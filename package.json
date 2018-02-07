@@ -2,24 +2,34 @@
   "name": "rei-cedar-docs",
   "version": "0.0.1",
   "description": "This is the API documentation site for REI Cedar 2 Framework components",
-  "main": "index.js",
+  "author": "Allen ",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/rei/rei-cedar-docs.git"
-  },
-  "keywords": [
-    "documentation",
-    "docs",
-    "rei",
-    "cedar"
-  ],
   "author": "REI Software Engineering",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rei/rei-cedar-docs/issues"
   },
-  "homepage": "https://github.com/rei/rei-cedar-docs#readme"
+  "homepage": "https://github.com/rei/rei-cedar-docs#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rei/rei-cedar-docs.git"
+  },
+  "dependencies": {
+    "nuxt": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.15.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-vue": "^4.0.0"
+  }
 }
