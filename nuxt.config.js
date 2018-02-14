@@ -13,19 +13,12 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  /*
-  * Extend core functionality
+  /* 
+  ** Add modules
   */
   modules: [
     '@nuxtjs/markdownit'
   ],
-  /*
-  * markdownit options
-  * See https://github.com/markdown-it/markdown-it
-  */
-  markdownit: {
-    preset: 'default',
-  },
   /*
   ** Customize the progress bar color
   */
