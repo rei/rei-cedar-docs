@@ -23,8 +23,10 @@
   },
   "dependencies": {
     "@nuxtjs/markdownit": "^1.2.0",
+    "@rei/cdr-activity-card": "^0.0.1",
     "@rei/cdr-base-components": "^0.0.2",
     "@rei/cdr-media-object": "^0.0.1",
+    "@rei/cdr-search": "^0.0.1",
     "nuxt": "^1.0.0"
   },
   "devDependencies": {

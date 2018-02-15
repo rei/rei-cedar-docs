@@ -81,6 +81,18 @@
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/@rei/cdr-a/-/cdr-a-0.0.1.tgz#22265a3a5f85bf0b24f60584659018d0594ec0b6"
 
+"@rei/cdr-activity-card@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@rei/cdr-activity-card/-/cdr-activity-card-0.0.1.tgz#b1564c2add4ca5d95963e4c0acd8824a9edbda6b"
+  dependencies:
+    "@rei/cdr-card" "^0.0.1"
+    "@rei/cdr-heading" "^0.0.1"
+    "@rei/cdr-icon" "^0.0.1"
+    "@rei/cdr-img" "^0.0.1"
+    "@rei/cdr-list" "^0.0.1"
+    "@rei/cdr-media-object" "^0.0.1"
+    "@rei/cdr-rating" "^0.0.1"
+
 "@rei/cdr-base-components@^0.0.2":
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/@rei/cdr-base-components/-/cdr-base-components-0.0.2.tgz#3ede2b8fe3ed3cd3d6ad0f29e1d10a54af722ebc"
@@ -120,6 +132,10 @@
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/@rei/cdr-heading/-/cdr-heading-0.0.1.tgz#d18306f4d786db702ed3c1918d391f32ddea733d"
 
+"@rei/cdr-icon@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@rei/cdr-icon/-/cdr-icon-0.0.1.tgz#089504c4261065dfbe6efb0187909473ab4499c2"
+
 "@rei/cdr-icon@^0.0.2":
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/@rei/cdr-icon/-/cdr-icon-0.0.2.tgz#4aecac061fb7bb1840cbe94eecd1f382144e8b32"
@@ -151,6 +167,10 @@
 "@rei/cdr-row@^0.0.1":
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/@rei/cdr-row/-/cdr-row-0.0.1.tgz#48af7e3125f5546630338b259af6e3d3329355a8"
+
+"@rei/cdr-search@^0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@rei/cdr-search/-/cdr-search-0.0.1.tgz#15e2364845c472aa4866132e515356ac3ae60f9c"
 
 "@rei/cdr-select@^0.0.1":
   version "0.0.1"
