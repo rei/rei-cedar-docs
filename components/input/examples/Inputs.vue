@@ -128,7 +128,7 @@
 </template>
 
 <script>
-import Components from 'Components/_index';
+import Components from '~/components/_index';
 
 export default {
   name: 'Forms',

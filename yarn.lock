@@ -93,6 +93,10 @@
     "@rei/cdr-media-object" "^0.0.1"
     "@rei/cdr-rating" "^0.0.1"
 
+"@rei/cdr-assets@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@rei/cdr-assets/-/cdr-assets-0.0.2.tgz#6ffe6f6fbe721983045389f00f999501cfe6d83e"
+
 "@rei/cdr-base-components@^0.0.2":
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/@rei/cdr-base-components/-/cdr-base-components-0.0.2.tgz#3ede2b8fe3ed3cd3d6ad0f29e1d10a54af722ebc"
