@@ -22,6 +22,7 @@
     "url": "git+https://github.com/rei/rei-cedar-docs.git"
   },
   "dependencies": {
+    "@nuxtjs/markdownit": "^1.2.0",
     "nuxt": "^1.0.0"
   },
   "devDependencies": {
