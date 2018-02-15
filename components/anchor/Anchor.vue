@@ -7,7 +7,7 @@
 
 <script>
 import anchorMD from './archive/cdrA.md'
-import Anchors from './examples/Anchors'
+import Anchors from './examples/Anchors.vue'
 
 export default {
   name: 'Anchor',
