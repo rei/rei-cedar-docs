@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import buttonMD from './archive/cdrButton.md'
-import Buttons from './examples/Buttons.vue'
+import buttonMD from '~/components/button/archive/cdrButton.md'
+import Buttons from '~/components/button/examples/Buttons.vue'
 
 export default {
   name: 'Button',
