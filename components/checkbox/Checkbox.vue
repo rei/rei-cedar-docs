@@ -15,6 +15,11 @@ export default {
   name: 'Checkbox',
   components: {
     Checkboxes
+  },
+  computed: {
+    checkboxMD () {
+      return checkboxMD
+    }
   }
 }
 </script>
