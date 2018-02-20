@@ -1,19 +1,16 @@
 <template>
   <div>
     <aside>
-      <h3>Introduction</h3>
-      <ul>
-
-      </ul>
-      <h3>Documentation</h3>
+      <h3><a href="#intro">Introduction</a></h3>
+      <h3><a href="#docs">Documentation</a></h3>
         <ul>
-          <li>Installation</li>
-          <li>Configuration</li>
+          <li><a href="#install">Installation</a></li>
+          <li><a href="#config">Configuration</a></li>
         </ul>
       <h3>Components</h3>
       <ul>
         <li v-for="name in compNames" :key="name">
-          <nuxt-link :to="name">{{name}}</nuxt-link>
+          <a :href="'#' + name">{{name}}</a>
         </li>
       </ul>
     </aside>
@@ -43,7 +40,16 @@ export default {
 
 <style>
 aside {
-  float: left;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  padding: 16px;
+  width: 200px;
+  overflow: auto;
+  background-color: #f5f5f5;
+  border: #e8e8e8;
+  border-width: 0 1px 0 0;
 }
 
 ul {
@@ -52,51 +58,9 @@ ul {
 }
 
 .content {
+  position: relative;
+  left: 200px;
   float: left;
-}
-
-html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+  padding: 16px;
 }
 </style>
