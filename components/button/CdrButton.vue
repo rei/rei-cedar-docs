@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-html="buttonMD"></div>
+    <div id="CdrButton" v-html="buttonMD"></div>
     <Buttons/>
   </div>
 </template>

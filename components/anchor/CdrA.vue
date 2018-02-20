@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-html="anchorMD"></div>
+    <div id="CdrA" v-html="anchorMD"></div>
     <Anchors/>
   </div>
 </template>
@@ -16,9 +16,15 @@ export default {
   components: {
     Anchors
   },
+  asyncData: {
+    anchor: 'CdrA'
+  },
   computed: {
     anchorMD() {
       return anchorMD
+    },
+    hashtag() {
+      return '#' + this.anchor
     }
   }
 }

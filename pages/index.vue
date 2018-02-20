@@ -1,24 +1,30 @@
 <template>
   <div>
+    <Intro/>
+    <Documentation/>
     <Anchor/>
     <Button/>
-    <Card/>
+    <!-- <Card/>
     <Checkbox/>
-    <Grid/>
+    <Grid/> -->
   </div>
 </template>
 
 <script>
-import Anchor from '~/components/anchor/Anchor.vue'
-import Button from '~/components/button/Button.vue'
-import Card from '~/components/card/Card.vue'
-import Checkbox from '~/components/checkbox/Checkbox.vue'
+import Intro from '~/components/Introduction.vue'
+import Documentation from '~/components/Documentation.vue'
+import Anchor from '~/components/anchor/CdrA.vue'
+import Button from '~/components/button/CdrButton.vue'
+import Card from '~/components/card/CdrCard.vue'
+import Checkbox from '~/components/checkbox/CdrCheckbox.vue'
 import Grid from '~/components/grid/Grid.vue'
 
 import '@rei/cdr-assets/dist/cdr-core.css'
 
 export default {
   components: {
+    Intro,
+    Documentation,
     Anchor,
     Button,
     Card,
