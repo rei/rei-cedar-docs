@@ -1,10 +1,60 @@
 <template>
   <div>
-    <nuxt/>
+    <aside>
+      <h3>Introduction</h3>
+      <ul>
+
+      </ul>
+      <h3>Documentation</h3>
+        <ul>
+          <li>Installation</li>
+          <li>Configuration</li>
+        </ul>
+      <h3>Components</h3>
+      <ul>
+        <li v-for="name in compNames" :key="name">
+          <nuxt-link :to="name">{{name}}</nuxt-link>
+        </li>
+      </ul>
+    </aside>
+    <div class="content">
+      <nuxt/>
+    </div>
   </div>
 </template>
 
+<script>
+import Components from '~/components/_index'
+
+export default {
+  computed: {
+    compNames () {
+      let names = []
+      for (const comp in Components) {
+        if(Components[comp].name) {
+          names.push(Components[comp].name)
+        }
+      }
+      return names
+    } 
+  }
+}
+</script>
+
 <style>
+aside {
+  float: left;
+}
+
+ul {
+  list-style-type: none;
+  padding: 16px;
+}
+
+.content {
+  float: left;
+}
+
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
