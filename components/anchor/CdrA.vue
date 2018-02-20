@@ -16,16 +16,10 @@ export default {
   components: {
     Anchors
   },
-  asyncData: {
-    anchor: 'CdrA'
-  },
   computed: {
     anchorMD() {
       return anchorMD
     },
-    hashtag() {
-      return '#' + this.anchor
-    }
   }
 }
 </script>

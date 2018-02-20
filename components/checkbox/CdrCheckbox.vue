@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-html="checkboxMD"></div>
+    <div id="CdrCheckbox" v-html="checkboxMD"></div>
     <Checkboxes/>
   </div>
 </template>

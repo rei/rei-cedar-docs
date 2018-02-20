@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-html="cardMD"></div>
+    <div id="CdrCard" v-html="cardMD"></div>
     <Cards/>
   </div>
 </template>
