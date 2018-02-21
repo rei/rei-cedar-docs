@@ -7,7 +7,7 @@
           <li><a href="#install">Installation</a></li>
           <li><a href="#config">Configuration</a></li>
         </ul>
-      <h3>Components</h3>
+      <h3><a href="#components">Components</a></h3>
       <ul>
         <li v-for="name in compNames" :key="name">
           <a :href="'#' + name">{{name}}</a>
