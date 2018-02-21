@@ -8,6 +8,8 @@
       <!-- <Grid/> -->
     <Heading/>
     <Icon/>
+    <Images/>
+    <Input/>
   </div>
 </template>
 
@@ -19,6 +21,8 @@ import Checkbox from '~/components/checkbox/CdrCheckbox.vue'
 // import Grid from '~/components/grid/Grid.vue'
 import Heading from '~/components/heading/CdrHeading.vue'
 import Icon from '~/components/icon/CdrIcon.vue'
+import Images from '~/components/image/CdrImage.vue'
+import Input from '~/components/input/CdrInput.vue'
 
 export default {
   name: 'CdrComponents',
@@ -29,6 +33,8 @@ export default {
     Checkbox,
     Heading,
     Icon,
+    Images,
+    Input
   }
 }
 </script>
