@@ -10,6 +10,7 @@
     <Icon/>
     <Images/>
     <Input/>
+    <List/>
   </div>
 </template>
 
@@ -23,6 +24,7 @@ import Heading from '~/components/heading/CdrHeading.vue'
 import Icon from '~/components/icon/CdrIcon.vue'
 import Images from '~/components/image/CdrImage.vue'
 import Input from '~/components/input/CdrInput.vue'
+import List from '~/components/list/CdrList.vue'
 
 export default {
   name: 'CdrComponents',
@@ -34,7 +36,8 @@ export default {
     Heading,
     Icon,
     Images,
-    Input
+    Input,
+    List
   }
 }
 </script>
