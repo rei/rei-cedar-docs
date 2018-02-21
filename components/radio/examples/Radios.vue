@@ -54,7 +54,7 @@
 </template>
 
 <script>
-import Components from '../../_index';
+import Components from '~/components/_index';
 
 export default {
   name: 'Radios',
@@ -64,7 +64,7 @@ export default {
       ex1: '',
       ex2: 'b2',
       ex3: 'c1',
-    };
+    }
   },
 };
 </script>

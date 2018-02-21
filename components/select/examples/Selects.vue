@@ -93,7 +93,7 @@
 </template>
 
 <script>
-import Components from '../../_index';
+import Components from '~/components/_index';
 
 export default {
   name: 'Selects',
