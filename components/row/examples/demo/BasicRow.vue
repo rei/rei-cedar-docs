@@ -1,0 +1,29 @@
+<template>
+  <div class="cdr-container-fluid">
+    <cdr-row cols="3">
+      <cdr-col>
+        <div class="row-demo"/>
+      </cdr-col>
+      <cdr-col>
+        <div class="row-demo"/>
+      </cdr-col>
+      <cdr-col>
+        <div class="row-demo"/>
+      </cdr-col>
+      <cdr-col>
+        <div class="row-demo"/>
+      </cdr-col>
+    </cdr-row>
+  </div>
+</template>
+
+<script>
+import Components from '~/components/_index'
+// import cdrRow from '../../../row/cdrRow';
+// import cdrCol from '../../../column/cdrCol';
+
+export default {
+  name: 'BasicRowExample',
+  components: { Components },
+};
+</script>

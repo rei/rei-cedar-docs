@@ -42,7 +42,7 @@
 import Components from '~/components/_index';
 
 export default {
-  name: 'Rating',
+  name: 'CRatings',
   components: { Components },
 };
 </script>

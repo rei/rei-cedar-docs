@@ -38,12 +38,17 @@ import ratios from './demos/Ratios';
 import cropping from './demos/Cropping';
 import mods from './demos/Mods';
 
-Components.ratios = ratios;
-Components.cropping = cropping;
-Components.mods = mods;
+// Components.ratios = ratios;
+// Components.cropping = cropping;
+// Components.mods = mods;
 
 export default {
   name: 'Images',
-  components: Components,
-};
+  components: {
+    Components,
+    ratios,
+    cropping,
+    mods
+  }
+}
 </script>
