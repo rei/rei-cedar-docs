@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="CdrMediaObject" v-html="mediaObjMD"></div>
-    <!-- <MediaObjs/> -->
+    <MediaObjs/>
   </div>
 </template>
 

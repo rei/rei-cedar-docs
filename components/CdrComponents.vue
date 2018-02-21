@@ -12,7 +12,7 @@
     <Input/>
     <List/>
     <MediaObject/>
-
+    <Radio/>
   </div>
 </template>
 
@@ -28,6 +28,7 @@ import CImage from '~/components/image/CdrImage.vue'
 import Input from '~/components/input/CdrInput.vue'
 import List from '~/components/list/CdrList.vue'
 import MediaObject from '~/components/mediaObject/CdrMediaObject.vue'
+import Radio from '~/components/radio/CdrRadio.vue'
 
 export default {
   name: 'CdrComponents',
@@ -41,7 +42,8 @@ export default {
     CImage,
     Input,
     List,
-    MediaObject
+    MediaObject,
+    Radio
   }
 }
 </script>
