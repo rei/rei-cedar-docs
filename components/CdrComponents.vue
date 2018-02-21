@@ -7,6 +7,7 @@
     <Checkbox/>
       <!-- <Grid/> -->
     <Heading/>
+    <Icon/>
   </div>
 </template>
 
@@ -17,6 +18,7 @@ import Card from '~/components/card/CdrCard.vue'
 import Checkbox from '~/components/checkbox/CdrCheckbox.vue'
 // import Grid from '~/components/grid/Grid.vue'
 import Heading from '~/components/heading/CdrHeading.vue'
+import Icon from '~/components/icon/CdrIcon.vue'
 
 export default {
   name: 'CdrComponents',
@@ -26,6 +28,7 @@ export default {
     Card,
     Checkbox,
     Heading,
+    Icon,
   }
 }
 </script>
