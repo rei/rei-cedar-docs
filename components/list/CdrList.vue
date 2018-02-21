@@ -9,6 +9,8 @@
 import listMD from '~/components/list/archive/cdrList.md'
 import Lists from '~/components/list/examples/Lists.vue'
 
+import '@rei/cdr-list/dist/cdr-list.css'
+
 export default {
   name: 'List',
   computed: {

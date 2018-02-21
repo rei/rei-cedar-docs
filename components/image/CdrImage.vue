@@ -9,8 +9,10 @@
 import imageMD from '~/components/image/archive/cdrImg.md'
 import Images from '~/components/image/examples/Images.vue'
 
+import '@rei/cdr-img/dist/cdr-img.css'
+
 export default {
-  name: 'Image',
+  name: 'CImage',
   computed: {
     imageMD() {
       return imageMD

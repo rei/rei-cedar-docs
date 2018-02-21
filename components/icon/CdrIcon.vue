@@ -9,6 +9,8 @@
 import iconMD from '~/components/icon/archive/cdrIcon.md'
 import Icons from '~/components/icon/examples/Icons.vue'
 
+import '@rei/cdr-icon/dist/cdr-icon.css'
+
 export default {
   name: 'Icon',
   computed: {

@@ -9,6 +9,8 @@
 import inputMD from '~/components/input/archive/cdrInput.md'
 import Inputs from '~/components/input/examples/Inputs.vue'
 
+import '@rei/cdr-input/dist/cdr-input.css'
+
 export default {
   name: 'Input',
   computed: {
