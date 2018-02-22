@@ -9,7 +9,13 @@
         </ul>
       <h3><a href="#components">Components</a></h3>
       <ul>
-        <li v-for="name in compNames" :key="name">
+        <li v-for="name in componentNames" :key="name">
+          <a :href="'#' + name">{{name}}</a>
+        </li>
+      </ul>
+      <h3><a href="#compositions">Compositions</a></h3>
+      <ul>
+        <li v-for="name in compositionNames" :key="name">
           <a :href="'#' + name">{{name}}</a>
         </li>
       </ul>
@@ -22,10 +28,11 @@
 
 <script>
 import Components from '~/components/_index'
+import Compositions from '~/compositions/_index'
 
 export default {
   computed: {
-    compNames () {
+    componentNames () {
       let names = []
       for (const comp in Components) {
         if(Components[comp].name) {
@@ -33,7 +40,16 @@ export default {
         }
       }
       return names
-    } 
+    },
+    compositionNames () {
+      let names = []
+      for(const comp in Compositions) {
+        if(Compositions[comp].name) {
+          names.push(Compositions[comp].name)
+        }
+      }
+      return names
+    }
   }
 }
 </script>

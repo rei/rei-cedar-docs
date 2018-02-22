@@ -17,11 +17,11 @@
 </template>
 
 <script>
-import { CdrActivityCard } from '@rei/cdr-activity-card';
+import Compositions from '~/compositions/_index';
 
 export default {
-  name: 'Activity',
-  components: { CdrActivityCard },
+  name: 'Activites',
+  components: Compositions,
 };
 </script>
 

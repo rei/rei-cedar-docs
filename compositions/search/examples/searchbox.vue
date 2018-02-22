@@ -29,11 +29,11 @@
 </template>
 
 <script>
-import CdrSearch from '@rei/cdr-search';
+import Compositions from '~/compositions/_index';
 
 export default {
   name: 'Searchbox',
-  components: { CdrSearch },
+  components: Compositions,
   data() {
     return {
       search1: '',
