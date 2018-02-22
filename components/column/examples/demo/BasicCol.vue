@@ -23,11 +23,9 @@
 
 <script>
 import Components from '~/components/_index'
-// import cdrRow from '../../../row/cdrRow';
-// import cdrCol from '../../../column/cdrCol';
 
 export default {
   name: 'BasicColExample',
-  components: { Components },
+  components: Components,
 };
 </script>

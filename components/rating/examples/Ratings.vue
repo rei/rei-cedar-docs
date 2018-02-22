@@ -40,10 +40,11 @@
 
 <script>
 import Components from '~/components/_index';
+let cdrRating = Components.CdrRating;
 
 export default {
-  name: 'CRatings',
-  components: { Components },
+  name: 'Ratings',
+  components: { cdrRating },
 };
 </script>
 

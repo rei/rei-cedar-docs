@@ -38,14 +38,12 @@ import ratios from './demos/Ratios';
 import cropping from './demos/Cropping';
 import mods from './demos/Mods';
 
-// Components.ratios = ratios;
-// Components.cropping = cropping;
-// Components.mods = mods;
+let cdrImg = Components.CdrImg
 
 export default {
   name: 'Images',
   components: {
-    Components,
+    cdrImg,
     ratios,
     cropping,
     mods

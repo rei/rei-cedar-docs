@@ -18,9 +18,7 @@ export default {
       return imageMD
     }
   },
-  components: {
-    Images
-  }
+  components: { Images }
 }
 </script>
 

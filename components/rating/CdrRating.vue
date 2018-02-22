@@ -1,25 +1,25 @@
 <template>
   <div>
     <div id="CdrRating" v-html="ratingMD"></div>
-    <CRatings/>
+    <Ratings/>
   </div>
 </template>
 
 <script>
 import ratingMD from '~/components/rating/archive/cdrRating.md'
-import CRatings from '~/components/rating/examples/Ratings.vue'
+import Ratings from '~/components/rating/examples/Ratings.vue'
 
 import '@rei/cdr-rating/dist/cdr-rating.css'
 
 export default {
-  name: 'CRating',
+  name: 'Rating',
   computed: {
     ratingMD() {
       return ratingMD
     }
   },
   components: {
-    CRatings
+    Ratings
   }
 }
 </script>
