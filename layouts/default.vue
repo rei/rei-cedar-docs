@@ -31,24 +31,23 @@ import Components from '~/components/_index'
 import Compositions from '~/compositions/_index'
 
 export default {
+  methods: {
+    compNames(compsObj) {
+      let names = []
+      for(const compKey in compsObj) {
+        if (compsObj[compKey].name) {
+          names.push(compsObj[compKey].name)
+        }
+      }
+      return names
+    }
+  },
   computed: {
     componentNames () {
-      let names = []
-      for (const comp in Components) {
-        if(Components[comp].name) {
-          names.push(Components[comp].name)
-        }
-      }
-      return names
+      return this.compNames(Components)
     },
     compositionNames () {
-      let names = []
-      for(const comp in Compositions) {
-        if(Compositions[comp].name) {
-          names.push(Compositions[comp].name)
-        }
-      }
-      return names
+      return this.compNames(Compositions)
     }
   }
 }
