@@ -1,15 +1,8 @@
-/*!
- * ws: a node.js websocket client
- * Copyright(c) 2011 Einar Otto Stangvik <einaros@gmail.com>
- * MIT Licensed
- */
-
 'use strict';
 
 const safeBuffer = require('safe-buffer');
 const EventEmitter = require('events');
 const crypto = require('crypto');
-const Ultron = require('ultron');
 const http = require('http');
 const url = require('url');
 
@@ -81,19 +74,38 @@ class WebSocketServer extends EventEmitter {
     }
 
     if (this._server) {
-      this._ultron = new Ultron(this._server);
-      this._ultron.on('listening', () => this.emit('listening'));
-      this._ultron.on('error', (err) => this.emit('error', err));
-      this._ultron.on('upgrade', (req, socket, head) => {
-        this.handleUpgrade(req, socket, head, (client) => {
-          this.emit('connection', client, req);
-        });
+      this._removeListeners = addListeners(this._server, {
+        listening: this.emit.bind(this, 'listening'),
+        error: this.emit.bind(this, 'error'),
+        upgrade: (req, socket, head) => {
+          this.handleUpgrade(req, socket, head, (ws) => {
+            this.emit('connection', ws, req);
+          });
+        }
       });
     }
 
     if (options.perMessageDeflate === true) options.perMessageDeflate = {};
     if (options.clientTracking) this.clients = new Set();
     this.options = options;
+  }
+
+  /**
+   * Returns the bound address, the address family name, and port of the server
+   * as reported by the operating system if listening on an IP socket.
+   * If the server is listening on a pipe or UNIX domain socket, the name is
+   * returned as a string.
+   *
+   * @return {(Object|String|null)} The address of the server
+   * @public
+   */
+  address () {
+    if (this.options.noServer) {
+      throw new Error('The server is operating in "noServer" mode');
+    }
+
+    if (!this._server) return null;
+    return this._server.address();
   }
 
   /**
@@ -113,8 +125,8 @@ class WebSocketServer extends EventEmitter {
     const server = this._server;
 
     if (server) {
-      this._ultron.destroy();
-      this._ultron = this._server = null;
+      this._removeListeners();
+      this._removeListeners = this._server = null;
 
       //
       // Close the http server if it was internally created.
@@ -150,7 +162,7 @@ class WebSocketServer extends EventEmitter {
    * @public
    */
   handleUpgrade (req, socket, head, cb) {
-    socket.on('error', socketError);
+    socket.on('error', socketOnError);
 
     const version = +req.headers['sec-websocket-version'];
     const extensions = {};
@@ -270,7 +282,7 @@ class WebSocketServer extends EventEmitter {
     this.emit('headers', headers, req);
 
     socket.write(headers.concat('\r\n').join('\r\n'));
-    socket.removeListener('error', socketError);
+    socket.removeListener('error', socketOnError);
 
     ws.setSocket(socket, head, this.options.maxPayload);
 
@@ -286,11 +298,30 @@ class WebSocketServer extends EventEmitter {
 module.exports = WebSocketServer;
 
 /**
+ * Add event listeners on an `EventEmitter` using a map of <event, listener>
+ * pairs.
+ *
+ * @param {EventEmitter} server The event emitter
+ * @param {Object.<String, Function>} map The listeners to add
+ * @return {Function} A function that will remove the added listeners when called
+ * @private
+ */
+function addListeners (server, map) {
+  for (const event of Object.keys(map)) server.on(event, map[event]);
+
+  return function removeListeners () {
+    for (const event of Object.keys(map)) {
+      server.removeListener(event, map[event]);
+    }
+  };
+}
+
+/**
  * Handle premature socket errors.
  *
  * @private
  */
-function socketError () {
+function socketOnError () {
   this.destroy();
 }
 
@@ -315,6 +346,6 @@ function abortConnection (socket, code, message) {
     );
   }
 
-  socket.removeListener('error', socketError);
+  socket.removeListener('error', socketOnError);
   socket.destroy();
 }

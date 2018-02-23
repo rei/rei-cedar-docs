@@ -1,9 +1,3 @@
-/*!
- * ws: a node.js websocket client
- * Copyright(c) 2011 Einar Otto Stangvik <einaros@gmail.com>
- * MIT Licensed
- */
-
 'use strict';
 
 const safeBuffer = require('safe-buffer');
@@ -54,10 +48,11 @@ class Receiver {
     this._fragments = [];
 
     this._cleanupCallback = null;
+    this._isCleaningUp = false;
     this._hadError = false;
-    this._dead = false;
     this._loop = false;
 
+    this.add = this.add.bind(this);
     this.onmessage = null;
     this.onclose = null;
     this.onerror = null;
@@ -68,73 +63,57 @@ class Receiver {
   }
 
   /**
-   * Consumes bytes from the available buffered data.
+   * Consumes `n` bytes from the buffered data, calls `cleanup` if necessary.
    *
-   * @param {Number} bytes The number of bytes to consume
-   * @return {Buffer} Consumed bytes
+   * @param {Number} n The number of bytes to consume
+   * @return {(Buffer|null)} The consumed bytes or `null` if `n` bytes are not
+   *     available
    * @private
    */
-  readBuffer (bytes) {
-    var offset = 0;
-    var dst;
-    var l;
-
-    this._bufferedBytes -= bytes;
-
-    if (bytes === this._buffers[0].length) return this._buffers.shift();
-
-    if (bytes < this._buffers[0].length) {
-      dst = this._buffers[0].slice(0, bytes);
-      this._buffers[0] = this._buffers[0].slice(bytes);
-      return dst;
+  consume (n) {
+    if (this._bufferedBytes < n) {
+      this._loop = false;
+      if (this._isCleaningUp) this.cleanup(this._cleanupCallback);
+      return null;
     }
 
-    dst = Buffer.allocUnsafe(bytes);
+    this._bufferedBytes -= n;
 
-    while (bytes > 0) {
-      l = this._buffers[0].length;
+    if (n === this._buffers[0].length) return this._buffers.shift();
 
-      if (bytes >= l) {
-        this._buffers[0].copy(dst, offset);
-        offset += l;
-        this._buffers.shift();
+    if (n < this._buffers[0].length) {
+      const buf = this._buffers[0];
+      this._buffers[0] = buf.slice(n);
+      return buf.slice(0, n);
+    }
+
+    const dst = Buffer.allocUnsafe(n);
+
+    do {
+      const buf = this._buffers[0];
+
+      if (n >= buf.length) {
+        this._buffers.shift().copy(dst, dst.length - n);
       } else {
-        this._buffers[0].copy(dst, offset, 0, bytes);
-        this._buffers[0] = this._buffers[0].slice(bytes);
+        buf.copy(dst, dst.length - n, 0, n);
+        this._buffers[0] = buf.slice(n);
       }
 
-      bytes -= l;
-    }
+      n -= buf.length;
+    } while (n > 0);
 
     return dst;
   }
 
   /**
-   * Checks if the number of buffered bytes is bigger or equal than `n` and
-   * calls `cleanup` if necessary.
-   *
-   * @param {Number} n The number of bytes to check against
-   * @return {Boolean} `true` if `bufferedBytes >= n`, else `false`
-   * @private
-   */
-  hasBufferedBytes (n) {
-    if (this._bufferedBytes >= n) return true;
-
-    this._loop = false;
-    if (this._dead) this.cleanup(this._cleanupCallback);
-    return false;
-  }
-
-  /**
    * Adds new data to the parser.
    *
+   * @param {Buffer} chunk A chunk of data
    * @public
    */
-  add (data) {
-    if (this._dead) return;
-
-    this._bufferedBytes += data.length;
-    this._buffers.push(data);
+  add (chunk) {
+    this._bufferedBytes += chunk.length;
+    this._buffers.push(chunk);
     this.startLoop();
   }
 
@@ -146,7 +125,7 @@ class Receiver {
   startLoop () {
     this._loop = true;
 
-    while (this._loop) {
+    do {
       switch (this._state) {
         case GET_INFO:
           this.getInfo();
@@ -166,7 +145,7 @@ class Receiver {
         default: // `INFLATING`
           this._loop = false;
       }
-    }
+    } while (this._loop);
   }
 
   /**
@@ -175,9 +154,8 @@ class Receiver {
    * @private
    */
   getInfo () {
-    if (!this.hasBufferedBytes(2)) return;
-
-    const buf = this.readBuffer(2);
+    const buf = this.consume(2);
+    if (buf === null) return;
 
     if ((buf[0] & 0x30) !== 0x00) {
       this.error(
@@ -283,9 +261,10 @@ class Receiver {
    * @private
    */
   getPayloadLength16 () {
-    if (!this.hasBufferedBytes(2)) return;
+    const buf = this.consume(2);
+    if (buf === null) return;
 
-    this._payloadLength = this.readBuffer(2).readUInt16BE(0, true);
+    this._payloadLength = buf.readUInt16BE(0, true);
     this.haveLength();
   }
 
@@ -295,9 +274,9 @@ class Receiver {
    * @private
    */
   getPayloadLength64 () {
-    if (!this.hasBufferedBytes(8)) return;
+    const buf = this.consume(8);
+    if (buf === null) return;
 
-    const buf = this.readBuffer(8);
     const num = buf.readUInt32BE(0, true);
 
     //
@@ -338,9 +317,9 @@ class Receiver {
    * @private
    */
   getMask () {
-    if (!this.hasBufferedBytes(4)) return;
+    this._mask = this.consume(4);
+    if (this._mask === null) return;
 
-    this._mask = this.readBuffer(4);
     this._state = GET_DATA;
   }
 
@@ -353,9 +332,9 @@ class Receiver {
     var data = constants.EMPTY_BUFFER;
 
     if (this._payloadLength) {
-      if (!this.hasBufferedBytes(this._payloadLength)) return;
+      data = this.consume(this._payloadLength);
+      if (data === null) return;
 
-      data = this.readBuffer(this._payloadLength);
       if (this._masked) bufferUtil.unmask(data, this._mask);
     }
 
@@ -443,8 +422,8 @@ class Receiver {
   controlMessage (data) {
     if (this._opcode === 0x08) {
       if (data.length === 0) {
-        this.onclose(1005, '');
         this._loop = false;
+        this.onclose(1005, '');
         this.cleanup(this._cleanupCallback);
       } else if (data.length === 1) {
         this.error(
@@ -474,8 +453,8 @@ class Receiver {
           return;
         }
 
-        this.onclose(code, buf.toString());
         this._loop = false;
+        this.onclose(code, buf.toString());
         this.cleanup(this._cleanupCallback);
       }
 
@@ -496,9 +475,9 @@ class Receiver {
    * @private
    */
   error (err, code) {
-    this.onerror(err, code);
     this._hadError = true;
     this._loop = false;
+    this.onerror(err, code);
     this.cleanup(this._cleanupCallback);
   }
 
@@ -552,25 +531,30 @@ class Receiver {
    * @public
    */
   cleanup (cb) {
-    this._dead = true;
+    if (this._extensions === null) {
+      if (cb) cb();
+      return;
+    }
 
     if (!this._hadError && (this._loop || this._state === INFLATING)) {
       this._cleanupCallback = cb;
-    } else {
-      this._extensions = null;
-      this._fragments = null;
-      this._buffers = null;
-      this._mask = null;
-
-      this._cleanupCallback = null;
-      this.onmessage = null;
-      this.onclose = null;
-      this.onerror = null;
-      this.onping = null;
-      this.onpong = null;
-
-      if (cb) cb();
+      this._isCleaningUp = true;
+      return;
     }
+
+    this._extensions = null;
+    this._fragments = null;
+    this._buffers = null;
+    this._mask = null;
+
+    this._cleanupCallback = null;
+    this.onmessage = null;
+    this.onclose = null;
+    this.onerror = null;
+    this.onping = null;
+    this.onpong = null;
+
+    if (cb) cb();
   }
 }
 
