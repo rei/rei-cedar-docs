@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import anchorMD from '~/components/anchor/archive/cdrA.md'
-import Anchors from '~/components/anchor/examples/Anchors.vue'
+import anchorMD from '~/components/CdrA/archive/cdrA.md'
+import Anchors from '~/components/CdrA/examples/Anchors.vue'
 
 import '@rei/cdr-a/dist/cdr-a.css'
 
