@@ -28,7 +28,8 @@
     "@rei/cdr-base-components": "^0.0.2",
     "@rei/cdr-media-object": "^0.0.1",
     "@rei/cdr-search": "^0.0.1",
-    "nuxt": "^1.0.0"
+    "nuxt": "^1.0.0",
+    "semver": "^5.5.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",
