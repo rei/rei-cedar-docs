@@ -2,8 +2,8 @@
   <div>
     <Intro/>
     <Documentation/>
-    <CdrComponents/>
-    <CdrCompositions/>
+    <!-- <CdrComponents/>
+    <CdrCompositions/> -->
   </div>
 </template>
 

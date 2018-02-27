@@ -1,15 +1,15 @@
 <template>
-  <div v-if="getVersions.length > 0">
+  <div v-if="versions.length > 0">
     <ul>
-      <li v-for="version in getVersions" :key="version">
-        <a :href="'#'">{{version}}</a>
+      <li v-for="version in versions" :key="version">
+        <a :href="'#' + compPath + '-' + version">{{version}}</a>
       </li>
     </ul>
   </div>
 </template>
 
 <script>
-import versions from '~/components/_versions'
+import archive from '~/archive-versions'
 
 export default {
   name: 'Versions',
@@ -20,8 +20,11 @@ export default {
     }
   },
   computed: {
-    getVersions() {
-      return versions(compPath)
+    archive() {
+      return archive
+    },
+    versions() {
+      return archive[this.compPath]
     }
   }
 }

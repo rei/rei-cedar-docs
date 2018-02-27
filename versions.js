@@ -8,11 +8,13 @@ let versions = {}
 let verJSON = ''
 const fullPath = path.resolve(__dirname) + '/+(components|compositions)/**/versions/*.md'
 
+// find all versioned mardown documentation files
 glob(fullPath, (mdErr, mdFiles) => {
   if(mdErr) {
     throw new Error(`Error while trying to create versioned documentation: ${mdErr}`)
   }
   
+  // Create hash table of each cedar component name with an array of their archived NPM versions
   mdFiles.forEach((mdFile) => {
     const startCompName = mdFile.lastIndexOf('/') + 1, endCompName = mdFile.lastIndexOf('-')
     let compName = mdFile.slice(startCompName, endCompName)
@@ -29,8 +31,8 @@ glob(fullPath, (mdErr, mdFiles) => {
     }
   })
 
+  // create file that exports this JSON object acting as a hash
   verJSON += `export default ${util.inspect(versions)}`
-  
   fs.writeFile('./archive-versions.js', verJSON, (wrErr) => {
     if (wrErr) {
       throw new Error(`Error while creating archived versions folder`)

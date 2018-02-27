@@ -1,23 +1,22 @@
 <template>
   <div>
     <aside>
-      <h3><a href="#intro">Introduction</a></h3>
-      <h3><a href="#docs">Documentation</a></h3>
+      <h3><a href="/Introduction">Introduction</a></h3>
+      <h3><a href="/Documentation">Documentation</a></h3>
         <ul>
-          <li><a href="#install">Installation</a></li>
-          <li><a href="#config">Configuration</a></li>
+          <li><a href="/Documentation#install">Installation</a></li>
+          <li><a href="/Documentation#config">Configuration</a></li>
         </ul>
       <h3><a href="#components">Components</a></h3>
       <ul>
         <li v-for="name in componentNames" :key="name">
-          <a :href="'#' + name">{{name}}</a>
-          <!-- <Versions comp-path="name"/> -->
+          <nuxt-link :to="'/' + name">{{name}}</nuxt-link>
         </li>
       </ul>
       <h3><a href="#compositions">Compositions</a></h3>
       <ul>
         <li v-for="name in compositionNames" :key="name">
-          <a :href="'#' + name">{{name}}</a>
+          <nuxt-link :to="'/' + name">{{name}}</nuxt-link>
         </li>
       </ul>
     </aside>
