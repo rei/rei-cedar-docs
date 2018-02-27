@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import Anchor from '~/components/CdrA/CdrA.vue'
+import Anchor from '~/components/anchor/CdrA.vue'
 import Button from '~/components/button/CdrButton.vue'
 import Card from '~/components/card/CdrCard.vue'
 import Checkbox from '~/components/checkbox/CdrCheckbox.vue'
