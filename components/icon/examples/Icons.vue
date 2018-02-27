@@ -13,9 +13,6 @@
         />
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-arrow-down"/>
-      </cdr-col>
-      <cdr-col>
         <cdr-icon url="/rei-icons.svg#cdr-arrow-left"/>
       </cdr-col>
       <cdr-col>

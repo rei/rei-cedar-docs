@@ -80,7 +80,7 @@
         label-class="flex">
 
         <cdr-icon
-          url="/rei-icons.svg#cdr-heart-fill"
+          url="~/assets/rei-icons.svg#cdr-heart-fill"
           class="cdr-inline--sm checkbox-example-icon"/>
 
         <div>

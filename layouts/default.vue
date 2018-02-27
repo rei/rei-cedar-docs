@@ -11,6 +11,7 @@
       <ul>
         <li v-for="name in componentNames" :key="name">
           <a :href="'#' + name">{{name}}</a>
+          <!-- <Versions comp-path="name"/> -->
         </li>
       </ul>
       <h3><a href="#compositions">Compositions</a></h3>
@@ -29,6 +30,7 @@
 <script>
 import Components from '~/components/_index'
 import Compositions from '~/compositions/_index'
+import Versions from '~/components/Versions.vue'
 
 export default {
   methods: {
@@ -49,37 +51,10 @@ export default {
     compositionNames () {
       return this.compNames(Compositions)
     }
-  }
+  },
+  components: { Versions }
 }
 </script>
 
 <style>
-aside {
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  padding: 16px;
-  width: 200px;
-  z-index: 10;
-  overflow-x: hidden;
-  background-color: #f5f5f5;
-  border: #e8e8e8;
-  border-width: 0 1px 0 0;
-}
-
-aside ul {
-  list-style-type: none;
-  padding: 16px;
-}
-
-@media screen and (max-height: 450px) {
-    aside {padding-top: 15px;}
-    aside a {font-size: 18px;}
-}
-
-.content {
-  margin-left: 200px;
-  padding: 16px;
-}
 </style>
