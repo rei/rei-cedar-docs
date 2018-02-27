@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div id="CdrA" v-html="anchorMD"></div>
+    <!-- <div id="CdrA" v-html="anchorMD"></div> -->
+    <nuxt-child />
     <Anchors/>
   </div>
 </template>
