@@ -1,11 +1,14 @@
  <template>
-        <div id="CdrList" v-html="md"></div>
+        <div>
+          <h3>Version 0.0.1</h3>
+          <div id="CdrList" v-html="md"></div>
+        </div>
       </template>
       <script>
       import md from '~/components/list/archive/versions/cdrList-0.0.1.md'
       
       export default {
-        name: 'CdrList-0.0.1',
+        name: 'CdrList-0-0-1',
         computed: {
           md() {
             return md
