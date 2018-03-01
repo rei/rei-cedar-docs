@@ -1,24 +1,27 @@
 <template>
   <div>
     <aside>
-      <h3><a href="/Introduction">Introduction</a></h3>
-      <h3><a href="/Documentation">Documentation</a></h3>
-        <ul>
+      <cdr-search bare="true"></cdr-search>
+      <cdr-list modifier="unstyled">
+        <li><a href="/Introduction">Introduction</a></li>
+        <li><a href="/Documentation">Documentation</a></li>
+        <cdr-list modifier="unstyled">
           <li><a href="/Documentation#install">Installation</a></li>
           <li><a href="/Documentation#config">Configuration</a></li>
-        </ul>
-      <h3><a href="#components">Components</a></h3>
-      <ul>
-        <li v-for="name in componentNames" :key="name">
-          <nuxt-link :to="'/' + name">{{name}}</nuxt-link>
-        </li>
-      </ul>
-      <h3><a href="#compositions">Compositions</a></h3>
-      <ul>
-        <li v-for="name in compositionNames" :key="name">
-          <nuxt-link :to="'/' + name">{{name}}</nuxt-link>
-        </li>
-      </ul>
+        </cdr-list>
+        <li><a href="#components">Components</a></li>
+        <cdr-list modifier="unstyled">
+          <li v-for="name in componentNames" :key="name">
+            <nuxt-link :to="'/' + name">{{name}}</nuxt-link>
+          </li>
+        </cdr-list>
+        <li><a href="#compositions">Compositions</a></li>
+        <cdr-list modifier="unstyled">
+          <li v-for="name in compositionNames" :key="name">
+            <nuxt-link :to="'/' + name">{{name}}</nuxt-link>
+          </li>
+        </cdr-list>
+      </cdr-list>
     </aside>
     <div class="content">
       <nuxt/>
@@ -30,6 +33,10 @@
 import Components from '~/components/_index'
 import Compositions from '~/compositions/_index'
 import Versions from '~/components/Versions.vue'
+
+const cdrHeading = Components.cdrHeading
+const cdrList = Components.CdrList
+const cdrSearch = Components.CdrSearch
 
 export default {
   methods: {
@@ -51,7 +58,12 @@ export default {
       return this.compNames(Compositions)
     }
   },
-  components: { Versions }
+  components: { 
+    cdrHeading,
+    cdrList,
+    cdrSearch,
+    Versions,
+  }
 }
 </script>
 
