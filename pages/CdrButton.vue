@@ -1,26 +1,23 @@
 <template>
   <div>
-    <div id="CdrButton" v-html="buttonMD"></div>
+    <Versions comp-path="CdrButton"/>
+    <nuxt-child/>
     <Buttons/>
   </div>
 </template>
 
 <script>
-import buttonMD from '~/components/button/archive/cdrButton.md'
 import Buttons from '~/components/button/examples/Buttons.vue'
+import Versions from '~/components/Versions.vue'
 
 import '@rei/cdr-button/dist/cdr-button.css'
 
 export default {
   name: 'Button',
   components: {
-    Buttons
+    Buttons,
+    Versions
   },
-  computed: {
-    buttonMD () {
-      return buttonMD
-    }
-  }
 }
 </script>
 

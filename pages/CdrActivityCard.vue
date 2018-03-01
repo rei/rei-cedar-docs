@@ -1,24 +1,23 @@
 <template>
   <div>
-    <div id="CdrActivityCard" v-html="activityCardMD"></div>
+    <Versions comp-path="CdrActivityCard"/>
+    <nuxt-child/>
     <ActivityCards/>
   </div>
 </template>
 
 <script>
 import ActivityCards from '~/compositions/activityCard/examples/activity.vue'
-import activityCardMD from '~/compositions/activityCard/archive/cdrActivityCard.md'
+import Versions from '~/components/Versions.vue'
 
 import '@rei/cdr-activity-card/dist/cdr-activity-card.css'
 
 export default {
   name:'ActivityCard',
-  computed: {
-    activityCardMD() {
-      return activityCardMD
-    }
-  },
-  components: { ActivityCards }
+  components: { 
+    ActivityCards,
+    Versions
+  }
 }
 </script>
 

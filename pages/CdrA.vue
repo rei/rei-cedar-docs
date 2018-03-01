@@ -1,13 +1,12 @@
 <template>
   <div>
     <Versions comp-path="CdrA" />
-    <nuxt-child />
+    <nuxt-child/>
     <Anchors/>
   </div>
 </template>
 
 <script>
-import anchorMD from '~/components/anchor/archive/cdrA.md'
 import Anchors from '~/components/anchor/examples/Anchors.vue'
 import Versions from '~/components/Versions.vue'
 
@@ -19,11 +18,6 @@ export default {
     Anchors,
     Versions
   },
-  computed: {
-    anchorMD() {
-      return anchorMD
-    },
-  }
 }
 </script>
 

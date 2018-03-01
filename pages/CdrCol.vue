@@ -1,23 +1,20 @@
 <template>
   <div>
-    <div id="CdrCol" v-html="colMD"></div>
+    <Versions comp-path="CdrCol"/>
+    <nuxt-child/>
     <Columns/>
   </div>
 </template>
 
 <script>
-import colMD from '~/components/column/archive/cdrCol.md'
+import Versions from '~/components/Versions.vue'
 import Columns from '~/components/column/examples/Columns.vue'
 
 export default {
   name: 'Column',
-  computed: {
-    colMD() {
-      return colMD
-    }
-  },
   components: {
-    Columns
+    Columns,
+    Versions
   }
 }
 </script>

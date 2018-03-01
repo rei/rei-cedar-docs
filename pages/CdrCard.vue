@@ -1,12 +1,13 @@
 <template>
   <div>
-    <div id="CdrCard" v-html="cardMD"></div>
+    <Versions comp-path="CdrCard"/>
+    <nuxt-child/>
     <Cards/>
   </div>
 </template>
 
 <script>
-import cardMD from '~/components/card/archive/cdrCard.md'
+import Versions from '~/components/Versions.vue'
 import Cards from '~/components/card/examples/Cards.vue'
 
 import '@rei/cdr-card/dist/cdr-card.css'
@@ -14,13 +15,9 @@ import '@rei/cdr-card/dist/cdr-card.css'
 export default {
   name: 'Card',
   components: {
-    Cards
+    Cards,
+    Versions
   },
-  computed: {
-    cardMD () {
-      return cardMD
-    }
-  }
 }
 </script>
 

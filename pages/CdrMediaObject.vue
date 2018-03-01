@@ -1,25 +1,22 @@
 <template>
   <div>
-    <div id="CdrMediaObject" v-html="mediaObjMD"></div>
+    <Versions comp-path="CdrMediaObject"/>
+    <nuxt-child/>
     <MediaObjs/>
   </div>
 </template>
 
 <script>
-import mediaObjMD from '~/components/mediaObject/archive/cdrMediaObject.md'
+import Versions from '~/components/Versions.vue'
 import MediaObjs from '~/components/mediaObject/examples/mediaObject.vue'
 
 import '@rei/cdr-media-object/dist/cdr-media-object.css'
 
 export default {
   name: 'MediaObject',
-  computed: {
-    mediaObjMD() {
-      return mediaObjMD
-    }
-  },
   components: {
-    MediaObjs
+    MediaObjs,
+    Versions
   }
 }
 </script>

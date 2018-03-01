@@ -1,12 +1,13 @@
 <template>
   <div>
-    <div id="CdrHeading" v-html="headingMD"></div>
+    <Versions comp-path="CdrHeading"/>
+    <nuxt-child/>
     <Headings/>
   </div>
 </template>
 
 <script>
-import headingMD from '~/components/heading/archive/cdrHeading.md'
+import Versions from '~/components/Versions.vue'
 import Headings from '~/components/heading/examples/Headings.vue'
 
 import '@rei/cdr-heading/dist/cdr-heading.css'
@@ -14,13 +15,9 @@ import '@rei/cdr-heading/dist/cdr-heading.css'
 export default {
   name: 'Heading',
   components: {
-    Headings
+    Headings,
+    Versions
   },
-  computed: {
-    headingMD() {
-      return headingMD
-    }
-  }
 }
 </script>
 

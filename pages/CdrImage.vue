@@ -1,24 +1,23 @@
 <template>
   <div>
-    <div id="CdrImg" v-html="imageMD"></div>
+    <Version comp-path="CdrImg"/>
+    <nuxt-child/>
     <Images/>
   </div>
 </template>
 
 <script>
-import imageMD from '~/components/image/archive/cdrImg.md'
+import Versions from '~/components/Versions.vue'
 import Images from '~/components/image/examples/Images.vue'
 
 import '@rei/cdr-img/dist/cdr-img.css'
 
 export default {
   name: 'CImage',
-  computed: {
-    imageMD() {
-      return imageMD
-    }
-  },
-  components: { Images }
+  components: { 
+    Images,
+    Versions
+  }
 }
 </script>
 

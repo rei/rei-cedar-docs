@@ -1,25 +1,22 @@
 <template>
   <div>
-    <div id="CdrInput" v-html="inputMD"></div>
+    <Versions comp-path="CdrInput"/>
+    <nuxt-child/>
     <Inputs/>
   </div>
 </template>
 
 <script>
-import inputMD from '~/components/input/archive/cdrInput.md'
+import Versions from '~/components/Versions.vue'
 import Inputs from '~/components/input/examples/Inputs.vue'
 
 import '@rei/cdr-input/dist/cdr-input.css'
 
 export default {
   name: 'Input',
-  computed: {
-    inputMD() {
-      return inputMD
-    }
-  },
   components: {
-    Inputs
+    Inputs,
+    Versions
   }
 }
 </script>

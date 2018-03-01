@@ -1,23 +1,20 @@
 <template>
   <div>
-    <div id="CdrRow" v-html="rowMD"></div>
+    <Versions comp-path="CdrRow"/>
+    <nuxt-child/>
     <Rows/>
   </div>
 </template>
 
 <script>
-import rowMD from '~/components/row/archive/cdrRow.md'
+import Versions from '~/components/Versions.vue'
 import Rows from '~/components/row/examples/Rows.vue'
 
 export default {
   name: 'Row',
-  computed: {
-    rowMD() {
-      return rowMD
-    }
-  },
   components: {
-    Rows
+    Rows,
+    Versions,
   }
 }
 </script>

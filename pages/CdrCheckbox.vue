@@ -1,12 +1,13 @@
 <template>
   <div>
-    <div id="CdrCheckbox" v-html="checkboxMD"></div>
+    <Versions comp-path="CdrCheckbox" />
+    <nuxt-child/>
     <Checkboxes/>
   </div>
 </template>
 
 <script>
-import checkboxMD from '~/components/checkbox/archive/cdrCheckbox.md'
+import Versions from '~/components/Versions.vue'
 import Checkboxes from '~/components/checkbox/examples/checkboxes.vue'
 
 import '@rei/cdr-checkbox/dist/cdr-checkbox.css'
@@ -14,13 +15,9 @@ import '@rei/cdr-checkbox/dist/cdr-checkbox.css'
 export default {
   name: 'Checkbox',
   components: {
-    Checkboxes
+    Checkboxes,
+    Versions
   },
-  computed: {
-    checkboxMD () {
-      return checkboxMD
-    }
-  }
 }
 </script>
 
