@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Version comp-path="CdrImg"/>
+    <Versions comp-path="CdrImg"/>
     <nuxt-child/>
     <Images/>
   </div>

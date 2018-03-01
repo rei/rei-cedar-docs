@@ -1,25 +1,22 @@
 <template>
   <div>
-    <div id="CdrIcon" v-html="iconMD"></div>
+    <Versions comp-path="CdrIcon"/>
+    <nuxt-child/>
     <Icons/>
   </div>
 </template>
 
 <script>
-import iconMD from '~/components/icon/archive/cdrIcon.md'
+import Versions from '~/components/Versions.vue'
 import Icons from '~/components/icon/examples/Icons.vue'
 
 import '@rei/cdr-icon/dist/cdr-icon.css'
 
 export default {
   name: 'Icon',
-  computed: {
-    iconMD() {
-      return iconMD
-    }
-  },
   components: {
     Icons,
+    Versions,
   }
 }
 </script>
