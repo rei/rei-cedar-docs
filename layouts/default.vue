@@ -1,7 +1,9 @@
 <template>
   <div>
     <aside>
-      <cdr-search bare="true"></cdr-search>
+      <div>
+      </div>
+      <cdr-search bare placeholder="Filter by name"></cdr-search>
       <cdr-list modifier="unstyled">
         <li><a href="/Introduction">Introduction</a></li>
         <li><a href="/Documentation">Documentation</a></li>
@@ -36,7 +38,7 @@ import Versions from '~/components/Versions.vue'
 
 const cdrHeading = Components.cdrHeading
 const cdrList = Components.CdrList
-const cdrSearch = Components.CdrSearch
+const cdrSearch = Compositions.CdrSearch
 
 export default {
   methods: {
