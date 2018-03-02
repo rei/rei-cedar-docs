@@ -1,52 +1,92 @@
 <template>
   <div>
-    <nuxt/>
+    <aside>
+      <div class="title">
+        <cdr-heading level="1">Rei Cedar Style Guide</cdr-heading>
+      </div>
+      <nav>
+        <cdr-search @input="updateSearch" bare></cdr-search>
+        <cdr-list modifier="unstyled">
+          <li v-if="filterNavItem('Introduction')"><a href="/Introduction">Introduction</a></li>
+          <li v-if="filterNavItem('Documentation')"><a href="/Documentation">Documentation</a></li>
+          <cdr-list modifier="unstyled">
+            <li v-if="filterNavItem('Installation')"><a href="/Documentation#install">Installation</a></li>
+            <li v-if="filterNavItem('Configuration')"><a href="/Documentation#config">Configuration</a></li>
+          </cdr-list>
+          <li v-if="filterNavGroup(componentNames)"><a href="#components">Components</a></li>
+          <cdr-list modifier="unstyled">
+            <li v-for="name in componentNames" :key="name" v-if="filterNavItem(name)">
+              <nuxt-link :to="'/' + name">{{name}}</nuxt-link>
+            </li>
+          </cdr-list>
+          <li v-if="filterNavGroup(compositionNames)"><a href="#compositions">Compositions</a></li>
+          <cdr-list modifier="unstyled">
+            <li v-for="name in compositionNames" :key="name" v-if="filterNavItem(name)">
+              <nuxt-link :to="'/' + name">{{name}}</nuxt-link>
+            </li>
+          </cdr-list>
+        </cdr-list>
+      </nav>
+    </aside>
+    <div class="content">
+      <nuxt/>
+    </div>
   </div>
 </template>
 
+<script>
+import Components from '~/components/_index'
+import Compositions from '~/compositions/_index'
+import Versions from '~/components/Versions.vue'
+
+const cdrHeading = Components.cdrHeading
+const cdrList = Components.CdrList
+const cdrSearch = Compositions.CdrSearch
+
+export default {
+  data() {
+    return {
+      searchTerm: ''
+    }
+  },
+  methods: {
+    compNames(compsObj) {
+      let names = []
+      for(const compKey in compsObj) {
+        if (compsObj[compKey].name) {
+          names.push(compsObj[compKey].name.toString())
+        }
+      }
+      return names
+    },
+    updateSearch(searchInput) {
+      this.searchTerm = searchInput
+    },
+    filterNavItem(navItem) {
+      return (this.searchTerm === '') ? true : navItem.toLowerCase().indexOf(this.searchTerm.toLowerCase()) !== -1
+    },
+    filterNavGroup(group) {
+      return group.some((groupItem) => {
+        return this.filterNavItem(groupItem)
+      })
+    }
+  },
+  computed: {
+    componentNames () {
+      return this.compNames(Components)
+    },
+    compositionNames () {
+      return this.compNames(Compositions)
+    }
+  },
+  components: { 
+    cdrHeading,
+    cdrList,
+    cdrSearch,
+    Versions,
+  }
+}
+</script>
+
 <style>
-html {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
-}
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
-}
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
-}
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
-}
 </style>
