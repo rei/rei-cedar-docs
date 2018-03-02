@@ -1,29 +1,32 @@
 <template>
   <div>
     <aside>
-      <div>
+      <div class="title">
+        <cdr-heading level="1">Rei Cedar Style Guide</cdr-heading>
       </div>
-      <cdr-search bare placeholder="Filter by name"></cdr-search>
-      <cdr-list modifier="unstyled">
-        <li><a href="/Introduction">Introduction</a></li>
-        <li><a href="/Documentation">Documentation</a></li>
+      <nav>
+        <cdr-search @input="updateSearch" bare></cdr-search>
         <cdr-list modifier="unstyled">
-          <li><a href="/Documentation#install">Installation</a></li>
-          <li><a href="/Documentation#config">Configuration</a></li>
+          <li v-if="filterNavItem('Introduction')"><a href="/Introduction">Introduction</a></li>
+          <li v-if="filterNavItem('Documentation')"><a href="/Documentation">Documentation</a></li>
+          <cdr-list modifier="unstyled">
+            <li v-if="filterNavItem('Installation')"><a href="/Documentation#install">Installation</a></li>
+            <li v-if="filterNavItem('Configuration')"><a href="/Documentation#config">Configuration</a></li>
+          </cdr-list>
+          <li v-if="filterNavGroup(componentNames)"><a href="#components">Components</a></li>
+          <cdr-list modifier="unstyled">
+            <li v-for="name in componentNames" :key="name" v-if="filterNavItem(name)">
+              <nuxt-link :to="'/' + name">{{name}}</nuxt-link>
+            </li>
+          </cdr-list>
+          <li v-if="filterNavGroup(compositionNames)"><a href="#compositions">Compositions</a></li>
+          <cdr-list modifier="unstyled">
+            <li v-for="name in compositionNames" :key="name" v-if="filterNavItem(name)">
+              <nuxt-link :to="'/' + name">{{name}}</nuxt-link>
+            </li>
+          </cdr-list>
         </cdr-list>
-        <li><a href="#components">Components</a></li>
-        <cdr-list modifier="unstyled">
-          <li v-for="name in componentNames" :key="name">
-            <nuxt-link :to="'/' + name">{{name}}</nuxt-link>
-          </li>
-        </cdr-list>
-        <li><a href="#compositions">Compositions</a></li>
-        <cdr-list modifier="unstyled">
-          <li v-for="name in compositionNames" :key="name">
-            <nuxt-link :to="'/' + name">{{name}}</nuxt-link>
-          </li>
-        </cdr-list>
-      </cdr-list>
+      </nav>
     </aside>
     <div class="content">
       <nuxt/>
@@ -41,15 +44,31 @@ const cdrList = Components.CdrList
 const cdrSearch = Compositions.CdrSearch
 
 export default {
+  data() {
+    return {
+      searchTerm: ''
+    }
+  },
   methods: {
     compNames(compsObj) {
       let names = []
       for(const compKey in compsObj) {
         if (compsObj[compKey].name) {
-          names.push(compsObj[compKey].name)
+          names.push(compsObj[compKey].name.toString())
         }
       }
       return names
+    },
+    updateSearch(searchInput) {
+      this.searchTerm = searchInput
+    },
+    filterNavItem(navItem) {
+      return (this.searchTerm === '') ? true : navItem.toLowerCase().indexOf(this.searchTerm.toLowerCase()) !== -1
+    },
+    filterNavGroup(group) {
+      return group.some((groupItem) => {
+        return this.filterNavItem(groupItem)
+      })
     }
   },
   computed: {
