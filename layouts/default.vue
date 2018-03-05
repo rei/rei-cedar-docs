@@ -29,7 +29,9 @@
       </nav>
     </aside>
     <div class="content">
-      <nuxt/>
+      <transition>
+        <nuxt/>
+      </transition>
     </div>
   </div>
 </template>
@@ -39,7 +41,7 @@ import Components from '~/components/_index'
 import Compositions from '~/compositions/_index'
 import Versions from '~/components/Versions.vue'
 
-const cdrHeading = Components.cdrHeading
+const cdrHeading = Components.CdrHeading
 const cdrList = Components.CdrList
 const cdrSearch = Compositions.CdrSearch
 
