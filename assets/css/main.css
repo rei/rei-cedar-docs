@@ -29,3 +29,10 @@ aside ul {
   margin-left: 200px;
   padding: 16px 16px 16px 32px;
 }
+
+.page-enter-active, .page-leave-active {
+  transition: opacity .5s;
+}
+.page-enter, .page-leave-to {
+  opacity: 0;
+}
