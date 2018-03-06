@@ -26,11 +26,11 @@
         </cdr-list>
       </nav>
     </aside>
-    <div class="content">
-      <transition>
+    <transition>
+      <div class="content">
         <nuxt/>
-      </transition>
-    </div>
+      </div>
+    </transition>
   </div>
 </template>
 
