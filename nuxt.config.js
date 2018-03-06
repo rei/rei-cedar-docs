@@ -44,5 +44,8 @@ module.exports = {
   css: [
     '~/assets/css/main.css',
     '~/assets/css/main.scss'
-  ]
+  ],
+  router: {
+    middleware: 'home-route'
+  }
 }
