@@ -7,24 +7,18 @@
       <nav>
         <cdr-search @input="updateSearch" bare></cdr-search>
         <cdr-list modifier="unstyled">
-          <!-- <li v-if="filterNavItem('Introduction')"><a href="/Introduction">Introduction</a></li>
-          <li v-if="filterNavItem('Documentation')"><a href="/Documentation">Documentation</a></li>
-          <transition-group class="cdr-list cdr-list--unstyled" name="list" tag="ul">
-            <li key="install" v-if="filterNavItem('Installation')"><a href="/Documentation#install">Installation</a></li>
-            <li key="config" v-if="filterNavItem('Configuration')"><a href="/Documentation#config">Configuration</a></li>
-          </transition-group> -->
-          <transition appear>
+          <transition name="list" move-class="list">
             <li v-if="filterNavGroup(componentNames)"><a href="#components">Components</a></li>
           </transition>
-          <transition-group appear class="cdr-list cdr-list--unstyled" move-class="list" name="list" tag="ul">
+          <transition-group class="cdr-list cdr-list--unstyled" move-class="list" name="list" tag="ul">
             <li v-for="name in componentNames" :key="name" v-if="filterNavItem(name)">
               <nuxt-link :to="'/' + name">{{name}}</nuxt-link>
             </li>
           </transition-group>
-          <transition appear>
+          <transition name="list" move-class="list">
             <li v-if="filterNavGroup(compositionNames)"><a href="#compositions">Compositions</a></li>
           </transition>
-          <transition-group appear class="cdr-list cdr-list--unstyled" move-class="list" name="list" tag="ul">
+          <transition-group class="cdr-list cdr-list--unstyled" move-class="list" name="list" tag="ul">
             <li v-for="name in compositionNames" :key="name" v-if="filterNavItem(name)">
               <nuxt-link :to="'/' + name">{{name}}</nuxt-link>
             </li>
