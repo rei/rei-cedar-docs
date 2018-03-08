@@ -10,4 +10,4 @@ The basic card is intended as a container for grouping like content.
 
 Slot | Description
 --- | ---
-default | 
+default | innerHTML on the inside of the card component

@@ -6,13 +6,20 @@ src/components/list/cdrList.vue
 
 Cedar 2 component for list
 
+
+
+Modifier classes: {unstyled, bullet, disc, numbered, menu, compact, circle, inline}
+
+
+
+**Note**: type doesn't affect the modifier.
+
 ### Props, Methods, Events, Slots
 
 Prop Name | Type | Default | Require | Description
 --- | --- | --- | --- | ---
-modifier | string | n/a | false | Space separated list of modifiers. See below for possible values
 listType | string | "ul" | false | List type. 'ul' = Unordered List. 'ol' = Ordered List.
 
 Slot | Description
 --- | ---
-default | 
+default | innerHTML inside of the list component

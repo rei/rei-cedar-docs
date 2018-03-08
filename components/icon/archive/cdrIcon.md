@@ -4,6 +4,10 @@
 src/components/icon/cdrIcon.vue
 
 
+Cedar 2 component for icons
+
+
+
 **NOTE:** Can only be used with an SVG symbol sprite.
 
 ### Props, Methods, Events, Slots

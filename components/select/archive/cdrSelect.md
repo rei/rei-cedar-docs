@@ -6,6 +6,8 @@ src/components/select/cdrSelect.vue
 
 Cedar 2 component for select
 
+**NOTE:** `v-model` is required.
+
 ### Props, Methods, Events, Slots
 
 Prop Name | Type | Default | Require | Description
@@ -19,10 +21,10 @@ as a 'placeholder' for the select.
 options | array | n/a | false | Build options programatically with data.
 Array of objects [{ text: String, value: String}] to give greater control.
 Array of strings ['String'] for simpler setup (value and text will be the same).
-value | string|number|boolean|object|array|symbol|func | n/a | false | 
-required | boolean | n/a | false | 
-size | string | n/a | false | 
-multiple | boolean | n/a | false | 
+
+Event Name | Type | Description
+--- | --- | ---
+input | string|array | Current input value. Fires when
 
 Slot | Description
 --- | ---

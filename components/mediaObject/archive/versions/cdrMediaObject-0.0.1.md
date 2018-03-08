@@ -6,6 +6,28 @@ src/components/mediaObject/cdrMediaObject.vue
 
 Cedar 2 component for media object
 
+
+
+The Media Object allows you to group small amounts of like content is a small amount of markup. The examples below show some of the may visual displays available to this component.
+
+
+
+Modifier classes: {top, right, bottom, center, overlay, block, stretch}
+
+top: Media figure displays above Media body
+
+right: Media figure displays to the right of the Media body
+
+bottom: Media figure displays below the Media body
+
+center: Can be stacked with other alignment modifiers and will center the Media figure.
+
+overlay: Media Body overlays the Media Frame
+
+stretch: The Media Frame extends 16px left and right from the parent container. This is intended to be used with the top or bottom modifier.
+
+block: The Media Frame extends 16px left and right from the parent container. And an additional 16px left and right value wraps the media object. This is intended to be used with the top or bottom modifier.
+
 ### Props, Methods, Events, Slots
 
 Prop Name | Type | Default | Require | Description
@@ -39,4 +61,4 @@ imgTarget | string | n/a | false | Target for the image link
 
 Slot | Description
 --- | ---
-default | 
+default | innerHTML inside of the media object component
