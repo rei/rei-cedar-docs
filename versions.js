@@ -89,7 +89,7 @@ glob(path.resolve(__dirname) + '/+(components|compositions)/**/versions/*.md', (
     ` <template>
         <div>
           <h3>Version ${mdFileVer}</h3>
-          <div id="${compName}" v-html="md"></div>
+          <div id="cedar-comp" v-html="md"></div>
         </div>
       </template>
       <script>
