@@ -1,4 +1,4 @@
-## CdrCheckbox
+# CdrCheckbox
 
 
 src/components/checkbox/cdrCheckbox.vue
@@ -10,13 +10,13 @@ Cedar 2 component for checkbox
 
 **NOTE:** `v-model` is required.
 
-### Props, Methods, Events, Slots
+### <button class='title'>PROPS, METHODS, EVENTS, SLOTS</button>
 
 Prop Name | Type | Default | Require | Description
 --- | --- | --- | --- | ---
-trueValue | string|number|boolean|object|array|symbol|func | true | false | The value when checked.
-falseValue | string|number|boolean|object|array|symbol|func | false | false | The value when unchecked.
-customValue | string|number|boolean|object|array|symbol|func | n/a | false | The value when used in a checkbox group. Replaces `trueValue` and `falseValue`.
+trueValue | string,number,boolean,object,array,symbol,func | true | false | The value when checked.
+falseValue | string,number,boolean,object,array,symbol,func | false | false | The value when unchecked.
+customValue | string,number,boolean,object,array,symbol,func | n/a | false | The value when used in a checkbox group. Replaces `trueValue` and `falseValue`.
 labelClass | string | n/a | false | Class that is added to the label for custom styles
 
 Event Name | Type | Description

@@ -1,4 +1,4 @@
-## CdrSearch
+# CdrSearch
 
 
 src/compositions/search/cdrSearch.vue
@@ -8,7 +8,7 @@ A composition of cdr-input and cdr-buttonthat gives you a simple search box.
 
 Passes all other attributes and events to cdr-input.
 
-### Props, Methods, Events, Slots
+### <button class='title'>PROPS, METHODS, EVENTS, SLOTS</button>
 
 Prop Name | Type | Default | Require | Description
 --- | --- | --- | --- | ---

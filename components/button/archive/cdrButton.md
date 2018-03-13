@@ -1,4 +1,4 @@
-## CdrButton
+# CdrButton
 
 
 src/components/button/cdrButton.vue
@@ -26,7 +26,7 @@ cdrA and the other modifiers shouldn't be combined with it.
 
 Responsive makes the button full width and block @ sm breakpoint.
 
-### Props, Methods, Events, Slots
+### <button class='title'>PROPS, METHODS, EVENTS, SLOTS</button>
 
 Prop Name | Type | Default | Require | Description
 --- | --- | --- | --- | ---

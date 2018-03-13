@@ -1,4 +1,4 @@
-## CdrCard
+# CdrCard
 
 
 src/components/card/cdrCard.vue
@@ -6,7 +6,7 @@ src/components/card/cdrCard.vue
 
 The basic card is intended as a container for grouping like content.
 
-### Props, Methods, Events, Slots
+### <button class='title'>PROPS, METHODS, EVENTS, SLOTS</button>
 
 Slot | Description
 --- | ---

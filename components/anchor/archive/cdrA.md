@@ -1,4 +1,4 @@
-## CdrA
+# CdrA
 
 
 src/components/anchor/cdrA.vue
@@ -20,7 +20,7 @@ A modifier list that contains 'button' exposes the same modifiers as
 
 cdrButton and the other modifiers shouldn't be combined with it.
 
-### Props, Methods, Events, Slots
+### <button class='title'>PROPS, METHODS, EVENTS, SLOTS</button>
 
 Slot | Description
 --- | ---
