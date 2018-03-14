@@ -1,12 +1,12 @@
-# CdrHeading
+# <span class="display-name">CdrHeading</span>
 
 
-src/components/heading/cdrHeading.vue
+<span class="file">src/components/heading/cdrHeading.vue<span>
 
 
 Cedar 2 component for heading
 
-
+<span class="modifiers">Modifiers</span>
 
 Accepts typography classes.
 

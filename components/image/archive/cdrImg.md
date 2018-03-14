@@ -1,14 +1,14 @@
-# CdrImg
+# <span class="display-name">CdrImg</span>
 
 
-src/components/image/cdrImg.vue
+<span class="file">src/components/image/cdrImg.vue<span>
 
 
 Cedar 2 component for image
 
+<span class="modifiers">Modifiers</span>
 
-
-Modifier classes: {responsive, rounded, circle, thumbnail}
+{responsive, rounded, circle, thumbnail}
 
 ### <button class='title'>PROPS, METHODS, EVENTS, SLOTS</button>
 

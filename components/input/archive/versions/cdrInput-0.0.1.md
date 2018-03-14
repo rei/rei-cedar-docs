@@ -1,10 +1,12 @@
-# CdrInput
+# <span class="display-name">CdrInput</span>
 
 
-src/components/input/cdrInput.vue
+<span class="file">src/components/input/cdrInput.vue<span>
 
 
 Cedar 2 component for input
+
+**NOTE:** `v-model` is required.
 
 ### <button class='title'>PROPS, METHODS, EVENTS, SLOTS</button>
 

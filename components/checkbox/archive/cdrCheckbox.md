@@ -1,12 +1,10 @@
-# CdrCheckbox
+# <span class="display-name">CdrCheckbox</span>
 
 
-src/components/checkbox/cdrCheckbox.vue
+<span class="file">src/components/checkbox/cdrCheckbox.vue<span>
 
 
 Cedar 2 component for checkbox
-
-
 
 **NOTE:** `v-model` is required.
 

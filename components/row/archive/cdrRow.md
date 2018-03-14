@@ -1,7 +1,7 @@
-# CdrRow
+# <span class="display-name">CdrRow</span>
 
 
-src/components/row/cdrRow.vue
+<span class="file">src/components/row/cdrRow.vue<span>
 
 
 Cedar 2 component for row

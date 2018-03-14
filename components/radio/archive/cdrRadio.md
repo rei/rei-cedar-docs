@@ -1,7 +1,7 @@
-# CdrRadio
+# <span class="display-name">CdrRadio</span>
 
 
-src/components/radio/cdrRadio.vue
+<span class="file">src/components/radio/cdrRadio.vue<span>
 
 
 Cedar 2 component for radio
@@ -17,7 +17,6 @@ value | string,number,boolean,object,array,symbol,func | n/a | true | Sets the v
 
 Event Name | Type | Description
 --- | --- | ---
-boolean|array | change | Selected radio value. Fires on selection.
 change | boolean|array | Selected radio value. Fires on section.
 
 Slot | Description

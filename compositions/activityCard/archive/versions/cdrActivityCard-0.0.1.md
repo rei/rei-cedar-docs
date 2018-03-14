@@ -1,10 +1,8 @@
-# CdrActivityCard
+# <span class="display-name">CdrActivityCard</span>
 
 
-src/compositions/activityCard/cdrActivityCard.vue
+<span class="file">src/compositions/activityCard/cdrActivityCard.vue<span>
 
-
-A composition of search.
 
 While the simple card is a generic wrapper that does not do much more than provide a chome, the activity card is a composition of compomnents and is intended to fill a specific role as outlined.
 

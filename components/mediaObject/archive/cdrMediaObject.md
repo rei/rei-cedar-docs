@@ -1,18 +1,16 @@
-# CdrMediaObject
+# <span class="display-name">CdrMediaObject</span>
 
 
-src/components/mediaObject/cdrMediaObject.vue
+<span class="file">src/components/mediaObject/cdrMediaObject.vue<span>
 
 
 Cedar 2 component for media object
 
-
-
 The Media Object allows you to group small amounts of like content is a small amount of markup. The examples below show some of the may visual displays available to this component.
 
+<span class="modifiers">Modifiers</span>
 
-
-Modifier classes: {top, right, bottom, center, overlay, block, stretch}
+{top, right, bottom, center, overlay, block, stretch}
 
 top: Media figure displays above Media body
 

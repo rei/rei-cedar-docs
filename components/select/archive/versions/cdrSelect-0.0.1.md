@@ -1,7 +1,7 @@
-# CdrSelect
+# <span class="display-name">CdrSelect</span>
 
 
-src/components/select/cdrSelect.vue
+<span class="file">src/components/select/cdrSelect.vue<span>
 
 
 Cedar 2 component for select
