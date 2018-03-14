@@ -1,14 +1,12 @@
-## CdrSearch
+# <span class="display-name">CdrSearch</span>
 
 
-src/compositions/search/cdrSearch.vue
+<span class="file">src/compositions/search/cdrSearch.vue<span>
 
 
-A composition of cdr-input and cdr-buttonthat gives you a simple search box.
+A Cedar composition of `cdr-input` and `cdr-button` that gives you a simple search box. Passes all other attributes and events to `cdr-input`.
 
-Passes all other attributes and events to cdr-input.
-
-### Props, Methods, Events, Slots
+### <button class='title'>PROPS, METHODS, EVENTS, SLOTS</button>
 
 Prop Name | Type | Default | Require | Description
 --- | --- | --- | --- | ---

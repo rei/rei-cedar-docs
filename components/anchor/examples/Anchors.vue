@@ -2,7 +2,7 @@
   <div>
     <h2>Anchors</h2>
     <default-anchor/>
-    <constrast-anchor/>
+    <contrast-anchor/>
     <standalone-anchor/>
     <button-anchor/>
   </div>
@@ -10,7 +10,7 @@
 
 <script>
 import defaultAnchor from './demo/Default.vue';
-import constrastAnchor from './demo/Contrast.vue';
+import contrastAnchor from './demo/Contrast.vue';
 import standaloneAnchor from './demo/Standalone.vue';
 import buttonAnchor from './demo/Button.vue';
 
@@ -18,7 +18,7 @@ export default {
   name: 'Anchors',
   components: {
     defaultAnchor,
-    constrastAnchor,
+    contrastAnchor,
     standaloneAnchor,
     buttonAnchor,
   },

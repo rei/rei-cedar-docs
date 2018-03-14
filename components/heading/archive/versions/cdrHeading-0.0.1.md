@@ -1,20 +1,20 @@
-## CdrHeading
+# <span class="display-name">CdrHeading</span>
 
 
-src/components/heading/cdrHeading.vue
+<span class="file">src/components/heading/cdrHeading.vue<span>
 
 
 Cedar 2 component for heading
 
-
+<span class="modifiers">Modifiers</span>
 
 Accepts typography classes.
 
-### Props, Methods, Events, Slots
+### <button class='title'>PROPS, METHODS, EVENTS, SLOTS</button>
 
 Prop Name | Type | Default | Require | Description
 --- | --- | --- | --- | ---
-level | string|number | n/a | true | Heading level -- 1 = h1, 2 = h2, etc.
+level | string,number | n/a | true | Heading level -- 1 = h1, 2 = h2, etc.
 
 Slot | Description
 --- | ---

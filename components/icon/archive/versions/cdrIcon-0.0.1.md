@@ -1,16 +1,14 @@
-## CdrIcon
+# <span class="display-name">CdrIcon</span>
 
 
-src/components/icon/cdrIcon.vue
+<span class="file">src/components/icon/cdrIcon.vue<span>
 
 
 Cedar 2 component for icons
 
-
-
 **NOTE:** Can only be used with an SVG symbol sprite.
 
-### Props, Methods, Events, Slots
+### <button class='title'>PROPS, METHODS, EVENTS, SLOTS</button>
 
 Prop Name | Type | Default | Require | Description
 --- | --- | --- | --- | ---

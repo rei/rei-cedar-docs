@@ -1,7 +1,6 @@
  <template>
         <div>
-          <h3>Version 0.0.1</h3>
-          <div id="CdrSelect" v-html="md"></div>
+          <div id="cedar-comp" v-html="md"></div>
         </div>
       </template>
       <script>

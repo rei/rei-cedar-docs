@@ -1,20 +1,18 @@
-## CdrList
+# <span class="display-name">CdrList</span>
 
 
-src/components/list/cdrList.vue
+<span class="file">src/components/list/cdrList.vue<span>
 
 
 Cedar 2 component for list
 
+<span class="modifiers">Modifiers</span>
 
-
-Modifier classes: {unstyled, bullet, disc, numbered, menu, compact, circle, inline}
-
-
+{unstyled, bullet, disc, numbered, menu, compact, circle, inline}
 
 **Note**: type doesn't affect the modifier.
 
-### Props, Methods, Events, Slots
+### <button class='title'>PROPS, METHODS, EVENTS, SLOTS</button>
 
 Prop Name | Type | Default | Require | Description
 --- | --- | --- | --- | ---
