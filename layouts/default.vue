@@ -2,7 +2,7 @@
   <div>
     <aside>
       <div class="title">
-        <cdr-heading level="1">Rei Cedar Style Guide</cdr-heading>
+        <cdr-heading level="1">REI Cedar Style Guide</cdr-heading>
       </div>
       <nav>
         <cdr-search @input="updateSearch" bare></cdr-search>
