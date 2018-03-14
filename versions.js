@@ -14,7 +14,7 @@ glob(path.resolve(__dirname) + '/+(components|compositions)/**/archive/*.md', (m
     throw new Error(`Error while trying to create index.vue files to \nconsume most recent md of each component: ${mdErr}`)
   }
 
-  // create default index.vue file that consume most recent markdown documentation file
+  // create default child rounte index.vue file that will consume most recent cedar component markdown documentation file
   mdFiles.forEach((mdFile) => {
     const startFileName = mdFile.lastIndexOf('/') + 1
     const endFileName = mdFile.lastIndexOf('.')
@@ -43,13 +43,15 @@ glob(path.resolve(__dirname) + '/+(components|compositions)/**/archive/*.md', (m
       
       fs.ensureDir(`./pages/${compName}`, (dirErr) => {
         if (dirErr) {
-          throw new Error(`Error while trying to create archive Vue directory for ${compName}-${mdFileVer}: ${dirErr}`)
+          throw new Error(`Error while trying to create archive Nuxt pages directory for ${compName}-${mdFileVer}: ${dirErr}`)
         }
         
         fs.writeFile(`./pages/${compName}/index.vue`, archiveVueFile, (crErr) => {
           if (crErr) {
             throw new Error(`Error while trying to create default index.vue file for ${compName}: ${crErr}`)
           }
+          
+          console.log(`Created default child route index.vue file for ${compName} at: \npages/${compName}/index.vue\n`)
         })
       })
     }
@@ -62,7 +64,8 @@ glob(path.resolve(__dirname) + '/+(components|compositions)/**/versions/*.md', (
     throw new Error(`Error while trying to create versioned documentation: ${mdErr}`)
   }
   
-  // Create hash table of each cedar component name with an array of their archived NPM versions
+  // Create hash table of each cedar component name where key is the component name
+  // and the value is an array of all the previous archived versions for that component
   mdFiles.forEach((mdFile) => {
     const startCompName = mdFile.lastIndexOf('/') + 1
     const endCompName = mdFile.lastIndexOf('-')
@@ -88,7 +91,6 @@ glob(path.resolve(__dirname) + '/+(components|compositions)/**/versions/*.md', (
       let archiveVueFile =
     ` <template>
         <div>
-          <h3>Version ${mdFileVer}</h3>
           <div id="cedar-comp" v-html="md"></div>
         </div>
       </template>
@@ -114,6 +116,8 @@ glob(path.resolve(__dirname) + '/+(components|compositions)/**/versions/*.md', (
           if(crErr) {
             throw new Error(`Error while trying to create archived Vue file for ${compName}-${mdFileVer}: ${crErr}`)
           }
+
+          console.log(`Created child route and archived Vue file for ${compName}-${mdFileVer} at \npages/${compName}/${compName}-${mdFileVer}.vue\n`)
         })
       })
     }
