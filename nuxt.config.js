@@ -3,7 +3,7 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'rei-cedar-docs',
+    title: 'REI Cedar Style Guide',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -42,9 +42,8 @@ module.exports = {
     }
   },
   css: [
-    '~/assets/css/main.css',
-    '~/assets/css/main.scss',
-    '~/assets/css/markdown.scss'
+    '~/assets/css/cedar-components.scss',
+    '~/assets/css/main.scss'
   ],
   router: {
     middleware: 'home-route'
