@@ -45,6 +45,9 @@ module.exports = {
     '~/assets/css/cedar-components.scss',
     '~/assets/css/main.scss'
   ],
+  generate: {
+    dir: 'docs'
+  },
   router: {
     middleware: 'home-route'
   }
