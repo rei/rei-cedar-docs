@@ -9,8 +9,8 @@
 </template>
 
 <script>
-import installMD from '~/docs/Installation.md'
-import configMD from '~/docs/Configuration.md'
+import installMD from '~/old_docs/Installation.md'
+import configMD from '~/old_docs/Configuration.md'
 
 export default {
   computed: {

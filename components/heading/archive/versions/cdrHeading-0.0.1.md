@@ -14,7 +14,8 @@ Accepts typography classes.
 
 Prop Name | Type | Default | Require | Description
 --- | --- | --- | --- | ---
-level | string,number | n/a | true | Heading level -- 1 = h1, 2 = h2, etc.
+disableResponsive | boolean | false | false | 
+level | string,number | 1 | true | Heading level -- 1 = h1, 2 = h2, etc.
 
 Slot | Description
 --- | ---

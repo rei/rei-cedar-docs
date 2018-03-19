@@ -24,22 +24,22 @@ glob(path.resolve(__dirname) + '/+(components|compositions)/**/archive/*.md', (m
     const fullPath = mdFile.substring(fullPathStart)
 
     if(compName.toLowerCase().startsWith('cdr')) {
-      let archiveVueFile =
-      ` <template>
-          <div id="${compName}" v-html="md"></div>
-        </template>
-        <script>
-        import md from '~/${fullPath}'
-        
-        export default {
-          name: '${compName}-current',
-          computed: {
-            md() {
-              return md
-            }
-          }
-        }
-        </script>`
+      let archiveVueFile = `
+<template>
+  <div id="cedar-comp" v-html="md"></div>
+</template>
+<script>
+import md from '~/${fullPath}'
+
+export default {
+  name: '${compName}-current',
+  computed: {
+    md() {
+      return md
+    }
+  }
+}
+</script>`
       
       fs.ensureDir(`./pages/${compName}`, (dirErr) => {
         if (dirErr) {
@@ -88,24 +88,24 @@ glob(path.resolve(__dirname) + '/+(components|compositions)/**/versions/*.md', (
       versions[compName].push(mdFileVer)
       
       // Create Vue file for each archived markdown file
-      let archiveVueFile =
-    ` <template>
-        <div>
-          <div id="cedar-comp" v-html="md"></div>
-        </div>
-      </template>
-      <script>
-      import md from '~/${fullPath}'
-      
-      export default {
-        name: '${compName}-${mdFileVer.split('.').join('-')}',
-        computed: {
-          md() {
-            return md
-          }
-        }
-      }
-      </script>`
+      let archiveVueFile = `
+<template>
+  <div>
+    <div id="cedar-comp" v-html="md"></div>
+  </div>
+</template>
+<script>
+import md from '~/${fullPath}'
+
+export default {
+  name: '${compName}-${mdFileVer.split('.').join('-')}',
+  computed: {
+    md() {
+      return md
+    }
+  }
+}
+</script>`
       
       fs.ensureDir(`./pages/${compName}`, (dirErr) => {
         if (dirErr) {

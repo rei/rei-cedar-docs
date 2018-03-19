@@ -21,7 +21,7 @@ patternError | string | n/a | false | Error message to be displayed when `patter
 feedback | boolean | n/a | false | Enables icon feedback as part of validation for valid, warn, and error states.
 type | string | "text" | false | Input type. NOTE: This component is meant for text style inputs. Other input types (checkbox, radio) have their own components.
 rules | array | function() { return []; } | false | Array of functions. Provide your own validation function(s). Takes the input string and outputs an object with a state and message. State is a String with value `valid`, `warning`, or `error`. Message is any String.
-debounce | boolean | false | false | Boolean or Number. `true` has a default of 500ms. Providing a number will set debounce to that (in ms). `false` is no debounce.
+debounce | boolean,number | false | false | Boolean or Number. `true` has a default of 500ms. Providing a number will set debounce to that (in ms). `false` is no debounce.
 
 Event Name | Type | Description
 --- | --- | ---
