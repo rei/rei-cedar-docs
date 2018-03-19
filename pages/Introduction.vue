@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import introMD from '~/docs/Introduction.md'
+import introMD from '~/old_docs/Introduction.md'
 
 export default {
   computed: {

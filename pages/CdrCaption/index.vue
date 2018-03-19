@@ -3,10 +3,10 @@
   <div id="cedar-comp" v-html="md"></div>
 </template>
 <script>
-import md from '~/components/button/archive/cdrButton.md'
+import md from '~/compositions/caption/archive/CdrCaption.md'
 
 export default {
-  name: 'CdrButton-current',
+  name: 'CdrCaption-current',
   computed: {
     md() {
       return md

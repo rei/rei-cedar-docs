@@ -5,10 +5,10 @@
   </div>
 </template>
 <script>
-import md from '~/components/input/archive/versions/cdrInput-0.0.1.md'
+import md from '~/components/text/archive/versions/CdrText-0.0.1.md'
 
 export default {
-  name: 'CdrInput-0-0-1',
+  name: 'CdrText-0-0-1',
   computed: {
     md() {
       return md
