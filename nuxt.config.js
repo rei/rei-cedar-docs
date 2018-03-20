@@ -49,6 +49,7 @@ module.exports = {
     dir: 'docs'
   },
   router: {
-    middleware: 'home-route'
+    middleware: 'home-route',
+    base: process.env.NODE_ENV === 'dev' ? '/' : '/rei-cedar-docs/'
   }
 }
