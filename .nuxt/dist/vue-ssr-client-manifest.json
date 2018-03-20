@@ -60,16 +60,16 @@
     "pages/CdrActivityCard/CdrActivityCard-0.0.1.98a9a90e9ad2de3ae4d7.js",
     "pages/CdrA/index.44b4aa9a52cd53459894.js",
     "pages/CdrA/CdrA-0.0.1.19d3d962c37cdaea609d.js",
-    "pages/index.19f0f04b2adf90ab3f2c.js",
+    "pages/index.da32d60f47d68cfbfabe.js",
     "vendor.a7922c82e067e264fb95.js",
     "app.1049a1098e0c59ae2179.js",
-    "manifest.3b38b8da6faaea07b450.js",
+    "manifest.a1f2e29ec4ffb90e676f.js",
     "LICENSES",
     "index.spa.html",
     "index.ssr.html"
   ],
   "initial": [
-    "manifest.3b38b8da6faaea07b450.js",
+    "manifest.a1f2e29ec4ffb90e676f.js",
     "vendor.a7922c82e067e264fb95.js",
     "app.1049a1098e0c59ae2179.js"
   ],
@@ -132,7 +132,7 @@
     "pages/CdrActivityCard/CdrActivityCard-0.0.1.98a9a90e9ad2de3ae4d7.js",
     "pages/CdrA/index.44b4aa9a52cd53459894.js",
     "pages/CdrA/CdrA-0.0.1.19d3d962c37cdaea609d.js",
-    "pages/index.19f0f04b2adf90ab3f2c.js"
+    "pages/index.da32d60f47d68cfbfabe.js"
   ],
   "modules": {
     "18058053": [
@@ -227,6 +227,9 @@
     ],
     "7e91e5ea": [
       30
+    ],
+    "3585e839": [
+      59
     ],
     "504df1ad": [
       60
@@ -1180,6 +1183,12 @@
     "0a4aa7d1": [
       33
     ],
+    "09e089ba": [
+      11
+    ],
+    "629e580d": [
+      60
+    ],
     "66c806cd": [
       60
     ],
@@ -1770,9 +1779,6 @@
     "6220715f": [
       54
     ],
-    "09e089ba": [
-      11
-    ],
     "5ffe3377": [
       7
     ],
@@ -1858,12 +1864,6 @@
     "edaf72f0": [
       20
     ],
-    "06ca52bc": [
-      60
-    ],
-    "629e580d": [
-      60
-    ],
     "5e7c4499": [
       61
     ],
@@ -1906,6 +1906,9 @@
     "6baff242": [
       4,
       1
+    ],
+    "06ca52bc": [
+      60
     ],
     "4125ab88": [
       60

@@ -4,10 +4,10 @@
   "description": "This is the API documentation site for REI Cedar 2 Framework components",
   "private": true,
   "scripts": {
-    "dev": "NODE_ENV=dev nuxt",
+    "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
+    "generate": "NODE_ENV=prod nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
     "versions": "node versions"
