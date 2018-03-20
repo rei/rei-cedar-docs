@@ -1,1 +1,0 @@
-webpackJsonp([58],{"/TYz":function(e,l,u){"use strict";Object.defineProperty(l,"__esModule",{value:!0});var t=u("kWY+"),n=u("VU/8")(t.a,null,!1,null,null,null);n.options.__file="pages/index.vue",l.default=n.exports},"kWY+":function(e,l,u){"use strict";l.a={middleware:"default-reroute"}}});

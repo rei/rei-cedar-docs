@@ -50,6 +50,6 @@ module.exports = {
   },
   router: {
     middleware: 'home-route',
-    base: process.env.NODE_ENV === 'dev' ? '/' : '/rei-cedar-docs/'
+    base: process.env.NODE_ENV === 'prod' ? '/rei-cedar-docs/' : '/'
   }
 }
