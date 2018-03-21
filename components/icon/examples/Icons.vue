@@ -9,257 +9,257 @@
       <cdr-col>
         <cdr-icon
           data-backstop="cdr-icon-add"
-          url="/rei-icons.svg#cdr-account"
+          :url="`${svg}#cdr-account`"
         />
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-arrow-left"/>
+        <cdr-icon :url="`${svg}#cdr-arrow-left`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-arrow-right"/>
+        <cdr-icon :url="`${svg}#cdr-arrow-right`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-arrow-up"/>
+        <cdr-icon :url="`${svg}#cdr-arrow-up`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-bike"/>
+        <cdr-icon :url="`${svg}#cdr-bike`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-bookmark-fill"/>
+        <cdr-icon :url="`${svg}#cdr-bookmark-fill`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-bookmark-stroke"/>
+        <cdr-icon :url="`${svg}#cdr-bookmark-stroke`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-calendar"/>
+        <cdr-icon :url="`${svg}#cdr-calendar`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-camera"/>
+        <cdr-icon :url="`${svg}#cdr-camera`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-caret-down"/>
+        <cdr-icon :url="`${svg}#cdr-caret-down`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-caret-left"/>
+        <cdr-icon :url="`${svg}#cdr-caret-left`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-caret-right"/>
+        <cdr-icon :url="`${svg}#cdr-caret-right`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-caret-up"/>
+        <cdr-icon :url="`${svg}#cdr-caret-up`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-cart"/>
+        <cdr-icon :url="`${svg}#cdr-cart`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-chainlink"/>
+        <cdr-icon :url="`${svg}#cdr-chainlink`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-chat"/>
+        <cdr-icon :url="`${svg}#cdr-chat`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-check-circ-fill"/>
+        <cdr-icon :url="`${svg}#cdr-check-circ-fill`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-check-circ-stroke"/>
+        <cdr-icon :url="`${svg}#cdr-check-circ-stroke`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-check-lg"/>
+        <cdr-icon :url="`${svg}#cdr-check-lg`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-check-sm"/>
+        <cdr-icon :url="`${svg}#cdr-check-sm`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-climb"/>
+        <cdr-icon :url="`${svg}#cdr-climb`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-coupon-fill"/>
+        <cdr-icon :url="`${svg}#cdr-coupon-fill`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-coupon"/>
+        <cdr-icon :url="`${svg}#cdr-coupon`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-creditcard"/>
+        <cdr-icon :url="`${svg}#cdr-creditcard`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-download"/>
+        <cdr-icon :url="`${svg}#cdr-download`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-expand"/>
+        <cdr-icon :url="`${svg}#cdr-expand`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-external"/>
+        <cdr-icon :url="`${svg}#cdr-external`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-facebook"/>
+        <cdr-icon :url="`${svg}#cdr-facebook`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-heart-fill"/>
+        <cdr-icon :url="`${svg}#cdr-heart-fill`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-heart-stroke"/>
+        <cdr-icon :url="`${svg}#cdr-heart-stroke`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-help-circ-fill"/>
+        <cdr-icon :url="`${svg}#cdr-help-circ-fill`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-help-circ-stroke"/>
+        <cdr-icon :url="`${svg}#cdr-help-circ-stroke`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-image"/>
+        <cdr-icon :url="`${svg}#cdr-image`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-info-circ-fill"/>
+        <cdr-icon :url="`${svg}#cdr-info-circ-fill`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-info-circ-stroke"/>
+        <cdr-icon :url="`${svg}#cdr-info-circ-stroke`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-instagram"/>
+        <cdr-icon :url="`${svg}#cdr-instagram`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-locate"/>
+        <cdr-icon :url="`${svg}#cdr-locate`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-loc-pin-fill"/>
+        <cdr-icon :url="`${svg}#cdr-loc-pin-fill`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-loc-pin"/>
+        <cdr-icon :url="`${svg}#cdr-loc-pin`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-mail"/>
+        <cdr-icon :url="`${svg}#cdr-mail`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-minus-circ-fill"/>
+        <cdr-icon :url="`${svg}#cdr-minus-circ-fill`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-minus-circ-stroke"/>
+        <cdr-icon :url="`${svg}#cdr-minus-circ-stroke`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-minus-lg"/>
+        <cdr-icon :url="`${svg}#cdr-minus-lg`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-minus-sm"/>
+        <cdr-icon :url="`${svg}#cdr-minus-sm`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-more"/>
+        <cdr-icon :url="`${svg}#cdr-more`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-nav-alt"/>
+        <cdr-icon :url="`${svg}#cdr-nav-alt`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-nav"/>
+        <cdr-icon :url="`${svg}#cdr-nav`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-phone"/>
+        <cdr-icon :url="`${svg}#cdr-phone`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-pinterest"/>
+        <cdr-icon :url="`${svg}#cdr-pinterest`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-play-circ-fill"/>
+        <cdr-icon :url="`${svg}#cdr-play-circ-fill`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-play-circ-stroke"/>
+        <cdr-icon :url="`${svg}#cdr-play-circ-stroke`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-plus-circ-fill"/>
+        <cdr-icon :url="`${svg}#cdr-plus-circ-fill`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-plus-circ-stroke"/>
+        <cdr-icon :url="`${svg}#cdr-plus-circ-stroke`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-plus-lg"/>
+        <cdr-icon :url="`${svg}#cdr-plus-lg`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-plus-sm"/>
+        <cdr-icon :url="`${svg}#cdr-plus-sm`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-print"/>
+        <cdr-icon :url="`${svg}#cdr-print`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-recent"/>
+        <cdr-icon :url="`${svg}#cdr-recent`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-refresh"/>
+        <cdr-icon :url="`${svg}#cdr-refresh`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-reload"/>
+        <cdr-icon :url="`${svg}#cdr-reload`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-service"/>
+        <cdr-icon :url="`${svg}#cdr-service`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-share"/>
+        <cdr-icon :url="`${svg}#cdr-share`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-ship"/>
+        <cdr-icon :url="`${svg}#cdr-ship`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-shopping-bag"/>
+        <cdr-icon :url="`${svg}#cdr-shopping-bag`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-shrink"/>
+        <cdr-icon :url="`${svg}#cdr-shrink`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-sizechart"/>
+        <cdr-icon :url="`${svg}#cdr-sizechart`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-snow"/>
+        <cdr-icon :url="`${svg}#cdr-snow`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-spyglass"/>
+        <cdr-icon :url="`${svg}#cdr-spyglass`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-star-25"/>
+        <cdr-icon :url="`${svg}#cdr-star-25`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-star-50"/>
+        <cdr-icon :url="`${svg}#cdr-star-50`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-star-75"/>
+        <cdr-icon :url="`${svg}#cdr-star-75`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-star-100"/>
+        <cdr-icon :url="`${svg}#cdr-star-100`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-star-stroke"/>
+        <cdr-icon :url="`${svg}#cdr-star-stroke`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-twitter"/>
+        <cdr-icon :url="`${svg}#cdr-twitter`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-upload"/>
+        <cdr-icon :url="`${svg}#cdr-upload`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-warning-circ-fill"/>
+        <cdr-icon :url="`${svg}#cdr-warning-circ-fill`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-warning-circ-stroke"/>
+        <cdr-icon :url="`${svg}#cdr-warning-circ-stroke`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-warning-tri"/>
+        <cdr-icon :url="`${svg}#cdr-warning-tri`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-x-circ-fill"/>
+        <cdr-icon :url="`${svg}#cdr-x-circ-fill`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-x-circ-stroke"/>
+        <cdr-icon :url="`${svg}#cdr-x-circ-stroke`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-x-lg"/>
+        <cdr-icon :url="`${svg}#cdr-x-lg`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-x-sm"/>
+        <cdr-icon :url="`${svg}#cdr-x-sm`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-youtube"/>
+        <cdr-icon :url="`${svg}#cdr-youtube`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-zoom-in"/>
+        <cdr-icon :url="`${svg}#cdr-zoom-in`"/>
       </cdr-col>
       <cdr-col>
-        <cdr-icon url="/rei-icons.svg#cdr-zoom-out"/>
+        <cdr-icon :url="`${svg}#cdr-zoom-out`"/>
       </cdr-col>
     </cdr-row>
   </div>
@@ -267,9 +267,15 @@
 
 <script>
 import Components from '~/components/_index';
+import svg from '~/assets/rei-icons.svg'
 
 export default {
   name: 'Icons',
+  data() {
+    return {
+      svg
+    }
+  },
   components: Components,
 };
 </script>
