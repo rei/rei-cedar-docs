@@ -119,6 +119,7 @@ export default {
       testVal2: [9, 8],
       complex1: false,
       complex2: true,
+      svg,
     };
   },
   methods: {
