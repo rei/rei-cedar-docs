@@ -11,7 +11,7 @@
     "pages/CdrRow.5f0aca05e87c59552cf4.js",
     "pages/CdrCol.c43caff6a6635d63991a.js",
     "pages/CdrIcon.ed76ff1da664a931b191.js",
-    "pages/CdrCheckbox.79e369579b0b3b30b5bd.js",
+    "pages/CdrCheckbox.64fc9b2848378a2ab889.js",
     "pages/CdrCard.041daa311d28a5b6b19a.js",
     "pages/CdrSelect.8e6526ab69a8a472502e.js",
     "pages/CdrRating.60da933c920124556a48.js",
@@ -64,13 +64,13 @@
     "pages/index.da32d60f47d68cfbfabe.js",
     "vendor.a7922c82e067e264fb95.js",
     "app.958797c594470d42b61e.js",
-    "manifest.8e5dacbf7ced07423789.js",
+    "manifest.52d8762ed7e0d4cc7d22.js",
     "LICENSES",
     "index.spa.html",
     "index.ssr.html"
   ],
   "initial": [
-    "manifest.8e5dacbf7ced07423789.js",
+    "manifest.52d8762ed7e0d4cc7d22.js",
     "vendor.a7922c82e067e264fb95.js",
     "app.958797c594470d42b61e.js"
   ],
@@ -84,7 +84,7 @@
     "pages/CdrRow.5f0aca05e87c59552cf4.js",
     "pages/CdrCol.c43caff6a6635d63991a.js",
     "pages/CdrIcon.ed76ff1da664a931b191.js",
-    "pages/CdrCheckbox.79e369579b0b3b30b5bd.js",
+    "pages/CdrCheckbox.64fc9b2848378a2ab889.js",
     "pages/CdrCard.041daa311d28a5b6b19a.js",
     "pages/CdrSelect.8e6526ab69a8a472502e.js",
     "pages/CdrRating.60da933c920124556a48.js",
