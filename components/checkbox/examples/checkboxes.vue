@@ -61,7 +61,7 @@
         label-class="flex">
 
         <cdr-icon
-          url="/rei-icons.svg#cdr-heart-fill"
+          :url="`${svg}#cdr-heart-fill`"
           class="cdr-inline--sm checkbox-example-icon"/>
 
         <div>
@@ -80,7 +80,7 @@
         label-class="flex">
 
         <cdr-icon
-          url="/rei-icons.svg#cdr-heart-fill"
+          :url="`${svg}#cdr-heart-fill`"
           class="cdr-inline--sm checkbox-example-icon"/>
 
         <div>
@@ -98,6 +98,7 @@
 
 <script>
 import Components from '~/components/_index';
+import svg from '~/assets/rei-icons.svg'
 
 export default {
   name: 'Checkboxes',
@@ -118,6 +119,7 @@ export default {
       testVal2: [9, 8],
       complex1: false,
       complex2: true,
+      svg,
     };
   },
   methods: {

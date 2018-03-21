@@ -39,13 +39,17 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
   },
   css: [
     '~/assets/css/cedar-components.scss',
     '~/assets/css/main.scss'
   ],
+  generate: {
+    dir: 'docs'
+  },
   router: {
-    middleware: 'home-route'
+    middleware: 'home-route',
+    base: process.env.NODE_ENV === 'prod' ? '/rei-cedar-docs/' : '/'
   }
 }

@@ -13,5 +13,7 @@ export default { CdrA: [ '0.0.1' ],
   CdrRating: [ '0.0.1' ],
   CdrRow: [ '0.0.1' ],
   CdrSelect: [ '0.0.1' ],
+  CdrText: [ '0.0.1' ],
   CdrActivityCard: [ '0.0.1' ],
+  CdrCaption: [ '0.0.1' ],
   CdrSearch: [ '0.0.1' ] }
