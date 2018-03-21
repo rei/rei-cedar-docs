@@ -39,7 +39,7 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
   },
   css: [
     '~/assets/css/cedar-components.scss',
