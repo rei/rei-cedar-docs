@@ -15,8 +15,7 @@ import Anchors from '~/components/anchor/examples/Anchors.vue'
 import Versions from '~/components/Versions.vue'
 import Components from '~/components/_index'
 
-let cdrA = Components.CdrA
-console.log(cdrA)
+let  CdrA = Components.CdrA
 
 import '@rei/cdr-a/dist/cdr-a.css'
 
@@ -24,7 +23,7 @@ export default {
   name: 'Anchor',
   data() {
     return {
-      scope: { cdrA },
+      scope: { CdrA },
       value: `
 <template>
   <div>
@@ -36,11 +35,14 @@ export default {
 <script>
   module.exports = {
     name: 'live-example',
-    data() {
+    data: function() {
       return {
         testing: 'fake',
         real: 'not fake'
       }
+    },
+    components: {
+      CdrA
     }
   }
 <\/script>`
@@ -48,8 +50,7 @@ export default {
   },
   components: {
     Anchors,
-    Versions,
-    cdrA
+    Versions
   },
 }
 </script>
