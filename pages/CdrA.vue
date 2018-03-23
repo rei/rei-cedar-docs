@@ -24,7 +24,12 @@ export default {
       value: `
 <template>
   <div>
-    <cdr-a>This is an {{testing}}</cdr-a>
+    <cdr-a href="https://www.rei.com/">An example link</cdr-a>
+    <br/>
+    <cdr-a href="https://www.rei.com/" modifier="standalone">An example standalone link</cdr-a>
+    <div class="anchor-example overlay-example">
+      <cdr-a modifier="contrast" href="#example-contrast">An example contrast link</cdr-a>
+    </div>
   </div>
 </template>
 
@@ -40,7 +45,16 @@ export default {
       CdrA
     }
   }
-<\/script>`
+<\/script>
+<style>
+  .anchor-example {
+    padding: 20px;
+  }
+
+  .overlay-example {
+    background-color: black;
+  }
+</style>`
     }
   },
   components: {
