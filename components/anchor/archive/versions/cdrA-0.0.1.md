@@ -14,7 +14,7 @@ Cedar 2 component for anchor.
 
 Modifiers can be combined 1 from each grouping.
 
-{contrast, overlay, standalone} **OR** button
+{contrast, standalone} **OR** button
 
 Use of the 'button' modifier depends on including the css for cdrButton.
 

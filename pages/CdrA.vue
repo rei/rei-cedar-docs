@@ -2,16 +2,13 @@
   <div>
     <Versions comp-path="CdrA" />
     <nuxt-child/>
-    <!-- <Anchors/> -->
       <no-ssr>
-        <vuep :value="value" :scope="scope" :options="{ theme: 'material' }"></vuep>
+        <vuep :value="value" :scope="scope"></vuep>
       </no-ssr>
   </div>
 </template>
 
 <script>
-// import contrastAnchor from '~/components/anchor/examples/demo/Contrast.vue'
-import Anchors from '~/components/anchor/examples/Anchors.vue'
 import Versions from '~/components/Versions.vue'
 import Components from '~/components/_index'
 
@@ -27,8 +24,7 @@ export default {
       value: `
 <template>
   <div>
-    <h1>This is a {{testing}} anchor</h1>
-    <cdr-a>This is a {{real}} anchor</cdr-a>
+    <cdr-a>This is an {{testing}}</cdr-a>
   </div>
 </template>
 
@@ -37,8 +33,7 @@ export default {
     name: 'live-example',
     data: function() {
       return {
-        testing: 'fake',
-        real: 'not fake'
+        testing: 'anchor',
       }
     },
     components: {
@@ -49,12 +44,7 @@ export default {
     }
   },
   components: {
-    Anchors,
     Versions
   },
 }
 </script>
-
-<style>
-
-</style>
