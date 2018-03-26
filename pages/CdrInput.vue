@@ -28,7 +28,6 @@ export default {
       value: `
 <template>
   <div>
-  <h2>Text Input</h2>
     <cdr-input
       v-model="required"
       label="Default required validation"

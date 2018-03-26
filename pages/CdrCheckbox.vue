@@ -25,7 +25,6 @@ export default {
       value: `
 <template>
   <div>
-    <h2>Checkboxes</h2>
     <cdr-checkbox
       v-model="ex1"
     >single</cdr-checkbox>

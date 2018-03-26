@@ -25,7 +25,6 @@ export default {
       value: `
 <template>
   <div>
-    <h3>Styled List</h3>
     <cdr-list modifier="disc">
       <li>List item - disc</li>
       <li>List item - disc</li>
