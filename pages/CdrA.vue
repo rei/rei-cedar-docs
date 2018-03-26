@@ -12,7 +12,7 @@
 import Versions from '~/components/Versions.vue'
 import Components from '~/components/_index'
 
-let  CdrA = Components.CdrA
+const CdrA = Components.CdrA
 
 import '@rei/cdr-a/dist/cdr-a.css'
 

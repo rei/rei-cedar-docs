@@ -12,7 +12,7 @@ import Components from '~/components/_index'
 
 import '@rei/cdr-checkbox/dist/cdr-checkbox.css'
 
-let CdrCheckbox = Components.CdrCheckbox
+const CdrCheckbox = Components.CdrCheckbox
 
 export default {
   name: 'Checkbox',

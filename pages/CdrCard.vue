@@ -12,7 +12,7 @@ import Components from '~/components/_index'
 
 import '@rei/cdr-card/dist/cdr-card.css'
 
-let CdrCard = Components.CdrCard
+const CdrCard = Components.CdrCard
 
 export default {
   name: 'Card',
