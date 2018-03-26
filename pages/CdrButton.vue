@@ -24,23 +24,48 @@ export default {
       value: `
 <template>
   <div>
-    <cdr-button>This is a {{testing}}</cdr-button>
+    <div class="button-example">
+      <cdr-button
+        data-backstop="cdr-button"
+        type="submit"
+        :on-click="log"
+      >Default with click</cdr-button>
+      <cdr-button disabled>Default Disabled</cdr-button>
+    </div>
+    <div class="button-example">
+      <cdr-button
+        type="submit"
+        modifier="sm"
+      >Small button</cdr-button>
+      <cdr-button
+        type="submit"
+        modifier="xs"
+      >Extra Small button</cdr-button>
+    </div>
+
+    <div class="button-example">
+      <cdr-button theme="red">red</cdr-button>
+      <cdr-button
+        theme="red"
+        modifier="sm">red sm</cdr-button>
+    </div>
   </div>
 </template>
 
 <script>
   module.exports = {
     name: 'live-example',
-    data: function() {
-      return {
-        testing: 'button'
-      }
-    },
     components: {
       CdrButton
     }
   }
-<\/script>`
+<\/script>
+
+<style>
+  .button-example {
+    padding: 10px;
+  }
+</style>`
     }
   },
   components: {
