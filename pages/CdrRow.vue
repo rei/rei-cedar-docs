@@ -24,6 +24,7 @@ export default {
       value: `
 <template>
   <div>
+    <h3>Basic Row</h3>
     <cdr-row cols="3">
       <cdr-col>
         One

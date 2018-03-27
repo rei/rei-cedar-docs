@@ -28,7 +28,6 @@ export default {
       <cdr-button
         data-backstop="cdr-button"
         type="submit"
-        :on-click="log"
       >Default with click</cdr-button>
       <cdr-button disabled>Default Disabled</cdr-button>
     </div>
