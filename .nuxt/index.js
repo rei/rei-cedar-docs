@@ -12,6 +12,7 @@ import { setContext, getLocation, getRouteData } from './utils'
 import { createStore } from './store.js'
 
 /* Plugins */
+import nuxt_plugin_liveedit_ada408d6 from 'nuxt_plugin_liveedit_ada408d6' // Source: ../plugins/live-edit (ssr: false)
 
 
 // Component: <no-ssr>
@@ -151,6 +152,9 @@ async function createApp (ssrContext) {
   // Plugin execution
   
   
+  if (process.browser) { 
+    if (typeof nuxt_plugin_liveedit_ada408d6 === 'function') await nuxt_plugin_liveedit_ada408d6(app.context, inject)
+  }
 
   // If server-side, wait for async component to be resolved first
   if (process.server && ssrContext && ssrContext.url) {

@@ -2,22 +2,43 @@
   <div>
     <Versions comp-path="CdrCard"/>
     <nuxt-child/>
-    <Cards/>
+    <vuep :value="value" :scope="scope"></vuep>
   </div>
 </template>
 
 <script>
 import Versions from '~/components/Versions.vue'
-import Cards from '~/components/card/examples/Cards.vue'
+import Components from '~/components/_index'
 
 import '@rei/cdr-card/dist/cdr-card.css'
+
+const CdrCard = Components.CdrCard
 
 export default {
   name: 'Card',
   components: {
-    Cards,
     Versions
   },
+  data() {
+    return {
+      scope: { CdrCard },
+      value: `
+<template>
+  <cdr-card>
+    <p>A simple card</p>
+  </cdr-card>
+</template>
+
+<script>
+module.exports = {
+  name: 'live-example',
+  components: {
+    CdrCard
+  }
+}
+<\/script>`
+    }
+  }
 }
 </script>
 
