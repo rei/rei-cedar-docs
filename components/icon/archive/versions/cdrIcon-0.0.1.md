@@ -12,4 +12,6 @@ Cedar 2 component for icons
 
 Prop Name | Type | Default | Require | Description
 --- | --- | --- | --- | ---
-url | string | n/a | true | URL to the svg sprite and icon name. /path/to/svg.svg#icon-name
+url | string | n/a | false | URL to the svg sprite and icon name. /path/to/svg.svg#icon-name
+name | string | n/a | false | Icon name from the default REI icon set
+raw | string | n/a | false | Raw SVG string for using icons outside of the REI icon set
