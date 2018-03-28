@@ -40,6 +40,7 @@
 import Components from '~/components/_index'
 import Compositions from '~/compositions/_index'
 import Versions from '~/components/Versions.vue'
+import compNamesMixin from '~/mixins/comp-names'
 
 const cdrHeading = Components.CdrHeading
 const cdrList = Components.CdrList
@@ -51,16 +52,8 @@ export default {
       searchTerm: ''
     }
   },
+  mixins: [compNamesMixin],
   methods: {
-    compNames(compsObj) {
-      let names = []
-      for(const compKey in compsObj) {
-        if (compsObj[compKey].name) {
-          names.push(compsObj[compKey].name.toString())
-        }
-      }
-      return names
-    },
     updateSearch(searchInput) {
       this.searchTerm = searchInput
     },
