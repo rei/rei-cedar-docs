@@ -14,7 +14,7 @@ glob(path.resolve(__dirname) + '/+(components|compositions)/**/archive/*.md', (m
     throw new Error(`Error while trying to create index.vue files to \nconsume most recent md of each component: ${mdErr}`)
   }
 
-  // create default child rounte index.vue file that will consume most recent cedar component markdown documentation file
+  // create default child route index.vue file that will consume most recent cedar component markdown documentation file
   mdFiles.forEach((mdFile) => {
     const startFileName = mdFile.lastIndexOf('/') + 1
     const endFileName = mdFile.lastIndexOf('.')
@@ -107,11 +107,13 @@ export default {
 }
 </script>`
       
+      // Ensure the route directory for the specfied component exists
       fs.ensureDir(`./pages/${compName}`, (dirErr) => {
         if (dirErr) {
           throw new Error(`Error while trying to create archive Vue directory for ${compName}-${mdFileVer}: ${dirErr}`)
         }
         
+        // Create the versioned child route based on the template created above
         fs.writeFile(`./pages/${compName}/${compName}-${mdFileVer}.vue`, archiveVueFile, (crErr) => {
           if(crErr) {
             throw new Error(`Error while trying to create archived Vue file for ${compName}-${mdFileVer}: ${crErr}`)
