@@ -1,8 +1,8 @@
 import { CdrActivityCard } from '@rei/cdr-activity-card'
 import { CdrSearch } from '@rei/cdr-search'
 
-import cdrActivityCardPkg from '@rei/cdr-activity-card/package.json'
-import cdrSearchPkg from '@rei/cdr-search/package.json'
+import CdrActivityCardPkg from '@rei/cdr-activity-card/package.json'
+import CdrSearchPkg from '@rei/cdr-search/package.json'
 
 export default {
   CdrActivityCard,
@@ -10,8 +10,8 @@ export default {
 }
 
 const cdrCompositionPkgs = {
-  cdrActivityCardPkg,
-  cdrSearchPkg
+  CdrActivityCardPkg,
+  CdrSearchPkg
 }
 
 export { cdrCompositionPkgs }

@@ -12,8 +12,11 @@
           <nav>
             <cdr-search @input="updateSearch" bare></cdr-search>
             <cdr-list modifier="unstyled">
+              <li>
+                <nuxt-link to="/Introduction">Introduction</nuxt-link>
+              </li>
               <transition name="list" move-class="list">
-                <li v-if="filterNavGroup(componentNames)"><a href="#components">Components</a></li>
+                <li v-if="filterNavGroup(componentNames)"><a>Components</a></li>
               </transition>
               <transition-group class="cdr-list cdr-list--unstyled" move-class="list" name="list" tag="ul">
                 <li v-for="name in componentNames" :key="name" v-if="filterNavItem(name)">
@@ -21,7 +24,7 @@
                 </li>
               </transition-group>
               <transition name="list" move-class="list">
-                <li v-if="filterNavGroup(compositionNames)"><a href="#compositions">Compositions</a></li>
+                <li v-if="filterNavGroup(compositionNames)"><a>Compositions</a></li>
               </transition>
               <transition-group class="cdr-list cdr-list--unstyled" move-class="list" name="list" tag="ul">
                 <li v-for="name in compositionNames" :key="name" v-if="filterNavItem(name)">

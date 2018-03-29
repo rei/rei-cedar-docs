@@ -9,5 +9,5 @@ export default {
       }
       return names
     }
-  },
+  }
 }
