@@ -22,6 +22,7 @@
     <cdr-row v-for="name in componentNames" :key="name">
       <cdr-col> {{ name }} </cdr-col>
       <cdr-col> {{ namedComponentPkg(name, 'version') }} </cdr-col>
+      <cdr-col><cdr-icon :url="`${svg}#cdr-check-circ-stroke`"></cdr-icon></cdr-col>
     </cdr-row>
   </div>
 </template>
