@@ -1,18 +1,20 @@
-import { CdrA } from '@rei/cdr-a';
-import { CdrButton } from '@rei/cdr-button';
-import { CdrCard } from '@rei/cdr-card';
-import { CdrCheckbox } from '@rei/cdr-checkbox';
-import { CdrCol } from '@rei/cdr-col';
-import { CdrHeading } from '@rei/cdr-heading';
-import { CdrIcon } from '@rei/cdr-icon';
-import { CdrImg } from '@rei/cdr-img';
-import { CdrInput } from '@rei/cdr-input';
-import { CdrList } from '@rei/cdr-list';
-import { CdrMediaObject } from '@rei/cdr-media-object';
-import { CdrRadio } from '@rei/cdr-radio';
-import { CdrRating } from '@rei/cdr-rating';
-import { CdrRow } from '@rei/cdr-row';
-import { CdrSelect } from '@rei/cdr-select';
+import { CdrA } from '@rei/cdr-a'
+import { CdrButton } from '@rei/cdr-button'
+import { CdrCard } from '@rei/cdr-card'
+import { CdrCheckbox } from '@rei/cdr-checkbox'
+import { CdrCol } from '@rei/cdr-col'
+import { CdrHeading } from '@rei/cdr-heading'
+import { CdrIcon } from '@rei/cdr-icon'
+import { CdrImg } from '@rei/cdr-img'
+import { CdrInput } from '@rei/cdr-input'
+import { CdrList } from '@rei/cdr-list'
+import { CdrMediaObject } from '@rei/cdr-media-object'
+import { CdrRadio } from '@rei/cdr-radio'
+import { CdrRating } from '@rei/cdr-rating'
+import { CdrRow } from '@rei/cdr-row'
+import { CdrSelect } from '@rei/cdr-select'
+import { CdrText } from '@rei/cdr-text'
+import { CdrQuote } from '@rei/cdr-quote'
 
 import CdrAPkg from '@rei/cdr-a/package.json'
 import CdrButtonPkg from '@rei/cdr-button/package.json'
@@ -29,6 +31,8 @@ import CdrRadioPkg from '@rei/cdr-radio/package.json'
 import CdrRatingPkg from '@rei/cdr-rating/package.json'
 import CdrRowPkg from '@rei/cdr-row/package.json'
 import CdrSelectPkg from '@rei/cdr-select/package.json'
+import CdrTextPkg from '@rei/cdr-text/package.json'
+import CdrQuotePkg from '@rei/cdr-quote/package.json'
 
 export default {
   CdrA,
@@ -46,6 +50,8 @@ export default {
   CdrRating,
   CdrRow,
   CdrSelect,
+  CdrText,
+  CdrQuote
 };
 
 const cdrComponentPkgs = {
@@ -63,6 +69,8 @@ const cdrComponentPkgs = {
   CdrRadioPkg,
   CdrRatingPkg,
   CdrRowPkg,
-  CdrSelectPkg
+  CdrSelectPkg,
+  CdrTextPkg,
+  CdrQuotePkg
 }
 export { cdrComponentPkgs };
