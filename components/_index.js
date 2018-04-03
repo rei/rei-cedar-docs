@@ -14,6 +14,22 @@ import { CdrRating } from '@rei/cdr-rating';
 import { CdrRow } from '@rei/cdr-row';
 import { CdrSelect } from '@rei/cdr-select';
 
+import CdrAPkg from '@rei/cdr-a/package.json'
+import CdrButtonPkg from '@rei/cdr-button/package.json'
+import CdrCardPkg from '@rei/cdr-card/package.json'
+import CdrCheckboxPkg from '@rei/cdr-checkbox/package.json'
+import CdrColPkg from '@rei/cdr-col/package.json'
+import CdrHeadingPkg from '@rei/cdr-heading/package.json'
+import CdrIconPkg from '@rei/cdr-icon/package.json'
+import CdrImgPkg from '@rei/cdr-img/package.json'
+import CdrInputPkg from '@rei/cdr-input/package.json'
+import CdrListPkg from '@rei/cdr-list/package.json'
+import CdrMediaObjectPkg from '@rei/cdr-media-object/package.json'
+import CdrRadioPkg from '@rei/cdr-radio/package.json'
+import CdrRatingPkg from '@rei/cdr-rating/package.json'
+import CdrRowPkg from '@rei/cdr-row/package.json'
+import CdrSelectPkg from '@rei/cdr-select/package.json'
+
 export default {
   CdrA,
   CdrButton,
@@ -31,3 +47,22 @@ export default {
   CdrRow,
   CdrSelect,
 };
+
+const cdrComponentPkgs = {
+  CdrAPkg,
+  CdrButtonPkg,
+  CdrCardPkg,
+  CdrCheckboxPkg,
+  CdrColPkg,
+  CdrHeadingPkg,
+  CdrIconPkg,
+  CdrImgPkg,
+  CdrInputPkg,
+  CdrListPkg,
+  CdrMediaObjectPkg,
+  CdrRadioPkg,
+  CdrRatingPkg,
+  CdrRowPkg,
+  CdrSelectPkg
+}
+export { cdrComponentPkgs };
