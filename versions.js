@@ -85,7 +85,7 @@ glob(path.resolve(__dirname) + '/+(components|compositions)/**/versions/*.md', (
       if (!versions[compName]) {
         versions[compName] = []
       }
-      versions[compName].push(mdFileVer)
+      versions[compName].unshift(mdFileVer)
       
       // Create Vue file for each archived markdown file
       let archiveVueFile = `
