@@ -25,7 +25,7 @@
   "dependencies": {
     "@nuxtjs/markdownit": "^1.2.0",
     "@rei/cdr-activity-card": "^0.0.1",
-    "@rei/cdr-assets": "^0.0.2",
+    "@rei/cdr-assets": "^0.1.0",
     "@rei/cdr-base-components": "^0.0.3",
     "@rei/cdr-caption": "0.0.1",
     "@rei/cdr-media-object": "^0.0.1",

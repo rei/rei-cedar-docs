@@ -1,16 +1,6 @@
-# <span class="display-name">CdrA</span>
+# <span class="display-name">CdrAnchor</span>
 
-
-<span class="file">src/components/anchor/cdrA.vue<span>
-
-
-Cedar 2 component for anchor.
-
-
-
-<span class="modifiers">Modifiers</span>
-
-
+### <span class="modifiers">Modifiers</span>
 
 Modifiers can be combined 1 from each grouping.
 
@@ -25,3 +15,22 @@ A modifier list that contains 'button' exposes the same modifiers as cdrButton a
 Slot | Description
 --- | ---
 default | innerHTML on the inside of the anchor component
+### Examples
+
+#### Basic
+```
+<cdr-a href="https://www.rei.com/">Default link</cdr-a>
+
+```
+
+#### Standalone
+
+```
+<cdr-a modifier="standalone" href="https://www.rei.com/">An example standalone link</cdr-a>
+```
+
+#### Button modifier
+
+```
+<cdr-a modifier="button" href="https://www.rei.com/">Link as button</cdr-a>
+```
