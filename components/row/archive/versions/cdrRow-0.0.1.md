@@ -1,11 +1,6 @@
 # <span class="display-name">CdrRow</span>
 
-
-<span class="file">src/components/row/cdrRow.vue<span>
-
-
 Cedar 2 component for row
-
 ### <button class='title'>PROPS, METHODS, EVENTS, SLOTS</button>
 
 Prop Name | Type | Default | Require | Description

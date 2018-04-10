@@ -1,13 +1,6 @@
 # <span class="display-name">CdrSelect</span>
 
-
-<span class="file">src/components/select/cdrSelect.vue<span>
-
-
-Cedar 2 component for select
-
 **NOTE:** `v-model` is required.
-
 ### <button class='title'>PROPS, METHODS, EVENTS, SLOTS</button>
 
 Prop Name | Type | Default | Require | Description
@@ -25,3 +18,49 @@ input | string|array | Current input value. Fires when
 Slot | Description
 --- | ---
 default | 
+### Examples
+
+#### Standard
+
+```
+var selected = '';
+
+<div>
+  <cdr-select label="Normal" v-model="selected">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+  </cdr-select>
+  <p>Selected: {{selected}}</p>
+</div>
+```
+
+#### With prompt
+
+```
+var selected = '';
+
+<div>
+  <cdr-select label="Normal with prompt" v-model="selected" prompt="Choose one">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+  </cdr-select>
+  <p>Selected: {{selected}}</p>
+</div>
+```
+
+#### Data driven options
+
+```
+var selected = '';
+var data = ['a', 'b', 'c', 'd'];
+
+<div>
+  <cdr-select label="Built with data" v-model="selected" :options="data"></cdr-select>
+  <p>Selected: {{selected}}</p>
+</div>
+
+```

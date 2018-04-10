@@ -1,10 +1,6 @@
 # <span class="display-name">CdrCaption</span>
 
-
-<span class="file">src/compositions/caption/CdrCaption.vue<span>
-
-
-Cedar 2 component for captions
+* Cedar 2 component for captions
 
 ### <button class='title'>PROPS, METHODS, EVENTS, SLOTS</button>
 
