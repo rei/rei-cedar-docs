@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import Components from '~/components/_index';
+import * as Components from '~/components/_index';
 
 export default {
   name: 'CtaSale',

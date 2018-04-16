@@ -8,11 +8,9 @@
 
 <script>
 import Versions from '~/components/Versions.vue'
-import Components from '~/components/_index'
+import { CdrList } from '~/components/_index'
 
 import '@rei/cdr-list/dist/cdr-list.css'
-
-const CdrList = Components.CdrList
 
 export default {
   name: 'List',

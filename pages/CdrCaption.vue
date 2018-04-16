@@ -10,11 +10,9 @@
 
 <script>
 import Versions from '~/components/Versions.vue'
-import Compositions from '~/compositions/_index'
+import { CdrCaption } from '~/compositions/_index'
 
 import '@rei/cdr-caption/dist/cdr-caption.css'
-
-const CdrCaption = Compositions.CdrCaption
 
 export default {
   name: 'Caption',

@@ -8,11 +8,9 @@
 
 <script>
 import Versions from '~/components/Versions.vue'
-import Components from '~/components/_index'
+import { CdrHeading } from '~/components/_index'
 
 import '@rei/cdr-heading/dist/cdr-heading.css'
-
-const CdrHeading = Components.CdrHeading
 
 export default {
   name: 'Heading',

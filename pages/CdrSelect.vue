@@ -10,11 +10,9 @@
 <script>
 import Versions from '~/components/Versions.vue'
 import Selects from '~/components/select/examples/Selects.vue'
-import Components from '~/components/_index'
+import { CdrSelect } from '~/components/_index'
 
 import '@rei/cdr-select/dist/cdr-select.css'
-
-const CdrSelect = Components.CdrSelect
 
 export default {
   name: 'CSelect',

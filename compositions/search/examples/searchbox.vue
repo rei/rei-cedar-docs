@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import Compositions from '~/compositions/_index';
+import * as Compositions from '~/compositions/_index';
 
 export default {
   name: 'Searchbox',

@@ -8,10 +8,7 @@
 
 <script>
 import Versions from '~/components/Versions.vue'
-import Components from '~/components/_index'
-
-const CdrCol = Components.CdrCol
-const CdrRow = Components.CdrRow
+import { CdrCol, CdrRow} from '~/components/_index'
 
 export default {
   name: 'Column',

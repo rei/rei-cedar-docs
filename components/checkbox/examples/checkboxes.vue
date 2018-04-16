@@ -97,7 +97,7 @@
 </template>
 
 <script>
-import Components from '~/components/_index';
+import * as Components from '~/components/_index';
 import svg from '~/assets/rei-icons.svg'
 
 export default {

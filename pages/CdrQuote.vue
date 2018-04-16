@@ -10,11 +10,9 @@
 
 <script>
 import Versions from '~/components/Versions.vue'
-import Components from '~/components/_index'
+import { CdrQuote } from '~/components/_index'
 
 import '@rei/cdr-quote/dist/cdr-quote.css'
-
-const CdrQuote = Components.CdrQuote
 
 export default {
   name: 'Quote',

@@ -207,7 +207,7 @@
 
 <script>
 import testImage from '~/assets/test-image.jpeg';
-import Components from '~/components/_index';
+import * as Components from '~/components/_index';
 
 export default {
   name: 'Cropping',
