@@ -10,11 +10,9 @@
 <script>
 import Versions from '~/components/Versions.vue'
 import Radios from '~/components/radio/examples/Radios.vue'
-import Components from '~/components/_index'
+import { CdrRadio } from '~/components/_index'
 
 import '@rei/cdr-radio/dist/cdr-radio.css'
-
-const CdrRadio = Components.CdrRadio
 
 export default {
   name: 'Radio',

@@ -8,11 +8,9 @@
 
 <script>
 import Versions from '~/components/Versions.vue'
-import Components from '~/components/_index'
+import { CdrCard } from '~/components/_index'
 
 import '@rei/cdr-card/dist/cdr-card.css'
-
-const CdrCard = Components.CdrCard
 
 export default {
   name: 'Card',

@@ -10,9 +10,7 @@
 
 <script>
 import Versions from '~/components/Versions.vue'
-import Components from '~/components/_index'
-
-const CdrA = Components.CdrA
+import { CdrA } from '~/components/_index'
 
 import '@rei/cdr-a/dist/cdr-a.css'
 

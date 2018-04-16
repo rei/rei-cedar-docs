@@ -10,11 +10,9 @@
 
 <script>
 import Versions from '~/components/Versions.vue'
-import Components from '~/components/_index'
+import { CdrButton } from '~/components/_index'
 
 import '@rei/cdr-button/dist/cdr-button.css'
-
-const CdrButton = Components.CdrButton
 
 export default {
   name: 'Button',

@@ -10,11 +10,9 @@
 <script>
 import Versions from '~/components/Versions.vue'
 import Searches from '~/compositions/search/examples/searchbox.vue'
-import Compositions from '~/compositions/_index'
+import { CdrSearch } from '~/compositions/_index'
 
 import '@rei/cdr-search/dist/cdr-search.css'
-
-const CdrSearch = Compositions.CdrSearch
 
 export default {
   name: 'Search',

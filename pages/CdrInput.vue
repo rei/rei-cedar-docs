@@ -10,11 +10,9 @@
 <script>
 import Versions from '~/components/Versions.vue'
 import Inputs from '~/components/input/examples/Inputs.vue'
-import Components from '~/components/_index'
+import { CdrInput } from '~/components/_index'
 
 import '@rei/cdr-input/dist/cdr-input.css'
-
-const CdrInput = Components.CdrInput
 
 export default {
   name: 'Input',

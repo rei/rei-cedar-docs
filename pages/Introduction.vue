@@ -29,16 +29,13 @@
 
 <script>
 import introMD from '~/old_docs/Introduction.md'
-import Components, { cdrComponentPkgs } from '~/components/_index'
-import Compositions, { cdrCompositionPkgs } from '~/compositions/_index'
+import * as Components from '~/components/_index'
+import * as cdrComponentPkgs from '~/components/_index_packages'
+import * as Compositions from '~/compositions/_index'
+import * as cdrCompositionPkgs from '~/compositions/_index_packages'
 import svg from '~/assets/rei-icons.svg'
 import compNamesMixin from '~/mixins/comp-names'
 import util from 'util'
-
-const CdrRow = Components.CdrRow
-const CdrList = Components.CdrList
-const CdrCol = Components.CdrCol
-const CdrIcon = Components.CdrIcon
 
 export default {
   mixins: [compNamesMixin],
@@ -51,10 +48,7 @@ export default {
     }
   },
   components: {
-    CdrRow,
-    CdrCol,
-    CdrList,
-    CdrIcon
+    ...Components
   },
   computed: {
     componentNames () {

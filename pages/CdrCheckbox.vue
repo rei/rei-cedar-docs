@@ -8,11 +8,9 @@
 
 <script>
 import Versions from '~/components/Versions.vue'
-import Components from '~/components/_index'
+import { CdrCheckbox } from '~/components/_index'
 
 import '@rei/cdr-checkbox/dist/cdr-checkbox.css'
-
-const CdrCheckbox = Components.CdrCheckbox
 
 export default {
   name: 'Checkbox',

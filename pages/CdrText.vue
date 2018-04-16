@@ -10,9 +10,7 @@
 
 <script>
 import Versions from '~/components/Versions.vue'
-import Components from '~/components/_index'
-
-const CdrText = Components.CdrText
+import { CdrText } from '~/components/_index'
 
 export default {
   name:'CText',

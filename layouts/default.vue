@@ -40,8 +40,8 @@
 </template>
 
 <script>
-import Components from '~/components/_index'
-import Compositions from '~/compositions/_index'
+import * as Components from '~/components/_index'
+import * as Compositions from '~/compositions/_index'
 import Versions from '~/components/Versions.vue'
 import compNamesMixin from '~/mixins/comp-names'
 
@@ -78,9 +78,8 @@ export default {
     }
   },
   components: { 
-    cdrHeading,
-    cdrList,
-    cdrSearch,
+    ...Components,
+    ...Compositions,
     Versions,
   }
 }

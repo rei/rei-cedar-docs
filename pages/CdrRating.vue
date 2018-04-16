@@ -10,11 +10,9 @@
 <script>
 import Versions from '~/components/Versions.vue'
 import Ratings from '~/components/rating/examples/Ratings.vue'
-import Components from '~/components/_index'
+import { CdrRating } from '~/components/_index'
 
 import '@rei/cdr-rating/dist/cdr-rating.css'
-
-const CdrRating = Components.CdrRating
 
 export default {
   name: 'Rating',
