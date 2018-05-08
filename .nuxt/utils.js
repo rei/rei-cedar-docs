@@ -113,13 +113,13 @@ export async function setContext(app, context) {
         return process.client
       },
       isStatic: process.static,
-      isDev: false,
+      isDev: true,
       isHMR: false,
       app,
-      store: app.store,
+      
       payload: context.payload,
       error: context.error,
-      base: '/rei-cedar-docs/',
+      base: '/',
       env: {}
     }
     // Only set once
