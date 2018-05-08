@@ -9,7 +9,7 @@ import { applyAsyncData, sanitizeComponent, getMatchedComponents, getContext, mi
 const debug = require('debug')('nuxt:render')
 debug.color = 4 // force blue color
 
-const isDev = false
+const isDev = true
 
 const noopApp = () => new Vue({ render: (h) => h('div') })
 
@@ -22,8 +22,8 @@ const createNext = ssrContext => opts => {
   }
   opts.query = stringify(opts.query)
   opts.path = opts.path + (opts.query ? '?' + opts.query : '')
-  if (opts.path.indexOf('http') !== 0 && ('/rei-cedar-docs/' !== '/' && opts.path.indexOf('/rei-cedar-docs/') !== 0)) {
-    opts.path = urlJoin('/rei-cedar-docs/', opts.path)
+  if (opts.path.indexOf('http') !== 0 && ('/' !== '/' && opts.path.indexOf('/') !== 0)) {
+    opts.path = urlJoin('/', opts.path)
   }
   // Avoid loop redirect
   if (opts.path === ssrContext.url) {
@@ -48,9 +48,9 @@ export default async ssrContext => {
   // Used for beforeNuxtRender({ Components, nuxtState })
   ssrContext.beforeRenderFns = []
   // Nuxt object (window.__NUXT__)
-  ssrContext.nuxt = { layout: 'default', data: [], error: null, state: null, serverRendered: true }
+  ssrContext.nuxt = { layout: 'default', data: [], error: null, serverRendered: true }
   // Create the app definition and the instance (created for each request)
-  const { app, router, store } = await createApp(ssrContext)
+  const { app, router } = await createApp(ssrContext)
   const _app = new Vue(app)
 
   // Add meta infos (used in renderer.js)
@@ -61,9 +61,6 @@ export default async ssrContext => {
   const beforeRender = async () => {
     // Call beforeNuxtRender() methods
     await Promise.all(ssrContext.beforeRenderFns.map((fn) => promisify(fn, { Components, nuxtState: ssrContext.nuxt })))
-    
-    // Add the state from the vuex store
-    ssrContext.nuxt.state = store.state
     
   }
   const renderErrorPage = async () => {
@@ -80,26 +77,11 @@ export default async ssrContext => {
     return renderErrorPage()
   }
 
-  
+  const s = isDev && Date.now()
 
   // Components are already resolved by setContext -> getRouteData (app/utils.js)
   const Components = getMatchedComponents(router.match(ssrContext.url))
 
-  
-  /*
-  ** Dispatch store nuxtServerInit
-  */
-  if (store._actions && store._actions.nuxtServerInit) {
-    try {
-      await store.dispatch('nuxtServerInit', app.context)
-    } catch (err) {
-      debug('error occurred when calling nuxtServerInit: ', err.message)
-      throw err
-    }
-  }
-  // ...If there is a redirect or an error, stop the process
-  if (ssrContext.redirected) return noopApp()
-  if (ssrContext.nuxt.error) return renderErrorPage()
   
 
   /*
@@ -160,7 +142,7 @@ export default async ssrContext => {
     isValid = Component.options.validate({
       params: app.context.route.params || {},
       query: app.context.route.query  || {},
-      store
+      
     })
   })
   // ...If .validate() returned false
@@ -202,7 +184,7 @@ export default async ssrContext => {
     return Promise.all(promises)
   }))
 
-  
+  if (asyncDatas.length) debug('Data fetching ' + ssrContext.url + ': ' + (Date.now() - s) + 'ms')
 
   // datas are the first row of each
   ssrContext.nuxt.data = asyncDatas.map(r => r[0] || {})
