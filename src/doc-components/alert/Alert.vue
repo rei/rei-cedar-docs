@@ -29,6 +29,7 @@ export default {
     box-sizing: border-box;
     color: $text-color-primary;
     display: flex;
+    margin-bottom: $space-1-x;
     padding: $inset-quarter-x;
   }
 

@@ -8,7 +8,9 @@ import '../assets/css/main.scss'
 
 let layouts = {
 
-  "_default": () => import('../layouts/default.vue'  /* webpackChunkName: "layouts/default" */).then(m => m.default || m)
+  "_default": () => import('../layouts/default.vue'  /* webpackChunkName: "layouts/default" */).then(m => m.default || m),
+
+  "_proving-ground": () => import('../layouts/proving-ground.vue'  /* webpackChunkName: "layouts/proving-ground" */).then(m => m.default || m)
 
 }
 
