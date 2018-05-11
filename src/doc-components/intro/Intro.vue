@@ -1,14 +1,14 @@
 <template>
-  <div class="cdr-doc-hero">
-    <div class="cdr-doc-hero__inner">
-        <ul class="cdr-doc-hero__breadcrumbs" v-if="breadcrumbs">
+  <div class="cdr-doc-intro">
+    <div class="cdr-doc-intro__inner">
+        <ul class="cdr-doc-intro__breadcrumbs" v-if="breadcrumbs">
           <li v-for="breadcrumb in breadcrumbs">
-            <a :href="breadcrumb.href" class="cdr-doc-hero__breadcrumb-link">{{ breadcrumb.text }}</a>
+            <a :href="breadcrumb.href" class="cdr-doc-intro__breadcrumb-link">{{ breadcrumb.text }}</a>
           </li>
         </ul>
-        <h1 class="cdr-doc-hero__title">{{ title }}</h1>
-        <h2 class="cdr-doc-hero__title-metadata" v-if="metadata">{{ metadata }}</h2>
-        <p class="cdr-doc-hero__summary">
+        <h1 class="cdr-doc-intro__title">{{ title }}</h1>
+        <h2 class="cdr-doc-intro__title-metadata" v-if="metadata">{{ metadata }}</h2>
+        <p class="cdr-doc-intro__summary">
           <slot>
             Buttons are used to invoke an event and communicate the action that will occur.
           </slot>
@@ -19,7 +19,7 @@
 
 <script>
 export default {
-  name: 'CdrDocHero',
+  name: 'CdrDocIntro',
   props: {
     breadcrumbs: {
       type: Array,
@@ -43,29 +43,29 @@ export default {
 </script>
 <style lang="scss">
   @import '../../../assets/css/cedar-tokens.scss';
-  $background-color-hero: $crimp-son-and-clover;
-  $text-color-hero: $clean-slate;
+  $background-color-intro: $crimp-son-and-clover;
+  $text-color-intro: $clean-slate;
   $content-max-width: 900px;
 
-  .cdr-doc-hero {
-    background: $background-color-hero;
-    color: $text-color-hero;
+  .cdr-doc-intro {
+    background: $background-color-intro;
+    color: $text-color-intro;
     padding: $space-4-x $space-1-x;
   }
 
-  .cdr-doc-hero__inner {
+  .cdr-doc-intro__inner {
     margin: 0 auto;
     max-width: $content-max-width;
   }
 
-  .cdr-doc-hero__title {
+  .cdr-doc-intro__title {
     @include spruce-display-80;
-    border-bottom: solid 1px $text-color-hero;
+    border-bottom: solid 1px $text-color-intro;
     margin-bottom: $space-1-x;
     padding-bottom: $space-1-x;
   }
 
-  .cdr-doc-hero__breadcrumbs {
+  .cdr-doc-intro__breadcrumbs {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
@@ -74,22 +74,22 @@ export default {
     padding: 0;
   }
 
-  .cdr-doc-hero__breadcrumb-link {
+  .cdr-doc-intro__breadcrumb-link {
     @include spruce-display-00;
-    color: $text-color-hero;
+    color: $text-color-intro;
     margin-right: $space-half-x;
 
     &:hover {
-      color: $text-color-hero;
+      color: $text-color-intro;
     }
   }
 
-  .cdr-doc-hero__title-metadata {
+  .cdr-doc-intro__title-metadata {
     @include redwood-display-20;
     margin-bottom: $space-half-x;
   }
 
-  .cdr-doc-hero__summary {
+  .cdr-doc-intro__summary {
     @include redwood-display-60;
   }
 </style>
