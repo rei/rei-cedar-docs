@@ -1,5 +1,6 @@
 <template>
   <div>
+    <cdr-doc-alert/>
     <Versions comp-path="CdrButton"/>
     <nuxt-child/>
     <no-ssr>
@@ -10,6 +11,7 @@
 
 <script>
 import Versions from '~/components/Versions.vue'
+import CdrDocAlert from '~/src/doc-components/alert/Alert.vue'
 import { CdrButton } from '~/components/_index'
 
 import '@rei/cdr-button/dist/cdr-button.css'
@@ -67,6 +69,7 @@ export default {
   },
   components: {
     Versions,
+    CdrDocAlert
   },
 }
 </script>

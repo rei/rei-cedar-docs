@@ -13,7 +13,7 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  /* 
+  /*
   ** Add modules
   */
   modules: [
@@ -39,14 +39,14 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    },
+    }
   },
   css: [
     '~/assets/css/cedar-components.scss',
     '~/assets/css/main.scss'
   ],
   plugins: [
-    {src: '~/plugins/live-edit', ssr: false}
+    { src: '~/plugins/live-edit', ssr: false }
   ],
   generate: {
     dir: 'docs'
