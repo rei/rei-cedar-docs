@@ -19,5 +19,8 @@
   },
   "devDependencies": {
     "vuepress": "^0.8.4"
+  },
+  "dependencies": {
+    "@rei/cdr-list": "^0.1.0"
   }
 }
