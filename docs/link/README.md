@@ -1,6 +1,15 @@
 ---
 title: Link
 layout: ComponentLayout
+summary: Links are used to link to other things
+title_metadata: AKA for link
+breadcrumbs:
+- text: Components/
+  href: "#"
+- text: Another-Step/
+  href: "#"
+- text: Pathname/
+  href: "#"
 ---
 
 # Counter APP
