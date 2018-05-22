@@ -4,8 +4,9 @@
   "description": "This is the API documentation site for REI Cedar 2 Framework components",
   "private": false,
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "dev": "npm run theo && vuepress dev docs",
+    "build": "vuepress build docs",
+    "theo": "node utils/theo.js"
   },
   "author": "REI Software Engineering",
   "license": "ISC",
@@ -18,9 +19,14 @@
     "url": "git+https://github.com/rei/rei-cedar-docs.git"
   },
   "devDependencies": {
+    "node-sass": "^4.9.0",
+    "sass-loader": "^6.0.7",
+    "theo": "^7.0.1",
     "vuepress": "^0.8.4"
   },
   "dependencies": {
-    "@rei/cdr-list": "^0.1.0"
+    "@rei/cdr-icon": "^0.2.0",
+    "@rei/cdr-list": "^0.1.0",
+    "rei-cedar-tokens": "git+https://github.com/rei/rei-cedar-tokens.git#0.1.4"
   }
 }

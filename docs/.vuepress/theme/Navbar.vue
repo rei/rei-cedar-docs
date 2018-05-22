@@ -1,5 +1,5 @@
 <template>
-  <header class="navbar">
+  <header class="cdr-doc-side-navigation__items navbar">
     <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
     <router-link :to="$localePath" class="home-link">
       <img class="logo"
@@ -38,34 +38,11 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-@import './styles/config.styl'
+<style lang="scss">
+  @import './styles/cdr-tokens';
+  @import './styles/cdr-doc-tokens';
 
-.navbar
-  padding 0.7rem 1.5rem
-  line-height $navbarHeight - 1.4rem
-  position relative
-  a, span, img
-    display inline-block
-  .logo
-    height $navbarHeight - 1.4rem
-    min-width $navbarHeight - 1.4rem
-    margin-right 0.8rem
-    vertical-align top
-  .site-name
-    font-size 1.3rem
-    font-weight 600
-    color $textColor
-    position relative
-  .links
-    font-size 0.9rem
-    position absolute
-    right 1.5rem
-    top 0.7rem
-
-@media (max-width: $MQMobile)
-  .navbar
-    padding-left 4rem
-    .can-hide
-      display none
+  .cdr-doc-side-navigation__items {
+    border-top: $cdr-doc-border-separator;
+  }
 </style>

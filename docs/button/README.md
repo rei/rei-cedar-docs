@@ -1,5 +1,6 @@
 ---
 title: Button
+layout: ComponentLayout
 ---
 
 # API GUIDE

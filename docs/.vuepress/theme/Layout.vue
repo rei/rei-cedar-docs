@@ -3,20 +3,31 @@
     :class="pageClasses"
     @touchstart="onTouchStart"
     @touchend="onTouchEnd">
-    <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar"/>
-    <div class="sidebar-mask" @click="toggleSidebar(false)"></div>
-    <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
-      <slot name="sidebar-top" slot="top"/>
-      <slot name="sidebar-bottom" slot="bottom"/>
-    </Sidebar>
-    <div class="custom-layout" v-if="$page.frontmatter.layout">
-      <component :is="$page.frontmatter.layout"/>
+    <div class="cdr-doc-page-shell">
+      <div class="cdr-doc-page-shell__side-navigation">
+        <div class="cdr-doc-side-navigation">
+          <div class="cdr-doc-side-navigation__logo-wrap">
+            <img class="cdr-doc-side-navigation__logo" :src="$withBase('/doc-site-logo.png')" alt="CO-OP Design System">
+          </div>
+          <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar"/>
+        </div>
+      </div>
+      <div class="cdr-doc-page-shell__body">
+        <div class="sidebar-mask" @click="toggleSidebar(false)"></div>
+        <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
+          <slot name="sidebar-top" slot="top"/>
+          <slot name="sidebar-bottom" slot="bottom"/>
+        </Sidebar>
+        <div class="custom-layout" v-if="$page.frontmatter.layout">
+          <component :is="$page.frontmatter.layout"/>
+        </div>
+        <Home v-else-if="$page.frontmatter.home"/>
+        <Page v-else :sidebar-items="sidebarItems">
+          <slot name="page-top" slot="top"/>
+          <slot name="page-bottom" slot="bottom"/>
+        </Page>
+      </div>
     </div>
-    <Home v-else-if="$page.frontmatter.home"/>
-    <Page v-else :sidebar-items="sidebarItems">
-      <slot name="page-top" slot="top"/>
-      <slot name="page-bottom" slot="bottom"/>
-    </Page>
   </div>
 </template>
 
@@ -174,4 +185,4 @@ function updateMetaTags (meta, current) {
 </script>
 
 <style src="prismjs/themes/prism-tomorrow.css"></style>
-<style src="./styles/theme.styl" lang="stylus"></style>
+<style src="./styles/theme.scss" lang="scss"></style>

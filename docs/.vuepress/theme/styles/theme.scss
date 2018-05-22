@@ -1,0 +1,46 @@
+@import 'cdr-tokens';
+@import 'cdr-doc-tokens';
+$side-navigation-logo-width: 162px;
+$side-navigation-width: 262px;
+
+html,
+body {
+  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.cdr-doc-page-shell {
+  display: flex;
+}
+
+.cdr-doc-page-shell__side-navigation {
+  flex: 0 0 $side-navigation-width;
+  width: $side-navigation-width;
+}
+
+.cdr-doc-side-navigation {
+  border-right: $cdr-doc-border-separator;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow-y: auto;
+  width: $side-navigation-width;
+}
+
+.cdr-doc-side-navigation__logo-wrap {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 152px;
+  width: $side-navigation-width;
+}
+
+.cdr-doc-side-navigation__logo {
+  max-width: $side-navigation-logo-width;
+}
+
+.cdr-doc-page-shell__body {
+  background: $cdr-doc-background-color-main-body;
+}
