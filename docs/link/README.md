@@ -1,5 +1,6 @@
 ---
 title: Link
+layout: ComponentLayout
 ---
 
 # Counter APP
