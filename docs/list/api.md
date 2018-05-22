@@ -13,7 +13,7 @@ To use an ordered list pass `ol` to the tag property.
 ```
 Note that the tag itself does not determine display.
 
-### Variants
+### Modifiers
  In addition to our bare list the following modifiers are provided which accommodate our standard text list options.
 * unordered
 * ordered
@@ -52,7 +52,7 @@ The inline modifier is intended for generic or unordered list variants. In ether
 ## Accessibility
 The `cdr-list` component has decoupled the semantic tags `ul` and `ol` from the visual presentation provided by our modifiers. 
 
-This section is focused on sematic implementations of list. 
+This section is focused on semantic implementations of list. 
 
 **Note** that it is perfectly valid to render a semantic ordered list `ol` as a visually non styled or bulleted list using our modifiers.
 ```
@@ -92,5 +92,6 @@ npm i @rei/cdr-list
 ```
 
 ## Contributing
-### Request an an enhancement
-Join us on Slack at [#design-systems](https://rei.slack.com/messages/CA58YCGN4).
+
+* Join us on Slack at [#design-systems](https://rei.slack.com/messages/CA58YCGN4).
+* [#Log an issue]()https://github.com/rei/rei-cedar/issues.
