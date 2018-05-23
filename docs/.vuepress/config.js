@@ -2,8 +2,13 @@ module.exports = {
   title: "REI CO-OP Design System",
   description: "A demo documentation using VuePress",
   themeConfig: {
+    logo: "doc-site-logo.png",
     search: false,
     nav: [
+      { 
+        text: "Home",
+        link: "/" 
+      },
       { 
         text: "Release History",
         link: "#" 
@@ -18,9 +23,10 @@ module.exports = {
       },
       { text: "Components",
         items: [
-          { text: "Button", link: "/button/" },
-          { text: "Link", link: "/link/" },
-          { text: "List", link: "/list/" }
+          { text: "Overview", link: "/components/" },
+          { text: "Button", link: "/components/button/" },
+          { text: "Link", link: "/components/link/" },
+          { text: "List", link: "/components/list/" }
         ] 
       },
     ]

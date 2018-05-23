@@ -6,18 +6,15 @@
     <div class="cdr-doc-page-shell">
       <div class="cdr-doc-page-shell__side-navigation">
         <div class="cdr-doc-side-navigation">
-          <div class="cdr-doc-side-navigation__logo-wrap">
-            <img class="cdr-doc-side-navigation__logo" :src="$withBase('/doc-site-logo.png')" alt="CO-OP Design System">
-          </div>
           <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar"/>
         </div>
       </div>
       <div class="cdr-doc-page-shell__body">
         <div class="sidebar-mask" @click="toggleSidebar(false)"></div>
-        <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
+<!--         <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
           <slot name="sidebar-top" slot="top"/>
           <slot name="sidebar-bottom" slot="bottom"/>
-        </Sidebar>
+        </Sidebar> -->
         <div class="custom-layout" v-if="$page.frontmatter.layout">
           <component :is="$page.frontmatter.layout"/>
         </div>
