@@ -1,28 +1,18 @@
 <template>
-  <div class="page">
+  <div class="page cdr-doc-component-layout">
     <cdr-doc-intro :title="data.title" :metadata="data.title_metadata" :breadcrumbs="data.breadcrumbs">
       {{ data.summary }}
     </cdr-doc-intro>
-    <Content :custom="false"/>
-    <div class="content edit-link" v-if="editLink">
-      <a :href="editLink" target="_blank" rel="noopener noreferrer">{{ editLinkText }}</a>
-      <OutboundLink/>
+    <div class="cdr-doc-component-layout__body">
+      <div class="cdr-doc-component-layout__tabs">
+        <div class="cdr-doc-component-layout__tabs-inner">
+          Full bleed tabs go here
+        </div>
+      </div>
+      <div class="cdr-doc-component-layout__body-inner">
+        <Content :custom="false"/>
+      </div>
     </div>
-    <div class="content page-nav" v-if="prev || next">
-      <p class="inner">
-        <span v-if="prev" class="prev">
-          ← <router-link v-if="prev" class="prev" :to="prev.path">
-            {{ prev.title || prev.path }}
-          </router-link>
-        </span>
-        <span v-if="next" class="next">
-          <router-link v-if="next" :to="next.path">
-            {{ next.title || next.path }}
-          </router-link> →
-        </span>
-      </p>
-    </div>
-    <slot name="bottom"/>
   </div>
 </template>
 
@@ -37,5 +27,31 @@ export default {
 </script>
 
 <style lang="scss">
+  @import '../theme/styles/cdr-tokens';
+  @import '../theme/styles/cdr-doc-tokens';
 
+  .cdr-doc-component-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .cdr-doc-component-layout__body {
+    flex: 1 0 100%;
+    // padding: $inset-1-x;
+  }
+
+  .cdr-doc-component-layout__tabs {
+    border-bottom: $cdr-doc-border-separator;
+  }
+
+  .cdr-doc-component-layout__tabs-inner {
+    margin: 0 auto;
+    width: $cdr-doc-content-max-width;
+  }
+
+  .cdr-doc-component-layout__body-inner {
+    margin: 0 auto;
+    width: $cdr-doc-content-max-width;
+  }
 </style>

@@ -1,10 +1,10 @@
 <template>
-  <div class="page">
+  <div class="page cdr-doc-article-layout">
       <cdr-doc-intro :title="data.title" :metadata="data.title_metadata" :breadcrumbs="data.breadcrumbs">
         {{ data.summary }}
       </cdr-doc-intro>
-    <div class="cdr-doc-article-body">
-      <div class="cdr-doc-article-body__inner">
+    <div class="cdr-doc-article-layout__body">
+      <div class="cdr-doc-article-layout__body-inner">
         <Content :custom="false"/>
       </div>
     </div>
@@ -25,11 +25,18 @@ export default {
   @import '../theme/styles/cdr-tokens';
   @import '../theme/styles/cdr-doc-tokens';
   
-  .cdr-doc-article-body {
+  .cdr-doc-article-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .cdr-doc-article-layout__body {
+    flex: 1 0 100%;
     padding: $inset-1-x;
   }
 
-  .cdr-doc-article-body__inner {
+  .cdr-doc-article-layout__body-inner {
     margin: 0 auto;
     width: $cdr-doc-content-max-width;
   }
