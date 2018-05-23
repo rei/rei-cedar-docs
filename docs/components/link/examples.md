@@ -10,6 +10,12 @@ title: Examples
 
 ```
 
+#### Basic +
+```
+<cdr-link href="https://www.rei.com/">Default link</cdr-link>
+
+```
+
 #### Standalone
 
 ```
