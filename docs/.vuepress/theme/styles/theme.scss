@@ -1,3 +1,4 @@
+@import 'cdr-fonts';
 @import 'cdr-tokens';
 @import 'cdr-doc-tokens';
 $side-navigation-logo-width: 162px;
@@ -6,7 +7,7 @@ $side-navigation-width: 262px;
 html,
 body {
   color: $cdr-doc-text-color-primary;
-  font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
 }
