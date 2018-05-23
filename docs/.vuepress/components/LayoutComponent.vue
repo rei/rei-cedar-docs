@@ -3,12 +3,12 @@
     <cdr-doc-intro :title="data.title" :metadata="data.title_metadata" :breadcrumbs="data.breadcrumbs">
       {{ data.summary }}
     </cdr-doc-intro>
-    <div class="cdr-doc-component-layout__body">
-      <div class="cdr-doc-component-layout__tabs">
-        <div class="cdr-doc-component-layout__tabs-inner">
-          Full bleed tabs go here
-        </div>
+    <div class="cdr-doc-component-layout__tabs">
+      <div class="cdr-doc-component-layout__tabs-inner">
+        Full bleed tabs go here
       </div>
+    </div>
+    <div class="cdr-doc-component-layout__body">
       <div class="cdr-doc-component-layout__body-inner">
         <Content :custom="false"/>
       </div>
@@ -38,7 +38,9 @@ export default {
 
   .cdr-doc-component-layout__body {
     flex: 1 0 100%;
-    // padding: $inset-1-x;
+    padding: $inset-1-x;
+    padding-bottom: 0;
+    padding-top: 0;
   }
 
   .cdr-doc-component-layout__tabs {
@@ -52,6 +54,9 @@ export default {
 
   .cdr-doc-component-layout__body-inner {
     margin: 0 auto;
+    padding: $inset-1-x;
+    padding-left: 0;
+    padding-right: 0;
     width: $cdr-doc-content-max-width;
   }
 </style>
