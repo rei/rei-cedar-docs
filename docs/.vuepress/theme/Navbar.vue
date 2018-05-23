@@ -1,14 +1,10 @@
 <template>
   <header class="cdr-doc-side-navigation__items navbar">
     <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
-    <router-link :to="$localePath" class="home-link">
-      <img class="logo"
+    <router-link :to="$localePath" class="home-link cdr-doc-side-navigation__logo-wrap">
+      <img class="logo cdr-doc-side-navigation__logo"
         v-if="$site.themeConfig.logo"
-        :src="$withBase($site.themeConfig.logo)">
-      <span class="site-name"
-        v-if="$siteTitle"
-        :class="{ 'can-hide': $site.themeConfig.logo }">
-        {{ $siteTitle }}
+        :src="$withBase($site.themeConfig.logo)" :alt="$siteTitle">
       </span>
     </router-link>
     <div class="links">

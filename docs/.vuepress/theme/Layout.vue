@@ -6,9 +6,6 @@
     <div class="cdr-doc-page-shell">
       <div class="cdr-doc-page-shell__side-navigation">
         <div class="cdr-doc-side-navigation">
-          <div class="cdr-doc-side-navigation__logo-wrap">
-            <img class="cdr-doc-side-navigation__logo" :src="$withBase('/doc-site-logo.png')" alt="CO-OP Design System">
-          </div>
           <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar"/>
         </div>
       </div>

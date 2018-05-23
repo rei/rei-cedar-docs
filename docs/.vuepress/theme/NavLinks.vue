@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav-links" v-if="userLinks.length || repoLink">
+  <nav class="nav-links cdr-doc-nav-links" v-if="userLinks.length || repoLink">
     <!-- user links -->
     <div
       class="nav-item"
@@ -98,36 +98,11 @@ export default {
 }
 </script>
 
-<style lang="stylus">
-// @import './styles/config.styl'
-
-// .nav-links
-//   display inline-block
-//   a
-//     line-height 1.4rem
-//     color inherit
-//     &:hover, &.router-link-active
-//       color $accentColor
-//   .nav-item
-//     cursor: pointer
-//     position relative
-//     display inline-block
-//     margin-left 1.5rem
-//     line-height 2rem
-//   .repo-link
-//     margin-left 1.5rem
-
-// @media (max-width: $MQMobile)
-//   .nav-links
-//     .nav-item, .repo-link
-//       margin-left 0
-
-// @media (min-width: $MQMobile)
-//   .nav-links a
-//     &:hover, &.router-link-active
-//       color $textColor
-//   .nav-item > a
-//     &:hover, &.router-link-active
-//       margin-bottom -2px
-//       border-bottom 2px solid lighten($accentColor, 8%)
+<style lang="scss">
+  @import './styles/cdr-tokens';
+  @import './styles/cdr-doc-tokens';
+  
+  .cdr-doc-nav-links {
+    border-bottom: $cdr-doc-border-separator;
+  }
 </style>
