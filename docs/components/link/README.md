@@ -1,8 +1,8 @@
 ---
 title: Link
 layout: LayoutComponent
-summary: Links are used to link to other things
-title_metadata: AKA for link
+summary: Clickable text element used when navigating to page section, another page or opening an overlay window such as modal dialog or popover. 
+title_metadata: Hyperlink, Anchor, CdrButton, CdrLink
 breadcrumbs:
 - text: Components/
   href: "#"
