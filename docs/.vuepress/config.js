@@ -23,9 +23,10 @@ module.exports = {
       },
       { text: "Components",
         items: [
-          { text: "Button", link: "/button/" },
-          { text: "Link", link: "/link/" },
-          { text: "List", link: "/list/" }
+          { text: "Overview", link: "/components/" },
+          { text: "Button", link: "/components/button/" },
+          { text: "Link", link: "/components/link/" },
+          { text: "List", link: "/components/list/" }
         ] 
       },
     ]

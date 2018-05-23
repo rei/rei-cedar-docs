@@ -5,6 +5,7 @@ $side-navigation-width: 262px;
 
 html,
 body {
+  color: $cdr-doc-text-color-primary;
   font-family: Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -43,4 +44,5 @@ body {
 
 .cdr-doc-page-shell__body {
   background: $cdr-doc-background-color-main-body;
+  flex: 1 1 100%;
 }
