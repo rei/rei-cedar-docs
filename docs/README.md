@@ -1,11 +1,11 @@
-# STATIC
-
-This directory contains your static files.
-Each file inside this directory is mapped to /.
-
-Example: /static/robots.txt is mapped as /robots.txt.
-
-More information about the usage of this directory in the documentation:
-https://nuxtjs.org/guide/assets#static
-
-**This directory is not required, you can delete it if you don't want to use it.**
+---
+home: true
+actionText: See the link component
+actionLink: /link/examples
+features:
+- title: Embedded Vue Counter
+  details: A Vue counter developed using Vue is embedded in this doc, now thats the power of VuePress!
+- title: Fun Docs made with VuePress
+  details: This entire doc was basically made with VuePress which parsed markdown files and corresponding assets using webpack.
+footer: Developed using VuePress by William Imoh
+---

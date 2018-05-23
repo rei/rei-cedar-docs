@@ -2,15 +2,11 @@
   "name": "rei-cedar-docs",
   "version": "0.0.1",
   "description": "This is the API documentation site for REI Cedar 2 Framework components",
-  "private": true,
+  "private": false,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "NODE_ENV=prod nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "precommit": "npm run lint",
-    "versions": "node versions"
+    "dev": "npm run theo && vuepress dev docs",
+    "build": "vuepress build docs",
+    "theo": "node utils/theo.js"
   },
   "author": "REI Software Engineering",
   "license": "ISC",
@@ -22,29 +18,15 @@
     "type": "git",
     "url": "git+https://github.com/rei/rei-cedar-docs.git"
   },
-  "dependencies": {
-    "@nuxtjs/markdownit": "^1.2.0",
-    "@rei/cdr-activity-card": "^0.0.1",
-    "@rei/cdr-assets": "^0.1.0",
-    "@rei/cdr-base-components": "^0.0.3",
-    "@rei/cdr-caption": "0.0.1",
-    "@rei/cdr-media-object": "^0.0.1",
-    "@rei/cdr-search": "^0.0.1",
-    "codemirror": "^5.36.0",
-    "file-system": "^2.2.2",
-    "glob": "^7.1.2",
-    "nuxt": "^1.4.0",
-    "semver": "^5.5.0",
-    "vuep": "^0.8.0"
-  },
   "devDependencies": {
-    "babel-eslint": "^8.2.1",
-    "eslint": "^4.19.1",
-    "eslint-config-vue": "^2.0.2",
-    "eslint-friendly-formatter": "^3.0.0",
-    "eslint-loader": "^1.7.1",
-    "eslint-plugin-vue": "^4.4.0",
-    "node-sass": "^4.8.3",
-    "sass-loader": "^6.0.7"
+    "node-sass": "^4.9.0",
+    "sass-loader": "^6.0.7",
+    "theo": "^7.0.1",
+    "vuepress": "^0.8.4"
+  },
+  "dependencies": {
+    "@rei/cdr-icon": "^0.2.0",
+    "@rei/cdr-list": "^0.1.0",
+    "rei-cedar-tokens": "git+https://github.com/rei/rei-cedar-tokens.git#0.1.4"
   }
 }
