@@ -5,7 +5,7 @@ module.exports = {
     ['link', { rel: 'stylesheet', href:'https://fonts.googleapis.com/css?family=Roboto+Condensed:400|Roboto:400' }]
   ],
   themeConfig: {
-    logo: "doc-site-logo.png",
+    logo: '/doc-site-logo.png',
     search: false,
     nav: [
       { 
