@@ -2,9 +2,12 @@ module.exports = {
   title: "REI CO-OP Design System",
   description: "A demo documentation using VuePress",
   head: [
-    ['link', { rel: 'stylesheet', href:'https://fonts.googleapis.com/css?family=Roboto+Condensed:400|Roboto:400' }]
+    ['link', { rel: 'stylesheet', href:'https://fonts.googleapis.com/css?family=Roboto+Condensed:400|Roboto:400|Roboto+Mono:400' }]
   ],
   themeConfig: {
+    markdown: {
+      lineNumbers: true
+    },
     logo: '/doc-site-logo.png',
     search: false,
     nav: [

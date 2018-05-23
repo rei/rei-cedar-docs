@@ -51,3 +51,25 @@ body {
 .header-anchor {
   display: none;
 }
+
+.cdr-doc-proving-ground {
+  box-sizing: border-box;
+  padding: $inset-1-x;
+  width: 100vw;
+
+  .cdr-doc-page-shell,
+  .cdr-doc-page-shell__body,
+  .page,
+  .content {
+    display: block;
+    width: 100%;
+  }
+
+  .cdr-doc-page-shell__side-navigation {
+    display: none;
+  }
+
+  .cdr-doc-page-shell__body {
+    background: none;
+  }
+}

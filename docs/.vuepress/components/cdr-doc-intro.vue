@@ -49,6 +49,7 @@ export default {
 <style lang="scss">
   @import '../theme/styles/cdr-tokens.scss';
   @import '../theme/styles/cdr-doc-tokens.scss';
+  
   $background-color-intro: #F9535A; // Copied from InVision comp
   $text-color-intro: $clean-slate;
 
