@@ -1,6 +1,6 @@
 <template>
   <header class="cdr-doc-side-navigation__items navbar">
-    <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
+    <!-- <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/> -->
     <router-link :to="$localePath" class="home-link cdr-doc-side-navigation__logo-wrap">
       <img class="logo cdr-doc-side-navigation__logo"
         v-if="$site.themeConfig.logo"

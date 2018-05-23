@@ -11,10 +11,10 @@
       </div>
       <div class="cdr-doc-page-shell__body">
         <div class="sidebar-mask" @click="toggleSidebar(false)"></div>
-        <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
+<!--         <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
           <slot name="sidebar-top" slot="top"/>
           <slot name="sidebar-bottom" slot="bottom"/>
-        </Sidebar>
+        </Sidebar> -->
         <div class="custom-layout" v-if="$page.frontmatter.layout">
           <component :is="$page.frontmatter.layout"/>
         </div>
