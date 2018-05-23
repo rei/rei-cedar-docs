@@ -8,7 +8,7 @@
         </ul>
         <h1 class="cdr-doc-intro__title">{{ title }}</h1>
         <h2 class="cdr-doc-intro__title-metadata" v-if="metadata">{{ metadata }}</h2>
-        <p class="cdr-doc-intro__summary">
+        <p class="cdr-doc-intro__summary" v-if="hasSlotData">
           <slot>
             Buttons are used to invoke an event and communicate the action that will occur.
           </slot>
@@ -38,13 +38,18 @@ export default {
       type: String,
       default: 'Also known as a Call-to-Action (CTA)'
     }
+  },
+  computed: {
+    hasSlotData() {
+      return this.$slots.default && this.$slots.default[0].text.trim() !== 'false';
+    }
   }
 }
 </script>
 <style lang="scss">
   @import '../theme/styles/cdr-tokens.scss';
   @import '../theme/styles/cdr-doc-tokens.scss';
-  $background-color-intro: $snap-decision;
+  $background-color-intro: #F9535A; // Copied from InVision comp
   $text-color-intro: $clean-slate;
 
   .cdr-doc-intro {
@@ -60,9 +65,8 @@ export default {
 
   .cdr-doc-intro__title {
     @include spruce-display-80;
-    border-bottom: solid 1px $text-color-intro;
-    margin-bottom: $space-1-x;
-    padding-bottom: $space-1-x;
+    margin: 0;
+    // padding-bottom: $space-1-x;
   }
 
   .cdr-doc-intro__breadcrumbs {
@@ -86,10 +90,24 @@ export default {
 
   .cdr-doc-intro__title-metadata {
     @include redwood-display-20;
+    margin: 0;
     margin-bottom: $space-half-x;
+
+    .cdr-doc-intro__title + & {
+      border-top: solid 1px $text-color-intro;
+      margin-top: $space-1-x;
+      padding-top: $space-1-x;
+    }
   }
 
   .cdr-doc-intro__summary {
     @include redwood-display-60;
+    margin: 0;
+    
+    .cdr-doc-intro__title + & {
+      border-top: solid 1px $text-color-intro;
+      margin-top: $space-1-x;
+      padding-top: $space-1-x;
+    }
   }
 </style>

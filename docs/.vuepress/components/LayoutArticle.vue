@@ -4,7 +4,9 @@
         {{ data.summary }}
       </cdr-doc-intro>
     <div class="cdr-doc-article-body">
-      <Content :custom="false"/>
+      <div class="cdr-doc-article-body__inner">
+        <Content :custom="false"/>
+      </div>
     </div>
   </div>
 </template>
@@ -22,8 +24,12 @@ export default {
 <style lang="scss">
   @import '../theme/styles/cdr-tokens';
   @import '../theme/styles/cdr-doc-tokens';
-
+  
   .cdr-doc-article-body {
+    padding: $inset-1-x;
+  }
+
+  .cdr-doc-article-body__inner {
     margin: 0 auto;
     width: $cdr-doc-content-max-width;
   }

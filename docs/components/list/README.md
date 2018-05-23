@@ -1,5 +1,6 @@
 ---
 title: List
+layout: LayoutComponent
 ---
 
 # API GUIDE

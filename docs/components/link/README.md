@@ -1,6 +1,6 @@
 ---
 title: Link
-layout: ComponentLayout
+layout: LayoutComponent
 summary: Links are used to link to other things
 title_metadata: AKA for link
 breadcrumbs:

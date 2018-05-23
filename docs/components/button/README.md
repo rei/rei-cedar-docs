@@ -1,6 +1,6 @@
 ---
 title: Button
-layout: ComponentLayout
+layout: LayoutComponent
 summary: Buttons are used to invoke an event and communicate the action that will occur.
 title_metadata: Also known as a Call-to-Action (CTA)
 breadcrumbs:
