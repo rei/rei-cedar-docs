@@ -22,11 +22,12 @@
     "node-sass": "^4.9.0",
     "sass-loader": "^6.0.7",
     "theo": "^7.0.1",
-    "vuepress": "^0.8.4"
+    "vuepress": "^0.9.0"
   },
   "dependencies": {
     "@rei/cdr-icon": "^0.2.0",
     "@rei/cdr-list": "^0.1.0",
+    "prismjs": "^1.14.0",
     "rei-cedar-tokens": "git+https://github.com/rei/rei-cedar-tokens.git#0.1.4"
   }
 }

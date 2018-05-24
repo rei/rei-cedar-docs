@@ -6,6 +6,11 @@ pageClass: cdr-doc-proving-ground
 # Code Snippet Proving Grounds
 
 ## Simple Example
+<script>
+  const source = `
+
+  `;
+</script>
 <cdr-doc-code-snippet>
   ```html
     <h1>Hello World</h1>

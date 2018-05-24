@@ -3,8 +3,8 @@
     <div class="cdr-doc-code-snippet__actions" v-if="copyButton">
       <button class="cdr-doc-code-snippet__copy-action">Copy To Clipboard</button>
     </div>
-    <div class="cdr-doc-code-snippet__code">
-      <slot ref="source"/>
+    <div class="cdr-doc-code-snippet__code" ref="source">
+      <slot/>
     </div>
   </div>
 </template>
@@ -20,6 +20,14 @@ export default {
       default: true,
       type: Boolean
     }
+  },
+  mounted: function() {
+    var Prism = require('prismjs');
+    console.log(this.$refs.source);
+    const codeElement = this.$refs.source.querySelector('code');
+    const code = codeElement.innerHTML;
+    const highlightedCode = Prism.highlight(code, Prism.languages.html, 'html');
+    codeElement.innerHTML = highlightedCode;
   }
 }
 </script>
