@@ -4,10 +4,10 @@ module.exports = {
   head: [
     ['link', { rel: 'stylesheet', href:'https://fonts.googleapis.com/css?family=Roboto+Condensed:400|Roboto:400|Roboto+Mono:400' }]
   ],
+  markdown: {
+    lineNumbers: true
+  },
   themeConfig: {
-    markdown: {
-      lineNumbers: true
-    },
     logo: '/doc-site-logo.png',
     search: false,
     nav: [
@@ -34,7 +34,7 @@ module.exports = {
           { text: "Link", link: "/components/link/" },
           { text: "List", link: "/components/list/" }
         ] 
-      },
+      }
     ]
   }
 };

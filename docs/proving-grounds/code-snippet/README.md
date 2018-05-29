@@ -5,12 +5,15 @@ pageClass: cdr-doc-proving-ground
 
 # Code Snippet Proving Grounds
 
-## Simple Example
-<script>
-  const source = `
+## Default Markdown Highlighting
 
-  `;
-</script>
+```html
+  <h1>Testing. 1. 2. 3.</h1>
+  <h2>Is this thing on?</h2>
+  <h3>Tap, Tap, Tap</h3>
+```
+
+## With Copy Button
 <cdr-doc-code-snippet>
   ```html
     <h1>Hello World</h1>
@@ -18,7 +21,7 @@ pageClass: cdr-doc-proving-ground
   ```
 </cdr-doc-code-snippet>
 
-## No Copy Button
+## Wrapped as snippet, No Copy Button
 <cdr-doc-code-snippet :copy-button="false">
   ```html
     <h1>Hello World</h1>

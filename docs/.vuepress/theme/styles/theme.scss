@@ -73,3 +73,105 @@ body {
     background: none;
   }
 }
+
+// Code Highlighting
+div[class^='language-'] {
+    background: $cdr-doc-background-color-default;
+    border: $cdr-doc-border-separator;
+    border-radius: $cdr-doc-border-radius-default;
+    color: $cdr-doc-text-color-secondary;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    line-height: 1.4;
+    padding: $inset-1-x;
+    max-width: 100%;
+    overflow-x: auto;
+    position: relative;
+
+    .cdr-doc-code-snippet__actions + & {
+      border-radius: 0 0 $cdr-doc-border-radius-default $cdr-doc-border-radius-default;
+    }
+
+    pre {
+      margin: 0;
+      padding-left: $space-2-x;
+    }
+
+    & > div {
+      position: relative;
+    }
+
+    // Prism overrides
+    .token {      
+      &.property,
+      .tag {
+          color: #6C966A;
+      }
+
+      &.selector,
+      .attr-name {
+          color: #C48648;
+      }
+
+      .attr-value {
+          color: $cdr-doc-text-color-primary;
+      }
+
+      .punctuation {
+          color: $cdr-doc-text-color-primary;
+      }
+    }
+
+    pre.line-numbers {
+      position: relative;
+      padding-left: 3.8em;
+      counter-reset: linenumber;
+    }
+
+    pre.line-numbers > code {
+      position: relative;
+      white-space: inherit;
+    }
+
+    .line-numbers-wrapper {
+      border-right: $cdr-doc-border-separator;
+      font-family: 'Roboto Mono', monospace;
+      font-size: 14px;
+      line-height: 1.4;
+      padding-right: $space-1-x;
+      position: absolute;
+      text-align: right;
+      top: $space-1-x;
+    }
+
+    .line-numbers .line-numbers-rows {
+      position: absolute;
+      pointer-events: none;
+      top: 0;
+      font-size: 100%;
+      left: -3.8em;
+      width: 3em; /* works for line-numbers below 1000 lines */
+      letter-spacing: -1px;
+      border-right: 1px solid #999;
+
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+    }
+
+    .line-numbers-rows > span {
+      pointer-events: none;
+      display: block;
+      counter-increment: linenumber;
+    }
+
+    .line-numbers-rows > span:before {
+      content: counter(linenumber);
+      color: #999;
+      display: block;
+      padding-right: 0.8em;
+      text-align: right;
+    }
+  }

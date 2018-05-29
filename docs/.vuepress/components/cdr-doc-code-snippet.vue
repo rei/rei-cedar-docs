@@ -3,9 +3,10 @@
     <div class="cdr-doc-code-snippet__actions" v-if="copyButton">
       <button class="cdr-doc-code-snippet__copy-action">Copy To Clipboard</button>
     </div>
-    <div class="cdr-doc-code-snippet__code" ref="source">
-      <slot/>
-    </div>
+    <div class="cdr-doc-code-snippet__code" ref="source"><slot/></div>
+<!--     <div class="cdr-doc-code-snippet__code language-html line-numbers-mode line-numbers">
+      <pre class="line-numbers"><code class="language-html line-numbers" v-html="highlightedSource" ref="highlightedCodeElement"></code></pre>
+    </div> -->
   </div>
 </template>
 
@@ -21,13 +22,21 @@ export default {
       type: Boolean
     }
   },
+  data: function() {
+    return {
+      highlightedSource: false
+    }
+  },
   mounted: function() {
-    var Prism = require('prismjs');
-    console.log(this.$refs.source);
-    const codeElement = this.$refs.source.querySelector('code');
-    const code = codeElement.innerHTML;
-    const highlightedCode = Prism.highlight(code, Prism.languages.html, 'html');
-    codeElement.innerHTML = highlightedCode;
+    // var Prism = require('prismjs');
+    // const source = this.$refs.source;
+    // const preElement = source.querySelector('pre');
+    // const codeElement = source.querySelector('code');
+    // const code = codeElement.innerText;
+    // // const syntaxHighlighting = preElement.className.replace(/language-/, '').trim();
+    // // const highlightedCode = Prism.highlight(code, Prism.languages[syntaxHighlighting], syntaxHighlighting);
+    // this.highlightedSource = code;
+    // Prism.highlightElement(this.$refs.highlightedCodeElement);
   }
 }
 </script>
@@ -57,38 +66,18 @@ export default {
 
   .cdr-doc-code-snippet__code {
     background: $cdr-doc-background-color-default;
-    border: $cdr-doc-border-separator;
-    border-radius: $cdr-doc-border-radius-default;
+    // border: $cdr-doc-border-separator;
+    // border-radius: $cdr-doc-border-radius-default;
     color: $cdr-doc-text-color-secondary;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 14px;
-    padding: $inset-1-x;
+    // font-family: 'Roboto Mono', monospace;
+    // font-size: 14px;
+    // line-height: 1.4;
+    // padding: $inset-1-x;
     max-width: 100%;
     overflow-x: auto;
 
     .cdr-doc-code-snippet__actions + & {
       border-radius: 0 0 $cdr-doc-border-radius-default $cdr-doc-border-radius-default;
-    }
-
-    // Prism overrides
-    .token {      
-      &.property,
-      .tag {
-          color: #6C966A;
-      }
-
-      &.selector,
-      .attr-name {
-          color: #C48648;
-      }
-
-      .attr-value {
-          color: $cdr-doc-text-color-primary;
-      }
-
-      .punctuation {
-          color: $cdr-doc-text-color-primary;
-      }
     }
   }
 </style>
