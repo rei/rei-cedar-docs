@@ -3,7 +3,7 @@
     <div class="cdr-doc-code-snippet__actions" v-if="copyButton">
       <button class="cdr-doc-code-snippet__copy-action">Copy To Clipboard</button>
     </div>
-    <div class="cdr-doc-code-snippet__code" ref="source"><slot/></div>
+    <div class="cdr-doc-code-snippet__code"><slot/></div>
 <!--     <div class="cdr-doc-code-snippet__code language-html line-numbers-mode line-numbers">
       <pre class="line-numbers"><code class="language-html line-numbers" v-html="highlightedSource" ref="highlightedCodeElement"></code></pre>
     </div> -->
@@ -21,22 +21,6 @@ export default {
       default: true,
       type: Boolean
     }
-  },
-  data: function() {
-    return {
-      highlightedSource: false
-    }
-  },
-  mounted: function() {
-    // var Prism = require('prismjs');
-    // const source = this.$refs.source;
-    // const preElement = source.querySelector('pre');
-    // const codeElement = source.querySelector('code');
-    // const code = codeElement.innerText;
-    // // const syntaxHighlighting = preElement.className.replace(/language-/, '').trim();
-    // // const highlightedCode = Prism.highlight(code, Prism.languages[syntaxHighlighting], syntaxHighlighting);
-    // this.highlightedSource = code;
-    // Prism.highlightElement(this.$refs.highlightedCodeElement);
   }
 }
 </script>
