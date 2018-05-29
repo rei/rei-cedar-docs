@@ -5,7 +5,7 @@ pageClass: cdr-doc-proving-ground
 
 # Code Snippet Proving Grounds
 
-## Default Markdown Highlighting
+## Default Markdown Highlighting, No Component
 
 ```html
   <h1>Testing. 1. 2. 3.</h1>
@@ -13,7 +13,7 @@ pageClass: cdr-doc-proving-ground
   <h3>Tap, Tap, Tap</h3>
 ```
 
-## With Copy Button
+## Default Component Behavior
 <cdr-doc-code-snippet>
   ```html
     <h1>Hello World</h1>
