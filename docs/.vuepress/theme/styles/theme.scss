@@ -1,6 +1,8 @@
-@import 'cdr-fonts';
 @import 'cdr-tokens';
 @import 'cdr-doc-tokens';
+@import '../../../../node_modules/@rei/cdr-assets/dist/cdr-fonts.css';
+@import '../../../../node_modules/@rei/cdr-assets/dist/cdr-core.css';
+
 $side-navigation-logo-width: 162px;
 $side-navigation-width: 262px;
 
