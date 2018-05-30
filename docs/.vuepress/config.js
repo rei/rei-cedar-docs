@@ -1,5 +1,4 @@
 module.exports = {
-  base: "/cedar/",
   title: "REI CO-OP Design System",
   description: "A demo documentation using VuePress",
   head: [
