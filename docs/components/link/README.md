@@ -15,7 +15,7 @@ breadcrumbs:
 ## Basic
 
 ```
-<cdr-link href="https://www.rei.com/">REI.com</cdr-link>
+<cdr-link href="https://www.rei.com/">REI.com home page</cdr-link>
 
 ```
 ## Standalone
