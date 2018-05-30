@@ -49,7 +49,7 @@ export default {
 <style lang="scss">
   @import '../theme/styles/cdr-tokens.scss';
   @import '../theme/styles/cdr-doc-tokens.scss';
-  $background-color-intro: #F9535A; // Copied from InVision comp
+  $background-color-intro: $easily-excited; // Copied from InVision comp
   $text-color-intro: $clean-slate;
 
   .cdr-doc-intro {
@@ -94,7 +94,7 @@ export default {
     margin-bottom: $space-half-x;
 
     .cdr-doc-intro__title + & {
-      border-top: solid 1px $text-color-intro;
+      border-top: solid 1px $suede-shoes;
       margin-top: $space-1-x;
       padding-top: $space-1-x;
     }
@@ -105,7 +105,7 @@ export default {
     margin: 0;
     
     .cdr-doc-intro__title + & {
-      border-top: solid 1px $text-color-intro;
+      border-top: solid 1px $suede-shoes;
       margin-top: $space-1-x;
       padding-top: $space-1-x;
     }

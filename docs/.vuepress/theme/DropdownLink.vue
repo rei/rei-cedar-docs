@@ -74,8 +74,8 @@ export default {
     padding: 0;
   }
 
-  .cdr-doc-side-navigation__parent-link-icon {
-    height: $icon-size;
-    width: $icon-size;
-  }
+  // .cdr-doc-side-navigation__parent-link-icon {
+  //   height: $icon-size;
+  //   width: $icon-size;
+  // }
 </style>
