@@ -15,17 +15,17 @@ breadcrumbs:
 ## Basic
 
 ```
-<cdr-link href="https://www.rei.com/">Default link</cdr-link>
+<cdr-link href="https://www.rei.com/">REI.com</cdr-link>
 
 ```
 ## Standalone
 
 ```
-<cdr-link modifier="standalone" href="https://www.rei.com/">An example standalone link</cdr-link>
+<cdr-link modifier="standalone" href="https://www.rei.com/">REI.com</cdr-link>
 ```
 
 ## With Button Element
 
 ```
-<cdr-link el="button">Button Link</cdr-link>
+<cdr-link tag="button">add to cart</cdr-link>
 ```
