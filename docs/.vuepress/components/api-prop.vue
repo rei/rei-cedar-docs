@@ -1,11 +1,11 @@
 <template>
-  <div class="cdr-doc-api">
+  <div class="api-prop">
     <cdr-row
       gutter="none"
     >
       <cdr-col
-        spanSm="3"
         span="6"
+        spanSm="3"
       >
         <div>
           <p class="prop-name">ordered</p>
@@ -13,8 +13,8 @@
         </div>
       </cdr-col>
       <cdr-col
-        spanSm="3"
         span="6"
+        spanSm="3"
       >
         <div>
           <p class="prop-type">String</p>
@@ -22,8 +22,8 @@
         </div>
       </cdr-col>
       <cdr-col
-        spanSm="6"
         span="6"
+        spanSm="6"
       >
         <div>
           <p class="prop-default">" "</p>
@@ -46,7 +46,13 @@
   import { CdrRow } from '@rei/cdr-row'
   
   export default {
-    name: 'CdrDocApi',
+    name: 'api-prop',
+    props: {
+      isProp: {
+        type: Boolean,
+        default: true
+      }
+    },
     components: {
       CdrCol,
       CdrRow
@@ -58,7 +64,7 @@
   @import '../theme/styles/cdr-tokens.scss';
   @import '../theme/styles/cdr-doc-tokens.scss';
 
-  .cdr-doc-api {
+  .api-prop {
     background-color: $clean-slate;
     border: 1px solid $partly-cloudy;
     border-radius: 4px;
