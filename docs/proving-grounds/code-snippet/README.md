@@ -69,3 +69,60 @@ pageClass: cdr-doc-proving-ground
     </cdr-link>
   ```
 </cdr-doc-code-snippet>
+
+## Content Resilience - Too Much Content
+<cdr-doc-code-snippet>
+  ```html
+    <h1>Hello World</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore nemo inventore, tempora maxime velit accusamus delectus placeat vitae! Voluptatibus officia, aperiam ipsam ducimus odit cupiditate consectetur nisi ad dicta provident.
+    </p>
+    <h2>Sub heading</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem laudantium, quidem unde voluptatibus est, quos error quibusdam ducimus et quaerat quam? Veritatis fuga architecto amet, dolorem praesentium possimus recusandae eaque!
+    </p>
+    <h2>Sub heading</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem laudantium, quidem unde voluptatibus est, quos error quibusdam ducimus et quaerat quam? Veritatis fuga architecto amet, dolorem praesentium possimus recusandae eaque!
+    </p>
+    <h2>Sub heading</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem laudantium, quidem unde voluptatibus est, quos error quibusdam ducimus et quaerat quam? Veritatis fuga architecto amet, dolorem praesentium possimus recusandae eaque!
+    </p>
+    <h2>Sub heading</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem laudantium, quidem unde voluptatibus est, quos error quibusdam ducimus et quaerat quam? Veritatis fuga architecto amet, dolorem praesentium possimus recusandae eaque!
+    </p>
+    <h2>Sub heading</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem laudantium, quidem unde voluptatibus est, quos error quibusdam ducimus et quaerat quam? Veritatis fuga architecto amet, dolorem praesentium possimus recusandae eaque!
+    </p>
+    <h2>Sub heading</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem laudantium, quidem unde voluptatibus est, quos error quibusdam ducimus et quaerat quam? Veritatis fuga architecto amet, dolorem praesentium possimus recusandae eaque!
+    </p>
+    <h2>Sub heading</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem laudantium, quidem unde voluptatibus est, quos error quibusdam ducimus et quaerat quam? Veritatis fuga architecto amet, dolorem praesentium possimus recusandae eaque!
+    </p>
+    <h2>Sub heading</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem laudantium, quidem unde voluptatibus est, quos error quibusdam ducimus et quaerat quam? Veritatis fuga architecto amet, dolorem praesentium possimus recusandae eaque!
+    </p>
+    <h2>Sub heading</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem laudantium, quidem unde voluptatibus est, quos error quibusdam ducimus et quaerat quam? Veritatis fuga architecto amet, dolorem praesentium possimus recusandae eaque!
+    </p>
+    <h2>Sub heading</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem laudantium, quidem unde voluptatibus est, quos error quibusdam ducimus et quaerat quam? Veritatis fuga architecto amet, dolorem praesentium possimus recusandae eaque!
+    </p>
+  ```
+</cdr-doc-code-snippet>
+
+## Content Resilience - Too Little Content
+<cdr-doc-code-snippet>
+  ```html
+    <h1>A</h1>
+  ```
+</cdr-doc-code-snippet>

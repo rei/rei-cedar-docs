@@ -2,15 +2,15 @@
   <div class="cdr-doc-code-snippet" v-bind:class="{ 'cdr-doc-code-snippet--show-copied-notification': copied }">
     <div class="cdr-doc-code-snippet__actions" v-if="copyButton">
       <div class="cdr-doc-code-snippet__copy-action" v-on:click="copyToClipBoard">
-        <cdr-button class="cdr-doc-code-snippet__copy-action">Copy To Clipboard</cdr-button>
-        <div class="cdr-doc-code-snippet__notification" v-if="copied || copyError || copyNotSupported">
-          <span class="cdr-doc-code-snippet__notification-message" v-if="copied">
+        <div class="cdr-doc__copy-action-icon"></div>
+        <div class="cdr-doc-code-snippet__notification">
+          <span class="cdr-doc-code-snippet__notification-message">
             Copied!
           </span>
-          <span class="cdr-doc-code-snippet__notification-message" v-if="copyError">
+          <span class="cdr-doc-code-snippet__notification-message" v-show="copyError">
             Could not copy to clipboard.
           </span>
-          <span class="cdr-doc-code-snippet__notification-message" v-if="copyNotSupported">
+          <span class="cdr-doc-code-snippet__notification-message" v-show="copyNotSupported">
             This browser does not support automatic copying to clipboard.
           </span>
         </div>
@@ -74,6 +74,9 @@ export default {
       this.copied = true;
       this.copyError = false;
       this.copyNotSupported = false;
+      setTimeout(() => {
+        this.copied = false;
+      }, 2000);
     },
     triggerCopyError() {
       this.copied = false;
@@ -91,6 +94,7 @@ export default {
 <style lang="scss">
   @import '../theme/styles/cdr-tokens.scss';
   @import '../theme/styles/cdr-doc-tokens.scss';
+  @import '../../../node_modules/@rei/cdr-button/dist/cdr-button.css';
   $cdr-doc-code-snippet-actions-background-color: $ice-age;
 
   .cdr-doc-code-snippet {
@@ -104,24 +108,15 @@ export default {
     border-bottom: 0;
     border-radius: $cdr-doc-border-radius-default $cdr-doc-border-radius-default 0 0;
     display: flex;
-    padding: $inset-half-x;
-  }
-
-  .cdr-doc-code-snippet__copy-action {
-    margin-left: auto;
+    padding: $inset-1-x;
   }
 
   .cdr-doc-code-snippet__code-wrap div[class^='language-'] {
     background: $cdr-doc-background-color-default;
-    // border: $cdr-doc-border-separator;
-    // border-radius: $cdr-doc-border-radius-default;
     color: $cdr-doc-text-color-secondary;
-    // font-family: 'Roboto Mono', monospace;
-    // font-size: 14px;
-    // line-height: 1.4;
-    // padding: $inset-1-x;
+    max-height: 200px;
     max-width: 100%;
-    overflow-x: auto;
+    overflow: auto;
 
     .cdr-doc-code-snippet__actions + & {
       border-radius: 0 0 $cdr-doc-border-radius-default $cdr-doc-border-radius-default;
@@ -132,15 +127,18 @@ export default {
     position: relative;
   }
 
+  $cdr-doc-code-snippet-icon-color: $taken-for-granite;
+  $cdr-doc-code-snippet-copied-notification-background-color: rgba(0,0,0,0.8);
+  $cdr-doc-code-snippet-copied-notification-caret-size: 8px;
   .cdr-doc-code-snippet__notification {
-    background: rgba(0,0,0,0.8);
+    background: $cdr-doc-code-snippet-copied-notification-background-color;
     border-radius: $cdr-doc-border-radius-default;
-    bottom: 50%;
+    bottom: -30px;
     color: $clean-slate;
     font-size: 14px;
     left: 50%;
     opacity: 0;
-    padding: $inset-half-x-squish;
+    padding: $inset-1-x-squish;
     position: absolute;
     text-align: center;
     transition: .4s;
@@ -149,10 +147,28 @@ export default {
     z-index: 100;
 
     .cdr-doc-code-snippet--show-copied-notification & {
-      bottom: 100%;
+      bottom: -50px;
       opacity: 1;
       transition: .4s;
       visibility: visible;
     }
-  }  
+
+    &:before {
+      border-color: transparent transparent $cdr-doc-code-snippet-copied-notification-background-color transparent;
+      border-style: solid;
+      border-width: $cdr-doc-code-snippet-copied-notification-caret-size;
+      content: '';
+      left: 50%;
+      position: absolute;
+      top: -($cdr-doc-code-snippet-copied-notification-caret-size * 2);
+      transform: translateX(-50%);
+    }
+  }
+
+  .cdr-doc__copy-action-icon {
+    background-color: $cdr-doc-code-snippet-icon-color;
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+  }
 </style>
