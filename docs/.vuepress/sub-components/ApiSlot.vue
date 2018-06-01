@@ -65,5 +65,9 @@
     .prop-description {
       font-size: 14px;
     }
+
+    & + & {
+      margin-top: $space-1-x;
+    }
   }
 </style>
