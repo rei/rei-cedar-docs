@@ -12,11 +12,12 @@ export default {
       required: true,
       validator: value => {
         return ['prop', 'slot', 'event'].indexOf(value) > -1;
-      },
-      dataObj: {
-        type: Object,
-        required: true
       }
+      // ,
+      // dataObj: {
+      //   type: Object,
+      //   required: true
+      // }
     }
   },
   render: function(createElement, context) {
@@ -35,7 +36,7 @@ export default {
       return apiComp;
     }
 
-    return createElement()
+    return createElement(apiComponent())
   }
 }
 </script>
