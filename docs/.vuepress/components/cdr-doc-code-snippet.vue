@@ -114,7 +114,7 @@ export default {
   .cdr-doc-code-snippet__code-wrap div[class^='language-'] {
     background: $cdr-doc-background-color-default;
     color: $cdr-doc-text-color-secondary;
-    max-height: 200px;
+    max-height: 140px;
     max-width: 100%;
     overflow: auto;
 
