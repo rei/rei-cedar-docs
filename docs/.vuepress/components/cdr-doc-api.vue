@@ -28,10 +28,13 @@ export default {
       switch (ctx.props.type) {
         case 'prop':
           apiComp = ApiProp;
+          break;
         case 'slot':
           apiComp = ApiSlot;
+          break;
         case 'event':
           apiComp = ApiEvent;
+          break;
       }
 
       return apiComp;
