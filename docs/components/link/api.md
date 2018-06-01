@@ -13,41 +13,29 @@ Cdr-link required assets:
 | cdr-link.css  | Style sheet         | Component specific styles              |
 
 
-There are several ways you may decide to incorporate the required assets for a component. The following steps provide *a* way rather than *the* way.
+To incorporate the required assets for a component, use the following steps.
 ### #1. Install via NPM
 Install the cdr-link package via `npm` in your terminal:
-Terminal
 
+Terminal
 ```terminal
     npm install --save @rei/cdr-link
 ```
 
-### #2. Import the Component
-Once installed, navigate to your app’s main entry point. In this file you will import your cdr-components as well as their dependencies  and tell Vue to use them.
+### #2. Import Dependencies
+
 main.js 
 ```javascript
-    // Cedar has one dependency which is vue.js 
-    import Vue from 'vue'
-```
-
-Locally register your components
-cedar.js 
-```javascript
-    export { CdrLink } from '@rei/cdr-link';
-    
-    // if using icons with the cdr-link component, also install cdr-icon 
-    export { CdrIcon } from '@rei/cdr-icon';
-```
-
-### #3. Import Dependencies
-cedar.js 
-```javascript
     // import your required css.
+    import "@rei/cdr-assets/dist/cdr-core.css";
+    import "@rei/cdr-assets/dist/cdr-fonts.css";
     import '@rei/cdr-link/dist/cdr-link.css';
+
+    // If your link will display an icon ensure you also include the icon’s css file.
     import '@rei/cdr-link/dist/cdr-icon.css';
 ```
 
-### #4. Use them in your component
+### #3. Use them in your component
 
 local.vue 
 ```vue
@@ -71,7 +59,7 @@ local.vue
 
 ## Usage
 
-By default, the component renders using an anchor element and requires an href attribute or tag to render a valid accessible link. 
+By default, the component renders using an anchor element and requires an href attribute or tag to render a valid accessible link.
 
 ```vue
   <cdr-link href="http://rei.com">
@@ -79,7 +67,7 @@ By default, the component renders using an anchor element and requires an href a
   </cdr-link>
 ```
 
-Use the tag prop to render the link as a  `<button>` element that presents a link appearance without an `href` attribute.
+Use the tag prop to render the link as a `<button>` element that presents a link appearance without an `href` attribute.
 
 ```vue
   <cdr-link tag="button">
@@ -88,18 +76,26 @@ Use the tag prop to render the link as a  `<button>` element that presents a lin
 ```
 
 ## Style Modifiers
-You can pass the following variants to the modifier attribute of the cdr-link component to effect its visual presentation.
+To effect the visual presentation pass the following variants to the modifier attribute of the cdr-link component.
 
 | Standalone | Include as an independent call to action to expand content, remove filters, or provide additional information. |
 
 ## Accessibility
 
-- Always use a `<button>` element via the `tag` prop when there is no `href` attribute that can be applied to the link. For example, toggling a display to fullscreen.
-- Always use the default `<a>` element for a link when the link will navigate the user to the location specified by the `href` attribute. 
-- Ensure assistive technology can find all links on a page.
-- Never use link labels that aren’t descriptive, such as “click here” or “start here”
-- Describe users destination when they click it
-- Improve descriptiveness by including hidden text from view but read by screen readers via an inline element with the `cdr-sr-only` class.
+* Always use a `<button>` element via the `tag` prop when there is no `href` attribute that can be applied to the link. Examples are: 
+  * Toggling a display to fullscreen
+  * Opening a modal window
+  * Triggering a popup menu
+  * Playing media content
+* Always use the default `<a>` element for a link when the link will navigate the user to the location specified by the `href` attribute.
+*Ensure links can be accessed via the keyboard.
+  * Don’t manipulate the default tab index
+* Ensure assistive technology can find all links on a page by:
+  * Using link labels that are descriptive. Do not use  “click here” or “start here”
+  * Describing the link’s destination when clicked 
+  * Always providing a href attribute. Empty href attributes are not considered true links
+  * Use hidden text that can be read by screen readers, if screen space for text is minimal
+  * Use an inline element for hidden text using the `cdr-sr-only` class
 ```vue
     <cdr-link>
        Start here 
@@ -109,12 +105,10 @@ You can pass the following variants to the modifier attribute of the cdr-link co
      </cdr-link>
 ```
 
-- Always ensure links can be accessed via the keyboard.
-
 ## Development roadmap
 
-The following features will be explored in future iterations
-- Support for vue router-link.
+The following features will be explored in future iterations.
+* Support for vue router-link.
 
 
 
