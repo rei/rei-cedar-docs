@@ -18,14 +18,21 @@ breadcrumbs:
 <cdr-link href="https://www.rei.com/">REI.com home page</cdr-link>
 
 ```
+[github](https://github.com/rei/rei-cedar/tree/cedar2/src/components/link)
+[code sandbox](https://codesandbox.io/s/jnv1rko1z9)
+
 ## Standalone
 
 ```
 <cdr-link modifier="standalone" href="https://www.rei.com/">REI.com</cdr-link>
 ```
+[github](https://github.com/rei/rei-cedar/tree/cedar2/src/components/link)
+[code sandbox](https://codesandbox.io/s/jnv1rko1z9)
 
 ## With Button Element
 
 ```
 <cdr-link tag="button">add to cart</cdr-link>
 ```
+[github](https://github.com/rei/rei-cedar/tree/cedar2/src/components/link)
+[code sandbox](https://codesandbox.io/s/jnv1rko1z9)
