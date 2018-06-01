@@ -7,7 +7,7 @@ export default {
   name: 'CdrDocApi',
   functional: true,
   props: {
-    apiType: {
+    type: {
       type: String,
       required: true,
       validator: value => {
@@ -20,12 +20,12 @@ export default {
       // }
     }
   },
-  render: function(createElement, context) {
+  render: function(h, ctx) {
 
     function apiComponent () {
       let apiComp;
 
-      switch (context.apiType) {
+      switch (ctx.props.type) {
         case 'prop':
           apiComp = ApiProp;
         case 'slot':
@@ -33,10 +33,11 @@ export default {
         case 'event':
           apiComp = ApiEvent;
       }
+
       return apiComp;
     }
 
-    return createElement(apiComponent())
+    return h(apiComponent())
   }
 }
 </script>
