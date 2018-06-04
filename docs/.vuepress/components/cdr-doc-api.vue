@@ -13,11 +13,6 @@ export default {
       validator: value => {
         return ['prop', 'slot', 'event'].indexOf(value) > -1;
       }
-      // ,
-      // dataObj: {
-      //   type: Object,
-      //   required: true
-      // }
     }
   },
   render: function(h, ctx) {
