@@ -1,24 +1,26 @@
 <template>
-  <div class="api-slot">
-    <cdr-row
-      gutter="none"
-    >
-      <cdr-col
-        span="12"
+  <div>
+    <div class="api-slot" v-for="apiSlot in $page.frontmatter.versions[0].api.slots" :key="apiSlot.text">
+      <cdr-row
+        gutter="none"
       >
-        <div>
-          <p class="slot-name">default</p>
-          <p class="slot-label">name</p>
-        </div>
-      </cdr-col>
-      <cdr-col
-        span="12"
-      >
-        <p class="slot-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt officia quibusdam obcaecati quos, corporis porro ipsa et hic
-        </p>
-      </cdr-col>
-    </cdr-row>
+        <cdr-col
+          span="12"
+        >
+          <div>
+            <p class="slot-name">{{ apiSlot.name }}</p>
+            <p class="slot-label">name </p>
+          </div>
+        </cdr-col>
+        <cdr-col
+          span="12"
+        >
+          <p class="slot-description">
+            {{ apiSlot.description }}
+          </p>
+        </cdr-col>
+      </cdr-row>
+    </div>
   </div>
 </template>
 

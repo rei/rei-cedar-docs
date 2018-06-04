@@ -1,43 +1,45 @@
 <template>
-  <div class="api-prop">
-    <cdr-row
-      gutter="none"
-    >
-      <cdr-col
-        span="6"
-        spanSm="3"
+  <div>
+    <div class="api-prop" v-for="apiProp in $page.frontmatter.versions[0].api.props" :key="apiProp.text">
+      <cdr-row
+        gutter="none"
       >
-        <div>
-          <p class="prop-name">cycle</p>
-          <p class="prop-label">name</p>
-        </div>
-      </cdr-col>
-      <cdr-col
-        span="6"
-        spanSm="3"
-      >
-        <div>
-          <p class="prop-type">Boolean</p>
-          <p class="prop-label">type</p>
-        </div>
-      </cdr-col>
-      <cdr-col
-        span="6"
-        spanSm="6"
-      >
-        <div>
-          <p class="prop-default">false</p>
-          <p class="prop-label">Default</p>
-        </div>
-      </cdr-col>
-      <cdr-col
-        span="12"
-      >
-        <p class="prop-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt officia quibusdam obcaecati quos, corporis porro ipsa et hic
-        </p>
-      </cdr-col>
-    </cdr-row>
+        <cdr-col
+          span="6"
+          spanSm="3"
+        >
+          <div>
+            <p class="prop-name">{{ apiProp.name }}</p>
+            <p class="prop-label">name</p>
+          </div>
+        </cdr-col>
+        <cdr-col
+          span="6"
+          spanSm="3"
+        >
+          <div>
+            <p class="prop-type">{{ apiProp.type }}</p>
+            <p class="prop-label">type</p>
+          </div>
+        </cdr-col>
+        <cdr-col
+          span="6"
+          spanSm="6"
+        >
+          <div>
+            <p class="prop-default">{{ apiProp.default }}</p>
+            <p class="prop-label">Default</p>
+          </div>
+        </cdr-col>
+        <cdr-col
+          span="12"
+        >
+          <p class="prop-description">
+            {{ apiProp.description }}
+          </p>
+        </cdr-col>
+      </cdr-row>
+    </div>
   </div>
 </template>
 

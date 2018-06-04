@@ -1,32 +1,34 @@
 <template>
-  <div class="api-event">
-    <cdr-row
-      gutter="none"
-    >
-      <cdr-col
-        span="6"
+  <div>
+    <div class="api-event" v-for="apiEvent in $page.frontmatter.versions[0].api.events" :key="apiEvent.text">
+      <cdr-row
+        gutter="none"
       >
-        <div>
-          <p class="event-name">input</p>
-          <p class="event-label">name</p>
-        </div>
-      </cdr-col>
-      <cdr-col
-        span="6"
-      >
-        <div>
-          <p class="event-type">String</p>
-          <p class="event-label">value</p>
-        </div>
-      </cdr-col>
-      <cdr-col
-        span="12"
-      >
-        <p class="event-description">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt officia quibusdam obcaecati quos, corporis porro ipsa et hic
-        </p>
-      </cdr-col>
-    </cdr-row>
+        <cdr-col
+          span="6"
+        >
+          <div>
+            <p class="event-name">{{ apiEvent.name }}</p>
+            <p class="event-label">name</p>
+          </div>
+        </cdr-col>
+        <cdr-col
+          span="6"
+        >
+          <div>
+            <p class="event-type">{{ apiEvent.type }}</p>
+            <p class="event-label">value</p>
+          </div>
+        </cdr-col>
+        <cdr-col
+          span="12"
+        >
+          <p class="event-description">
+            {{ apiEvent.description }}
+          </p>
+        </cdr-col>
+      </cdr-row>
+    </div>
   </div>
 </template>
 
