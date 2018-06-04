@@ -37,23 +37,6 @@
             "name": "test",
             "description": "testing multiple slot documentation"
           }
-        ],
-        "events": [
-          {
-            "name": "keydown",
-            "type": "event",
-            "description": "Fires when a key is pressed."
-          },
-          {
-            "name": "paste",
-            "type": "event",
-            "description": "Fires when text is pasted into input."
-          },
-          {
-            "name": "focus",
-            "type": "event",
-            "description": "Fires when input gains focus."
-          }
         ]
       },
       "version": "0.1.0"
@@ -95,7 +78,3 @@ Have as much fun as possible!!
 ### Slots 
 
 <cdr-doc-api type="slot" />
-
-# Events
-
-<cdr-doc-api type="event" />
