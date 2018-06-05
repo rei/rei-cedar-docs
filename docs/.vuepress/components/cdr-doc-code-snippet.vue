@@ -1,5 +1,5 @@
 <template>
-  <div class="cdr-doc-code-snippet" v-bind:class="{ 'cdr-doc-code-snippet--show-copied-notification': copied, 'cdr-doc-code-snippet--no-line-numbers': !lineNumbers,
+  <div class="cdr-doc-code-snippet" :class="{ 'cdr-doc-code-snippet--show-copied-notification': copied, 'cdr-doc-code-snippet--no-line-numbers': !lineNumbers,
     'cdr-doc-code-snippet--no-max-height': !maxHeight }">
     <div class="cdr-doc-code-snippet__actions" v-if="copyButton">
       <div class="cdr-doc-code-snippet__copy-action cdr-doc-code-snippet__action" v-on:click="copyToClipBoard">
