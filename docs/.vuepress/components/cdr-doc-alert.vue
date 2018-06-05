@@ -1,6 +1,6 @@
 <template>
   <div class="rei-doc-alert">
-    <icon-information-stroke class="rei-doc-alert__icon"/>
+    <icon-information-stroke modifier="sm" class="rei-doc-alert__icon"/>
     <slot>Last updated on July 2, 2018. Consistent with v 2.0.1</slot>
   </div>
 </template>
@@ -36,8 +36,8 @@ export default {
 
   .rei-doc-alert .rei-doc-alert__icon {
     fill: $icon-color;
-    height: $icon-size-sm;
+    // height: $icon-size-sm;
     margin-right: $space-quarter-x;
-    width: $icon-size-sm;
+    // width: $icon-size-sm;
   }
 </style>
