@@ -32,11 +32,8 @@
 </template>
 
 <script>
-import { CdrButton } from '@rei/cdr-button';
-
 export default {
   name: 'CdrDocCodeSnippet',
-  components: { CdrButton },
   props: {
     copyButton: {
       default: true,
@@ -119,7 +116,6 @@ export default {
 <style lang="scss">
   @import '../theme/styles/cdr-tokens.scss';
   @import '../theme/styles/cdr-doc-tokens.scss';
-  @import '../../../node_modules/@rei/cdr-button/dist/cdr-button.css';
   $cdr-doc-code-snippet-actions-background-color: $ice-age;
 
   .cdr-doc-code-snippet {

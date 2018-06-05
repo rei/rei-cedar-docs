@@ -26,6 +26,7 @@
 <script>
 import OutboundLink from './OutboundLink.vue'
 import { resolvePage, normalize, outboundRE, endingSlashRE } from './util'
+import '../cedar.js'; // Make components available on all pages
 
 export default {
   components: { OutboundLink },
