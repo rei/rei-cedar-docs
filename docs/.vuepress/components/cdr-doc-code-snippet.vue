@@ -1,8 +1,11 @@
 <template>
-  <div class="cdr-doc-code-snippet" v-bind:class="{ 'cdr-doc-code-snippet--show-copied-notification': copied }">
+  <div class="cdr-doc-code-snippet" v-bind:class="{ 'cdr-doc-code-snippet--show-copied-notification': copied, 'cdr-doc-code-snippet--no-line-numbers': !lineNumbers,
+    'cdr-doc-code-snippet--no-max-height': !maxHeight }">
     <div class="cdr-doc-code-snippet__actions" v-if="copyButton">
-      <div class="cdr-doc-code-snippet__copy-action" v-on:click="copyToClipBoard">
-        <div class="cdr-doc__copy-action-icon"></div>
+      <div class="cdr-doc-code-snippet__copy-action cdr-doc-code-snippet__action" v-on:click="copyToClipBoard">
+        <cdr-button class="cdr-doc-code-snippet__copy-action">
+          <img class="cdr-doc-code-snippet__action-icon" src="/Copy@2x.png" />
+        </cdr-button>
         <div class="cdr-doc-code-snippet__notification">
           <span class="cdr-doc-code-snippet__notification-message">
             Copied!
@@ -15,6 +18,12 @@
           </span>
         </div>
       </div>
+      <a class="cdr-doc-code-snippet__action" :href="repositoryHref" v-if="repositoryHref">
+        <img class="cdr-doc-code-snippet__action-icon" src="/Github@2x.png" />
+      </a>
+      <a class="cdr-doc-code-snippet__action" :href="sandboxHref" v-if="sandboxHref">
+        <img class="cdr-doc-code-snippet__action-icon" src="/CodeSandbox@2x.png" />
+      </a>
     </div>
     <div class="cdr-doc-code-snippet__code-wrap" ref="codeWrap">
       <div class="cdr-doc-code-snippet__code" ref="source"><slot/></div>
@@ -32,6 +41,22 @@ export default {
     copyButton: {
       default: true,
       type: Boolean
+    },
+    lineNumbers: {
+      default: true,
+      type: Boolean
+    },
+    maxHeight: {
+      default: true,
+      type: Boolean
+    },
+    repositoryHref: {
+      default: false,
+      type: [String, Number]
+    },
+    sandboxHref: {
+      default: false,
+      type: [String, Number]
     }
   },
   data: function() {
@@ -103,6 +128,7 @@ export default {
   }
 
   .cdr-doc-code-snippet__actions {
+    align-items: center;
     background-color: $cdr-doc-code-snippet-actions-background-color;
     border: $cdr-doc-border-separator;
     border-bottom: 0;
@@ -117,6 +143,10 @@ export default {
     max-height: 140px;
     max-width: 100%;
     overflow: auto;
+
+    .cdr-doc-code-snippet--no-max-height & {
+      max-height: none;
+    }
 
     .cdr-doc-code-snippet__actions + & {
       border-radius: 0 0 $cdr-doc-border-radius-default $cdr-doc-border-radius-default;
@@ -165,10 +195,38 @@ export default {
     }
   }
 
-  .cdr-doc__copy-action-icon {
-    background-color: $cdr-doc-code-snippet-icon-color;
+  .cdr-doc-code-snippet__action-icon {
     cursor: pointer;
-    height: 18px;
-    width: 18px;
+    display: block;
+    height: 22px;
+  }
+
+  .cdr-doc-code-snippet--no-line-numbers {
+    .line-numbers-wrapper {
+      display: none;
+    }
+
+    div[class^='language-'] pre {
+      padding-left: 0;
+    }
+  }
+
+  .cdr-doc-code-snippet__action {
+    display: block;
+    margin-right: $space-1-x;
+  }
+
+  // Strip out button styles until official "Icon Only" button variation is possible
+  .cdr-button {
+    &,
+    &:hover {
+      background: none;
+      border: 0;
+      display: block;
+      font-size: 0;
+      line-height: 1;
+      margin: 0;
+      padding: 0;
+    }
   }
 </style>
