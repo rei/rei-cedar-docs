@@ -4,25 +4,25 @@
     <div class="cdr-doc-code-snippet__actions" v-if="copyButton">
       <div class="cdr-doc-code-snippet__copy-action cdr-doc-code-snippet__action" v-on:click="copyToClipBoard">
         <cdr-button class="cdr-doc-code-snippet__copy-action">
-          <img class="cdr-doc-code-snippet__action-icon" :src="$withBase('/Copy@2x.png')" />
+          <img class="cdr-doc-code-snippet__action-icon" :src="$withBase('/Copy@2x.png')" alt="Copy to clipboard"/>
         </cdr-button>
-        <div class="cdr-doc-code-snippet__notification">
-          <span class="cdr-doc-code-snippet__notification-message">
+        <div class="cdr-doc-code-snippet__notification" aria-live="polite">
+          <span class="cdr-doc-code-snippet__notification-message" v-if="copied">
             Copied!
           </span>
-          <span class="cdr-doc-code-snippet__notification-message" v-show="copyError">
+          <span class="cdr-doc-code-snippet__notification-message" v-if="copyError">
             Could not copy to clipboard.
           </span>
-          <span class="cdr-doc-code-snippet__notification-message" v-show="copyNotSupported">
+          <span class="cdr-doc-code-snippet__notification-message" v-if="copyNotSupported">
             This browser does not support automatic copying to clipboard.
           </span>
         </div>
       </div>
       <a class="cdr-doc-code-snippet__action" :href="repositoryHref" v-if="repositoryHref">
-        <img class="cdr-doc-code-snippet__action-icon" :src="$withBase('/Github@2x.png')"/>
+        <img class="cdr-doc-code-snippet__action-icon" :src="$withBase('/Github@2x.png')" alt="View source in repository"/>
       </a>
       <a class="cdr-doc-code-snippet__action" :href="sandboxHref" v-if="sandboxHref">
-        <img class="cdr-doc-code-snippet__action-icon" :src="$withBase('/CodeSandbox@2x.png')" />
+        <img class="cdr-doc-code-snippet__action-icon" :src="$withBase('/CodeSandbox@2x.png')" alt="View in code sandbox"/>
       </a>
     </div>
     <div class="cdr-doc-code-snippet__code-wrap" ref="codeWrap">
@@ -49,11 +49,11 @@ export default {
     },
     repositoryHref: {
       default: false,
-      type: [String, Number]
+      type: [String, Boolean]
     },
     sandboxHref: {
       default: false,
-      type: [String, Number]
+      type: [String, Boolean]
     }
   },
   data: function() {
@@ -73,6 +73,7 @@ export default {
       textarea.style.width = '0';
       textarea.style.position = 'absolute';
       textarea.style.left = '-99999px';
+      textarea.tabIndex = -1;
       this.$refs.codeWrap.appendChild(textarea);
 
       textarea.textContent = source.textContent;

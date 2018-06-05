@@ -92,10 +92,6 @@ div[class^='language-'] {
     }
 
     pre {
-      font-family: 'Roboto Mono', monospace;
-      font-size: 14px;
-      letter-spacing: -0.01em;
-      line-height: 1.4;
       margin: 0;
       padding-left: $space-1-x * 3;
       position: relative;
@@ -104,6 +100,10 @@ div[class^='language-'] {
 
     code {
       display: block;
+      font-family: 'Roboto Mono', monospace;
+      font-size: 14px;
+      letter-spacing: -0.01em;
+      line-height: 1.4;
     }
 
     & > div {
