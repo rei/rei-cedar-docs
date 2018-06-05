@@ -4,7 +4,7 @@
     <div class="cdr-doc-code-snippet__actions" v-if="copyButton">
       <div class="cdr-doc-code-snippet__copy-action cdr-doc-code-snippet__action" v-on:click="copyToClipBoard">
         <cdr-button class="cdr-doc-code-snippet__copy-action">
-          <img class="cdr-doc-code-snippet__action-icon" src="/Copy@2x.png" />
+          <img class="cdr-doc-code-snippet__action-icon" :src="$withBase('/Copy@2x.png')" />
         </cdr-button>
         <div class="cdr-doc-code-snippet__notification">
           <span class="cdr-doc-code-snippet__notification-message">
@@ -19,10 +19,10 @@
         </div>
       </div>
       <a class="cdr-doc-code-snippet__action" :href="repositoryHref" v-if="repositoryHref">
-        <img class="cdr-doc-code-snippet__action-icon" src="/Github@2x.png" />
+        <img class="cdr-doc-code-snippet__action-icon" :src="$withBase('/Github@2x.png')"/>
       </a>
       <a class="cdr-doc-code-snippet__action" :href="sandboxHref" v-if="sandboxHref">
-        <img class="cdr-doc-code-snippet__action-icon" src="/CodeSandbox@2x.png" />
+        <img class="cdr-doc-code-snippet__action-icon" :src="$withBase('/CodeSandbox@2x.png')" />
       </a>
     </div>
     <div class="cdr-doc-code-snippet__code-wrap" ref="codeWrap">
