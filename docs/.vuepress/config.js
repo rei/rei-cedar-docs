@@ -8,10 +8,13 @@ module.exports = {
       {
         rel: "stylesheet",
         href:
-          "https://fonts.googleapis.com/css?family=Roboto+Condensed:400|Roboto:400"
+          "https://fonts.googleapis.com/css?family=Roboto+Condensed:400|Roboto:400|Roboto+Mono:400"
       }
     ]
   ],
+  markdown: {
+    lineNumbers: true
+  },
   themeConfig: {
     logo: "/doc-site-logo.png",
     search: false,

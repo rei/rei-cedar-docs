@@ -1,8 +1,6 @@
 ---
 layout: LayoutArticle
 title: Components
-breadcrumbs: false
-title_metadata: false
 summary: false
 ---
 # About our components

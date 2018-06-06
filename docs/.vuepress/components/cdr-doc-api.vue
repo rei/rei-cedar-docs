@@ -1,30 +1,41 @@
-<template>
-  <div class=".cdr-doc-api">
-  </div>
-</template>
-
 <script>
-  import { CdrCol } from '@rei/cdr-col'
-  import { CdrRow } from '@rei/cdr-row'
-  
-  export default {
-    name: 'CdrDocApi',
-    components: {
-      CdrCol,
-      CdrRow
-    }
-  };
-</script>
+import ApiEvent from '../sub-components/ApiEvent.vue';
+import ApiProp from '../sub-components/ApiProp.vue';
+import ApiSlot from '../sub-components/ApiSlot.vue';
 
-<style lang="scss">
-  @import '../theme/styles/cdr-tokens.scss';
-  
-  .cdr-doc-api {
-    box-sizing: border-box;
-    height: 84px;
-    width: 689px;
-    border: 1px solid $partly-cloudy;
-    border-radius: 4px;
-    background-color: $clean-slate
+export default {
+  name: 'CdrDocApi',
+  functional: true,
+  props: {
+    type: {
+      type: String,
+      required: true,
+      validator: value => {
+        return ['prop', 'slot', 'event'].indexOf(value) > -1;
+      }
+    }
+  },
+  render: function(h, ctx) {
+
+    function apiComponent () {
+      let apiComp;
+
+      switch (ctx.props.type) {
+        case 'prop':
+          apiComp = ApiProp;
+          break;
+        case 'slot':
+          apiComp = ApiSlot;
+          break;
+        case 'event':
+          apiComp = ApiEvent;
+          break;
+      }
+
+      return apiComp;
+    }
+
+    return h(apiComponent())
   }
-</style>
+}
+</script>

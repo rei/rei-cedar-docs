@@ -1,11 +1,48 @@
 ---
-title: Button
-layout: LayoutComponent
-summary: Buttons are used to invoke an event and communicate the action that will occur.
-title_metadata: Also known as a Call-to-Action (CTA)
-breadcrumbs:
-- text: Components/
-  href: "#"
+{
+	"title": "Button",
+	"layout": "LayoutComponent",
+	"summary": "Buttons are used to invoke an event and communicate the action that will occur.",
+	"title_metadata": "Also known as a Call-to-Action (CTA)",
+	"breadcrumbs": [
+		{
+			"text": "Components/",
+			"href": "#"
+		}
+  ],
+  "name": "CdrButton",
+  "versions": [
+    {
+      "api": {
+        "props": [
+          {
+            "name": "size",
+            "type": "string",
+            "default": "\"medium\"",
+            "description": "Sets a static size for the button, which scales padding and text size. {small, medium, large}"
+          },
+          {
+            "name": "responsiveSize",
+            "type": "array",
+            "default": "n/a",
+            "description": "Render a specific button size at a specific breakpoint. Takes precedence over size and fullWidth.\nFormat is size@breakpoint (ex: large@sm)."
+          }
+        ],
+        "slots": [
+          {
+            "name": "default",
+            "description": "innerHTML on the inside of the button component"
+          },
+          {
+            "name": "test",
+            "description": "testing multiple slot documentation"
+          }
+        ]
+      },
+      "version": "0.1.0"
+    }
+  ]
+}
 ---
 
 <cdr-doc-alert/>
@@ -33,3 +70,11 @@ Cras euismod venenatis nulla sed fermentum. Etiam venenatis vestibulum metus at 
 ::: tip Warning!!
 Have as much fun as possible!!
 :::
+
+### Props
+
+<cdr-doc-api type="prop" />
+
+### Slots 
+
+<cdr-doc-api type="slot" />

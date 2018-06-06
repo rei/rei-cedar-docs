@@ -39,12 +39,8 @@
 </template>
 
 <script>
-import * as CdrList from "@rei/cdr-list";
 export default {
   name: "list",
-  components: {
-    ...CdrList
-  }
 };
 </script>
 

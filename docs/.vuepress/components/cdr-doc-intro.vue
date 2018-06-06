@@ -2,7 +2,7 @@
   <div class="cdr-doc-intro">
     <div class="cdr-doc-intro__inner">
         <ul class="cdr-doc-intro__breadcrumbs" v-if="breadcrumbs">
-          <li v-for="breadcrumb in breadcrumbs">
+          <li v-for="breadcrumb in breadcrumbs" :key="breadcrumb.text">
             <a :href="breadcrumb.href" class="cdr-doc-intro__breadcrumb-link">{{ breadcrumb.text }}</a>
           </li>
         </ul>
@@ -23,19 +23,21 @@ export default {
   props: {
     breadcrumbs: {
       type: Array,
-      default: [
-        {
-          text: 'Components/',
-          href: '#'
-        }
-      ]
+      default: function () {
+        return [
+          {
+            text: 'Components/',
+            href: '#'
+          }
+        ];
+      }
     },
     title: {
       type: String,
       default: 'Button'
     },
     metadata: {
-      type: String,
+      type: [String, Boolean],
       default: 'Also known as a Call-to-Action (CTA)'
     }
   },
@@ -49,6 +51,7 @@ export default {
 <style lang="scss">
   @import '../theme/styles/cdr-tokens.scss';
   @import '../theme/styles/cdr-doc-tokens.scss';
+  
   $background-color-intro: $easily-excited; // Copied from InVision comp
   $text-color-intro: $clean-slate;
 

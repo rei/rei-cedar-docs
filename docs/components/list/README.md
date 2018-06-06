@@ -1,6 +1,30 @@
 ---
-title: List
-layout: LayoutComponent
+{
+  "title": "List",
+  "layout": "LayoutComponent",
+  "name": "CdrList",
+  "versions": [
+    {
+      "api": {
+        "props": [
+          {
+            "name": "tag",
+            "type": "string",
+            "default": "\"ul\"",
+            "description": "Tag accepts a user defined element and expects either: 'ul' = Unordered List or 'ol' = Ordered List."
+          }
+        ],
+        "slots": [
+          {
+            "name": "default",
+            "description": "MISSING DESCRIPTION"
+          }
+        ]
+      },
+      "version": "0.1.0"
+    }
+  ]
+}
 ---
 
 # API GUIDE
@@ -26,3 +50,11 @@ Cras euismod venenatis nulla sed fermentum. Etiam venenatis vestibulum metus at 
 ::: tip Warning!!
 Have as much fun as possible!!
 :::
+
+### Props
+
+<cdr-doc-api type="prop" />
+
+### Slots 
+
+<cdr-doc-api type="slot" />
