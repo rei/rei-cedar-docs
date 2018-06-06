@@ -5,7 +5,7 @@
     </cdr-doc-intro>
     <div class="cdr-doc-component-layout__tabs">
       <div class="cdr-doc-component-layout__tabs-inner">
-        Full bleed tabs go here
+        <cdr-doc-tabs :labels="tabLabels"/>
       </div>
     </div>
     <div class="cdr-doc-component-layout__body">
@@ -21,6 +21,10 @@ export default {
   computed: {
     data () {
       return this.$page.frontmatter
+    },
+    tabLabels () {
+      const labels = this.data.tabLabels || ['Overview', 'Design Guidelines', 'API', 'History'];
+      return labels;
     }
   }
 }
