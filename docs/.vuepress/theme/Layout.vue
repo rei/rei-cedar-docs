@@ -121,7 +121,7 @@ export default {
     nprogress.configure({ showSpinner: false })
 
     this.$router.beforeEach((to, from, next) => {
-      if (to.path !== from.path && !Vue.component(pathToComponentName(to.path))) {
+      if (to.path !== from.path && !Vue.component(to.name)) {
         nprogress.start()
       }
       next()
@@ -181,5 +181,5 @@ function updateMetaTags (meta, current) {
 }
 </script>
 
-<style src="prismjs/themes/prism-tomorrow.css"></style>
+<!-- <style src="prismjs/themes/prism-coy.css"></style> -->
 <style src="./styles/theme.scss" lang="scss"></style>
