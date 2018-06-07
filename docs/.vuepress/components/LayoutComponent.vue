@@ -1,30 +1,40 @@
 <template>
-  <div class="page cdr-doc-component-layout">
-    <cdr-doc-intro :title="data.title" :metadata="data.title_metadata" :breadcrumbs="data.breadcrumbs">
-      {{ data.summary }}
+  <div class="page cdr-doc-component-layout" :class="activeTabClass">
+    <cdr-doc-intro :title="pageData.title" :metadata="pageData.title_metadata" :breadcrumbs="pageData.breadcrumbs">
+      {{ pageData.summary }}
     </cdr-doc-intro>
-    <div class="cdr-doc-component-layout__tabs">
-      <div class="cdr-doc-component-layout__tabs-inner">
-        <cdr-doc-tabs :labels="tabLabels"/>
-      </div>
-    </div>
-    <div class="cdr-doc-component-layout__body">
-      <div class="cdr-doc-component-layout__body-inner">
-        <Content :custom="false"/>
-      </div>
-    </div>
+    <Content :custom="false"/>
   </div>
 </template>
 
 <script>
+import slugify from '../../../utils/slugify.js';
+
 export default {
+  data: function() {
+    return {
+      activeTab: 'Overview'
+    }
+  },
   computed: {
-    data () {
+    pageData () {
       return this.$page.frontmatter
     },
     tabLabels () {
-      const labels = this.data.tabLabels || ['Overview', 'Design Guidelines', 'API', 'History'];
+      const labels = this.pageData.tabLabels || ['Overview', 'Design Guidelines', 'API', 'History'];
       return labels;
+    },
+    tabId () {
+      const id = this.pageData.tabId || 'global-component-doc-tabs';
+      return id;
+    },
+    activeTabClass () {
+      return `cdr-doc-component-layout--${slugify(this.activeTab)}-active`;
+    }
+  },
+  methods: {
+    activeTabSwitched(newActiveTab) {
+      this.activeTab = newActiveTab;
     }
   }
 }
@@ -45,22 +55,5 @@ export default {
     padding: $inset-1-x;
     padding-bottom: 0;
     padding-top: 0;
-  }
-
-  .cdr-doc-component-layout__tabs {
-    border-bottom: $cdr-doc-border-separator;
-  }
-
-  .cdr-doc-component-layout__tabs-inner {
-    margin: 0 auto;
-    width: $cdr-doc-content-max-width;
-  }
-
-  .cdr-doc-component-layout__body-inner {
-    margin: 0 auto;
-    padding: $inset-1-x;
-    padding-left: 0;
-    padding-right: 0;
-    width: $cdr-doc-content-max-width;
   }
 </style>

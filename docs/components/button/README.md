@@ -44,69 +44,83 @@
   ]
 }
 ---
+
+<cdr-doc-tabs>
+<template slot="Overview">
 <cdr-doc-alert/>
 
-<cdr-doc-tab-panel panel-id="Overview">
-  # API GUIDE
-  ## The Beginning
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum in sapien sed dictum. Phasellus placerat sem a eros rutrum efficitur. Proin vestibulum quam ut felis maximus lacinia. Vestibulum non cursus massa. Pellentesque quis leo at tellus aliquet porta. Quisque volutpat sollicitudin tincidunt. In gravida ante nisl, at pretium nibh scelerisque eget. Phasellus eleifend pretium imperdiet. Nunc egestas finibus dui a rhoncus. Integer viverra dapibus posuere. Donec ut augue neque. Aliquam sed sem eu lacus posuere semper sit amet quis orci. Suspendisse potenti.
+# API GUIDE
+## The Beginning
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum in sapien sed dictum. Phasellus placerat sem a eros rutrum efficitur. Proin vestibulum quam ut felis maximus lacinia. Vestibulum non cursus massa. Pellentesque quis leo at tellus aliquet porta. Quisque volutpat sollicitudin tincidunt. In gravida ante nisl, at pretium nibh scelerisque eget. Phasellus eleifend pretium imperdiet. Nunc egestas finibus dui a rhoncus. Integer viverra dapibus posuere. Donec ut augue neque. Aliquam sed sem eu lacus posuere semper sit amet quis orci. Suspendisse potenti.
 
-  ```js
-  console.log("wachaaaaa!!!")
-  let chuloo = 'awesome'
-  let you = 'a little more awesome'
-  ```
+```js
+console.log("wachaaaaa!!!")
+let chuloo = 'awesome'
+let you = 'a little more awesome'
+```
 
-  ## Hidden Leaf API Chakras
-  Cras euismod venenatis nulla sed fermentum. Etiam venenatis vestibulum metus at rhoncus. Aenean et ex libero. Vivamus dapibus nulla eget nisi elementum, in gravida purus eleifend. Integer id scelerisque ligula. Nulla sit amet odio nisl. Suspendisse tempor risus eget nunc dictum, at placerat turpis malesuada. Aenean sit amet accumsan diam, ultricies facilisis odio. Aenean nec iaculis ipsum. Maecenas finibus pulvinar leo, quis viverra quam. Duis ipsum augue, hendrerit in semper vel, dapibus eu diam. Nulla laoreet rutrum enim vehicula maximus. Vivamus porta congue justo, quis ullamcorper purus pellentesque ac. Aliquam sagittis leo nec consequat vulputate.
+## Hidden Leaf API Chakras
+Cras euismod venenatis nulla sed fermentum. Etiam venenatis vestibulum metus at rhoncus. Aenean et ex libero. Vivamus dapibus nulla eget nisi elementum, in gravida purus eleifend. Integer id scelerisque ligula. Nulla sit amet odio nisl. Suspendisse tempor risus eget nunc dictum, at placerat turpis malesuada. Aenean sit amet accumsan diam, ultricies facilisis odio. Aenean nec iaculis ipsum. Maecenas finibus pulvinar leo, quis viverra quam. Duis ipsum augue, hendrerit in semper vel, dapibus eu diam. Nulla laoreet rutrum enim vehicula maximus. Vivamus porta congue justo, quis ullamcorper purus pellentesque ac. Aliquam sagittis leo nec consequat vulputate.
 
-  ### Kakashi Sensei PATCH POST DELETE
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum in sapien sed dictum. Phasellus placerat sem a eros rutrum efficitur. Proin vestibulum quam ut felis maximus lacinia. Vestibulum non cursus massa. Pellentesque quis leo at tellus aliquet porta. Quisque volutpat sollicitudin tincidunt. In gravida ante nisl, at pretium nibh scelerisque eget. Phasellus eleifend pretium imperdiet. Nunc egestas finibus dui a rhoncus. Integer viverra dapibus posuere. Donec ut augue neque. Aliquam sed sem eu lacus posuere semper sit amet quis orci. Suspendisse potenti.
+<cdr-doc-code-snippet>
+```
+<h1>Hello World</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis doloremque vero facere. Cumque velit explicabo reprehenderit, et iusto ullam tenetur ipsum ratione, laudantium repudiandae neque natus, a dolorum dignissimos id.</p>
+```
+</cdr-doc-code-snippet>
+
+### Kakashi Sensei PATCH POST DELETE
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum in sapien sed dictum. Phasellus placerat sem a eros rutrum efficitur. Proin vestibulum quam ut felis maximus lacinia. Vestibulum non cursus massa. Pellentesque quis leo at tellus aliquet porta. Quisque volutpat sollicitudin tincidunt. In gravida ante nisl, at pretium nibh scelerisque eget. Phasellus eleifend pretium imperdiet. Nunc egestas finibus dui a rhoncus. Integer viverra dapibus posuere. Donec ut augue neque. Aliquam sed sem eu lacus posuere semper sit amet quis orci. Suspendisse potenti.
 
 
-  ### Konohamaru GET Requests
-  Cras euismod venenatis nulla sed fermentum. Etiam venenatis vestibulum metus at rhoncus. Aenean et ex libero. Vivamus dapibus nulla eget nisi elementum, in gravida purus eleifend. Integer id scelerisque ligula. Nulla sit amet odio nisl. Suspendisse tempor risus eget nunc dictum, at placerat turpis malesuada. Aenean sit amet accumsan diam, ultricies facilisis odio. Aenean nec iaculis ipsum. Maecenas finibus pulvinar leo, quis viverra quam. Duis ipsum augue, hendrerit in semper vel, dapibus eu diam. Nulla laoreet rutrum enim vehicula maximus. Vivamus porta congue justo, quis ullamcorper purus pellentesque ac. Aliquam sagittis leo nec consequat vulputate.
+### Konohamaru GET Requests
+Cras euismod venenatis nulla sed fermentum. Etiam venenatis vestibulum metus at rhoncus. Aenean et ex libero. Vivamus dapibus nulla eget nisi elementum, in gravida purus eleifend. Integer id scelerisque ligula. Nulla sit amet odio nisl. Suspendisse tempor risus eget nunc dictum, at placerat turpis malesuada. Aenean sit amet accumsan diam, ultricies facilisis odio. Aenean nec iaculis ipsum. Maecenas finibus pulvinar leo, quis viverra quam. Duis ipsum augue, hendrerit in semper vel, dapibus eu diam. Nulla laoreet rutrum enim vehicula maximus. Vivamus porta congue justo, quis ullamcorper purus pellentesque ac. Aliquam sagittis leo nec consequat vulputate.
 
-  ::: tip Warning!!
-  Have as much fun as possible!!
-  :::
+::: tip Warning!!
+Have as much fun as possible!!
+:::
 
-  ### Props
+### Props
 
-  <cdr-doc-api type="prop" />
+<cdr-doc-api type="prop" />
 
-  ### Slots 
+### Slots 
 
-  <cdr-doc-api type="slot" />
-</cdr-doc-tab-panel>
+<cdr-doc-api type="slot" />
+</template>
 
-<cdr-doc-tab-panel panel-id="Design Guidelines">
-  # <span class="display-name">CdrButton</span>
 
-  ### <span class="modifiers">Modifiers</span>
+<template slot="Design Guidelines">
 
-  Modifiers can be combined 1 from each grouping.
+# <span class="display-name">CdrButton</span>
 
-  {secondary} | {sm,xs} | {block, fixed, responsive} **OR** link
+### <span class="modifiers">Modifiers</span>
 
-  Use of the 'link' modifier depends on including the css for cdrA.
+Modifiers can be combined 1 from each grouping.
 
-  A modifier list that contains 'link' exposes the same modifiers as cdrA and the other modifiers shouldn't be combined with it.
+{secondary} | {sm,xs} | {block, fixed, responsive} **OR** link
 
-  Responsive makes the button full width and block @ sm breakpoint.
+Use of the 'link' modifier depends on including the css for cdrA.
 
-</cdr-doc-tab-panel>
+A modifier list that contains 'link' exposes the same modifiers as cdrA and the other modifiers shouldn't be combined with it.
 
-<cdr-doc-tab-panel panel-id="API">
-  # Properties
-  API Props
+Responsive makes the button full width and block @ sm breakpoint.
 
-</cdr-doc-tab-panel>
+</template>
 
-<cdr-doc-tab-panel panel-id="History">
-  # Last updated
-  June 19, 2018
+<template slot="API">
 
-  # Contributors
+# Properties
+API Props
 
-</cdr-doc-tab-panel>
+</template>
+
+<template slot="History">
+
+# Last updated
+June 19, 2018
+
+# Contributors
+
+</template>
+</cdr-doc-tabs>
