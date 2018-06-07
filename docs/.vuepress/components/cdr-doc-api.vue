@@ -1,7 +1,7 @@
 <script>
-import ApiEvent from '../sub-components/ApiEvent.vue';
-import ApiProp from '../sub-components/ApiProp.vue';
-import ApiSlot from '../sub-components/ApiSlot.vue';
+import ApiEvent from './ApiEvent.vue';
+import ApiProp from './ApiProp.vue';
+import ApiSlot from './ApiSlot.vue';
 
 export default {
   name: 'CdrDocApi',
