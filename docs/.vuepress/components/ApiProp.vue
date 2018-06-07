@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="api-prop" v-for="apiProp in $page.frontmatter.versions[0].api.props" :key="apiProp.text">
+    <div class="api-prop" v-for="(apiProp, index) in $page.frontmatter.versions[0].api.props" :key="apiProp.text">
       <cdr-row
         gutter="none"
       >
@@ -9,8 +9,8 @@
           spanSm="3"
         >
           <div>
-            <p class="prop-name">{{ apiProp.name }}</p>
-            <p class="prop-label">name</p>
+            <p :aria-labelledby="'propName' + index" class="prop-name">{{ apiProp.name }}</p>
+            <p :id="'propName' + index" class="prop-label">name</p>
           </div>
         </cdr-col>
         <cdr-col
@@ -18,8 +18,8 @@
           spanSm="3"
         >
           <div>
-            <p class="prop-type">{{ apiProp.type }}</p>
-            <p class="prop-label">type</p>
+            <p :aria-labelledby="'propType' + index" class="prop-type">{{ apiProp.type }}</p>
+            <p :id="'propType' + 1" class="prop-label">type</p>
           </div>
         </cdr-col>
         <cdr-col
@@ -27,14 +27,14 @@
           spanSm="6"
         >
           <div>
-            <p class="prop-default">{{ apiProp.default }}</p>
-            <p class="prop-label">Default</p>
+            <p :aria-labelledby="'propDefault' + index" class="prop-default">{{ apiProp.default }}</p>
+            <p :id="'propDefault' + index" class="prop-label">Default</p>
           </div>
         </cdr-col>
         <cdr-col
           span="12"
         >
-          <p class="prop-description">
+          <p aria-lable="prop description" class="prop-description">
             {{ apiProp.description }}
           </p>
         </cdr-col>

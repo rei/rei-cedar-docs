@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="api-event" v-for="apiEvent in $page.frontmatter.versions[0].api.events" :key="apiEvent.text">
+    <div class="api-event" v-for="(apiEvent, index) in $page.frontmatter.versions[0].api.events" :key="apiEvent.text">
       <cdr-row
         gutter="none"
       >
@@ -8,22 +8,22 @@
           span="6"
         >
           <div>
-            <p class="event-name">{{ apiEvent.name }}</p>
-            <p class="event-label">name</p>
+            <p :aria-labelledby="'eventName' + index" class="event-name">{{ apiEvent.name }}</p>
+            <p :id="'eventName' + index" class="event-label">name</p>
           </div>
         </cdr-col>
         <cdr-col
           span="6"
         >
           <div>
-            <p class="event-type">{{ apiEvent.type }}</p>
-            <p class="event-label">value</p>
+            <p :aria-labelledby="'eventType' + index" class="event-type">{{ apiEvent.type }}</p>
+            <p :id="'eventType' + index" class="event-label">value</p>
           </div>
         </cdr-col>
         <cdr-col
           span="12"
         >
-          <p class="event-description">
+          <p aria-lable="event description" class="event-description">
             {{ apiEvent.description }}
           </p>
         </cdr-col>
