@@ -3,7 +3,7 @@
     <div class="cdr-doc-tabs__labels">
       <ul class="cdr-doc-tabs-list">
         <li class="cdr-doc-tabs__list-item" v-for="tab in tabLabelData" :key="tab.slug">
-          <a class="cdr-doc-tabs__link" :class="{ 'cdr-doc-tabs__link--active' : tab.active }" :href="tab.anchor" v-on:click="switchActiveTab(tab.label, $event)">
+          <a class="cdr-doc-tabs__link" :id="tab.linkId" :class="{ 'cdr-doc-tabs__link--active' : tab.active }" :href="tab.anchor" v-on:click="switchActiveTab(tab.label, $event)" :aria-selected="tab.active">
             {{ tab.label }}
           </a>
         </li>
@@ -11,7 +11,7 @@
     </div>
     <div class="cdr-doc-tabs__panels">
       <div class="cdr-doc-tabs__panels-inner">
-        <div v-for="tab in tabLabelData" class="cdr-doc-tab-panel" :class="{'cdr-doc-tab-panel--active': tab.active }">
+        <div v-for="tab in tabLabelData" class="cdr-doc-tab-panel" :class="{'cdr-doc-tab-panel--active': tab.active }" :aria-hidden="!tab.active" :aria-labelledby="tab.linkId">
           <slot :name="tab.label"/>
         </div>
       </div>
@@ -45,7 +45,8 @@ export default {
     tabLabelData: function() {
       const tabLabelData = this.labels.map(label => {
         const slug = slugify(label);
-        const tabData = {label: label, slug: slug, anchor: `#${slug}`};
+        const tabLinkId = `${slug}-tab`;
+        const tabData = {label: label, slug: slug, anchor: `#${slug}`, linkId: tabLinkId };
         if (this.activeTab === label) {
           tabData.active = true;
         }
