@@ -4,7 +4,7 @@
     <div
       class="nav-item"
       v-for="item in userLinks"
-      :key="item.link">
+      :key="item.text">
       <DropdownLink v-if="item.type === 'links'" :item="item"/>
       <NavLink v-else :item="item"/>
     </div>
