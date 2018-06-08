@@ -1,30 +1,41 @@
 <template>
   <div>
-    <div class="api-event" v-for="apiEvent in $page.frontmatter.versions[0].api.events" :key="apiEvent.text">
+    <div class="api-prop" v-for="(apiProp, index) in $page.frontmatter.versions[0].api.props" :key="apiProp.text">
       <cdr-row
         gutter="none"
       >
         <cdr-col
           span="6"
+          spanSm="3"
         >
           <div>
-            <p class="event-name">{{ apiEvent.name }}</p>
-            <p class="event-label">name</p>
+            <p :aria-labelledby="'propName' + index" class="prop-name">{{ apiProp.name }}</p>
+            <p :id="'propName' + index" class="prop-label">name</p>
           </div>
         </cdr-col>
         <cdr-col
           span="6"
+          spanSm="3"
         >
           <div>
-            <p class="event-type">{{ apiEvent.type }}</p>
-            <p class="event-label">value</p>
+            <p :aria-labelledby="'propType' + index" class="prop-type">{{ apiProp.type }}</p>
+            <p :id="'propType' + 1" class="prop-label">type</p>
+          </div>
+        </cdr-col>
+        <cdr-col
+          span="6"
+          spanSm="6"
+        >
+          <div>
+            <p :aria-labelledby="'propDefault' + index" class="prop-default">{{ apiProp.default }}</p>
+            <p :id="'propDefault' + index" class="prop-label">Default</p>
           </div>
         </cdr-col>
         <cdr-col
           span="12"
         >
-          <p class="event-description">
-            {{ apiEvent.description }}
+          <p aria-lable="prop description" class="prop-description">
+            {{ apiProp.description }}
           </p>
         </cdr-col>
       </cdr-row>
@@ -37,7 +48,7 @@
   import { CdrRow } from '@rei/cdr-row'
   
   export default {
-    name: 'ApiEvent',
+    name: 'ApiProp',
     components: {
       CdrCol,
       CdrRow
@@ -49,25 +60,31 @@
   @import '../theme/styles/cdr-tokens.scss';
   @import '../theme/styles/cdr-doc-tokens.scss';
 
-  .api-event {
+  .api-prop {
     background-color: $clean-slate;
     border: 1px solid $partly-cloudy;
     border-radius: 4px;
     padding: $space-half-x;
 
-    .event-name {
+    .prop-name {
       color: $quick-fixe;
       font-size: 14px;
       margin-bottom: 0px;
     }
     
-    .event-type {
+    .prop-type {
       color: $dehydrated-lemon;
       font-size: 14px;
       margin-bottom: 0px;
     }
 
-    .event-label {
+    .prop-default {
+      color: $cdr-doc-text-color-primary;
+      font-size: 12px;
+      margin-bottom: 0px;
+    }
+
+    .prop-label {
       color: $coal-train;
       font-size: 9px;
     }

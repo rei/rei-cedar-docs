@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="api-slot" v-for="apiSlot in $page.frontmatter.versions[0].api.slots" :key="apiSlot.text">
+    <div class="api-slot" v-for="(apiSlot, index) in $page.frontmatter.versions[0].api.slots" :key="apiSlot.text">
       <cdr-row
         gutter="none"
       >
@@ -8,14 +8,14 @@
           span="12"
         >
           <div>
-            <p class="slot-name">{{ apiSlot.name }}</p>
-            <p class="slot-label">name </p>
+            <p :aria-labelledby="'slotName' + index" class="slot-name">{{ apiSlot.name }}</p>
+            <p :id="'slotName' + index" class="slot-label">name </p>
           </div>
         </cdr-col>
         <cdr-col
           span="12"
         >
-          <p class="slot-description">
+          <p aria-label="slot description" class="slot-description">
             {{ apiSlot.description }}
           </p>
         </cdr-col>
