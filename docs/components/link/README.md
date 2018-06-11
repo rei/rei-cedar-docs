@@ -81,7 +81,7 @@
 
 <cdr-doc-api type="prop" />
 
-### Slots 
+### Slots
 
 <cdr-doc-api type="slot" />
 </template>
@@ -126,6 +126,16 @@ TBD -- Link to sketch file with info about link component.
 </template>
 
 <template slot="API">
+
+<cdr-doc-version />
+
+### Props
+
+<cdr-doc-api type="prop" />
+
+### Slots
+
+<cdr-doc-api type="slot" />
 
 ## Installation
 
