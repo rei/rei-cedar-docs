@@ -1,10 +1,12 @@
 <template>
-  <cdr-select
-    label="Version Select",
-    prompt="Select the API version",
-    :options="$page.frontmatter.versions.map(version => version['version'])"
-  >
-  </cdr-select>
+  <div>
+    <cdr-select
+      v-model="selected"
+      label="Version Select"
+      prompt="Select the API version"
+      :options="$page.frontmatter.versions.map(version => version['version'])"
+    />
+  </div>
 </template>
 
 <script>
@@ -14,6 +16,11 @@ export default {
   name: 'CdrDocVersion',
   components: {
     CdrSelect
+  },
+  data() {
+    return {
+    selected: ''
+    }
   }
 };
 </script>
