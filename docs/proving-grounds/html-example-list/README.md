@@ -8,8 +8,12 @@ pageClass: cdr-doc-proving-ground
 ## Default Component Behavior
 <cdr-button/>
 <cdr-doc-html-example-list>
-  <cdr-button size="large"/>
-  <cdr-button size="small"/>
-  <cdr-button>Foo</cdr-button>
+```html
+  <div>
+    <cdr-button size="large">It's working</cdr-button>
+    <cdr-button size="small">Sort of updating</cdr-button>
+    <cdr-button>Foo</cdr-button>
+  </div>
+```
 </cdr-doc-html-example-list>
 
