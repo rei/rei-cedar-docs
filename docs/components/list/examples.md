@@ -1,4 +1,0 @@
----
-title: Examples
----
-<list></list>
