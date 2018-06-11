@@ -1,10 +1,14 @@
 <template>
   <div class="cdr-doc-html-example-list" v-on:click="codeToConsole">
-    <div class="cdr-doc-html-example-list-slot-wrap" ref="code">
-      <slot/>
-    </div>
-    <div id="cdr-doc-html-example">
-      <!-- Will be replaced with the compiled template code -->
+    <div class="cdr-doc-html-example-list__item" v-for="slotContent, label in $slots">
+      <h1>{{ label }}</h1>
+      <!-- Code is rendered as a string here, then extracted, compiled, and injected as an html example -->
+      <div class="cdr-doc-html-example-list__code" :ref="'cdr-doc-html-example-list__code-source-' + label">
+        <slot :name="label"/>
+      </div>
+      <div :id="'cdr-doc-html-example-' + label">
+        <!-- Will be replaced with the compiled template code -->
+      </div>
     </div>
   </div>
 </template>
@@ -24,23 +28,27 @@
     },
     data: function() {
       return {
-        tempComponent: false
+        examples: []
       }
     },
     computed: {
     },
     mounted: function () {
-      this.codeToConsole();
+      for (const label in this.$slots) {
+        const mountId = '#cdr-doc-html-example-' + label;
+        const templateSource = this.$refs['cdr-doc-html-example-list__code-source-' + label][0].querySelector('pre').textContent;
+        this.codeToConsole(templateSource, mountId);
+      }
     },
     methods: {
-      codeToConsole () {
+      codeToConsole (template, mountId) {
         // This method extracts the textContent out of the markdown <pre> passed in via a <slot> and 
         // calls the Vue compiler directly to render the VUE template content as HTML
         var tempComponent = new Vue({
-          template: this.$refs.code.querySelector('pre').textContent,
+          template: template,
           parent: this,
           components: { CdrButton }
-        }).$mount("#cdr-doc-html-example")
+        }).$mount(mountId)
       }
     }
   }
@@ -50,7 +58,7 @@
   @import '../theme/styles/cdr-doc-tokens.scss';
   $cdr-doc-code-snippet-actions-background-color: $ice-age;
 
-  .cdr-doc-html-example-list-slot-wrap {
-    display: none;
-  }
+  // .cdr-doc-html-example-list-slot-wrap {
+  //   display: none;
+  // }
 </style>

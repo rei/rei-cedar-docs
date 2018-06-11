@@ -6,7 +6,6 @@ pageClass: cdr-doc-proving-ground
 # Html Example List Proving Grounds
 
 ## Default Component Behavior
-<cdr-button/>
 <cdr-doc-html-example-list>
 ```html
   <div>
@@ -17,3 +16,21 @@ pageClass: cdr-doc-proving-ground
 ```
 </cdr-doc-html-example-list>
 
+## Multiple Examples
+
+<cdr-doc-html-example-list>
+  <template slot="default">
+
+```html
+  <cdr-button size="large">Don't forget the spaces</cdr-button>
+```
+  
+  </template>
+  <template slot="hover">
+
+```html
+  <cdr-button size="small">Hovering</cdr-button>
+```
+
+  </template>
+</cdr-doc-html-example-list>
