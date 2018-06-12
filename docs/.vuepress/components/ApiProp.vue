@@ -49,6 +49,9 @@
   
   export default {
     name: 'ApiProp',
+    props: {
+      semver: String
+    },
     components: {
       CdrCol,
       CdrRow

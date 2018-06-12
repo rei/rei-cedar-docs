@@ -38,6 +38,9 @@
   
   export default {
     name: 'ApiEvent',
+    props: {
+      semver: String
+    },
     components: {
       CdrCol,
       CdrRow
