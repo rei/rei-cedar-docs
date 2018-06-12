@@ -1,10 +1,36 @@
 <template>
-  <div class="cdr-doc-html-example-list" v-on:click="codeToConsole">
-    <div class="cdr-doc-html-example-list__item" v-for="slotContent, label in $slots">
-      <span class="cdr-doc-html-example-list__item-label">{{ label }}</span>
-      <!-- Code is rendered as a string here, then extracted, compiled, and injected as an html example -->
-      <div :id="'cdr-doc-html-example-' + label" class="cdr-doc-html-example-list__item">
-        <!-- Will be replaced with the compiled template code -->
+  <div class="cdr-doc-html-example-list" :class="{'cdr-doc-html-example-list--not-interactive': !interactive }">
+    <div class="cdr-doc-html-example-list__item" 
+          :class="'cdr-doc-html-example-list__item-background--' + backgroundToggleStates[slotLabel]"
+          v-for="slotContent, slotLabel in $slots">
+      <div class="cdr-doc-html-example-list__item-background-toggle">
+        <label :for="'cdr-doc-html-example-list__toggle-light-' + slotLabel + instanceId">
+          <input 
+            type="radio" 
+            :id="'cdr-doc-html-example-list__toggle-light-' + slotLabel + instanceId"
+            value="light"
+            v-model="backgroundToggleStates[slotLabel]">
+            Light
+        </label>
+        <label :for="'cdr-doc-html-example-list__toggle-dark-' + slotLabel + instanceId">
+        <input 
+          type="radio" 
+          :id="'cdr-doc-html-example-list__toggle-dark-' + slotLabel + instanceId"
+          value="dark"
+          v-model="backgroundToggleStates[slotLabel]">
+          Dark
+        </label>
+      </div>
+      <span 
+        class="cdr-doc-html-example-list__item-label" 
+        v-if="(exampleCount > 1 && showExampleLabels) || 
+              label">
+        {{ label || slotLabel }}
+      </span>
+      <div class="cdr-doc-html-example-list__item-example">
+        <div :id="'cdr-doc-html-example-' + slotLabel">
+          <!-- Will be replaced with the compiled template code on mount -->
+        </div>
       </div>
     </div>
   </div>
@@ -21,24 +47,57 @@
   export default {
     name: 'CdrDocHtmlExampleList',
     props: {
-
+      backgroundToggle: {
+        type: Boolean,
+        default: true
+      },
+      interactive: {
+        type: Boolean,
+        default: true
+      },
+      label: {
+        type: [String, Boolean],
+        default: false
+      },
+      showExampleLabels: {
+        type: Boolean,
+        default: true
+      }
     },
     data: function() {
       return {
-        examples: []
+        exampleCount: 0,
+        backgroundToggleStates: {},
+        instanceId: null,
+        templateSources: {}
       }
     },
-    computed: {
+    created: function() {
+      let backgroundToggleStates = {}
+      for (const label in this.$slots) {
+        backgroundToggleStates[label] = 'light'; 
+      }
+      this.backgroundToggleStates = backgroundToggleStates; // Set default background toggle state to light
     },
     mounted: function () {
+      this.instanceId = this._uid;
+      this.exampleCount = Object.keys(this.$slots).length;
       for (const label in this.$slots) {
         const mountId = '#cdr-doc-html-example-' + label;
         const codeNode = this.extractCodeNodeFromVnodeTree(this.$slots[label][0]);
-        const templateSource = this.extractTextFromVnode(codeNode, '');
-        this.codeToConsole(templateSource, mountId);
+        const templateSource = this.getStoredTemplateSourceForExample(label, codeNode);
+        this.renderExampleFromTemplate(templateSource, mountId);
       }
     },
     methods: {
+      getStoredTemplateSourceForExample(label, codeNode) {
+        let templateSource = this.templateSources[label]
+        if (!templateSource) {
+          templateSource = this.extractTextFromVnode(codeNode, '');
+          this.templateSources[label] = templateSource;
+        }
+        return templateSource;
+      },
       extractTextFromVnode(vNode, text) {
         let newText = text;
         if (vNode.text) {
@@ -50,7 +109,6 @@
         } else {
           return '';
         }
-        // console.log(newText);
         return newText;
       },
       extractCodeNodeFromVnodeTree(vNode) {
@@ -66,9 +124,8 @@
 
         return codeNode
       },
-      codeToConsole (template, mountId) {
-        // This method extracts the textContent out of the markdown <pre> passed in via a <slot> and 
-        // calls the Vue compiler directly to render the VUE template content as HTML
+      renderExampleFromTemplate (template, mountId) {
+        // This method calls the Vue compiler directly to render the VUE template content as HTML
         var tempComponent = new Vue({
           template: template,
           parent: this,
@@ -84,6 +141,8 @@
 
   .cdr-doc-html-example-list {
     border: $cdr-doc-border-separator;
+    border-radius: $cdr-doc-border-radius-default;
+    margin-bottom: $space-1-x;
   }
 
   .cdr-doc-html-example-list__item {
@@ -91,11 +150,21 @@
     border-bottom: $cdr-doc-border-separator;
     display: flex;
     justify-content: center;
+    padding: $inset-2-x;
     position: relative;
 
     &:last-child {
       border-bottom: 0;
     }
+
+  }
+
+  .cdr-doc-html-example-list--not-interactive .cdr-doc-html-example-list__item-example {
+    pointer-events: none; // prevent interaction
+  }
+
+  .cdr-doc-html-example-list__item-background--dark {
+    background: $lost-in-space;
   }
 
   .cdr-doc-html-example-list__code {
@@ -103,8 +172,9 @@
   }
 
   .cdr-doc-html-example-list__item-label {
+    @include redwood-display-10;
+    bottom: $space-1-x;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: $space-1-x;
   }
 </style>
