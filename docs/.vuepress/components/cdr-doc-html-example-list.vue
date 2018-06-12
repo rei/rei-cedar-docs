@@ -3,9 +3,6 @@
     <div class="cdr-doc-html-example-list__item" v-for="slotContent, label in $slots">
       <span class="cdr-doc-html-example-list__item-label">{{ label }}</span>
       <!-- Code is rendered as a string here, then extracted, compiled, and injected as an html example -->
-      <div class="cdr-doc-html-example-list__code" :ref="'cdr-doc-html-example-list__code-source-' + label">
-        <slot :name="label"/>
-      </div>
       <div :id="'cdr-doc-html-example-' + label" class="cdr-doc-html-example-list__item">
         <!-- Will be replaced with the compiled template code -->
       </div>
@@ -14,11 +11,11 @@
 </template>
 
 <script>
-  import Vue from '$vue';
+  import { Vue } from '../cedar.js';
   // Note the '$vue', which is the full build of Vue, not the default runtime 'vue'. We need to import the full build to have access to the compiler
   
   // Import components that will be shown as examples
-  import { CdrButton } from '@rei/cdr-button';
+  // import { CdrButton } from '@rei/cdr-button';
   import { IconInformationStroke } from '@rei/cdr-icon';
 
   export default {
@@ -36,18 +33,45 @@
     mounted: function () {
       for (const label in this.$slots) {
         const mountId = '#cdr-doc-html-example-' + label;
-        const templateSource = this.$refs['cdr-doc-html-example-list__code-source-' + label][0].querySelector('pre').textContent;
+        const codeNode = this.extractCodeNodeFromVnodeTree(this.$slots[label][0]);
+        const templateSource = this.extractTextFromVnode(codeNode, '');
         this.codeToConsole(templateSource, mountId);
       }
     },
     methods: {
+      extractTextFromVnode(vNode, text) {
+        let newText = text;
+        if (vNode.text) {
+          newText += vNode.text;
+        } else if (vNode.children) {
+          vNode.children.forEach(childNode => {
+            newText += this.extractTextFromVnode(childNode, '');
+          })
+        } else {
+          return '';
+        }
+        // console.log(newText);
+        return newText;
+      },
+      extractCodeNodeFromVnodeTree(vNode) {
+        let codeNode = false;
+        if (vNode.tag === 'code') {
+          codeNode = vNode;
+        } else if (vNode.children) {
+          vNode.children.some(childNode => {
+            codeNode = this.extractCodeNodeFromVnodeTree(childNode);
+            return codeNode !== false;
+          });
+        }
+
+        return codeNode
+      },
       codeToConsole (template, mountId) {
         // This method extracts the textContent out of the markdown <pre> passed in via a <slot> and 
         // calls the Vue compiler directly to render the VUE template content as HTML
         var tempComponent = new Vue({
           template: template,
           parent: this,
-          components: { CdrButton }
         }).$mount(mountId)
       }
     }

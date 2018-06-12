@@ -1,4 +1,4 @@
-import Vue from 'vue'; // for registering components globally
+import Vue from '$vue'; // for registering components globally
 
 // Core assets
 import "@rei/cdr-assets/dist/cdr-core.css";
@@ -13,3 +13,5 @@ Vue.component('CdrList', CdrList); // Register component globally
 import { CdrButton } from "@rei/cdr-button";
 import "@rei/cdr-button/dist/cdr-button.css";
 Vue.component('CdrButton', CdrButton);
+
+export { Vue }
