@@ -3,17 +3,23 @@
     <div class="cdr-doc-html-example-list__item" 
           :class="'cdr-doc-html-example-list__item-background--' + backgroundToggleStates[slotLabel]"
           v-for="slotContent, slotLabel in $slots">
-      <div class="cdr-doc-html-example-list__item-background-toggle">
-        <label :for="'cdr-doc-html-example-list__toggle-light-' + slotLabel + instanceId">
+      <div class="cdr-doc-html-example-list__item-background-toggle" v-if="backgroundToggle">
+        <label class="cdr-doc-item-background-toggle__button" 
+                :class="{'cdr-doc-item-background-toggle__button--active': backgroundToggleStates[slotLabel] === 'light'}" 
+                :for="'cdr-doc-html-example-list__toggle-light-' + slotLabel + instanceId">
           <input 
+            class="cdr-doc-item-background-toggle__input"
             type="radio" 
             :id="'cdr-doc-html-example-list__toggle-light-' + slotLabel + instanceId"
             value="light"
             v-model="backgroundToggleStates[slotLabel]">
             Light
         </label>
-        <label :for="'cdr-doc-html-example-list__toggle-dark-' + slotLabel + instanceId">
+        <label class="cdr-doc-item-background-toggle__button"
+                :class="{'cdr-doc-item-background-toggle__button--active': backgroundToggleStates[slotLabel] === 'dark'}" 
+                :for="'cdr-doc-html-example-list__toggle-dark-' + slotLabel + instanceId">
         <input 
+          class="cdr-doc-item-background-toggle__input"
           type="radio" 
           :id="'cdr-doc-html-example-list__toggle-dark-' + slotLabel + instanceId"
           value="dark"
@@ -156,7 +162,6 @@
     &:last-child {
       border-bottom: 0;
     }
-
   }
 
   .cdr-doc-html-example-list--not-interactive .cdr-doc-html-example-list__item-example {
@@ -173,8 +178,51 @@
 
   .cdr-doc-html-example-list__item-label {
     @include redwood-display-10;
-    bottom: $space-1-x;
+    bottom: $space-half-x;
     position: absolute;
-    right: $space-1-x;
+    right: $space-half-x;
+
+    .cdr-doc-html-example-list__item-background--dark & {
+      color: $clean-slate;
+    }
+  }
+
+  .cdr-doc-html-example-list__item-background-toggle {
+    display: flex;
+    position: absolute;
+    right: $space-half-x;
+    top: $space-half-x;
+  }
+
+  .cdr-doc-item-background-toggle__button {
+    @include redwood-display-20;
+    background-color: $clean-slate;
+    border: solid 1px $holy-smoke;
+    border-right-width: 0;
+    cursor: pointer;
+    padding: $space-half-x;
+    padding-bottom: $space-half-x-squish;
+    padding-top: $space-half-x-squish;
+
+    &:first-child {
+      border-radius: $cdr-doc-border-radius-default 0 0 $cdr-doc-border-radius-default;
+    }
+    
+    &:last-child {
+      border-radius: 0 $cdr-doc-border-radius-default $cdr-doc-border-radius-default 0;
+      border-right-width: 1px;
+    }
+  }
+  
+  .cdr-doc-item-background-toggle__button--active {
+    background: $partly-cloudy;
+  }
+
+  .cdr-doc-item-background-toggle__input {
+    position: absolute !important;
+    height: 1px; width: 1px; 
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
   }
 </style>

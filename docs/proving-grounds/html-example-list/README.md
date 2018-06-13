@@ -27,6 +27,17 @@ pageClass: cdr-doc-proving-ground
 ```
 </cdr-doc-html-example-list>
 
+## No Background Toggle
+<cdr-doc-html-example-list :background-toggle="false">
+```html
+  <div>
+    <cdr-button size="large">It's working</cdr-button>
+    <cdr-button size="small">Sort of updating</cdr-button>
+    <cdr-button>Foo</cdr-button>
+  </div>
+```
+</cdr-doc-html-example-list>
+
 ## Multiple Examples
 
 <cdr-doc-html-example-list>
@@ -62,7 +73,7 @@ pageClass: cdr-doc-proving-ground
 
 ## Multiple Examples, prevent interaction and hide slot labels
 
-<cdr-doc-html-example-list :interactive="false" :showExampleLabels="false">
+<cdr-doc-html-example-list :interactive="false" :show-example-labels="false">
   <template slot="Default">
 
 ```html
