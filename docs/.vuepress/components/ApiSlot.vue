@@ -41,6 +41,9 @@
         });
       }
     },
+    created() {
+      this.chosenVersionIdx = 0;
+    },
     components: {
       CdrCol,
       CdrRow
