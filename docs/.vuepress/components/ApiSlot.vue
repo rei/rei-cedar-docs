@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="api-slot" v-for="(apiSlot, index) in $page.frontmatter.versions[0].api.slots" :key="apiSlot.text">
+    <div class="api-slot" v-for="(apiSlot, index) in $page.frontmatter.versions[chosenVersionIdx].api.slots" :key="apiSlot.text">
       <cdr-row
         gutter="none"
       >
@@ -32,6 +32,13 @@
     name: 'ApiEvent',
     props: {
       semver: String
+    },
+    computed: {
+      chosenVersionIdx () {
+        return $page.frontmatter.versions.findIndex(function (ele) {
+          return ele.version === this.semver;
+        });
+      }
     },
     components: {
       CdrCol,

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="api-event" v-for="(apiEvent, index) in $page.frontmatter.versions[0].api.events" :key="apiEvent.text">
+    <div class="api-event" v-for="(apiEvent, index) in $page.frontmatter.versions[chosenVersionIdx].api.events" :key="apiEvent.text">
       <cdr-row
         gutter="none"
       >
@@ -40,6 +40,13 @@
     name: 'ApiEvent',
     props: {
       semver: String
+    },
+    computed: {
+      chosenVersionIdx () {
+        return $page.frontmatter.versions.findIndex(function (ele) {
+          return ele.version === this.semver;
+        });
+      }
     },
     components: {
       CdrCol,
