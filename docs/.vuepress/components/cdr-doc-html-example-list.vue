@@ -57,6 +57,16 @@
         type: Boolean,
         default: true
       },
+      backgroundColors: {
+        type: Object,
+        default: function() {
+          return {};
+        }
+      },
+      backgroundColor: {
+        type: String,
+        default: 'light'
+      },
       interactive: {
         type: Boolean,
         default: true
@@ -81,9 +91,13 @@
     created: function() {
       let backgroundToggleStates = {}
       for (const label in this.$slots) {
-        backgroundToggleStates[label] = 'light'; 
+        if (this.backgroundColors[label]) {
+          backgroundToggleStates[label] = this.backgroundColors[label];
+        } else {
+          backgroundToggleStates[label] = this.backgroundColor;
+        }
       }
-      this.backgroundToggleStates = backgroundToggleStates; // Set default background toggle state to light
+      this.backgroundToggleStates = backgroundToggleStates; // Set default background toggle states
     },
     mounted: function () {
       this.instanceId = this._uid;
