@@ -50,14 +50,24 @@
   export default {
     name: 'ApiProp',
     props: {
-      semver: String
+      semver: String,
+      required: true,
     },
     computed: {
-      chosenVersionIdx () {
-        return $page.frontmatter.versions.findIndex(function (ele) {
-          return ele.version === this.semver;
-        });
+      chosenVersionIdx: {
+        get() {
+          const that = this;
+          return $page.frontmatter.versions.findIndex(function (ele) {
+            return ele.version === that.semver;
+          });
+        },
+        set(newVal) {
+          this.semver = $page.frontmatter.versions[newVal].version;
+        }
       }
+    },
+    created() {
+      this.chosenVersionIdx = 0;
     },
     components: {
       CdrCol,

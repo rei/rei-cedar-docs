@@ -5,6 +5,7 @@
       label="Version Select"
       prompt="Select the API version"
       :options="$page.frontmatter.versions.map(version => version['version'])"
+      @input="versionChanged"
     />
   </div>
 </template>
@@ -19,7 +20,12 @@ export default {
   },
   data() {
     return {
-    selected: ''
+      selected: ''
+    }
+  },
+  methods: {
+    versionChanged() {
+      this.$emit('versionChanged', this.selected);
     }
   }
 };

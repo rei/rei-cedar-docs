@@ -31,7 +31,8 @@
   export default {
     name: 'ApiEvent',
     props: {
-      semver: String
+      semver: String,
+      required: true
     },
     computed: {
       chosenVersionIdx () {

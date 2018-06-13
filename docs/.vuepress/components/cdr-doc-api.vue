@@ -2,7 +2,6 @@
 import ApiEvent from './ApiEvent.vue';
 import ApiProp from './ApiProp.vue';
 import ApiSlot from './ApiSlot.vue';
-import Version from './cdr-doc-api.vue';
 import semver from 'semver';
 
 export default {
