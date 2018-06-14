@@ -27,23 +27,11 @@
 <script>
   import { CdrCol } from '@rei/cdr-col'
   import { CdrRow } from '@rei/cdr-row'
+  import apiMixin from '../mixins/apiComponent.js'
   
   export default {
     name: 'ApiEvent',
-    props: {
-      semver: String,
-      required: true
-    },
-    computed: {
-      chosenVersionIdx () {
-        return $page.frontmatter.versions.findIndex(function (ele) {
-          return ele.version === this.semver;
-        });
-      }
-    },
-    created() {
-      this.chosenVersionIdx = 0;
-    },
+    mixins: [apiMixin],
     components: {
       CdrCol,
       CdrRow
