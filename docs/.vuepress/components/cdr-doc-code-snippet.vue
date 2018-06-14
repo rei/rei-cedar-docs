@@ -3,9 +3,9 @@
     'cdr-doc-code-snippet--no-max-height': !maxHeight }">
     <div class="cdr-doc-code-snippet__actions" v-if="copyButton">
       <div class="cdr-doc-code-snippet__copy-action cdr-doc-code-snippet__action" v-on:click="copyToClipBoard">
-        <cdr-button class="cdr-doc-code-snippet__copy-action">
+        <button class="cdr-doc-code-snippet__copy-action">
           <img class="cdr-doc-code-snippet__action-icon" :src="$withBase('/Copy@2x.png')" alt="Copy to clipboard"/>
-        </cdr-button>
+        </button>
         <div class="cdr-doc-code-snippet__notification" aria-live="polite">
           <span class="cdr-doc-code-snippet__notification-message" v-if="copied">
             Copied!
@@ -151,6 +151,11 @@ export default {
   }
 
   .cdr-doc-code-snippet__copy-action {
+    background: none;
+    border: 0;
+    display: block;
+    margin: 0;
+    padding: 0;
     position: relative;
   }
 
@@ -211,19 +216,5 @@ export default {
   .cdr-doc-code-snippet__action {
     display: block;
     margin-right: $space-1-x;
-  }
-
-  // Strip out button styles until official "Icon Only" button variation is possible
-  .cdr-button {
-    &,
-    &:hover {
-      background: none;
-      border: 0;
-      display: block;
-      font-size: 0;
-      line-height: 1;
-      margin: 0;
-      padding: 0;
-    }
   }
 </style>

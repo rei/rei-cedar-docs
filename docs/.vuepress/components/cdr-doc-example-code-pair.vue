@@ -39,7 +39,10 @@
         </div>
       </div>
     </div>
-    <slot/>
+
+    <cdr-doc-code-snippet :copyButton="copyButton" :lineNumbers="lineNumbers" :maxHeight="codeMaxHeight" :repositoryHref="repositoryHref" :sandboxHref="sandboxHref">
+      <slot :name="slotNames[0]"/> <!-- Only display the code snippet for the first (or only) slot content -->
+    </cdr-doc-code-snippet>
   </div>
 </template>
 
@@ -78,6 +81,26 @@
       showExampleLabels: {
         type: Boolean,
         default: true
+      },
+      copyButton: {
+        default: true,
+        type: Boolean
+      },
+      lineNumbers: {
+        default: true,
+        type: Boolean
+      },
+      codeMaxHeight: {
+        default: true,
+        type: Boolean
+      },
+      repositoryHref: {
+        default: false,
+        type: [String, Boolean]
+      },
+      sandboxHref: {
+        default: false,
+        type: [String, Boolean]
       }
     },
     data: function() {
@@ -85,7 +108,8 @@
         exampleCount: 0,
         backgroundToggleStates: {},
         instanceId: null,
-        templateSources: {}
+        templateSources: {},
+        slotNames: []
       }
     },
     created: function() {
@@ -97,6 +121,7 @@
           backgroundToggleStates[label] = this.backgroundColor;
         }
       }
+      this.slotNames = Object.keys(this.$slots);
       this.backgroundToggleStates = backgroundToggleStates; // Set default background toggle states
     },
     mounted: function () {
@@ -163,6 +188,23 @@
     border: $cdr-doc-border-separator;
     border-radius: $cdr-doc-border-radius-default;
     margin-bottom: $space-1-x;
+
+    // code snippet style overrides for composite component
+    .cdr-doc-code-snippet {
+      border: 0;
+      margin-bottom: 0;
+    }
+
+    .cdr-doc-code-snippet__actions {
+      border: 0;
+      border-radius: 0;
+    }
+
+    div[class^='language-'] {
+      border-bottom: 0;
+      border-left: 0;
+      border-right: 0;
+    }
   }
 
   .cdr-doc-example-code-pair__item {

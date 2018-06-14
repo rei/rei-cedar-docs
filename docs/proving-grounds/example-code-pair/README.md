@@ -16,3 +16,50 @@ pageClass: cdr-doc-proving-ground
   </div>
 ```
 </cdr-doc-example-code-pair>
+
+## Hide Background Toggle, add repository and sandbox links
+
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="http://github.com/rei" sandbox-href="http://codesandbox.io">
+
+```html
+  <div>
+    <h1>Hello World!</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis ducimus illum unde accusantium magni, nostrum vero autem inventore. Beatae recusandae minima distinctio, aut adipisci debitis consequatur cupiditate similique est eius!</p>
+  </div>
+```
+
+</cdr-doc-example-code-pair>
+
+## Multiple Examples
+<cdr-doc-example-code-pair>
+
+<template slot="Default">
+
+```html
+  <cdr-button size="large">Default</cdr-button>
+```
+  
+</template>
+<template slot="Hover">
+
+```html
+  <cdr-button size="small" class="cdr-doc-button-demo--hover">Hover</cdr-button>
+```
+
+</template>
+<template slot="Active">
+
+```html
+  <cdr-button size="small">Active</cdr-button>
+```
+
+</template>
+<template slot="Focused">
+
+```html
+  <cdr-button size="small">Focused</cdr-button>
+```
+
+</template>
+
+</cdr-doc-example-code-pair>
