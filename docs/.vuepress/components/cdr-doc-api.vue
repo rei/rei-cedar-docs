@@ -23,7 +23,7 @@ export default {
       }
     }
   },
-  render: function(h, ctx) {
+  render(h, ctx) {
 
     function apiComponent () {
       let apiComp;
@@ -44,11 +44,7 @@ export default {
     }
 
     return h(apiComponent(), 
-    { 
-      props: { 
-        semver: ctx.props.semver 
-      } 
-    })
+    {...ctx})
   }
 }
 </script>

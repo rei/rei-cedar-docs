@@ -6,13 +6,18 @@ export default {
     }
   },
   computed: {
-    chosenVersionIdx () {
-      return $page.frontmatter.versions.findIndex(function (ele) {
-        return ele.version === this.semver;
-      });
+    chosenVersionIdx: {
+      get() {
+        return this.$page.frontmatter.versions.findIndex((ele) => {
+          return ele.version === this.semver;
+        });
+      },
+      set(newVal) {
+        this.semver = this.$page.frontmatter.versions[newVal].version;
+      }
     }
   },
-  created() {
+  beforeMount() {
     this.chosenVersionIdx = 0;
   },
 };
