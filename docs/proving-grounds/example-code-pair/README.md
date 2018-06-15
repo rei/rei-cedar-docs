@@ -45,6 +45,8 @@ pageClass: cdr-doc-proving-ground
 </cdr-doc-example-code-pair>
 
 ## Multiple Examples
+Note: Only the first example's code is shown in the code snippet when multiple examples are rendered
+
 <cdr-doc-example-code-pair>
 
 <template slot="Default">
