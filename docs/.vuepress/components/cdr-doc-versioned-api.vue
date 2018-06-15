@@ -32,7 +32,6 @@ export default {
   methods: {
     updateSemver(value) {
       this.selectedVersion = value;
-      console.log(`selectedVersion on update: ${this.selectedVersion}`);
     }
   }
 }
