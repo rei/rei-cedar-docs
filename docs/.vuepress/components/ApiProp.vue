@@ -34,7 +34,7 @@
         <cdr-col
           span="12"
         >
-          <p aria-lable="prop description" class="prop-description">
+          <p aria-label="prop description" class="prop-description">
             {{ apiProp.description }}
           </p>
         </cdr-col>
