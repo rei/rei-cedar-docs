@@ -30,7 +30,7 @@
   import apiMixin from '../mixins/apiComponent.js'
   
   export default {
-    name: 'ApiEvent',
+    name: 'ApiSlot',
     mixins: [apiMixin],
     components: {
       CdrCol,
