@@ -16,6 +16,10 @@ pageClass: cdr-doc-proving-ground
     width: 200px;
   }
 
+  .cdr-doc-proving-grounds-demo-content {
+    padding-right: 40px;
+  }
+
   .cdr-doc-proving-grounds-demo-content h1 {
     font-size: 48px;
     margin-top: 24px;
@@ -118,7 +122,7 @@ When completed, this ultimate weapon will spell certain doom for the small band 
 
 <h3>Characters</h3>
 
-* Ewoks
+* Wicket
 * Admiral Ackbar
 
 <h2>Episode VII: The Force Awakens</h2>
@@ -151,6 +155,90 @@ But the Resistance has been exposed. As the First Order speeds toward the rebel 
 
 </div>
   <div class="cdr-doc-proving-grounds-demo-shell__local-nav">
-    <cdr-doc-local-anchor-nav parent-selectors=".cdr-doc-proving-grounds-demo-content-1 h2" child-selectors=".cdr-doc-proving-grounds-demo-content-1 h3"/>
+    <cdr-doc-local-anchor-nav 
+      parent-selectors=".cdr-doc-proving-grounds-demo-content-1 h2" 
+      child-selectors=".cdr-doc-proving-grounds-demo-content-1 h3"/>
+  </div>
+</div>
+
+<div class="cdr-doc-proving-grounds-demo-shell">
+<div class="cdr-doc-proving-grounds-demo-content cdr-doc-proving-grounds-demo-content-2">
+
+<h1>A Big First Section</h1>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, autem delectus, voluptate incidunt voluptatum aut architecto iusto quos expedita, illum nisi ipsum dolorem nihil fugit laudantium dicta amet harum modi?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, autem delectus, voluptate incidunt voluptatum aut architecto iusto quos expedita, illum nisi ipsum dolorem nihil fugit laudantium dicta amet harum modi?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, autem delectus, voluptate incidunt voluptatum aut architecto iusto quos expedita, illum nisi ipsum dolorem nihil fugit laudantium dicta amet harum modi?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, autem delectus, voluptate incidunt voluptatum aut architecto iusto quos expedita, illum nisi ipsum dolorem nihil fugit laudantium dicta amet harum modi?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, autem delectus, voluptate incidunt voluptatum aut architecto iusto quos expedita, illum nisi ipsum dolorem nihil fugit laudantium dicta amet harum modi?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, autem delectus, voluptate incidunt voluptatum aut architecto iusto quos expedita, illum nisi ipsum dolorem nihil fugit laudantium dicta amet harum modi?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, autem delectus, voluptate incidunt voluptatum aut architecto iusto quos expedita, illum nisi ipsum dolorem nihil fugit laudantium dicta amet harum modi?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, autem delectus, voluptate incidunt voluptatum aut architecto iusto quos expedita, illum nisi ipsum dolorem nihil fugit laudantium dicta amet harum modi?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, autem delectus, voluptate incidunt voluptatum aut architecto iusto quos expedita, illum nisi ipsum dolorem nihil fugit laudantium dicta amet harum modi?
+
+<h1>Only the h1's get picked up this time</h1>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt doloremque cumque ad officiis repudiandae natus, culpa obcaecati, expedita, porro distinctio assumenda explicabo nisi. Molestiae praesentium quo, repudiandae nobis eos voluptatum.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt doloremque cumque ad officiis repudiandae natus, culpa obcaecati, expedita, porro distinctio assumenda explicabo nisi. Molestiae praesentium quo, repudiandae nobis eos voluptatum.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt doloremque cumque ad officiis repudiandae natus, culpa obcaecati, expedita, porro distinctio assumenda explicabo nisi. Molestiae praesentium quo, repudiandae nobis eos voluptatum.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt doloremque cumque ad officiis repudiandae natus, culpa obcaecati, expedita, porro distinctio assumenda explicabo nisi. Molestiae praesentium quo, repudiandae nobis eos voluptatum.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt doloremque cumque ad officiis repudiandae natus, culpa obcaecati, expedita, porro distinctio assumenda explicabo nisi. Molestiae praesentium quo, repudiandae nobis eos voluptatum.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt doloremque cumque ad officiis repudiandae natus, culpa obcaecati, expedita, porro distinctio assumenda explicabo nisi. Molestiae praesentium quo, repudiandae nobis eos voluptatum.
+
+
+<h1>4 Headers starting with numbers will get a correct ID too</h1>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores labore eligendi quam praesentium qui, consectetur asperiores doloremque pariatur quos cupiditate? Tempore minus reprehenderit fugit. Tempora doloribus rem ipsa architecto mollitia.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores labore eligendi quam praesentium qui, consectetur asperiores doloremque pariatur quos cupiditate? Tempore minus reprehenderit fugit. Tempora doloribus rem ipsa architecto mollitia.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores labore eligendi quam praesentium qui, consectetur asperiores doloremque pariatur quos cupiditate? Tempore minus reprehenderit fugit. Tempora doloribus rem ipsa architecto mollitia.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores labore eligendi quam praesentium qui, consectetur asperiores doloremque pariatur quos cupiditate? Tempore minus reprehenderit fugit. Tempora doloribus rem ipsa architecto mollitia.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores labore eligendi quam praesentium qui, consectetur asperiores doloremque pariatur quos cupiditate? Tempore minus reprehenderit fugit. Tempora doloribus rem ipsa architecto mollitia.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores labore eligendi quam praesentium qui, consectetur asperiores doloremque pariatur quos cupiditate? Tempore minus reprehenderit fugit. Tempora doloribus rem ipsa architecto mollitia.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores labore eligendi quam praesentium qui, consectetur asperiores doloremque pariatur quos cupiditate? Tempore minus reprehenderit fugit. Tempora doloribus rem ipsa architecto mollitia.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores labore eligendi quam praesentium qui, consectetur asperiores doloremque pariatur quos cupiditate? Tempore minus reprehenderit fugit. Tempora doloribus rem ipsa architecto mollitia.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores labore eligendi quam praesentium qui, consectetur asperiores doloremque pariatur quos cupiditate? Tempore minus reprehenderit fugit. Tempora doloribus rem ipsa architecto mollitia.
+
+</div>
+  <div class="cdr-doc-proving-grounds-demo-shell__local-nav">
+    <cdr-doc-local-anchor-nav 
+      parent-selectors=".cdr-doc-proving-grounds-demo-content-2 h1" 
+      :child-selectors="false"/>
+  </div>
+</div>
+
+
+<div class="cdr-doc-proving-grounds-demo-shell">
+<div class="cdr-doc-proving-grounds-demo-content cdr-doc-proving-grounds-demo-content-3">
+
+# Works with markdown headings too
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, autem delectus, voluptate incidunt voluptatum aut architecto iusto quos expedita, illum nisi ipsum dolorem nihil fugit laudantium dicta amet harum modi?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, autem delectus, voluptate incidunt voluptatum aut architecto iusto quos expedita, illum nisi ipsum dolorem nihil fugit laudantium dicta amet harum modi?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, autem delectus, voluptate incidunt voluptatum aut architecto iusto quos expedita, illum nisi ipsum dolorem nihil fugit laudantium dicta amet harum modi?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, autem delectus, voluptate incidunt voluptatum aut architecto iusto quos expedita, illum nisi ipsum dolorem nihil fugit laudantium dicta amet harum modi?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, autem delectus, voluptate incidunt voluptatum aut architecto iusto quos expedita, illum nisi ipsum dolorem nihil fugit laudantium dicta amet harum modi?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, autem delectus, voluptate incidunt voluptatum aut architecto iusto quos expedita, illum nisi ipsum dolorem nihil fugit laudantium dicta amet harum modi?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, autem delectus, voluptate incidunt voluptatum aut architecto iusto quos expedita, illum nisi ipsum dolorem nihil fugit laudantium dicta amet harum modi?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, autem delectus, voluptate incidunt voluptatum aut architecto iusto quos expedita, illum nisi ipsum dolorem nihil fugit laudantium dicta amet harum modi?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, autem delectus, voluptate incidunt voluptatum aut architecto iusto quos expedita, illum nisi ipsum dolorem nihil fugit laudantium dicta amet harum modi?
+
+## And multiple child heading selectors
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt doloremque cumque ad officiis repudiandae natus, culpa obcaecati, expedita, porro distinctio assumenda explicabo nisi. Molestiae praesentium quo, repudiandae nobis eos voluptatum.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt doloremque cumque ad officiis repudiandae natus, culpa obcaecati, expedita, porro distinctio assumenda explicabo nisi. Molestiae praesentium quo, repudiandae nobis eos voluptatum.
+
+### So it's pretty flexible
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores labore eligendi quam praesentium qui, consectetur asperiores doloremque pariatur quos cupiditate? Tempore minus reprehenderit fugit. Tempora doloribus rem ipsa architecto mollitia.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores labore eligendi quam praesentium qui, consectetur asperiores doloremque pariatur quos cupiditate? Tempore minus reprehenderit fugit. Tempora doloribus rem ipsa architecto mollitia.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores labore eligendi quam praesentium qui, consectetur asperiores doloremque pariatur quos cupiditate? Tempore minus reprehenderit fugit. Tempora doloribus rem ipsa architecto mollitia.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores labore eligendi quam praesentium qui, consectetur asperiores doloremque pariatur quos cupiditate? Tempore minus reprehenderit fugit. Tempora doloribus rem ipsa architecto mollitia.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores labore eligendi quam praesentium qui, consectetur asperiores doloremque pariatur quos cupiditate? Tempore 
+
+#### Really flexible in fact
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dolorem excepturi repellat qui atque unde itaque voluptates velit eaque, ratione pariatur adipisci libero culpa, autem doloremque nulla necessitatibus. Sit, eos.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dolorem excepturi repellat qui atque unde itaque voluptates velit eaque, ratione pariatur adipisci libero culpa, autem doloremque nulla necessitatibus. Sit, eos.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dolorem excepturi repellat qui atque unde itaque voluptates velit eaque, ratione pariatur adipisci libero culpa, autem doloremque nulla necessitatibus. Sit, eos.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dolorem excepturi repellat qui atque unde itaque voluptates velit eaque, ratione pariatur adipisci libero culpa, autem doloremque nulla necessitatibus. Sit, eos.
+
+</div>
+  <div class="cdr-doc-proving-grounds-demo-shell__local-nav">
+    <cdr-doc-local-anchor-nav 
+      parent-selectors=".cdr-doc-proving-grounds-demo-content-3 h1" 
+      child-selectors=".cdr-doc-proving-grounds-demo-content-3 h2, .cdr-doc-proving-grounds-demo-content-3 h3, .cdr-doc-proving-grounds-demo-content-3 h4"/>
   </div>
 </div>
