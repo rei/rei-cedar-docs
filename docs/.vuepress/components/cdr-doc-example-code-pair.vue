@@ -121,6 +121,7 @@
       }
     },
     created: function() {
+      // Loop over all the slots and set the default background color for each example. Also create an array of all the slot names so that just the first slot's code can be displayed
       let backgroundToggleStates = {}
       for (const label in this.$slots) {
         if (this.backgroundColors[label]) {
@@ -134,24 +135,28 @@
     },
     mounted: function () {
       this.instanceId = this._uid;
-      this.exampleCount = Object.keys(this.$slots).length;
+      this.exampleCount = Object.keys(this.$slots).length; // If more than one example is present, labels will be turned on by default
+      // Loop over all the slots and extract the source HTML/Custom Element code from the escaped markdown code snippet. This code is saved as a Vue template string that is then rendered into a dynamically created empty div in the template 
       for (const label in this.$slots) {
         const mountId = '#cdr-doc-html-example-' + label;
         const codeNode = this.extractCodeNodeFromVnodeTree(this.$slots[label][0]);
         const templateSource = this.getStoredTemplateSourceForExample(label, codeNode);
-        this.renderExampleFromTemplate(templateSource, mountId);
+        this.renderExampleFromTemplate(templateSource, mountId); // This renders a string like: '<cdr-button>Example</button>' using the correct Vue template and injects it into the corresponding empty div in the template
       }
     },
     methods: {
       getStoredTemplateSourceForExample(label, codeNode) {
+        // This method checks a data object to see if the vue template has already been stored as a string for subsequent renders
         let templateSource = this.templateSources[label]
         if (!templateSource) {
+          // If the template hasn't already been stored, it is extracted from the VNode tree that's passed in and stored in a data object
           templateSource = this.extractTextFromVnode(codeNode, '');
           this.templateSources[label] = templateSource;
         }
         return templateSource;
       },
       extractTextFromVnode(vNode, text) {
+        // This method traverses a vNode tree extracting all the textContent from within the vNode
         let newText = text;
         if (vNode.text) {
           newText += vNode.text;
@@ -165,6 +170,7 @@
         return newText;
       },
       extractCodeNodeFromVnodeTree(vNode) {
+        // This method traverses a vNode tree until it gets to a <code> tag in the tree, at which point the <code> vNode is returned
         let codeNode = false;
         if (vNode.tag === 'code') {
           codeNode = vNode;
@@ -178,7 +184,7 @@
         return codeNode
       },
       renderExampleFromTemplate (template, mountId) {
-        // This method calls the Vue compiler directly to render the VUE template content as HTML
+        // This method calls the Vue compiler directly to render the Vue template content as HTML and mount it in the DOM at the `mountId` provided
         var tempComponent = new Vue({
           template: template,
           parent: this,
