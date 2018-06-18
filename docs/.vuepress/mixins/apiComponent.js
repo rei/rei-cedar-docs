@@ -3,17 +3,21 @@ export default {
     semver: {
       type: String,
       required: true
+    },
+    apiVersions: {
+      type: Array,
+      required: true
     }
   },
   computed: {
     chosenVersionIdx: {
       get() {
-        return this.$page.frontmatter.versions.findIndex((ele) => {
+        return this.apiVersions.findIndex((ele) => {
           return ele.version === this.semver;
         });
       },
       set(newVal) {
-        this.semver = this.$page.frontmatter.versions[newVal].version;
+        this.semver = this.apiVersions[newVal].version;
       }
     }
   },

@@ -4,7 +4,7 @@
       v-model="selected"
       label="Version Select"
       prompt="Select the API version"
-      :options="$page.frontmatter.versions.map(version => version['version'])"
+      :options="versOpts.map(version => version['version'])"
       @input="versionChanged"
     />
   </div>
@@ -15,8 +15,11 @@ import { CdrSelect } from '@rei/cdr-select';
 
 export default {
   name: 'CdrDocVersion',
-  components: {
-    CdrSelect
+  props: {
+    versOpts: {
+      type: Array,
+      required: true
+    }
   },
   data() {
     return {
@@ -27,6 +30,9 @@ export default {
     versionChanged() {
       this.$emit('versionChanged', this.selected);
     }
+  },
+  components: {
+    CdrSelect
   }
 };
 </script>

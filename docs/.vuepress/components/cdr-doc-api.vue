@@ -21,10 +21,13 @@ export default {
       validator: value => {
         return semver.valid(value);
       }
+    },
+    apiVersions: {
+      type: Array,
+      required: true
     }
   },
   render(h, ctx) {
-
     function apiComponent () {
       let apiComp;
 
@@ -39,11 +42,10 @@ export default {
           apiComp = ApiEvent;
           break;
       }
-
       return apiComp;
     }
 
-    return h(apiComponent(), 
+return h(apiComponent(), 
     {...ctx})
   }
 }

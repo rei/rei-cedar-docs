@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="api-event" v-for="(apiEvent, index) in $page.frontmatter.versions[chosenVersionIdx].api.events" :key="apiEvent.text">
+    <div class="api-event" v-for="(apiEvent, index) in apiVersions[chosenVersionIdx].api.events" :key="apiEvent.text">
       <cdr-row
         gutter="none"
       >

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="api-prop" v-for="(apiProp, index) in $page.frontmatter.versions[chosenVersionIdx].api.props" :key="apiProp.text">
+    <div class="api-prop" v-for="(apiProp, index) in apiVersions[chosenVersionIdx].api.props" :key="apiProp.text">
       <cdr-row
         gutter="none"
       >
