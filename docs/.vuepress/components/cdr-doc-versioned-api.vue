@@ -16,8 +16,6 @@ import VerSelect from './cdr-doc-version.vue';
 import Api from './cdr-doc-api.vue';
 import CDO from '../../../cedar-data.json';
 
-import util from 'util';
-
 export default {
   name: 'cdr-doc-versioned-api',
   props: {
@@ -37,7 +35,6 @@ export default {
   },
   computed: {
     cdrDataObj() {
-      // console.log(`compName:${CDO.components.find(ele => ele.name.toLowerCase() === name.toLowerCase())}`);
       return CDO.components.find(ele => ele.name.toLowerCase() === this.compName.toLowerCase()) ||
       CDO.compositions.find(ele => ele.name.toLowerCase() === this.compName.toLowerCase());
     },

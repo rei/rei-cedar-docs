@@ -24,6 +24,35 @@
       "api": {
         "props": [
           {
+            "name": "size",
+            "type": "string",
+            "default": "\"medium\"",
+            "description": "Sets a static size for the button, which scales padding and text size. {small, medium, large}"
+          },
+          {
+            "name": "responsiveSize",
+            "type": "array",
+            "default": "n/a",
+            "description": "Render a specific button size at a specific breakpoint. Takes precedence over size and fullWidth.\nFormat is size@breakpoint (ex: large@sm)."
+          }
+        ],
+        "slots": [
+          {
+            "name": "default",
+            "description": "innerHTML on the inside of the button component"
+          },
+          {
+            "name": "test",
+            "description": "testing multiple slot documentation"
+          }
+        ]
+      },
+      "version": "0.1.1"
+    },
+    {
+      "api": {
+        "props": [
+          {
             "name": "tag",
             "type": "string",
             "default": "\"a\"",
@@ -77,13 +106,6 @@
 [github](https://github.com/rei/rei-cedar/tree/cedar2/src/components/link)
 [code sandbox](https://codesandbox.io/s/jnv1rko1z9)
 
-### Props
-
-<cdr-doc-api type="prop" />
-
-### Slots
-
-<cdr-doc-api type="slot" />
 </template>
 
 
@@ -127,15 +149,7 @@ TBD -- Link to sketch file with info about link component.
 
 <template slot="API">
 
-<cdr-doc-version />
-
-### Props
-
-<cdr-doc-api type="prop" />
-
-### Slots
-
-<cdr-doc-api type="slot" />
+<cdr-doc-versioned-api compName="CdrLink"/>
 
 ## Installation
 
