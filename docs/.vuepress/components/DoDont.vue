@@ -67,7 +67,7 @@ $dont-color: $high-stakes;
   }
 
   &__caption {
-    @include maple-utility-30();
+    @include maple-utility-20();
   }
 
   &__type {
