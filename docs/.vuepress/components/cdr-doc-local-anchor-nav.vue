@@ -2,7 +2,12 @@
   <nav class="cdr-doc-local-anchor-nav" ref="localNav">
     <ul class="cdr-doc-local-anchor-nav__list">
       <li v-for="link in links" class="cdr-doc-local-anchor-nav__list-item" :class="{'cdr-doc-local-anchor-nav__list-item--parent': !link.isChild, 'cdr-doc-local-anchor-nav__list-item--child': link.isChild }">
-        <a class="cdr-doc-local-anchor-nav__link" :class="{'cdr-doc-local-anchor-nav__link--parent': !link.isChild, 'cdr-doc-local-anchor-nav__link--child': link.isChild }" :href="link.href">{{ link.text }}</a>
+        <a class="cdr-doc-local-anchor-nav__link" 
+            :class="{'cdr-doc-local-anchor-nav__link--parent': !link.isChild, 'cdr-doc-local-anchor-nav__link--child': link.isChild }" 
+            :href="link.href"
+            v-on:click="softScrollToAnchoredSection($event, link.href)">
+          {{ link.text }}
+        </a>
       </li>
     </ul>
   </nav>
@@ -12,6 +17,10 @@
 
 import slugify from '../../../utils/slugify.js';
 import Stickyfill from 'stickyfilljs';
+import smoothscroll from 'smoothscroll-polyfill';
+
+// kick off the polyfill!
+smoothscroll.polyfill();
 
 export default {
   name: 'CdrDocLocalAnchorNav',
@@ -24,7 +33,7 @@ export default {
       type: [String, Boolean],
       default: 'h3'
     },
-    topOffset: {
+    stickyTopOffset: {
       type: String,
       default: '0'
     }
@@ -48,7 +57,7 @@ export default {
   methods: {
     setStickyPositioning() {
       const localNav = this.$refs['localNav'];
-      localNav.style.cssText = `top: ${this.topOffset}px; max-height: calc(100vh - ${this.topOffset}px);`;
+      localNav.style.cssText = `top: ${this.stickyTopOffset}px; max-height: calc(100vh - ${this.stickyTopOffset}px);`;
       Stickyfill.add(localNav); // Polyfill for browsers without native position: sticky; support 
     },
     createAnchorsFromContent () {
@@ -100,6 +109,19 @@ export default {
       }
 
       this.links = links;
+    },
+    softScrollToAnchoredSection(event, id) {
+      event.preventDefault(); // Intercept click event
+      history.pushState(null, null, id); // make sure URL still gets updated with hash
+      const anchoredSection = document.querySelector(id);
+      console.log(anchoredSection)
+      const scrollPosition = anchoredSection.offsetTop;
+
+      window.scroll({
+          top: scrollPosition,
+          left: 0,
+          behavior: 'smooth'
+      });
     }
   }
 }
