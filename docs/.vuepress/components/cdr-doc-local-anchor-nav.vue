@@ -143,20 +143,30 @@ export default {
 
   .cdr-doc-local-anchor-nav__link {
     @include redwood-display-20;
+    color: $cdr-doc-link-color-primary;
     display: block;
+    position: relative;
   }
 
   .cdr-doc-local-anchor-nav__link--child {
-    padding-left: 10px;
+    padding-left: $space-2-x;
 
     &:before {
-      content: ' - ';
+      content: '\2014'; // &mdash;
+      position: absolute;
+      left: 16px;
+      top: 0;
+      display: block;
     }
+  }
+
+  .cdr-doc-local-anchor-nav__list-item {
+    margin-bottom: $space-quarter-x;
   }
 
   .cdr-doc-local-anchor-nav__list-item--parent {
     .cdr-doc-local-anchor-nav__list-item--child + & {
-      margin-top: 8px;
+      margin-top: $space-half-x;
     }
   }
 </style>

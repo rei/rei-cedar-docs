@@ -92,27 +92,12 @@ During the battle, Rebel spies managed to steal secret plans to the Empire's ult
 
 Pursued by the Empire's sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can save her people and restore freedom to the galaxy....
 
-<h3>Characters</h3>
-
-* Luke Skywalker
-* Princess Leia
-* Han Solo
-* Chewbacca
-
 <h2>Episode V: The Empire Strikes Back</h2>
 It is a dark time for the Rebellion. Although the Death Star has been destroyed, Imperial troops have driven the Rebel forces from their hidden base and pursued them across the galaxy.
 
 Evading the dreaded Imperial Starfleet, a group of freedom fighters led by Luke Skywalker has established a new secret base on the remote ice world of Hoth.
 
 The evil lord Darth Vader, obsessed with finding young Skywalker, has dispatched thousands of remote probes into the far reaches of space....
-
-<h3>Characters</h3>
-
-* Lando Calrissian
-* Boba Fett
-* C-3PO
-* R2-D2
-
 
 <h2>Episode VI: Return of the Jedi</h2>
 Luke Skywalker has returned to his home planet of Tatooine in an attempt to rescue his friend Han Solo from the clutches of the vile gangster Jabba the Hutt.
@@ -125,6 +110,16 @@ When completed, this ultimate weapon will spell certain doom for the small band 
 
 * Wicket
 * Admiral Ackbar
+
+### Settings
+* Tattooine
+* Yavin 4
+* The Death Star
+
+### Spoilers that aren't really spoilers
+* Alderaan gets destroyed
+* Jek Porkins dies
+* Luke never gets his power converters from Tosche Station
 
 <h2>Episode VII: The Force Awakens</h2>
 Luke Skywalker has vanished. In his absence, the sinister FIRST ORDER has risen from the ashes of the Empire and will not rest until Skywalker, the last Jedi, has been destroyed.
@@ -162,6 +157,8 @@ But the Resistance has been exposed. As the First Order speeds toward the rebel 
   </div>
 </div>
 
+
+# With Sticky Positionining Top Offset
 <div class="cdr-doc-proving-grounds-demo-shell">
 <div class="cdr-doc-proving-grounds-demo-content cdr-doc-proving-grounds-demo-content-2">
 
@@ -199,12 +196,14 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores labore eligend
 </div>
   <div class="cdr-doc-proving-grounds-demo-shell__local-nav">
     <cdr-doc-local-anchor-nav 
+      sticky-top-offset="15"
       parent-selectors=".cdr-doc-proving-grounds-demo-content-2 h1" 
       :child-selectors="false"/>
   </div>
 </div>
 
 
+# Markdown Based Headings
 <div class="cdr-doc-proving-grounds-demo-shell">
 <div class="cdr-doc-proving-grounds-demo-content cdr-doc-proving-grounds-demo-content-3">
 
@@ -239,7 +238,59 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dolorem exceptu
 </div>
   <div class="cdr-doc-proving-grounds-demo-shell__local-nav">
     <cdr-doc-local-anchor-nav 
+      sticky-top-offset="15"
       parent-selectors=".cdr-doc-proving-grounds-demo-content-3 h1" 
       child-selectors=".cdr-doc-proving-grounds-demo-content-3 h2, .cdr-doc-proving-grounds-demo-content-3 h3, .cdr-doc-proving-grounds-demo-content-3 h4"/>
+  </div>
+</div>
+<div class="cdr-doc-proving-grounds-demo-shell">
+<div class="cdr-doc-proving-grounds-demo-content cdr-doc-proving-grounds-demo-content-4">
+
+## Use when
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, autem delectus, voluptate incidunt voluptatum aut architecto iusto quos expedita, illum nisi ipsum dolorem nihil fugit laudantium dicta amet harum modi?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, autem delectus, voluptate incidunt voluptatum aut architecto iusto quos expedita, illum nisi ipsum dolorem nihil fugit laudantium dicta amet harum modi?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, autem delectus, voluptate incidunt voluptatum aut architecto iusto quos expedita, illum nisi ipsum dolorem nihil fugit laudantium dicta amet harum modi?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, autem delectus, voluptate incidunt voluptatum aut architecto iusto quos expedita, illum nisi ipsum dolorem nihil fugit laudantium dicta amet harum modi?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, autem delectus, voluptate incidunt voluptatum aut architecto iusto quos expedita, illum nisi ipsum dolorem nihil fugit laudantium dicta amet harum modi?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, autem delectus, voluptate incidunt voluptatum aut architecto iusto quos expedita, illum nisi ipsum dolorem nihil fugit laudantium dicta amet harum modi?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, autem delectus, voluptate incidunt voluptatum aut architecto iusto quos expedita, illum nisi ipsum dolorem nihil fugit laudantium dicta amet harum modi?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, autem delectus, voluptate incidunt voluptatum aut architecto iusto quos expedita, illum nisi ipsum dolorem nihil fugit laudantium dicta amet harum modi?
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, autem delectus, voluptate incidunt voluptatum aut architecto iusto quos expedita, illum nisi ipsum dolorem nihil fugit laudantium dicta amet harum modi?
+
+### Don't use when
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt doloremque cumque ad officiis repudiandae natus, culpa obcaecati, expedita, porro distinctio assumenda explicabo nisi. Molestiae praesentium quo, repudiandae nobis eos voluptatum.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt doloremque cumque ad officiis repudiandae natus, culpa obcaecati, expedita, porro distinctio assumenda explicabo nisi. Molestiae praesentium quo, repudiandae nobis eos voluptatum.
+
+## Visual language
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores labore eligendi quam praesentium qui, consectetur asperiores doloremque pariatur quos cupiditate? Tempore minus reprehenderit fugit. Tempora doloribus rem ipsa architecto mollitia.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores labore eligendi quam praesentium qui, consectetur asperiores doloremque pariatur quos cupiditate? Tempore minus reprehenderit fugit. Tempora doloribus rem ipsa architecto mollitia.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores labore eligendi quam praesentium qui, consectetur asperiores doloremque pariatur quos cupiditate? Tempore minus reprehenderit fugit. Tempora doloribus rem ipsa architecto mollitia.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores labore eligendi quam praesentium qui, consectetur asperiores doloremque pariatur quos cupiditate? Tempore minus reprehenderit fugit. Tempora doloribus rem ipsa architecto mollitia.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores labore eligendi quam praesentium qui, consectetur asperiores doloremque pariatur quos cupiditate? Tempore 
+
+## Behavior
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dolorem excepturi repellat qui atque unde itaque voluptates velit eaque, ratione pariatur adipisci libero culpa, autem doloremque nulla necessitatibus. Sit, eos.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dolorem excepturi repellat qui atque unde itaque voluptates velit eaque, ratione pariatur adipisci libero culpa, autem doloremque nulla necessitatibus. Sit, eos.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dolorem excepturi repellat qui atque unde itaque voluptates velit eaque, ratione pariatur adipisci libero culpa, autem doloremque nulla necessitatibus. Sit, eos.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dolorem excepturi repellat qui atque unde itaque voluptates velit eaque, ratione pariatur adipisci libero culpa, autem doloremque nulla necessitatibus. Sit, eos.
+
+## Editorial
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dolorem excepturi repellat qui atque unde itaque voluptates velit eaque, ratione pariatur adipisci libero culpa, autem doloremque nulla necessitatibus. Sit, eos.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dolorem excepturi repellat qui atque unde itaque voluptates velit eaque, ratione pariatur adipisci libero culpa, autem doloremque nulla necessitatibus. Sit, eos.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dolorem excepturi repellat qui atque unde itaque voluptates velit eaque, ratione pariatur adipisci libero culpa, autem doloremque nulla necessitatibus. Sit, eos.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dolorem excepturi repellat qui atque unde itaque voluptates velit eaque, ratione pariatur adipisci libero culpa, autem doloremque nulla necessitatibus. Sit, eos.
+
+## Accessibility
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dolorem excepturi repellat qui atque unde itaque voluptates velit eaque, ratione pariatur adipisci libero culpa, autem doloremque nulla necessitatibus. Sit, eos.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dolorem excepturi repellat qui atque unde itaque voluptates velit eaque, ratione pariatur adipisci libero culpa, autem doloremque nulla necessitatibus. Sit, eos.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dolorem excepturi repellat qui atque unde itaque voluptates velit eaque, ratione pariatur adipisci libero culpa, autem doloremque nulla necessitatibus. Sit, eos.
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam dolorem excepturi repellat qui atque unde itaque voluptates velit eaque, ratione pariatur adipisci libero culpa, autem doloremque nulla necessitatibus. Sit, eos.
+
+</div>
+  <div class="cdr-doc-proving-grounds-demo-shell__local-nav">
+    <cdr-doc-local-anchor-nav 
+      sticky-top-offset="15"
+      parent-selectors=".cdr-doc-proving-grounds-demo-content-4 h2" 
+      child-selectors=".cdr-doc-proving-grounds-demo-content-4 h3"/>
   </div>
 </div>
