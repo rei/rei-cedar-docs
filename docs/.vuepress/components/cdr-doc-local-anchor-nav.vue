@@ -1,5 +1,5 @@
 <template>
-  <nav class="cdr-doc-local-anchor-nav">
+  <nav class="cdr-doc-local-anchor-nav" ref="localNav">
     <ul class="cdr-doc-local-anchor-nav__list">
       <li v-for="link in links" class="cdr-doc-local-anchor-nav__list-item" :class="{'cdr-doc-local-anchor-nav__list-item--parent': !link.isChild, 'cdr-doc-local-anchor-nav__list-item--child': link.isChild }">
         <a class="cdr-doc-local-anchor-nav__link" :class="{'cdr-doc-local-anchor-nav__link--parent': !link.isChild, 'cdr-doc-local-anchor-nav__link--child': link.isChild }" :href="link.href">{{ link.text }}</a>
@@ -20,8 +20,12 @@ export default {
       default: 'h2'
     },
     childSelectors: {
-      type: String,
+      type: [String, Boolean],
       default: 'h3'
+    },
+    topOffset: {
+      type: String,
+      default: '15'
     }
   },
   components: {
@@ -38,8 +42,13 @@ export default {
   },
   mounted: function() {
     this.createAnchorsFromContent();
+    this.setStickyPositioning();
   },
   methods: {
+    setStickyPositioning() {
+      const localNav = this.$refs['localNav'];
+      localNav.style.cssText = `top: ${this.topOffset}px; max-height: calc(100vh - ${this.topOffset}px);`;    
+    },
     createAnchorsFromContent () {
       const selectors = `${this.parentSelectors}, ${this.childSelectors}`;
       const anchorElements = document.querySelectorAll(selectors);
@@ -90,6 +99,11 @@ export default {
 <style lang="scss">
   @import '../theme/styles/cdr-tokens.scss';
   @import '../theme/styles/cdr-doc-tokens.scss';
+
+  .cdr-doc-local-anchor-nav {
+    overflow-y: auto;
+    position: sticky;
+  }
 
   .cdr-doc-local-anchor-nav__list {
     list-style: none;
