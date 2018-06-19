@@ -1,11 +1,14 @@
 <template>
-  <div class="cdr-doc-code-snippet" :class="{ 'cdr-doc-code-snippet--show-copied-notification': copied, 'cdr-doc-code-snippet--no-line-numbers': !lineNumbers,
+  <div class="cdr-doc-code-snippet" :class="{ 
+    'cdr-doc-code-snippet--show-copied-notification': copied, 
+    'cdr-doc-code-snippet--no-line-numbers': !lineNumbers,
+    'cdr-doc-code-snippet--code-hidden': codeHidden,
     'cdr-doc-code-snippet--no-max-height': !maxHeight }">
     <div class="cdr-doc-code-snippet__actions" v-if="copyButton">
       <div class="cdr-doc-code-snippet__copy-action cdr-doc-code-snippet__action" v-on:click="copyToClipBoard">
-        <cdr-button class="cdr-doc-code-snippet__copy-action">
+        <button class="cdr-doc-code-snippet__copy-action">
           <img class="cdr-doc-code-snippet__action-icon" :src="$withBase('/Copy@2x.png')" alt="Copy to clipboard"/>
-        </cdr-button>
+        </button>
         <div class="cdr-doc-code-snippet__notification" aria-live="polite">
           <span class="cdr-doc-code-snippet__notification-message" v-if="copied">
             Copied!
@@ -24,6 +27,8 @@
       <a class="cdr-doc-code-snippet__action" :href="sandboxHref" v-if="sandboxHref">
         <img class="cdr-doc-code-snippet__action-icon" :src="$withBase('/CodeSandbox@2x.png')" alt="View in code sandbox"/>
       </a>
+
+      <button class="cdr-doc-snippet__hide-code-toggle" v-on:click="toggleCodeDisplay" v-if="codeToggle">{{ hideCodeToggleText }}</button>
     </div>
     <div class="cdr-doc-code-snippet__code-wrap" ref="codeWrap">
       <div class="cdr-doc-code-snippet__code" ref="source"><slot/></div>
@@ -54,17 +59,37 @@ export default {
     sandboxHref: {
       default: false,
       type: [String, Boolean]
+    },
+    codeToggle: {
+      default: false,
+      type: Boolean
+    },
+    hideCode: {
+      default: false,
+      type: Boolean
     }
   },
   data: function() {
     return {
       copied: false,
       copyError: false,
-      copyNotSupported: false
+      copyNotSupported: false,
+      codeHidden: false,
+      hideCodeToggleText: 'Hide code'
     }
   },
-
+  created: function() {
+    this.codeHidden = this.hideCode;
+    this.setCodeToggleText();
+  },
   methods: {
+    setCodeToggleText() {
+      this.hideCodeToggleText = this.codeHidden ? 'Show code' : 'Hide code';
+    },
+    toggleCodeDisplay() {
+      this.codeHidden = !this.codeHidden;
+      this.setCodeToggleText();
+    },
     copyToClipBoard() {
       const source = this.$refs.source.querySelector('code');
 
@@ -117,7 +142,7 @@ export default {
 <style lang="scss">
   @import '../theme/styles/cdr-tokens.scss';
   @import '../theme/styles/cdr-doc-tokens.scss';
-  $cdr-doc-code-snippet-actions-background-color: $ice-age;
+  $cdr-doc-code-snippet-actions-background-color: $moon-shot;
 
   .cdr-doc-code-snippet {
     margin-bottom: $space-1-x;
@@ -131,7 +156,15 @@ export default {
     border-bottom: 0;
     border-radius: $cdr-doc-border-radius-default $cdr-doc-border-radius-default 0 0;
     display: flex;
-    padding: $inset-1-x;
+    padding: $inset-half-x;
+
+    .cdr-doc-code-snippet--code-hidden & {
+      border-radius: $cdr-doc-border-radius-default;
+    }
+  }
+
+  .cdr-doc-code-snippet--code-hidden .cdr-doc-code-snippet__code-wrap {
+    display: none;
   }
 
   .cdr-doc-code-snippet__code-wrap div[class^='language-'] {
@@ -151,6 +184,11 @@ export default {
   }
 
   .cdr-doc-code-snippet__copy-action {
+    background: none;
+    border: 0;
+    display: block;
+    margin: 0;
+    padding: 0;
     position: relative;
   }
 
@@ -213,17 +251,19 @@ export default {
     margin-right: $space-1-x;
   }
 
-  // Strip out button styles until official "Icon Only" button variation is possible
-  .cdr-button {
-    &,
-    &:hover {
-      background: none;
-      border: 0;
-      display: block;
-      font-size: 0;
-      line-height: 1;
-      margin: 0;
-      padding: 0;
+  .cdr-doc-snippet__hide-code-toggle {
+    @include redwood-display-20;
+    border: 0;
+    background: none;
+    color: $cdr-doc-text-color-primary;
+    cursor: pointer;
+    display: block;
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+
+    &:active {
+      color: $cdr-doc-text-color-primary;
     }
   }
 </style>
