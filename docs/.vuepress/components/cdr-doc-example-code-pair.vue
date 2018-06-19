@@ -238,6 +238,10 @@
     pointer-events: none; // prevent interaction
   }
 
+  .cdr-doc-example-code-pair__item-background--light {
+    background: $clean-slate;
+  }
+
   .cdr-doc-example-code-pair__item-background--dark {
     background: $lost-in-space;
   }
