@@ -2,6 +2,7 @@
 import ApiEvent from './ApiEvent.vue';
 import ApiProp from './ApiProp.vue';
 import ApiSlot from './ApiSlot.vue';
+import semver from 'semver';
 
 export default {
   name: 'CdrDocApi',
@@ -13,10 +14,20 @@ export default {
       validator: value => {
         return ['prop', 'slot', 'event'].indexOf(value) > -1;
       }
+    },
+    semver: {
+      type: String,
+      required: true,
+      validator: value => {
+        return semver.valid(value);
+      }
+    },
+    apiVersions: {
+      type: Array,
+      required: true
     }
   },
-  render: function(h, ctx) {
-
+  render(h, ctx) {
     function apiComponent () {
       let apiComp;
 
@@ -31,11 +42,11 @@ export default {
           apiComp = ApiEvent;
           break;
       }
-
       return apiComp;
     }
 
-    return h(apiComponent())
+return h(apiComponent(), 
+    {...ctx})
   }
 }
 </script>

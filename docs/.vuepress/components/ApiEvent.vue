@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="api-event" v-for="(apiEvent, index) in $page.frontmatter.versions[0].api.events" :key="apiEvent.text">
+    <div class="api-event" v-for="(apiEvent, index) in apiVersions[chosenVersionIdx].api.events" :key="apiEvent.text">
       <cdr-row
         gutter="none"
       >
@@ -35,9 +35,11 @@
 <script>
   import { CdrCol } from '@rei/cdr-col'
   import { CdrRow } from '@rei/cdr-row'
+  import apiMixin from '../mixins/apiComponent.js'
   
   export default {
     name: 'ApiEvent',
+    mixins: [apiMixin],
     components: {
       CdrCol,
       CdrRow

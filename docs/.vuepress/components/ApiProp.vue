@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="api-prop" v-for="(apiProp, index) in $page.frontmatter.versions[0].api.props" :key="apiProp.text">
+    <div class="api-prop" v-for="(apiProp, index) in apiVersions[chosenVersionIdx].api.props" :key="apiProp.text">
       <cdr-row
         gutter="none"
       >
@@ -34,7 +34,7 @@
         <cdr-col
           span="12"
         >
-          <p aria-lable="prop description" class="prop-description">
+          <p aria-label="prop description" class="prop-description">
             {{ apiProp.description }}
           </p>
         </cdr-col>
@@ -46,9 +46,11 @@
 <script>
   import { CdrCol } from '@rei/cdr-col'
   import { CdrRow } from '@rei/cdr-row'
+  import apiMixin from '../mixins/apiComponent.js'
   
   export default {
     name: 'ApiProp',
+    mixins: [apiMixin],
     components: {
       CdrCol,
       CdrRow
