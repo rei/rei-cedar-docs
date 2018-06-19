@@ -3,9 +3,11 @@
     <ul class="cdr-doc-local-anchor-nav__list">
       <li v-for="link in links" class="cdr-doc-local-anchor-nav__list-item" :class="{'cdr-doc-local-anchor-nav__list-item--parent': !link.isChild, 'cdr-doc-local-anchor-nav__list-item--child': link.isChild }">
         <a class="cdr-doc-local-anchor-nav__link" 
-            :class="{'cdr-doc-local-anchor-nav__link--parent': !link.isChild, 'cdr-doc-local-anchor-nav__link--child': link.isChild }" 
+            :class="{'cdr-doc-local-anchor-nav__link--parent': !link.isChild, 
+                      'cdr-doc-local-anchor-nav__link--child': link.isChild,
+                      'cdr-doc-local-anchor-nav__link--active': link.href === activeLinkHref }" 
             :href="link.href"
-            v-on:click="softScrollToAnchoredSection($event, link.href)">
+            v-on:click="handleAnchorLinkClick(link.href, $event)">
           {{ link.text }}
         </a>
       </li>
@@ -59,14 +61,23 @@ export default {
           href: '#',
           text: 'Click Me'
         }
-      ]
+      ],
+      activeLinkHref: null
     }
   },
   mounted: function() {
     this.createAnchorsFromContent();
     this.setStickyPositioning();
+    this.setActiveLinkFromHash();
   },
   methods: {
+    setActiveLinkFromHash() {
+      if (window.location.hash.length !== 0) {
+        const hash = window.location.hash;
+        this.activeLinkHref = hash;
+        this.softScrollToAnchoredSection(hash);
+      }
+    },
     setStickyPositioning() {
       const localNav = this.$refs['localNav'];
       localNav.style.cssText = `top: ${this.stickyTopOffset}px; max-height: calc(100vh - ${this.stickyTopOffset}px);`;
@@ -122,8 +133,12 @@ export default {
 
       this.links = links;
     },
-    softScrollToAnchoredSection(event, id) {
+    handleAnchorLinkClick(id, event) {
       event.preventDefault(); // Intercept click event
+      this.activeLinkHref = id;
+      this.softScrollToAnchoredSection(id);
+    },
+    softScrollToAnchoredSection(id) {
       history.pushState(null, null, id); // make sure URL still gets updated with hash
       const anchoredSection = document.querySelector(id);
       console.log(anchoredSection)
@@ -158,6 +173,10 @@ export default {
     color: $cdr-doc-link-color-primary;
     display: block;
     position: relative;
+  }
+
+  .cdr-doc-local-anchor-nav__link--active {
+    text-decoration: underline;
   }
 
   .cdr-doc-local-anchor-nav__link--child {
