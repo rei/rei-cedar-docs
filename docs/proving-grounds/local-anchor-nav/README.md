@@ -13,6 +13,7 @@ pageClass: cdr-doc-proving-ground
 
   .cdr-doc-proving-grounds-demo-shell__local-nav {
     flex-shrink: 0;
+    position: relative;
     width: 200px;
   }
 

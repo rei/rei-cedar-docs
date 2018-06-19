@@ -11,6 +11,7 @@
 <script>
 
 import slugify from '../../../utils/slugify.js';
+import Stickyfill from 'stickyfilljs';
 
 export default {
   name: 'CdrDocLocalAnchorNav',
@@ -25,7 +26,7 @@ export default {
     },
     topOffset: {
       type: String,
-      default: '15'
+      default: '0'
     }
   },
   components: {
@@ -47,15 +48,22 @@ export default {
   methods: {
     setStickyPositioning() {
       const localNav = this.$refs['localNav'];
-      localNav.style.cssText = `top: ${this.topOffset}px; max-height: calc(100vh - ${this.topOffset}px);`;    
+      localNav.style.cssText = `top: ${this.topOffset}px; max-height: calc(100vh - ${this.topOffset}px);`;
+      Stickyfill.add(localNav); // Polyfill for browsers without native position: sticky; support 
     },
     createAnchorsFromContent () {
+      // Polyfill matches() for IE11
+      if (!Element.prototype.matches) {
+          Element.prototype.matches = Element.prototype.msMatchesSelector;
+      }
+
       const selectors = `${this.parentSelectors}, ${this.childSelectors}`;
       const anchorElements = document.querySelectorAll(selectors);
       const links = [];
       const anchorIds = [];
 
-      anchorElements.forEach(anchorElement => {
+      for (let i=0; i < anchorElements.length; i++) { // Traditional for loop to support IE 11
+        const anchorElement = anchorElements[i];
         let anchorId = anchorElement.getAttribute('id');
         const text = anchorElement.textContent.replace(/^# /, '');
         // Markdown in VuePress automatically creates anchor links within headings with a '#' symbol as the text, strip this out of the textContent
@@ -89,7 +97,7 @@ export default {
 
         anchorIds.push(anchorId);
         links.push(linkData)
-      });
+      }
 
       this.links = links;
     }
