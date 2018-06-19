@@ -47,19 +47,24 @@
 
 <cdr-doc-tabs>
 <template slot="Overview">
+<cdr-doc-table-of-contents-shell>
 <cdr-doc-alert/>
 
 
 ## Primary
 Use primary button to emphasize an action to complete a form or more forward in a process such as "Submit" or "Add to cart".
 
-<cdr-doc-example-code-pair>
+<cdr-doc-example-code-pair repository-href="http://github.com" sandbox-href="http://github.com">
 
 ```html
+  <cdr-button>Button Text</cdr-button>
+  <cdr-button>Button Text</cdr-button>
+  <cdr-button>Button Text</cdr-button>
   <cdr-button>Button Text</cdr-button>
 ```
 
 </cdr-doc-example-code-pair>
+
 
 
 ## Secondary
@@ -97,6 +102,7 @@ Change the button size based on where button is used
 ```
 
 </cdr-doc-example-code-pair>
+</cdr-doc-table-of-contents-shell>
 </template>
 
 

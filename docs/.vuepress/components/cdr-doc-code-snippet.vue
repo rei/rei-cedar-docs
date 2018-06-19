@@ -1,3 +1,5 @@
+
+<!-- TODO: Add tooltips on hover for copy to clipboard, github, and code sandbox links -->
 <template>
   <div class="cdr-doc-code-snippet" :class="{ 
     'cdr-doc-code-snippet--show-copied-notification': copied, 

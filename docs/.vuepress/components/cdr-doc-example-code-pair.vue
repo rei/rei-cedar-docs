@@ -107,7 +107,7 @@
         type: Boolean
       },
       hideCode: {
-        default: false,
+        default: true,
         type: Boolean
       }
     },
@@ -231,6 +231,10 @@
 
     &:last-child {
       border-bottom: 0;
+    }
+
+    &:first-child {
+      border-radius: $cdr-doc-border-radius-default $cdr-doc-border-radius-default 0 0;
     }
   }
 
