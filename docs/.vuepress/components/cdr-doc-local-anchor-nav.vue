@@ -10,6 +10,12 @@
         </a>
       </li>
     </ul>
+    <ul class="cdr-doc-local-anchor-nav__appended-items" v-if="appendedItems.length > 0">
+      <li v-for="item in appendedItems">
+        <a class="cdr-doc-local-anchor-nav__appended-item-link" :href="item.href" v-if="item.href">{{ item.text }}</a>
+        <span class="cdr-doc-local-anchor-nav__appended-item-header" v-if="!item.href">{{ item.text }}</span>
+      </li>
+    </ul>
   </nav>
 </template>
 
@@ -36,6 +42,12 @@ export default {
     stickyTopOffset: {
       type: String,
       default: '0'
+    },
+    appendedItems: {
+      type: Array,
+      default: function() {
+        return [];
+      }
     }
   },
   components: {
@@ -168,5 +180,21 @@ export default {
     .cdr-doc-local-anchor-nav__list-item--child + & {
       margin-top: $space-half-x;
     }
+  }
+
+  .cdr-doc-local-anchor-nav__appended-items {
+    list-style: none;
+    padding: 0;
+    margin-top: $space-2-x;
+  }
+
+  .cdr-doc-local-anchor-nav__appended-item-link {
+    @include redwood-display-20;
+    color: $cdr-doc-link-color-primary;
+  }
+
+  .cdr-doc-local-anchor-nav__appended-item-header {
+    @include redwood-display-30;
+    color: $cdr-doc-text-color-primary;
   }
 </style>

@@ -153,7 +153,20 @@ But the Resistance has been exposed. As the First Order speeds toward the rebel 
   <div class="cdr-doc-proving-grounds-demo-shell__local-nav">
     <cdr-doc-local-anchor-nav 
       parent-selectors=".cdr-doc-proving-grounds-demo-content-1 h2" 
-      child-selectors=".cdr-doc-proving-grounds-demo-content-1 h3"/>
+      child-selectors=".cdr-doc-proving-grounds-demo-content-1 h3"
+      :appended-items="[
+        {
+          text: 'Related Films'
+        },
+        {
+          text: 'Rogue One: A Star Wars Story',
+          href: 'https://en.wikipedia.org/wiki/Rogue_One'
+        },
+        {
+          text: 'Solo: A Star Wars Story',
+          href: 'https://en.wikipedia.org/wiki/Solo:_A_Star_Wars_Story'
+        }
+      ]"/>
   </div>
 </div>
 
