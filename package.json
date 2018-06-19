@@ -29,7 +29,8 @@
     "@rei/cdr-icon": "^0.2.0",
     "@rei/cdr-list": "^0.1.0",
     "@rei/cdr-row": "^0.1.0",
-    "@rei/cdr-select": "^0.1.0",
+    "@rei/cdr-select": "^0.1.1",
+    "@rei/cdr-text": "^0.2.1",
     "rei-cedar-tokens": "git+https://github.com/rei/rei-cedar-tokens.git#0.1.4"
   }
 }

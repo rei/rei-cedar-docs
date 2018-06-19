@@ -2,11 +2,11 @@
   <div>
     <cdr-doc-version :versOpts="compVersions" @versionChanged="updateSemver" />
 
-    <h3>Props</h3>
+    <cdr-text :tag="this.headerTag">Props</cdr-text>
     <cdr-doc-api type="prop" :semver="selectedVersion" :apiVersions="compVersions" />
-    <h3>Slots</h3>
+    <cdr-text :tag="this.headerTag">Slots</cdr-text>
     <cdr-doc-api type="slot" :semver="selectedVersion" :apiVersions="compVersions" />
-    <h3>Events</h3>
+    <cdr-text :tag="this.headerTag">Events</cdr-text>
     <cdr-doc-api type="event" :semver="selectedVersion" :apiVersions="compVersions" />
   </div>
 </template>
@@ -15,17 +15,22 @@
 import VerSelect from './cdr-doc-version.vue';
 import Api from './cdr-doc-api.vue';
 import CDO from '../../../cedar-data.json';
+import { CdrText } from '@rei/cdr-text';
 
 export default {
   name: 'cdr-doc-versioned-api',
   props: {
     compName: {
       type: String,
-      required: true
-      ,validator: (value) => {
+      required: true,
+      validator: (value) => {
         return CDO.components.some(ele => ele.name.toLowerCase() === value.toLowerCase()) ||
           CDO.compositions.some(ele => ele.name.toLowerCase() === value.toLowerCase());
       }
+    },
+    headerTag: {
+      type: String,
+      default: 'h3'
     }
   },
   data() {
@@ -47,7 +52,8 @@ export default {
   },
   components: {
     VerSelect,
-    Api
+    Api,
+    CdrText
   },
   methods: {
     updateSemver(value) {
