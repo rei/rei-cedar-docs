@@ -1,6 +1,9 @@
 <template>
 <div class="do-dont">
-  <figure class="do-dont__figure do-dont__figure--do">
+  <figure
+    v-if="doExample"
+    class="do-dont__figure do-dont__figure--do"
+  >
     <img
       class="do-dont__image"
       :src="$withBase(`/${doExample.image}`)"
@@ -10,7 +13,15 @@
       <span v-html="doExample.caption"/>
     </figcaption>
   </figure>
-  <figure class="do-dont__figure do-dont__figure--dont">
+  <div
+    v-if="!doExample && dontExample"
+    aria-hidden="true"
+    class="do-dont__figure"
+  />
+  <figure
+    v-if="dontExample"
+    class="do-dont__figure do-dont__figure--dont"
+  >
     <img
       class="do-dont__image"
       :src="$withBase(`/${dontExample.image}`)"

@@ -20,5 +20,25 @@ examples:
 
 # Do Don't proving grounds
 
-<do-dont :do-example="$page.frontmatter.examples.do" :dont-example="$page.frontmatter.examples.dont" />
-<do-dont :do-example="$page.frontmatter.examples.do2" :dont-example="$page.frontmatter.examples.dont2" />
+<div class="cdr-container">
+
+  ## Regular example
+
+  <do-dont :do-example="$page.frontmatter.examples.do" :dont-example="$page.frontmatter.examples.dont" />
+
+  ## With a link
+
+  <do-dont :do-example="$page.frontmatter.examples.do2" :dont-example="$page.frontmatter.examples.dont2" />
+
+  ## More Dos than don'ts
+
+  <do-dont :do-example="$page.frontmatter.examples.do2" :dont-example="$page.frontmatter.examples.dont2" />
+  <do-dont :do-example="$page.frontmatter.examples.do" />
+  <do-dont :do-example="$page.frontmatter.examples.do2" />
+
+  ## More don'ts than dos
+
+  <do-dont :do-example="$page.frontmatter.examples.do2" :dont-example="$page.frontmatter.examples.dont2" />
+  <do-dont :dont-example="$page.frontmatter.examples.dont" />
+  <do-dont :dont-example="$page.frontmatter.examples.dont2" />
+</div>
