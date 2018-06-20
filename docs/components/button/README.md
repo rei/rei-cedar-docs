@@ -58,9 +58,6 @@ Use primary button to emphasize an action to complete a form or more forward in 
 
 ```html
   <cdr-button>Button Text</cdr-button>
-  <cdr-button>Button Text</cdr-button>
-  <cdr-button>Button Text</cdr-button>
-  <cdr-button>Button Text</cdr-button>
 ```
 
 </cdr-doc-example-code-pair>
@@ -96,9 +93,11 @@ Change the button size based on where button is used
 <cdr-doc-example-code-pair>
 
 ```html
-  <cdr-button size="small">Add to cart</cdr-button>
-  <cdr-button>Add to cart</cdr-button>
-  <cdr-button size="large">Add to cart</cdr-button>
+  <div>
+    <cdr-button size="small">Add to cart</cdr-button>
+    <cdr-button>Add to cart</cdr-button>
+    <cdr-button size="large">Add to cart</cdr-button>
+  </div>
 ```
 
 </cdr-doc-example-code-pair>

@@ -26,6 +26,7 @@
 import slugify from '../../../utils/slugify.js';
 import Stickyfill from 'stickyfilljs';
 import smoothscroll from 'smoothscroll-polyfill';
+import scrollMonitor from 'scrollmonitor';
 
 // kick off the polyfill!
 smoothscroll.polyfill();
@@ -62,15 +63,153 @@ export default {
           text: 'Click Me'
         }
       ],
-      activeLinkHref: null
+      activeLinkHref: null,
+      scrollMonitoringEnabled: false
     }
   },
   mounted: function() {
     this.createAnchorsFromContent();
     this.setStickyPositioning();
     this.setActiveLinkFromHash();
+    setTimeout(() => {
+      this.monitorAnchoredSectionsForActiveLinkHighlighting();
+      this.scrollMonitoringEnabled = true;
+    }, 50); // Brittle, but gives everything on the page time to load
   },
   methods: {
+    monitorAnchoredSectionsForActiveLinkHighlighting(debug) {
+      const anchoredSections = document.querySelectorAll(`${this.parentSelectors}, ${this.childSelectors}`);
+      for (let i=0; i < anchoredSections.length; i++) {
+        const anchoredSection = anchoredSections[i];
+        const anchoredSectionId = anchoredSection.getAttribute('id');
+        const linkHref = `#${anchoredSectionId}`;
+        const link = document.querySelector(`a[href="${linkHref}"]`);
+        const nextSection = anchoredSections[i + 1] ? anchoredSections[i + 1] : false;
+        const sectionTop = anchoredSection.offsetTop;
+        const sectionBottom = nextSection ? nextSection.offsetTop - 1 : sectionTop + document.body.offsetHeight;
+        const elementWatcher = scrollMonitor.create({top: sectionTop, bottom: sectionBottom});
+
+        if (debug) {
+          // Adds horizontal lines to the top and bottom of each section for debugging
+          this.generatePageSectionMarkers(sectionTop, sectionBottom);
+        }
+
+        // When a section spans the entire viewport
+        elementWatcher.stateChange(() => {
+          if (this.scrollMonitoringEnabled && 
+              elementWatcher.isAboveViewport && 
+              elementWatcher.isBelowViewport) {
+            console.log(`SPANNING ${linkHref}`);
+            this.activeLinkHref = linkHref;
+          }
+        });
+
+        // Scroll Down Behavior
+        elementWatcher.partiallyExitViewport(() => {
+          if (this.scrollMonitoringEnabled &&
+              nextSection &&
+              elementWatcher.isAboveViewport) {
+            console.log(`SCROLL DOWN ${linkHref}`);
+            // When one section exits the viewport at the top, set the next section's link to be active
+            this.activeLinkHref = linkHref;
+          }
+        });
+
+        // Scroll Up Behavior
+        elementWatcher.enterViewport(() => {
+          if (this.scrollMonitoringEnabled &&
+              !elementWatcher.isBelowViewport) {
+            console.log(`SCROLL UP ${linkHref}`);
+            this.activeLinkHref = linkHref;
+          }
+        });
+
+        // Highlight the last item in the nav when the last section is fully scrolled into view
+        if (!nextSection) {
+          elementWatcher.fullyEnterViewport(() => {
+            if (this.scrollMonitoringEnabled) {
+              this.activeLinkHref = linkHref;
+            }
+          });
+        }
+      }
+
+        // for (var i = 0; i < pageAnchorLinks.length; i++) {
+        //     let anchorLink = pageAnchorLinks[i],
+        //         targetHref = anchorLink.getAttribute('href');
+
+        //   console.log(anchorLink, targetHref);
+        //     let target = document.querySelector(targetHref),
+        //         nextAnchorLink = pageAnchorLinks[i + 1],
+        //         nextTargetHref = typeof nextAnchorLink === 'undefined' ? false : nextAnchorLink.getAttribute('href'),
+        //         nextTarget = nextTargetHref ? document.querySelector(nextTargetHref) : false,
+        //         sectionTop = target.offsetTop,
+        //         sectionBottom = nextTarget ? nextTarget.offsetTop - 1 : document.body.offsetHeight,
+        //         elementWatcher = scrollMonitor.create({top: sectionTop, bottom: sectionBottom});
+
+        //     // When a section spans the entire viewport
+        //     elementWatcher.stateChange(function(){
+        //         if (scrollMonitoringEnabled(pageNavigation) && elementWatcher.isAboveViewport && elementWatcher.isBelowViewport) {
+        //             setListItemActive(targetHref);
+        //         }
+        //     });
+
+        //     // Scroll Down Behavior
+        //     elementWatcher.partiallyExitViewport(function(){
+        //         if (elementWatcher.isAboveViewport) {
+        //             if (scrollMonitoringEnabled(pageNavigation) && nextTarget) {
+        //                 // When one section exits the viewport at the top, set the next section's header to be active
+        //                 setListItemActive(targetHref);
+        //             }
+        //         }
+        //     });
+
+        //     // Scroll Up Behavior
+        //     elementWatcher.enterViewport(function(){
+        //         if (!elementWatcher.isBelowViewport) {
+        //             if (scrollMonitoringEnabled(pageNavigation)) {
+        //                 setListItemActive(targetHref);
+        //             }
+        //         }
+        //     });
+
+        //     // Highlight the last item in the nav when the last section is fully scrolled into view
+        //     if (!nextTarget) {
+        //         elementWatcher.fullyEnterViewport(function(){
+        //            if (scrollMonitoringEnabled(pageNavigation)) {
+        //                setListItemActive(targetHref);
+        //            }
+        //         });
+        //     }
+
+        //     if (debug) {
+        //         // Adds horizontal lines to the top and bottom of each section for debugging
+        //         this.generatePageSectionMarkers(sectionTop, sectionBottom);
+        //     }
+        // }
+    },
+    generatePageSectionMarkers(topPosition, bottomPosition) {
+        let topMarker = document.createElement('div'),
+            bottomMarker = document.createElement('div');
+
+        topMarker.style.width = "100%";
+        topMarker.style.height = "1px";
+        topMarker.style.backgroundColor = "red";
+        topMarker.style.position = "absolute";
+        topMarker.style.left = 0;
+        topMarker.style.top = `${topPosition}px`;
+
+        bottomMarker.style.width = "100%";
+        bottomMarker.style.height = "1px";
+        bottomMarker.style.backgroundColor = "blue";
+        bottomMarker.style.position = "absolute";
+        bottomMarker.style.left = 0;
+        bottomMarker.style.top = `${bottomPosition}px`;
+
+
+        document.body.appendChild(topMarker);
+        document.body.appendChild(bottomMarker);
+    },
     setActiveLinkFromHash() {
       if (window.location.hash.length !== 0) {
         const hash = window.location.hash;
@@ -139,9 +278,9 @@ export default {
       this.softScrollToAnchoredSection(id);
     },
     softScrollToAnchoredSection(id) {
+      this.scrollMonitoringEnabled = false; // disable scrollMonitoring while soft scrolling to a specific section
       history.pushState(null, null, id); // make sure URL still gets updated with hash
       const anchoredSection = document.querySelector(id);
-      console.log(anchoredSection)
       const scrollPosition = anchoredSection.offsetTop;
 
       window.scroll({
@@ -149,6 +288,10 @@ export default {
           left: 0,
           behavior: 'smooth'
       });
+
+      setTimeout(() => {
+        this.scrollMonitoringEnabled = true;
+      }, 1000); // window.scroll smooth offers no callback, so re-enable scrollmonitoring hopefully after the soft scroll has occurred
     }
   }
 }
