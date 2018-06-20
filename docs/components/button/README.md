@@ -48,8 +48,6 @@
 <cdr-doc-tabs>
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
-<cdr-doc-alert/>
-
 
 ## Primary
 Use primary button to emphasize an action to complete a form or more forward in a process such as "Submit" or "Add to cart".
@@ -106,10 +104,11 @@ Change the button size based on where button is used
 
 
 <template slot="Design Guidelines">
+  <cdr-doc-table-of-contents-shell>
+    <cdr-doc-alert/>
 
-# <span class="display-name">CdrButton</span>
 
-### <span class="modifiers">Modifiers</span>
+## Modifiers
 
 Modifiers can be combined 1 from each grouping.
 
@@ -121,6 +120,7 @@ A modifier list that contains 'link' exposes the same modifiers as cdrA and the 
 
 Responsive makes the button full width and block @ sm breakpoint.
 
+  </cdr-doc-table-of-contents-shell>
 </template>
 
 <template slot="API">

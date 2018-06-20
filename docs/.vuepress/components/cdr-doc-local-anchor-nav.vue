@@ -44,7 +44,7 @@ export default {
     },
     stickyTopOffset: {
       type: String,
-      default: '0'
+      default: '48'
     },
     appendedItems: {
       type: Array,
@@ -71,6 +71,7 @@ export default {
     this.createAnchorsFromContent();
     this.setStickyPositioning();
     this.setActiveLinkFromHash();
+    console.log(this.parentSelectors, this.childSelectors);
     setTimeout(() => {
       this.monitorAnchoredSectionsForActiveLinkHighlighting();
       this.scrollMonitoringEnabled = true;
@@ -133,60 +134,6 @@ export default {
           });
         }
       }
-
-        // for (var i = 0; i < pageAnchorLinks.length; i++) {
-        //     let anchorLink = pageAnchorLinks[i],
-        //         targetHref = anchorLink.getAttribute('href');
-
-        //   console.log(anchorLink, targetHref);
-        //     let target = document.querySelector(targetHref),
-        //         nextAnchorLink = pageAnchorLinks[i + 1],
-        //         nextTargetHref = typeof nextAnchorLink === 'undefined' ? false : nextAnchorLink.getAttribute('href'),
-        //         nextTarget = nextTargetHref ? document.querySelector(nextTargetHref) : false,
-        //         sectionTop = target.offsetTop,
-        //         sectionBottom = nextTarget ? nextTarget.offsetTop - 1 : document.body.offsetHeight,
-        //         elementWatcher = scrollMonitor.create({top: sectionTop, bottom: sectionBottom});
-
-        //     // When a section spans the entire viewport
-        //     elementWatcher.stateChange(function(){
-        //         if (scrollMonitoringEnabled(pageNavigation) && elementWatcher.isAboveViewport && elementWatcher.isBelowViewport) {
-        //             setListItemActive(targetHref);
-        //         }
-        //     });
-
-        //     // Scroll Down Behavior
-        //     elementWatcher.partiallyExitViewport(function(){
-        //         if (elementWatcher.isAboveViewport) {
-        //             if (scrollMonitoringEnabled(pageNavigation) && nextTarget) {
-        //                 // When one section exits the viewport at the top, set the next section's header to be active
-        //                 setListItemActive(targetHref);
-        //             }
-        //         }
-        //     });
-
-        //     // Scroll Up Behavior
-        //     elementWatcher.enterViewport(function(){
-        //         if (!elementWatcher.isBelowViewport) {
-        //             if (scrollMonitoringEnabled(pageNavigation)) {
-        //                 setListItemActive(targetHref);
-        //             }
-        //         }
-        //     });
-
-        //     // Highlight the last item in the nav when the last section is fully scrolled into view
-        //     if (!nextTarget) {
-        //         elementWatcher.fullyEnterViewport(function(){
-        //            if (scrollMonitoringEnabled(pageNavigation)) {
-        //                setListItemActive(targetHref);
-        //            }
-        //         });
-        //     }
-
-        //     if (debug) {
-        //         // Adds horizontal lines to the top and bottom of each section for debugging
-        //         this.generatePageSectionMarkers(sectionTop, sectionBottom);
-        //     }
-        // }
     },
     generatePageSectionMarkers(topPosition, bottomPosition) {
         let topMarker = document.createElement('div'),

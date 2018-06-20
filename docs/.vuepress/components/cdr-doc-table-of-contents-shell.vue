@@ -1,12 +1,12 @@
 <template>
-  <div class="cdr-doc-table-of-contents-shell">
+  <div class="cdr-doc-table-of-contents-shell" :class="'cdr-doc-table-of-contents-shell--' + instanceId">
     <div class="cdr-doc-table-of-contents-shell__content">
       <slot/>
     </div>
     <div class="cdr-doc-table-of-contents-shell__navigation">
       <cdr-doc-local-anchor-nav 
-        parent-selectors=".cdr-doc-table-of-contents-shell__content h2" 
-        child-selectors=".cdr-doc-table-of-contents-shell__content h3"/>
+        :parent-selectors="'.cdr-doc-table-of-contents-shell--' + instanceId + ' .cdr-doc-table-of-contents-shell__content h2'" 
+        :child-selectors="'.cdr-doc-table-of-contents-shell--' + instanceId + ' .cdr-doc-table-of-contents-shell__content h3'"/>
     </div>
   </div>
 </template>
@@ -14,11 +14,13 @@
 <script>
 export default {
   name: 'CdrDocTableOfContentsShell',
-  props: {
-
+  data: function() {
+    return {
+      instanceId: null
+    }
   },
-  computed: {
-
+  mounted: function() {
+    this.instanceId = this._uid;
   }
 }
 </script>
@@ -30,8 +32,14 @@ export default {
     display: flex;
   }
 
+  .cdr-doc-table-of-contents-shell__content {
+    border-right: $cdr-doc-border-separator;
+    padding-right: 24px; // Not a token?
+    margin-right: 24px; // Not a token?
+  }
+
   .cdr-doc-table-of-contents-shell__navigation {
-    width: 200px;
     flex-shrink: 0;
+    width: 200px;
   }
 </style>
