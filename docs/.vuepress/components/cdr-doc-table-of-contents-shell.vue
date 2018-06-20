@@ -6,7 +6,8 @@
     <div class="cdr-doc-table-of-contents-shell__navigation">
       <cdr-doc-local-anchor-nav 
         :parent-selectors="'.cdr-doc-table-of-contents-shell--' + instanceId + ' .cdr-doc-table-of-contents-shell__content h2'" 
-        :child-selectors="'.cdr-doc-table-of-contents-shell--' + instanceId + ' .cdr-doc-table-of-contents-shell__content h3'"/>
+        :child-selectors="'.cdr-doc-table-of-contents-shell--' + instanceId + ' .cdr-doc-table-of-contents-shell__content h3'"
+        :appended-items="appendedNavItems"/>
     </div>
   </div>
 </template>
@@ -14,6 +15,14 @@
 <script>
 export default {
   name: 'CdrDocTableOfContentsShell',
+  props: {
+    appendedNavItems: {
+      type: Array,
+      default: function() {
+        return [];
+      }
+    }
+  },
   data: function() {
     return {
       instanceId: null
