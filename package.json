@@ -31,4 +31,9 @@
     "@rei/cdr-list": "^0.1.0",
     "@rei/cdr-row": "^0.1.0"
   }
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "ie >= 11"
+  ]
 }
