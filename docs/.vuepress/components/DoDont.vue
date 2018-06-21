@@ -1,56 +1,53 @@
 <template>
-<div class="do-dont">
-  <figure
-    v-if="doExample"
-    class="do-dont__figure do-dont__figure--do"
+<cdr-row cols="2">
+  <cdr-col
+    v-for="(example, idx) in examples"
+    :key="`${example.type}${idx}`"
+    :span="example.fullWidth? '12' : null"
   >
-    <img
-      class="do-dont__image"
-      :src="$withBase(`/${doExample.image}`)"
-      :alt="doAlt">
-    <figcaption class="do-dont__caption">
-      <span class="do-dont__type">Do </span>
-      <span v-html="doExample.caption"/>
-    </figcaption>
-  </figure>
-  <div
-    v-if="!doExample && dontExample"
-    aria-hidden="true"
-    class="do-dont__figure"
-  />
-  <figure
-    v-if="dontExample"
-    class="do-dont__figure do-dont__figure--dont"
-  >
-    <img
-      class="do-dont__image"
-      :src="$withBase(`/${dontExample.image}`)"
-      :alt="dontAlt">
-    <figcaption class="do-dont__caption">
-      <span class="do-dont__type">Don't </span>
-      <span v-html="dontExample.caption"/>
-    </figcaption>
-  </figure>
-</div>
+    <figure class="do-dont">
+      <cdr-img
+        class="do-dont__image"
+        :src="$withBase(`/${example.image}`)"
+        ratio="16-9"
+        :alt="altText(example)" />
+      <figcaption :class="['do-dont__caption', typeClass(example.type)]">
+        <span v-if="example.type==='do'" class="do-dont__type">Do </span>
+        <span v-if="example.type==='dont'" class="do-dont__type">Don't </span>
+        <component :is="compiled(`${example.type}${idx}`, example.caption)" />
+        <slot/>
+      </figcaption>
+    </figure>
+  </cdr-col>
+</cdr-row>
 </template>
 
 <script>
+import Vue from '$vue';
+
 export default {
   name: "DoDont",
   props: {
-    doExample: {
-      type: Object,
-    },
-    dontExample: {
-      type: Object
+    examples: {
+      type: Array,
     }
   },
-  computed: {
-    doAlt() {
-      return this.doExample.alt || 'Do example image';
+  methods: {
+    altText(ex) {
+      if (ex.alt) return ex.alt;
+      else if (!ex.alt && ex.type === 'do') return 'Do example image';
+      else return `Don't example image`;
     },
-    dontAlt() {
-      return this.dontExample.alt || `Don't example image`;
+    typeClass(type) {
+      return {
+        'do-dont__caption--do': type === 'do',
+        'do-dont__caption--dont': type === 'dont',
+      }
+    },
+    compiled(id, template) {
+      this.$options.components[`comp-${id}`] = { ...Vue.compile(`<span>${template}</span>`) };
+
+      return `comp-${id}`;
     }
   }
 }
@@ -63,50 +60,54 @@ $do-color: $crimp-son-and-clover;
 $dont-color: $high-stakes;
 
 .do-dont {
-  display: flex;
-  justify-content: space-between;
-  align-content: stretch;
-  margin-bottom: 8px;
 
   &__image {
     border: 1px solid $partly-cloudy;
-    border-bottom-width: 8px;
     border-radius: $radius-softer;
-    width: 100%;
-    display: block;
-    margin-bottom: 8px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom: none;
   }
 
   &__caption {
     @include maple-utility-20();
-  }
 
-  &__type {
-    font-weight: bold;
-  }
-
-  &__figure {
-    flex: 0 1 calc(50% - 16px);
+    &::before {
+      content: '';
+      display: block;
+      height: 8px;
+      width: 100%;
+      border: none;
+      border-bottom-style: solid;
+      border-bottom-width: 8px;
+      border-bottom-left-radius: $radius-softer;
+      border-bottom-right-radius: $radius-softer;
+      margin-bottom: 8px;
+    }
 
     &--do {
-      & > .do-dont__image {
-        border-bottom-color: $do-color;
+      &::before {
+        border-color: $do-color;
       }
 
-      & .do-dont__type {
+      & > .do-dont__type {
         color: $do-color;
       }
     }
 
     &--dont {
-      & > .do-dont__image {
-        border-bottom-color: $dont-color;
+      &::before {
+        border-color: $dont-color;
       }
 
-      & .do-dont__type {
+      & > .do-dont__type {
         color: $dont-color;
       }
     }
+  }
+
+  &__type {
+    font-weight: bold;
   }
 }
 </style>
