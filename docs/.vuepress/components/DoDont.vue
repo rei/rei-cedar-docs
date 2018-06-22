@@ -56,8 +56,8 @@ export default {
 <style lang="scss">
 @import '../theme/styles/cdr-tokens.scss';
 
-$do-color: $crimp-son-and-clover;
-$dont-color: $high-stakes;
+$do-color: $instant-winner;
+$dont-color: $quick-fixe;
 
 .do-dont {
 
