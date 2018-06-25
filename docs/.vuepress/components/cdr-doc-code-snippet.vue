@@ -210,7 +210,7 @@ export default {
   @mixin cdr-doc-reveal-tooltip {
     top: calc(100% + #{$cdr-doc-code-snippet-tooltip-caret-size});
     opacity: 1;
-    transition: .4s;
+    transition: .4s .5s;
     visibility: visible;
   }
   .cdr-doc-code-snippet__tooltip {
@@ -225,7 +225,7 @@ export default {
     position: absolute;
     text-align: center;
     top: 50%;
-    transition: .4s;
+    transition: .4s 0s;
     transform: translateX(-50%);
     visibility: hidden;
     z-index: 100;
@@ -252,8 +252,11 @@ export default {
   }
 
   .cdr-doc-code-snippet__tooltip--copied-notification {
+    transition: .4s 0s;
+
     .cdr-doc-code-snippet--show-copied-notification & {
       @include cdr-doc-reveal-tooltip;
+      transition: .4s 0s;
     }
   }
 
