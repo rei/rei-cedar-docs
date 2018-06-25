@@ -66,6 +66,7 @@ export default {
 <style lang="scss">
   @import '../theme/styles/cdr-tokens.scss';
   @import '../theme/styles/cdr-doc-tokens.scss';
+  @import '../theme/styles/cdr-doc-mixins.scss';
 
   .cdr-doc-tabs__labels {
     border-bottom: $cdr-doc-border-separator;
@@ -128,6 +129,7 @@ export default {
   }
 
   .cdr-doc-tab-panel {
+    @include cdr-doc-long-form-text;
     display: none;
   }
 

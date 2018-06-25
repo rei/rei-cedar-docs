@@ -1,0 +1,39 @@
+  @mixin cdr-doc-long-form-text {
+    & > h2 {
+      @include redwood-display-70;
+      margin-bottom: $space-1-x;
+      margin-top: $space-2-x;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    & > h3 {
+      @include redwood-display-60;
+      margin-bottom: $space-1-x;
+      margin-top: $space-2-x;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    & > p {
+      @include redwood-display-30;
+      margin-bottom: $space-2-x;
+    }
+
+    & > div[class^='language-'] {
+      margin-bottom: $space-2-x;
+    }
+    
+    & > ol li,
+    & > ul li {
+      margin-bottom: $space-half-x;
+    }
+  }
+
+cdr-doc-table-of-contents-shell {
+  @include cdr-doc-long-form-text;
+}
