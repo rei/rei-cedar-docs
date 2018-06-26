@@ -1,5 +1,5 @@
 <template>
-<cdr-row cols="2">
+<cdr-row cols="1" cols-sm="2">
   <cdr-col
     v-for="(example, idx) in examples"
     :key="`${example.type}${idx}`"
