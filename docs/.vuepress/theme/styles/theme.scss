@@ -1,5 +1,6 @@
 @import 'cdr-tokens';
 @import 'cdr-doc-tokens';
+@import 'cdr-doc-mixins';
 @import '../../../../node_modules/@rei/cdr-assets/dist/cdr-fonts.css';
 @import '../../../../node_modules/@rei/cdr-assets/dist/cdr-core.css';
 
@@ -66,6 +67,7 @@ body {
     display: block;
     width: 100%;
   }
+
 
   .cdr-doc-page-shell__side-navigation {
     display: none;

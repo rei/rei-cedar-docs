@@ -36,15 +36,18 @@ export default {
 <style lang="scss">
   @import '../theme/styles/cdr-tokens.scss';
   @import '../theme/styles/cdr-doc-tokens.scss';
+  @import '../theme/styles/cdr-doc-mixins.scss';
   
   .cdr-doc-table-of-contents-shell {
     display: flex;
   }
 
   .cdr-doc-table-of-contents-shell__content {
+    @include cdr-doc-long-form-text;
     border-right: $cdr-doc-border-separator;
     padding-right: 24px; // Not a token?
     margin-right: 24px; // Not a token?
+    width: 100%;
   }
 
   .cdr-doc-table-of-contents-shell__navigation {

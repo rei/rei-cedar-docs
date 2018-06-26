@@ -29,11 +29,15 @@ module.exports = {
       },
       {
         text: "Getting Started",
-        link: "#"
+        items: [
+          { text: "As a Developer", link: "/getting-started/as-a-developer/" }
+        ]
       },
       {
         text: "Foundation",
-        link: "#"
+        items: [
+          { text: "Color", link: "/foundation/color/" }
+        ]
       },
       {
         text: "Components",
