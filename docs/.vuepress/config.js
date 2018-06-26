@@ -16,7 +16,7 @@ module.exports = {
     lineNumbers: true
   },
   themeConfig: {
-    logo: "/doc-site-logo.png",
+    logo: "/doc-site-logo.svg",
     search: false,
     nav: [
       {
