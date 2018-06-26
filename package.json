@@ -29,6 +29,9 @@
     "@rei/cdr-icon": "^0.2.0",
     "@rei/cdr-list": "^0.1.0",
     "@rei/cdr-row": "^0.1.0",
-    "rei-cedar-tokens": "git+https://github.com/rei/rei-cedar-tokens.git#0.1.4"
+    "rei-cedar-tokens": "git+https://github.com/rei/rei-cedar-tokens.git#0.1.4",
+    "scrollmonitor": "^1.2.4",
+    "smoothscroll-polyfill": "^0.4.3",
+    "stickyfilljs": "^2.0.5"
   }
 }

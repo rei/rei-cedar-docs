@@ -47,39 +47,126 @@
 
 <cdr-doc-tabs>
 <template slot="Overview">
-<cdr-doc-alert/>
+<cdr-doc-table-of-contents-shell>
 
-# API GUIDE
-## The Beginning
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum in sapien sed dictum. Phasellus placerat sem a eros rutrum efficitur. Proin vestibulum quam ut felis maximus lacinia. Vestibulum non cursus massa. Pellentesque quis leo at tellus aliquet porta. Quisque volutpat sollicitudin tincidunt. In gravida ante nisl, at pretium nibh scelerisque eget. Phasellus eleifend pretium imperdiet. Nunc egestas finibus dui a rhoncus. Integer viverra dapibus posuere. Donec ut augue neque. Aliquam sed sem eu lacus posuere semper sit amet quis orci. Suspendisse potenti.
+## Primary
+Use primary button to emphasize an action to complete a form or more forward in a process such as "Submit" or "Add to cart".
 
-```js
-console.log("wachaaaaa!!!")
-let chuloo = 'awesome'
-let you = 'a little more awesome'
+<cdr-doc-example-code-pair repository-href="http://github.com" sandbox-href="http://github.com">
+
+```html
+  <cdr-button>Button Text</cdr-button>
 ```
 
-## Hidden Leaf API Chakras
-Cras euismod venenatis nulla sed fermentum. Etiam venenatis vestibulum metus at rhoncus. Aenean et ex libero. Vivamus dapibus nulla eget nisi elementum, in gravida purus eleifend. Integer id scelerisque ligula. Nulla sit amet odio nisl. Suspendisse tempor risus eget nunc dictum, at placerat turpis malesuada. Aenean sit amet accumsan diam, ultricies facilisis odio. Aenean nec iaculis ipsum. Maecenas finibus pulvinar leo, quis viverra quam. Duis ipsum augue, hendrerit in semper vel, dapibus eu diam. Nulla laoreet rutrum enim vehicula maximus. Vivamus porta congue justo, quis ullamcorper purus pellentesque ac. Aliquam sagittis leo nec consequat vulputate.
+</cdr-doc-example-code-pair>
 
-<cdr-doc-code-snippet>
+
+
+## Secondary
+Use secondary button for all actions that do not move the user to the next step or are additional user actions such as “Add to wish list” or “Load more”. There should be only 1 primary action per major page section.
+
+<cdr-doc-example-code-pair>
+
+```html
+  <cdr-button class="cdr-button--secondary">Button Text</cdr-button>
 ```
-<h1>Hello World</h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis doloremque vero facere. Cumque velit explicabo reprehenderit, et iusto ullam tenetur ipsum ratione, laudantium repudiandae neque natus, a dolorum dignissimos id.</p>
+
+</cdr-doc-example-code-pair>
+
+## Button with icon
+Most common icon only button is for closing a modal or accordion panel.
+
+<cdr-doc-example-code-pair>
+
+```html
+  <cdr-button>Button Text</cdr-button>
 ```
-</cdr-doc-code-snippet>
 
-### Kakashi Sensei PATCH POST DELETE
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In interdum in sapien sed dictum. Phasellus placerat sem a eros rutrum efficitur. Proin vestibulum quam ut felis maximus lacinia. Vestibulum non cursus massa. Pellentesque quis leo at tellus aliquet porta. Quisque volutpat sollicitudin tincidunt. In gravida ante nisl, at pretium nibh scelerisque eget. Phasellus eleifend pretium imperdiet. Nunc egestas finibus dui a rhoncus. Integer viverra dapibus posuere. Donec ut augue neque. Aliquam sed sem eu lacus posuere semper sit amet quis orci. Suspendisse potenti.
+</cdr-doc-example-code-pair>
 
 
-### Konohamaru GET Requests
-Cras euismod venenatis nulla sed fermentum. Etiam venenatis vestibulum metus at rhoncus. Aenean et ex libero. Vivamus dapibus nulla eget nisi elementum, in gravida purus eleifend. Integer id scelerisque ligula. Nulla sit amet odio nisl. Suspendisse tempor risus eget nunc dictum, at placerat turpis malesuada. Aenean sit amet accumsan diam, ultricies facilisis odio. Aenean nec iaculis ipsum. Maecenas finibus pulvinar leo, quis viverra quam. Duis ipsum augue, hendrerit in semper vel, dapibus eu diam. Nulla laoreet rutrum enim vehicula maximus. Vivamus porta congue justo, quis ullamcorper purus pellentesque ac. Aliquam sagittis leo nec consequat vulputate.
+## Size
+Change the button size based on where button is used
 
-::: tip Warning!!
-Have as much fun as possible!!
-:::
+<cdr-doc-example-code-pair>
 
+```html
+  <div>
+    <cdr-button size="small">Add to cart</cdr-button>
+    <cdr-button>Add to cart</cdr-button>
+    <cdr-button size="large">Add to cart</cdr-button>
+  </div>
+```
+
+</cdr-doc-example-code-pair>
+</cdr-doc-table-of-contents-shell>
+</template>
+
+
+<template slot="Design Guidelines">
+  <cdr-doc-table-of-contents-shell 
+    :appended-nav-items="[
+      {
+        text: 'Related Components'
+      },
+      {
+        text: 'Call to Action buttons',
+        href: '#'
+      },
+      {
+        text: 'Toggle buttons',
+        href: '#'
+      },
+      {
+        text: 'Button groups',
+        href: '#'
+      }
+    ]">
+    <cdr-doc-alert/>
+
+## Use When
+
+  * Triggering an action when a user clicks or taps on the component.
+  * Enabling a &ldquo;final&rdquo; action.
+  * Progressing or regressing a user through a step in a flow.
+  * Submitting requested information. 
+  * Confirming the completion of a flow or cancelling out of it.
+
+### Don't use when
+
+  * Navigating to another page on a site. Instead, use Call-to-action.
+  * Taking a user to a different part within the same page. Instead, use Link.
+
+## Visual language
+Buttons should be self-contained visual elements, typically a form of rectangle, that encloses text, iconography, or both. Hierarchy of importance is emphasized and delineated by using primary and secondary buttons. These button types should utilize visual and spatial cues to communicate their importance within that hierarchy, such as boldness of color/value choices and order of presentation such as left-to-right or top-to-bottom arrangements.
+
+Visual specs for small, medium and large buttons.
+
+## Behavior
+These are guidelines for when and how to use the Button component.
+
+## Content
+
+  * Clearly and accurately label buttons.
+  * Lead with strong, actionable verbs.
+  * Depending on the use case, buttons may contain a label and/or an icon.
+  * All button labels are sentence case, with only the first word in a phrase and any proper nouns capitalized.
+  * Button labels should be as short as possible and communicate the action that will occur when the user touches them.
+
+## Accessibility
+
+  * Display a visible focus state when users tab to the button.
+  * For icon-only buttons, provide engineers with UI text to be used inside the `<button>` element for screen readers. This text is defined in the `<title>` tag for SVG files or `<ALT>` tag.
+  * If needed, a longer description for the icon (or SVG element) that contains its purpose or provides additional and/or clarifying information can be provided to engineers. This text will appear in the `<desc>` tag and is very helpful to users of assistive technology.
+Modifiers can be combined 1 from each grouping.
+  * If the SVG is purely decorative or has supporting text, define UI text as “NONE” because no UI text needs to be provided for `<title>` or `<desc>` or `<alt>` tags. 
+
+  </cdr-doc-table-of-contents-shell>
+</template>
+
+<template slot="API">
+
+# Properties
 ### Props
 
 <cdr-doc-api type="prop" />
@@ -87,32 +174,6 @@ Have as much fun as possible!!
 ### Slots 
 
 <cdr-doc-api type="slot" />
-</template>
-
-
-<template slot="Design Guidelines">
-
-# <span class="display-name">CdrButton</span>
-
-### <span class="modifiers">Modifiers</span>
-
-Modifiers can be combined 1 from each grouping.
-
-{secondary} | {sm,xs} | {block, fixed, responsive} **OR** link
-
-Use of the 'link' modifier depends on including the css for cdrA.
-
-A modifier list that contains 'link' exposes the same modifiers as cdrA and the other modifiers shouldn't be combined with it.
-
-Responsive makes the button full width and block @ sm breakpoint.
-
-</template>
-
-<template slot="API">
-
-# Properties
-API Props
-
 </template>
 
 <template slot="History">
