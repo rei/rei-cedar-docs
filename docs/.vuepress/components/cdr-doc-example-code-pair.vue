@@ -107,7 +107,7 @@
         type: Boolean
       },
       hideCode: {
-        default: false,
+        default: true,
         type: Boolean
       }
     },
@@ -232,10 +232,18 @@
     &:last-child {
       border-bottom: 0;
     }
+
+    &:first-child {
+      border-radius: $cdr-doc-border-radius-default $cdr-doc-border-radius-default 0 0;
+    }
   }
 
   .cdr-doc-example-code-pair--not-interactive .cdr-doc-example-code-pair__item-example {
     pointer-events: none; // prevent interaction
+  }
+
+  .cdr-doc-example-code-pair__item-background--light {
+    background: $clean-slate;
   }
 
   .cdr-doc-example-code-pair__item-background--dark {

@@ -176,10 +176,18 @@
     &:last-child {
       border-bottom: 0;
     }
+
+    &:first-child {
+      border-radius: $cdr-doc-border-radius-default $cdr-doc-border-radius-default 0 0;
+    }
   }
 
   .cdr-doc-html-example-list--not-interactive .cdr-doc-html-example-list__item-example {
     pointer-events: none; // prevent interaction
+  }
+
+  .cdr-doc-html-example-list__item-background--light {
+    background: $clean-slate;
   }
 
   .cdr-doc-html-example-list__item-background--dark {
