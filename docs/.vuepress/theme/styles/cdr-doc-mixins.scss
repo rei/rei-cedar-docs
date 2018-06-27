@@ -65,4 +65,18 @@
     margin-bottom: $space-2-x;
     margin-top: $space-2-x;    
   }
+
+  & > p,
+  & > li {
+    & > code {
+      background: $cdr-doc-color-white;
+      border: $cdr-doc-border-separator;
+      border-radius: $cdr-doc-border-radius-default;
+      color: $cdr-doc-text-color-code;
+      font-family: $cdr-doc-font-family-mono;
+      font-size: 16px;
+      padding: 0 $space-half-x;
+      white-space: nowrap;
+    }
+  }
 }

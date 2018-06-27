@@ -1,5 +1,8 @@
+$cdr-doc-color-white: $clean-slate;
+
 $cdr-doc-text-color-primary: #2E2E2E; // Copied from InVision comp
 $cdr-doc-text-color-secondary: $taken-for-granite;
+$cdr-doc-text-color-code: $quick-fixe;
 
 $cdr-doc-link-color-primary: #426C90; // Copied from InVision comp
 
@@ -11,3 +14,6 @@ $cdr-doc-border-radius-default: 4px;
 
 $cdr-doc-content-max-width: 900px;
 $cdr-doc-long-form-text-max-line-length: 630px;
+
+$cdr-doc-font-family-mono: 'Roboto Mono', monospace;
+
