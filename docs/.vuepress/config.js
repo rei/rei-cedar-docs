@@ -1,5 +1,5 @@
 module.exports = {
-  base: "/rei-cedar-docs/",
+  base: "/",
   title: "REI CO-OP Design System",
   description: "A demo documentation using VuePress",
   head: [
@@ -47,6 +47,6 @@ module.exports = {
     ]
   },
   chainWebpack(config) {
-    config.resolve.alias.set('$vue', 'vue/dist/vue.common.js')
+    config.resolve.alias.set('$vue', 'vue/dist/vue.esm.js')
   }
 };

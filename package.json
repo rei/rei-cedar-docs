@@ -18,20 +18,26 @@
     "url": "git+https://github.com/rei/rei-cedar-docs.git"
   },
   "devDependencies": {
+    "@rei/cdr-tokens": "^0.1.6",
     "node-sass": "^4.9.0",
     "sass-loader": "^6.0.7",
-    "vuepress": "^0.9.0"
+    "vuepress": "^0.10.2"
   },
   "dependencies": {
     "@rei/cdr-assets": "^0.1.0",
     "@rei/cdr-button": "^0.1.0",
     "@rei/cdr-col": "^0.1.0",
     "@rei/cdr-icon": "^0.2.0",
+    "@rei/cdr-img": "^1.0.0-alpha.1",
     "@rei/cdr-list": "^0.1.0",
     "@rei/cdr-row": "^0.1.0",
-    "rei-cedar-tokens": "git+https://github.com/rei/rei-cedar-tokens.git#0.1.4",
     "scrollmonitor": "^1.2.4",
     "smoothscroll-polyfill": "^0.4.3",
     "stickyfilljs": "^2.0.5"
-  }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "ie >= 11"
+  ]
 }
