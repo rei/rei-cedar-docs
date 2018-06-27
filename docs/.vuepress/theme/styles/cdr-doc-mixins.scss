@@ -57,6 +57,13 @@
     margin-bottom: $space-half-x;
     margin-top: 0;
     max-width: $cdr-doc-long-form-text-max-line-length;
+    padding-left: 1em;
+    text-indent: -1em;
+  }
+
+  & > ul li {
+    padding-left: 1.1em;
+    text-indent: -1em;
   }
 
   & > hr {
@@ -66,8 +73,17 @@
     margin-top: $space-2-x;    
   }
 
+  & > a,
+  & > p a,
+  & > li a {
+    color: $cdr-doc-link-color-primary;
+    text-decoration: underline;
+  }
+
+
   & > p,
-  & > li {
+  & > ol li,
+  & > ul li {
     & > code {
       background: $cdr-doc-color-white;
       border: $cdr-doc-border-separator;

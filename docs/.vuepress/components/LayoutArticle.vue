@@ -1,6 +1,6 @@
 <template>
   <div class="page cdr-doc-article-layout">
-    <cdr-doc-intro :title="pageData.title" :metadata="pageData.title_metadata" :breadcrumbs="pageData.breadcrumbs">
+    <cdr-doc-intro size="small" :title="pageData.title" :metadata="pageData.title_metadata" :breadcrumbs="pageData.breadcrumbs">
       {{ pageData.summary }}
     </cdr-doc-intro>
     <div class="cdr-doc-article-layout__body">
@@ -35,6 +35,8 @@ export default {
   .cdr-doc-article-layout__body {
     flex: 1 0 100%;
     padding: $inset-1-x;
+    padding-bottom: $cdr-doc-long-form-text-top-and-bottom-inset-space;
+    padding-top: $cdr-doc-long-form-text-top-and-bottom-inset-space;
   }
 
   .cdr-doc-article-layout__body-inner {

@@ -1,5 +1,5 @@
 <template>
-  <div class="cdr-doc-intro">
+  <div class="cdr-doc-intro" :class="[size ? `cdr-doc-intro--${size}` : '']">
     <div class="cdr-doc-intro__inner">
         <ul class="cdr-doc-intro__breadcrumbs" v-if="breadcrumbs">
           <li v-for="breadcrumb in breadcrumbs" :key="breadcrumb.text">
@@ -39,6 +39,9 @@ export default {
     metadata: {
       type: [String, Boolean],
       default: 'Also known as a Call-to-Action (CTA)'
+    },
+    size: {
+      type: String
     }
   },
   computed: {
@@ -59,6 +62,10 @@ export default {
     background: $background-color-intro;
     color: $text-color-intro;
     padding: $space-4-x $space-1-x;
+  }
+
+  .cdr-doc-intro--small {
+    padding: $space-2-x $space-1-x;
   }
 
   .cdr-doc-intro__inner {

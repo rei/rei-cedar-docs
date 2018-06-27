@@ -93,7 +93,8 @@ export default {
   .cdr-doc-tabs__panels-inner {
     margin: 0 auto;
     max-width: $cdr-doc-content-max-width;
-    padding-top: 48px; // not a token?
+    padding-bottom: $cdr-doc-long-form-text-top-and-bottom-inset-space;
+    padding-top: $cdr-doc-long-form-text-top-and-bottom-inset-space;
   }
 
   .cdr-doc-tabs__list-item {
