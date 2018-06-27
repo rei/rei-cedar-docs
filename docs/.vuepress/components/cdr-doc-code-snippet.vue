@@ -1,29 +1,45 @@
+
+<!-- TODO: Add tooltips on hover for copy to clipboard, github, and code sandbox links -->
 <template>
-  <div class="cdr-doc-code-snippet" :class="{ 'cdr-doc-code-snippet--show-copied-notification': copied, 'cdr-doc-code-snippet--no-line-numbers': !lineNumbers,
+  <div class="cdr-doc-code-snippet" :class="{ 
+    'cdr-doc-code-snippet--show-copied-notification': copied, 
+    'cdr-doc-code-snippet--no-line-numbers': !lineNumbers,
+    'cdr-doc-code-snippet--code-hidden': codeHidden,
     'cdr-doc-code-snippet--no-max-height': !maxHeight }">
     <div class="cdr-doc-code-snippet__actions" v-if="copyButton">
       <div class="cdr-doc-code-snippet__copy-action cdr-doc-code-snippet__action" v-on:click="copyToClipBoard">
-        <cdr-button class="cdr-doc-code-snippet__copy-action">
+        <button class="cdr-doc-code-snippet__copy-action">
           <img class="cdr-doc-code-snippet__action-icon" :src="$withBase('/Copy@2x.png')" alt="Copy to clipboard"/>
-        </cdr-button>
-        <div class="cdr-doc-code-snippet__notification" aria-live="polite">
-          <span class="cdr-doc-code-snippet__notification-message" v-if="copied">
+        </button>
+        <span class="cdr-doc-code-snippet__tooltip cdr-doc-code-snippet__tooltip--show-on-hover">
+          Copy to clipboard
+        </span>
+        <span class="cdr-doc-code-snippet__tooltip cdr-doc-code-snippet__tooltip--copied-notification" aria-live="polite">
+          <span class="cdr-doc-code-snippet__tooltip-message" v-if="copied">
             Copied!
           </span>
-          <span class="cdr-doc-code-snippet__notification-message" v-if="copyError">
+          <span class="cdr-doc-code-snippet__tooltip-message" v-if="copyError">
             Could not copy to clipboard.
           </span>
-          <span class="cdr-doc-code-snippet__notification-message" v-if="copyNotSupported">
+          <span class="cdr-doc-code-snippet__tooltip-message" v-if="copyNotSupported">
             This browser does not support automatic copying to clipboard.
           </span>
-        </div>
+        </span>
       </div>
       <a class="cdr-doc-code-snippet__action" :href="repositoryHref" v-if="repositoryHref">
         <img class="cdr-doc-code-snippet__action-icon" :src="$withBase('/Github@2x.png')" alt="View source in repository"/>
+        <span class="cdr-doc-code-snippet__tooltip cdr-doc-code-snippet__tooltip--show-on-hover">
+          View in repository
+        </span>
       </a>
       <a class="cdr-doc-code-snippet__action" :href="sandboxHref" v-if="sandboxHref">
         <img class="cdr-doc-code-snippet__action-icon" :src="$withBase('/CodeSandbox@2x.png')" alt="View in code sandbox"/>
+        <span class="cdr-doc-code-snippet__tooltip cdr-doc-code-snippet__tooltip--show-on-hover">
+          View in sandbox
+        </span>
       </a>
+
+      <button class="cdr-doc-snippet__hide-code-toggle" v-on:click="toggleCodeDisplay" v-if="codeToggle">{{ hideCodeToggleText }}</button>
     </div>
     <div class="cdr-doc-code-snippet__code-wrap" ref="codeWrap">
       <div class="cdr-doc-code-snippet__code" ref="source"><slot/></div>
@@ -54,17 +70,37 @@ export default {
     sandboxHref: {
       default: false,
       type: [String, Boolean]
+    },
+    codeToggle: {
+      default: false,
+      type: Boolean
+    },
+    hideCode: {
+      default: false,
+      type: Boolean
     }
   },
   data: function() {
     return {
       copied: false,
       copyError: false,
-      copyNotSupported: false
+      copyNotSupported: false,
+      codeHidden: false,
+      hideCodeToggleText: 'Hide code'
     }
   },
-
+  created: function() {
+    this.codeHidden = this.hideCode;
+    this.setCodeToggleText();
+  },
   methods: {
+    setCodeToggleText() {
+      this.hideCodeToggleText = this.codeHidden ? 'Show code' : 'Hide code';
+    },
+    toggleCodeDisplay() {
+      this.codeHidden = !this.codeHidden;
+      this.setCodeToggleText();
+    },
     copyToClipBoard() {
       const source = this.$refs.source.querySelector('code');
 
@@ -117,7 +153,7 @@ export default {
 <style lang="scss">
   @import '../theme/styles/cdr-tokens.scss';
   @import '../theme/styles/cdr-doc-tokens.scss';
-  $cdr-doc-code-snippet-actions-background-color: $ice-age;
+  $cdr-doc-code-snippet-actions-background-color: $moon-shot;
 
   .cdr-doc-code-snippet {
     margin-bottom: $space-1-x;
@@ -131,7 +167,15 @@ export default {
     border-bottom: 0;
     border-radius: $cdr-doc-border-radius-default $cdr-doc-border-radius-default 0 0;
     display: flex;
-    padding: $inset-1-x;
+    padding: $inset-half-x;
+
+    .cdr-doc-code-snippet--code-hidden & {
+      border-radius: $cdr-doc-border-radius-default;
+    }
+  }
+
+  .cdr-doc-code-snippet--code-hidden .cdr-doc-code-snippet__code-wrap {
+    display: none;
   }
 
   .cdr-doc-code-snippet__code-wrap div[class^='language-'] {
@@ -151,44 +195,68 @@ export default {
   }
 
   .cdr-doc-code-snippet__copy-action {
+    background: none;
+    border: 0;
+    display: block;
+    margin: 0;
+    padding: 0;
     position: relative;
   }
 
   $cdr-doc-code-snippet-icon-color: $taken-for-granite;
-  $cdr-doc-code-snippet-copied-notification-background-color: rgba(0,0,0,0.8);
-  $cdr-doc-code-snippet-copied-notification-caret-size: 8px;
-  .cdr-doc-code-snippet__notification {
-    background: $cdr-doc-code-snippet-copied-notification-background-color;
+  $cdr-doc-code-snippet-tooltip-background-color: rgba(0,0,0,0.8);
+  $cdr-doc-code-snippet-tooltip-caret-size: 8px;
+
+  @mixin cdr-doc-reveal-tooltip {
+    top: calc(100% + #{$cdr-doc-code-snippet-tooltip-caret-size});
+    opacity: 1;
+    transition: .4s .5s;
+    visibility: visible;
+  }
+  .cdr-doc-code-snippet__tooltip {
+    background: $cdr-doc-code-snippet-tooltip-background-color;
     border-radius: $cdr-doc-border-radius-default;
-    bottom: -30px;
     color: $clean-slate;
     font-size: 14px;
     left: 50%;
     opacity: 0;
     padding: $inset-1-x-squish;
+    pointer-events: none;
     position: absolute;
     text-align: center;
-    transition: .4s;
+    top: 50%;
+    transition: .4s 0s;
     transform: translateX(-50%);
     visibility: hidden;
     z-index: 100;
 
-    .cdr-doc-code-snippet--show-copied-notification & {
-      bottom: -50px;
-      opacity: 1;
-      transition: .4s;
-      visibility: visible;
-    }
 
     &:before {
-      border-color: transparent transparent $cdr-doc-code-snippet-copied-notification-background-color transparent;
+      border-color: transparent transparent $cdr-doc-code-snippet-tooltip-background-color transparent;
       border-style: solid;
-      border-width: $cdr-doc-code-snippet-copied-notification-caret-size;
+      border-width: $cdr-doc-code-snippet-tooltip-caret-size;
       content: '';
       left: 50%;
       position: absolute;
-      top: -($cdr-doc-code-snippet-copied-notification-caret-size * 2);
+      top: -($cdr-doc-code-snippet-tooltip-caret-size * 2);
       transform: translateX(-50%);
+    }
+  }
+
+  .cdr-doc-code-snippet__action:hover .cdr-doc-code-snippet__tooltip--show-on-hover {
+    @include cdr-doc-reveal-tooltip;
+
+    .cdr-doc-code-snippet--show-copied-notification & {
+      display: none;
+    }
+  }
+
+  .cdr-doc-code-snippet__tooltip--copied-notification {
+    transition: .4s 0s;
+
+    .cdr-doc-code-snippet--show-copied-notification & {
+      @include cdr-doc-reveal-tooltip;
+      transition: .4s 0s;
     }
   }
 
@@ -211,19 +279,22 @@ export default {
   .cdr-doc-code-snippet__action {
     display: block;
     margin-right: $space-1-x;
+    position: relative;
   }
 
-  // Strip out button styles until official "Icon Only" button variation is possible
-  .cdr-button {
-    &,
-    &:hover {
-      background: none;
-      border: 0;
-      display: block;
-      font-size: 0;
-      line-height: 1;
-      margin: 0;
-      padding: 0;
+  .cdr-doc-snippet__hide-code-toggle {
+    @include redwood-display-20;
+    border: 0;
+    background: none;
+    color: $cdr-doc-text-color-primary;
+    cursor: pointer;
+    display: block;
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+
+    &:active {
+      color: $cdr-doc-text-color-primary;
     }
   }
 </style>
