@@ -149,7 +149,7 @@ TBD -- Link to sketch file with info about link component.
 
 <template slot="API">
 
-<cdr-doc-versioned-api compName="CdrLink"/>
+<cdr-doc-versioned-api headerTag="h2" compName="CdrLink"/>
 
 ## Installation
 
