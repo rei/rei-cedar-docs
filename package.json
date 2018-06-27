@@ -23,11 +23,11 @@
     "vuepress": "^0.9.0"
   },
   "dependencies": {
-    "@rei/cdr-assets": "^0.1.0",
+    "@rei/cdr-assets": "^0.3.0",
     "@rei/cdr-button": "^0.1.0",
     "@rei/cdr-col": "^0.1.0",
     "@rei/cdr-icon": "^0.2.0",
-    "@rei/cdr-list": "^0.1.0",
+    "@rei/cdr-list": "^0.2.0",
     "@rei/cdr-row": "^0.1.0",
     "@rei/cdr-select": "^0.1.1",
     "@rei/cdr-text": "^0.2.1",

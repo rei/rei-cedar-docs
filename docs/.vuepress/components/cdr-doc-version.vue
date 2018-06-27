@@ -5,7 +5,7 @@
       label="Version Select"
       prompt="Select the API version"
       :options="versOpts.map(version => version['version'])"
-      @input="versionChanged"
+      @change="versionChanged"
     />
   </div>
 </template>
