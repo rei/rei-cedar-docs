@@ -28,27 +28,32 @@ export default {
       instanceId: null
     }
   },
-  mounted: function() {
-    this.instanceId = this._uid;
+  beforeMount: function() {
+    this.instanceId = this.instanceId || this._uid;
   }
 }
 </script>
 <style lang="scss">
   @import '../theme/styles/cdr-tokens.scss';
   @import '../theme/styles/cdr-doc-tokens.scss';
+  @import '../theme/styles/cdr-doc-mixins.scss';
   
   .cdr-doc-table-of-contents-shell {
     display: flex;
   }
 
   .cdr-doc-table-of-contents-shell__content {
+    @include cdr-doc-long-form-text;
     border-right: $cdr-doc-border-separator;
     padding-right: 24px; // Not a token?
     margin-right: 24px; // Not a token?
+    min-width: 0;
+    flex: 1 1 100%;
   }
 
   .cdr-doc-table-of-contents-shell__navigation {
     flex-shrink: 0;
+    min-width: 0;
     width: 200px;
   }
 </style>
