@@ -28,8 +28,8 @@ export default {
       instanceId: null
     }
   },
-  mounted: function() {
-    this.instanceId = this._uid;
+  beforeMount: function() {
+    this.instanceId = this.instanceId || this._uid;
   }
 }
 </script>
