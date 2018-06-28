@@ -51,39 +51,55 @@
 
 <cdr-doc-tabs>
 <template slot="Overview">
+<cdr-doc-table-of-contents-shell>
 
 ## Basic
+Clickable text element to navigate to page section, another page or open an overlaid window such as modal dialog or popover. 
 
-```
-<cdr-link href="https://www.rei.com/">REI.com home page</cdr-link>
+<cdr-doc-example-code-pair :hide-code="true" repository-href="http://github.com/rei" sandbox-href="http://codesandbox.io">
 
+```html
+  <div>
+    <h1>Hello World!</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis ducimus illum unde accusantium magni, nostrum vero autem inventore. Beatae recusandae minima distinctio, aut adipisci debitis consequatur cupiditate similique est eius!</p>
+  </div>
 ```
-[github](https://github.com/rei/rei-cedar/tree/cedar2/src/components/link)
-[code sandbox](https://codesandbox.io/s/jnv1rko1z9)
+
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/master/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9" >
+
+```html
+  <div>
+  <cdr-text>If you spend much time in the great outdoors, you’re likely to hear the phrase “Leave No Trace” as often as you hear “<cdr-link href="https://www.rei.com/learn/expert-advice/ten-essentials.html">the Ten Essentials</cdr-link>.” What does it mean? Simply put, it’s the best practices we should follow to enjoy and protect our natural spaces.</cdr-text>
+  </div>
+```
+
+</cdr-doc-example-code-pair>
 
 ## Standalone
+blob
 
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/master/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
+
+```html
+  <cdr-link modifier="standalone" href="https://www.rei.com/">REI.com</cdr-link>
 ```
-<cdr-link modifier="standalone" href="https://www.rei.com/">REI.com</cdr-link>
-```
-[github](https://github.com/rei/rei-cedar/tree/cedar2/src/components/link)
-[code sandbox](https://codesandbox.io/s/jnv1rko1z9)
+
+</cdr-doc-example-code-pair>
+
 
 ## With Button Element
+blob
 
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/master/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
+
+```html
+  <cdr-link tag="button">add to cart</cdr-link>
 ```
-<cdr-link tag="button">add to cart</cdr-link>
-```
-[github](https://github.com/rei/rei-cedar/tree/cedar2/src/components/link)
-[code sandbox](https://codesandbox.io/s/jnv1rko1z9)
 
-### Props
-
-<cdr-doc-api type="prop" />
-
-### Slots 
-
-<cdr-doc-api type="slot" />
+</cdr-doc-example-code-pair>
+</cdr-doc-table-of-contents-shell>
 </template>
 
 

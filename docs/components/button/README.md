@@ -55,7 +55,7 @@ Use primary button to emphasize an action to complete a form or more forward in 
 <cdr-doc-example-code-pair repository-href="http://github.com" sandbox-href="http://github.com">
 
 ```html
-  <cdr-button>Button Text</cdr-button>
+  <cdr-button>Button more Text</cdr-button>
 ```
 
 </cdr-doc-example-code-pair>
