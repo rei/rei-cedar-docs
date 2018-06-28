@@ -2,12 +2,18 @@
   <div>
     <cdr-doc-version :versOpts="compVersions" @versionChanged="updateSemver" />
 
-    <cdr-text :tag="this.headerTag">Props</cdr-text>
-    <cdr-doc-api type="prop" :semver="selectedVersion" :apiVersions="compVersions" />
-    <cdr-text :tag="this.headerTag">Slots</cdr-text>
-    <cdr-doc-api type="slot" :semver="selectedVersion" :apiVersions="compVersions" />
-    <cdr-text :tag="this.headerTag">Events</cdr-text>
-    <cdr-doc-api type="event" :semver="selectedVersion" :apiVersions="compVersions" />
+    <div v-if="apiExists('props')">
+      <cdr-text :tag="this.headerTag">Props</cdr-text>
+      <cdr-doc-api type="prop" :semver="selectedVersion" :apiVersions="compVersions" />
+    </div>
+    <div v-if="apiExists('slots')">
+      <cdr-text :tag="this.headerTag">Slots</cdr-text>
+      <cdr-doc-api type="slot" :semver="selectedVersion" :apiVersions="compVersions" />
+    </div>
+    <div v-if="apiExists('events')">
+      <cdr-text :tag="this.headerTag">Events</cdr-text>
+      <cdr-doc-api type="event" :semver="selectedVersion" :apiVersions="compVersions" />
+    </div>
   </div>
 </template>
 
@@ -58,6 +64,14 @@ export default {
   methods: {
     updateSemver(value) {
       this.selectedVersion = value;
+    },
+    apiExists(apiType) {
+      return this.compVersions.some((version) => {
+        console.log(`API for ${apiType}:\n${version.api[apiType]}`)
+        return version.version === this.selectedVersion &&
+          version.api[apiType] !== undefined &&
+          version.api[apiType].length > 0
+      });
     }
   }
 }
