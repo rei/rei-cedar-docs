@@ -120,13 +120,17 @@ div[class^='language-'] {
     &.boolean,     
     &.property,
     .tag {
-        color: #6C966A;
+        color: #2574A9;
     }
 
     &.keyword,
     &.selector,
     .attr-name {
-        color: #C48648;
+        color: #DB0A5B;
+    }
+
+    &.comment {
+      color: $cdr-doc-text-color-secondary;
     }
 
     .attr-value {

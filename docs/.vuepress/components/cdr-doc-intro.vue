@@ -22,7 +22,7 @@ export default {
   name: 'CdrDocIntro',
   props: {
     breadcrumbs: {
-      type: Array,
+      type: [Array, Boolean],
       default: function () {
         return [
           {
