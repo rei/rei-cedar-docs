@@ -87,8 +87,7 @@ div[class^='language-'] {
   font-size: 14px;
   line-height: 1.4;
   padding: $inset-1-x;
-  max-width: 100%;
-  overflow-x: auto;
+  overflow: auto;
   position: relative;
 
   .cdr-doc-code-snippet__actions + & {

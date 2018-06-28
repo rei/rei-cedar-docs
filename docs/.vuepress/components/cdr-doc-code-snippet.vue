@@ -157,7 +157,8 @@ export default {
 
   .cdr-doc-code-snippet {
     margin-bottom: $space-1-x;
-    max-width: 100%;
+    // max-width: 100%;
+    width: 100%;
   }
 
   .cdr-doc-code-snippet__actions {
@@ -176,6 +177,10 @@ export default {
 
   .cdr-doc-code-snippet--code-hidden .cdr-doc-code-snippet__code-wrap {
     display: none;
+  }
+
+  .cdr-doc-code-snippet__code-wrap {
+    width: 100%;
   }
 
   .cdr-doc-code-snippet__code-wrap div[class^='language-'] {

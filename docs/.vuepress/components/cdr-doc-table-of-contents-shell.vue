@@ -47,11 +47,13 @@ export default {
     border-right: $cdr-doc-border-separator;
     padding-right: 24px; // Not a token?
     margin-right: 24px; // Not a token?
-    width: 100%;
+    min-width: 0;
+    flex: 1 1 100%;
   }
 
   .cdr-doc-table-of-contents-shell__navigation {
     flex-shrink: 0;
+    min-width: 0;
     width: 200px;
   }
 </style>
