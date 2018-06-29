@@ -59,6 +59,8 @@ export default {
     switchActiveTab: function(activeTabLabel, event) {
       if (event) event.preventDefault();
       this.activeTab = activeTabLabel;
+      this.$router.push({ query: { 'active-tab': slugify(this.activeTab) }});
+      this.$root.$emit('cdrDocTabsActiveTabSwitched', this.activeTab);
     }
   }
 }

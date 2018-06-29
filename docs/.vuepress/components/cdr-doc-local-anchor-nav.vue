@@ -51,6 +51,10 @@ export default {
       default: function() {
         return [];
       }
+    },
+    tabName: {
+      type: [String, Boolean],
+      default: false
     }
   },
   components: {
@@ -64,20 +68,43 @@ export default {
         }
       ],
       activeLinkHref: null,
-      scrollMonitoringEnabled: false
+      scrollMonitoringEnabled: false,
+      elementWatchers: []
     }
   },
   mounted: function() {
     this.createAnchorsFromContent();
     this.setStickyPositioning();
-    this.setActiveLinkFromHash();
-    console.log(this.parentSelectors, this.childSelectors);
-    setTimeout(() => {
-      this.monitorAnchoredSectionsForActiveLinkHighlighting();
-      this.scrollMonitoringEnabled = true;
-    }, 50); // Brittle, but gives everything on the page time to load
+    if (!this.tabName) {
+      this.initialize();
+    } else {
+      this.initializeForActiveTabOnly();
+    }
+
+    this.$root.$on('cdrDocTabsActiveTabSwitched', this.initializeForActiveTabOnly);
   },
   methods: {
+    unitialize() {
+      this.elementWatchers.forEach((watcher) => {
+        watcher.destroy();
+      });
+    },
+    initialize() {
+      this.setActiveLinkFromHash();
+      setTimeout(() => {
+        this.monitorAnchoredSectionsForActiveLinkHighlighting();
+        this.scrollMonitoringEnabled = true;
+      }, 50); // Brittle, but gives everything on the page time to load
+    },
+    initializeForActiveTabOnly() {
+      if (this.tabName && slugify(this.tabName) === this.$route.query['active-tab']) {
+        console.log(`${this.tabName} should be initialized`);
+        this.initialize();
+      } else if (this.tabName && slugify(this.tabName) !== this.$route.query['active-tab']) {
+        console.log(`${this.tabName} should be uninitialized`);
+        this.unitialize();
+      }
+    },
     monitorAnchoredSectionsForActiveLinkHighlighting(debug) {
       const anchoredSections = document.querySelectorAll(`${this.parentSelectors}, ${this.childSelectors}`);
       for (let i=0; i < anchoredSections.length; i++) {
@@ -89,6 +116,7 @@ export default {
         const sectionTop = anchoredSection.offsetTop;
         const sectionBottom = nextSection ? nextSection.offsetTop - 1 : sectionTop + document.body.offsetHeight;
         const elementWatcher = scrollMonitor.create({top: sectionTop, bottom: sectionBottom});
+        this.elementWatchers.push(elementWatcher);
 
         if (debug) {
           // Adds horizontal lines to the top and bottom of each section for debugging
