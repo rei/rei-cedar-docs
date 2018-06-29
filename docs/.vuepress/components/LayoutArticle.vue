@@ -1,8 +1,8 @@
 <template>
   <div class="page cdr-doc-article-layout">
-      <cdr-doc-intro :title="data.title" :metadata="data.title_metadata" :breadcrumbs="data.breadcrumbs">
-        {{ data.summary }}
-      </cdr-doc-intro>
+    <cdr-doc-intro :size="pageData.intro_size || 'small'" :title="pageData.title" :metadata="pageData.title_metadata" :breadcrumbs="pageData.breadcrumbs">
+      {{ pageData.summary }}
+    </cdr-doc-intro>
     <div class="cdr-doc-article-layout__body">
       <div class="cdr-doc-article-layout__body-inner">
         <Content :custom="false"/>
@@ -14,7 +14,7 @@
 <script>
 export default {
   computed: {
-    data () {
+    pageData () {
       return this.$page.frontmatter
     }
   }
@@ -24,6 +24,7 @@ export default {
 <style lang="scss">
   @import '../theme/styles/cdr-tokens';
   @import '../theme/styles/cdr-doc-tokens';
+  @import '../theme/styles/cdr-doc-mixins';
   
   .cdr-doc-article-layout {
     display: flex;
@@ -34,10 +35,16 @@ export default {
   .cdr-doc-article-layout__body {
     flex: 1 0 100%;
     padding: $inset-1-x;
+    padding-bottom: $cdr-doc-long-form-text-top-and-bottom-inset-space;
+    padding-top: $cdr-doc-long-form-text-top-and-bottom-inset-space;
   }
 
   .cdr-doc-article-layout__body-inner {
     margin: 0 auto;
     width: $cdr-doc-content-max-width;
+  }
+
+  .cdr-doc-article-layout__body-inner .content {
+    @include cdr-doc-long-form-text;
   }
 </style>
