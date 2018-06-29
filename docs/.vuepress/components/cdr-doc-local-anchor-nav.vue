@@ -24,6 +24,7 @@
 <script>
 
 import slugify from '../../../utils/slugify.js';
+import getUrlParameter from '../../../utils/getUrlParameter.js';
 import Stickyfill from 'stickyfilljs';
 import smoothscroll from 'smoothscroll-polyfill';
 import scrollMonitor from 'scrollmonitor';
@@ -95,13 +96,15 @@ export default {
       setTimeout(() => {
         this.monitorAnchoredSectionsForActiveLinkHighlighting();
         this.scrollMonitoringEnabled = true;
-      }, 50); // Brittle, but gives everything on the page time to load
+      }, 100); // Brittle, but gives everything on the page time to load
     },
-    initializeForActiveTabOnly() {
-      if (this.tabName && slugify(this.tabName) === this.$route.query['active-tab']) {
+    initializeForActiveTabOnly(activeTab) {
+      console.log(`NAV THINKS ACTIVE TAB IS: ${getUrlParameter('active-tab')}`);
+      const activeTabQueryParam = getUrlParameter('active-tab');
+      if (this.tabName && slugify(this.tabName) === activeTabQueryParam) {
         console.log(`${this.tabName} should be initialized`);
         this.initialize();
-      } else if (this.tabName && slugify(this.tabName) !== this.$route.query['active-tab']) {
+      } else if (this.tabName && slugify(this.tabName) !== activeTabQueryParam) {
         console.log(`${this.tabName} should be uninitialized`);
         this.unitialize();
       }

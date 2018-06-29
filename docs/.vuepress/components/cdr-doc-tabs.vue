@@ -21,6 +21,7 @@
 
 <script>
 import slugify from '../../../utils/slugify.js';
+import updateUrlParameter from '../../../utils/updateUrlParameter.js';
 
 export default {
   name: 'CdrDocTabs',
@@ -41,6 +42,9 @@ export default {
       type: String
     }
   },
+  mounted: function() {
+    this.switchActiveTab(this.initialActiveTab); //TODO, unless query param for active-tab is already set
+  },
   computed: {
     tabLabelData: function() {
       const tabLabelData = this.labels.map(label => {
@@ -56,10 +60,10 @@ export default {
     }
   },
   methods: {
-    switchActiveTab: function(activeTabLabel, event) {
+    switchActiveTab(activeTabLabel, event) {
       if (event) event.preventDefault();
       this.activeTab = activeTabLabel;
-      this.$router.push({ query: { 'active-tab': slugify(this.activeTab) }});
+      updateUrlParameter('active-tab', slugify(this.activeTab));
       this.$root.$emit('cdrDocTabsActiveTabSwitched', this.activeTab);
     }
   }
