@@ -203,7 +203,6 @@ export default {
       }
 
       const selectors = `${this.parentSelectors}, ${this.childSelectors}`;
-      console.log(selectors);
       const anchorElements = document.querySelectorAll(selectors);
       const links = [];
       const anchorIds = [];
@@ -244,7 +243,6 @@ export default {
         anchorIds.push(anchorId);
         links.push(linkData)
       }
-      console.log(links);
       this.links = links;
     },
     handleAnchorLinkClick(id, event) {
