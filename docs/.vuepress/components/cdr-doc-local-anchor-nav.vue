@@ -24,6 +24,8 @@
 <script>
 
 import slugify from '../../../utils/slugify.js';
+import getUrlParameter from '../../../utils/getUrlParameter.js';
+import updateUrlParameter from '../../../utils/updateUrlParameter.js';
 import Stickyfill from 'stickyfilljs';
 import smoothscroll from 'smoothscroll-polyfill';
 import scrollMonitor from 'scrollmonitor';
@@ -51,6 +53,10 @@ export default {
       default: function() {
         return [];
       }
+    },
+    tabName: {
+      type: [String, Boolean],
+      default: false
     }
   },
   components: {
@@ -64,21 +70,46 @@ export default {
         }
       ],
       activeLinkHref: null,
-      scrollMonitoringEnabled: false
+      scrollMonitoringEnabled: false,
+      elementWatchers: []
     }
   },
   mounted: function() {
-    console.log("LOCAL NAV MOUNTED");
     this.createAnchorsFromContent();
     this.setStickyPositioning();
-    this.setActiveLinkFromHash();
-    console.log(this.parentSelectors, this.childSelectors);
-    setTimeout(() => {
-      this.monitorAnchoredSectionsForActiveLinkHighlighting();
-      this.scrollMonitoringEnabled = true;
-    }, 50); // Brittle, but gives everything on the page time to load
+    if (!this.tabName) {
+      this.initialize();
+    } else {
+      this.initializeForActiveTabOnly();
+    }
+
+    this.$root.$on('cdrDocTabsActiveTabSwitched', this.initializeForActiveTabOnly);
   },
   methods: {
+    unitialize() {
+      this.elementWatchers.forEach((watcher) => {
+        watcher.destroy();
+      });
+    },
+    initialize() {
+      const activeLinkParam = getUrlParameter('active-link');
+      if (activeLinkParam) {
+        this.setActiveLinkFromUrl(activeLinkParam);
+      } else {
+        setTimeout(() => {
+          this.monitorAnchoredSectionsForActiveLinkHighlighting();
+          this.scrollMonitoringEnabled = true;
+        }, 100); // Brittle, but gives everything on the page time to load
+      }
+    },
+    initializeForActiveTabOnly(activeTab) {
+      const activeTabQueryParam = getUrlParameter('active-tab');
+      if (this.tabName && slugify(this.tabName) === activeTabQueryParam) {
+        this.initialize();
+      } else if (this.tabName && slugify(this.tabName) !== activeTabQueryParam) {
+        this.unitialize();
+      }
+    },
     monitorAnchoredSectionsForActiveLinkHighlighting(debug) {
       const anchoredSections = document.querySelectorAll(`${this.parentSelectors}, ${this.childSelectors}`);
       for (let i=0; i < anchoredSections.length; i++) {
@@ -90,6 +121,7 @@ export default {
         const sectionTop = anchoredSection.offsetTop;
         const sectionBottom = nextSection ? nextSection.offsetTop - 1 : sectionTop + document.body.offsetHeight;
         const elementWatcher = scrollMonitor.create({top: sectionTop, bottom: sectionBottom});
+        this.elementWatchers.push(elementWatcher);
 
         if (debug) {
           // Adds horizontal lines to the top and bottom of each section for debugging
@@ -155,12 +187,9 @@ export default {
         document.body.appendChild(topMarker);
         document.body.appendChild(bottomMarker);
     },
-    setActiveLinkFromHash() {
-      if (window.location.hash.length !== 0) {
-        const hash = window.location.hash;
-        this.activeLinkHref = hash;
-        this.softScrollToAnchoredSection(hash);
-      }
+    setActiveLinkFromUrl(activeLinkParam) {
+      this.activeLinkHref = `#${activeLinkParam}`;
+      this.softScrollToAnchoredSection(this.activeLinkHref);
     },
     setStickyPositioning() {
       const localNav = this.$refs['localNav'];
@@ -174,7 +203,6 @@ export default {
       }
 
       const selectors = `${this.parentSelectors}, ${this.childSelectors}`;
-      console.log(selectors);
       const anchorElements = document.querySelectorAll(selectors);
       const links = [];
       const anchorIds = [];
@@ -215,7 +243,6 @@ export default {
         anchorIds.push(anchorId);
         links.push(linkData)
       }
-      console.log(links);
       this.links = links;
     },
     handleAnchorLinkClick(id, event) {
@@ -225,7 +252,7 @@ export default {
     },
     softScrollToAnchoredSection(id) {
       this.scrollMonitoringEnabled = false; // disable scrollMonitoring while soft scrolling to a specific section
-      history.pushState(null, null, id); // make sure URL still gets updated with hash
+      updateUrlParameter('active-link', id.replace('#', ''));
       const anchoredSection = document.querySelector(id);
       const scrollPosition = anchoredSection.offsetTop;
 
@@ -237,7 +264,7 @@ export default {
 
       setTimeout(() => {
         this.scrollMonitoringEnabled = true;
-      }, 1000); // window.scroll smooth offers no callback, so re-enable scrollmonitoring hopefully after the soft scroll has occurred
+      }, 1500); // window.scroll smooth offers no callback, so re-enable scrollmonitoring hopefully after the soft scroll has occurred
     }
   }
 }
