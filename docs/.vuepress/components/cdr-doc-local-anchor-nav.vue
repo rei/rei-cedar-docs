@@ -68,6 +68,7 @@ export default {
     }
   },
   mounted: function() {
+    console.log("LOCAL NAV MOUNTED");
     this.createAnchorsFromContent();
     this.setStickyPositioning();
     this.setActiveLinkFromHash();
@@ -100,7 +101,6 @@ export default {
           if (this.scrollMonitoringEnabled && 
               elementWatcher.isAboveViewport && 
               elementWatcher.isBelowViewport) {
-            console.log(`SPANNING ${linkHref}`);
             this.activeLinkHref = linkHref;
           }
         });
@@ -110,7 +110,6 @@ export default {
           if (this.scrollMonitoringEnabled &&
               nextSection &&
               elementWatcher.isAboveViewport) {
-            console.log(`SCROLL DOWN ${linkHref}`);
             // When one section exits the viewport at the top, set the next section's link to be active
             this.activeLinkHref = linkHref;
           }
@@ -120,7 +119,6 @@ export default {
         elementWatcher.enterViewport(() => {
           if (this.scrollMonitoringEnabled &&
               !elementWatcher.isBelowViewport) {
-            console.log(`SCROLL UP ${linkHref}`);
             this.activeLinkHref = linkHref;
           }
         });
@@ -176,6 +174,7 @@ export default {
       }
 
       const selectors = `${this.parentSelectors}, ${this.childSelectors}`;
+      console.log(selectors);
       const anchorElements = document.querySelectorAll(selectors);
       const links = [];
       const anchorIds = [];
@@ -216,7 +215,7 @@ export default {
         anchorIds.push(anchorId);
         links.push(linkData)
       }
-
+      console.log(links);
       this.links = links;
     },
     handleAnchorLinkClick(id, event) {

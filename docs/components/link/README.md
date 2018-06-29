@@ -2,7 +2,7 @@
 {
    "title": "Link",
    "layout": "LayoutComponent",
-   "summary": "Clickable text element used when navigating to page section, another page or opening an overlay window such as modal dialog or popover.",
+   "summary": "Clickable text element to navigate to page section, another page or open an overlaid window such as modal dialog or popover.",
    "title_metadata": "Hyperlink, Anchor, CdrButton, CdrLink",
    "breadcrumbs": [
       {
@@ -27,19 +27,36 @@
             "name": "tag",
             "type": "string",
             "default": "\"a\"",
-            "description": "MISSING DESCRIPTION"
+            "description": "Enables user to set appropriate HTML element tag. {a, button}"
+          },
+          {
+            "name": "modifier",
+            "type": "string",
+            "default": "N/A",
+            "description": "Modifier allows the user to pass a style variant to this component {standalone}"
           },
           {
             "name": "href",
             "type": "string",
             "default": "\"#\"",
-            "description": "MISSING DESCRIPTION"
+            "description": "Requires tag to be set to “a”. Sets URL to cdr-link href property"
           }
         ],
         "slots": [
           {
             "name": "default",
             "description": "innerHTML on the inside of the anchor component"
+          }
+        ],
+        "installation": [
+          {
+            "name": "@rei/cdr-link",
+            "type": "Node module package",
+            "description": "Import the component into your project"
+          },
+          { "name": "cdr-link.css", 
+            "type": "css", 
+            "description": "Component specific styles" 
           }
         ]
       },
@@ -54,20 +71,9 @@
 <cdr-doc-table-of-contents-shell>
 
 ## Basic
-Clickable text element to navigate to page section, another page or open an overlaid window such as modal dialog or popover. 
+Display within body copy for articles, hub cards, footer, or recommendations.
 
-<cdr-doc-example-code-pair :hide-code="true" repository-href="http://github.com/rei" sandbox-href="http://codesandbox.io">
-
-```html
-  <div>
-    <h1>Hello World!</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis ducimus illum unde accusantium magni, nostrum vero autem inventore. Beatae recusandae minima distinctio, aut adipisci debitis consequatur cupiditate similique est eius!</p>
-  </div>
-```
-
-</cdr-doc-example-code-pair>
-
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/master/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/master/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9" >
 
 ```html
   <div>
@@ -78,24 +84,63 @@ Clickable text element to navigate to page section, another page or open an over
 </cdr-doc-example-code-pair>
 
 ## Standalone
-blob
+Display independently with a call to action. Examples are remove filters, find a store, or view related products.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/master/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/master/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
 
 ```html
-  <cdr-link modifier="standalone" href="https://www.rei.com/">REI.com</cdr-link>
+  <div>
+    <cdr-text tag="h1" modifier="heading-large" class="cdr-stack--md">
+      REI CO-op Half Dome 2 Plus Tent
+    </cdr-text>
+    <cdr-link href="https://www.rei.com" modifier="standalone">
+      View all REI Co-op Backpacking Tents
+    </cdr-link>
+  </div>
 ```
 
 </cdr-doc-example-code-pair>
 
 
-## With Button Element
-blob
+## Icon on left
+Display icon on left of link message.
 
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/master/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
 
 ```html
-  <cdr-link tag="button">add to cart</cdr-link>
+  <div>
+    <cdr-icon-sprite /> 
+      <cdr-link tag="button">
+        <!-- Using the sprite -->
+        <cdr-icon
+            use="#shipping"
+            modifier="inherit-color"
+            class="cdr-inline-left--sm"
+        />
+        This item ships for FREE!
+      </cdr-link>
+  </div>
+```
+
+</cdr-doc-example-code-pair>
+
+## Icon on right
+Display icon on right of link message.
+
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/master/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
+
+```html
+  <div>
+    <cdr-icon-sprite /> 
+      <cdr-link>
+        Visit site
+        <!-- Using the sprite -->
+        <cdr-icon
+            use="#external-link"
+            modifier="inherit-color"
+            class="cdr-inline-right--sm"/>
+      </cdr-link>
+  </div>
 ```
 
 </cdr-doc-example-code-pair>
@@ -143,19 +188,28 @@ TBD -- Link to sketch file with info about link component.
 
 <template slot="API">
 
+## Properties
+### Props
+
+<cdr-doc-api type="prop" />
+
+### Slots 
+
+<cdr-doc-api type="slot" />
+
 ## Installation
 
-Cdr-link required assets:
+Resources are available within the [cdr-link package](https://www.npmjs.com/package/@rei/cdr-link):
 
-| Name          | type                | description                            |
-| ------------- | ------------------- | -------------------------------------- |
-| @rei/cdr-link | Node module package | Import the component into your project |
-| cdr-link.css  | Style sheet         | Component specific styles              |
+<cdr-doc-api type="installation" />
+* Component: **@rei/cdr-link** 
+* Component styles: **cdr-link.css**
 
 
 To incorporate the required assets for a component, use the following steps.
-### #1. Install via NPM
-Install the cdr-link package via `npm` in your terminal:
+### #1. Install using NPM
+Install the `cdr-link` package using `npm` in your terminal:
+
 
 Terminal
 ```terminal

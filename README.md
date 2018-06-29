@@ -1,5 +1,10 @@
 ## Environment Setup
 
+### Install nodejs if you haven't already
+Download the latest long-term stable (LTS) version from the nodejs website:
+
+https://nodejs.org/en/
+
 ``` bash
 # clone the repo
 $ git clone git@github.com:rei/rei-cedar-docs.git
