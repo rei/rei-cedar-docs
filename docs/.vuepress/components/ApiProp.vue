@@ -5,8 +5,7 @@
         gutter="none"
       >
         <cdr-col
-          span="6"
-          spanSm="3"
+          span="12 4@sm"
         >
           <div>
             <p :aria-labelledby="'propName' + index" class="prop-name">{{ apiProp.name }}</p>
@@ -14,8 +13,7 @@
           </div>
         </cdr-col>
         <cdr-col
-          span="6"
-          spanSm="3"
+          span="12 4@sm"
         >
           <div>
             <p :aria-labelledby="'propType' + index" class="prop-type">{{ apiProp.type }}</p>
@@ -23,8 +21,7 @@
           </div>
         </cdr-col>
         <cdr-col
-          span="6"
-          spanSm="6"
+          span="12 4@sm"
         >
           <div>
             <p :aria-labelledby="'propDefault' + index" class="prop-default">{{ apiProp.default }}</p>
@@ -32,7 +29,7 @@
           </div>
         </cdr-col>
         <cdr-col
-          span="12"
+          span="12 4@sm"
         >
           <p aria-lable="prop description" class="prop-description">
             {{ apiProp.description }}
@@ -44,15 +41,8 @@
 </template>
 
 <script>
-  import { CdrCol } from '@rei/cdr-col'
-  import { CdrRow } from '@rei/cdr-row'
-  
   export default {
     name: 'ApiProp',
-    components: {
-      CdrCol,
-      CdrRow
-    }
   };
 </script>
 

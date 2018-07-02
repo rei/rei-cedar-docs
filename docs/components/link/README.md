@@ -180,7 +180,20 @@ Display icon on right of link message.
 </template>
 
 <template slot="Design Guidelines">
-
+<cdr-doc-table-of-contents-shell 
+    :appended-nav-items="[
+      {
+        text: 'Related Components'
+      },
+      {
+        text: 'buttons',
+        href: '../button/'
+      },
+      {
+        text: 'CTA Buttons'
+      }
+    ]">
+    <cdr-doc-alert/>
 # Use when
 
 - Navigating to another page or a different portion of the same page
@@ -216,7 +229,6 @@ Display icon on right of link message.
 | **Cannot be disabled** like buttons but can be made inert with tabindex="-1" and aria-hidden="true" | Can be disabled with disabled attribute                                              |
 
 
-
 - Apply the following use cases when deciding when to use links as anchors or buttons:
 
 <do-dont :examples="$page.frontmatter.standalone" />
@@ -225,6 +237,28 @@ Display icon on right of link message.
 
 <do-dont :examples="$page.frontmatter.link" />
 
+## Accessibility
+
+- To ensure that usage of this component complies with accessibility guidelines, do the following:
+  - Don’t use the word “link” in your links. Screen readers tell users when they encounter a link
+  - Don’t capitalize links. Some screen readers read capitalized text letter-by-letter. Instead, use sentence case
+  - Keep link text concise.  Restrict link text length to a maximum of 100 characters
+  - Restrict the number of text links on a page. Screen reader can read all the links on a page
+  - When using images as links, the ALT attribute acts as the link text. Describe the image and tell the user what activating the link will do 
+  - Ensure links can be accessed via the keyboard. Don’t manipulate the default tab index
+  - Ensure assistive technology can find all links on a page by:
+    - Using link labels that are descriptive. Do not use  “click here” or “start here”
+    - Describing the link’s destination when clicked 
+  - Use hidden text that can be read by screen readers, to the cdr-sr-only class tag for links add the following
+    - For in-page anchor links, use a standard preceding phrase such as “In this page” or “This page contains the following content” 
+    - For opening a window, always alert the user by adding text such as “(opens in new window)”
+- This component has compliance with following WebAIM’s accessibility guidelines:
+  - [WCAG SC 1.4.3: Contrast (Minimum)](https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast): Cedar Design System text color uses a Level AA contrast ratio of 4.5:1 contrast between the text color and the background, only when using the text color pairings
+- It is possible to define this component as a link or button using modifiers. Both types of modifiers can: 
+  - Receive keyboard focus by default
+  - Enable states: Focus, Hover, and Active
+
+</cdr-doc-table-of-contents-shell>
 </template>
 
 <template slot="API">
@@ -244,7 +278,6 @@ Resources are available within the [cdr-link package](https://www.npmjs.com/pack
 <cdr-doc-api type="installation" />
 
 - Component: **@rei/cdr-link**
-
 - Component styles: **cdr-link.css**
 
 To incorporate the required assets for a component, use the following steps.
@@ -347,10 +380,12 @@ This component has compliance with following WebAIM’s accessibility guidelines
 
 Cdr-link component:
 
-- Displays as an inline or standalone variant.
-- Can render using an anchor or button element.
-- Includes a property to allow the cdr-icon fill color to inherit the link color value.
-- Support for a cdr-icon to display on left, on right, or, both. Git commit reference (9d404f4).
+- Displays as an inline or standalone variant
+- Can render using an anchor or button element
+- Includes a property to allow the cdr-icon fill color to inherit the link color value
+- Support for a cdr-icon to display on left, on right, or, both. Git commit reference [9d404f4](https://github.com/rei/rei-cedar/commit/9d404f4)
+
+<cdr-doc-api type="installation" />
 
 </template>
 </cdr-doc-tabs>

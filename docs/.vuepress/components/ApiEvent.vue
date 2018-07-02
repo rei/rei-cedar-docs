@@ -5,7 +5,7 @@
         gutter="none"
       >
         <cdr-col
-          span="6"
+          span="12 6@sm"
         >
           <div>
             <p :aria-labelledby="'eventName' + index" class="event-name">{{ apiEvent.name }}</p>
@@ -13,7 +13,7 @@
           </div>
         </cdr-col>
         <cdr-col
-          span="6"
+          span="12 6@sm"
         >
           <div>
             <p :aria-labelledby="'eventType' + index" class="event-type">{{ apiEvent.type }}</p>
@@ -33,15 +33,8 @@
 </template>
 
 <script>
-  import { CdrCol } from '@rei/cdr-col'
-  import { CdrRow } from '@rei/cdr-row'
-  
   export default {
     name: 'ApiEvent',
-    components: {
-      CdrCol,
-      CdrRow
-    }
   };
 </script>
 

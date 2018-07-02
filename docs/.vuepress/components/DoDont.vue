@@ -3,7 +3,7 @@
   <cdr-col
     v-for="(example, idx) in examples"
     :key="`${example.type}${idx}`"
-    :span="example.fullWidth? '12' : null"
+    :span="example.fullWidth? '12' : '12 6@sm'"
   >
     <figure class="do-dont">
       <cdr-img
