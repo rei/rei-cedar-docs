@@ -82,7 +82,8 @@
             "type": "Node module package",
             "description": "Import the component into your project"
           },
-          { "name": "cdr-link.css", 
+          { 
+            "name": "cdr-link.css", 
             "type": "css", 
             "description": "Component specific styles" 
           }
