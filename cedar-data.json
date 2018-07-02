@@ -455,13 +455,19 @@
 								"name": "tag",
 								"type": "string",
 								"default": "\"a\"",
-								"description": "MISSING DESCRIPTION"
+								"description": "Enables user to set appropriate HTML element tag. {a, button}"
+							},
+							{
+								"name": "modifier",
+								"type": "string",
+								"default": "N/A",
+								"description": "Modifier allows the user to pass a style variant to this component {standalone}"
 							},
 							{
 								"name": "href",
 								"type": "string",
 								"default": "\"#\"",
-								"description": "MISSING DESCRIPTION"
+								"description": "Requires tag to be set to “a”. Sets URL to cdr-link href property"
 							}
 						],
 						"slots": [
@@ -469,9 +475,20 @@
 								"name": "default",
 								"description": "innerHTML on the inside of the anchor component"
 							}
+						],
+						"installation": [
+							{
+								"name": "@rei/cdr-link",
+								"type": "Node module package",
+								"description": "Import the component into your project"
+							},
+							{ "name": "cdr-link.css", 
+								"type": "css", 
+								"description": "Component specific styles" 
+							}
 						]
 					},
-					"version": "0.1.0"
+					"version": "1.0.0"
 				}
 			]
 		},

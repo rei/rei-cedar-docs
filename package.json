@@ -24,16 +24,20 @@
     "vuepress": "^0.10.2"
   },
   "dependencies": {
-    "@rei/cdr-assets": "^0.1.0",
+    "@rei/cdr-assets": "^0.3.0",
     "@rei/cdr-button": "^0.1.0",
     "@rei/cdr-col": "^0.1.0",
-    "@rei/cdr-icon": "^0.2.0",
+    "@rei/cdr-icon": "^1.0.0-next.beta.0",
     "@rei/cdr-img": "^1.0.0-alpha.1",
+    "@rei/cdr-link": "^1.0.0-next.beta.0",
     "@rei/cdr-list": "^0.1.0",
     "@rei/cdr-row": "^0.1.0",
+    "@rei/cdr-text": "^1.0.0-next.beta.0",
     "scrollmonitor": "^1.2.4",
     "smoothscroll-polyfill": "^0.4.3",
-    "stickyfilljs": "^2.0.5"
+    "stickyfilljs": "^2.0.5",
+    "svg-use-it": "^1.1.6",
+    "svgxuse": "^1.2.6"
   },
   "browserslist": [
     "> 1%",
