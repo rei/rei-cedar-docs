@@ -25,15 +25,8 @@
 </template>
 
 <script>
-  import { CdrCol } from '@rei/cdr-col'
-  import { CdrRow } from '@rei/cdr-row'
-  
   export default {
     name: 'ApiEvent',
-    components: {
-      CdrCol,
-      CdrRow
-    }
   };
 </script>
 

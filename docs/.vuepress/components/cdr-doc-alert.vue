@@ -1,7 +1,7 @@
 <template>
   <div class="rei-doc-alert">
     <icon-information-stroke modifier="sm" class="rei-doc-alert__icon"/>
-    <slot>Last updated on July 2, 2018. Consistent with v 2.0.1</slot>
+    <slot>Last updated on July 2, 2018. Consistent with v 1.0.0</slot>
   </div>
 </template>
 
