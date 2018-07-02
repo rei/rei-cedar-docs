@@ -3,7 +3,7 @@
     <div class="cdr-doc-tabs__labels">
       <ul class="cdr-doc-tabs-list">
         <li class="cdr-doc-tabs__list-item" v-for="tab in tabLabelData" :key="tab.slug">
-          <a class="cdr-doc-tabs__link" :id="tab.linkId" :class="{ 'cdr-doc-tabs__link--active' : tab.active }" :href="tab.anchor" v-on:click="switchActiveTab(tab.label, $event)" :aria-selected="tab.active">
+          <a class="cdr-doc-tabs__link" :id="tab.linkId" :class="{ 'cdr-doc-tabs__link--active' : tab.active }" :href="tab.anchor" v-on:click="switchActiveTab(tab.slug, $event)" :aria-selected="tab.active">
             {{ tab.label }}
           </a>
         </li>
@@ -21,12 +21,14 @@
 
 <script>
 import slugify from '../../../utils/slugify.js';
+import updateUrlParameter from '../../../utils/updateUrlParameter.js';
+import getUrlParameter from '../../../utils/getUrlParameter.js';
 
 export default {
   name: 'CdrDocTabs',
   data: function() {
     return {
-      activeTab: this.initialActiveTab || 'Overview'
+      activeTab: this.initialActiveTab || 'overview'
     }
   },
   props: {
@@ -37,8 +39,16 @@ export default {
       type: Array
     },
     initialActiveTab: {
-      default: 'Overview',
+      default: 'overview',
       type: String
+    }
+  },
+  mounted: function() {
+    const urlActiveTab = getUrlParameter('active-tab');
+    if (urlActiveTab) {
+      this.switchActiveTab(urlActiveTab);
+    } else {
+      this.switchActiveTab(this.initialActiveTab);
     }
   },
   computed: {
@@ -47,7 +57,7 @@ export default {
         const slug = slugify(label);
         const tabLinkId = `${slug}-tab`;
         const tabData = {label: label, slug: slug, anchor: `#${slug}`, linkId: tabLinkId };
-        if (this.activeTab === label) {
+        if (this.activeTab === slug) {
           tabData.active = true;
         }
         return tabData;
@@ -56,9 +66,11 @@ export default {
     }
   },
   methods: {
-    switchActiveTab: function(activeTabLabel, event) {
+    switchActiveTab(activeTabLabel, event) {
       if (event) event.preventDefault();
       this.activeTab = activeTabLabel;
+      updateUrlParameter('active-tab', slugify(this.activeTab));
+      this.$root.$emit('cdrDocTabsActiveTabSwitched', this.activeTab);
     }
   }
 }

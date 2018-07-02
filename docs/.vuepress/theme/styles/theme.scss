@@ -205,3 +205,10 @@ div[class^='language-'] {
     text-align: right;
   }
 }
+
+// Homepage styles
+.cdr-doc-homepage-asset-types {
+  display: flex;
+  margin-bottom: $space-2-x;
+  margin-top: $space-2-x;
+}
