@@ -1,4 +1,10 @@
   @mixin cdr-doc-long-form-text {
+  img {
+    max-width: 100%;
+    margin-bottom: $space-2-x;
+    margin-top: $space-1-x;
+  }
+
   & > h2 {
     @include spruce-display-50;
     margin-bottom: $space-1-x;
@@ -51,6 +57,11 @@
     list-style-position: inside;
     padding: 0;
   }
+
+  & > ol > li > ol {
+    list-style-position: inside;
+    list-style: lower-alpha;
+  }
   
   & > ol li,
   & > ul li {
@@ -75,7 +86,8 @@
 
   & > a,
   & > p a,
-  & > li a {
+  & > ul li a,
+  & > ol li a {
     color: $cdr-doc-link-color-primary;
     text-decoration: underline;
   }
