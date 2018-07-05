@@ -30,7 +30,8 @@ module.exports = {
       {
         text: "Getting Started",
         items: [
-          { text: "As a Developer", link: "/getting-started/as-a-developer/" }
+          { text: "As a Developer", link: "/getting-started/as-a-developer/" },
+          { text: "As a Designer", link: "/getting-started/as-a-designer/" }
         ]
       },
       {
