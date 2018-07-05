@@ -208,7 +208,23 @@ div[class^='language-'] {
 
 // Homepage styles
 .cdr-doc-homepage-asset-types {
+  align-items: center;
   display: flex;
+  justify-content: space-between;
   margin-bottom: $space-2-x;
   margin-top: $space-2-x;
+}
+
+// Colors page styles
+.cdr-doc-colors-intro {
+  display: flex;
+} 
+
+.cdr-doc-colors-intro__image {
+  max-width: 100%;
+}
+
+.cdr-doc-colors-intro__text {
+  @include cdr-doc-long-form-text;
+  margin-right: $space-4-x;
 }
