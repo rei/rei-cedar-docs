@@ -29,7 +29,7 @@
           </div>
         </cdr-col>
         <cdr-col
-          span="12 4@sm"
+          span="12"
         >
           <p aria-lable="prop description" class="prop-description">
             {{ apiProp.description }}

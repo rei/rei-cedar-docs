@@ -35,9 +35,7 @@ module.exports = {
       },
       {
         text: "Foundation",
-        items: [
-          { text: "Color", link: "/foundation/color/" }
-        ]
+        items: [{ text: "Color", link: "/foundation/color/" }]
       },
       {
         text: "Components",
@@ -45,12 +43,13 @@ module.exports = {
           { text: "Overview", link: "/components/" },
           { text: "Button", link: "/components/button/" },
           { text: "Link", link: "/components/link/" },
-          { text: "List", link: "/components/list/" }
+          { text: "List", link: "/components/list/" },
+          { text: "Paragraph", link: "/components/paragraph/" }
         ]
       }
     ]
   },
   chainWebpack(config) {
-    config.resolve.alias.set('$vue', 'vue/dist/vue.esm.js')
+    config.resolve.alias.set("$vue", "vue/dist/vue.esm.js");
   }
 };
