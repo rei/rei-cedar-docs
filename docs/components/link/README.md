@@ -61,7 +61,7 @@
             "name": "modifier",
             "type": "string",
             "default": "N/A",
-            "description": "Modifier allows the user to pass a style variant to this component {standalone}"
+            "description": "Modifier allows the user to pass a style variant to this component  Possible values: standalone"
           },
           {
             "name": "href",
@@ -193,12 +193,14 @@ Display icon on right of link message.
         text: 'CTA Buttons'
       }
     ]">
-    <cdr-doc-alert/>
-# Use when
+
+  <cdr-doc-alert/>
+
+## Use when
 
 - Navigating to another page or a different portion of the same page
 
-**Don’t use when**
+## Don’t use when
 
 - Triggering an action other than navigation. Instead, use [Button](https://docs.google.com/document/d/1RlEPYma55X_EKcxKOoBdnYqwEaWsXwGAaaGmP-1KjYQ/edit?usp=sharing)
 - Navigating a user from promotional or campaign content. Instead, use [Call-to-action](https://docs.google.com/document/d/14GC9JaIxOVYHkL1qinHr5KsPBfnLCxo5sU1lZ2_-6Eg/edit?usp=sharing)
@@ -290,10 +292,10 @@ Resources are available within the [cdr-link package](https://www.npmjs.com/pack
 
 <cdr-doc-api type="installation" />
 
-- Component: **@rei/cdr-link**
-- Component styles: **cdr-link.css**
+- Component: `@rei/cdr-link`
+- Component styles: `cdr-link.css`
 
-To incorporate the required assets for a component, use the following steps.
+To incorporate the required assets for a component, use the following steps:
 
 ### #1. Install using NPM
 
@@ -392,7 +394,7 @@ This component has compliance with following WebAIM’s accessibility guidelines
 
 ### What's new
 
-Cdr-link component:
+**CdrLink** component:
 
 - Displays as an inline or standalone variant
 - Can render using an anchor or button element

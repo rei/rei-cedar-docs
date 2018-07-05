@@ -996,13 +996,13 @@
 								"name": "tag",
 								"type": "string",
 								"default": "\"p\"",
-								"description": "Any valid HTML tag"
+								"description": "Valid HTML tag"
 							}
 						],
 						"slots": [
 							{
 								"name": "default",
-								"description": "MISSING DESCRIPTION"
+								"description": "description": "innerHTML on the inside of the anchor component"
 							}
 						]
 					},
