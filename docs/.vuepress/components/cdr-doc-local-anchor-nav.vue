@@ -26,12 +26,6 @@
 import slugify from '../../../utils/slugify.js';
 import getUrlParameter from '../../../utils/getUrlParameter.js';
 import updateUrlParameter from '../../../utils/updateUrlParameter.js';
-import Stickyfill from 'stickyfilljs';
-import smoothscroll from 'smoothscroll-polyfill';
-import scrollMonitor from 'scrollmonitor';
-
-// kick off the polyfill!
-smoothscroll.polyfill();
 
 export default {
   name: 'CdrDocLocalAnchorNav',
@@ -60,7 +54,7 @@ export default {
     }
   },
   components: {
-  },
+    },
   data: function() {
     return {
       links: [
@@ -71,19 +65,31 @@ export default {
       ],
       activeLinkHref: null,
       scrollMonitoringEnabled: false,
-      elementWatchers: []
+      elementWatchers: [],
+      activeTabName: this.tabName
     }
   },
-  mounted: function() {
+  mounted() {
+    import('smoothscroll-polyfill').then(smoothscroll => {
+      smoothscroll.polyfill();
+    });
+
     this.createAnchorsFromContent();
-    this.setStickyPositioning();
-    if (!this.tabName) {
+
+    import('stickyfilljs').then(s => {
+      this.setStickyPositioning(s);
+    });
+
+    if (!this.activeTabName) {
       this.initialize();
     } else {
       this.initializeForActiveTabOnly();
     }
 
-    this.$root.$on('cdrDocTabsActiveTabSwitched', this.initializeForActiveTabOnly);
+    this.$root.$on('cdrDocTabsActiveTabSwitched', (activeTab) => {
+      this.activeTabName = activeTab;
+      this.initializeForActiveTabOnly()
+    });
   },
   methods: {
     unitialize() {
@@ -104,66 +110,69 @@ export default {
     },
     initializeForActiveTabOnly(activeTab) {
       const activeTabQueryParam = getUrlParameter('active-tab');
-      if (this.tabName && slugify(this.tabName) === activeTabQueryParam) {
+      if (this.activeTabName && slugify(this.activeTabName) === activeTabQueryParam) {
         this.initialize();
-      } else if (this.tabName && slugify(this.tabName) !== activeTabQueryParam) {
+      } else if (this.activeTabName && slugify(this.activeTabName) !== activeTabQueryParam) {
         this.unitialize();
       }
     },
-    monitorAnchoredSectionsForActiveLinkHighlighting(debug) {
+    monitorAnchoredSectionsForActiveLinkHighlighting(debug=false) {
       const anchoredSections = document.querySelectorAll(`${this.parentSelectors}, ${this.childSelectors}`);
-      for (let i=0; i < anchoredSections.length; i++) {
-        const anchoredSection = anchoredSections[i];
-        const anchoredSectionId = anchoredSection.getAttribute('id');
-        const linkHref = `#${anchoredSectionId}`;
-        const link = document.querySelector(`a[href="${linkHref}"]`);
-        const nextSection = anchoredSections[i + 1] ? anchoredSections[i + 1] : false;
-        const sectionTop = anchoredSection.offsetTop;
-        const sectionBottom = nextSection ? nextSection.offsetTop - 1 : sectionTop + document.body.offsetHeight;
-        const elementWatcher = scrollMonitor.create({top: sectionTop, bottom: sectionBottom});
-        this.elementWatchers.push(elementWatcher);
+      import('scrollmonitor').then(scrollMonitor => {
+        for (let i=0; i < anchoredSections.length; i++) {
+          const anchoredSection = anchoredSections[i];
+          const anchoredSectionId = anchoredSection.getAttribute('id');
+          const linkHref = `#${anchoredSectionId}`;
+          const link = document.querySelector(`a[href="${linkHref}"]`);
+          const nextSection = anchoredSections[i + 1] ? anchoredSections[i + 1] : false;
+          const sectionTop = anchoredSection.offsetTop;
+          const sectionBottom = nextSection ? nextSection.offsetTop - 1 : sectionTop + document.body.offsetHeight;
+          // const elementWatcher = this.getScrollMonitor().create({top: sectionTop, bottom: sectionBottom});
+          const elementWatcher = scrollMonitor.create({top: sectionTop, bottom: sectionBottom});
+          this.elementWatchers.push(elementWatcher);
 
-        if (debug) {
-          // Adds horizontal lines to the top and bottom of each section for debugging
-          this.generatePageSectionMarkers(sectionTop, sectionBottom);
-        }
-
-        // When a section spans the entire viewport
-        elementWatcher.stateChange(() => {
-          if (this.scrollMonitoringEnabled && 
-              elementWatcher.isAboveViewport && 
-              elementWatcher.isBelowViewport) {
-            this.activeLinkHref = linkHref;
+          if (debug) {
+            // Adds horizontal lines to the top and bottom of each section for debugging
+            this.generatePageSectionMarkers(sectionTop, sectionBottom);
           }
-        });
 
-        // Scroll Down Behavior
-        elementWatcher.partiallyExitViewport(() => {
-          if (this.scrollMonitoringEnabled &&
-              nextSection &&
-              elementWatcher.isAboveViewport) {
-            // When one section exits the viewport at the top, set the next section's link to be active
-            this.activeLinkHref = linkHref;
-          }
-        });
+          // When a section spans the entire viewport
+          elementWatcher.stateChange(() => {
+            if (this.scrollMonitoringEnabled && 
+                elementWatcher.isAboveViewport && 
+                elementWatcher.isBelowViewport) {
+                  this.activeLinkHref = linkHref;
+            }
+          });
 
-        // Scroll Up Behavior
-        elementWatcher.enterViewport(() => {
-          if (this.scrollMonitoringEnabled &&
-              !elementWatcher.isBelowViewport) {
-            this.activeLinkHref = linkHref;
-          }
-        });
-
-        // Highlight the last item in the nav when the last section is fully scrolled into view
-        if (!nextSection) {
-          elementWatcher.fullyEnterViewport(() => {
-            if (this.scrollMonitoringEnabled) {
+          // Scroll Down Behavior
+          elementWatcher.partiallyExitViewport(() => {
+            if (this.scrollMonitoringEnabled &&
+                nextSection &&
+                elementWatcher.isAboveViewport) {
+                  // When one section exits the viewport at the top, set the next section's link to be active
               this.activeLinkHref = linkHref;
             }
           });
+
+          // Scroll Up Behavior
+          elementWatcher.enterViewport(() => {
+            if (this.scrollMonitoringEnabled &&
+                !elementWatcher.isBelowViewport) {
+                  this.activeLinkHref = linkHref;
+            }
+          });
+
+          // Highlight the last item in the nav when the last section is fully scrolled into view
+          if (!nextSection) {
+            elementWatcher.fullyEnterViewport(() => {
+              if (this.scrollMonitoringEnabled) {
+                this.activeLinkHref = linkHref;
+              }
+            });
+          }
         }
-      }
+      });
     },
     generatePageSectionMarkers(topPosition, bottomPosition) {
         let topMarker = document.createElement('div'),
@@ -191,7 +200,7 @@ export default {
       this.activeLinkHref = `#${activeLinkParam}`;
       this.softScrollToAnchoredSection(this.activeLinkHref);
     },
-    setStickyPositioning() {
+    setStickyPositioning(Stickyfill) {
       const localNav = this.$refs['localNav'];
       localNav.style.cssText = `top: ${this.stickyTopOffset}px; max-height: calc(100vh - ${this.stickyTopOffset}px);`;
       Stickyfill.add(localNav); // Polyfill for browsers without native position: sticky; support 
