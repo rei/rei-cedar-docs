@@ -33,7 +33,7 @@
             "name": "modifier",
             "type": "string",
             "default": "N/A",
-            "description": "Modifier allows the user to pass a style variant to this component  Possible values: display | display-static | heading-large | heading-large-static | heading-large-static | heading-medium | heading-medium-static | heading-small | heading-small-static | subheading"
+            "description": "Modifier allows the user to pass a style variant to this component  Possible values: display | display-static | heading-large | heading-large-static | heading-medium | heading-medium-static | heading-small | heading-small-static | subheading"
           }
         ],
         "slots": [
