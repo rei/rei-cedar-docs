@@ -1,5 +1,5 @@
 module.exports = {
-  base: process.env.NODE_ENV === 'production' ? "/rei-cedar-docs/" : "",
+  base: process.env.NODE_ENV === 'production' ? "/rei-cedar-docs/" : "/",
   title: "REI CO-OP Design System",
   description: "A demo documentation using VuePress",
   head: [
