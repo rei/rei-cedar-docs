@@ -1,25 +1,26 @@
 <template>
-<cdr-row cols="1" cols-sm="2">
-  <cdr-col
-    v-for="(example, idx) in examples"
-    :key="`${example.type}${idx}`"
-    :span="example.fullWidth? '12' : '12 6@sm'"
-  >
-    <figure class="do-dont">
-      <cdr-img
-        class="do-dont__image"
-        :src="$withBase(`/${example.image}`)"
-        ratio="16-9"
-        :alt="altText(example)" />
-      <figcaption :class="['do-dont__caption', typeClass(example.type)]">
-        <span v-if="example.type==='do'" class="do-dont__type">Do </span>
-        <span v-if="example.type==='dont'" class="do-dont__type">Don't </span>
-        <component :is="compiled(`${example.type}${idx}`, example.caption)" />
-        <slot/>
-      </figcaption>
-    </figure>
-  </cdr-col>
-</cdr-row>
+  <cdr-row cols="1" cols-sm="2">
+    <cdr-col
+      v-for="(example, idx) in examples"
+      :key="`${example.type}${idx}`"
+      :span="example.fullWidth? '12' : '12 6@sm'"
+    >
+      <figure class="do-dont">
+        <cdr-img
+          class="do-dont__image"
+          :src="$withBase(`/${example.image}`)"
+          ratio="16-9"
+          :alt="altText(example)" />
+        <figcaption :class="['do-dont__caption', typeClass(example.type)]">
+          <span v-if="example.type==='do'" class="do-dont__type">Do </span>
+          <span v-if="example.type==='dont'" class="do-dont__type">Don't </span>
+          <component :is="`comp-${example.type}${idx}`" />
+          <!-- <component :is="compiled(`${example.type}${idx}`, example.caption)" /> -->
+          <slot/>
+        </figcaption>
+      </figure>
+    </cdr-col>
+  </cdr-row>
 </template>
 
 <script>
@@ -31,6 +32,11 @@ export default {
     examples: {
       type: Array,
     }
+  },
+  beforeMount() {
+    this.examples.forEach((example, idx) => {
+      this.$options.components[`comp-${example.type}${idx}`] = { ...Vue.compile(`<span>${example.caption}</span>`) };
+    })
   },
   methods: {
     altText(ex) {

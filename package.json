@@ -34,9 +34,7 @@
     "@rei/cdr-text": "^1.0.0-next.beta.0",
     "scrollmonitor": "^1.2.4",
     "smoothscroll-polyfill": "^0.4.3",
-    "stickyfilljs": "^2.0.5",
-    "svg-use-it": "^1.1.6",
-    "svgxuse": "^1.2.6"
+    "stickyfilljs": "^2.0.5"
   },
   "browserslist": [
     "> 1%",

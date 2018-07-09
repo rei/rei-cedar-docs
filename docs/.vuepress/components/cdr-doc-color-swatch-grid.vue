@@ -25,6 +25,7 @@ export default {
   }
 }
 </script>
+
 <style lang="scss">
   @import '../theme/styles/cdr-tokens.scss';
   @import '../theme/styles/cdr-doc-tokens.scss';
