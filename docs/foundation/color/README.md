@@ -17,7 +17,7 @@
 
   <div class="cdr-doc-colors-intro__text">
     <h2>About our colors</h2>
-    Until every right thing is easy, we're going to keep pushing the bits &mdash; that includes additional writing guidelines. Check below for much needed updates to our button and select components, prettier inputs, and all kinds of Sketch cleanup.
+    Cedar offers a range colors designed to be accessed, understood, and used by all people regardless of their age, background, or ability. We meet or exceed color contrast <cdr-link href="https://www.w3.org/WAI/standards-guidelines/wcag/">WCAG AA accessibility standards</cdr-link>.
   </div>
   <img class="cdr-doc-colors-intro__image" src="/color-illustration.png">
 

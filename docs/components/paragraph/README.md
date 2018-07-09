@@ -4,12 +4,6 @@
    "layout": "LayoutComponent",
    "summary": "The HTML <p> element contains text elements such as paragraphs, headings, and lists to establish vertical spacing and optimize the reading experience.",
    "title_metadata": "Paragraph, cdrText",
-   "breadcrumbs": [
-      {
-         "text": "Components/",
-         "href": "../"
-      },
-    ],
 	  "width": [
       {
         "type": "do",

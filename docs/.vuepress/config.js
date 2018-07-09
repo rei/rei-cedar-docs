@@ -20,12 +20,8 @@ module.exports = {
     search: false,
     nav: [
       {
-        text: "Home",
-        link: "/"
-      },
-      {
         text: "Release History",
-        link: "#"
+        link: "/release-history/"
       },
       {
         text: "Getting Started",
@@ -41,11 +37,15 @@ module.exports = {
       {
         text: "Components",
         items: [
-          { text: "Overview", link: "/components/" },
-          { text: "Button", link: "/components/button/" },
+          { text: "Headings", link: "/components/heading/" },
           { text: "Link", link: "/components/link/" },
-          { text: "List", link: "/components/list/" },
           { text: "Paragraph", link: "/components/paragraph/" }
+        ]
+      },
+      {
+        text: "About Cedar",
+        items: [
+          { text: "Browser Support", link: "/about-cedar/browser-support/" }
         ]
       }
     ]
