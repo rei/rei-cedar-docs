@@ -79,7 +79,7 @@ Use for responsive display heading.
 
 ```html
   <cdr-text
-    tag="h3"
+    tag="h4"
     modifier="display">
       When you gear up, we give back
   </cdr-text>
