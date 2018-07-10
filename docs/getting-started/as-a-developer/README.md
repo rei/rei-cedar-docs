@@ -111,7 +111,7 @@ import '@rei/cdr-button/dist/cdr-button.css';
 </cdr-doc-code-snippet>
 
 #### Postcss-import
-Cedar packages include the [unofficial style field]() supported by postcss-import.
+Cedar packages include the [unofficial style field](https://jaketrent.com/post/package-json-style-attribute/) supported by postcss-import.
 
 <cdr-doc-code-snippet :copy-button="false" :line-numbers="false">
 ```js
@@ -210,7 +210,7 @@ In this example, the `responsiveSize` prop accepts an array of strings denoting 
 <hr>
 
 ## Customize components using token variables
-Cedar provides a robust collection of [design tokens](#) corresponding to Cedars foundations. Standard colors, typography mixins, space, size and other properties are available in the `cdr-assets` package as Sass/SCSS variables. If you need them in a different format such as LESS or XML, please [create an issue]() and let us know.
+Cedar provides a robust collection of [design tokens](https://rei.github.io/rei-cedar-tokens/#/) corresponding to Cedars foundations. Standard colors, typography mixins, space, size and other properties are available in the `cdr-assets` package as Sass/SCSS variables. If you need them in a different format such as LESS or XML, please [submit a feature request](https://airtable.com/shrcbq9CHthuMO7AC).
 
 As you extend Cedar components and create your own components, work with your designer to take advantage of this inventory in your custom classes. Using them this way will ensure your custom styles remain consistent with design guidelines.
 
@@ -242,7 +242,8 @@ export default {
 <hr/>
 
 ## Accessibility
-Always follow the a11y guidelines outlined in each component’s documentation. (TODO: LINK TO BUTTON a11y when it exists)
+REI requires 100% compliance with WCAG AA guidelines.
+We have provided the relevant guidelines in each [component's documentation](../../components/link/?active-tab=api&active-link=accessibility-2).
 
 <hr/>
 
@@ -295,6 +296,6 @@ For example with checkbox you may want to target both the label and the content 
 ```
 </cdr-doc-code-snippet>
 
-If you find that a component needs to have a targeted prop class added, please [create an issue](#) and let us know.
+If you find that a component needs to have a targeted prop class added, please [create an issue](https://github.com/rei/rei-cedar/issues) and let us know.
 
 </cdr-doc-table-of-contents-shell>

@@ -1,6 +1,6 @@
 <template>
   <a :href="href" class="cdr-doc-homepage-asset-card">
-    <img class="cdr-doc-homepage-asset-card__image" :src="imgSrc" alt="">
+    <img class="cdr-doc-homepage-asset-card__image" :src="$withBase(imgSrc)" alt="">
     <h3 class="cdr-doc-homepage-asset-card__title">
       {{ title }}
     </h3>

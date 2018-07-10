@@ -4,20 +4,6 @@
    "layout": "LayoutComponent",
    "summary": "Clickable text element to navigate to page section, another page or open an overlaid window such as modal dialog or popover.",
    "title_metadata": "Hyperlink, Anchor, CdrButton, CdrLink",
-   "breadcrumbs": [
-      {
-         "text": "Components/",
-         "href": "#"
-      },
-      {
-         "text": "Another-Step/",
-         "href": "#"
-      },
-      {
-         "text": "Pathname/",
-         "href": "#"
-      }
-    ],
 	  "standalone": [
       {
         "type": "do",
@@ -103,12 +89,10 @@
 
 Display within body copy for articles, hub cards, footer, or recommendations.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/master/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9" >
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/master/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9" >
 
 ```html
-  <div>
-  <cdr-text>If you spend much time in the great outdoors, you’re likely to hear the phrase “Leave No Trace” as often as you hear “<cdr-link href="https://www.rei.com/learn/expert-advice/ten-essentials.html">the Ten Essentials</cdr-link>.” What does it mean? Simply put, it’s the best practices we should follow to enjoy and protect our natural spaces.</cdr-text>
-  </div>
+  <cdr-link href="https://www.rei.com/learn/expert-advice/ten-essentials.html">the Ten Essentials</cdr-link>
 ```
 
 </cdr-doc-example-code-pair>
@@ -117,17 +101,12 @@ Display within body copy for articles, hub cards, footer, or recommendations.
 
 Display independently with a call to action. Examples are remove filters, find a store, or view related products.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/master/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/master/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
 
 ```html
-  <div>
-    <cdr-text tag="h1" modifier="heading-large" class="cdr-stack--md">
-      REI CO-op Half Dome 2 Plus Tent
-    </cdr-text>
-    <cdr-link href="https://www.rei.com" modifier="standalone">
-      View all REI Co-op Backpacking Tents
-    </cdr-link>
-  </div>
+  <cdr-link href="https://www.rei.com" modifier="standalone">
+    View all REI Co-op Backpacking Tents
+  </cdr-link>
 ```
 
 </cdr-doc-example-code-pair>
@@ -141,15 +120,15 @@ Display icon on left of link message.
 ```html
   <div>
     <cdr-icon-sprite />
-      <cdr-link tag="button">
-        <!-- Using the sprite -->
-        <cdr-icon
-            use="#shipping"
-            modifier="inherit-color"
-            class="cdr-inline-left--sm"
-        />
-        This item ships for FREE!
-      </cdr-link>
+    <cdr-link tag="button">
+      <!-- Using the sprite -->
+      <cdr-icon
+          use="#shipping"
+          modifier="inherit-color"
+          class="cdr-inline-left--sm"
+      />
+      This item ships for FREE!
+    </cdr-link>
   </div>
 ```
 
@@ -202,12 +181,11 @@ Display icon on right of link message.
 
 ## Don’t use when
 
-- Triggering an action other than navigation. Instead, use [Button](https://docs.google.com/document/d/1RlEPYma55X_EKcxKOoBdnYqwEaWsXwGAaaGmP-1KjYQ/edit?usp=sharing)
-- Navigating a user from promotional or campaign content. Instead, use [Call-to-action](https://docs.google.com/document/d/14GC9JaIxOVYHkL1qinHr5KsPBfnLCxo5sU1lZ2_-6Eg/edit?usp=sharing)
+- Navigating a user from promotional or campaign content. Instead, use Call-to-action
 
 ## Foundations
 
-- Link styles are adapted based on context, such as for links included in the [Breadcrumb](http://breadcrumb.html), [Menus](http://menus.html) and [Navigation](http://navigation.html) component
+- Link styles are adapted based on context, such as for links included in the Breadcrumb, Menus and Navigation
 
 ## Content
 
