@@ -4,7 +4,7 @@
       <slot/>
     </div>
     <div class="cdr-doc-table-of-contents-shell__navigation">
-      <cdr-doc-local-anchor-nav 
+      <cdr-doc-local-anchor-nav
         :tab-name="tabName"
         :parent-selectors="'.cdr-doc-table-of-contents-shell--' + instanceId + ' .cdr-doc-table-of-contents-shell__content h2'" 
         :child-selectors="'.cdr-doc-table-of-contents-shell--' + instanceId + ' .cdr-doc-table-of-contents-shell__content h3'"

@@ -11,7 +11,7 @@ export default {
       type: String,
       required: true,
       validator: value => {
-        return ['prop', 'slot', 'event'].indexOf(value) > -1;
+        return ['prop', 'slot', 'event', 'installation'].indexOf(value) > -1;
       }
     }
   },

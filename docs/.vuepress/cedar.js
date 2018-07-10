@@ -25,8 +25,6 @@ import { CdrIconSprite } from "@rei/cdr-icon";
 Vue.component("CdrIconSprite", CdrIconSprite);
 FullVue.component("CdrIconSprite", CdrIconSprite);
 
-import svgUseIt from "svg-use-it";
-
 import { CdrLink } from "@rei/cdr-link";
 import "@rei/cdr-link/dist/cdr-link.css";
 Vue.component("CdrLink", CdrLink);

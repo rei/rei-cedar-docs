@@ -18,7 +18,7 @@
     "url": "git+https://github.com/rei/rei-cedar-docs.git"
   },
   "devDependencies": {
-    "@rei/cdr-tokens": "^0.1.6",
+    "@rei/cdr-tokens": "^0.1.7",
     "node-sass": "^4.9.0",
     "sass-loader": "^6.0.7",
     "vuepress": "^0.10.2"
@@ -34,9 +34,7 @@
     "@rei/cdr-text": "^1.0.0-next.beta.0",
     "scrollmonitor": "^1.2.4",
     "smoothscroll-polyfill": "^0.4.3",
-    "stickyfilljs": "^2.0.5",
-    "svg-use-it": "^1.1.6",
-    "svgxuse": "^1.2.6"
+    "stickyfilljs": "^2.0.5"
   },
   "browserslist": [
     "> 1%",
