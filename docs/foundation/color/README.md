@@ -68,7 +68,7 @@ people regardless of their age, background, or ability. We meet or exceed color 
 ]" />
 
 Text choices should be paired with their corresponding background color to ensure accessibility.
-<img :src="$withBase(`/color-illustrations/color_accessibility.png`)" alt="Color Accessibility Chart">
+<img :src="$withBase('/color-illustrations/color_accessibility.png')" alt="Color Accessibility Chart">
 
 
 ## Color Palette

@@ -1,5 +1,5 @@
 <template>
-  <a :href="href" class="cdr-doc-homepage-asset-card">
+  <div class="cdr-doc-homepage-asset-card">
     <img class="cdr-doc-homepage-asset-card__image" :src="$withBase(imgSrc)" alt="">
     <h3 class="cdr-doc-homepage-asset-card__title">
       {{ title }}
@@ -7,7 +7,7 @@
     <p class="cdr-doc-homepage-asset-card__description">
       {{ description }}
     </p>
-  </a>
+  </div>
 </template>
 
 <script>
