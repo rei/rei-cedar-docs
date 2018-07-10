@@ -60,14 +60,8 @@
         text: 'Typography'
       },
       {
-        text: 'Caption'
-      },
-      {
-        text: 'Blockquote'
-      },
-      {
-        text: 'Headings',
-        href: '../heading/'
+        text: 'Paragraph',
+        href: '../paragraph/'
       }
     ]">
 
@@ -79,7 +73,7 @@ Use for responsive display heading.
 
 ```html
   <cdr-text
-    tag="h3"
+    tag="h4"
     modifier="display">
       When you gear up, we give back
   </cdr-text>
@@ -205,11 +199,15 @@ Use for subheadings that are positioned beneath small headings.
 <template slot="Design Guidelines">
 <cdr-doc-table-of-contents-shell 
     :appended-nav-items="[
-      {
+       {
         text: 'Related Components'
       },
       {
         text: 'Typography'
+      },
+      {
+        text: 'Paragraph',
+        href: '../paragraph/'
       }
     ]">
 
@@ -276,21 +274,15 @@ Responsive heading font sizes are the default for heading levels except subheadi
 <template slot="API">
 <cdr-doc-table-of-contents-shell
     :appended-nav-items="[
-      {
+       {
         text: 'Related Components'
       },
       {
         text: 'Typography'
       },
       {
-        text: 'Caption'
-      },
-      {
-        text: 'Blockquote'
-      },
-      {
-        text: 'Headings',
-        href: '../heading/'
+        text: 'Paragraph',
+        href: '../paragraph/'
       }
     ]">
 
@@ -465,13 +457,21 @@ Web browsers, plug-ins, and assistive technologies use headings to provide in-pa
 
 ### What's new
 
-**cdrText** component::
+**cdrText** component:
 
-- Enables a consistent visual paragraph style applied to any html element using the tag property
-- By default, results in a generic `<p>` tag
-- Visual style is applied with the modifier property and supports:
-  - **Unmodified variant**:  Used as default font style. It may be used for paragraphs, lists, or any basic information
-  - **Body**: intended for long-form articles like Expert Advice pages or editorial content on PDP pages
+- Enables the visual style of many heading levels and subheading to be applied flexibly to HTML headings (`<h1>` to `<h6>`) and other HTML elements
+- Enabled responsive heading font sizing applied by default and disabled as an alternative with following modifiers:
+  - Display
+  - Heading-large
+  - Heading-medium
+  - Heading-small
+  - Disabled as an alternative with following modifiers:
+  - Display-static
+  - Heading-large-static
+  - Heading-medium-static
+  - Heading-small-static
+  - Subheading
+
 
 </template>
 </cdr-doc-tabs>

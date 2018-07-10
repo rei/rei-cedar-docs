@@ -92,17 +92,10 @@ Used as default font style for all text information. Also known as body-default 
 <cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.06.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4" >
 
 ```html
-  <div>
-   <cdr-text
-      tag="h3"
-      modifier="heading-small">
-      Backpacking checklist
-    </cdr-text>
-    <cdr-text
-    class="cdr-stack--lg">
-      Pack everything you need with this handy checklist! We include the 10 essentials and more for comfort in the backcountry.
-    </cdr-text>
-  </div>
+  <cdr-text
+  class="cdr-stack--lg">
+    Pack everything you need with this handy checklist! We include the 10 essentials and more for comfort in the backcountry.
+  </cdr-text>
 ```
 
 </cdr-doc-example-code-pair>
