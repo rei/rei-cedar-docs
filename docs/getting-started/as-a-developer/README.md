@@ -210,7 +210,7 @@ In this example, the `responsiveSize` prop accepts an array of strings denoting 
 <hr>
 
 ## Customize components using token variables
-Cedar provides a robust collection of [design tokens](https://rei.github.io/rei-cedar-tokens/#/) corresponding to Cedars foundations. Standard colors, typography mixins, space, size and other properties are available in the `cdr-assets` package as Sass/SCSS variables. If you need them in a different format such as LESS or XML, please [create an issue](https://github.com/rei/rei-cedar-tokens/issues) and let us know.
+Cedar provides a robust collection of [design tokens](https://rei.github.io/rei-cedar-tokens/#/) corresponding to Cedars foundations. Standard colors, typography mixins, space, size and other properties are available in the `cdr-assets` package as Sass/SCSS variables. If you need them in a different format such as LESS or XML, please [submit a feature request](https://airtable.com/shrcbq9CHthuMO7AC).
 
 As you extend Cedar components and create your own components, work with your designer to take advantage of this inventory in your custom classes. Using them this way will ensure your custom styles remain consistent with design guidelines.
 

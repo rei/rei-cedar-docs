@@ -181,12 +181,11 @@ Display icon on right of link message.
 
 ## Don’t use when
 
-- Triggering an action other than navigation. Instead, use [Button](https://docs.google.com/document/d/1RlEPYma55X_EKcxKOoBdnYqwEaWsXwGAaaGmP-1KjYQ/edit?usp=sharing)
-- Navigating a user from promotional or campaign content. Instead, use [Call-to-action](https://docs.google.com/document/d/14GC9JaIxOVYHkL1qinHr5KsPBfnLCxo5sU1lZ2_-6Eg/edit?usp=sharing)
+- Navigating a user from promotional or campaign content. Instead, use Call-to-action
 
 ## Foundations
 
-- Link styles are adapted based on context, such as for links included in the [Breadcrumb](http://breadcrumb.html), [Menus](http://menus.html) and [Navigation](http://navigation.html) component
+- Link styles are adapted based on context, such as for links included in the Breadcrumb, Menus and Navigation
 
 ## Content
 
