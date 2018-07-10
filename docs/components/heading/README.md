@@ -60,14 +60,8 @@
         text: 'Typography'
       },
       {
-        text: 'Caption'
-      },
-      {
-        text: 'Blockquote'
-      },
-      {
-        text: 'Headings',
-        href: '../heading/'
+        text: 'Paragraph',
+        href: '../paragraph/'
       }
     ]">
 
@@ -205,11 +199,15 @@ Use for subheadings that are positioned beneath small headings.
 <template slot="Design Guidelines">
 <cdr-doc-table-of-contents-shell 
     :appended-nav-items="[
-      {
+       {
         text: 'Related Components'
       },
       {
         text: 'Typography'
+      },
+      {
+        text: 'Paragraph',
+        href: '../paragraph/'
       }
     ]">
 
@@ -276,21 +274,15 @@ Responsive heading font sizes are the default for heading levels except subheadi
 <template slot="API">
 <cdr-doc-table-of-contents-shell
     :appended-nav-items="[
-      {
+       {
         text: 'Related Components'
       },
       {
         text: 'Typography'
       },
       {
-        text: 'Caption'
-      },
-      {
-        text: 'Blockquote'
-      },
-      {
-        text: 'Headings',
-        href: '../heading/'
+        text: 'Paragraph',
+        href: '../paragraph/'
       }
     ]">
 
