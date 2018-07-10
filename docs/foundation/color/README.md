@@ -20,7 +20,7 @@
     Cedar offers a range colors designed to be accessed, understood, and used by all
 people regardless of their age, background, or ability. We meet or exceed color contrast [WCAG AA accessibility standards](https://www.w3.org/WAI/standards-guidelines/wcag/).
   </div>
-  <img class="cdr-doc-colors-intro__image" src="/color-illustration.png">
+  <img class="cdr-doc-colors-intro__image" :src="$withBase('/color-illustration.png')">
 
 </div>
 
@@ -69,7 +69,7 @@ people regardless of their age, background, or ability. We meet or exceed color 
 ]" />
 
 Text choices should be paired with their corresponding background color to ensure accessibility.
-<img src="/color-illustrations/color_accessibility.png" alt="Color Accessibility Chart">
+<img :src="$withBase('/color-illustrations/color_accessibility.png')" alt="Color Accessibility Chart">
 
 
 ## Color Palette
