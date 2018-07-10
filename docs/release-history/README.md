@@ -7,24 +7,28 @@
 }
 ---
 
-## What’s New
+## [Cedar Alpha Release](https://github.com/rei/rei-cedar/tree/18.06.1)
 
-### Components
+### What’s New
 
-- Added new Links component v0.1.0 ([CdrLink](https://github.com/rei/rei-cedar/tree/18.06.1/src/components/link))
-- Added new Paragraphs component ([CdrText](https://github.com/rei/rei-cedar/tree/18.06.1/src/components/text))
+#### Components
 
-### Design Assets
+- Released of V1 Link component ([CdrLink](https://www.npmjs.com/package/@rei/cdr-link))
+- Released of V1 Text component ([CdrText](https://www.npmjs.com/package/@rei/cdr-text))
+  - supports [paragraphs](../components/paragraph/README.md)
+  - supports [headings](../components/heading/README.md)
+
+#### Design Assets
 
 - Sketch library
-  - Published the Sketch library with design assets for the released components above 
+  - Published the Sketch library with design assets for the released components above
 
-## Documentation Updates
+### Documentation Updates
 
-- Cedar Home page 
+- Cedar Home page
   - Alpha version of Cedar Design System Home page
 - Browser Support
-  - Article outlining OS / Browser combinations currently supported by Cedar  
+  - Article outlining OS / Browser combinations currently supported by Cedar
 - Getting Started as a Designer
   - Article providing step-by-step instructions for how to get started as a designer
 - Getting Started as a Developer

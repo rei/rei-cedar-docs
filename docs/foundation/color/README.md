@@ -19,7 +19,7 @@
     <h2>About our colors</h2>
     Cedar offers a range colors designed to be accessed, understood, and used by all people regardless of their age, background, or ability. We meet or exceed color contrast <cdr-link href="https://www.w3.org/WAI/standards-guidelines/wcag/">WCAG AA accessibility standards</cdr-link>.
   </div>
-  <img class="cdr-doc-colors-intro__image" src="/color-illustration.png">
+  <img class="cdr-doc-colors-intro__image" :src="$withBase(`/color-illustration.png`)" />
 
 </div>
 
