@@ -85,7 +85,9 @@ Neutral colors support the cohesive use of typography, backgrounds, and borders 
   'coal-train',
   'taken-for-granite',
   'threat-level-midnight',
-  'lost-in-space'
+  'lost-in-space',
+  'heart-of-darkness',
+  'the-tooth'
 ]"/>
 
 ### Accent colors
