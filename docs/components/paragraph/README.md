@@ -93,7 +93,7 @@
 
 Used as default font style for all text information. Also known as body-default in UI ToolKit.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.06.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4" >
 
 ```html
   <cdr-text
@@ -108,7 +108,7 @@ Used as default font style for all text information. Also known as body-default 
 
 Used for editorial content such as long-form articles like Expert Advice pages or editorial content on PDP pages.  Also known as body-editorial in UI ToolKit.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.06.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4">
 
 ```html
   <div>

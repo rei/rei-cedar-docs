@@ -71,7 +71,7 @@
 
 Use for responsive display heading.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.06.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4" >
 
 ```html
   <cdr-text
@@ -87,7 +87,7 @@ Use for responsive display heading.
 
 Use for non-responsive display heading that maintains font size across all viewport sizes.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.06.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4">
 
 ```html
   <cdr-text modifier="display-static">
@@ -101,7 +101,7 @@ Use for non-responsive display heading that maintains font size across all viewp
 
 Use for a responsive large heading.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.06.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4">
 
 ```html
   <cdr-text modifier="heading-large">
@@ -115,7 +115,7 @@ Use for a responsive large heading.
 
 Use for non-responsive large heading that maintains font size across all viewport sizes.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.06.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4">
 
 ```html
   <cdr-text modifier="heading-large-static">
@@ -129,7 +129,7 @@ Use for non-responsive large heading that maintains font size across all viewpor
 
 Use for a responsive medium heading.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.06.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4">
 
 ```html
   <cdr-text modifier="heading-medium">
@@ -143,7 +143,7 @@ Use for a responsive medium heading.
 
 Use for non-responsive medium heading that maintains font size across all viewport sizes.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.06.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4">
 
 ```html
   <cdr-text modifier="heading-medium-static">
@@ -157,7 +157,7 @@ Use for non-responsive medium heading that maintains font size across all viewpo
 
 Use for a responsive small heading.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.06.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4">
 
 ```html
   <cdr-text modifier="heading-small">
@@ -171,7 +171,7 @@ Use for a responsive small heading.
 
 Use for non-responsive small heading that maintains font size across all viewport sizes.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.06.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4">
 
 ```html
   <cdr-text modifier="heading-small-static">
@@ -185,7 +185,7 @@ Use for non-responsive small heading that maintains font size across all viewpor
 
 Use for subheadings that are positioned beneath small headings.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.06.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4">
 
 ```html
   <cdr-text modifier="subheading">

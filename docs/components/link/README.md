@@ -93,7 +93,7 @@
 
 Display within body copy for articles, hub cards, footer, or recommendations.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/master/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9" >
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9" >
 
 ```html
   <cdr-link href="https://www.rei.com/learn/expert-advice/ten-essentials.html">the Ten Essentials</cdr-link>
@@ -105,7 +105,7 @@ Display within body copy for articles, hub cards, footer, or recommendations.
 
 Display independently with a call to action. Examples are remove filters, find a store, or view related products.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/master/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
 
 ```html
   <cdr-link href="https://www.rei.com" modifier="standalone">
@@ -119,7 +119,7 @@ Display independently with a call to action. Examples are remove filters, find a
 
 Display icon on left of link message.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/master/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
 
 ```html
   <div>
@@ -142,7 +142,7 @@ Display icon on left of link message.
 
 Display icon on right of link message.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/master/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
 
 ```html
   <div>
