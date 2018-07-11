@@ -29,9 +29,9 @@
     "@rei/cdr-grid": "^1.0.0-next.beta.0",
     "@rei/cdr-icon": "^1.0.0-next.beta.0",
     "@rei/cdr-img": "^1.0.0-alpha.1",
-    "@rei/cdr-link": "^1.0.0-next.beta.0",
+    "@rei/cdr-link": "^1.0.0",
     "@rei/cdr-list": "^0.1.0",
-    "@rei/cdr-text": "^1.0.0-next.beta.0",
+    "@rei/cdr-text": "^1.0.0",
     "scrollmonitor": "^1.2.4",
     "smoothscroll-polyfill": "^0.4.3",
     "stickyfilljs": "^2.0.5"
