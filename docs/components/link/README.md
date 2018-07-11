@@ -8,12 +8,14 @@
       {
         "type": "do",
         "image": "links_descriptivetext_do.png",
+        "ratio": "4-3",
         "alt": "Image showing proper link usage",
         "caption": "use clear, concise, and descriptive text."
       },
       {
         "type": "dont",
         "image": "links_descriptivetext_dont.png",
+        "ratio": "4-3",
         "alt": "Image showing mixed button sizes",
         "caption": "use multiple sizes in the same context."
       }
@@ -22,12 +24,14 @@
       {
         "type": "do",
         "image": "links_underlinestyle_text_do.png",
+        "ratio": "4-3",
         "alt": "The link in this copy uses the cdr-link component, and, so correctly uses an underline",
         "caption": "underline every link."
       },
       {
         "type": "dont",
         "image": "links_underlinestyle_text_dont.png",
+        "ratio": "4-3",
         "alt": "The default link in body copy incorrectly does not use an underline",
         "caption": "apply different visual treatments for hyperlinks."
       }
