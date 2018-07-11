@@ -106,6 +106,7 @@ Accents drive a user’s attention to important actions or content. Use accents 
 
 ### Brand colors
 Brand colors are core to the co-op. They’re often used as backgrounds when an experience calls for a stronger brand impression.
+
 <cdr-doc-color-swatch-grid :token-names="[
   'old-growth',
   'moose-tooth',
