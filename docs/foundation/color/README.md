@@ -79,15 +79,15 @@ Neutral colors support the cohesive use of typography, backgrounds, and borders 
 <cdr-doc-color-swatch-grid :token-names="[
   'clean-slate',
   'moon-shot',
+  'the-tooth',
   'partly-cloudy',
   'grey-matter',
   'holy-smoke',
   'coal-train',
   'taken-for-granite',
   'threat-level-midnight',
-  'lost-in-space',
   'heart-of-darkness',
-  'the-tooth'
+  'lost-in-space'
 ]"/>
 
 ### Accent colors
