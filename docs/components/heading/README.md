@@ -7,13 +7,15 @@
 	  "minimize": [
       {
         "type": "do",
-        "image": "headings_text_do.png",
+        "image": "heading/headings_text_do.png",
+        "ratio": "4-3",
         "alt": "Image showing proper link usage",
         "caption": "use heading levels to define hierarchical information."
       },
       {
         "type": "dont",
-        "image": "headings_text_dont.png",
+        "image": "heading/headings_text_dont.png",
+        "ratio": "4-3",
         "alt": "Image showing mixed button sizes",
         "caption": "use heading tag for visual results. Instead use heading modifiers."
       }

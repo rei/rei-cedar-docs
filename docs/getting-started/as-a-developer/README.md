@@ -57,7 +57,6 @@ npm install --save @rei/cdr-assets
 The [cdr-assets package](https://www.npmjs.com/package/@rei/cdr-assets) contains these files:
   * cdr-core.css
   * cdr-fonts.css
-  * cdr-tokens.scss
 
 ### Install required core styles
 Cedar requires a core stylesheet to render components properly.
@@ -124,7 +123,7 @@ You can also import css from the node_modules folder.
 
 <cdr-doc-code-snippet :copy-button="false" :line-numbers="false">
 ```js
-import 'path/to/node_modules/@rei/cdr-button/dist/cdr-button.css';
+import '~@rei/cdr-button/dist/cdr-button.css';
 ```
 </cdr-doc-code-snippet>
 
@@ -210,11 +209,23 @@ In this example, the `responsiveSize` prop accepts an array of strings denoting 
 <hr>
 
 ## Customize components using token variables
-Cedar provides a robust collection of [design tokens](https://rei.github.io/rei-cedar-tokens/#/) corresponding to Cedars foundations. Standard colors, typography mixins, space, size and other properties are available in the `cdr-assets` package as Sass/SCSS variables. If you need them in a different format such as LESS or XML, please [submit a feature request](https://airtable.com/shrcbq9CHthuMO7AC).
+Cedar provides a robust collection of [design tokens](https://rei.github.io/rei-cedar-tokens/#/) corresponding to Cedar's foundations. Standard colors, typography mixins, space, size and other properties are available in the `cdr-tokens` package as Sass/SCSS variables. If you need them in a different format such as LESS or XML, please [submit a feature request](https://airtable.com/shrcbq9CHthuMO7AC).
 
 As you extend Cedar components and create your own components, work with your designer to take advantage of this inventory in your custom classes. Using them this way will ensure your custom styles remain consistent with design guidelines.
 
-Here we’re using a typography mixin and a color token to style `.myClass`.
+### Install tokens package
+
+<cdr-doc-code-snippet :copy-button="false" :line-numbers="false">
+```js
+npm install --save @rei/cdr-tokens
+```
+</cdr-doc-code-snippet>
+
+### Use Cedar design tokens
+
+The package contains files for using tokens in both CSS (as SCSS variables) and Javascript (as commonjs).
+
+Here we’re using a typography mixin and a color token to style `.myClass` from the SCSS tokens file.
 
 <cdr-doc-code-snippet :copy-button="false" :line-numbers="false" :max-height="false">
 ```html
@@ -229,7 +240,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import 'path/to/node_modules/@rei/cdr-assets/dist/cdr-tokens.scss';
+@import '~@rei/cdr-tokens/dist/cdr-tokens.scss';
 
 .myClass {
   @include redwood-display-10();

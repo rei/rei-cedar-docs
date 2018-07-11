@@ -9,7 +9,7 @@
         <cdr-img
           class="do-dont__image"
           :src="$withBase(`/${example.image}`)"
-          ratio="16-9"
+          :ratio="getRatio(example.ratio) || '16-9'"
           :alt="altText(example)" />
         <figcaption :class="['do-dont__caption', typeClass(example.type)]">
           <span v-if="example.type==='do'" class="do-dont__type">Do </span>
@@ -54,6 +54,12 @@ export default {
       this.$options.components[`comp-${id}`] = { ...Vue.compile(`<span>${template}</span>`) };
 
       return `comp-${id}`;
+    },
+    getRatio(ratio) {
+      if (ratio) {
+        return ratio.replace(':', '-');
+      } 
+      return false;
     }
   }
 }
