@@ -7,14 +7,14 @@
 	  "width": [
       {
         "type": "do",
-        "image": "paragraphs_characterlength_text_do.png",
+        "image": "paragraph/paragraphs_characterlength_text_do.png",
         "ratio": "4-3",
         "alt": "Image showing proper link usage",
         "caption": "set max-width for paragraphs."
       },
       {
         "type": "dont",
-        "image": "paragraphs_characterlength_text_dont.png",
+        "image": "paragraph/paragraphs_characterlength_text_dont.png",
         "ratio": "4-3",
         "alt": "Image showing mixed button sizes",
         "caption": "allow text to span beyond max-width for paragraphs."
@@ -23,14 +23,14 @@
     "backgrounds": [
       {
         "type": "do",
-        "image": "paragraphs_standardfont_text_do.png",
+        "image": "paragraph/paragraphs_standardfont_text_do.png",
         "ratio": "4-3",
         "alt": "The link in this copy uses the cdr-link component, and, so correctly uses an underline",
         "caption": "use standard font color."
       },
       {
         "type": "dont",
-        "image": "paragraphs_reversedfont_text_dont.png",
+        "image": "paragraph/paragraphs_reversedfont_text_dont.png",
         "ratio": "4-3",
         "alt": "The default link in body copy incorrectly does not use an underline",
         "caption": "display long passages of text  on dark backgrounds. "
@@ -206,7 +206,7 @@ Used for editorial content such as long-form articles like Expert Advice pages o
     - Within paragraphs, line spacing is at least 1.5 times font height
     - Between paragraphs, at least 1.5 times larger than the line spacing
 
-  <cdr-img alt="paragraphs_spacing_graphic_example" :src="$withBase(`/paragraphs_spacing_graphic_example.png`)" />
+  <cdr-img alt="paragraphs_spacing_graphic_example" :src="$withBase(`/paragraph/paragraphs_spacing_graphic_example.png`)" />
 
 </cdr-doc-table-of-contents-shell>
 </template>
