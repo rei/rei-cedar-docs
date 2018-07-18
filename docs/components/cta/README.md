@@ -48,6 +48,96 @@
 ---
 
 <cdr-doc-tabs>
+<template slot="Overview">
+<cdr-doc-table-of-contents-shell>
+
+## Brand
+
+Use CTA blue link as an alternative.
+
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/cta" sandbox-ref="https://codesandbox.io/s/9ojj43x1op">
+
+```html
+  <cdr-cta 
+    href="https://rei.com"
+  >
+    Explore travel tips &amp; gear
+  </cdr-cta>
+```
+
+</cdr-doc-example-code-pair>
+
+## Dark
+
+Use CTA dark link over a light background image or color to provide proper contrast.
+
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/cta" sandbox-ref="https://codesandbox.io/s/9ojj43x1op">
+
+```html
+  <cdr-cta 
+    href="https://rei.com"
+    cta-style="dark"
+  >
+    Explore travel tips &amp; gear
+  </cdr-cta>
+```
+
+</cdr-doc-example-code-pair>
+
+## Light
+
+Use CTA Light link over a dark background image or color to provide proper contrast.
+
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/cta" sandbox-ref="https://codesandbox.io/s/9ojj43x1op">
+
+```html
+  <cdr-cta 
+    href="https://rei.com"
+    cta-style="light"
+  >
+    Explore travel tips &amp; gear
+  </cdr-cta>
+```
+
+</cdr-doc-example-code-pair>
+
+## Sale
+
+Use CTA red link for sale or off-price placements.
+
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/cta" sandbox-ref="https://codesandbox.io/s/9ojj43x1op">
+
+```html
+  <cdr-cta 
+    href="https://rei.com"
+    cta-style="sale"
+  >
+    Shop top-rated gear
+  </cdr-cta>
+```
+
+</cdr-doc-example-code-pair>
+
+## Elevated
+
+Use elevated when...
+
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/cta" sandbox-ref="https://codesandbox.io/s/9ojj43x1op">
+
+```html
+  <cdr-cta 
+    href="https://rei.com"
+    modifier="elevated"
+  >
+    Explore travel tips &amp; gear
+  </cdr-cta>
+```
+
+</cdr-doc-example-code-pair>
+
+</cdr-doc-table-of-contents-shell>
+</template>
+
 <template slot="API">
 <cdr-doc-table-of-contents-shell>
   
