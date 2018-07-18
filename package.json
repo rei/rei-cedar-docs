@@ -21,17 +21,18 @@
     "@rei/cdr-tokens": "^0.1.7",
     "node-sass": "^4.9.0",
     "sass-loader": "^6.0.7",
-    "vuepress": "^0.10.2"
+    "vuepress": "^0.12.0"
   },
   "dependencies": {
     "@rei/cdr-assets": "^0.3.0",
-    "@rei/cdr-button": "^0.1.0",
+    "@rei/cdr-button": "^0.2.0-alpha.0",
+    "@rei/cdr-card": "^0.1.0",
     "@rei/cdr-grid": "^1.0.0-next.beta.1",
     "@rei/cdr-icon": "^1.0.0-next.beta.1",
-    "@rei/cdr-img": "^1.0.0-alpha.1",
-    "@rei/cdr-link": "^1.0.0",
-    "@rei/cdr-list": "^0.1.0",
-    "@rei/cdr-text": "^1.0.0",
+    "@rei/cdr-img": "^1.0.0-next.alpha.1",
+    "@rei/cdr-link": "^1.0.0-next.beta.0",
+    "@rei/cdr-list": "^0.2.0",
+    "@rei/cdr-text": "^1.0.0-next.beta.0",
     "scrollmonitor": "^1.2.4",
     "smoothscroll-polyfill": "^0.4.3",
     "stickyfilljs": "^2.0.5"
