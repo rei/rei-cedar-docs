@@ -37,20 +37,16 @@
             <p class="home-subheading">Learn how to start using Cedar components with handy onboarding guides.</p>
             <cdr-row cols="auto" justify="around">
               <cdr-col>
-                <div>
-                  <cdr-button
-                    tag="a"
-                    :href="$withBase('/getting-started/designer')"
-                    modifier="secondary">View Designer Guide</cdr-button>
-                </div>
+                <cdr-button
+                  tag="a"
+                  :href="$withBase('/getting-started/designer/')"
+                  modifier="secondary">View Designer Guide</cdr-button>
               </cdr-col>
               <cdr-col>
-                <div>
-                  <cdr-button
-                    tag="a"
-                    :href="$withBase('/getting-started/developer')"
-                    modifier="secondary">View Developer Guide</cdr-button>
-                </div>
+                <cdr-button
+                  tag="a"
+                  :href="$withBase('/getting-started/developer/')"
+                  modifier="secondary">View Developer Guide</cdr-button>
               </cdr-col>
             </cdr-row>
           </div>
@@ -72,7 +68,7 @@
             <h2 class="home-heading">Foundation</h2>
             <cdr-text class="cdr-stack">Build cohesive digital experiences with the basic design elements that comprise the Cedar visual language.</cdr-text>
             <cdr-link
-              :href="$withBase('/foundation/color')"
+              :href="$withBase('/foundation/color/')"
               modifier="standalone"
             >Start with color</cdr-link>
           </div>
@@ -89,7 +85,7 @@
             <h2 class="home-heading">Components</h2>
             <cdr-text class="cdr-stack">Use components as building blocks to create new digital products - usage, visual guidelines, and code included.</cdr-text>
             <cdr-link
-              :href="$withBase('/components/button')"
+              :href="$withBase('/components/button/')"
               modifier="standalone"
             >Start with buttons</cdr-link>
           </div>
@@ -114,7 +110,7 @@
                     modifier="heading-small-static"
                     class="cdr-stack"
                   >Cedar Sketch UI toolkit</cdr-text>
-                  <cdr-link :href="$withBase('/getting-started/designer')" modifier="standalone">Get the Sketch library</cdr-link>
+                  <cdr-link :href="$withBase('/getting-started/as-a-designer/')" modifier="standalone">Get the Sketch library</cdr-link>
                 </div>
               </cdr-col>
               <cdr-col span="3">
@@ -155,6 +151,7 @@
               class="cdr-stack"
             >Contribute to Cedar</cdr-text>
             <cdr-text class="cdr-stack">The Cedar team welcomes contributions from the community. Learn how to become a pilot contributor.  </cdr-text>
+            <!-- TODO: correct link? -->
             <cdr-link :href="$withBase('/adopting-cedar#contributions')" modifier="standalone">Help build Cedar</cdr-link>
           </cdr-card>
         </cdr-col>
