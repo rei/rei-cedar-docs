@@ -235,11 +235,19 @@ export default {
 .home-heading {
   @include spruce-display-60();
   margin-bottom: $space-1-x;
+
+  @media (max-width: $breakpoint-md) {
+    text-align: center;
+  }
 }
 
 .home-subheading {
   @include redwood-body-40();
   margin-bottom: $space-1-x;
+
+  @media (max-width: $breakpoint-md) {
+    text-align: center;
+  }
 }
 
 .getting-started-image {
