@@ -4,6 +4,86 @@
   "layout": "LayoutComponent",
   "summary": "Buttons are used to invoke an event and communicate the action that will occur.",
   "title_metadata": "Also known as a Call-to-Action (CTA)",
+  "vertical": [
+      {
+        "type": "do",
+        "image": "button/button_vert_do_4-3.png",
+        "ratio": "4-3",
+        "alt": "Image showing proper vertical button grouping",
+        "caption": "match button widths"
+      },
+      {
+        "type": "dont",
+        "image": "button/button_vert_dont_4-3.png",
+        "ratio": "4-3",
+        "alt": "Image showing mixed button sizing",
+        "caption": "mix button sizes."
+      }
+    ],
+    "horizontal": [
+      {
+        "type": "do",
+        "image": "button/button_horiz_do_4-3.png",
+        "ratio": "4-3",
+        "alt": "Image showing proper button height grouping",
+        "caption": "match button heights."
+      },
+      {
+        "type": "dont",
+        "image": "button/button_horiz_dont_4-3.png",
+        "ratio": "4-3",
+        "alt": "Image showing mixed button sizing",
+        "caption": "mix button sizes."
+      }
+    ],
+    "label": [
+      {
+        "type": "do",
+        "image": "button/button_label_do_4-3.png",
+        "ratio": "4-3",
+        "alt": "Image showing buttons with proper text length",
+        "caption": "minimize label length."
+      },
+      {
+        "type": "dont",
+        "image": "button/button_label_dont_4-3.png",
+        "ratio": "4-3",
+        "alt": "Image showing buttons with too much text",
+        "caption": "put too much text in a button."
+      }
+    ],
+    "case": [
+      {
+        "type": "do",
+        "image": "button/button_case_do_4-3.png",
+        "ratio": "4-3",
+        "alt": "Image showing buttons with proper text sentance case",
+        "caption": "use sentance case."
+      },
+      {
+        "type": "dont",
+        "image": "button/button_case_dont_4-3.png",
+        "ratio": "4-3",
+        "alt": "Image showing buttons with title case",
+        "caption": "use title case."
+      }
+    ],
+    "noun": [
+      {
+        "type": "do",
+        "image": "button/button_noun_do_4-3.png",
+        "ratio": "4-3",
+        "alt": "Image showing buttons with proper noun capitalization",
+        "caption": "capitalize any proper nouns."
+      },
+      {
+        "type": "dont",
+        "image": "button/button_noun_dont_4-3.png",
+        "ratio": "4-3",
+        "alt": "Image showing buttons with all uppercase text",
+        "caption": "use all caps."
+      }
+    ],
   "breadcrumbs": [
     {
       "text": "Components/",
@@ -127,40 +207,82 @@ Change the button size based on where button is used
 
 ## Use When
 
-  * Triggering an action when a user clicks or taps on the component.
-  * Enabling a &ldquo;final&rdquo; action.
-  * Progressing or regressing a user through a step in a flow.
-  * Submitting requested information. 
-  * Confirming the completion of a flow or cancelling out of it.
+- Triggering an action  
+- Enabling a “final” action  
+- Progressing or regressing a user through a step in a flow
+- Submitting requested information  
+- Confirming the completion of a flow or cancelling out of it
 
 ### Don't use when
 
-  * Navigating to another page on a site. Instead, use Call-to-action.
-  * Taking a user to a different part within the same page. Instead, use Link.
+- Navigating to another page on a site
+- Taking users to a different part within the same page. Instead, use [Links](/components/link) component
 
-## Visual language
-Buttons should be self-contained visual elements, typically a form of rectangle, that encloses text, iconography, or both. Hierarchy of importance is emphasized and delineated by using primary and secondary buttons. These button types should utilize visual and spatial cues to communicate their importance within that hierarchy, such as boldness of color/value choices and order of presentation such as left-to-right or top-to-bottom arrangements.
+## Foundations
 
-Visual specs for small, medium and large buttons.
+- Change the button size when:
+  - Medium - default size
+  - Small - for supplemental user actions such as product comparison or filter on product pages
+  - Large - XS grid with full breakpoint width; in mobile version. Also, for &quot;Add to cart&quot; on product pages or CTA buttons on campaign pages
+- When stacking buttons vertically:
+  - Align left borders
+  - Display all with the same width
+  - Separate each by stack-1-x spacing
+  <cdr-img :src="$withBase(`/button/Spec__Button_Vertical_Spacing_16-4.png`)"/>
+- When arranging buttons horizontally:
+  - Align top borders
+  - Display all with the same height
+  - Separate each by standard inline-1-x spacing
+  <cdr-img :src="$withBase(`/button/Spec__Button_Horizontal_Spacing_16-9.png`)"/>
+- When grouping buttons, match button sizes either horizontally or vertically
 
-## Behavior
-These are guidelines for when and how to use the Button component.
+<do-dont :examples="$page.frontmatter.vertical" />
+
+<do-dont :examples="$page.frontmatter.horizontal" />
 
 ## Content
 
-  * Clearly and accurately label buttons.
-  * Lead with strong, actionable verbs.
-  * Depending on the use case, buttons may contain a label and/or an icon.
-  * All button labels are sentence case, with only the first word in a phrase and any proper nouns capitalized.
-  * Button labels should be as short as possible and communicate the action that will occur when the user touches them.
+- Clearly and concisely label with 1–3 words and fewer than 20 characters, including spaces
+  <do-dont :examples="$page.frontmatter.label" />
+- Start with a verb, if possible. Labels must be action-oriented and set expectations for what the user will see next
+- Never repeat the context of a label when the context is already clear. For example, for a &quot;Save&quot; button, do not expand to &quot;Save Account Information&quot;
+- Use sentence case, not all caps, title caps or all lowercase
+  <do-dont :examples="$page.frontmatter.case" />
+
+  <do-dont :examples="$page.frontmatter.noun" />
+
+
+
+
+## Behavior
+
+### Choosing a Button or Link
+
+- When making decisions about using this component styled as a link or a button, consider the following:
+
+| **Links**                                                                                           | **Buttons**                                                                          |
+| --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Answers the question, "Where can I go"                                                              | Answers the question, "What can I do"                                                |
+| Search engine crawlers can follow anchors for links (`<a>`)                                         | Search engine crawlers **cannot** follow links that are submitted by input or button |
+| Default keyboard behavior is triggered using the Enter key                                          | Default keyboard behavior is triggered using the Space or Enter key                  |
+| **Cannot be disabled** like buttons but can be made inert with tabindex="-1" and aria-hidden="true" | Can be disabled with disabled attribute                                              |
+
+- Apply the following use cases when deciding when to use links as anchors or buttons:
+
+| **Links**                                                                                           | **Buttons**                                                                          |
+| --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Navigating user to a new page or view                                                               | Toggling a display to full screen                                                    |
+| Changing the URL                                                                                    | Opening a modal window                                                               |
+| Causing a browser redraw/refresh                                                                    | Triggering a popup menu                                                              |
+| Supporting internal page jumps                                                                      | Can be disabled with disabled attribute                                              |
 
 ## Accessibility
 
-  * Display a visible focus state when users tab to the button.
-  * For icon-only buttons, provide engineers with UI text to be used inside the `<button>` element for screen readers. This text is defined in the `<title>` tag for SVG files or `<ALT>` tag.
-  * If needed, a longer description for the icon (or SVG element) that contains its purpose or provides additional and/or clarifying information can be provided to engineers. This text will appear in the `<desc>` tag and is very helpful to users of assistive technology.
-Modifiers can be combined 1 from each grouping.
-  * If the SVG is purely decorative or has supporting text, define UI text as “NONE” because no UI text needs to be provided for `<title>` or `<desc>` or `<alt>` tags. 
+  - For icon-only buttons, provide aria-label text that describes what the button does.
+  - Apply keyboard interaction patterns as described on [REI universal design and accessibility: Buttons](https://confluence.rei.com/display/accessibility/Buttons)
+  - This component has no specific WCAG compliance attributes built into the control. It is possible to define this component as a link or button. Both types can: 
+    - Receive keyboard focus by default
+    - Enable states: Focus, Hover, and Active 
 
   </cdr-doc-table-of-contents-shell>
 </template>
