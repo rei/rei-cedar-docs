@@ -39,7 +39,8 @@ module.exports = {
         items: [
           { text: "Headings", link: "/components/heading/" },
           { text: "Link", link: "/components/link/" },
-          { text: "Paragraph", link: "/components/paragraph/" }
+          { text: "Paragraph", link: "/components/paragraph/" },
+          { text: "Breadcrumb", link: "/components/breadcrumb/" }
         ]
       },
       {
