@@ -1,9 +1,9 @@
 ---
 {
-   "title": "Link",
+   "title": "Breadcrumb",
    "layout": "LayoutComponent",
-   "summary": "Clickable text element to navigate to page section, another page or open an overlaid window such as modal dialog or popover.",
-   "title_metadata": "Hyperlink, Anchor, CdrButton, CdrLink",
+   "summary": "Navigation to reveal a page’s location within the site hierarchy.",
+   "title_metadata": "Breadcrumb, cdrBreadcrumb",
 	  "standalone": [
       {
         "type": "do",
@@ -36,7 +36,7 @@
         "caption": "apply different visual treatments for hyperlinks."
       }
     ],
-  "name": "CdrLink",
+  "name": "CdrBreadcrumb",
   "versions": [
     {
       "api": {
@@ -89,78 +89,29 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
 
-## Basic
+## Default
 
-Display within body copy for articles, hub cards, footer, or recommendations.
+Complete breadcrumb string with all items visible.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9" >
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/breadcrumb" sandbox-href="https://codesandbox.io/s/jnv1rko1z9" >
 
 ```html
-  <cdr-link href="https://www.rei.com/learn/expert-advice/ten-essentials.html">the Ten Essentials</cdr-link>
+  <cdr-breadcrumb :truncation-enabled="false" :items="[{item:{url:'', name: 'Snowboarding'}},{item:{url:'', name: 'Snowboard Clothing'}},{item:{url:'', name: 'Kids\' Snowboard Clothing'}}]"/>
 ```
 
 </cdr-doc-example-code-pair>
 
-## Standalone
+## Truncated
 
-Display independently with a call to action. Examples are remove filters, find a store, or view related products.
+Long breadcrumbs shortened to display the last 2 links in the trail, with hidden links indicated by ellipsis.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/breadcrumb" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
 
 ```html
-  <cdr-link href="https://www.rei.com" modifier="standalone">
-    View all REI Co-op Backpacking Tents
-  </cdr-link>
+    <cdr-breadcrumb :items="[{item:{url:'', name: 'Kids\' Snowboard Clothing Accessories'}},{item:{url:'', name: 'Kids\' Snowboard Gloves and Mittens'}}]"/>
 ```
 
 </cdr-doc-example-code-pair>
-
-## Icon on left
-
-Display icon on left of link message.
-
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
-
-```html
-  <div>
-    <cdr-icon-sprite />
-    <cdr-link tag="button">
-      <!-- Using the sprite -->
-      <cdr-icon
-          use="#shipping"
-          modifier="inherit-color"
-          class="cdr-inline-left--sm"
-      />
-      This item ships for FREE!
-    </cdr-link>
-  </div>
-```
-
-</cdr-doc-example-code-pair>
-
-## Icon on right
-
-Display icon on right of link message.
-
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
-
-```html
-  <div>
-    <cdr-icon-sprite />
-      <cdr-link>
-        Visit site
-        <!-- Using the sprite -->
-        <cdr-icon
-            use="#external-link"
-            modifier="inherit-color"
-            class="cdr-inline-right--sm"/>
-      </cdr-link>
-  </div>
-```
-
-</cdr-doc-example-code-pair>
-</cdr-doc-table-of-contents-shell>
-</template>
 
 <template slot="Design Guidelines">
 <cdr-doc-table-of-contents-shell
