@@ -46,6 +46,7 @@ module.exports = {
       {
         text: "About Cedar",
         items: [
+          { text: "Cedar Design System", link: "/about/cedar"},
           { text: "Browser Support", link: "/about-cedar/browser-support/" }
         ]
       }
