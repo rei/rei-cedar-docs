@@ -44,9 +44,10 @@ module.exports = {
         ]
       },
       {
-        text: "About Cedar",
+        text: "About",
         items: [
-          { text: "Browser Support", link: "/about-cedar/browser-support/" }
+          { text: "Cedar Design System", link: "/about/cedar-design-system/"},
+          { text: "Browser Support", link: "/about/browser-support/" }
         ]
       }
     ]
