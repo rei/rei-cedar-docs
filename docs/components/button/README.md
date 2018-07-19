@@ -10,35 +10,39 @@
       "href": "#"
     }
   ],
-  "name": "CdrButton",
   "versions": [
     {
-      "api": {
-        "props": [
-          {
-            "name": "size",
-            "type": "string",
-            "default": "\"medium\"",
-            "description": "Sets a static size for the button, which scales padding and text size. {small, medium, large}"
-          },
-          {
-            "name": "responsiveSize",
-            "type": "array",
-            "default": "n/a",
-            "description": "Render a specific button size at a specific breakpoint. Takes precedence over size and fullWidth.\nFormat is size@breakpoint (ex: large@sm)."
+      "components": [
+        {
+          "name": "CdrButton",
+          "api": {
+            "props": [
+              {
+                "name": "size",
+                "type": "string",
+                "default": "\"medium\"",
+                "description": "Sets a static size for the button, which scales padding and text size. {small, medium, large}"
+              },
+              {
+                "name": "responsiveSize",
+                "type": "array",
+                "default": "n/a",
+                "description": "Render a specific button size at a specific breakpoint. Takes precedence over size and fullWidth.\nFormat is size@breakpoint (ex: large@sm)."
+              }
+            ],
+            "slots": [
+              {
+                "name": "default",
+                "description": "innerHTML on the inside of the button component"
+              },
+              {
+                "name": "test",
+                "description": "testing multiple slot documentation"
+              }
+            ]
           }
-        ],
-        "slots": [
-          {
-            "name": "default",
-            "description": "innerHTML on the inside of the button component"
-          },
-          {
-            "name": "test",
-            "description": "testing multiple slot documentation"
-          }
-        ]
-      },
+        }
+      ],
       "version": "0.1.0"
     }
   ]
@@ -170,11 +174,11 @@ Modifiers can be combined 1 from each grouping.
 # Properties
 ### Props
 
-<cdr-doc-api type="prop" />
+<cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
 ### Slots 
 
-<cdr-doc-api type="slot" />
+<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 </template>
 
 <template slot="History">

@@ -36,49 +36,53 @@
         "caption": "apply different visual treatments for hyperlinks."
       }
     ],
-  "name": "CdrLink",
   "versions": [
     {
-      "api": {
-        "props": [
-          {
-            "name": "tag",
-            "type": "string",
-            "default": "\"a\"",
-            "description": "Enables user to set appropriate HTML element tag. {a, button}"
-          },
-          {
-            "name": "modifier",
-            "type": "string",
-            "default": "N/A",
-            "description": "Modifier allows the user to pass a style variant to this component  Possible values: standalone"
-          },
-          {
-            "name": "href",
-            "type": "string",
-            "default": "\"#\"",
-            "description": "Requires tag to be set to “a”. Sets URL to cdr-link href property"
+      "components": [
+        {
+          "name": "CdrLink",
+          "api": {
+            "props": [
+              {
+                "name": "tag",
+                "type": "string",
+                "default": "\"a\"",
+                "description": "Enables user to set appropriate HTML element tag. {a, button}"
+              },
+              {
+                "name": "modifier",
+                "type": "string",
+                "default": "N/A",
+                "description": "Modifier allows the user to pass a style variant to this component  Possible values: standalone"
+              },
+              {
+                "name": "href",
+                "type": "string",
+                "default": "\"#\"",
+                "description": "Requires tag to be set to “a”. Sets URL to cdr-link href property"
+              }
+            ],
+            "slots": [
+              {
+                "name": "default",
+                "description": "innerHTML on the inside of the anchor component"
+              }
+            ],
+            "installation": [
+              {
+                "name": "@rei/cdr-link",
+                "type": "Node module package",
+                "description": "Import the component into your project"
+              },
+              { 
+                "name": "cdr-link.css", 
+                "type": "css", 
+                "description": "Component specific styles" 
+              }
+            ]
           }
-        ],
-        "slots": [
-          {
-            "name": "default",
-            "description": "innerHTML on the inside of the anchor component"
-          }
-        ],
-        "installation": [
-          {
-            "name": "@rei/cdr-link",
-            "type": "Node module package",
-            "description": "Import the component into your project"
-          },
-          { 
-            "name": "cdr-link.css", 
-            "type": "css", 
-            "description": "Component specific styles" 
-          }
-        ]
-      },
+        }
+      ],
       "version": "0.1.0"
     }
   ]
@@ -262,11 +266,11 @@ Display icon on right of link message.
 
 ## Properties
 
-<cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].api.props" />
+<cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
 ## Slots
 
-<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].api.slots" />
+<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
 ## Installation
 

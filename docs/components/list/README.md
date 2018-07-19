@@ -2,25 +2,29 @@
 {
   "title": "List",
   "layout": "LayoutComponent",
-  "name": "CdrList",
   "versions": [
     {
-      "api": {
-        "props": [
-          {
-            "name": "tag",
-            "type": "string",
-            "default": "\"ul\"",
-            "description": "Tag accepts a user defined element and expects either: 'ul' = Unordered List or 'ol' = Ordered List."
+      "components": [
+        {
+          "name": "CdrList",
+          "api": {
+            "props": [
+              {
+                "name": "tag",
+                "type": "string",
+                "default": "\"ul\"",
+                "description": "Tag accepts a user defined element and expects either: 'ul' = Unordered List or 'ol' = Ordered List."
+              }
+            ],
+            "slots": [
+              {
+                "name": "default",
+                "description": "MISSING DESCRIPTION"
+              }
+            ]
           }
-        ],
-        "slots": [
-          {
-            "name": "default",
-            "description": "MISSING DESCRIPTION"
-          }
-        ]
-      },
+        }
+      ],
       "version": "0.1.0"
     }
   ]
