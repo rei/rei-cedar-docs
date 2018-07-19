@@ -1,5 +1,5 @@
 module.exports = {
-  base: process.env.NODE_ENV === 'production' ? "/rei-cedar-docs/" : "/",
+  base: process.env.NODE_ENV === "production" ? "/rei-cedar-docs/" : "/",
   title: "REI CO-OP Design System",
   description: "A demo documentation using VuePress",
   head: [
@@ -26,8 +26,9 @@ module.exports = {
       {
         text: "Getting Started",
         items: [
+          { text: "As a Designer", link: "/getting-started/as-a-designer/" },
           { text: "As a Developer", link: "/getting-started/as-a-developer/" },
-          { text: "As a Designer", link: "/getting-started/as-a-designer/" }
+          { text: "As an Adopter", link: "/getting-started/as-an-adopter/" }
         ]
       },
       {
@@ -37,15 +38,17 @@ module.exports = {
       {
         text: "Components",
         items: [
+          { text: "Accordion", link: "/components/accordion/" },
           { text: "Headings", link: "/components/heading/" },
           { text: "Link", link: "/components/link/" },
           { text: "Paragraph", link: "/components/paragraph/" }
         ]
       },
       {
-        text: "About Cedar",
+        text: "About",
         items: [
-          { text: "Browser Support", link: "/about-cedar/browser-support/" }
+          { text: "Cedar Design System", link: "/about/cedar-design-system/"},
+          { text: "Browser Support", link: "/about/browser-support/" }
         ]
       }
     ]
