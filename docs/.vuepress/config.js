@@ -39,6 +39,7 @@ module.exports = {
         items: [
           { text: "Headings", link: "/components/heading/" },
           { text: "Link", link: "/components/link/" },
+          { text: "Button", link: "/components/button/" },
           { text: "Paragraph", link: "/components/paragraph/" }
         ]
       },

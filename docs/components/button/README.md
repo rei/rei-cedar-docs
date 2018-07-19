@@ -2,8 +2,8 @@
 {
   "title": "Button",
   "layout": "LayoutComponent",
-  "summary": "Buttons are used to invoke an event and communicate the action that will occur.",
-  "title_metadata": "Also known as a Call-to-Action (CTA)",
+  "summary": "Invoke and communicate an action that will occur.",
+  "title_metadata": "Button, CdrButton",
   "vertical": [
       {
         "type": "do",
@@ -96,26 +96,80 @@
       "api": {
         "props": [
           {
-            "name": "size",
+            "name": "tag",
+            "type": "String",
+            "default": "button",
+            "description": "Render CdrButton as a <button> or <a> element. When using a value of a, this element renders as an anchor link. Possible values: { button, a }"
+          },
+          {
+            "name": "type",
             "type": "string",
-            "default": "\"medium\"",
-            "description": "Sets a static size for the button, which scales padding and text size. {small, medium, large}"
+            "default": "button",
+            "description": "Set the button type. Possible values: { button, submit, reset}"
+          },
+          {
+            "name": "onClick",
+            "type": "Function",
+            "default": "Return null",
+            "description": "Add custom click actions."
+          },
+          {
+            "name": "fullWidth",
+            "type": "Boolean",
+            "default": "false",
+            "description": "Set button width to 100%. Setting it to true will set the button width to 100% of the parent container. Use the full-width prop with the size prop to control top and bottom padding."
+          },
+          {
+            "name": "size",
+            "type": "String",
+            "default": "medium",
+            "description": "Set the button size. Possible values: { small, medium, large }"
           },
           {
             "name": "responsiveSize",
-            "type": "array",
+            "type": "Array",
             "default": "n/a",
-            "description": "Render a specific button size at a specific breakpoint. Takes precedence over size and fullWidth.\nFormat is size@breakpoint (ex: large@sm)."
-          }
+            "description": "Renders an icon-only button. Overrides size and responsiveSize props."
+          },
+          {
+            "name": "iconOnly",
+            "type": "Boolean",
+            "default": "false",
+            "description": "Set the button size at different responsive breakpoints. Breakpoints are expressed as t-shirt sizing with values: xs, sm, md, and lg. Example: [‘large@xs’, ‘small@lg’]"
+          },
+          {
+            "name": "onDark",
+            "type": "Boolean",
+            "default": "false",
+            "description": "Renders an icon-only button with a light fill color for use on dark backgrounds. iconOnly must also be true."
+          },
+          {
+            "name": "modifier",
+            "type": "String",
+            "default": "n/a",
+            "description": "Allows style variants to be defined."
+          }                          
         ],
         "slots": [
           {
             "name": "default",
-            "description": "innerHTML on the inside of the button component"
+            "description": "Slot for button text. Leave empty if icon-only"
           },
           {
-            "name": "test",
-            "description": "testing multiple slot documentation"
+            "name": "icon",
+            "description": "Slot for the icon"
+          }
+        ],
+        "installation": [
+          {
+            "name": "@rei/cdr-button",
+            "type": "Node module package",
+            "description": "Import the component into your project"
+          },
+          {
+            "name": "cdr-button.css",
+            "type": "Style sheet",
+            "description": "Component specific styles"
           }
         ]
       },
@@ -130,12 +184,13 @@
 <cdr-doc-table-of-contents-shell tab-name="Overview">
 
 ## Primary
-Use primary button to emphasize an action to complete a form or more forward in a process such as "Submit" or "Add to cart".
 
-<cdr-doc-example-code-pair repository-href="http://github.com" sandbox-href="http://github.com">
+Use primary buttons for actions to complete a task or move forward in a process such as &quot;Add to cart.&quot; There is only 1 primary action per major page section.
+
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/master/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
 
 ```html
-  <cdr-button>Button more Text</cdr-button>
+  <cdr-button>Add to cart</cdr-button>
 ```
 
 </cdr-doc-example-code-pair>
@@ -143,42 +198,87 @@ Use primary button to emphasize an action to complete a form or more forward in 
 
 
 ## Secondary
-Use secondary button for all actions that do not move the user to the next step or are additional user actions such as “Add to wish list” or “Load more”. There should be only 1 primary action per major page section.
 
-<cdr-doc-example-code-pair>
+Use secondary buttons for all actions that do not move the user to the next step or are additional user actions such as &quot;Add to wish list&quot; or &quot;Find a campout near you.&quot;
+
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/master/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
 
 ```html
-  <cdr-button class="cdr-button--secondary">Button Text</cdr-button>
+  <cdr-button class="cdr-button--secondary">Add to wish list</cdr-button>
 ```
 
 </cdr-doc-example-code-pair>
 
-## Button with icon
-Most common icon only button is for closing a modal or accordion panel.
+## Text and Icon
 
-<cdr-doc-example-code-pair>
+Pair an icon with text to improve recognition about an object or action.
 
-```html
-  <cdr-button>Button Text</cdr-button>
-```
-
-</cdr-doc-example-code-pair>
-
-
-## Size
-Change the button size based on where button is used
-
-<cdr-doc-example-code-pair>
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/master/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
 
 ```html
   <div>
-    <cdr-button size="small">Add to cart</cdr-button>
-    <cdr-button>Add to cart</cdr-button>
-    <cdr-button size="large">Add to cart</cdr-button>
+    <cdr-icon-sprite />
+    <cdr-button
+          modifier="secondary"
+          >
+          <template name="icon">
+            <cdr-icon
+              use="#play-stroke"
+              class="cdr-button__icon"
+              modifier="inherit-color"
+            />
+          </template>
+          Play video
+    </cdr-button>
   </div>
 ```
 
 </cdr-doc-example-code-pair>
+
+
+## Icon Only
+
+Use to visually communicate an object or action in limited space. Include alternative text to describe what button does.
+
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/master/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
+
+```html
+  <div>
+    <cdr-icon-sprite />
+    <cdr-button
+          :icon-only="true"
+          aria-label="More information about icon"
+        >
+          <template name="icon">
+            <cdr-icon
+              class="cdr-button__icon"
+              use="#question-fill"
+              modifier="inherit-color"
+          />
+          </template>
+
+    </cdr-button>
+  </div>
+```
+
+</cdr-doc-example-code-pair>
+
+## Sizing
+
+Change the button size based on where button is used. Default size is medium. Small is used for supplemental user actions such as product comparison or filter. Large is used for &quot;Add to cart&quot; on product pages or Call to Action.
+
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/master/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
+
+```html
+    <div>
+      <cdr-button size="small">Add to cart</cdr-button>
+      <cdr-button>Add to cart</cdr-button>
+      <cdr-button size="large">Add to cart</cdr-button>
+    </div>
+```
+
+</cdr-doc-example-code-pair>
+
 </cdr-doc-table-of-contents-shell>
 </template>
 
@@ -223,7 +323,7 @@ Change the button size based on where button is used
 - Change the button size when:
   - Medium - default size
   - Small - for supplemental user actions such as product comparison or filter on product pages
-  - Large - XS grid with full breakpoint width; in mobile version. Also, for &quot;Add to cart&quot; on product pages or CTA buttons on campaign pages
+  - Large - XS grid with full breakpoint width; in mobile version. Also, for &quot;Add to cart&quot; on product pages or Call to Action on campaign pages
 - When stacking buttons vertically:
   - Align left borders
   - Display all with the same width
@@ -242,17 +342,13 @@ Change the button size based on where button is used
 
 ## Content
 
-- Clearly and concisely label with 1–3 words and fewer than 20 characters, including spaces
+  - Clearly and concisely label with 1–3 words and fewer than 20 characters, including spaces
   <do-dont :examples="$page.frontmatter.label" />
-- Start with a verb, if possible. Labels must be action-oriented and set expectations for what the user will see next
-- Never repeat the context of a label when the context is already clear. For example, for a &quot;Save&quot; button, do not expand to &quot;Save Account Information&quot;
-- Use sentence case, not all caps, title caps or all lowercase
+  - Start with a verb, if possible. Labels must be action-oriented and set expectations for what the user will see next
+  - Never repeat the context of a label when the context is already clear. For example, for a &quot;Save&quot; button, do not expand to &quot;Save Account Information&quot;
+  - Use sentence case, not all caps, title caps or all lowercase
   <do-dont :examples="$page.frontmatter.case" />
-
   <do-dont :examples="$page.frontmatter.noun" />
-
-
-
 
 ## Behavior
 
@@ -264,7 +360,7 @@ Change the button size based on where button is used
 | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | Answers the question, "Where can I go"                                                              | Answers the question, "What can I do"                                                |
 | Search engine crawlers can follow anchors for links (`<a>`)                                         | Search engine crawlers **cannot** follow links that are submitted by input or button |
-| Default keyboard behavior is triggered using the Enter key                                          | Default keyboard behavior is triggered using the Space or Enter key                  |
+| Default keyboard behavior is triggered using the `Enter` key                                          | Default keyboard behavior is triggered using the `Space` or `Enter` key                  |
 | **Cannot be disabled** like buttons but can be made inert with tabindex="-1" and aria-hidden="true" | Can be disabled with disabled attribute                                              |
 
 - Apply the following use cases when deciding when to use links as anchors or buttons:
@@ -280,29 +376,230 @@ Change the button size based on where button is used
 
   - For icon-only buttons, provide aria-label text that describes what the button does.
   - Apply keyboard interaction patterns as described on [REI universal design and accessibility: Buttons](https://confluence.rei.com/display/accessibility/Buttons)
-  - This component has no specific WCAG compliance attributes built into the control. It is possible to define this component as a link or button. Both types can: 
+  - This component has no specific WCAG compliance attributes built into the control. It is possible to define this component as a link or button. Both types can:
     - Receive keyboard focus by default
-    - Enable states: Focus, Hover, and Active 
+    - Enable states: Focus, Hover, and Active
+
+## Resources
+
+  - [CDS UI Toolkit](/getting-started/as-a-designer/)
+  - WebAIM: [Keyboard Accessibility](https://webaim.org/techniques/keyboard/)
+  - Web Accessibility Guidelines v1.0 (Carnegie Museum of Pittsburgh): [SVG](http://web-accessibility.carnegiemuseums.org/code/svg/)
+  - WebAIM [WCAG 2.0 Checklist](https://webaim.org/standards/wcag/checklist)
 
   </cdr-doc-table-of-contents-shell>
 </template>
 
 <template slot="API">
 
-# Properties
-### Props
+### Properties
 
 <cdr-doc-api type="prop" />
 
-### Slots 
+## Slots
 
 <cdr-doc-api type="slot" />
+
+## Modifiers
+
+Following are modifiers for `cdrButton` component:
+- Secondary
+
+## Installation
+
+Resources are available within the [cdr-button package:](https://www.npmjs.com/search?q=cdr-button)
+
+<cdr-doc-api type="installation" />
+
+- Component: `@rei/cdr-button`
+- Component styles: `cdr-button.css`
+
+To incorporate the required assets for a component, use the following steps:
+
+### 1. Install using NPM
+
+Install the `cdr-button` package using `npm` in your terminal:
+
+_Terminal_
+
+```terminal
+    npm i -s @rei/cdr-button
+```
+### 2. Import dependencies
+
+_main.js_
+
+```javascript
+// import your required css.
+import "@rei/cdr-link/dist/cdr-button.css";
+```
+
+### 3. Add component to a template
+
+In this example we’ll create a medium-sized primary button, which is the default.
+
+_local.vue_
+
+```vue
+<template>
+  <cdr-button
+    type="button"
+  >
+    Add to cart
+  </cdr-button>
+</template>
+
+<script>
+import { CdrButton } from '@rei/cdr-button';
+export default {
+  ...
+  components: {
+     CdrButton  
+  }
+}
+</script>
+```
+
+## Usage
+
+### Size, responsive size, and full-width sizing props
+
+The below example uses both the `size` and `responsive-size` props. This button’s size is small, but it will become a large button at the `xs` and `sm` breakpoints.
+
+```vue
+<template>
+  <cdr-button
+    size="small"
+    :responsive-size="[‘large@xs’, ‘large@sm’]"
+  >
+    Add to cart
+  </cdr-button>
+</template>
+```
+
+### Composing with icons
+
+`cdr-button` can be used with the icon component from the @rei/cdr-icon package.
+
+### Text and Icon 
+
+To scale Cedar icons appropriately, include the `cdr-button__icon` class with any icon component. The `size` prop scales both the icon and button. 
+
+In the below example, a Download button is rendered as a button with icon and text using `cdr-icon` and the icon sprite.
+
+```vue
+<template>
+  <cdr-button>
+    <template name="icon">
+      <cdr-icon
+        class="cdr-button__icon"
+        use="#download"
+      />
+    </template>
+    Download
+  </cdr-button>
+</template>
+
+<script>
+import { CdrButton } from '@rei/cdr-button';
+import { CdrIcon } from '@rei/cdr-icon;
+export default {
+  ...
+  components: {
+     CdrButton,
+     CdrIcon,  
+  }
+}
+</script>
+```
+
+### Icon Only
+
+Use the following props to modify `cdr-button`:
+
+- Default slot must be empty. If text is present in default slot, the text will render  
+- `Size` prop is disable when `icon-only` prop is true
+- For the SVG files:
+  - If the `fill` color is dark, assign true to the `on-dark` prop
+  - `On-dark` prop only works if `icon-only` prop is also true
+- Add `aria-label` text to describe the button’s action when clicked or tapped
+
+```vue
+<template>
+  <cdr-button
+    :icon-only="true"
+    :on-dark="true"
+    aria-label="Complete this step"
+  >
+    <template name="icon">
+      <icon-check-lg class="cdr-button__icon" />
+    </template>
+  </cdr-button>
+</template>
+```
+
+### Click Actions
+
+Use the `on-click` prop to attach custom actions and event handling.
+
+```vue
+<template>
+  <cdr-button
+    :on-click="greet"
+  >
+    Greet
+  </cdr-button>
+</template>
+
+<script>
+export default {
+  ...
+  methods: {
+    greet() {
+      console.log(‘Hello there’);
+    }
+  }
+}
+</script>
+```
+
+### CdrCloseButton & CdrPlayButton
+
+The cdr-button package includes two specific icon-only variants. CdrCloseButton and CdrPlayButton include their respective icons and aria-label text for accessibility.
+
+```vue
+<template>
+  <cdr-close-button />
+</template>
+
+<script>
+import { CdrCloseButton } from '@rei/cdr-button';
+
+export default {
+  ...
+  components: {
+     CdrCloseButton  
+  }
+}
+</script>
+```
+
+## Accessibility
+
+- Cdr-button renders as a button or anchor:
+  - Select the semantically correct element, which will ensure that screen readers have correct instructions for how to interact with the component	
+  - Use cdr-link to make a button that looks like a link
+  - Do not use div or input elements 
+- Do not add role=”button” to cdr-button
+- Icon-only buttons require aria-label text since only the icon is visible
+
 </template>
 
 <template slot="History">
 
 # Last updated
-June 19, 2018
+
+July 19, 2018
 
 # Contributors
 
