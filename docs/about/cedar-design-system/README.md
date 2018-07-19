@@ -7,14 +7,11 @@
 }
 ---
 
+<cdr-doc-table-of-contents-shell>
+
 # Cedar Design System
 
 Cedar is REI’s Design System: a foundational tool built to serve the design and engineering of digital products. 
-
-[in automated Right Rail page navigation]
-About Cedar
-Community
-Vision & Goals
 
 ## About Cedar
 
@@ -50,3 +47,5 @@ As a future-friendly foundation for REI’s digital portfolio, Cedar is an inter
 - Streamline time to market by increasing the speed of prototyping and development
 - Establish shared processes and governance
 - Allow better cross-functional collaboration with a common language and standards
+
+</cdr-doc-table-of-contents-shell>
