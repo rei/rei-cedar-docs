@@ -35,7 +35,7 @@
           <div>
             <h2 class="home-heading">Getting Started</h2>
             <p class="home-subheading">Learn how to start using Cedar components with handy onboarding guides.</p>
-            <cdr-row cols="auto" justify="around">
+            <cdr-row cols="auto" justify="around left@md">
               <cdr-col>
                 <cdr-button
                   tag="a"
