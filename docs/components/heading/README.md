@@ -1,50 +1,54 @@
 ---
 {
-   "title": "Headings",
-   "layout": "LayoutComponent",
-   "summary": "Used as titles to create hierarchical information structure within a page layout.",
-   "title_metadata": "Heading, cdrText",
-	  "minimize": [
-      {
-        "type": "do",
-        "image": "heading/headings_text_do.png",
-        "ratio": "4-3",
-        "alt": "Image showing proper link usage",
-        "caption": "use heading levels to define hierarchical information."
-      },
-      {
-        "type": "dont",
-        "image": "heading/headings_text_dont.png",
-        "ratio": "4-3",
-        "alt": "Image showing mixed button sizes",
-        "caption": "use heading tag for visual results. Instead use heading modifiers."
-      }
-    ],
-  "name": "CdrLink",
+  "title": "Headings",
+  "layout": "LayoutComponent",
+  "summary": "Used as titles to create hierarchical information structure within a page layout.",
+  "title_metadata": "Heading, cdrText",
+  "minimize": [
+    {
+      "type": "do",
+      "image": "heading/headings_text_do.png",
+      "ratio": "4-3",
+      "alt": "Image showing proper link usage",
+      "caption": "use heading levels to define hierarchical information."
+    },
+    {
+      "type": "dont",
+      "image": "heading/headings_text_dont.png",
+      "ratio": "4-3",
+      "alt": "Image showing mixed button sizes",
+      "caption": "use heading tag for visual results. Instead use heading modifiers."
+    }
+  ],
   "versions": [
     {
-      "api": {
-        "props": [
-          {
-            "name": "tag",
-            "type": "string",
-            "default": "\"p\"",
-            "description": "Valid HTML tag"
-          },
-          {
-            "name": "modifier",
-            "type": "string",
-            "default": "N/A",
-            "description": "Modifier allows the user to pass a style variant to this component.  Possible values: display | display-static | heading-large | heading-large-static | heading-medium | heading-medium-static | heading-small | heading-small-static | subheading"
+      "components": [
+        {
+          "name": "CdrLink",
+          "api": {
+            "props": [
+              {
+                "name": "tag",
+                "type": "string",
+                "default": "\"p\"",
+                "description": "Valid HTML tag"
+              },
+              {
+                "name": "modifier",
+                "type": "string",
+                "default": "N/A",
+                "description": "Modifier allows the user to pass a style variant to this component.  Possible values: display | display-static | heading-large | heading-large-static | heading-medium | heading-medium-static | heading-small | heading-small-static | subheading"
+              }
+            ],
+            "slots": [
+              {
+                "name": "default",
+                "description": "innerHTML on the inside of the anchor component"
+              }
+            ]
           }
-        ],
-        "slots": [
-          {
-            "name": "default",
-            "description": "innerHTML on the inside of the anchor component"
-          }
-        ],
-      },
+        }
+      ],
       "version": "0.1.0"
     }
   ]
@@ -290,11 +294,11 @@ Responsive heading font sizes are the default for heading levels except subheadi
 
 ## Properties
 
-<cdr-doc-api type="prop" />
+<cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
 ## Slots
 
-<cdr-doc-api type="slot" />
+<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
 ## Installation
 

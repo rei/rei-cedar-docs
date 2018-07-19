@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="api-slot" v-for="(apiSlot, index) in $page.frontmatter.versions[0].api.slots" :key="apiSlot.text">
+    <div class="api-slot" v-for="(apiSlot, index) in this.$slots.default" :key="apiSlot.text">
       <cdr-row
         gutter="none"
       >
