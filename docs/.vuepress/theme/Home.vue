@@ -110,7 +110,7 @@
                     modifier="heading-small-static"
                     class="cdr-stack"
                   >Cedar Sketch UI toolkit</cdr-text>
-                  <cdr-link :href="$withBase('/getting-started/as-a-designer/')" modifier="standalone">Get the Sketch library</cdr-link>
+                  <cdr-link :href="$withBase('/getting-started/as-a-designer/')" modifier="standalone">Download the Sketch library</cdr-link>
                 </div>
               </cdr-col>
               <cdr-col span="3">
@@ -298,7 +298,7 @@ export default {
 }
 
 .adopt-text {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto $space-2-x;
 }
 </style>
