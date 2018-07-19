@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="api-event" v-for="(apiEvent, index) in $page.frontmatter.versions[0].api.events" :key="apiEvent.text">
+    <div class="api-event" v-for="(apiEvent, index) in this.$slots.default" :key="apiEvent.text">
       <cdr-row
         gutter="none"
       >

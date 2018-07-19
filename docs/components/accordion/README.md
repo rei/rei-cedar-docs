@@ -98,14 +98,15 @@ Accordions are built from two components, `cdr-accordion` and `cdr-accordion-ite
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].api.props" />
 
 #### cdr-accordion-item
-
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.related_components[0].versions[0].api.props" />
 
 ### Slots
 
 #### cdr-accordion
+<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].api.slots" />
 
 #### cdr-accordion-item
+<cdr-doc-api type="slot" :api-data="$page.frontmatter.related_components[0].versions[0].api.slots" />
 
 </cdr-doc-table-of-contents-shell>
 </template>

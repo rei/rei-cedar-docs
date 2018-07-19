@@ -262,11 +262,11 @@ Display icon on right of link message.
 
 ## Properties
 
-<cdr-doc-api type="prop" />
+<cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].api.props" />
 
 ## Slots
 
-<cdr-doc-api type="slot" />
+<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].api.slots" />
 
 ## Installation
 
