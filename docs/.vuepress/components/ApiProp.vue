@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="api-prop" v-for="(apiProp, index) in $page.frontmatter.versions[0].api.props" :key="apiProp.text">
+    <div class="api-prop" v-for="(apiProp, index) in this.$slots.default" :key="apiProp.text">
       <cdr-row
         gutter="none"
       >
@@ -42,7 +42,7 @@
 
 <script>
   export default {
-    name: 'ApiProp',
+    name: 'ApiProp'
   };
 </script>
 
