@@ -41,7 +41,8 @@ module.exports = {
           { text: "Accordion", link: "/components/accordion/" },
           { text: "Headings", link: "/components/heading/" },
           { text: "Link", link: "/components/link/" },
-          { text: "Paragraph", link: "/components/paragraph/" }
+          { text: "Paragraph", link: "/components/paragraph/" },
+          { text: "Grid", link: "/components/grid/" },
         ]
       },
       {
