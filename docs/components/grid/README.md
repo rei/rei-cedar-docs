@@ -1233,15 +1233,12 @@ This component follows WebAIM’s accessibility guidelines:
 
 <template slot="History">
 
-## 0.2.0
+## 1.0.0
 
 - Consolidate responsive props to single prop that accepts responsive values
 See full dev [changelog](https://github.com/rei/rei-cedar/blob/master/src/components/grid/CHANGELOG.md)
-
-## 0.1.0
-
 - Replaces `@rei/cdr-row` and `@rei/cdr-col` packages (both components are available from this package)
-- CSS Grid Grid css is contained in this package and not in `@rei/cdr-assets` core.css
+- The Grid css is contained in this package and not in `@rei/cdr-assets` core.css
 
 </template>
 </cdr-doc-tabs>
