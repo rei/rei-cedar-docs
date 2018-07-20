@@ -57,8 +57,8 @@
         "type": "do",
         "image": "button/button_case_do_4-3.png",
         "ratio": "4-3",
-        "alt": "Image showing buttons with proper text sentance case",
-        "caption": "use sentance case."
+        "alt": "Image showing buttons with proper text sentence case",
+        "caption": "use sentence case."
       },
       {
         "type": "dont",
