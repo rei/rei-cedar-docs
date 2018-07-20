@@ -233,19 +233,7 @@ Breadcrumbs provide context and a sense of place. This is especially important o
 </template>
 
 <template slot="API">
-<cdr-doc-table-of-contents-shell
-    :appended-nav-items="[
-      {
-        text: 'Related Components'
-      },
-      {
-        text: 'buttons',
-        href: '../button/'
-      },
-      {
-        text: 'CTA Buttons'
-      }
-    ]">
+<cdr-doc-table-of-contents-shell>
 
 ## Properties
 
@@ -287,7 +275,7 @@ _local.vue_
 
 ```vue
 <template>
-  <cdr-breadcrumb items="breadcrumbItems"/>
+  <cdr-breadcrumb :items="breadcrumbItems"/>
 </template>
 
 <script>
