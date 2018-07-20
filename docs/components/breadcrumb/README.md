@@ -125,7 +125,7 @@
 
 Complete breadcrumb string with all items visible.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/breadcrumb" sandbox-href="https://codesandbox.io/s/jnv1rko1z9" >
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/breadcrumb" sandbox-href="https://codesandbox.io/s/mm9qpyjojp" :backgroundToggle="false" >
 
 ```html
   <cdr-breadcrumb :truncation-enabled="false" :items="[{item:{url:'', name: 'Snowboarding'}},{item:{url:'', name: 'Snowboard Clothing'}},{item:{url:'', name: 'Kids\' Snowboard Clothing'}}]"/>
@@ -137,7 +137,7 @@ Complete breadcrumb string with all items visible.
 
 Long breadcrumbs shortened to display the last 2 links in the trail, with hidden links indicated by ellipsis.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/breadcrumb" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/breadcrumb" sandbox-href="https://codesandbox.io/s/mm9qpyjojp" :backgroundToggle="false">
 
 ```html
     <cdr-breadcrumb :items="[{item:{url:'', name: 'Kids\' Snowboard Clothing Accessories'}},{item:{url:'', name: 'Kids\' Snowboard Gloves and Mittens'}}]"/>
@@ -279,6 +279,7 @@ _main.js_
 ```javascript
 // import your required css.
 import "@rei/cdr-breadcrumb/dist/cdr-breadcrumb.css";
+```
 
 ### #3. Add component to a template
 
@@ -286,19 +287,17 @@ _local.vue_
 
 ```vue
 <template>
-  ...
-     <cdr-breadcrumb items="breadcrumbItems"/>
-  ...
+  <cdr-breadcrumb items="breadcrumbItems"/>
 </template>
 
 <script>
 import { CdrBreadcrumb } from '@rei/cdr-breadcrumb';
 export default {
-  ...
+
   components: {
      CdrBreadcrumb
   },
-  props: {
+  data () {
     breadcrumbItems: [
       {
         item: {
@@ -326,7 +325,7 @@ export default {
 
 ## Usage
 
-The ```breadcrumbItems``` property requires an array of objects, in the format shown above. Notable values include:
+The ```items``` property requires an array of objects, in the format shown above. Notable values include:
 
 - ```item.url (optional)``` string where the breadcrumb item segment links when clicked or tapped
 - ```item.name (required)```  string for the breadcrumb text item segment
