@@ -39,28 +39,33 @@
   "name": "CdrList",
   "versions": [
     {
-      "api": {
-        "props": [
-          {
-            "name": "tag",
-            "type": "string",
-            "default": "\"ul\"",
-            "description": "ul || ol"
-          },
-          {
-            "name": "modifier",
-            "type": "string",
-            "default": "N/A",
-            "description": "Modifier allows the user to pass a style variant to this component.  Possible values:  ordered | unordered | compact | inline"
-          }
-        ],
-        "slots": [
-          {
-            "name": "default",
-            "description": "innerHTML on the inside of the anchor component"
-          }
-        ],
+      "components": [
+      {
+        "name": "CdrList",
+        "api": {
+          "props": [
+            {
+              "name": "tag",
+              "type": "string",
+              "default": "\"ul\"",
+              "description": "Tag allows the user to define what html list root to use. Possible values: ul || ol"
+            },
+            {
+              "name": "modifier",
+              "type": "string",
+              "default": "N/A",
+              "description": "Modifier allows the user to pass a style variant to this component.  Possible values:  ordered | unordered | compact | inline"
+            }
+          ],
+          "slots": [
+            {
+              "name": "default",
+              "description": "innerHTML on the inside of the anchor component"
+            }
+          ],
+        },
       },
+      ],
       "version": "0.1.0"
     }
   ]
@@ -331,7 +336,7 @@ Every item in a list must:
     - Use the aria-label attribute to provide an explicit text description of list contents
     - Alternatively, the title attribute can provide an explicit text description of the list contents
 - This component has compliance with following WebAIM’s accessibility guidelines:
-  - [WCAG SC 1.3.1: Info and Relationships:](https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast) Cedar Design System provides ability to create structured lists. Lists are easier to navigate than simple tables 
+  - [WCAG SC 1.3.1: Info and Relationships:](https://www.w3.org/TR/WCAG20/#content-structure-separation) Cedar Design System provides ability to create structured lists. Lists are easier to navigate than simple tables 
 
 
 
@@ -352,11 +357,11 @@ Every item in a list must:
 
 ## Properties
 
-<cdr-doc-api type="prop" />
+<cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props"/>
 
 ## Slots
 
-<cdr-doc-api type="slot" />
+<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
 ## Installation
 
@@ -436,7 +441,9 @@ By default the `cdr-list` component renders as an unordered and undecorated "bar
 
 The `cdr-list` component has decoupled the semantic tags `<ul>` and `<ol>` from visual presentation.
 It is possible to render a semantic ordered list `<ol>` as a visually non styled or bulleted list using the `cdr-list` modifiers. With this decoupling, individual list items can contain a variety of HTML elements, including paragraphs, headings, form elements, and other (nested) lists. Ensure that content is structured and follows design guidelines.
-**Tag variants** 
+
+### Tag variants
+
 Following are different types of lists:
 
 - Unordered lists: 
@@ -482,7 +489,7 @@ Note that the tag itself does not determine display, a modifier must be added fo
   - Proper structure is used to provide a visual list, do not rely on indentation
   - Special characters are not used to create a list
 - This component has compliance with following WebAIM’s accessibility guidelines:
-  - [WCAG SC 1.3.1: Info and Relationships](https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast): Cedar Design System provides ability to create structured lists. Lists are easier to navigate than simple tables 
+  - [WCAG SC 1.3.1: Info and Relationships](https://www.w3.org/TR/WCAG20/#content-structure-separation): Cedar Design System provides ability to create structured lists. Lists are easier to navigate than simple tables 
 
 </cdr-doc-table-of-contents-shell>
 </template>
