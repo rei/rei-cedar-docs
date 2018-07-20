@@ -96,7 +96,10 @@ Display within body copy for articles, hub cards, footer, or recommendations.
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9" >
 
 ```html
-  <cdr-link href="https://www.rei.com/learn/expert-advice/ten-essentials.html">the Ten Essentials</cdr-link>
+  <cdr-link
+    href="https://www.rei.com/learn/expert-advice/ten-essentials.html">
+      the Ten Essentials
+  </cdr-link>
 ```
 
 </cdr-doc-example-code-pair>
@@ -119,7 +122,7 @@ Display independently with a call to action. Examples are remove filters, find a
 
 Display icon on left of link message.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
+<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
 
 ```html
   <div>
@@ -142,7 +145,7 @@ Display icon on left of link message.
 
 Display icon on right of link message.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
+<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
 
 ```html
   <div>
@@ -281,7 +284,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### #1. Install using NPM
 
-Install the `cdr-link` package using `npm` in your terminal:
+Install the `cdr-link` package using **npm** in your terminal:
 
 _Terminal_
 

@@ -300,7 +300,7 @@ Responsive heading font sizes are the default for heading levels except subheadi
 
 Resources are available within the [cdr-text package](https://www.npmjs.com/package/@rei/cdr-text):
 
-# 
+
 | Name          | Type                | Description                            |
 |:--------------|:--------------------|:---------------------------------------|
 | @rei/cdr-text | Node module package | Import the component into your project |
@@ -310,7 +310,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### #1. Install using NPM
 
-Install the `cdr-text` package using `npm` in your terminal:
+Install the `cdr-text` package using **npm** in your terminal:
 
 _Terminal_
 
