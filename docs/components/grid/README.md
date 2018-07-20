@@ -15,7 +15,7 @@
       },
     {
         "type": "dont",
-        "image": "grid/grid_consistent_do.png",
+        "image": "grid/grid_consistent_dont.png",
         "ratio": "4-3",
         "alt": "Image showing mixed grid usage",
         "caption": "mix this grid and other grid systems."
@@ -167,7 +167,7 @@
 
 Use rows and columns to lay out content by specifying equal-widths for all columns
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/grid" sandbox-href="https://codesandbox.io/s/18r9z588l9" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/grid" sandbox-href="https://codesandbox.io/s/18r9z588l" >
 
 ```html
 <div class="grid-example-wrap">
@@ -1018,7 +1018,7 @@ Defines nested columns (also known as isRow).
 
 ## Don’t use when
 
-- Presenting a multi-row columnar data display, such as features or specs of a product. Instead, use [Data Table](/components/table) component
+- Presenting a multi-row columnar data display, such as features or specs of a product. Instead, use the `Data Table` component
 
 ## Foundations
 
@@ -1079,9 +1079,9 @@ To build an effective responsive grid:
 - Design mobile first:
     - Use the XS (≤ 768px) viewport width applicable to small devices like a phone
     - Start with a one column layout and add columns as needed
-- Apply responsive rules to the grid and its contained content at relevant breakpoints including S (≥ 768px) and M (≥ 998px).
-- Complete and optimize the layout for the widest L (≥ 1232px) viewport width.
-- Inspect responsive displays “in between” each breakpoint for how content responds across the fluid spectrum.
+- Apply responsive rules to the grid and its contained content at relevant breakpoints including S (≥ 768px) and M (≥ 998px)
+- Complete and optimize the layout for the widest L (≥ 1232px) viewport width
+- Inspect responsive displays “in between” each breakpoint for how content responds across the fluid spectrum
 
 ## Accessibility
 
