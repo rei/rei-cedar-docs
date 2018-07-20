@@ -26,6 +26,7 @@
   "dependencies": {
     "@rei/cdr-accordion": "0.1.0-alpha.1",
     "@rei/cdr-assets": "^0.3.0",
+    "@rei/cdr-breadcrumb": "^1.0.0-beta.0",
     "@rei/cdr-button": "^0.1.0",
     "@rei/cdr-grid": "^1.0.0-next.beta.1",
     "@rei/cdr-icon": "^1.0.0-next.beta.1",
