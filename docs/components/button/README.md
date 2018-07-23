@@ -597,11 +597,20 @@ export default {
 
 <template slot="History">
 
-# Last updated
+## 0.1.0
 
-July 19, 2018
+### What's new
 
-# Contributors
+**CdrButton** component:
+
+- Renders using an anchor or button element
+- Includes secondary button style
+- Supports small, medium, large, responsive, and full-width sizes
+- Works with cdr-icon for icons in buttons and icon-only buttons
+- Cdr-button package includes Cdr-close-button and Cdr-play-button components
+
+Git commit reference [(1531860)](https://github.com/rei/rei-cedar/pull/436/commits/15318606570811a6d53549a5335e0943a3463971)
+
 
 </template>
 </cdr-doc-tabs>
