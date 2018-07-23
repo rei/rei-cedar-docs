@@ -131,13 +131,13 @@
             "name": "responsiveSize",
             "type": "Array",
             "default": "n/a",
-            "description": "Renders an icon-only button. Overrides size and responsiveSize props."
+            "description": "Set the button size at different responsive breakpoints. Breakpoints are expressed as t-shirt sizing with values: xs, sm, md, and lg. Example: [‘large@xs’, ‘small@lg’]"
           },
           {
             "name": "iconOnly",
             "type": "Boolean",
             "default": "false",
-            "description": "Set the button size at different responsive breakpoints. Breakpoints are expressed as t-shirt sizing with values: xs, sm, md, and lg. Example: [‘large@xs’, ‘small@lg’]"
+            "description": "Renders an icon-only button. Overrides size and responsiveSize props."
           },
           {
             "name": "onDark",
