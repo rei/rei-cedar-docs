@@ -603,7 +603,7 @@ export default {
 
 <template slot="History">
 
-## 0.1.0
+## 1.0.0
 
 ### What's new
 
