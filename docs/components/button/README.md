@@ -92,7 +92,10 @@
   ],
   "versions": [
     {
-      "api": {
+      "components": [
+        {
+        "name": CdrButton,
+        "api": {
         "props": [
           {
             "name": "tag",
@@ -171,7 +174,9 @@
             "description": "Component specific styles"
           }
         ]
-      },
+        }
+      }
+    ],
       "version": "0.1.0"
     }
   ]
@@ -234,7 +239,6 @@ Pair an icon with text to improve recognition about an object or action.
 
 </cdr-doc-example-code-pair>
 
-
 ## Icon Only
 
 Use to visually communicate an object or action in limited space. Include alternative text to describe what button does.
@@ -281,10 +285,9 @@ Change the button size based on where button is used. Default size is medium. Sm
 </cdr-doc-table-of-contents-shell>
 </template>
 
-
 <template slot="Design Guidelines">
   <cdr-doc-table-of-contents-shell
-    tab-name="Design Guidelines" 
+    tab-name="Design Guidelines"
     :appended-nav-items="[
       {
         text: 'Related Components'
@@ -390,6 +393,7 @@ Change the button size based on where button is used. Default size is medium. Sm
 </template>
 
 <template slot="API">
+<cdr-doc-table-of-contents-shell>
 
 ### Properties
 
@@ -397,11 +401,12 @@ Change the button size based on where button is used. Default size is medium. Sm
 
 ## Slots
 
-<cdr-doc-api type="slot" />
+<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
 ## Modifiers
 
 Following are modifiers for `cdrButton` component:
+
 - Secondary
 
 ## Installation
@@ -424,6 +429,7 @@ _Terminal_
 ```terminal
     npm i -s @rei/cdr-button
 ```
+
 ### 2. Import dependencies
 
 _main.js_
@@ -480,9 +486,9 @@ The below example uses both the `size` and `responsive-size` props. This button�
 
 `cdr-button` can be used with the icon component from the @rei/cdr-icon package.
 
-### Text and Icon 
+### Text and Icon
 
-To scale Cedar icons appropriately, include the `cdr-button__icon` class with any icon component. The `size` prop scales both the icon and button. 
+To scale Cedar icons appropriately, include the `cdr-button__icon` class with any icon component. The `size` prop scales both the icon and button.
 
 In the below example, a Download button is rendered as a button with icon and text using `cdr-icon` and the icon sprite.
 
@@ -586,12 +592,13 @@ export default {
 ## Accessibility
 
 - Cdr-button renders as a button or anchor:
-  - Select the semantically correct element, which will ensure that screen readers have correct instructions for how to interact with the component	
-  - Use cdr-link to make a button that looks like a link
-  - Do not use div or input elements 
+- Select the semantically correct element, which will ensure that screen readers have correct instructions for how to interact with the component
+- Use cdr-link to make a button that looks like a link
+- Do not use div or input elements
 - Do not add role=”button” to cdr-button
 - Icon-only buttons require aria-label text since only the icon is visible
 
+</cdr-doc-table-of-contents-shell>
 </template>
 
 <template slot="History">
@@ -609,7 +616,6 @@ export default {
 - Cdr-button package includes Cdr-close-button and Cdr-play-button components
 
 Git commit reference [(1531860)](https://github.com/rei/rei-cedar/pull/436/commits/15318606570811a6d53549a5335e0943a3463971)
-
 
 </template>
 </cdr-doc-tabs>
