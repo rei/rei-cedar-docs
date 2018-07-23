@@ -13,10 +13,13 @@ export default {
       validator: value => {
         return ['prop', 'slot', 'event', 'installation'].indexOf(value) > -1;
       }
+    },
+    apiData: {
+      type: Array,
+      required: false
     }
   },
   render: function(h, ctx) {
-
     function apiComponent () {
       let apiComp;
 
@@ -35,7 +38,7 @@ export default {
       return apiComp;
     }
 
-    return h(apiComponent())
+    return h(apiComponent(), ctx.props.apiData)
   }
 }
 </script>

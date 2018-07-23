@@ -90,7 +90,6 @@
       "href": "#"
     }
   ],
-  "name": "CdrButton",
   "versions": [
     {
       "api": {
@@ -394,7 +393,7 @@ Change the button size based on where button is used. Default size is medium. Sm
 
 ### Properties
 
-<cdr-doc-api type="prop" />
+<cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
 ## Slots
 
