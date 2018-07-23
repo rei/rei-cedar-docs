@@ -31,6 +31,10 @@ export default {
     flex-direction: column;
     min-height: 100vh;
   }
+  .cdr-doc-article-img {
+    border: 1px solid $partly-cloudy;
+    border-radius:  $radius-softer;
+  }
 
   .cdr-doc-article-layout__body {
     flex: 1 0 100%;

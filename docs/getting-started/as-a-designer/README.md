@@ -39,11 +39,11 @@ The Cedar UI Toolkit is distributed using Google Drive. This allows you to pull 
     <ol>
       <li>
         <strong>Navigate</strong> to your local Applications folder by pressing Command + Spacebar and typing in your REI username.
-        <cdr-img :src="$withBase(`/getting-started-for-designers/image9.png`)"/>
+        <cdr-img class="cdr-doc-article-img" :src="$withBase(`/getting-started-for-designers/image9.png`)"/>
       </li>
       <li>
         <strong>Drag</strong> Backup and Sync to your local Applications folder, not the system folder.
-        <cdr-img :src="$withBase(`/getting-started-for-designers/image7.png`)"/>
+        <cdr-img class="cdr-doc-article-img" :src="$withBase(`/getting-started-for-designers/image7.png`)"/>
       </li>
     </ol>
   </li>
@@ -55,11 +55,11 @@ The Cedar UI Toolkit is distributed using Google Drive. This allows you to pull 
       </li>
       <li>
         On the next step, <strong>uncheck</strong> unneeded folders.
-        <cdr-img :src="$withBase(`/getting-started-for-designers/image2.png`)"/>
+        <cdr-img class="cdr-doc-article-img" :src="$withBase(`/getting-started-for-designers/image2.png`)"/>
       </li>
       <li>
         <strong>Check</strong> the “Sync My Drive to this computer” option to add Google Drive to your Finder.
-        <cdr-img :src="$withBase(`/getting-started-for-designers/image6.png`)"/>
+        <cdr-img class="cdr-doc-article-img" :src="$withBase(`/getting-started-for-designers/image6.png`)"/>
       </li>
       <li>
         Click <strong>Start</strong>.
@@ -69,7 +69,7 @@ The Cedar UI Toolkit is distributed using Google Drive. This allows you to pull 
       </li>
       <li>
         Finally, <strong>navigate</strong> to the <a href="https://drive.google.com/drive/folders/0B7H-SygEBEpfQmloX1o5TThNRmc" target="_blank">Sketch Library folder</a> in the REI Design System Google Drive, right-click the Cedar UI Toolkit file and “Add it to My Drive”.
-        <cdr-img :src="$withBase(`/getting-started-for-designers/image5.png`)"/>
+        <cdr-img class="cdr-doc-article-img" :src="$withBase(`/getting-started-for-designers/image5.png`)"/>
       </li>
     </ol>
   </li>
@@ -95,7 +95,7 @@ Sketch Libraries enable us to sync and share system features across the team usi
     <ol>
       <li>
         Open Sketch and navigate to <strong>Sketch > Preferences > Libraries</strong> in the menu.
-        <cdr-img :src="$withBase(`/getting-started-for-designers/image1.png`)"/>
+        <cdr-img class="cdr-doc-article-img" :src="$withBase(`/getting-started-for-designers/image1.png`)"/>
       </li>
       <li>
         Click “Add Library&hellip;”
@@ -105,11 +105,11 @@ Sketch Libraries enable us to sync and share system features across the team usi
       </li>
       <li>
         Select the <strong>Cedar UI Toolkit.sketch</strong> file and <strong>click</strong> “Open.”
-        <cdr-img :src="$withBase(`/getting-started-for-designers/image4.png`)"/>
+        <cdr-img class="cdr-doc-article-img" :src="$withBase(`/getting-started-for-designers/image4.png`)"/>
       </li>
       <li>
         That’s it! You can now add Cedar components to designs in other Sketch files.
-        <cdr-img :src="$withBase(`/getting-started-for-designers/image8.png`)"/>
+        <cdr-img class="cdr-doc-article-img" :src="$withBase(`/getting-started-for-designers/image8.png`)"/>
       </li>
     </ol>
   </li>
@@ -149,7 +149,7 @@ The Cedar team suggests using Sketch Measure to label and shade Cedar components
 
 Example of UI annotated to show what is a Cedar component as well as spacing variables:
 
-<cdr-img :src="$withBase(`/getting-started-for-designers/image10.png`)"/>
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/getting-started-for-designers/image10.png`)"/>
 
 ## Contributing Design to Cedar
 
@@ -169,7 +169,7 @@ One of the best ways to influence the visual language of the co-op’s digital p
 System releases are communicated through both #cedar-design-system and #cedar-design.
 
 Depending on your Google Drive settings, you will either see a notification in Sketch immediately or have to manually initiate a sync to see the notification. Clicking on the update in Sketch will reveal what component designs have been updated.
-<cdr-img :src="$withBase(`/getting-started-for-designers/image3.png`)"/>
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/getting-started-for-designers/image3.png`)"/>
 
 #### I found a bug with the UI Toolkit (or some other Cedar service). How do I let you know?
 
