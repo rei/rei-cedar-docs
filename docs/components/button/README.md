@@ -592,9 +592,9 @@ export default {
 ## Accessibility
 
 - Cdr-button renders as a button or anchor:
-- Select the semantically correct element, which will ensure that screen readers have correct instructions for how to interact with the component
-- Use cdr-link to make a button that looks like a link
-- Do not use div or input elements
+  - Select the semantically correct element, which will ensure that screen readers have correct instructions for how to interact with the component
+  - Use cdr-link to make a button that looks like a link
+  - Do not use div or input elements
 - Do not add role=”button” to cdr-button
 - Icon-only buttons require aria-label text since only the icon is visible
 
