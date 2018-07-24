@@ -288,7 +288,7 @@ Display items horizontally, separated by a bullet character.
 ## Foundations
 
 - Vary list item font size
-- Follow spacing requirements found on [Typography](../../foundation/typography/) and Space pages
+- Follow spacing requirements found on [Typography](/foundation/typography/) and Space pages
 
 <cdr-img :src="$withBase(`/list/Spec_List_Font_Size_Variations_16-9.png`)" ratio="16-9"/>
 

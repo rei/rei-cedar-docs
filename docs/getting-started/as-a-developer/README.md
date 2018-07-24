@@ -24,20 +24,17 @@ All components are available as a package on [npm within the REI organization](h
 
 Each component is a separate NPM package. This ensures that you only have the essentials for your application - nothing more.
 
-<cdr-doc-code-snippet :copy-button="false" :line-numbers="false">
-```js
+_Terminal_
+```bash
 npm install --save @rei/cdr-<component-name>
 ```
-</cdr-doc-code-snippet>
 
 Once installed, files are located in the package&lsquo;s `dist/` folder. Component packages often contain one JS file and one CSS file. 
 
-<cdr-doc-code-snippet :copy-button="false" :line-numbers="false">
 ```js
 node_modules/@rei/cdr-<component-name>/dist/cdr-<component-name>.js
 node_modules/@rei/cdr-<component-name>/dist/cdr-<component-name>.css
 ```
-</cdr-doc-code-snippet>
 
 Some packages contain more (or fewer) than these two files which is noted in the package’s documentation.
 
@@ -48,11 +45,9 @@ All components depend upon core style and font assets. Without these assets incl
 
 First, install the assets package:
 
-<cdr-doc-code-snippet :copy-button="false" :line-numbers="false">
-```js
+```bash
 npm install --save @rei/cdr-assets
 ```
-</cdr-doc-code-snippet>
 
 The [cdr-assets package](https://www.npmjs.com/package/@rei/cdr-assets) contains these files:
   * cdr-core.css
@@ -63,37 +58,34 @@ Cedar requires a core stylesheet to render components properly.
 
 To include the stylesheet, import `cdr-core.css`:
 
-<cdr-doc-code-snippet :copy-button="false" :line-numbers="false">
+_main.js_
 ```js
 import '@rei/cdr-assets/dist/cdr-core.css';
 ```
-</cdr-doc-code-snippet>
 
 ## Install required fonts
 Cedar uses specific fonts – Roboto, Roboto Condensed, and Sentinel – that are required for your project. 
 
-Roboto and Roboto Condensed are available from [Google Fonts](https://fonts.google.com/specimen/Roboto).
+Roboto and Roboto Condensed are available from [Google Fonts](https://fonts.google.com/selection?selection.family=Roboto%7CRoboto+Condensed&query=robo) (preselected for quick use).
 
 Sentinel is available in the `cdr-assets` package and mapped using the `cdr-fonts.css` file.
 
 To include these fonts, import `cdr-fonts.css`:
 
-<cdr-doc-code-snippet :copy-button="false" :line-numbers="false">
+_main.js_
 ```js
 import '@rei/cdr-assets/dist/cdr-fonts.css';
 ```
-</cdr-doc-code-snippet>
 
 <hr>
 
 ## Install a component
 Examples below demo the `CdrButton` component.
 
-<cdr-doc-code-snippet :copy-button="false" :line-numbers="false">
-```js
+_Terminal_
+```bash
 npm install --save @rei/cdr-button
 ```
-</cdr-doc-code-snippet>
 
 ### Including component-specific CSS
 How you include css depends on your tech stack and varies from project to project. 
@@ -103,31 +95,28 @@ Here are a few common methods:
 #### Webpack (css-loader)
 If using a bundler, import css into javascript and let loaders extract it.
 
-<cdr-doc-code-snippet :copy-button="false" :line-numbers="false">
+_main.js_
 ```js
 import '@rei/cdr-button/dist/cdr-button.css';
 ```
-</cdr-doc-code-snippet>
 
 #### Postcss-import
 Cedar packages include the [unofficial style field](https://jaketrent.com/post/package-json-style-attribute/) supported by postcss-import.
 
-<cdr-doc-code-snippet :copy-button="false" :line-numbers="false">
-```js
+_cedar.postcss_
+```css
 import '@rei/cdr-button’;
 ```
-</cdr-doc-code-snippet>
 
 #### SCSS (or another pre-processor)
 You can also import css from the node_modules folder.
 
-<cdr-doc-code-snippet :copy-button="false" :line-numbers="false">
+_cedar.scss_
 ```js
 import '~@rei/cdr-button/dist/cdr-button.css';
 ```
-</cdr-doc-code-snippet>
 
-Note: Code snippets provided throughout the docs will demonstrate the webpack + css-loader method.
+**Note**: Code snippets provided throughout the docs will demonstrate the webpack + css-loader method.
 
 <hr>
 
@@ -139,33 +128,30 @@ Examples below demonstrate the `CdrButton` component. Refer to each component’
 ### Including component-specific CSS
 1. Import the component within the `script` block.
 
-<cdr-doc-code-snippet :copy-button="false" :line-numbers="false">
+_local.vue_
 ```js
 import { CdrButton } from '@rei/cdr-button';
 ```
-</cdr-doc-code-snippet>
 
 2. Register the component in the `components:` object.
 
-<cdr-doc-code-snippet :copy-button="false" :line-numbers="false">
+_local.vue_
 ```js
 components: {
   CdrButton
 }
 ```
-</cdr-doc-code-snippet>
 
-3. Add the component element, such as `<cdr-button>` into the template.
+3. Add the component element, such as `<cdr-button>` into the `template`.
 
-<cdr-doc-code-snippet :copy-button="false" :line-numbers="false">
+_local.vue_
 ```html
 <cdr-button>I'm a button</cdr-button>
 ```
-</cdr-doc-code-snippet>
 
 Final file:
 
-<cdr-doc-code-snippet :copy-button="false" :line-numbers="false" :max-height="false">
+_local.vue_
 ```html
 <template>
     <cdr-button>I'm a button</cdr-button>
@@ -181,16 +167,13 @@ export default {
 }
 </script>
 ```
-</cdr-doc-code-snippet>
 
 ### Configure component props
 Most Cedar components provide properties to configure component data, display, and logic. For example, the `<cdr-button>` component provides a `size` property to configure the button’s size.
 
-<cdr-doc-code-snippet :copy-button="false" :line-numbers="false" :max-height="false">
 ```html
 <cdr-button size="large">I'm a large button</cdr-button>
 ```
-</cdr-doc-code-snippet>
 
 Refer to each component’s API documentation for a full list of available properties.
 
@@ -201,11 +184,10 @@ Prop names are also documented and referenced in javascript as camel case, but [
 
 In this example, the `responsiveSize` prop accepts an array of strings denoting size at different breakpoints. Note that `responsiveSize` is used as `responsive-size` in the template.
 
-<cdr-doc-code-snippet :copy-button="false" :line-numbers="false" :max-height="false">
 ```html
 <cdr-button :responsive-size="['small@xs', 'large@sm']">I'm a responsive button</cdr-button>
 ```
-</cdr-doc-code-snippet>
+
 <hr>
 
 ## Customize components using token variables
@@ -215,11 +197,10 @@ As you extend Cedar components and create your own components, work with your de
 
 ### Install tokens package
 
-<cdr-doc-code-snippet :copy-button="false" :line-numbers="false">
+_Terminal_
 ```js
 npm install --save @rei/cdr-tokens
 ```
-</cdr-doc-code-snippet>
 
 ### Use Cedar design tokens
 
@@ -227,7 +208,7 @@ The package contains files for using tokens in both CSS (as SCSS variables) and 
 
 Here we’re using a typography mixin and a color token to style `.myClass` from the SCSS tokens file.
 
-<cdr-doc-code-snippet :copy-button="false" :line-numbers="false" :max-height="false">
+_local.vue_
 ```html
 <template>
   <p class="myClass">I'm styled with tokens!</p>
@@ -248,7 +229,6 @@ export default {
 }
 </style>
 ```
-</cdr-doc-code-snippet>
 
 <hr/>
 
@@ -265,7 +245,6 @@ Never use Cedar class names within your own css or target them in javascript; th
 
 To target CSS, create custom selectors such as `my-wrapper` and `my-selector` in the following example…
 
-<cdr-doc-code-snippet :copy-button="false" :line-numbers="false" :max-height="false">
 ```html
 <template>
   <div class="my-wrapper">
@@ -281,13 +260,11 @@ To target CSS, create custom selectors such as `my-wrapper` and `my-selector` in
 }
 </style>
 ```
-</cdr-doc-code-snippet>
 
 Some components are more complex and have templates with multiple areas you may wish to add your own selectors. We try to be mindful of this and add props that will allow you to target your own classes to various elements. 
 
 For example with checkbox you may want to target both the label and the content areas. 
 
-<cdr-doc-code-snippet :copy-button="false" :line-numbers="false" :max-height="false">
 ```html
 <template>
   <cdr-checkbox label-class="my-label" content-class="my-content">My checkbox</cdr-checkbox>
@@ -305,7 +282,6 @@ For example with checkbox you may want to target both the label and the content 
 }
 </style>
 ```
-</cdr-doc-code-snippet>
 
 If you find that a component needs to have a targeted prop class added, please [create an issue](https://github.com/rei/rei-cedar/issues) and let us know.
 
