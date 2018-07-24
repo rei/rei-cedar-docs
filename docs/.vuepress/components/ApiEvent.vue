@@ -33,8 +33,8 @@
 </template>
 
 <script>
-  import { CdrCol } from '@rei/cdr-col'
-  import { CdrRow } from '@rei/cdr-row'
+  import { CdrCol } from '@rei/cdr-grid'
+  import { CdrRow } from '@rei/cdr-grid'
   import apiMixin from '../mixins/apiComponent.js'
   
   export default {
