@@ -85,6 +85,196 @@
 
 <cdr-doc-tabs>
 
+<template slot="Overview">
+<cdr-doc-table-of-contents-shell>
+
+## Default
+
+Section borders expand to full width of container.
+
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/accordion" sandbox-href="https://codesandbox.io/s/m9jm5rw1zx">
+
+```html
+  <cdr-accordion>
+    <cdr-accordion-item
+      id="default-1"
+      label="How do I find my member number?">
+      <cdr-text tag="p">
+          Find your member number online. You can also call 
+          Customer Support at 1-800-426-4840 (U.S. and Canada) or 1-253-891-2500 (International).
+      </cdr-text>
+    </cdr-accordion-item>
+    <cdr-accordion-item
+      id="default-2"
+      label="Does every member get an Annual Dividend?">
+      <cdr-text tag="p">
+          Only active REI Co-op members receive an Annual Dividend notice. To be an active 
+          member, you need to make net merchandise or shipping purchases (purchases minus credits and returns) 
+          of at least $10 per year, unless you joined during that calendar year.
+      </cdr-text>
+    </cdr-accordion-item>
+    <cdr-accordion-item
+      id="default-3"
+      label="When does my dividend expire?">
+      <cdr-text tag="p">
+          Your dividend expires on Jan. 3, just under two years after it has been issued. 
+          or example, your 2018 dividend earned on 2017 purchases will expire in January 2020.
+      </cdr-text>
+    </cdr-accordion-item>
+  </cdr-accordion>
+```
+
+</cdr-doc-example-code-pair>
+
+## Compact
+
+Reduced spacing around title and content body. Also, smaller font sizes resulting in an overall denser display of content.
+
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/accordion" sandbox-href="https://codesandbox.io/s/m9jm5rw1zx">
+
+```html
+  <cdr-accordion :compact="true">
+    <cdr-accordion-item
+      id="compact-1"
+      label="Why buy used gear?"
+    >
+      <cdr-text tag="p">
+        Used Gear Beta is one way we are experimenting expanding opportunities 
+        to enjoy life outdoors and bringing value to our members.
+      </cdr-text>
+    </cdr-accordion-item>
+    <cdr-accordion-item
+      id="compact-2"
+      label="What's your cancellation policy?"
+    >
+      <cdr-text tag="p">
+        Orders may be cancelled within 30 minutes of placing your order online. 
+        After 30 minutes, your order will begin processing through our fulfillment center and cannot be cancelled.
+      </cdr-text>
+    </cdr-accordion-item>
+    <cdr-accordion-item
+      id="compact-3"
+      label="When will my order arrive?"
+    >
+      <cdr-text tag="p">
+        REI Co-op Used Gear Beta orders can take up to 3-4 business days to ship out. When your order ships, 
+        we'll send you a shipping confirmation email that contains your tracking information. Shipping time is generally 3-5 business days.
+      </cdr-text>
+    </cdr-accordion-item>
+  </cdr-accordion>
+```
+
+</cdr-doc-example-code-pair>
+
+## Border Aligned
+
+Border aligns to the title text and expand/collapse icon.
+
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/accordion" sandbox-href="https://codesandbox.io/s/m9jm5rw1zx">
+
+```html
+  <cdr-accordion :border-aligned="true">
+    <cdr-accordion-item
+      id="border-aligned-1"
+      label="How long have you been in business?"
+    >
+      <cdr-text tag="p" modifier="body">
+        REI has offered the finest in outdoor gear since 1938. In that same spirit, 
+        REI Adventures has led the way down wilderness paths and cultural back roads 
+        to the most intriguing destinations in the world since 1987.
+      </cdr-text>
+    </cdr-accordion-item>
+    <cdr-accordion-item
+      id="border-aligned-2"
+      label="What kinds of trips are offered?"
+    >
+      <cdr-text tag="p">
+        We have adventures that range from weekend getaways to three-week treks. We 
+        explore the world on foot, by kayak, canoe or raft, bicycle, safari, 4-wheel 
+        drive, cruise ship or a combination of these vehicles! Novices are welcome. 
+        We can teach you to kayak or to safely summit a mountain.
+      </cdr-text>
+    </cdr-accordion-item>
+    <cdr-accordion-item
+      id="border-aligned-3"
+      label="How do I know what each trip is like?"
+    >
+      <cdr-text tag="p">
+        This website provides full details of each trip. If you still have questions, 
+        please call us at 1-800-622-2236 or e-mail us at travel@rei.com.
+      </cdr-text>
+    </cdr-accordion-item>
+  </cdr-accordion>
+```
+
+</cdr-doc-example-code-pair>
+
+</cdr-doc-table-of-contents-shell>
+</template>
+
+<template slot="Design Guidelines">
+<cdr-doc-table-of-contents-shell>
+
+## Use when
+
+- Providing users more content within the same layout
+- Displaying content that's directly related, or supplemental, to the main subject of the page
+- Designing with limited vertical space and there is enough content to condense
+
+## Don't use when
+
+- Linking a title to another page. Instead, use Link
+- Designing with sparse content. Instead, use List or Paragraph
+- Content is lengthy. Instead, use Tabs
+
+## Foundations
+
+- Always include a title, icon and subsequent content for each section. All are required
+- Use on either light or dark backgrounds, background color is provided for use on both
+- Never nest accordions within themselves
+
+## Content
+
+- Order the accordion titles by priority and importance
+- Keep titles short to avoid wrapping at smaller viewports
+- Use sentence case for titles
+
+## Behavior
+
+- Entire title area is clickable, including icon and background.
+- Accordion sections are all closed by default, however it is possible to:
+  - Open all accordion sections when page is displayed
+  - Open a single accordion section with remaining accordion section closed
+- Multiple sections can be open at the same time
+- Sections do not automatically collapse when another is expanded
+- Position interactive elements (i.e. Select, Button, Link) within the container far enough from the title area to avoid accidental collapsing
+
+Never nest accordions within themselves
+
+Use short titles for accordion labels to avoid wrapping
+
+## Responsiveness
+
+- Accordion style can change variant based on breakpoint. Example: _Default_ at MD/LG, _Compact_ and _Border-Aligned_ at XS/SM
+- Switching between tab component and accordion component is not supported in Cedar components library. Do not replace the accordion component with the tab component and different breakpoints
+
+## Accessibility
+
+To ensure that usage of this component complies with accessibility guidelines:
+
+- Provide descriptive label for accordion header
+- Be aware that embedding lengthy content in an accordion can be disorienting. When the accordion header expands, it can give the appearance of moving to another page
+
+This component has compliance with WCAG accessibility guidelines:
+
+- Providing keyboard interactions to:
+  - Expand and collapse accordion headers
+  - Navigate and reverse navigate through the accordion headers
+- Generates ARIA tags for accessibility, specifically aria-controls, aria-expanded, and aria-hidden
+
+</cdr-doc-table-of-contents-shell>
+</template>
+
 <template slot="API">
 <cdr-doc-table-of-contents-shell>
 
