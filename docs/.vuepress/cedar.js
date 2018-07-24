@@ -42,6 +42,11 @@ FullVue.component('CdrRow', CdrRow);
 Vue.component('CdrCol', CdrCol);
 FullVue.component('CdrCol', CdrCol);
 
+import { CdrBreadcrumb } from "@rei/cdr-breadcrumb";
+import "@rei/cdr-breadcrumb/dist/cdr-breadcrumb.css";
+Vue.component("CdrBreadcrumb", CdrBreadcrumb);
+FullVue.component("CdrBreadcrumb", CdrBreadcrumb);
+
 import { CdrCard } from "@rei/cdr-card";
 import "@rei/cdr-card/dist/cdr-card.css";
 Vue.component('CdrCard', CdrCard);

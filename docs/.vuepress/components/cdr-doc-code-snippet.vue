@@ -26,13 +26,13 @@
           </span>
         </span>
       </div>
-      <a class="cdr-doc-code-snippet__action" :href="repositoryHref" v-if="repositoryHref">
+      <a class="cdr-doc-code-snippet__action" :href="repositoryHref" target="_blank" rel="noopener noreferrer" v-if="repositoryHref">
         <img class="cdr-doc-code-snippet__action-icon" :src="$withBase(`/GitHub@2x.png`)" alt="View source in repository"/>
         <span class="cdr-doc-code-snippet__tooltip cdr-doc-code-snippet__tooltip--show-on-hover">
           View in repository
         </span>
       </a>
-      <a class="cdr-doc-code-snippet__action" :href="sandboxHref" v-if="sandboxHref">
+      <a class="cdr-doc-code-snippet__action" :href="sandboxHref" target="_blank" rel="noopener noreferrer" v-if="sandboxHref">
         <img class="cdr-doc-code-snippet__action-icon" :src="$withBase(`/CodeSandbox@2x.png`)" alt="View in code sandbox"/>
         <span class="cdr-doc-code-snippet__tooltip cdr-doc-code-snippet__tooltip--show-on-hover">
           View in sandbox
