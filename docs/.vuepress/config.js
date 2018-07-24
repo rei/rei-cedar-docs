@@ -43,6 +43,7 @@ module.exports = {
             text: "Button",
             link: "/components/button/"
           },
+          { text: "Grid", link: "/components/grid/" },
           { text: "Headings", link: "/components/heading/" },
           { text: "Link", link: "/components/link/" },
           { text: "List", link: "/components/list/" },
