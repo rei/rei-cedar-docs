@@ -88,7 +88,7 @@
 <template slot="API">
 <cdr-doc-table-of-contents-shell>
 
-Accordions are built from two components, `cdr-accordion` and `cdr-accordion-item`.
+Accordions are built from two components, `cdr-accordion` and `cdr-accordion-item`, which are meant to be used together.
 
 ## Properties
 
@@ -186,8 +186,6 @@ Use `cdr-accordion` to pass styling options to `cdr-accordion-item`.
 </template>
 ```
 
-### MIGHT WANT TO ADD SOMETHING HERE ABOUT PASSING VALUES TO CDR-ACCORDION-ITEM WITHOUT USING CDR-ACCORDION
-
 ### Behavior
 
 Set `show-all` to `true` on `cdr-accordion`, and each `cdr-accordion-item` will display in an open state.
@@ -205,7 +203,7 @@ Set `show-all` to `true` on `cdr-accordion`, and each `cdr-accordion-item` will 
     ...
 ```
 
-`cdr-accordion-item` can also be controlled individually.
+`cdr-accordion-item` can also be controlled individually. If `show-all` is `false` at the `cdr-accordion` level, set `show` to `true` to display an individual accordion item in an open state. Note that `cdr-accordion` settings will take precedence over `cdr-accordion-item` settings.
 
 ```vue
 <template>
@@ -219,7 +217,33 @@ Set `show-all` to `true` on `cdr-accordion`, and each `cdr-accordion-item` will 
     ...
 ```
 
-If `show-all` is `false` at the `cdr-accordion` level, set `show` to `true` to display an individual accordion item in an open state. Note that `cdr-accordion` settings will take precedence over `cdr-accordion-item` settings.
+Any options set at the `cdr-accordion` level can be set on any parent component of `cdr-accordion-item` by using Vue's provide/inject functionality. This is useful, for instance, if `cdr-accordion-item` ever needs to be used as a part of another group component.
+
+
+```vue
+<template>
+  ...
+  <cdr-accordion-item
+    id="item-1"
+    label="Label text"
+  >
+    Accordion content here
+  </cdr-accordion-item>
+  ...
+</template>
+
+<script>
+  export default {
+    ...
+    provide() {
+      return {
+        borderAligned: true,
+        showAll: true
+      };
+    }
+  }
+</script>
+```
 
 ## Accessibility
 
@@ -233,6 +257,22 @@ This component has compliance with WCAG accessibility guidelines:
   - Generate ARIA tags for accessibility, speciically aria-controls, aria-expanded, and aria-hidden
 
 </cdr-doc-table-of-contents-shell>
+</template>
+
+<template slot="History">
+
+## 1.0.0
+
+### What's new
+
+**CdrAccordion** component:
+
+- Includes cdr-accordion and cdr-accordion-item components
+- Toggles initial open state at group and individual level
+- Supports compact and border-aligned styles
+
+Git commit reference ([05adb80](https://github.com/rei/rei-cedar/commit/05adb8018e5c37cee764700c69c02d5281785f58))
+
 </template>
 
 </cdr-doc-tabs>
