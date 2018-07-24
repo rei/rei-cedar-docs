@@ -28,7 +28,7 @@ module.exports = {
         items: [
           { text: "As a Designer", link: "/getting-started/as-a-designer/" },
           { text: "As a Developer", link: "/getting-started/as-a-developer/" },
-          { text: "As an Adopter", link: "/getting-started/as-an-adopter/" }
+          { text: "As an Adopting Team", link: "/getting-started/as-an-adopter/" }
         ]
       },
       {
@@ -39,10 +39,15 @@ module.exports = {
         text: "Components",
         items: [
           { text: "Accordion", link: "/components/accordion/" },
+          {
+            text: "Button",
+            link: "/components/button/"
+          },
+          { text: "Grid", link: "/components/grid/" },
           { text: "Headings", link: "/components/heading/" },
           { text: "Link", link: "/components/link/" },
-          { text: "Paragraph", link: "/components/paragraph/" },
-          { text: "Grid", link: "/components/grid/" },
+          { text: "List", link: "/components/list/" },
+          { text: "Paragraph", link: "/components/paragraph/" }
         ]
       },
       {

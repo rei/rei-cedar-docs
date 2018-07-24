@@ -4,14 +4,15 @@
   "title_metadata": false,
   "layout": "LayoutArticle",
   "summary": false,
+  "breadcrumbs": [
+    {
+      "text": "About/"
+    }
+  ],
 }
 ---
 
 <cdr-doc-table-of-contents-shell>
-
-# Cedar Design System
-
-Cedar is REI’s Design System: a foundational tool built to serve the design and engineering of digital products. 
 
 ## About Cedar
 
