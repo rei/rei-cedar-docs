@@ -1,9 +1,9 @@
 <template>
   <div class="cdr-stack--lg">
-    <span :class="[token ? `cdr-doc--${token}` : '']"> {{ token }}
+    <span class="cdr-doc-type-sample cdr-stack" :class="[token ? `cdr-doc--${token}` : '']"> {{ token }}
     </span>
 
-    <cdr-row justify="between">
+    <cdr-row>
       <cdr-col span="3">
       <div> <b> font-weight: </b> {{ weight }}</div>
       </cdr-col>
@@ -42,6 +42,9 @@ export default {
   @import '../theme/styles/cdr-tokens.scss';
   @import '../theme/styles/cdr-doc-tokens.scss';
 
+.cdr-doc-type-sample {
+  display: block;
+}
 .cdr-doc--spruce-display-100 {
   @include spruce-display-100;
 }
