@@ -125,7 +125,7 @@
 
 Complete breadcrumb string with all items visible.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/breadcrumb" sandbox-href="https://codesandbox.io/s/mm9qpyjojp" :backgroundToggle="false" >
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/breadcrumb" sandbox-href="https://codesandbox.io/s/mm9qpyjojp" :backgroundToggle="false" :codeMaxHeight= false >
 
 ```html
   <cdr-breadcrumb 
@@ -144,13 +144,14 @@ Complete breadcrumb string with all items visible.
 
 Long breadcrumbs shortened to display the last 2 links in the trail, with hidden links indicated by ellipsis.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/breadcrumb" sandbox-href="https://codesandbox.io/s/mm9qpyjojp" :backgroundToggle="false">
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/breadcrumb" sandbox-href="https://codesandbox.io/s/mm9qpyjojp" :backgroundToggle="false" :codeMaxHeight= false>
 
 ```html
     <cdr-breadcrumb
       :items="[
         {item:{url:'', name: 'Kids\' Snowboard Clothing Accessories'}},
-        {item:{url:'', name: 'Kids\' Snowboard Gloves and Mittens'}}]"
+        {item:{url:'', name: 'Kids\' Snowboard Gloves and Mittens'}}
+      ]"
     />
 ```
 
