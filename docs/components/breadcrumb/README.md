@@ -128,7 +128,14 @@ Complete breadcrumb string with all items visible.
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/breadcrumb" sandbox-href="https://codesandbox.io/s/mm9qpyjojp" :backgroundToggle="false" >
 
 ```html
-  <cdr-breadcrumb :truncation-enabled="false" :items="[{item:{url:'', name: 'Snowboarding'}},{item:{url:'', name: 'Snowboard Clothing'}},{item:{url:'', name: 'Kids\' Snowboard Clothing'}}]"/>
+  <cdr-breadcrumb 
+    :truncation-enabled="false" 
+    :items="[
+      {item:{url:'', name: 'Snowboarding'}},
+      {item:{url:'', name: 'Snowboard Clothing'}},
+      {item:{url:'', name: 'Kids\' Snowboard Clothing'}}
+    ]"
+  />
 ```
 
 </cdr-doc-example-code-pair>
@@ -140,7 +147,11 @@ Long breadcrumbs shortened to display the last 2 links in the trail, with hidden
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/breadcrumb" sandbox-href="https://codesandbox.io/s/mm9qpyjojp" :backgroundToggle="false">
 
 ```html
-    <cdr-breadcrumb :items="[{item:{url:'', name: 'Kids\' Snowboard Clothing Accessories'}},{item:{url:'', name: 'Kids\' Snowboard Gloves and Mittens'}}]"/>
+    <cdr-breadcrumb
+      :items="[
+        {item:{url:'', name: 'Kids\' Snowboard Clothing Accessories'}},
+        {item:{url:'', name: 'Kids\' Snowboard Gloves and Mittens'}}]"
+    />
 ```
 
 </cdr-doc-example-code-pair>
