@@ -36,7 +36,10 @@ module.exports = {
       },
       {
         text: "Foundation",
-        items: [{ text: "Color", link: "/foundation/color/" }]
+        items: [
+          { text: "Color", link: "/foundation/color/" },
+          { text: "Typography", link: "/foundation/typography/" }
+        ]
       },
       {
         text: "Components",
