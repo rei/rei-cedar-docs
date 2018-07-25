@@ -45,6 +45,7 @@ All components depend upon core style and font assets. Without these assets incl
 
 First, install the assets package:
 
+_Terminal_
 ```bash
 npm install --save @rei/cdr-assets
 ```
