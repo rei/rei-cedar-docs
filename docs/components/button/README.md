@@ -141,13 +141,13 @@
           },
           {
             "name": "onDark",
-            "type": "Boolean",
+            "type": "boolean",
             "default": "false",
             "description": "Renders an icon-only button with a light fill color for use on dark backgrounds. iconOnly must also be true."
           },
           {
             "name": "modifier",
-            "type": "String",
+            "type": "string",
             "default": "n/a",
             "description": "Allows style variants to be defined."
           }                          
