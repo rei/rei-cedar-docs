@@ -338,13 +338,26 @@ The array must be ordered appropriately from low index rendered on the left, to 
 
 The below example shows alternatively setting ```items``` using an array literal.
 ```vue
-<cdr-breadcrumb :items="[{item:{url:'', name: 1}},{item:{url:'', name: 2}},{item:{url:'', name: 3}}]"/>
+<cdr-breadcrumb
+  :items="[
+    {item:{url:'', name: 1}},
+    {item:{url:'', name: 2}},
+    {item:{url:'', name: 3}}
+  ]"
+/>
 ```
 
 Use ```truncationEnabled``` to disable the truncation functionality.  Below shows truncation being disabled.
 
 ```vue
-<cdr-breadcrumb :truncation-enabled="false" :items="[{url:'', name: 1},{url:'', name: 2},{url:'', name: 3}]"/>
+<cdr-breadcrumb
+  :truncation-enabled="false"
+  :items="[
+    {url:'', name: 1},
+    {url:'', name: 2},
+    {url:'', name: 3}
+  ]"
+/>
 ```
 
 Use the ```truncationThreshold``` prop to alter when truncation occurs:
@@ -359,7 +372,10 @@ Below shows using ```truncationThreshold``` to set truncation to occur at 50%.
 <cdr-img alt="Breadcrumb with truncation threshold at 50% and 80%" :src="$withBase(`/breadcrumb/Spec_API___Breadcrumb_Truncated_Threshold_50to80_16-4.png`)" />
 
 ```vue
-<cdr-breadcrumb :truncation-threshold="0.50" :items="breadcrumbItems"/>
+<cdr-breadcrumb
+  :truncation-threshold="0.50"
+  :items="breadcrumbItems"
+/>
 ```
 Use the ```truncationXSThreshold``` prop to alter when truncation occurs:
 
@@ -373,7 +389,10 @@ Below shows using ```truncationXSThreshold``` to set truncation to occur at 70%.
 <cdr-img alt="Breadcrumb with truncation XS  threshold at 70%" :src="$withBase(`/breadcrumb/Spec_API___Breadcrumb_Truncated_XSThreshold_70to100_16-4.png`)" />
 
 ```vue
-<cdr-breadcrumb :truncation-x-s-threshold=“0.70” :items="breadcrumbItems"/>
+<cdr-breadcrumb
+  :truncation-x-s-threshold=“0.70”
+  :items="breadcrumbItems"
+/>
 ```
 
 ## Accessibility
