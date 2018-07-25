@@ -99,7 +99,7 @@
         "props": [
           {
             "name": "tag",
-            "type": "String",
+            "type": "string",
             "default": "button",
             "description": "Render CdrButton as a <button> or <a> element. When using a value of a, this element renders as an anchor link. Possible values: { button, a }"
           },
@@ -111,31 +111,31 @@
           },
           {
             "name": "onClick",
-            "type": "Function",
-            "default": "Return null",
+            "type": "function",
+            "default": "return null",
             "description": "Add custom click actions."
           },
           {
             "name": "fullWidth",
-            "type": "Boolean",
+            "type": "boolean",
             "default": "false",
             "description": "Set button width to 100%. Setting it to true will set the button width to 100% of the parent container. Use the full-width prop with the size prop to control top and bottom padding."
           },
           {
             "name": "size",
-            "type": "String",
+            "type": "string",
             "default": "medium",
             "description": "Set the button size. Possible values: { small, medium, large }"
           },
           {
             "name": "responsiveSize",
-            "type": "Array",
+            "type": "array",
             "default": "n/a",
             "description": "Set the button size at different responsive breakpoints. Breakpoints are expressed as t-shirt sizing with values: xs, sm, md, and lg. Example: [‘large@xs’, ‘small@lg’]"
           },
           {
             "name": "iconOnly",
-            "type": "Boolean",
+            "type": "boolean",
             "default": "false",
             "description": "Renders an icon-only button. Overrides size and responsiveSize props."
           },
