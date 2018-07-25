@@ -20,8 +20,8 @@
   "devDependencies": {
     "@rei/cdr-tokens": "^0.1.7",
     "node-sass": "^4.9.2",
-    "sass-loader": "^6.0.7",
-    "vuepress": "^0.10.2"
+    "sass-loader": "^7.0.3",
+    "vuepress": "^0.12.0"
   },
   "dependencies": {
     "@rei/cdr-accordion": "0.1.0-alpha.1",
