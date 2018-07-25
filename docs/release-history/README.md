@@ -12,23 +12,23 @@
 }
 ---
 
-# [Cedar Beta Release](https://github.com/rei/rei-cedar/tree/18.06.2)
+# [Cedar Beta Release](https://github.com/rei/rei-cedar/tree/18.07.2)
 
 ## What’s New
 
 ### Components
 
-- Added new Breadcrumb component v1.0 ([CdrBreadcrumb]())
+- Added new Breadcrumb component v1.0 ([CdrBreadcrumb](https://github.com/rei/rei-cedar/tree/18.07.2/src/components/breadcrumb))
   - Component
   - Styles
-- Added new Button component v1.0 ([CdrButton]())
+- Added new Button component v1.0 ([CdrButton](https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button))
   - Component
   - Styles
-- Added new Grid component v1.0 ([CdrGrid]())
+- Added new Grid component v1.0 ([CdrGrid](https://github.com/rei/rei-cedar/tree/18.07.2/src/components/grid))
   - Row component
   - Col Component
   - Styles
-- Added new List component v1.0 ([CdrList]())
+- Added new List component v1.0 ([CdrList](https://github.com/rei/rei-cedar/tree/18.07.2/src/components/list))
   - Component
   - Styles
 
