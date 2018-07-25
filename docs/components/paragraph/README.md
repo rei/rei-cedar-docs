@@ -36,31 +36,35 @@
         "caption": "display long passages of text  on dark backgrounds. "
       }
     ],
-  "name": "CdrLink",
   "versions": [
     {
-      "api": {
-        "props": [
-          {
-            "name": "tag",
-            "type": "string",
-            "default": "\"p\"",
-            "description": "Valid HTML tag"
-          },
-          {
-            "name": "modifier",
-            "type": "string",
-            "default": "N/A",
-            "description": "Modifier allows the user to pass a style variant to this component  Possible values: body"
+      "components": [
+        {
+          "name": "CdrLink",
+          "api": {
+            "props": [
+              {
+                "name": "tag",
+                "type": "string",
+                "default": "\"p\"",
+                "description": "Valid HTML tag"
+              },
+              {
+                "name": "modifier",
+                "type": "string",
+                "default": "N/A",
+                "description": "Modifier allows the user to pass a style variant to this component  Possible values: body"
+              }
+            ],
+            "slots": [
+              {
+                "name": "default",
+                "description": "innerHTML on the inside of the anchor component"
+              }
+            ]
           }
-        ],
-        "slots": [
-          {
-            "name": "default",
-            "description": "innerHTML on the inside of the anchor component"
-          }
-        ],
-      },
+        }
+      ],
       "version": "0.1.0"
     }
   ]
@@ -234,11 +238,11 @@ Used for editorial content such as long-form articles like Expert Advice pages o
 
 ## Properties
 
-<cdr-doc-api type="prop" />
+<cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
 ## Slots
 
-<cdr-doc-api type="slot" />
+<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
 ## Installation
 

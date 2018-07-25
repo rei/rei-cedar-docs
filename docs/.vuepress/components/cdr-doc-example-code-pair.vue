@@ -219,6 +219,10 @@
       border-left: 0;
       border-right: 0;
     }
+    
+    &__item-example {
+      width: 100%;
+    }
   }
 
   .cdr-doc-example-code-pair__item {
@@ -237,6 +241,7 @@
       border-radius: $cdr-doc-border-radius-default $cdr-doc-border-radius-default 0 0;
     }
   }
+
 
   .cdr-doc-example-code-pair--not-interactive .cdr-doc-example-code-pair__item-example {
     pointer-events: none; // prevent interaction
