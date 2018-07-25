@@ -208,7 +208,7 @@ Use secondary buttons for all actions that do not move the user to the next step
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
 
 ```html
-  <cdr-button class="cdr-button--secondary">Add to wish list</cdr-button>
+  <cdr-button modifier="secondary">Add to wish list</cdr-button>
 ```
 
 </cdr-doc-example-code-pair>
