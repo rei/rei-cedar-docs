@@ -11,6 +11,38 @@
     }
   ],
   "name": "CdrAccordion",
+  "nesting": [
+    {
+      "type": "do",
+      "image": "accordion/accordion_nest_do_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing proper accordion usage",
+      "caption": "present content in a single accordion"
+    },
+    {
+      "type": "dont",
+      "image": "accordion/accordion_nest_dont_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing nested accordions",
+      "caption": "nest accordions"
+    }
+  ],
+  "titles": [
+    {
+      "type": "do",
+      "image": "accordion/accordion_title_do_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing short and succinct accordion titles",
+      "caption": "keep titles short and succinct"
+    },
+    {
+      "type": "dont",
+      "image": "accordion/accordion_title_dont_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing a too long accordion title wrapped to many lines",
+      "caption": "create labels so lengthy that they wrap to a second line"
+    }
+  ],
   "versions": [
     {
       "components": [
@@ -248,10 +280,13 @@ Border aligns to the title text and expand/collapse icon.
 - Multiple sections can be open at the same time
 - Sections do not automatically collapse when another is expanded
 - Position interactive elements (i.e. Select, Button, Link) within the container far enough from the title area to avoid accidental collapsing
+- Never nest accordions within themselves
 
-Never nest accordions within themselves
+<do-dont :examples="$page.frontmatter.nesting" />
 
-Use short titles for accordion labels to avoid wrapping
+- Use short titles for accordion labels to avoid wrapping
+
+<do-dont :examples="$page.frontmatter.titles" />
 
 ## Responsiveness
 
