@@ -36,12 +36,15 @@ module.exports = {
       },
       {
         text: "Foundation",
-        items: [{ text: "Color", link: "/foundation/color/" }]
+        items: [
+          { text: "Color", link: "/foundation/color/" },
+          { text: "Typography", link: "/foundation/typography/" }
+        ]
       },
       {
         text: "Components",
         items: [
-          { text: "Accordion", link: "/components/accordion/" },
+          /* { text: "Accordion", link: "/components/accordion/" }, */
           { text: "Breadcrumb", link: "/components/breadcrumb/" },
           {
             text: "Button",
