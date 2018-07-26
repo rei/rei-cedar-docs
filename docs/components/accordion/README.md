@@ -496,7 +496,7 @@ This component has compliance with WCAG accessibility guidelines:
 - Toggles initial open state at group and individual level
 - Supports compact and border-aligned styles
 
-Git commit reference ([05adb80](https://github.com/rei/rei-cedar/commit/05adb8018e5c37cee764700c69c02d5281785f58))
+Git commit reference ([cc998a4](https://github.com/rei/rei-cedar/commit/cc998a4f7a4a0278a86c35063ba6615196a46ba2))
 
 </template>
 
