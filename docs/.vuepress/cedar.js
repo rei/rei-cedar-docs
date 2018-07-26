@@ -52,3 +52,8 @@ import { CdrBreadcrumb } from "@rei/cdr-breadcrumb";
 import "@rei/cdr-breadcrumb/dist/cdr-breadcrumb.css";
 Vue.component("CdrBreadcrumb", CdrBreadcrumb);
 FullVue.component("CdrBreadcrumb", CdrBreadcrumb);
+
+import { CdrRadio } from "@rei/cdr-radio";
+import "@rei/cdr-radio/dist/cdr-radio.css";
+Vue.component("CdrRadio", CdrRadio);
+FullVue.component("CdrRadio", CdrRadio);

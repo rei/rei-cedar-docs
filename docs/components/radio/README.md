@@ -1,9 +1,9 @@
 ---
 {
-  "title": "Breadcrumb",
+  "title": "Radio Buttons",
   "layout": "LayoutComponent",
-  "summary": "Navigation to reveal a page’s location within the site hierarchy.",
-  "title_metadata": "Breadcrumb, cdrBreadcrumb",
+  "summary": "Permits user to select only one option from a list of two or more.",
+  "title_metadata": "Radio, cdrRadio",
 	  "path": [
       {
         "type": "do",
