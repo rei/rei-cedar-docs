@@ -72,7 +72,7 @@
     {
       "components": [
         {
-          "name": "CdrBreadcrumb",
+          "name": "CdrRadio",
           "api": {
             "props": [
               {
@@ -127,19 +127,29 @@
 
 ## Default
 
-Complete breadcrumb string with all items visible.
+Default and standard spacing for radio buttons.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/breadcrumb" sandbox-href="https://codesandbox.io/s/mm9qpyjojp" :backgroundToggle="false" :codeMaxHeight= false >
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/radio" sandbox-href="https://codesandbox.io/s/4rx86n66l9" :backgroundToggle="true" :codeMaxHeight= false >
 
 ```html
-  <cdr-breadcrumb
-    :truncation-enabled="false"
-    :items="[
-      {item:{url:'', name: 'Snowboarding'}},
-      {item:{url:'', name: 'Snowboard Clothing'}},
-      {item:{url:'', name: 'Kids\' Snowboard Clothing'}}
-    ]"
-  />
+<div>
+<cdr-radio
+  name="example"
+  value="a1"
+  v-model="ex1"
+>Radio 1</cdr-radio>
+<cdr-radio
+  name="example"
+  value="a2"
+  v-model="ex1"
+>Radio 2</cdr-radio>
+<cdr-radio
+  name="example"
+  :value="{val:'a3'}"
+  v-model="ex1"
+  disabled
+>Radio 3</cdr-radio>
+</div>
 ```
 
 </cdr-doc-example-code-pair>
@@ -148,7 +158,7 @@ Complete breadcrumb string with all items visible.
 
 Long breadcrumbs shortened to display the last 2 links in the trail, with hidden links indicated by ellipsis.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/breadcrumb" sandbox-href="https://codesandbox.io/s/mm9qpyjojp" :backgroundToggle="false" :codeMaxHeight= false>
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/breadcrumb" sandbox-href="https://codesandbox.io/s/4rx86n66l9" :backgroundToggle="false" :codeMaxHeight= false>
 
 ```html
     <cdr-breadcrumb
