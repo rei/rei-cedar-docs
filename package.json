@@ -24,7 +24,7 @@
     "vuepress": "^0.10.2"
   },
   "dependencies": {
-    "@rei/cdr-accordion": "0.1.0-alpha.1",
+    "@rei/cdr-accordion": "0.1.0-alpha.3",
     "@rei/cdr-assets": "^0.3.0",
     "@rei/cdr-breadcrumb": "^1.0.0-beta.0",
     "@rei/cdr-button": "^1.0.0-beta.0",

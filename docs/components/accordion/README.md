@@ -2,8 +2,8 @@
 {
   "title": "Accordion",
   "layout": "LayoutComponent",
-  "summary": "Vertically-stacked list that allows users to expand and collapse additional content. I assume this will be edited to be a proper sentence.",
-  "title_metadata": "Why is this text here?",
+  "summary": "Vertically-stacked list that allows users to expand and collapse additional content.",
+  "title_metadata": "Accordion, cdr-accordion",
   "breadcrumbs": [
     {
       "text": "Components/",
@@ -72,7 +72,7 @@
             "slots": [
               {
                 "name": "default",
-                "description": "innerHTML on the inside of the accordion component"
+                "description": "Default slot for cdr-accordion-item(s)."
               }
             ]
           },
@@ -202,7 +202,7 @@ Reduced spacing around title and content body. Also, smaller font sizes resultin
 
 Border aligns to the title text and expand/collapse icon.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/accordion" sandbox-href="https://codesandbox.io/s/m9jm5rw1zx">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/accordion" sandbox-href="https://codesandbox.io/s/m9jm5rw1zx">
 
 ```html
   <cdr-accordion :border-aligned="true">
@@ -210,7 +210,7 @@ Border aligns to the title text and expand/collapse icon.
       id="border-aligned-1"
       label="How long have you been in business?"
     >
-      <cdr-text tag="p" modifier="body">
+      <cdr-text tag="p">
         REI has offered the finest in outdoor gear since 1938. In that same spirit, 
         REI Adventures has led the way down wilderness paths and cultural back roads 
         to the most intriguing destinations in the world since 1987.

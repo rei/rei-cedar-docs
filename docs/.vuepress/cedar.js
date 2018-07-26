@@ -6,11 +6,13 @@ import "@rei/cdr-assets/dist/cdr-core.css";
 import "@rei/cdr-assets/dist/cdr-fonts.css";
 
 // Components
-import { CdrAccordion, CdrAccordionItem } from "@rei/cdr-accordion";
-import "@rei/cdr-accordion/dist/cdr-accordion.css";
+import { CdrAccordion } from "@rei/cdr-accordion";
 Vue.component('CdrAccordion', CdrAccordion);
-Vue.component('CdrAccordionItem', CdrAccordionItem);
 FullVue.component('CdrAccordion', CdrAccordion);
+
+import { CdrAccordionItem } from "@rei/cdr-accordion";
+import "@rei/cdr-accordion/dist/cdr-accordion.css";
+Vue.component('CdrAccordionItem', CdrAccordionItem);
 FullVue.component('CdrAccordionItem', CdrAccordionItem);
 
 import { CdrButton } from "@rei/cdr-button";
