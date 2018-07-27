@@ -142,14 +142,14 @@
                 "slots": [
                     {
                         "name": "default",
-                        "notes": "innerHTML inside of checkbox component. This is the readable text inside the <label> element."
+                        "description": "innerHTML inside of checkbox component. This is the readable text inside the <label> element."
                     }
                 ],
                 "events": [
                     {
                         "name": "change",
                         "arguments": "newValue, event",
-                        "notes": "$emit event fired on check/uncheck"
+                        "description": "$emit event fired on check/uncheck"
                     }
                 ],
                 "installation": [
@@ -179,7 +179,7 @@
 
 Default and standard spacing for checkboxes.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/checkbox" sandbox-href="https://codesandbox.io/s/z30opplw43" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/checkbox" sandbox-href="https://codesandbox.io/s/z30opplw43" >
 
 ```html
 <div>
@@ -195,7 +195,7 @@ Default and standard spacing for checkboxes.
 
 Compact spacing for checkboxes.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/checkbox" sandbox-href="https://codesandbox.io/s/z30opplw43" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/checkbox" sandbox-href="https://codesandbox.io/s/z30opplw43" >
 
 ```html
 <div>
@@ -211,7 +211,7 @@ Compact spacing for checkboxes.
 
 Displays status for checkbox group by indicating that some of the sub-selections in a list are selected. Provides user with ability to select or unselect all items in the list’s sub-group.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/checkbox" sandbox-href="https://codesandbox.io/s/z30opplw43" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/checkbox" sandbox-href="https://codesandbox.io/s/z30opplw43" >
 
 ```html
 <div>
@@ -225,14 +225,13 @@ Displays status for checkbox group by indicating that some of the sub-selections
 
 Custom styles for checkboxes.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/checkbox" sandbox-href="https://codesandbox.io/s/z30opplw43" class="custom-checkbox-example">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/checkbox" sandbox-href="https://codesandbox.io/s/z30opplw43" class="custom-checkbox-example">
 
 ```html
 <div>
   <cdr-checkbox v-model="ex1" input-class="no-box" content-class="no-box__content">Custom checkbox 1</cdr-checkbox>
   <cdr-checkbox v-model="ex1">Custom checkbox 2</cdr-checkbox>
   <cdr-checkbox v-model="ex1" disabled>Custom checkbox 3</cdr-checkbox>
-  <p>Value: {{ex1}}</p>
 </div>
 ```
 
@@ -263,7 +262,7 @@ Custom styles for checkboxes.
 
 - Selecting one or multiple choices from a list
 - Selecting options from a list that contains sub-selections
-- Choosing “yes” or “no” when there is a single option (stand-alone checkbox)
+- Choosing &quot;yes&quot; or &quot;no&quot; when there is a single option (stand-alone checkbox)
 - Viewing all available options is needed
 - Comparing between a list of selections is desired
 
@@ -346,7 +345,7 @@ For more information, review techniques and failures for:
 
 Following are modifiers for `cdrCheckbox` component:
 
-- comapct
+- compact
 - hide-figure
 
 ## Slots
