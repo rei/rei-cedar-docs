@@ -1216,6 +1216,67 @@
 					"version": "1.0.0"
 				}
 			]
+		},
+		{
+			"name": "CdrRadio",
+			"versions": [
+				{
+					"api": {
+						"props": [
+							{
+								"name": "labelClass",
+								"type": "string",
+								"default": "n/a",
+								"description": "Class that is added to the label for custom styles"
+							},
+							{
+								"name": "inputClass",
+								"type": "string",
+								"default": "n/a",
+								"description": "Class that is added to the input for custom styles"
+							},
+							{
+								"name": "contentClass",
+								"type": "string",
+								"default": "n/a",
+								"description": "Class that is added to the slot wrapper for custom styles"
+							},
+							{
+								"name": "name",
+								"type": "string",
+								"default": "n/a",
+								"description": "Sets the name of the radio button. Required"
+							},
+							{
+								"name": "value",
+								"type": "string, number, boolean, object, array, symbol, function",
+								"default": "n/a",
+								"description": "Sets the value of the radio button. Required"
+							},
+							{
+								"name": "modifier",
+								"type": "string",
+								"default": "n/a",
+								"description": "Allows style variants to be defined"
+							}
+						],
+						"slots": [
+							{
+								"name": "default",
+								"description": "innerHTML inside of radio button component. This is the readable text inside the <label> element"
+							}
+						],
+						"events": [
+							{
+								"name": "change",
+								"type": "value",
+								"description": "$emit event fired on radio selection"
+							}
+						]
+					},
+					"version": "1.0.0"
+				}
+			]
 		}
 	]
 }
