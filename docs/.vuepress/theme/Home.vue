@@ -118,7 +118,7 @@
               </cdr-col>
               <cdr-col span="3">
                 <div>
-                  <cdr-img :src="$withBase('sketch_icon.png')" />
+                  <cdr-img class="home-resource-icon" :src="$withBase('sketch_icon.png')" />
                 </div>
               </cdr-col>
             </cdr-row>
@@ -139,7 +139,7 @@
               </cdr-col>
               <cdr-col span="3">
                 <div>
-                  <cdr-img :src="$withBase('vue_icon.png')" />
+                  <cdr-img class="home-resource-icon" :src="$withBase('vue_icon.png')" />
                 </div>
               </cdr-col>
             </cdr-row>
@@ -223,7 +223,7 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    color: white; //TODO: replace with token
+    color: $clean-slate;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -231,6 +231,7 @@ export default {
 
   &__description {
     @include redwood-display-40();
+    width: 100%;
     max-width: 400px;
     margin: 0 auto;
   }
@@ -310,6 +311,12 @@ export default {
   background-color: $clean-slate;
   border: 1px solid $partly-cloudy;
   border-radius: $radius-softer;
+}
+
+.home-resource-icon {
+  max-width: 55px !important;
+  display: block;
+  margin-left: auto;
 }
 
 .adopt-text {
