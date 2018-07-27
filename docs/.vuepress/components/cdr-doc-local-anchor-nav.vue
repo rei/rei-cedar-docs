@@ -24,8 +24,6 @@
 <script>
 
 import slugify from '../../../utils/slugify.js';
-import getUrlParameter from '../../../utils/getUrlParameter.js';
-import updateUrlParameter from '../../../utils/updateUrlParameter.js';
 
 export default {
   name: 'CdrDocLocalAnchorNav',
@@ -98,7 +96,7 @@ export default {
       });
     },
     initialize() {
-      const activeLinkParam = getUrlParameter('active-link');
+      const activeLinkParam = this.$route.query['active-link'];
       if (activeLinkParam) {
         this.setActiveLinkFromUrl(activeLinkParam);
       } else {
@@ -109,7 +107,7 @@ export default {
       }
     },
     initializeForActiveTabOnly(activeTab) {
-      const activeTabQueryParam = getUrlParameter('active-tab');
+      const activeTabQueryParam = this.$route.query['active-tab'];
       if (this.activeTabName && slugify(this.activeTabName) === activeTabQueryParam) {
         this.initialize();
       } else if (this.activeTabName && slugify(this.activeTabName) !== activeTabQueryParam) {
@@ -261,7 +259,7 @@ export default {
     },
     softScrollToAnchoredSection(id) {
       this.scrollMonitoringEnabled = false; // disable scrollMonitoring while soft scrolling to a specific section
-      updateUrlParameter('active-link', id.replace('#', ''));
+      this.$router.push({ query: Object.assign({}, this.$route.query, { 'active-link': id.replace('#', '') }) });
       const anchoredSection = document.querySelector(id);
       const scrollPosition = anchoredSection.offsetTop;
 

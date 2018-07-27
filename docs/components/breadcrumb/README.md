@@ -1,9 +1,9 @@
 ---
 {
-   "title": "Breadcrumb",
-   "layout": "LayoutComponent",
-   "summary": "Navigation to reveal a page’s location within the site hierarchy.",
-   "title_metadata": "Breadcrumb, cdrBreadcrumb",
+  "title": "Breadcrumb",
+  "layout": "LayoutComponent",
+  "summary": "Navigation to reveal a page’s location within the site hierarchy.",
+  "title_metadata": "Breadcrumb, cdrBreadcrumb",
 	  "path": [
       {
         "type": "do",
@@ -68,49 +68,53 @@
         "caption": "color breadcrumbs blue."
       }
     ],
-  "name": "CdrBreadcrumb",
   "versions": [
     {
-      "api": {
-        "props": [
-          {
-            "name": "items",
-            "type": "array",
-            "default": "N/A",
-            "description": "An array of breadcrumb objects that each contain a \"url\" and \"name\" property"
-          },
-          {
-            "name": "truncationEnabled",
-            "type": "boolean",
-            "default": "true",
-            "description": "Controls the ability to truncate. If a user sets this to false, truncation will no longer occur"
-          },
-          {
-            "name": "truncationThreshold",
-            "type": "number",
-            "default": 0.80,
-            "description": "This property respresents the ratio between breadcrumb width vs container width that truncation will occur"
-          },
-          {
-            "name": "truncationXSThreshold",
-            "type": "number",
-            "default": 1,
-            "description": "This property respresents the ratio between breadcrumb width vs container width that truncation will occur on the XS breakpoint"
+      "components": [
+        {
+          "name": "CdrBreadcrumb",
+          "api": {
+            "props": [
+              {
+                "name": "items",
+                "type": "array",
+                "default": "N/A",
+                "description": "An array of breadcrumb objects that each contain a \"url\" and \"name\" property"
+              },
+              {
+                "name": "truncationEnabled",
+                "type": "boolean",
+                "default": "true",
+                "description": "Controls the ability to truncate. If a user sets this to false, truncation will no longer occur"
+              },
+              {
+                "name": "truncationThreshold",
+                "type": "number",
+                "default": 0.80,
+                "description": "This property respresents the ratio between breadcrumb width vs container width that truncation will occur"
+              },
+              {
+                "name": "truncationXSThreshold",
+                "type": "number",
+                "default": 1,
+                "description": "This property respresents the ratio between breadcrumb width vs container width that truncation will occur on the XS breakpoint"
+              }
+            ],
+            "installation": [
+              {
+                "name": "@rei/cdr-breadcrumb",
+                "type": "Node module package",
+                "description": "Import the component into your project"
+              },
+              {
+                "name": "cdr-breadcrumb.css",
+                "type": "css",
+                "description": "Component specific styles"
+              }
+            ]
           }
-        ],
-        "installation": [
-          {
-            "name": "@rei/cdr-breadcrumb",
-            "type": "Node module package",
-            "description": "Import the component into your project"
-          },
-          {
-            "name": "cdr-breadcrumb.css",
-            "type": "css",
-            "description": "Component specific styles"
-          }
-        ]
-      },
+        }
+      ],
       "version": "1.0.0"
     }
   ]
@@ -125,11 +129,11 @@
 
 Complete breadcrumb string with all items visible.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/breadcrumb" sandbox-href="https://codesandbox.io/s/mm9qpyjojp" :backgroundToggle="false" :codeMaxHeight= false >
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/breadcrumb" sandbox-href="https://codesandbox.io/s/mm9qpyjojp" :backgroundToggle="false" :codeMaxHeight= false >
 
 ```html
-  <cdr-breadcrumb 
-    :truncation-enabled="false" 
+  <cdr-breadcrumb
+    :truncation-enabled="false"
     :items="[
       {item:{url:'', name: 'Snowboarding'}},
       {item:{url:'', name: 'Snowboard Clothing'}},
@@ -144,7 +148,7 @@ Complete breadcrumb string with all items visible.
 
 Long breadcrumbs shortened to display the last 2 links in the trail, with hidden links indicated by ellipsis.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/breadcrumb" sandbox-href="https://codesandbox.io/s/mm9qpyjojp" :backgroundToggle="false" :codeMaxHeight= false>
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/breadcrumb" sandbox-href="https://codesandbox.io/s/mm9qpyjojp" :backgroundToggle="false" :codeMaxHeight= false>
 
 ```html
     <cdr-breadcrumb
@@ -249,7 +253,7 @@ Breadcrumbs provide context and a sense of place. This is especially important o
 
 ## Properties
 
-<cdr-doc-api type="prop" />
+<cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props"/>
 
 ## Installation
 
@@ -269,7 +273,7 @@ Install the `cdr-breadcrumb` package using `npm` in your terminal:
 _Terminal_
 
 ```terminal
-    npm i -s @rei/cdr-breadcrumb
+npm i -s @rei/cdr-breadcrumb
 ```
 
 ### #2. Import Dependencies
@@ -334,13 +338,26 @@ The array must be ordered appropriately from low index rendered on the left, to 
 
 The below example shows alternatively setting ```items``` using an array literal.
 ```vue
-<cdr-breadcrumb :items="[{item:{url:'', name: 1}},{item:{url:'', name: 2}},{item:{url:'', name: 3}}]"/>
+<cdr-breadcrumb
+  :items="[
+    {item:{url:'', name: 1}},
+    {item:{url:'', name: 2}},
+    {item:{url:'', name: 3}}
+  ]"
+/>
 ```
 
 Use ```truncationEnabled``` to disable the truncation functionality.  Below shows truncation being disabled.
 
 ```vue
-<cdr-breadcrumb :truncation-enabled="false" :items="[{url:'', name: 1},{url:'', name: 2},{url:'', name: 3}]"/>
+<cdr-breadcrumb
+  :truncation-enabled="false"
+  :items="[
+    {url:'', name: 1},
+    {url:'', name: 2},
+    {url:'', name: 3}
+  ]"
+/>
 ```
 
 Use the ```truncationThreshold``` prop to alter when truncation occurs:
@@ -355,7 +372,10 @@ Below shows using ```truncationThreshold``` to set truncation to occur at 50%.
 <cdr-img alt="Breadcrumb with truncation threshold at 50% and 80%" :src="$withBase(`/breadcrumb/Spec_API___Breadcrumb_Truncated_Threshold_50to80_16-4.png`)" />
 
 ```vue
-<cdr-breadcrumb :truncation-threshold="0.50" :items="breadcrumbItems"/>
+<cdr-breadcrumb
+  :truncation-threshold="0.50"
+  :items="breadcrumbItems"
+/>
 ```
 Use the ```truncationXSThreshold``` prop to alter when truncation occurs:
 
@@ -369,7 +389,10 @@ Below shows using ```truncationXSThreshold``` to set truncation to occur at 70%.
 <cdr-img alt="Breadcrumb with truncation XS  threshold at 70%" :src="$withBase(`/breadcrumb/Spec_API___Breadcrumb_Truncated_XSThreshold_70to100_16-4.png`)" />
 
 ```vue
-<cdr-breadcrumb :truncation-x-s-threshold=“0.70” :items="breadcrumbItems"/>
+<cdr-breadcrumb
+  :truncation-x-s-threshold=“0.70”
+  :items="breadcrumbItems"
+/>
 ```
 
 ## Accessibility

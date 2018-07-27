@@ -6,8 +6,7 @@
   "summary": false,
   "breadcrumbs": [
     {
-      "text": "Foundation/",
-      "href": "/foundation/"
+      "text": "Foundation/"
     }
   ],
 }
