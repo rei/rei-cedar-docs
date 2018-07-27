@@ -1,47 +1,131 @@
 ---
 {
-  "title": "CTA",
+  "title": "Call to Action",
   "layout": "LayoutComponent",
-  "summary": "Provides an emphasized path to a new location or page view. It’s primary purpose is for selling or marketing a product(s) and entices users to perform an action. ",
-  "title_metadata": "Can I just remove this property?",
+  "summary": "Stylized link used in campaigns and promotions to encourage users to further explore featured products, services or offers.",
+  "title_metadata": "Call to Action, CTA, CTA button, cdr-cta",
+  "placement": [
+    {
+      "type": "do",
+      "image": "cta/CTA_placement_do_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing proper Call to Action usage",
+      "caption": "use Call to Action to lead users to explain more."
+    },
+    {
+      "type": "dont",
+      "image": "cta/CTA_placement_dont_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing proper Call to Action paired with basic button",
+      "caption": "mix Call to Action and basic buttons."
+    }
+  ],
+  "label": [
+    {
+      "type": "do",
+      "image": "cta/CTA_label_do_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing Call to Action with a brief label",
+      "caption": "write brief and concise labels."
+    },
+    {
+      "type": "dont",
+      "image": "cta/CTA_label_dont_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing a Call to Action with a long label",
+      "caption": "write long labels."
+    }
+  ],
+  "size": [
+    {
+      "type": "do",
+      "image": "cta/CTA_size_do_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing standard size Call to Action",
+      "caption": "maintain standard size."
+    },
+    {
+      "type": "dont",
+      "image": "cta/CTA_size_dont_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing a different sized Call to Action",
+      "caption": "alter the button size."
+    }
+  ],
+  "typography": [
+    {
+      "type": "do",
+      "image": "cta/CTA_type_do_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing standard Call to Action typography",
+      "caption": "maintain standard typography."
+    },
+    {
+      "type": "dont",
+      "image": "cta/CTA_type_dont_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing a Call to Action with different typography",
+      "caption": "alter standard typography."
+    }
+  ],
+  "link": [
+    {
+      "type": "do",
+      "image": "cta/CTA_link_do_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing standard Call to Action link style",
+      "caption": "maintain standard button-like styles."
+    },
+    {
+      "type": "dont",
+      "image": "cta/CTA_link_dont_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing a Call to Action as a link",
+      "caption": "style as a link."
+    }
+  ],
   "breadcrumbs": [
     {
       "text": "Components/",
       "href": "#"
     }
   ],
-  "name": "CdrCTA",
   "versions": [
     {
-      "api": {
-        "props": [
-          {
-            "name": "ctaStyle",
-            "type": "string",
-            "default": "\"brand\"",
-            "description": "Set CTA style. Changes the color to match different themes. Possible values: { brand, dark, light, sale }"
-          },
-          {
-            "name": "fullWidth",
-            "type": "boolean",
-            "default": "false",
-            "description": "Set CTA width to be 100% of the parent container."
-          },
-          {
-            "name": "href",
-            "type": "string",
-            "default": "\"#\"",
-            "description": "The destination page url."
+      "components": [
+        {
+          "name": "CdrCTA",
+          "api": {
+            "props": [
+              {
+                "name": "ctaStyle",
+                "type": "string",
+                "default": "\"brand\"",
+                "description": "Set Call to Action color by changing ctaStyle to match different themes. \nPossible values: {brand, dark, light, sale}"
+              },
+              {
+                "name": "fullWidth",
+                "type": "boolean",
+                "default": "false",
+                "description": "Set Call to Action width to 100%. Setting it to true will set the width to 100% of the parent container. "
+              },
+              {
+                "name": "href",
+                "type": "string",
+                "default": "\"#\"",
+                "description": "Set the link using the page url."
+              }
+            ],
+            "slots": [
+              {
+                "name": "default",
+                "description": "This is for the readable text of cdr-cta."
+              }
+            ],
           }
-        ],
-        "slots": [
-          {
-            "name": "default",
-            "description": "This is for the readable text of cdr-cta."
-          }
-        ]
-      },
-      "version": "0.1.0-alpha.0"
+        }
+      ],
+      "version": "0.1.0-alpha.1"
     }
   ]
 }
@@ -51,25 +135,9 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
 
-## Brand
-
-Use CTA blue link as an alternative.
-
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/cta" sandbox-ref="https://codesandbox.io/s/9ojj43x1op">
-
-```html
-  <cdr-cta 
-    href="https://rei.com"
-  >
-    Explore travel tips &amp; gear
-  </cdr-cta>
-```
-
-</cdr-doc-example-code-pair>
-
 ## Dark
 
-Use CTA dark link over a light background image or color to provide proper contrast.
+Use dark Call to Action over a light background image or color to provide proper contrast. This is the default Call to Action style.
 
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/cta" sandbox-ref="https://codesandbox.io/s/9ojj43x1op">
 
@@ -86,7 +154,7 @@ Use CTA dark link over a light background image or color to provide proper contr
 
 ## Light
 
-Use CTA Light link over a dark background image or color to provide proper contrast.
+Use light Call to Action over a dark background image or color to provide proper contrast.
 
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/cta" sandbox-ref="https://codesandbox.io/s/9ojj43x1op">
 
@@ -103,7 +171,7 @@ Use CTA Light link over a dark background image or color to provide proper contr
 
 ## Sale
 
-Use CTA red link for sale or off-price placements.
+Use sale Call to Action for off-price placements.
 
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/cta" sandbox-ref="https://codesandbox.io/s/9ojj43x1op">
 
@@ -118,15 +186,33 @@ Use CTA red link for sale or off-price placements.
 
 </cdr-doc-example-code-pair>
 
+## Brand
+
+Use CTA blue link as an alternative.
+
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/cta" sandbox-ref="https://codesandbox.io/s/9ojj43x1op">
+
+```html
+  <cdr-cta
+    cta-style="brand"
+    href="https://rei.com"
+  >
+    Explore travel tips &amp; gear
+  </cdr-cta>
+```
+
+</cdr-doc-example-code-pair>
+
 ## Elevated
 
-Use elevated when...
+Adds drop shadow to increase contrast and visibility of Call to Action when placed over an image.
 
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/cta" sandbox-ref="https://codesandbox.io/s/9ojj43x1op">
 
 ```html
   <cdr-cta 
     href="https://rei.com"
+    cta-style="brand"
     modifier="elevated"
   >
     Explore travel tips &amp; gear
@@ -138,14 +224,97 @@ Use elevated when...
 </cdr-doc-table-of-contents-shell>
 </template>
 
+<template slot="Design Guidelines">
+<cdr-doc-table-of-contents-shell>
+
+## Use when
+- Encouraging a user to navigate to a new location
+- Promoting a campaign, promotional advertisements, or email offers
+
+## Don't use when
+
+- Triggering interface interactions. Instead, use a [Button](/components/button/) component
+
+## Foundation
+
+- Use uppercase for all words within a Call to Action
+
+## Content
+
+Call to Action exists as a means to navigate users to a new location or additional information:
+
+- Use clear and concise text
+- Make it clear what happens when this link is clicked or tapped 
+- For example, “Shop Backpacking” Call to Action on a homepage would navigate the user to an assortment of backpacking-related products available for purchase
+- Use all caps for CTAs, not sentence case, title caps or all lowercase
+
+To construct consistent and universal Call to Actions across the site:
+
+- If leading to a Brand/Category/Activity Landing page, UI text for Call to Action should be **[Explore Brand/Category/Activity Name]**
+- If leading to a Product Detail page, UI text for Call to Action should be **[Shop Product Name]**
+- If leading to a Collection/Search Result, UI text for Call to Action should be **[Shop all Brand/Category/Activity Name]**
+
+## Behavior
+
+Avoid combining a Call to Action with a basic button. Disabling Call to Actions is not semantically supported.
+
+<do-dont :examples="$page.frontmatter.placement" />
+
+Write brief and concise Call to Action labels to ensure a good customer experience for mobile and desktop users.
+
+<do-dont :examples="$page.frontmatter.label" />
+
+Maintain standard size of a Call to Action.
+
+<do-dont :examples="$page.frontmatter.size" />
+
+Maintain typography styling for a Call to Action.
+
+<do-dont :examples="$page.frontmatter.typography" />
+
+Maintain button styling for a Call to Action. Do not style as a link.
+
+<do-dont :examples="$page.frontmatter.link" />
+
+## Accessibility
+
+When using Call to Action with assistive technology:
+
+- Use an aria-label to clarify information 
+- Clearly and concisely label what happens when the Call to Action is clicked or tapped
+- For example, aria-label might read: “Shop our \<specific advertising category\>"
+
+Call to Action text and text links must comply to AA color contrast and text size accessibility compliance guidelines
+
+- Choose a the light button theme on dark background or dark button theme on light background
+- Test color contrast for button themes against all backgrounds
+
+This component has no specific WCAG compliance attributes built into the control, Call to Action can: 
+
+- Receive keyboard focus by default
+- Enable states: Focus, Hover, and Active
+
+## Related Links
+
+- [Button](/components/button/)
+- [Links](/components/link/)
+
+
+</cdr-doc-table-of-contents-shell>
+</template>
+
 <template slot="API">
 <cdr-doc-table-of-contents-shell>
   
 ## Properties
-<cdr-doc-api type="prop" />
+<cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
 ## Slots
-<cdr-doc-api type="slot" />
+<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
+
+## Modifiers
+
+- elevated
 
 ## Installation
 
@@ -204,9 +373,8 @@ export default {
 
 ## Usage
 
-Cdr-cta is meant to standardize calls-to-action, so there are a limited number of ways it can change. Use the 'elevated' modifier to change the drop shadow, and ctaStyle to change the theme.
+This example code renders a full width `cdr-cta`, with the `elevated` modifier and the `sale` theme.
 
-This example code renders a full-width cdr-cta link, with the elevated modifier and the sale theme.
 ```vue
 <template>
   <cdr-cta 
@@ -220,9 +388,10 @@ This example code renders a full-width cdr-cta link, with the elevated modifier 
 </template>
 ```
 
-While cdr-cta looks like a button, it's actually an anchor, and should never be used where a button is preferable. Furthermore, cdr-cta should never be assigned a role of button.
-
-If you need to make a link that does not look like a button, use cdr-link.
+The `cdr-cta` component looks like a button; however it's actually an anchor:
+- Do not use when a button is preferable such as triggering an action
+- Do not assign the role of button
+- For basic links, use [cdr-link](/components/link/)
 
 ## Accessibility
 
@@ -244,7 +413,7 @@ If you need to make a link that does not look like a button, use cdr-link.
 
 <template slot="History">
 
-## 0.1.0-alpha.0
+## 1.0.0
 
 ### What's new
 

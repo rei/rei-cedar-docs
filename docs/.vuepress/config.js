@@ -50,6 +50,7 @@ module.exports = {
             text: "Button",
             link: "/components/button/"
           },
+          { text: "Call to Action", link: "/components/cta/" },
           { text: "Grid", link: "/components/grid/" },
           { text: "Headings", link: "/components/heading/" },
           { text: "Link", link: "/components/link/" },
