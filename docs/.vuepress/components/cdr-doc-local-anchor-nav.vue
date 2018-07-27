@@ -2,19 +2,30 @@
   <nav class="cdr-doc-local-anchor-nav" ref="localNav">
     <ul class="cdr-doc-local-anchor-nav__list">
       <li v-for="link in links" class="cdr-doc-local-anchor-nav__list-item" :class="{'cdr-doc-local-anchor-nav__list-item--parent': !link.isChild, 'cdr-doc-local-anchor-nav__list-item--child': link.isChild }">
-        <a class="cdr-doc-local-anchor-nav__link" 
-            :class="{'cdr-doc-local-anchor-nav__link--parent': !link.isChild, 
-                      'cdr-doc-local-anchor-nav__link--child': link.isChild,
-                      'cdr-doc-local-anchor-nav__link--active': link.href === activeLinkHref }" 
+        <cdr-link
+            :class="[
+              'cdr-doc-local-anchor-nav__link',
+              {
+                'cdr-doc-local-anchor-nav__link--parent': !link.isChild, 
+                'cdr-doc-local-anchor-nav__link--child': link.isChild,
+                'cdr-doc-local-anchor-nav__link--active': link.href === activeLinkHref
+              }
+            ]"
+            modifier="standalone"
             :href="link.href"
             v-on:click="handleAnchorLinkClick(link.href, $event)">
           {{ link.text }}
-        </a>
+        </cdr-link>
       </li>
     </ul>
     <ul class="cdr-doc-local-anchor-nav__appended-items" v-if="appendedItems.length > 0">
       <li v-for="item in appendedItems">
-        <a class="cdr-doc-local-anchor-nav__appended-item-link" :href="item.href" v-if="item.href">{{ item.text }}</a>
+        <cdr-link
+          v-if="item.href"
+          modifier="standalone"
+          class="cdr-doc-local-anchor-nav__appended-item-link"
+          :href="item.href"
+        >{{ item.text }}</cdr-link>
         <span class="cdr-doc-local-anchor-nav__appended-item-header" v-if="!item.href">{{ item.text }}</span>
       </li>
     </ul>
@@ -293,7 +304,6 @@ export default {
 
   .cdr-doc-local-anchor-nav__link {
     @include redwood-display-20;
-    color: $cdr-doc-link-color-primary;
     display: block;
     position: relative;
   }
@@ -332,7 +342,6 @@ export default {
 
   .cdr-doc-local-anchor-nav__appended-item-link {
     @include redwood-display-20;
-    color: $cdr-doc-link-color-primary;
   }
 
   .cdr-doc-local-anchor-nav__appended-item-header {
