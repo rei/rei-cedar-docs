@@ -225,13 +225,13 @@ Displays status for checkbox group by indicating that some of the sub-selections
 
 Custom styles for checkboxes.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/checkbox" sandbox-href="https://codesandbox.io/s/z30opplw43" >
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/checkbox" sandbox-href="https://codesandbox.io/s/z30opplw43" class="custom-checkbox-example">
 
 ```html
 <div>
-  <cdr-checkbox v-model="ex1">Custom checkbox 1</cdr-checkbox>
-  <cdr-checkbox>Custom checkbox 2</cdr-checkbox>
-  <cdr-checkbox disabled>Custom checkbox 3</cdr-checkbox>
+  <cdr-checkbox v-model="ex1" input-class="no-box" content-class="no-box__content">Custom checkbox 1</cdr-checkbox>
+  <cdr-checkbox v-model="ex1">Custom checkbox 2</cdr-checkbox>
+  <cdr-checkbox v-model="ex1" disabled>Custom checkbox 3</cdr-checkbox>
   <p>Value: {{ex1}}</p>
 </div>
 ```
