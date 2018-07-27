@@ -39,13 +39,13 @@
               <cdr-col>
                 <cdr-button
                   tag="a"
-                  :href="$withBase('/getting-started/designer/')"
+                  :href="$withBase('/getting-started/as-a-designer/')"
                   modifier="secondary">View Designer Guide</cdr-button>
               </cdr-col>
               <cdr-col>
                 <cdr-button
                   tag="a"
-                  :href="$withBase('/getting-started/developer/')"
+                  :href="$withBase('/getting-started/as-a-developer/')"
                   modifier="secondary">View Developer Guide</cdr-button>
               </cdr-col>
             </cdr-row>
@@ -134,8 +134,7 @@
                     modifier="heading-small-static"
                     class="cdr-stack"
                   >Vue.js components</cdr-text>
-                  <!-- TODO: link href -->
-                  <cdr-link href="" modifier="standalone">View the NPM repository</cdr-link>
+                  <cdr-link href="https://www.npmjs.com/org/rei" target="_blank" modifier="standalone">View the NPM repository</cdr-link>
                 </div>
               </cdr-col>
               <cdr-col span="3">
@@ -154,8 +153,7 @@
               class="cdr-stack"
             >Contribute to Cedar</cdr-text>
             <cdr-text class="cdr-stack">The Cedar team welcomes contributions from the community. Learn how to become a pilot contributor.  </cdr-text>
-            <!-- TODO: correct link? -->
-            <cdr-link :href="$withBase('/adopting-cedar#contributions')" modifier="standalone">Help build Cedar</cdr-link>
+            <cdr-link :href="$withBase('/getting-started/as-an-adopter/?active-link=contributions')" modifier="standalone">Help build Cedar</cdr-link>
           </div>
         </cdr-col>
         <cdr-col>
