@@ -53,7 +53,7 @@
         </cdr-col>
       </cdr-row>
 
-      <hr class="home-hr cdr-stack--xl"/>
+      <div class="home-hr cdr-stack--xl" role="presentation"></div>
 
       <cdr-row cols="1 2@md" class="cdr-stack--xl">
         <cdr-col>
@@ -273,7 +273,8 @@ export default {
 }
 
 .home-hr {
-  color: $partly-cloudy;
+  height: 1px;
+  background-color: $partly-cloudy;
 }
 
 .home-hr-tree {
