@@ -6,7 +6,7 @@
         class="hero__image"
         :src="$withBase(data.heroImage)"
         ratio="2-1"
-        crop="top x-center"
+        crop="y-center x-center"
         cover
         alt="hero"/>
       <div class="hero__container cdr-text-center">
@@ -93,7 +93,10 @@
       </cdr-row>
 
       <div class="home-hr-tree cdr-stack--xl">
-        <cdr-img :src="$withBase('hr_tree.png')" />
+        <cdr-img
+          class="home-hr-tree__image"
+          :src="$withBase('hr_tree.png')"
+          role="presentation" />
       </div>
 
 
@@ -101,7 +104,7 @@
 
       <cdr-row cols="1 2@md" class="cdr-stack--xl">
         <cdr-col>
-          <cdr-card class="cdr-inset--lg">
+          <div class="home-card cdr-inset">
             <cdr-row align="middle">
               <cdr-col span="9">
                 <div>
@@ -119,10 +122,10 @@
                 </div>
               </cdr-col>
             </cdr-row>
-          </cdr-card>
+          </div>
         </cdr-col>
         <cdr-col>
-          <cdr-card class="cdr-inset--lg">
+          <div class="home-card cdr-inset">
             <cdr-row align="middle">
               <cdr-col span="9">
                 <div>
@@ -141,10 +144,10 @@
                 </div>
               </cdr-col>
             </cdr-row>
-          </cdr-card>
+          </div>
         </cdr-col>
         <cdr-col>
-          <cdr-card class="cdr-inset--lg">
+          <div class="home-card cdr-inset">
             <cdr-text
               tag="h3"
               modifier="heading-small-static"
@@ -153,10 +156,10 @@
             <cdr-text class="cdr-stack">The Cedar team welcomes contributions from the community. Learn how to become a pilot contributor.  </cdr-text>
             <!-- TODO: correct link? -->
             <cdr-link :href="$withBase('/adopting-cedar#contributions')" modifier="standalone">Help build Cedar</cdr-link>
-          </cdr-card>
+          </div>
         </cdr-col>
         <cdr-col>
-          <cdr-card class="cdr-inset--lg">
+          <div class="home-card cdr-inset">
             <cdr-text
               tag="h3"
               modifier="heading-small-static"
@@ -164,7 +167,7 @@
             >Feedback & support</cdr-text>
             <cdr-text class="cdr-stack">Questions, ideas, or comments? Your feedback can help improve Cedar. </cdr-text>
             <cdr-link href="mailto:cedar@rei.com" modifier="standalone">Get in touch</cdr-link>
-          </cdr-card>
+          </div>
         </cdr-col>
       </cdr-row>
 
@@ -208,6 +211,9 @@ export default {
   position: relative;
 
   &__image {
+    max-height: 486px;
+    min-height: 250px;
+
     &::before {
       padding-bottom: 40% !important;
     }
@@ -267,7 +273,7 @@ export default {
 }
 
 .home-hr {
-  color: black;
+  color: $partly-cloudy;
 }
 
 .home-hr-tree {
@@ -282,7 +288,7 @@ export default {
     left: 0;
     transform: translateY(-50%);
     width: 33%;
-    border-top: 1px solid black;
+    border-top: 1px solid $partly-cloudy;
   }
 
   &::after {
@@ -293,8 +299,18 @@ export default {
     right: 0;
     transform: translateY(-50%);
     width: 33%;
-    border-top: 1px solid black;
+    border-top: 1px solid $partly-cloudy;
   }
+
+  &__image {
+    width: 87px;
+  }
+}
+
+.home-card {
+  background-color: $clean-slate;
+  border: 1px solid $partly-cloudy;
+  border-radius: $radius-softer;
 }
 
 .adopt-text {

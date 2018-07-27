@@ -47,11 +47,6 @@ import "@rei/cdr-breadcrumb/dist/cdr-breadcrumb.css";
 Vue.component("CdrBreadcrumb", CdrBreadcrumb);
 FullVue.component("CdrBreadcrumb", CdrBreadcrumb);
 
-import { CdrCard } from "@rei/cdr-card";
-import "@rei/cdr-card/dist/cdr-card.css";
-Vue.component('CdrCard', CdrCard);
-FullVue.component('CdrCard', CdrCard);
-
 // Core assets
 import "@rei/cdr-assets/dist/cdr-core.css";
 import "@rei/cdr-assets/dist/cdr-fonts.css";
