@@ -1,7 +1,12 @@
 <template>
   <div class="page cdr-doc-article-layout">
-    <cdr-doc-intro :size="pageData.intro_size || 'small'" :title="pageData.title" :metadata="pageData.title_metadata" :breadcrumbs="pageData.breadcrumbs">
-      {{ pageData.summary }}
+    <cdr-doc-intro 
+      :size="pageData.intro_size || 'small'"
+      :title="pageData.title"
+      :metadata="pageData.title_metadata"
+      :breadcrumbs="pageData.breadcrumbs"
+    >
+      {{ pageData.summary ? pageData.summary : '' }}
     </cdr-doc-intro>
     <div class="cdr-doc-article-layout__body">
       <div class="cdr-doc-article-layout__body-inner">
