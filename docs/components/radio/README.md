@@ -134,17 +134,14 @@ Default and standard spacing for radio buttons.
 ```html
 <div>
 <cdr-radio
-  v-model="$page.frontmatter.example1"
   name="example"
   value="a1"
 >Default radio 1</cdr-radio>
 <cdr-radio
-  v-model="$page.frontmatter.example1"
   name="example"
   value="a2"
 >Default radio 2</cdr-radio>
 <cdr-radio
-  v-model="$page.frontmatter.example1"
   name="example"
   :value="{val:'a3'}"
   disabled
@@ -238,8 +235,8 @@ Custom styles for radio buttons.
 
 ## Don’t use when
 
-- Displaying a top-level page, such as a home or high level category page
-- Linking to previous steps of a sequential process
+- Selecting from a list when multiple choices are allowed. Instead, use Checkboxes component
+- Providing a single selectable option. Instead, use Checkboxes component (stand-alone checkbox)
 
 ## Foundations
 
