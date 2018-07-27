@@ -4,6 +4,7 @@
   "layout": "LayoutComponent",
   "summary": "Permits user to select only one option from a list of two or more.",
   "title_metadata": "Radio, cdrRadio",
+  "example1": '',
 	  "path": [
       {
         "type": "do",
@@ -126,7 +127,6 @@
 <cdr-doc-table-of-contents-shell>
 
 ## Default
-
 Default and standard spacing for radio buttons.
 
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/radio" sandbox-href="https://codesandbox.io/s/4rx86n66l9" :backgroundToggle="true" :codeMaxHeight= false >
@@ -134,42 +134,93 @@ Default and standard spacing for radio buttons.
 ```html
 <div>
 <cdr-radio
+  v-model="$page.frontmatter.example1"
   name="example"
   value="a1"
-  v-model="ex1"
->Radio 1</cdr-radio>
+>Default radio 1</cdr-radio>
 <cdr-radio
+  v-model="$page.frontmatter.example1"
   name="example"
   value="a2"
-  v-model="ex1"
->Radio 2</cdr-radio>
+>Default radio 2</cdr-radio>
 <cdr-radio
+  v-model="$page.frontmatter.example1"
   name="example"
   :value="{val:'a3'}"
-  v-model="ex1"
   disabled
->Radio 3</cdr-radio>
+>Default radio 3</cdr-radio>
 </div>
 ```
 
 </cdr-doc-example-code-pair>
 
-## Truncated
+## Compact
 
-Long breadcrumbs shortened to display the last 2 links in the trail, with hidden links indicated by ellipsis.
+Compact spacing for radio buttons.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/breadcrumb" sandbox-href="https://codesandbox.io/s/4rx86n66l9" :backgroundToggle="false" :codeMaxHeight= false>
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/radio" sandbox-href="https://codesandbox.io/s/4rx86n66l9" :backgroundToggle="true" :codeMaxHeight= false>
 
 ```html
-    <cdr-breadcrumb
-      :items="[
-        {item:{url:'', name: 'Kids\' Snowboard Clothing Accessories'}},
-        {item:{url:'', name: 'Kids\' Snowboard Gloves and Mittens'}}
-      ]"
-    />
+<div>
+<cdr-radio
+  modifier="compact"
+  name="example"
+  value="a1"
+>Compact radio 1</cdr-radio>
+<cdr-radio
+  modifier="compact"
+  name="example"
+  value="a2"
+>Compact radio 2</cdr-radio>
+<cdr-radio
+  modifier="compact"
+  name="example"
+  :value="{val:'a3'}"
+  disabled
+>Compact radio 3</cdr-radio>
+</div>
 ```
 
 </cdr-doc-example-code-pair>
+
+## Custom
+
+Custom styles for radio buttons.
+
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/radio" sandbox-href="https://codesandbox.io/s/4rx86n66l9" :backgroundToggle="true" :codeMaxHeight= false>
+
+```html
+<div>
+
+<cdr-radio
+  name="example"
+  value="a1"
+  modifier="hide-figure"
+  input-class="no-box"
+  content-class="no-box__content"
+>Custom radio 1</cdr-radio>
+<cdr-radio
+  name="example"
+  value="a2"
+  modifier="hide-figure"
+  input-class="no-box"
+  content-class="no-box__content"
+>Custom radio 2</cdr-radio>
+<cdr-radio
+  name="example"
+  :value="{val:'a3'}"
+  modifier="hide-figure"
+  input-class="no-box"
+  content-class="no-box__content"
+  disabled
+>Custom radio 3</cdr-radio>
+
+
+</div>
+```
+
+</cdr-doc-example-code-pair>
+
 </cdr-doc-table-of-contents-shell>
 </template>
 
@@ -180,8 +231,10 @@ Long breadcrumbs shortened to display the last 2 links in the trail, with hidden
 
 ## Use when
 
-- Helping users understand where they are within the site hierarchy
-- Providing a shortcut to explore similar products within common parent categories
+- Selecting only 1 choice from a list is allowed
+- Viewing all available options is needed
+- Comparing between list of selections is desired
+
 
 ## Don’t use when
 
