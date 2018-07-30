@@ -34,9 +34,8 @@
         {{ label || slotLabel }}
       </span>
       <div class="cdr-doc-example-code-pair__item-example">
-        <div :id="'cdr-doc-html-example-' + slotLabel">
-          <!-- Will be replaced with the compiled template code on mount -->
-        </div>
+        <!-- Will be replaced with the compiled template code on mount -->
+        <component :is="`cdr-doc-html-example-${slotLabel}-${instanceId}`" />
       </div>
     </div>
 
@@ -111,16 +110,20 @@
         type: Boolean
       }
     },
-    data: function() {
+    data() {
       return {
         exampleCount: 0,
         backgroundToggleStates: {},
-        instanceId: null,
         templateSources: {},
         slotNames: []
       }
     },
-    created: function() {
+    computed: {
+      instanceId() {
+        return this._uid;
+      }
+    },
+    created() {
       // Loop over all the slots and set the default background color for each example. Also create an array of all the slot names so that just the first slot's code can be displayed
       let backgroundToggleStates = {}
       for (const label in this.$slots) {
@@ -133,15 +136,13 @@
       this.slotNames = Object.keys(this.$slots);
       this.backgroundToggleStates = backgroundToggleStates; // Set default background toggle states
     },
-    mounted: function () {
-      this.instanceId = this._uid;
+    beforeMount() {
       this.exampleCount = Object.keys(this.$slots).length; // If more than one example is present, labels will be turned on by default
       // Loop over all the slots and extract the source HTML/Custom Element code from the escaped markdown code snippet. This code is saved as a Vue template string that is then rendered into a dynamically created empty div in the template 
       for (const label in this.$slots) {
-        const mountId = '#cdr-doc-html-example-' + label;
         const codeNode = this.extractCodeNodeFromVnodeTree(this.$slots[label][0]);
         const templateSource = this.getStoredTemplateSourceForExample(label, codeNode);
-        this.renderExampleFromTemplate(templateSource, mountId); // This renders a string like: '<cdr-button>Example</button>' using the correct Vue template and injects it into the corresponding empty div in the template
+        this.$options.components[`cdr-doc-html-example-${label}-${this.instanceId}`] = { ...Vue.compile(templateSource) };
       }
     },
     methods: {
@@ -183,13 +184,6 @@
 
         return codeNode
       },
-      renderExampleFromTemplate (template, mountId) {
-        // This method calls the Vue compiler directly to render the Vue template content as HTML and mount it in the DOM at the `mountId` provided
-        var tempComponent = new Vue({
-          template: template,
-          parent: this,
-        }).$mount(mountId)
-      }
     }
   }
 </script>
