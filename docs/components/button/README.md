@@ -99,7 +99,7 @@
         "props": [
           {
             "name": "tag",
-            "type": "String",
+            "type": "string",
             "default": "button",
             "description": "Render CdrButton as a <button> or <a> element. When using a value of a, this element renders as an anchor link. Possible values: { button, a }"
           },
@@ -111,43 +111,43 @@
           },
           {
             "name": "onClick",
-            "type": "Function",
-            "default": "Return null",
+            "type": "function",
+            "default": "return null",
             "description": "Add custom click actions."
           },
           {
             "name": "fullWidth",
-            "type": "Boolean",
+            "type": "boolean",
             "default": "false",
             "description": "Set button width to 100%. Setting it to true will set the button width to 100% of the parent container. Use the full-width prop with the size prop to control top and bottom padding."
           },
           {
             "name": "size",
-            "type": "String",
+            "type": "string",
             "default": "medium",
             "description": "Set the button size. Possible values: { small, medium, large }"
           },
           {
             "name": "responsiveSize",
-            "type": "Array",
+            "type": "array",
             "default": "n/a",
             "description": "Set the button size at different responsive breakpoints. Breakpoints are expressed as t-shirt sizing with values: xs, sm, md, and lg. Example: [‘large@xs’, ‘small@lg’]"
           },
           {
             "name": "iconOnly",
-            "type": "Boolean",
+            "type": "boolean",
             "default": "false",
             "description": "Renders an icon-only button. Overrides size and responsiveSize props."
           },
           {
             "name": "onDark",
-            "type": "Boolean",
+            "type": "boolean",
             "default": "false",
             "description": "Renders an icon-only button with a light fill color for use on dark backgrounds. iconOnly must also be true."
           },
           {
             "name": "modifier",
-            "type": "String",
+            "type": "string",
             "default": "n/a",
             "description": "Allows style variants to be defined."
           }                          
@@ -191,7 +191,7 @@
 
 Use primary buttons for actions to complete a task or move forward in a process such as &quot;Add to cart.&quot; There is only 1 primary action per major page section.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
 
 ```html
   <cdr-button>Add to cart</cdr-button>
@@ -205,10 +205,10 @@ Use primary buttons for actions to complete a task or move forward in a process 
 
 Use secondary buttons for all actions that do not move the user to the next step or are additional user actions such as &quot;Add to wish list&quot; or &quot;Find a campout near you.&quot;
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
 
 ```html
-  <cdr-button class="cdr-button--secondary">Add to wish list</cdr-button>
+  <cdr-button modifier="secondary">Add to wish list</cdr-button>
 ```
 
 </cdr-doc-example-code-pair>
@@ -217,7 +217,7 @@ Use secondary buttons for all actions that do not move the user to the next step
 
 Pair an icon with text to improve recognition about an object or action.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
 
 ```html
   <div>
@@ -243,7 +243,7 @@ Pair an icon with text to improve recognition about an object or action.
 
 Use to visually communicate an object or action in limited space. Include alternative text to describe what button does.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
 
 ```html
   <div>
@@ -270,7 +270,7 @@ Use to visually communicate an object or action in limited space. Include altern
 
 Change the button size based on where button is used. Default size is medium. Small is used for supplemental user actions such as product comparison or filter. Large is used for &quot;Add to cart&quot; on product pages or Call to Action.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
 
 ```html
     <div>

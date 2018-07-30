@@ -3,9 +3,14 @@
     <div class="cdr-doc-tabs__labels">
       <ul class="cdr-doc-tabs-list">
         <li class="cdr-doc-tabs__list-item" v-for="tab in tabLabelData" :key="tab.slug">
-          <a class="cdr-doc-tabs__link" :id="tab.linkId" :class="{ 'cdr-doc-tabs__link--active' : tab.active }" :href="tab.anchor" v-on:click="switchActiveTab(tab.slug, $event)" :aria-selected="tab.active">
-            {{ tab.label }}
-          </a>
+          <router-link
+            :to="{path: '', query: { 'active-tab': tab.slug} }"
+            @click.native="switchActiveTab(tab.slug, $event)"
+            class="cdr-doc-tabs__link"
+            :class="{ 'cdr-doc-tabs__link--active' : tab.active }"
+            :id="tab.linkId"
+            :aria-selected="tab.active"
+          >{{ tab.label }}</router-link>
         </li>
       </ul>
     </div>
@@ -21,8 +26,6 @@
 
 <script>
 import slugify from '../../../utils/slugify.js';
-import updateUrlParameter from '../../../utils/updateUrlParameter.js';
-import getUrlParameter from '../../../utils/getUrlParameter.js';
 
 export default {
   name: 'CdrDocTabs',
@@ -44,7 +47,7 @@ export default {
     }
   },
   mounted: function() {
-    const urlActiveTab = getUrlParameter('active-tab');
+    const urlActiveTab = this.$route.query['active-tab'];
     if (urlActiveTab) {
       this.switchActiveTab(urlActiveTab);
     } else {
@@ -69,7 +72,6 @@ export default {
     switchActiveTab(activeTabLabel, event) {
       if (event) event.preventDefault();
       this.activeTab = activeTabLabel;
-      updateUrlParameter('active-tab', slugify(this.activeTab));
       this.$root.$emit('cdrDocTabsActiveTabSwitched', this.activeTab);
     }
   }
