@@ -124,7 +124,7 @@
 
 Section borders expand to full width of container.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/accordion" sandbox-href="https://codesandbox.io/s/m9jm5rw1zx">
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/accordion" sandbox-href="https://codesandbox.io/s/m9jm5rw1zx">
 
 ```html
   <cdr-accordion>
@@ -162,7 +162,7 @@ Section borders expand to full width of container.
 
 Reduced spacing around title and content body. Also, smaller font sizes resulting in an overall denser display of content.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/accordion" sandbox-href="https://codesandbox.io/s/m9jm5rw1zx">
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/accordion" sandbox-href="https://codesandbox.io/s/m9jm5rw1zx">
 
 ```html
   <cdr-accordion :compact="true">
@@ -202,7 +202,7 @@ Reduced spacing around title and content body. Also, smaller font sizes resultin
 
 Border aligns to the title text and expand/collapse icon.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/accordion" sandbox-href="https://codesandbox.io/s/m9jm5rw1zx">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/accordion" sandbox-href="https://codesandbox.io/s/m9jm5rw1zx">
 
 ```html
   <cdr-accordion :border-aligned="true">
@@ -255,8 +255,8 @@ Border aligns to the title text and expand/collapse icon.
 
 ## Don't use when
 
-- Linking a title to another page. Instead, use Link
-- Designing with sparse content. Instead, use List or Paragraph
+- Linking a title to another page. Instead, use [Link](/components/link/)
+- Designing with sparse content. Instead, use [List](/components/list/) or [Paragraph](/components/paragraph/)
 - Content is lengthy. Instead, use Tabs
 
 ## Foundations
@@ -280,11 +280,12 @@ Border aligns to the title text and expand/collapse icon.
 - Multiple sections can be open at the same time
 - Sections do not automatically collapse when another is expanded
 - Position interactive elements (i.e. Select, Button, Link) within the container far enough from the title area to avoid accidental collapsing
-- Never nest accordions within themselves
+
+Never nest accordions within themselves
 
 <do-dont :examples="$page.frontmatter.nesting" />
 
-- Use short titles for accordion labels to avoid wrapping
+Use short titles for accordion labels to avoid wrapping
 
 <do-dont :examples="$page.frontmatter.titles" />
 
@@ -307,6 +308,10 @@ This component has compliance with WCAG accessibility guidelines:
   - Navigate and reverse navigate through the accordion headers
 - Generates ARIA tags for accessibility, specifically aria-controls, aria-expanded, and aria-hidden
 
+## Related links
+- [List](/components/list/)
+- Tabs
+
 </cdr-doc-table-of-contents-shell>
 </template>
 
@@ -315,7 +320,7 @@ This component has compliance with WCAG accessibility guidelines:
 
 Accordions are built from two components, `cdr-accordion` and `cdr-accordion-item`, which are meant to be used together.
 
-## Properties
+## Props
 
 ### cdr-accordion
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
@@ -338,7 +343,7 @@ Resources are available within the [cdr-accordion package](https://www.npmjs.com
 <cdr-doc-api type="installation" />
 
 - Component: `@rei/cdr-accordion`
-- Component styles: `cdr-link.css`
+- Component styles: `cdr-accordion.css`
 
 To incorporate the required assets for a component, use the following steps:
 
@@ -479,7 +484,7 @@ This component has compliance with WCAG accessibility guidelines:
   - Providing keyboard interactions to:
     - Expand and collapse accordion headers
     - Navigate and reverse navigate through the accordion headers
-  - Generate ARIA tags for accessibility, speciically aria-controls, aria-expanded, and aria-hidden
+  - Generate ARIA tags for accessibility, speciically `aria-controls`, `aria-expanded`, and `aria-hidden`
 
 </cdr-doc-table-of-contents-shell>
 </template>
