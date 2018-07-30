@@ -37,6 +37,7 @@ module.exports = {
       {
         text: "Foundation",
         items: [
+          { text: "Experience Principles", link: "/foundation/experience-principles/" },
           { text: "Color", link: "/foundation/color/" },
           { text: "Typography", link: "/foundation/typography/" }
         ]
@@ -55,7 +56,8 @@ module.exports = {
           { text: "Headings", link: "/components/heading/" },
           { text: "Link", link: "/components/link/" },
           { text: "List", link: "/components/list/" },
-          { text: "Paragraph", link: "/components/paragraph/" }
+          { text: "Paragraph", link: "/components/paragraph/" },
+          { text: "Radio", link: "/components/radio/" }
         ]
       },
       {

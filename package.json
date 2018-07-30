@@ -34,6 +34,7 @@
     "@rei/cdr-img": "^1.0.0-next.alpha.1",
     "@rei/cdr-link": "^1.0.0",
     "@rei/cdr-list": "^1.0.0",
+    "@rei/cdr-radio": "^1.0.0-alpha.0",
     "@rei/cdr-text": "^1.0.0",
     "scrollmonitor": "^1.2.4",
     "smoothscroll-polyfill": "^0.4.3",
