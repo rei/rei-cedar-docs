@@ -153,8 +153,11 @@ Long breadcrumbs shortened to display the last 2 links in the trail, with hidden
 ```html
     <cdr-breadcrumb
       :items="[
-        {item:{url:'', name: 'Kids\' Snowboard Clothing Accessories'}},
-        {item:{url:'', name: 'Kids\' Snowboard Gloves and Mittens'}}
+        {item:{url:'', name: 'Kids\' Clothing'}},
+        {item:{url:'', name: 'Kids\' Clothing Accessories'}},
+        {item:{url:'', name: 'Kids\' Snowboard Gloves and Mittens'}},
+        {item:{url:'', name: 'Kids\' Gloves'}},
+        {item:{url:'', name: 'Kids\' Insulated Gloves'}},
       ]"
     />
 ```
