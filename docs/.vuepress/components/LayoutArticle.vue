@@ -5,9 +5,7 @@
       :title="pageData.title"
       :metadata="pageData.title_metadata"
       :breadcrumbs="pageData.breadcrumbs"
-    >
-      {{ pageData.summary ? pageData.summary : '' }}
-    </cdr-doc-intro>
+      :summary="pageData.summary ? pageData.summary : false" />
     <div class="cdr-doc-article-layout__body">
       <div class="cdr-doc-article-layout__body-inner">
         <Content :custom="false"/>
