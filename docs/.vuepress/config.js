@@ -45,7 +45,7 @@ module.exports = {
       {
         text: "Components",
         items: [
-          /* { text: "Accordion", link: "/components/accordion/" }, */
+          { text: "Accordion", link: "/components/accordion/" },
           { text: "Breadcrumb", link: "/components/breadcrumb/" },
           {
             text: "Button",
