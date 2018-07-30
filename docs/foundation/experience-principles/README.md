@@ -20,7 +20,7 @@ These principles are meant to give us a shared vocabulary for translating the br
 
 **Unexpected / Emotive / Engaging / Empowering**
 
-We believe it’s in the outdoors that we find our best selves. Our digital products are tethered to that belief - a place our users come to dream, be curious, scheme and plan.
+We believe it’s in the outdoors that we find our best selves. Our digital products are tethered to that belief&mdash;a place our users come to dream, be curious, scheme and plan.
 
 We are a destination for discovery. To remind people to think “what if?”, encouraging exploration and rewarding curiosity. Storytelling is at the very center of everything we create: helping people find what they are looking for, and surprising and delighting them when they discover new, interesting things.
 
@@ -28,7 +28,7 @@ We are a destination for discovery. To remind people to think “what if?”, en
 
 **Inviting / Accessible / Empathetic**
 
-The outdoors is the world’s largest level playing field – it is for all. We want everyone to benefit from being outside. We make it easy. The hardest part is actually walking outside to breathe more fresh air.
+The outdoors is the world’s largest level playing field&mdash;it is for all. We want everyone to benefit from being outside. We make it easy. The hardest part is actually walking outside to breathe more fresh air.
 
 Our digital products are designed so that they can be accessed, understood, and used by all people regardless of their age, background, or ability. The diversity of our customers is reflected in the images, stories and language we use. Our experiences are intuitive, inspiring to explore, and easy to use and navigate.
 
@@ -46,7 +46,7 @@ Our digital experiences feel approachable and genuine, not sterile or institutio
 
 Our experiences solve real customer problems. We develop tools and features that enhance the customer experience and provide help along the way, and deliver our offerings in a relevant and meaningful way.
 
-We make it easy for all customers. The experience is consistent, predictable, and responsive to customer inputs. Its organization, hierarchy, and navigation is intuitive - customers always know where they are, where they can go, and how they can get back. Customer actions are clear and outcomes are purposeful.
+We make it easy for all customers. The experience is consistent, predictable, and responsive to customer inputs. Its organization, hierarchy, and navigation is intuitive&mdash;customers always know where they are, where they can go, and how they can get back. Customer actions are clear and outcomes are purposeful.
 
 ## Trustworthy
 
