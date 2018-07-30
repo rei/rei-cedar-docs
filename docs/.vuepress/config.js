@@ -37,6 +37,7 @@ module.exports = {
       {
         text: "Foundation",
         items: [
+          { text: "Experience Principles", link: "/foundation/experience-principles/" },
           { text: "Color", link: "/foundation/color/" },
           { text: "Typography", link: "/foundation/typography/" }
         ]
@@ -44,15 +45,17 @@ module.exports = {
       {
         text: "Components",
         items: [
-          /* { text: "Accordion", link: "/components/accordion/" }, */
+          { text: "Accordion", link: "/components/accordion/" },
           { text: "Breadcrumb", link: "/components/breadcrumb/" },
           { text: "Button", link: "/components/button/" },
+          { text: "Call to Action", link: "/components/cta/" },
           { text: "Checkbox", link: "/components/checkbox/" },
           { text: "Grid", link: "/components/grid/" },
           { text: "Headings", link: "/components/heading/" },
           { text: "Link", link: "/components/link/" },
           { text: "List", link: "/components/list/" },
-          { text: "Paragraph", link: "/components/paragraph/" }
+          { text: "Paragraph", link: "/components/paragraph/" },
+          { text: "Radio", link: "/components/radio/" }
         ]
       },
       {

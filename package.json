@@ -24,8 +24,9 @@
     "vuepress": "^0.12.0"
   },
   "dependencies": {
-    "@rei/cdr-accordion": "0.1.0-alpha.1",
+    "@rei/cdr-accordion": "0.1.0-alpha.3",
     "@rei/cdr-assets": "^0.3.0",
+    "@rei/cdr-cta": "0.1.0-alpha.1",
     "@rei/cdr-breadcrumb": "^1.0.0",
     "@rei/cdr-button": "^1.0.0",
     "@rei/cdr-checkbox": "^1.0.0-alpha.0",
@@ -34,6 +35,7 @@
     "@rei/cdr-img": "^1.0.0-next.alpha.1",
     "@rei/cdr-link": "^1.0.0",
     "@rei/cdr-list": "^1.0.0",
+    "@rei/cdr-radio": "^1.0.0-alpha.0",
     "@rei/cdr-text": "^1.0.0",
     "scrollmonitor": "^1.2.4",
     "smoothscroll-polyfill": "^0.4.3",
