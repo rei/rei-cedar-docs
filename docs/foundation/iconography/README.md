@@ -11,32 +11,31 @@
   ],
 }
 ---
-
-## Iconography
+<cdr-doc-table-of-contents-shell>
 
 UI icons or glyphs symbolize commands, navigation, utility, or common actions and provide additional visual context and enhance usability. Icons offer a form of “visual shorthand”, lowering cognitive load and better utilizing space. Icons use familiar shapes and metaphors to communicate concepts in simple graphic forms.
 
 
-### Characteristics
+## Characteristics
 
-#### Grid
+### Grid
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/iconography/grid.png`)"/>
 
 Design icons on a 20px grid and export on a 24px artboard. Constrain the content of an icon  to the “live area” of the icon grid. The live area and padding ensure sufficient display room and consistent scaling of the icon set.
 
-#### Shapes
+### Shapes
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/iconography/shapes.png`)"/>
 
 Create icons  on the grid using basic foundational shapes. Adhering to these shapes ensures consistent proportionality of iconography throughout the icon set.
 
 
-#### Sizes
+### Sizes
 
 Icons scale to display across three sizes: small (16px), medium (24px), and large (32px).
 
-#### Clearance
+### Clearance
 
 Adequate space around the icon allows for legibility and touch. A minimum touch target area of 40px is recommended for standalone iconography.
 
@@ -46,7 +45,7 @@ When the mouse and keyboard are the primary input methods or when icons are pair
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/iconography/clearance2.png`)"/>
 
-### Style
+## Style
 Icons are built from foundational shapes within the icon grid and align to the pixel grid to ensure clarity when scaling. Optical corrections made where necessary.
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/iconography/style.png`)"/>
@@ -72,3 +71,5 @@ Filled versions of select icons are available and typically represent an “on�
 Inverse display is available when paired with darker backgrounds.
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/iconography/style5.png`)"/>
+
+</cdr-doc-table-of-contents-shell>

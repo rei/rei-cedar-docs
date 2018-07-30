@@ -12,11 +12,13 @@
 }
 ---
 
-# [Cedar Beta Release](https://github.com/rei/rei-cedar/tree/18.07.2)
+<cdr-doc-table-of-contents-shell>
 
-## What’s New
+## [Cedar Beta Release](https://github.com/rei/rei-cedar/tree/18.07.2)
 
-### Components
+### What’s New
+
+#### Components
 
 - Added new Breadcrumb component v1.0 ([CdrBreadcrumb](https://github.com/rei/rei-cedar/tree/18.07.2/src/components/breadcrumb))
   - Component
@@ -32,12 +34,12 @@
   - Component
   - Styles
 
-### Design Assets
+#### Design Assets
 
 - Sketch library 
   - Published the Sketch library with design assets for the released components above
 
-## Documentation Updates
+#### Documentation Updates
 
 - About Cedar
   - Article providing a high level overview of Cedar and the benefits of adoption 
@@ -48,7 +50,7 @@
 
 <hr/>
 
-# [Cedar Alpha Release](https://github.com/rei/rei-cedar/tree/18.06.1)
+## [Cedar Alpha Release](https://github.com/rei/rei-cedar/tree/18.06.1)
 
 ### What’s New
 
@@ -64,7 +66,7 @@
 - Sketch library
   - Published the Sketch library with design assets for the released components above
 
-### Documentation Updates
+#### Documentation Updates
 
 - Cedar Home page
   - Alpha version of Cedar Design System Home page
@@ -76,3 +78,5 @@
   - Article providing step-by-step instructions for how to get started as a developer
 - Color page
   - Article describing the use of color as a foundation of the design system
+
+</cdr-doc-table-of-contents-shell>

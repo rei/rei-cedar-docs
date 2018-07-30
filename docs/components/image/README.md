@@ -107,19 +107,7 @@
 
 <cdr-doc-tabs>
 <template slot="Overview">
-<cdr-doc-table-of-contents-shell 
-    :appended-nav-items="[
-      {
-        text: 'Related Components'
-      },
-      {
-        text: 'Typography'
-      },
-      {
-        text: 'Paragraph',
-        href: '../paragraph/'
-      }
-    ]">
+<cdr-doc-table-of-contents-shell>
 
 ## Default
 
@@ -130,7 +118,7 @@ Use for images with no responsive qualities.
 ```html
 
 <cdr-img 
-  src="https://www.rei.com/assets/graphics/maintenance/maintenance/live.jpg" 
+  src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg" 
   alt="REI employees building trails during a stewardship event"
 />
 
@@ -145,7 +133,7 @@ Apply rules to an image using ratio and crop properties.
 
 ```html
 <cdr-img
-  src="https://www.rei.com/assets/graphics/maintenance/maintenance/live.jpg" 
+  src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg" 
   alt="REI employees building trails during a stewardship event"
   ratio="9-16"
   crop="top"
@@ -161,7 +149,7 @@ Use the cover property to resize the background image to fill the entire contain
 
 ```html
 <cdr-img
-  src="https://www.rei.com/assets/graphics/maintenance/maintenance/live.jpg" 
+  src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg" 
   alt="REI employees building trails during a stewardship event"
   ratio="16-9"
   cover
@@ -178,31 +166,16 @@ Apply a radius to an image.
 
 <cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/image" sandbox-href="https://codesandbox.io/s/10lx8v0qm4" >
 
-<template slot="rounded">
-
-```html
-<cdr-img
-  src="https://www.rei.com/assets/graphics/maintenance/maintenance/live.jpg" 
-  alt="REI employees building trails during a stewardship event"
-  ratio="square"
-  radius="rounded"
-  crop="center"
-/>
-```
-</template>
-<template slot="circle">
-
 ```html
   <cdr-img
-  src="https://www.rei.com/assets/graphics/maintenance/maintenance/live.jpg" 
+  src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg" 
   alt="REI employees building trails during a stewardship event"
   ratio="square"
   radius="circle"
-  crop="top"
+  crop="y-center x-center"
 />
 ```
   
-</template>
 </cdr-doc-example-code-pair>
 
 </cdr-doc-table-of-contents-shell>
