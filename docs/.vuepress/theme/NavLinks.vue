@@ -5,8 +5,16 @@
       class="nav-item"
       v-for="item in userLinks"
       :key="item.text">
-      <DropdownLink v-if="item.type === 'links'" :item="item"/>
-      <NavLink v-else :item="item"/>
+      <!-- <DropdownLink v-if="item.type === 'links'" :item="item"/> -->
+      <cdr-accordion-item
+        id=""
+        :label="item.text"
+      >
+        <cdr-list>
+          
+        </cdr-list> 
+      </cdr-accordion-item>
+      <!-- <NavLink v-else :item="item"/> -->
     </div>
     <!-- repo link -->
     <a v-if="repoLink"
@@ -23,11 +31,14 @@
 <script>
 import OutboundLink from './OutboundLink.vue'
 import DropdownLink from './DropdownLink.vue'
+import { CdrAccordionItem } from '@rei/cdr-accordion';
+import '@rei/cdr-accordion/dist/cdr-accordion.css';
+import { CdrList } from '@rei/cdr-list';
 import { resolveNavLinkItem } from './util'
 import NavLink from './NavLink.vue'
 
 export default {
-  components: { OutboundLink, NavLink, DropdownLink },
+  components: { OutboundLink, NavLink, DropdownLink, CdrAccordionItem },
   computed: {
     userNav () {
       return this.$themeLocaleConfig.nav || this.$site.themeConfig.nav || []
@@ -94,6 +105,13 @@ export default {
 
       return 'Source'
     },
+  },
+  provide() {
+    return {
+      compact: false,
+      borderAligned: false,
+      showAll: false
+    }
   }
 }
 </script>
