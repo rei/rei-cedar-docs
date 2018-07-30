@@ -20,6 +20,11 @@ import "@rei/cdr-button/dist/cdr-button.css";
 Vue.component('CdrButton', CdrButton);
 FullVue.component('CdrButton', CdrButton);
 
+import { CdrCta } from "@rei/cdr-cta";
+import "@rei/cdr-cta/dist/cdr-cta.css"
+Vue.component('CdrCta', CdrCta);
+FullVue.component('CdrCta', CdrCta);
+
 import { CdrImg } from "@rei/cdr-img";
 import "@rei/cdr-img/dist/cdr-img.css";
 Vue.component("CdrImg", CdrImg);
