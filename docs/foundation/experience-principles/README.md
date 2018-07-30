@@ -1,6 +1,6 @@
 ---
 {
-  "title": "The 5 Principles of Customer Experience",
+  "title": "Experience Principles",
   "title_metadata": false,
   "layout": "LayoutArticle",
   "summary": false,
