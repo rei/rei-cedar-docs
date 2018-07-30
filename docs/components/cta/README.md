@@ -139,7 +139,7 @@
 
 Use dark Call to Action over a light background image or color to provide proper contrast. This is the default Call to Action style.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/cta" sandbox-href="https://codesandbox.io/s/9ojj43x1op">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/cta" sandbox-href="https://codesandbox.io/s/9ojj43x1op">
 
 ```html
   <cdr-cta 
@@ -284,12 +284,12 @@ When using Call to Action with assistive technology:
 - Clearly and concisely label what happens when the Call to Action is clicked or tapped
 - For example, aria-label might read: “Shop our \<specific advertising category\>"
 
-Call to Action text and text links must comply to AA color contrast and text size accessibility compliance guidelines
+Call to Action text and text links must comply to AA color contrast and text size accessibility compliance guidelines:
 
 - Choose a the light button theme on dark background or dark button theme on light background
 - Test color contrast for button themes against all backgrounds
 
-This component has no specific WCAG compliance attributes built into the control, Call to Action can: 
+This component has no specific WCAG compliance attributes built into the control. Call to Action can: 
 
 - Receive keyboard focus by default
 - Enable states: Focus, Hover, and Active
@@ -421,6 +421,8 @@ The `cdr-cta` component looks like a button; however it's actually an anchor:
 
 - Includes suppoort for various themes
 - Renders default and full-width sizes
+
+Git commit reference [(b944d3a)](https://github.com/rei/rei-cedar/commit/b944d3a91b45dd1778d71674eaf26073f4521caa)
 
 </template>
 </cdr-doc-tabs>
