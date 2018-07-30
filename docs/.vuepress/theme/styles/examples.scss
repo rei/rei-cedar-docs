@@ -26,7 +26,8 @@
   }
 }
 
-.custom-radio-example {
+.custom-radio-example,
+.custom-checkbox-example {
   .no-box:checked ~ .no-box__content {
     color: green;
 
