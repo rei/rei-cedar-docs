@@ -3,7 +3,6 @@
   "title": "As an Adopting Team",
   "title_metadata": false,
   "layout": "LayoutArticle",
-  "summary": "Information and resources for digital product teams to begin adoption of Cedar Design System.",
   "breadcrumbs": [
     {
       "text": "Getting Started/",
