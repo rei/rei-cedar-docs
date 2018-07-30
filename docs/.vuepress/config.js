@@ -52,6 +52,7 @@ module.exports = {
           },
           { text: "Grid", link: "/components/grid/" },
           { text: "Headings", link: "/components/heading/" },
+          { text: "Images", link: "/components/image/" },
           { text: "Link", link: "/components/link/" },
           { text: "List", link: "/components/list/" },
           { text: "Paragraph", link: "/components/paragraph/" }

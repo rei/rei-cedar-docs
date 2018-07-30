@@ -273,7 +273,7 @@ Install the `cdr-breadcrumb` package using `npm` in your terminal:
 _Terminal_
 
 ```terminal
-npm i -s @rei/cdr-breadcrumb
+npm i -S @rei/cdr-breadcrumb
 ```
 
 ### #2. Import Dependencies
