@@ -57,7 +57,8 @@ module.exports = {
           { text: "Images", link: "/components/image/" },
           { text: "Link", link: "/components/link/" },
           { text: "List", link: "/components/list/" },
-          { text: "Paragraph", link: "/components/paragraph/" }
+          { text: "Paragraph", link: "/components/paragraph/" },
+          { text: "Radio", link: "/components/radio/" }
         ]
       },
       {
