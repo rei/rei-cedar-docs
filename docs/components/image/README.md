@@ -204,8 +204,8 @@ REI image requirements are described on the Consumer Mobile Applications/Design 
 Use conventional aspect ratios:
 
 - Square 
-- Portrait: 2:1, 3:2, 4:3, 16:9 
-- Landscape: 1:2, 2:3, 3:4, 9:16 
+- Portrait: 2-1, 3-2, 4-3, 16-9
+- Landscape: 1-2, 2-3, 3-4, 9-16
 
 ### Quality
 
@@ -277,19 +277,19 @@ Images are cropped on y-axis with bottom value and on x-axis with left, x-center
 
 - Provide descriptive text for `<alt>` tag for:
   - Informative images: 
-    - Conveys a simple concept or information
+    - Convey a simple concept or information
     - For more information, [Web Accessibility Tutorials: Informative Images](https://www.w3.org/WAI/tutorials/images/informative/)
-  - Functional images: 
-    - Initiates an action rather than to convey information such as a printer icon
+  - Functional images:
+    - Initiate an action rather than to convey information (such as a printer icon)
     - Describe functionality of the link or button rather than the visual image
     - For more information, [Web Accessibility Tutorials: Functional Images](https://www.w3.org/WAI/tutorials/images/functional/) 
-  - Images of Text: 
+  - Images of Text:
     - Displays text that is intended to be read
     - Avoid text in images, unless the image is a logo
     - For more information, [Web Accessibility Tutorials: Images of Text](https://www.w3.org/WAI/tutorials/images/textual/#image-of-styled-text-with-decorative-effect)
-- This component has no specific WCAG compliance attributes built into the control except:
-  - Adds an empty alt attribute into the image element by default 
-  - An empty alt attribute is needed to meet accessibility requirements for decorative images
+- This component has no specific WCAG compliance attributes built into the control except to add an empty alt attribute into the image by default.
+
+An empty alt attribute is needed to meet accessibility requirements for decorative images
 
 ### Alt text
 
