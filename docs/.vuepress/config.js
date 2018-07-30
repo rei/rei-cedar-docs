@@ -38,6 +38,8 @@ module.exports = {
         text: "Foundation",
         items: [
           { text: "Color", link: "/foundation/color/" },
+          { text: "Iconography", link: "/foundation/iconography/" },
+          { text: "Motion", link: "/foundation/motion/" },
           { text: "Typography", link: "/foundation/typography/" }
         ]
       },

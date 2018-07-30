@@ -137,7 +137,7 @@ Use for images with no responsive qualities.
 ```
 </cdr-doc-example-code-pair>
 
-## Manage your images
+## Manage images
 
 Apply rules to an image using ratio and crop properties.
 
@@ -153,9 +153,9 @@ Apply rules to an image using ratio and crop properties.
 ```
 </cdr-doc-example-code-pair>
 
-## Display your images as backgrounds
+## Display images as backgrounds
 
-Use the cover property to resize the background image to cover the entire container.
+Use the cover property to resize the background image to fill the entire container.
 
 <cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/image" sandbox-href="https://codesandbox.io/s/10lx8v0qm4" >
 
@@ -172,9 +172,9 @@ Use the cover property to resize the background image to cover the entire contai
 </cdr-doc-example-code-pair>
 
 
-## Shape your images
+## Shape images
 
-Apply a radius to your images.
+Apply a radius to an image.
 
 <cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/image" sandbox-href="https://codesandbox.io/s/10lx8v0qm4" >
 
