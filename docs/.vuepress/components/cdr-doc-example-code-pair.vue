@@ -90,7 +90,7 @@
         type: Boolean
       },
       codeMaxHeight: {
-        default: true,
+        default: false,
         type: Boolean
       },
       repositoryHref: {
