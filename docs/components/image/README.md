@@ -270,13 +270,13 @@ Use conventional aspect ratios:
     - Y-center: Orients the image to its vertical center
 - Accepts x and y axis combination (e.g. crop="top left")
 
-<cdr-img :src="$withBase(`../../image-component/Spec__Imgae_Crop_Top_16-4.png`)"/>
+<cdr-img :src="$withBase(`/image-component/Spec__Imgae_Crop_Top_16-4.png`)"/>
 Images are cropped on y-axis with top value and on x-axis with left, x-center, and right values
 
-<cdr-img :src="$withBase(`../../image-component/Spec__Imgae_Crop_Center_16-4.png`)"/>
+<cdr-img :src="$withBase(`/image-component/Spec__Imgae_Crop_Center_16-4.png`)"/>
 Images are cropped on y-axis with y-center value and on x-axis with left, x-center, and right values
 
-<cdr-img :src="$withBase(`../../image-component/Spec__Imgae_Crop_Bottom_16-4.png`)"/>
+<cdr-img :src="$withBase(`/image-component/Spec__Imgae_Crop_Bottom_16-4.png`)"/>
 Images are cropped on y-axis with bottom value and on x-axis with left, x-center, and right values
 
 ## Overlaid Text
