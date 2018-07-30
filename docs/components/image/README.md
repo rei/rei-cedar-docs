@@ -4,22 +4,6 @@
   "layout": "LayoutComponent",
   "summary": "Capture the user’s attention and communicate your message.",
   "title_metadata": "Images, cdr-image, cdr-img",
-  "minimize": [
-    {
-      "type": "do",
-      "image": "heading/headings_text_do.png",
-      "ratio": "4-3",
-      "alt": "Image showing proper link usage",
-      "caption": "use heading levels to define hierarchical information."
-    },
-    {
-      "type": "dont",
-      "image": "heading/headings_text_dont.png",
-      "ratio": "4-3",
-      "alt": "Image showing mixed button sizes",
-      "caption": "use heading tag for visual results. Instead use heading modifiers."
-    }
-  ],
   "versions": [
     {
       "components": [
@@ -286,15 +270,69 @@ Use conventional aspect ratios:
     - Y-center: Orients the image to its vertical center
 - Accepts x and y axis combination (e.g. crop="top left")
 
-## Content
+<cdr-img :src="$withBase(`../../image-component/Spec__Imgae_Crop_Top_16-4.png`)"/>
+Images are cropped on y-axis with top value and on x-axis with left, x-center, and right values
 
-## Behavior
+<cdr-img :src="$withBase(`../../image-component/Spec__Imgae_Crop_Center_16-4.png`)"/>
+Images are cropped on y-axis with y-center value and on x-axis with left, x-center, and right values
 
-<do-dont :examples="$page.frontmatter.minimize" />
+<cdr-img :src="$withBase(`../../image-component/Spec__Imgae_Crop_Bottom_16-4.png`)"/>
+Images are cropped on y-axis with bottom value and on x-axis with left, x-center, and right values
+
+## Overlaid Text
+
+- Only display heading text on non-solid backgrounds:
+  - Text should be at least 18px
+  - Never allow overlaid text to wrap. Longer strings of text can be harder to navigate when the background varies
+  - Consider adding a semi-transparent black gradient over the image in the CSS
+- Apply only vertical gradient backgrounds. Avoid horizontal, diagonal, and radial gradients
+- Always include a backup background color so that when the background image is disabled, text is still legible and passes contrast requirements 
+- For help in determining whether your text and image combination conforms to the required contrast ratio, use this Chrome plugin: [Color Contrast Analyzer](https://chrome.google.com/webstore/detail/color-contrast-analyzer/dagdlcijhfbmgkjokkjicnnfimlebcll)
+
+## Decorative Images
+
+- Avoid using decorative images; instead present the image as a background-image using cascading style sheets (CSS)
+- If using the HTML `<img>` element, add an empty `<alt>` tag
+- If using the HTML `<img>` element, add the following attribute: role="presentation"
 
 ## Responsiveness
 
-## Accessibility
+- Ability to control image display at small, medium and large breakpoints
+- Lazy loading of images is provided
+
+## Accessibility 
+
+- Provide descriptive text for `<alt>` tag for:
+  - Informative images: 
+    - Conveys a simple concept or information
+    - For more information, [Web Accessibility Tutorials: Informative Images](https://www.w3.org/WAI/tutorials/images/informative/)
+  - Functional images: 
+    - Initiates an action rather than to convey information such as a printer icon
+    - Describe functionality of the link or button rather than the visual image
+    - For more information, [Web Accessibility Tutorials: Functional Images](https://www.w3.org/WAI/tutorials/images/functional/) 
+  - Images of Text: 
+    - Displays text that is intended to be read
+    - Avoid text in images, unless the image is a logo
+    - For more information, [Web Accessibility Tutorials: Images of Text](https://www.w3.org/WAI/tutorials/images/textual/#image-of-styled-text-with-decorative-effect)
+- This component has no specific WCAG compliance attributes built into the control except:
+  - Adds an empty alt attribute into the image element by default 
+  - An empty alt attribute is needed to meet accessibility requirements for decorative images
+
+### Alt text
+
+- Use [this decision tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) to determine how to use the `<alt>` attribute of the `<img>` element in various situations
+- Be succinct. Ideally, one sentence or less
+- Be informative and accurate 
+- If images of text are used, the `<alt>` attribute should contain the same words that appear in the image
+- Avoid repetitive labels. For example: “image of” or “picture of” 
+- Descriptions:
+  - Use short description that conveys the essential information presented by the image without burdening users with superfluous details
+  - Use long descriptions for complex images such as graphs, charts, or diagrams to provide equivalent access to the information the image
+- For groups of images that convey a single piece of information, apply the `<alt>` attribute to only one image for the entire group
+- For image maps with multiple clickable areas:
+  - Must provide an overall context for the set of links using `<alt>` attribute
+  - Each individual clickable area should have an `<alt>` attribute that describes the purpose or destination of the link
+
 
 </cdr-doc-table-of-contents-shell>
 </template>
