@@ -8,11 +8,7 @@
         </ul>
         <h1 class="cdr-doc-intro__title">{{ title }}</h1>
         <h2 class="cdr-doc-intro__title-metadata" v-if="metadata">{{ metadata }}</h2>
-        <p class="cdr-doc-intro__summary" v-if="hasSlotData">
-          <slot>
-            Buttons are used to invoke an event and communicate the action that will occur.
-          </slot>
-        </p>
+        <p class="cdr-doc-intro__summary" v-if="summary">{{ summary }}</p>
     </div>
   </div>
 </template>
@@ -40,13 +36,12 @@ export default {
       type: [String, Boolean],
       default: 'Also known as a Call-to-Action (CTA)'
     },
+    summary: {
+      type: [String, Boolean],
+      default: false
+    },
     size: {
       type: String
-    }
-  },
-  computed: {
-    hasSlotData() {
-      return this.$slots.default && this.$slots.default[0].text.trim() !== 'false';
     }
   }
 }

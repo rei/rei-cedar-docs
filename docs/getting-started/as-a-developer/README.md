@@ -3,7 +3,6 @@
   "title": "As a Developer",
   "title_metadata": false,
   "layout": "LayoutArticle",
-  "summary": false,
   "breadcrumbs": [
     {
       "text": "Getting Started/",
