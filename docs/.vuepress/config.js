@@ -37,6 +37,7 @@ module.exports = {
       {
         text: "Foundation",
         items: [
+          { text: "Experience Principles", link: "/foundation/experience-principles/" },
           { text: "Color", link: "/foundation/color/" },
           { text: "Typography", link: "/foundation/typography/" }
         ]
