@@ -10,9 +10,11 @@
         id=""
         :label="item.text"
       >
-        <cdr-list>
-          
-        </cdr-list> 
+        <ul class="nav-dropdown cdr-doc-side-navigation__child-links">
+          <li v-for="navItem in item.items" class="dropdown-item">
+            <a :href="navItem.link" class="nav-link cdr-doc-side-navigation__link cdr-doc-side-navigation__child-link">{{ navItem.text }}</a>
+          </li>
+        </ul> 
       </cdr-accordion-item>
       <!-- <NavLink v-else :item="item"/> -->
     </div>
