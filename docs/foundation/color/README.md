@@ -41,37 +41,6 @@ people regardless of their age, background, or ability. We meet or exceed color 
   'background-color-darker'
 ]"/>
 
-### Examples
-<do-dont :examples="[
-  {
-    type: 'do',
-    image: 'color-illustrations/color_1_do.png',
-    caption: 'use approved background colors to separate content areas'
-  },
-  {
-    type: 'dont',
-    image: 'color-illustrations/color_1_dont.png',
-    caption: 'use accent colors as backgrounds'
-  }
-]" />
-
-<do-dont :examples="[
-  {
-    type: 'do',
-    image: 'color-illustrations/color_2_do.png',
-    caption: 'arrange background colors to promote page hierarchy by minimizing shifts in background'
-  },
-  {
-    type: 'dont',
-    image: 'color-illustrations/color_2_dont.png',
-    caption: 'alternate background colors in visually jarring ways'
-  }
-]" />
-
-Text choices should be paired with their corresponding background color to ensure accessibility.
-<img :src="$withBase('/color-illustrations/color_accessibility.png')" alt="Color Accessibility Chart">
-
-
 ## Color Palette
 
 ### Neutral colors
@@ -131,5 +100,36 @@ Feedback colors are used for [alerts](#), [notifications](#), and other componen
   'hunky-dory',
   'crowd-pleaser'
 ]"/>
+
+## Examples
+<do-dont :examples="[
+  {
+    type: 'do',
+    image: 'color-illustrations/color_1_do.png',
+    caption: 'use approved background colors to separate content areas'
+  },
+  {
+    type: 'dont',
+    image: 'color-illustrations/color_1_dont.png',
+    caption: 'use accent colors as backgrounds'
+  }
+]" />
+
+<do-dont :examples="[
+  {
+    type: 'do',
+    image: 'color-illustrations/color_2_do.png',
+    caption: 'arrange background colors to promote page hierarchy by minimizing shifts in background'
+  },
+  {
+    type: 'dont',
+    image: 'color-illustrations/color_2_dont.png',
+    caption: 'alternate background colors in visually jarring ways'
+  }
+]" />
+
+Text choices should be paired with their corresponding background color to ensure accessibility.
+
+<accessible-text-example />
 
 </cdr-doc-table-of-contents-shell>
