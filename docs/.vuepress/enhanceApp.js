@@ -8,7 +8,6 @@ export default ({
 }) => {
   router.options.scrollBehavior = function(to, frm, savedPosition) {
     if (frm && to.name === frm.name && _.isEqual(to.params, frm.params)) {
-      console.log('object');
       return;
     }
     // Handle scroll
