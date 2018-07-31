@@ -12,14 +12,13 @@
 }
 ---
 
-# Supported Platforms
+## Supported Platforms
 
-## Browsers
+### Browsers
 
 Cedar supports the latest, stable releases of the following browsers and platforms. Support is not guaranteed for platforms beyond this list, and any issues reported against unsupported platforms will be investigated at the team’s earliest opportunity.
 Officially supported platforms are:
 
-# 
 | **Platform** | **Chrome** | **FIrefox** | **Safari**     | **Edge** |
 |:-------------|:-----------|:------------|:---------------|:---------|
 | Windows 10   | Yes        | Yes         |                | Yes      |
