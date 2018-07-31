@@ -293,7 +293,7 @@ Install the `cdr-link` package using **npm** in your terminal:
 _Terminal_
 
 ```terminal
-    npm i -s @rei/cdr-link
+    npm i -S @rei/cdr-link
 ```
 
 ### #2. Import Dependencies

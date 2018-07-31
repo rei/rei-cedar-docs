@@ -11,6 +11,7 @@
   ],
 }
 ---
+<cdr-doc-table-of-contents-shell>
 
 ## Type Families
 
@@ -93,3 +94,5 @@ Utility type styles are used sparingly within UI elements such as form labels an
 <cdr-doc-typography-sample token="maple-utility-50" weight="400" size="20" height="28"/>
 <cdr-doc-typography-sample token="maple-utility-60" weight="400" size="24" height="32"/>
 <cdr-doc-typography-sample token="maple-utility-70" weight="400" size="28" height="36"/>
+
+</cdr-doc-table-of-contents-shell>

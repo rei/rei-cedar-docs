@@ -12,6 +12,8 @@
 }
 ---
 
+<cdr-doc-table-of-contents-shell>
+
 <div class="cdr-doc-colors-intro">
 
   <div class="cdr-doc-colors-intro__text">
@@ -129,3 +131,5 @@ Feedback colors are used for [alerts](#), [notifications](#), and other componen
   'hunky-dory',
   'crowd-pleaser'
 ]"/>
+
+</cdr-doc-table-of-contents-shell>

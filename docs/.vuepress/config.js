@@ -39,6 +39,8 @@ module.exports = {
         items: [
           { text: "Experience Principles", link: "/foundation/experience-principles/" },
           { text: "Color", link: "/foundation/color/" },
+          { text: "Iconography", link: "/foundation/iconography/" },
+          { text: "Motion", link: "/foundation/motion/" },
           { text: "Typography", link: "/foundation/typography/" }
         ]
       },
@@ -51,7 +53,8 @@ module.exports = {
           { text: "Call to Action", link: "/components/cta/" },
           { text: "Checkbox", link: "/components/checkbox/" },
           { text: "Grid", link: "/components/grid/" },
-          { text: "Headings", link: "/components/heading/" },
+          { text: "Heading", link: "/components/heading/" },
+          { text: "Image", link: "/components/image/" },
           { text: "Link", link: "/components/link/" },
           { text: "List", link: "/components/list/" },
           { text: "Paragraph", link: "/components/paragraph/" },
