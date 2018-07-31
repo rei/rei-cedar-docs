@@ -234,7 +234,7 @@ export default {
 
 ## Accessibility
 REI requires 100% compliance with WCAG AA guidelines.
-We have provided the relevant guidelines in each component's documentation.
+Relevant guidelines are provided in each component's documentation.
 
 <hr/>
 
