@@ -46,7 +46,7 @@ When the mouse and keyboard are the primary input methods or when icons are pair
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/iconography/clearance2.png`)"/>
 
 ## Style
-Icons are built from foundational shapes within the icon grid and align to the pixel grid to ensure clarity when scaling. Optical corrections made where necessary.
+Icons are built from foundational shapes within the icon grid and align to the pixel grid to ensure clarity when scaling. Optical corrections can be made where necessary.
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/iconography/style.png`)"/>
 
