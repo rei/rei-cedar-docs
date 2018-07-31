@@ -8,12 +8,13 @@ export default ({
 }) => {
   router.options.scrollBehavior = function(to, frm, savedPosition) {
     if (frm && to.name === frm.name && _.isEqual(to.params, frm.params)) {
+      console.log('object');
       return;
     }
     // Handle scroll
     // copied from https://github.com/vuejs/vuepress/blob/master/lib/app/app.js
-    if (saved) {
-      return saved
+    if (savedPosition) {
+      return savedPosition
     } else if (to.hash) {
       if (store.disableScrollBehavior) {
         return false
