@@ -60,7 +60,7 @@ export default {
   }
 
   .cdr-doc-intro--small {
-    padding: $space-2-x $space-1-x;
+    padding: 52px $space-1-x;
   }
 
   .cdr-doc-intro__inner {
