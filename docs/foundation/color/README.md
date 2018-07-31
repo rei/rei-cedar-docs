@@ -17,7 +17,7 @@
 <div class="cdr-doc-colors-intro">
 
   <div class="cdr-doc-colors-intro__text">
-    Cedar offers a range colors designed to be accessed, understood, and used by all
+    Cedar offers a range of colors designed to be accessed, understood, and used by all
 people regardless of their age, background, or ability. We meet or exceed color contrast <cdr-link href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank">WCAG AA accessibility standards</cdr-link>.
   </div>
 
