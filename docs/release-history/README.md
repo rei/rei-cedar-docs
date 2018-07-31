@@ -14,7 +14,7 @@
 
 <cdr-doc-table-of-contents-shell>
 
-## [Cedar Beta Release](https://github.com/rei/rei-cedar/tree/18.07.2)
+[Cedar Beta Release](https://github.com/rei/rei-cedar/tree/18.07.2)
 
 ### What’s New
 
