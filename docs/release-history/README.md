@@ -14,11 +14,11 @@
 
 <cdr-doc-table-of-contents-shell>
 
+## What’s New: Beta
+
 [Cedar Beta Release](https://github.com/rei/rei-cedar/tree/18.07.2)
 
-### What’s New
-
-#### Components
+### Components
 
 - Added new Breadcrumb component v1.0 ([CdrBreadcrumb](https://github.com/rei/rei-cedar/tree/18.07.2/src/components/breadcrumb))
   - Component
@@ -34,12 +34,12 @@
   - Component
   - Styles
 
-#### Design Assets
+### Design Assets
 
 - Sketch library 
   - Published the Sketch library with design assets for the released components above
 
-#### Documentation Updates
+### Documentation Updates
 
 - About Cedar
   - Article providing a high level overview of Cedar and the benefits of adoption 
@@ -50,23 +50,23 @@
 
 <hr/>
 
-## [Cedar Alpha Release](https://github.com/rei/rei-cedar/tree/18.06.1)
+## What’s New: Alpha
 
-### What’s New
+[Cedar Alpha Release](https://github.com/rei/rei-cedar/tree/18.06.1)
 
-#### Components
+### Components
 
 - Released of V1 Link component ([CdrLink](https://www.npmjs.com/package/@rei/cdr-link))
 - Released of V1 Text component ([CdrText](https://www.npmjs.com/package/@rei/cdr-text))
   - supports [paragraphs](../components/paragraph/README.md)
   - supports [headings](../components/heading/README.md)
 
-#### Design Assets
+### Design Assets
 
 - Sketch library
   - Published the Sketch library with design assets for the released components above
 
-#### Documentation Updates
+### Documentation Updates
 
 - Cedar Home page
   - Alpha version of Cedar Design System Home page
