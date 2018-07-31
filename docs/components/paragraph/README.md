@@ -100,10 +100,7 @@ Used as default font style for all text information. Also known as body-default 
 <cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4" >
 
 ```html
-  <cdr-text
-  class="cdr-stack--lg">
-    Pack everything you need with this handy checklist! We include the 10 essentials and more for comfort in the backcountry.
-  </cdr-text>
+  <cdr-text>Pack everything you need with this handy checklist! We include the 10 essentials and more for comfort in the backcountry.</cdr-text>
 ```
 
 </cdr-doc-example-code-pair>
