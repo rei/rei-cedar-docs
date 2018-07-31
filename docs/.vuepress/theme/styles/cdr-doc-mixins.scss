@@ -1,8 +1,8 @@
-  @mixin cdr-doc-long-form-text {
-  a {
+@mixin cdr-doc-long-form-text {
+  & > a {
     color: $cdr-doc-link-color-primary;
     text-decoration: none;
-
+    
     &:hover,
     &:active,
     &:focus {
@@ -11,7 +11,7 @@
     }
   }
   
-  img {
+  & > img {
     max-width: 100%;
     margin-bottom: $space-2-x;
     margin-top: $space-1-x;
