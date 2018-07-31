@@ -267,7 +267,7 @@ Display icon on right of link message.
       }
     ]">
 
-## Properties
+## Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 

@@ -233,7 +233,7 @@ Used for editorial content such as long-form articles like Expert Advice pages o
       }
     ]">
 
-## Properties
+## Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 

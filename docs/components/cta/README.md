@@ -306,7 +306,7 @@ This component has no specific WCAG compliance attributes built into the control
 <template slot="API">
 <cdr-doc-table-of-contents-shell>
   
-## Properties
+## Props
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
 ## Slots

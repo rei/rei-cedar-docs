@@ -292,7 +292,7 @@ Responsive heading font sizes are the default for heading levels except subheadi
       }
     ]">
 
-## Properties
+## Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
