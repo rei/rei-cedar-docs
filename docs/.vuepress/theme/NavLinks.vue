@@ -1,23 +1,22 @@
 <template>
   <nav class="nav-links cdr-doc-nav-links" v-if="userLinks.length || repoLink">
     <!-- user links -->
-    <div
-      class="nav-item"
+    <cdr-accordion-item
+      v-if="item.type === 'links'"
       v-for="item in userLinks"
-      :key="item.text">
-      <!-- <DropdownLink v-if="item.type === 'links'" :item="item"/> -->
-      <cdr-accordion-item
-        id=""
-        :label="item.text"
-      >
-        <ul class="nav-dropdown cdr-doc-side-navigation__child-links">
-          <li v-for="navItem in item.items" class="dropdown-item">
-            <a :href="navItem.link" class="nav-link cdr-doc-side-navigation__link cdr-doc-side-navigation__child-link">{{ navItem.text }}</a>
-          </li>
-        </ul> 
-      </cdr-accordion-item>
-      <!-- <NavLink v-else :item="item"/> -->
-    </div>
+      :key="item.text"
+      :id="item.text.replace(' ', '-').toLowerCase()"
+      :label="item.text"
+      class="nav-item cdr-accordion-nav"
+    >
+      <ul class="nav-dropdown cdr-doc-side-navigation__child-links">
+        <li v-for="navItem in item.items" class="dropdown-item">
+          <nav-link :item="navItem" class="cdr-doc-side-navigation__child-link" />
+        </li>
+      </ul> 
+    </cdr-accordion-item>
+    <NavLink v-else :item="item"/>
+    <!-- </div> -->
     <!-- repo link -->
     <a v-if="repoLink"
       :href="repoLink"
@@ -121,8 +120,11 @@ export default {
 <style lang="scss">
   @import './styles/cdr-tokens';
   @import './styles/cdr-doc-tokens';
-  
-  .cdr-doc-nav-links {
-    border-bottom: $cdr-doc-border-separator;
+
+  .cdr-accordion-nav > div > div {
+    padding-left: 0;
+  }
+  .cdr-accordion-nav > button > span {
+    font-weight: 400;
   }
 </style>
