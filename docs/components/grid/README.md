@@ -1101,20 +1101,20 @@ This component follows WebAIM’s accessibility guidelines:
 
 Grids are built from two components, `cdr-row` and `cdr-col`.
 
-### Props
+## Props
 
-#### cdr-row
+### cdr-row
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-#### cdr-col
+### cdr-col
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[1].api.props" />
 
-### Slots
+## Slots
 
-#### cdr-row
+### cdr-row
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-#### cdr-col
+### cdr-col
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[1].api.slots" />
 
 ## Installation
@@ -1201,7 +1201,7 @@ Immediate children of `cdr-col` are flexed due to a flex height display bug in s
   ```
 </cdr-doc-code-snippet>
 
-## Nested Grids
+### Nested Grids
 
 Nested grids are made by nesting CdrCols and adding the `is-row` prop to the `CdrCol` that acts as the row wrapper:
 

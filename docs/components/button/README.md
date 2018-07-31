@@ -395,7 +395,7 @@ Change the button size based on where button is used. Default size is medium. Sm
 <template slot="API">
 <cdr-doc-table-of-contents-shell>
 
-### Properties
+## Properties
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
