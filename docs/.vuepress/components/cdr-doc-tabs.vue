@@ -122,9 +122,12 @@ export default {
     padding-left: 0;
     padding-right: 0;
     position: relative;
+    text-decoration: none;
 
-    &,
+    &:active,
+    &:focus,
     &:hover {
+      color: $cdr-doc-link-color-primary;
       text-decoration: none;
     }
   }

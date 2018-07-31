@@ -1,4 +1,16 @@
   @mixin cdr-doc-long-form-text {
+  a {
+    color: $cdr-doc-link-color-primary;
+    text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $cdr-doc-link-color-primary;
+      text-decoration: underline;
+    }
+  }
+  
   img {
     max-width: 100%;
     margin-bottom: $space-2-x;
