@@ -1,5 +1,7 @@
 @import 'cdr-tokens';
 @import 'cdr-doc-tokens';
+@import 'cdr-doc-mixins';
+@import 'examples.scss';
 @import '../../../../node_modules/@rei/cdr-assets/dist/cdr-fonts.css';
 @import '../../../../node_modules/@rei/cdr-assets/dist/cdr-core.css';
 
@@ -67,6 +69,7 @@ body {
     width: 100%;
   }
 
+
   .cdr-doc-page-shell__side-navigation {
     display: none;
   }
@@ -78,125 +81,179 @@ body {
 
 // Code Highlighting
 div[class^='language-'] {
-    background: $cdr-doc-background-color-default;
-    border: $cdr-doc-border-separator;
-    border-radius: $cdr-doc-border-radius-default;
-    color: $cdr-doc-text-color-secondary;
-    font-size: 14px;
-    line-height: 1.4;
-    padding: $inset-1-x;
-    max-width: 100%;
-    overflow-x: auto;
+  background: $cdr-doc-background-color-default;
+  border: $cdr-doc-border-separator;
+  border-radius: $cdr-doc-border-radius-default;
+  color: $cdr-doc-text-color-secondary;
+  font-size: 14px;
+  line-height: 1.4;
+  padding: $inset-1-x;
+  overflow: auto;
+  position: relative;
+
+  .cdr-doc-code-snippet__actions + & {
+    border-radius: 0 0 $cdr-doc-border-radius-default $cdr-doc-border-radius-default;
+  }
+
+  pre {
+    margin: 0;
+    padding-left: $space-1-x * 3;
     position: relative;
+    z-index: 10;
+  }
 
-    .cdr-doc-code-snippet__actions + & {
-      border-radius: 0 0 $cdr-doc-border-radius-default $cdr-doc-border-radius-default;
+  code {
+    display: block;
+    font-family: $cdr-doc-font-family-mono;
+    font-size: 14px;
+    letter-spacing: -0.01em;
+    line-height: 1.4;
+  }
+
+  & > div {
+    position: relative;
+  }
+
+  // Prism overrides
+  .token { 
+    &.string,
+    &.boolean,     
+    &.property,
+    .tag {
+        color: #2574A9;
     }
 
-    pre {
-      margin: 0;
-      padding-left: $space-1-x * 3;
-      position: relative;
-      z-index: 10;
+    &.keyword,
+    &.selector,
+    .attr-name {
+        color: #DB0A5B;
     }
 
-    code {
-      display: block;
-      font-family: 'Roboto Mono', monospace;
-      font-size: 14px;
-      letter-spacing: -0.01em;
-      line-height: 1.4;
+    &.comment {
+      color: $cdr-doc-text-color-secondary;
     }
 
-    & > div {
-      position: relative;
+    .attr-value {
+        color: $cdr-doc-text-color-primary;
     }
 
-    // Prism overrides
-    .token { 
-      &.string,
-      &.boolean,     
-      &.property,
-      .tag {
-          color: #6C966A;
-      }
-
-      &.keyword,
-      &.selector,
-      .attr-name {
-          color: #C48648;
-      }
-
-      .attr-value {
-          color: $cdr-doc-text-color-primary;
-      }
-
-      .punctuation {
-          color: $cdr-doc-text-color-primary;
-      }
-    }
-
-    pre.line-numbers {
-      position: relative;
-      padding-left: 3.8em;
-      counter-reset: linenumber;
-    }
-
-    pre.line-numbers > code {
-      position: relative;
-      white-space: inherit;
-    }
-
-    .line-numbers-wrapper {
-      border-right: $cdr-doc-border-separator;
-      font-family: 'Roboto Mono', monospace;
-      font-size: 14px;
-      line-height: 1.4;
-      padding-right: $space-1-x;
-      position: absolute;
-      text-align: right;
-      top: $space-1-x;
-    }
-
-    .highlight-lines {
-      left: 0;
-      position: absolute;
-      top: $space-1-x;
-      width: 100%;
-
-      .highlighted {
-        background: rgba(yellow, 0.8); // Final color TBD
-      }
-    }
-
-    .line-numbers .line-numbers-rows {
-      position: absolute;
-      pointer-events: none;
-      top: 0;
-      font-size: 100%;
-      left: -3.8em;
-      width: 3em; /* works for line-numbers below 1000 lines */
-      letter-spacing: -1px;
-      border-right: 1px solid #999;
-
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-
-    }
-
-    .line-numbers-rows > span {
-      pointer-events: none;
-      display: block;
-      counter-increment: linenumber;
-    }
-
-    .line-numbers-rows > span:before {
-      content: counter(linenumber);
-      color: #999;
-      display: block;
-      padding-right: 0.8em;
-      text-align: right;
+    .punctuation {
+        color: $cdr-doc-text-color-primary;
     }
   }
+
+  pre.line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+  }
+
+  pre.line-numbers > code {
+    position: relative;
+    white-space: inherit;
+  }
+
+  .line-numbers-wrapper {
+    border-right: $cdr-doc-border-separator;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    line-height: 1.4;
+    padding-right: $space-1-x;
+    position: absolute;
+    text-align: right;
+    top: $space-1-x;
+  }
+
+  .highlight-lines {
+    left: 0;
+    position: absolute;
+    top: $space-1-x;
+    width: 100%;
+
+    .highlighted {
+      background: rgba(yellow, 0.8); // Final color TBD
+    }
+  }
+
+  .line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+  }
+
+  .line-numbers-rows > span {
+    pointer-events: none;
+    display: block;
+    counter-increment: linenumber;
+  }
+
+  .line-numbers-rows > span:before {
+    content: counter(linenumber);
+    color: #999;
+    display: block;
+    padding-right: 0.8em;
+    text-align: right;
+  }
+}
+
+// Homepage styles
+.cdr-doc-homepage-asset-types {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: $space-2-x;
+  margin-top: $space-2-x;
+}
+
+// Colors page styles
+.cdr-doc-colors-intro {
+  display: flex;
+} 
+
+.cdr-doc-colors-intro__image {
+  max-width: 100%;
+}
+
+.cdr-doc-colors-intro__text {
+  @include cdr-doc-long-form-text;
+  margin-right: $space-4-x;
+}
+
+/* 
+Generic Styling, for Desktops/Laptops  this is for markdown table display, this will need to be refactored to ensure it does not style cdr-tables 
+*/
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Zebra striping */
+
+tr:nth-of-type(odd) {
+  background: #eee;
+}
+
+th {
+  background: #333;
+  color: white;
+  font-weight: bold;
+}
+
+td,
+th {
+  padding: 6px;
+  border: 1px solid #ccc;
+  text-align: left;
+}

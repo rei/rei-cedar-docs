@@ -1,18 +1,27 @@
-# nuxt-demo
+## Environment Setup
 
-> Nuxt.js project
+### Install nodejs if you haven't already
+Download the latest long-term stable (LTS) version from the nodejs website:
 
-## Build Setup
+https://nodejs.org/en/
 
 ``` bash
+# clone the repo
+$ git clone git@github.com:rei/rei-cedar-docs.git
+OR
+$ git clone https://github.com/rei/rei-cedar-docs.git
+
+# cd to cloned repo
+$ cd /path/to/cloned/repo
+
 # install dependencies
 $ npm install # Or yarn install
 
-# serve with hot reload at localhost:3000
+# serve with hot reload at localhost:8080
 $ npm run dev
 
 # build for production
 $ npm run build
 ```
 
-For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
+The doc site is built using [VuePress](https://vuepress.vuejs.org)

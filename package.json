@@ -18,20 +18,32 @@
     "url": "git+https://github.com/rei/rei-cedar-docs.git"
   },
   "devDependencies": {
-    "node-sass": "^4.9.0",
-    "sass-loader": "^6.0.7",
-    "vuepress": "^0.9.0"
+    "@rei/cdr-tokens": "^0.1.7",
+    "node-sass": "^4.9.2",
+    "sass-loader": "^7.0.3",
+    "vuepress": "^0.12.0"
   },
   "dependencies": {
+    "@rei/cdr-accordion": "0.1.0-alpha.3",
     "@rei/cdr-assets": "^0.3.0",
-    "@rei/cdr-button": "^0.1.0",
-    "@rei/cdr-col": "^0.1.0",
-    "@rei/cdr-grid": "^0.1.0",
-    "@rei/cdr-icon": "^0.2.0",
-    "@rei/cdr-list": "^0.2.0",
-    "@rei/cdr-row": "^0.1.0",
-    "@rei/cdr-select": "^0.1.1",
-    "@rei/cdr-text": "^0.2.1",
-    "rei-cedar-tokens": "git+https://github.com/rei/rei-cedar-tokens.git#0.1.4"
-  }
+    "@rei/cdr-cta": "0.1.0-alpha.1",
+    "@rei/cdr-breadcrumb": "^1.0.0",
+    "@rei/cdr-button": "^1.0.0",
+    "@rei/cdr-checkbox": "^1.0.0-alpha.0",
+    "@rei/cdr-grid": "^1.0.0",
+    "@rei/cdr-icon": "^1.0.0-next.beta.1",
+    "@rei/cdr-img": "^1.0.0-next.beta.0",
+    "@rei/cdr-link": "^1.0.0",
+    "@rei/cdr-list": "^1.0.0",
+    "@rei/cdr-radio": "^1.0.0-alpha.0",
+    "@rei/cdr-text": "^1.0.0",
+    "scrollmonitor": "^1.2.4",
+    "smoothscroll-polyfill": "^0.4.3",
+    "stickyfilljs": "^2.0.5"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "ie >= 11"
+  ]
 }

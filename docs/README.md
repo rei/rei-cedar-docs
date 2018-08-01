@@ -1,11 +1,31 @@
 ---
 home: true
-actionText: See the link component
-actionLink: /link/examples
-features:
-- title: Embedded Vue Counter
-  details: A Vue counter developed using Vue is embedded in this doc, now thats the power of VuePress!
-- title: Fun Docs made with VuePress
-  details: This entire doc was basically made with VuePress which parsed markdown files and corresponding assets using webpack.
-footer: Developed using VuePress by William Imoh
+title: "Welcome to Cedar"
+title_metadata: false
+breadcrumbs: false
+summary: false
+intro_size: "default"
+layout: "LayoutArticle"
 ---
+
+## What is Cedar?
+Cedar is REI’s digital visual language built into accessible UI components, offered as dual Vue-based code and Sketch design assets with full documentation.
+
+<div class="cdr-doc-homepage-asset-types">
+  <cdr-doc-homepage-asset-card 
+    img-src="/cedar-for-sketch.png"
+    title="Cedar for Sketch"
+    description="A UI toolkit for designers"/>
+
+  <cdr-doc-homepage-asset-card 
+    img-src="/cedar-for-vue.png"
+    title="Cedar for Vue"
+    description="A code repository for engineers"/>
+
+  <cdr-doc-homepage-asset-card 
+    img-src="/cedar-for-doc.png"
+    title="Cedar Documentation"
+    description="A robust library for everyone"/>
+</div>
+
+The Cedar design system promotes reusability of modular components to spread a more unified and cohesive customer experience across our enterprise of digital product development teams and enable more effective design communication.

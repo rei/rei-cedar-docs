@@ -1,5 +1,5 @@
 <template>
-  <div class="cdr-doc-intro">
+  <div class="cdr-doc-intro" :class="[size ? `cdr-doc-intro--${size}` : '']">
     <div class="cdr-doc-intro__inner">
         <ul class="cdr-doc-intro__breadcrumbs" v-if="breadcrumbs">
           <li v-for="breadcrumb in breadcrumbs" :key="breadcrumb.text">
@@ -8,11 +8,7 @@
         </ul>
         <h1 class="cdr-doc-intro__title">{{ title }}</h1>
         <h2 class="cdr-doc-intro__title-metadata" v-if="metadata">{{ metadata }}</h2>
-        <p class="cdr-doc-intro__summary" v-if="hasSlotData">
-          <slot>
-            Buttons are used to invoke an event and communicate the action that will occur.
-          </slot>
-        </p>
+        <p class="cdr-doc-intro__summary" v-if="summary">{{ summary }}</p>
     </div>
   </div>
 </template>
@@ -22,7 +18,7 @@ export default {
   name: 'CdrDocIntro',
   props: {
     breadcrumbs: {
-      type: Array,
+      type: [Array, Boolean],
       default: function () {
         return [
           {
@@ -39,11 +35,13 @@ export default {
     metadata: {
       type: [String, Boolean],
       default: 'Also known as a Call-to-Action (CTA)'
-    }
-  },
-  computed: {
-    hasSlotData() {
-      return this.$slots.default && this.$slots.default[0].text.trim() !== 'false';
+    },
+    summary: {
+      type: [String, Boolean],
+      default: false
+    },
+    size: {
+      type: String
     }
   }
 }
@@ -52,13 +50,17 @@ export default {
   @import '../theme/styles/cdr-tokens.scss';
   @import '../theme/styles/cdr-doc-tokens.scss';
   
-  $background-color-intro: $easily-excited; // Copied from InVision comp
+  $background-color-intro: #46522C; // Copied from InVision comp
   $text-color-intro: $clean-slate;
 
   .cdr-doc-intro {
     background: $background-color-intro;
     color: $text-color-intro;
     padding: $space-4-x $space-1-x;
+  }
+
+  .cdr-doc-intro--small {
+    padding: $space-2-x $space-1-x;
   }
 
   .cdr-doc-intro__inner {
@@ -97,7 +99,7 @@ export default {
     margin-bottom: $space-half-x;
 
     .cdr-doc-intro__title + & {
-      border-top: solid 1px $suede-shoes;
+      border-top: solid 1px $grey-matter;
       margin-top: $space-1-x;
       padding-top: $space-1-x;
     }
@@ -108,7 +110,7 @@ export default {
     margin: 0;
     
     .cdr-doc-intro__title + & {
-      border-top: solid 1px $suede-shoes;
+      border-top: solid 1px $grey-matter;
       margin-top: $space-1-x;
       padding-top: $space-1-x;
     }

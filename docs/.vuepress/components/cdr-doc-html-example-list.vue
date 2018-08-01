@@ -43,7 +43,7 @@
 </template>
 
 <script>
-  import { Vue } from '../cedar.js';
+  import Vue from '$vue';
   // Note the '$vue', which is the full build of Vue, not the default runtime 'vue'. We need to import the full build to have access to the compiler
   
   // Import components that will be shown as examples
@@ -147,9 +147,10 @@
       renderExampleFromTemplate (template, mountId) {
         // This method calls the Vue compiler directly to render the VUE template content as HTML
         var tempComponent = new Vue({
+          el: mountId,
           template: template,
           parent: this,
-        }).$mount(mountId)
+        })
       }
     }
   }
@@ -176,10 +177,18 @@
     &:last-child {
       border-bottom: 0;
     }
+
+    &:first-child {
+      border-radius: $cdr-doc-border-radius-default $cdr-doc-border-radius-default 0 0;
+    }
   }
 
   .cdr-doc-html-example-list--not-interactive .cdr-doc-html-example-list__item-example {
     pointer-events: none; // prevent interaction
+  }
+
+  .cdr-doc-html-example-list__item-background--light {
+    background: $clean-slate;
   }
 
   .cdr-doc-html-example-list__item-background--dark {
