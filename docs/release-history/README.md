@@ -14,23 +14,23 @@
 
 <cdr-doc-table-of-contents-shell>
 
-## [Cedar MVP Release](https://github.com/rei/rei-cedar/tree/18.07.3)
+## [Cedar MVP Release](https://github.com/rei/rei-cedar/tree/18.08.1)
 
 ### Components
 
-- Added new [Accordion](/components/accordion/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.07.3/src/components/accordion)
+- Added new [Accordion](/components/accordion/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.08.1/src/components/accordion)
   - Component
   - Styles
-- Added new [Checkbox](/components/checkbox/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.07.2/src/components/checkbox)
+- Added new [Checkbox](/components/checkbox/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.08.1/src/components/checkbox)
   - Component
   - Styles
-- Added new [CTA](/components/cta/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.07.2/src/components/cta)
+- Added new [CTA](/components/cta/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.08.1/src/components/cta)
   - Component
   - Styles
-- Added new [Image](/components/image/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.07.2/src/components/image)
+- Added new [Image](/components/image/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.08.1/src/components/image)
   - Component
   - Styles
-- Added new [Radio](/components/radio/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.07.2/src/components/radio)
+- Added new [Radio](/components/radio/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.08.1/src/components/radio)
   - Component
   - Styles
 
