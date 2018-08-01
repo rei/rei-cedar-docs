@@ -168,7 +168,7 @@ export default {
     border-bottom: 0;
     border-radius: $cdr-doc-border-radius-default $cdr-doc-border-radius-default 0 0;
     display: flex;
-    padding: 10px $inset-1-x;
+    padding: $space-three-quarter-x $inset-1-x;
 
     .cdr-doc-code-snippet--code-hidden & {
       border-radius: $cdr-doc-border-radius-default;
