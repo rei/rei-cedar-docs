@@ -3,7 +3,7 @@
   "title": "Call to Action",
   "layout": "LayoutComponent",
   "summary": "Stylized link used in campaigns and promotions to encourage users to further explore featured products, services or offers.",
-  "title_metadata": "Call to Action, CTA, CTA button, cdr-cta",
+  "title_metadata": "Call to Action, CTA, CTA button, cdrCta",
   "placement": [
     {
       "type": "do",

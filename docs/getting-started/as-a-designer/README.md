@@ -121,12 +121,6 @@ Sketch Libraries enable us to sync and share system features across the team usi
 Abstract is another way that the UI Toolkit is distributed to your project. If you’re interested in learning more about Abstract or would like a demo, talk to your manager.<br/>
 [Learn more about Abstract](https://www.goabstract.com/)
 
-#### Library Styles Sync
-
-Syncs shared styles from the Sketch Library to the current document.<br/>
-[Download from Github](https://github.com/zeroheight/library-styles-sync)<br/>
-[Installation Guide](https://docs.google.com/document/d/1XeQxc5u5Sv_VMZwpfAWUqjUWvUKS5KhM5swPGbngXOM/edit)
-
 #### Sketch Measure
 
 Make it a fun process to create specs for developers and teammates.<br/>
@@ -176,7 +170,7 @@ Sorry about that. Please fill out and submit a [Bug Report Form](https://airtabl
 
 #### I have an idea for an enhancement to the Cedar UI Toolkit. Who do I talk to?
 
-Great! Your feedback is appreciated. First, [review proposed enhancements]() already under consideration. If your addition is unique, you can [submit a request](link this text) to the Cedar team backlog.
+Great! Your feedback is appreciated. If your addition is unique, you can [submit a request](https://airtable.com/shrcbq9CHthuMO7AC) to the Cedar team backlog.
 
 #### Should I always update Sketch versions when it tells me to?
 

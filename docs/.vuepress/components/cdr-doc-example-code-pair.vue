@@ -142,7 +142,7 @@
       for (const label in this.$slots) {
         const codeNode = this.extractCodeNodeFromVnodeTree(this.$slots[label][0]);
         const templateSource = this.getStoredTemplateSourceForExample(label, codeNode);
-        this.$options.components[`cdr-doc-html-example-${label}-${this.instanceId}`] = { ...Vue.compile(templateSource) };
+        this.$options.components[`cdr-doc-html-example-${label}-${this.instanceId}`] = { ...Vue.compile(`<div>${templateSource}</div>`) };
       }
     },
     methods: {

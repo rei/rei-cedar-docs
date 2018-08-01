@@ -229,9 +229,19 @@ Custom styles for checkboxes.
 
 ```html
 <div>
-  <cdr-checkbox input-class="no-box" content-class="no-box__content">Custom checkbox 1</cdr-checkbox>
-  <cdr-checkbox >Custom checkbox 2</cdr-checkbox>
-  <cdr-checkbox disabled>Custom checkbox 3</cdr-checkbox>
+  <cdr-checkbox
+    modifier="hide-figure"
+    input-class="no-box"
+    content-class="no-box__content">Custom checkbox 1</cdr-checkbox>
+  <cdr-checkbox
+    modifier="hide-figure"
+    input-class="no-box"
+    content-class="no-box__content">Custom checkbox 2</cdr-checkbox>
+  <cdr-checkbox 
+    modifier="hide-figure"
+    input-class="no-box"
+    content-class="no-box__content"
+    disabled>Custom checkbox 3</cdr-checkbox>
 </div>
 ```
 
@@ -249,11 +259,11 @@ Custom styles for checkboxes.
       },
       {
         text: 'List Group',
-        href: '/components/list'
+        href: '/components/list/'
       },
       {
         text: 'Radio buttons',
-        href: '/components/radio'
+        href: '/components/radio/'
       }
     ]">
     <cdr-doc-alert/>
@@ -268,7 +278,7 @@ Custom styles for checkboxes.
 
 ### Don't use when
 
-- Selecting from a list when only 1 choice is allowed. Instead, use [Radio button](/components/radio) component
+- Selecting from a list when only 1 choice is allowed. Instead, use [Radio button](/components/radio/) component
 
 ## Content
 
