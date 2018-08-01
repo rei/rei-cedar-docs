@@ -267,7 +267,7 @@ Display icon on right of link message.
       }
     ]">
 
-## Properties
+## Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
@@ -292,8 +292,8 @@ Install the `cdr-link` package using **npm** in your terminal:
 
 _Terminal_
 
-```terminal
-    npm i -S @rei/cdr-link
+```bash
+npm i -S @rei/cdr-link
 ```
 
 ### #2. Import Dependencies

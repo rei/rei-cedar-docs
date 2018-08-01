@@ -254,7 +254,7 @@ Breadcrumbs provide context and a sense of place. This is especially important o
 <template slot="API">
 <cdr-doc-table-of-contents-shell>
 
-## Properties
+## Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props"/>
 
@@ -275,7 +275,7 @@ Install the `cdr-breadcrumb` package using `npm` in your terminal:
 
 _Terminal_
 
-```terminal
+```bash
 npm i -S @rei/cdr-breadcrumb
 ```
 

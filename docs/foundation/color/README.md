@@ -17,9 +17,8 @@
 <div class="cdr-doc-colors-intro">
 
   <div class="cdr-doc-colors-intro__text">
-    <h2>About our colors</h2>
-    Cedar offers a range colors designed to be accessed, understood, and used by all
-people regardless of their age, background, or ability. We meet or exceed color contrast <cdr-link href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="blank" rel="noopener noreferrer"> WCAG AA accessibility standards</cdr-link><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg>.
+    Cedar offers a range of colors designed to be accessed, understood, and used by all
+people regardless of their age, background, or ability. We meet or exceed color contrast <cdr-link href="https://www.w3.org/WAI/standards-guidelines/wcag/" target="_blank">WCAG AA accessibility standards</cdr-link>.
   </div>
 
 </div>
@@ -40,37 +39,6 @@ people regardless of their age, background, or ability. We meet or exceed color 
   'background-color-dark',
   'background-color-darker'
 ]"/>
-
-### Examples
-<do-dont :examples="[
-  {
-    type: 'do',
-    image: 'color-illustrations/color_1_do.png',
-    caption: 'use approved background colors to separate content areas'
-  },
-  {
-    type: 'dont',
-    image: 'color-illustrations/color_1_dont.png',
-    caption: 'use accent colors as backgrounds'
-  }
-]" />
-
-<do-dont :examples="[
-  {
-    type: 'do',
-    image: 'color-illustrations/color_2_do.png',
-    caption: 'arrange background colors to promote page hierarchy by minimizing shifts in background'
-  },
-  {
-    type: 'dont',
-    image: 'color-illustrations/color_2_dont.png',
-    caption: 'alternate background colors in visually jarring ways'
-  }
-]" />
-
-Text choices should be paired with their corresponding background color to ensure accessibility.
-<img :src="$withBase('/color-illustrations/color_accessibility.png')" alt="Color Accessibility Chart">
-
 
 ## Color Palette
 
@@ -131,5 +99,36 @@ Feedback colors are used for [alerts](#), [notifications](#), and other componen
   'hunky-dory',
   'crowd-pleaser'
 ]"/>
+
+## Examples
+<do-dont :examples="[
+  {
+    type: 'do',
+    image: 'color-illustrations/color_1_do.png',
+    caption: 'use approved background colors to separate content areas'
+  },
+  {
+    type: 'dont',
+    image: 'color-illustrations/color_1_dont.png',
+    caption: 'use accent colors as backgrounds'
+  }
+]" />
+
+<do-dont :examples="[
+  {
+    type: 'do',
+    image: 'color-illustrations/color_2_do.png',
+    caption: 'arrange background colors to promote page hierarchy by minimizing shifts in background'
+  },
+  {
+    type: 'dont',
+    image: 'color-illustrations/color_2_dont.png',
+    caption: 'alternate background colors in visually jarring ways'
+  }
+]" />
+
+Text choices should be paired with their corresponding background color to ensure accessibility.
+
+<accessible-text-example />
 
 </cdr-doc-table-of-contents-shell>

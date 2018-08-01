@@ -100,10 +100,7 @@ Used as default font style for all text information. Also known as body-default 
 <cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4" >
 
 ```html
-  <cdr-text
-  class="cdr-stack--lg">
-    Pack everything you need with this handy checklist! We include the 10 essentials and more for comfort in the backcountry.
-  </cdr-text>
+  <cdr-text>Pack everything you need with this handy checklist! We include the 10 essentials and more for comfort in the backcountry.</cdr-text>
 ```
 
 </cdr-doc-example-code-pair>
@@ -236,7 +233,7 @@ Used for editorial content such as long-form articles like Expert Advice pages o
       }
     ]">
 
-## Properties
+## Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
@@ -258,8 +255,8 @@ Install the `cdr-text` package using `npm` in your terminal:
 
 _Terminal_
 
-```terminal
-    npm i -S @rei/cdr-text
+```bash
+npm i -S @rei/cdr-text
 ```
 
 ### #2. Import Dependencies

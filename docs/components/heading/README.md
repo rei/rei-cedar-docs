@@ -292,7 +292,7 @@ Responsive heading font sizes are the default for heading levels except subheadi
       }
     ]">
 
-## Properties
+## Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
@@ -318,8 +318,8 @@ Install the `cdr-text` package using **npm** in your terminal:
 
 _Terminal_
 
-```terminal
-    npm i -S @rei/cdr-text
+```bash
+npm i -S @rei/cdr-text
 ```
 
 ### #2. Import Dependencies

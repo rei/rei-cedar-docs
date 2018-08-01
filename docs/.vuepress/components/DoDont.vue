@@ -79,6 +79,7 @@ $dont-color: $quick-fixe;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     border-bottom: none;
+    background-color: #fff;
   }
 
   &__caption {

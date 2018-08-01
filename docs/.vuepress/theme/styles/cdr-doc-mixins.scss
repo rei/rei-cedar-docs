@@ -1,5 +1,17 @@
-  @mixin cdr-doc-long-form-text {
-  img {
+@mixin cdr-doc-long-form-text {
+  & > a {
+    color: $cdr-doc-link-color-primary;
+    text-decoration: none;
+    
+    &:hover,
+    &:active,
+    &:focus {
+      color: $cdr-doc-link-color-primary;
+      text-decoration: underline;
+    }
+  }
+  
+  & > img {
     max-width: 100%;
     margin-bottom: $space-2-x;
     margin-top: $space-1-x;
@@ -155,7 +167,7 @@
       border-radius: $cdr-doc-border-radius-default;
       color: $cdr-doc-text-color-code;
       font-family: $cdr-doc-font-family-mono;
-      font-size: 16px;
+      font-size: 14px;
       padding: 0 $space-half-x;
       white-space: nowrap;
     }

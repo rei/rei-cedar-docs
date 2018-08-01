@@ -6,7 +6,9 @@
 </template>
 
 <style lang="scss">
-// .icon.outbound
+.icon.outbound {
+  display: none!important;
+}
 //   color #aaa
 //   display inline-block
 </style>

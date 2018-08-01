@@ -175,7 +175,7 @@ Most Cedar components provide properties to configure component data, display, a
 <cdr-button size="large">I'm a large button</cdr-button>
 ```
 
-Refer to each component’s API documentation for a full list of available properties.
+Refer to each component’s API documentation for a full list of available props.
 
 #### Bind dynamic data to the component
 Props can be [static or dynamic](https://vuejs.org/v2/guide/components-props.html#Passing-Static-or-Dynamic-Props). To provide dynamic data (or non-string data) add a ‘:’ before the prop name.
@@ -234,7 +234,7 @@ export default {
 
 ## Accessibility
 REI requires 100% compliance with WCAG AA guidelines.
-We have provided the relevant guidelines in each [component's documentation](../../components/link/?active-tab=api&active-link=accessibility-2).
+Relevant guidelines are provided in each component's documentation.
 
 <hr/>
 

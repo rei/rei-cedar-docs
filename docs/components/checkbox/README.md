@@ -373,8 +373,8 @@ Install the `cdr-checkbox` package using `npm` in your terminal:
 
 _Terminal_
 
-```terminal
-    npm i -s @rei/cdr-checkbox
+```bash
+npm i -s @rei/cdr-checkbox
 ```
 
 ### 2. Import dependencies

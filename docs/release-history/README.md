@@ -14,7 +14,9 @@
 
 <cdr-doc-table-of-contents-shell>
 
-## [Cedar MVP Release](https://github.com/rei/rei-cedar/tree/18.08.1)
+## MVP Release
+
+[Cedar MVP Release](https://github.com/rei/rei-cedar/tree/18.08.1)
 
 ### Components
 
@@ -48,7 +50,9 @@
 - Experience Principles
   - Article describing the principles of customer experience at the foundation of Cedar
 
-## [Cedar Beta Release](https://github.com/rei/rei-cedar/tree/18.07.2)
+## Beta Release
+
+[Cedar Beta Release](https://github.com/rei/rei-cedar/tree/18.07.2)
 
 ### Components
 
@@ -82,7 +86,9 @@
 
 <hr/>
 
-## [Cedar Alpha Release](https://github.com/rei/rei-cedar/tree/18.06.1)
+## Alpha Release
+
+[Cedar Alpha Release](https://github.com/rei/rei-cedar/tree/18.06.1)
 
 ### Components
 

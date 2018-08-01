@@ -13,7 +13,7 @@
             ]"
             modifier="standalone"
             :href="link.href"
-            v-on:click="handleAnchorLinkClick(link.href, $event)">
+            @click.native="handleAnchorLinkClick(link.href, $event)">
           {{ link.text }}
         </cdr-link>
       </li>
@@ -311,6 +311,11 @@ export default {
     @include redwood-display-20;
     display: block;
     position: relative;
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
   }
 
   .cdr-doc-local-anchor-nav__link--active {
