@@ -74,7 +74,7 @@
                 "name": "default",
                 "description": "Default slot for cdr-accordion-item(s)."
               }
-            ]
+            ],
           },
         },
         {
@@ -104,6 +104,13 @@
               {
                 "name": "default",
                 "description": "Default slot for cdr-accordion-item content."
+              }
+            ],
+            "events": [
+              {
+                  "name": "accordion-item-toggle",
+                  "arguments": "isOpen, event",
+                  "description": "$emit event fired on cdr-accordion-item toggle"
               }
             ]
           }
@@ -330,11 +337,16 @@ Accordions are built from two components, `cdr-accordion` and `cdr-accordion-ite
 
 ## Slots
 
-#### cdr-accordion
+### cdr-accordion
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-#### cdr-accordion-item
+### cdr-accordion-item
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[1].api.slots" />
+
+## Events
+
+### cdr-accordion-item
+<cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[1].api.events" />
 
 ## Installation
 
