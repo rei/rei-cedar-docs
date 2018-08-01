@@ -3,7 +3,7 @@
   "title": "Grid",
   "layout": "LayoutComponent",
   "summary": "Cedar’s grid system is a responsive, mobile first, fluid system that appropriately scales 12 columns as the device or viewport size increases.",
-  "title_metadata": "Grid, layout, cdr-grid",
+  "title_metadata": "Grid, layout, cdrGrid",
   #DO-DON'T
   "consistent": [
     {

@@ -259,11 +259,11 @@ Custom styles for checkboxes.
       },
       {
         text: 'List Group',
-        href: '/components/list'
+        href: '/components/list/'
       },
       {
         text: 'Radio buttons',
-        href: '/components/radio'
+        href: '/components/radio/'
       }
     ]">
     <cdr-doc-alert/>
@@ -278,7 +278,7 @@ Custom styles for checkboxes.
 
 ### Don't use when
 
-- Selecting from a list when only 1 choice is allowed. Instead, use [Radio button](/components/radio) component
+- Selecting from a list when only 1 choice is allowed. Instead, use [Radio button](/components/radio/) component
 
 ## Content
 
