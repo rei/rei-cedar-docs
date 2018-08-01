@@ -14,11 +14,43 @@
 
 <cdr-doc-table-of-contents-shell>
 
+## [Cedar MVP Release](https://github.com/rei/rei-cedar/tree/18.08.1)
+
+### Components
+
+- Added new [Accordion](/components/accordion/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.08.1/src/components/accordion)
+  - Component
+  - Styles
+- Added new [Checkbox](/components/checkbox/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.08.1/src/components/checkbox)
+  - Component
+  - Styles
+- Added new [CTA](/components/cta/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.08.1/src/components/cta)
+  - Component
+  - Styles
+- Added new [Image](/components/image/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.08.1/src/components/image)
+  - Component
+  - Styles
+- Added new [Radio](/components/radio/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.08.1/src/components/radio)
+  - Component
+  - Styles
+
+### Design Assets
+
+- Sketch library 
+  - Published the Sketch library with design assets for the released components above
+
+### Documentation Updates
+
+- Iconography 
+  - Article describing the use of iconography as a foundation of the design system
+- Motion 
+  - Article describing the use of motion as a foundation of the design system
+- Experience Principles
+  - Article describing the principles of customer experience at the foundation of Cedar
+
 ## [Cedar Beta Release](https://github.com/rei/rei-cedar/tree/18.07.2)
 
-### What’s New
-
-#### Components
+### Components
 
 - Added new Breadcrumb component v1.0 ([CdrBreadcrumb](https://github.com/rei/rei-cedar/tree/18.07.2/src/components/breadcrumb))
   - Component
@@ -34,12 +66,12 @@
   - Component
   - Styles
 
-#### Design Assets
+### Design Assets
 
 - Sketch library 
   - Published the Sketch library with design assets for the released components above
 
-#### Documentation Updates
+### Documentation Updates
 
 - About Cedar
   - Article providing a high level overview of Cedar and the benefits of adoption 
@@ -52,21 +84,19 @@
 
 ## [Cedar Alpha Release](https://github.com/rei/rei-cedar/tree/18.06.1)
 
-### What’s New
-
-#### Components
+### Components
 
 - Released of V1 Link component ([CdrLink](https://www.npmjs.com/package/@rei/cdr-link))
 - Released of V1 Text component ([CdrText](https://www.npmjs.com/package/@rei/cdr-text))
   - supports [paragraphs](../components/paragraph/README.md)
   - supports [headings](../components/heading/README.md)
 
-#### Design Assets
+### Design Assets
 
 - Sketch library
   - Published the Sketch library with design assets for the released components above
 
-#### Documentation Updates
+### Documentation Updates
 
 - Cedar Home page
   - Alpha version of Cedar Design System Home page

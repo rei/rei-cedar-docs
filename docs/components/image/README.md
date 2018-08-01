@@ -113,7 +113,7 @@
 
 Use for images with no responsive qualities.
 
-<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/image" sandbox-href="https://codesandbox.io/s/wwnr4jzwr7" >
+<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/image" sandbox-href="https://codesandbox.io/s/wwnr4jzwr7" >
 
 ```html
 
@@ -129,7 +129,7 @@ Use for images with no responsive qualities.
 
 Apply rules to an image using ratio and crop properties.
 
-<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/image" sandbox-href="https://codesandbox.io/s/wwnr4jzwr7" >
+<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/image" sandbox-href="https://codesandbox.io/s/wwnr4jzwr7" >
 
 ```html
 <cdr-img
@@ -145,7 +145,7 @@ Apply rules to an image using ratio and crop properties.
 
 Use the cover property to resize the background image to fill the entire container.
 
-<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/image" sandbox-href="https://codesandbox.io/s/wwnr4jzwr7" >
+<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/image" sandbox-href="https://codesandbox.io/s/wwnr4jzwr7" >
 
 ```html
 <cdr-img
@@ -164,7 +164,7 @@ Use the cover property to resize the background image to fill the entire contain
 
 Apply a radius to an image.
 
-<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/image" sandbox-href="https://codesandbox.io/s/wwnr4jzwr7" >
+<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/image" sandbox-href="https://codesandbox.io/s/wwnr4jzwr7" >
 
 ```html
   <cdr-img
