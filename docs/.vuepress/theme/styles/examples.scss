@@ -25,3 +25,14 @@
     text-align: center;
   }
 }
+
+.custom-radio-example,
+.custom-checkbox-example {
+  .no-box:checked ~ .no-box__content {
+    color: green;
+
+    &::after {
+      content: '(checked)';
+    }
+  }
+}

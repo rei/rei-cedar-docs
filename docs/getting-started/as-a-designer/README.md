@@ -3,7 +3,6 @@
   "title": "As a Designer",
   "title_metadata": false,
   "layout": "LayoutArticle",
-  "summary": "Cedar offers you pre-defined, high-quality components for use in your designs using a shared Sketch Library aligned with component code available for engineers.",
   "breadcrumbs": [
     {
       "text": "Getting Started/",

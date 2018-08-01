@@ -153,8 +153,11 @@ Long breadcrumbs shortened to display the last 2 links in the trail, with hidden
 ```html
     <cdr-breadcrumb
       :items="[
-        {item:{url:'', name: 'Kids\' Snowboard Clothing Accessories'}},
-        {item:{url:'', name: 'Kids\' Snowboard Gloves and Mittens'}}
+        {item:{url:'', name: 'Kids\' Clothing'}},
+        {item:{url:'', name: 'Kids\' Clothing Accessories'}},
+        {item:{url:'', name: 'Kids\' Snowboard Gloves and Mittens'}},
+        {item:{url:'', name: 'Kids\' Gloves'}},
+        {item:{url:'', name: 'Kids\' Insulated Gloves'}},
       ]"
     />
 ```
@@ -251,7 +254,7 @@ Breadcrumbs provide context and a sense of place. This is especially important o
 <template slot="API">
 <cdr-doc-table-of-contents-shell>
 
-## Properties
+## Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props"/>
 
@@ -272,8 +275,8 @@ Install the `cdr-breadcrumb` package using `npm` in your terminal:
 
 _Terminal_
 
-```terminal
-npm i -s @rei/cdr-breadcrumb
+```bash
+npm i -S @rei/cdr-breadcrumb
 ```
 
 ### #2. Import Dependencies

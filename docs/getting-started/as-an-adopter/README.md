@@ -3,7 +3,6 @@
   "title": "As an Adopting Team",
   "title_metadata": false,
   "layout": "LayoutArticle",
-  "summary": "Information and resources for digital product teams to begin adoption of Cedar Design System.",
   "breadcrumbs": [
     {
       "text": "Getting Started/",
@@ -39,7 +38,7 @@ This may involve regular checks with individual teams every 1-2 months to review
 
 ### Planning Adoption
 
-For initial adoption, consider beginning with ongoing work on a new feature, section or redesign. This enables team members to focus on on-boarding to using Cedar and estimating the 0 impact to workflows. Once familiar with the system, teams can then consider addressing accrued technical and design debt (including migration of Cedar 1 components) in other product areas that are not under active development.
+For initial adoption, consider beginning with ongoing work on a new feature, section or redesign. This enables team members to focus on on-boarding to using Cedar and estimating the impact to workflows. Once familiar with the system, teams can then consider addressing accrued technical and design debt (including migration of Cedar 1 components) in other product areas that are not under active development.
 
 ## Resources
 

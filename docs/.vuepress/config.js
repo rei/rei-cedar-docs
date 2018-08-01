@@ -1,6 +1,6 @@
 module.exports = {
   base: process.env.NODE_ENV === "production" ? "/rei-cedar-docs/" : "/",
-  title: "REI CO-OP Design System",
+  title: "Cedar Design System | REI Co-op",
   description: "A demo documentation using VuePress",
   head: [
     [
@@ -9,6 +9,13 @@ module.exports = {
         rel: "stylesheet",
         href:
           "https://fonts.googleapis.com/css?family=Roboto+Condensed:400|Roboto:400|Roboto+Mono:400"
+      },
+    ],
+    [
+      'link',
+      {
+        rel: 'icon',
+        href: '/favicon.ico'
       }
     ]
   ],
@@ -37,24 +44,28 @@ module.exports = {
       {
         text: "Foundation",
         items: [
+          { text: "Experience Principles", link: "/foundation/experience-principles/" },
           { text: "Color", link: "/foundation/color/" },
+          { text: "Iconography", link: "/foundation/iconography/" },
+          { text: "Motion", link: "/foundation/motion/" },
           { text: "Typography", link: "/foundation/typography/" }
         ]
       },
       {
         text: "Components",
         items: [
-          /* { text: "Accordion", link: "/components/accordion/" }, */
+          { text: "Accordion", link: "/components/accordion/" },
           { text: "Breadcrumb", link: "/components/breadcrumb/" },
-          {
-            text: "Button",
-            link: "/components/button/"
-          },
+          { text: "Button", link: "/components/button/" },
+          { text: "Call to Action", link: "/components/cta/" },
+          { text: "Checkbox", link: "/components/checkbox/" },
           { text: "Grid", link: "/components/grid/" },
-          { text: "Headings", link: "/components/heading/" },
+          { text: "Heading", link: "/components/heading/" },
+          { text: "Image", link: "/components/image/" },
           { text: "Link", link: "/components/link/" },
           { text: "List", link: "/components/list/" },
-          { text: "Paragraph", link: "/components/paragraph/" }
+          { text: "Paragraph", link: "/components/paragraph/" },
+          { text: "Radio", link: "/components/radio/" }
         ]
       },
       {

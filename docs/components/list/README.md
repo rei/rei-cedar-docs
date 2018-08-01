@@ -355,7 +355,7 @@ Every item in a list must:
       }
     ]">
 
-## Properties
+## Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props"/>
 
@@ -383,8 +383,8 @@ _Terminal_
 
 <cdr-doc-code-snippet :line-numbers="false" :copy-button="false">
 
-```terminal
-npm i -s @rei/cdr-list
+```bash
+npm i -S @rei/cdr-list
 ```
 
 </cdr-doc-code-snippet>
