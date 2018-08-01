@@ -319,7 +319,7 @@ Install the `cdr-text` package using **npm** in your terminal:
 _Terminal_
 
 ```terminal
-    npm i -s @rei/cdr-text
+    npm i -S @rei/cdr-text
 ```
 
 ### #2. Import Dependencies
@@ -328,8 +328,8 @@ _main.js_
 
 ```javascript
 // import your required css.
-import "@rei/cdr-assets/dist/cdr-core.css";
-import "@rei/cdr-assets/dist/cdr-fonts.css";
+import '@rei/cdr-assets/dist/cdr-core.css';
+import '@rei/cdr-assets/dist/cdr-fonts.css';
 ```
 
 ### #3. Add component to a template

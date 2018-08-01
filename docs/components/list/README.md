@@ -384,7 +384,7 @@ _Terminal_
 <cdr-doc-code-snippet :line-numbers="false" :copy-button="false">
 
 ```terminal
-npm i -s @rei/cdr-list
+npm i -S @rei/cdr-list
 ```
 
 </cdr-doc-code-snippet>
