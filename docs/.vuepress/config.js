@@ -1,7 +1,7 @@
 module.exports = {
   base: process.env.NODE_ENV === "production" ? "/rei-cedar-docs/" : "/",
   title: "Cedar Design System | REI Co-op",
-  description: "A demo documentation using VuePress",
+  description: "The Cedar Design System provides digital teams with reusable UI components based on REI’s visual language.",
   head: [
     [
       "link",
