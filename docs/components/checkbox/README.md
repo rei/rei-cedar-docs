@@ -183,7 +183,7 @@ Default and standard spacing for checkboxes.
 
 ```html
 <div>
-  <cdr-checkbox v-model="checked">Default checkbox 1</cdr-checkbox>
+  <cdr-checkbox>Default checkbox 1</cdr-checkbox>
   <cdr-checkbox>Default checkbox 2</cdr-checkbox>
   <cdr-checkbox disabled>Default checkbox 3</cdr-checkbox>
 </div>
@@ -199,7 +199,7 @@ Compact spacing for checkboxes.
 
 ```html
 <div>
-  <cdr-checkbox v-model="checked" modifier="compact">Compact checkbox 1</cdr-checkbox>
+  <cdr-checkbox modifier="compact">Compact checkbox 1</cdr-checkbox>
   <cdr-checkbox modifier="compact">Compact checkbox 2</cdr-checkbox>
   <cdr-checkbox disabled modifier="compact">Compact checkbox 3</cdr-checkbox>
 </div>
@@ -229,9 +229,9 @@ Custom styles for checkboxes.
 
 ```html
 <div>
-  <cdr-checkbox v-model="ex1" input-class="no-box" content-class="no-box__content">Custom checkbox 1</cdr-checkbox>
-  <cdr-checkbox v-model="ex1">Custom checkbox 2</cdr-checkbox>
-  <cdr-checkbox v-model="ex1" disabled>Custom checkbox 3</cdr-checkbox>
+  <cdr-checkbox input-class="no-box" content-class="no-box__content">Custom checkbox 1</cdr-checkbox>
+  <cdr-checkbox >Custom checkbox 2</cdr-checkbox>
+  <cdr-checkbox disabled>Custom checkbox 3</cdr-checkbox>
 </div>
 ```
 
