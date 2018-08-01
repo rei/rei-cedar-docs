@@ -16,8 +16,8 @@
           span="12 6@sm"
         >
           <div>
-            <p :aria-labelledby="'eventType' + index" class="event-type">{{ apiEvent.type }}</p>
-            <p :id="'eventType' + index" class="event-label">value</p>
+            <p :aria-labelledby="'eventType' + index" class="event-type">{{ apiEvent.arguments }}</p>
+            <p :id="'eventType' + index" class="event-label">arguments</p>
           </div>
         </cdr-col>
         <cdr-col

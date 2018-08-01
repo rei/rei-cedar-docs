@@ -354,7 +354,7 @@ Following are modifiers for `cdrCheckbox` component:
 
 ## Events
 
-<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
+<cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
 
 ## Installation
 
