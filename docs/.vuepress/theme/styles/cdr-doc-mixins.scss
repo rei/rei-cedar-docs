@@ -64,29 +64,82 @@
     margin-bottom: $space-2-x;
   }
 
+  // List resets
   & > ul,
   & > ol {
-    list-style-position: inside;
+    list-style-type: none;
     padding: 0;
+
+    /* spacing
+      ---------- */
+    & > li + li {
+      margin-top: 8px;
+    }
+
+    /* nesting
+      ---------- */
+    & li > ul,
+    & li > ol {
+      margin-top: 8px;
+      padding-left: 16px;
+      list-style-type: none;
+    }
   }
 
-  & > ol > li > ol {
-    list-style-position: inside;
-    list-style: lower-alpha;
-  }
-  
-  & > ol li,
-  & > ul li {
-    margin-bottom: $space-half-x;
-    margin-top: 0;
-    max-width: $cdr-doc-long-form-text-max-line-length;
-    padding-left: 1em;
-    text-indent: -1em;
+  // unordered
+  & > ul {
+    position: relative;
+    padding-left: $unordered-list-indentation-space;
+
+    & > li::before {
+      content: "\2022";
+      position: absolute;
+      left: 0;
+    }
+
+    /* nesting
+      ---------- */
+    & li > ul,
+    & li > ol {
+      position: relative;
+      padding-left: $nested-list-indentation-space;
+
+      & > li {
+        &::before {
+          content: "\2013";
+          position: absolute;
+          left: 0;
+        }
+      }
+    }
   }
 
-  & > ul li {
-    padding-left: 1.1em;
-    text-indent: -1em;
+  // ordered
+  & > ol {
+    list-style-type: decimal;
+    padding-left: $ordered-list-indentation-space;
+    
+    & li {
+      padding-left: $space-quarter-x;
+
+      /* nesting
+      ---------- */
+      & > ol,
+      & > ul {
+        position: relative;
+        padding-left: $nested-list-indentation-space;
+
+        & > li {
+          padding-left: $list-item-indentation-space;
+
+          &::before {
+            content: "\2013";
+            position: absolute;
+            left: 0;
+          }
+        }
+      }
+    }
   }
 
   & > hr {
