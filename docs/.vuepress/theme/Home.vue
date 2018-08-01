@@ -25,7 +25,7 @@
         <cdr-col>
           <cdr-img
             class="getting-started-image"
-            :src="$withBase('hero-banner.jpg')" 
+            :src="$withBase('home/gettingstarted_icon.png')" 
             ratio="16-9"
             cover
             radius="rounded"
@@ -60,7 +60,7 @@
           <div class="cdr-text-center">
             <cdr-img
               class="home-start-image"
-              :src="$withBase('hero-banner.jpg')"
+              :src="$withBase('home/foundation_icon.png')"
               ratio="square"
               radius="rounded"
               cover
@@ -77,7 +77,7 @@
           <div class="cdr-text-center">
             <cdr-img
               class="home-start-image"
-              :src="$withBase('hero-banner.jpg')"
+              :src="$withBase('home/components_icon.png')"
               ratio="square"
               radius="rounded"
               cover
@@ -95,7 +95,7 @@
       <div class="home-hr-tree cdr-stack--xl">
         <cdr-img
           class="home-hr-tree__image"
-          :src="$withBase('hr_tree.png')"
+          :src="$withBase('home/hr_tree.png')"
           role="presentation" />
       </div>
 
