@@ -121,12 +121,6 @@ Sketch Libraries enable us to sync and share system features across the team usi
 Abstract is another way that the UI Toolkit is distributed to your project. If you’re interested in learning more about Abstract or would like a demo, talk to your manager.<br/>
 [Learn more about Abstract](https://www.goabstract.com/)
 
-#### Library Styles Sync
-
-Syncs shared styles from the Sketch Library to the current document.<br/>
-[Download from Github](https://github.com/zeroheight/library-styles-sync)<br/>
-[Installation Guide](https://docs.google.com/document/d/1XeQxc5u5Sv_VMZwpfAWUqjUWvUKS5KhM5swPGbngXOM/edit)
-
 #### Sketch Measure
 
 Make it a fun process to create specs for developers and teammates.<br/>
