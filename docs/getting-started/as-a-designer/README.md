@@ -176,7 +176,7 @@ Sorry about that. Please fill out and submit a [Bug Report Form](https://airtabl
 
 #### I have an idea for an enhancement to the Cedar UI Toolkit. Who do I talk to?
 
-Great! Your feedback is appreciated. First, [review proposed enhancements]() already under consideration. If your addition is unique, you can [submit a request](link this text) to the Cedar team backlog.
+Great! Your feedback is appreciated. If your addition is unique, you can [submit a request](https://airtable.com/shrcbq9CHthuMO7AC) to the Cedar team backlog.
 
 #### Should I always update Sketch versions when it tells me to?
 
