@@ -1134,8 +1134,8 @@ Install the `cdr-grid` package using `npm` in your terminal:
 
 _Terminal_
 
-```terminal
-    npm i -s @rei/cdr-grid
+```bash
+npm i -s @rei/cdr-grid
 ```
 
 ### #2. Import Dependencies

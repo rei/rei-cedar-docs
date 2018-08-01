@@ -344,7 +344,7 @@ Install the `cdr-radio` package using `npm` in your terminal:
 
 _Terminal_
 
-```terminal
+```bash
 npm i -s @rei/cdr-radio
 ```
 

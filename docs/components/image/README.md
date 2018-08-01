@@ -340,8 +340,8 @@ Install the `cdr-img` package using `npm` in your terminal:
 
 _Terminal_
 
-```terminal
-    npm i -S @rei/cdr-img
+```bash
+npm i -S @rei/cdr-img
 ```
 
 ### #2. Import Dependencies

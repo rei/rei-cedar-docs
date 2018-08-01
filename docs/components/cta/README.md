@@ -333,8 +333,8 @@ Install the `cdr-cta` package using `npm` in your terminal:
 
 _Terminal_
 
-```terminal
-    npm i -s @rei/cdr-link
+```bash
+npm i -s @rei/cdr-link
 ```
 
 ### #2. Import Dependencies

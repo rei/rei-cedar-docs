@@ -353,8 +353,8 @@ Install the `cdr-accordion` package using `npm` in your terminal:
 
 _Terminal_
 
-```terminal
-    npm i -s @rei/cdr-accordion
+```bash
+npm i -s @rei/cdr-accordion
 ```
 
 ### #2. Import Dependencies

@@ -383,7 +383,7 @@ _Terminal_
 
 <cdr-doc-code-snippet :line-numbers="false" :copy-button="false">
 
-```terminal
+```bash
 npm i -S @rei/cdr-list
 ```
 

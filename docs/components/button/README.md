@@ -426,8 +426,8 @@ Install the `cdr-button` package using `npm` in your terminal:
 
 _Terminal_
 
-```terminal
-    npm i -S @rei/cdr-button
+```bash
+npm i -S @rei/cdr-button
 ```
 
 ### 2. Import dependencies

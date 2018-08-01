@@ -255,8 +255,8 @@ Install the `cdr-text` package using `npm` in your terminal:
 
 _Terminal_
 
-```terminal
-    npm i -S @rei/cdr-text
+```bash
+npm i -S @rei/cdr-text
 ```
 
 ### #2. Import Dependencies

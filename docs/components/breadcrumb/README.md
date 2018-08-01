@@ -275,7 +275,7 @@ Install the `cdr-breadcrumb` package using `npm` in your terminal:
 
 _Terminal_
 
-```terminal
+```bash
 npm i -S @rei/cdr-breadcrumb
 ```
 
