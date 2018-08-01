@@ -286,25 +286,7 @@ Change the button size based on where button is used. Default size is medium. Sm
 </template>
 
 <template slot="Design Guidelines">
-  <cdr-doc-table-of-contents-shell
-    tab-name="Design Guidelines"
-    :appended-nav-items="[
-      {
-        text: 'Related Components'
-      },
-      {
-        text: 'Call to Action buttons',
-        href: '#'
-      },
-      {
-        text: 'Toggle buttons',
-        href: '#'
-      },
-      {
-        text: 'Button groups',
-        href: '#'
-      }
-    ]">
+  <cdr-doc-table-of-contents-shell>
     <cdr-doc-alert/>
 
 ## Use When
