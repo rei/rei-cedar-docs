@@ -46,18 +46,22 @@ export default {
     padding: $inset-1-x;
     text-decoration: none;
 
+    &:hover {
+      color: $easily-excited;
+    }
+
     .cdr-doc-side-navigation__child-links & {
       border-top: 0;
       padding: $inset-2-x-squish;
     }
   
     &.router-link-active {
-      color: $cdr-doc-link-color-primary;
+      color: $easily-excited;
       position: relative;
 
       &:before {
         content: '';
-        background: $cdr-doc-link-color-primary;
+        background: $easily-excited;
         bottom: 0;
         left: 0;
         position: absolute;

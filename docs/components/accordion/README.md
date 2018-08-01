@@ -74,7 +74,7 @@
                 "name": "default",
                 "description": "Default slot for cdr-accordion-item(s)."
               }
-            ]
+            ],
           },
         },
         {
@@ -105,6 +105,13 @@
                 "name": "default",
                 "description": "Default slot for cdr-accordion-item content."
               }
+            ],
+            "events": [
+              {
+                  "name": "accordion-item-toggle",
+                  "arguments": "isOpen, event",
+                  "description": "$emit event fired on cdr-accordion-item toggle"
+              }
             ]
           }
         }
@@ -124,7 +131,7 @@
 
 Section borders expand to full width of container.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/accordion" sandbox-href="https://codesandbox.io/s/m9jm5rw1zx">
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/accordion" sandbox-href="https://codesandbox.io/s/m9jm5rw1zx">
 
 ```html
   <cdr-accordion>
@@ -162,7 +169,7 @@ Section borders expand to full width of container.
 
 Reduced spacing around title and content body. Also, smaller font sizes resulting in an overall denser display of content.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/accordion" sandbox-href="https://codesandbox.io/s/m9jm5rw1zx">
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/accordion" sandbox-href="https://codesandbox.io/s/m9jm5rw1zx">
 
 ```html
   <cdr-accordion :compact="true">
@@ -202,7 +209,7 @@ Reduced spacing around title and content body. Also, smaller font sizes resultin
 
 Border aligns to the title text and expand/collapse icon.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/accordion" sandbox-href="https://codesandbox.io/s/m9jm5rw1zx">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/accordion" sandbox-href="https://codesandbox.io/s/m9jm5rw1zx">
 
 ```html
   <cdr-accordion :border-aligned="true">
@@ -330,11 +337,16 @@ Accordions are built from two components, `cdr-accordion` and `cdr-accordion-ite
 
 ## Slots
 
-#### cdr-accordion
+### cdr-accordion
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-#### cdr-accordion-item
+### cdr-accordion-item
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[1].api.slots" />
+
+## Events
+
+### cdr-accordion-item
+<cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[1].api.events" />
 
 ## Installation
 
