@@ -14,9 +14,41 @@
 
 <cdr-doc-table-of-contents-shell>
 
-## What’s New: Beta
+## [Cedar MVP Release](https://github.com/rei/rei-cedar/tree/18.08.1)
 
-[Cedar Beta Release](https://github.com/rei/rei-cedar/tree/18.07.2)
+### Components
+
+- Added new [Accordion](/components/accordion/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.08.1/src/components/accordion)
+  - Component
+  - Styles
+- Added new [Checkbox](/components/checkbox/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.08.1/src/components/checkbox)
+  - Component
+  - Styles
+- Added new [CTA](/components/cta/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.08.1/src/components/cta)
+  - Component
+  - Styles
+- Added new [Image](/components/image/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.08.1/src/components/image)
+  - Component
+  - Styles
+- Added new [Radio](/components/radio/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.08.1/src/components/radio)
+  - Component
+  - Styles
+
+### Design Assets
+
+- Sketch library 
+  - Published the Sketch library with design assets for the released components above
+
+### Documentation Updates
+
+- Iconography 
+  - Article describing the use of iconography as a foundation of the design system
+- Motion 
+  - Article describing the use of motion as a foundation of the design system
+- Experience Principles
+  - Article describing the principles of customer experience at the foundation of Cedar
+
+## [Cedar Beta Release](https://github.com/rei/rei-cedar/tree/18.07.2)
 
 ### Components
 
@@ -51,8 +83,6 @@
 <hr/>
 
 ## What’s New: Alpha
-
-[Cedar Alpha Release](https://github.com/rei/rei-cedar/tree/18.06.1)
 
 ### Components
 
