@@ -318,7 +318,7 @@ Change the button size based on where button is used. Default size is medium. Sm
 ### Don't use when
 
 - Navigating to another page on a site
-- Taking users to a different part within the same page. Instead, use [Links](/components/link) component
+- Taking users to a different part within the same page. Instead, use [Link](/components/link/)
 
 ## Foundations
 
