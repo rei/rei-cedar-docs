@@ -229,9 +229,19 @@ Custom styles for checkboxes.
 
 ```html
 <div>
-  <cdr-checkbox input-class="no-box" content-class="no-box__content">Custom checkbox 1</cdr-checkbox>
-  <cdr-checkbox >Custom checkbox 2</cdr-checkbox>
-  <cdr-checkbox disabled>Custom checkbox 3</cdr-checkbox>
+  <cdr-checkbox
+    modifier="hide-figure"
+    input-class="no-box"
+    content-class="no-box__content">Custom checkbox 1</cdr-checkbox>
+  <cdr-checkbox
+    modifier="hide-figure"
+    input-class="no-box"
+    content-class="no-box__content">Custom checkbox 2</cdr-checkbox>
+  <cdr-checkbox 
+    modifier="hide-figure"
+    input-class="no-box"
+    content-class="no-box__content"
+    disabled>Custom checkbox 3</cdr-checkbox>
 </div>
 ```
 
