@@ -1,6 +1,6 @@
 module.exports = {
   base: process.env.NODE_ENV === "production" ? "/rei-cedar-docs/" : "/",
-  title: "REI CO-OP Design System",
+  title: "Cedar Design System | REI Co-op",
   description: "A demo documentation using VuePress",
   head: [
     [
@@ -9,6 +9,13 @@ module.exports = {
         rel: "stylesheet",
         href:
           "https://fonts.googleapis.com/css?family=Roboto+Condensed:400|Roboto:400|Roboto+Mono:400"
+      },
+    ],
+    [
+      'link',
+      {
+        rel: 'icon',
+        href: '/favicon.ico'
       }
     ]
   ],
