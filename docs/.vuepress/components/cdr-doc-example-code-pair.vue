@@ -4,26 +4,26 @@
           :class="'cdr-doc-example-code-pair__item-background--' + backgroundToggleStates[slotLabel]"
           v-for="slotContent, slotLabel in $slots">
       <div class="cdr-doc-example-code-pair__item-background-toggle" v-if="backgroundToggle">
-        <label class="cdr-doc-item-background-toggle__button" 
-                :class="{'cdr-doc-item-background-toggle__button--active': backgroundToggleStates[slotLabel] === 'light'}" 
-                :for="'cdr-doc-example-code-pair__toggle-light-' + slotLabel + instanceId">
+        <label
+          class="cdr-doc-item-background-toggle__button" 
+          :class="{'cdr-doc-item-background-toggle__button--active': backgroundToggleStates[slotLabel] === 'light'}" 
+        >
           <input 
             class="cdr-doc-item-background-toggle__input"
             type="radio" 
-            :id="'cdr-doc-example-code-pair__toggle-light-' + slotLabel + instanceId"
             value="light"
             v-model="backgroundToggleStates[slotLabel]">
             Light
         </label>
-        <label class="cdr-doc-item-background-toggle__button"
-                :class="{'cdr-doc-item-background-toggle__button--active': backgroundToggleStates[slotLabel] === 'dark'}" 
-                :for="'cdr-doc-example-code-pair__toggle-dark-' + slotLabel + instanceId">
-        <input 
-          class="cdr-doc-item-background-toggle__input"
-          type="radio" 
-          :id="'cdr-doc-example-code-pair__toggle-dark-' + slotLabel + instanceId"
-          value="dark"
-          v-model="backgroundToggleStates[slotLabel]">
+        <label
+          class="cdr-doc-item-background-toggle__button"
+          :class="{'cdr-doc-item-background-toggle__button--active': backgroundToggleStates[slotLabel] === 'dark'}"
+        >
+          <input
+            class="cdr-doc-item-background-toggle__input"
+            type="radio" 
+            value="dark"
+            v-model="backgroundToggleStates[slotLabel]">
           Dark
         </label>
       </div>
@@ -123,20 +123,16 @@
         return this._uid;
       }
     },
-    created() {
+    beforeMount() {
       // Loop over all the slots and set the default background color for each example. Also create an array of all the slot names so that just the first slot's code can be displayed
-      let backgroundToggleStates = {}
       for (const label in this.$slots) {
         if (this.backgroundColors[label]) {
-          backgroundToggleStates[label] = this.backgroundColors[label];
+          this.$set(this.backgroundToggleStates, label, this.backgroundColors[label]);
         } else {
-          backgroundToggleStates[label] = this.backgroundColor;
+          this.$set(this.backgroundToggleStates, label, this.backgroundColor);
         }
       }
       this.slotNames = Object.keys(this.$slots);
-      this.backgroundToggleStates = backgroundToggleStates; // Set default background toggle states
-    },
-    beforeMount() {
       this.exampleCount = Object.keys(this.$slots).length; // If more than one example is present, labels will be turned on by default
       // Loop over all the slots and extract the source HTML/Custom Element code from the escaped markdown code snippet. This code is saved as a Vue template string that is then rendered into a dynamically created empty div in the template 
       for (const label in this.$slots) {
