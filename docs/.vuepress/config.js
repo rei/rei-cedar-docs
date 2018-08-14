@@ -1,7 +1,8 @@
 module.exports = {
   base: process.env.NODE_ENV === "production" ? "/rei-cedar-docs/" : "/",
   title: "Cedar Design System | REI Co-op",
-  description: "The Cedar Design System provides digital teams with reusable UI components based on REI’s visual language.",
+  description:
+    "The Cedar Design System provides digital teams with reusable UI components based on REI’s visual language.",
   head: [
     [
       "link",
@@ -9,13 +10,13 @@ module.exports = {
         rel: "stylesheet",
         href:
           "https://fonts.googleapis.com/css?family=Roboto+Condensed:400|Roboto:400|Roboto+Mono:400"
-      },
+      }
     ],
     [
-      'link',
+      "link",
       {
-        rel: 'icon',
-        href: '/favicon.ico'
+        rel: "icon",
+        href: "/favicon.ico"
       }
     ]
   ],
@@ -44,7 +45,10 @@ module.exports = {
       {
         text: "Foundation",
         items: [
-          { text: "Experience Principles", link: "/foundation/experience-principles/" },
+          {
+            text: "Experience Principles",
+            link: "/foundation/experience-principles/"
+          },
           { text: "Color", link: "/foundation/color/" },
           { text: "Iconography", link: "/foundation/iconography/" },
           { text: "Motion", link: "/foundation/motion/" },
