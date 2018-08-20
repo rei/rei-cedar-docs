@@ -27,7 +27,7 @@
     "@rei/cdr-accordion": "^1.0.0",
     "@rei/cdr-assets": "^0.3.0",
     "@rei/cdr-breadcrumb": "^1.0.0",
-    "@rei/cdr-button": "^1.0.0",
+    "@rei/cdr-button": "^1.0.1-alpha.0",
     "@rei/cdr-checkbox": "^1.0.0",
     "@rei/cdr-cta": "^1.0.0",
     "@rei/cdr-grid": "^1.0.0",

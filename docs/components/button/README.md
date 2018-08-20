@@ -223,16 +223,15 @@ Pair an icon with text to improve recognition about an object or action.
   <div>
     <cdr-icon-sprite />
     <cdr-button
-          modifier="secondary"
-          >
-          <template name="icon">
-            <cdr-icon
-              use="#play-stroke"
-              class="cdr-button__icon"
-              modifier="inherit-color"
-            />
-          </template>
-          Play video
+      modifier="secondary"
+    >
+      <cdr-icon
+        slot="icon"
+        use="#play-stroke"
+        class="cdr-button__icon"
+        modifier="inherit-color"
+      />
+      Play video
     </cdr-button>
   </div>
 ```
@@ -249,17 +248,15 @@ Use to visually communicate an object or action in limited space. Include altern
   <div>
     <cdr-icon-sprite />
     <cdr-button
-          :icon-only="true"
-          aria-label="More information about icon"
-        >
-          <template name="icon">
-            <cdr-icon
-              class="cdr-button__icon"
-              use="#question-fill"
-              modifier="inherit-color"
-          />
-          </template>
-
+      :icon-only="true"
+      aria-label="More information about icon"
+    >
+      <cdr-icon
+        slot="icon"
+        class="cdr-button__icon"
+        use="#question-fill"
+        modifier="inherit-color"
+      />
     </cdr-button>
   </div>
 ```
@@ -477,12 +474,11 @@ In the below example, a Download button is rendered as a button with icon and te
 ```vue
 <template>
   <cdr-button>
-    <template name="icon">
-      <cdr-icon
-        class="cdr-button__icon"
-        use="#download"
-      />
-    </template>
+    <cdr-icon
+      slot="icon"
+      class="cdr-button__icon"
+      use="#download"
+    />
     Download
   </cdr-button>
 </template>
@@ -518,9 +514,10 @@ Use the following props to modify `cdr-button`:
     :on-dark="true"
     aria-label="Complete this step"
   >
-    <template name="icon">
-      <icon-check-lg class="cdr-button__icon" />
-    </template>
+    <icon-check-lg
+      slot="icon"
+      class="cdr-button__icon"
+    />
   </cdr-button>
 </template>
 ```
