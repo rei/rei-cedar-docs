@@ -1186,6 +1186,8 @@ CdrRow functions as a flexbox container, and CdrCol functions as a flexbox item.
 
 New to or unfamiliar with flexbox? Read this [CSS Tricks flexbox guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background) for background, terminology, guidelines, and examples.
 
+### Cdr-col content width
+
 Immediate children of `cdr-col` are flexed due to a flex height display bug in some versions of Safari. This causes immediate children to be full-width and display stacked horizontally. Wrapping child elements in a single `div` element will fix these problems (if undesired). 
 
 <cdr-doc-code-snippet :copy-button="false" :max-height="false">
