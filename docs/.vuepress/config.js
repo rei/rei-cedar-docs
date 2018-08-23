@@ -52,7 +52,8 @@ module.exports = {
           { text: "Color", link: "/foundation/color/" },
           { text: "Iconography", link: "/foundation/iconography/" },
           { text: "Motion", link: "/foundation/motion/" },
-          { text: "Typography", link: "/foundation/typography/" }
+          { text: "Typography", link: "/foundation/typography/" },
+          { text: "Spacing", link: "/foundation/spacing/" }
         ]
       },
       {
