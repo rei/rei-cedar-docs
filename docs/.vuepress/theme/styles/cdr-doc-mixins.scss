@@ -1,4 +1,8 @@
 @mixin cdr-doc-long-form-text {
+  & > pre {
+    font-size: 1.4rem;
+  }
+
   & > a {
     color: $cdr-doc-link-color-primary;
     text-decoration: none;
