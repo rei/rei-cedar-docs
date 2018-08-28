@@ -66,6 +66,7 @@ module.exports = {
           { text: "Checkbox", link: "/components/checkbox/" },
           { text: "Grid", link: "/components/grid/" },
           { text: "Heading", link: "/components/heading/" },
+          { text: "Icon", link: "/components/icon/" },
           { text: "Image", link: "/components/image/" },
           { text: "Link", link: "/components/link/" },
           { text: "List", link: "/components/list/" },

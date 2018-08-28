@@ -35,6 +35,14 @@ import { CdrIconSprite } from "@rei/cdr-icon";
 Vue.component("CdrIconSprite", CdrIconSprite);
 FullVue.component("CdrIconSprite", CdrIconSprite);
 
+import { IconCaretUp } from "@rei/cdr-icon";
+Vue.component("IconCaretUp", IconCaretUp);
+FullVue.component("IconCaretUp", IconCaretUp);
+
+import { IconCaretDown } from "@rei/cdr-icon";
+Vue.component("IconCaretDown", IconCaretDown);
+FullVue.component("IconCaretDown", IconCaretDown);
+
 import { CdrLink } from "@rei/cdr-link";
 import "@rei/cdr-link/dist/cdr-link.css";
 Vue.component("CdrLink", CdrLink);

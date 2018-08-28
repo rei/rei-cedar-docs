@@ -16,9 +16,12 @@
   }
   
   & > img {
+    display: block;
     max-width: 100%;
     margin-bottom: $space-2-x;
     margin-top: $space-1-x;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   & > h2 {
@@ -73,6 +76,7 @@
   & > ol {
     list-style-type: none;
     padding: 0;
+    margin-bottom: 1rem;
 
     /* spacing
       ---------- */
