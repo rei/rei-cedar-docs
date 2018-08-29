@@ -1,14 +1,15 @@
 <template>
   <cdr-row
       cols="3 6@md 10@lg"
-      class="cdr-stack--lg"
+      class="cdr-stack--lg icon-demo-grid"
+      gutter="xxs"
     >
       <cdr-col
         v-for="(val, key) in Icons"
         :key="key"
         v-if="key !== 'CdrIcon' && key !== 'CdrIconSprite'"
       >
-        <div class="cdr-text-center">
+        <div class="icon-demo">
           <svg
             :is="key"
           />
@@ -34,4 +35,10 @@ export default {
 </script>
 
 <style lang="scss">
+.icon-demo {
+  background-color: white;
+  border: 1px solid black;
+  text-align: center;
+  padding: 10px;
+}
 </style>
