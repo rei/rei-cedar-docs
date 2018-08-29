@@ -244,14 +244,13 @@ When the mouse and keyboard are the primary input methods or when icons are pair
 
 ## Icon Library
 
-TODO: Icon grid
+<icon-grid />
 
 List of icons with names and descriptions about when or how to use each icon. Icons are referred to as:
 - `<name-of-icon>` when using with the method for SVG sprite. For example, account-profile 
 - `Icon<name-of-icon>` when using with the method for Individual icon component. For example, the icon, ‘account-profile’ becomes is IconAccountProfile
 
-
-TODO: Icon table
+<icon-table />
 
 ## Behavior
 When using icons with links or buttons, make sure that the icon communicates intended meaning.
@@ -352,7 +351,7 @@ The CdrIcon package contains many different components:
 
 1. `CdrIcon`  -- This is a basic SVG wrapper. This component allows for using Non-Cedar SVGs. Use this component in conjunction with the CdrIconSprite package
 2. `CdrIconSprite` -- A symbol definition sprite with all Cedar icons
-3. Individual icons -- For available icons, view [Cedar Icon Library](TODO:Link to table) on Design Guidelines tab
+3. Individual icons -- For available icons, view [Cedar Icon Library](?active-tab=design-guidelines&active-link=icon-library) on Design Guidelines tab
 
 There are 3 different options to display SVG icons on your page using the `CdrIcon` package.
 
