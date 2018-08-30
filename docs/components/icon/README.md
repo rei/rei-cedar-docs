@@ -75,7 +75,7 @@
                 "name": "use",
                 "type": "string",
                 "default": "none",
-                "description": "Set the href attribute for use with SVG symbol sprite (CdrIconSprite). Only for CdrIcon."
+                "description": "Only on CdrIcon. Set the href attribute for use with SVG symbol sprite (CdrIconSprite)"
               },
               {
                 "name": "modifier",
@@ -181,8 +181,8 @@ Create a new SVG icon using any valid internal SVG markup. This method creates a
 ## Accessibility 
 
 To ensure that usage of this component complies with accessibility guidelines:
-- If an icon conveys meaning, there must be an `<alt>` tag that describes the action or idea that the icon represents
-- If an icon is decorative, use an empty `<alt>` tag 
+- If an icon conveys meaning, there must be an `alt` attribute that describes the action or idea that the icon represents
+- If an icon is decorative, use an empty `alt` attribute 
 <div class="cdr-stack--lg"></div>
 
 Recommendations for writing alternative text: 
@@ -299,8 +299,8 @@ CdrIcon and all Icon* components have a default slot.
 
 Resources are available within the [CdrIcon package](https://www.npmjs.com/package/@rei/cdr-icon):
 
-- Component: @rei/cdr-accordion
-- Component styles: cdr-accordion.css
+- Component: `@rei/cdr-accordion`
+- Component styles: `cdr-accordion.css`
 
 To incorporate the required assets for a component, use the following steps:
 
