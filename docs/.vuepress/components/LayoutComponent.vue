@@ -48,6 +48,12 @@ export default {
     min-height: 100vh;
   }
 
+  .cdr-doc-article-img {
+    border: 1px solid $partly-cloudy;
+    border-radius:  $radius-softer;
+    background-color: white;
+  }
+
   .cdr-doc-component-layout__body {
     flex: 1 0 100%;
     padding: $inset-1-x;

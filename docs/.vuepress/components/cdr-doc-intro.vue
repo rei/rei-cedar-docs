@@ -30,11 +30,11 @@ export default {
     },
     title: {
       type: String,
-      default: 'Button'
+      default: 'I need a title'
     },
     metadata: {
       type: [String, Boolean],
-      default: 'Also known as a Call-to-Action (CTA)'
+      default: false
     },
     summary: {
       type: [String, Boolean],

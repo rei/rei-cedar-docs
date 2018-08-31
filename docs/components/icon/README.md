@@ -3,6 +3,7 @@
   "title": "Icons",
   "layout": "LayoutComponent",
   "summary": "Icons communicate meaning through the use of graphics",
+  "title_metadata": "cdr-icon",
   "meta": [
     {
       "name": "keywords",
@@ -75,7 +76,7 @@
                 "name": "use",
                 "type": "string",
                 "default": "none",
-                "description": "Only on CdrIcon. Set the href attribute for use with SVG symbol sprite (CdrIconSprite)"
+                "description": "Only on CdrIcon. Sets the href attribute for use with SVG symbol sprite (CdrIconSprite)"
               },
               {
                 "name": "modifier",
@@ -113,6 +114,10 @@
       {
         text: 'Links',
         href: '../link/'
+      },
+      {
+        text: 'Iconography',
+        href: '../../foundation/iconography/'
       }
     ]">
 
@@ -146,7 +151,7 @@ Display any icon separately. This may be the easiest way to use an icon on a pag
 
 ## Non-Cedar SVG
 
-Create a new SVG icon using any valid internal SVG markup. This method creates an outer SVG wrapper for accessibility and styles. This is not recommended is if using a large number of icons.
+Create a new SVG icon using any valid internal SVG markup. This method creates an outer SVG wrapper for accessibility and styles. This is not recommended if using a large number of icons.
 
 <cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/icon" sandbox-href="https://codesandbox.io/s/wq7x673mol" >
 
@@ -193,7 +198,7 @@ Recommendations for writing alternative text:
 <div class="cdr-stack--lg"></div>
 
 W3C recommends using `<title>` and `<desc>` elements in SVG for assistive technologies; however these elements have mixed support for screen readers as explained here. Cedar follows these recommendations by:
-- Adding `role=’presentation’` to icons. This hide them from screen readers and causes the icon to be a nested image inside of a button or a link
+- Adding `role=’presentation’` to icons. This hides them from screen readers and causes the icon to be a nested image inside of a button or a link
 - Assigning the attribute `focusable=’false’` to the SVG element
 - Using `aria-label` for buttons or Cedar’s hidden text CSS style for links
 
@@ -214,6 +219,10 @@ W3C recommends using `<title>` and `<desc>` elements in SVG for assistive techno
       {
         text: 'Links',
         href: '../link/'
+      },
+      {
+        text: 'Iconography',
+        href: '../../foundation/iconography/'
       }
     ]">
 
@@ -228,19 +237,19 @@ W3C recommends using `<title>` and `<desc>` elements in SVG for assistive techno
 ### Sizes
 Icons are available in three sizes: small (16px), medium (24px), and large (32px).  Default size is 24px; however designers can choose a different size.
 
-<cdr-img :src="$withBase(`/icon/Spec__Icon__Sizes_4-3.png`)" alt="Cedar icon sizes" ratio="4-3" />
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/icon/Spec__Icon__Sizes_4-3.png`)" alt="Cedar icon sizes" ratio="4-3" />
 
 ### Color
-Ensure that icons use contrast ratio of 4.5:1 contrast between icon color and background color. Follow recommendations in the Color article for pairing light and dark color tokens.
+Ensure that icons use contrast ratio of 4.5:1 contrast between icon color and background color. Follow recommendations in the [Color article](../../foundation/color/) for pairing light and dark color tokens.
 
-<cdr-img :src="$withBase(`/icon/Spec__Icon__Colors_21-9.png`)" alt="Cedar icon sizes" />
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/icon/Spec__Icon__Colors_21-9.png`)" alt="Cedar icon sizes" />
 
 ### Clearance
 Adequate space around the icon allows for legibility and touch. A minimum touch target area of 40px is recommended for standalone iconography.
 
 When the mouse and keyboard are the primary input methods or when icons are paired inline with text, measurements may be condensed to accommodate denser layouts. Icon size should align to the line-height of the paired text element. 
 
-<cdr-img :src="$withBase(`/icon/Spec__Icon__Spacing_16-9.png`)" alt="Cedar icon sizes" ratio="16-9"/>
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/icon/Spec__Icon__Spacing_16-9.png`)" alt="Cedar icon sizes" ratio="16-9"/>
 
 ## Icon Library
 
@@ -248,22 +257,22 @@ When the mouse and keyboard are the primary input methods or when icons are pair
 
 List of icons with names and descriptions about when or how to use each icon. Icons are referred to as:
 - `<name-of-icon>` when using with the method for SVG sprite. For example, account-profile 
-- `Icon<name-of-icon>` when using with the method for Individual icon component. For example, the icon, ‘account-profile’ becomes is IconAccountProfile
+- `Icon<NameOfIcon>` when using with the method for Individual icon component. For example, the icon, ‘account-profile’ becomes IconAccountProfile
 
 <icon-table />
 
 ## Behavior
 When using icons with links or buttons, make sure that the icon communicates intended meaning.
 
-<do-dont :examples="$page.frontmatter.meaning" />
+<do-dont :examples="$page.frontmatter.meaning" class="cdr-stack--lg"/>
 
 Ensure that icons are sized to provide a minimum click or touch target. 
 
-<do-dont :examples="$page.frontmatter.clearance" />
+<do-dont :examples="$page.frontmatter.clearance" class="cdr-stack--lg"/>
 
 Ensure that icons use contrast ratio of 4.5:1 between icon color and background color.
 
-<do-dont :examples="$page.frontmatter.color" />
+<do-dont :examples="$page.frontmatter.color" class="cdr-stack--lg"/>
 
 
 </cdr-doc-table-of-contents-shell>
@@ -282,6 +291,10 @@ Ensure that icons use contrast ratio of 4.5:1 between icon color and background 
       {
         text: 'Links',
         href: '../link/'
+      },
+      {
+        text: 'Iconography',
+        href: '../../foundation/iconography/'
       }
     ]">
 
@@ -291,7 +304,7 @@ Ensure that icons use contrast ratio of 4.5:1 between icon color and background 
 
 ## Slots
 
-CdrIcon and all Icon* components have a default slot.
+CdrIcon and all Icon* (IconArrowUp, IconCalendar, etc.) components have a default slot.
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
@@ -301,6 +314,8 @@ Resources are available within the [CdrIcon package](https://www.npmjs.com/packa
 
 - Component: `@rei/cdr-accordion`
 - Component styles: `cdr-accordion.css`
+
+<div class="cdr-stack--xl" />
 
 To incorporate the required assets for a component, use the following steps:
 
@@ -323,7 +338,7 @@ _main.js_
 import '@rei/cdr-icon/dist/cdr-icon.css';
 ```
 
-### #3. Add component to a template
+### 3. Add component to a template
 
 _local.vue_
 
@@ -347,10 +362,10 @@ export default {
 
 ## Usage
 
-The CdrIcon package contains many different components:
+The **CdrIcon** package contains many different components:
 
-1. `CdrIcon`  -- This is a basic SVG wrapper. This component allows for using Non-Cedar SVGs. Use this component in conjunction with the CdrIconSprite package
-2. `CdrIconSprite` -- A symbol definition sprite with all Cedar icons
+1. **CdrIcon**  -- This is a basic SVG wrapper. This component allows for using Non-Cedar SVGs. Use this component in conjunction with the CdrIconSprite package
+2. **CdrIconSprite** -- A symbol definition sprite with all Cedar icons
 3. Individual icons -- For available icons, view [Cedar Icon Library](?active-tab=design-guidelines&active-link=icon-library) on Design Guidelines tab
 
 There are 3 different options to display SVG icons on your page using the `CdrIcon` package.
@@ -506,9 +521,9 @@ Use any valid SVG markup in the CdrIcon slot.
 Following variants are available to the `cdr-icon` modifier attribute: 
 | Value | Description |
 |:-------|:-----------------------|
-| sm | Sets icon size to 16px |
-| md | Sets icon size to 24px |
-| lg | Sets icon size to 32px |
+| 'sm' | Sets icon size to 16px |
+| 'md' | Sets icon size to 24px |
+| 'lg' | Sets icon size to 32px |
 
 </cdr-doc-table-of-contents-shell>
 </template>
