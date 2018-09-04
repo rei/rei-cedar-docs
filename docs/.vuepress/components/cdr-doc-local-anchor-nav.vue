@@ -270,24 +270,32 @@ export default {
     },
     softScrollToAnchoredSection(id) {
       this.scrollMonitoringEnabled = false; // disable scrollMonitoring while soft scrolling to a specific section
-      this.$router.replace(
-        { query: Object.assign({}, this.$route.query, { 'active-link': id.replace('#', '') }) },
-        () => {
-          const anchoredSection = document.querySelector(id);
-          const scrollPosition = anchoredSection.offsetTop;
-    
-          window.scroll({
-            top: scrollPosition,
-            left: 0,
-            behavior: 'smooth'
-          });
-    
-    
-          setTimeout(() => {
-            this.scrollMonitoringEnabled = true;
-          }, 1500); // window.scroll smooth offers no callback, so re-enable scrollmonitoring hopefully after the soft scroll has occurred
-        }
-      );
+
+      if (this.$route.query['active-link'] === id.replace('#', '' )) {
+        this.softScroll(id);
+      } else {
+        this.$router.replace(
+          { query: Object.assign({}, this.$route.query, { 'active-link': id.replace('#', '') }) },
+          () => {
+            this.softScroll(id);
+          }
+        );
+      }
+    },
+    softScroll(id) {
+      const anchoredSection = document.querySelector(id);
+      const scrollPosition = anchoredSection.offsetTop;
+
+      window.scroll({
+        top: scrollPosition,
+        left: 0,
+        behavior: 'smooth'
+      });
+
+
+      setTimeout(() => {
+        this.scrollMonitoringEnabled = true;
+      }, 1500); // window.scroll smooth offers no callback, so re-enable scrollmonitoring hopefully after the soft scroll has occurred
     }
   }
 }

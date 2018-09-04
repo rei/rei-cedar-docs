@@ -52,7 +52,8 @@ module.exports = {
           { text: "Color", link: "/foundation/color/" },
           { text: "Iconography", link: "/foundation/iconography/" },
           { text: "Motion", link: "/foundation/motion/" },
-          { text: "Typography", link: "/foundation/typography/" }
+          { text: "Typography", link: "/foundation/typography/" },
+          { text: "Spacing", link: "/foundation/spacing/" }
         ]
       },
       {
@@ -65,6 +66,7 @@ module.exports = {
           { text: "Checkbox", link: "/components/checkbox/" },
           { text: "Grid", link: "/components/grid/" },
           { text: "Heading", link: "/components/heading/" },
+          { text: "Icons", link: "/components/icon/" },
           { text: "Image", link: "/components/image/" },
           { text: "Link", link: "/components/link/" },
           { text: "List", link: "/components/list/" },

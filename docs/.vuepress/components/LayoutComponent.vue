@@ -1,8 +1,6 @@
 <template>
   <div class="page cdr-doc-component-layout" :class="activeTabClass">
-    <cdr-doc-intro :title="pageData.title" :metadata="pageData.title_metadata" :breadcrumbs="pageData.breadcrumbs">
-      {{ pageData.summary }}
-    </cdr-doc-intro>
+    <cdr-doc-intro :title="pageData.title" :metadata="pageData.title_metadata" :breadcrumbs="pageData.breadcrumbs" :summary="pageData.summary" />
     <Content :custom="false"/>
   </div>
 </template>
@@ -48,6 +46,12 @@ export default {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+  }
+
+  .cdr-doc-article-img {
+    border: 1px solid $partly-cloudy;
+    border-radius:  $radius-softer;
+    background-color: white;
   }
 
   .cdr-doc-component-layout__body {
