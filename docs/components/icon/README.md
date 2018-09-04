@@ -532,6 +532,7 @@ Following variants are available to the `cdr-icon` modifier attribute:
 
 ## 1.0.0
 
+- Add grid-view, list-view, and scan-barcode icons
 - All icon components have a slot that accepts any SVG xml
 - Individual icon components for all icons (use only what you need)
 - CdrIcon is lower-level component that acts as an SVG wrapper.
