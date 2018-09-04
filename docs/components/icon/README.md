@@ -237,7 +237,7 @@ W3C recommends using `<title>` and `<desc>` elements in SVG for assistive techno
 ### Sizes
 Icons are available in three sizes: small (16px), medium (24px), and large (32px).  Default size is 24px; however designers can choose a different size.
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/icon/Spec__Icon__Sizes_4-3.png`)" alt="Cedar icon sizes" ratio="4-3" />
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/icon/Spec__Icon__Sizes_4-3.png`)" alt="Cedar icon sizes" />
 
 ### Color
 Ensure that icons use contrast ratio of 4.5:1 contrast between icon color and background color. Follow recommendations in the [Color article](../../foundation/color/) for pairing light and dark color tokens.
@@ -249,7 +249,7 @@ Adequate space around the icon allows for legibility and touch. A minimum touch 
 
 When the mouse and keyboard are the primary input methods or when icons are paired inline with text, measurements may be condensed to accommodate denser layouts. Icon size should align to the line-height of the paired text element. 
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/icon/Spec__Icon__Spacing_16-9.png`)" alt="Cedar icon sizes" ratio="16-9"/>
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/icon/Spec__Icon__Spacing_21-9.png`)" alt="Cedar icon sizes" />
 
 ## Icon Library
 
