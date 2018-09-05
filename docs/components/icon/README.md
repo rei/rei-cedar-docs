@@ -4,12 +4,6 @@
   "layout": "LayoutComponent",
   "summary": "Icons communicate meaning through the use of graphics",
   "title_metadata": "cdr-icon",
-  "meta": [
-    {
-      "name": "keywords",
-      "content": "cdr-icon"
-    }
-  ],
   "breadcrumbs": [
     {
       "text": "Components/",
@@ -17,6 +11,23 @@
     }
   ],
   "name": "CdrIcon",
+  "see_also": [
+    {
+      "text": 'Related Components'
+    },
+    {
+      "text": 'Buttons',
+      "href": '../button/'
+    },
+    {
+      "text": 'Links',
+      "href": '../link/'
+    },
+    {
+      "text": 'Iconography',
+      "href": '../../foundation/iconography/'
+    }
+  ],
   "meaning": [
     {
       "type": "do",
@@ -102,24 +113,7 @@
 
 <cdr-doc-tabs>
 <template slot="Overview">
-<cdr-doc-table-of-contents-shell 
-    :appended-nav-items="[
-      {
-        text: 'Related Components'
-      },
-      {
-        text: 'Buttons',
-        href: '../button/'
-      },
-      {
-        text: 'Links',
-        href: '../link/'
-      },
-      {
-        text: 'Iconography',
-        href: '../../foundation/iconography/'
-      }
-    ]">
+<cdr-doc-table-of-contents-shell>
 
 ## SVG sprite
 
@@ -207,24 +201,7 @@ W3C recommends using `<title>` and `<desc>` elements in SVG for assistive techno
 </template>
 
 <template slot="Design Guidelines">
-<cdr-doc-table-of-contents-shell 
-    :appended-nav-items="[
-      {
-        text: 'Related Components'
-      },
-      {
-        text: 'Buttons',
-        href: '../button/'
-      },
-      {
-        text: 'Links',
-        href: '../link/'
-      },
-      {
-        text: 'Iconography',
-        href: '../../foundation/iconography/'
-      }
-    ]">
+<cdr-doc-table-of-contents-shell>
 
 ## Use when
 - Communicating simple actions and concepts that are easily understood, such as printing a receipt or sending email
@@ -279,24 +256,7 @@ Ensure that icons use contrast ratio of 4.5:1 between icon color and background 
 </template>
 
 <template slot="API">
-<cdr-doc-table-of-contents-shell
-    :appended-nav-items="[
-      {
-        text: 'Related Components'
-      },
-      {
-        text: 'Buttons',
-        href: '../button/'
-      },
-      {
-        text: 'Links',
-        href: '../link/'
-      },
-      {
-        text: 'Iconography',
-        href: '../../foundation/iconography/'
-      }
-    ]">
+<cdr-doc-table-of-contents-shell>
 
 ## Props
 
