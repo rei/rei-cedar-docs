@@ -284,7 +284,7 @@ npm i -S @rei/cdr-breadcrumb
 _main.js_
 
 ```javascript
-// import your required css.
+// import your required CSS.
 import "@rei/cdr-breadcrumb/dist/cdr-breadcrumb.css";
 ```
 

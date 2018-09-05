@@ -353,7 +353,7 @@ npm i -s @rei/cdr-radio
 _main.js_
 
 ```javascript
-// import your required css.
+// import your required CSS.
 import "@rei/cdr-radio/dist/cdr-radio.css";
 ```
 

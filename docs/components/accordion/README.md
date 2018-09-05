@@ -374,7 +374,7 @@ npm i -s @rei/cdr-accordion
 _main.js_
 
 ```javascript
-// import your required css
+// import your required CSS
 import "@rei/cdr-accordion/dist/cdr-accordion.css";
 ```
 

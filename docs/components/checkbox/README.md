@@ -392,7 +392,7 @@ npm i -s @rei/cdr-checkbox
 _main.js_
 
 ```javascript
-// import your required css.
+// import your required CSS.
 import "@rei/cdr-link/dist/cdr-checkbox.css";
 ```
 

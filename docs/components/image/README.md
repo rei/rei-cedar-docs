@@ -349,7 +349,7 @@ npm i -S @rei/cdr-img
 _main.js_
 
 ```javascript
-// import your required css.
+// import your required CSS.
 import '@rei/cdr-img/dist/cdr-img.css';
 ```
 

@@ -291,7 +291,7 @@ npm i -S @rei/cdr-icon
 _main.js_
 
 ```bash
-// import your required css.
+// import your required CSS.
 import '@rei/cdr-icon/dist/cdr-icon.css';
 ```
 

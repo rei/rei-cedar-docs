@@ -88,12 +88,12 @@ npm install --save @rei/cdr-button
 ```
 
 ### Including component-specific CSS
-How you include css depends on your tech stack and varies from project to project. 
+How you include CSS depends on your tech stack and varies from project to project. 
 
 Here are a few common methods:
 
 #### Webpack (css-loader)
-If using a bundler, import css into javascript and let loaders extract it.
+If using a bundler, import CSS into javascript and let loaders extract it.
 
 _main.js_
 ```js
@@ -109,7 +109,7 @@ import '@rei/cdr-button’;
 ```
 
 #### SCSS (or another pre-processor)
-You can also import css from the node_modules folder.
+You can also import CSS from the node_modules folder.
 
 _cedar.scss_
 ```js
@@ -239,9 +239,9 @@ Relevant guidelines are provided in each component's documentation.
 <hr/>
 
 ## CSS Modules and custom class names
-Component css class names are [css modules](https://github.com/css-modules/css-modules) that reflect the package version. For example, `CdrButton@0.2.0` will have classes that end in ‘_0-2-0’. This allows the possibility of components at different versions to live together without having css class name collisions. 
+Component CSS class names are [CSS modules](https://github.com/css-modules/css-modules) that reflect the package version. For example, `CdrButton@0.2.0` will have classes that end in ‘_0-2-0’. This allows the possibility of components at different versions to live together without having CSS class name collisions. 
 
-Never use Cedar class names within your own css or target them in javascript; they will change as you upgrade the package and break any functionality/styling you attach to them. 
+Never use Cedar class names within your own CSS or target them in javascript; they will change as you upgrade the package and break any functionality/styling you attach to them. 
 
 To target CSS, create custom selectors such as `my-wrapper` and `my-selector` in the following example…
 

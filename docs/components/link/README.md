@@ -301,10 +301,10 @@ npm i -S @rei/cdr-link
 _main.js_
 
 ```javascript
-// import your required css.
+// import your required CSS.
 import "@rei/cdr-link/dist/cdr-link.css";
 
-// If your link will display an icon ensure you also include the icon’s css file.
+// If your link will display an icon ensure you also include the icon’s CSS file.
 import "@rei/cdr-link/dist/cdr-icon.css";
 ```
 
