@@ -13,7 +13,7 @@
   "name": "CdrIcon",
   "see_also": [
     {
-      "text": 'Related Components'
+      "text": 'See Also'
     },
     {
       "text": 'Buttons',
@@ -182,14 +182,12 @@ Create a new SVG icon using any valid internal SVG markup. This method creates a
 To ensure that usage of this component complies with accessibility guidelines:
 - If an icon conveys meaning, there must be an `alt` attribute that describes the action or idea that the icon represents
 - If an icon is decorative, use an empty `alt` attribute 
-<div class="cdr-stack--lg"></div>
 
 Recommendations for writing alternative text: 
 - Be succinct. Exclude unnecessary words
 - Be informative and accurate 
 - Write in the active voice
 - Avoid technical jargon
-<div class="cdr-stack--lg"></div>
 
 W3C recommends using `<title>` and `<desc>` elements in SVG for assistive technologies; however these elements have mixed support for screen readers as explained here. Cedar follows these recommendations by:
 - Adding `role=’presentation’` to icons. This hides them from screen readers and causes the icon to be a nested image inside of a button or a link
@@ -275,7 +273,6 @@ Resources are available within the [CdrIcon package](https://www.npmjs.com/packa
 - Component: `@rei/cdr-accordion`
 - Component styles: `cdr-accordion.css`
 
-<div class="cdr-stack--xl" />
 
 To incorporate the required assets for a component, use the following steps:
 
