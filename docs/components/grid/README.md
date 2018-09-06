@@ -8,15 +8,13 @@
   "consistent": [
     {
         "type": "do",
-        "image": "grid/grid_consistent_do.png",
-        "ratio": "4-3",
+        "image": "grid/grid_consistent_do_16-9.png",
         "alt": "Image showing proper grid usage",
         "caption": "maintain a consistent grid system."
       },
     {
         "type": "dont",
-        "image": "grid/grid_consistent_dont.png",
-        "ratio": "4-3",
+        "image": "grid/grid_consistent_dont_16-9.png",
         "alt": "Image showing mixed grid usage",
         "caption": "mix this grid and other grid systems."
       },
@@ -24,22 +22,27 @@
   "margins": [
     {
       "type": "do",
-      "image": "grid/grid_margins_do.png",
-      "ratio": "4-3",
-      "alt": "Image showing grid margins and gutters",
-      "caption": "maintain global margins and gutters."
+      "image": "grid/grid_margins_do_16-9.png",
+      "alt": "Image showing grid margins",
+      "caption": "maintain global margins."
     },
     {
       "type": "dont",
-      "image": "grid/grid_margins_dont.png",
-      "ratio": "4-3",
+      "image": "grid/grid_margins_dont_16-9.png",
       "alt": "Image showing overly large side margins",
       "caption": "make margins too large."
     },
+  ],
+  "gutters": [
+    {
+      "type": "do",
+      "image": "grid/grid_gutters_do_16-9.png",
+      "alt": "Image showing grid gutters",
+      "caption": "maintain global gutters."
+    },
     {
       "type": "dont",
-      "image": "grid/grid_gutters_dont.png",
-      "ratio": "4-3",
+      "image": "grid/grid_gutters_dont_16-9.png",
       "alt": "Image showing overly large grid gutters",
       "caption": "make gutters too large."
     },
@@ -1040,32 +1043,76 @@ Columns, gutters, and margins scales as a fluid system as the device and viewpor
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase('/grid/Spec_Grids_Gutters_and_Margins_16-9.png')" alt="gutter margins and grids"/>
 <br/>
+<cdr-img class="cdr-doc-article-img" :src="$withBase('/grid/Spec_Grids_Gutters_and_Margins_16-9.png')" alt="gutter margins and grids"/>
 
 - Maximum width of 1232px:
   - Allows for padding between grid and browser window
   - Utilities are available to manage layout and presentation
   - Stay within max width to match the width of the global navigation
 
+<table>
+  <tbody>
+    <tr>
+      <td>XS - Extra Small</td>
+      <td>< 768px</td>
+      <td>16px</td>
+      <td>16px</td>
+    </tr>
+    <tr>
+      <td>S - Small</td>
+      <td>≥ 768px</td>
+      <td>16px</td>
+      <td>16px</td>
+    </tr>
+    <tr>
+      <td>M - Medium</td>
+      <td>≥ 992px</td>
+      <td>32px</td>
+      <td>32px</td>
+    </tr>
+    <tr>
+      <td>L - Large</td>
+      <td>≥ 1232px</td>
+      <td>32px</td>
+      <td>32px</td>
+    </tr>
+  </tbody>
+</table>
 
-| **Breakpoints**  | **Viewpoint Width** | **Left Margin** | **Right Margin** |
-| ---------------- | ------------------- | --------------- | ---------------- |
-| XS - Extra Small | < 768px             | 16px            | 16px             |
-| S - Small        | ≥ 768px             | 16px            | 16px             |
-| M - Medium       | ≥ 992px             | 32px            | 32px             |
-| L - Large        | ≥ 1232px            | 32px            | 32px             |
+<br/>
 
 - Limit to 12 columns per row: 
   - If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line
   - If a layout does not need 12 columns, specify that number to the engineering team
+
+<br/>
+
 - Gutters separate columns with pre-defined padding:
 
-
-| **Breakpoints**  | **Viewpoint Width** | **Gutter Size**                            |
-| ---------------- | ------------------- | ------------------------------------------ |
-| XS - Extra Small | < 768px             | 16px gutters (8px on left + 8px on right)  |
-| S - Small        | ≥ 768px             | 16px gutters (8px on left + 8px on right)  |
-| M - Medium       | ≥ 992px             | 32px gutters (16px on left +16px on right) |
-| L - Large        | ≥ 1232px            | 32px gutters (16px on left +16px on right) |
+<table>
+  <tbody>
+    <tr>
+      <td>XS - Extra Small</td>
+      <td>< 768px</td>
+      <td>16px gutters (8px on left + 8px on right)</td>
+    </tr>
+    <tr>
+      <td>S - Small</td>
+      <td>≥ 768px</td>
+      <td>16px gutters (8px on left + 8px on right)</td>
+    </tr>
+    <tr>
+      <td>M - Medium</td>
+      <td>≥ 992px</td>
+      <td>32px gutters (16px on left +16px on right)</td>
+    </tr>
+    <tr>
+      <td>L - Large</td>
+      <td>≥ 1232px</td>
+      <td>32px gutters (16px on left +16px on right)</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Content
 
@@ -1075,12 +1122,15 @@ Columns, gutters, and margins scales as a fluid system as the device and viewpor
 ## Behavior
 
 - Avoid breaking alignment or slightly oversizing a container to stick out for visual interest or to add emphasis.
+- Create relationships and hierarchy between content elements by using the margins and gutters in the grid shared by the page layout.
+
+## Do/Don't
 
 <do-dont :examples="$page.frontmatter.consistent" />
 
-- Create relationships and hierarchy between content elements by using the margins and gutters in the grid shared by the page layout.
-
 <do-dont :examples="$page.frontmatter.margins" />
+
+<do-dont :examples="$page.frontmatter.gutters" />
 
 ## Responsiveness
 
@@ -1092,16 +1142,6 @@ To build an effective responsive grid:
 - Apply responsive rules to the grid and its contained content at relevant breakpoints including S (≥ 768px) and M (≥ 998px)
 - Complete and optimize the layout for the widest L (≥ 1232px) viewport width
 - Inspect responsive displays “in between” each breakpoint for how content responds across the fluid spectrum
-
-## Accessibility
-
-To ensure that usage of this component complies with accessibility guidelines, do the following:
-
-- Low-vision users should be able to increase the size of the text by up to 200 percent without breaking the layout
-
-This component follows WebAIM’s accessibility guidelines:
-
-- [WCAG SC 1.3.2: Meaningful Sequence](https://www.w3.org/TR/WCAG20/#content-structure-separation-sequence): Cedar Design System does not provide for flexbox’s order property.  Reverse order or reordering of items is not allowed. Content must be presented in a correct reading sequence to comply with accessibility standards
 
 </cdr-doc-table-of-contents-shell>
 </template>
