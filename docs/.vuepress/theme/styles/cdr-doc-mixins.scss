@@ -76,6 +76,7 @@
   & > ol {
     list-style-type: none;
     padding: 0;
+    margin-top: 1rem;
     margin-bottom: 1rem;
 
     /* spacing
@@ -179,5 +180,10 @@
       padding: 0 $space-half-x;
       white-space: nowrap;
     }
+  }
+
+  & > table {
+    margin-top: 16px;
+    margin-bottom: 16px;
   }
 }
