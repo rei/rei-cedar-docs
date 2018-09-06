@@ -25,7 +25,7 @@
         >
           <div>
             <p :aria-labelledby="'propDefault' + index" class="prop-default">{{ apiProp.default }}</p>
-            <p :id="'propDefault' + index" class="prop-label">Default</p>
+            <p :id="'propDefault' + index" class="prop-label">default</p>
           </div>
         </cdr-col>
         <cdr-col
