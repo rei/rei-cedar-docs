@@ -235,7 +235,7 @@ Web browsers, plug-ins, and assistive technologies use headings to provide in-pa
 - Creating hierarchical structure of information in a page layout
 - Improving quick scanning of page content for sighted users and screen readers
 
-## Don’t use when
+### Don’t use when
 
 - Tagging as a semantic heading when an element only needs to be highlighted or emphasized within your content. Instead, use sizing modifier for this component
 
@@ -249,7 +249,9 @@ Web browsers, plug-ins, and assistive technologies use headings to provide in-pa
 
 - Be specific. Provide facts or information that pique user interest. Avoid broad and generic headings
 - Start heading titles with strong and familiar keywords to increase scannability
-- Ensure the heading works out of context in search results, social-media streams, blog posts, and news feeds
+- Ensure the heading works out of page context, such as in search results, social media streams, blog posts, and news feeds
+  - Start with most descriptive word. For example, in a section labeled “Disaster Relief” instead of “Preparation for floods”, use “Flood preparation”
+  - Avoid duplicating headings (e.g. "More Details")
 - Omit needless words. Be clear and concise
 - Limit heading length for improved scale across variable container widths
 - Headings must:
@@ -264,26 +266,17 @@ Web browsers, plug-ins, and assistive technologies use headings to provide in-pa
   - Ensure an accessible contrast between the text and the background
   - Implement image text with proper HTML markup and use CSS to embed any special fonts
 
+### Do / Don’t
+
 <do-dont :examples="$page.frontmatter.minimize" />
 
 ## Responsiveness
 
 Responsive heading font sizes are the default for heading levels except subheading. Refer to Overview section for more information. 
 
-## Accessibility
+## Resources
 
-- Web browsers, plug-ins, and assistive technologies use headings to provide in-page navigation. To ensure that usage of this component complies with accessibility guidelines, do the following:
-  - Use headings for content structure:
-    - Headings must be marked up as true headings and identified by order of importance starting with `<h1>`, `<h2>`, and so on
-    - Use headings to identify individual sections of content, where appropriate
-    - Avoid skipping heading levels (e.g., `<h2>` to `<h4>`)
-    - Screen reader and other assistive technology users skim the structure of a page and navigate to or skip over sections through the use of heading levels
-  - Compose headings that are easily understood by all users, regardless of age, cultures, education levels:
-    - Start with most descriptive word. For example, in a section labeled “Disaster Relief” instead of “Preparation for floods”, use “Flood preparation:”
-  - Avoid duplicating heading (e.g., "More Details") unless the structure provides adequate differentiation between them
-- This component follows WebAIM’s accessibility guidelines:
-  - [WCAG SC 1.3.1: Info and Relationships:](https://www.w3.org/TR/WCAG20/#content-structure-separation-programmatic) Cedar Design System defines semantic heading levels for `<h1>` through `<h6>` with ability to assign predefined visual heading styles to each level
-  - [WCAG SC 2.4.6: Headings and Labels:](https://www.w3.org/TR/WCAG20/#navigation-mechanisms-descriptive) Cedar Design System defines semantic heading levels for `<h1>` through `<h6>` with ability to assign predefined visual heading styles to each level
+- WebAIM: [Semantic Structure](https://webaim.org/techniques/semanticstructure/)
 
 </cdr-doc-table-of-contents-shell>
 </template>
