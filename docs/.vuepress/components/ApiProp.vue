@@ -7,7 +7,7 @@
         <cdr-col
           span="12 4@sm"
         >
-          <div>
+          <div class="prop-wrap">
             <p :aria-labelledby="'propName' + index" class="prop-name">{{ apiProp.name }}</p>
             <p :id="'propName' + index" class="prop-label">name</p>
           </div>
@@ -15,7 +15,7 @@
         <cdr-col
           span="12 4@sm"
         >
-          <div>
+          <div class="prop-wrap">
             <p :aria-labelledby="'propType' + index" class="prop-type">{{ apiProp.type }}</p>
             <p :id="'propType' + 1" class="prop-label">type</p>
           </div>
@@ -23,7 +23,7 @@
         <cdr-col
           span="12 4@sm"
         >
-          <div>
+          <div class="prop-wrap">
             <p :aria-labelledby="'propDefault' + index" class="prop-default">{{ apiProp.default }}</p>
             <p :id="'propDefault' + index" class="prop-label">default</p>
           </div>
@@ -55,6 +55,12 @@
     border: 1px solid $partly-cloudy;
     border-radius: 4px;
     padding: $space-half-x;
+
+    .prop-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
 
     .prop-name {
       color: $quick-fixe;

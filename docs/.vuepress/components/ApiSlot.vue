@@ -1,6 +1,6 @@
 <template>
   <div>
-    Find more information about using Slots in the article, <cdr-link href="/getting-started/as-a-developer/">Getting Started as a Developer</cdr-link> 
+    Find more information about using Slots in the article, <cdr-link :href="$withBase('/getting-started/as-a-developer/?active-link=add-content-via-slots')">Getting Started as a Developer</cdr-link> 
     <div class="api-slot" v-for="(apiSlot, index) in this.$slots.default" :key="apiSlot.text">
       <cdr-row
         gutter="none"

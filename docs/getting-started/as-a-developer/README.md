@@ -169,7 +169,10 @@ export default {
 ```
 
 ### Configure component props
-Most Cedar components provide properties to configure component data, display, and logic. For example, the `<cdr-button>` component provides a `size` property to configure the button’s size.
+
+Props are custom attributes registered on a component. For further information about props see [Vue's prop documentation](https://vuejs.org/v2/guide/components-props.html).
+
+Most Cedar components provide props to configure component data, display, and logic. For example, the `<cdr-button>` component provides a `size` prop to configure the button’s size.
 
 ```html
 <cdr-button size="large">I'm a large button</cdr-button>
@@ -186,6 +189,26 @@ In this example, the `responsiveSize` prop accepts an array of strings denoting 
 
 ```html
 <cdr-button :responsive-size="['small@xs', 'large@sm']">I'm a responsive button</cdr-button>
+```
+
+### Add content via slots
+
+Some components use slots for content distribution. Most components will have a single default slot others will have named slots. Slots are listed as part of the API for all components. See [Vue's documentation on props](https://vuejs.org/v2/guide/components-slots.html) for further information.
+
+Adding content to a default slot
+
+```html
+<cdr-button>I'm content in the default slot</cdr-button>
+```
+
+Adding content to a named slot
+
+```html
+<my-component>
+  <slot name="header">I'm content in the header slot</slot>
+
+  <slot name="footer">I'm content in the footer slot</slot>
+</my-component>
 ```
 
 <hr>
