@@ -14,7 +14,7 @@
     },
     {
       "text": 'Paragraphs',
-      "href": '/components/paragraph/'
+      "href": '/components/paragraphs/'
     }
   ],
   "minimize": [
@@ -375,7 +375,7 @@ export default {
 
 ## Usage
 
-The **cdrText** component allows for styling any html element with available text styles. Visual style and semantic meaning are managed independently by providing: 
+The cdrText component allows for styling any html element with available text styles. Visual style and semantic meaning are managed independently by providing: 
 
 - Element to the `tag` prop 
 - Style to the `modifier` prop
