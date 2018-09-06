@@ -63,7 +63,7 @@ module.exports = {
           { text: "Breadcrumb", link: "/components/breadcrumb/" },
           { text: "Button", link: "/components/button/" },
           { text: "Call to Action", link: "/components/cta/" },
-          { text: "Checkbox", link: "/components/checkbox/" },
+          { text: "Checkboxes", link: "/components/checkboxes/" },
           { text: "Grid", link: "/components/grid/" },
           { text: "Headings", link: "/components/headings/" },
           { text: "Icons", link: "/components/icon/" },

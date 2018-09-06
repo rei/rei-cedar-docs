@@ -127,7 +127,7 @@
       },
       {
         text: 'Checkbox',
-        href: '../checkbox/'
+        href: '../checkboxes/'
       }
     ]">
 
@@ -234,7 +234,7 @@ Custom styles for radio buttons.
       },
       {
         text: 'Checkbox',
-        href: '../checkbox/'
+        href: '../checkboxes/'
       }
     ]">
 
@@ -303,7 +303,7 @@ For more information, review techniques and failures for:
       },
       {
         text: 'Checkbox',
-        href: '../checkbox/'
+        href: '../checkboxes/'
       }
     ]">
 
