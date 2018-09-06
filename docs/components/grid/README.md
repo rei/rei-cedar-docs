@@ -2,8 +2,8 @@
 {
   "title": "Grid",
   "layout": "LayoutComponent",
-  "summary": "Cedar’s grid system is a responsive, mobile first, fluid system that appropriately scales 12 columns as the device or viewport size increases.",
-  "title_metadata": "Grid, layout, cdrGrid",
+  "summary": "A responsive, mobile first, fluid system that appropriately scales 12 columns as the device or viewport size increases",
+  "title_metadata": "Layout, CdrGrid",
   #DO-DON'T
   "consistent": [
     {
@@ -56,55 +56,55 @@
                 "name": "cols",
                 "type": "string",
                 "default": "n/a",
-                "description": "Number of equal-width columns in the row. A value of ‘auto’ will size columns as wide as their content.\nPossible values: {1-12, auto}\nAlso accepts responsive values with `@breakpoint`: \"2 4@md\""
+                "description": "Number of equal-width columns in the row; however the value of ‘auto’ will size columns as wide as the column’s content. Possible values: {  ‘1’  through  ‘12’  |  ‘auto’  }.  Also accepts responsive values @breakpoint: ‘2 4@md’"
               },
               {
                 "name": "justify",
                 "type": "string",
                 "default": "n/a",
-                "description": "Justify columns within a row. See CSS flexbox justify-content.\nPossible values: {left, center, right, around, between}.\nAlso accepts responsive values with `@breakpoint`: \"center right@lg\""
+                "description": "Justify columns within a row. See CSS Flexbox justify-content. Possible values: {  ‘left’  |  ‘center’  |  ‘right’  |  ‘around’  |  ‘between’  }. Also accepts responsive values @breakpoint: ‘center right@lg’"
               },
               {
                 "name": "align",
                 "type": "string",
                 "default": "n/a",
-                "description": "Align columns of different heights. See CSS flexbox align-items.\nPossible values: {top, middle, bottom, stretch}.\nAlso accepts responsive values with `@breakpoint`: \"top middle@sm\""
+                "description": "Align columns of different heights. See CSS Flexbox align-items. Possible values: {  ‘top’  |  ‘middle’  |  ‘bottom’  |  ‘stretch}. Also accepts responsive values @breakpoint:  ‘top middle@sm’"
               },
               {
                 "name": "gutter",
                 "type": "string",
                 "default": "n/a",
-                "description": "Defines gutter size. Default gutter size is 16px @xs and @sm and 32px @md and @lg.\nPossible values: {none, xxs}.\nAlso accepts responsive values with `@breakpoint`: \"none@md\""
+                "description": "Defines gutter size. Default gutter size is 16px @xs and @sm and 32px @md and @lg. Possible values: {  ‘none’  |  ‘xxs’  }. Also accepts responsive values @breakpoint:  none@md’"
               },
               {
                 "name": "vertical",
                 "type": "string",
                 "default": "n/a",
-                "description": "Changes row to a column layout. See CSS flexbox flex-direction.\nPossible values: {vertical}.\nAlso accepts responsive values with `@breakpoint`: \"vertical@md\""
+                "description": "Changes row to a column layout. See CSS Flexbox flex-direction. Possible values: {  ‘vertical’  }. Also accepts responsive values @breakpoint:  vertical@md’"
               },
               {
                 "name": "wrap",
                 "type": "string",
                 "default": "n/a",
-                "description": "Enables row wrapping. Only needs to be changed if overriding `nowrap`. See CSS flexbox flex-wrap.\nPossible values: {wrap}.\nAlso accepts responsive values with `@breakpoint`: \"wrap@md\""
+                "description": "Enables row wrapping. Change only if overriding `nowrap`. See CSS Flexbox flex-wrap"
               },
               {
                 "name": "nowrap",
                 "type": "string",
                 "default": "n/a",
-                "description": "Disables row wrapping and enables overflow scrolling. See CSS flexbox flex-wrap.\nPossible values: {nowrap}.\nAlso accepts responsive values with `@breakpoint`: \"nowrap@md\""
+                "description": "Disables row wrapping and enables overflow scrolling. See CSS Flexbox flex-wrap. Possible values: {  ‘nowrap’  }. Also accepts responsive values with @breakpoint: ‘nowrap@md’"
               },
               {
                 "name": "type",
                 "type": "string",
                 "default": "\"normal\"",
-                "description": "Sets grid to use `ul` and `li` or `div`.\nPossible values: {normal, list}."
+                "description": "Sets grid to use <ul> and <li> or <div>. Possible values: {  ‘normal’  |  ‘list’  }"
               }
             ],
             "slots": [
               {
                 "name": "default",
-                "description": "innerHTML on the inside of the row component"
+                "description": "Sets the innerHTML for cdr-row content. This includes text and html markup"
               }
             ]
           },
@@ -117,37 +117,37 @@
                 "name": "span",
                 "type": "string",
                 "default": "n/a",
-                "description": "Number of columns (out of 12) the column should span. Functions like bootstrap col-* classes.\nOverrides widths set by \"cols\" prop on CdrRow.\nPossible values: {1-12}\nAlso accepts responsive values with `@breakpoint`: \"12 8@lg\""
+                "description": "Number of columns (out of 12) the column will span. Functions like bootstrap col-* classes. Overrides widths set by ‘cols’ prop on CdrRow. Possible values: {  ‘1’  through   ‘12’  }. Also accepts responsive values with @breakpoint: ‘12 8@lg’"
               },
               {
                 "name": "offsetLeft",
                 "type": "string",
                 "default": "n/a",
-                "description": "Number of columns (out of 12) of empty space to add left of this column.\nPossible values: {0-12}\nAlso accepts responsive values with `@breakpoint`: \"12 8@lg\""
+                "description": "Adds up to 12 columns of empty space to left of an individual column. Possible values: {  ‘1’  through  ‘12’  }. Also accepts responsive values with @breakpoint: ‘12 8@lg’"
               },
               {
                 "name": "offsetRight",
                 "type": "string",
                 "default": "n/a",
-                "description": "Number of columns (out of 12) of empty space to add right of this column.\nPossible values: {0-12}\nAlso accepts responsive values with `@breakpoint`: \"12 8@lg\""
+                "description": "Adds up to 12 columns of empty space to right of an individual column. Possible values: {  ‘1’  through  ‘12’  }. Also accepts responsive values with @breakpoint: ‘12 8@lg’"
               },
               {
                 "name": "alignSelf",
                 "type": "string",
                 "default": "n/a",
-                "description": "How the column should align (overrides CdrRow alignment). See CSS flexbox align-self.\nPossible values: {top, middle, bottom, stretch}.\nAlso accepts responsive values with `@breakpoint`: \"middle@sm\""
+                "description": "Aligns individual column by overriding CdrRow alignment. See CSS Flexbox align-self. Possible values: {  ‘top’  |  ‘middle’  |  ‘bottom’  |  ‘stretch’  }. Also accepts responsive values with @breakpoint: ‘middle@sm’"
               },
               {
                 "name": "isRow",
                 "type": "boolean",
                 "default": "false",
-                "description": "Makes the column act as a CdrRow. Setting this to true exposes all props of CdrRow in addition to cdr-col props."
+                "description": "Makes the column act as a CdrRow. Setting this value to true will expose all props of CdrRow in addition to CdrCol props"
               }
             ],
             "slots": [
               {
                 "name": "default",
-                "description": "Default slot for cdr-col content."
+                "description": "Sets the innerHTML for cdr-col content. This includes text and html markup"
               }
             ]
           }
@@ -1001,13 +1001,20 @@ Defines nested columns (also known as isRow).
 
 </cdr-doc-example-code-pair>
 
+## Accessibility
+
+To ensure that usage of this component complies with accessibility guidelines:
+- Low-vision users should be able to increase the size of the text by up to 200 percent without breaking the layout
+- Use list markup for content layout. List markup allow contents to be structured which makes it easier for assistive technologies
+<br/>
+This component has compliance with following WCAG guidelines:
+- [WCAG SC 1.3.2: Meaningful Sequence](https://www.w3.org/TR/WCAG20/#content-structure-separation-sequence): Cedar Design System does not provide for Flexbox’s `order` property.  Reverse order or reordering of items is not allowed. Content must be presented in a correct reading sequence to comply with accessibility standards 
+
 </cdr-doc-table-of-contents-shell>
 </template>
 
 <template slot="Design Guidelines">
 <cdr-doc-table-of-contents-shell>
-
-<cdr-doc-alert/>
 
 ## Use when
 
@@ -1016,20 +1023,23 @@ Defines nested columns (also known as isRow).
 - Applying responsive rules to columns of a row and/or regions of a page layout or a container of many components
 - Arranging elements within a single component with two or more zones, including those aligned to the left or right edge
 
-## Don’t use when
+### Don’t use when
 
-- Presenting a multi-row columnar data display, such as features or specs of a product. Instead, use the `Data Table` component
+- Presenting a multi-row columnar data display, such as features or specs of a product. Instead, use [Data Table(TODO:missing link)](TODO:table link)
 
 ## Foundations
 
 Columns, gutters, and margins scales as a fluid system as the device and viewport increases from a small devices to a large device: 
 
-<cdr-img :src="$withBase('/grid/Spec_Grid_Desktop_and_Mobile_4-3.png')" alt="grid concept at desktop and mobile sizes"/>
-<cdr-img :src="$withBase('/grid/Spec_Grids_Breakpoints_16-9.png')" alt="grid breakpoints"/>
+<cdr-img class="cdr-doc-article-img" :src="$withBase('/grid/Spec_Grid_Desktop_and_Mobile_4-3.png')" alt="grid concept at desktop and mobile sizes"/>
+<br/>
+<cdr-img class="cdr-doc-article-img" :src="$withBase('/grid/Spec_Grids_Breakpoints_16-9.png')" alt="grid breakpoints"/>
+<br/>
 
 ## Anatomy
 
-<cdr-img :src="$withBase('/grid/Spec_Grids_Gutters_and_Margins_16-9.png')" alt="gutter margins and grids"/>
+<cdr-img class="cdr-doc-article-img" :src="$withBase('/grid/Spec_Grids_Gutters_and_Margins_16-9.png')" alt="gutter margins and grids"/>
+<br/>
 
 - Maximum width of 1232px:
   - Allows for padding between grid and browser window
@@ -1099,38 +1109,40 @@ This component follows WebAIM’s accessibility guidelines:
 <template slot="API">
 <cdr-doc-table-of-contents-shell>
 
-Grids are built from two components, `cdr-row` and `cdr-col`.
+Grids are built from two components, **CdrRow** and **CdrCol**.
 
 ## Props
 
-### cdr-row
+### CdrRow
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-### cdr-col
+### CdrCol
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[1].api.props" />
 
 ## Slots
 
-### cdr-row
+### CdrRow
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-### cdr-col
+### CdrCol
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[1].api.slots" />
 
 ## Installation
 
-Resources are available within the [cdr-grid package](https://www.npmjs.com/package/@rei/cdr-grid):
+Resources are available within the [CdrGrid package](https://www.npmjs.com/package/@rei/cdr-grid):
 
 <cdr-doc-api type="installation" />
 
 - Component: `@rei/cdr-grid`
 - Component styles: `cdr-grid.css`
 
+<br/>
+
 To incorporate the required assets for a component, use the following steps:
 
-### #1. Install using NPM
+### 1. Install using NPM
 
-Install the `cdr-grid` package using `npm` in your terminal:
+Install the `CdrGrid` package using `npm` in your terminal:
 
 _Terminal_
 
@@ -1138,7 +1150,7 @@ _Terminal_
 npm i -s @rei/cdr-grid
 ```
 
-### #2. Import Dependencies
+### 2. Import Dependencies
 
 _main.js_
 
@@ -1147,7 +1159,7 @@ _main.js_
 import "@rei/cdr-grid/dist/cdr-grid.css";
 ```
 
-### #3. Add component to a template
+### 3. Add component to a template
 
 _local.vue_
 
@@ -1184,11 +1196,13 @@ CdrRow functions as a flexbox container, and CdrCol functions as a flexbox item.
     - Never include other elements as immediate children of CdrRow besides CdrCol 
 - The grid system is mobile-first, flexbox based, and 12 columns wide. Many props mirror the flexbox API and work as you’d expect CSS flexbox to work.
 
+<br/>
+
 New to or unfamiliar with flexbox? Read this [CSS Tricks flexbox guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background) for background, terminology, guidelines, and examples.
 
 ### Cdr-col content width
 
-Immediate children of `cdr-col` are flexed due to a flex height display bug in some versions of Safari. This causes immediate children to be full-width and display stacked horizontally. Wrapping child elements in a single `div` element will fix these problems (if undesired). 
+Immediate children of `cdr-col` are flexed due to a flex height display bug in some versions of Safari. This causes immediate children to be full-width and display stacked horizontally. Wrapping child elements in a single `<div>` element will fix these problems (if undesired). 
 
 <cdr-doc-code-snippet :copy-button="false" :max-height="false">
   ```html{3,6}
@@ -1205,7 +1219,7 @@ Immediate children of `cdr-col` are flexed due to a flex height display bug in s
 
 ### Nested Grids
 
-Nested grids are made by nesting CdrCols and adding the `is-row` prop to the `CdrCol` that acts as the row wrapper:
+Nested grids are made by nesting `cdr-col` and adding the `is-row` prop to the `cdr-col` that acts as the row wrapper:
 
 - Add `is-row` prop to `cdr-col` that has other `cdr-col` as children
 - `is-row` will expose all props for both col and row
@@ -1221,15 +1235,6 @@ Nested grids are made by nesting CdrCols and adding the `is-row` prop to the `Cd
   ```
 </cdr-doc-code-snippet>
 
-## Accessibility
-
-- Low-vision users should be able to increase the size of the text by up to 200 percent without breaking the layout
-- Use list markup for content layout. List markup allow contents to be structured which makes it easier for assistive technologies
-
-This component follows WebAIM’s accessibility guidelines:
-
-- [WCAG SC 1.3.2: Meaningful Sequence](https://www.w3.org/TR/WCAG20/#content-structure-separation-sequence): Cedar Design System does not provide for flexbox’s order property.  Reverse order or reordering of items is not allowed. Content must be presented in a correct reading sequence to comply with accessibility standards
-
 </cdr-doc-table-of-contents-shell>
 </template>
 
@@ -1237,10 +1242,9 @@ This component follows WebAIM’s accessibility guidelines:
 
 ## 1.0.0
 
-- Consolidate responsive props to single prop that accepts responsive values
-See full dev [changelog](https://github.com/rei/rei-cedar/blob/master/src/components/grid/CHANGELOG.md)
+- Consolidate responsive props to single prop that accepts responsive values. See full dev [changelog](https://github.com/rei/rei-cedar/blob/master/src/components/grid/CHANGELOG.md)
 - Replaces `@rei/cdr-row` and `@rei/cdr-col` packages (both components are available from this package)
-- The Grid CSS is contained in this package and not in `@rei/cdr-assets` core.css
+- The Grid CSS is contained in this package and not in `@rei/cdr-assets core.css`
 
 </template>
 </cdr-doc-tabs>
