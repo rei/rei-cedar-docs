@@ -88,12 +88,12 @@ npm install --save @rei/cdr-button
 ```
 
 ### Including component-specific CSS
-How you include css depends on your tech stack and varies from project to project. 
+How you include CSS depends on your tech stack and varies from project to project. 
 
 Here are a few common methods:
 
 #### Webpack (css-loader)
-If using a bundler, import css into javascript and let loaders extract it.
+If using a bundler, import CSS into javascript and let loaders extract it.
 
 _main.js_
 ```js
@@ -109,7 +109,7 @@ import '@rei/cdr-button’;
 ```
 
 #### SCSS (or another pre-processor)
-You can also import css from the node_modules folder.
+You can also import CSS from the node_modules folder.
 
 _cedar.scss_
 ```js
@@ -169,7 +169,10 @@ export default {
 ```
 
 ### Configure component props
-Most Cedar components provide properties to configure component data, display, and logic. For example, the `<cdr-button>` component provides a `size` property to configure the button’s size.
+
+Props are custom attributes registered on a component. For further information about props see [Vue's prop documentation](https://vuejs.org/v2/guide/components-props.html).
+
+Most Cedar components provide props to configure component data, display, and logic. For example, the `<cdr-button>` component provides a `size` prop to configure the button’s size.
 
 ```html
 <cdr-button size="large">I'm a large button</cdr-button>
@@ -186,6 +189,26 @@ In this example, the `responsiveSize` prop accepts an array of strings denoting 
 
 ```html
 <cdr-button :responsive-size="['small@xs', 'large@sm']">I'm a responsive button</cdr-button>
+```
+
+### Add content via slots
+
+Some components use slots for content distribution. Most components will have a single default slot others will have named slots. Slots are listed as part of the API for all components. See [Vue's documentation on props](https://vuejs.org/v2/guide/components-slots.html) for further information.
+
+Adding content to a default slot
+
+```html
+<cdr-button>I'm content in the default slot</cdr-button>
+```
+
+Adding content to a named slot
+
+```html
+<my-component>
+  <slot name="header">I'm content in the header slot</slot>
+
+  <slot name="footer">I'm content in the footer slot</slot>
+</my-component>
 ```
 
 <hr>
@@ -239,9 +262,9 @@ Relevant guidelines are provided in each component's documentation.
 <hr/>
 
 ## CSS Modules and custom class names
-Component css class names are [css modules](https://github.com/css-modules/css-modules) that reflect the package version. For example, `CdrButton@0.2.0` will have classes that end in ‘_0-2-0’. This allows the possibility of components at different versions to live together without having css class name collisions. 
+Component CSS class names are [CSS modules](https://github.com/css-modules/css-modules) that reflect the package version. For example, `CdrButton@0.2.0` will have classes that end in ‘_0-2-0’. This allows the possibility of components at different versions to live together without having CSS class name collisions. 
 
-Never use Cedar class names within your own css or target them in javascript; they will change as you upgrade the package and break any functionality/styling you attach to them. 
+Never use Cedar class names within your own CSS or target them in javascript; they will change as you upgrade the package and break any functionality/styling you attach to them. 
 
 To target CSS, create custom selectors such as `my-wrapper` and `my-selector` in the following example…
 

@@ -81,7 +81,7 @@
 
     /* spacing
       ---------- */
-    & > li + li {
+    & li + li {
       margin-top: 8px;
     }
 
@@ -185,5 +185,9 @@
   & > table {
     margin-top: 16px;
     margin-bottom: 16px;
+
+    td {
+      background-color: white;
+    }
   }
 }

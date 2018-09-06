@@ -1143,7 +1143,7 @@ npm i -s @rei/cdr-grid
 _main.js_
 
 ```javascript
-// import your required css.
+// import your required CSS.
 import "@rei/cdr-grid/dist/cdr-grid.css";
 ```
 
@@ -1240,7 +1240,7 @@ This component follows WebAIM’s accessibility guidelines:
 - Consolidate responsive props to single prop that accepts responsive values
 See full dev [changelog](https://github.com/rei/rei-cedar/blob/master/src/components/grid/CHANGELOG.md)
 - Replaces `@rei/cdr-row` and `@rei/cdr-col` packages (both components are available from this package)
-- The Grid css is contained in this package and not in `@rei/cdr-assets` core.css
+- The Grid CSS is contained in this package and not in `@rei/cdr-assets` core.css
 
 </template>
 </cdr-doc-tabs>

@@ -332,7 +332,7 @@ Change the button size based on where button is used. Default size is medium. Sm
   - Never repeat the context of a label when the context is already clear. For example, for a &quot;Save&quot; button, do not expand to &quot;Save Account Information&quot;
 
   - Use sentence case, not all caps, title caps or all lowercase
-  
+
   <do-dont :examples="$page.frontmatter.case" />
   <do-dont :examples="$page.frontmatter.noun" />
 
@@ -419,7 +419,7 @@ npm i -S @rei/cdr-button
 _main.js_
 
 ```javascript
-// import your required css.
+// import your required CSS.
 import "@rei/cdr-link/dist/cdr-button.css";
 ```
 
