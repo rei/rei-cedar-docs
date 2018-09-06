@@ -2,8 +2,21 @@
 {
   "title": "Headings",
   "layout": "LayoutComponent",
-  "summary": "Used as titles to create hierarchical information structure within a page layout.",
-  "title_metadata": "Heading, cdrText",
+  "summary": "Used as titles to create hierarchical information structure within a page layout",
+  "title_metadata": "CdrText",
+  "see_also": [
+    {
+      "text": 'See Also'
+    },
+    {
+      "text": 'Typography',
+      "href": '/foundation/typography/'
+    },
+    {
+      "text": 'Paragraphs',
+      "href": '/components/paragraph/'
+    }
+  ],
   "minimize": [
     {
       "type": "do",
@@ -201,13 +214,17 @@ Use for subheadings that are positioned beneath small headings.
 
 ## Accessibility
 
-Web browsers, plug-ins, and assistive technologies use headings to provide in-page navigation. To ensure that usage of this component complies with accessibility guidelines, do the following:
+To ensure that usage of this component complies with accessibility guidelines:
+
 - Use h1-h6 to identify headings (`<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, and `<h6>`)
   - If additional headings are needed (`<h7>` and so on), following technique described on this page: [ARIA12: Using role=heading to identify headings](https://www.w3.org/TR/WCAG20-TECHS/ARIA12)
 - Headings are used to label page regions
   - Use aria-labelled to associate headings with their page region, as described in the [label page regions](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby) section of this tutorial
 - Subheadings are not semantic headings. Subheadings may be visually styled as a heading but will not be navigable using a screen reader
 - For PDF documents, follow technique on this page: [Providing headings by marking content with heading tags in PDF documents](https://www.w3.org/TR/WCAG20-TECHS/PDF9)
+- Assistive technologies skim the structure of a page:
+  - Allow users to navigate to or skip over sections through the use of heading levels
+  - Avoid skipping heading levels (e.g., `<h2>`  to  `<h4>` )
 
 - This component has compliance with WCAG guidelines by: 
   - Defining semantic heading levels with ability to assign predefined visual heading styles to each level
