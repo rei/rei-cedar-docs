@@ -18,8 +18,8 @@
         </cdr-link>
       </li>
     </ul>
-    <ul class="cdr-doc-local-anchor-nav__appended-items" v-if="appendedItems.length > 0">
-      <li v-for="item in appendedItems">
+    <ul class="cdr-doc-local-anchor-nav__appended-items" v-if="pageData.see_also && pageData.see_also.length > 0">
+      <li v-for="item in pageData.see_also">
         <cdr-link
           v-if="item.href"
           modifier="standalone"
@@ -62,8 +62,11 @@ export default {
       default: false
     }
   },
-  components: {
-    },
+  computed: {
+    pageData () {
+      return this.$page.frontmatter
+    }
+  },
   data: function() {
     return {
       links: [

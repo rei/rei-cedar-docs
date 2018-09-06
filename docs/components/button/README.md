@@ -324,10 +324,15 @@ Change the button size based on where button is used. Default size is medium. Sm
 ## Content
 
   - Clearly and concisely label with 1–3 words and fewer than 20 characters, including spaces
+
   <do-dont :examples="$page.frontmatter.label" />
+
   - Start with a verb, if possible. Labels must be action-oriented and set expectations for what the user will see next
+
   - Never repeat the context of a label when the context is already clear. For example, for a &quot;Save&quot; button, do not expand to &quot;Save Account Information&quot;
+
   - Use sentence case, not all caps, title caps or all lowercase
+  
   <do-dont :examples="$page.frontmatter.case" />
   <do-dont :examples="$page.frontmatter.noun" />
 
