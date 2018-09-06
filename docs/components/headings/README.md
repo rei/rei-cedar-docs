@@ -2,8 +2,21 @@
 {
   "title": "Headings",
   "layout": "LayoutComponent",
-  "summary": "Used as titles to create hierarchical information structure within a page layout.",
-  "title_metadata": "Heading, cdrText",
+  "summary": "Used as titles to create hierarchical information structure within a page layout",
+  "title_metadata": "CdrText",
+  "see_also": [
+    {
+      "text": 'See Also'
+    },
+    {
+      "text": 'Typography',
+      "href": '/foundation/typography/'
+    },
+    {
+      "text": 'Paragraphs',
+      "href": '/components/paragraphs/'
+    }
+  ],
   "minimize": [
     {
       "type": "do",
@@ -199,6 +212,23 @@ Use for subheadings that are positioned beneath small headings.
 
 </cdr-doc-example-code-pair>
 
+## Accessibility
+
+To ensure that usage of this component complies with accessibility guidelines:
+
+- Use h1-h6 to identify headings (`<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, and `<h6>`)
+  - If additional headings are needed (`<h7>` and so on), following technique described on this page: [ARIA12: Using role=heading to identify headings](https://www.w3.org/TR/WCAG20-TECHS/ARIA12)
+- Headings are used to label page regions
+  - Use aria-labelled to associate headings with their page region, as described in the [label page regions](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby) section of this tutorial
+- Subheadings are not semantic headings. Subheadings may be visually styled as a heading but will not be navigable using a screen reader
+- For PDF documents, follow technique on this page: [Providing headings by marking content with heading tags in PDF documents](https://www.w3.org/TR/WCAG20-TECHS/PDF9)
+- Assistive technologies skim the structure of a page:
+  - Allow users to navigate to or skip over sections through the use of heading levels
+  - Avoid skipping heading levels (e.g., `<h2>`  to  `<h4>` )
+
+- This component has compliance with WCAG guidelines by: 
+  - Defining semantic heading levels with ability to assign predefined visual heading styles to each level
+
 </cdr-doc-table-of-contents-shell>
 </template>
 
@@ -222,7 +252,7 @@ Use for subheadings that are positioned beneath small headings.
 - Creating hierarchical structure of information in a page layout
 - Improving quick scanning of page content for sighted users and screen readers
 
-## Don’t use when
+### Don’t use when
 
 - Tagging as a semantic heading when an element only needs to be highlighted or emphasized within your content. Instead, use sizing modifier for this component
 
@@ -236,7 +266,9 @@ Use for subheadings that are positioned beneath small headings.
 
 - Be specific. Provide facts or information that pique user interest. Avoid broad and generic headings
 - Start heading titles with strong and familiar keywords to increase scannability
-- Ensure the heading works out of context in search results, social-media streams, blog posts, and news feeds
+- Ensure the heading works out of page context, such as in search results, social media streams, blog posts, and news feeds
+  - Start with most descriptive word. For example, in a section labeled “Disaster Relief” instead of “Preparation for floods”, use “Flood preparation”
+  - Avoid duplicating headings (e.g. "More Details")
 - Omit needless words. Be clear and concise
 - Limit heading length for improved scale across variable container widths
 - Headings must:
@@ -251,26 +283,17 @@ Use for subheadings that are positioned beneath small headings.
   - Ensure an accessible contrast between the text and the background
   - Implement image text with proper HTML markup and use CSS to embed any special fonts
 
+### Do / Don’t
+
 <do-dont :examples="$page.frontmatter.minimize" />
 
 ## Responsiveness
 
 Responsive heading font sizes are the default for heading levels except subheading. Refer to Overview section for more information. 
 
-## Accessibility
+## Resources
 
-- Web browsers, plug-ins, and assistive technologies use headings to provide in-page navigation. To ensure that usage of this component complies with accessibility guidelines, do the following:
-  - Use headings for content structure:
-    - Headings must be marked up as true headings and identified by order of importance starting with `<h1>`, `<h2>`, and so on
-    - Use headings to identify individual sections of content, where appropriate
-    - Avoid skipping heading levels (e.g., `<h2>` to `<h4>`)
-    - Screen reader and other assistive technology users skim the structure of a page and navigate to or skip over sections through the use of heading levels
-  - Compose headings that are easily understood by all users, regardless of age, cultures, education levels:
-    - Start with most descriptive word. For example, in a section labeled “Disaster Relief” instead of “Preparation for floods”, use “Flood preparation:”
-  - Avoid duplicating heading (e.g., "More Details") unless the structure provides adequate differentiation between them
-- This component follows WebAIM’s accessibility guidelines:
-  - [WCAG SC 1.3.1: Info and Relationships:](https://www.w3.org/TR/WCAG20/#content-structure-separation-programmatic) Cedar Design System defines semantic heading levels for `<h1>` through `<h6>` with ability to assign predefined visual heading styles to each level
-  - [WCAG SC 2.4.6: Headings and Labels:](https://www.w3.org/TR/WCAG20/#navigation-mechanisms-descriptive) Cedar Design System defines semantic heading levels for `<h1>` through `<h6>` with ability to assign predefined visual heading styles to each level
+- WebAIM: [Semantic Structure](https://webaim.org/techniques/semanticstructure/)
 
 </cdr-doc-table-of-contents-shell>
 </template>
@@ -300,19 +323,15 @@ Responsive heading font sizes are the default for heading levels except subheadi
 
 ## Installation
 
-Resources are available within the [cdr-text package](https://www.npmjs.com/package/@rei/cdr-text):
+Resources are available within the [CdrText package](https://www.npmjs.com/package/@rei/cdr-text)
 
-
-| Name          | Type                | Description                            |
-|:--------------|:--------------------|:---------------------------------------|
-| @rei/cdr-text | Node module package | Import the component into your project |
-
+- Component: `@rei/cdr-text`
 
 To incorporate the required assets for a component, use the following steps:
 
-### #1. Install using NPM
+### 1. Install using NPM
 
-Install the `cdr-text` package using **npm** in your terminal:
+Install the `CdrText` package using `npm` in your terminal:
 
 _Terminal_
 
@@ -320,7 +339,7 @@ _Terminal_
 npm i -S @rei/cdr-text
 ```
 
-### #2. Import Dependencies
+### 2. Import dependencies
 
 _main.js_
 
@@ -330,7 +349,7 @@ import '@rei/cdr-assets/dist/cdr-core.css';
 import '@rei/cdr-assets/dist/cdr-fonts.css';
 ```
 
-### #3. Add component to a template
+### 3. Add component to a template
 
 _local.vue_
 
@@ -356,7 +375,7 @@ export default {
 
 ## Usage
 
-The **cdrText** component allows for styling any html element with available text styles. Visual style and semantic meaning are managed independently by providing: 
+The cdrText component allows for styling any html element with available text styles. Visual style and semantic meaning are managed independently by providing: 
 
 - Element to the `tag` prop 
 - Style to the `modifier` prop
@@ -382,7 +401,7 @@ This will result in the following HTML:
   </cdr-text>
 ```
 
-**Cdr-text** modifiers can be nested within semantic headings. The below modifier for subheading is nested in the `<h2>` tag.
+**CdrText** modifiers can be nested within semantic headings. The below modifier for subheading is nested in the `<h2>` tag.
 
 ```vue
   <cdr-text
@@ -439,19 +458,6 @@ Skipping heading levels can be confusing and should be avoided where possible:
 
 In fixed sections of the page (e.g. sidebars), heading levels **should not** change depending on the heading levels in other areas of the page. Consistency across pages is required throughout the REI digital properties as explained on the [Navigation Design Principles Confluence page](https://confluence.rei.com/display/NAV/Navigation+Design+Principles).
 
-## Accessibility
-
-Web browsers, plug-ins, and assistive technologies use headings to provide in-page navigation. To ensure that usage of this component complies with accessibility guidelines, do the following:
-- Use h1-h6 to identify headings (`<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, and `<h6>`)
-  - If additional headings are needed (`<h7>` and so on), following technique described on this page: [ARIA12: Using role=heading to identify headings](https://www.w3.org/TR/WCAG20-TECHS/ARIA12)
-- Headings are used to label page regions
-  - Use aria-labelled to associate headings with their page region, as described in the [label page regions](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby) section of this tutorial
-- Subheadings are not semantic headings. Subheadings may be visually styled as a heading but will not be navigable using a screen reader
-- For PDF documents, follow technique on this page: [Providing headings by marking content with heading tags in PDF documents](https://www.w3.org/TR/WCAG20-TECHS/PDF9)
-- This component follows WebAIM’s accessibility guidelines:
-  - [WCAG SC 1.3.1: Info and Relationships:](https://www.w3.org/TR/WCAG20/#content-structure-separation-programmatic) Cedar Design System defines semantic heading levels for `<h1>` through `<h6>` with ability to assign predefined visual heading styles to each level
-  - [WCAG SC 2.4.6: Headings and Labels:](https://www.w3.org/TR/WCAG20/#navigation-mechanisms-descriptive) Cedar Design System defines semantic heading levels for `<h1>` through `<h6>` with ability to assign predefined visual heading styles to each level
-
 </cdr-doc-table-of-contents-shell>
 </template>
 
@@ -459,23 +465,18 @@ Web browsers, plug-ins, and assistive technologies use headings to provide in-pa
 
 ## 1.0.0
 
-### What's new
-
-**cdrText** component:
-
 - Enables the visual style of many heading levels and subheading to be applied flexibly to HTML headings (`<h1>` to `<h6>`) and other HTML elements
-- Enabled responsive heading font sizing applied by default and disabled as an alternative with following modifiers:
+- Enables responsive heading font sizes that are applied by default and disable as an alternative with following modifiers:
   - Display
   - Heading-large
   - Heading-medium
   - Heading-small
-  - Disabled as an alternative with following modifiers:
+- Disables responsive heading font sizes as an alternative with following modifiers:
   - Display-static
   - Heading-large-static
   - Heading-medium-static
   - Heading-small-static
   - Subheading
-
 
 </template>
 </cdr-doc-tabs>

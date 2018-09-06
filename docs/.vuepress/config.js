@@ -70,7 +70,7 @@ module.exports = {
           { text: "Image", link: "/components/image/" },
           { text: "Link", link: "/components/link/" },
           { text: "List", link: "/components/list/" },
-          { text: "Paragraph", link: "/components/paragraph/" },
+          { text: "Paragraphs", link: "/components/paragraphs/" },
           { text: "Radio", link: "/components/radio/" }
         ]
       },
