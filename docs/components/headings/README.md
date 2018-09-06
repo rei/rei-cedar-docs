@@ -7,14 +7,14 @@
   "minimize": [
     {
       "type": "do",
-      "image": "heading/headings_text_do.png",
+      "image": "headings/headings_text_do.png",
       "ratio": "4-3",
       "alt": "Image showing proper link usage",
       "caption": "use heading levels to define hierarchical information."
     },
     {
       "type": "dont",
-      "image": "heading/headings_text_dont.png",
+      "image": "headings/headings_text_dont.png",
       "ratio": "4-3",
       "alt": "Image showing mixed button sizes",
       "caption": "use heading tag for visual results. Instead use heading modifiers."
@@ -30,20 +30,20 @@
               {
                 "name": "tag",
                 "type": "string",
-                "default": "\"p\"",
-                "description": "Valid HTML tag"
+                "default": "'p'",
+                "description": "Sets valid HTML element tag"
               },
               {
                 "name": "modifier",
                 "type": "string",
                 "default": "N/A",
-                "description": "Modifier allows the user to pass a style variant to this component.  Possible values: display | display-static | heading-large | heading-large-static | heading-medium | heading-medium-static | heading-small | heading-small-static | subheading"
+                "description": "Modifies the style variant for this component. Possible values: { ‘display’  |  ‘display-static’  |  ‘heading-large’  |  ‘heading-large-static’  |  ‘heading-medium’  |  ‘heading-medium-static’  |  ‘heading-small’  |  ‘heading-small-static’  |  ‘subheading  }"
               }
             ],
             "slots": [
               {
                 "name": "default",
-                "description": "innerHTML on the inside of the anchor component"
+                "description": "Set the innerHTML for cdr-text. This includes text and html markup."
               }
             ]
           }
@@ -216,8 +216,6 @@ Use for subheadings that are positioned beneath small headings.
         href: '../paragraph/'
       }
     ]">
-
-  <cdr-doc-alert/>
 
 ## Use when
 
