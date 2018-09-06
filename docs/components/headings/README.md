@@ -199,6 +199,19 @@ Use for subheadings that are positioned beneath small headings.
 
 </cdr-doc-example-code-pair>
 
+## Accessibility
+
+Web browsers, plug-ins, and assistive technologies use headings to provide in-page navigation. To ensure that usage of this component complies with accessibility guidelines, do the following:
+- Use h1-h6 to identify headings (`<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, and `<h6>`)
+  - If additional headings are needed (`<h7>` and so on), following technique described on this page: [ARIA12: Using role=heading to identify headings](https://www.w3.org/TR/WCAG20-TECHS/ARIA12)
+- Headings are used to label page regions
+  - Use aria-labelled to associate headings with their page region, as described in the [label page regions](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby) section of this tutorial
+- Subheadings are not semantic headings. Subheadings may be visually styled as a heading but will not be navigable using a screen reader
+- For PDF documents, follow technique on this page: [Providing headings by marking content with heading tags in PDF documents](https://www.w3.org/TR/WCAG20-TECHS/PDF9)
+
+- This component has compliance with WCAG guidelines by: 
+  - Defining semantic heading levels with ability to assign predefined visual heading styles to each level
+
 </cdr-doc-table-of-contents-shell>
 </template>
 
@@ -308,7 +321,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the `cdr-text` package using **npm** in your terminal:
+Install the `CdrText` package using `npm` in your terminal:
 
 _Terminal_
 
@@ -316,7 +329,7 @@ _Terminal_
 npm i -S @rei/cdr-text
 ```
 
-### 2. Import Dependencies
+### 2. Import dependencies
 
 _main.js_
 
@@ -378,7 +391,7 @@ This will result in the following HTML:
   </cdr-text>
 ```
 
-**Cdr-text** modifiers can be nested within semantic headings. The below modifier for subheading is nested in the `<h2>` tag.
+**CdrText** modifiers can be nested within semantic headings. The below modifier for subheading is nested in the `<h2>` tag.
 
 ```vue
   <cdr-text
@@ -434,19 +447,6 @@ Skipping heading levels can be confusing and should be avoided where possible:
 ### Exception for fixed page sections
 
 In fixed sections of the page (e.g. sidebars), heading levels **should not** change depending on the heading levels in other areas of the page. Consistency across pages is required throughout the REI digital properties as explained on the [Navigation Design Principles Confluence page](https://confluence.rei.com/display/NAV/Navigation+Design+Principles).
-
-## Accessibility
-
-Web browsers, plug-ins, and assistive technologies use headings to provide in-page navigation. To ensure that usage of this component complies with accessibility guidelines, do the following:
-- Use h1-h6 to identify headings (`<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, and `<h6>`)
-  - If additional headings are needed (`<h7>` and so on), following technique described on this page: [ARIA12: Using role=heading to identify headings](https://www.w3.org/TR/WCAG20-TECHS/ARIA12)
-- Headings are used to label page regions
-  - Use aria-labelled to associate headings with their page region, as described in the [label page regions](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby) section of this tutorial
-- Subheadings are not semantic headings. Subheadings may be visually styled as a heading but will not be navigable using a screen reader
-- For PDF documents, follow technique on this page: [Providing headings by marking content with heading tags in PDF documents](https://www.w3.org/TR/WCAG20-TECHS/PDF9)
-- This component follows WebAIM’s accessibility guidelines:
-  - [WCAG SC 1.3.1: Info and Relationships:](https://www.w3.org/TR/WCAG20/#content-structure-separation-programmatic) Cedar Design System defines semantic heading levels for `<h1>` through `<h6>` with ability to assign predefined visual heading styles to each level
-  - [WCAG SC 2.4.6: Headings and Labels:](https://www.w3.org/TR/WCAG20/#navigation-mechanisms-descriptive) Cedar Design System defines semantic heading levels for `<h1>` through `<h6>` with ability to assign predefined visual heading styles to each level
 
 </cdr-doc-table-of-contents-shell>
 </template>
