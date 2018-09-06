@@ -300,17 +300,13 @@ Responsive heading font sizes are the default for heading levels except subheadi
 
 ## Installation
 
-Resources are available within the [cdr-text package](https://www.npmjs.com/package/@rei/cdr-text):
+Resources are available within the [CdrText package](https://www.npmjs.com/package/@rei/cdr-text)
 
-
-| Name          | Type                | Description                            |
-|:--------------|:--------------------|:---------------------------------------|
-| @rei/cdr-text | Node module package | Import the component into your project |
-
+- Component: `@rei/cdr-text`
 
 To incorporate the required assets for a component, use the following steps:
 
-### #1. Install using NPM
+### 1. Install using NPM
 
 Install the `cdr-text` package using **npm** in your terminal:
 
@@ -320,7 +316,7 @@ _Terminal_
 npm i -S @rei/cdr-text
 ```
 
-### #2. Import Dependencies
+### 2. Import Dependencies
 
 _main.js_
 
@@ -330,7 +326,7 @@ import '@rei/cdr-assets/dist/cdr-core.css';
 import '@rei/cdr-assets/dist/cdr-fonts.css';
 ```
 
-### #3. Add component to a template
+### 3. Add component to a template
 
 _local.vue_
 
@@ -459,23 +455,18 @@ Web browsers, plug-ins, and assistive technologies use headings to provide in-pa
 
 ## 1.0.0
 
-### What's new
-
-**cdrText** component:
-
 - Enables the visual style of many heading levels and subheading to be applied flexibly to HTML headings (`<h1>` to `<h6>`) and other HTML elements
-- Enabled responsive heading font sizing applied by default and disabled as an alternative with following modifiers:
+- Enables responsive heading font sizes that are applied by default and disable as an alternative with following modifiers:
   - Display
   - Heading-large
   - Heading-medium
   - Heading-small
-  - Disabled as an alternative with following modifiers:
+- Disables responsive heading font sizes as an alternative with following modifiers:
   - Display-static
   - Heading-large-static
   - Heading-medium-static
   - Heading-small-static
   - Subheading
-
 
 </template>
 </cdr-doc-tabs>
