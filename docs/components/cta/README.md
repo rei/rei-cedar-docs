@@ -342,7 +342,7 @@ npm i -s @rei/cdr-link
 _main.js_
 
 ```javascript
-// import your required css
+// import your required CSS
 import "@rei/cdr-cta/dist/cdr-cta.css";
 
 // CTA uses a 

@@ -344,7 +344,7 @@ npm i -S @rei/cdr-text
 _main.js_
 
 ```javascript
-// import your required css.
+// import your required CSS.
 import '@rei/cdr-assets/dist/cdr-core.css';
 import '@rei/cdr-assets/dist/cdr-fonts.css';
 ```

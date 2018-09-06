@@ -396,7 +396,7 @@ _main.js_
 <cdr-doc-code-snippet :line-numbers="false" :copy-button="false">
 
 ```javascript
-// import your required css.
+// import your required CSS.
 import '@rei/cdr-list/dist/cdr-list.css';
 ```
 </cdr-doc-code-snippet>

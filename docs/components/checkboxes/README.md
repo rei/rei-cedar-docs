@@ -2,8 +2,21 @@
 {
     "title": "Checkboxes",
     "layout": "LayoutComponent",
-    "summary": "Permits user to make one or more selections from a list.",
-    "title_metadata": "Checkbox, CdrCheckbox",
+    "title_metadata": "CdrCheckbox, cdr-checkbox",
+    "summary": "Permits user to make one or more selections from a list",
+    "see_also": [
+      {
+        "text": 'See Also'
+      },
+      # {
+      #   "text": 'List Group',
+      #   "href": '/components/list/'
+      # },
+      {
+        "text": 'Radio Buttons',
+        "href": '/components/radio/'
+      }
+    ],
     "case": [
         {
             "type": "do",
@@ -100,25 +113,25 @@
                         "name": "labelClass",
                         "type": "string",
                         "default": "n/a",
-                        "description": "Class that is added to the label for custom styles."
+                        "description": "Add CSS class to the label for custom styles."
                     },
                     {
                         "name": "inputClass",
                         "type": "string",
                         "default": "n/a",
-                        "description": "Class that is added to the input for custom styles."
+                        "description": "Add CSS class to the input for custom styles."
                     },
                     {
                         "name": "contentClass",
                         "type": "string",
                         "default": "n/a",
-                        "description": "Class that is added to the slot wrapper for custom styles."
+                        "description": "Add CSS class to the slot wrapper for custom styles."
                     },
                     {
                         "name": "indeterminate",
                         "type": "boolean",
                         "default": "false",
-                        "description": "Show checkbox in indeterminate state. This is a visual-only state and there is no logic for when to show it."
+                        "description": "Shows checkbox in indeterminate state. This is a visual-only state with no logic for when to show it."
                     },
                     {
                         "name": "trueValue",
@@ -137,12 +150,18 @@
                         "type": "string, number, boolean, object, array, symbol, function",
                         "default": "false",
                         "description": "The value when used in a checkbox group. Replaces `trueValue` and `falseValue`."
+                    },
+                    {
+                      "name": "modifier",
+                      "type": "string",
+                      "default": "N/A",
+                      "description": "Modifies the style variant for this component.  Possible values: { ‘compact’  |  ‘hide-figure’ }"
                     }
                 ],
                 "slots": [
                     {
                         "name": "default",
-                        "description": "innerHTML inside of checkbox component. This is the readable text inside the <label> element."
+                        "description": "Sets the innerHTML for cdr-checkbox. This is the readable text for the <label> element"
                     }
                 ],
                 "events": [
@@ -247,26 +266,39 @@ Custom styles for checkboxes.
 
 </cdr-doc-example-code-pair>
 
+## Accessibility
+
+To ensure that usage of this component complies with accessibility guidelines:
+- Each checkbox must be focusable and keyboard accessible:
+  - When the checkbox has focus, the **space** key changes the selection
+  - **Tab** key moves to next element in list 
+- Fieldsets (or grouped checkboxes) should be: 
+  - Used when associating group of checkboxes
+  - Identified or described as a group using a `<legend>` tag 
+- Avoid nested fieldsets
+- Single checkboxes:
+  - May be interchangeable with a toggle 
+  - Write labels to be self-explanatory
+- Custom checkboxes maintain accessibility requirements. The checkbox icon is only visually hidden and replaced with custom style 
+
+<br/>
+
+This component has compliance with WCAG guidelines by: 
+
+- Wrapping the input in a label element and label is automatically associated with it
+
+<br/>
+
+For more information, review techniques and failures for:
+- [WCAG 2.0,  1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
+- [WCAG 2.0,  3.3.2 Labels and Instructions](https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html)
+
+
 </cdr-doc-table-of-contents-shell>
 </template>
 
 <template slot="Design Guidelines">
-  <cdr-doc-table-of-contents-shell
-    tab-name="Design Guidelines"
-    :appended-nav-items="[
-      {
-        text: 'Related Components'
-      },
-      {
-        text: 'List Group',
-        href: '/components/list/'
-      },
-      {
-        text: 'Radio buttons',
-        href: '/components/radio/'
-      }
-    ]">
-    <cdr-doc-alert/>
+  <cdr-doc-table-of-contents-shell tab-name="Design Guidelines">
 
 ## Use When
 
@@ -278,7 +310,7 @@ Custom styles for checkboxes.
 
 ### Don't use when
 
-- Selecting from a list when only 1 choice is allowed. Instead, use [Radio button](/components/radio/) component
+- Selecting from a list when only 1 choice is allowed. Instead, use [Radio Buttons](/components/radio/)
 
 ## Content
 
@@ -289,6 +321,8 @@ When using checkboxes in a list:
  - Clearly communicate the effect of selecting the option
  - Provide a link or include a subtitle for more information. Don’t rely on tooltips to explain a checkbox
 
+<br/>
+
 Checkbox labels should:
 
  - Start with a capital letter
@@ -297,6 +331,10 @@ Checkbox labels should:
  - Avoid long labels
  - Be written as sentence fragments
  - No terminal punctuation
+
+<br/>
+
+### Do/Don't
 
 <do-dont :examples="$page.frontmatter.case" />
 
@@ -314,32 +352,13 @@ Checkboxes work independently from each other:
  - When parent checkbox is used for a bulk selection action, all child checkbox items will be selected or not selected
  - Use a standalone checkbox for a simple toggle selection. Don’t use radio buttons or toggles
 
+<br/>
+
 <do-dont :examples="$page.frontmatter.simplify" />
-
-## Accessibility
-
-To ensure that usage of this component complies with accessibility guidelines:
-
- - Each checkbox must be focusable and keyboard accessible:
-   - When the checkbox has focus, the `Space` key changes the selection
-   - `Tab` key moves to next element in list
- - Fieldsets (or grouped checkboxes) should be:
-   - Used when associating group of checkboxes
-   - Identified or described as a group using a `<legend>` tag
- - Avoid nested fieldsets
- - Single checkboxes:
-   - May be interchangeable with a toggle
-   - Write labels to be self-explanatory
-
-For more information, review techniques and failures for:
-
- - [WCAG 2.0,  1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
- - [WCAG 2.0,  3.3.2 Labels and Instructions](https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html)
 
 ## Resources
 
- - [CDS UI Toolkit](/getting-started/as-a-designer/)
- - WebAIM: [Keyboard Accessibility](https://webaim.org/techniques/keyboard/)
+ - WebAIM: [Semantic Structure: Using Lists Correctly](https://webaim.org/techniques/semanticstructure/)
 
   </cdr-doc-table-of-contents-shell>
 </template>
@@ -351,12 +370,6 @@ For more information, review techniques and failures for:
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-## Modifiers
-
-Following are modifiers for `cdrCheckbox` component:
-
-- compact
-- hide-figure
 
 ## Slots
 
@@ -368,18 +381,20 @@ Following are modifiers for `cdrCheckbox` component:
 
 ## Installation
 
-Resources are available within the [cdr-checkbox package:](https://www.npmjs.com/search?q=cdr-checkbox)
+Resources are available within the [CdrCheckbox package:](https://www.npmjs.com/search?q=cdr-checkbox)
 
 <cdr-doc-api type="installation" />
 
 - Component: `@rei/cdr-checkbox`
 - Component styles: `cdr-checkbox.css`
 
+<br/>
+
 To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the `cdr-checkbox` package using `npm` in your terminal:
+Install the `CdrCheckbox` package using `npm` in your terminal:
 
 _Terminal_
 
@@ -392,7 +407,7 @@ npm i -s @rei/cdr-checkbox
 _main.js_
 
 ```javascript
-// import your required css.
+// import your required CSS.
 import "@rei/cdr-link/dist/cdr-checkbox.css";
 ```
 
@@ -424,7 +439,7 @@ export default {
 
 ## Usage
 
-Cdr-checkbox requires  `v-model`  to track  `:checked`  values.
+CdrCheckbox requires  `v-model`  to track  `:checked`  values.
 
 This example uses  `true-value`  and  `false-value`  props to change what’s saved to the model.
 
@@ -484,6 +499,30 @@ Default checkbox to checked/unchecked state by setting the model in Javascript.
 </script>
 ```
 
+Set the indeterminate prop to true to generate an indeterminate checkbox, which looks different than the default. This is a visual styling only; it does not include any of the functional aspects of an indeterminate checkbox.
+
+```vue
+<template>
+  <cdr-checkbox
+    v-model="groupModel"
+    :indeterminate="true"
+  >
+    Option 1
+  </cdr-checkbox>
+  ...
+</template>
+```
+
+### Modifiers
+
+Following variants are available to the `cdr-checkbox` modifier attribute: 
+| Value | Description            |
+|:------|:-----------------------|
+| 'compact'  | Sets the spacing for smaller screen sizes |
+| 'hide-figure'  | Hides the checkbox icon |
+
+<br/>
+
 Use the `hide-figure` modifier to hide the checkbox itself, which leaves the text label as the clickable element. Add appropriate custom styles to convey selected and unselected states.
 
 ```vue
@@ -511,43 +550,6 @@ Use the `hide-figure` modifier to hide the checkbox itself, which leaves the tex
 </style>
 ```
 
-Set the indeterminate prop to true to generate an indeterminate checkbox, which looks different than the default. This is a visual styling only; it does not include any of the functional aspects of an indeterminate checkbox.
-
-```vue
-<template>
-  <cdr-checkbox
-    v-model="groupModel"
-    :indeterminate="true"
-  >
-    Option 1
-  </cdr-checkbox>
-  ...
-</template>
-```
-
-## Accessibility
-
-- The input is wrapped in a label element, so label is automatically associated as per these guidelines [WCAG 2.0,  3.3.2 Labels and Instructions](https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html)
-- Custom checkboxes maintain accessibility requirements. The checkbox icon is only visually hidden and replaced with custom style
-
-To ensure that usage of this component complies with accessibility guidelines:
-
-- Each checkbox must be focusable and keyboard accessible:
-  - When the checkbox has focus, the `Space` key changes the selection
-  - `Tab` key moves to next element in list
-- Fieldsets (or grouped checkboxes) should be:
-  - Used when associating group of checkboxes
-  - Identified or described as a group using a `<legend>` tag
-- Avoid nested fieldsets
-- Single checkboxes:
-  - May be interchangeable with a toggle
-  - Write labels to be self-explanatory
-
-For more information, review techniques and failures for:
-
-- [WCAG 2.0,  1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
-- [WCAG 2.0,  3.3.2 Labels and Instructions](https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html)
-
 </cdr-doc-table-of-contents-shell>
 </template>
 
@@ -559,8 +561,7 @@ For more information, review techniques and failures for:
 - Hides checkboxes with  `hide-figure`  modifier
 - Includes default and compact styling
 - Includes indeterminate state visual style
-
-Git commit reference [(1531860)](https://github.com/rei/rei-cedar/pull/436/commits/15318606570811a6d53549a5335e0943a3463971)
+- Git commit reference [(1531860)](https://github.com/rei/rei-cedar/pull/436/commits/15318606570811a6d53549a5335e0943a3463971)
 
 </template>
 </cdr-doc-tabs>

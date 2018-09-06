@@ -127,7 +127,7 @@
       },
       {
         text: 'Checkbox',
-        href: '../checkbox/'
+        href: '../checkboxes/'
       }
     ]">
 
@@ -234,7 +234,7 @@ Custom styles for radio buttons.
       },
       {
         text: 'Checkbox',
-        href: '../checkbox/'
+        href: '../checkboxes/'
       }
     ]">
 
@@ -303,7 +303,7 @@ For more information, review techniques and failures for:
       },
       {
         text: 'Checkbox',
-        href: '../checkbox/'
+        href: '../checkboxes/'
       }
     ]">
 
@@ -353,7 +353,7 @@ npm i -s @rei/cdr-radio
 _main.js_
 
 ```javascript
-// import your required css.
+// import your required CSS.
 import "@rei/cdr-radio/dist/cdr-radio.css";
 ```
 
