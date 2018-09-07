@@ -34,7 +34,7 @@ The Cedar UI Toolkit is distributed using Google Drive. This allows you to pull 
 
 <ol>
   <li>
-      <cdr-link href="https://www.google.com/drive/download/backup-and-sync/">
+      <cdr-link href="https://www.google.com/drive/download/backup-and-sync/" target="_blank">
         Install Backup and Sync from Google
       </cdr-link>
     <ol>
@@ -69,7 +69,7 @@ The Cedar UI Toolkit is distributed using Google Drive. This allows you to pull 
         Upon successful installation, you’ll get a notification on you desktop that Sync is complete.
       </li>
       <li>
-        Finally, <strong>navigate</strong> to the <a href="https://drive.google.com/drive/folders/0B7H-SygEBEpfQmloX1o5TThNRmc" target="_blank">Sketch Library folder</a> in the REI Design System Google Drive, right-click the Cedar UI Toolkit file and “Add it to My Drive”.
+        Finally, <strong>navigate</strong> to the <cdr-link href="https://drive.google.com/drive/folders/0B7H-SygEBEpfQmloX1o5TThNRmc" target="_blank">Sketch Library folder</cdr-link> in the REI Design System Google Drive, right-click the Cedar UI Toolkit file and “Add it to My Drive”.
         <cdr-img class="cdr-doc-article-img" :src="$withBase(`/getting-started-for-designers/image5.png`)"/>
       </li>
     </ol>
