@@ -220,57 +220,59 @@ This component has compliance with following WebAIM’s accessibility guidelines
 </template>
 
 <template slot="Design Guidelines">
-<cdr-doc-table-of-contents-shell 
-    :appended-nav-items="[
-      {
-        text: 'Related Components'
-      },
-      {
-        text: 'buttons',
-        href: '../button/'
-      },
-      {
-        text: 'CTA Buttons'
-      }
-    ]">
-
-  <cdr-doc-alert/>
+<cdr-doc-table-of-contents-shell>
 
 ## Use when
 
 - Navigating to another page or a different portion of the same page
 
-## Don’t use when
+### Don’t use when
 
-- Navigating a user from promotional or campaign content. Instead, use Call-to-action
+- Navigating a user from promotional or campaign content. Instead, use Call to action
 
 ## Foundations
 
 - Link styles are adapted based on context, such as for links included in the Breadcrumb, Menus and Navigation
+- There are 2 basic link styles, default and standalone: 
+  - Use the default link when the link is near a body of text or in appears in a body of text.
+  - Use the standalone link when there is separation from a body of text.
 
 ## Content
 
-- If screen space for text is minimal:
-  - Use link labels that are descriptive. Do not use “click here” or “start here”
-  - Describe the link’s destination when clicked
-  - Use descriptive hidden text to explain the link
-  - For example, if the Learn more link is connected to a control for pick up in store, then the hidden or descriptive text would be “Learn more about pick up in store”
+Use link labels that describe the link’s destination when clicked or tapped:
+
+- Keep link text concise.  Restrict link text length to a maximum of 100 characters
+- Use descriptive text for links, so user knows where they are going. Avoid using “click here” or “start here” or “link”
+- If screen space for text is minimal and text is only “Learn more”:
+  - Provide `<alt>` text that can be read by screen readers
+  - For example, if the link text is “Learn more”, then the `<alt>` text could be “Learn more about pick up in store”
+- Don’t capitalize links. Some screen readers read capitalized text letter-by-letter. Instead, use sentence case
+- Restrict the number of text links on a page. Screen reader will read all the links on a page
 
 ## Behavior
 
-**Choosing a Button or Link**
+### Choosing a Button or Link
 
-- When making decisions about using this component styled as a link or a button, consider the following:
+When making decisions about using this component styled as a link or a button, consider the following:
 
 | **Links**                                                                                           | **Buttons**                                                                          |
 | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | Answers the question, "Where can I go"                                                              | Answers the question, "What can I do"                                                |
 | Search engine crawlers can follow anchors for links (`<a>`)                                         | Search engine crawlers **cannot** follow links that are submitted by input or button |
-| Default keyboard behavior is triggered using the Enter key                                          | Default keyboard behavior is triggered using the Space or Enter key                  |
+| Default keyboard behavior is triggered using the **enter** key                                          | Default keyboard behavior is triggered using the **space** or **enter** key                  |
 | **Cannot be disabled** like buttons but can be made inert with tabindex="-1" and aria-hidden="true" | Can be disabled with disabled attribute                                              |
 
+<br />
 
-- Apply the following use cases when deciding when to use links as anchors or buttons:
+Apply the following use cases when deciding when to use links as anchors or buttons:
+
+| Links                                 	| Buttons                           	|
+|---------------------------------------	|-----------------------------------	|
+| Navigating user to a new page or view 	| Toggling a display to full screen 	|
+| Changing the URL                      	| Opening a modal window            	|
+| Causing a browser redraw/refresh      	| Triggering a popup menu           	|
+| Supporting internal page jumps        	| Playing media content             	|
+### Do / Don’t
 
 <do-dont :examples="$page.frontmatter.standalone" />
 
@@ -278,26 +280,9 @@ This component has compliance with following WebAIM’s accessibility guidelines
 
 <do-dont :examples="$page.frontmatter.link" />
 
-## Accessibility
+## Resources
 
-- To ensure that usage of this component complies with accessibility guidelines, do the following:
-  - Don’t use the word “link” in your links. Screen readers tell users when they encounter a link
-  - Don’t capitalize links. Some screen readers read capitalized text letter-by-letter. Instead, use sentence case
-  - Keep link text concise.  Restrict link text length to a maximum of 100 characters
-  - Restrict the number of text links on a page. Screen reader can read all the links on a page
-  - When using images as links, the ALT attribute acts as the link text. Describe the image and tell the user what activating the link will do 
-  - Ensure links can be accessed via the keyboard. Don’t manipulate the default tab index
-  - Ensure assistive technology can find all links on a page by:
-    - Using link labels that are descriptive. Do not use  “click here” or “start here”
-    - Describing the link’s destination when clicked 
-  - Use hidden text that can be read by screen readers, to the cdr-sr-only class tag for links add the following
-    - For in-page anchor links, use a standard preceding phrase such as “In this page” or “This page contains the following content” 
-    - For opening a window, always alert the user by adding text such as “(opens in new window)”
-- This component has compliance with following WebAIM’s accessibility guidelines:
-  - [WCAG SC 1.4.3: Contrast (Minimum)](https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast): Cedar Design System text color uses a Level AA contrast ratio of 4.5:1 contrast between the text color and the background, only when using the text color pairings
-- It is possible to define this component as a link or button using modifiers. Both types of modifiers can: 
-  - Receive keyboard focus by default
-  - Enable states: Focus, Hover, and Active
+ebAIM: Links and Hypertext [Introduction to Links and Hypertext](https://webaim.org/techniques/hypertext/)
 
 </cdr-doc-table-of-contents-shell>
 </template>
