@@ -423,8 +423,7 @@ This component has compliance with following WebAIM’s accessibility guidelines
 - Truncates when entire breadcrumb string gets too long
 - Enables customization of whitespace threshold to the right, by default and in narrow viewports
 - Incorporates accessibility and SEO compliant features
-
-Git commit reference [08b883c](https://github.com/rei/rei-cedar/commit/08b883c)
+- Git commit reference [08b883c](https://github.com/rei/rei-cedar/commit/08b883c)
 
 </template>
 </cdr-doc-tabs>
