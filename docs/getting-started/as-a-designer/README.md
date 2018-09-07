@@ -34,8 +34,7 @@ The Cedar UI Toolkit is distributed using Google Drive. This allows you to pull 
 
 <ol>
   <li>
-      <cdr-link
-      href="https://www.google.com/drive/download/backup-and-sync/">
+      <cdr-link href="https://www.google.com/drive/download/backup-and-sync/">
         Install Backup and Sync from Google
       </cdr-link>
     <ol>
