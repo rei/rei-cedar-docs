@@ -290,8 +290,6 @@ export default {
         if (document.readyState == "complete") {
           const anchoredSection = document.querySelector(id);
           const scrollPosition = anchoredSection.offsetTop;
-          console.log('readystate');
-          console.log(anchoredSection, scrollPosition);
 
           window.scroll({
             top: scrollPosition,
@@ -299,11 +297,8 @@ export default {
             behavior: 'smooth'
           });
 
-
           setTimeout(() => {
             this.scrollMonitoringEnabled = true;
-            console.log(scrollPosition);
-            console.log(anchoredSection.offsetTop);
           }, 1500); // window.scroll smooth offers no callback, so re-enable scrollmonitoring hopefully after the soft scroll has occurred
         }
       }
