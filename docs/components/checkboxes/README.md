@@ -10,11 +10,11 @@
       },
       # {
       #   "text": 'List Group',
-      #   "href": '/components/list/'
+      #   "href": '../list/'
       # },
       {
         "text": 'Radio Buttons',
-        "href": '/components/radio/'
+        "href": '../radio/'
       }
     ],
     "case": [
@@ -310,7 +310,7 @@ For more information, review techniques and failures for:
 
 ### Don't use when
 
-- Selecting from a list when only one choice is allowed. Instead, use [Radio Buttons](/components/radio/)
+- Selecting from a list when only one choice is allowed. Instead, use [Radio Buttons](../radio/)
 
 ## Content
 
