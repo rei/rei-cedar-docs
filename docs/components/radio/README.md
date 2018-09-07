@@ -317,8 +317,6 @@ Radio button labels should:
 
 Resources are available within the [CdrRadio package](https://www.npmjs.com/package/@rei/cdr-radio):
 
-<cdr-doc-api type="installation" />
-
 - Component: `@rei/cdr-radio`
 - Component styles: `cdr-radio.css`
 

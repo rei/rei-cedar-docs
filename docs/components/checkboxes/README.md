@@ -383,8 +383,6 @@ Checkboxes work independently from each other:
 
 Resources are available within the [CdrCheckbox package:](https://www.npmjs.com/search?q=cdr-checkbox)
 
-<cdr-doc-api type="installation" />
-
 - Component: `@rei/cdr-checkbox`
 - Component styles: `cdr-checkbox.css`
 
