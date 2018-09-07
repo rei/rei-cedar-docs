@@ -289,6 +289,7 @@ export default {
       document.addEventListener("DOMContentLoaded",function(){
         const anchoredSection = document.querySelector(id);
         const scrollPosition = anchoredSection.offsetTop;
+        console.log(anchoredSection, scrollPosition);
 
         window.scroll({
           top: scrollPosition,
