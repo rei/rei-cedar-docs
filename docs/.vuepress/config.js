@@ -61,6 +61,7 @@ module.exports = {
         items: [
           { text: "Accordion", link: "/components/accordion/" },
           { text: "Breadcrumb", link: "/components/breadcrumb/" },
+          { text: "Block Quote", link: "/components/block-quote/" },
           { text: "Button", link: "/components/button/" },
           { text: "Call to Action", link: "/components/cta/" },
           { text: "Checkboxes", link: "/components/checkboxes/" },
