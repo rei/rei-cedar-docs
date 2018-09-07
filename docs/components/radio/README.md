@@ -391,6 +391,7 @@ Following variants are available to the `cdr-radio` modifier attribute:
 | 'hide-figure'  | Hides the radio button icon |
 
 <br/>
+
 Use the `hide-figure` modifier to hide the radio button itself, which leaves text label as the clickable element. Add appropriate custom styles to convey selected and unselected states.
 
 ```vue
