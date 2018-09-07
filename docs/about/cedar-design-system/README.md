@@ -40,7 +40,7 @@ The Cedar design system will enable cost-effective and consistent experiences ac
 
 #### Goals
 
-As a future-friendly foundation for REI’s digital portfolio, Cedar is an internal product built to serve REI product teams by enabling them to to work faster, more efficiently, and with higher quality. In order to do this, we are focused on the following goals:
+As a future-friendly foundation for REI’s digital portfolio, Cedar is an internal product built to serve REI product teams by enabling them to work faster, more efficiently, and with higher quality. In order to do this, we are focused on the following goals:
 
 - Systemize the interfaces across the portfolio
 - Enable a consistent customer experience by promoting visual cohesion at scale
