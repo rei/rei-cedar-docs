@@ -1009,7 +1009,9 @@ Defines nested columns (also known as isRow).
 To ensure that usage of this component complies with accessibility guidelines:
 - Low-vision users should be able to increase the size of the text by up to 200 percent without breaking the layout
 - Use list markup for content layout. List markup allow contents to be structured which makes it easier for assistive technologies
+
 <br/>
+
 This component has compliance with following WCAG guidelines:
 - [WCAG SC 1.3.2: Meaningful Sequence](https://www.w3.org/TR/WCAG20/#content-structure-separation-sequence): Cedar Design System does not provide for Flexbox’s `order` property.  Reverse order or reordering of items is not allowed. Content must be presented in a correct reading sequence to comply with accessibility standards 
 
@@ -1028,7 +1030,7 @@ This component has compliance with following WCAG guidelines:
 
 ### Don’t use when
 
-- Presenting a multi-row columnar data display, such as features or specs of a product. Instead, use [Data Table(TODO:missing link)](TODO:table link)
+- Presenting a multi-row columnar data display, such as features or specs of a product. Instead, use Data Tables
 
 ## Foundations
 
@@ -1041,8 +1043,6 @@ Columns, gutters, and margins scales as a fluid system as the device and viewpor
 
 ## Anatomy
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase('/grid/Spec_Grids_Gutters_and_Margins_16-9.png')" alt="gutter margins and grids"/>
-<br/>
 <cdr-img class="cdr-doc-article-img" :src="$withBase('/grid/Spec_Grids_Gutters_and_Margins_16-9.png')" alt="gutter margins and grids"/>
 
 - Maximum width of 1232px:
@@ -1182,7 +1182,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the `CdrGrid` package using `npm` in your terminal:
+Install the CdrGrid package using `npm` in your terminal:
 
 _Terminal_
 
