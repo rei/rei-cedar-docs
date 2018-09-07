@@ -186,8 +186,13 @@
     margin-top: 16px;
     margin-bottom: 16px;
 
-    td {
-      background-color: white;
+    tr:nth-child(even) {
+        background-color: white
     }
+
+    tr:nth-child(odd) {
+        background-color: #f2f2f2
+    }
+
   }
 }
