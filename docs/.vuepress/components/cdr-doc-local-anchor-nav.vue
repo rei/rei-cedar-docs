@@ -286,22 +286,23 @@ export default {
       }
     },
     softScroll(id) {
-      document.addEventListener("DOMContentLoaded",function(){
-        const anchoredSection = document.querySelector(id);
-        const scrollPosition = anchoredSection.offsetTop;
-        console.log(anchoredSection, scrollPosition);
+      const anchoredSection = document.querySelector(id);
+      // const scrollPosition = anchoredSection.offsetTop;
+      const rect = anchoredSection.getBoundingClientRect();
+      const scrollPosition = rect.top + window.pageYOffset;
+      console.log('Try2');
+      console.log(anchoredSection, scrollPosition);
 
-        window.scroll({
-          top: scrollPosition,
-          left: 0,
-          behavior: 'smooth'
-        });
-
-
-        setTimeout(() => {
-          this.scrollMonitoringEnabled = true;
-        }, 1500); // window.scroll smooth offers no callback, so re-enable scrollmonitoring hopefully after the soft scroll has occurred
+      window.scroll({
+        top: scrollPosition,
+        left: 0,
+        behavior: 'smooth'
       });
+
+
+      setTimeout(() => {
+        this.scrollMonitoringEnabled = true;
+      }, 1500); // window.scroll smooth offers no callback, so re-enable scrollmonitoring hopefully after the soft scroll has occurred
     }
   }
 }
