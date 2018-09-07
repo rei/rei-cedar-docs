@@ -14,7 +14,7 @@
     },
     {
       "text": 'Paragraphs',
-      "href": '../components/paragraphs/'
+      "href": '../paragraphs/'
     }
   ],
   "minimize": [
