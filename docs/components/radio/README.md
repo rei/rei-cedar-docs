@@ -1,9 +1,18 @@
 ---
 {
-  "title": "Radio",
+  "title": "Radio Buttons",
   "layout": "LayoutComponent",
-  "summary": "Permits user to select only one option from a list of two or more.",
-  "title_metadata": "Radio, cdrRadio",
+  "summary": "Permits user to select only one option from a list of two or more",
+  "title_metadata": "Radios, CdrRadio",
+  "see_also": [
+      {
+      "text": 'See Also'
+    },
+    {
+      "text": 'Checkboxes',
+      "href": '../checkboxes/'
+    }
+  ],
   "case": [
     {
       "type": "do",
@@ -63,19 +72,19 @@
                 "name": "labelClass",
                 "type": "string",
                 "default": "n/a",
-                "description": "Class that is added to the label for custom styles"
+                "description": "Adds CSS class to the label for custom styles"
               },
               {
                 "name": "inputClass",
                 "type": "string",
                 "default": "n/a",
-                "description": "Class that is added to the input for custom styles"
+                "description": "Adds CSS class to the input for custom styles"
               },
               {
                 "name": "contentClass",
                 "type": "string",
                 "default": "n/a",
-                "description": "Class that is added to the slot wrapper for custom styles"
+                "description": "Adds CSS class to the slot wrapper for custom styles"
               },
               {
                 "name": "name",
@@ -93,19 +102,19 @@
                 "name": "modifier",
                 "type": "string",
                 "default": "n/a",
-                "description": "Allows style variants to be defined"
+                "description": "Modifies the style variants for this component. Possible values: {  ‘compact’  |  'hide-figure'  }"
               }
             ],
             "slots": [
               {
                 "name": "default",
-                "description": "innerHTML inside of radio button component. This is the readable text inside the <label> element"
+                "description": "Sets the innerHTML for cdr-radio. This is the readable text for the <label> element"
               }
             ],
             "events": [
               {
                 "name": "change",
-                "type": "value",
+                "arguments": "value",
                 "description": "$emit event fired on radio selection"
               }
             ]
@@ -120,16 +129,7 @@
 
 <cdr-doc-tabs>
 <template slot="Overview">
-<cdr-doc-table-of-contents-shell
-  :appended-nav-items="[
-      {
-        text: 'Related Components'
-      },
-      {
-        text: 'Checkbox',
-        href: '../checkboxes/'
-      }
-    ]">
+<cdr-doc-table-of-contents-shell>
 
 ## Default
 Default and standard spacing for radio buttons.
@@ -223,22 +223,37 @@ Custom styles for radio buttons.
 
 </cdr-doc-example-code-pair>
 
+## Accessibility
+
+To ensure that usage of this component complies with accessibility guidelines:
+
+- Each radio button must be focusable and keyboard accessible:
+  - When radio button has focus, the **space** key changes the selection
+  - **Tab** key moves to next element in list 
+- Fieldsets should be: 
+  - Used when associating group of radio buttons
+  - Identified or described as a group using a `<legend>` tag
+- Avoid nested fieldsets
+- Custom radio buttons maintain accessibility requirements. The radio button icon is only visually hidden and replaced with custom style 
+
+<br/>
+
+This component has compliance with WCAG guidelines by:
+
+- Wrapping the input in a label element and label is automatically associated with it
+
+<br/>
+
+For more information, review techniques and failures for:
+- [WCAG 2.0,  1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
+- [WCAG 2.0,  3.3.2 Labels and Instructions](https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html)
+
+
 </cdr-doc-table-of-contents-shell>
 </template>
 
 <template slot="Design Guidelines">
-<cdr-doc-table-of-contents-shell
-  :appended-nav-items="[
-       {
-        text: 'Related Components'
-      },
-      {
-        text: 'Checkbox',
-        href: '../checkboxes/'
-      }
-    ]">
-
-  <cdr-doc-alert/>
+<cdr-doc-table-of-contents-shell>
 
 ## Use when
 
@@ -247,10 +262,10 @@ Custom styles for radio buttons.
 - Comparing between list of selections is desired
 
 
-## Don’t use when
+### Don’t use when
 
-- Selecting from a list when multiple choices are allowed. Instead, use Checkbox component
-- Providing a single selectable option. Instead, use Checkbox component (stand-alone checkbox)
+- Selecting from a list when multiple choices are allowed. Instead, use [Checkboxes](../checkboxes/)
+- Providing a single selectable option. Instead, use [Checkboxes](../checkboxes/) (stand-alone checkbox)
 
 ## Content
 When using radio buttons in a list:
@@ -259,6 +274,8 @@ When using radio buttons in a list:
 - Clearly communicate the effect of selecting the option
 - Provide a link or include a subtitle for more information. Don’t rely on tooltips to explain a radio button
 
+<br/>
+
 Radio button labels should:
 - Start with a capital letter
 - Use sentence case
@@ -266,27 +283,13 @@ Radio button labels should:
 - Be written as sentence fragments
 - No terminal punctuation
 
+### Do/Don't
+
 <do-dont :examples="$page.frontmatter.case" />
 
 <do-dont :examples="$page.frontmatter.label" />
 
 <do-dont :examples="$page.frontmatter.fragment" />
-
-## Accessibility
-
-To ensure that usage of this component complies with accessibility guidelines, do the following:
-
-- Each radio button must be focusable and keyboard accessible:
-  - When radio button has focus, the `space` key changes the selection
-  - `tab` key moves to next element in list
-- Fieldsets should be:
-  - Used when associating group of radio buttons
-  - Identified or described as a group using a `<legend>` tag
-- Avoid nested fieldsets
-
-For more information, review techniques and failures for:
-  - [WCAG 2.0,  1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
-  - [WCAG 2.0,  3.3.2 Labels and Instructions](https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html)
 
 ## Resources
 
@@ -296,16 +299,7 @@ For more information, review techniques and failures for:
 </template>
 
 <template slot="API">
-<cdr-doc-table-of-contents-shell
-  :appended-nav-items="[
-       {
-        text: 'Related Components'
-      },
-      {
-        text: 'Checkbox',
-        href: '../checkboxes/'
-      }
-    ]">
+<cdr-doc-table-of-contents-shell>
 
 ## Props
 
@@ -319,28 +313,22 @@ For more information, review techniques and failures for:
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events"/>
 
-## Modifiers
-
-Following are modifiers for `cdrRadio` component:
-
-- compact
-- hide-figure
-
-
 ## Installation
 
-Resources are available within the [cdr-radio package](https://www.npmjs.com/package/@rei/cdr-radio):
+Resources are available within the [CdrRadio package](https://www.npmjs.com/package/@rei/cdr-radio):
 
 <cdr-doc-api type="installation" />
 
 - Component: `@rei/cdr-radio`
 - Component styles: `cdr-radio.css`
 
+<br/>
+
 To incorporate the required assets for a component, use the following steps:
 
-### #1. Install using NPM
+### 1. Install using NPM
 
-Install the `cdr-radio` package using `npm` in your terminal:
+Install the `CdrRadio` package using `npm` in your terminal:
 
 _Terminal_
 
@@ -348,7 +336,7 @@ _Terminal_
 npm i -s @rei/cdr-radio
 ```
 
-### #2. Import Dependencies
+### 2. Import Dependencies
 
 _main.js_
 
@@ -357,7 +345,7 @@ _main.js_
 import "@rei/cdr-radio/dist/cdr-radio.css";
 ```
 
-### #3. Add component to a template
+### 3. Add component to a template
 
 _local.vue_
 
@@ -392,8 +380,18 @@ export default {
 
 ## Usage
 
-Cdr-radio requires `v-model` to track the value of selected radios.
+The CdrRadio component requires `v-model` to track the value of selected radios.
 Use the `hide-figure` modifier to hide the radio button itself, which leaves text label as the clickable element. Add appropriate custom styles to convey selected and unselected states.
+
+### Modifiers
+
+Following variants are available to the `cdr-radio` modifier attribute: 
+| Value | Description            |
+|:------|:-----------------------|
+| 'compact'  | Sets the spacing for smaller screen sizes |
+| 'hide-figure'  | Hides the radio button icon |
+
+<br/>
 
 ```vue
 <template>
@@ -418,21 +416,6 @@ Use the `hide-figure` modifier to hide the radio button itself, which leaves tex
  }
 </style>
 ```
-## Accessibility
-
-- The input is wrapped in a label element, so label is automatically associated as per these guidelines [WCAG 2.0, 3.3.2 Labels and Instructions](https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html)
-To ensure that usage of this component complies with accessibility guidelines, do the following:
-- Each radio button must be focusable and keyboard accessible:
-  - When radio button has focus, the `space` key changes the selection
-  - `tab` key moves to next element in list
-- Fieldsets should be:
-  - Used when associating group of radio buttons
-  - Identified or described as a group using a `<legend>` tag
-  - Avoid nested fieldsets
-
-For more information, review techniques and failures for:
-  - [WCAG 2.0,  1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
-  - [WCAG 2.0,  3.3.2 Labels and Instructions](https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html)
 
 </cdr-doc-table-of-contents-shell>
 </template>
@@ -444,8 +427,7 @@ For more information, review techniques and failures for:
 - Sets radio value to String, Number, Boolean, Object, Array, Symbol or Function
 - Hides radio buttons with `hide-figure` modifier
 - Includes default and compact styling
-
-Git commit reference [5fe44c8](https://github.com/rei/rei-cedar/commit/5fe44c8d3f53a50e0d21e77a4c9beb23486f6a53)
+- Git commit reference [5fe44c8](https://github.com/rei/rei-cedar/commit/5fe44c8d3f53a50e0d21e77a4c9beb23486f6a53)
 
 </template>
 </cdr-doc-tabs>
