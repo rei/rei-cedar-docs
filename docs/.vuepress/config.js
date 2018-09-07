@@ -68,7 +68,7 @@ module.exports = {
           { text: "Headings", link: "/components/headings/" },
           { text: "Icons", link: "/components/icon/" },
           { text: "Image", link: "/components/image/" },
-          { text: "Link", link: "/components/link/" },
+          { text: "Links", link: "/components/links/" },
           { text: "List", link: "/components/list/" },
           { text: "Paragraphs", link: "/components/paragraphs/" },
           { text: "Radio Buttons", link: "/components/radio/" }

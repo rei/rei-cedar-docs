@@ -1,20 +1,33 @@
 ---
 {
-   "title": "Link",
+   "title": "Links",
    "layout": "LayoutComponent",
-   "summary": "Clickable text element to navigate to page section, another page or open an overlaid window such as modal dialog or popover.",
+   "summary": "Clickable text element to navigate to page section, another page or open an overlaid window such as modal dialog or popover",
    "title_metadata": "Hyperlink, Anchor, CdrButton, CdrLink",
+   "see_also": [
+      {
+        "text": 'See Also'
+      },
+      {
+        "text": 'Buttons',
+        "href": '../buttons/'
+      },
+      {
+        "text": 'Call to Action',
+        "href": '../cta/'
+      }
+    ],
 	  "standalone": [
       {
         "type": "do",
-        "image": "link/links_descriptivetext_do.png",
+        "image": "links/links_descriptivetext_do.png",
         "ratio": "4-3",
         "alt": "Image showing proper link usage",
         "caption": "use clear, concise, and descriptive text."
       },
       {
         "type": "dont",
-        "image": "link/links_descriptivetext_dont.png",
+        "image": "links/links_descriptivetext_dont.png",
         "ratio": "4-3",
         "alt": "Image showing mixed button sizes",
         "caption": "use multiple sizes in the same context."
@@ -23,14 +36,14 @@
     "link": [
       {
         "type": "do",
-        "image": "link/links_underlinestyle_text_do.png",
+        "image": "links/links_underlinestyle_text_do.png",
         "ratio": "4-3",
         "alt": "The link in this copy uses the cdr-link component, and, so correctly uses an underline",
         "caption": "underline every link."
       },
       {
         "type": "dont",
-        "image": "link/links_underlinestyle_text_dont.png",
+        "image": "links/links_underlinestyle_text_dont.png",
         "ratio": "4-3",
         "alt": "The default link in body copy incorrectly does not use an underline",
         "caption": "apply different visual treatments for hyperlinks."
@@ -46,26 +59,26 @@
               {
                 "name": "tag",
                 "type": "string",
-                "default": "\"a\"",
-                "description": "Enables user to set appropriate HTML element tag. {a, button}"
+                "default": "'a'",
+                "description": "Sets valid HTML element tag. Possible values: {  ‘a’  |  ‘button’  }"
               },
               {
                 "name": "modifier",
                 "type": "string",
                 "default": "N/A",
-                "description": "Modifier allows the user to pass a style variant to this component  Possible values: standalone"
+                "description": "Modifies the style variant for this component. Possible values: {  ‘standalone’  }"
               },
               {
                 "name": "href",
                 "type": "string",
-                "default": "\"#\"",
-                "description": "Requires tag to be set to “a”. Sets URL to cdr-link href property"
+                "default": "'#'",
+                "description": "Sets URL to ‘cdr-link’ href property. The tag prop requires value of <a>"
               }
             ],
             "slots": [
               {
                 "name": "default",
-                "description": "innerHTML on the inside of the anchor component"
+                "Sets the innerHTML for cdr-link. This includes text and html markup for icons"
               }
             ],
             "installation": [
@@ -93,24 +106,31 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
 
-## Basic
+## Default
 
 Display within body copy for articles, hub cards, footer, or recommendations.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9" >
+<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9" >
 
 ```html
-  <cdr-link
+<cdr-text>
+  If you spend much time in the great outdoors, 
+  you’re likely to hear the phrase “Leave No Trace” 
+  as often as you hear 
+  "<cdr-link
     href="https://www.rei.com/learn/expert-advice/ten-essentials.html">
       the Ten Essentials
-  </cdr-link>
+  </cdr-link>".
+  What does it mean? Simply put, it’s the best practices 
+  we should follow to enjoy and protect our natural spaces.
+</cdr-text>
 ```
 
 </cdr-doc-example-code-pair>
 
 ## Standalone
 
-Display independently with a call to action. Examples are remove filters, find a store, or view related products.
+Display independently with a call to action. Some examples are for finding a store, or viewing related products.
 
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
 
@@ -124,14 +144,14 @@ Display independently with a call to action. Examples are remove filters, find a
 
 ## Icon on left
 
-Display icon on left of link message.
+Display standalone link with icon on left.
 
 <cdr-doc-example-code-pair :codeMaxHeight= false repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
 
 ```html
   <div>
     <cdr-icon-sprite />
-    <cdr-link tag="button">
+    <cdr-link tag="button" modifier="standalone">
       <!-- Using the sprite -->
       <cdr-icon
           use="#shipping"
@@ -147,14 +167,14 @@ Display icon on left of link message.
 
 ## Icon on right
 
-Display icon on right of link message.
+Display standalone link with icon on right.
 
 <cdr-doc-example-code-pair :codeMaxHeight= false repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
 
 ```html
   <div>
     <cdr-icon-sprite />
-      <cdr-link>
+      <cdr-link modifier="standalone">
         Visit site
         <!-- Using the sprite -->
         <cdr-icon
@@ -166,6 +186,36 @@ Display icon on right of link message.
 ```
 
 </cdr-doc-example-code-pair>
+
+## Accessibility
+
+To ensure that usage of this component complies with accessibility guidelines:
+
+- Always use a `<button>` element via the `tag` prop when there is no `href` attribute that can be applied to the link. Examples are:
+  - Toggling a display to full screen
+  - Opening a modal window
+  - Triggering a popup menu
+  - Playing media content
+- Always use the default `<a>` element for a link when the link will navigate the user to the location specified by the `href` attribute
+- Avoid using only “click here” or “start here” but if screen space for text is minimal:
+  - Provide text that can be read by screen readers
+  - Use an inline element for hidden text with the 'cdr-sr-only' class
+
+```vue
+  <cdr-link>
+    Start here <span class="cdr-sr-only">for help finding the proper sleeping bag </span>
+  </cdr-link>
+```
+
+- Ensure assistive technology can find all links on a page:
+  - Always provide a `href` attribute. Empty `href` attributes are not considered true links
+  - Ensure that each link can be accessed via the keyboard, don’t manipulate the default tab index
+  - When using images as links, the `<alt>` tag acts as the link text. Describe the action or hyperlink that the image represents
+
+This component has compliance with following WebAIM’s accessibility guidelines:
+
+- Using text color with a Level AA contrast ratio of 4.5:1 contrast between the text color and the background but only when displayed on light backgrounds
+
 </cdr-doc-table-of-contents-shell>
 </template>
 
@@ -253,19 +303,7 @@ Display icon on right of link message.
 </template>
 
 <template slot="API">
-<cdr-doc-table-of-contents-shell
-    :appended-nav-items="[
-      {
-        text: 'Related Components'
-      },
-      {
-        text: 'buttons',
-        href: '../button/'
-      },
-      {
-        text: 'CTA Buttons'
-      }
-    ]">
+<cdr-doc-table-of-contents-shell>
 
 ## Props
 
@@ -277,18 +315,16 @@ Display icon on right of link message.
 
 ## Installation
 
-Resources are available within the [cdr-link package](https://www.npmjs.com/package/@rei/cdr-link):
-
-<cdr-doc-api type="installation" />
+Resources are available within the [cdrLink package](https://www.npmjs.com/package/@rei/cdr-link):
 
 - Component: `@rei/cdr-link`
 - Component styles: `cdr-link.css`
 
 To incorporate the required assets for a component, use the following steps:
 
-### #1. Install using NPM
+### 1. Install using NPM
 
-Install the `cdr-link` package using **npm** in your terminal:
+Install the `cdrLink` package using `npm` in your terminal:
 
 _Terminal_
 
@@ -296,7 +332,7 @@ _Terminal_
 npm i -S @rei/cdr-link
 ```
 
-### #2. Import Dependencies
+### 2. Import dependencies
 
 _main.js_
 
@@ -308,7 +344,7 @@ import "@rei/cdr-link/dist/cdr-link.css";
 import "@rei/cdr-link/dist/cdr-icon.css";
 ```
 
-### #3. Add component to a template
+### 3. Add component to a template
 
 _local.vue_
 
@@ -332,7 +368,7 @@ export default {
 
 ## Usage
 
-By default, the component renders using an anchor element and requires an href attribute or tag to render a valid accessible link.
+By default, the component renders using an anchor element and requires an `href` attribute or tag to render a valid accessible link.
 
 ```vue
   <cdr-link href="http://rei.com">
@@ -348,31 +384,11 @@ Use the tag prop to render the link as a `<button>` element that presents a link
   </cdr-link>
 ```
 
-## Style Modifiers
+### Style Modifiers
 
-To effect the visual presentation pass the following variants to the modifier attribute of the cdr-link component.
+To effect the visual presentation pass the following variants to the modifier attribute of the cdrLink component.
 
-- **Standalone**: Include as an independent call to action to expand content, remove filters, or provide additional information.
-
-## Accessibility
-
-To ensure that usage of this component complies with accessibility guidelines, do the following:
-
-- Always use a `<button>` element via the `tag` prop when there is no href attribute that can be applied to the link. Examples are:
-  - Toggling a display to full screen
-  - Opening a modal window
-  - Triggering a popup menu
-  - Playing media content
-- Always use the default `<a>` element for a link when the link will navigate the user to the location specified by the href attribute
-- Ensure links can be accessed via the keyboard. Don’t manipulate the default tab index
-- Ensure assistive technology can find all links on a page by:
-  - Using link labels that are descriptive. Do not use “click here” or “start here”
-  - Describing the link’s destination when clicked
-  - Always providing a href attribute. Empty href attributes are not considered true links
-
-This component has compliance with following WebAIM’s accessibility guidelines:
-
-- [WCAG SC 1.4.3: Contrast (Minimum)](https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast): Cedar Design System text color uses a Level AA contrast ratio of 4.5:1 contrast between the text color and the background, only when using the text color pairings
+- `Standalone`: Include as an independent call to action to expand content, remove filters, or provide additional information.
 
 </cdr-doc-table-of-contents-shell>
 </template>
@@ -381,14 +397,11 @@ This component has compliance with following WebAIM’s accessibility guidelines
 
 ## 1.0.0
 
-### What's new
-
-**CdrLink** component:
-
 - Displays as an inline or standalone variant
-- Can render using an anchor or button element
-- Includes a property to allow the cdr-icon fill color to inherit the link color value
-- Support for a cdr-icon to display on left, on right, or, both. Git commit reference [9d404f4](https://github.com/rei/rei-cedar/commit/9d404f4)
+- Renders using an anchor or button element
+- Includes a property to allow the `cdr-icon` fill color to inherit the link color value
+- Supports `cdr-icon` to display on left, on right, or, both. 
+- Git commit reference [9d404f4](https://github.com/rei/rei-cedar/commit/9d404f4)
 
 </template>
 </cdr-doc-tabs>
