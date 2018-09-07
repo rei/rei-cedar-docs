@@ -286,19 +286,21 @@ export default {
       }
     },
     softScroll(id) {
-      const anchoredSection = document.querySelector(id);
-      const scrollPosition = anchoredSection.offsetTop;
+      document.addEventListener("DOMContentLoaded",function(){
+        const anchoredSection = document.querySelector(id);
+        const scrollPosition = anchoredSection.offsetTop;
 
-      window.scroll({
-        top: scrollPosition,
-        left: 0,
-        behavior: 'smooth'
+        window.scroll({
+          top: scrollPosition,
+          left: 0,
+          behavior: 'smooth'
+        });
+
+
+        setTimeout(() => {
+          this.scrollMonitoringEnabled = true;
+        }, 1500); // window.scroll smooth offers no callback, so re-enable scrollmonitoring hopefully after the soft scroll has occurred
       });
-
-
-      setTimeout(() => {
-        this.scrollMonitoringEnabled = true;
-      }, 1500); // window.scroll smooth offers no callback, so re-enable scrollmonitoring hopefully after the soft scroll has occurred
     }
   }
 }
