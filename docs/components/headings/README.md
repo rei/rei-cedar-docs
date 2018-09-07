@@ -216,7 +216,8 @@ To ensure that usage of this component complies with accessibility guidelines:
 
 <br />
 
-This component has compliance with WCAG guidelines by: 
+This component has compliance with WCAG guidelines by:
+
 - Defining semantic heading levels with ability to assign predefined visual heading styles to each level
 
 </cdr-doc-table-of-contents-shell>
