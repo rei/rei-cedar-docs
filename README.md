@@ -24,4 +24,4 @@ $ npm run dev
 $ npm run build
 ```
 
-The doc site is built using [VuePress](https://vuepress.vuejs.org)
+The doc site is built using [VuePress](https://vuepress.vuejs.org) and is available for viewing on the `next` branch [here](http://cedar-docs.rei-cloud.com/rei-cedar-docs/)
