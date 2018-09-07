@@ -24,7 +24,7 @@
 
 ### Required Software
 
-#### Sketch v50.x +
+#### Sketch v51.x +
 
 You should be very comfortable using Sketch. If you are a new designer, download the latest version of Sketch using the Self Service app installed on your mac. If Sketch isn’t available there, talk to your manager.
 
@@ -34,7 +34,7 @@ The Cedar UI Toolkit is distributed using Google Drive. This allows you to pull 
 
 <ol>
   <li>
-    Install Backup and Sync from Google
+    [Install Backup and Sync from Google](https://www.google.com/drive/download/backup-and-sync/)
     <ol>
       <li>
         <strong>Navigate</strong> to your local Applications folder by pressing Command + Spacebar and typing in your REI username.
