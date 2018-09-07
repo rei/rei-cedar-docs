@@ -214,6 +214,8 @@ To ensure that usage of this component complies with accessibility guidelines:
   - Allow users to navigate to or skip over sections through the use of heading levels
   - Avoid skipping heading levels (e.g., `<h2>`  to  `<h4>` )
 
+<br />
+
 This component has compliance with WCAG guidelines by: 
 - Defining semantic heading levels with ability to assign predefined visual heading styles to each level
 
