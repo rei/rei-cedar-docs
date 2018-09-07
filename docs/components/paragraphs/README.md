@@ -10,7 +10,7 @@
       },
       {
         "text": 'Typography',
-        "href": '../foundation/typography/'
+        "href": '../../foundation/typography/'
       },
       {
         "text": 'Headings',
