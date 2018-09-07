@@ -61,7 +61,7 @@ module.exports = {
         items: [
           { text: "Accordion", link: "/components/accordion/" },
           { text: "Breadcrumb", link: "/components/breadcrumb/" },
-          { text: "Button", link: "/components/button/" },
+          { text: "Buttons", link: "/components/buttons/" },
           { text: "Call to Action", link: "/components/cta/" },
           { text: "Checkboxes", link: "/components/checkboxes/" },
           { text: "Grid", link: "/components/grid/" },
@@ -69,7 +69,7 @@ module.exports = {
           { text: "Icons", link: "/components/icon/" },
           { text: "Image", link: "/components/image/" },
           { text: "Links", link: "/components/links/" },
-          { text: "List", link: "/components/list/" },
+          { text: "Lists", link: "/components/lists/" },
           { text: "Paragraphs", link: "/components/paragraphs/" },
           { text: "Radio Buttons", link: "/components/radio/" }
         ]

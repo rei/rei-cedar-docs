@@ -7,14 +7,14 @@
 	  "list1": [
       {
         "type": "do",
-        "image": "list/lists_grammar_do__4-3.png",
+        "image": "lists/lists_grammar_do__4-3.png",
         "ratio": "4-3",
         "alt": "",
         "caption": "link independent clauses and product details."
       },
       {
         "type": "dont",
-        "image": "list/lists_grammar_dont__4-3.png",
+        "image": "lists/lists_grammar_dont__4-3.png",
         "ratio": "4-3",
         "alt": "",
         "caption": "link unrelated items together."
@@ -23,14 +23,14 @@
     "list2": [
       {
         "type": "do",
-        "image": "list/lists_punctuation_do_3-4.png",
+        "image": "lists/lists_punctuation_do_3-4.png",
         "ratio": "3-4",
         "alt": "",
         "caption": "end each sentence with a period except last sentence."
       },
       {
         "type": "dont",
-        "image": "list/lists_punctuation_dont_3-4.png",
+        "image": "lists/lists_punctuation_dont_3-4.png",
         "ratio": "3-4",
         "alt": "",
         "caption": "add terminal punctuation."
@@ -47,20 +47,20 @@
             {
               "name": "tag",
               "type": "string",
-              "default": "\"ul\"",
-              "description": "Tag allows the user to define what html list root to use. Possible values: ul || ol"
+              "default": "'ul'",
+              "description": "Sets valid HTML element tag for lists. Possible values: {  ‘ul’  }  ‘ol’  }"
             },
             {
               "name": "modifier",
               "type": "string",
               "default": "N/A",
-              "description": "Modifier allows the user to pass a style variant to this component.  Possible values:  ordered | unordered | compact | inline"
+              "description": "Modifies the style variant for this component. Possible values: {  ‘ordered’  |  ‘unordered’  |  ‘compact’  |  ‘inline’  }"
             }
           ],
           "slots": [
             {
               "name": "default",
-              "description": "innerHTML on the inside of the anchor component"
+              "description": "Sets the innerHTML for cdr-list. This includes text and html markup"
             }
           ],
         },
@@ -290,7 +290,7 @@ Display items horizontally, separated by a bullet character.
 - Vary list item font size
 - Follow spacing requirements found on [Typography](/foundation/typography/) and Space pages
 
-<cdr-img :src="$withBase(`/list/Spec_List_Font_Size_Variations_16-9.png`)" ratio="16-9"/>
+<cdr-img :src="$withBase(`/lists/Spec_List_Font_Size_Variations_16-9.png`)" ratio="16-9"/>
 
 ## Content
 
@@ -498,17 +498,13 @@ Note that the tag itself does not determine display, a modifier must be added fo
 
 ## 1.0.0
 
-### What's new
-
-**cdrList** component:
-
 - Displays with following variants:
   - Bare (default)
   - Ordered
   - Unordered
   - Compact
   - Inline
-- Can be an ordered `ol` or unordered `ul` list, the tag itself does not determine
+- Can be an ordered `<ol>` or unordered `<ul>` list, the tag itself does not determine styling
 - [Complete component history](https://github.com/rei/rei-cedar/blob/master/src/components/list/CHANGELOG.md)
 
 </template>
