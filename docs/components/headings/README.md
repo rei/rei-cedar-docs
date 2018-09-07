@@ -70,19 +70,7 @@
 
 <cdr-doc-tabs>
 <template slot="Overview">
-<cdr-doc-table-of-contents-shell 
-    :appended-nav-items="[
-      {
-        text: 'Related Components'
-      },
-      {
-        text: 'Typography'
-      },
-      {
-        text: 'Paragraph',
-        href: '../paragraph/'
-      }
-    ]">
+<cdr-doc-table-of-contents-shell>
 
 ## Display Responsive
 
@@ -233,19 +221,7 @@ This component has compliance with WCAG guidelines by:
 </template>
 
 <template slot="Design Guidelines">
-<cdr-doc-table-of-contents-shell 
-    :appended-nav-items="[
-       {
-        text: 'Related Components'
-      },
-      {
-        text: 'Typography'
-      },
-      {
-        text: 'Paragraph',
-        href: '../paragraph/'
-      }
-    ]">
+<cdr-doc-table-of-contents-shell>
 
 ## Use when
 
@@ -299,19 +275,7 @@ Responsive heading font sizes are the default for heading levels except subheadi
 </template>
 
 <template slot="API">
-<cdr-doc-table-of-contents-shell
-    :appended-nav-items="[
-       {
-        text: 'Related Components'
-      },
-      {
-        text: 'Typography'
-      },
-      {
-        text: 'Paragraph',
-        href: '../paragraph/'
-      }
-    ]">
+<cdr-doc-table-of-contents-shell>
 
 ## Props
 
