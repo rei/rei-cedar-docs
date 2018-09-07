@@ -3,7 +3,7 @@
     "title": "Checkboxes",
     "layout": "LayoutComponent",
     "title_metadata": "CdrCheckbox, cdr-checkbox",
-    "summary": "Permits user to make one or more selections from a list",
+    "summary": "Permits user to make one or more selections from a list.",
     "see_also": [
       {
         "text": 'See Also'
@@ -310,7 +310,7 @@ For more information, review techniques and failures for:
 
 ### Don't use when
 
-- Selecting from a list when only 1 choice is allowed. Instead, use [Radio Buttons](/components/radio/)
+- Selecting from a list when only one choice is allowed. Instead, use [Radio Buttons](/components/radio/)
 
 ## Content
 
@@ -439,7 +439,7 @@ export default {
 
 ## Usage
 
-CdrCheckbox requires  `v-model`  to track  `:checked`  values.
+`CdrCheckbox` requires  `v-model`  to track  `:checked`  values.
 
 This example uses  `true-value`  and  `false-value`  props to change what’s saved to the model.
 
