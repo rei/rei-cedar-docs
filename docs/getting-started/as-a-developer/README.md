@@ -193,7 +193,7 @@ In this example, the `responsiveSize` prop accepts an array of strings denoting 
 
 ### Add content via slots
 
-Some components use slots for content distribution. Most components will have a single default slot others will have named slots. Slots are listed as part of the API for all components. See [Vue's documentation on props](https://vuejs.org/v2/guide/components-slots.html) for further information.
+Some components use slots for content distribution. Most components will have a single default slot others will have named slots. Slots are listed as part of the API for all components. See [Vue's documentation on slots](https://vuejs.org/v2/guide/components-slots.html) for further information.
 
 Adding content to a default slot
 
