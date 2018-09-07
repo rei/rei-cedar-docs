@@ -3,7 +3,7 @@
     "title": "Checkboxes",
     "layout": "LayoutComponent",
     "title_metadata": "CdrCheckbox, cdr-checkbox",
-    "summary": "Permits user to make one or more selections from a list.",
+    "summary": "Permits user to make one or more selections from a list",
     "see_also": [
       {
         "text": 'See Also'
