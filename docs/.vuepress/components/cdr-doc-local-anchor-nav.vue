@@ -302,6 +302,7 @@ export default {
 
       setTimeout(() => {
         this.scrollMonitoringEnabled = true;
+        console.log(scrollPosition);
       }, 1500); // window.scroll smooth offers no callback, so re-enable scrollmonitoring hopefully after the soft scroll has occurred
     }
   }
