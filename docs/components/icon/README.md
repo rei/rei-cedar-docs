@@ -270,8 +270,8 @@ CdrIcon and all Icon* (IconArrowUp, IconCalendar, etc.) components have a defaul
 
 Resources are available within the [CdrIcon package](https://www.npmjs.com/package/@rei/cdr-icon):
 
-- Component: `@rei/cdr-accordion`
-- Component styles: `cdr-accordion.css`
+- Component: `@rei/cdr-icon`
+- Component styles: `cdr-icon.css`
 
 
 To incorporate the required assets for a component, use the following steps:

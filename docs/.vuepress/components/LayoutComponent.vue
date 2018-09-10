@@ -52,6 +52,10 @@ export default {
     border: 1px solid $partly-cloudy;
     border-radius:  $radius-softer;
     background-color: white;
+
+    &.captioned {
+      margin-bottom: 8px;
+    }
   }
 
   .cdr-doc-component-layout__body {
