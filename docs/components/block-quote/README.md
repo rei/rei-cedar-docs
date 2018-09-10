@@ -2,7 +2,7 @@
 {
     "title": "Block Quote",
     "layout": "LayoutComponent",
-    "title_metadata": "Quote, CdrQuote, cdr-quote",
+    "title_metadata": "Quote, CdrQuote",
     "summary": "Short excerpt with an external citation and citation URL that is set off from the main body of text",
     "see_also": [
       {
@@ -173,8 +173,9 @@ To ensure that usage of this component complies with accessibility guidelines:
   - Define a sectioning root in HTML5, which means that any  `<h1>` - `<h6>`  elements it contains don’t become part of the document’s outline
 - To make the blockquote content accessible, use the `<cite>` attribute with a valid URL
 
-This component has compliance with WCAG guidelines by:
+<br>
 
+This component has compliance with WCAG guidelines by:
 - Adding a `<cite>` element to refer to the source of the quote
 
 </cdr-doc-table-of-contents-shell>
@@ -183,7 +184,7 @@ This component has compliance with WCAG guidelines by:
 <template slot="Design Guidelines">
   <cdr-doc-table-of-contents-shell tab-name="Design Guidelines">
 
-## Use When
+## Use when
 
 - Highlighting valuable customer feedback
 - Encouraging a customer to try out an experience or product
@@ -215,9 +216,11 @@ Use a block quote for emphasizing content that has a close and significant relat
 
 <do-dont :examples="$page.frontmatter.too_many" />
 
+<br>
+
 Provide a citation to the external source and if available, the URL address.
 
-<br/>
+<br>
 
 <do-dont :examples="$page.frontmatter.citation" />
 

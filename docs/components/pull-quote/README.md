@@ -2,7 +2,7 @@
 {
     "title": "Pull Quote",
     "layout": "LayoutComponent",
-    "title_metadata": "Quote, CdrQuote, cdr-quote",
+    "title_metadata": "Quote, CdrQuote",
     "summary": "Short excerpt taken from the main body of text to give a dominant position",
     "see_also": [
       {
@@ -154,7 +154,7 @@ Default pull quote can be used with the following HTML tags: `<p>`, `<div>`, `<a
   <cdr-quote
         tag="aside"
         modifier="pull"
-        summary="Stewardship is a choice and a mindset. It means that we look at our business differently, an we take individual responsibility for making a positive, lasting impact."
+        summary="Stewardship is a choice and a mindset. It means that we look at our business differently, and we take individual responsibility for making a positive, lasting impact."
       />
 </div>
 ```
@@ -169,6 +169,8 @@ To ensure that usage of this component complies with accessibility guidelines:
 - Do not use this component to indent text. Screen readers use the `<blockquote>` element to:
   - Provide semantic understanding of page content by announcing blockquote as quote
   - Define a sectioning root in HTML5, which means that any  `<h1>` - `<h6>`  elements it contains don’t become part of the document’s outline
+
+<br>
 
 This component has compliance with WCAG guidelines by:
 
