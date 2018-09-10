@@ -116,22 +116,35 @@
                 "description": "Sets the link using the page url."
               },
               {
-                "name": "modifier",
+                "name": "",
                 "type": "string",
                 "default": "N/A",
-                "description": "Modifies the style variant for this component. Possible value: { 'elevated' }"
+                "description": "Modifies the style variant for this component. Possible values: { 'elevated' }"
               }
             ],
             "slots": [
               {
                 "name": "default",
-                "description": "Sets the innerHTML for cdr-cta. This is for the readable text of cdr-cta."
+                "description": "Slot for CdrCta readable text."
               }
             ],
           }
         }
       ],
       "version": "0.1.0-alpha.1"
+    }
+  ],
+  "see_also": [
+    {
+      "text": "See Also"
+    },
+    {
+      "text": "Buttons",
+      "href": "/components/buttons/"
+    },
+    {
+      "text": "Links",
+      "href": "/components/links/"
     }
   ]
 }
@@ -245,7 +258,10 @@ To ensure that usage of this component complies with accessibility guidelines:
   - Always providing an `href` attribute. Empty `href` attributes are not considered true links
   - Ensuring that it can be accessed via the keyboard. Don't manipulate the default tab index
 
+<br />
+
 This component has compliance with [WCAG SC 1.4.3: Contrast (Minimum)](https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast), however, do the following:
+
 - Choose the light button theme for a dark background or the dark button theme for a light background
 - Test color contrast for button themes against all backgrounds
 
@@ -261,7 +277,7 @@ This component has compliance with [WCAG SC 1.4.3: Contrast (Minimum)](https://w
 
 ### Don't use when
 
-- Triggering interface interactions. Instead, use [Buttons](/components/button/)
+- Triggering interface interactions. Instead, use [Buttons](/components/buttons/)
 
 ## Foundation
 
@@ -275,6 +291,8 @@ Call to Action exists as a means to navigate users to a new location or addition
 - Make it clear what happens when this link is clicked or tapped 
 - For example, “Shop Backpacking” Call to Action on a homepage would navigate the user to an assortment of backpacking-related products available for purchase
 - Use all caps for CTAs, not sentence case, title caps or all lowercase
+
+<br />
 
 To construct consistent and universal Call to Actions across the site:
 
@@ -291,11 +309,19 @@ To construct consistent and universal Call to Actions across the site:
 
 <do-dont :examples="$page.frontmatter.placement" />
 
+<br />
+
 <do-dont :examples="$page.frontmatter.label" />
+
+<br />
 
 <do-dont :examples="$page.frontmatter.size" />
 
+<br />
+
 <do-dont :examples="$page.frontmatter.typography" />
+
+<br />
 
 <do-dont :examples="$page.frontmatter.link" />
 
@@ -326,6 +352,8 @@ Resources are available with the [CdrCta package](https://www.npmjs.com/package/
 
 - Component: `@rei/cdr-cta`
 - Component styles: `cdr-cta.css`
+
+<br />
 
 To incorporate the required assets for a component, use the following steps:
 
@@ -393,7 +421,7 @@ This example code renders a full width `cdr-cta`, with the `elevated` modifier a
 The CdrCta component looks like a button, however it's actually an anchor:
 - Do not use when a button is preferable such as triggering an action
 - Do not assign the role of button
-- For basic links, use the [CdrLink component](/components/link/)
+- For basic links, use the [CdrLink component](/components/links/)
 
 ### Modifiers
 
@@ -401,7 +429,7 @@ The following variants are available to the `cdr-cta` modifier attribute:
 
 |             |                            |
 | ---         | ---                        |
-| `elevated`  | Adds drop shadow to button |
+| elevated  | Adds drop shadow to button |
 
 </cdr-doc-table-of-contents-shell>
 </template>

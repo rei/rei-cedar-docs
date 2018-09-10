@@ -72,7 +72,7 @@
             "slots": [
               {
                 "name": "default",
-                "description": "Default slot for cdr-accordion-item(s)."
+                "description": "Slot for CdrAccordionItem(s)"
               }
             ],
           },
@@ -103,7 +103,7 @@
             "slots": [
               {
                 "name": "default",
-                "description": "Default slot for cdr-accordion-item content."
+                "description": "Slot for CdrAccordionItem content"
               }
             ],
             "events": [
@@ -119,6 +119,19 @@
       "version": "0.1.0"
     }
   ],
+  "see_also": [
+    {
+      "text": "See Also",
+    },
+    {
+      "text": "Lists",
+      "href": "/components/lists/"
+    },
+    {
+      "text": "Tabs",
+      "href": "components/tabs/"
+    }
+  ]
 }
 ---
 
@@ -254,6 +267,8 @@ To ensure that usage of this component complies with accessibility guidelines:
 - Provide descriptive label for accordion header
 - Be aware of embedding leanthy content in an accordion can be disorienting. When the accordion header expands, it can give the appearance of moving to another page
 
+<br />
+
 This component has compliance with WCAG guidelines by:
 - Providing keyboard interactions to:
   - Expand and collapse accordion headers
@@ -274,8 +289,8 @@ This component has compliance with WCAG guidelines by:
 
 ### Don't use when
 
-- Linking a title to another page. Instead, use [Links](/components/link/)
-- Designing with sparse content. Instead, use [Lists](/components/list/) or [Paragraphs](/components/paragraph/)
+- Linking a title to another page. Instead, use [Links](/components/links/)
+- Designing with sparse content. Instead, use [Lists](/components/lists/) or [Paragraphs](/components/paragraphs/)
 - Content is lengthy
 
 ## Foundations
@@ -346,12 +361,14 @@ Accordions are built from two components, CdrACcordion and CdrAccordionItem, whi
 
 ## Installation
 
-Resources are available within the [CdrAccordion package](https://www.npmjs.com/package/@rei/cdr-accordion);
+Resources are available within the [CdrAccordion package](https://www.npmjs.com/package/@rei/cdr-accordion):
 
 <cdr-doc-api type="installation" />
 
 - Component: `@rei/cdr-accordion`
 - Component styles: `cdr-accordion.css`
+
+<br />
 
 To incorporate the required assets for a component, use the following steps:
 
@@ -490,7 +507,7 @@ Any options set at the CdrAccordion level can be set on any parent component of 
 
 ## 1.0.0
 
-- Includes cdr-accordion and cdr-accordion-item components
+- Includes CdrAccordion and CdrAccordionItem components
 - Toggles initial open state at group and individual level
 - Supports compact and border-aligned styles
 - Git commit reference ([cc998a4](https://github.com/rei/rei-cedar/commit/cc998a4f7a4a0278a86c35063ba6615196a46ba2))

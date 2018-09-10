@@ -155,11 +155,11 @@
         "slots": [
           {
             "name": "default",
-            "description": "Sets the innerHTML for cdr-button. This is the readable text of the button. Leave empty if icon-only"
+            "description": "Slot for the readable text of the button. Leave empty if icon-only"
           },
           {
             "name": "icon",
-            "description": "Sets the innerHTML for cdr-button. this is for the"
+            "description": "Slot for the icon in a button"
           }
         ],
         "installation": [
@@ -179,6 +179,15 @@
     ],
       "version": "1.0.0"
     }
+  ],
+  "see_also": [
+    {
+      "text": "See Also",
+    },
+    {
+      "text": "Call to Action",
+      "href": "/components/cta/"
+    }
   ]
 }
 ---
@@ -195,6 +204,7 @@ Use primary buttons for actions to complete a task or move forward in a process 
 
 ```html
   <cdr-button>Add to cart</cdr-button>
+  <cdr-button disabled>Add to cart</cdr-button>
 ```
 
 </cdr-doc-example-code-pair>
@@ -209,6 +219,7 @@ Use secondary buttons for all actions that do not move the user to the next step
 
 ```html
   <cdr-button modifier="secondary">Add to wish list</cdr-button>
+  <cdr-button modifier="secondary" disabled>Add to wish list</cdr-button>
 ```
 
 </cdr-doc-example-code-pair>
@@ -230,6 +241,18 @@ Pair an icon with text to improve recognition about an object or action.
         use="#play-stroke"
         class="cdr-button__icon"
         modifier="inherit-color"
+      />
+      Play video
+    </cdr-button>
+    <cdr-button
+      modifier="secondary"
+    >
+      <cdr-icon
+        slot="icon"
+        use="#play-stroke"
+        class="cdr-button__icon"
+        modifier="inherit-color"
+        disabled
       />
       Play video
     </cdr-button>
@@ -286,6 +309,8 @@ To ensure that usage of this component complies with accessibility guidelines:
 - For icon-only buttons, provide `aria-label` text that describes the button's action
 - Apply keyboard interaction patterns as described on REI universal design and accessibility: Buttons
 
+<br />
+
 This component has no specific WCAG compliance attributes built into the control. It is possibile to define this component as a link or button:
 
 - Select the semantically correct element, which will ensure that assistive technologies have correct instructions for how to interact with the component
@@ -311,7 +336,7 @@ This component has no specific WCAG compliance attributes built into the control
 ### Don't use when
 
 - Navigating to another page on a site. Instead use [Call to Action](/components/cta/)
-- Taking users to a different part within the same page. Instead, use [Links](/components/link/)
+- Taking users to a different part within the same page. Instead, use [Links](/components/links/)
 
 ## Foundations
 
@@ -320,11 +345,15 @@ Change the button size when:
   - Small - for supplemental user actions such as product comparison or filter on product pages
   - Large - XS grid with full breakpoint width; in mobile version. Also, for &quot;Add to cart&quot; on product pages or [Call to Action](/components/cta/) on campaign pages
 
+<br />
+
 When stacking buttons vertically:
   - Align left borders
   - Display all with the same width
   - Separate each by stack-1-x spacing
   <cdr-img :src="$withBase(`/button/Spec__Button_Vertical_Spacing_16-4.png`)"/>
+
+<br />
 
 When arranging buttons horizontally:
   - Align top borders
@@ -332,11 +361,17 @@ When arranging buttons horizontally:
   - Separate each by standard inline-1-x spacing
   <cdr-img :src="$withBase(`/button/Spec__Button_Horizontal_Spacing_16-9.png`)"/>
 
+<br />
+
 When grouping buttons, match button sizes either horizontally or vertically
 
 <do-dont :examples="$page.frontmatter.vertical" />
 
+<br />
+
 <do-dont :examples="$page.frontmatter.horizontal" />
+
+<br />
 
 ## Content
 
@@ -365,13 +400,15 @@ When making decisions about using this component styled as a link or a button, c
 | **Links**                                                                                           | **Buttons**                                                                          |
 | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | Answers the question, "Where can I go"                                                              | Answers the question, "What can I do"                                                |
-| Search engine crawlers can follow anchors for links **(<\a)>**                                             | Search engine crawlers **cannot** follow links that are submitted by input or button |
-| Default keyboard behavior is triggered using the **enter** key                                          | Default keyboard behavior is triggered using the **space** or **enter** key                  |
+| Search engine crawlers can follow anchors for links (**&lt;a&gt;**)                                 | Search engine crawlers **cannot** follow links that are submitted by input or button |
+| Default keyboard behavior is triggered using the **enter** key                                      | Default keyboard behavior is triggered using the **space** or **enter** key          |
 | **Cannot be disabled** like buttons but can be made inert with tabindex="-1" and aria-hidden="true" | Can be disabled with disabled attribute                                              |
+
+<br />
 
 Apply the following use cases when deciding when to use links as anchors or buttons:
 
-| **Links**                                                                                           | **Buttons**                                                                          |
+|                                                                                       | |
 | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | Navigating user to a new page or view                                                               | Toggling a display to full screen                                                    |
 | Changing the URL                                                                                    | Opening a modal window                                                               |
@@ -405,6 +442,8 @@ Resources are available within the [CdrButton package:](https://www.npmjs.com/se
 
 - Component: `@rei/cdr-button`
 - Component styles: `cdr-button.css`
+
+<br />
 
 To incorporate the required assets for a component, use the following steps:
 
