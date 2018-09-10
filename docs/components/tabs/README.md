@@ -143,7 +143,7 @@ Tab buttons space evenly across the container
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/34y337p26q" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
 
 ```html
-<cdr-tabs name="Product">
+<cdr-tabs>
   <cdr-tab name="Product" modifier="full-width">Tab 1 Content</cdr-tab>
   <cdr-tab name="Articles" modifier="full-width">Tab 2 Content</cdr-tab>
   <cdr-tab name="Classes & Events" modifier="full-width">Tab 3 Content</cdr-tab>
