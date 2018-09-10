@@ -94,8 +94,8 @@
 
 - Released of V1 Link component ([CdrLink](https://www.npmjs.com/package/@rei/cdr-link))
 - Released of V1 Text component ([CdrText](https://www.npmjs.com/package/@rei/cdr-text))
-  - supports [paragraphs](../components/paragraph/README.md)
-  - supports [headings](../components/heading/README.md)
+  - supports [paragraphs](../components/paragraphs/README.md)
+  - supports [headings](../components/headings/README.md)
 
 ### Design Assets
 
