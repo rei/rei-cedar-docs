@@ -125,11 +125,11 @@
     },
     {
       "text": "Lists",
-      "href": "/components/lists/"
+      "href": "../lists/"
     },
     {
       "text": "Tabs",
-      "href": "components/tabs/"
+      "href": "../tabs/"
     }
   ]
 }
@@ -289,8 +289,8 @@ This component has compliance with WCAG guidelines by:
 
 ### Don't use when
 
-- Linking a title to another page. Instead, use [Links](/components/links/)
-- Designing with sparse content. Instead, use [Lists](/components/lists/) or [Paragraphs](/components/paragraphs/)
+- Linking a title to another page. Instead, use [Links](../links/)
+- Designing with sparse content. Instead, use [Lists](../lists/) or [Paragraphs](../paragraphs/)
 - Content is lengthy
 
 ## Foundations

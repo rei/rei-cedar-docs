@@ -140,11 +140,11 @@
     },
     {
       "text": "Buttons",
-      "href": "/components/buttons/"
+      "href": "../buttons/"
     },
     {
       "text": "Links",
-      "href": "/components/links/"
+      "href": "../links/"
     }
   ]
 }
@@ -277,7 +277,7 @@ This component has compliance with [WCAG SC 1.4.3: Contrast (Minimum)](https://w
 
 ### Don't use when
 
-- Triggering interface interactions. Instead, use [Buttons](/components/buttons/)
+- Triggering interface interactions. Instead, use [Buttons](../buttons/)
 
 ## Foundation
 
@@ -327,8 +327,8 @@ To construct consistent and universal Call to Actions across the site:
 
 ## Related Links
 
-- [Button](/components/button/)
-- [Links](/components/link/)
+- [Button](../button/)
+- [Links](../link/)
 
 
 </cdr-doc-table-of-contents-shell>
@@ -421,7 +421,7 @@ This example code renders a full width `cdr-cta`, with the `elevated` modifier a
 The CdrCta component looks like a button, however it's actually an anchor:
 - Do not use when a button is preferable such as triggering an action
 - Do not assign the role of button
-- For basic links, use the [CdrLink component](/components/links/)
+- For basic links, use the [CdrLink component](../links/)
 
 ### Modifiers
 

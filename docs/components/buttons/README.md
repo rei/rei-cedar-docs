@@ -186,7 +186,7 @@
     },
     {
       "text": "Call to Action",
-      "href": "/components/cta/"
+      "href": "../cta/"
     }
   ]
 }
@@ -335,15 +335,15 @@ This component has no specific WCAG compliance attributes built into the control
 
 ### Don't use when
 
-- Navigating to another page on a site. Instead use [Call to Action](/components/cta/)
-- Taking users to a different part within the same page. Instead, use [Links](/components/links/)
+- Navigating to another page on a site. Instead use [Call to Action](../cta/)
+- Taking users to a different part within the same page. Instead, use [Links](../links/)
 
 ## Foundations
 
 Change the button size when:
   - Medium - default size
   - Small - for supplemental user actions such as product comparison or filter on product pages
-  - Large - XS grid with full breakpoint width; in mobile version. Also, for &quot;Add to cart&quot; on product pages or [Call to Action](/components/cta/) on campaign pages
+  - Large - XS grid with full breakpoint width; in mobile version. Also, for &quot;Add to cart&quot; on product pages or [Call to Action](../cta/) on campaign pages
 
 <br />
 
