@@ -4,118 +4,88 @@
   "layout": "LayoutComponent",
   "summary": "Organize and group related content into smaller sections navigable within a single container",
   "title_metadata": "cdr-tabs",
-  "see_also": [
-      {
-      "text": 'See Also'
-    },
-    {
-      "text": 'Checkboxes',
-      "href": '../checkboxes/'
-    }
-  ],
-  "case": [
+  "select": [
     {
       "type": "do",
-      "image": "radio/radio_case_do_16-9.png",
+      "image": "tabs/tab_select_do_16-9.png",
       "ratio": "16-9",
-      "alt": "Radio buttons proper casing",
-      "caption": "use sentence case, with only proper nouns capitalized."
+      "alt": "tab with content displaying.",
+      "caption": "display a tab section on load."
     },
     {
       "type": "dont",
-      "image": "radio/radio_case_dont_16-9.png",
+      "image": "tabs/tab_select_dont_16-9.png",
       "ratio": "16-9",
-      "alt": "Radio buttons with incorrect casing",
-      "caption": "use title caps for labels."
+      "alt": "tab with empty content.",
+      "caption": "display tabs without a section visible."
     }
   ],
-  "label": [
+  "number": [
     {
       "type": "do",
-      "image": "radio/radio_label_do_16-9.png",
+      "image": "tabs/tab_number_do_16-9.png",
       "ratio": "16-9",
-      "alt": "radio buttons with brief labels",
-      "caption": "make labels brief."
+      "alt": "tabs with two buttons.",
+      "caption": "use tabs with at least 2 buttons."
     },
     {
       "type": "dont",
-      "image": "radio/radio_label_dont_16-9.png",
+      "image": "tabs/tab_number_dont_16-9.png",
       "ratio": "16-9",
-      "alt": "radio buttons with long labels",
-      "caption": "put too much text in the label."
+      "alt": "tab with one button.",
+      "caption": "use tabs with only 1 button."
     }
   ],
-  "fragment": [
+  "capitalization": [
     {
       "type": "do",
-      "image": "radio/radio_fragment_do_16-9.png",
+      "image": "tabs/tab_capitalization_do_16-9.png",
       "ratio": "16-9",
-      "alt": "radio buttons with no ending punctuation",
-      "caption": "write labels as sentence fragments with no ending punctuation."
+      "alt": "tabs with title cased labels.",
+      "caption": "use title case for tab labels."
     },
     {
       "type": "dont",
-      "image": "radio/radio_fragment_dont_16-9.png",
+      "image": "tabs/tab_capitalization_dont_16-9.png",
       "ratio": "16-9",
-      "alt": "radio buttons with ending punctuation",
-      "caption": "add terminal punctuation at the end of a label."
+      "alt": "tabs with all caps labels.",
+      "caption": "use all caps for tab labels."
+    }
+  ],
+    "label": [
+    {
+      "type": "do",
+      "image": "tabs/tab_label_do_16-9.png",
+      "ratio": "16-9",
+      "alt": "tabs with succint labels.",
+      "caption": "write succinct and meaningful tab labels. Between 1-2 words is best."
+    },
+    {
+      "type": "dont",
+      "image": "tabs/tab_label_dont_16-9.png",
+      "ratio": "16-9",
+      "alt": "tabs with truncated labels.",
+      "caption": "truncate tab labels. If a label overruns the container, find a shorter alternative."
     }
   ],
   "versions": [
     {
       "components": [
         {
-          "name": "CdrRadio",
+          "name": "CdrTabs",
           "api": {
             "props": [
-              {
-                "name": "labelClass",
-                "type": "string",
-                "default": "n/a",
-                "description": "Adds CSS class to the label for custom styles"
-              },
-              {
-                "name": "inputClass",
-                "type": "string",
-                "default": "n/a",
-                "description": "Adds CSS class to the input for custom styles"
-              },
-              {
-                "name": "contentClass",
-                "type": "string",
-                "default": "n/a",
-                "description": "Adds CSS class to the slot wrapper for custom styles"
-              },
               {
                 "name": "name",
                 "type": "string",
                 "default": "n/a",
-                "description": "Sets the name of the radio button. Required"
-              },
-              {
-                "name": "value",
-                "type": "string, number, boolean, object, array, symbol, function",
-                "default": "n/a",
-                "description": "Sets the value of the radio button. Required"
+                "description": "Sets code reference and tab display name. Required and must be unique for each tab"
               },
               {
                 "name": "modifier",
                 "type": "string",
                 "default": "n/a",
-                "description": "Modifies the style variants for this component. Possible values: {  ‘compact’  |  'hide-figure'  }"
-              }
-            ],
-            "slots": [
-              {
-                "name": "default",
-                "description": "Sets the innerHTML for cdr-radio. This is the readable text for the <label> element"
-              }
-            ],
-            "events": [
-              {
-                "name": "change",
-                "arguments": "value",
-                "description": "$emit event fired on radio selection"
+                "description": "Modifies the style variants for this component. Possible values: {  'compact'  |  'full-width'  |  'no-border'  }"
               }
             ]
           }
@@ -132,93 +102,53 @@
 <cdr-doc-table-of-contents-shell>
 
 ## Default
-Default and standard spacing for radio buttons.
+Tab buttons align left and bottom border expands to full width of container
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/radio" sandbox-href="https://codesandbox.io/s/4rx86n66l9" :backgroundToggle="false" :codeMaxHeight="false" >
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/34y337p26q" :backgroundToggle="false" :codeMaxHeight="false" >
 
 ```html
-<div>
-<cdr-radio
-  name="example"
-  value="a1"
->Default radio 1</cdr-radio>
-<cdr-radio
-  name="example"
-  value="a2"
->Default radio 2</cdr-radio>
-<cdr-radio
-  name="example"
-  :value="{val:'a3'}"
-  disabled
->Default radio 3</cdr-radio>
-</div>
+
+<cdr-tabs>
+  <cdr-tab name="Product">Tab 1 Content</cdr-tab>
+  <cdr-tab name="Articles">Tab 2 Content</cdr-tab>
+  <cdr-tab name="Classes & Events">Tab 3 Content</cdr-tab>
+  <cdr-tab name="Videos">Tab 4 Content</cdr-tab>
+</cdr-tabs>
+
 ```
 
 </cdr-doc-example-code-pair>
 
 ## Compact
 
-Compact spacing for radio buttons.
+Reduced spacing around the tab buttons create a denser visual design
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/radio" sandbox-href="https://codesandbox.io/s/4rx86n66l9" :backgroundToggle="false" :codeMaxHeight="false">
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/34y337p26q" :backgroundToggle="false" :codeMaxHeight="false">
 
 ```html
-<div>
-<cdr-radio
-  modifier="compact"
-  name="example"
-  value="a1"
->Compact radio 1</cdr-radio>
-<cdr-radio
-  modifier="compact"
-  name="example"
-  value="a2"
->Compact radio 2</cdr-radio>
-<cdr-radio
-  modifier="compact"
-  name="example"
-  :value="{val:'a3'}"
-  disabled
->Compact radio 3</cdr-radio>
-</div>
+<cdr-tabs>
+  <cdr-tab name="Product" modifier="compact">Tab 1 Content</cdr-tab>
+  <cdr-tab name="Articles" modifier="compact">Tab 2 Content</cdr-tab>
+  <cdr-tab name="Classes & Events" modifier="compact">Tab 3 Content</cdr-tab>
+  <cdr-tab name="Videos" modifier="compact">Tab 4 Content</cdr-tab>
+</cdr-tabs>
 ```
 
 </cdr-doc-example-code-pair>
 
-## Custom
+## Full Width
 
-Custom styles for radio buttons.
+Tab buttons space evenly across the container
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/radio" sandbox-href="https://codesandbox.io/s/4rx86n66l9" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/34y337p26q" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
 
 ```html
-<div>
-
-<cdr-radio
-  name="example"
-  value="a1"
-  modifier="hide-figure"
-  input-class="no-box"
-  content-class="no-box__content"
->Custom radio 1</cdr-radio>
-<cdr-radio
-  name="example"
-  value="a2"
-  modifier="hide-figure"
-  input-class="no-box"
-  content-class="no-box__content"
->Custom radio 2</cdr-radio>
-<cdr-radio
-  name="example"
-  :value="{val:'a3'}"
-  modifier="hide-figure"
-  input-class="no-box"
-  content-class="no-box__content"
-  disabled
->Custom radio 3</cdr-radio>
-
-
-</div>
+<cdr-tabs name="Product">
+  <cdr-tab name="Product" modifier="full-width">Tab 1 Content</cdr-tab>
+  <cdr-tab name="Articles" modifier="full-width">Tab 2 Content</cdr-tab>
+  <cdr-tab name="Classes & Events" modifier="full-width">Tab 3 Content</cdr-tab>
+  <cdr-tab name="Videos" modifier="full-width">Tab 4 Content</cdr-tab>
+</cdr-tabs>
 ```
 
 </cdr-doc-example-code-pair>
@@ -226,28 +156,22 @@ Custom styles for radio buttons.
 ## Accessibility
 
 To ensure that usage of this component complies with accessibility guidelines:
+- Indicate tablist role in tabs header container
+- Indicate tab role in tab header element
+- Indicate tabpanel role in tab content element
 
-- Each radio button must be focusable and keyboard accessible:
-  - When radio button has focus, the **space** key changes the selection
-  - **Tab** key moves to next element in list
-- Fieldsets should be:
-  - Used when associating group of radio buttons
-  - Identified or described as a group using a `<legend>` tag
-- Avoid nested fieldsets
-- Custom radio buttons maintain accessibility requirements. The radio button icon is only visually hidden and replaced with custom style
+<br/>
+
+Tabs component maintains these keyboard interactions:
+- Left arrow ( ` ← ` ) and Right arrow  ( ` → ` ) keystrokes move user between tabs
+- ` Tab ` keystroke moves user into the content within the active tab section
+- ` Shift ` + ` Tab ` returns the user to the selected tab
 
 <br/>
 
 This component has compliance with WCAG guidelines by:
 
-- Wrapping the input in a label element and label is automatically associated with it
-
-<br/>
-
-For more information, review techniques and failures for:
-- [WCAG 2.0,  1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
-- [WCAG 2.0,  3.3.2 Labels and Instructions](https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html)
-
+- Using text color with a Level AA contrast ratio of 4.5:1 contrast between the text color and the background (but only when displayed on light backgrounds)
 
 </cdr-doc-table-of-contents-shell>
 </template>
@@ -257,41 +181,74 @@ For more information, review techniques and failures for:
 
 ## Use when
 
-- Selecting only 1 choice from a list is allowed
-- Viewing all available options is needed
-- Comparing between list of selections is desired
+- Organizing related content in a single container
+- Flipping between multiple panes or sections
+- Grouping content to display horizontally
+- Content is lengthy and can be broken into discrete parts
 
 
 ### Don’t use when
 
-- Selecting from a list when multiple choices are allowed. Instead, use [Checkboxes](../checkboxes/)
-- Providing a single selectable option. Instead, use [Checkboxes](../checkboxes/) (stand-alone checkbox)
-
-## Content
-When using radio buttons in a list:
-- Use a logical order, whether it’s alphabetical, numerical, or time-based
-- Labels should have approximately equal length
-- Clearly communicate the effect of selecting the option
-- Provide a link or include a subtitle for more information. Don’t rely on tooltips to explain a radio button
+- Grouping content to display vertically. Instead, use [Accordion](../accordion/)
+- Creating primary navigation that links to other pages
+- Creating anchor or in-page navigation. Instead, use List Group
+- Comparing related content. Instead. Instead, use Data Table
 
 <br/>
 
-Radio button labels should:
-- Start with a capital letter
-- Use sentence case
-- Avoid long labels
-- Be written as sentence fragments
-- No terminal punctuation
+## Foundations
+
+- Never display disabled tab labels
+- Remove tab button if there is no content
+- Keep to no more than 6 tab buttons
+- Never display fewer than 2 tab buttons
+
+
+<br/>
+
+## Content
+
+- Order the tab buttons by priority/importance from left to right
+- Keep tab labels succinct and meaningful. Between 1-2 words is best and written in plain language
+- Never truncate tab labels
+- Use title caps for tab labels
+
+
+<br/>
+
+## Behavior
+
+- The first tab section is selected by default
+- Only one tab can be selected at a time
+- Currently selected tab is always highlighted
+- Tabs are scrollable by default and do not wrap to a second line
+- Tabs become scrollable when the length of the labels exceed the width of the container
+- Inactive tab panels are rendered for SEO purposes
+
 
 ### Do/Don't
 
-<do-dont :examples="$page.frontmatter.case" />
+<do-dont :examples="$page.frontmatter.select" />
+
+<do-dont :examples="$page.frontmatter.number" />
+
+<do-dont :examples="$page.frontmatter.capitalization" />
 
 <do-dont :examples="$page.frontmatter.label" />
 
-<do-dont :examples="$page.frontmatter.fragment" />
+## Responsiveness
 
-## Resources
+- Tabs can change styles based on breakpoint
+  - Example: Default at MD/LG, Compact and Full-Width at XS/SM
+- Scroll
+  - If tabs exceed width of viewport, a gradient is added to the end (right) of tab container.
+  - When scrolled to end of tabs, a gradient is added to the beginning (left) of tab container.
+  - Scroll is set by default
+  - Tabs labels never wrap to two lines
+- Maintain layout for tabs when switching to smaller viewports. Do not replace the tab component with the accordion component
+- Switching between tab component and accordion component is not supported in Cedar components library
+
+
 
 - WebAIM: [Semantic Structure: Using Lists Correctly](https://webaim.org/techniques/semanticstructure/)
 
@@ -305,20 +262,13 @@ Radio button labels should:
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props"/>
 
-## Slots
-
-<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots"/>
-
-## Events
-
-<cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events"/>
 
 ## Installation
 
-Resources are available within the [CdrRadio package](https://www.npmjs.com/package/@rei/cdr-radio):
+Resources are available within the [CdrTabs package](https://www.npmjs.com/package/@rei/cdr-tabs):
 
-- Component: `@rei/cdr-radio`
-- Component styles: `cdr-radio.css`
+- Component: `@rei/cdr-tabs`
+- Component styles: `cdr-tabs.css`
 
 <br/>
 
@@ -326,13 +276,12 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the `CdrRadio` package using `npm` in your terminal:
+Install the `CdrTabs` package using `npm` in your terminal:
 
 _Terminal_
 
 ```bash
-npm i -s @rei/cdr-radio
-```
+npm i -s @rei/cdr-tabs
 
 ### 2. Import Dependencies
 
@@ -340,7 +289,7 @@ _main.js_
 
 ```javascript
 // import your required CSS.
-import "@rei/cdr-radio/dist/cdr-radio.css";
+import "@rei/cdr-tabs/dist/cdr-tabs.css";
 ```
 
 ### 3. Add component to a template
@@ -349,72 +298,45 @@ _local.vue_
 
 ```vue
 <template>
-  <cdr-radio
-    v-model="model"
-    name="ship-pref"
-    value="ship"
-  >
-    Ship to address
-  </cdr-radio>
-  <cdr-radio
-    v-model="model"
-    name="ship-pref"
-    value="pickup"
-  >
-    Pick up in store
-  </cdr-radio>
+  ...
+     <cdr-tabs>
+       <cdr-tab name=”tab1”>TAB1 CONTENT GOES HERE</cdr-tab>
+       <cdr-tab name=”tab2”>TAB2 CONTENT GOES HERE</cdr-tab>
+       <cdr-tab name=”tab3”>TAB3 CONTENT GOES HERE</cdr-tab>
+     </cdr-tabs>
+  ...
 </template>
 
 <script>
-import { CdrRadio} from '@rei/cdr-radio';
+import { CdrTabs, CdrTab } from '@rei/cdr-tabs’;
 export default {
   ...
   components: {
-     CdrRadio
-  }
+     CdrTabs,
+     CdrTab
+  },
 }
 </script>
 ```
 
 ## Usage
 
-The CdrRadio component requires `v-model` to track the value of selected radios.
+The ` cdr-tab name ` property sets the tab display value and is used for reference.
+
+```vue
+ <cdr-tabs>
+   <cdr-tab name="tab1">Tab 1 Content</cdr-tab>
+ </cdr-tabs>
+```
 
 ### Modifiers
 
-Following variants are available to the `cdr-radio` modifier attribute:
-| Value | Description            |
-|:------|:-----------------------|
-| 'compact'  | Sets the spacing for smaller screen sizes |
-| 'hide-figure'  | Hides the radio button icon |
-
-<br/>
-
-Use the `hide-figure` modifier to hide the radio button itself, which leaves text label as the clickable element. Add appropriate custom styles to convey selected and unselected states.
-
-```vue
-<template>
-  <cdr-radio
-    v-model="model"
-    name="model"
-    value="model"
-    modifier="hide-figure"
-    input-class="no-box"
-    content-class="no-box__content"
-  >
-    Add to cart
-  </cdr-radio>
-</template>
-<style>
-.no-box:checked ~ .no-box__content {
-   color: green;
-
-   &::after {
-     content: '(checked)';
-   }
- }
-</style>
-```
+Set the visual presentation by passing the following variants to the modifier attribute of the CdrTabs component.
+| Value        | Description            |
+|:-------------|:-----------------------|
+| 'compact'    | Sets the tabs styling for smaller screen sizes |
+| 'full-width' | Sets the tab header to display evenly across the entire width instead of left justified |
+| 'no-border'  | Removes the bottom border of the tabs header |
 
 </cdr-doc-table-of-contents-shell>
 </template>
@@ -423,10 +345,11 @@ Use the `hide-figure` modifier to hide the radio button itself, which leaves tex
 
 ## 1.0.0
 
-- Sets radio value to String, Number, Boolean, Object, Array, Symbol or Function
-- Hides radio buttons with `hide-figure` modifier
-- Includes default and compact styling
-- Git commit reference [5fe44c8](https://github.com/rei/rei-cedar/commit/5fe44c8d3f53a50e0d21e77a4c9beb23486f6a53)
+- Organizes content across different screens
+- Enables navigation between content with Tab Header List
+- Tabs Header List supports overflow by allowing horizontal scrolling of header
+- Incorporates accessibility and SEO compliant features
+- Git commit reference [cc6b3fb](https://github.com/rei/rei-cedar/pull/454/commits/cc6b3fbd49bbe1b07165dd605df99fbe1743cbd6)
 
 </template>
 </cdr-doc-tabs>

@@ -1277,6 +1277,30 @@
 					"version": "1.0.0"
 				}
 			]
+		},
+		{
+			"name": "CdrTabs",
+			"versions": [
+				{
+					"api": {
+						"props": [
+							{
+								"name": "name",
+								"type": "string",
+								"default": "n/a",
+								"description": "Sets code reference and tab display name. Required and must be unique for each tab"
+							},
+							{
+								"name": "modifier",
+								"type": "string",
+								"default": "n/a",
+								"description": "Modifies the style variants for this component. Possible values: {  'compact'  |  'full-width'  |  'no-border'  }"
+							}
+						]
+					}
+					"version": "1.0.0"
+				}
+			]
 		}
 	]
 }
