@@ -104,7 +104,7 @@
 ## Default
 Tab buttons align left and bottom border expands to full width of container
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/34y337p26q" :backgroundToggle="false" :codeMaxHeight="false" >
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" >
 
 ```html
 
@@ -123,7 +123,7 @@ Tab buttons align left and bottom border expands to full width of container
 
 Reduced spacing around the tab buttons create a denser visual design
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/34y337p26q" :backgroundToggle="false" :codeMaxHeight="false">
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false">
 
 ```html
 <cdr-tabs>
@@ -140,7 +140,7 @@ Reduced spacing around the tab buttons create a denser visual design
 
 Tab buttons space evenly across the container
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/34y337p26q" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
 
 ```html
 <cdr-tabs>
