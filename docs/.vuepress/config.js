@@ -72,6 +72,7 @@ module.exports = {
           { text: "Link", link: "/components/link/" },
           { text: "List", link: "/components/list/" },
           { text: "Paragraphs", link: "/components/paragraphs/" },
+          { text: "Pull Quote", link: "/components/pull-quote/" },
           { text: "Radio", link: "/components/radio/" }
         ]
       },

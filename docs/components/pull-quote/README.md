@@ -1,92 +1,76 @@
 ---
 {
-    "title": "Block Quote",
+    "title": "Pull Quote",
     "layout": "LayoutComponent",
     "title_metadata": "Quote, CdrQuote, cdr-quote",
-    "summary": "Short excerpt with an external citation and citation URL that is set off from the main body of text",
+    "summary": "Short excerpt taken from the main body of text to give a dominant position",
     "see_also": [
       {
         "text": "See Also"
       },
       {
-         "text": "Pull Quote",
-         "href": "/components/pull-quote/"
+         "text": "Block Quote",
+         "href": "/components/block-quote/"
       },
       {
         "text": "Paragraph",
         "href": "/components/paragraph/"
       }
     ],
-    "position": [
+    "indenting": [
         {
             "type": "do",
-            "image": "block-quote/quotes_block__do__9-16.png",
+            "image": "pull-quote/quotes_pull__do__9-16.png",
             "ratio": "16-9",
-            "alt": "Image showing proper block quote use.",
+            "alt": "Image showing proper pull quote use.",
             "caption": "position the quote near the surrounding text."
         },
         {
             "type": "dont",
-            "image": "block-quote/quotes_block__random__dont_9-16.png",
+            "image": "pull-quote/quotes_pull__indent_text__dont_9-16.png",
             "ratio": "16-9",
-            "alt": "Image showing random block quotes in an article",
-            "caption": "position quotes in a random location on the page."
+            "alt": "Image showing improper pull quote use in an article",
+            "caption": "use for indenting text content."
         }
     ],
-    "indenting": [
+    "position": [
         {
             "type": "do",
-            "image": "block-quote/quotes_block__do__9-16.png",
+            "image": "pull-quote/quotes_pull__do__9-16.png",
             "ratio": "16-9",
-            "alt": "Image showing proper block quote use.",
-            "caption": "use for emphasizing content or additional content."
+            "alt": "Image showing proper pull quote use.",
+            "caption": "position the quote near the surrounding text."
         },
         {
             "type": "dont",
-            "image": "block-quote/quotes_block__indent_text__dont_9-16.png",
+            "image": "pull-quote/quotes_pull__random__dont_9-16.png",
             "ratio": "16-9",
-            "alt": "Image showing random block quotes in an article",
-            "caption": "use for indenting text content."
+            "alt": "Image showing improper pull quote use in an article",
+            "caption": "position quotes in a random location on the page."
         }
     ],
     "too_many": [
         {
             "type": "do",
-            "image": "block-quote/quotes_block__do__9-16.png",
+            "image": "pull-quote/quotes_pull__do__9-16.png",
             "ratio": "16-9",
-            "alt": "Image showing proper block quote position.",
-            "caption": "position quotes so users can visually scan the page."
+            "alt": "Image showing proper pull quote use.",
+            "caption": "use for emphasizing content or additional content."
         },
         {
             "type": "dont",
-            "image": "block-quote/quotes_block__too_many__dont_9-16.png",
+            "image": "pull-quote/quotes_pull__too_many__dont_9-16.png",
             "ratio": "16-9",
-            "alt": "Image showing too many block quotes in an article",
-            "caption": "use too many block quotes."
+            "alt": "Image showing too many pull quotes in an article",
+            "caption": "use too many pull quotes."
         }
     ],
-    "citation": [
-        {
-            "type": "do",
-            "image": "block-quote/quotes_block__citation__do_3-2.png",
-            "ratio": "3-2",
-            "alt": "Image showing proper block citation.",
-            "caption": "provide a citation."
-        },
-        {
-            "type": "dont",
-            "image": "block-quote/quotes_block__citation__dont_3-2.png",
-            "ratio": "3-2",
-            "alt": "Image showing too improper citation style",
-            "caption": "emphasize the citation."
-        }
-    ],
-
     "breadcrumbs": [
         {
-        "text": "Components/",
-        "href": "#"
-    }],
+            "text": "Components/",
+            "href": "#"
+        }
+    ],
     "versions": [{
         "components": [
             {
@@ -95,31 +79,45 @@
                 "props": [
                     {
                         "name": "tag",
-                        "type": "string",
+                        "type": "enum",
                         "default": "`blockquote`",
                         "required": "false",
                         "description": "Sets the ‘tag’ attribute for cdr-quote to define the root HTML element. Possible values: {  ‘blockquote’  |  ‘aside’  |  ‘q’  |  ‘div’  }"
+                    },
+                    {
+                        "name": "modifier",
+                        "type": "string",
+                        "default": "",
+                        "required": "false",
+                        "description": "Modifies the style variant for this component. Possible values: {  ‘pull’  }"
+                    },
+                    {
+                        "name": "role",
+                        "type": "string",
+                        "default": "",
+                        "required": "false",
+                        "description": "Sets the ‘role’ attribute to ‘presentation’ when creating a pull quote. Possible values: {  ‘presentation’  }"
+                    },
+                    {
+                        "name": "aria-hidden",
+                        "type": "string",
+                        "default": "",
+                        "required": "false",
+                        "description": "Sets the ‘aria-hidden’ attribute to ‘true’ when creating a pull quote. Possible values: {  ‘true’  }"
                     },
                     {
                         "name": "summary",
                         "type": "string",
                         "default": "",
                         "required": "false",
-                        "description": "Sets the quote body text"
-                    },
-                    {
-                        "name": "cite",
-                        "type": "string",
-                        "default": "",
-                        "required": "false",
-                        "description": "When the ‘tag’ prop is set to ‘blockquote’ provide a URL to the quote’s source. This does not render but is available to screen readers and search engines"
+                        "description": "Sets the pull quote body text"
                     },
                     {
                         "name": "citation",
                         "type": "string",
                         "default": "",
                         "required": "false",
-                        "description": "Sets the quote attribution text for crediting media such as photos or charts"
+                        "description": "Sets the pull quote attribution text"
                     }
                 ],
                 "installation": [
@@ -147,16 +145,16 @@
 
 ## Default
 
-Default block quote can be used with the following HTML tags: `<p>`, `<div>`, `<aside>`. This is responsive with styles for XS breakpoint
+Default pull quote can be used with the following HTML tags: `<p>`, `<div>`, `<aside>`. For XS breakpoint, a border is below pull quote and font size is smaller.
 
 <cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/quote" sandbox-href="https://codesandbox.io/s/q722z00mk4">
 
 ```html
 <div>
   <cdr-quote
-        modifier="block"
+        tag="aside"
+        modifier="pull"
         summary="Stewardship is a choice and a mindset. It means that we look at our business differently, an we take individual responsibility for making a positive, lasting impact."
-        citation="Jerry Stritzke, REI President and CEO"
       />
 </div>
 ```
@@ -171,11 +169,11 @@ To ensure that usage of this component complies with accessibility guidelines:
 - Do not use this component to indent text. Screen readers use the `<blockquote>` element to:
   - Provide semantic understanding of page content by announcing blockquote as quote
   - Define a sectioning root in HTML5, which means that any  `<h1>` - `<h6>`  elements it contains don’t become part of the document’s outline
-- To make the blockquote content accessible, use the `<cite>` attribute with a valid URL
 
 This component has compliance with WCAG guidelines by:
 
-- Adding a `<cite>` element to refer to the source of the quote
+- Setting the `aria-hidden="true"` so the pull quote will not be conveyed to a screen reader
+
 
 </cdr-doc-table-of-contents-shell>
 </template>
@@ -185,45 +183,31 @@ This component has compliance with WCAG guidelines by:
 
 ## Use When
 
-- Highlighting valuable customer feedback
-- Encouraging a customer to try out an experience or product
+- Attracting the user’s attention to article text 
+- Breaking up a large body of text
+- Providing the reader with visual markers 
+- Maintaining a sense of sequence and place
 
 ### Don't use when
 
-- Pulling a direct quote from an article. Instead, use [Pull Quote](/components/pull-quote/)
+- Displaying a citation reference. Instead, use [Block Quote](/components/block-quote/)
 - Displaying for a decorative treatment only
-
-## Content
-
-To make the block quote content accessible, following these rules:
-
-- Must be quoted from another source, whose address, if it has one, may be cited in the `<cite>` attribute
-- If the `<cite>` attribute is present:
-  - Must be a valid URL
-  - Capitalize the cited source title the same as the author does
-- For more information, see [REI Confluence Accessible Patterns: Quotes](https://confluence.rei.com/display/accessibility/Quote)
 
 ## Behavior
 
-Use a block quote for emphasizing content that has a close and significant relationship with the surrounding text and will help users to visually scan the page.
+Use a pull quote for emphasizing content that has a close and significant relationship with the surrounding text and will help users to visually scan the page
 
 <br/>
-
-<do-dont :examples="$page.frontmatter.position" />
 
 <do-dont :examples="$page.frontmatter.indenting" />
 
 <do-dont :examples="$page.frontmatter.too_many" />
 
-Provide a citation to the external source and if available, the URL address.
-
-<br/>
-
-<do-dont :examples="$page.frontmatter.citation" />
+<do-dont :examples="$page.frontmatter.position" />
 
 ## Responsiveness
 
-When block quotes are displayed in at XS breakpoints, the text will use a smaller font size.
+When a pull quote is displayed in at XS breakpoints, the left border will appear below the pull quote and will use a smaller font size.
 
   </cdr-doc-table-of-contents-shell>
 </template>
@@ -274,13 +258,13 @@ _local.vue_
 ```vue
 <template>
   <cdr-quote
-     cite="https://www.rei.com/stewardship"
+     tag="aside"
+     modifier="pull"
      summary="As a co-op, we’re a different kind of company.
      We put purpose before profits and act with the long-term
      interests of our members in mind. Being a co-op also means
      we engage with our community and believe in collective
      accountability."
-    citation="REI Stewardship"
  />
 </template>
 
@@ -289,7 +273,7 @@ import { CdrQuote } from '@rei/cdr-quote';
 export default {
   ...
   components: {
-     CdrQuote 
+     CdrQuote
   }
 }
 </script>
