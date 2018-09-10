@@ -13,8 +13,8 @@
          "href": "/components/block-quote/"
       },
       {
-        "text": "Paragraph",
-        "href": "/components/paragraph/"
+        "text": "Paragraphs",
+        "href": "/components/paragraphs/"
       }
     ],
     "indenting": [
@@ -39,7 +39,7 @@
             "image": "pull-quote/quotes_pull__do__9-16.png",
             "ratio": "16-9",
             "alt": "Image showing proper pull quote use.",
-            "caption": "position the quote near the surrounding text."
+            "caption": "relate the quote to the surrounding text."
         },
         {
             "type": "dont",

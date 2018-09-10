@@ -13,8 +13,8 @@
          "href": "/components/pull-quote/"
       },
       {
-        "text": "Paragraph",
-        "href": "/components/paragraph/"
+        "text": "Paragraphs",
+        "href": "/components/paragraphs/"
       }
     ],
     "position": [
@@ -176,6 +176,7 @@ To ensure that usage of this component complies with accessibility guidelines:
 <br>
 
 This component has compliance with WCAG guidelines by:
+
 - Adding a `<cite>` element to refer to the source of the quote
 
 </cdr-doc-table-of-contents-shell>
@@ -292,7 +293,7 @@ import { CdrQuote } from '@rei/cdr-quote';
 export default {
   ...
   components: {
-     CdrQuote 
+     CdrQuote
   }
 }
 </script>
