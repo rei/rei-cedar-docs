@@ -114,9 +114,9 @@ Display within body copy for articles, hub cards, footer, or recommendations.
 
 ```html
 <cdr-text>
-  If you spend much time in the great outdoors, 
-  you’re likely to hear the phrase “Leave No Trace” 
-  as often as you hear 
+  If you spend much time in the great outdoors,
+  you’re likely to hear the phrase “Leave No Trace”
+  as often as you hear
   "<cdr-link
     href="https://www.rei.com/learn/expert-advice/ten-essentials.html">
       the Ten Essentials
