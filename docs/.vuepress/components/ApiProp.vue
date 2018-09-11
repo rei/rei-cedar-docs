@@ -76,7 +76,7 @@
 
     .prop-default {
       color: $cdr-doc-text-color-primary;
-      font-size: 12px;
+      font-size: 14px;
       margin-bottom: 0px;
     }
 
