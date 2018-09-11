@@ -2,8 +2,8 @@
 {
   "title": "Breadcrumb",
   "layout": "LayoutComponent",
-  "summary": "Navigation to reveal a page’s location within the site hierarchy.",
-  "title_metadata": "Breadcrumb, cdrBreadcrumb",
+  "summary": "Navigation to reveal a page’s location within the site hierarchy",
+  "title_metadata": "Breadcrumb, CdrBreadcrumb, cdr-breadcrumb",
 	  "path": [
       {
         "type": "do",
@@ -146,7 +146,7 @@ Complete breadcrumb string with all items visible.
 
 ## Truncated
 
-Long breadcrumbs shortened to display the last 2 links in the trail, with hidden links indicated by ellipsis.
+Long breadcrumb path shortened to display the last 2 items with hidden links indicated by ellipsis.
 
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/breadcrumb" sandbox-href="https://codesandbox.io/s/mm9qpyjojp" :backgroundToggle="false" :codeMaxHeight= false>
 
@@ -161,8 +161,38 @@ Long breadcrumbs shortened to display the last 2 links in the trail, with hidden
       ]"
     />
 ```
-
 </cdr-doc-example-code-pair>
+
+## Accessibility
+
+Web browsers, plug-ins, and assistive technologies use headings to provide in-page navigation. To ensure that usage of this component complies with accessibility guidelines, do the following:
+
+- Indicate the current page location within a hierarchy using breadcrumbs
+- Do not include the current page in breadcrumb path
+
+<br>
+
+This component has compliance with following WebAIM’s accessibility guidelines:
+  - [WCAG SC 1.4.3: Contrast (Minimum)](https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast): Only when displayed on light backgrounds, Cedar Design System text color uses a Level AA contrast ratio of 4.5:1 contrast between the text color and the background
+  - [WCAG SC 2.4.8:Location](https://www.w3.org/TR/WCAG20/#navigation-mechanisms-location): Cedar Design System breadcrumb component provides this functionality
+    - The attribute aria-label=”Breadcrumb” in the ```<nav>``` element identifies the structure of  ```cdr-breadcrumb as a breadcrumb``` trail for screen readers
+    - The final breadcrumb link element must not link to the current page because the ```aria-current``` attribute is not defined for the last item
+    - The ellipsis button contains the ```aria-expanded="false"``` attribute when the user has the ability to expand the breadcrumb
+
+<br>
+
+To ensure that usage of this component complies with accessibility guidelines:
+Indicate the current page location within a hierarchy using breadcrumbs
+Do not incluPade the current page in breadcrumb path because the ```aria-current``` attribute is not defined for the last item
+
+<br>
+
+This component has compliance with WCAG guidelines by:
+  - Using text color with a Level AA contrast ratio of 4.5:1 contrast between the text color and the background but only when displayed on light backgrounds
+  - Defining the attribute ```aria-label=’Breadcrumb’```  in the  ```<nav>```  element to identify the structure of  ```cdr-breadcrumb```  as a breadcrumb path for assistive technologies
+  - Defining that the ellipsis button contains the  ```aria-expanded=’false’```  attribute when the user has the ability to expand the breadcrumb path
+
+
 </cdr-doc-table-of-contents-shell>
 </template>
 
@@ -176,7 +206,7 @@ Long breadcrumbs shortened to display the last 2 links in the trail, with hidden
 - Helping users understand where they are within the site hierarchy
 - Providing a shortcut to explore similar products within common parent categories
 
-## Don’t use when
+### Don’t use when
 
 - Displaying a top-level page, such as a home or high level category page
 - Linking to previous steps of a sequential process
@@ -208,41 +238,34 @@ Breadcrumbs provide context and a sense of place. This is especially important o
 
 - Include the full location path data once and only once in the code
 - Always retain the full location path in page markup, even if shortened due to responsive styling
+- Display the complete breadcrumb path—not just the previous item—when an ellipsis is clicked or tapped
+- When full breadcrumbs path is displayed, it may wrap to 2 or more lines
+- Refer to API documentation for how to customize breadcrumb truncation width
 
+
+## Do / Don't
 <do-dont :examples="$page.frontmatter.path" />
 
 ### Truncation
 
-- Truncate breadcrumbs at 80% width of the screen’s content container except for mobile (that truncates at 100%) as shown below
+Truncate breadcrumbs at 80% width of the screen’s content container except for mobile (that truncates at 100%) as shown below
 
 <cdr-img alt="breadcrumbs truncated to 80 percent of the container" :src="$withBase(`/breadcrumb/Spec__Breadcrumb_Truncated_with_Grid_16-4.png`)" />
 
-- Truncate breadcrumbs left to right to show the final two links in the trail, so that at least the parent and grandparent are always visible
+Truncate breadcrumbs left to right to show the final two links in the trail, so that at least the parent and grandparent are always visible
 
 <do-dont :examples="$page.frontmatter.truncation" />
 
-- Indicate hidden links using an ellipsis
+Indicate hidden links using an ellipsis
 
 <cdr-img alt="breadcrumbs truncated with ellipsis" :src="$withBase(`/breadcrumb/Spec__Breadcrumb_Truncated_16-2.png`)" />
 
-- Display the complete breadcrumb path—not just that item—when an ellipsis is clicked or tapped
-- When full breadcrumbs path is displayed, it may wrap to 2 or more lines
-- Refer to API documentation for how to customize breadcrumb truncation width
 
 ### Avoid customization
 
 <do-dont :examples="$page.frontmatter.path_symbol" />
 
 <do-dont :examples="$page.frontmatter.link" />
-
-## Accessibility
-
-- Web browsers, plug-ins, and assistive technologies use headings to provide in-page navigation. To ensure that usage of this component complies with accessibility guidelines, do the following:
-  - Indicate the current page location within a hierarchy using breadcrumbs
-  - Do not include the current page in breadcrumb path Instead, use sentence case
-- This component has compliance with following WebAIM’s accessibility guidelines:
-  - [WCAG SC 1.4.3: Contrast (Minimum)](https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast): Cedar Design System text color uses a Level AA contrast ratio of 4.5:1 contrast between the text color and the background
-  - [WCAG SC 2.4.8:Location](https://www.w3.org/TR/WCAG20/#navigation-mechanisms-location): Cedar Design System breadcrumb component provides this functionality
 
 ## Resources
 
@@ -260,18 +283,20 @@ Breadcrumbs provide context and a sense of place. This is especially important o
 
 ## Installation
 
-Resources are available within the [cdr-breadcrumb package](https://www.npmjs.com/package/@rei/cdr-breadcrumb):
+Resources are available within the [CdrBreadcrumb package](https://www.npmjs.com/package/@rei/cdr-breadcrumb):
 
 <cdr-doc-api type="installation" />
 
-- Component: `@rei/cdr-breadcrumb`
-- Component styles: `cdr-breadcrumb.css`
+  - Component: `@rei/cdr-breadcrumb`
+  - Component styles: `cdr-breadcrumb.css`
+
+<br>
 
 To incorporate the required assets for a component, use the following steps:
 
-### #1. Install using NPM
+### 1. Install using NPM
 
-Install the `cdr-breadcrumb` package using `npm` in your terminal:
+Install the `CdrBreadcrumb` package using `npm` in your terminal:
 
 _Terminal_
 
@@ -279,7 +304,7 @@ _Terminal_
 npm i -S @rei/cdr-breadcrumb
 ```
 
-### #2. Import Dependencies
+### 2. Import Dependencies
 
 _main.js_
 
@@ -288,7 +313,7 @@ _main.js_
 import "@rei/cdr-breadcrumb/dist/cdr-breadcrumb.css";
 ```
 
-### #3. Add component to a template
+### 3. Add component to a template
 
 _local.vue_
 
@@ -334,8 +359,8 @@ export default {
 
 The ```items``` property requires an array of objects, in the format shown above. Notable values include:
 
-- ```item.url (optional)``` string where the breadcrumb item segment links when clicked or tapped
-- ```item.name (required)```  string for the breadcrumb text item segment
+- ```item.url``` (optional) string where the breadcrumb item segment links when clicked or tapped
+- ```item.name``` (required) string for the breadcrumb text item segment
 
 The array must be ordered appropriately from low index rendered on the left, to high index on the right.
 
@@ -365,12 +390,11 @@ Use ```truncationEnabled``` to disable the truncation functionality.  Below show
 
 Use the ```truncationThreshold``` prop to alter when truncation occurs:
 
-- value must be a number between 0 and 1
-- Truncation occurs when (breadcrumb width)/(container width) exceeds the ```truncationThreshold``` value
+- Value must be a number between 0 and 1
+- Truncation occurs when (breadcrumb width) / (container width) exceeds the ```truncationThreshold``` value
+- The default value is 0.80 ( 80% ).
 
-The default value is 0.80 ( 80% ).
-
-Below shows using ```truncationThreshold``` to set truncation to occur at 50%.
+The below image and example code shows using ```truncationThreshold``` to set truncation to occur at 50%.
 
 <cdr-img alt="Breadcrumb with truncation threshold at 50% and 80%" :src="$withBase(`/breadcrumb/Spec_API___Breadcrumb_Truncated_Threshold_50to80_16-4.png`)" />
 
@@ -383,11 +407,10 @@ Below shows using ```truncationThreshold``` to set truncation to occur at 50%.
 Use the ```truncationXSThreshold``` prop to alter when truncation occurs:
 
 - value must be a number between 0 and 1
-- Truncation occurs when (breadcrumb width)/(container width) exceeds the ```truncationXSThreshold``` value on XS screen sizes
+- Truncation occurs when (breadcrumb width) / (container width) exceeds the ```truncationXSThreshold``` value on XS screen sizes
+- The default value is 1 ( 100% ).
 
-The default value is 1 ( 100% ).
-
-Below shows using ```truncationXSThreshold``` to set truncation to occur at 70%.
+The below image and example code shows using ```truncationXSThreshold``` to set truncation to occur at 70%.
 
 <cdr-img alt="Breadcrumb with truncation XS  threshold at 70%" :src="$withBase(`/breadcrumb/Spec_API___Breadcrumb_Truncated_XSThreshold_70to100_16-4.png`)" />
 
@@ -397,20 +420,6 @@ Below shows using ```truncationXSThreshold``` to set truncation to occur at 70%.
   :items="breadcrumbItems"
 />
 ```
-
-## Accessibility
-
-Web browsers, plug-ins, and assistive technologies use headings to provide in-page navigation. To ensure that usage of this component complies with accessibility guidelines, do the following:
-
-- Indicate the current page location within a hierarchy using breadcrumbs
-- Do not include the current page in breadcrumb path
-
-This component has compliance with following WebAIM’s accessibility guidelines:
-  - [WCAG SC 1.4.3: Contrast (Minimum)](https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast): Only when displayed on light backgrounds, Cedar Design System text color uses a Level AA contrast ratio of 4.5:1 contrast between the text color and the background
-  - [WCAG SC 2.4.8:Location](https://www.w3.org/TR/WCAG20/#navigation-mechanisms-location): Cedar Design System breadcrumb component provides this functionality
-    - The attribute aria-label=”Breadcrumb” in the ```<nav>``` element identifies the structure of  ```cdr-breadcrumb as a breadcrumb``` trail for screen readers
-    - The final breadcrumb link element must not link to the current page because the ```aria-current``` attribute is not defined for the last item
-    - The ellipsis button contains the ```aria-expanded="false"``` attribute when the user has the ability to expand the breadcrumb
 
 </cdr-doc-table-of-contents-shell>
 </template>

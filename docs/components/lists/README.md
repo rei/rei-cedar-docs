@@ -296,8 +296,6 @@ This component has compliance with WCAG guidelines by:
 <template slot="Design Guidelines">
 <cdr-doc-table-of-contents-shell>
 
-  <cdr-doc-alert/>
-
 ## Use when
 
 - Displaying groups of related items represented by text
@@ -371,14 +369,16 @@ WebAIM: [Semantic Structure: Using Lists Correctly](https://webaim.org/technique
 
 Resources are available within the [CdrList package](https://www.npmjs.com/package/@rei/cdr-list):
 
-- Component: '@rei/cdr-list'
-- Component styles: 'cdr-list.css'
+- Component: `@rei/cdr-list`
+- Component styles: `cdr-list.css`
+
+<br/>
 
 To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the `CdrList` package using 'npm' in your terminal:
+Install the CdrList package using `npm` in your terminal:
 
 _Terminal_
 
@@ -431,7 +431,9 @@ Visual style and semantic meaning are managed independently by providing:
 - Element to the `tag` prop
 - Style to the `modifier` prop
 
-By default the `CdrList` component renders as an unordered and undecorated "bare" list. To use an ordered list pass `<ol>` to the tag property.
+<br/>
+
+By default the CdrList component renders as an unordered and undecorated "bare" list. To use an ordered list pass `<ol>` to the tag property.
 
 ```html
 <cdr-list tag="ol">
@@ -440,7 +442,10 @@ By default the `CdrList` component renders as an unordered and undecorated "bare
 </cdr-list>
 ```
 
-The `CdrList` component has decoupled the semantic tags `<ul>` and `<ol>` from visual presentation.
+The CdrList component has decoupled the semantic tags `<ul>` and `<ol>` from visual presentation. 
+
+<br/>
+
 It is possible to render a semantic ordered list `<ol>` as a visually non styled or bulleted list using the `cdr-list` modifiers. With this decoupling, individual list items can contain a variety of HTML elements, including paragraphs, headings, form elements, and other (nested) lists. Ensure that content is structured and follows design guidelines.
 
 ### Tag variants
