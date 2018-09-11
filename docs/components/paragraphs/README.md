@@ -10,11 +10,11 @@
       },
       {
         "text": 'Typography',
-        "href": '/foundation/typography/'
+        "href": '../../foundation/typography/'
       },
       {
         "text": 'Headings',
-        "href": '/components/headings/'
+        "href": '../headings/'
       }
     ],
 	  "width": [
@@ -121,28 +121,27 @@ Used for editorial content such as long-form articles like Expert Advice pages o
 
 ## Accessibility
 
-- To ensure that usage of this component complies with accessibility guidelines, do the following:
-  - Text container does not exceed 634px or line length does not exceed more than 75 characters 
-  - Minimize use of reversed-out body copy because it’s harder to read 
-  - When possible, use the first sentence as an introduction to the paragraph. With screen readers, users can listen to the first sentence and then jump to the next paragraph 
-  - Break long pages into shorter sections by organizing content into well-defined groups or chunks
+To ensure that usage of this component complies with accessibility guidelines, do the following:
 
-<br />
+- Text container does not exceed 634px or line length does not exceed more than 75 characters
+- Minimize use of reversed-out body copy because it’s harder to read 
+- When possible, use the first sentence as an introduction to the paragraph. With screen readers, users can listen to the first sentence and then jump to the next paragraph 
+- Break long pages into shorter sections by organizing content into well-defined groups or chunks
 
-- This component has compliance with following WebAIM’s accessibility guidelines:
-  - [WCAG SC 1.4.8: Visual presentation](https://www.w3.org/TR/WCAG20/#visual-audio-contrast-visual-presentation): Cedar Design System text component provides for spacing for: 
-    - Within paragraphs, line spacing is at least 1.5 times font height
-    - Between paragraphs, at least 1.5 times larger than the line spacing
+<br/>
 
-  <cdr-img class="cdr-doc-article-img" alt="paragraphs_spacing_graphic_example" :src="$withBase(`/paragraph/paragraphs_spacing_graphic_example.png`)" />
+This component has compliance with following WebAIM’s accessibility guidelines:
+- [WCAG SC 1.4.8: Visual presentation](https://www.w3.org/TR/WCAG20/#visual-audio-contrast-visual-presentation): Cedar Design System text component provides for spacing for: 
+  - Within paragraphs, line spacing is at least 1.5 times font height
+  - Between paragraphs, at least 1.5 times larger than the line spacing
+
+<cdr-img class="cdr-doc-article-img" alt="paragraphs_spacing_graphic_example" :src="$withBase(`/paragraphs/paragraphs_spacing_graphic_example.png`)" />
 
 </cdr-doc-table-of-contents-shell>
 </template>
 
 <template slot="Design Guidelines">
 <cdr-doc-table-of-contents-shell>
-
-  <cdr-doc-alert/>
 
 ## Use when
 
@@ -155,7 +154,7 @@ Used for editorial content such as long-form articles like Expert Advice pages o
 
 - Displaying form inputs. Instead, use Inputs
 - Displaying alert messages. Instead, use Alerts
-- Listing product features. Instead, use List
+- Listing product features. Instead, use [Lists](../lists/)
 
 ## Foundations
 
@@ -216,11 +215,13 @@ Resources are available within the [CdrText package](https://www.npmjs.com/packa
 
 - Component: `@rei/cdr-text`
 
+<br />
+
 To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM 
 
-Install the `cdr-text` package using `npm` in your terminal:
+Install the Cdr-Text package using `npm` in your terminal:
 
 _Terminal_
 
@@ -264,10 +265,12 @@ export default {
 
 ## Usage
 
-The cdrText component allows for styling any html element with available text styles. Visual style and semantic meaning are managed independently by providing: 
+The CdrText component allows for styling any html element with available text styles. Visual style and semantic meaning are managed independently by providing: 
 
 * Element to the `tag` prop 
 * Style to the `modifier` prop
+
+<br />
 
 By default the cdrText component renders as a paragraph, this default paragraph is intended for most standard use cases.
 

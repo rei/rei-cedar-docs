@@ -274,8 +274,12 @@ export default {
     softScrollToAnchoredSection(id) {
       this.scrollMonitoringEnabled = false; // disable scrollMonitoring while soft scrolling to a specific section
 
-      if (this.$route.query['active-link'] === id.replace('#', '' )) {
-        this.softScroll(id);
+      if (this.$route.query['active-link'] === id.replace('#', '' )) { // query param already set (like coming from a different page)
+        document.onreadystatechange = () => {
+          if (document.readyState == "complete") {
+            this.softScroll(id);
+          }
+        }
       } else {
         this.$router.replace(
           { query: Object.assign({}, this.$route.query, { 'active-link': id.replace('#', '') }) },
@@ -294,7 +298,6 @@ export default {
         left: 0,
         behavior: 'smooth'
       });
-
 
       setTimeout(() => {
         this.scrollMonitoringEnabled = true;

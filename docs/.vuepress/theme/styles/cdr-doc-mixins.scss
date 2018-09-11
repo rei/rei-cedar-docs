@@ -169,7 +169,10 @@
 
   & > p,
   & > ol li,
-  & > ul li {
+  & > ul li,
+  & > ul li p,
+  & > table tbody tr td
+   {
     & > code {
       background: $cdr-doc-color-white;
       border: $cdr-doc-border-separator;

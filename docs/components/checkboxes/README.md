@@ -10,11 +10,11 @@
       },
       # {
       #   "text": 'List Group',
-      #   "href": '/components/list/'
+      #   "href": '../list/'
       # },
       {
         "text": 'Radio Buttons',
-        "href": '/components/radio/'
+        "href": '../radio/'
       }
     ],
     "case": [
@@ -310,7 +310,7 @@ For more information, review techniques and failures for:
 
 ### Don't use when
 
-- Selecting from a list when only 1 choice is allowed. Instead, use [Radio Buttons](/components/radio/)
+- Selecting from a list when only one choice is allowed. Instead, use [Radio Buttons](../radio/)
 
 ## Content
 
@@ -383,8 +383,6 @@ Checkboxes work independently from each other:
 
 Resources are available within the [CdrCheckbox package:](https://www.npmjs.com/search?q=cdr-checkbox)
 
-<cdr-doc-api type="installation" />
-
 - Component: `@rei/cdr-checkbox`
 - Component styles: `cdr-checkbox.css`
 
@@ -439,7 +437,7 @@ export default {
 
 ## Usage
 
-CdrCheckbox requires  `v-model`  to track  `:checked`  values.
+`CdrCheckbox` requires  `v-model`  to track  `:checked`  values.
 
 This example uses  `true-value`  and  `false-value`  props to change what’s saved to the model.
 

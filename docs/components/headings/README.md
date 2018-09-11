@@ -10,11 +10,11 @@
     },
     {
       "text": 'Typography',
-      "href": '/foundation/typography/'
+      "href": '../../foundation/typography/'
     },
     {
       "text": 'Paragraphs',
-      "href": '/components/paragraphs/'
+      "href": '../paragraphs/'
     }
   ],
   "minimize": [
@@ -50,7 +50,7 @@
                 "name": "modifier",
                 "type": "string",
                 "default": "N/A",
-                "description": "Modifies the style variant for this component. Possible values: { ‘display’  |  ‘display-static’  |  ‘heading-large’  |  ‘heading-large-static’  |  ‘heading-medium’  |  ‘heading-medium-static’  |  ‘heading-small’  |  ‘heading-small-static’  |  ‘subheading  }"
+                "description": "Modifies the style variant for this component. Possible values: { ‘display’  |  ‘display-static’  |  ‘heading-large’  |  ‘heading-large-static’  |  ‘heading-medium’  |  ‘heading-medium-static’  |  ‘heading-small’  |  ‘heading-small-static’  |  ‘subheading' }"
               }
             ],
             "slots": [
@@ -70,21 +70,9 @@
 
 <cdr-doc-tabs>
 <template slot="Overview">
-<cdr-doc-table-of-contents-shell 
-    :appended-nav-items="[
-      {
-        text: 'Related Components'
-      },
-      {
-        text: 'Typography'
-      },
-      {
-        text: 'Paragraph',
-        href: '../paragraph/'
-      }
-    ]">
+<cdr-doc-table-of-contents-shell>
 
-## Display
+## Display Responsive
 
 Use for responsive display heading.
 
@@ -219,33 +207,24 @@ To ensure that usage of this component complies with accessibility guidelines:
 - Use h1-h6 to identify headings (`<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, and `<h6>`)
   - If additional headings are needed (`<h7>` and so on), follow the technique described on this page: [ARIA12: Using role=heading to identify headings](https://www.w3.org/TR/WCAG20-TECHS/ARIA12)
 - Headings are used to label page regions
-  - Use aria-labelled to associate headings with their page region, as described in the [label page regions](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby) section of this tutorial
+  - Use the `aria-label` attribute to associate headings with their page region, as described in the [label page regions](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby) section of this tutorial
 - Subheadings are not semantic headings. Subheadings may be visually styled as a heading but will not be navigable using a screen reader
-- For PDF documents, follow technique on this page: [Providing headings by marking content with heading tags in PDF documents](https://www.w3.org/TR/WCAG20-TECHS/PDF9)
+- For PDF documents, follow the technique on this page: [Providing headings by marking content with heading tags in PDF documents](https://www.w3.org/TR/WCAG20-TECHS/PDF9)
 - Assistive technologies skim the structure of a page:
   - Allow users to navigate to or skip over sections through the use of heading levels
   - Avoid skipping heading levels (e.g., `<h2>`  to  `<h4>` )
 
-- This component has compliance with WCAG guidelines by: 
-  - Defining semantic heading levels with ability to assign predefined visual heading styles to each level
+<br />
+
+This component has compliance with WCAG guidelines by:
+
+- Defining semantic heading levels with ability to assign predefined visual heading styles to each level
 
 </cdr-doc-table-of-contents-shell>
 </template>
 
 <template slot="Design Guidelines">
-<cdr-doc-table-of-contents-shell 
-    :appended-nav-items="[
-       {
-        text: 'Related Components'
-      },
-      {
-        text: 'Typography'
-      },
-      {
-        text: 'Paragraph',
-        href: '../paragraph/'
-      }
-    ]">
+<cdr-doc-table-of-contents-shell>
 
 ## Use when
 
@@ -299,19 +278,7 @@ Responsive heading font sizes are the default for heading levels except subheadi
 </template>
 
 <template slot="API">
-<cdr-doc-table-of-contents-shell
-    :appended-nav-items="[
-       {
-        text: 'Related Components'
-      },
-      {
-        text: 'Typography'
-      },
-      {
-        text: 'Paragraph',
-        href: '../paragraph/'
-      }
-    ]">
+<cdr-doc-table-of-contents-shell>
 
 ## Props
 
@@ -331,7 +298,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the `CdrText` package using `npm` in your terminal:
+Install the CdrText package using `npm` in your terminal:
 
 _Terminal_
 
@@ -375,7 +342,7 @@ export default {
 
 ## Usage
 
-The cdrText component allows for styling any html element with available text styles. Visual style and semantic meaning are managed independently by providing: 
+The CdrText component allows for styling any html element with available text styles. Visual style and semantic meaning are managed independently by providing: 
 
 - Element to the `tag` prop 
 - Style to the `modifier` prop
