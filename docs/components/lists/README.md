@@ -61,7 +61,7 @@
               "name": "tag",
               "type": "string",
               "default": "'ul'",
-              "description": "Sets valid HTML element tag for lists. Possible values: {  ‘ul’  }  ‘ol’  }"
+              "description": "Sets valid HTML element tag for lists. Possible values: {  ‘ul’ | ‘ol’  }"
             },
             {
               "name": "modifier",
@@ -447,7 +447,7 @@ It is possible to render a semantic ordered list `<ol>` as a visually non styled
 
 Following are different types of lists:
 
-- Unordered lists: 
+- Unordered lists:
   - Used when the order of the items is not relevant
   - Consists of one `<ul>` element and multiple list item `<li>` elements
 - Ordered lists:
@@ -472,7 +472,7 @@ Following are different types of lists:
 
 ### Modifier options
 
-Note that the tag itself does not determine display, a modifier must be added for list styles. Add one of the following variants to the 'modifier' attribute of the `cdr-list` tag to change the visual presentation:
+Note that the tag itself does not determine display, a modifier must be added for list styles. Add one of the following variants to the `modifier` attribute of the `cdr-list` tag to change the visual presentation:
 
 | **Name**  | **Description**                                                                                                                                                                        | **Example** |
 |:----------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------|
