@@ -2,8 +2,8 @@
 {
   "title": "Call to Action",
   "layout": "LayoutComponent",
-  "summary": "Stylized link used in campaigns and promotions to encourage users to further explore featured products, services or offers.",
-  "title_metadata": "Call to Action, CTA, CTA button, cdrCta",
+  "summary": "Stylized link used in campaigns and promotions to encourage users to further explore featured products, services or offers",
+  "title_metadata": "Call to Action, CTA, CTA Button, CdrCta",
   "placement": [
     {
       "type": "do",
@@ -101,31 +101,50 @@
                 "name": "ctaStyle",
                 "type": "string",
                 "default": "\"brand\"",
-                "description": "Set Call to Action color by changing ctaStyle to match different themes. \nPossible values: {brand, dark, light, sale}"
+                "description": "Sets Call to Action color by changing ctaStyle to match different themes. Possible values: { 'brand' | 'dark' | 'light' | 'sale' }"
               },
               {
                 "name": "fullWidth",
                 "type": "boolean",
                 "default": "false",
-                "description": "Set Call to Action width to 100%. Setting it to true will set the width to 100% of the parent container. "
+                "description": "Sets Call to Action width to 100%. Setting this value to true will set the width to 100% of the parent container"
               },
               {
                 "name": "href",
                 "type": "string",
                 "default": "\"#\"",
-                "description": "Set the link using the page url."
+                "description": "Sets the link using the page url."
+              },
+              {
+                "name": "",
+                "type": "string",
+                "default": "N/A",
+                "description": "Modifies the style variant for this component. Possible values: { 'elevated' }"
               }
             ],
             "slots": [
               {
                 "name": "default",
-                "description": "This is for the readable text of cdr-cta."
+                "description": "Slot for CdrCta readable text."
               }
             ],
           }
         }
       ],
       "version": "0.1.0-alpha.1"
+    }
+  ],
+  "see_also": [
+    {
+      "text": "See Also"
+    },
+    {
+      "text": "Buttons",
+      "href": "../buttons/"
+    },
+    {
+      "text": "Links",
+      "href": "../links/"
     }
   ]
 }
@@ -221,6 +240,31 @@ Adds drop shadow to increase contrast and visibility of Call to Action when plac
 
 </cdr-doc-example-code-pair>
 
+## Accessibility
+
+To ensure that usage of this component complies with accessibility guidelines:
+
+- Clearly and concisely describe the link’s destination when the button is clicked or tapped:
+  - For example, if the button text is "Shop Now", the `aria-label` might read: "Shop our &lt;specific advertising category&gt; now"
+- Avoid using "click here" or "start here" but if screen space for text is minimal:
+  - Provide text that can be read by screen readers
+  - Use an inline element for hidden text with the `cdr-sr-only` class
+  ```vue
+  <cdr-cta>
+    Start here <span class="cdr-sr-only">for help finding the proper sleeping bag</span>
+  </cdr-cta>
+  ```
+- Ensure screen readers can find all **Call to Action** buttons on a page by:
+  - Always providing an `href` attribute. Empty `href` attributes are not considered true links
+  - Ensuring that it can be accessed via the keyboard. Don't manipulate the default tab index
+
+<br />
+
+This component has compliance with [WCAG SC 1.4.3: Contrast (Minimum)](https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast), however, do the following:
+
+- Choose the light button theme for a dark background or the dark button theme for a light background
+- Test color contrast for button themes against all backgrounds
+
 </cdr-doc-table-of-contents-shell>
 </template>
 
@@ -231,9 +275,9 @@ Adds drop shadow to increase contrast and visibility of Call to Action when plac
 - Encouraging a user to navigate to a new location
 - Promoting a campaign, promotional advertisements, or email offers
 
-## Don't use when
+### Don't use when
 
-- Triggering interface interactions. Instead, use a [Button](/components/button/) component
+- Triggering interface interactions. Instead, use [Buttons](../buttons/)
 
 ## Foundation
 
@@ -248,6 +292,8 @@ Call to Action exists as a means to navigate users to a new location or addition
 - For example, “Shop Backpacking” Call to Action on a homepage would navigate the user to an assortment of backpacking-related products available for purchase
 - Use all caps for CTAs, not sentence case, title caps or all lowercase
 
+<br />
+
 To construct consistent and universal Call to Actions across the site:
 
 - If leading to a Brand/Category/Activity Landing page, UI text for Call to Action should be **[Explore Brand/Category/Activity Name]**
@@ -256,48 +302,33 @@ To construct consistent and universal Call to Actions across the site:
 
 ## Behavior
 
-Avoid combining a Call to Action with a basic button. Disabling Call to Actions is not semantically supported.
+- Avoid combining a Call to Action with a basic button. Disabling Call to Actions is not semantically supported
+- Maintain button styling including typographic and sizing for a Call to Action. Do not style as a link
+
+### Do / Don't
 
 <do-dont :examples="$page.frontmatter.placement" />
 
-Write brief and concise Call to Action labels to ensure a good customer experience for mobile and desktop users.
+<br />
 
 <do-dont :examples="$page.frontmatter.label" />
 
-Maintain standard size of a Call to Action.
+<br />
 
 <do-dont :examples="$page.frontmatter.size" />
 
-Maintain typography styling for a Call to Action.
+<br />
 
 <do-dont :examples="$page.frontmatter.typography" />
 
-Maintain button styling for a Call to Action. Do not style as a link.
+<br />
 
 <do-dont :examples="$page.frontmatter.link" />
 
-## Accessibility
-
-When using Call to Action with assistive technology:
-
-- Use an aria-label to clarify information 
-- Clearly and concisely label what happens when the Call to Action is clicked or tapped
-- For example, aria-label might read: “Shop our \<specific advertising category\>"
-
-Call to Action text and text links must comply to AA color contrast and text size accessibility compliance guidelines:
-
-- Choose a the light button theme on dark background or dark button theme on light background
-- Test color contrast for button themes against all backgrounds
-
-This component has no specific WCAG compliance attributes built into the control. Call to Action can: 
-
-- Receive keyboard focus by default
-- Enable states: Focus, Hover, and Active
-
 ## Related Links
 
-- [Button](/components/button/)
-- [Links](/components/link/)
+- [Button](../button/)
+- [Links](../link/)
 
 
 </cdr-doc-table-of-contents-shell>
@@ -310,26 +341,25 @@ This component has no specific WCAG compliance attributes built into the control
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
 ## Slots
+
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
-
-## Modifiers
-
-- elevated
 
 ## Installation
 
-Resources are available with the [cdr-cta package](https://www.npmjs.com/package/@rei/cdr-cta):
+Resources are available with the [CdrCta package](https://www.npmjs.com/package/@rei/cdr-cta):
 
 <cdr-doc-api type="installation" />
 
 - Component: `@rei/cdr-cta`
 - Component styles: `cdr-cta.css`
 
+<br />
+
 To incorporate the required assets for a component, use the following steps:
 
-### #1. Install using NPM
+### 1. Install using NPM
 
-Install the `cdr-cta` package using `npm` in your terminal:
+Install the CdrCta package using `npm` in your terminal:
 
 _Terminal_
 
@@ -337,7 +367,7 @@ _Terminal_
 npm i -s @rei/cdr-link
 ```
 
-### #2. Import Dependencies
+### 2. Import Dependencies
 
 _main.js_
 
@@ -349,7 +379,7 @@ import "@rei/cdr-cta/dist/cdr-cta.css";
 import "@rei/cdr-link/dist/cdr-icon.css";
 ```
 
-### #3. Add component to a template
+### 3. Add component to a template
 
 _local.vue_
 
@@ -388,25 +418,18 @@ This example code renders a full width `cdr-cta`, with the `elevated` modifier a
 </template>
 ```
 
-The `cdr-cta` component looks like a button; however it's actually an anchor:
+The CdrCta component looks like a button, however it's actually an anchor:
 - Do not use when a button is preferable such as triggering an action
 - Do not assign the role of button
-- For basic links, use [cdr-link](/components/link/)
+- For basic links, use the [CdrLink component](../links/)
 
-## Accessibility
+### Modifiers
 
-- Ensure cdr-cta can be accessed via the keyboard. Don't manipulate the default tab index
-- Ensure assistive technologies can find all cdr-cta links on a page by:
-  - Using labels that are descriptive. Do not use "Click here" or "start here"
-  - Describing the cdr-cta link's destination when clicked
-  - Always providing an href attribute. Empty href attributes are not considered true links.
-  - Use hidden text that can be read by screen readers, if screen space for text is minimal
-  - Use an inline element for hidden text using the cdr-sr-only class
-  ```vue
-  <cdr-cta>
-    Start here <span class="cdr-sr-only">for help finding the proper sleeping bag</span>
-  </cdr-cta>
-  ```
+The following variants are available to the `cdr-cta` modifier attribute:
+
+|             |                            |
+| ---         | ---                        |
+| elevated  | Adds drop shadow to button |
 
 </cdr-doc-table-of-contents-shell>
 </template>
@@ -415,14 +438,9 @@ The `cdr-cta` component looks like a button; however it's actually an anchor:
 
 ## 1.0.0
 
-### What's new
-
-**CdrCTA** component:
-
 - Includes suppoort for various themes
 - Renders default and full-width sizes
-
-Git commit reference [(b944d3a)](https://github.com/rei/rei-cedar/commit/b944d3a91b45dd1778d71674eaf26073f4521caa)
+- Git commit reference [(b944d3a)](https://github.com/rei/rei-cedar/commit/b944d3a91b45dd1778d71674eaf26073f4521caa)
 
 </template>
 </cdr-doc-tabs>

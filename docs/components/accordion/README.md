@@ -2,8 +2,8 @@
 {
   "title": "Accordion",
   "layout": "LayoutComponent",
-  "summary": "Vertically-stacked list that allows users to expand and collapse additional content.",
-  "title_metadata": "Accordion, cdrAccordion",
+  "summary": "Vertically-stacked list that allows users to expand and collapse additional content",
+  "title_metadata": "Accordion, CdrAccordion, cdr-accordion",
   "breadcrumbs": [
     {
       "text": "Components/",
@@ -54,25 +54,25 @@
                 "name": "compact",
                 "type": "boolean",
                 "default": "false",
-                "description": "Set compact style of cdr-accordion-item child components."
+                "description": "Sets the compact style of CdrAccordionItem child components"
               },
               {
                 "name": "borderAligned",
                 "type": "boolean",
                 "default": "false",
-                "description": "Set border-aligned style of cdr-accordion-item child components."
+                "description": "Sets the border-aligned style of CdrAccordionItem child components"
               },
               {
                 "name": "showAll",
                 "type": "boolean",
                 "default": "false",
-                "description": "Set all child cdr-accordion-item components to display open by default."
+                "description": "Sets all child CdrAccordionItem components to display open by default"
               }
             ],
             "slots": [
               {
                 "name": "default",
-                "description": "Default slot for cdr-accordion-item(s)."
+                "description": "Slot for CdrAccordionItem(s)"
               }
             ],
           },
@@ -85,25 +85,25 @@
                 "name": "id",
                 "type": "string",
                 "default": "n/a",
-                "description": "Required id for component reference. Id must be unique."
+                "description": "Requires unique ID for each component reference"
               },
               {
                 "name": "label",
                 "type": "string",
                 "default": "n/a",
-                "description": "Set the readable text on the cdr-accordion-item button or trigger. Required."
+                "description": "Sets the readable text on the CdrAccordionItem button or trigger. Required"
               },
               {
                 "name": "show",
                 "type": "boolean",
                 "default": "false",
-                "description": "Set a single cdr-accordion-item to display open by default. Prop showAll will take precedence, if true."
+                "description": "Sets a single CdrAccordionItem to display open by default. The showAll prop takes precedence, when true"
               }
             ],
             "slots": [
               {
                 "name": "default",
-                "description": "Default slot for cdr-accordion-item content."
+                "description": "Slot for CdrAccordionItem content"
               }
             ],
             "events": [
@@ -119,6 +119,19 @@
       "version": "0.1.0"
     }
   ],
+  "see_also": [
+    {
+      "text": "See Also",
+    },
+    {
+      "text": "Lists",
+      "href": "../lists/"
+    },
+    {
+      "text": "Tabs",
+      "href": "../tabs/"
+    }
+  ]
 }
 ---
 
@@ -248,6 +261,20 @@ Border aligns to the title text and expand/collapse icon.
 
 </cdr-doc-example-code-pair>
 
+## Accessibility
+
+To ensure that usage of this component complies with accessibility guidelines:
+- Provide descriptive label for accordion header
+- Be aware of embedding leanthy content in an accordion can be disorienting. When the accordion header expands, it can give the appearance of moving to another page
+
+<br />
+
+This component has compliance with WCAG guidelines by:
+- Providing keyboard interactions to:
+  - Expand and collapse accordion headers
+  - Navigate and reverse navigate through the accordion headers
+- Generating ARIA tags for accessibility, specifically `aria-controls`, `aria-expanded`, and `aria-hidden`
+
 </cdr-doc-table-of-contents-shell>
 </template>
 
@@ -260,11 +287,11 @@ Border aligns to the title text and expand/collapse icon.
 - Displaying content that's directly related, or supplemental, to the main subject of the page
 - Designing with limited vertical space and there is enough content to condense
 
-## Don't use when
+### Don't use when
 
-- Linking a title to another page. Instead, use [Link](/components/link/)
-- Designing with sparse content. Instead, use [List](/components/list/) or [Paragraph](/components/paragraph/)
-- Content is lengthy. Instead, use Tabs
+- Linking a title to another page. Instead, use [Links](../links/)
+- Designing with sparse content. Instead, use [Lists](../lists/) or [Paragraphs](../paragraphs/)
+- Content is lengthy
 
 ## Foundations
 
@@ -287,12 +314,14 @@ Border aligns to the title text and expand/collapse icon.
 - Multiple sections can be open at the same time
 - Sections do not automatically collapse when another is expanded
 - Position interactive elements (i.e. Select, Button, Link) within the container far enough from the title area to avoid accidental collapsing
+- Never nest accordions within themselves
+- Use short titles for accordion labels to avoid wrapping
 
-Never nest accordions within themselves
+### Do / Don't
 
 <do-dont :examples="$page.frontmatter.nesting" />
 
-Use short titles for accordion labels to avoid wrapping
+<br />
 
 <do-dont :examples="$page.frontmatter.titles" />
 
@@ -301,67 +330,51 @@ Use short titles for accordion labels to avoid wrapping
 - Accordion style can change variant based on breakpoint. Example: _Default_ at MD/LG, _Compact_ and _Border-Aligned_ at XS/SM
 - Switching between tab component and accordion component is not supported in Cedar components library. Do not replace the accordion component with the tab component and different breakpoints
 
-## Accessibility
-
-To ensure that usage of this component complies with accessibility guidelines:
-
-- Provide descriptive label for accordion header
-- Be aware that embedding lengthy content in an accordion can be disorienting. When the accordion header expands, it can give the appearance of moving to another page
-
-This component has compliance with WCAG accessibility guidelines:
-
-- Providing keyboard interactions to:
-  - Expand and collapse accordion headers
-  - Navigate and reverse navigate through the accordion headers
-- Generates ARIA tags for accessibility, specifically aria-controls, aria-expanded, and aria-hidden
-
-## Related links
-- [List](/components/list/)
-- Tabs
-
 </cdr-doc-table-of-contents-shell>
 </template>
 
 <template slot="API">
 <cdr-doc-table-of-contents-shell>
 
-Accordions are built from two components, `cdr-accordion` and `cdr-accordion-item`, which are meant to be used together.
+Accordions are built from two components, CdrACcordion and CdrAccordionItem, which are meant to be used together.
 
 ## Props
 
-### cdr-accordion
+### CdrAccordion
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-### cdr-accordion-item
+### CdrAccordionItem
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[1].api.props" />
 
 ## Slots
 
-### cdr-accordion
+### CdrAccordion
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-### cdr-accordion-item
+### CdrAccordionItem
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[1].api.slots" />
 
 ## Events
 
-### cdr-accordion-item
+### CdrAccordionItem
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[1].api.events" />
 
 ## Installation
 
-Resources are available within the [cdr-accordion package](https://www.npmjs.com/package/@rei/cdr-accordion);
+Resources are available within the [CdrAccordion package](https://www.npmjs.com/package/@rei/cdr-accordion):
 
 <cdr-doc-api type="installation" />
 
 - Component: `@rei/cdr-accordion`
 - Component styles: `cdr-accordion.css`
 
+<br />
+
 To incorporate the required assets for a component, use the following steps:
 
-### #1. Install using NPM
+### 1. Install using NPM
 
-Install the `cdr-accordion` package using `npm` in your terminal:
+Install the CdrAccordion package using `npm` in your terminal:
 
 _Terminal_
 
@@ -369,7 +382,7 @@ _Terminal_
 npm i -s @rei/cdr-accordion
 ```
 
-### #2. Import Dependencies
+### 2. Import Dependencies
 
 _main.js_
 
@@ -378,7 +391,7 @@ _main.js_
 import "@rei/cdr-accordion/dist/cdr-accordion.css";
 ```
 
-### #3. Add component to a template
+### 3. Add component to a template
 
 _local.vue_
 
@@ -445,7 +458,7 @@ Set `show-all` to `true` on `cdr-accordion`, and each `cdr-accordion-item` will 
     ...
 ```
 
-`cdr-accordion-item` can also be controlled individually. If `show-all` is `false` at the `cdr-accordion` level, set `show` to `true` to display an individual accordion item in an open state. Note that `cdr-accordion` settings will take precedence over `cdr-accordion-item` settings.
+The CdrAccordionItem component can also be controlled individually. If `show-all` is `false` at the CdrAccordion level, set `show` to `true` to display an individual accordion item in an open state. Note that CdrAccordion settings will take precedence over CdrAccordionItem settings.
 
 ```vue
 <template>
@@ -459,7 +472,7 @@ Set `show-all` to `true` on `cdr-accordion`, and each `cdr-accordion-item` will 
     ...
 ```
 
-Any options set at the `cdr-accordion` level can be set on any parent component of `cdr-accordion-item` by using Vue's provide/inject functionality. This is useful, for instance, if `cdr-accordion-item` ever needs to be used as a part of another group component.
+Any options set at the CdrAccordion level can be set on any parent component of CdrAccordion by using Vue's provide/inject functionality. This is useful, for instance, if CdrAccordionItem ever needs to be used as a part of another group component.
 
 
 ```vue
@@ -487,17 +500,6 @@ Any options set at the `cdr-accordion` level can be set on any parent component 
 </script>
 ```
 
-## Accessibility
-
-To ensure that usage of this component complies with accessability guidelines:
-  - Provide a descriptive label for accordion header
-
-This component has compliance with WCAG accessibility guidelines:
-  - Providing keyboard interactions to:
-    - Expand and collapse accordion headers
-    - Navigate and reverse navigate through the accordion headers
-  - Generate ARIA tags for accessibility, speciically `aria-controls`, `aria-expanded`, and `aria-hidden`
-
 </cdr-doc-table-of-contents-shell>
 </template>
 
@@ -505,15 +507,10 @@ This component has compliance with WCAG accessibility guidelines:
 
 ## 1.0.0
 
-### What's new
-
-**CdrAccordion** component:
-
-- Includes cdr-accordion and cdr-accordion-item components
+- Includes CdrAccordion and CdrAccordionItem components
 - Toggles initial open state at group and individual level
 - Supports compact and border-aligned styles
-
-Git commit reference ([cc998a4](https://github.com/rei/rei-cedar/commit/cc998a4f7a4a0278a86c35063ba6615196a46ba2))
+- Git commit reference ([cc998a4](https://github.com/rei/rei-cedar/commit/cc998a4f7a4a0278a86c35063ba6615196a46ba2))
 
 </template>
 

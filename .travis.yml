@@ -10,7 +10,6 @@ before_install:
   fi
 - if [ "$TRAVIS_OS_NAME" == "linux" ]; then export DISPLAY=:99.0; fi
 - if [ "$TRAVIS_OS_NAME" == "linux" ]; then sh -e /etc/init.d/xvfb start; fi
-- npm install --cache-min 999999999
 - npm i -g npm
 install:
 - npm install
