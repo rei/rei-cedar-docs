@@ -1297,7 +1297,7 @@
 								"description": "Modifies the style variants for this component. Possible values: {  'compact'  |  'full-width'  |  'no-border'  }"
 							}
 						]
-					}
+					},
 					"version": "1.0.0"
 				}
 			]

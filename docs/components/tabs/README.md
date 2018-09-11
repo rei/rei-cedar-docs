@@ -126,11 +126,11 @@ Reduced spacing around the tab buttons create a denser visual design
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false">
 
 ```html
-<cdr-tabs>
-  <cdr-tab name="Product" modifier="compact">Tab 1 Content</cdr-tab>
-  <cdr-tab name="Articles" modifier="compact">Tab 2 Content</cdr-tab>
-  <cdr-tab name="Classes & Events" modifier="compact">Tab 3 Content</cdr-tab>
-  <cdr-tab name="Videos" modifier="compact">Tab 4 Content</cdr-tab>
+<cdr-tabs modifier="compact">
+  <cdr-tab name="Product" >Tab 1 Content</cdr-tab>
+  <cdr-tab name="Articles">Tab 2 Content</cdr-tab>
+  <cdr-tab name="Classes & Events">Tab 3 Content</cdr-tab>
+  <cdr-tab name="Videos">Tab 4 Content</cdr-tab>
 </cdr-tabs>
 ```
 
@@ -143,11 +143,11 @@ Tab buttons space evenly across the container
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
 
 ```html
-<cdr-tabs>
-  <cdr-tab name="Product" modifier="full-width">Tab 1 Content</cdr-tab>
-  <cdr-tab name="Articles" modifier="full-width">Tab 2 Content</cdr-tab>
-  <cdr-tab name="Classes & Events" modifier="full-width">Tab 3 Content</cdr-tab>
-  <cdr-tab name="Videos" modifier="full-width">Tab 4 Content</cdr-tab>
+<cdr-tabs modifier="full-width">
+  <cdr-tab name="Product">Tab 1 Content</cdr-tab>
+  <cdr-tab name="Articles">Tab 2 Content</cdr-tab>
+  <cdr-tab name="Classes & Events">Tab 3 Content</cdr-tab>
+  <cdr-tab name="Videos">Tab 4 Content</cdr-tab>
 </cdr-tabs>
 ```
 
