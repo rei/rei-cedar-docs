@@ -3,7 +3,7 @@
   "title": "Tabs",
   "layout": "LayoutComponent",
   "summary": "Organize and group related content into smaller sections navigable within a single container",
-  "title_metadata": "cdr-tabs",
+  "title_metadata": "Tab Panels, CdrTabs",
   "select": [
     {
       "type": "do",
@@ -186,13 +186,12 @@ This component has compliance with WCAG guidelines by:
 - Grouping content to display horizontally
 - Content is lengthy and can be broken into discrete parts
 
-
 ### Don’t use when
 
 - Grouping content to display vertically. Instead, use [Accordion](../accordion/)
 - Creating primary navigation that links to other pages
-- Creating anchor or in-page navigation. Instead, use List Group
-- Comparing related content. Instead. Instead, use Data Table
+- Creating anchor or in-page navigation 
+- Comparing related content 
 
 <br/>
 
@@ -203,7 +202,6 @@ This component has compliance with WCAG guidelines by:
 - Keep to no more than 6 tab buttons
 - Never display fewer than 2 tab buttons
 
-
 <br/>
 
 ## Content
@@ -212,7 +210,6 @@ This component has compliance with WCAG guidelines by:
 - Keep tab labels succinct and meaningful. Between 1-2 words is best and written in plain language
 - Never truncate tab labels
 - Use title caps for tab labels
-
 
 <br/>
 
@@ -225,7 +222,6 @@ This component has compliance with WCAG guidelines by:
 - Tabs become scrollable when the length of the labels exceed the width of the container
 - Inactive tab panels are rendered for SEO purposes
 
-
 ### Do/Don't
 
 <do-dont :examples="$page.frontmatter.select" />
@@ -236,21 +232,20 @@ This component has compliance with WCAG guidelines by:
 
 <do-dont :examples="$page.frontmatter.label" />
 
+<br/>
+
 ## Responsiveness
 
 - Tabs can change styles based on breakpoint
   - Example: Default at MD/LG, Compact and Full-Width at XS/SM
 - Scroll
-  - If tabs exceed width of viewport, a gradient is added to the end (right) of tab container.
-  - When scrolled to end of tabs, a gradient is added to the beginning (left) of tab container.
+  - If tabs exceed width of viewport, a gradient is added to the end (right) of tab container
+  - When scrolled to end of tabs, a gradient is added to the beginning (left) of tab container
   - Scroll is set by default
   - Tabs labels never wrap to two lines
 - Maintain layout for tabs when switching to smaller viewports. Do not replace the tab component with the accordion component
 - Switching between tab component and accordion component is not supported in Cedar components library
 
-
-
-- WebAIM: [Semantic Structure: Using Lists Correctly](https://webaim.org/techniques/semanticstructure/)
 
 </cdr-doc-table-of-contents-shell>
 </template>
@@ -276,14 +271,15 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the `CdrTabs` package using `npm` in your terminal:
+Install the CdrTabs package using `npm` in your terminal:
 
 _Terminal_
 
 ```bash
 npm i -s @rei/cdr-tabs
+```
 
-### 2. Import Dependencies
+## 2. Import Dependencies
 
 _main.js_
 
@@ -334,9 +330,9 @@ The ` cdr-tab name ` property sets the tab display value and is used for referen
 Set the visual presentation by passing the following variants to the modifier attribute of the CdrTabs component.
 | Value        | Description            |
 |:-------------|:-----------------------|
-| 'compact'    | Sets the tabs styling for smaller screen sizes |
-| 'full-width' | Sets the tab header to display evenly across the entire width instead of left justified |
-| 'no-border'  | Removes the bottom border of the tabs header |
+| `compact`    | Sets the tabs styling for smaller screen sizes |
+| `full-width` | Sets the tab header to display evenly across the entire width instead of left justified |
+| `no-border`  | Removes the bottom border of the tabs header |
 
 </cdr-doc-table-of-contents-shell>
 </template>
@@ -349,7 +345,7 @@ Set the visual presentation by passing the following variants to the modifier at
 - Enables navigation between content with Tab Header List
 - Tabs Header List supports overflow by allowing horizontal scrolling of header
 - Incorporates accessibility and SEO compliant features
-- Git commit reference [cc6b3fb](https://github.com/rei/rei-cedar/pull/454/commits/cc6b3fbd49bbe1b07165dd605df99fbe1743cbd6)
+- Git commit reference [(cc6b3fb)](https://github.com/rei/rei-cedar/pull/454/commits/cc6b3fbd49bbe1b07165dd605df99fbe1743cbd6)
 
 </template>
 </cdr-doc-tabs>
