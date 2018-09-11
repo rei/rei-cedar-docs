@@ -190,8 +190,8 @@ This component has compliance with WCAG guidelines by:
 
 - Grouping content to display vertically. Instead, use [Accordion](../accordion/)
 - Creating primary navigation that links to other pages
-- Creating anchor or in-page navigation 
-- Comparing related content 
+- Creating anchor or in-page navigation
+- Comparing related content
 
 <br/>
 
