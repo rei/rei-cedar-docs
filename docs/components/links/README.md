@@ -212,6 +212,8 @@ To ensure that usage of this component complies with accessibility guidelines:
   - Ensure that each link can be accessed via the keyboard, don’t manipulate the default tab index
   - When using images as links, the `<alt>` tag acts as the link text. Describe the action or hyperlink that the image represents
 
+<br/>
+
 This component has compliance with following WebAIM’s accessibility guidelines:
 
 - Using text color with a Level AA contrast ratio of 4.5:1 contrast between the text color and the background but only when displayed on light backgrounds
@@ -258,7 +260,7 @@ When making decisions about using this component styled as a link or a button, c
 | **Links**                                                                                           | **Buttons**                                                                          |
 | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | Answers the question, "Where can I go"                                                              | Answers the question, "What can I do"                                                |
-| Search engine crawlers can follow anchors for links (`<a>`)                                         | Search engine crawlers **cannot** follow links that are submitted by input or button |
+| Search engine crawlers can follow anchors for links (<a>)                                         | Search engine crawlers **cannot** follow links that are submitted by input or button |
 | Default keyboard behavior is triggered using the **enter** key                                          | Default keyboard behavior is triggered using the **space** or **enter** key                  |
 | **Cannot be disabled** like buttons but can be made inert with tabindex="-1" and aria-hidden="true" | Can be disabled with disabled attribute                                              |
 
@@ -275,8 +277,6 @@ Apply the following use cases when deciding when to use links as anchors or butt
 ### Do / Don’t
 
 <do-dont :examples="$page.frontmatter.standalone" />
-
-- Use underline text style for links in paragraphs.
 
 <do-dont :examples="$page.frontmatter.link" />
 
@@ -300,16 +300,18 @@ ebAIM: Links and Hypertext [Introduction to Links and Hypertext](https://webaim.
 
 ## Installation
 
-Resources are available within the [cdrLink package](https://www.npmjs.com/package/@rei/cdr-link):
+Resources are available within the [CdrLink package](https://www.npmjs.com/package/@rei/cdr-link):
 
 - Component: `@rei/cdr-link`
 - Component styles: `cdr-link.css`
+
+<br/>
 
 To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the `cdrLink` package using `npm` in your terminal:
+Install the CdrLink package using `npm` in your terminal:
 
 _Terminal_
 
@@ -371,7 +373,7 @@ Use the tag prop to render the link as a `<button>` element that presents a link
 
 ### Style Modifiers
 
-To effect the visual presentation pass the following variants to the modifier attribute of the cdrLink component.
+To effect the visual presentation pass the following variants to the modifier attribute of the CdrLink component.
 
 - `Standalone`: Include as an independent call to action to expand content, remove filters, or provide additional information.
 
