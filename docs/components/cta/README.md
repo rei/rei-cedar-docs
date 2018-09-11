@@ -327,8 +327,8 @@ To construct consistent and universal Call to Actions across the site:
 
 ## Related Links
 
-- [Button](../button/)
-- [Links](../link/)
+- [Button](../buttons/)
+- [Links](../links/)
 
 
 </cdr-doc-table-of-contents-shell>

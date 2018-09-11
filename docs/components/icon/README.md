@@ -17,11 +17,11 @@
     },
     {
       "text": 'Buttons',
-      "href": '../button/'
+      "href": '../buttons/'
     },
     {
       "text": 'Links',
-      "href": '../link/'
+      "href": '../links/'
     },
     {
       "text": 'Iconography',
