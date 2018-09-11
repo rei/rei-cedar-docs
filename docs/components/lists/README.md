@@ -2,8 +2,21 @@
 {
    "title": "Lists",
    "layout": "LayoutComponent",
-   "summary": "Group related content items together either vertically or horizontally.",
-   "title_metadata": "List, Bare list, Unstyled list, Unordered list, Ordered list, Inline list",
+   "summary": "Group related content items together either vertically or horizontally",
+   "title_metadata": " Bare list, Unstyled list, Unordered list, Ordered list, Inline list, CdrList",
+   "see_also": [
+      {
+        "text": 'See Also'
+      },
+      {
+        "text": 'Accordion',
+        "href": '../accordion/'
+      },
+      {
+        "text": 'Breadcrumb',
+        "href": '../breadcrumb/'
+      }
+    ],
 	  "list1": [
       {
         "type": "do",
@@ -48,7 +61,7 @@
               "name": "tag",
               "type": "string",
               "default": "'ul'",
-              "description": "Sets valid HTML element tag for lists. Possible values: {  ‘ul’  }  ‘ol’  }"
+              "description": "Sets valid HTML element tag for lists. Possible values: {  ‘ul’ | ‘ol’  }"
             },
             {
               "name": "modifier",
@@ -74,16 +87,7 @@
 
 <cdr-doc-tabs>
 <template slot="Overview">
-<cdr-doc-table-of-contents-shell 
-    :appended-nav-items="[
-       {
-        text: 'Related Components'
-      },
-      {
-        text: 'Breadcrumb',
-        href: '../breadcrumb/'
-      }
-    ]">
+<cdr-doc-table-of-contents-shell>
 
 ## Bare
 
@@ -94,13 +98,13 @@ Collect items to be displayed in a list when items are not marked with bullets. 
 
 ```html
   <cdr-list>
-    <li>List item 1</li>
-    <li>List item 2
+    <li>Default list item 1</li>
+    <li>Default list item 2
       <cdr-list>
-        <li>List item</li>
+        <li>Default list item</li>
       </cdr-list>
     </li>
-    <li>List item 3</li>
+    <li>Default list item 3</li>
   </cdr-list>
 ```
 </template>
@@ -109,13 +113,13 @@ Collect items to be displayed in a list when items are not marked with bullets. 
 
 ```html
   <cdr-list modifier="compact">
-    <li>List item 1</li>
-    <li>List item 2
+    <li>Compact list item 1</li>
+    <li>Compact list item 2
       <cdr-list>
-        <li>List item</li>
+        <li>Compact list item</li>
       </cdr-list>
     </li>
-    <li>List item 3</li>
+    <li>Compact list item 3</li>
   </cdr-list>
 ```
   
@@ -132,13 +136,13 @@ Collect related items that don’t need to be in a specific order or sequence. L
 
 ```html
   <cdr-list modifier="unordered">
-    <li>List item 1</li>
-    <li>List item 2
+    <li>Default list item 1</li>
+    <li>Default list item 2
       <cdr-list>
-        <li>List item</li>
+        <li>Default list item</li>
       </cdr-list>
     </li>
-    <li>List item 3</li>
+    <li>Default list item 3</li>
   </cdr-list>
 ```
 </template>
@@ -147,13 +151,13 @@ Collect related items that don’t need to be in a specific order or sequence. L
 
 ```html
   <cdr-list modifier="unordered compact">
-    <li>List item 1</li>
-    <li>List item 2
+    <li>Compact list item 1</li>
+    <li>Compact list item 2
       <cdr-list>
-        <li>List item</li>
+        <li>Compact list item</li>
       </cdr-list>
     </li>
-    <li>List item 3</li>
+    <li>Compact list item 3</li>
   </cdr-list>
 ```
   
@@ -171,13 +175,13 @@ Collect related items with numeric order or sequence. Numbering starts at 1 with
 
 ```html
   <cdr-list tag="ol" modifier="ordered">
-    <li>List item 1</li>
-    <li>List item 2
+    <li>Default list item 1</li>
+    <li>Default list item 2
       <cdr-list>
-        <li>List item</li>
+        <li>Default list item</li>
       </cdr-list>
     </li>
-    <li>List item 3</li>
+    <li>Default list item 3</li>
   </cdr-list>
 ```
 </template>
@@ -186,13 +190,13 @@ Collect related items with numeric order or sequence. Numbering starts at 1 with
 
 ```html
   <cdr-list tag="ol" modifier="ordered compact">
-    <li>List item 1</li>
-    <li>List item 2
+    <li>Compact list item 1</li>
+    <li>Compact list item 2
       <cdr-list>
-        <li>List item</li>
+        <li>Compact list item</li>
       </cdr-list>
     </li>
-    <li>List item 3</li>
+    <li>Compact list item 3</li>
   </cdr-list>
 ```
   
@@ -209,9 +213,9 @@ Display items horizontally with no divider.
 
 ```html
   <cdr-list modifier="inline">
-    <li>List item 1</li>
-    <li>List item 2</li>
-    <li>List item 3</li>
+    <li>Default list item 1</li>
+    <li>Default list item 2</li>
+    <li>Default list item 3</li>
   </cdr-list>
 ```
 </template>
@@ -220,9 +224,9 @@ Display items horizontally with no divider.
 
 ```html
   <cdr-list modifier="inline compact">
-    <li>List item 1</li>
-    <li>List item 2</li>
-    <li>List item 3</li>
+    <li>Compact list item 1</li>
+    <li>Compact list item 2</li>
+    <li>Compact list item 3</li>
   </cdr-list>
 ```
   
@@ -239,9 +243,9 @@ Display items horizontally, separated by a bullet character.
 
 ```html
   <cdr-list modifier="inline unordered">
-    <li>List item 1</li>
-    <li>List item 2</li>
-    <li>List item 3</li>
+    <li>Default list item 1</li>
+    <li>Default list item 2</li>
+    <li>Default list item 3</li>
   </cdr-list>
 ```
 </template>
@@ -250,47 +254,63 @@ Display items horizontally, separated by a bullet character.
 
 ```html
   <cdr-list modifier="inline compact unordered">
-    <li>List item 1</li>
-    <li>List item 2</li>
-    <li>List item 3</li>
+    <li>Compact list item 1</li>
+    <li>Compact list item 2</li>
+    <li>Compact list item 3</li>
   </cdr-list>
 ```
   
 </template>
 
 </cdr-doc-example-code-pair>
+
+## Accessibility
+
+To ensure that usage of this component complies with accessibility guidelines:
+
+- Organize lists so users can understand the relationship and grouping of information
+- Use explicit list markup that allows users to:
+  - Rapidly browse
+  - Navigate a page using list content
+  - Announce the number of items in each list when using screen readers
+
+<br />
+
+When creating nested lists, ensure they are coded properly. Always check that:
+
+- List items are contained within one list
+- Spacing does not break a list into multiple individual points
+- Proper semantic tags are used - either `<ol>` or `<ul>`
+- Proper structure is used to provide a visual list, do not rely on indentation
+- Special characters are not used to create a list
+
+<br />
+
+This component has compliance with WCAG guidelines by:
+
+- Providing ability to create structured lists. Lists are easier to navigate than simple tables
+
 </cdr-doc-table-of-contents-shell>
 </template>
 
 <template slot="Design Guidelines">
-<cdr-doc-table-of-contents-shell 
-    :appended-nav-items="[
-       {
-        text: 'Related Components'
-      },
-      {
-        text: 'Breadcrumb',
-        href: '../breadcrumb/'
-      }
-    ]">
-
-  <cdr-doc-alert/>
+<cdr-doc-table-of-contents-shell>
 
 ## Use when
 
 - Displaying groups of related items represented by text
 
-## Don’t use when
+### Don’t use when
 
 - Displaying content that is not primarily text
-- Displaying content with two or more well-defined dimensions. Instead, use a Data Table  or List Group
+- Displaying content with two or more well-defined dimensions
 
 ## Foundations
 
 - Vary list item font size
-- Follow spacing requirements found on [Typography](/foundation/typography/) and Space pages
+- Follow spacing requirements found on [Typography](../../foundation/typography/) and [Spacing](../../foundation/spacing/) pages
 
-<cdr-img :src="$withBase(`/lists/Spec_List_Font_Size_Variations_16-9.png`)" ratio="16-9"/>
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/lists/Spec_List_Font_Size_Variations_16-9.png`)" ratio="16-9"/>
 
 ## Content
 
@@ -304,6 +324,8 @@ Break up chunks of content to make the information easier to scan:
   - **Duration.** High: 4 hrs. 15 min.; low: 48 hrs. 20 min.
 - Create structured content with a list. Do not use a list for formatting
 
+<br />
+
 Use multi-column lists when:
 
 - Specific ordering is not required
@@ -311,49 +333,29 @@ Use multi-column lists when:
 - Space is minimal
 - Viewing items at a glance is more beneficial than scrolling
 
+<br />
+
 Every item in a list must:
 
 - Start with a capital letter and use sentence case
 - Use semicolons when linking independent clauses and product details in the list
-
-<do-dont :examples="$page.frontmatter.list1" />
-
 - End each sentence in a list item with a period when there are multiple sentences; however, don’t add a period for the last sentence or phrase
 
+### Do / Don’t
+
+<do-dont :examples="$page.frontmatter.list1" />
+<br />
 <do-dont :examples="$page.frontmatter.list2" />
 
-## Accessibility
+## Resources
 
-- To ensure that usage of this component complies with accessibility guidelines, do the following:
-  - Organize lists so users can understand the relationship and grouping of information
-  - Use explicit list markup that allows users to:
-    - Rapidly browse
-    - Access list content
-    - Navigate a page using list content
-    - Use screen readers to announce the number of items in each list
-  - Use aria labels:
-    - Use the aria-labelledby attribute to reference the IDs of one or more elements to describe the list contents
-    - Use the aria-label attribute to provide an explicit text description of list contents
-    - Alternatively, the title attribute can provide an explicit text description of the list contents
-- This component has compliance with following WebAIM’s accessibility guidelines:
-  - [WCAG SC 1.3.1: Info and Relationships:](https://www.w3.org/TR/WCAG20/#content-structure-separation) Cedar Design System provides ability to create structured lists. Lists are easier to navigate than simple tables 
-
-
+WebAIM: [Semantic Structure: Using Lists Correctly](https://webaim.org/techniques/semanticstructure/)
 
 </cdr-doc-table-of-contents-shell>
 </template>
 
 <template slot="API">
-<cdr-doc-table-of-contents-shell 
-    :appended-nav-items="[
-       {
-        text: 'Related Components'
-      },
-      {
-        text: 'Breadcrumb',
-        href: '../breadcrumb/'
-      }
-    ]">
+<cdr-doc-table-of-contents-shell>
 
 ## Props
 
@@ -365,19 +367,18 @@ Every item in a list must:
 
 ## Installation
 
-Resources are available within the [cdr-list package](https://www.npmjs.com/package/@rei/cdr-list):
+Resources are available within the [CdrList package](https://www.npmjs.com/package/@rei/cdr-list):
 
-| **Name**        | **Type**            | **Description**                        |
-|:----------------|:--------------------|:---------------------------------------|
-| `@rei/cdr-list` | Node module package | Import the component into your project |
-| `cdr-list.css`  | Style sheet         | Component specific styles              |
+- Component: `@rei/cdr-list`
+- Component styles: `cdr-list.css`
 
+<br/>
 
 To incorporate the required assets for a component, use the following steps:
 
-### #1. Install using NPM
+### 1. Install using NPM
 
-Install the `cdr-list` package using **npm** in your terminal:
+Install the CdrList package using `npm` in your terminal:
 
 _Terminal_
 
@@ -389,7 +390,7 @@ npm i -S @rei/cdr-list
 
 </cdr-doc-code-snippet>
 
-### #2. Import Dependencies
+### 2. Import dependencies
 
 _main.js_
 
@@ -401,7 +402,7 @@ import '@rei/cdr-list/dist/cdr-list.css';
 ```
 </cdr-doc-code-snippet>
 
-### #3. Add component to a template
+### 3. Add component to a template
 
 _local.vue_
 
@@ -427,10 +428,12 @@ export default {
 
 Visual style and semantic meaning are managed independently by providing: 
 
-- Element to the **tag** prop
-- Style to the **modifier** prop
+- Element to the `tag` prop
+- Style to the `modifier` prop
 
-By default the `cdr-list` component renders as an unordered and undecorated "bare" list. To use an ordered list pass `<ol>` to the tag property.
+<br/>
+
+By default the CdrList component renders as an unordered and undecorated "bare" list. To use an ordered list pass `<ol>` to the tag property.
 
 ```html
 <cdr-list tag="ol">
@@ -439,14 +442,17 @@ By default the `cdr-list` component renders as an unordered and undecorated "bar
 </cdr-list>
 ```
 
-The `cdr-list` component has decoupled the semantic tags `<ul>` and `<ol>` from visual presentation.
+The CdrList component has decoupled the semantic tags `<ul>` and `<ol>` from visual presentation. 
+
+<br/>
+
 It is possible to render a semantic ordered list `<ol>` as a visually non styled or bulleted list using the `cdr-list` modifiers. With this decoupling, individual list items can contain a variety of HTML elements, including paragraphs, headings, form elements, and other (nested) lists. Ensure that content is structured and follows design guidelines.
 
 ### Tag variants
 
 Following are different types of lists:
 
-- Unordered lists: 
+- Unordered lists:
   - Used when the order of the items is not relevant
   - Consists of one `<ul>` element and multiple list item `<li>` elements
 - Ordered lists:
@@ -471,25 +477,15 @@ Following are different types of lists:
 
 ### Modifier options
 
-Note that the tag itself does not determine display, a modifier must be added for list styles. Add one of the following variants to the **modifier** attribute of the `cdr-list` tag to change the visual presentation:
+Note that the tag itself does not determine display, a modifier must be added for list styles. Add one of the following variants to the `modifier` attribute of the `cdr-list` tag to change the visual presentation:
 
 | **Name**  | **Description**                                                                                                                                                                        | **Example** |
 |:----------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------|
-| unordered | The unordered modifier adds a bullet decorator to child list items and a ‘en-dash’ decorator to grandchild list items. This variant can be used on both `<ul>`  or `<ol>`  list types. | ```<cdr-list  modifier="unordered" >``` |
-| ordered   | The ordered modifier adds a numeric decorator to child list items and a ‘en-dash’ decorator to grandchild list items. This variant can be used on both `<ul>`  or `<ol>`  list types.      | ```<cdr-list tag="ol" modifier="ordered" >```|
-| compact   | The compact modifier reduces the vertical space between list items for non-inline list variants. For inline variants the compact modifier reduces the horizontal space between list items. | ```<cdr-list modifier="compact">``` |
-| inline    | The inline modifier is intended for bare or unordered list variants. In ether case this can be combined with compact to adjust the spacing of inline list variants.                        | ```<cdr-list modifier=" inline">``` |
+| unordered | The unordered modifier adds a bullet decorator to child list items and a ‘en-dash’ decorator to grandchild list items. This variant can be used on both `<ul>`  or `<ol>`  list types. | `<cdr-list modifier="unordered">` |
+| ordered   | The ordered modifier adds a numeric decorator to child list items and a ‘en-dash’ decorator to grandchild list items. This variant can be used on both `<ul>`  or `<ol>`  list types.      | `<cdr-list tag="ol" modifier="ordered" >`|
+| compact   | The compact modifier reduces the vertical space between list items for non-inline list variants. For inline variants the compact modifier reduces the horizontal space between list items. | `<cdr-list modifier="compact">` |
+| inline    | The inline modifier is intended for bare or unordered list variants. In ether case this can be combined with compact to adjust the spacing of inline list variants.                        | `<cdr-list modifier=" inline">` |
 
-## Accessibility
-
-- When creating nested lists, ensure they are coded properly. Always check that:
-  - List items are contained within one list
-  - Spacing does not break a list into multiple individual points
-  - Proper semantic tags are used - either `<ul>` or `<ol>`
-  - Proper structure is used to provide a visual list, do not rely on indentation
-  - Special characters are not used to create a list
-- This component has compliance with following WebAIM’s accessibility guidelines:
-  - [WCAG SC 1.3.1: Info and Relationships](https://www.w3.org/TR/WCAG20/#content-structure-separation): Cedar Design System provides ability to create structured lists. Lists are easier to navigate than simple tables 
 
 </cdr-doc-table-of-contents-shell>
 </template>

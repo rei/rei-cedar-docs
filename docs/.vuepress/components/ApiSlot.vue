@@ -58,7 +58,7 @@
       font-size: 9px;
     }
 
-    .prop-description {
+    .slot-description {
       font-size: 14px;
     }
 

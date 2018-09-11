@@ -68,7 +68,7 @@ module.exports = {
           { text: "Grid", link: "/components/grid/" },
           { text: "Headings", link: "/components/headings/" },
           { text: "Icons", link: "/components/icon/" },
-          { text: "Image", link: "/components/image/" },
+          { text: "Images", link: "/components/image/" },
           { text: "Links", link: "/components/links/" },
           { text: "Lists", link: "/components/lists/" },
           { text: "Paragraphs", link: "/components/paragraphs/" },
