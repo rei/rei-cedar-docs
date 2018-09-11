@@ -78,7 +78,7 @@
             "slots": [
               {
                 "name": "default",
-                "Sets the innerHTML for cdr-link. This includes text and html markup for icons"
+                "description": "Sets the innerHTML for cdr-link. This includes text and html markup for icons"
               }
             ],
             "installation": [
@@ -260,7 +260,7 @@ When making decisions about using this component styled as a link or a button, c
 | **Links**                                                                                           | **Buttons**                                                                          |
 | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | Answers the question, "Where can I go"                                                              | Answers the question, "What can I do"                                                |
-| Search engine crawlers can follow anchors for links (<a>)                                         | Search engine crawlers **cannot** follow links that are submitted by input or button |
+| Search engine crawlers can follow anchors for links (`<a>`)                                         | Search engine crawlers **cannot** follow links that are submitted by input or button |
 | Default keyboard behavior is triggered using the **enter** key                                          | Default keyboard behavior is triggered using the **space** or **enter** key                  |
 | **Cannot be disabled** like buttons but can be made inert with tabindex="-1" and aria-hidden="true" | Can be disabled with disabled attribute                                              |
 
