@@ -265,7 +265,7 @@ Border aligns to the title text and expand/collapse icon.
 
 To ensure that usage of this component complies with accessibility guidelines:
 - Provide descriptive label for accordion header
-- Be aware of embedding leanthy content in an accordion can be disorienting. When the accordion header expands, it can give the appearance of moving to another page
+- Be aware that embedding lengthy content in an accordion can be disorienting. When the accordion header expands, it can give the appearance of moving to another page
 
 <br />
 
@@ -296,7 +296,7 @@ This component has compliance with WCAG guidelines by:
 ## Foundations
 
 - Always include a title, icon and subsequent content for each section. All are required
-- Use on either light or dark backgrounds, background color is provided for use on both
+- Use on either light or dark backgrounds, background color is provided for both
 - Never nest accordions within themselves
 
 ## Content
@@ -328,7 +328,7 @@ This component has compliance with WCAG guidelines by:
 ## Responsiveness
 
 - Accordion style can change variant based on breakpoint. Example: _Default_ at MD/LG, _Compact_ and _Border-Aligned_ at XS/SM
-- Switching between tab component and accordion component is not supported in Cedar components library. Do not replace the accordion component with the tab component and different breakpoints
+- Switching between tab component and accordion component is not supported in Cedar components library. Do not replace the accordion component with the tab component at different breakpoints
 
 </cdr-doc-table-of-contents-shell>
 </template>
@@ -336,7 +336,7 @@ This component has compliance with WCAG guidelines by:
 <template slot="API">
 <cdr-doc-table-of-contents-shell>
 
-Accordions are built from two components, CdrACcordion and CdrAccordionItem, which are meant to be used together.
+Accordions are built from two components, CdrAccordion and CdrAccordionItem, which must be used together.
 
 ## Props
 

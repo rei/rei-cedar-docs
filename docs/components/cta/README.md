@@ -3,14 +3,14 @@
   "title": "Call to Action",
   "layout": "LayoutComponent",
   "summary": "Stylized link used in campaigns and promotions to encourage users to further explore featured products, services or offers",
-  "title_metadata": "Call to Action, CTA, CTA Button, CdrCta",
+  "title_metadata": "CTA, CTA Button, CdrCta",
   "placement": [
     {
       "type": "do",
       "image": "cta/CTA_placement_do_16-9.png",
       "ratio": "16-9",
       "alt": "Image showing proper Call to Action usage",
-      "caption": "use Call to Action to lead users to explain more."
+      "caption": "use Call to Action to lead users to explore more."
     },
     {
       "type": "dont",
@@ -207,7 +207,7 @@ Use sale Call to Action for off-price placements.
 
 ## Brand
 
-Use CTA blue link as an alternative.
+Use brand Call to Action as an alternative.
 
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/cta" sandbox-href="https://codesandbox.io/s/9ojj43x1op">
 
@@ -325,11 +325,6 @@ To construct consistent and universal Call to Actions across the site:
 
 <do-dont :examples="$page.frontmatter.link" />
 
-## Related Links
-
-- [Button](../buttons/)
-- [Links](../links/)
-
 
 </cdr-doc-table-of-contents-shell>
 </template>
@@ -427,9 +422,8 @@ The CdrCta component looks like a button, however it's actually an anchor:
 
 The following variants are available to the `cdr-cta` modifier attribute:
 
-|             |                            |
+| `elevated`  | Adds drop shadow to button |
 | ---         | ---                        |
-| elevated  | Adds drop shadow to button |
 
 </cdr-doc-table-of-contents-shell>
 </template>

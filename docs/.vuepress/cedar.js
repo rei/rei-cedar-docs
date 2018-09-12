@@ -83,3 +83,13 @@ import { CdrTable } from "@rei/cdr-table";
 import "@rei/cdr-table/dist/cdr-table.css";
 Vue.component("CdrTable", CdrTable);
 FullVue.component("CdrTable", CdrTable);
+
+import { CdrCaption } from "@rei/cdr-caption";
+import "@rei/cdr-caption/dist/cdr-caption.css";
+Vue.component("CdrCaption", CdrCaption);
+FullVue.component("CdrCaption", CdrCaption);
+
+import { CdrQuote } from "@rei/cdr-quote";
+import "@rei/cdr-quote/dist/cdr-quote.css";
+Vue.component("CdrQuote", CdrQuote);
+FullVue.component("CdrQuote", CdrQuote);
