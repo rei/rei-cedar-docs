@@ -50,7 +50,7 @@
                 "name": "modifier",
                 "type": "string",
                 "default": "N/A",
-                "description": "Modifies the style variant for this component. Possible values: { ‘display’  |  ‘display-static’  |  ‘heading-large’  |  ‘heading-large-static’  |  ‘heading-medium’  |  ‘heading-medium-static’  |  ‘heading-small’  |  ‘heading-small-static’  |  ‘subheading  }"
+                "description": "Modifies the style variant for this component. Possible values: { ‘display’  |  ‘display-static’  |  ‘heading-large’  |  ‘heading-large-static’  |  ‘heading-medium’  |  ‘heading-medium-static’  |  ‘heading-small’  |  ‘heading-small-static’  |  ‘subheading' }"
               }
             ],
             "slots": [
