@@ -10,11 +10,11 @@
       },
       {
          "text": "Pull Quote",
-         "href": "/components/pull-quote/"
+         "href": "../pull-quote/"
       },
       {
         "text": "Paragraphs",
-        "href": "/components/paragraphs/"
+        "href": "../paragraphs/"
       }
     ],
     "position": [
@@ -167,7 +167,7 @@ Default block quote can be used with the following HTML tags: `<p>`, `<div>`, `<
 
 To ensure that usage of this component complies with accessibility guidelines:
 
-- All recommendations listed for [Paragraphs](/components/paragraphs/?active-link=accessibility) component apply to this component
+- All recommendations listed for [Paragraphs](../paragraphs/?active-link=accessibility) component apply to this component
 - Do not use this component to indent text. Screen readers use the `<blockquote>` element to:
   - Provide semantic understanding of page content by announcing blockquote as quote
   - Define a sectioning root in HTML5, which means that any  `<h1>` - `<h6>`  elements it contains don’t become part of the document’s outline
@@ -192,7 +192,7 @@ This component has compliance with WCAG guidelines by:
 
 ### Don't use when
 
-- Pulling a direct quote from an article. Instead, use [Pull Quote](/components/pull-quote/)
+- Pulling a direct quote from an article. Instead, use [Pull Quote](../pull-quote/)
 - Displaying for a decorative treatment only
 
 ## Content
