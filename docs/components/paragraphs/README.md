@@ -122,19 +122,20 @@ Used for editorial content such as long-form articles like Expert Advice pages o
 ## Accessibility
 
 To ensure that usage of this component complies with accessibility guidelines, do the following:
-- Text container does not exceed 634px or line length does not exceed more than 75 characters 
+
+- Text container does not exceed 634px or line length does not exceed more than 75 characters
 - Minimize use of reversed-out body copy because it’s harder to read 
 - When possible, use the first sentence as an introduction to the paragraph. With screen readers, users can listen to the first sentence and then jump to the next paragraph 
 - Break long pages into shorter sections by organizing content into well-defined groups or chunks
 
-<br />
+<br/>
 
 This component has compliance with following WebAIM’s accessibility guidelines:
 - [WCAG SC 1.4.8: Visual presentation](https://www.w3.org/TR/WCAG20/#visual-audio-contrast-visual-presentation): Cedar Design System text component provides for spacing for: 
   - Within paragraphs, line spacing is at least 1.5 times font height
   - Between paragraphs, at least 1.5 times larger than the line spacing
 
-  <cdr-img class="cdr-doc-article-img" alt="paragraphs_spacing_graphic_example" :src="$withBase(`/paragraph/paragraphs_spacing_graphic_example.png`)" />
+<cdr-img class="cdr-doc-article-img" alt="paragraphs_spacing_graphic_example" :src="$withBase(`/paragraphs/paragraphs_spacing_graphic_example.png`)" />
 
 </cdr-doc-table-of-contents-shell>
 </template>
