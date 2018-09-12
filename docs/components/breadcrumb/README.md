@@ -217,7 +217,7 @@ This component has compliance with WCAG guidelines by:
   - Last child link is emphasized as $sys-color-heart-of-darkness
 - Emphasize breadcrumb hover states with the  $sys-color-heart-of-darkness color and an underline
 
-<cdr-img alt="Breadcrumb hover state is emphasized using link color and underline" :src="$withBase(`/breadcrumb/Spec__Breadcrumb_Long_16-2.png`)" />
+<cdr-img class="cdr-doc-article-img" alt="Breadcrumb hover state is emphasized using link color and underline" :src="$withBase(`/breadcrumb/Spec__Breadcrumb_Long_16-2.png`)" />
 
 ## Content
 - Always align breadcrumb labels with page names that are the destination of that breadcrumb
@@ -249,11 +249,11 @@ Breadcrumbs provide context and a sense of place. This is especially important o
 
 Truncate breadcrumbs at 80% width of the screen’s content container except for mobile (that truncates at 100%) as shown below
 
-<cdr-img alt="breadcrumbs truncated to 80 percent of the container" :src="$withBase(`/breadcrumb/Spec__Breadcrumb_Truncated_with_Grid_16-4.png`)" />
+<cdr-img class="cdr-doc-article-img" alt="breadcrumbs truncated to 80 percent of the container" :src="$withBase(`/breadcrumb/Spec__Breadcrumb_Truncated_with_Grid_16-4.png`)" />
 
 Indicate hidden links using an ellipsis
 
-<cdr-img alt="breadcrumbs truncated with ellipsis" :src="$withBase(`/breadcrumb/Spec__Breadcrumb_Truncated_16-2.png`)" />
+<cdr-img class="cdr-doc-article-img" alt="breadcrumbs truncated with ellipsis" :src="$withBase(`/breadcrumb/Spec__Breadcrumb_Truncated_16-2.png`)" />
 
 Truncate breadcrumbs left to right to show the final two links in the trail, so that at least the parent and grandparent are always visible
 
@@ -395,7 +395,7 @@ Use the ```truncationThreshold``` prop to alter when truncation occurs:
 
 The below image and example code shows using ```truncationThreshold``` to set truncation to occur at 50%.
 
-<cdr-img alt="Breadcrumb with truncation threshold at 50% and 80%" :src="$withBase(`/breadcrumb/Spec_API___Breadcrumb_Truncated_Threshold_50to80_16-4.png`)" />
+<cdr-img class="cdr-doc-article-img" alt="Breadcrumb with truncation threshold at 50% and 80%" :src="$withBase(`/breadcrumb/Spec_API___Breadcrumb_Truncated_Threshold_50to80_16-4.png`)" />
 
 ```vue
 <cdr-breadcrumb
@@ -411,7 +411,7 @@ Use the ```truncationXSThreshold``` prop to alter when truncation occurs:
 
 The below image and example code shows using ```truncationXSThreshold``` to set truncation to occur at 70%.
 
-<cdr-img alt="Breadcrumb with truncation XS  threshold at 70%" :src="$withBase(`/breadcrumb/Spec_API___Breadcrumb_Truncated_XSThreshold_70to100_16-4.png`)" />
+<cdr-img class="cdr-doc-article-img" alt="Breadcrumb with truncation XS  threshold at 70%" :src="$withBase(`/breadcrumb/Spec_API___Breadcrumb_Truncated_XSThreshold_70to100_16-4.png`)" />
 
 ```vue
 <cdr-breadcrumb
