@@ -198,13 +198,13 @@
 
 Default and standard spacing for checkboxes.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/checkbox" sandbox-href="https://codesandbox.io/s/z30opplw43" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/checkbox" sandbox-href="https://codesandbox.io/s/z30opplw43" :model="{ex1: true, ex2: false, ex3: false}" >
 
 ```html
 <div>
-  <cdr-checkbox>Default checkbox 1</cdr-checkbox>
-  <cdr-checkbox>Default checkbox 2</cdr-checkbox>
-  <cdr-checkbox disabled>Default checkbox 3</cdr-checkbox>
+  <cdr-checkbox v-model="ex1">Default checkbox 1</cdr-checkbox>
+  <cdr-checkbox v-model="ex2">Default checkbox 2</cdr-checkbox>
+  <cdr-checkbox v-model="ex3" disabled>Default checkbox 3</cdr-checkbox>
 </div>
 ```
 
@@ -214,13 +214,13 @@ Default and standard spacing for checkboxes.
 
 Compact spacing for checkboxes.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/checkbox" sandbox-href="https://codesandbox.io/s/z30opplw43" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/checkbox" sandbox-href="https://codesandbox.io/s/z30opplw43" :model="{ex1: true, ex2: false, ex3: false}">
 
 ```html
 <div>
-  <cdr-checkbox modifier="compact">Compact checkbox 1</cdr-checkbox>
-  <cdr-checkbox modifier="compact">Compact checkbox 2</cdr-checkbox>
-  <cdr-checkbox disabled modifier="compact">Compact checkbox 3</cdr-checkbox>
+  <cdr-checkbox v-model="ex1" modifier="compact">Compact checkbox 1</cdr-checkbox>
+  <cdr-checkbox v-model="ex2" modifier="compact">Compact checkbox 2</cdr-checkbox>
+  <cdr-checkbox v-model="ex3" disabled modifier="compact">Compact checkbox 3</cdr-checkbox>
 </div>
 ```
 
@@ -230,11 +230,11 @@ Compact spacing for checkboxes.
 
 Displays status for checkbox group by indicating that some of the sub-selections in a list are selected. Provides user with ability to select or unselect all items in the list’s sub-group.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/checkbox" sandbox-href="https://codesandbox.io/s/z30opplw43" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/checkbox" sandbox-href="https://codesandbox.io/s/z30opplw43" :model="{ex1: false}">
 
 ```html
 <div>
-  <cdr-checkbox indeterminate>Indeterminate</cdr-checkbox>
+  <cdr-checkbox v-model="ex1" indeterminate>Indeterminate</cdr-checkbox>
 </div>
 ```
 
@@ -244,19 +244,22 @@ Displays status for checkbox group by indicating that some of the sub-selections
 
 Custom styles for checkboxes.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/checkbox" sandbox-href="https://codesandbox.io/s/z30opplw43" class="custom-checkbox-example">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/checkbox" sandbox-href="https://codesandbox.io/s/z30opplw43" class="custom-checkbox-example" :model="{ex1: true, ex2: false, ex3: false}">
 
 ```html
 <div>
   <cdr-checkbox
+    v-model="ex1"
     modifier="hide-figure"
     input-class="no-box"
     content-class="no-box__content">Custom checkbox 1</cdr-checkbox>
   <cdr-checkbox
+    v-model="ex2"
     modifier="hide-figure"
     input-class="no-box"
     content-class="no-box__content">Custom checkbox 2</cdr-checkbox>
   <cdr-checkbox 
+    v-model="ex3"
     modifier="hide-figure"
     input-class="no-box"
     content-class="no-box__content"
