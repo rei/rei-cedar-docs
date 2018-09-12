@@ -61,6 +61,7 @@ module.exports = {
         items: [
           { text: "Accordion", link: "/components/accordion/" },
           { text: "Breadcrumb", link: "/components/breadcrumb/" },
+          { text: "Block Quote", link: "/components/block-quote/" },
           { text: "Buttons", link: "/components/buttons/" },
           { text: "Caption", link: "/components/caption/" },
           { text: "Call to Action", link: "/components/cta/" },
@@ -72,7 +73,7 @@ module.exports = {
           { text: "Links", link: "/components/links/" },
           { text: "Lists", link: "/components/lists/" },
           { text: "Paragraphs", link: "/components/paragraphs/" },
-          { text: "Radio Buttons", link: "/components/radio/" }
+          { text: "Radio", link: "/components/radio/" }
         ]
       },
       {
