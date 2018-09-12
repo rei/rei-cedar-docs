@@ -39,6 +39,10 @@
 
 .custom-radio-example,
 .custom-checkbox-example {
+  .no-box:focus ~ .no-box__content {
+    outline: .5rem auto -webkit-focus-ring-color;
+  }
+
   .no-box:checked ~ .no-box__content {
     color: green;
 

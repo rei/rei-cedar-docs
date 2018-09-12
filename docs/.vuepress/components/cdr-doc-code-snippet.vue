@@ -8,7 +8,7 @@
     'cdr-doc-code-snippet--no-max-height': !maxHeight }">
     <div class="cdr-doc-code-snippet__actions" v-if="copyButton">
       <div class="cdr-doc-code-snippet__copy-action cdr-doc-code-snippet__action" v-on:click="copyToClipBoard">
-        <button class="cdr-doc-code-snippet__copy-action">
+        <button class="cdr-doc-code-snippet__copy-button">
           <img class="cdr-doc-code-snippet__action-icon" :src="$withBase(`/Copy@2x.png`)" alt="Copy to clipboard"/>
         </button>
         <span class="cdr-doc-code-snippet__tooltip cdr-doc-code-snippet__tooltip--show-on-hover">
@@ -26,18 +26,22 @@
           </span>
         </span>
       </div>
-      <a class="cdr-doc-code-snippet__action" :href="repositoryHref" target="_blank" rel="noopener noreferrer" v-if="repositoryHref">
-        <img class="cdr-doc-code-snippet__action-icon" :src="$withBase(`/GitHub@2x.png`)" alt="View source in repository"/>
+      <div class="cdr-doc-code-snippet__action-wrapper">
+        <a class="cdr-doc-code-snippet__action" :href="repositoryHref" target="_blank" rel="noopener noreferrer" v-if="repositoryHref">
+          <img class="cdr-doc-code-snippet__action-icon" :src="$withBase(`/GitHub@2x.png`)" alt="View source in repository"/>
+        </a>
         <span class="cdr-doc-code-snippet__tooltip cdr-doc-code-snippet__tooltip--show-on-hover">
           View in repository
         </span>
-      </a>
-      <a class="cdr-doc-code-snippet__action" :href="sandboxHref" target="_blank" rel="noopener noreferrer" v-if="sandboxHref">
-        <img class="cdr-doc-code-snippet__action-icon" :src="$withBase(`/CodeSandbox@2x.png`)" alt="View in code sandbox"/>
+      </div>
+      <div class="cdr-doc-code-snippet__action-wrapper">
+        <a class="cdr-doc-code-snippet__action" :href="sandboxHref" target="_blank" rel="noopener noreferrer" v-if="sandboxHref">
+          <img class="cdr-doc-code-snippet__action-icon" :src="$withBase(`/CodeSandbox@2x.png`)" alt="View in code sandbox"/>
+        </a>
         <span class="cdr-doc-code-snippet__tooltip cdr-doc-code-snippet__tooltip--show-on-hover">
           View in sandbox
         </span>
-      </a>
+      </div>
 
       <button class="cdr-doc-snippet__hide-code-toggle" v-on:click="toggleCodeDisplay" v-if="codeToggle">{{ hideCodeToggleText }}</button>
     </div>
@@ -203,14 +207,20 @@ export default {
     }
   }
 
-  .cdr-doc-code-snippet__copy-action {
+  .cdr-doc-code-snippet__copy-button {
     background: none;
     border: 0;
     display: block;
     margin: 0;
     padding: 0;
+  }
+
+  .cdr-doc-code-snippet__copy-action {
+    margin-right: $space-1-x;
     position: relative;
   }
+
+
 
   $cdr-doc-code-snippet-icon-color: $taken-for-granite;
   $cdr-doc-code-snippet-tooltip-background-color: rgba(0,0,0,0.8);
@@ -252,7 +262,13 @@ export default {
     }
   }
 
-  .cdr-doc-code-snippet__action:hover .cdr-doc-code-snippet__tooltip--show-on-hover {
+  .cdr-doc-code-snippet__action-wrapper {
+    position: relative;
+    margin-right: $space-1-x;
+  }
+
+  .cdr-doc-code-snippet__action:hover + .cdr-doc-code-snippet__tooltip--show-on-hover,
+  .cdr-doc-code-snippet__copy-button:hover + .cdr-doc-code-snippet__tooltip--show-on-hover {
     @include cdr-doc-reveal-tooltip;
 
     .cdr-doc-code-snippet--show-copied-notification & {
@@ -287,7 +303,6 @@ export default {
 
   .cdr-doc-code-snippet__action {
     display: block;
-    margin-right: $space-1-x;
     position: relative;
   }
 
