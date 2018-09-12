@@ -88,6 +88,7 @@ import { CdrCaption } from "@rei/cdr-caption";
 import "@rei/cdr-caption/dist/cdr-caption.css";
 Vue.component("CdrCaption", CdrCaption);
 FullVue.component("CdrCaption", CdrCaption);
+
 import { CdrQuote } from "@rei/cdr-quote";
 import "@rei/cdr-quote/dist/cdr-quote.css";
 Vue.component("CdrQuote", CdrQuote);
