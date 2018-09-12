@@ -3,14 +3,14 @@
   "title": "Breadcrumb",
   "layout": "LayoutComponent",
   "summary": "Navigation to reveal a page’s location within the site hierarchy",
-  "title_metadata": "Breadcrumb, CdrBreadcrumb, cdr-breadcrumb",
+  "title_metadata": "CdrBreadcrumb",
 	  "path": [
       {
         "type": "do",
         "image": "breadcrumb/breadcrumbs_path_do_4-3.png",
         "ratio": "4-3",
         "alt": "Image showing proper breadcrumb paths",
-        "caption": "show the full path for breadcrumbs whenever possible."
+        "caption": "show the full path for breadcrumb items whenever possible."
       },
       {
         "type": "dont",
@@ -26,14 +26,14 @@
         "image": "breadcrumb/breadcrumbs_path_symbol_do_4-3.png",
         "ratio": "4-3",
         "alt": "breadcrumbs separated with a forward slash",
-        "caption": "separate breadcrumbs with the \"/\" symbol, automatically added in CSS."
+        "caption": "separate breadcrumb items with the \"/\" symbol, automatically added in CSS."
       },
       {
         "type": "dont",
         "image": "breadcrumb/breadcrumbs_path_symbol_dont_4-3.png",
         "ratio": "4-3",
         "alt": "breadcrumbs separated with a right arrow",
-        "caption": "create a custom symbol to separate breadcrumbs."
+        "caption": "create a custom symbol to separate breadcrumb items."
       }
     ],
     "truncation": [
@@ -42,14 +42,14 @@
         "image": "breadcrumb/breadcrumbs_truncate_do_4-3.png",
         "ratio": "4-3",
         "alt": "truncated breadcrumbs",
-        "caption": "use truncated breadcrumbs."
+        "caption": "use truncation for breadcrumb path."
       },
       {
         "type": "dont",
         "image": "breadcrumb/breadcrumbs_truncate_dont_4-3.png",
         "ratio": "4-3",
         "alt": "breadcrumbs forcing a linebreak",
-        "caption": "break the page title when long breadcrumbs are expanded."
+        "caption": "break the page title when long breadcrumb path is expanded."
       }
     ],
     "link": [
@@ -58,14 +58,14 @@
         "image": "breadcrumb/breadcrumbs_link_do_4-3.png",
         "ratio": "4-3",
         "alt": "breadcrumbs links in gray",
-        "caption": "use gray color tints for breadcrumbs."
+        "caption": "use gray color tints for breadcrumb items."
       },
       {
         "type": "dont",
         "image": "breadcrumb/breadcrumbs_link_dont_4-3.png",
         "ratio": "4-3",
         "alt": "breadcrumbs links in blue",
-        "caption": "color breadcrumbs blue."
+        "caption": "color breadcrumb items blue."
       }
     ],
   "versions": [
@@ -79,25 +79,25 @@
                 "name": "items",
                 "type": "array",
                 "default": "N/A",
-                "description": "An array of breadcrumb objects that each contain a \"url\" and \"name\" property"
+                "description": "Sets the array of a breadcrumb object containing a 'url' and 'name' property"
               },
               {
                 "name": "truncationEnabled",
                 "type": "boolean",
                 "default": "true",
-                "description": "Controls the ability to truncate. If a user sets this to false, truncation will no longer occur"
+                "description": "Controls the ability to truncate the entire breadcrumb path. If this value is false, truncation will no longer occur"
               },
               {
                 "name": "truncationThreshold",
                 "type": "number",
                 "default": 0.80,
-                "description": "This property respresents the ratio between breadcrumb width vs container width that truncation will occur"
+                "description": "Sets the ratio between breadcrumb path width and container width when truncation will occur"
               },
               {
                 "name": "truncationXSThreshold",
                 "type": "number",
                 "default": 1,
-                "description": "This property respresents the ratio between breadcrumb width vs container width that truncation will occur on the XS breakpoint"
+                "description": "Sets the ratio between breadcrumb path width and container width when truncation will occur at the XS breakpoint"
               }
             ],
             "installation": [
@@ -182,8 +182,8 @@ This component has compliance with following WebAIM’s accessibility guidelines
 <br>
 
 To ensure that usage of this component complies with accessibility guidelines:
-Indicate the current page location within a hierarchy using breadcrumbs
-Do not incluPade the current page in breadcrumb path because the ```aria-current``` attribute is not defined for the last item
+- Indicate the current page location within a hierarchy using breadcrumbs
+- Do not include the current page in breadcrumb path because the ```aria-current``` attribute is not defined for the last item
 
 <br>
 
@@ -198,8 +198,6 @@ This component has compliance with WCAG guidelines by:
 
 <template slot="Design Guidelines">
 <cdr-doc-table-of-contents-shell>
-
-  <cdr-doc-alert/>
 
 ## Use when
 
@@ -243,8 +241,9 @@ Breadcrumbs provide context and a sense of place. This is especially important o
 - Refer to API documentation for how to customize breadcrumb truncation width
 
 
-## Do / Don't
+### Do / Don't
 <do-dont :examples="$page.frontmatter.path" />
+
 
 ### Truncation
 
@@ -252,13 +251,13 @@ Truncate breadcrumbs at 80% width of the screen’s content container except for
 
 <cdr-img alt="breadcrumbs truncated to 80 percent of the container" :src="$withBase(`/breadcrumb/Spec__Breadcrumb_Truncated_with_Grid_16-4.png`)" />
 
-Truncate breadcrumbs left to right to show the final two links in the trail, so that at least the parent and grandparent are always visible
-
-<do-dont :examples="$page.frontmatter.truncation" />
-
 Indicate hidden links using an ellipsis
 
 <cdr-img alt="breadcrumbs truncated with ellipsis" :src="$withBase(`/breadcrumb/Spec__Breadcrumb_Truncated_16-2.png`)" />
+
+Truncate breadcrumbs left to right to show the final two links in the trail, so that at least the parent and grandparent are always visible
+
+<do-dont :examples="$page.frontmatter.truncation" />
 
 
 ### Avoid customization
@@ -296,7 +295,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the `CdrBreadcrumb` package using `npm` in your terminal:
+Install the CdrBreadcrumb package using `npm` in your terminal:
 
 _Terminal_
 
@@ -392,7 +391,7 @@ Use the ```truncationThreshold``` prop to alter when truncation occurs:
 
 - Value must be a number between 0 and 1
 - Truncation occurs when (breadcrumb width) / (container width) exceeds the ```truncationThreshold``` value
-- The default value is 0.80 ( 80% ).
+- The default value is 0.80 ( 80% )
 
 The below image and example code shows using ```truncationThreshold``` to set truncation to occur at 50%.
 
@@ -406,9 +405,9 @@ The below image and example code shows using ```truncationThreshold``` to set tr
 ```
 Use the ```truncationXSThreshold``` prop to alter when truncation occurs:
 
-- value must be a number between 0 and 1
+- Value must be a number between 0 and 1
 - Truncation occurs when (breadcrumb width) / (container width) exceeds the ```truncationXSThreshold``` value on XS screen sizes
-- The default value is 1 ( 100% ).
+- The default value is 1 ( 100% )
 
 The below image and example code shows using ```truncationXSThreshold``` to set truncation to occur at 70%.
 
@@ -432,7 +431,7 @@ The below image and example code shows using ```truncationXSThreshold``` to set 
 - Truncates when entire breadcrumb string gets too long
 - Enables customization of whitespace threshold to the right, by default and in narrow viewports
 - Incorporates accessibility and SEO compliant features
-- Git commit reference [08b883c](https://github.com/rei/rei-cedar/commit/08b883c)
+- Git commit reference [(08b883c)](https://github.com/rei/rei-cedar/commit/08b883c)
 
 </template>
 </cdr-doc-tabs>
