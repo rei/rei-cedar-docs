@@ -422,8 +422,9 @@ The CdrCta component looks like a button, however it's actually an anchor:
 
 The following variants are available to the `cdr-cta` modifier attribute:
 
-| `elevated`  | Adds drop shadow to button |
-| ---         | ---                        |
+| Value | Description            |
+|:------|:-----------------------|
+| 'elevated'  | Adds drop shadow to button |
 
 </cdr-doc-table-of-contents-shell>
 </template>
