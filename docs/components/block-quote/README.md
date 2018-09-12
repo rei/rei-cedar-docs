@@ -155,7 +155,7 @@ Default block quote can be used with the following HTML tags: `<p>`, `<div>`, `<
 <div>
   <cdr-quote
         modifier="block"
-        summary="Stewardship is a choice and a mindset. It means that we look at our business differently, an we take individual responsibility for making a positive, lasting impact."
+        summary="Stewardship is a choice and a mindset. It means that we look at our business differently, and we take individual responsibility for making a positive, lasting impact."
         citation="Jerry Stritzke, REI President and CEO"
       />
 </div>
