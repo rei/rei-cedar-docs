@@ -10,11 +10,11 @@
       },
       {
          "text": "Block Quote",
-         "href": "/components/block-quote/"
+         "href": "../block-quote/"
       },
       {
         "text": "Paragraphs",
-        "href": "/components/paragraphs/"
+        "href": "../paragraphs/"
       }
     ],
     "indenting": [
@@ -165,7 +165,7 @@ Default pull quote can be used with the following HTML tags: `<p>`, `<div>`, `<a
 
 To ensure that usage of this component complies with accessibility guidelines:
 
-- All recommendations listed for [Paragraphs](/components/paragraphs/?active-link=accessibility) component apply to this component
+- All recommendations listed for [Paragraphs](../paragraphs/?active-link=accessibility) component apply to this component
 - Do not use this component to indent text. Screen readers use the `<blockquote>` element to:
   - Provide semantic understanding of page content by announcing blockquote as quote
   - Define a sectioning root in HTML5, which means that any  `<h1>` - `<h6>`  elements it contains don’t become part of the document’s outline
@@ -192,7 +192,7 @@ This component has compliance with WCAG guidelines by:
 
 ### Don't use when
 
-- Displaying a citation reference. Instead, use [Block Quote](/components/block-quote/)
+- Displaying a citation reference. Instead, use [Block Quote](../block-quote/)
 - Displaying for a decorative treatment only
 
 ## Behavior
@@ -236,7 +236,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the `CdrQuote` package using `npm` in your terminal:
+Install the CdrQuote package using `npm` in your terminal:
 
 _Terminal_
 
