@@ -7,14 +7,14 @@
   "vertical": [
       {
         "type": "do",
-        "image": "button/button_vert_do_4-3.png",
+        "image": "buttons/button_vert_do_4-3.png",
         "ratio": "4-3",
         "alt": "Image showing proper vertical button grouping",
-        "caption": "match button widths"
+        "caption": "match button widths."
       },
       {
         "type": "dont",
-        "image": "button/button_vert_dont_4-3.png",
+        "image": "buttons/button_vert_dont_4-3.png",
         "ratio": "4-3",
         "alt": "Image showing mixed button sizing",
         "caption": "mix button sizes."
@@ -125,7 +125,7 @@
             "name": "size",
             "type": "string",
             "default": "medium",
-            "description": "Sets the button size. Possible values: { small, medium, large }"
+            "description": "Sets the button size. Possible values: { 'small' | 'medium' | 'large' }"
           },
           {
             "name": "responsiveSize",
@@ -155,11 +155,11 @@
         "slots": [
           {
             "name": "default",
-            "description": "Slot for the readable text of the button. Leave empty if icon-only"
+            "description": "Sets the innerHTML for cdr-button. This is the readable text of the button. Leave empty if icon-only"
           },
           {
             "name": "icon",
-            "description": "Slot for the icon in a button"
+            "description": "Sets the innerHTML for cdr-button. This is for the icon"
           }
         ],
         "installation": [
@@ -350,7 +350,7 @@ When stacking buttons vertically:
   - Align left borders
   - Display all with the same width
   - Separate each by stack-1-x spacing
-  <cdr-img :src="$withBase(`/button/Spec__Button_Vertical_Spacing_16-4.png`)"/>
+  <cdr-img :src="$withBase(`/buttons/Spec__Button_Vertical_Spacing_16-4.png`)"/>
 
 <br />
 
@@ -358,7 +358,7 @@ When arranging buttons horizontally:
   - Align top borders
   - Display all with the same height
   - Separate each by standard inline-1-x spacing
-  <cdr-img :src="$withBase(`/button/Spec__Button_Horizontal_Spacing_16-9.png`)"/>
+  <cdr-img :src="$withBase(`/buttons/Spec__Button_Horizontal_Spacing_16-9.png`)"/>
 
 <br />
 
