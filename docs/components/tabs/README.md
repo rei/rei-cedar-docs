@@ -82,6 +82,12 @@
                 "description": "Sets code reference and tab display name. Required and must be unique for each tab"
               },
               {
+                "name": "height",
+                "type": "string",
+                "default": "240px",
+                "description": "Sets total height of tab container."
+              },
+              {
                 "name": "modifier",
                 "type": "string",
                 "default": "n/a",
@@ -115,7 +121,7 @@ Tab buttons align left and bottom border expands to full width of container
 
 ```html
 
-<cdr-tabs>
+<cdr-tabs height="100px">
   <cdr-tab name="Product">Tab 1 Content</cdr-tab>
   <cdr-tab name="Articles">Tab 2 Content</cdr-tab>
   <cdr-tab name="Classes & Events">Tab 3 Content</cdr-tab>
