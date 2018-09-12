@@ -87,7 +87,14 @@
                 "default": "n/a",
                 "description": "Modifies the style variants for this component. Possible values: {  'compact'  |  'full-width'  |  'no-border'  }"
               }
-            ]
+            ],
+            "events": [
+              {
+                "name": "tabChange",
+                "arguments": "state, tabId",
+                "description": "$emit event fired when the active tab has been changed"
+              }
+            ],
           }
         }
       ],
@@ -257,6 +264,9 @@ This component has compliance with WCAG guidelines by:
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props"/>
 
+## Events
+
+<cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
 
 ## Installation
 
