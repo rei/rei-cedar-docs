@@ -512,8 +512,9 @@ The below example uses both the `size` and `responsive-size` props. This buttonâ
 
 Following variants are available to the `cdr-button` modifier attribute:
 
-| `secondary` | Sets the secondary style for the button |
-| ---         | ---                                     |
+| Value | Description            |
+|:------|:-----------------------|
+| 'secondary' | Sets the secondary style for the button |
 
 
 ### Click Actions
