@@ -95,6 +95,15 @@
       ],
       "version": "0.1.0"
     }
+  ],
+  "see_also": [
+    {
+      "text": "See Also",
+    },
+    {
+      "text": "Images",
+      "href": "../image/"
+    }
   ]
 }
 ---
