@@ -3,7 +3,7 @@
   "title": "Buttons",
   "layout": "LayoutComponent",
   "summary": "Invoke and communicate an action that will occur",
-  "title_metadata": "Button, CdrButton",
+  "title_metadata": "CdrButton",
   "vertical": [
       {
         "type": "do",
@@ -307,7 +307,7 @@ Change the button size based on where button is used. Default size is medium. Sm
 To ensure that usage of this component complies with accessibility guidelines:
 
 - For icon-only buttons, provide `aria-label` text that describes the button's action
-- Apply keyboard interaction patterns as described on REI universal design and accessibility: Buttons
+- Apply keyboard interaction patterns as described on [REI universal design and accessibility: Buttons](https://confluence.rei.com/display/accessibility/Buttons)
 
 <br />
 
@@ -323,7 +323,6 @@ This component has no specific WCAG compliance attributes built into the control
 
 <template slot="Design Guidelines">
   <cdr-doc-table-of-contents-shell>
-    <cdr-doc-alert/>
 
 ## Use When
 
@@ -408,7 +407,7 @@ When making decisions about using this component styled as a link or a button, c
 
 Apply the following use cases when deciding when to use links as anchors or buttons:
 
-|                                                                                       | |
+| **Links**                                                                                           | **Buttons**                                                                          |
 | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | Navigating user to a new page or view                                                               | Toggling a display to full screen                                                    |
 | Changing the URL                                                                                    | Opening a modal window                                                               |
@@ -511,11 +510,11 @@ The below example uses both the `size` and `responsive-size` props. This buttonâ
 
 ### Modifiers
 
-The following variants are available to the `cdr-button` modifier attribute:
+Following variants are available to the `cdr-button` modifier attribute:
 
-|             |                                         |
-| ---         | ---                                     |
 | `secondary` | Sets the secondary style for the button |
+| ---         | ---                                     |
+
 
 ### Click Actions
 
