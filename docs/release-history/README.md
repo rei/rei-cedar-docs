@@ -32,8 +32,8 @@
 
 ### Component Updates
 
-- Updated [Buttons](../components/buttons/) component styling to remove extra grey border around all variants (PLIB-3770) (view in github)
-- Updated [Breadcrumb](../components/breadcrumb/)Breadcrumb component to address an issue with the ‘offsetWidth’ property (PLIB-3659) (view in github)
+- Updated [Buttons](../components/buttons/) component styling to remove extra grey border around all variants (PLIB-3770)
+- Updated [Breadcrumb](../components/breadcrumb/) component to address an issue with the ‘offsetWidth’ property (PLIB-3659)
 
 ### Design Assets
 
@@ -61,7 +61,7 @@
 ### Component Updates
 
 - Updated cdr-core.css for anchor color to use $easily-excited (PLIB-3773) [view in github](https://github.com/rei/rei-cedar/tree/18.09.1/src/cdr-assets)
-- released npm patch for released components in support of current cdrAsset peer-dependency version bump
+- Released npm patch for released components in support of current cdrAsset peer-dependency version bump
 
 ## MVP Release
 
