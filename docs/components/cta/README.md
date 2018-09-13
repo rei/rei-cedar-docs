@@ -113,10 +113,10 @@
                 "name": "href",
                 "type": "string",
                 "default": "\"#\"",
-                "description": "Sets the link using the page url."
+                "description": "Sets the link using the page url"
               },
               {
-                "name": "",
+                "name": "modifier",
                 "type": "string",
                 "default": "N/A",
                 "description": "Modifies the style variant for this component. Possible values: { 'elevated' }"
@@ -125,7 +125,7 @@
             "slots": [
               {
                 "name": "default",
-                "description": "Slot for CdrCta readable text."
+                "description": "Sets the innerHTML for cdr-cta. This is the readable text of the button"
               }
             ],
           }
@@ -359,7 +359,7 @@ Install the CdrCta package using `npm` in your terminal:
 _Terminal_
 
 ```bash
-npm i -s @rei/cdr-link
+npm i -s @rei/cdr-cta
 ```
 
 ### 2. Import Dependencies
@@ -370,7 +370,7 @@ _main.js_
 // import your required CSS
 import "@rei/cdr-cta/dist/cdr-cta.css";
 
-// CTA uses a 
+// CTA uses cdr-icon 
 import "@rei/cdr-link/dist/cdr-icon.css";
 ```
 
