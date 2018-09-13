@@ -74,7 +74,7 @@ module.exports = {
           { text: "Lists", link: "/components/lists/" },
           { text: "Paragraphs", link: "/components/paragraphs/" },
           { text: "Radio Buttons", link: "/components/radio/" },
-          { text: "Tabs", link: "/components/tabs/" }
+          { text: "Tabs", link: "/components/tabs/" },
           { text: "Radio", link: "/components/radio/" }
         ]
       },
