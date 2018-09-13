@@ -6,8 +6,7 @@
   "title_metadata": "Accordion, CdrAccordion, cdr-accordion",
   "breadcrumbs": [
     {
-      "text": "Components/",
-      "href": "#"
+      "text": "Components/"
     }
   ],
   "name": "CdrAccordion",

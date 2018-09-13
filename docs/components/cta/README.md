@@ -86,8 +86,7 @@
   ],
   "breadcrumbs": [
     {
-      "text": "Components/",
-      "href": "#"
+      "text": "Components/"
     }
   ],
   "versions": [

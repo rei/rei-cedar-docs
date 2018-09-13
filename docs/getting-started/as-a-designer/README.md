@@ -5,8 +5,7 @@
   "layout": "LayoutArticle",
   "breadcrumbs": [
     {
-      "text": "Getting Started/",
-      "href": "/getting-started/"
+      "text": "Getting Started/"
     }
   ],
 }
