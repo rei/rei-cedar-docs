@@ -100,20 +100,20 @@
           {
             "name": "tag",
             "type": "string",
-            "default": "button",
+            "default": "'button'",
             "description": "Renders CdrButton as a <button> or <a> element. When using the value of <a>, this element renders as an achor link. Possible values: { 'button' | 'a' }"
           },
           {
             "name": "type",
             "type": "string",
-            "default": "button",
+            "default": "'button'",
             "description": "Sets the button type. Possible values: { 'button' | 'submit' | 'reset' }"
           },
           {
             "name": "onClick",
             "type": "function",
             "default": "return null",
-            "description": "Add custom click actions"
+            "description": "Adds custom click actions"
           },
           {
             "name": "fullWidth",

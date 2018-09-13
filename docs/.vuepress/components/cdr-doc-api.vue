@@ -17,7 +17,11 @@ export default {
     apiData: {
       type: Array,
       required: false
-    }
+    },
+    slotsGettingStartedLink: {
+      type: Boolean,
+      default: true,
+    },
   },
   render: function(h, ctx) {
     function apiComponent () {
@@ -38,7 +42,7 @@ export default {
       return apiComp;
     }
 
-    return h(apiComponent(), ctx.props.apiData)
+    return h(apiComponent(), { props: ctx.props });
   }
 }
 </script>

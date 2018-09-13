@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="api-event" v-for="(apiEvent, index) in this.$slots.default" :key="apiEvent.text">
+    <div class="api-event" v-for="(apiEvent, index) in apiData" :key="apiEvent.text">
       <cdr-row
         gutter="none"
       >
@@ -35,6 +35,7 @@
 <script>
   export default {
     name: 'ApiEvent',
+    props: ['apiData'],
   };
 </script>
 
