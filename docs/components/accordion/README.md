@@ -144,7 +144,7 @@
 
 Section borders expand to full width of container.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/accordion" sandbox-href="https://codesandbox.io/s/m9jm5rw1zx" :example-margin-top="15">
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/accordion" sandbox-href="https://codesandbox.io/s/m9jm5rw1zx">
 
 ```html
   <cdr-accordion>
@@ -182,7 +182,7 @@ Section borders expand to full width of container.
 
 Reduced spacing around title and content body. Also, smaller font sizes resulting in an overall denser display of content.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/accordion" sandbox-href="https://codesandbox.io/s/m9jm5rw1zx" :example-margin-top="15">
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/accordion" sandbox-href="https://codesandbox.io/s/m9jm5rw1zx">
 
 ```html
   <cdr-accordion :compact="true">
