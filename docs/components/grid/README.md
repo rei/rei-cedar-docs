@@ -1161,11 +1161,13 @@ Grids are built from two components, **CdrRow** and **CdrCol**.
 
 ## Slots
 
+Find more information about using Slots in the article, <cdr-link :href="$withBase('/getting-started/as-a-developer/?active-link=add-content-via-slots')">Getting Started as a Developer</cdr-link>
+
 ### CdrRow
-<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
+<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" :slots-getting-started-link="false" />
 
 ### CdrCol
-<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[1].api.slots" />
+<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[1].api.slots" :slots-getting-started-link="false" />
 
 ## Installation
 

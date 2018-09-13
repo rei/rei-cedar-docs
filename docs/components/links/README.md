@@ -230,7 +230,7 @@ This component has compliance with following WebAIM’s accessibility guidelines
 
 ### Don’t use when
 
-- Navigating a user from promotional or campaign content. Instead, use Call to action
+- Navigating a user from promotional or campaign content. Instead, use [Call to Action](../cta/)
 
 ## Foundations
 

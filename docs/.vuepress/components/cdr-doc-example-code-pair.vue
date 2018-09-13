@@ -108,7 +108,11 @@
       hideCode: {
         default: true,
         type: Boolean
-      }
+      },
+      model: {
+        type: Object,
+        default: () => {}
+      },
     },
     data() {
       return {
@@ -138,7 +142,8 @@
       for (const label in this.$slots) {
         const codeNode = this.extractCodeNodeFromVnodeTree(this.$slots[label][0]);
         const templateSource = this.getStoredTemplateSourceForExample(label, codeNode);
-        this.$options.components[`cdr-doc-html-example-${label}-${this.instanceId}`] = { ...Vue.compile(`<div>${templateSource}</div>`) };
+        const m = this.model
+        this.$options.components[`cdr-doc-html-example-${label}-${this.instanceId}`] = { data() { return {...m} }, ...Vue.compile(`<div>${templateSource}</div>`) };
       }
     },
     methods: {

@@ -6,8 +6,7 @@
   "title_metadata": "cdr-icon",
   "breadcrumbs": [
     {
-      "text": "Components/",
-      "href": "#"
+      "text": "Components/"
     }
   ],
   "name": "CdrIcon",
@@ -17,11 +16,11 @@
     },
     {
       "text": 'Buttons',
-      "href": '../button/'
+      "href": '../buttons/'
     },
     {
       "text": 'Links',
-      "href": '../link/'
+      "href": '../links/'
     },
     {
       "text": 'Iconography',

@@ -3,18 +3,18 @@
   "title": "Buttons",
   "layout": "LayoutComponent",
   "summary": "Invoke and communicate an action that will occur",
-  "title_metadata": "Button, CdrButton",
+  "title_metadata": "CdrButton",
   "vertical": [
       {
         "type": "do",
-        "image": "button/button_vert_do_4-3.png",
+        "image": "buttons/button_vert_do_4-3.png",
         "ratio": "4-3",
         "alt": "Image showing proper vertical button grouping",
-        "caption": "match button widths"
+        "caption": "match button widths."
       },
       {
         "type": "dont",
-        "image": "button/button_vert_dont_4-3.png",
+        "image": "buttons/button_vert_dont_4-3.png",
         "ratio": "4-3",
         "alt": "Image showing mixed button sizing",
         "caption": "mix button sizes."
@@ -86,8 +86,7 @@
     ],
   "breadcrumbs": [
     {
-      "text": "Components/",
-      "href": "#"
+      "text": "Components/"
     }
   ],
   "versions": [
@@ -100,20 +99,20 @@
           {
             "name": "tag",
             "type": "string",
-            "default": "button",
+            "default": "'button'",
             "description": "Renders CdrButton as a <button> or <a> element. When using the value of <a>, this element renders as an achor link. Possible values: { 'button' | 'a' }"
           },
           {
             "name": "type",
             "type": "string",
-            "default": "button",
+            "default": "'button'",
             "description": "Sets the button type. Possible values: { 'button' | 'submit' | 'reset' }"
           },
           {
             "name": "onClick",
             "type": "function",
             "default": "return null",
-            "description": "Add custom click actions"
+            "description": "Adds custom click actions"
           },
           {
             "name": "fullWidth",
@@ -125,7 +124,7 @@
             "name": "size",
             "type": "string",
             "default": "medium",
-            "description": "Sets the button size. Possible values: { small, medium, large }"
+            "description": "Sets the button size. Possible values: { 'small' | 'medium' | 'large' }"
           },
           {
             "name": "responsiveSize",
@@ -155,11 +154,11 @@
         "slots": [
           {
             "name": "default",
-            "description": "Slot for the readable text of the button. Leave empty if icon-only"
+            "description": "Sets the innerHTML for cdr-button. This is the readable text of the button. Leave empty if icon-only"
           },
           {
             "name": "icon",
-            "description": "Slot for the icon in a button"
+            "description": "Sets the innerHTML for cdr-button. This is for the icon"
           }
         ],
         "installation": [
@@ -307,7 +306,7 @@ Change the button size based on where button is used. Default size is medium. Sm
 To ensure that usage of this component complies with accessibility guidelines:
 
 - For icon-only buttons, provide `aria-label` text that describes the button's action
-- Apply keyboard interaction patterns as described on REI universal design and accessibility: Buttons
+- Apply keyboard interaction patterns as described on [REI universal design and accessibility: Buttons](https://confluence.rei.com/display/accessibility/Buttons)
 
 <br />
 
@@ -323,7 +322,6 @@ This component has no specific WCAG compliance attributes built into the control
 
 <template slot="Design Guidelines">
   <cdr-doc-table-of-contents-shell>
-    <cdr-doc-alert/>
 
 ## Use When
 
@@ -351,7 +349,7 @@ When stacking buttons vertically:
   - Align left borders
   - Display all with the same width
   - Separate each by stack-1-x spacing
-  <cdr-img :src="$withBase(`/button/Spec__Button_Vertical_Spacing_16-4.png`)"/>
+  <cdr-img class="cdr-doc-article-img" :src="$withBase(`/buttons/Spec__Button_Vertical_Spacing_16-4.png`)"/>
 
 <br />
 
@@ -359,7 +357,7 @@ When arranging buttons horizontally:
   - Align top borders
   - Display all with the same height
   - Separate each by standard inline-1-x spacing
-  <cdr-img :src="$withBase(`/button/Spec__Button_Horizontal_Spacing_16-9.png`)"/>
+  <cdr-img class="cdr-doc-article-img" :src="$withBase(`/buttons/Spec__Button_Horizontal_Spacing_16-9.png`)"/>
 
 <br />
 
@@ -408,7 +406,7 @@ When making decisions about using this component styled as a link or a button, c
 
 Apply the following use cases when deciding when to use links as anchors or buttons:
 
-|                                                                                       | |
+| **Links**                                                                                           | **Buttons**                                                                          |
 | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | Navigating user to a new page or view                                                               | Toggling a display to full screen                                                    |
 | Changing the URL                                                                                    | Opening a modal window                                                               |
@@ -511,11 +509,12 @@ The below example uses both the `size` and `responsive-size` props. This buttonâ
 
 ### Modifiers
 
-The following variants are available to the `cdr-button` modifier attribute:
+Following variants are available to the `cdr-button` modifier attribute:
 
-|             |                                         |
-| ---         | ---                                     |
-| `secondary` | Sets the secondary style for the button |
+| Value | Description            |
+|:------|:-----------------------|
+| 'secondary' | Sets the secondary style for the button |
+
 
 ### Click Actions
 
