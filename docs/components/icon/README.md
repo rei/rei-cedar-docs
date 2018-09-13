@@ -6,8 +6,7 @@
   "title_metadata": "cdr-icon",
   "breadcrumbs": [
     {
-      "text": "Components/",
-      "href": "#"
+      "text": "Components/"
     }
   ],
   "name": "CdrIcon",

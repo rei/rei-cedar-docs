@@ -3,7 +3,7 @@
     <div class="cdr-doc-intro__inner">
         <ul class="cdr-doc-intro__breadcrumbs" v-if="breadcrumbs">
           <li v-for="breadcrumb in breadcrumbs" :key="breadcrumb.text">
-            <a :href="breadcrumb.href" class="cdr-doc-intro__breadcrumb-link">{{ breadcrumb.text }}</a>
+            <p class="cdr-doc-intro__breadcrumb-link">{{ breadcrumb.text }}</p>
           </li>
         </ul>
         <h1 class="cdr-doc-intro__title">{{ title }}</h1>
@@ -87,6 +87,7 @@ export default {
     @include spruce-display-00;
     color: $text-color-intro;
     margin-right: $space-half-x;
+    margin-bottom: 0;
 
     &:hover {
       color: $text-color-intro;
