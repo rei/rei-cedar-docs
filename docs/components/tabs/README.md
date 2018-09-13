@@ -206,8 +206,6 @@ This component has compliance with WCAG guidelines by:
 - Creating anchor or in-page navigation
 - Comparing related content
 
-<br/>
-
 ## Foundations
 
 - Never display disabled tab labels
@@ -215,16 +213,12 @@ This component has compliance with WCAG guidelines by:
 - Keep to no more than 6 tab buttons
 - Never display fewer than 2 tab buttons
 
-<br/>
-
 ## Content
 
 - Order the tab buttons by priority/importance from left to right
 - Keep tab labels succinct and meaningful. Between 1-2 words is best and written in plain language
 - Never truncate tab labels
 - Use title caps for tab labels
-
-<br/>
 
 ## Behavior
 
@@ -245,7 +239,6 @@ This component has compliance with WCAG guidelines by:
 
 <do-dont :examples="$page.frontmatter.label" />
 
-<br/>
 
 ## Responsiveness
 
