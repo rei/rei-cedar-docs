@@ -33,7 +33,7 @@
               label">
         {{ label || slotLabel }}
       </span>
-      <div class="cdr-doc-example-code-pair__item-example">
+      <div class="cdr-doc-example-code-pair__item-example" :style="{ 'margin-top': `${exampleMarginTop}px` }">
         <!-- Will be replaced with the compiled template code on mount -->
         <component :is="`cdr-doc-html-example-${slotLabel}-${instanceId}`" />
       </div>
@@ -108,6 +108,10 @@
       hideCode: {
         default: true,
         type: Boolean
+      },
+      exampleMarginTop: {
+        type: Number,
+        default: 0,
       },
       model: {
         type: Object,
