@@ -457,7 +457,7 @@ Following variants are available to the `cdr-img` modifier attribute:
 
 ## Performance
 
-For internal applications with large images or images that would benefit from changes due to platform or breakpoint use our lazy load properties to integrate with the [rei-lazy-image-loader project](https://git.rei.com/projects/FEDPACK/repos/rei-lazy-image-loader/browse).
+For internal applications with large images or images that would benefit from changes due to platform or breakpoint, use lazy load properties to integrate with the [rei-lazy-image-loader project](https://git.rei.com/projects/FEDPACK/repos/rei-lazy-image-loader/browse).
 
 </cdr-doc-table-of-contents-shell>
 </template>
