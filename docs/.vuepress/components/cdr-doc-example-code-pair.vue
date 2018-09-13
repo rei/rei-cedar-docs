@@ -33,7 +33,7 @@
               label">
         {{ label || slotLabel }}
       </span>
-      <div class="cdr-doc-example-code-pair__item-example" :style="{ 'margin-top': `${exampleMarginTop}px` }">
+      <div class="cdr-doc-example-code-pair__item-example">
         <!-- Will be replaced with the compiled template code on mount -->
         <component :is="`cdr-doc-html-example-${slotLabel}-${instanceId}`" />
       </div>
@@ -108,10 +108,6 @@
       hideCode: {
         default: true,
         type: Boolean
-      },
-      exampleMarginTop: {
-        type: Number,
-        default: 0,
       },
       model: {
         type: Object,
@@ -221,6 +217,7 @@
     
     &__item-example {
       width: 100%;
+      margin-top: 15px; // prevents full-width components from displaying on top of light/dark toggle
     }
   }
 
