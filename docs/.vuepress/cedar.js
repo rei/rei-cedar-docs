@@ -84,9 +84,9 @@ import "@rei/cdr-table/dist/cdr-table.css";
 Vue.component("CdrTable", CdrTable);
 FullVue.component("CdrTable", CdrTable);
 
-import { CdrTabs, CdrTab } from "@rei/cdr-tabs";
+import { CdrTabs, CdrTabPanel } from "@rei/cdr-tabs";
 import "@rei/cdr-tabs/dist/cdr-tabs.css";
 Vue.component("CdrTabs", CdrTabs);
 FullVue.component("CdrTabs", CdrTabs);
-Vue.component("CdrTab", CdrTab);
-FullVue.component("CdrTab", CdrTab);
+Vue.component("CdrTabPanel", CdrTabPanel);
+FullVue.component("CdrTabPanel", CdrTabPanel);

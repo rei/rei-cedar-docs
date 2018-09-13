@@ -122,10 +122,10 @@ Tab buttons align left and bottom border expands to full width of container
 ```html
 
 <cdr-tabs height="100px">
-  <cdr-tab name="Product">Tab 1 Content</cdr-tab>
-  <cdr-tab name="Articles">Tab 2 Content</cdr-tab>
-  <cdr-tab name="Classes & Events">Tab 3 Content</cdr-tab>
-  <cdr-tab name="Videos">Tab 4 Content</cdr-tab>
+  <cdr-tab-panel name="Product">Tab 1 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Articles">Tab 2 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Classes & Events">Tab 3 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Videos">Tab 4 Content</cdr-tab-panel>
 </cdr-tabs>
 
 ```
@@ -140,10 +140,10 @@ Reduced spacing around the tab buttons create a denser visual design
 
 ```html
 <cdr-tabs modifier="compact">
-  <cdr-tab name="Product" >Tab 1 Content</cdr-tab>
-  <cdr-tab name="Articles">Tab 2 Content</cdr-tab>
-  <cdr-tab name="Classes & Events">Tab 3 Content</cdr-tab>
-  <cdr-tab name="Videos">Tab 4 Content</cdr-tab>
+  <cdr-tab-panel name="Product" >Tab 1 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Articles">Tab 2 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Classes & Events">Tab 3 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Videos">Tab 4 Content</cdr-tab-panel>
 </cdr-tabs>
 ```
 
@@ -157,10 +157,10 @@ Tab buttons space evenly across the container
 
 ```html
 <cdr-tabs modifier="full-width">
-  <cdr-tab name="Product">Tab 1 Content</cdr-tab>
-  <cdr-tab name="Articles">Tab 2 Content</cdr-tab>
-  <cdr-tab name="Classes & Events">Tab 3 Content</cdr-tab>
-  <cdr-tab name="Videos">Tab 4 Content</cdr-tab>
+  <cdr-tab-panel name="Product">Tab 1 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Articles">Tab 2 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Classes & Events">Tab 3 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Videos">Tab 4 Content</cdr-tab-panel>
 </cdr-tabs>
 ```
 
@@ -312,20 +312,20 @@ _local.vue_
 <template>
   ...
      <cdr-tabs>
-       <cdr-tab name=”tab1”>TAB1 CONTENT GOES HERE</cdr-tab>
-       <cdr-tab name=”tab2”>TAB2 CONTENT GOES HERE</cdr-tab>
-       <cdr-tab name=”tab3”>TAB3 CONTENT GOES HERE</cdr-tab>
+       <cdr-tab-panel name=”tab1”>TAB1 CONTENT GOES HERE</cdr-tab-panel>
+       <cdr-tab-panel name=”tab2”>TAB2 CONTENT GOES HERE</cdr-tab-panel>
+       <cdr-tab-panel name=”tab3”>TAB3 CONTENT GOES HERE</cdr-tab-panel>
      </cdr-tabs>
   ...
 </template>
 
 <script>
-import { CdrTabs, CdrTab } from '@rei/cdr-tabs’;
+import { CdrTabs, CdrTabPanel } from '@rei/cdr-tabs’;
 export default {
   ...
   components: {
      CdrTabs,
-     CdrTab
+     CdrTabPanel
   },
 }
 </script>
@@ -333,11 +333,11 @@ export default {
 
 ## Usage
 
-The ` cdr-tab name ` property sets the tab display value and is used for reference.
+The ` cdr-tab-panel name ` property sets the tab display value and is used for reference.
 
 ```vue
  <cdr-tabs>
-   <cdr-tab name="tab1">Tab 1 Content</cdr-tab>
+   <cdr-tab-panel name="tab1">Tab 1 Content</cdr-tab-panel>
  </cdr-tabs>
 ```
 
