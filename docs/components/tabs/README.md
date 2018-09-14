@@ -139,7 +139,7 @@ Reduced spacing around the tab buttons create a denser visual design
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false">
 
 ```html
-<cdr-tabs modifier="compact">
+<cdr-tabs modifier="compact" height="100px">
   <cdr-tab-panel name="Product" >Tab 1 Content</cdr-tab-panel>
   <cdr-tab-panel name="Articles">Tab 2 Content</cdr-tab-panel>
   <cdr-tab-panel name="Classes & Events">Tab 3 Content</cdr-tab-panel>
@@ -156,7 +156,24 @@ Tab buttons space evenly across the container
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
 
 ```html
-<cdr-tabs modifier="full-width">
+<cdr-tabs modifier="full-width" height="100px">
+  <cdr-tab-panel name="Product">Tab 1 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Articles">Tab 2 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Classes & Events">Tab 3 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Videos">Tab 4 Content</cdr-tab-panel>
+</cdr-tabs>
+```
+
+</cdr-doc-example-code-pair>
+
+## No Border
+
+Bottom border of tab header list is removed.
+
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
+
+```html
+<cdr-tabs modifier="no-border" height="100px">
   <cdr-tab-panel name="Product">Tab 1 Content</cdr-tab-panel>
   <cdr-tab-panel name="Articles">Tab 2 Content</cdr-tab-panel>
   <cdr-tab-panel name="Classes & Events">Tab 3 Content</cdr-tab-panel>
