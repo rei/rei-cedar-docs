@@ -245,13 +245,13 @@ Pair an icon with text to improve recognition about an object or action.
     </cdr-button>
     <cdr-button
       modifier="secondary"
+      disabled
     >
       <cdr-icon
         slot="icon"
         use="#play-stroke"
         class="cdr-button__icon"
         modifier="inherit-color"
-        disabled
       />
       Play video
     </cdr-button>
