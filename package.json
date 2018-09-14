@@ -39,7 +39,7 @@
     "@rei/cdr-quote": "^1.0.0-alpha.0",
     "@rei/cdr-radio": "^1.0.0",
     "@rei/cdr-table": "0.1.0-alpha.1",
-    "@rei/cdr-tabs": "^1.0.0-alpha.50",
+    "@rei/cdr-tabs": "^1.0.0-alpha.54",
     "@rei/cdr-text": "^1.0.0",
     "npm": "^6.4.1",
     "scrollmonitor": "^1.2.4",
