@@ -165,21 +165,6 @@ Long breadcrumb path shortened to display the last 2 items with hidden links ind
 
 ## Accessibility
 
-Web browsers, plug-ins, and assistive technologies use headings to provide in-page navigation. To ensure that usage of this component complies with accessibility guidelines, do the following:
-
-- Indicate the current page location within a hierarchy using breadcrumbs
-- Do not include the current page in breadcrumb path
-
-<br>
-
-This component has compliance with following WebAIM’s accessibility guidelines:
-  - [WCAG SC 1.4.3: Contrast (Minimum)](https://www.w3.org/TR/WCAG20/#visual-audio-contrast-contrast): Only when displayed on light backgrounds, Cedar Design System text color uses a Level AA contrast ratio of 4.5:1 contrast between the text color and the background
-  - [WCAG SC 2.4.8:Location](https://www.w3.org/TR/WCAG20/#navigation-mechanisms-location): Cedar Design System breadcrumb component provides this functionality
-    - The attribute aria-label=”Breadcrumb” in the ```<nav>``` element identifies the structure of  ```cdr-breadcrumb as a breadcrumb``` trail for screen readers
-    - The final breadcrumb link element must not link to the current page because the ```aria-current``` attribute is not defined for the last item
-    - The ellipsis button contains the ```aria-expanded="false"``` attribute when the user has the ability to expand the breadcrumb
-
-<br>
 
 To ensure that usage of this component complies with accessibility guidelines:
 - Indicate the current page location within a hierarchy using breadcrumbs
