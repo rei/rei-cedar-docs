@@ -201,6 +201,7 @@ To make the block quote content accessible, following these rules:
 - Must be quoted from another source, whose address, if it has one, may be cited in the `<cite>` attribute
 - If the `<cite>` attribute is present:
   - Must be a valid URL
+  - Link only to canonical end-state URLs with no parameter appended
   - Capitalize the cited source title the same as the author does
 - For more information, see [REI Confluence Accessible Patterns: Quotes](https://confluence.rei.com/display/accessibility/Quote)
 
