@@ -368,7 +368,7 @@ This will result in the following HTML:
   </cdr-text>
 ```
 
-**CdrText** modifiers can be nested within semantic headings. The below modifier for subheading is nested in the `<h2>` tag.
+CdrText modifiers can be nested within semantic headings. The below modifier for subheading is nested in the `<h2>` tag.
 
 ```vue
   <cdr-text
