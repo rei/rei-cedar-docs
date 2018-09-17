@@ -377,7 +377,7 @@ To effect the visual presentation pass the following variants to the modifier at
 
 | Value | Description            |
 |:------|:--------------------------------------------------------------|
-| 'elevated'  | Include as an independent call to action to expand content, remove filters, or provide additional information |
+| 'standalone'  | Include as an independent call to action to expand content, remove filters, or provide additional information |
 
 
 </cdr-doc-table-of-contents-shell>
