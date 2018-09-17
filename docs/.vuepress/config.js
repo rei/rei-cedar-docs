@@ -60,11 +60,11 @@ module.exports = {
         text: "Components",
         items: [
           { text: "Accordion", link: "/components/accordion/" },
-          { text: "Breadcrumb", link: "/components/breadcrumb/" },
           { text: "Block Quote", link: "/components/block-quote/" },
+          { text: "Breadcrumb", link: "/components/breadcrumb/" },
           { text: "Buttons", link: "/components/buttons/" },
-          { text: "Caption", link: "/components/caption/" },
           { text: "Call to Action", link: "/components/cta/" },
+          { text: "Caption", link: "/components/caption/" },
           { text: "Checkboxes", link: "/components/checkboxes/" },
           { text: "Grid", link: "/components/grid/" },
           { text: "Headings", link: "/components/headings/" },
@@ -75,8 +75,7 @@ module.exports = {
           { text: "Paragraphs", link: "/components/paragraphs/" },
           { text: "Pull Quote", link: "/components/pull-quote/" },
           { text: "Radio Buttons", link: "/components/radio/" },
-          { text: "Tabs", link: "/components/tabs/" },
-          { text: "Radio", link: "/components/radio/" }
+          { text: "Tabs", link: "/components/tabs/" }
         ]
       },
       {
