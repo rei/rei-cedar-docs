@@ -13,6 +13,55 @@
 ---
 
 <cdr-doc-table-of-contents-shell>
+## 18.09.2 Release
+
+### New Components
+
+- Added new [Block Quote](../components/block-quote/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.09.2/src/components/quote)
+  - Component
+  - Styles
+- Added new [Caption](../components/caption/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.09.2/src/compositions/caption)
+  - Component
+  - Styles
+- Added new [Pull Quote](../components/pull-quote/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.09.2/src/components/quote)
+  - Component
+  - Styles
+- Added new [Tabs](../components/tabs/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.09.2/src/components/tabs)
+  - Component
+  - Styles
+
+### Component Updates
+
+- Updated [Buttons](../components/buttons/) component styling to remove extra grey border around all variants (PLIB-3770)
+- Updated [Breadcrumb](../components/breadcrumb/) component to address an issue with the ‘offsetWidth’ property (PLIB-3659)
+
+### Design Assets
+
+- Sketch library
+  - Published the Sketch library with design assets for the released components above
+
+### Documentation Updates
+
+- Spacing
+  - Article describing the use of spacing as a foundation of the design system
+- Component documentation updates to improve content consistency and usability including (but not limited to) the following:
+  - Updated spacing to improve readability
+  - Added a “See also” section to applicable component pages to highlight related content
+  - Consolidated accessibility info and moved this to the Overview tab for each component
+  - Updated image styling on component and article pages to improve consistency and readability
+
+## 18.09.1 Release
+
+### New Components
+
+- Added new [Icons](../components/icon/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.09.1/src/components/icons)
+  - Component
+  - Styles
+
+### Component Updates
+
+- Updated cdr-core.css for anchor color to use $easily-excited (PLIB-3773) [view in github](https://github.com/rei/rei-cedar/tree/18.09.1/src/cdr-assets)
+- Released npm patch for released components in support of current cdrAsset peer-dependency version bump
 
 ## MVP Release
 
@@ -38,14 +87,14 @@
 
 ### Design Assets
 
-- Sketch library 
+- Sketch library
   - Published the Sketch library with design assets for the released components above
 
 ### Documentation Updates
 
-- Iconography 
+- Iconography
   - Article describing the use of iconography as a foundation of the design system
-- Motion 
+- Motion
   - Article describing the use of motion as a foundation of the design system
 - Experience Principles
   - Article describing the principles of customer experience at the foundation of Cedar

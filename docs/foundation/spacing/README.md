@@ -18,7 +18,7 @@
 
 Cedar provides easy-to-use, preset values to apply consistent spacing within and between components. These spacing tokens help maintain a cohesive visual style across all REI properties.
 
-Spacing symbols are available within the Cedar UI Toolkit and directly reflect the token names in the code ensuring a [more efficient handoff](/getting-started/as-a-designer/?active-link=annotating-delivering-cedar-based-designs) between design and development. 
+Spacing symbols are available within the Cedar UI Toolkit and directly reflect the token names in the code ensuring a [more efficient handoff](../../getting-started/as-a-designer/?active-link=annotating-delivering-cedar-based-designs) between design and development. 
 
 ## Concepts
 The Cedar spacing system is built on three core concepts: `inset`, `stack` and `inline`. Whether applying space within a container or between two components, the included options make for easier and more consistent design decisions. 

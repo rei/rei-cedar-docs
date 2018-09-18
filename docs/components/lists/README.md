@@ -91,7 +91,7 @@
 
 ## Bare
 
-Collect items to be displayed in a list when items are not marked with bullets.  Also known as unordered and undecorated “bare” list.
+Collect items to be displayed in a list when items are not marked with bullets.  This is the default and is also known as unordered and undecorated “bare” list.
 
 <cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/list" sandbox-href="https://codesandbox.io/s/1q95wpz4rq" :codeMaxHeight= false >
 <template slot="Default">
@@ -481,10 +481,10 @@ Note that the tag itself does not determine display, a modifier must be added fo
 
 | **Name**  | **Description**                                                                                                                                                                        | **Example** |
 |:----------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------|
-| unordered | The unordered modifier adds a bullet decorator to child list items and a ‘en-dash’ decorator to grandchild list items. This variant can be used on both `<ul>`  or `<ol>`  list types. | `<cdr-list modifier="unordered">` |
-| ordered   | The ordered modifier adds a numeric decorator to child list items and a ‘en-dash’ decorator to grandchild list items. This variant can be used on both `<ul>`  or `<ol>`  list types.      | `<cdr-list tag="ol" modifier="ordered" >`|
-| compact   | The compact modifier reduces the vertical space between list items for non-inline list variants. For inline variants the compact modifier reduces the horizontal space between list items. | `<cdr-list modifier="compact">` |
-| inline    | The inline modifier is intended for bare or unordered list variants. In ether case this can be combined with compact to adjust the spacing of inline list variants.                        | `<cdr-list modifier=" inline">` |
+| 'unordered' | The unordered modifier adds a bullet decorator to child list items and a ‘en-dash’ decorator to grandchild list items. This variant can be used on both `<ul>`  or `<ol>`  list types. | `<cdr-list modifier="unordered">` |
+| 'ordered'   | The ordered modifier adds a numeric decorator to child list items and a ‘en-dash’ decorator to grandchild list items. This variant can be used on both `<ul>`  or `<ol>`  list types.      | `<cdr-list tag="ol" modifier="ordered" >`|
+| 'compact'   | The compact modifier reduces the vertical space between list items for non-inline list variants. For inline variants the compact modifier reduces the horizontal space between list items. | `<cdr-list modifier="compact">` |
+| 'inline'    | The inline modifier is intended for bare or unordered list variants. In ether case this can be combined with compact to adjust the spacing of inline list variants.                        | `<cdr-list modifier=" inline">` |
 
 
 </cdr-doc-table-of-contents-shell>

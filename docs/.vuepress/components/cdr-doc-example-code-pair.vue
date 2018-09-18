@@ -217,6 +217,7 @@
     
     &__item-example {
       width: 100%;
+      margin-top: 15px; // prevents full-width components from displaying on top of light/dark toggle
     }
   }
 
