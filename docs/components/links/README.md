@@ -282,7 +282,7 @@ Apply the following use cases when deciding when to use links as anchors or butt
 
 ## Resources
 
-ebAIM: Links and Hypertext [Introduction to Links and Hypertext](https://webaim.org/techniques/hypertext/)
+WebAIM: Links and Hypertext [Introduction to Links and Hypertext](https://webaim.org/techniques/hypertext/)
 
 </cdr-doc-table-of-contents-shell>
 </template>
@@ -373,9 +373,12 @@ Use the tag prop to render the link as a `<button>` element that presents a link
 
 ### Style Modifiers
 
-To effect the visual presentation pass the following variants to the modifier attribute of the CdrLink component.
+To effect the visual presentation pass the following variants to the modifier attribute of the CdrLink component:
 
-- `Standalone`: Include as an independent call to action to expand content, remove filters, or provide additional information.
+| Value | Description            |
+|:------|:--------------------------------------------------------------|
+| 'standalone'  | Include as an independent call to action to expand content, remove filters, or provide additional information |
+
 
 </cdr-doc-table-of-contents-shell>
 </template>
