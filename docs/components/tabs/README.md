@@ -356,9 +356,9 @@ The ` cdr-tab-panel name ` property sets the tab display value and is used for r
 Set the visual presentation by passing the following variants to the modifier attribute of the CdrTabs component.
 | Value        | Description            |
 |:-------------|:-----------------------|
-| `compact`    | Sets the tabs styling for smaller screen sizes |
-| `full-width` | Sets the tab header to display evenly across the entire width instead of left justified |
-| `no-border`  | Removes the bottom border of the tabs header |
+| compact    | Sets the tabs styling for smaller screen sizes |
+| full-width | Sets the tab header to display evenly across the entire width instead of left justified |
+| no-border  | Removes the bottom border of the tabs header |
 
 </cdr-doc-table-of-contents-shell>
 </template>
