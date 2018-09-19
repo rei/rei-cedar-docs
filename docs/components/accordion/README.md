@@ -3,7 +3,7 @@
   "title": "Accordion",
   "layout": "LayoutComponent",
   "summary": "Vertically-stacked list that allows users to expand and collapse additional content",
-  "title_metadata": "Accordion, CdrAccordion, cdr-accordion",
+  "title_metadata": "CdrAccordion",
   "breadcrumbs": [
     {
       "text": "Components/"
