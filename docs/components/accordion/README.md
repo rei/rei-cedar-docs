@@ -290,7 +290,7 @@ This component has compliance with WCAG guidelines by:
 
 - Linking a title to another page. Instead, use [Links](../links/)
 - Designing with sparse content. Instead, use [Lists](../lists/) or [Paragraphs](../paragraphs/)
-- Content is lengthy
+- Content is lengthy, use [Tabs](../tabs/)
 
 ## Foundations
 
