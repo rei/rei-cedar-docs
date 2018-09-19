@@ -3,7 +3,7 @@
   "title": "Icons",
   "layout": "LayoutComponent",
   "summary": "Icons communicate meaning through the use of graphics",
-  "title_metadata": "cdr-icon",
+  "title_metadata": "CdrIcon",
   "breadcrumbs": [
     {
       "text": "Components/"
