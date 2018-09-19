@@ -2,7 +2,7 @@
 {
     "title": "Checkboxes",
     "layout": "LayoutComponent",
-    "title_metadata": "CdrCheckbox, cdr-checkbox",
+    "title_metadata": "CdrCheckbox",
     "summary": "Permits user to make one or more selections from a list",
     "see_also": [
       {
