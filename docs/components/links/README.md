@@ -191,7 +191,7 @@ Display standalone link with icon on right.
 
 To ensure that usage of this component complies with accessibility guidelines:
 
-- Always use a `<button>` element via the `tag` prop when there is no `href` attribute that can be applied to the link. Examples are:
+- Always use a `<button>` element for the `tag` prop when there is no `href` attribute that can be applied to the link. Examples are:
   - Toggling a display to full screen
   - Opening a modal window
   - Triggering a popup menu
@@ -210,7 +210,7 @@ To ensure that usage of this component complies with accessibility guidelines:
 - Ensure assistive technology can find all links on a page:
   - Always provide a `href` attribute. Empty `href` attributes are not considered true links
   - Ensure that each link can be accessed via the keyboard, don’t manipulate the default tab index
-  - When using images as links, the `<alt>` tag acts as the link text. Describe the action or hyperlink that the image represents
+  - When using images as links, the `<alt>` attribute acts as the link text. Describe the action or hyperlink that the image represents
 
 <br/>
 
