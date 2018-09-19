@@ -234,7 +234,7 @@ This component has compliance with following WebAIM’s accessibility guidelines
 
 ## Foundations
 
-- Link styles are adapted based on context, such as for links included in the Breadcrumb, Menus and Navigation
+- Link styles are adapted based on context, such as for links included in the [Breadcrumb](../breadcrumb/), Menus and Navigation
 - There are 2 basic link styles, default and standalone: 
   - Use the default link when the link is near a body of text or in appears in a body of text.
   - Use the standalone link when there is separation from a body of text.
