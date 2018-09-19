@@ -3,7 +3,7 @@
   "title": "Accordion",
   "layout": "LayoutComponent",
   "summary": "Vertically-stacked list that allows users to expand and collapse additional content",
-  "title_metadata": "Accordion, CdrAccordion, cdr-accordion",
+  "title_metadata": "CdrAccordion",
   "breadcrumbs": [
     {
       "text": "Components/"
@@ -290,7 +290,7 @@ This component has compliance with WCAG guidelines by:
 
 - Linking a title to another page. Instead, use [Links](../links/)
 - Designing with sparse content. Instead, use [Lists](../lists/) or [Paragraphs](../paragraphs/)
-- Content is lengthy
+- Content is lengthy. Instead, use [Tabs](../tabs/)
 
 ## Foundations
 
