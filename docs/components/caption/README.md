@@ -114,7 +114,7 @@
 
 Caption aligns to the left alongside the body copy with inset padding. Default caption includes summary and credit.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/caption" sandbox-href="https://codesandbox.io/s/889z57925l" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.09.2/src/components/caption" sandbox-href="https://codesandbox.io/s/889z57925l" >
 
 ```html
   <cdr-caption 
@@ -128,7 +128,7 @@ Caption aligns to the left alongside the body copy with inset padding. Default c
 
 Summary has same CSS styles as the default; however, only the summary element is displayed.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/caption" sandbox-href="https://codesandbox.io/s/889z57925l">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.09.2/src/components/caption" sandbox-href="https://codesandbox.io/s/889z57925l">
 
 ```html
   <cdr-caption 
@@ -142,7 +142,7 @@ Summary has same CSS styles as the default; however, only the summary element is
 
 Credit has same CSS styles as the default; however, only the credit element is displayed.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/caption" sandbox-href="https://codesandbox.io/s/889z57925l">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.09.2/src/components/caption" sandbox-href="https://codesandbox.io/s/889z57925l">
 
 ```html
   <cdr-caption 
@@ -156,7 +156,7 @@ Credit has same CSS styles as the default; however, only the credit element is d
 
 The captions component is text-only; however, it is meant to be displayed in the context of a media object.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/caption" sandbox-href="https://codesandbox.io/s/889z57925l" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.09.2/src/components/caption" sandbox-href="https://codesandbox.io/s/889z57925l" >
 
 ```html
 <figure>

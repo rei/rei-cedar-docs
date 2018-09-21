@@ -148,7 +148,7 @@
 
 Default block quote can be used with the following HTML tags: `<p>`, `<div>`, `<aside>`. This is responsive with styles for XS breakpoint
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/quote" sandbox-href="https://codesandbox.io/s/q722z00mk4">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.09.2/src/components/quote" sandbox-href="https://codesandbox.io/s/q722z00mk4">
 
 ```html
 <div>
