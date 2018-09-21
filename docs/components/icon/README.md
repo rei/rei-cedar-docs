@@ -492,7 +492,7 @@ Following variants are available to the `cdr-icon` modifier attribute:
 - All icon components have a slot that accepts any SVG xml
 - Individual icon components for all icons (use only what you need)
 - CdrIcon is lower-level component that acts as an SVG wrapper.
-- Link to full dev [changelog](https://github.com/rei/rei-cedar/blob/master/src/components/icon/CHANGELOG.md)
+- Link to full dev [changelog](https://github.com/rei/rei-cedar/blob/18.09.1/src/components/icon/CHANGELOG.md)
 
 </template>
 </cdr-doc-tabs>

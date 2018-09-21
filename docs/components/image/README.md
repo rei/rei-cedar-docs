@@ -101,8 +101,8 @@
       "text": "See Also",
     },
     {
-      "text": "Images",
-      "href": "../image/"
+      "text": "Caption",
+      "href": "../caption/"
     }
   ]
 }
