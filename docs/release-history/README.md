@@ -51,14 +51,9 @@
 
 ### New Components
 
-- Added new [Icons](../components/icon/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.09.1/src/components/icons)
+- Added new [Icons](../components/icon/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.09.1/src/components/icon)
   - Component
   - Styles
-
-### Component Updates
-
-- Updated cdr-core.css for anchor color to use $easily-excited (PLIB-3773) [view in github](https://github.com/rei/rei-cedar/tree/18.09.1/src/cdr-assets)
-- Released npm patch for released components in support of current cdrAsset peer-dependency version bump
 
 ## MVP Release
 
