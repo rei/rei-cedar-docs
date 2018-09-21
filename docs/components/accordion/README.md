@@ -125,10 +125,6 @@
     {
       "text": "Lists",
       "href": "../lists/"
-    },
-    {
-      "text": "Tabs",
-      "href": "../tabs/"
     }
   ]
 }
