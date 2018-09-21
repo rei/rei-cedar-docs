@@ -308,7 +308,7 @@ export default {
 
 - Includes support for Block Quote component
 - Includes support for Pull Quote component
-- Git commit reference [(f53e0b7)](https://github.com/rei/rei-cedar/commit/f53e0b729fb8ee968f912f9af4457f74da6e8ed8)
+- Link to full dev [changelog](https://github.com/rei/rei-cedar/blob/18.09.2/src/components/quote/CHANGELOG.md)
 
 </template>
 </cdr-doc-tabs>

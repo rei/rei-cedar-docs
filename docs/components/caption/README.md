@@ -375,7 +375,7 @@ The below example demonstrates how to extend this component for use within a fig
 ## 1.0.0
 
 - Supports summary and credit
-- [Git changelog](https://github.com/rei/rei-cedar/blob/18.09.2/src/compositions/caption/CHANGELOG.md)
+- - Link to full dev [changelog](https://github.com/rei/rei-cedar/blob/18.09.2/src/compositions/caption/CHANGELOG.md)
 
 </template>
 </cdr-doc-tabs>
