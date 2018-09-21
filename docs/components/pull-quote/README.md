@@ -289,7 +289,7 @@ export default {
 
 - Includes support for Block Quote component
 - Includes support for Pull Quote component
-- - Link to full dev [changelog](https://github.com/rei/rei-cedar/blob/18.09.2/src/components/quote/CHANGELOG.md)
+- Link to full dev [changelog](https://github.com/rei/rei-cedar/blob/18.09.2/src/components/quote/CHANGELOG.md)
 
 </template>
 </cdr-doc-tabs>
