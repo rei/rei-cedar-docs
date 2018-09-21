@@ -26,9 +26,6 @@
 - Added new [Pull Quote](../components/pull-quote/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.09.2/src/components/quote)
   - Component
   - Styles
-- Added new [Tabs](../components/tabs/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.09.2/src/components/tabs)
-  - Component
-  - Styles
 
 ### Component Updates
 
