@@ -336,7 +336,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the `CdrRadio` package using `npm` in your terminal:
+Install the CdrRadio package using `npm` in your terminal:
 
 _Terminal_
 

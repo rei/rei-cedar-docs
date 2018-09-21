@@ -3,7 +3,7 @@
    "title": "Lists",
    "layout": "LayoutComponent",
    "summary": "Group related content items together either vertically or horizontally",
-   "title_metadata": " Bare list, Unstyled list, Unordered list, Ordered list, Inline list, CdrList",
+   "title_metadata": "CdrList",
    "see_also": [
       {
         "text": 'See Also'

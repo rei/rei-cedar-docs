@@ -121,7 +121,7 @@ Used for editorial content such as long-form articles like Expert Advice pages o
 
 ## Accessibility
 
-To ensure that usage of this component complies with accessibility guidelines, do the following:
+To ensure that usage of this component complies with accessibility guidelines:
 
 - Text container does not exceed 634px or line length does not exceed more than 75 characters
 - Minimize use of reversed-out body copy because it’s harder to read 

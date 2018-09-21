@@ -262,6 +262,11 @@ Use conventional aspect ratios:
 - Avoid small file sizes that pixelate the image
 - Avoid unnecessarily large file sizes. Export images at the lowest file size possible without compromising quality
 - Optimize high resolution images using [TinyPNG](https://tinypng.com/)
+- Must display images at a proper pixel size compared to Natural size
+
+### File Names
+- Image file name should include primary keyword or what the page is targeting
+- Showcase keyword targeting through file name and alt text
 
 ### Color and Contrast
 

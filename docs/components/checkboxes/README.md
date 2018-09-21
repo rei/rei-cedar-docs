@@ -2,7 +2,7 @@
 {
     "title": "Checkboxes",
     "layout": "LayoutComponent",
-    "title_metadata": "CdrCheckbox, cdr-checkbox",
+    "title_metadata": "CdrCheckbox",
     "summary": "Permits user to make one or more selections from a list",
     "see_also": [
       {
@@ -394,7 +394,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the `CdrCheckbox` package using `npm` in your terminal:
+Install the CdrCheckbox package using `npm` in your terminal:
 
 _Terminal_
 

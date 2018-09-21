@@ -191,7 +191,7 @@ Display standalone link with icon on right.
 
 To ensure that usage of this component complies with accessibility guidelines:
 
-- Always use a `<button>` element via the `tag` prop when there is no `href` attribute that can be applied to the link. Examples are:
+- Always use a `<button>` element for the `tag` prop when there is no `href` attribute that can be applied to the link. Examples are:
   - Toggling a display to full screen
   - Opening a modal window
   - Triggering a popup menu
@@ -210,7 +210,7 @@ To ensure that usage of this component complies with accessibility guidelines:
 - Ensure assistive technology can find all links on a page:
   - Always provide a `href` attribute. Empty `href` attributes are not considered true links
   - Ensure that each link can be accessed via the keyboard, don’t manipulate the default tab index
-  - When using images as links, the `<alt>` tag acts as the link text. Describe the action or hyperlink that the image represents
+  - When using images as links, the `<alt>` attribute acts as the link text. Describe the action or hyperlink that the image represents
 
 <br/>
 
@@ -234,7 +234,7 @@ This component has compliance with following WebAIM’s accessibility guidelines
 
 ## Foundations
 
-- Link styles are adapted based on context, such as for links included in the Breadcrumb, Menus and Navigation
+- Link styles are adapted based on context, such as for links included in the [Breadcrumb](../breadcrumb/), Menus and Navigation
 - There are 2 basic link styles, default and standalone: 
   - Use the default link when the link is near a body of text or in appears in a body of text.
   - Use the standalone link when there is separation from a body of text.
@@ -282,7 +282,7 @@ Apply the following use cases when deciding when to use links as anchors or butt
 
 ## Resources
 
-ebAIM: Links and Hypertext [Introduction to Links and Hypertext](https://webaim.org/techniques/hypertext/)
+WebAIM: Links and Hypertext [Introduction to Links and Hypertext](https://webaim.org/techniques/hypertext/)
 
 </cdr-doc-table-of-contents-shell>
 </template>
@@ -373,9 +373,12 @@ Use the tag prop to render the link as a `<button>` element that presents a link
 
 ### Style Modifiers
 
-To effect the visual presentation pass the following variants to the modifier attribute of the CdrLink component.
+To effect the visual presentation pass the following variants to the modifier attribute of the CdrLink component:
 
-- `Standalone`: Include as an independent call to action to expand content, remove filters, or provide additional information.
+| Value | Description            |
+|:------|:--------------------------------------------------------------|
+| 'standalone'  | Include as an independent call to action to expand content, remove filters, or provide additional information |
+
 
 </cdr-doc-table-of-contents-shell>
 </template>

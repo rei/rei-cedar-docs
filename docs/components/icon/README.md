@@ -3,7 +3,7 @@
   "title": "Icons",
   "layout": "LayoutComponent",
   "summary": "Icons communicate meaning through the use of graphics",
-  "title_metadata": "cdr-icon",
+  "title_metadata": "CdrIcon",
   "breadcrumbs": [
     {
       "text": "Components/"
@@ -318,10 +318,10 @@ export default {
 
 ## Usage
 
-The **CdrIcon** package contains many different components:
+The CdrIcon package contains many different components:
 
-1. **CdrIcon**  -- This is a basic SVG wrapper. This component allows for using Non-Cedar SVGs. Use this component in conjunction with the CdrIconSprite package
-2. **CdrIconSprite** -- A symbol definition sprite with all Cedar icons
+1. CdrIcon  -- This is a basic SVG wrapper. This component allows for using Non-Cedar SVGs. Use this component in conjunction with the CdrIconSprite package
+2. CdrIconSprite -- A symbol definition sprite with all Cedar icons
 3. Individual icons -- For available icons, view [Cedar Icon Library](?active-tab=design-guidelines&active-link=icon-library) on Design Guidelines tab
 
 There are 3 different options to display SVG icons on your page using the `CdrIcon` package.
