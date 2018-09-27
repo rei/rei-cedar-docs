@@ -433,7 +433,7 @@ In fixed sections of the page (e.g. sidebars), heading levels **should not** cha
 ## 1.0.0
 
 - Enables the visual style of many heading levels and subheading to be applied flexibly to HTML headings (`<h1>` to `<h6>`) and other HTML elements
-- Enables responsive heading font sizes that are applied by default and disable as an alternative with following modifiers:
+- Enables responsive heading font sizes that are applied by default with following modifiers:
   - Display
   - Heading-large
   - Heading-medium
