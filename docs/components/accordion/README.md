@@ -16,14 +16,14 @@
       "image": "accordion/accordion_nest_do_4-3.png",
       "ratio": "4-3",
       "alt": "Image showing proper accordion usage",
-      "caption": "present content in a single accordion"
+      "caption": "present content in a single accordion."
     },
     {
       "type": "dont",
       "image": "accordion/accordion_nest_dont_4-3.png",
       "ratio": "4-3",
       "alt": "Image showing nested accordions",
-      "caption": "nest accordions"
+      "caption": "nest accordions."
     }
   ],
   "titles": [
@@ -32,14 +32,14 @@
       "image": "accordion/accordion_title_do_4-3.png",
       "ratio": "4-3",
       "alt": "Image showing short and succinct accordion titles",
-      "caption": "keep titles short and succinct"
+      "caption": "keep titles short and concise."
     },
     {
       "type": "dont",
       "image": "accordion/accordion_title_dont_4-3.png",
       "ratio": "4-3",
       "alt": "Image showing a too long accordion title wrapped to many lines",
-      "caption": "create labels so lengthy that they wrap to a second line"
+      "caption": "create labels so lengthy that they wrap to a second line."
     }
   ],
   "versions": [
@@ -71,7 +71,7 @@
             "slots": [
               {
                 "name": "default",
-                "description": "Slot for CdrAccordionItem(s)"
+                "description": "Sets the innerHTML for cdr-accordion-item(s)"
               }
             ],
           },
@@ -96,13 +96,13 @@
                 "name": "show",
                 "type": "boolean",
                 "default": "false",
-                "description": "Sets a single CdrAccordionItem to display open by default. The showAll prop takes precedence, when true"
+                "description": "Sets a single CdrAccordionItem to display open by default. The 'showAll' prop takes precedence, when true"
               }
             ],
             "slots": [
               {
                 "name": "default",
-                "description": "Slot for CdrAccordionItem content"
+                "description": "Sets the innerHTML for cdr-accordion-item content"
               }
             ],
             "events": [
