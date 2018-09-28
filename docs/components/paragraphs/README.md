@@ -176,7 +176,7 @@ Sentinel carries a stronger brand impression with other brand material, and is p
   - Follow [REI Copy Guidelines](http://pcempub.rei.com/content/asset-guides/en_us/site/brand-assets-guides/copy/master-brand-copy-guides.html) for dates, time, dimensions, measurements, electrical units, and geographic reference
   - Expand abbreviations by explaining the definition the first time it is used
   - Use the `<abbr>` element, or link to a definition or glossary
-- Readability level on Flesch-Kincaid Grade Level should be roughly 9 years of primary education. For more information, view [Test your document’s readability](https://support.office.com/en-us/article/Test-your-document-s-readability-85b4969e-e80a-4777-8dd3-f7fc3c8b3fd2) on Microsoft’s website
+- For ease of reading, readability level should be about Grade 7. To test the body text, use the [Hemingway Editor](http://www.hemingwayapp.com/). For more information, view the [Help information](http://www.hemingwayapp.com/help.html)
 - When possible, write the first sentence as an introduction to the paragraph. With screen readers, users can jump from paragraph to paragraph, listening to the first sentence or two before moving on to the next paragraph
 
 ## Behavior
