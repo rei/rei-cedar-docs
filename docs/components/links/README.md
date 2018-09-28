@@ -371,13 +371,13 @@ Use the tag prop to render the link as a `<button>` element that presents a link
   </cdr-link>
 ```
 
-### Style Modifiers
+### Style Modifier
 
-To effect the visual presentation pass the following variants to the modifier attribute of the CdrLink component:
+Following variants are available to the `cdr-link` modifier attribute: 
 
 | Value | Description            |
 |:------|:--------------------------------------------------------------|
-| 'standalone'  | Include as an independent call to action to expand content, remove filters, or provide additional information |
+| 'standalone'  | Change visual presentation by removing the underline for the normal state. Intended to be use for an independent call to action to expand content, remove filters, or provide additional information |
 
 
 </cdr-doc-table-of-contents-shell>
