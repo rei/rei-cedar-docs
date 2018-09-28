@@ -63,7 +63,7 @@
                 "name": "crop",
                 "type": "string",
                 "default": "n/a",
-                "description": "Requires ‘ratio’ to define the starting position for cropping image. Image will overflow and not be displayed. Possible values: {  ‘left’  |  ‘x-center’  |  ‘right’  |  ‘top’  «  ‘y-center’  |  ‘bottom’  }"
+                "description": "Requires ‘ratio’ to define the starting position for cropping image. Image will overflow and not be displayed. Possible values: {  ‘left’  |  ‘x-center’  |  ‘right’  |  ‘top’  |  ‘y-center’  |  ‘bottom’  }"
               },
               {
                 "name": "cover",
