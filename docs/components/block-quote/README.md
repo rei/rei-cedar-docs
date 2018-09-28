@@ -21,14 +21,14 @@
         {
             "type": "do",
             "image": "block-quote/quotes_block__do__9-16.png",
-            "ratio": "16-9",
+            "ratio": "9-16",
             "alt": "Image showing proper block quote use.",
             "caption": "position the quote near the surrounding text."
         },
         {
             "type": "dont",
             "image": "block-quote/quotes_block__random__dont_9-16.png",
-            "ratio": "16-9",
+            "ratio": "9-16",
             "alt": "Image showing random block quotes in an article",
             "caption": "position quotes in a random location on the page."
         }
@@ -37,14 +37,14 @@
         {
             "type": "do",
             "image": "block-quote/quotes_block__do__9-16.png",
-            "ratio": "16-9",
+            "ratio": "9-16",
             "alt": "Image showing proper block quote use.",
             "caption": "use for emphasizing content or additional content."
         },
         {
             "type": "dont",
             "image": "block-quote/quotes_block__indent_text__dont_9-16.png",
-            "ratio": "16-9",
+            "ratio": "9-16",
             "alt": "Image showing random block quotes in an article",
             "caption": "use for indenting text content."
         }
@@ -53,14 +53,14 @@
         {
             "type": "do",
             "image": "block-quote/quotes_block__do__9-16.png",
-            "ratio": "16-9",
+            "ratio": "9-16",
             "alt": "Image showing proper block quote position.",
             "caption": "position quotes so users can visually scan the page."
         },
         {
             "type": "dont",
             "image": "block-quote/quotes_block__too_many__dont_9-16.png",
-            "ratio": "16-9",
+            "ratio": "9-16",
             "alt": "Image showing too many block quotes in an article",
             "caption": "use too many block quotes."
         }
