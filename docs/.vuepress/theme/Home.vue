@@ -85,7 +85,7 @@
             <h2 class="home-heading">Components</h2>
             <cdr-text class="cdr-stack">Use components as building blocks to create new digital products - usage, visual guidelines, and code included.</cdr-text>
             <cdr-link
-              :href="$withBase('/components/button/')"
+              :href="$withBase('/components/buttons/')"
               modifier="standalone"
             >Start with buttons</cdr-link>
           </div>
