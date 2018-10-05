@@ -100,7 +100,7 @@
             "name": "tag",
             "type": "string",
             "default": "'button'",
-            "description": "Renders 'CdrButton' as a <button> or <a> element. When using the value of <a>, this element renders as an achor link. Possible values: { 'button' | 'a' }"
+            "description": "Renders CdrButton as a <button> or <a> element. When using the value of <a>, this element renders as an achor link. Possible values: { 'button' | 'a' }"
           },
           {
             "name": "type",
@@ -154,11 +154,11 @@
         "slots": [
           {
             "name": "default",
-            "description": "Sets the innerHTML for 'cdr-button'. This is the readable text of the button. Leave empty if icon-only."
+            "description": "Sets the innerHTML for CdrButton'. This is the readable text of the button. Leave empty if icon-only."
           },
           {
             "name": "icon",
-            "description": "Sets the innerHTML for 'cdr-button'. This is for the icon."
+            "description": "Sets the innerHTML for CdrButton. This is for the icon."
           }
         ],
         "installation": [
