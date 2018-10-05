@@ -71,7 +71,7 @@
             "slots": [
               {
                 "name": "default",
-                "description": "Sets the innerHTML for cdr-accordion-item(s)."
+                "description": "Sets the innerHTML for CdrAccordionItem(s)."
               }
             ],
           },
@@ -102,7 +102,7 @@
             "slots": [
               {
                 "name": "default",
-                "description": "Sets the innerHTML for cdr-accordion-item content."
+                "description": "Sets the innerHTML for CdrAccordionItem content."
               }
             ],
             "events": [
