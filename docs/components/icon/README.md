@@ -86,7 +86,7 @@
                 "name": "use",
                 "type": "string",
                 "default": "none",
-                "description": "Only on CdrIcon. Sets the href attribute for use with SVG symbol sprite (CdrIconSprite)"
+                "description": "Only on CdrIcon. Sets the href attribute for use with SVG symbol sprite (CdrIconSprite)."
               },
               {
                 "name": "modifier",
@@ -179,7 +179,7 @@ Create a new SVG icon using any valid internal SVG markup. This method creates a
 ## Accessibility 
 
 To ensure that usage of this component complies with accessibility guidelines:
-- If an icon conveys meaning, there must be an `alt` attribute that describes the action or idea that the icon represents
+- If an icon conveys meaning, there must be an `aria-label` that describes the action or idea that the icon represents
 - If an icon is decorative, use an empty `alt` attribute 
 
 Recommendations for writing alternative text: 
