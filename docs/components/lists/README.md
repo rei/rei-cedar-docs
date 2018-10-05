@@ -61,7 +61,7 @@
               "name": "tag",
               "type": "string",
               "default": "'ul'",
-              "description": "Sets valid HTML element tag for lists. Possible values: {  ‘ul’ | ‘ol’  }"
+              "description": "Sets valid HTML element tag. Possible values: {  ‘ul’ | ‘ol’  }"
             },
             {
               "name": "modifier",
@@ -73,7 +73,7 @@
           "slots": [
             {
               "name": "default",
-              "description": "Sets the innerHTML for cdr-list. This includes text and html markup."
+              "description": "Sets the innerHTML for CdrList. This includes text and html markup."
             }
           ],
         },
