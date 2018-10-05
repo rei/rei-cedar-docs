@@ -78,7 +78,7 @@
             "slots": [
               {
                 "name": "default",
-                "description": "Sets the innerHTML for cdr-link. This includes text and html markup for icons."
+                "description": "Sets the innerHTML for CdrLink. This includes text and html markup for icons."
               }
             ],
             "installation": [
