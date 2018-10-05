@@ -44,7 +44,7 @@
                 "name": "tag",
                 "type": "string",
                 "default": "'p'",
-                "description": "Sets valid HTML element tag"
+                "description": "Sets valid HTML element tag."
               },
               {
                 "name": "modifier",
