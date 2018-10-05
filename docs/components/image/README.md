@@ -25,9 +25,9 @@
               },
               {
                 "name": "lazy",
-                "type": "bool",
+                "type": "boolean",
                 "default": "false",
-                "description": "Setting this value to true will enable lazy loading for internal applications. Lazy loading is provided using the the FEDPACK rei-lazy-image-loader project"
+                "description": "Setting this value to true will enable lazy loading for internal applications. Lazy loading is provided using the the FEDPACK rei-lazy-image-loader project."
               },
               {
                 "name": "lazyOpts",
@@ -38,43 +38,43 @@
               {
                 "name": "ratio",
                 "type": "enum",
-                "default": "n/a",
+                "default": "N/A",
                 "description": "Sets the aspect ratio and scales the image as large as possible without cropping or stretching the image (See CSS background-size: contain). Possible values: {  'auto'  |  'square'  |  '1-2'  |  '2-3'  |  '3-4'  |  '9-16'  |  '2-1'  |  '3-2'  |  '4-3'  |  '16-9'  }"
               },
               {
                 "name": "ratioSm",
                 "type": "enum",
-                "default": "n/a",
+                "default": "N/A",
                 "description": "Sets the aspect ratio at the small breakpoint. Possible values: {  'auto'  |  'square'  |  '1-2'  |  '2-3'  |  '3-4'  |  '9-16'  |  '2-1'  |  '3-2'  |  '4-3'  |  '16-9'  }"
               },
               {
                 "name": "ratioMd",
                 "type": "enum",
-                "default": "n/a",
+                "default": "N/A",
                 "description": "Sets the aspect ratio at the medium breakpoint. Possible values: {  'auto'  |  'square'  |  '1-2'  |  '2-3'  |  '3-4'  |  '9-16'  |  '2-1'  |  '3-2'  |  '4-3'  |  '16-9'  }"
               },
               {
                 "name": "ratioLg",
                 "type": "enum",
-                "default": "n/a",
+                "default": "N/A",
                 "description": "Sets the aspect ratio at the large breakpoint. Possible values: {  'auto'  |  'square'  |  '1-2'  |  '2-3'  |  '3-4'  |  '9-16'  |  '2-1'  |  '3-2'  |  '4-3'  |  '16-9'  }"
               },
               {
                 "name": "crop",
                 "type": "string",
-                "default": "n/a",
+                "default": "N/A",
                 "description": "Requires ‘ratio’ to define the starting position for cropping image. Image will overflow and not be displayed. Possible values: {  ‘left’  |  ‘x-center’  |  ‘right’  |  ‘top’  |  ‘y-center’  |  ‘bottom’  }"
               },
               {
                 "name": "cover",
                 "type": "false",
-                "default": "n/a",
+                "default": "N/A",
                 "description": "Requires ‘ratio’ to scale the image to be as large as possible to fill the entire background area. See CSS background-size: cover."
               },
               {
                 "name": "radius",
                 "type": "enum",
-                "default": "n/a",
+                "default": "N/A",
                 "description": "Sets a border radius to the root element. Possible values: {  'circle'  |  ‘rounded’  }"
               },
               {
@@ -87,7 +87,7 @@
             "slots": [
               {
                 "name": "default",
-                "description": "Set the innerHTML for cdr-image. This includes text and html markup"
+                "description": "Set the innerHTML for CdrImage. This includes text and html markup."
               }
             ]
           }
@@ -264,10 +264,6 @@ Use conventional aspect ratios:
 - Optimize high resolution images using [TinyPNG](https://tinypng.com/)
 - Must display images at a proper pixel size compared to Natural size
 
-### File Names
-- Image file name should include primary keyword or what the page is targeting
-- Showcase keyword targeting through file name and alt text
-
 ### Color and Contrast
 
 - Test images for high contrast displays 
@@ -305,6 +301,11 @@ Images are cropped on y-axis with y-center value and on x-axis with left, x-cent
 Images are cropped on y-axis with bottom value and on x-axis with left, x-center, and right values
 
 ## Content
+
+### File Names
+- Image file name should include primary keyword or what the page is targeting
+- Showcase keyword targeting through file name and alt text
+- For more information, view SEO How-to articles: [Image Implementation](https://confluence.rei.com/display/SI/Image+Implementation)
 
 ### Overlaid Text
 
