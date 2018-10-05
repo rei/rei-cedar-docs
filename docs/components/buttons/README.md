@@ -100,7 +100,7 @@
             "name": "tag",
             "type": "string",
             "default": "'button'",
-            "description": "Renders CdrButton as a <button> or <a> element. When using the value of <a>, this element renders as an achor link. Possible values: { 'button' | 'a' }"
+            "description": "Renders 'CdrButton' as a <button> or <a> element. When using the value of <a>, this element renders as an achor link. Possible values: { 'button' | 'a' }"
           },
           {
             "name": "type",
@@ -112,53 +112,53 @@
             "name": "onClick",
             "type": "function",
             "default": "return null",
-            "description": "Adds custom click actions"
+            "description": "Adds custom click actions."
           },
           {
             "name": "fullWidth",
             "type": "boolean",
             "default": "false",
-            "description": "Sets button width to 100%. Setting this value to true will set the button width to 100% of the parent container. Use the full-width prop with the size prop to control top and bottom padding"
+            "description": "Sets button width to 100%. Setting this value to true will set the button width to 100% of the parent container. Use the 'fullWidth' prop with the 'size' prop to control top and bottom padding."
           },
           {
             "name": "size",
             "type": "string",
-            "default": "medium",
+            "default": "'medium'",
             "description": "Sets the button size. Possible values: { 'small' | 'medium' | 'large' }"
           },
           {
             "name": "responsiveSize",
             "type": "array",
-            "default": "n/a",
-            "description": "Sets the button size at different responsive breakpoints. Breakpoints are expressed as t-shirt sizing with values: xs, sm, md, and lg. Examples: { ‘large@xs’ | ‘small@lg’ }"
+            "default": "N/A",
+            "description": "Sets the button size at different responsive breakpoints. Breakpoints values are: xs, sm, md, and lg. Examples: { ‘large@xs’ | ‘small@lg’ }"
           },
           {
             "name": "iconOnly",
             "type": "boolean",
             "default": "false",
-            "description": "Renders an icon-only button. When this value is true, it will override the size and responsiveSize props"
+            "description": "Renders an 'icon-only' button. When this value is true, it will override the size and 'responsiveSize' props."
           },
           {
             "name": "onDark",
             "type": "boolean",
             "default": "false",
-            "description": "Renders an icon-only button with a light fill color for use on dark backgrounds. The 'iconOnly' prop must be true."
+            "description": "Renders an 'icon-only' button with a light fill color for use on dark backgrounds. The 'iconOnly' prop must be true."
           },
           {
             "name": "modifier",
             "type": "string",
-            "default": "n/a",
+            "default": "N/A",
             "description": "Modifies the style variant for this component. Possible values: { 'secondary' }"
           }                          
         ],
         "slots": [
           {
             "name": "default",
-            "description": "Sets the innerHTML for cdr-button. This is the readable text of the button. Leave empty if icon-only"
+            "description": "Sets the innerHTML for 'cdr-button'. This is the readable text of the button. Leave empty if icon-only."
           },
           {
             "name": "icon",
-            "description": "Sets the innerHTML for cdr-button. This is for the icon"
+            "description": "Sets the innerHTML for 'cdr-button'. This is for the icon."
           }
         ],
         "installation": [
