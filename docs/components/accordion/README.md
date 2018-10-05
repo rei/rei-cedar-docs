@@ -109,7 +109,7 @@
               {
                   "name": "accordion-item-toggle",
                   "arguments": "isOpen, event",
-                  "description": "$emit event fired on cdr-accordion-item toggle."
+                  "description": "$emit event fired on 'cdr-accordion-item' toggle."
               }
             ]
           }
