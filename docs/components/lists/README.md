@@ -73,7 +73,7 @@
           "slots": [
             {
               "name": "default",
-              "description": "Sets the innerHTML for cdr-list. This includes text and html markup"
+              "description": "Sets the innerHTML for cdr-list. This includes text and html markup."
             }
           ],
         },
