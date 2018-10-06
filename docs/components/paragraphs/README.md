@@ -60,7 +60,7 @@
                 "name": "tag",
                 "type": "string",
                 "default": "'p'",
-                "description": "Sets valid HTML element tag"
+                "description": "Sets valid HTML element tag."
               },
               {
                 "name": "modifier",
@@ -72,7 +72,7 @@
             "slots": [
               {
                 "name": "default",
-                "description": "Sets the innerHTML for cdr-text. This includes text and html markup"
+                "description": "Sets the innerHTML for CdrText. This includes text and html markup."
               }
             ]
           }
