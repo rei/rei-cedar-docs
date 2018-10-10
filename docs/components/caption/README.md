@@ -88,13 +88,13 @@
                 "name": "summary",
                 "type": "string",
                 "default": "N/A",
-                "description": "Sets the string content for the description body of the caption. Not required"
+                "description": "Sets the string content for the description body of the caption. Not required."
               },
               {
                 "name": "credit",
                 "type": "string",
                 "default": "N/A",
-                "description": "Sets the string content for attribution. Not required"
+                "description": "Sets the string content for attribution. Not required."
               }
             ]
           }
