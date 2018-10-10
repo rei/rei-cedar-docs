@@ -53,25 +53,25 @@
                 "name": "compact",
                 "type": "boolean",
                 "default": "false",
-                "description": "Sets the compact style of CdrAccordionItem child components"
+                "description": "Sets the compact style of CdrAccordionItem child components."
               },
               {
                 "name": "borderAligned",
                 "type": "boolean",
                 "default": "false",
-                "description": "Sets the border-aligned style of CdrAccordionItem child components"
+                "description": "Sets the border-aligned style of CdrAccordionItem child components."
               },
               {
                 "name": "showAll",
                 "type": "boolean",
                 "default": "false",
-                "description": "Sets all child CdrAccordionItem components to display open by default"
+                "description": "Sets all child CdrAccordionItem components to display open by default."
               }
             ],
             "slots": [
               {
                 "name": "default",
-                "description": "Sets the innerHTML for cdr-accordion-item(s)"
+                "description": "Sets the innerHTML for CdrAccordionItem(s)."
               }
             ],
           },
@@ -83,33 +83,33 @@
               {
                 "name": "id",
                 "type": "string",
-                "default": "n/a",
-                "description": "Requires unique ID for each component reference"
+                "default": "N/A",
+                "description": "Requires unique ID for each component reference."
               },
               {
                 "name": "label",
                 "type": "string",
-                "default": "n/a",
-                "description": "Sets the readable text on the CdrAccordionItem button or trigger. Required"
+                "default": "N/A",
+                "description": "Sets the readable text on the CdrAccordionItem button or trigger. Required."
               },
               {
                 "name": "show",
                 "type": "boolean",
                 "default": "false",
-                "description": "Sets a single CdrAccordionItem to display open by default. The 'showAll' prop takes precedence, when true"
+                "description": "Sets a single CdrAccordionItem to display open by default. The 'showAll' prop takes precedence, when true."
               }
             ],
             "slots": [
               {
                 "name": "default",
-                "description": "Sets the innerHTML for cdr-accordion-item content"
+                "description": "Sets the innerHTML for CdrAccordionItem content."
               }
             ],
             "events": [
               {
                   "name": "accordion-item-toggle",
                   "arguments": "isOpen, event",
-                  "description": "$emit event fired on cdr-accordion-item toggle"
+                  "description": "$emit event fired on 'cdr-accordion-item' toggle."
               }
             ]
           }
