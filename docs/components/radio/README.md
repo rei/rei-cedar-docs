@@ -71,51 +71,51 @@
               {
                 "name": "labelClass",
                 "type": "string",
-                "default": "n/a",
-                "description": "Adds CSS class to the label for custom styles"
+                "default": "N/A",
+                "description": "Adds CSS class to the label for custom styles."
               },
               {
                 "name": "inputClass",
                 "type": "string",
-                "default": "n/a",
-                "description": "Adds CSS class to the input for custom styles"
+                "default": "N/A",
+                "description": "Adds CSS class to the input for custom styles."
               },
               {
                 "name": "contentClass",
                 "type": "string",
-                "default": "n/a",
-                "description": "Adds CSS class to the slot wrapper for custom styles"
+                "default": "N/A",
+                "description": "Adds CSS class to the slot wrapper for custom styles."
               },
               {
                 "name": "name",
                 "type": "string",
-                "default": "n/a",
-                "description": "Sets the name of the radio button. Required"
+                "default": "N/A",
+                "description": "Sets the name of the radio button. Required."
               },
               {
                 "name": "value",
                 "type": "string, number, boolean, object, array, symbol, function",
-                "default": "n/a",
-                "description": "Sets the value of the radio button. Required"
+                "default": "N/A",
+                "description": "Sets the value of the radio button. Required."
               },
               {
                 "name": "modifier",
                 "type": "string",
-                "default": "n/a",
+                "default": "N/A",
                 "description": "Modifies the style variants for this component. Possible values: {  ‘compact’  |  'hide-figure'  }"
               }
             ],
             "slots": [
               {
                 "name": "default",
-                "description": "Sets the innerHTML for cdr-radio. This is the readable text for the <label> element"
+                "description": "Sets the innerHTML for CdrRadio. This is the readable text for the <label> element."
               }
             ],
             "events": [
               {
                 "name": "change",
                 "arguments": "value",
-                "description": "$emit event fired on radio selection"
+                "description": "$emit event fired on radio selection."
               }
             ]
           }
