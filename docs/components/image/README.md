@@ -37,25 +37,25 @@
               },
               {
                 "name": "ratio",
-                "type": "enum",
+                "type": "string",
                 "default": "N/A",
                 "description": "Sets the aspect ratio and scales the image as large as possible without cropping or stretching the image (See CSS background-size: contain). Possible values: {  'auto'  |  'square'  |  '1-2'  |  '2-3'  |  '3-4'  |  '9-16'  |  '2-1'  |  '3-2'  |  '4-3'  |  '16-9'  }"
               },
               {
                 "name": "ratioSm",
-                "type": "enum",
+                "type": "string",
                 "default": "N/A",
                 "description": "Sets the aspect ratio at the small breakpoint. Possible values: {  'auto'  |  'square'  |  '1-2'  |  '2-3'  |  '3-4'  |  '9-16'  |  '2-1'  |  '3-2'  |  '4-3'  |  '16-9'  }"
               },
               {
                 "name": "ratioMd",
-                "type": "enum",
+                "type": "string",
                 "default": "N/A",
                 "description": "Sets the aspect ratio at the medium breakpoint. Possible values: {  'auto'  |  'square'  |  '1-2'  |  '2-3'  |  '3-4'  |  '9-16'  |  '2-1'  |  '3-2'  |  '4-3'  |  '16-9'  }"
               },
               {
                 "name": "ratioLg",
-                "type": "enum",
+                "type": "string",
                 "default": "N/A",
                 "description": "Sets the aspect ratio at the large breakpoint. Possible values: {  'auto'  |  'square'  |  '1-2'  |  '2-3'  |  '3-4'  |  '9-16'  |  '2-1'  |  '3-2'  |  '4-3'  |  '16-9'  }"
               },
@@ -67,13 +67,13 @@
               },
               {
                 "name": "cover",
-                "type": "false",
+                "type": "boolean",
                 "default": "N/A",
                 "description": "Requires ‘ratio’ to scale the image to be as large as possible to fill the entire background area. See CSS background-size: cover."
               },
               {
                 "name": "radius",
-                "type": "enum",
+                "type": "string",
                 "default": "N/A",
                 "description": "Sets a border radius to the root element. Possible values: {  'circle'  |  ‘rounded’  }"
               },
