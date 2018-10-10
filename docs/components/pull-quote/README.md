@@ -109,14 +109,14 @@
                         "type": "string",
                         "default": "",
                         "required": "false",
-                        "description": "Sets the pull quote body text"
+                        "description": "Sets the pull quote body text."
                     },
                     {
                         "name": "citation",
                         "type": "string",
                         "default": "",
                         "required": "false",
-                        "description": "Sets the pull quote attribution text"
+                        "description": "Sets the pull quote attribution text."
                     }
                 ],
                 "installation": [
