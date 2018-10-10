@@ -86,7 +86,7 @@
                 "name": "use",
                 "type": "string",
                 "default": "none",
-                "description": "Only on CdrIcon. Sets the href attribute for use with SVG symbol sprite (CdrIconSprite)"
+                "description": "Only on CdrIcon. Sets the href attribute for use with SVG symbol sprite (CdrIconSprite)."
               },
               {
                 "name": "modifier",
@@ -179,7 +179,7 @@ Create a new SVG icon using any valid internal SVG markup. This method creates a
 ## Accessibility 
 
 To ensure that usage of this component complies with accessibility guidelines:
-- If an icon conveys meaning, there must be an `alt` attribute that describes the action or idea that the icon represents
+- If an icon conveys meaning, there must be an `aria-label` that describes the action or idea that the icon represents
 - If an icon is decorative, use an empty `alt` attribute 
 
 Recommendations for writing alternative text: 
@@ -324,7 +324,7 @@ The CdrIcon package contains many different components:
 2. CdrIconSprite -- A symbol definition sprite with all Cedar icons
 3. Individual icons -- For available icons, view [Cedar Icon Library](?active-tab=design-guidelines&active-link=icon-library) on Design Guidelines tab
 
-There are 3 different options to display SVG icons on your page using the `CdrIcon` package.
+There are 3 different options to display SVG icons on your page using the CdrIcon package.
 
 ### 1. SVG Sprite
 
