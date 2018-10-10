@@ -79,25 +79,25 @@
                 "name": "items",
                 "type": "array",
                 "default": "N/A",
-                "description": "Sets the array of a breadcrumb object containing a 'url' and 'name' property"
+                "description": "Sets the array of a breadcrumb object containing a 'url' and 'name' property."
               },
               {
                 "name": "truncationEnabled",
                 "type": "boolean",
                 "default": "true",
-                "description": "Controls the ability to truncate the entire breadcrumb path. If this value is false, truncation will no longer occur"
+                "description": "Controls the ability to truncate the entire breadcrumb path. If this value is false, truncation will no longer occur."
               },
               {
                 "name": "truncationThreshold",
                 "type": "number",
                 "default": 0.80,
-                "description": "Sets the ratio between breadcrumb path width and container width when truncation will occur"
+                "description": "Sets the ratio between breadcrumb path width and container width when truncation will occur."
               },
               {
                 "name": "truncationXSThreshold",
                 "type": "number",
                 "default": 1,
-                "description": "Sets the ratio between breadcrumb path width and container width when truncation will occur at the XS breakpoint"
+                "description": "Sets the ratio between breadcrumb path width and container width when truncation will occur at the XS breakpoint."
               }
             ],
             "installation": [
