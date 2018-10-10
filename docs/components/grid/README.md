@@ -58,44 +58,44 @@
               {
                 "name": "cols",
                 "type": "string",
-                "default": "n/a",
-                "description": "Number of equal-width columns in the row; however the value of ‘auto’ will size columns as wide as the column’s content. Possible values: {  ‘1’  through  ‘12’  |  ‘auto’  }.  Also accepts responsive values @breakpoint: ‘2 4@md’"
+                "default": "N/A",
+                "description": "Number of equal-width columns in the row; however the value of ‘auto’ will size columns as wide as the column’s content. Possible values: {  ‘1’  through  ‘12’  |  ‘auto’  }.  Also accepts responsive values @breakpoint: ‘2 4@md’."
               },
               {
                 "name": "justify",
                 "type": "string",
-                "default": "n/a",
-                "description": "Justify columns within a row. See CSS Flexbox justify-content. Possible values: {  ‘left’  |  ‘center’  |  ‘right’  |  ‘around’  |  ‘between’  }. Also accepts responsive values @breakpoint: ‘center right@lg’"
+                "default": "N/A",
+                "description": "Justify columns within a row. See CSS Flexbox justify-content. Possible values: {  ‘left’  |  ‘center’  |  ‘right’  |  ‘around’  |  ‘between’  }. Also accepts responsive values @breakpoint: ‘center right@lg’."
               },
               {
                 "name": "align",
                 "type": "string",
-                "default": "n/a",
-                "description": "Align columns of different heights. See CSS Flexbox align-items. Possible values: {  ‘top’  |  ‘middle’  |  ‘bottom’  |  ‘stretch}. Also accepts responsive values @breakpoint:  ‘top middle@sm’"
+                "default": "N/A",
+                "description": "Align columns of different heights. See CSS Flexbox align-items. Possible values: {  ‘top’  |  ‘middle’  |  ‘bottom’  |  ‘stretch’  }. Also accepts responsive values @breakpoint:  ‘top middle@sm’."
               },
               {
                 "name": "gutter",
                 "type": "string",
-                "default": "n/a",
-                "description": "Defines gutter size. Default gutter size is 16px @xs and @sm and 32px @md and @lg. Possible values: {  ‘none’  |  ‘xxs’  }. Also accepts responsive values @breakpoint:  none@md’"
+                "default": "N/A",
+                "description": "Defines gutter size. Default gutter size is 16px for @xs and @sm and 32px for @md and @lg. Possible values: {  ‘none’  |  ‘xxs’  }. Also accepts responsive values @breakpoint:  none@md’."
               },
               {
                 "name": "vertical",
                 "type": "string",
-                "default": "n/a",
-                "description": "Changes row to a column layout. See CSS Flexbox flex-direction. Possible values: {  ‘vertical’  }. Also accepts responsive values @breakpoint:  vertical@md’"
+                "default": "N/A",
+                "description": "Changes row to a column layout. See CSS Flexbox flex-direction. Possible values: {  ‘vertical’  }. Also accepts responsive values @breakpoint:  vertical@md’."
               },
               {
                 "name": "wrap",
                 "type": "string",
-                "default": "n/a",
-                "description": "Enables row wrapping. Change only if overriding `nowrap`. See CSS Flexbox flex-wrap"
+                "default": "N/A",
+                "description": "Enables row wrapping. Change only if overriding `nowrap`. See CSS Flexbox flex-wrap."
               },
               {
                 "name": "nowrap",
                 "type": "string",
-                "default": "n/a",
-                "description": "Disables row wrapping and enables overflow scrolling. See CSS Flexbox flex-wrap. Possible values: {  ‘nowrap’  }. Also accepts responsive values with @breakpoint: ‘nowrap@md’"
+                "default": "N/A",
+                "description": "Disables row wrapping and enables overflow scrolling. See CSS Flexbox flex-wrap. Possible values: {  ‘nowrap’  }. Also accepts responsive values with @breakpoint: ‘nowrap@md’."
               },
               {
                 "name": "type",
@@ -107,7 +107,7 @@
             "slots": [
               {
                 "name": "default",
-                "description": "Sets the innerHTML for cdr-row content. This includes text and html markup"
+                "description": "Sets the innerHTML for CdrRow content. This includes text and html markup."
               }
             ]
           },
@@ -119,38 +119,38 @@
               {
                 "name": "span",
                 "type": "string",
-                "default": "n/a",
-                "description": "Number of columns (out of 12) the column will span. Functions like bootstrap col-* classes. Overrides widths set by ‘cols’ prop on CdrRow. Possible values: {  ‘1’  through   ‘12’  }. Also accepts responsive values with @breakpoint: ‘12 8@lg’"
+                "default": "N/A",
+                "description": "Number of columns (out of 12) the column will span. Functions like bootstrap col-* classes. Overrides widths set by ‘cols’ prop on CdrRow. Possible values: {  ‘1’  through   ‘12’  }. Also accepts responsive values with @breakpoint: ‘12 8@lg’."
               },
               {
                 "name": "offsetLeft",
                 "type": "string",
-                "default": "n/a",
-                "description": "Adds up to 12 columns of empty space to left of an individual column. Possible values: {  ‘1’  through  ‘12’  }. Also accepts responsive values with @breakpoint: ‘12 8@lg’"
+                "default": "N/A",
+                "description": "Adds up to 12 columns of empty space to left of an individual column. Possible values: {  ‘1’  through  ‘12’  }. Also accepts responsive values with @breakpoint: ‘12 8@lg’."
               },
               {
                 "name": "offsetRight",
                 "type": "string",
-                "default": "n/a",
-                "description": "Adds up to 12 columns of empty space to right of an individual column. Possible values: {  ‘1’  through  ‘12’  }. Also accepts responsive values with @breakpoint: ‘12 8@lg’"
+                "default": "N/A",
+                "description": "Adds up to 12 columns of empty space to right of an individual column. Possible values: {  ‘1’  through  ‘12’  }. Also accepts responsive values with @breakpoint: ‘12 8@lg’."
               },
               {
                 "name": "alignSelf",
                 "type": "string",
-                "default": "n/a",
-                "description": "Aligns individual column by overriding CdrRow alignment. See CSS Flexbox align-self. Possible values: {  ‘top’  |  ‘middle’  |  ‘bottom’  |  ‘stretch’  }. Also accepts responsive values with @breakpoint: ‘middle@sm’"
+                "default": "N/A",
+                "description": "Aligns individual column by overriding CdrRow alignment. See CSS Flexbox align-self. Possible values: {  ‘top’  |  ‘middle’  |  ‘bottom’  |  ‘stretch’  }. Also accepts responsive values with @breakpoint: ‘middle@sm’."
               },
               {
                 "name": "isRow",
                 "type": "boolean",
                 "default": "false",
-                "description": "Makes the column act as a CdrRow. Setting this value to true will expose all props of CdrRow in addition to CdrCol props"
+                "description": "Makes the column act as a CdrRow. Setting this value to true will expose all props of CdrRow in addition to CdrCol props."
               }
             ],
             "slots": [
               {
                 "name": "default",
-                "description": "Sets the innerHTML for cdr-col content. This includes text and html markup"
+                "description": "Sets the innerHTML for CdrCol content. This includes text and html markup."
               }
             ]
           }
