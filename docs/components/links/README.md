@@ -72,13 +72,13 @@
                 "name": "href",
                 "type": "string",
                 "default": "'#'",
-                "description": "Sets URL to ‘cdr-link’ href property. The tag prop requires value of <a>"
+                "description": "Sets URL to ‘cdr-link’ href property. The tag prop requires value of <a>."
               }
             ],
             "slots": [
               {
                 "name": "default",
-                "description": "Sets the innerHTML for cdr-link. This includes text and html markup for icons"
+                "description": "Sets the innerHTML for CdrLink. This includes text and html markup for icons."
               }
             ],
             "installation": [
