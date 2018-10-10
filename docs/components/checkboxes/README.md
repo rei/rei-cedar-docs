@@ -112,19 +112,19 @@
                         "name": "labelClass",
                         "type": "string",
                         "default": "n/a",
-                        "description": "Add CSS class to the label for custom styles."
+                        "description": "Adds CSS class to the label for custom styles."
                     },
                     {
                         "name": "inputClass",
                         "type": "string",
                         "default": "n/a",
-                        "description": "Add CSS class to the input for custom styles."
+                        "description": "Adds CSS class to the input for custom styles."
                     },
                     {
                         "name": "contentClass",
                         "type": "string",
                         "default": "n/a",
-                        "description": "Add CSS class to the slot wrapper for custom styles."
+                        "description": "Adds CSS class to the slot wrapper for custom styles."
                     },
                     {
                         "name": "indeterminate",
