@@ -104,21 +104,21 @@
                         "type": "string",
                         "default": "",
                         "required": "false",
-                        "description": "Sets the quote body text"
+                        "description": "Sets the quote body text."
                     },
                     {
                         "name": "cite",
                         "type": "string",
                         "default": "",
                         "required": "false",
-                        "description": "When the ‘tag’ prop is set to ‘blockquote’ provide a URL to the quote’s source. This does not render but is available to screen readers and search engines"
+                        "description": "When the ‘tag’ prop is set to ‘blockquote’ provide a URL to the quote’s source. This does not render but is available to screen readers and search engines."
                     },
                     {
                         "name": "citation",
                         "type": "string",
                         "default": "",
                         "required": "false",
-                        "description": "Sets the quote attribution text for crediting media such as photos or charts"
+                        "description": "Sets the quote attribution text."
                     }
                 ],
                 "installation": [

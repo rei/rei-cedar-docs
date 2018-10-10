@@ -111,20 +111,20 @@
                     {
                         "name": "labelClass",
                         "type": "string",
-                        "default": "n/a",
-                        "description": "Add CSS class to the label for custom styles."
+                        "default": "N/A",
+                        "description": "Adds CSS class to the label for custom styles."
                     },
                     {
                         "name": "inputClass",
                         "type": "string",
-                        "default": "n/a",
-                        "description": "Add CSS class to the input for custom styles."
+                        "default": "N/A",
+                        "description": "Adds CSS class to the input for custom styles."
                     },
                     {
                         "name": "contentClass",
                         "type": "string",
-                        "default": "n/a",
-                        "description": "Add CSS class to the slot wrapper for custom styles."
+                        "default": "N/A",
+                        "description": "Adds CSS class to the slot wrapper for custom styles."
                     },
                     {
                         "name": "indeterminate",
@@ -160,14 +160,14 @@
                 "slots": [
                     {
                         "name": "default",
-                        "description": "Sets the innerHTML for cdr-checkbox. This is the readable text for the <label> element"
+                        "description": "Sets the innerHTML for CdrCheckbox. This is the readable text for the <label> element."
                     }
                 ],
                 "events": [
                     {
                         "name": "change",
                         "arguments": "newValue, event",
-                        "description": "$emit event fired on check/uncheck"
+                        "description": "$emit event fired on check/uncheck."
                     }
                 ],
                 "installation": [

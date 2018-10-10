@@ -106,13 +106,13 @@
                 "name": "fullWidth",
                 "type": "boolean",
                 "default": "false",
-                "description": "Sets Call to Action width to 100%. Setting this value to true will set the width to 100% of the parent container"
+                "description": "Sets Call to Action width to 100%. Setting this value to true will set the width to 100% of the parent container."
               },
               {
                 "name": "href",
                 "type": "string",
                 "default": "\"#\"",
-                "description": "Sets the link using the page url"
+                "description": "Sets the link using the page url."
               },
               {
                 "name": "modifier",
@@ -124,7 +124,7 @@
             "slots": [
               {
                 "name": "default",
-                "description": "Sets the innerHTML for cdr-cta. This is the readable text of the button"
+                "description": "Sets the innerHTML for CdrCta. This is the readable text of the button."
               }
             ],
           }
