@@ -413,8 +413,6 @@ import "@rei/cdr-link/dist/cdr-checkbox.css";
 
 ### 3. Add component to a template
 
-In this example we’ll create a medium-sized primary button, which is the default.
-
 _local.vue_
 
 ```vue
