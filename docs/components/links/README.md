@@ -355,7 +355,7 @@ export default {
 
 ## Usage
 
-By default, the component renders using an anchor element and requires an `href` attribute or tag to render a valid accessible link.
+By default, the component renders using an anchor element and requires an `href` attribute to render a valid accessible link.
 
 ```vue
   <cdr-link href="http://rei.com">
