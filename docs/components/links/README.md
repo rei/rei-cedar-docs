@@ -29,8 +29,8 @@
         "type": "dont",
         "image": "links/links_descriptivetext_dont.png",
         "ratio": "4-3",
-        "alt": "Image showing mixed button sizes",
-        "caption": "use multiple sizes in the same context."
+        "alt": "Image showing click here link",
+        "caption": "use “click here” or “start here” for link text."
       }
     ],
     "link": [
