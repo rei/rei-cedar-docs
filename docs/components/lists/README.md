@@ -475,16 +475,16 @@ Following are different types of lists:
 - Bare or unstyled lists:
   - Can contain a variety of HTML elements, including paragraphs, headings, form elements, and other (nested) lists
 
-### Modifier options
+### Modifiers
 
 Note that the tag itself does not determine display, a modifier must be added for list styles. Add one of the following variants to the `modifier` attribute of the `cdr-list` tag to change the visual presentation:
 
-| **Name**  | **Description**                                                                                                                                                                        | **Example** |
-|:----------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------|
-| 'unordered' | The unordered modifier adds a bullet decorator to child list items and a ‘en-dash’ decorator to grandchild list items. This variant can be used on both `<ul>`  or `<ol>`  list types. | `<cdr-list modifier="unordered">` |
-| 'ordered'   | The ordered modifier adds a numeric decorator to child list items and a ‘en-dash’ decorator to grandchild list items. This variant can be used on both `<ul>`  or `<ol>`  list types.      | `<cdr-list tag="ol" modifier="ordered" >`|
-| 'compact'   | The compact modifier reduces the vertical space between list items for non-inline list variants. For inline variants the compact modifier reduces the horizontal space between list items. | `<cdr-list modifier="compact">` |
-| 'inline'    | The inline modifier is intended for bare or unordered list variants. In ether case this can be combined with compact to adjust the spacing of inline list variants.                        | `<cdr-list modifier=" inline">` |
+| Value | Description            |
+|:------|:-----------------------|
+| 'unordered'  | List items are typically marked with bullets |
+| 'ordered'  | List items are typically marked with numbers |
+| 'compact'  | Reduces spacing between list items |
+| 'inline'  | List items appear horizontally with no divider |
 
 
 </cdr-doc-table-of-contents-shell>
