@@ -100,7 +100,7 @@
             "name": "tag",
             "type": "string",
             "default": "'button'",
-            "description": "Renders CdrButton as a <button> or <a> element. When using the value of <a>, this element renders as an achor link. Possible values: { 'button' | 'a' }"
+            "description": "Renders CdrButton as a <button> or <a> element. When using the value of <a>, this element renders as an anchor link. Possible values: { 'button' | 'a' }"
           },
           {
             "name": "type",
