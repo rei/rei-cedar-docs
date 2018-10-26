@@ -320,7 +320,7 @@ Images are cropped on y-axis with bottom value and on x-axis with left, x-center
 ### Decorative Images
 
 - Avoid using decorative images; instead present the image as a background-image using cascading style sheets (CSS)
-- If using the HTML `<img>` element, add an empty `<alt>` tag
+- If using the HTML `<img>` element, add an empty `alt` attribute
 - If using the HTML `<img>` element, add the following attribute: role="presentation"
 
 ### Alternative text
