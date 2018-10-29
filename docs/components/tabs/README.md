@@ -353,7 +353,7 @@ The ` cdr-tab-panel name ` property sets the tab display value and is used for r
 
 ### Modifiers
 
-Set the visual presentation by passing the following variants to the modifier attribute of the CdrTabs component.
+Following variants are available to the `cdr-tabs` modifier attribute:
 | Value        | Description            |
 |:-------------|:-----------------------|
 | 'compact'    | Sets the tabs styling for smaller screen sizes |
