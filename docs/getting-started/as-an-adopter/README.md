@@ -37,7 +37,8 @@ This may involve regular checks with individual teams every 1-2 months to review
 
 ### Planning Adoption
 
-For initial adoption, consider beginning with ongoing work on a new feature, section or redesign. This enables team members to focus on on-boarding to using Cedar and estimating the impact to workflows. Once familiar with the system, teams can then consider addressing accrued technical and design debt (including migration of Cedar 1 components) in other product areas that are not under active development.
+For initial adoption, consider beginning with work on a new feature, section or redesign. Cedar components can be added incrementally to specific features or sections of a page, until the whole application can be converted to Vue.
+Once familiar with the system, teams can then plan to address accrued technical and design debt (including migration of Cedar 1 components) in other product areas that are not under active development.
 
 ## Resources
 
@@ -49,8 +50,7 @@ For initial adoption, consider beginning with ongoing work on a new feature, sec
 - Roadmap: [https://confluence.rei.com/display/TP/Roadmap](https://confluence.rei.com/display/TP/Roadmap)
 - Slack channels
   - For general inquiries and release updates: [#cedar-design-system](https://rei.slack.com/messages/C5W0VMKGU)
-  - For developer questions: [#cedar-engineering](https://rei.slack.com/messages/CBE0EPK37)
-  - For design questions: [#cedar-design](https://rei.slack.com/messages/CBDRL7M7U)
+  - For design and developer questions: [#cedar-users](https://rei.slack.com/messages/CA58YCGN4)
 - Email [cedar@rei.com](mailto:cedar@rei.com) for any additional support or clarification on anything related to the design system
 
 ### Contributions
