@@ -240,7 +240,7 @@ Install the CdrQuote package using `npm` in your terminal:
 _Terminal_
 
 ```bash
-import "@rei/cdr-quote/dist/cdr-quote.css";
+npm i @rei/cdr-quote
 ```
 
 ### 2. Import dependencies
@@ -249,7 +249,7 @@ _main.js_
 
 ```javascript
 // import your required CSS.
-import "@rei/cdr-link/dist/cdr-quote.css";
+import "@rei/cdr-quote/dist/cdr-quote.css";
 ```
 
 ### 3. Add component to a template
