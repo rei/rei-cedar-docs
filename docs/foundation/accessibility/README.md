@@ -50,7 +50,7 @@ Most accessibility principles can be implemented easily and will not impact the 
 Cedar components have accessibility attributes built in and provides guidelines for best practices in component documentation. The product team needs to ensure accessibility compliance when implementing Cedar components. This is a shared responsibility. The below table describes what is provided by Cedar and what is the product team's responsibility.
 
 
-####* table goes here with 3 columns*
+:hkquestion:_TABLE GOES HERE WITH 3 COLUMNS_
 
 
 ## Testing and validating 
@@ -84,7 +84,7 @@ Resources for understanding cognitive disabilities:
 
 ### Color
 Color contrast has an impact for all users and especially for users with visual, physical, and cognitive disabilities. 
-- Cedar complies with [WCAG 2.1 AA standard contrast ratios](http://www.w3.org/TR/WCAG/). Follow recommendations for color pairings on the [Color](https://rei.github.io/rei-cedar-docs/foundation/color/) page
+- Cedar complies with [WCAG 2.1 AA standard contrast ratios](http://www.w3.org/TR/WCAG/). Follow recommendations for color pairings on the [Color](https://rei.github.io/rei-cedar-docs/foundation/color/) page 
 - For gradient backgrounds or images, check contrast ratios using WebAIM’s [Color Contrast Checker](https://webaim.org/resources/contrastchecker/) 
  
 #### Designing for color blindness
@@ -96,9 +96,9 @@ When designing with color, use a color-blind simulator to review visibility of c
 - If you're working in Sketch, we recommend the [Stark plugin](http://www.getstark.co/)
 - Test an image by uploading it to the Coblis, [Color Blindness Simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/) web page
  
- 
-####* graphic goes here*
- 
+<cdr-img class="cdr-doc-article-img" alt="Non-color blind user versus color-blind user":src="$withBase(`/accessibility/Accessibility__ColorBlindness__16-9.png`)"/>
+Non-color blind user versus color-blind user
+
  
 #### Designing for low vision 
 Low vision can include partial sight in one or both eyes, and range from mild to severe. It affects 246 million people, or about 4% of the world’s population. To design for users with low-vision disability:
