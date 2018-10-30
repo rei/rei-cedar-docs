@@ -74,7 +74,8 @@ module.exports = {
           { text: "Lists", link: "/components/lists/" },
           { text: "Paragraphs", link: "/components/paragraphs/" },
           { text: "Pull Quote", link: "/components/pull-quote/" },
-          { text: "Radio Buttons", link: "/components/radio/" }
+          { text: "Radio Buttons", link: "/components/radio/" },
+          { text: "Ratings", link: "/components/rating/" }
           /* { text: "Tabs", link: "/components/tabs/" } */
         ]
       },
