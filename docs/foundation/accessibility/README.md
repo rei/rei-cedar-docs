@@ -49,9 +49,22 @@ Most accessibility principles can be implemented easily and will not impact the 
 
 Cedar components have accessibility attributes built in and provides guidelines for best practices in component documentation. The product team needs to ensure accessibility compliance when implementing Cedar components. This is a shared responsibility. The below table describes what is provided by Cedar and what is the product team's responsibility.
 
-
-:hkquestion:_TABLE GOES HERE WITH 3 COLUMNS_
-
+| **Key principles**                                       | **Cedar provides**                                                     | **Product team provides**                                              |
+| -------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| Provide appropriate alternative text                     | CdrImage provides empty **&lt;alt&gt;** attribute.                     | Write alt text to provide an equivalent to the image content, to convey information or explain actions or to describe a link’s function.    |
+| Content is well structured and clearly written           | CdrText separates CSS styles from semantic structure and provides max width container and line-height spacing for readability.    | Organize content using true headings (e.g., <h1>) and lists. Use illustrations, icons, etc. to supplement text. Check spelling, grammar, and readability.    |
+| Help users navigate to relevant content                  | CdrText and CdrList separates CSS styles from semantic structure.     | Use existing REI website controls that allow the user to skip over navigation to the main content in the page. Use true headings to organize content.    |
+| Provide headers for data tables                          | CdrDataTable provides ‘caption’ prop.                                 | Write captions to describe table contents. Use scope attribute to define column or row headers.    |
+| Do not rely on color alone to convey meaning             | Cedar’s color tokens ensure that color contrasts meet or exceed a Level AA contrast ratio of 4.5:1 contrast between the text color and the background.     | Use Cedar’s color tokens appropriately. For instance, use dark text colors only on light background colors.Use color to enhance comprehension but do not use color alone to convey information.    |
+| Ensure users can complete and submit all forms           | CdrInput requires a label and positions it adjacent to input fields. If label is hidden, CdrInput sets the ‘aria-label’ to this label value. CdrInput can display ‘Required’ next to the label.     | Group checkboxes or radio buttons using <fieldset> tags.    |
+| Ensure links make sense out of context                   | CdrLink provides ‘cdr-sr-only’ class that can hide descriptive text but make it available for screen readers.    | Avoid phrases such as “click here” or “start here” for links.    |
+| Caption and/or provide transcripts for media             |                                                                       | Write captions and transcripts for video or audio.                     |
+| Ensure accessibility of non-HTML content                 |                                                                       | Provide accessibility alternatives when appropriate.                   |
+| Miscellaneous                                            |                                                                       | Ensure that the page is readable and usable when fonts are enlarged 150-200%.    |
+| Miscellaneous                                            |                                                                       | Provide a descriptive page **&lt;title&gt;** attribute.                |
+| Miscellaneous                                            |                                                                       | Ensure events are available with both mouse and keyboard.              |
+| Miscellaneous                                            |                                                                       | Limit pop-up windows and notify users when pop-ups are used.           |
+<br />
 
 ## Testing and validating 
 Cedar Design System is only the foundation for accessible application development. We recommend that you review the accessibility of your web pages before release and ensure that it meets the WCAG 2.1 Guidelines at the AA Level.
@@ -99,7 +112,6 @@ When designing with color, use a color-blind simulator to review visibility of c
 <cdr-img class="cdr-doc-article-img" alt="Non-color blind user versus color-blind user":src="$withBase(`/accessibility/Accessibility__ColorBlindness__16-9.png`)"/>
 Non-color blind user versus color-blind user
 
- 
 #### Designing for low vision 
 Low vision can include partial sight in one or both eyes, and range from mild to severe. It affects 246 million people, or about 4% of the world’s population. To design for users with low-vision disability:
 - Follow keyboard navigation recommendations
