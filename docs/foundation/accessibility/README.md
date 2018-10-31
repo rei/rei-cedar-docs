@@ -51,17 +51,17 @@ Cedar components have accessibility attributes built in and provides guidelines 
 
 | **Key principles**                                       | **Cedar provides**                                                     | **Product team provides**                                              |
 | -------------------------------------------------------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| Provide appropriate alternative text                     | CdrImage provides empty **&lt;alt&gt;** attribute.                     | Write alt text to provide an equivalent to the image content, to convey information or explain actions or to describe a link’s function.    |
+| Provide appropriate alternative text                     | CdrImage provides empty <alt> attribute.                     | Write alt text to provide an equivalent to the image content, to convey information or explain actions or to describe a link’s function.    |
 | Content is well structured and clearly written           | CdrText separates CSS styles from semantic structure and provides max width container and line-height spacing for readability.    | Organize content using true headings (e.g., <h1>) and lists. Use illustrations, icons, etc. to supplement text. Check spelling, grammar, and readability.    |
 | Help users navigate to relevant content                  | CdrText and CdrList separates CSS styles from semantic structure.     | Use existing REI website controls that allow the user to skip over navigation to the main content in the page. Use true headings to organize content.    |
-| Provide headers for data tables                          | CdrDataTable provides ‘caption’ prop.                                 | Write captions to describe table contents. Use scope attribute to define column or row headers.    |
+| Provide headers for data tables                          | CdrDataTable provides `caption` prop.                                 | Write captions to describe table contents. Use scope attribute to define column or row headers.    |
 | Do not rely on color alone to convey meaning             | Cedar’s color tokens ensure that color contrasts meet or exceed a Level AA contrast ratio of 4.5:1 contrast between the text color and the background.     | Use Cedar’s color tokens appropriately. For instance, use dark text colors only on light background colors.Use color to enhance comprehension but do not use color alone to convey information.    |
-| Ensure users can complete and submit all forms           | CdrInput requires a label and positions it adjacent to input fields. If label is hidden, CdrInput sets the ‘aria-label’ to this label value. CdrInput can display ‘Required’ next to the label.     | Group checkboxes or radio buttons using <fieldset> tags.    |
-| Ensure links make sense out of context                   | CdrLink provides ‘cdr-sr-only’ class that can hide descriptive text but make it available for screen readers.    | Avoid phrases such as “click here” or “start here” for links.    |
+| Ensure users can complete and submit all forms           | CdrInput requires a label and positions it adjacent to input fields. If label is hidden, CdrInput sets the `aria-label` to this label value. CdrInput can display "Required" next to the label.     | Group checkboxes or radio buttons using <fieldset> tags.    |
+| Ensure links make sense out of context                   | CdrLink provides `cdr-sr-only` class that can hide descriptive text but make it available for screen readers.    | Avoid phrases such as “click here” or “start here” for links.    |
 | Caption and/or provide transcripts for media             |                                                                       | Write captions and transcripts for video or audio.                     |
 | Ensure accessibility of non-HTML content                 |                                                                       | Provide accessibility alternatives when appropriate.                   |
 | Miscellaneous                                            |                                                                       | Ensure that the page is readable and usable when fonts are enlarged 150-200%.    |
-| Miscellaneous                                            |                                                                       | Provide a descriptive page **&lt;title&gt;** attribute.                |
+| Miscellaneous                                            |                                                                       | Provide a descriptive page <title> attribute.                |
 | Miscellaneous                                            |                                                                       | Ensure events are available with both mouse and keyboard.              |
 | Miscellaneous                                            |                                                                       | Limit pop-up windows and notify users when pop-ups are used.           |
 <br />
@@ -88,16 +88,16 @@ Cognitive disabilities include difficulties with:
 - Linguistic
 - Deficits for verbal, math, or visual comprehension
 
-These disabilities range from mild, moderate or severe. Many people have one or more cognitive disability. People with this disability represents perhaps the largest disability group. Ensuring accessibility for this group is often forgotten or an afterthought.
+These disabilities range from mild, moderate or severe. Many people have one or more cognitive disability. People with this disability represent perhaps the largest disability group. Ensuring accessibility for this group is often forgotten or an afterthought.
 
 Resources for understanding cognitive disabilities:
-- WebAIM: Cognitive Disabilities
+- WebAIM: [Cognitive Disabilities](https://webaim.org/articles/cognitive/)
 - Carnegie Museums of Pittsburgh, Innovation Studio: Web Accessibility Guidelines v1.0: [Cognitive Disabilities](http://web-accessibility.carnegiemuseums.org/content/cognitive/)
 - Carleton College, Web Services Group: [Writing for Readability and Accessibility](https://apps.carleton.edu/campus/webgroup/training/accessibility/readability/)
 
 ### Color
 Color contrast has an impact for all users and especially for users with visual, physical, and cognitive disabilities. 
-- Cedar complies with [WCAG 2.1 AA standard contrast ratios](http://www.w3.org/TR/WCAG/). Follow recommendations for color pairings on the [Color](https://rei.github.io/rei-cedar-docs/foundation/color/) page 
+- Cedar complies with [WCAG 2.1 AA contrast ratios](https://www.w3.org/TR/WCAG/#contrast-minimum). Follow recommendations for color pairings on the [Color](https://rei.github.io/rei-cedar-docs/foundation/color/) page 
 - For gradient backgrounds or images, check contrast ratios using WebAIM’s [Color Contrast Checker](https://webaim.org/resources/contrastchecker/) 
  
 #### Designing for color blindness
@@ -127,9 +127,9 @@ Below are a collection of tools that can be used for accessibility testing:
 - For testing readability level:
     - [Hemingway Editor](http://www.hemingwayapp.com/)
 - For testing keyboard interactions:
-    - WebAIM: [Keyboard Accessibility: Keyboard Testing table](https://webaim.org/techniques/keyboard/#testing)
+    - WebAIM: [Keyboard Accessibility: Keyboard Testing](https://webaim.org/techniques/keyboard/#testing)
 - For images and writing alternative text:
-    - Web Accessibility Tutorials: [Image Tutorials: An Alt Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/)
+    - Web Accessibility Tutorials: [Image Tutorials: An alt Decision Tree](https://www.w3.org/WAI/tutorials/images/decision-tree/)
 - For checking visual disability issues:
     - WebAIM: [Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
     - Colblindor: Coblis: [Color Blindness Simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/)
