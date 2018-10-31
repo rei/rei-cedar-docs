@@ -64,6 +64,7 @@ Cedar components have accessibility attributes built in and provides guidelines 
 | Miscellaneous                                            |                                                                       | Provide a descriptive page <title> attribute.                |
 | Miscellaneous                                            |                                                                       | Ensure events are available with both mouse and keyboard.              |
 | Miscellaneous                                            |                                                                       | Limit pop-up windows and notify users when pop-ups are used.           |
+
 <br />
 
 ## Testing and validating 
@@ -109,7 +110,7 @@ When designing with color, use a color-blind simulator to review visibility of c
 - If you're working in Sketch, we recommend the [Stark plugin](http://www.getstark.co/)
 - Test an image by uploading it to the Coblis, [Color Blindness Simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/) web page
  
-<cdr-img class="cdr-doc-article-img" alt="Non-color blind user versus color-blind user":src="$withBase(`/accessibility/Accessibility__ColorBlindness__16-9.png`)"/>
+<cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Non-color blind user versus color-blind user":src="$withBase(`/accessibility/Accessibility__ColorBlindness__16-9.png`)"/>
 Non-color blind user versus color-blind user
 
 #### Designing for low vision 
