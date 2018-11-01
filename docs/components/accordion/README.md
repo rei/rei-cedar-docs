@@ -371,7 +371,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the CdrAccordion package using `npm` in your terminal:
+Install the **CdrAccordion** package using `npm` in your terminal:
 
 _Terminal_
 
@@ -455,7 +455,7 @@ Set `show-all` to `true` on `cdr-accordion`, and each `cdr-accordion-item` will 
     ...
 ```
 
-The CdrAccordionItem component can also be controlled individually. If `show-all` is `false` at the CdrAccordion level, set `show` to `true` to display an individual accordion item in an open state. Note that CdrAccordion settings will take precedence over CdrAccordionItem settings.
+The **CdrAccordionItem** component can also be controlled individually. If `show-all` is `false` at the **CdrAccordion** level, set `show` to `true` to display an individual accordion item in an open state. Note that **CdrAccordion** settings will take precedence over **CdrAccordionItem** settings.
 
 ```vue
 <template>
@@ -469,7 +469,7 @@ The CdrAccordionItem component can also be controlled individually. If `show-all
     ...
 ```
 
-Any options set at the CdrAccordion level can be set on any parent component of CdrAccordion by using Vue's provide/inject functionality. This is useful, for instance, if CdrAccordionItem ever needs to be used as a part of another group component.
+Any options set at the **CdrAccordion level** can be set on any parent component of **CdrAccordion** by using Vue's provide/inject functionality. This is useful, for instance, if **CdrAccordionItem** ever needs to be used as a part of another group component.
 
 
 ```vue
@@ -504,7 +504,7 @@ Any options set at the CdrAccordion level can be set on any parent component of 
 
 ## 1.0.0
 
-- Includes CdrAccordion and CdrAccordionItem components
+- Includes **CdrAccordion** and **CdrAccordionItem** components
 - Toggles initial open state at group and individual level
 - Supports compact and border-aligned styles
 - Git commit reference ([cc998a4](https://github.com/rei/rei-cedar/commit/cc998a4f7a4a0278a86c35063ba6615196a46ba2))
