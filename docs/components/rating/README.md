@@ -322,7 +322,7 @@ By default the CdrRating component renders the icons in medium size (24px) with 
 
 - New star icons
 - Updated colors
-- [href] prop to make rating act as a link
+- `href` prop to make rating act as a link
 - Icon size updates (small: 16px, medium: 24px, large: 32px)
 - Add size prop in place of "modifier"
 - Link to full dev [changelog](https://github.com/rei/rei-cedar/blob/18.09.2/src/components/rating/CHANGELOG.md)
