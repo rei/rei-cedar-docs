@@ -123,7 +123,7 @@ Shows review rating with up to 5 stars highlighted. If rating is zero, star icon
 
 ```html
 <div>
-  <cdr-rating rating="3.33333" count="100" />
+  <cdr-rating rating="3.33333" count="100" class="cdr-stack" />
   <cdr-rating rating="0" count="0" />
 </div>
 ```
@@ -157,7 +157,7 @@ Removes the word "Reviews" from the label for limited space layout.
 
 ```html
 <div>
-  <cdr-rating rating="3.33333" count="100" compact />
+  <cdr-rating rating="3.33333" count="100" compact class="cdr-stack" />
   <cdr-rating rating="0" count="0" compact />
 </div>
 ```
@@ -172,12 +172,12 @@ Change size for the star icon and text. Default size is medium.
 
 ```html
 <div>
-  <cdr-rating size="small" rating="3.33333" count="100" compact />
-  <cdr-rating size="medium" rating="3.33333" count="100" compact />
-  <cdr-rating size="large" rating="3.33333" count="100" compact />
-  <cdr-rating size="small" rating="0" count="0" compact />
-  <cdr-rating size="medium" rating="0" count="0" compact />
-  <cdr-rating size="large" rating="0" count="0" compact />
+  <cdr-rating size="small" rating="3.33333" count="100" compact class="cdr-stack" />
+  <cdr-rating size="medium" rating="3.33333" count="100" compact class="cdr-stack" />
+  <cdr-rating size="large" rating="3.33333" count="100" compact class="cdr-stack" />
+  <cdr-rating size="small" rating="0" count="0" compact class="cdr-stack" />
+  <cdr-rating size="medium" rating="0" count="0" compact class="cdr-stack" />
+  <cdr-rating size="large" rating="0" count="0" compact class="cdr-stack" />
 </div>
 ```
 
@@ -236,8 +236,8 @@ This component has compliance with WCAG guidelines by:
 
 ## Resources 
 
-- Icons
-- Iconography
+- [Icons](../icon/)
+- [Iconography](../../foundation/iconography/)
 
 
 </cdr-doc-table-of-contents-shell>
@@ -265,7 +265,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the CdrRating package using `npm` in your terminal:
+Install the **CdrRating** package using `npm` in your terminal:
 
 _Terminal_
 
@@ -305,7 +305,7 @@ export default {
 ```
 
 ## Usage
-By default the CdrRating component renders the icons in medium size (24px) with the total number of reviews. 
+By default the **CdrRating** component renders the icons in medium size (24px) with the total number of reviews. 
 
 ### Rating Values
 - The count for reviews will always be visible
