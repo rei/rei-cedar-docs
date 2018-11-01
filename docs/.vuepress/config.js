@@ -49,6 +49,7 @@ module.exports = {
             text: "Experience Principles",
             link: "/foundation/experience-principles/"
           },
+          { text: "Accessibility", link: "/foundation/accessibility/" },
           { text: "Color", link: "/foundation/color/" },
           { text: "Iconography", link: "/foundation/iconography/" },
           { text: "Motion", link: "/foundation/motion/" },
