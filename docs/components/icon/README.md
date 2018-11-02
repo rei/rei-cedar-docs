@@ -321,7 +321,7 @@ export default {
 The **CdrIcon** package contains many different components:
 
 1. **CdrIcon**: This is a basic SVG wrapper. This component allows for using Non-Cedar SVGs. Use this component in conjunction with the CdrIconSprite package
-2. **CdrIconSprite** A symbol definition sprite with all Cedar icons
+2. **CdrIconSprite**: A symbol definition sprite with all Cedar icons
 3. **Individual icons**: For available icons, view [Cedar Icon Library](?active-tab=design-guidelines&active-link=icon-library) on Design Guidelines tab
 
 
