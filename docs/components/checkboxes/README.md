@@ -437,7 +437,7 @@ export default {
 
 ## Usage
 
-`CdrCheckbox` requires  `v-model`  to track  `:checked`  values.
+The **CdrCheckbox** component requires  `v-model`  to track  `:checked`  values.
 
 This example uses  `true-value`  and  `false-value`  props to change what’s saved to the model.
 
