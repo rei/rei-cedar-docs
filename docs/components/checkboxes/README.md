@@ -272,7 +272,7 @@ Custom styles for checkboxes.
 
 To ensure that usage of this component complies with accessibility guidelines:
 - Each checkbox must be focusable and keyboard accessible:
-  - When the checkbox has focus, the **space** key changes the selection
+  - When the checkbox has focus, the **Space** key changes the selection
   - **Tab** key moves to next element in list 
 - Fieldsets (or grouped checkboxes) should be: 
   - Used when associating group of checkboxes
@@ -394,7 +394,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the CdrCheckbox package using `npm` in your terminal:
+Install the **CdrCheckbox** package using `npm` in your terminal:
 
 _Terminal_
 
@@ -497,7 +497,7 @@ Default checkbox to checked/unchecked state by setting the model in Javascript.
 </script>
 ```
 
-Set the indeterminate prop to true to generate an indeterminate checkbox, which looks different than the default. This is a visual styling only; it does not include any of the functional aspects of an indeterminate checkbox.
+Set the `indeterminate` prop to `true` to generate an indeterminate checkbox, which looks different than the default. This is a visual styling only; it does not include any of the functional aspects of an indeterminate checkbox.
 
 ```vue
 <template>
