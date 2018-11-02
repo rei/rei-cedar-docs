@@ -349,7 +349,7 @@ export default {
 
 ## Usage
 
-The CdrCaption component is developed to work within a composition with other components; however composition-type components have not been developed yet.
+The **CdrCaption** component is developed to work within a composition with other components; however composition-type components have not been developed yet.
 
 <br />
 
