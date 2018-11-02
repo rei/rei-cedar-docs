@@ -2,7 +2,7 @@
 {
   "title": "Icons",
   "layout": "LayoutComponent",
-  "summary": "Icons communicate meaning through the use of graphics",
+  "summary": "Communicates meaning through the use of graphics",
   "title_metadata": "CdrIcon",
   "breadcrumbs": [
     {
@@ -277,7 +277,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the CdrIcon package using `npm` in your terminal:
+Install the **CdrIcon** package using `npm` in your terminal:
 
 _Terminal_
 
@@ -318,13 +318,14 @@ export default {
 
 ## Usage
 
-The CdrIcon package contains many different components:
+The **CdrIcon** package contains many different components:
 
-1. CdrIcon  -- This is a basic SVG wrapper. This component allows for using Non-Cedar SVGs. Use this component in conjunction with the CdrIconSprite package
-2. CdrIconSprite -- A symbol definition sprite with all Cedar icons
-3. Individual icons -- For available icons, view [Cedar Icon Library](?active-tab=design-guidelines&active-link=icon-library) on Design Guidelines tab
+1. **CdrIcon**: This is a basic SVG wrapper. This component allows for using Non-Cedar SVGs. Use this component in conjunction with the CdrIconSprite package
+2. **CdrIconSprite** A symbol definition sprite with all Cedar icons
+3. **Individual icons**: For available icons, view [Cedar Icon Library](?active-tab=design-guidelines&active-link=icon-library) on Design Guidelines tab
 
-There are 3 different options to display SVG icons on your page using the CdrIcon package.
+
+There are 3 different options to display SVG icons on your page using the **CdrIcon** package.
 
 ### 1. SVG Sprite
 
@@ -332,6 +333,7 @@ There are 3 different options to display SVG icons on your page using the CdrIco
  
 Requires: 
 - Icon sprite inline on page
+ 
  
 The sprite needs to be available on any page where the icons are being used, so add the sprite component at the base layout or index:
 
@@ -382,7 +384,8 @@ components: {
 Requires:
 - `@rei/cdr-icon/sprite/cdr-icon-sprite.svg`
 - A webpack loader to handle the asset. This example assumes the file-loader package
-- A polyfill for external SVG resource. Possible packages are: svgxuse or svg4everybody 
+- A polyfill for external SVG resource. Possible packages are: **svgxuse** or **svg4everybody**
+ 
  
 Within an individual component (there may be a better way to scale this if the code calls it in many places): 
 
@@ -416,6 +419,7 @@ This may be the easiest way to use an icon on a page however use this method car
 Requires:
 - Install  `@rei/cdr-icon`
 
+
 ```vue
 <template>
   ...
@@ -439,16 +443,18 @@ import { IconCaretRight, IconClock } from '@rei/cdr-icon';
 
 ### 3. Non-Cedar SVG
  
-The CdrIcon package is simply an SVG with default attributes set for accessibility and styling. 
+The **CdrIcon** package is simply an SVG with default attributes set for accessibility and styling. 
 
 - Any SVG markup can be used
 - Any attributes added will override the defaults
 - This method will increase HTML file size and slow down performance if using a lot of icons.
  
+ 
 Requires: 
 - None
-
-Use any valid SVG markup in the CdrIcon slot. 
+ 
+  
+Use any valid SVG markup in the **CdrIcon** slot. 
 
 ```vue
 <template> 
@@ -491,7 +497,7 @@ Following variants are available to the `cdr-icon` modifier attribute:
 - Add grid-view, list-view, and scan-barcode icons
 - All icon components have a slot that accepts any SVG xml
 - Individual icon components for all icons (use only what you need)
-- CdrIcon is lower-level component that acts as an SVG wrapper.
+- **CdrIcon** is lower-level component that acts as an SVG wrapper
 - Link to full dev [changelog](https://github.com/rei/rei-cedar/blob/18.09.1/src/components/icon/CHANGELOG.md)
 
 </template>
