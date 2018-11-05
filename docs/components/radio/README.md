@@ -238,7 +238,7 @@ Custom styles for radio buttons.
 To ensure that usage of this component complies with accessibility guidelines:
 
 - Each radio button must be focusable and keyboard accessible:
-  - When radio button has focus, the **space** key changes the selection
+  - When radio button has focus, the **Space** key changes the selection
   - **Tab** key moves to next element in list 
 - Fieldsets should be: 
   - Used when associating group of radio buttons
@@ -336,7 +336,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the CdrRadio package using `npm` in your terminal:
+Install the **CdrRadio** package using `npm` in your terminal:
 
 _Terminal_
 
@@ -388,7 +388,7 @@ export default {
 
 ## Usage
 
-The CdrRadio component requires `v-model` to track the value of selected radios.
+The **CdrRadio** component requires `v-model` to track the value of selected radios.
 
 ### Modifiers
 
