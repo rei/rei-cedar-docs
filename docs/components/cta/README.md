@@ -353,7 +353,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the CdrCta package using `npm` in your terminal:
+Install the **CdrCta** package using `npm` in your terminal:
 
 _Terminal_
 
@@ -412,7 +412,7 @@ This example code renders a full width `cdr-cta`, with the `elevated` modifier a
 </template>
 ```
 
-The CdrCta component looks like a button, however it's actually an anchor:
+The **CdrCta** component looks like a button, however it's actually an anchor:
 - Do not use when a button is preferable such as triggering an action
 - Do not assign the role of button
 - For basic links, use the [CdrLink component](../links/)
