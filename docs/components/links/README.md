@@ -27,7 +27,7 @@
       },
       {
         "type": "dont",
-        "image": "links/links_descriptivetext_dont__16-6.png",
+        "image": "links/links_descriptivetext_dont__16-9.png",
         "ratio": "16-9",
         "alt": "Image showing click here link",
         "caption": "use “click here” or “start here” for link text."
