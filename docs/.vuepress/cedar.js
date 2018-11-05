@@ -100,3 +100,8 @@ import { CdrQuote } from "@rei/cdr-quote";
 import "@rei/cdr-quote/dist/cdr-quote.css";
 Vue.component("CdrQuote", CdrQuote);
 FullVue.component("CdrQuote", CdrQuote);
+
+import { CdrRating } from "@rei/cdr-rating";
+import "@rei/cdr-rating/dist/cdr-rating.css";
+Vue.component("CdrRating", CdrRating);
+FullVue.component("CdrRating", CdrRating);

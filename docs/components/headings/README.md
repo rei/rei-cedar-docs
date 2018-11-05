@@ -298,7 +298,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the CdrText package using `npm` in your terminal:
+Install the **CdrText** package using `npm` in your terminal:
 
 _Terminal_
 
@@ -342,7 +342,7 @@ export default {
 
 ## Usage
 
-The CdrText component allows for styling any html element with available text styles. Visual style and semantic meaning are managed independently by providing: 
+The **CdrText** component allows for styling any html element with available text styles. Visual style and semantic meaning are managed independently by providing: 
 
 - Element to the `tag` prop 
 - Style to the `modifier` prop
@@ -368,7 +368,7 @@ This will result in the following HTML:
   </cdr-text>
 ```
 
-CdrText modifiers can be nested within semantic headings. The below modifier for subheading is nested in the `<h2>` tag.
+**CdrText** modifiers can be nested within semantic headings. The below modifier for subheading is nested in the `<h2>` tag.
 
 ```vue
   <cdr-text

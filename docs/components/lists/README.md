@@ -378,7 +378,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the CdrList package using `npm` in your terminal:
+Install the **CdrList** package using `npm` in your terminal:
 
 _Terminal_
 
@@ -433,7 +433,7 @@ Visual style and semantic meaning are managed independently by providing:
 
 <br/>
 
-By default the CdrList component renders as an unordered and undecorated "bare" list. To use an ordered list pass `<ol>` to the tag property.
+By default the **CdrList** component renders as an unordered and undecorated "bare" list. To use an ordered list pass `<ol>` to the tag property.
 
 ```html
 <cdr-list tag="ol">
@@ -442,7 +442,7 @@ By default the CdrList component renders as an unordered and undecorated "bare" 
 </cdr-list>
 ```
 
-The CdrList component has decoupled the semantic tags `<ul>` and `<ol>` from visual presentation. 
+The **CdrList** component has decoupled the semantic tags `<ul>` and `<ol>` from visual presentation. 
 
 <br/>
 
