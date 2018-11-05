@@ -20,15 +20,15 @@
 	  "standalone": [
       {
         "type": "do",
-        "image": "links/links_descriptivetext_do.png",
-        "ratio": "4-3",
+        "image": "links/links_descriptivetext_do__16-9.png",
+        "ratio": "16-9",
         "alt": "Image showing proper link usage",
         "caption": "use clear, concise, and descriptive text."
       },
       {
         "type": "dont",
-        "image": "links/links_descriptivetext_dont.png",
-        "ratio": "4-3",
+        "image": "links/links_descriptivetext_dont__16-6.png",
+        "ratio": "16-9",
         "alt": "Image showing click here link",
         "caption": "use “click here” or “start here” for link text."
       }
@@ -36,15 +36,15 @@
     "link": [
       {
         "type": "do",
-        "image": "links/links_underlinestyle_text_do.png",
-        "ratio": "4-3",
+        "image": "links/links_underlinestyle_text_do__16-9.png",
+        "ratio": "16-9",
         "alt": "The link in this copy uses the cdr-link component, and, so correctly uses an underline",
         "caption": "underline every link."
       },
       {
         "type": "dont",
-        "image": "links/links_underlinestyle_text_dont.png",
-        "ratio": "4-3",
+        "image": "links/links_underlinestyle_text_dont__16-9.png",
+        "ratio": "16-9",
         "alt": "The default link in body copy incorrectly does not use an underline",
         "caption": "apply different visual treatments for hyperlinks."
       }
@@ -210,7 +210,7 @@ To ensure that usage of this component complies with accessibility guidelines:
 - Ensure assistive technology can find all links on a page:
   - Always provide a `href` attribute. Empty `href` attributes are not considered true links
   - Ensure that each link can be accessed via the keyboard, don’t manipulate the default tab index
-  - When using images as links, the `<alt>` attribute acts as the link text. Describe the action or hyperlink that the image represents
+  - When using images as links, the `alt` attribute acts as the link text. Describe the action or hyperlink that the image represents
 
 <br/>
 
@@ -244,10 +244,10 @@ This component has compliance with following WebAIM’s accessibility guidelines
 Use link labels that describe the link’s destination when clicked or tapped:
 
 - Keep link text concise.  Restrict link text length to a maximum of 100 characters
-- Use descriptive text for links, so user knows where they are going. Avoid using “click here” or “start here” or “link”
+- Use descriptive text for links, so user knows where they are going. Avoid using “click here” or “start here”
 - If screen space for text is minimal and text is only “Learn more”:
-  - Provide `<alt>` text that can be read by screen readers
-  - For example, if the link text is “Learn more”, then the `<alt>` text could be “Learn more about pick up in store”
+  - Provide `alt` text that can be read by screen readers
+  - For example, if the link text is “Learn more”, then the `alt` text could be “Learn more about pick up in store”
 - Don’t capitalize links. Some screen readers read capitalized text letter-by-letter. Instead, use sentence case
 - Restrict the number of text links on a page. Screen reader will read all the links on a page
 
@@ -261,7 +261,7 @@ When making decisions about using this component styled as a link or a button, c
 | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | Answers the question, "Where can I go"                                                              | Answers the question, "What can I do"                                                |
 | Search engine crawlers can follow anchors for links (`<a>`)                                         | Search engine crawlers **cannot** follow links that are submitted by input or button |
-| Default keyboard behavior is triggered using the **enter** key                                          | Default keyboard behavior is triggered using the **space** or **enter** key                  |
+| Default keyboard behavior is triggered using the **Enter** key                                          | Default keyboard behavior is triggered using the **Space** or **Enter** key                  |
 | **Cannot be disabled** like buttons but can be made inert with tabindex="-1" and aria-hidden="true" | Can be disabled with disabled attribute                                              |
 
 <br />
@@ -311,7 +311,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the CdrLink package using `npm` in your terminal:
+Install the **CdrLink** package using `npm` in your terminal:
 
 _Terminal_
 
@@ -363,7 +363,7 @@ By default, the component renders using an anchor element and requires an `href`
   </cdr-link>
 ```
 
-Use the tag prop to render the link as a `<button>` element that presents a link appearance without an `href` attribute.
+Use the `tag` prop to render the link as a `<button>` element that presents a link appearance without an `href` attribute.
 
 ```vue
   <cdr-link tag="button">
