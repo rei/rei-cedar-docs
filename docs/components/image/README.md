@@ -321,22 +321,22 @@ Images are cropped on y-axis with bottom value and on x-axis with left, x-center
 
 - Avoid using decorative images; instead present the image as a background-image using cascading style sheets (CSS)
 - If using the HTML `<img>` element, add an empty `alt` attribute
-- If using the HTML `<img>` element, add the following attribute: role="presentation"
+- If using the HTML `<img>` element, add the following attribute: ` role="presentation" `
 
 ### Alternative text
 
-- Use [this decision tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) to determine how to use the `<alt>` attribute of the `<img>` element in various situations
+- Use [this decision tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) to determine how to use the `alt` attribute
 - Be succinct. Ideally, one sentence or less
 - Be informative and accurate 
-- If images of text are used, the `<alt>` attribute should contain the same words that appear in the image
+- If images of text are used, the `alt` attribute should contain the same words that appear in the image
 - Avoid repetitive labels. For example: “image of” or “picture of” 
 - Descriptions:
   - Use short description that conveys the essential information presented by the image without burdening users with superfluous details
   - Use long descriptions for complex images such as graphs, charts, or diagrams to provide equivalent access to the information the image
-- For groups of images that convey a single piece of information, apply the `<alt>` attribute to only one image for the entire group
+- For groups of images that convey a single piece of information, apply the `alt` attribute to only one image for the entire group
 - For image maps with multiple clickable areas:
-  - Must provide an overall context for the set of links using `<alt>` attribute
-  - Each individual clickable area should have an `<alt>` attribute that describes the purpose or destination of the link
+  - Must provide an overall context for the set of links using `alt` attribute
+  - Each individual clickable area should have an `alt` attribute that describes the purpose or destination of the link
 
 ## Responsiveness
 
@@ -377,7 +377,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the CdrImg package using `npm` in your terminal:
+Install the **CdrImg** package using `npm` in your terminal:
 
 _Terminal_
 
@@ -438,7 +438,7 @@ export default {
 - Background image is displayed in its original size
 - Requires the `ratio` property 
 - Defines the starting point of the overflow position 
-- Accepts a single x-axis and y-axis value (e.g. crop=”top left”):
+- Accepts a single x-axis and y-axis value (e.g. ` crop=”top left” `):
   - Adjust the starting background-position on the x-axis of the image:
     - `left`: Orients the image to its horizontal left
     - `right`: Orients the image to its horizontal right
@@ -472,7 +472,7 @@ For internal applications with large images or images that would benefit from ch
 
 ## 1.0.0
 
-- Enforces WCAG A 1.1.1 criteria for decorative images by adding an empty alt attribute to all cdr-img’s
+- Enforces WCAG A 1.1.1 criteria for decorative images by adding an empty alt attribute to all CdrImg source files
 - Provides integration support for image best practices available using [rei-lazy-image-loader](https://git.rei.com/projects/FEDPACK/repos/rei-lazy-image-loader/browse)
 - Enables the following aspect ratios at breakpoints with following variants: Auto, Square, 1-2, 2-3, 3-4, 9-16, 2-1, 3-2, 4-3, 16-9
 - Enables user defined cropping and covering
