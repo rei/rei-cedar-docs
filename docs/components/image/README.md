@@ -325,18 +325,18 @@ Images are cropped on y-axis with bottom value and on x-axis with left, x-center
 
 ### Alternative text
 
-- Use [this decision tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) to determine how to use the `<alt>` attribute
+- Use [this decision tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) to determine how to use the `alt` attribute
 - Be succinct. Ideally, one sentence or less
 - Be informative and accurate 
-- If images of text are used, the `<alt>` attribute should contain the same words that appear in the image
+- If images of text are used, the `alt` attribute should contain the same words that appear in the image
 - Avoid repetitive labels. For example: “image of” or “picture of” 
 - Descriptions:
   - Use short description that conveys the essential information presented by the image without burdening users with superfluous details
   - Use long descriptions for complex images such as graphs, charts, or diagrams to provide equivalent access to the information the image
-- For groups of images that convey a single piece of information, apply the `<alt>` attribute to only one image for the entire group
+- For groups of images that convey a single piece of information, apply the `alt` attribute to only one image for the entire group
 - For image maps with multiple clickable areas:
-  - Must provide an overall context for the set of links using `<alt>` attribute
-  - Each individual clickable area should have an `<alt>` attribute that describes the purpose or destination of the link
+  - Must provide an overall context for the set of links using `alt` attribute
+  - Each individual clickable area should have an `alt` attribute that describes the purpose or destination of the link
 
 ## Responsiveness
 
