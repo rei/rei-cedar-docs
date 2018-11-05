@@ -67,6 +67,7 @@ module.exports = {
           { text: "Call to Action", link: "/components/cta/" },
           { text: "Caption", link: "/components/caption/" },
           { text: "Checkboxes", link: "/components/checkboxes/" },
+          { text: "Data Tables", link: "/components/data-tables/"},
           { text: "Grid", link: "/components/grid/" },
           { text: "Headings", link: "/components/headings/" },
           { text: "Icons", link: "/components/icon/" },
