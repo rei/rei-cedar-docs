@@ -883,7 +883,7 @@ Overrides row-level alignment for a column. This can be applied to an individual
 
 ## Nested Grids
 
-Defines nested columns (also known as isRow). 
+Defines nested columns (also known as `isRow`). 
 
 ### Simple
 
@@ -1053,25 +1053,25 @@ Columns, gutters, and margins scales as a fluid system as the device and viewpor
 <table>
   <tbody>
     <tr>
-      <td>XS - Extra Small</td>
+      <td>XS (Extra Small)</td>
       <td>< 768px</td>
       <td>16px</td>
       <td>16px</td>
     </tr>
     <tr>
-      <td>S - Small</td>
+      <td>SM (Small)</td>
       <td>≥ 768px</td>
       <td>16px</td>
       <td>16px</td>
     </tr>
     <tr>
-      <td>M - Medium</td>
+      <td>MD (Medium)</td>
       <td>≥ 992px</td>
       <td>32px</td>
       <td>32px</td>
     </tr>
     <tr>
-      <td>L - Large</td>
+      <td>LG (Large)</td>
       <td>≥ 1232px</td>
       <td>32px</td>
       <td>32px</td>
@@ -1092,22 +1092,22 @@ Columns, gutters, and margins scales as a fluid system as the device and viewpor
 <table>
   <tbody>
     <tr>
-      <td>XS - Extra Small</td>
+      <td>XS (Extra Small)</td>
       <td>< 768px</td>
       <td>16px gutters (8px on left + 8px on right)</td>
     </tr>
     <tr>
-      <td>S - Small</td>
+      <td>SM (Small)</td>
       <td>≥ 768px</td>
       <td>16px gutters (8px on left + 8px on right)</td>
     </tr>
     <tr>
-      <td>M - Medium</td>
+      <td>MD (Medium)</td>
       <td>≥ 992px</td>
       <td>32px gutters (16px on left +16px on right)</td>
     </tr>
     <tr>
-      <td>L - Large</td>
+      <td>LG (Large)</td>
       <td>≥ 1232px</td>
       <td>32px gutters (16px on left +16px on right)</td>
     </tr>
@@ -1139,9 +1139,9 @@ To build an effective responsive grid:
 - Design mobile first:
     - Use the XS (≤ 768px) viewport width applicable to small devices like a phone
     - Start with a one column layout and add columns as needed
-- Apply responsive rules to the grid and its contained content at relevant breakpoints including S (≥ 768px) and M (≥ 998px)
-- Complete and optimize the layout for the widest L (≥ 1232px) viewport width
-- Inspect responsive displays “in between” each breakpoint for how content responds across the fluid spectrum
+- Apply responsive rules to the grid and its contained content at relevant breakpoints including SM (≥ 768px) and MD (≥ 998px)
+- Complete and optimize the layout for the widest LG (≥ 1232px) viewport width
+- Inspect responsive displays in between each breakpoint for how content responds across the fluid spectrum
 
 </cdr-doc-table-of-contents-shell>
 </template>
@@ -1184,7 +1184,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the CdrGrid package using `npm` in your terminal:
+Install the **CdrGrid** package using `npm` in your terminal:
 
 _Terminal_
 
@@ -1231,11 +1231,11 @@ export default {
 
 ## Usage
 
-CdrRow functions as a flexbox container, and CdrCol functions as a flexbox item.
+**CdrRow** functions as a flexbox container, and **CdrCol** functions as a flexbox item.
 
-- Always use CdrRow and CdrCol together:
+- Always use **CdrRow** and **CdrCol** together:
     - Attempting to use either without the other will not work
-    - Never include other elements as immediate children of CdrRow besides CdrCol 
+    - Never include other elements as immediate children of **CdrRow** besides **CdrCol**
 - The grid system is mobile-first, flexbox based, and 12 columns wide. Many props mirror the flexbox API and work as you’d expect CSS flexbox to work.
 
 <br/>
