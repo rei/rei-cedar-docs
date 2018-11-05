@@ -38,6 +38,7 @@
     "@rei/cdr-list": "^1.0.0",
     "@rei/cdr-quote": "^1.0.0",
     "@rei/cdr-radio": "^1.0.0",
+    "@rei/cdr-rating": "^1.0.0-alpha.4",
     "@rei/cdr-table": "0.1.0-alpha.1",
     "@rei/cdr-tabs": "^1.0.0-alpha.60",
     "@rei/cdr-text": "^1.0.0",
