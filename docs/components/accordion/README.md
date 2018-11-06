@@ -331,7 +331,7 @@ This component has compliance with WCAG guidelines by:
 <template slot="API">
 <cdr-doc-table-of-contents-shell>
 
-Accordions are built from two components, CdrAccordion and CdrAccordionItem, which are meant to be used together.
+Accordions are built from two components, **CdrAccordion** and **CdrAccordionItem**, which are meant to be used together.
 
 ## Props
 
