@@ -1282,6 +1282,10 @@ Nested grids are made by nesting `cdr-col` and adding the `is-row` prop to the `
 
 <template slot="History">
 
+## 1.0.2
+
+- Add missing style property to package.json
+
 ## 1.0.0
 
 - Consolidate responsive props to single prop that accepts responsive values. See full dev [changelog](https://github.com/rei/rei-cedar/blob/master/src/components/grid/CHANGELOG.md)
