@@ -339,9 +339,9 @@ This component has no specific WCAG compliance attributes built into the control
 ## Foundations
 
 Buttons sizes are used:
-  - Small: Supplemental user actions such as product comparison or filter on product pages
-  - Medium: Default size
-  - Large: Mobile version for XS grid with full breakpoint width. Also, for &quot;Add to cart&quot; on product pages or [Call to Action](../cta/) on campaign pages
+  - **Small:** Supplemental user actions such as product comparison or filter on product pages
+  - **Medium:** Default size
+  - **Large:** Mobile version for XS grid with full breakpoint width. Also, for &quot;Add to cart&quot; on product pages or [Call to Action](../cta/) on campaign pages
 
 <br />
 
@@ -360,6 +360,7 @@ When arranging buttons horizontally:
   <cdr-img class="cdr-doc-article-img" :src="$withBase(`/buttons/Spec__Button_Horizontal_Spacing_16-9.png`)"/>
 
 <br />
+
 ### Do / Don't
 
 When grouping buttons, match button sizes either horizontally or vertically
