@@ -323,7 +323,8 @@ This component has compliance with WCAG guidelines by:
 ## Responsiveness
 
 - Accordion style can change variant based on breakpoint. Example: _Default_ at MD/LG, _Compact_ and _Border-Aligned_ at XS/SM
-- Switching between tab component and accordion component is not supported in Cedar components library. Do not replace the accordion component with the tab component at different breakpoints
+- Switching between tab component and accordion component is not supported in Cedar components library
+- Do not replace the accordion component with the tab component at different breakpoints
 
 </cdr-doc-table-of-contents-shell>
 </template>
