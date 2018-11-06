@@ -462,7 +462,7 @@ _main.js_
 
 ```javascript
 // import your required CSS.
-import "@rei/cdr-link/dist/cdr-button.css";
+import "@rei/cdr-button/dist/cdr-button.css";
 ```
 
 ### 3. Add component to a template

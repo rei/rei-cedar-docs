@@ -23,7 +23,7 @@
   "sizechart": [
     {
       "type": "do",
-      "image": "data-tables/table_sizechars_do_4-3.png",
+      "image": "data-tables/table_sizecharts_do_4-3.png",
       "ratio": "4-3",
       "alt": "Image showing size chart",
       "caption": "use Data Tables to render size charts."
@@ -278,6 +278,8 @@ Default:
 </cdr-doc-table-of-contents-shell>
 </template>
 
+
+
 <template slot="API">
 <cdr-doc-table-of-contents-shell>
 
@@ -291,12 +293,12 @@ Default:
 
 ## Installation
 
-Resources are available within the [CdrButton package:](https://www.npmjs.com/search?q=cdr-button)
+Resources are available within the [CdrDataTable package:](https://www.npmjs.com/search?q=cdr-data-table)
 
 <cdr-doc-api type="installation" />
 
-- Component: `@rei/cdr-button`
-- Component styles: `cdr-button.css`
+- Component: `@rei/cdr-data-table`
+- Component styles: `cdr-data-table.css`
 
 <br />
 
@@ -309,7 +311,7 @@ Install the CdrButton package using `npm` in your terminal:
 _Terminal_
 
 ```bash
-npm i -S @rei/cdr-button
+npm i -S @rei/cdr-data-table
 ```
 
 ### 2. Import dependencies
@@ -318,168 +320,184 @@ _main.js_
 
 ```javascript
 // import your required CSS.
-import "@rei/cdr-link/dist/cdr-button.css";
+import "@rei/cdr-data-table/dist/cdr-data-table.css";
 ```
 
 ### 3. Add component to a template
-
-In this example we’ll create a medium-sized primary button, which is the default.
 
 _local.vue_
 
 ```vue
 <template>
-  <cdr-button
-    type="button"
-  >
-    Add to cart
-  </cdr-button>
+  <cdr-table
+    id="size-details"
+    :col-headers="colHeaders"
+    :row-headers="rowHeaders"
+    :row-data="rowData"
+    :key-order="keyOrder"
+  />
 </template>
 
 <script>
-import { CdrButton } from '@rei/cdr-button';
+import { CdrTable } from '@rei/cdr-table';
 export default {
   ...
   components: {
-     CdrButton  
-  }
+     CdrTable  
+  }, 
+  data() {
+    ...
+  },
 }
 </script>
 ```
 
 ## Usage
 
-### Size, responsive size, and full-width sizing props
+### Using Props
 
-The below example uses both the `size` and `responsive-size` props. This button’s size is small, but it will become a large button at the `xs` and `sm` breakpoints.
+The simplest way to use CdrDataTable is using the props API. The below example shows how:
+- The data props (`colHeaders`, `rowHeaders`, `rowData`) are used
+- `keyOrder` determines values displayed in each cell. The array order must match the `colHeaders` or column order
 
 ```vue
 <template>
-  <cdr-button
-    size="small"
-    :responsive-size="[‘large@xs’, ‘large@sm’]"
-  >
-    Add to cart
-  </cdr-button>
+  <cdr-data-table
+    id="props-example"
+    :col-headers="colHeaders"
+    :row-headers="rowHeaders"
+    :row-data="rowData"
+    :key-order="keyOrder"
+    caption="CdrTable props usage"
+  />
 </template>
+
+<script>
+  ...
+  data() {
+    colHeaders: ['XS', 'S', 'M', 'L', 'XL', 'XXL', 'XXXL'],
+    rowHeaders: ['Chest', 'Sleeve Length', 'Waist', 'Hip', 'Inseam'],
+    keyOrder: ['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl'],
+    rowData: [
+      {
+        xs: '31.5 - 33',
+        s: '35 - 38',
+        m: '38 - 41',
+        l: '42 - 45',
+        xl: '46 - 49',
+        xxl: '50 - 53',
+        xxxl: '54-57',
+      },
+      {
+        s: '33',
+        m: '34',
+        l: '35',
+        xl: '35.5',
+        xxl: '36',
+        xxxl: '36.6',
+        xs: 'N/A',
+      },
+      ...
+    ],
+  },
+}
+</script>
+```
+
+### Using Slots
+
+The same table can be rendered using the `v-for` Vue directive and CdrDataTable's named slots:
+- Iterates over the data set by looping through items in an array or object
+- Generates appropriate markup for each named slot
+
+In the below examples, the `colHeaders` prop is set to true because there are column headers for the data table.
+
+```vue
+<template>
+  <cdr-data-table
+    id="slots-example"
+    :col-headers="true"
+    caption="CdrTable slots usage"
+  >
+    <template slot="thead">
+       <tr>
+         <th
+           class="empty"
+           scope="col"
+         />
+         <th
+           v-for="(header, index) in tableData.colHeaders"
+           :key="index"
+         >
+           {{ header }}
+         </th>
+       </tr>
+     </template>
+     <template slot="tbody">
+       <tr
+         v-for="(row, index) in tableData.rowData"
+         :key="'tr_' + index"
+       >
+         <th
+           scope="row"
+         >{{ tableData.rowHeaders[index] }}</th>
+         <td
+           v-for="(key, index) in ['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']"
+           :key="index"
+         >{{ row[key] }}
+         </td>
+       </tr>
+     </template>
+  </cdr-data-table>
+</template>
+
+<script>
+  ...
+  data() {
+    ...
+ ],
+  },
+}
+</script>
+```
+
+The below example uses:
+- `compact` and `borderless` modifiers
+- CdrDataTable's named slots
+- Markup is manual, not data-driven
+
+```vue
+<cdr-data-table
+  modifier="compact borderless"
+  caption="Full Manual - Compact & Borderless"
+  id="full-manual"
+>
+  <template slot="tbody">
+    <tr>
+      <th scope=”row”>Best Use</th>
+      <td>Casual</td>
+    </tr>
+    <tr>
+      <th scope=”row”>Fabric</th>
+      <td>Cotton canvas</td>
+    </tr>
+    <tr>
+      <th scope=”row”>Lining Fabric</th>
+      <td>Polyester microfleece/nylon</td>
+    </tr>
+    ...
+  </template>
+</cdr-data-table>
 ```
 
 ### Modifiers
 
-Following variants are available to the `cdr-button` modifier attribute:
+Following variants are available to the `cdr-data-table` modifier attribute:
 
-| Value | Description            |
-|:------|:-----------------------|
-| 'secondary' | Sets the secondary style for the button |
-
-
-### Click Actions
-
-Use the `on-click` prop to attach custom actions and event handling.
-
-```vue
-<template>
-  <cdr-button
-    :on-click="greet"
-  >
-    Greet
-  </cdr-button>
-</template>
-
-<script>
-export default {
-  ...
-  methods: {
-    greet() {
-      console.log(‘Hello there’);
-    }
-  }
-}
-</script>
-```
-
-## Composing with icons
-
-CdrButton component can be used with the icon component from the CdrIcon package.
-
-### Text and Icon
-
-To scale Cedar icons appropriately, include the `cdr-button__icon` class with any icon component. The `size` prop scales both the icon and button.
-
-In the below example, a _Download_ button is rendered as a button with icon and text using `cdr-icon` and the icon sprite.
-
-```vue
-<template>
-  <cdr-button>
-    <cdr-icon
-      slot="icon"
-      class="cdr-button__icon"
-      use="#download"
-    />
-    Download
-  </cdr-button>
-</template>
-
-<script>
-import { CdrButton } from '@rei/cdr-button';
-import { CdrIcon } from '@rei/cdr-icon;
-export default {
-  ...
-  components: {
-     CdrButton,
-     CdrIcon,  
-  }
-}
-</script>
-```
-
-### Icon Only
-
-Use the following props to modify `cdr-button`:
-
-- Default slot must be empty. If text is present in default slot, the text will render  
-- `size` prop is disable when `icon-only` prop is true
-- For the SVG files:
-  - If the `fill` color is dark, assign true to the `on-dark` prop
-  - `on-dark` prop only works if `icon-only` prop is also true
-- Add `aria-label` text to describe the button’s action when clicked or tapped
-
-```vue
-<template>
-  <cdr-button
-    :icon-only="true"
-    :on-dark="true"
-    aria-label="Complete this step"
-  >
-    <icon-check-lg
-      slot="icon"
-      class="cdr-button__icon"
-    />
-  </cdr-button>
-</template>
-```
-
-
-### CdrCloseButton & CdrPlayButton
-
-The CdrButton package includes two specific icon-only variants. CdrCloseButton and CdrPlayButton include their respective icons and `aria-label` text for accessibility.
-
-```vue
-<template>
-  <cdr-close-button />
-</template>
-
-<script>
-import { CdrCloseButton } from '@rei/cdr-button';
-
-export default {
-  ...
-  components: {
-     CdrCloseButton  
-  }
-}
-</script>
-```
+|              |                      |
+|--------------|----------------------|
+| `compact`    | Reduces cell padding |
+| `borderless` | Removes cell borders |
 
 </cdr-doc-table-of-contents-shell>
 </template>
