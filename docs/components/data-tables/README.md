@@ -4,86 +4,86 @@
   "layout": "LayoutComponent",
   "summary": "Organizes structured content so that it is easy to scan, make comparisons, and analyze the data",
   "title_metadata": "CdrDataTable",
-  "layout": [
-      {
-        "type": "do",
-        "image": "data-tables/table_layout_do_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing size chart",
-        "caption": "use Data Tables to render size charts."
-      },
-      {
-        "type": "dont",
-        "image": "data-tables/table_layout_dont_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing layout",
-        "caption": "use Data Tables as a layout tool, including inserting images into tables."
-      }
-    ],
-    "sizechart": [
-      {
-        "type": "do",
-        "image": "data-tables/table_sizechart_do_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing size chart",
-        "caption": "match button heights."
-      },
-      {
-        "type": "dont",
-        "image": "data-tables/table_sizechart_dont_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing links in table cells",
-        "caption": "use Data Tables - version 1 for interactive experiences, including links in cells."
-      }
-    ],
-    "techspecs": [
-      {
-        "type": "do",
-        "image": "data-tables/table_techspecs_do_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing technical specs table",
-        "caption": "use Data Tables to render technical specs."
-      },
-      {
-        "type": "dont",
-        "image": "data-tables/table_techspecs_dont_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing large table cells full of data",
-        "caption": "use Data Tables - version 1 for large amounts of data."
-      }
-    ],
-    "label": [
-      {
-        "type": "do",
-        "image": "data-tables/table_label_do_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing size chart with column and row headers",
-        "caption": "label information with row header or column header titles, when appropriate."
-      },
-      {
-        "type": "dont",
-        "image": "data-tables/table_label_dont_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing table data without column or row headers",
-        "caption": "provide unlabeled data to the user."
-      }
-    ],
-    "alternatestripe": [
-      {
-        "type": "do",
-        "image": "data-tables/table_alternatestripe_do_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing table with default alternating row background colors",
-        "caption": "use standard table styles with alternate row background colors."
-      },
-      {
-        "type": "dont",
-        "image": "data-tables/table_alternatestripe_dont_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing table with default styles removed",
-        "caption": "override table styles with all-white row background colors."
-      }
-    ],
+  "tablelayout": [
+    {
+      "type": "do",
+      "image": "data-tables/table_layout_do_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing size chart",
+      "caption": "use Data Tables to render size charts."
+    },
+    {
+      "type": "dont",
+      "image": "data-tables/table_layout_dont_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing layout",
+      "caption": "use Data Tables as a layout tool, including inserting images into tables."
+    }
+  ],
+  "sizechart": [
+    {
+      "type": "do",
+      "image": "data-tables/table_sizechars_do_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing size chart",
+      "caption": "use Data Tables to render size charts."
+    },
+    {
+      "type": "dont",
+      "image": "data-tables/table_sizecharts_dont_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing links in table cells",
+      "caption": "use Data Tables - version 1 for interactive experiences, including links in cells."
+    }
+  ],
+  "techspecs": [
+    {
+      "type": "do",
+      "image": "data-tables/table_techspecs_do_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing technical specs table",
+      "caption": "use Data Tables to render technical specs."
+    },
+    {
+      "type": "dont",
+      "image": "data-tables/table_techspecs_dont_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing large table cells full of data",
+      "caption": "use Data Tables - version 1 for large amounts of data."
+    }
+  ],
+  "label": [
+    {
+      "type": "do",
+      "image": "data-tables/table_label_do_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing size chart with column and row headers",
+      "caption": "label information with row header or column header titles, when appropriate."
+    },
+    {
+      "type": "dont",
+      "image": "data-tables/table_label_dont_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing table data without column or row headers",
+      "caption": "provide unlabeled data to the user."
+    }
+  ],
+  "alternatestripe": [
+    {
+      "type": "do",
+      "image": "data-tables/table_alternatestripe_do_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing table with default alternating row background colors",
+      "caption": "use standard table styles with alternate row background colors."
+    },
+    {
+      "type": "dont",
+      "image": "data-tables/table_alternatestripe_dont_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing table with default styles removed",
+      "caption": "override table styles with all-white row background colors."
+    }
+  ],
   "breadcrumbs": [
     {
       "text": "Components/"
@@ -91,101 +91,74 @@
   ],
   "versions": [
     {
+      "version": "1.0.0",
       "components": [
         {
-        "name": CdrButton,
-        "api": {
-        "props": [
-          {
-            "name": "tag",
-            "type": "string",
-            "default": "'button'",
-            "description": "Renders CdrButton as a <button> or <a> element. When using the value of <a>, this element renders as an anchor link. Possible values: { 'button' | 'a' }"
-          },
-          {
-            "name": "type",
-            "type": "string",
-            "default": "'button'",
-            "description": "Sets the button type. Possible values: { 'button' | 'submit' | 'reset' }"
-          },
-          {
-            "name": "onClick",
-            "type": "function",
-            "default": "return null",
-            "description": "Adds custom click actions."
-          },
-          {
-            "name": "fullWidth",
-            "type": "boolean",
-            "default": "false",
-            "description": "Sets button width to 100%. Setting this value to true will set the button width to 100% of the parent container. Use the 'fullWidth' prop with the 'size' prop to control top and bottom padding."
-          },
-          {
-            "name": "size",
-            "type": "string",
-            "default": "'medium'",
-            "description": "Sets the button size. Possible values: { 'small' | 'medium' | 'large' }"
-          },
-          {
-            "name": "responsiveSize",
-            "type": "array",
-            "default": "N/A",
-            "description": "Sets the button size at different responsive breakpoints. Breakpoints values are: xs, sm, md, and lg. Examples: { ‘large@xs’ | ‘small@lg’ }"
-          },
-          {
-            "name": "iconOnly",
-            "type": "boolean",
-            "default": "false",
-            "description": "Renders an 'icon-only' button. When this value is true, it will override the size and 'responsiveSize' props."
-          },
-          {
-            "name": "onDark",
-            "type": "boolean",
-            "default": "false",
-            "description": "Renders an 'icon-only' button with a light fill color for use on dark backgrounds. The 'iconOnly' prop must be true."
-          },
-          {
-            "name": "modifier",
-            "type": "string",
-            "default": "N/A",
-            "description": "Modifies the style variant for this component. Possible values: { 'secondary' }"
-          }                          
-        ],
-        "slots": [
-          {
-            "name": "default",
-            "description": "Sets the innerHTML for CdrButton'. This is the readable text of the button. Leave empty if icon-only."
-          },
-          {
-            "name": "icon",
-            "description": "Sets the innerHTML for CdrButton. This is for the icon."
+          "name": "CdrDataTable",
+          "api": {
+            "props": [
+              {
+                "name": "id",
+                "type": "string",
+                "default": "n/a",
+                "description": "Sets unique id on <table> element."
+              },
+              {
+                "name": "colHeaders",
+                "type": "array/boolean",
+                "default": "false",
+                "description": "The colHeaders prop accepts an array of column header strings or a boolean value. Renders in the `thead’ slot. If the value is false, column heads are not displayed. For example, possible values are:  [ ‘Column Header 1’, ‘Column Header 2’, ... ]"
+              },
+              {
+                "name": "rowHeaders",
+                "type": "array/boolean",
+                "default": "false",
+                "description": "The rowHeaders prop accepts an array of row header strings or a boolean value. Renders in the ‘tbody’ slot. If the value is false, row heads are not displayed.  For example, possible values are:  [ ‘Row Header 1’, ‘Row Header 2’, ... ]"
+              },
+              {
+                "name": "rowData",
+                "type": "array",
+                "default": "[]",
+                "description": "Sets an array of objects representing each row in the table."
+              },
+              {
+                "name": "keyOrder",
+                "type": "array",
+                "default": "[]",
+                "description": "Determines the order of cell content in a row."
+              },
+              {
+                "name": "caption",
+                "type": "string",
+                "default": "n/a",
+                "description": "Sets the caption text for the table"
+              }                       
+            ],
+            "slots": [
+              {
+                "name": "thead",
+                "description": "Sets the innerHTML for the thead element. Includes default slot content."
+              },
+              {
+                "name": "icon",
+                "description": "Sets the innerHTML for the tbody element. Includes default slot content."
+              }
+            ],
+            "installation": [
+              {
+                "name": "@rei/cdr-data-table",
+                "type": "Node module package",
+                "description": "Import the component into your project"
+              },
+              {
+                "name": "cdr-data-table.css",
+                "type": "Style sheet",
+                "description": "Component specific styles"
+              }
+            ]
           }
-        ],
-        "installation": [
-          {
-            "name": "@rei/cdr-data-table",
-            "type": "Node module package",
-            "description": "Import the component into your project"
-          },
-          {
-            "name": "cdr-data-table.css",
-            "type": "Style sheet",
-            "description": "Component specific styles"
-          }
-        ]
         }
-      }
-    ],
-      "version": "1.0.0"
-    }
-  ],
-  "see_also": [
-    {
-      "text": "See Also",
-    },
-    {
-      "text": "Call to Action",
-      "href": "../cta/"
+      ]
     }
   ]
 }
@@ -196,110 +169,6 @@
 <cdr-doc-table-of-contents-shell tab-name="Overview">
 
 ## Primary
-
-Use primary buttons for actions to complete a task or move forward in a process such as &quot;Add to cart.&quot; There is only 1 primary action per major page section.
-
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
-
-```html
-  <cdr-button>Add to cart</cdr-button>
-  <cdr-button disabled>Add to cart</cdr-button>
-```
-
-</cdr-doc-example-code-pair>
-
-
-
-## Secondary
-
-Use secondary buttons for all actions that do not move the user to the next step or are additional user actions such as &quot;Add to wish list&quot; or &quot;Find a campout near you.&quot;
-
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
-
-```html
-  <cdr-button modifier="secondary">Add to wish list</cdr-button>
-  <cdr-button modifier="secondary" disabled>Add to wish list</cdr-button>
-```
-
-</cdr-doc-example-code-pair>
-
-## Text and Icon
-
-Pair an icon with text to improve recognition about an object or action.
-
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
-
-```html
-  <div>
-    <cdr-icon-sprite />
-    <cdr-button
-      modifier="secondary"
-    >
-      <cdr-icon
-        slot="icon"
-        use="#play-stroke"
-        class="cdr-button__icon"
-        modifier="inherit-color"
-      />
-      Play video
-    </cdr-button>
-    <cdr-button
-      modifier="secondary"
-      disabled
-    >
-      <cdr-icon
-        slot="icon"
-        use="#play-stroke"
-        class="cdr-button__icon"
-        modifier="inherit-color"
-      />
-      Play video
-    </cdr-button>
-  </div>
-```
-
-</cdr-doc-example-code-pair>
-
-## Icon Only
-
-Use to visually communicate an object or action in limited space. Include alternative text to describe what button does.
-
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
-
-```html
-  <div>
-    <cdr-icon-sprite />
-    <cdr-button
-      :icon-only="true"
-      aria-label="More information about icon"
-    >
-      <cdr-icon
-        slot="icon"
-        class="cdr-button__icon"
-        use="#question-fill"
-        modifier="inherit-color"
-      />
-    </cdr-button>
-  </div>
-```
-
-</cdr-doc-example-code-pair>
-
-## Sizing
-
-Change the button size based on where button is used. Default size is medium. Small is used for supplemental user actions such as product comparison or filter. Large is used for &quot;Add to cart&quot; on product pages or Call to Action.
-
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
-
-```html
-    <div>
-      <cdr-button size="small">Add to cart</cdr-button>
-      <cdr-button>Add to cart</cdr-button>
-      <cdr-button size="large">Add to cart</cdr-button>
-    </div>
-```
-
-</cdr-doc-example-code-pair>
 
 ## Accessibility
 
@@ -315,8 +184,8 @@ To ensure that usage of this component complies with accessibility guidelines an
 <br />
 
 This component has compliance with WCAG guidelines by:
-  - Providing <caption> element for data tables
-  - Providing <th> element for row or column headers
+  - Providing `<caption>` element for data tables
+  - Providing `<th>` element for row or column headers
 
 </cdr-doc-table-of-contents-shell>
 </template>
@@ -381,7 +250,7 @@ Alignment impacts the table's readability. Make the data easy to read and simple
 
 ### Do/Don't
 
-<do-dont :examples="$page.frontmatter.layout" />
+<do-dont :examples="$page.frontmatter.tablelayout" />
 
 <br />
 
@@ -404,11 +273,9 @@ Alignment impacts the table's readability. Make the data easy to read and simple
 Table will change its scroll functions depending on viewport size.
 
 Default:
-- Anything over two columns 
+- Anything over two columns
 
-
-
-  </cdr-doc-table-of-contents-shell>
+</cdr-doc-table-of-contents-shell>
 </template>
 
 <template slot="API">
