@@ -168,7 +168,60 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell tab-name="Overview">
 
-## Primary
+## Default
+
+Basic layout with a column of row headers.  Rows alternate background colors.
+
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/62z9rk34rr" >
+
+</cdr-doc-example-code-pair>
+
+## Column Headers
+
+## Compact and Borderless
+
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/62z9rk34rr" >
+
+```html
+  <cdr-data-table modifier="compact borderless" id="full-manual">
+    <template slot="tbody">
+      <tr>
+        <th>Best Use</th>
+        <td>Casual</td>
+      </tr>
+      <tr>
+        <th>Fabric</th>
+        <td>Cotton canvas</td>
+      </tr>
+      <tr>
+        <th>Lining Fabric</th>
+        <td>Polyester microfleece/nylon</td>
+      </tr>
+      <tr>
+        <th>Hood</th>
+        <td>No</td>
+      </tr>
+      <tr>
+        <th>Black Length</th>
+        <td>Hip-length</td>
+      </tr>
+      <tr>
+        <th>Weight</th>
+        <td>Unavailable</td>
+      </tr>
+      <tr>
+        <th>Gender</th>
+        <td>Men's</td>
+      </tr>
+      <tr>
+        <th>Number</th>
+        <td>25</td>
+      </tr>
+    </template>
+  </cdr-data-table>
+```
+
+</cdr-doc-example-code-pair>
 
 ## Accessibility
 
