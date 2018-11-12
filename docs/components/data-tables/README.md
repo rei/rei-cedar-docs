@@ -140,7 +140,7 @@
                 "description": "Sets the innerHTML for the thead element. Includes default slot content."
               },
               {
-                "name": "icon",
+                "name": "tbody",
                 "description": "Sets the innerHTML for the tbody element. Includes default slot content."
               }
             ],
