@@ -258,7 +258,7 @@ Ensure that icons use contrast ratio of 4.5:1 between icon color and background 
 
 ## Slots
 
-CdrIcon and all Icon* (IconArrowUp, IconCalendar, etc.) components have a default slot.
+**CdrIcon** and all Icon* (IconArrowUp, IconCalendar, etc.) components have a default slot.
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 

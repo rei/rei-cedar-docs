@@ -2,7 +2,7 @@
 {
    "title": "Paragraphs",
    "layout": "LayoutComponent",
-   "summary": "The HTML <p> element contains text elements such as paragraphs, headings, and lists to establish vertical spacing and optimize the reading experience",
+   "summary": "Text container used for any text element such as paragraphs, headings, and lists. Establishes vertical spacing and optimizes the reading experience",
    "title_metadata": "CdrText",
    "see_also": [
       {
@@ -221,7 +221,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM 
 
-Install the Cdr-Text package using `npm` in your terminal:
+Install the **CdrText** package using `npm` in your terminal:
 
 _Terminal_
 
@@ -265,14 +265,14 @@ export default {
 
 ## Usage
 
-The CdrText component allows for styling any html element with available text styles. Visual style and semantic meaning are managed independently by providing: 
+The **CdrText** component allows for styling any html element with available text styles. Visual style and semantic meaning are managed independently by providing: 
 
 * Element to the `tag` prop 
 * Style to the `modifier` prop
 
 <br />
 
-By default the cdrText component renders as a paragraph, this default paragraph is intended for most standard use cases.
+By default the **CdrText** component renders as a paragraph, this default paragraph is intended for most standard use cases.
 
 ```vue
   <cdr-text>
@@ -305,11 +305,11 @@ Define custom tags by applying a specific `cdr-text` style with modifiers to it.
 
 ## 1.0.0
 
-- Enables a consistent visual paragraph style applied to any html element using the tag property
+- Enables a consistent visual paragraph style applied to any HTML element using the `tag` property
 - By default, results in a generic `<p>` tag
-- Visual style is applied with the modifier property and supports:
-  - **Unmodified variant**:  Used as default font style. It may be used for paragraphs, lists, or any basic information
-  - **Body**: intended for long-form articles like Expert Advice pages or editorial content on PDP pages
+- Visual style is applied with the `modifier` property and supports:
+  - **Default**:  Used as default font style. It may be used for paragraphs, lists, or any basic information
+  - **Body**: Intended for long-form articles like Expert Advice pages or editorial content on PDP pages
 
 </template>
 </cdr-doc-tabs>
