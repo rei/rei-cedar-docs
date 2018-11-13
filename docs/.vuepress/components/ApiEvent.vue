@@ -66,7 +66,7 @@
       font-size: 9px;
     }
 
-    .prop-description {
+    .event-description {
       font-size: 14px;
     }
 
