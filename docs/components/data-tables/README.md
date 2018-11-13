@@ -84,6 +84,57 @@
       "caption": "override table styles with all-white row background colors."
     }
   ],
+  "exampleTableData": {
+    colHeaders: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
+    rowHeaders: ["Chest", "Sleeve Length", "Waist", "Hip", "Inseam"],
+    rowData: [
+      {
+        xs: "31.5 - 33",
+        s: "35 - 38",
+        m: "38 - 41",
+        l: "42 - 45",
+        xl: "46 - 49",
+        xxl: "50 - 53",
+        xxxl: "54-57"
+      },
+      {
+        s: "33",
+        m: "34",
+        l: "35",
+        xl: "35.5",
+        xxl: "36",
+        xxxl: "36.6",
+        xs: "N/A"
+      },
+      {
+        xs: "26.5 - 27.5",
+        s: "28 - 30",
+        m: "32 - 34",
+        l: "36 - 38",
+        xl: "40 - 42",
+        xxl: "44 - 46",
+        xxxl: "48 - 50"
+      },
+      {
+        xs: "N/A",
+        s: "35 - 37",
+        m: "38 - 40",
+        l: "41 - 43",
+        xl: "44 - 46",
+        xxl: "47 - 49",
+        xxxl: "51 - 54"
+      },
+      {
+        xs: "31",
+        s: "32",
+        m: "32",
+        l: "32",
+        xl: "32",
+        xxl: "32",
+        xxxl: "32"
+      }
+    ]
+  },
   "breadcrumbs": [
     {
       "text": "Components/"
@@ -172,18 +223,46 @@
 
 Basic layout with a column of row headers.  Rows alternate background colors.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/62z9rk34rr" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/62z9rk34rr" >
+
+```html
+  <cdr-data-table
+    :row-headers="$page.frontmatter.exampleTableData.rowHeaders"
+    :row-data="$page.frontmatter.exampleTableData.rowData"
+    :key-order="['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']"
+    id="auto-table-col-lock-scroll"
+  />
+```
 
 </cdr-doc-example-code-pair>
 
 ## Column Headers
 
-## Compact and Borderless
+Layout for making comparisons such as between size/sleeve length. Column headers and row headers are displayed. When columns scroll, row header column is locked in place.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/62z9rk34rr" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/62z9rk34rr" >
 
 ```html
-  <cdr-data-table modifier="compact borderless" id="full-manual">
+  <cdr-data-table
+    :col-headers="$page.frontmatter.exampleTableData.colHeaders"
+    :row-headers="$page.frontmatter.exampleTableData.rowHeaders"
+    :row-data="$page.frontmatter.exampleTableData.rowData"
+    :key-order="['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']"
+    id="auto-table-col-lock-scroll"
+  />
+```
+
+</cdr-doc-example-code-pair>
+
+## Compact and Borderless
+
+<cdr-doc-example-code-pair :background-toggle="false" 
+repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/62z9rk34rr">
+
+Layout with reduced spacing within each cell. All cells are borderless. Defines a column of row headers. 
+
+```html
+  <cdr-data-table modifier="compact borderless">
     <template slot="tbody">
       <tr>
         <th>Best Use</th>
@@ -559,12 +638,8 @@ Following variants are available to the `cdr-data-table` modifier attribute:
 
 ## 1.0.0
 
-- Renders using an anchor or button element
-- Includes secondary button style
-- Supports small, medium, large, responsive, and full-width sizes
-- Works with `cdr-icon` for icons in buttons and icon-only buttons
-- CdrButton package includes `cdr-close-button` and `cdr-play-button` components
-- Git commit reference [(1531860)](https://github.com/rei/rei-cedar/pull/436/commits/15318606570811a6d53549a5335e0943a3463971)
+- Supports size charts 
+- Git commit reference [(3169234)](https://github.com/rei/rei-cedar/commit/3169234cb99b8fc750efd2e3d5813e19c10f8e71)
 
 </template>
 </cdr-doc-tabs>
