@@ -151,7 +151,7 @@
               {
                 "name": "id",
                 "type": "string",
-                "default": "n/a",
+                "default": "N/A",
                 "description": "Sets unique id on <table> element."
               },
               {
@@ -169,19 +169,19 @@
               {
                 "name": "rowData",
                 "type": "array",
-                "default": "[]",
+                "default": "[ ]",
                 "description": "Sets an array of objects representing each row in the table."
               },
               {
                 "name": "keyOrder",
                 "type": "array",
-                "default": "[]",
+                "default": "[ ]",
                 "description": "Determines the order of cell content in a row."
               },
               {
                 "name": "caption",
                 "type": "string",
-                "default": "n/a",
+                "default": "N/A",
                 "description": "Sets the caption text for the table"
               }                       
             ],
@@ -308,7 +308,7 @@ To ensure that usage of this component complies with accessibility guidelines an
 - Table caption should be included
 - Row headers and column headers should be defined
 - Table headers should never be empty
-  - Inlcuding the top-left cell of the data table
+  - Including the top-left cell of the data table
   - If needed, use `cdr-sr-only` to hide descriptive text that explains the content for the first column
 - Set the scope attribute to `row` or `col` to indicate that a header applies to the entire row or column
 
@@ -438,7 +438,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the CdrButton package using `npm` in your terminal:
+Install the **CdrDataTable** package using `npm` in your terminal:
 
 _Terminal_
 
@@ -461,7 +461,7 @@ _local.vue_
 
 ```vue
 <template>
-  <cdr-table
+  <cdr-data-table
     id="size-details"
     :col-headers="colHeaders"
     :row-headers="rowHeaders"
@@ -471,11 +471,11 @@ _local.vue_
 </template>
 
 <script>
-import { CdrTable } from '@rei/cdr-table';
+import { CdrDataTable } from '@rei/cdr-data-table';
 export default {
   ...
   components: {
-     CdrTable  
+     CdrDataTable  
   }, 
   data() {
     ...
@@ -628,8 +628,8 @@ Following variants are available to the `cdr-data-table` modifier attribute:
 
 | Value        | Description          |
 |--------------|----------------------|
-| `compact`    | Reduces cell padding |
-| `borderless` | Removes cell borders |
+| 'compact'    | Reduces cell padding |
+| 'borderless' | Removes cell borders |
 
 </cdr-doc-table-of-contents-shell>
 </template>
