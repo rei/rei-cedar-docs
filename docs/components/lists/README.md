@@ -303,7 +303,7 @@ This component has compliance with WCAG guidelines by:
 ### Don’t use when
 
 - Displaying content that is not primarily text
-- Displaying content with two or more well-defined dimensions
+- Displaying content with two or more well-defined dimensions. Instead, use [Data Tables](../data-tables/)
 
 ## Foundations
 

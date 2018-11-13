@@ -85,53 +85,53 @@
     }
   ],
   "exampleTableData": {
-    colHeaders: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
-    rowHeaders: ["Chest", "Sleeve Length", "Waist", "Hip", "Inseam"],
-    rowData: [
+    "colHeaders": ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
+    "rowHeaders": ["Chest", "Sleeve Length", "Waist", "Hip", "Inseam"],
+    "rowData": [
       {
-        xs: "31.5 - 33",
-        s: "35 - 38",
-        m: "38 - 41",
-        l: "42 - 45",
-        xl: "46 - 49",
-        xxl: "50 - 53",
-        xxxl: "54-57"
+        "xs": "31.5 - 33",
+        "s": "35 - 38",
+        "m": "38 - 41",
+        "l": "42 - 45",
+        "xl": "46 - 49",
+        "xxl": "50 - 53",
+        "xxxl": "54-57"
       },
       {
-        s: "33",
-        m: "34",
-        l: "35",
-        xl: "35.5",
-        xxl: "36",
-        xxxl: "36.6",
-        xs: "N/A"
+        "s": "33",
+        "m": "34",
+        "l": "35",
+        "xl": "35.5",
+        "xxl": "36",
+        "xxxl": "36.6",
+        "xs": "N/A"
       },
       {
-        xs: "26.5 - 27.5",
-        s: "28 - 30",
-        m: "32 - 34",
-        l: "36 - 38",
-        xl: "40 - 42",
-        xxl: "44 - 46",
-        xxxl: "48 - 50"
+        "xs": "26.5 - 27.5",
+        "s": "28 - 30",
+        "m": "32 - 34",
+        "l": "36 - 38",
+        "xl": "40 - 42",
+        "xxl": "44 - 46",
+        "xxxl": "48 - 50"
       },
       {
-        xs: "N/A",
-        s: "35 - 37",
-        m: "38 - 40",
-        l: "41 - 43",
-        xl: "44 - 46",
-        xxl: "47 - 49",
-        xxxl: "51 - 54"
+        "xs": "N/A",
+        "s": "35 - 37",
+        "m": "38 - 40",
+        "l": "41 - 43",
+        "xl": "44 - 46",
+        "xxl": "47 - 49",
+        "xxxl": "51 - 54"
       },
       {
-        xs: "31",
-        s: "32",
-        m: "32",
-        l: "32",
-        xl: "32",
-        xxl: "32",
-        xxxl: "32"
+        "xs": "31",
+        "s": "32",
+        "m": "32",
+        "l": "32",
+        "xl": "32",
+        "xxl": "32",
+        "xxxl": "32"
       }
     ]
   },
@@ -230,7 +230,7 @@ Basic layout with a column of row headers.  Rows alternate background colors.
     :row-headers="$page.frontmatter.exampleTableData.rowHeaders"
     :row-data="$page.frontmatter.exampleTableData.rowData"
     :key-order="['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']"
-    id="auto-table-col-lock-scroll"
+    id="default-example"
   />
 ```
 
@@ -240,7 +240,7 @@ Basic layout with a column of row headers.  Rows alternate background colors.
 
 Layout for making comparisons such as between size/sleeve length. Column headers and row headers are displayed. When columns scroll, row header column is locked in place.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/62z9rk34rr" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/62z9rk34rr">
 
 ```html
   <cdr-data-table
@@ -248,7 +248,7 @@ Layout for making comparisons such as between size/sleeve length. Column headers
     :row-headers="$page.frontmatter.exampleTableData.rowHeaders"
     :row-data="$page.frontmatter.exampleTableData.rowData"
     :key-order="['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']"
-    id="auto-table-col-lock-scroll"
+    id="col-headers-example"
   />
 ```
 
@@ -256,13 +256,12 @@ Layout for making comparisons such as between size/sleeve length. Column headers
 
 ## Compact and Borderless
 
-<cdr-doc-example-code-pair :background-toggle="false" 
-repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/62z9rk34rr">
-
 Layout with reduced spacing within each cell. All cells are borderless. Defines a column of row headers. 
 
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/62z9rk34rr">
+
 ```html
-  <cdr-data-table modifier="compact borderless">
+  <cdr-data-table modifier="compact borderless" id="manual-example">
     <template slot="tbody">
       <tr>
         <th>Best Use</th>
@@ -304,7 +303,7 @@ Layout with reduced spacing within each cell. All cells are borderless. Defines 
 
 ## Accessibility
 
-To ensure that usage of this component complies with accessibility guidelines and screen readers can correctly read the data:
+To ensure that usage of this component complies with accessibility guidelines and screen readers can correctly read data:
 
 - Table caption should be included
 - Row headers and column headers should be defined
@@ -324,8 +323,6 @@ This component has compliance with WCAG guidelines by:
 
 <template slot="Design Guidelines">
   <cdr-doc-table-of-contents-shell>
-
-These are guidelines for when and how to use the Data Table component.
 
 ## Use When
 
@@ -402,10 +399,13 @@ Alignment impacts the table's readability. Make the data easy to read and simple
 
 ## Responsiveness
 
-Table will change its scroll functions depending on viewport size.
+Data Tables are responsive when there are more than 2 columns:
+- Whenever the number of columns overflows the container, content will scroll
+- If row headers are defined, then the first column of headers will lock in place
 
-Default:
-- Anything over two columns
+For Data Tables with 2 columns:
+- Content will not scroll
+- Text within table cells will wrap to fit the smaller container (or viewport)
 
 </cdr-doc-table-of-contents-shell>
 </template>
@@ -544,7 +544,7 @@ The same table can be rendered using the `v-for` Vue directive and CdrDataTable'
 
 In the below examples, the `colHeaders` prop is set to true because there are column headers for the data table.
 
-```vue
+```vue{4}
 <template>
   <cdr-data-table
     id="slots-example"
@@ -626,7 +626,7 @@ The below example uses:
 
 Following variants are available to the `cdr-data-table` modifier attribute:
 
-|              |                      |
+| Value        | Description          |
 |--------------|----------------------|
 | `compact`    | Reduces cell padding |
 | `borderless` | Removes cell borders |
@@ -638,7 +638,9 @@ Following variants are available to the `cdr-data-table` modifier attribute:
 
 ## 1.0.0
 
-- Supports size charts 
+- Supports size chart and technical specs table designs
+- Responsive scroll behavior by default
+- Supports accessible table captions
 - Git commit reference [(3169234)](https://github.com/rei/rei-cedar/commit/3169234cb99b8fc750efd2e3d5813e19c10f8e71)
 
 </template>

@@ -1030,7 +1030,7 @@ This component has compliance with following WCAG guidelines:
 
 ### Don’t use when
 
-- Presenting a multi-row columnar data display, such as features or specs of a product. Instead, use Data Tables
+- Presenting a multi-row columnar data display, such as features or specs of a product. Instead, use [Data Tables](../data-tables/)
 
 ## Foundations
 
