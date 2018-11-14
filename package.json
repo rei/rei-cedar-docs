@@ -31,6 +31,7 @@
     "@rei/cdr-caption": "^1.0.0",
     "@rei/cdr-checkbox": "^1.0.0",
     "@rei/cdr-cta": "^1.0.0",
+    "@rei/cdr-data-table": "^1.0.0",
     "@rei/cdr-grid": "^1.0.0",
     "@rei/cdr-icon": "^1.0.0",
     "@rei/cdr-img": "^1.0.0",
