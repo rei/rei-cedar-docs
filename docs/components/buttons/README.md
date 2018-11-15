@@ -463,7 +463,7 @@ _main.js_
 
 ```javascript
 // import your required CSS.
-import "@rei/cdr-link/dist/cdr-button.css";
+import "@rei/cdr-button/dist/cdr-button.css";
 ```
 
 ### 3. Add component to a template
@@ -567,7 +567,7 @@ In the below example, a "Download" button is rendered as a button with icon and 
 
 <script>
 import { CdrButton } from '@rei/cdr-button';
-import { CdrIcon } from '@rei/cdr-icon;
+import { CdrIcon } from '@rei/cdr-icon';
 export default {
   ...
   components: {
@@ -630,6 +630,16 @@ export default {
 </template>
 
 <template slot="History">
+
+## 1.0.3
+- Fix css import for SSR
+
+## 1.0.2
+- Fix CSS outline bug
+
+## 1.0.1
+- Update CdrIcon dependency to peer/dev
+- Add CdrIcon CSS import
 
 ## 1.0.0
 
