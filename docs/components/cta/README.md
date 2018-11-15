@@ -430,6 +430,15 @@ The following variants are available to the `cdr-cta` modifier attribute:
 
 <template slot="History">
 
+## 1.0.3
+- Fix css import for SSR
+
+## 1.0.2
+- Update CdrIcon dependency
+
+## 1.0.1
+- Update CdrAssets dependency
+
 ## 1.0.0
 
 - Includes suppoort for various themes

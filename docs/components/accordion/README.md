@@ -470,7 +470,7 @@ The **CdrAccordionItem** component can also be controlled individually. If `show
     ...
 ```
 
-Any options set at the **CdrAccordion level** can be set on any parent component of **CdrAccordion** by using Vue's provide/inject functionality. This is useful, for instance, if **CdrAccordionItem** ever needs to be used as a part of another group component.
+Any options set at the **CdrAccordion** level can be set on any parent component of **CdrAccordion** by using Vue's provide/inject functionality. This is useful, for instance, if **CdrAccordionItem** ever needs to be used as a part of another group component.
 
 
 ```vue
