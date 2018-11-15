@@ -410,6 +410,9 @@ The below image and example code shows using ```truncationXSThreshold``` to set 
 
 <template slot="History">
 
+## 1.0.1
+- Update CdrAssets dependency
+
 ## 1.0.0
 
 - Displays as an inline list with links to previous sections
