@@ -58,7 +58,7 @@
       "image": "tabs/tab_label_do_16-9.png",
       "ratio": "16-9",
       "alt": "tabs with succint labels.",
-      "caption": "write succinct and meaningful tab labels. Between 1-2 words is best."
+      "caption": "write short and meaningful tab labels. Between 1-2 words is best."
     },
     {
       "type": "dont",
@@ -79,7 +79,7 @@
                 "name": "height",
                 "type": "string",
                 "default": "240px",
-                "description": "Sets total height of tab container."
+                "description": "Sets height of the tabs container element.  This is needed for managing content overflow and animations."
               },
               {
                 "name": "modifier",
@@ -199,9 +199,9 @@ Bottom border of tab header list is removed.
 ## Accessibility
 
 Tabs component maintains these keyboard interactions:
-- `Left arrow` and `Right arrow` key:  Moves user between tabs
-- `Down arrow`:  Moves user into the content within the active tab section
-- `Up arrow`:  Returns the user to the selected tab
+- **Left arrow** and **Right arrow** keys:  Moves user between tabs
+- **Down arrow**:  Moves user into the content within the active tab section
+- **Up arrow**:  Returns user to the selected tab
 
 <br/>
 
@@ -230,7 +230,7 @@ This component has compliance with WCAG guidelines by:
 - Grouping content to display vertically. Instead, use [Accordion](../accordion/)
 - Creating primary navigation that links to other pages
 - Creating anchor or in-page navigation
-- Comparing related content
+- Comparing related content. Instead, use [Data Tables](../data-tables/)
 
 ## Foundations
 
@@ -241,8 +241,8 @@ This component has compliance with WCAG guidelines by:
 
 ## Content
 
-- Order the tab buttons by priority/importance from left to right
-- Keep tab labels succinct and meaningful. Between 1-2 words is best and written in plain language
+- Order the tab buttons by priority or importance from left to right
+- Keep tab labels short and meaningful. Between 1-2 words is best and written in plain language
 - Never truncate tab labels
 - Use title caps for tab labels
 
@@ -269,9 +269,9 @@ This component has compliance with WCAG guidelines by:
 ## Responsiveness
 
 - Tabs can change styles based on breakpoint
-  - Example: Default at MD/LG, Compact and Full-Width at XS/SM
+  - Example: _Default_ at MD/LG, _Compact_ and _Full Width_ at XS/SM
 - Tabs labels never wrap to two lines
-- Scroll is set by default
+- Scroll is set by default:
   - If tabs exceed width of viewport, a gradient is added to the end (right) of tab container
   - When scrolled to end of tabs, a gradient is added to the beginning (left) of tab container
 - Maintain layout for tabs when switching to smaller viewports. Do not replace the tab component with the accordion component
