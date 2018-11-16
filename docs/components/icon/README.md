@@ -182,11 +182,13 @@ To ensure that usage of this component complies with accessibility guidelines:
 - If an icon conveys meaning, there must be an `aria-label` that describes the action or idea that the icon represents
 - If an icon is decorative, use an empty `alt` attribute  
 
+
 Recommendations for writing screen reader text: 
 - Be succinct. Exclude unnecessary words
 - Be informative and accurate 
 - Write in the active voice
 - Avoid technical jargon
+
 
 W3C recommends using `<title>` and `<desc>` elements in SVG for assistive technologies; however these elements have mixed support for screen readers as explained [here](http://haltersweb.github.io/Accessibility/svg.html). Cedar follows these recommendations by:
 - Adding `role=’presentation’` to icons. This hides them from screen readers and causes the icon to be a nested image inside of a button or a link
