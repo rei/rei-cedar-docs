@@ -76,12 +76,6 @@
           "api": {
             "props": [
               {
-                "name": "name",
-                "type": "string",
-                "default": "n/a",
-                "description": "Sets code reference and tab display name. Required and must be unique for each tab"
-              },
-              {
                 "name": "height",
                 "type": "string",
                 "default": "240px",
@@ -90,7 +84,7 @@
               {
                 "name": "modifier",
                 "type": "string",
-                "default": "n/a",
+                "default": "N/A",
                 "description": "Modifies the style variants for this component. Possible values: {  'compact'  |  'full-width'  |  'no-border'  }"
               }
             ],
@@ -100,7 +94,26 @@
                 "arguments": "state, tabId",
                 "description": "$emit event fired when the active tab has been changed"
               }
-            ],
+            ]
+          }
+        },
+        {
+          "name": "CdrTabPanel",
+          "api": {
+            "props": [
+              {
+                "name": "name",
+                "type": "string",
+                "default": "N/A",
+                "description": "Sets tab display name. Required and must be unique for each tab.  If id prop not provided, this value will be used as the reference identifier."
+              },
+              {
+                "name": "id",
+                "type": "string",
+                "default": "N/A",
+                "description": "Sets reference identifier.  Must be unique for each tab."
+              }
+            ]
           }
         }
       ],
@@ -185,23 +198,19 @@ Bottom border of tab header list is removed.
 
 ## Accessibility
 
-To ensure that usage of this component complies with accessibility guidelines:
-- Indicate tablist role in tabs header container
-- Indicate tab role in tab header element
-- Indicate tabpanel role in tab content element
-
-<br/>
-
 Tabs component maintains these keyboard interactions:
-- Left arrow ( ` ← ` ) and Right arrow  ( ` → ` ) keystrokes move user between tabs
-- ` Tab ` keystroke moves user into the content within the active tab section
-- ` Shift ` + ` Tab ` returns the user to the selected tab
+- `Left arrow` and `Right arrow` key:  Moves user between tabs
+- `Down arrow`:  Moves user into the content within the active tab section
+- `Up arrow`:  Returns the user to the selected tab
 
 <br/>
 
 This component has compliance with WCAG guidelines by:
 
 - Using text color with a Level AA contrast ratio of 4.5:1 contrast between the text color and the background (but only when displayed on light backgrounds)
+- Includes tablist role in tabs header container
+- Includes tab role in tab header element
+- Includes tabpanel role in tab content element
 
 </cdr-doc-table-of-contents-shell>
 </template>
@@ -261,14 +270,12 @@ This component has compliance with WCAG guidelines by:
 
 - Tabs can change styles based on breakpoint
   - Example: Default at MD/LG, Compact and Full-Width at XS/SM
-- Scroll
+- Tabs labels never wrap to two lines
+- Scroll is set by default
   - If tabs exceed width of viewport, a gradient is added to the end (right) of tab container
   - When scrolled to end of tabs, a gradient is added to the beginning (left) of tab container
-  - Scroll is set by default
-  - Tabs labels never wrap to two lines
 - Maintain layout for tabs when switching to smaller viewports. Do not replace the tab component with the accordion component
 - Switching between tab component and accordion component is not supported in Cedar components library
-
 
 </cdr-doc-table-of-contents-shell>
 </template>
@@ -278,7 +285,11 @@ This component has compliance with WCAG guidelines by:
 
 ## Props
 
+### CdrTabs
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props"/>
+
+### CdrTabPanel
+<cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[1].api.props"/>
 
 ## Events
 
