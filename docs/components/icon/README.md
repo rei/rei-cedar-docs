@@ -179,15 +179,18 @@ Create a new SVG icon using any valid internal SVG markup. This method creates a
 ## Accessibility 
 
 To ensure that usage of this component complies with accessibility guidelines:
-- If an icon conveys meaning, there must be a screen reader helper text that describes the action or idea that the icon represents
+- If an icon conveys meaning, there must be an `aria-label` that describes the action or idea that the icon represents
+- If an icon is decorative, use an empty `alt` attribute  
 
 Recommendations for writing screen reader text: 
 - Be succinct. Exclude unnecessary words
 - Be informative and accurate 
 - Write in the active voice
+- Avoid technical jargon
 
 W3C recommends using `<title>` and `<desc>` elements in SVG for assistive technologies; however these elements have mixed support for screen readers as explained [here](http://haltersweb.github.io/Accessibility/svg.html). Cedar follows these recommendations by:
-- Adding `role=’presentation’` to icons. This hides them from screen readers
+- Adding `role=’presentation’` to icons. This hides them from screen readers and causes the icon to be a nested image inside of a button or a link
+- Assigning the attribute `focusable=’false’` to the SVG element
 - Using `aria-label` for buttons or Cedar’s hidden text CSS style for links
 
 
@@ -474,16 +477,6 @@ Use any valid SVG markup in the **CdrIcon** slot.
  
 </script>
 ```
-
-## Modifiers
-
-Following variants are available to the `cdr-icon` modifier attribute: 
-| Value | Description |
-|:-------|:-----------------------|
-| 'sm' | Sets icon size to 16px |
-| 'md' | Sets icon size to 24px |
-| 'lg' | Sets icon size to 32px |
-| 'inherit-color' | Sets icon's css fill property to inherit  |
 
 </cdr-doc-table-of-contents-shell>
 </template>
