@@ -13,6 +13,14 @@
         "href": '../../foundation/typography/'
       },
       {
+        "text": 'Caption',
+        "href": '../caption/'
+      },
+      {
+        "text": 'Block Quote',
+        "href": '../block-quote/'
+      },
+      {
         "text": 'Headings',
         "href": '../headings/'
       }
