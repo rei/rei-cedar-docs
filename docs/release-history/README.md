@@ -13,6 +13,44 @@
 ---
 
 <cdr-doc-table-of-contents-shell>
+## 18.11.1 Release
+
+### New Components
+
+- Added new [Tabs](../components/tabs/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.11.1/src/components/tabs)
+  - Component
+  - Styles
+
+- Added new [Data Tables](../components/data-tables/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.11.1/src/components/dataTable)
+  - Component
+  - Styles
+
+- Added new [Inputs](../components/input/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.11.1/src/components/input)
+  - Component
+  - Styles
+
+- Added new [Ratings](../components/rating/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.11.1/src/components/rating)
+  - Component
+  - Styles
+
+### Component Updates
+
+- Updated [Buttons](../components/buttons/) component stylesheet import to fix server-side rendering
+- Updated [CTA](../components/cta/) component stylesheet import to fix server-side rendering
+- Updated [Accordion](../components/accordion/) component stylesheet import to fix server-side rendering
+- Updated [Breadcrumb](../components/breadcrumb/) component CdrAssets dependency
+
+### Design Assets
+
+- Sketch library 
+  - Published the Sketch library with design assets for the released components above 
+
+### Documentation Updates
+
+- Accessibility
+  - Article describing how Accessibility fits in as a foundation of the design system; including info on why it matters, how to make your products accessible and other related topics 
+
+
 ## 18.09.2 Release
 
 ### New Components
