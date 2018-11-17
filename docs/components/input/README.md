@@ -133,83 +133,213 @@ Basic input field with label
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" >
 
 ```html
-
 <cdr-input
-      class="demo-input"
-      v-model="defaultModel"
-      label="#1 Default"
+  v-model="defaultModel"
+  label="Input label"
+  placeholder="Placeholder input"
 />
-
+<br>
+<cdr-input
+  v-model="defaultModel"
+  label="Input label"
+  placeholder="Placeholder input"
+  disabled
+/>
 ```
 
 </cdr-doc-example-code-pair>
 
-## Compact
+## Required
 
-Reduced spacing around the tab buttons create a denser visual design
+Basic input field with label and required tag
 
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false">
 
 ```html
-<cdr-tabs modifier="compact" height="100px">
-  <cdr-tab-panel name="Product" >Tab 1 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Articles">Tab 2 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Classes & Events">Tab 3 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Videos">Tab 4 Content</cdr-tab-panel>
-</cdr-tabs>
+<cdr-input
+  v-model="defaultModel"
+  label="Input label"
+  placeholder="Placeholder input"
+  required
+/>
 ```
 
 </cdr-doc-example-code-pair>
 
-## Full Width
+## Sizing
 
-Tab buttons space evenly across the container
+Change size for the input field. Default size is medium.
 
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
 
 ```html
-<cdr-tabs modifier="full-width" height="100px">
-  <cdr-tab-panel name="Product">Tab 1 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Articles">Tab 2 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Classes & Events">Tab 3 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Videos">Tab 4 Content</cdr-tab-panel>
-</cdr-tabs>
+<cdr-input
+  v-model="defaultModel"
+  label="Input label"
+  placeholder="Placeholder input"
+/>
+<br>
+<cdr-input
+  v-model="defaultModel"
+  label="Input label"
+  placeholder="Placeholder input"
+  size="large"
+/>
 ```
 
 </cdr-doc-example-code-pair>
 
-## No Border
+## Bare
 
-Bottom border of tab header list is removed.
+Input field with no label
 
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
 
 ```html
-<cdr-tabs modifier="no-border" height="100px">
-  <cdr-tab-panel name="Product">Tab 1 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Articles">Tab 2 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Classes & Events">Tab 3 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Videos">Tab 4 Content</cdr-tab-panel>
-</cdr-tabs>
+<cdr-input
+  v-model="defaultModel"
+  label="Input label"
+  placeholder="Placeholder input"
+  hideLabel
+/>
+```
+
+</cdr-doc-example-code-pair>
+
+## Multi-line input
+
+Multiple line input field with expander control in lower right
+
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
+
+```html
+<cdr-input
+  v-model="defaultModel"
+  label="Input label"
+  placeholder="Placeholder input"
+  rows="4"
+/>
+```
+
+</cdr-doc-example-code-pair>
+
+## Input with link text
+
+Input field with link text on right
+
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
+
+```html
+<cdr-input
+  v-model="defaultModel"
+  label="Input label"
+  placeholder="Placeholder input"
+>
+  <template slot="info">
+    <a href="#">Information link</a>
+  </template>
+</cdr-input>
+```
+
+</cdr-doc-example-code-pair>
+
+## Input with icon above
+
+Input field with icon above input field on right
+
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
+
+```html
+<cdr-icon-sprite />
+<cdr-input
+  v-model="defaultModel"
+  label="Input label"
+  placeholder="Placeholder input"
+>
+  <cdr-icon
+    slot="info"
+    use="#information-fill"
+    class="cdr-button__icon"
+    modifier="inherit-color"
+  />
+</cdr-input>
+```
+
+</cdr-doc-example-code-pair>
+
+## Input with helper text
+
+Input field with helper or hint text below input field
+
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
+
+```html
+<cdr-input
+  v-model="defaultModel"
+  label="Input label"
+  placeholder="Placeholder input"
+>
+  <template slot="helper-text">
+    Helper or additional text
+  </template>
+</cdr-input>
+```
+
+</cdr-doc-example-code-pair>
+
+## Input with icon inserted left
+
+Input field with icon inserted into input field on left. Icon is decorative and not intended for any action
+
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
+
+```html
+<cdr-icon-sprite />
+<cdr-input
+  v-model="defaultModel"
+  label="Input label"
+  placeholder="Placeholder input"
+>
+  <cdr-icon
+    slot="pre-icon"
+    use="#location-pin-stroke"
+    class="cdr-button__icon"
+    modifier="inherit-color"
+  />
+</cdr-input>
+```
+
+</cdr-doc-example-code-pair>
+
+## Input with icon inserted right
+
+Input field with icon inserted into input field on right. Icon is decorative and not intended for any action
+
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
+
+```html
+<cdr-icon-sprite />
+<cdr-input
+  v-model="defaultModel"
+  label="Input label"
+  placeholder="Placeholder input"
+>
+  <cdr-icon
+    slot="post-icon"
+    use="#credit-card"
+    class="cdr-button__icon"
+    modifier="inherit-color"
+  />
+</cdr-input>
 ```
 
 </cdr-doc-example-code-pair>
 
 ## Accessibility
 
-Tabs component maintains these keyboard interactions:
-- `Left arrow` and `Right arrow` key:  Moves user between tabs
-- `Down arrow`:  Moves user into the content within the active tab section
-- `Up arrow`:  Returns the user to the selected tab
-
-<br/>
-
 This component has compliance with WCAG guidelines by:
-
-- Using text color with a Level AA contrast ratio of 4.5:1 contrast between the text color and the background (but only when displayed on light backgrounds)
-- Includes tablist role in tabs header container
-- Includes tab role in tab header element
-- Includes tabpanel role in tab content element
+- Requiring a value for the `label` field
+- When hiding a label, the `aria-label` attribute is set to the `label` value
 
 </cdr-doc-table-of-contents-shell>
 </template>
@@ -219,24 +349,38 @@ This component has compliance with WCAG guidelines by:
 
 ## Use when
 
-- Organizing related content in a single container
-- Flipping between multiple panes or sections
-- Grouping content to display horizontally
-- Content is lengthy and can be broken into discrete parts
+- Entering data with a wide variety of responses
+- Searching for content
 
 ### Don’t use when
 
-- Grouping content to display vertically. Instead, use [Accordion](../accordion/)
-- Creating primary navigation that links to other pages
-- Creating anchor or in-page navigation
-- Comparing related content
+- Selecting from a specific set of options. Use Selects
 
 ## Foundations
 
-- Never display disabled tab labels
-- Remove tab button if there is no content
-- Keep to no more than 6 tab buttons
-- Never display fewer than 2 tab buttons
+- **Identifiable** - Input fields should indicate that users can enter information
+- **Findable** - It should be easy to find an input field among other elements
+- **Legible** - Input fields indicate their state such as enabled, focused, or disabled
+
+### Options
+
+- Define width using CSS styles
+- Height options are medium or large. For more information, view Overview tab
+- Ability to specify field type for text, email, number, password, search, and URL
+
+### Multi-line input fields
+
+- Use when long free-form text is the desired user input such as a comment on a review or feedback form
+- Overflow text wraps to a new line
+- Scroll bar appears on right border when cursor reaches the bottom of the field
+- This input field is defined by using the `rows` prop by defining the number of rows to present the user with a recommended length for a response
+- Resizing handle allows user to change the height of the input area
+- Min and max limits are set by the product team for:
+  - Max-height of textarea
+  - Maximum and minimum number of characters
+
+<cdr-img class="cdr-doc-article-img" alt="Multi-line input field with resizing hande and scroll bar" :src="$withBase(`/breadcrumb/Spec__Breadcrumb_Long_16-2.png`)" />
+
 
 ## Content
 

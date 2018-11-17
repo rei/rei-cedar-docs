@@ -105,3 +105,8 @@ import { CdrRating } from "@rei/cdr-rating";
 import "@rei/cdr-rating/dist/cdr-rating.css";
 Vue.component("CdrRating", CdrRating);
 FullVue.component("CdrRating", CdrRating);
+
+import { CdrInput } from "@rei/cdr-input";
+import "@rei/cdr-input/dist/cdr-input.css";
+Vue.component("CdrInput", CdrInput);
+FullVue.component("CdrInput", CdrInput);
