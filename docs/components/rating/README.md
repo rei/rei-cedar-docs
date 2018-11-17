@@ -119,7 +119,7 @@
 
 Shows review rating with up to 5 stars highlighted. If rating is zero, star icons are displayed using the grey outline star icon. 
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.09.2/src/components/rating" sandbox-href="https://codesandbox.io/s/30r682534m">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.11.1/src/components/rating" sandbox-href="https://codesandbox.io/s/30r682534m">
 
 ```html
 <div>
@@ -134,7 +134,7 @@ Shows review rating with up to 5 stars highlighted. If rating is zero, star icon
 
 Creates a link to the corresponding review content if on the same page.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.09.2/src/components/rating" sandbox-href="https://codesandbox.io/s/30r682534m">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.11.1/src/components/rating" sandbox-href="https://codesandbox.io/s/30r682534m">
 
 ```html
 <div>
@@ -153,7 +153,7 @@ Creates a link to the corresponding review content if on the same page.
 
 Removes the word "Reviews" from the label for limited space layout.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.09.2/src/components/rating" sandbox-href="https://codesandbox.io/s/30r682534m">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.11.1/src/components/rating" sandbox-href="https://codesandbox.io/s/30r682534m">
 
 ```html
 <div>
@@ -168,7 +168,7 @@ Removes the word "Reviews" from the label for limited space layout.
 
 Change size for the star icon and text. Default size is medium.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.09.2/src/components/rating" sandbox-href="https://codesandbox.io/s/30r682534m">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.11.1/src/components/rating" sandbox-href="https://codesandbox.io/s/30r682534m">
 
 ```html
 <div>
@@ -325,7 +325,7 @@ By default the **CdrRating** component renders the icons in medium size (24px) w
 - `href` prop to make rating act as a link
 - Icon size updates (small: 16px, medium: 24px, large: 32px)
 - Add `size` prop to replace the `modifier` prop
-- Link to full dev [changelog](https://github.com/rei/rei-cedar/blob/18.09.2/src/components/rating/CHANGELOG.md)
+- Link to full dev [changelog](https://github.com/rei/rei-cedar/blob/master/src/components/rating/CHANGELOG.md)
 
 </template>
 </cdr-doc-tabs>

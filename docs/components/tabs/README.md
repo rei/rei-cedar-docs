@@ -384,7 +384,7 @@ Following variants are available to the `cdr-tabs` modifier attribute:
 - Enables navigation between content with Tab Header List
 - Tabs Header List supports overflow by allowing horizontal scrolling of header
 - Incorporates accessibility and SEO compliant features
-- Git commit reference [(cc6b3fb)](https://github.com/rei/rei-cedar/pull/454/commits/cc6b3fbd49bbe1b07165dd605df99fbe1743cbd6)
+- Git commit reference [(cc6b3fb)](https://github.com/rei/rei-cedar/blob/next/src/components/tabs/CHANGELOG.md)
 
 </template>
 </cdr-doc-tabs>
