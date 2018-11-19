@@ -211,7 +211,7 @@
 <cdr-doc-table-of-contents-shell>
 
 ## Default
-Basic input field with label
+Basic input field with label.
 
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/input/src/components/input" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
@@ -234,7 +234,7 @@ Basic input field with label
 
 ## Required
 
-Basic input field with label and required tag
+Basic input field with label and required tag.
 
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/input/src/components/input" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
@@ -274,7 +274,7 @@ Change size for the input field. Default size is medium.
 
 ## Bare
 
-Input field with no label
+Input field with no label.
 
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/input/src/components/input" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
@@ -291,7 +291,7 @@ Input field with no label
 
 ## Multi-line input
 
-Multiple line input field with expander control in lower right
+Multiple line input field with expander control in lower right.
 
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/input/src/components/input" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
@@ -308,7 +308,7 @@ Multiple line input field with expander control in lower right
 
 ## Input with link text
 
-Input field with link text on right
+Input field with link text on right.
 
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/input/src/components/input" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
@@ -328,7 +328,7 @@ Input field with link text on right
 
 ## Input with icon above
 
-Input field with icon above input field on right
+Input field with icon above input field on right.
 
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/input/src/components/input" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
@@ -352,7 +352,7 @@ Input field with icon above input field on right
 
 ## Input with helper text
 
-Input field with helper or hint text below input field
+Input field with helper or hint text below input field.
 
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/input/src/components/input" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
@@ -372,7 +372,7 @@ Input field with helper or hint text below input field
 
 ## Input with icon inserted left
 
-Input field with icon inserted into input field on left. Icon is decorative and not intended for any action
+Input field with icon inserted into input field on left. Icon is decorative and not intended for any action.
 
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/input/src/components/input" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
 
@@ -396,7 +396,7 @@ Input field with icon inserted into input field on left. Icon is decorative and 
 
 ## Input with icon inserted right
 
-Input field with icon inserted into input field on right. Icon is decorative and not intended for any action
+Input field with icon inserted into input field on right. Icon is decorative and not intended for any action.
 
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/input/src/components/input" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
 
@@ -471,7 +471,7 @@ This component has compliance with WCAG guidelines by:
 
 - Use concise and consistent labels that describes the meaning of the input field
 - Limit labels to 1–3 words and fewer than 20 characters, including spaces
-- Use sentence case, not all caps, title caps or all lowercase
+- Use sentence case; not all caps, title caps or all lowercase
 - Don’t use colons after labels
 
 ### Placeholder text
@@ -506,13 +506,12 @@ This component has compliance with WCAG guidelines by:
 
 ### Required fields
 
-- Optional is the default status of an input field
-- The text, "Required" will appear next to the input lable if the status is required
+- The default status of an input field is “optional”
+- If the status is set to “required”, the text, “Required” will appear next to the input label 
 
 ### Validation
 
-- Validate the user's data before form submission
-- For more information, see Messages &amp; Notifications
+- Validate the form data before submission
 
 ### Do/Don't
 
