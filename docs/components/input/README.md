@@ -133,7 +133,7 @@
                 "name": "type",
                 "type": "string",
                 "default": "text",
-                "description": "Supports HTML5 <input> types for text, email, number, password, search, and URL. For more information, view WebAIM’s Future Web Accessibility: New <input> Types in HTML5</a>."
+                "description": "Supports HTML5 <input> types for text, email, number, password, search, and URL."
               },
               {
                 "name": "label",
@@ -507,7 +507,7 @@ This component has compliance with WCAG guidelines by:
 ### Required fields
 
 - The default status of an input field is “optional”
-- If the status is set to “required”, the text, “Required” will appear next to the input label 
+- If the status is set to “required”, the text, “Required” will appear next to the input label
 
 ### Validation
 
