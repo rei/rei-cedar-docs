@@ -4,114 +4,165 @@
   "layout": "LayoutComponent",
   "summary": "Allows a user to enter and edit data. Also used for search",
   "title_metadata": "Text field, CdrInput, cdr-input",
-  "select": [
+  "length": [
     {
       "type": "do",
-      "image": "tabs/tab_select_do_16-9.png",
+      "image": "input/Input__Length_Do__16-9.png",
       "ratio": "16-9",
-      "alt": "tab with content displaying.",
-      "caption": "display a tab section on load."
+      "alt": "input with width limited.",
+      "caption": "limit the width of the input field."
     },
     {
       "type": "dont",
-      "image": "tabs/tab_select_dont_16-9.png",
+      "image": "input/Input__Length_Dont__16-9.png",
       "ratio": "16-9",
-      "alt": "tab with empty content.",
-      "caption": "display tabs without a section visible."
+      "alt": "input with too much width.",
+      "caption": "make the input field wider than approximately ⅓ of the information being entered."
     }
   ],
-  "number": [
+  "label": [
     {
       "type": "do",
-      "image": "tabs/tab_number_do_16-9.png",
+      "image": "input/Input__Label_Do__16-9.png",
       "ratio": "16-9",
-      "alt": "tabs with two buttons.",
-      "caption": "use tabs with at least 2 buttons."
+      "alt": "input with proper label.",
+      "caption": "use concise and meaningful labels."
     },
     {
       "type": "dont",
-      "image": "tabs/tab_number_dont_16-9.png",
+      "image": "input/Input__Label_Dont__16-9.png",
       "ratio": "16-9",
-      "alt": "tab with one button.",
-      "caption": "use tabs with only 1 button."
+      "alt": "input with too long of label",
+      "caption": "use instructional or help text for the label."
     }
   ],
-  "capitalization": [
+  "case": [
     {
       "type": "do",
-      "image": "tabs/tab_capitalization_do_16-9.png",
+      "image": "input/Input__Case_Do__16-9.png",
       "ratio": "16-9",
-      "alt": "tabs with title cased labels.",
-      "caption": "use title case for tab labels."
+      "alt": "label with proper case",
+      "caption": "use sentence case for labels."
     },
     {
       "type": "dont",
-      "image": "tabs/tab_capitalization_dont_16-9.png",
+      "image": "input/Input__Case_Dont__16-9.png",
       "ratio": "16-9",
-      "alt": "tabs with all caps labels.",
-      "caption": "use all caps for tab labels."
+      "alt": "label with all caps",
+      "caption": "use all caps for labels"
     }
   ],
-    "label": [
+  "punctuation": [
     {
       "type": "do",
-      "image": "tabs/tab_label_do_16-9.png",
+      "image": "input/Input__Punctuation_Do__16-9.png",
       "ratio": "16-9",
-      "alt": "tabs with succint labels.",
-      "caption": "write succinct and meaningful tab labels. Between 1-2 words is best."
+      "alt": "label without terminal punctuation",
+      "caption": "remove all terminal punctuation."
     },
     {
       "type": "dont",
-      "image": "tabs/tab_label_dont_16-9.png",
+      "image": "input/Input__Punctuation_Dont__16-9.png",
       "ratio": "16-9",
-      "alt": "tabs with truncated labels.",
-      "caption": "truncate tab labels. If a label overruns the container, find a shorter alternative."
+      "alt": "label with colon after",
+      "caption": "use colons after labels"
+    }
+  ],
+  "placeholder": [
+    {
+      "type": "do",
+      "image": "input/Input__Placeholder_Do__16-9.png",
+      "ratio": "16-9",
+      "alt": "proper placeholder text usage.",
+      "caption": "use placeholder text when providing extra help, so user understands what to enter."
+    },
+    {
+      "type": "dont",
+      "image": "input/Input__Placeholder_Dont__16-9.png",
+      "ratio": "16-9",
+      "alt": "placeholder text with too much information.",
+      "caption": "use placeholder text as an alternative to a label."
     }
   ],
   "versions": [
     {
       "components": [
         {
-          "name": "CdrTabs",
+          "name": "Inputs",
           "api": {
             "props": [
               {
-                "name": "height",
+                "name": "id",
                 "type": "string",
-                "default": "240px",
-                "description": "Sets total height of tab container."
+                "default": "auto-generated",
+                "description": "Requires unique ID that is mapped to the label ‘for’ attribute.  If this value is not set, it will be auto-generated."
               },
               {
-                "name": "modifier",
+                "name": "type",
+                "type": "string",
+                "default": "text",
+                "description": "Supports HTML5 <input> types for text, email, number, password, search, and URL. For more information, view WebAIM’s Future Web Accessibility: New <input> Types in HTML5</a>."
+              },
+              {
+                "name": "label (required)",
                 "type": "string",
                 "default": "N/A",
-                "description": "Modifies the style variants for this component. Possible values: {  'compact'  |  'full-width'  |  'no-border'  }"
+                "description": "Sets the text value for the input label.  Required for a11y compliance.  Use ‘hideLabel’ if the label display is not desired."
+              },
+              {
+                "name": "hideLabel",
+                "type": "boolean",
+                "default": "false",
+                "description": "Hides the label element and sets the input ‘aria-label’ to the ‘label’ value for a11y compliance."
+              },
+              {
+                "name": "rows",
+                "type": "number",
+                "default": "null",
+                "description": "Sets the number of rows for the input field and converts input field to textarea if the rows value is greater than 1."
+              },
+              {
+                "name": "disabled",
+                "type": "boolean",
+                "default": "false",
+                "description": "Sets disabled input field and label styling and restricts user input."
+              },
+              {
+                "name": "required",
+                "type": "boolean",
+                "default": "false",
+                "description": "Sets the field to required and displays the text “Required” next to the input label."
+              },
+              {
+                "name": "size",
+                "type": "string",
+                "default": "medium",
+                "description": "Sets the input field size. Possible values: {  ‘medium’  |  ‘large’  }"
+              }
+            ],
+            "slots": [
+              {
+                "name": "info",
+                "description": "Location for  information link or icon markup to the right above the input field."
+              },
+              {
+                "name": "pre-icon",
+                "description": "Location for icon markup to the left inside the input field."
+              },
+              {
+                "name": "post-icon",
+                "description": "Location for icon markup to the right inside the input field."
+              },
+              {
+                "name": "helper-text",
+                "description": "Location for helper or information text to the left below the input field."
               }
             ],
             "events": [
               {
-                "name": "tabChange",
-                "arguments": "state, tabId",
-                "description": "$emit event fired when the active tab has been changed"
-              }
-            ]
-          }
-        },
-        {
-          "name": "CdrTabPanel",
-          "api": {
-            "props": [
-              {
-                "name": "name",
-                "type": "string",
-                "default": "N/A",
-                "description": "Sets tab display name. Required and must be unique for each tab.  If id prop not provided, this value will be used as the reference identifier."
-              },
-              {
-                "name": "id",
-                "type": "string",
-                "default": "N/A",
-                "description": "Sets reference identifier.  Must be unique for each tab."
+                "name": "change",
+                "arguments": "newValue, event",
+                "description": "Event is emitted on input losing focus(onBlur) if the value has changed"
               }
             ]
           }
@@ -130,7 +181,7 @@
 ## Default
 Basic input field with label
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" >
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/input/src/components/input" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
@@ -153,7 +204,7 @@ Basic input field with label
 
 Basic input field with label and required tag
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false">
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/input/src/components/input" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
@@ -170,7 +221,7 @@ Basic input field with label and required tag
 
 Change size for the input field. Default size is medium.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/input/src/components/input" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
@@ -193,7 +244,7 @@ Change size for the input field. Default size is medium.
 
 Input field with no label
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/input/src/components/input" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
@@ -210,14 +261,14 @@ Input field with no label
 
 Multiple line input field with expander control in lower right
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/input/src/components/input" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
   v-model="defaultModel"
   label="Input label"
   placeholder="Placeholder input"
-  rows="4"
+  :rows="4"
 />
 ```
 
@@ -227,7 +278,7 @@ Multiple line input field with expander control in lower right
 
 Input field with link text on right
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/input/src/components/input" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
@@ -247,7 +298,7 @@ Input field with link text on right
 
 Input field with icon above input field on right
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/input/src/components/input" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-icon-sprite />
@@ -271,7 +322,7 @@ Input field with icon above input field on right
 
 Input field with helper or hint text below input field
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/input/src/components/input" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
@@ -291,7 +342,7 @@ Input field with helper or hint text below input field
 
 Input field with icon inserted into input field on left. Icon is decorative and not intended for any action
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/input/src/components/input" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
 
 ```html
 <cdr-icon-sprite />
@@ -315,7 +366,7 @@ Input field with icon inserted into input field on left. Icon is decorative and 
 
 Input field with icon inserted into input field on right. Icon is decorative and not intended for any action
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/input/src/components/input" sandbox-href="https://codesandbox.io/s/v19wpz29r7" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
 
 ```html
 <cdr-icon-sprite />
@@ -379,46 +430,41 @@ This component has compliance with WCAG guidelines by:
   - Max-height of textarea
   - Maximum and minimum number of characters
 
-<cdr-img class="cdr-doc-article-img" alt="Multi-line input field with resizing hande and scroll bar" :src="$withBase(`/breadcrumb/Spec__Breadcrumb_Long_16-2.png`)" />
+<cdr-img class="cdr-doc-article-img" alt="Multi-line input field with resizing hande and scroll bar" :src="$withBase(`/input/Spec__Input_Multi_Line_Field__16-9.png`)" />
 
 
 ## Content
 
-- Order the tab buttons by priority/importance from left to right
-- Keep tab labels succinct and meaningful. Between 1-2 words is best and written in plain language
-- Never truncate tab labels
-- Use title caps for tab labels
+### Labels
 
-## Behavior
+- Use concise and consistent labels that describes the meaning of the input field
+- Limit labels to 1–3 words and fewer than 20 characters, including spaces
+- Use sentence case, not all caps, title caps or all lowercase
+- Don’t use colons after labels
 
-- The first tab section is selected by default
-- Only one tab can be selected at a time
-- Currently selected tab is always highlighted
-- Tabs are scrollable by default and do not wrap to a second line
-- Tabs become scrollable when the length of the labels exceed the width of the container
-- Inactive tab panels are rendered for SEO purposes
+### Placeholder text
+
+- When user enters data into the input field, the placeholder text is not visible
+- Placeholder text gives context about a field’s input, such as what type of input is expected.  For example, for a date input field, use “mm/dd/yyyy”
+- Limit placeholder text to 1–3 words
+
+### Helper text
+
+- Use helper text for hints or suggestions
+- If help text is long or complex, use a tooltip or popover that is opened from the support link above the input field
+- Too much help text can make a form look and feel difficult to use
 
 ### Do/Don't
 
-<do-dont :examples="$page.frontmatter.select" />
-
-<do-dont :examples="$page.frontmatter.number" />
-
-<do-dont :examples="$page.frontmatter.capitalization" />
+<do-dont :examples="$page.frontmatter.length" />
 
 <do-dont :examples="$page.frontmatter.label" />
 
+<do-dont :examples="$page.frontmatter.case" />
 
-## Responsiveness
+<do-dont :examples="$page.frontmatter.punctuation" />
 
-- Tabs can change styles based on breakpoint
-  - Example: Default at MD/LG, Compact and Full-Width at XS/SM
-- Tabs labels never wrap to two lines
-- Scroll is set by default
-  - If tabs exceed width of viewport, a gradient is added to the end (right) of tab container
-  - When scrolled to end of tabs, a gradient is added to the beginning (left) of tab container
-- Maintain layout for tabs when switching to smaller viewports. Do not replace the tab component with the accordion component
-- Switching between tab component and accordion component is not supported in Cedar components library
+<do-dont :examples="$page.frontmatter.placeholder" />
 
 </cdr-doc-table-of-contents-shell>
 </template>
@@ -428,11 +474,11 @@ This component has compliance with WCAG guidelines by:
 
 ## Props
 
-### CdrTabs
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props"/>
 
-### CdrTabPanel
-<cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[1].api.props"/>
+## Slots
+
+<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" :slots-getting-started-link="false" />
 
 ## Events
 
@@ -440,10 +486,10 @@ This component has compliance with WCAG guidelines by:
 
 ## Installation
 
-Resources are available within the [CdrTabs package](https://www.npmjs.com/package/@rei/cdr-tabs):
+Resources are available within the [CdrInput package](https://www.npmjs.com/package/@rei/cdr-input):
 
-- Component: `@rei/cdr-tabs`
-- Component styles: `cdr-tabs.css`
+- Component: `@rei/cdr-input`
+- Component styles: `cdr-input.css`
 
 <br/>
 
@@ -451,12 +497,12 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the CdrTabs package using `npm` in your terminal:
+Install the CdrInput package using `npm` in your terminal:
 
 _Terminal_
 
 ```bash
-npm i -s @rei/cdr-tabs
+npm i -s @rei/cdr-input
 ```
 
 ## 2. Import Dependencies
@@ -465,7 +511,7 @@ _main.js_
 
 ```javascript
 // import your required CSS.
-import "@rei/cdr-tabs/dist/cdr-tabs.css";
+import "@rei/cdr-input/dist/cdr-input.css";
 ```
 
 ### 3. Add component to a template
@@ -475,44 +521,81 @@ _local.vue_
 ```vue
 <template>
   ...
-     <cdr-tabs>
-       <cdr-tab-panel name=”tab1”>TAB1 CONTENT GOES HERE</cdr-tab-panel>
-       <cdr-tab-panel name=”tab2”>TAB2 CONTENT GOES HERE</cdr-tab-panel>
-       <cdr-tab-panel name=”tab3”>TAB3 CONTENT GOES HERE</cdr-tab-panel>
-     </cdr-tabs>
+     <cdr-input
+       v-model=”inputModel”
+       label=”Input Label Text”
+       placeholder=”Input Placeholder Text”
+     />
   ...
 </template>
 
 <script>
-import { CdrTabs, CdrTabPanel } from '@rei/cdr-tabs’;
+import { CdrInput } from '@rei/cdr-input;
 export default {
   ...
   components: {
-     CdrTabs,
-     CdrTabPanel
+    CdrInput,
   },
+  data() {
+    inputModel: ‘Default Value’
+  }
 }
 </script>
 ```
 
 ## Usage
 
-The ` cdr-tab-panel name ` property sets the tab display value and is used for reference.
+The **CdrInput** component requires `v-model` to bind the input value to your data model.  You can also use   `helper-text` to display additional information below the input.
 
 ```vue
- <cdr-tabs>
-   <cdr-tab-panel name="tab1">Tab 1 Content</cdr-tab-panel>
- </cdr-tabs>
+<cdr-input
+  class="demo-input"
+  v-model="inputWithSlots"
+  id="slots-demo"
+  label="Billing address ZIP code">
+  <template slot="helper-text">
+    International customers, if no postal code, enter “NA”
+  </template>
+</cdr-input>
 ```
 
-### Modifiers
+The `aria-label` attribute will automatically be added on compilation based upon what is provided in the `label` prop.
 
-Following variants are available to the `cdr-tabs` modifier attribute:
-| Value        | Description            |
-|:-------------|:-----------------------|
-| 'compact'    | Sets the tabs styling for smaller screen sizes |
-| 'full-width' | Sets the tab header to display evenly across the entire width instead of left justified |
-| 'no-border'  | Removes the bottom border of the tabs header |
+```vue
+<cdr-input
+  class="demo-input"
+  v-model="ariaModel"
+  id="aria-demo"
+  label=”First Name">
+</cdr-input>
+```
+
+This will result in the following HTML:
+
+```vue
+<div class="cdr-input-wrap">
+  <input
+    id="aria-demo"
+    type="text"
+    class="cdr-input"
+    aria-label="First Name">
+</div>
+```
+
+Input inherits the `placeholder` attribute for the placeholder text. You can also use the `post-icon` slot for adding and icon.
+
+```vue
+<cdr-input
+  class="demo-input"
+  v-model="inputWithSlots"
+  placeholder="mm/dd/yyyy"
+  id="slots-demo"
+  label="Event Date">
+  <template slot="post-icon">
+    <icon-calendar />
+  </template>
+</cdr-input>
+```
 
 </cdr-doc-table-of-contents-shell>
 </template>
@@ -521,11 +604,8 @@ Following variants are available to the `cdr-tabs` modifier attribute:
 
 ## 1.0.0
 
-- Organizes content across different screens
-- Enables navigation between content with Tab Header List
-- Tabs Header List supports overflow by allowing horizontal scrolling of header
-- Incorporates accessibility and SEO compliant features
-- Git commit reference [(cc6b3fb)](https://github.com/rei/rei-cedar/pull/454/commits/cc6b3fbd49bbe1b07165dd605df99fbe1743cbd6)
+- Enables users to set the type of input field: text, email, number, password, search, url
+- [(Complete component history)](https://github.com/rei/rei-cedar/blob/master/src/components/input/CHANGELOG.md)
 
 </template>
 </cdr-doc-tabs>
