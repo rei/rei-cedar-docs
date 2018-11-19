@@ -230,7 +230,6 @@ This component has compliance with WCAG guidelines by:
 
 - Grouping content to display vertically. Instead, use [Accordion](../accordion/)
 - Creating primary navigation that links to other pages
-- Creating anchor or in-page navigation
 - Comparing related content. Instead, use [Data Tables](../data-tables/)
 
 ## Foundations
@@ -283,6 +282,8 @@ This component has compliance with WCAG guidelines by:
 <template slot="API">
 <cdr-doc-table-of-contents-shell>
 
+Tabs are built from two components, **CdrTabs** and **CdrTabPanel**, which are meant to be used together.
+
 ## Props
 
 ### CdrTabs
@@ -310,7 +311,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the CdrTabs package using `npm` in your terminal:
+Install the **CdrTabs** package using `npm` in your terminal:
 
 _Terminal_
 
