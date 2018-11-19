@@ -84,6 +84,38 @@
       "caption": "use placeholder text as an alternative to a label."
     }
   ],
+  "required": [
+    {
+      "type": "do",
+      "image": "input/Input__Required_Do__16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing 'Required' label next to field label.",
+      "caption": "position the required label next to input field label."
+    },
+    {
+      "type": "dont",
+      "image": "input/Input__Required_Dont__16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing asterisk to denote required label.",
+      "caption": "use an asterisk for a required field."
+    }
+  ],
+  "sizes": [
+    {
+      "type": "do",
+      "image": "input/Input__Sizes_Do__16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing two equally sized input fields as a part of a form.",
+      "caption": "use placeholder text when providing extra help, so user understands what to enter."
+    },
+    {
+      "type": "dont",
+      "image": "input/Input__Sizes_Dont__16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing missized input and button elements in a form.",
+      "caption": "use placeholder text as an alternative to a label."
+    }
+  ],
   "versions": [
     {
       "components": [
@@ -104,10 +136,10 @@
                 "description": "Supports HTML5 <input> types for text, email, number, password, search, and URL. For more information, view WebAIM’s Future Web Accessibility: New <input> Types in HTML5</a>."
               },
               {
-                "name": "label (required)",
+                "name": "label",
                 "type": "string",
                 "default": "N/A",
-                "description": "Sets the text value for the input label.  Required for a11y compliance.  Use ‘hideLabel’ if the label display is not desired."
+                "description": "Sets the text value for the input label.  Required for a11y compliance.  Use ‘hideLabel’ if the label display is not desired. Required."
               },
               {
                 "name": "hideLabel",
@@ -466,6 +498,28 @@ This component has compliance with WCAG guidelines by:
 
 <do-dont :examples="$page.frontmatter.placeholder" />
 
+## Behavior
+
+### Inputs with icons
+
+- Icons inserted into input fields are decorative, not inteded for any action
+
+### Required fields
+
+- Optional is the default status of an input field
+- The text, "Required" will appear next to the input lable if the status is required
+
+### Validation
+
+- Validate the user's data before form submission
+- For more information, see Messages &amp; Notifications
+
+### Do/Don't
+
+<do-dont :examples="$page.frontmatter.required" />
+
+<do-dont :examples="$page.frontmatter.sizes" />
+
 </cdr-doc-table-of-contents-shell>
 </template>
 
@@ -522,15 +576,15 @@ _local.vue_
 <template>
   ...
      <cdr-input
-       v-model=”inputModel”
-       label=”Input Label Text”
-       placeholder=”Input Placeholder Text”
+       v-model="inputModel"
+       label="Input Label Text"
+       placeholder="Input Placeholder Text"
      />
   ...
 </template>
 
 <script>
-import { CdrInput } from '@rei/cdr-input;
+import { CdrInput } from '@rei/cdr-input';
 export default {
   ...
   components: {
@@ -547,14 +601,14 @@ export default {
 
 The **CdrInput** component requires `v-model` to bind the input value to your data model.  You can also use   `helper-text` to display additional information below the input.
 
-```vue
+```vue {3,6,7,8}
 <cdr-input
   class="demo-input"
   v-model="inputWithSlots"
   id="slots-demo"
   label="Billing address ZIP code">
   <template slot="helper-text">
-    International customers, if no postal code, enter “NA”
+    International customers, if no postal code, enter "NA"
   </template>
 </cdr-input>
 ```
@@ -566,7 +620,7 @@ The `aria-label` attribute will automatically be added on compilation based upon
   class="demo-input"
   v-model="ariaModel"
   id="aria-demo"
-  label=”First Name">
+  label="First Name">
 </cdr-input>
 ```
 
@@ -584,7 +638,7 @@ This will result in the following HTML:
 
 Input inherits the `placeholder` attribute for the placeholder text. You can also use the `post-icon` slot for adding and icon.
 
-```vue
+```vue {4,7,8,9}
 <cdr-input
   class="demo-input"
   v-model="inputWithSlots"
