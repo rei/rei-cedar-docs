@@ -507,11 +507,7 @@ This component has compliance with WCAG guidelines by:
 ### Required fields
 
 - The default status of an input field is “optional”
-- If the status is set to “required”, the text, “Required” will appear next to the input label 
-
-### Validation
-
-- Validate the form data before submission
+- If the status is set to “required”, the text, “Required” will appear next to the input label
 
 ### Do/Don't
 
