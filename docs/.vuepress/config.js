@@ -72,6 +72,7 @@ module.exports = {
           { text: "Headings", link: "/components/headings/" },
           { text: "Icons", link: "/components/icon/" },
           { text: "Images", link: "/components/image/" },
+          { text: "Inputs", link: "/components/input/" },
           { text: "Links", link: "/components/links/" },
           { text: "Lists", link: "/components/lists/" },
           { text: "Paragraphs", link: "/components/paragraphs/" },
