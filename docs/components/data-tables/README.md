@@ -223,7 +223,7 @@
 
 Basic layout with a column of row headers.  Rows alternate background colors.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/62z9rk34rr" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/rj8l4k58p4" >
 
 ```html
   <cdr-data-table
@@ -240,7 +240,7 @@ Basic layout with a column of row headers.  Rows alternate background colors.
 
 Layout for making comparisons such as between size/sleeve length. Column headers and row headers are displayed. When columns scroll, row header column is locked in place.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/62z9rk34rr">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/rj8l4k58p4">
 
 ```html
   <cdr-data-table
@@ -258,7 +258,7 @@ Layout for making comparisons such as between size/sleeve length. Column headers
 
 Layout with reduced spacing within each cell. All cells are borderless. Defines a column of row headers. 
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/62z9rk34rr">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/rj8l4k58p4">
 
 ```html
   <cdr-data-table modifier="compact borderless" id="manual-example">
