@@ -106,14 +106,14 @@
       "image": "input/Input__Sizes_Do__16-9.png",
       "ratio": "16-9",
       "alt": "Image showing two equally sized input fields as a part of a form.",
-      "caption": "use placeholder text when providing extra help, so user understands what to enter."
+      "caption": "use consistent sizes for components on a single form."
     },
     {
       "type": "dont",
       "image": "input/Input__Sizes_Dont__16-9.png",
       "ratio": "16-9",
       "alt": "Image showing missized input and button elements in a form.",
-      "caption": "use placeholder text as an alternative to a label."
+      "caption": "mix sizes for components on a single form."
     }
   ],
   "versions": [
