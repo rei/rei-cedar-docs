@@ -9,14 +9,14 @@
       "type": "do",
       "image": "tabs/tab_select_do_16-9.png",
       "ratio": "16-9",
-      "alt": "tab with content displaying.",
+      "alt": "tab with content displaying",
       "caption": "display a tab section on load."
     },
     {
       "type": "dont",
       "image": "tabs/tab_select_dont_16-9.png",
       "ratio": "16-9",
-      "alt": "tab with empty content.",
+      "alt": "tab with empty content",
       "caption": "display tabs without a section visible."
     }
   ],
@@ -25,14 +25,14 @@
       "type": "do",
       "image": "tabs/tab_number_do_16-9.png",
       "ratio": "16-9",
-      "alt": "tabs with two buttons.",
+      "alt": "tabs with two buttons",
       "caption": "use tabs with at least 2 buttons."
     },
     {
       "type": "dont",
       "image": "tabs/tab_number_dont_16-9.png",
       "ratio": "16-9",
-      "alt": "tab with one button.",
+      "alt": "tab with one button",
       "caption": "use tabs with only 1 button."
     }
   ],
@@ -41,14 +41,14 @@
       "type": "do",
       "image": "tabs/tab_capitalization_do_16-9.png",
       "ratio": "16-9",
-      "alt": "tabs with title cased labels.",
+      "alt": "tabs with title cased labels",
       "caption": "use title case for tab labels."
     },
     {
       "type": "dont",
       "image": "tabs/tab_capitalization_dont_16-9.png",
       "ratio": "16-9",
-      "alt": "tabs with all caps labels.",
+      "alt": "tabs with all caps labels",
       "caption": "use all caps for tab labels."
     }
   ],
@@ -57,7 +57,7 @@
       "type": "do",
       "image": "tabs/tab_label_do_16-9.png",
       "ratio": "16-9",
-      "alt": "tabs with succint labels.",
+      "alt": "tabs with succint labels",
       "caption": "write short and meaningful tab labels. Between 1-2 words is best."
     },
     {
@@ -92,7 +92,7 @@
               {
                 "name": "tabChange",
                 "arguments": "state, tabId",
-                "description": "$emit event fired when the active tab has been changed"
+                "description": "$emit event fired when the active tab has been changed."
               }
             ]
           }
@@ -128,7 +128,7 @@
 <cdr-doc-table-of-contents-shell>
 
 ## Default
-Tab buttons align left and bottom border expands to full width of container
+Tab buttons align left and bottom border expands to full width of container.
 
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/6w37mxwozn" :backgroundToggle="false" :codeMaxHeight="false" >
 
@@ -147,7 +147,7 @@ Tab buttons align left and bottom border expands to full width of container
 
 ## Compact
 
-Reduced spacing around the tab buttons create a denser visual design
+Reduced spacing around the tab buttons create a denser visual design.
 
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.11.1/src/components/tabs" sandbox-href="https://codesandbox.io/s/6w37mxwozn" :backgroundToggle="false" :codeMaxHeight="false">
 
@@ -164,7 +164,7 @@ Reduced spacing around the tab buttons create a denser visual design
 
 ## Full Width
 
-Tab buttons space evenly across the container
+Tab buttons space evenly across the container.
 
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.11.1/src/components/tabs" sandbox-href="https://codesandbox.io/s/6w37mxwozn" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
 
