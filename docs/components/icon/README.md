@@ -176,17 +176,21 @@ Create a new SVG icon using any valid internal SVG markup. This method creates a
 
 </cdr-doc-example-code-pair>
 
-## Accessibility 
+## Accessibility
 
 To ensure that usage of this component complies with accessibility guidelines:
 - If an icon conveys meaning, there must be an `aria-label` that describes the action or idea that the icon represents
-- If an icon is decorative, use an empty `alt` attribute  
+- If an icon is decorative, use an empty `alt` attribute
 
-Recommendations for writing screen reader text: 
+<br/>
+
+Recommendations for writing screen reader text:
 - Be succinct. Exclude unnecessary words
-- Be informative and accurate 
+- Be informative and accurate
 - Write in the active voice
 - Avoid technical jargon
+
+<br/>
 
 W3C recommends using `<title>` and `<desc>` elements in SVG for assistive technologies; however these elements have mixed support for screen readers as explained [here](http://haltersweb.github.io/Accessibility/svg.html). Cedar follows these recommendations by:
 - Adding `role=’presentation’` to icons. This hides them from screen readers and causes the icon to be a nested image inside of a button or a link
@@ -204,7 +208,7 @@ W3C recommends using `<title>` and `<desc>` elements in SVG for assistive techno
 - Communicating simple actions and concepts that are easily understood, such as printing a receipt or sending email
 - Making navigation easier for common actions. such as return to home page or search
 - Representing an action, object or concept at a high level of abstraction, such as using the snowflake icon to represent snow sports
-- Notifying users about status, such as the number of items in a shopping cart or a warning message 
+- Notifying users about status, such as the number of items in a shopping cart or a warning message
 - Conserving space for concepts that are difficult to depict, such as the progress icon or the 3-line “hamburger” menu
 
 ## Foundations
@@ -221,7 +225,7 @@ Ensure that icons use contrast ratio of 4.5:1 contrast between icon color and ba
 ### Clearance
 Adequate space around the icon allows for legibility and touch. A minimum touch target area of 40px is recommended for standalone iconography.
 
-When the mouse and keyboard are the primary input methods or when icons are paired inline with text, measurements may be condensed to accommodate denser layouts. Icon size should align to the line-height of the paired text element. 
+When the mouse and keyboard are the primary input methods or when icons are paired inline with text, measurements may be condensed to accommodate denser layouts. Icon size should align to the line-height of the paired text element.
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/icon/Spec__Icon__Spacing_21-9.png`)" alt="Cedar icon sizes" />
 
@@ -230,7 +234,7 @@ When the mouse and keyboard are the primary input methods or when icons are pair
 <icon-grid />
 
 List of icons with names and descriptions about when or how to use each icon. Icons are referred to as:
-- `<name-of-icon>` when using with the method for SVG sprite. For example, account-profile 
+- `<name-of-icon>` when using with the method for SVG sprite. For example, account-profile
 - `Icon<NameOfIcon>` when using with the method for Individual icon component. For example, the icon, ‘account-profile’ becomes IconAccountProfile
 
 <icon-table />
@@ -240,7 +244,7 @@ When using icons with links or buttons, make sure that the icon communicates int
 
 <do-dont :examples="$page.frontmatter.meaning" class="cdr-stack--lg"/>
 
-Ensure that icons are sized to provide a minimum click or touch target. 
+Ensure that icons are sized to provide a minimum click or touch target.
 
 <do-dont :examples="$page.frontmatter.clearance" class="cdr-stack--lg"/>
 
@@ -310,7 +314,7 @@ import { IconArrowDown } from '@rei/cdr-icon';
 export default {
   ...
   components: {
-     IconArrowDown  
+     IconArrowDown
   }
 }
 </script>
@@ -330,92 +334,92 @@ There are 3 different options to display SVG icons on your page using the **CdrI
 ### 1. SVG Sprite
 
 #### Option A: Inline symbol sprite
- 
-Requires: 
+
+Requires:
 - Icon sprite inline on page
- 
- 
+
+
 The sprite needs to be available on any page where the icons are being used, so add the sprite component at the base layout or index:
 
 _App.vue (base template)_
 
 ```vue
-<template> 
-  <div id="main"> 
-    <cdr-icon-sprite /> 
- 
+<template>
+  <div id="main">
+    <cdr-icon-sprite />
+
     <router-view></router-view> // rest of app
-  </div> 
-</template> 
- 
-<script> 
+  </div>
+</template>
+
+<script>
 import { CdrIconSprite } from '@rei/cdr-icon';
 
-... 
+...
 components: {
   CdrIconSprite
 }
-... 
-</script> 
+...
+</script>
 ```
 
 _Child.vue (any descendant component of App.vue above)_
 
 ```vue
-<template> 
-  <div> 
+<template>
+  <div>
     <cdr-icon use="#caret-right" />
-  </div> 
-</template> 
- 
-<script> 
+  </div>
+</template>
+
+<script>
 import { CdrIcon } from '@rei/cdr-icon';
 
-... 
+...
 components: {
   CdrIcon
 }
-... 
-</script> 
+...
+</script>
 ```
 
 #### Option B: External symbol defs
- 
+
 Requires:
 - `@rei/cdr-icon/sprite/cdr-icon-sprite.svg`
 - A webpack loader to handle the asset. This example assumes the file-loader package
 - A polyfill for external SVG resource. Possible packages are: **svgxuse** or **svg4everybody**
- 
- 
-Within an individual component (there may be a better way to scale this if the code calls it in many places): 
+
+
+Within an individual component (there may be a better way to scale this if the code calls it in many places):
 
 ```vue
-<template> 
-  ... 
+<template>
+  ...
   <cdr-icon :use="`${iconUrl}#caret-right`" />
-  ... 
-</template> 
- 
-<script> 
-// import the sprite so file-loader will do its magic 
-@import iconUrl from '@rei/cdr-assets/dist/cdr-icons.svg`; 
- 
-export default { 
-  ... 
-  data() { 
-    return { 
-      iconUrl 
-    }; 
-  } 
-} 
- 
-</script> 
+  ...
+</template>
+
+<script>
+// import the sprite so file-loader will do its magic
+@import iconUrl from '@rei/cdr-assets/dist/cdr-icons.svg`;
+
+export default {
+  ...
+  data() {
+    return {
+      iconUrl
+    };
+  }
+}
+
+</script>
 ```
 
 ### 2. Individual icon components
- 
-This may be the easiest way to use an icon on a page however use this method carefully. This method will increase HTML file size and slow down performance if using a lot of icons. 
- 
+
+This may be the easiest way to use an icon on a page however use this method carefully. This method will increase HTML file size and slow down performance if using a lot of icons.
+
 Requires:
 - Install  `@rei/cdr-icon`
 
@@ -442,39 +446,39 @@ import { IconCaretRight, IconClock } from '@rei/cdr-icon';
 ```
 
 ### 3. Non-Cedar SVG
- 
-The **CdrIcon** package is simply an SVG with default attributes set for accessibility and styling. 
+
+The **CdrIcon** package is simply an SVG with default attributes set for accessibility and styling.
 
 - Any SVG markup can be used
 - Any attributes added will override the defaults
 - This method will increase HTML file size and slow down performance if using a lot of icons.
- 
- 
-Requires: 
+
+
+Requires:
 - None
- 
-  
-Use any valid SVG markup in the **CdrIcon** slot. 
+
+
+Use any valid SVG markup in the **CdrIcon** slot.
 
 ```vue
-<template> 
-  ... 
+<template>
+  ...
   <cdr-icon viewBox="0 0 30 30">
     <title>My icon</title>
     <path d="M12 12c1.9329966 0 3.5-1.5670034 3.5-3.5C15.5 6.56700338 13.9329966 5 12 5S8.5 6.56700338 8.5 8.5c0 1.9329966 1.5670034 3.5 3.5 3.5zm6.7621385 7c-.8850139-2.8946791-3.5777143-5-6.7621387-5-3.1844245 0-5.87712493 2.1053209-6.76213876 5H18.7621385zM4 21c-.55228475 0-1-.4477153-1-1h-.00754862a9.07963802 9.07963802 0 0 1 .01314502-.1064258c.00185549-.0175393.0041644-.0349433.00691478-.0522001.43595408-3.2192393 2.56090871-5.9021068 5.45328094-7.1270196C7.26398091 11.7054407 6.5 10.191939 6.5 8.5 6.5 5.46243388 8.96243388 3 12 3c3.0375661 0 5.5 2.46243388 5.5 5.5 0 1.6919391-.763981 3.2054409-1.9657923 4.2143547 2.8923661 1.2249103 5.0173178 3.9077692 5.4532779 7.1269995.0027529.0172699.0050636.0346873.0069201.0522401A9.07834213 9.07834213 0 0 1 21.0075481 20H21c0 .5522847-.4477153 1-1 1H4z"/>
-  </cdr-icon> 
-  ... 
-</template> 
- 
-<script> 
-@import { CdrIcon } from '@rei/cdr-icon'; 
- 
+  </cdr-icon>
+  ...
+</template>
+
+<script>
+@import { CdrIcon } from '@rei/cdr-icon';
+
 ...
   components: {
     CdrIcon
   }
 ...
- 
+
 </script>
 ```
 
