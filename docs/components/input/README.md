@@ -546,7 +546,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the CdrInput package using `npm` in your terminal:
+Install the **CdrInput** package using `npm` in your terminal:
 
 _Terminal_
 
@@ -654,7 +654,7 @@ Input inherits the `placeholder` attribute for the placeholder text. You can als
 ## 1.0.0
 
 - Enables users to set the type of input field: text, email, number, password, search, url
-- [(Complete component history)](https://github.com/rei/rei-cedar/blob/master/src/components/input/CHANGELOG.md)
+- [Complete component history](https://github.com/rei/rei-cedar/blob/master/src/components/input/CHANGELOG.md)
 
 </template>
 </cdr-doc-tabs>
