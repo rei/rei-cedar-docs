@@ -14,15 +14,15 @@
             "type": "do",
             "image": "rating/rating_stars_do_16-9.png",
             "ratio": "16-9",
-            "alt": "Image showing rating with 5 stars.",
-            "caption": "show all 5 stars"
+            "alt": "Image showing rating with 5 stars",
+            "caption": "show all 5 stars."
         },
         {
           "type": "dont",
             "image": "rating/rating_stars_dont_16-9.png",
             "ratio": "16-9",
             "alt": "Image showing rating with fewer than 5 stars",
-            "caption": "adjust the number of stars"
+            "caption": "adjust the number of stars."
         }
     ],
     "number": [
@@ -31,14 +31,14 @@
             "image": "rating/rating_number_do_16-9.png",
             "ratio": "16-9",
             "alt": "Image showing rating with number of reviews text",
-            "caption": "display the number of reviews next to the star rating"
+            "caption": "display the number of reviews next to the star rating."
         },
         {
           "type": "dont",
             "image": "rating/rating_number_dont_16-9.png",
             "ratio": "16-9",
             "alt": "Image showing rating without number of reviews text",
-            "caption": "only show the stars"
+            "caption": "only show the stars."
         }
     ],
     "none": [
@@ -47,14 +47,14 @@
             "image": "rating/rating_none_do_16-9.png",
             "ratio": "16-9",
             "alt": "Image showing rating with empty stars",
-            "caption": "show an empty rating when no reviews are available"
+            "caption": "show an empty rating when no reviews are available."
         },
         {
           "type": "dont",
             "image": "rating/rating_none_dont_16-9.png",
             "ratio": "16-9",
             "alt": "Image showing the text 'no ratings available'",
-            "caption": "hide rating in lieu of ‘No Ratings Available’ or blank space"
+            "caption": "hide rating in lieu of ‘No Ratings Available’ or blank space."
         }
     ],
     "breadcrumbs": [
