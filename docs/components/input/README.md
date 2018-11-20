@@ -58,7 +58,7 @@
       "image": "input/Input__Punctuation_Do__16-9.png",
       "ratio": "16-9",
       "alt": "label without terminal punctuation",
-      "caption": "remove all terminal punctuation."
+      "caption": "remove unnecessary terminal punctuation such as semicolons, colons or periods."
     },
     {
       "type": "dont",
