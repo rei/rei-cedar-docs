@@ -133,7 +133,7 @@
                 "name": "type",
                 "type": "string",
                 "default": "text",
-                "description": "Supports HTML5 <input> types for text, email, number, password, search, and URL. For more information, view WebAIM’s Future Web Accessibility: New <input> Types in HTML5</a>."
+                "description": "Supports HTML5 <input> types for text, email, number, password, search, and URL."
               },
               {
                 "name": "label",
