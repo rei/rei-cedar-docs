@@ -61,7 +61,7 @@
               "name": "tag",
               "type": "string",
               "default": "'ul'",
-              "description": "Sets valid HTML element tag for lists. Possible values: {  ‘ul’ | ‘ol’  }"
+              "description": "Sets valid HTML element tag. Possible values: {  ‘ul’ | ‘ol’  }"
             },
             {
               "name": "modifier",
@@ -73,7 +73,7 @@
           "slots": [
             {
               "name": "default",
-              "description": "Sets the innerHTML for cdr-list. This includes text and html markup"
+              "description": "Sets the innerHTML for CdrList. This includes text and html markup."
             }
           ],
         },
@@ -303,7 +303,7 @@ This component has compliance with WCAG guidelines by:
 ### Don’t use when
 
 - Displaying content that is not primarily text
-- Displaying content with two or more well-defined dimensions
+- Displaying content with two or more well-defined dimensions. Instead, use [Data Tables](../data-tables/)
 
 ## Foundations
 
@@ -378,7 +378,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the CdrList package using `npm` in your terminal:
+Install the **CdrList** package using `npm` in your terminal:
 
 _Terminal_
 
@@ -433,7 +433,7 @@ Visual style and semantic meaning are managed independently by providing:
 
 <br/>
 
-By default the CdrList component renders as an unordered and undecorated "bare" list. To use an ordered list pass `<ol>` to the tag property.
+By default the **CdrList** component renders as an unordered and undecorated "bare" list. To use an ordered list pass `<ol>` to the tag property.
 
 ```html
 <cdr-list tag="ol">
@@ -442,7 +442,7 @@ By default the CdrList component renders as an unordered and undecorated "bare" 
 </cdr-list>
 ```
 
-The CdrList component has decoupled the semantic tags `<ul>` and `<ol>` from visual presentation. 
+The **CdrList** component has decoupled the semantic tags `<ul>` and `<ol>` from visual presentation. 
 
 <br/>
 
@@ -475,16 +475,16 @@ Following are different types of lists:
 - Bare or unstyled lists:
   - Can contain a variety of HTML elements, including paragraphs, headings, form elements, and other (nested) lists
 
-### Modifier options
+### Modifiers
 
 Note that the tag itself does not determine display, a modifier must be added for list styles. Add one of the following variants to the `modifier` attribute of the `cdr-list` tag to change the visual presentation:
 
-| **Name**  | **Description**                                                                                                                                                                        | **Example** |
-|:----------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------|
-| 'unordered' | The unordered modifier adds a bullet decorator to child list items and a ‘en-dash’ decorator to grandchild list items. This variant can be used on both `<ul>`  or `<ol>`  list types. | `<cdr-list modifier="unordered">` |
-| 'ordered'   | The ordered modifier adds a numeric decorator to child list items and a ‘en-dash’ decorator to grandchild list items. This variant can be used on both `<ul>`  or `<ol>`  list types.      | `<cdr-list tag="ol" modifier="ordered" >`|
-| 'compact'   | The compact modifier reduces the vertical space between list items for non-inline list variants. For inline variants the compact modifier reduces the horizontal space between list items. | `<cdr-list modifier="compact">` |
-| 'inline'    | The inline modifier is intended for bare or unordered list variants. In ether case this can be combined with compact to adjust the spacing of inline list variants.                        | `<cdr-list modifier=" inline">` |
+| Value | Description            |
+|:------|:-----------------------|
+| 'unordered'  | List items are typically marked with bullets |
+| 'ordered'  | List items are typically marked with numbers |
+| 'compact'  | Reduces spacing between list items |
+| 'inline'  | List items appear horizontally with no divider |
 
 
 </cdr-doc-table-of-contents-shell>

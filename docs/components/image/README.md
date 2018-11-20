@@ -25,9 +25,9 @@
               },
               {
                 "name": "lazy",
-                "type": "bool",
+                "type": "boolean",
                 "default": "false",
-                "description": "Setting this value to true will enable lazy loading for internal applications. Lazy loading is provided using the the FEDPACK rei-lazy-image-loader project"
+                "description": "Setting this value to true will enable lazy loading for internal applications. Lazy loading is provided using the the FEDPACK rei-lazy-image-loader project."
               },
               {
                 "name": "lazyOpts",
@@ -37,44 +37,44 @@
               },
               {
                 "name": "ratio",
-                "type": "enum",
-                "default": "n/a",
+                "type": "string",
+                "default": "N/A",
                 "description": "Sets the aspect ratio and scales the image as large as possible without cropping or stretching the image (See CSS background-size: contain). Possible values: {  'auto'  |  'square'  |  '1-2'  |  '2-3'  |  '3-4'  |  '9-16'  |  '2-1'  |  '3-2'  |  '4-3'  |  '16-9'  }"
               },
               {
                 "name": "ratioSm",
-                "type": "enum",
-                "default": "n/a",
+                "type": "string",
+                "default": "N/A",
                 "description": "Sets the aspect ratio at the small breakpoint. Possible values: {  'auto'  |  'square'  |  '1-2'  |  '2-3'  |  '3-4'  |  '9-16'  |  '2-1'  |  '3-2'  |  '4-3'  |  '16-9'  }"
               },
               {
                 "name": "ratioMd",
-                "type": "enum",
-                "default": "n/a",
+                "type": "string",
+                "default": "N/A",
                 "description": "Sets the aspect ratio at the medium breakpoint. Possible values: {  'auto'  |  'square'  |  '1-2'  |  '2-3'  |  '3-4'  |  '9-16'  |  '2-1'  |  '3-2'  |  '4-3'  |  '16-9'  }"
               },
               {
                 "name": "ratioLg",
-                "type": "enum",
-                "default": "n/a",
+                "type": "string",
+                "default": "N/A",
                 "description": "Sets the aspect ratio at the large breakpoint. Possible values: {  'auto'  |  'square'  |  '1-2'  |  '2-3'  |  '3-4'  |  '9-16'  |  '2-1'  |  '3-2'  |  '4-3'  |  '16-9'  }"
               },
               {
                 "name": "crop",
                 "type": "string",
-                "default": "n/a",
-                "description": "Requires ‘ratio’ to define the starting position for cropping image. Image will overflow and not be displayed. Possible values: {  ‘left’  |  ‘x-center’  |  ‘right’  |  ‘top’  «  ‘y-center’  |  ‘bottom’  }"
+                "default": "N/A",
+                "description": "Requires ‘ratio’ to define the starting position for cropping image. Image will overflow and not be displayed. Possible values: {  ‘left’  |  ‘x-center’  |  ‘right’  |  ‘top’  |  ‘y-center’  |  ‘bottom’  }"
               },
               {
                 "name": "cover",
-                "type": "false",
-                "default": "n/a",
+                "type": "boolean",
+                "default": "N/A",
                 "description": "Requires ‘ratio’ to scale the image to be as large as possible to fill the entire background area. See CSS background-size: cover."
               },
               {
                 "name": "radius",
-                "type": "enum",
-                "default": "n/a",
+                "type": "string",
+                "default": "N/A",
                 "description": "Sets a border radius to the root element. Possible values: {  'circle'  |  ‘rounded’  }"
               },
               {
@@ -87,7 +87,7 @@
             "slots": [
               {
                 "name": "default",
-                "description": "Set the innerHTML for cdr-image. This includes text and html markup"
+                "description": "Set the innerHTML for CdrImg. This includes text and html markup."
               }
             ]
           }
@@ -264,10 +264,6 @@ Use conventional aspect ratios:
 - Optimize high resolution images using [TinyPNG](https://tinypng.com/)
 - Must display images at a proper pixel size compared to Natural size
 
-### File Names
-- Image file name should include primary keyword or what the page is targeting
-- Showcase keyword targeting through file name and alt text
-
 ### Color and Contrast
 
 - Test images for high contrast displays 
@@ -291,20 +287,25 @@ Use conventional aspect ratios:
     - Y-center: Orients the image to its vertical center
 - Accepts x and y axis combination (e.g. crop="top left")
 
-<cdr-img class="cdr-doc-article-img captioned" :src="$withBase(`/image-component/Spec__Imgae_Crop_Top_16-4.png`)"/>
+<cdr-img class="cdr-doc-article-img captioned" :src="$withBase(`/image-component/Spec__Image_Crop_Top_16-4.png`)"/>
 Images are cropped on y-axis with top value and on x-axis with left, x-center, and right values
 
 <br/>
 
-<cdr-img class="cdr-doc-article-img captioned" :src="$withBase(`/image-component/Spec__Imgae_Crop_Center_16-4.png`)"/>
+<cdr-img class="cdr-doc-article-img captioned" :src="$withBase(`/image-component/Spec__Image_Crop_Center_16-4.png`)"/>
 Images are cropped on y-axis with y-center value and on x-axis with left, x-center, and right values
 
 <br/>
 
-<cdr-img class="cdr-doc-article-img captioned" :src="$withBase(`/image-component/Spec__Imgae_Crop_Bottom_16-4.png`)"/>
+<cdr-img class="cdr-doc-article-img captioned" :src="$withBase(`/image-component/Spec__Image_Crop_Bottom_16-4.png`)"/>
 Images are cropped on y-axis with bottom value and on x-axis with left, x-center, and right values
 
 ## Content
+
+### File Names
+- Image file name should include primary keyword or what the page is targeting
+- Showcase keyword targeting through file name and alt text
+- For more information, view SEO How-to articles: [Image Implementation](https://confluence.rei.com/display/SI/Image+Implementation)
 
 ### Overlaid Text
 
@@ -319,23 +320,23 @@ Images are cropped on y-axis with bottom value and on x-axis with left, x-center
 ### Decorative Images
 
 - Avoid using decorative images; instead present the image as a background-image using cascading style sheets (CSS)
-- If using the HTML `<img>` element, add an empty `<alt>` tag
-- If using the HTML `<img>` element, add the following attribute: role="presentation"
+- If using the HTML `<img>` element, add an empty `alt` attribute
+- If using the HTML `<img>` element, add the following attribute: ` role="presentation" `
 
 ### Alternative text
 
-- Use [this decision tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) to determine how to use the `<alt>` attribute of the `<img>` element in various situations
+- Use [this decision tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) to determine how to use the `alt` attribute
 - Be succinct. Ideally, one sentence or less
 - Be informative and accurate 
-- If images of text are used, the `<alt>` attribute should contain the same words that appear in the image
+- If images of text are used, the `alt` attribute should contain the same words that appear in the image
 - Avoid repetitive labels. For example: “image of” or “picture of” 
 - Descriptions:
   - Use short description that conveys the essential information presented by the image without burdening users with superfluous details
   - Use long descriptions for complex images such as graphs, charts, or diagrams to provide equivalent access to the information the image
-- For groups of images that convey a single piece of information, apply the `<alt>` attribute to only one image for the entire group
+- For groups of images that convey a single piece of information, apply the `alt` attribute to only one image for the entire group
 - For image maps with multiple clickable areas:
-  - Must provide an overall context for the set of links using `<alt>` attribute
-  - Each individual clickable area should have an `<alt>` attribute that describes the purpose or destination of the link
+  - Must provide an overall context for the set of links using `alt` attribute
+  - Each individual clickable area should have an `alt` attribute that describes the purpose or destination of the link
 
 ## Responsiveness
 
@@ -376,7 +377,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the CdrImg package using `npm` in your terminal:
+Install the **CdrImg** package using `npm` in your terminal:
 
 _Terminal_
 
@@ -437,7 +438,7 @@ export default {
 - Background image is displayed in its original size
 - Requires the `ratio` property 
 - Defines the starting point of the overflow position 
-- Accepts a single x-axis and y-axis value (e.g. crop=”top left”):
+- Accepts a single x-axis and y-axis value (e.g. ` crop=”top left” `):
   - Adjust the starting background-position on the x-axis of the image:
     - `left`: Orients the image to its horizontal left
     - `right`: Orients the image to its horizontal right
@@ -471,7 +472,7 @@ For internal applications with large images or images that would benefit from ch
 
 ## 1.0.0
 
-- Enforces WCAG A 1.1.1 criteria for decorative images by adding an empty alt attribute to all cdr-img’s
+- Enforces WCAG A 1.1.1 criteria for decorative images by adding an empty alt attribute to all **CdrImg** source files
 - Provides integration support for image best practices available using [rei-lazy-image-loader](https://git.rei.com/projects/FEDPACK/repos/rei-lazy-image-loader/browse)
 - Enables the following aspect ratios at breakpoints with following variants: Auto, Square, 1-2, 2-3, 3-4, 9-16, 2-1, 3-2, 4-3, 16-9
 - Enables user defined cropping and covering

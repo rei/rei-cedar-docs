@@ -58,44 +58,44 @@
               {
                 "name": "cols",
                 "type": "string",
-                "default": "n/a",
-                "description": "Number of equal-width columns in the row; however the value of ‘auto’ will size columns as wide as the column’s content. Possible values: {  ‘1’  through  ‘12’  |  ‘auto’  }.  Also accepts responsive values @breakpoint: ‘2 4@md’"
+                "default": "N/A",
+                "description": "Number of equal-width columns in the row; however the value of ‘auto’ will size columns as wide as the column’s content. Possible values: {  ‘1’  through  ‘12’  |  ‘auto’  }.  Also accepts responsive values @breakpoint: ‘2 4@md’."
               },
               {
                 "name": "justify",
                 "type": "string",
-                "default": "n/a",
-                "description": "Justify columns within a row. See CSS Flexbox justify-content. Possible values: {  ‘left’  |  ‘center’  |  ‘right’  |  ‘around’  |  ‘between’  }. Also accepts responsive values @breakpoint: ‘center right@lg’"
+                "default": "N/A",
+                "description": "Justify columns within a row. See CSS Flexbox justify-content. Possible values: {  ‘left’  |  ‘center’  |  ‘right’  |  ‘around’  |  ‘between’  }. Also accepts responsive values @breakpoint: ‘center right@lg’."
               },
               {
                 "name": "align",
                 "type": "string",
-                "default": "n/a",
-                "description": "Align columns of different heights. See CSS Flexbox align-items. Possible values: {  ‘top’  |  ‘middle’  |  ‘bottom’  |  ‘stretch}. Also accepts responsive values @breakpoint:  ‘top middle@sm’"
+                "default": "N/A",
+                "description": "Align columns of different heights. See CSS Flexbox align-items. Possible values: {  ‘top’  |  ‘middle’  |  ‘bottom’  |  ‘stretch’  }. Also accepts responsive values @breakpoint:  ‘top middle@sm’."
               },
               {
                 "name": "gutter",
                 "type": "string",
-                "default": "n/a",
-                "description": "Defines gutter size. Default gutter size is 16px @xs and @sm and 32px @md and @lg. Possible values: {  ‘none’  |  ‘xxs’  }. Also accepts responsive values @breakpoint:  none@md’"
+                "default": "N/A",
+                "description": "Defines gutter size. Default gutter size is 16px for @xs and @sm and 32px for @md and @lg. Possible values: {  ‘none’  |  ‘xxs’  }. Also accepts responsive values @breakpoint:  none@md’."
               },
               {
                 "name": "vertical",
                 "type": "string",
-                "default": "n/a",
-                "description": "Changes row to a column layout. See CSS Flexbox flex-direction. Possible values: {  ‘vertical’  }. Also accepts responsive values @breakpoint:  vertical@md’"
+                "default": "N/A",
+                "description": "Changes row to a column layout. See CSS Flexbox flex-direction. Possible values: {  ‘vertical’  }. Also accepts responsive values @breakpoint:  vertical@md’."
               },
               {
                 "name": "wrap",
                 "type": "string",
-                "default": "n/a",
-                "description": "Enables row wrapping. Change only if overriding `nowrap`. See CSS Flexbox flex-wrap"
+                "default": "N/A",
+                "description": "Enables row wrapping. Change only if overriding `nowrap`. See CSS Flexbox flex-wrap."
               },
               {
                 "name": "nowrap",
                 "type": "string",
-                "default": "n/a",
-                "description": "Disables row wrapping and enables overflow scrolling. See CSS Flexbox flex-wrap. Possible values: {  ‘nowrap’  }. Also accepts responsive values with @breakpoint: ‘nowrap@md’"
+                "default": "N/A",
+                "description": "Disables row wrapping and enables overflow scrolling. See CSS Flexbox flex-wrap. Possible values: {  ‘nowrap’  }. Also accepts responsive values with @breakpoint: ‘nowrap@md’."
               },
               {
                 "name": "type",
@@ -107,7 +107,7 @@
             "slots": [
               {
                 "name": "default",
-                "description": "Sets the innerHTML for cdr-row content. This includes text and html markup"
+                "description": "Sets the innerHTML for CdrRow content. This includes text and html markup."
               }
             ]
           },
@@ -119,38 +119,38 @@
               {
                 "name": "span",
                 "type": "string",
-                "default": "n/a",
-                "description": "Number of columns (out of 12) the column will span. Functions like bootstrap col-* classes. Overrides widths set by ‘cols’ prop on CdrRow. Possible values: {  ‘1’  through   ‘12’  }. Also accepts responsive values with @breakpoint: ‘12 8@lg’"
+                "default": "N/A",
+                "description": "Number of columns (out of 12) the column will span. Functions like bootstrap col-* classes. Overrides widths set by ‘cols’ prop on CdrRow. Possible values: {  ‘1’  through   ‘12’  }. Also accepts responsive values with @breakpoint: ‘12 8@lg’."
               },
               {
                 "name": "offsetLeft",
                 "type": "string",
-                "default": "n/a",
-                "description": "Adds up to 12 columns of empty space to left of an individual column. Possible values: {  ‘1’  through  ‘12’  }. Also accepts responsive values with @breakpoint: ‘12 8@lg’"
+                "default": "N/A",
+                "description": "Adds up to 12 columns of empty space to left of an individual column. Possible values: {  ‘1’  through  ‘12’  }. Also accepts responsive values with @breakpoint: ‘12 8@lg’."
               },
               {
                 "name": "offsetRight",
                 "type": "string",
-                "default": "n/a",
-                "description": "Adds up to 12 columns of empty space to right of an individual column. Possible values: {  ‘1’  through  ‘12’  }. Also accepts responsive values with @breakpoint: ‘12 8@lg’"
+                "default": "N/A",
+                "description": "Adds up to 12 columns of empty space to right of an individual column. Possible values: {  ‘1’  through  ‘12’  }. Also accepts responsive values with @breakpoint: ‘12 8@lg’."
               },
               {
                 "name": "alignSelf",
                 "type": "string",
-                "default": "n/a",
-                "description": "Aligns individual column by overriding CdrRow alignment. See CSS Flexbox align-self. Possible values: {  ‘top’  |  ‘middle’  |  ‘bottom’  |  ‘stretch’  }. Also accepts responsive values with @breakpoint: ‘middle@sm’"
+                "default": "N/A",
+                "description": "Aligns individual column by overriding CdrRow alignment. See CSS Flexbox align-self. Possible values: {  ‘top’  |  ‘middle’  |  ‘bottom’  |  ‘stretch’  }. Also accepts responsive values with @breakpoint: ‘middle@sm’."
               },
               {
                 "name": "isRow",
                 "type": "boolean",
                 "default": "false",
-                "description": "Makes the column act as a CdrRow. Setting this value to true will expose all props of CdrRow in addition to CdrCol props"
+                "description": "Makes the column act as a CdrRow. Setting this value to true will expose all props of CdrRow in addition to CdrCol props."
               }
             ],
             "slots": [
               {
                 "name": "default",
-                "description": "Sets the innerHTML for cdr-col content. This includes text and html markup"
+                "description": "Sets the innerHTML for CdrCol content. This includes text and html markup."
               }
             ]
           }
@@ -883,7 +883,7 @@ Overrides row-level alignment for a column. This can be applied to an individual
 
 ## Nested Grids
 
-Defines nested columns (also known as isRow). 
+Defines nested columns (also known as `isRow`). 
 
 ### Simple
 
@@ -1030,7 +1030,7 @@ This component has compliance with following WCAG guidelines:
 
 ### Don’t use when
 
-- Presenting a multi-row columnar data display, such as features or specs of a product. Instead, use Data Tables
+- Presenting a multi-row columnar data display, such as features or specs of a product. Instead, use [Data Tables](../data-tables/)
 
 ## Foundations
 
@@ -1053,25 +1053,25 @@ Columns, gutters, and margins scales as a fluid system as the device and viewpor
 <table>
   <tbody>
     <tr>
-      <td>XS - Extra Small</td>
+      <td>XS (Extra Small)</td>
       <td>< 768px</td>
       <td>16px</td>
       <td>16px</td>
     </tr>
     <tr>
-      <td>S - Small</td>
+      <td>SM (Small)</td>
       <td>≥ 768px</td>
       <td>16px</td>
       <td>16px</td>
     </tr>
     <tr>
-      <td>M - Medium</td>
+      <td>MD (Medium)</td>
       <td>≥ 992px</td>
       <td>32px</td>
       <td>32px</td>
     </tr>
     <tr>
-      <td>L - Large</td>
+      <td>LG (Large)</td>
       <td>≥ 1232px</td>
       <td>32px</td>
       <td>32px</td>
@@ -1092,22 +1092,22 @@ Columns, gutters, and margins scales as a fluid system as the device and viewpor
 <table>
   <tbody>
     <tr>
-      <td>XS - Extra Small</td>
+      <td>XS (Extra Small)</td>
       <td>< 768px</td>
       <td>16px gutters (8px on left + 8px on right)</td>
     </tr>
     <tr>
-      <td>S - Small</td>
+      <td>SM (Small)</td>
       <td>≥ 768px</td>
       <td>16px gutters (8px on left + 8px on right)</td>
     </tr>
     <tr>
-      <td>M - Medium</td>
+      <td>MD (Medium)</td>
       <td>≥ 992px</td>
       <td>32px gutters (16px on left +16px on right)</td>
     </tr>
     <tr>
-      <td>L - Large</td>
+      <td>LG (Large)</td>
       <td>≥ 1232px</td>
       <td>32px gutters (16px on left +16px on right)</td>
     </tr>
@@ -1139,9 +1139,9 @@ To build an effective responsive grid:
 - Design mobile first:
     - Use the XS (≤ 768px) viewport width applicable to small devices like a phone
     - Start with a one column layout and add columns as needed
-- Apply responsive rules to the grid and its contained content at relevant breakpoints including S (≥ 768px) and M (≥ 998px)
-- Complete and optimize the layout for the widest L (≥ 1232px) viewport width
-- Inspect responsive displays “in between” each breakpoint for how content responds across the fluid spectrum
+- Apply responsive rules to the grid and its contained content at relevant breakpoints including SM (≥ 768px) and MD (≥ 998px)
+- Complete and optimize the layout for the widest LG (≥ 1232px) viewport width
+- Inspect responsive displays in between each breakpoint for how content responds across the fluid spectrum
 
 </cdr-doc-table-of-contents-shell>
 </template>
@@ -1184,7 +1184,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the CdrGrid package using `npm` in your terminal:
+Install the **CdrGrid** package using `npm` in your terminal:
 
 _Terminal_
 
@@ -1231,11 +1231,11 @@ export default {
 
 ## Usage
 
-CdrRow functions as a flexbox container, and CdrCol functions as a flexbox item.
+**CdrRow** functions as a flexbox container, and **CdrCol** functions as a flexbox item.
 
-- Always use CdrRow and CdrCol together:
+- Always use **CdrRow** and **CdrCol** together:
     - Attempting to use either without the other will not work
-    - Never include other elements as immediate children of CdrRow besides CdrCol 
+    - Never include other elements as immediate children of **CdrRow** besides **CdrCol**
 - The grid system is mobile-first, flexbox based, and 12 columns wide. Many props mirror the flexbox API and work as you’d expect CSS flexbox to work.
 
 <br/>
@@ -1281,6 +1281,10 @@ Nested grids are made by nesting `cdr-col` and adding the `is-row` prop to the `
 </template>
 
 <template slot="History">
+
+## 1.0.2
+
+- Add missing style property to package.json
 
 ## 1.0.0
 

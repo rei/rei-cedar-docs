@@ -48,6 +48,7 @@ module.exports = {
             text: "Experience Principles",
             link: "/foundation/experience-principles/"
           },
+          { text: "Accessibility", link: "/foundation/accessibility/" },
           { text: "Color", link: "/foundation/color/" },
           { text: "Iconography", link: "/foundation/iconography/" },
           { text: "Motion", link: "/foundation/motion/" },
@@ -65,16 +66,19 @@ module.exports = {
           { text: "Call to Action", link: "/components/cta/" },
           { text: "Caption", link: "/components/caption/" },
           { text: "Checkboxes", link: "/components/checkboxes/" },
+          { text: "Data Tables", link: "/components/data-tables/"},
           { text: "Grid", link: "/components/grid/" },
           { text: "Headings", link: "/components/headings/" },
           { text: "Icons", link: "/components/icon/" },
           { text: "Images", link: "/components/image/" },
+          { text: "Inputs", link: "/components/input/" },
           { text: "Links", link: "/components/links/" },
           { text: "Lists", link: "/components/lists/" },
           { text: "Paragraphs", link: "/components/paragraphs/" },
           { text: "Pull Quote", link: "/components/pull-quote/" },
-          { text: "Radio Buttons", link: "/components/radio/" }
-          /* { text: "Tabs", link: "/components/tabs/" } */
+          { text: "Radio Buttons", link: "/components/radio/" },
+          { text: "Ratings", link: "/components/rating/" },
+          { text: "Tabs", link: "/components/tabs/" }
         ]
       },
       {

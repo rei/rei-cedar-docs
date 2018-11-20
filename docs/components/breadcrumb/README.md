@@ -79,25 +79,25 @@
                 "name": "items",
                 "type": "array",
                 "default": "N/A",
-                "description": "Sets the array of a breadcrumb object containing a 'url' and 'name' property"
+                "description": "Sets the array of a breadcrumb object containing a 'url' and 'name' property."
               },
               {
                 "name": "truncationEnabled",
                 "type": "boolean",
                 "default": "true",
-                "description": "Controls the ability to truncate the entire breadcrumb path. If this value is false, truncation will no longer occur"
+                "description": "Controls the ability to truncate the entire breadcrumb path. If this value is false, truncation will no longer occur."
               },
               {
                 "name": "truncationThreshold",
                 "type": "number",
                 "default": 0.80,
-                "description": "Sets the ratio between breadcrumb path width and container width when truncation will occur"
+                "description": "Sets the ratio between breadcrumb path width and container width when truncation will occur."
               },
               {
                 "name": "truncationXSThreshold",
                 "type": "number",
                 "default": 1,
-                "description": "Sets the ratio between breadcrumb path width and container width when truncation will occur at the XS breakpoint"
+                "description": "Sets the ratio between breadcrumb path width and container width when truncation will occur at the XS breakpoint."
               }
             ],
             "installation": [
@@ -280,7 +280,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the CdrBreadcrumb package using `npm` in your terminal:
+Install the **CdrBreadcrumb** package using `npm` in your terminal:
 
 _Terminal_
 
@@ -409,6 +409,9 @@ The below image and example code shows using ```truncationXSThreshold``` to set 
 </template>
 
 <template slot="History">
+
+## 1.0.1
+- Update CdrAssets dependency
 
 ## 1.0.0
 

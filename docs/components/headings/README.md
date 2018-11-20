@@ -44,7 +44,7 @@
                 "name": "tag",
                 "type": "string",
                 "default": "'p'",
-                "description": "Sets valid HTML element tag"
+                "description": "Sets valid HTML element tag."
               },
               {
                 "name": "modifier",
@@ -56,7 +56,7 @@
             "slots": [
               {
                 "name": "default",
-                "description": "Set the innerHTML for cdr-text. This includes text and html markup."
+                "description": "Set the innerHTML for CdrText content. This includes text and html markup."
               }
             ]
           }
@@ -298,7 +298,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the CdrText package using `npm` in your terminal:
+Install the **CdrText** package using `npm` in your terminal:
 
 _Terminal_
 
@@ -342,7 +342,7 @@ export default {
 
 ## Usage
 
-The CdrText component allows for styling any html element with available text styles. Visual style and semantic meaning are managed independently by providing: 
+The **CdrText** component allows for styling any html element with available text styles. Visual style and semantic meaning are managed independently by providing: 
 
 - Element to the `tag` prop 
 - Style to the `modifier` prop
@@ -368,7 +368,7 @@ This will result in the following HTML:
   </cdr-text>
 ```
 
-CdrText modifiers can be nested within semantic headings. The below modifier for subheading is nested in the `<h2>` tag.
+**CdrText** modifiers can be nested within semantic headings. The below modifier for subheading is nested in the `<h2>` tag.
 
 ```vue
   <cdr-text
@@ -433,7 +433,7 @@ In fixed sections of the page (e.g. sidebars), heading levels **should not** cha
 ## 1.0.0
 
 - Enables the visual style of many heading levels and subheading to be applied flexibly to HTML headings (`<h1>` to `<h6>`) and other HTML elements
-- Enables responsive heading font sizes that are applied by default and disable as an alternative with following modifiers:
+- Enables responsive heading font sizes that are applied by default with following modifiers:
   - Display
   - Heading-large
   - Heading-medium

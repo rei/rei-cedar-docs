@@ -219,6 +219,15 @@
       width: 100%;
       margin-top: 15px; // prevents full-width components from displaying on top of light/dark toggle
     }
+
+    /* This is to overrule broad table styles needed for Markdown */
+    table {
+      width: auto;
+
+      tr {
+        background-color: transparent;
+      }
+    }
   }
 
   .cdr-doc-example-code-pair__item {

@@ -106,13 +106,13 @@
                 "name": "fullWidth",
                 "type": "boolean",
                 "default": "false",
-                "description": "Sets Call to Action width to 100%. Setting this value to true will set the width to 100% of the parent container"
+                "description": "Sets Call to Action width to 100%. Setting this value to true will set the width to 100% of the parent container."
               },
               {
                 "name": "href",
                 "type": "string",
                 "default": "\"#\"",
-                "description": "Sets the link using the page url"
+                "description": "Sets the link using the page url."
               },
               {
                 "name": "modifier",
@@ -124,7 +124,7 @@
             "slots": [
               {
                 "name": "default",
-                "description": "Sets the innerHTML for cdr-cta. This is the readable text of the button"
+                "description": "Sets the innerHTML for CdrCta. This is the readable text of the button."
               }
             ],
           }
@@ -353,7 +353,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the CdrCta package using `npm` in your terminal:
+Install the **CdrCta** package using `npm` in your terminal:
 
 _Terminal_
 
@@ -412,7 +412,7 @@ This example code renders a full width `cdr-cta`, with the `elevated` modifier a
 </template>
 ```
 
-The CdrCta component looks like a button, however it's actually an anchor:
+The **CdrCta** component looks like a button, however it's actually an anchor:
 - Do not use when a button is preferable such as triggering an action
 - Do not assign the role of button
 - For basic links, use the [CdrLink component](../links/)
@@ -429,6 +429,15 @@ The following variants are available to the `cdr-cta` modifier attribute:
 </template>
 
 <template slot="History">
+
+## 1.0.3
+- Fix css import for SSR
+
+## 1.0.2
+- Update CdrIcon dependency
+
+## 1.0.1
+- Update CdrAssets dependency
 
 ## 1.0.0
 

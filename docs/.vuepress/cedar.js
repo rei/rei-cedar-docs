@@ -79,10 +79,10 @@ import "@rei/cdr-radio/dist/cdr-radio.css";
 Vue.component("CdrRadio", CdrRadio);
 FullVue.component("CdrRadio", CdrRadio);
 
-import { CdrTable } from "@rei/cdr-table";
-import "@rei/cdr-table/dist/cdr-table.css";
-Vue.component("CdrTable", CdrTable);
-FullVue.component("CdrTable", CdrTable);
+import { CdrDataTable } from "@rei/cdr-data-table";
+import "@rei/cdr-data-table/dist/cdr-data-table.css";
+Vue.component("CdrDataTable", CdrDataTable);
+FullVue.component("CdrDataTable", CdrDataTable);
 
 import { CdrTabs, CdrTabPanel } from "@rei/cdr-tabs";
 import "@rei/cdr-tabs/dist/cdr-tabs.css";
@@ -100,3 +100,13 @@ import { CdrQuote } from "@rei/cdr-quote";
 import "@rei/cdr-quote/dist/cdr-quote.css";
 Vue.component("CdrQuote", CdrQuote);
 FullVue.component("CdrQuote", CdrQuote);
+
+import { CdrRating } from "@rei/cdr-rating";
+import "@rei/cdr-rating/dist/cdr-rating.css";
+Vue.component("CdrRating", CdrRating);
+FullVue.component("CdrRating", CdrRating);
+
+import { CdrInput } from "@rei/cdr-input";
+import "@rei/cdr-input/dist/cdr-input.css";
+Vue.component("CdrInput", CdrInput);
+FullVue.component("CdrInput", CdrInput);

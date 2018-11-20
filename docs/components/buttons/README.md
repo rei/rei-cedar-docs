@@ -100,7 +100,7 @@
             "name": "tag",
             "type": "string",
             "default": "'button'",
-            "description": "Renders CdrButton as a <button> or <a> element. When using the value of <a>, this element renders as an achor link. Possible values: { 'button' | 'a' }"
+            "description": "Renders CdrButton as a <button> or <a> element. When using the value of <a>, this element renders as an anchor link. Possible values: { 'button' | 'a' }"
           },
           {
             "name": "type",
@@ -112,53 +112,53 @@
             "name": "onClick",
             "type": "function",
             "default": "return null",
-            "description": "Adds custom click actions"
+            "description": "Adds custom click actions."
           },
           {
             "name": "fullWidth",
             "type": "boolean",
             "default": "false",
-            "description": "Sets button width to 100%. Setting this value to true will set the button width to 100% of the parent container. Use the full-width prop with the size prop to control top and bottom padding"
+            "description": "Sets button width to 100%. Setting this value to true will set the button width to 100% of the parent container. Use the 'fullWidth' prop with the 'size' prop to control top and bottom padding."
           },
           {
             "name": "size",
             "type": "string",
-            "default": "medium",
+            "default": "'medium'",
             "description": "Sets the button size. Possible values: { 'small' | 'medium' | 'large' }"
           },
           {
             "name": "responsiveSize",
             "type": "array",
-            "default": "n/a",
-            "description": "Sets the button size at different responsive breakpoints. Breakpoints are expressed as t-shirt sizing with values: xs, sm, md, and lg. Examples: { ‘large@xs’ | ‘small@lg’ }"
+            "default": "N/A",
+            "description": "Sets the button size at different responsive breakpoints. Breakpoints values are: xs, sm, md, and lg. Examples: { ‘large@xs’ | ‘small@lg’ }"
           },
           {
             "name": "iconOnly",
             "type": "boolean",
             "default": "false",
-            "description": "Renders an icon-only button. When this value is true, it will override the size and responsiveSize props"
+            "description": "Renders an 'icon-only' button. When this value is true, it will override the size and 'responsiveSize' props."
           },
           {
             "name": "onDark",
             "type": "boolean",
             "default": "false",
-            "description": "Renders an icon-only button with a light fill color for use on dark backgrounds. The 'iconOnly' prop must be true."
+            "description": "Renders an 'icon-only' button with a light fill color for use on dark backgrounds. The 'iconOnly' prop must be true."
           },
           {
             "name": "modifier",
             "type": "string",
-            "default": "n/a",
+            "default": "N/A",
             "description": "Modifies the style variant for this component. Possible values: { 'secondary' }"
           }                          
         ],
         "slots": [
           {
             "name": "default",
-            "description": "Sets the innerHTML for cdr-button. This is the readable text of the button. Leave empty if icon-only"
+            "description": "Sets the innerHTML for CdrButton'. This is the readable text of the button. Leave empty if icon-only."
           },
           {
             "name": "icon",
-            "description": "Sets the innerHTML for cdr-button. This is for the icon"
+            "description": "Sets the innerHTML for CdrButton. This is for the icon."
           }
         ],
         "installation": [
@@ -313,9 +313,9 @@ To ensure that usage of this component complies with accessibility guidelines:
 This component has no specific WCAG compliance attributes built into the control. It is possibile to define this component as a link or button:
 
 - Select the semantically correct element, which will ensure that assistive technologies have correct instructions for how to interact with the component
-- Use the CdrLink component to make a button that looks like a link
+- Use the **CdrLink** component to make a button that looks like a link
 - Do not use `div` or `input` elements
-- Do not add `role="button"` to the CdrButton component
+- Do not add `role="button"` to the **CdrButton** component
 
 </cdr-doc-table-of-contents-shell>
 </template>
@@ -338,10 +338,10 @@ This component has no specific WCAG compliance attributes built into the control
 
 ## Foundations
 
-Change the button size when:
-  - Medium - default size
-  - Small - for supplemental user actions such as product comparison or filter on product pages
-  - Large - XS grid with full breakpoint width; in mobile version. Also, for &quot;Add to cart&quot; on product pages or [Call to Action](../cta/) on campaign pages
+Buttons sizes are used:
+  - **Small:** Supplemental user actions such as product comparison or filter on product pages
+  - **Medium:** Default size
+  - **Large:** Mobile version for XS grid with full breakpoint width. Also, for &quot;Add to cart&quot; on product pages or [Call to Action](../cta/) on campaign pages
 
 <br />
 
@@ -360,6 +360,8 @@ When arranging buttons horizontally:
   <cdr-img class="cdr-doc-article-img" :src="$withBase(`/buttons/Spec__Button_Horizontal_Spacing_16-9.png`)"/>
 
 <br />
+
+### Do / Don't
 
 When grouping buttons, match button sizes either horizontally or vertically
 
@@ -398,8 +400,8 @@ When making decisions about using this component styled as a link or a button, c
 | **Links**                                                                                           | **Buttons**                                                                          |
 | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | Answers the question, "Where can I go"                                                              | Answers the question, "What can I do"                                                |
-| Search engine crawlers can follow anchors for links (**&lt;a&gt;**)                                 | Search engine crawlers **cannot** follow links that are submitted by input or button |
-| Default keyboard behavior is triggered using the **enter** key                                      | Default keyboard behavior is triggered using the **space** or **enter** key          |
+| Search engine crawlers can follow anchors for links (`<a>`)                                 | Search engine crawlers **cannot** follow links that are submitted by input or button |
+| Default keyboard behavior is triggered using the **Enter** key                                      | Default keyboard behavior is triggered using the **Space** or **Enter** key          |
 | **Cannot be disabled** like buttons but can be made inert with tabindex="-1" and aria-hidden="true" | Can be disabled with disabled attribute                                              |
 
 <br />
@@ -447,7 +449,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the CdrButton package using `npm` in your terminal:
+Install the **CdrButton** package using `npm` in your terminal:
 
 _Terminal_
 
@@ -461,7 +463,7 @@ _main.js_
 
 ```javascript
 // import your required CSS.
-import "@rei/cdr-link/dist/cdr-button.css";
+import "@rei/cdr-button/dist/cdr-button.css";
 ```
 
 ### 3. Add component to a template
@@ -543,13 +545,13 @@ export default {
 
 ## Composing with icons
 
-CdrButton component can be used with the icon component from the CdrIcon package.
+**CdrButton** component can be used with the icon component from the **CdrIcon** package.
 
 ### Text and Icon
 
 To scale Cedar icons appropriately, include the `cdr-button__icon` class with any icon component. The `size` prop scales both the icon and button.
 
-In the below example, a _Download_ button is rendered as a button with icon and text using `cdr-icon` and the icon sprite.
+In the below example, a "Download" button is rendered as a button with icon and text using `cdr-icon` and the icon sprite.
 
 ```vue
 <template>
@@ -565,7 +567,7 @@ In the below example, a _Download_ button is rendered as a button with icon and 
 
 <script>
 import { CdrButton } from '@rei/cdr-button';
-import { CdrIcon } from '@rei/cdr-icon;
+import { CdrIcon } from '@rei/cdr-icon';
 export default {
   ...
   components: {
@@ -605,7 +607,7 @@ Use the following props to modify `cdr-button`:
 
 ### CdrCloseButton & CdrPlayButton
 
-The CdrButton package includes two specific icon-only variants. CdrCloseButton and CdrPlayButton include their respective icons and `aria-label` text for accessibility.
+The **CdrButton** package includes two specific icon-only variants. **CdrCloseButton** and **CdrPlayButton** include their respective icons and `aria-label` text for accessibility.
 
 ```vue
 <template>
@@ -629,13 +631,23 @@ export default {
 
 <template slot="History">
 
+## 1.0.3
+- Fix css import for SSR
+
+## 1.0.2
+- Fix CSS outline bug
+
+## 1.0.1
+- Update CdrIcon dependency to peer/dev
+- Add CdrIcon CSS import
+
 ## 1.0.0
 
 - Renders using an anchor or button element
 - Includes secondary button style
 - Supports small, medium, large, responsive, and full-width sizes
 - Works with `cdr-icon` for icons in buttons and icon-only buttons
-- CdrButton package includes `cdr-close-button` and `cdr-play-button` components
+- **CdrButton** package includes `cdr-close-button` and `cdr-play-button` components
 - Git commit reference [(1531860)](https://github.com/rei/rei-cedar/pull/436/commits/15318606570811a6d53549a5335e0943a3463971)
 
 </template>

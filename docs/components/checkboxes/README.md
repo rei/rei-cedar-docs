@@ -111,20 +111,20 @@
                     {
                         "name": "labelClass",
                         "type": "string",
-                        "default": "n/a",
-                        "description": "Add CSS class to the label for custom styles."
+                        "default": "N/A",
+                        "description": "Adds CSS class to the label for custom styles."
                     },
                     {
                         "name": "inputClass",
                         "type": "string",
-                        "default": "n/a",
-                        "description": "Add CSS class to the input for custom styles."
+                        "default": "N/A",
+                        "description": "Adds CSS class to the input for custom styles."
                     },
                     {
                         "name": "contentClass",
                         "type": "string",
-                        "default": "n/a",
-                        "description": "Add CSS class to the slot wrapper for custom styles."
+                        "default": "N/A",
+                        "description": "Adds CSS class to the slot wrapper for custom styles."
                     },
                     {
                         "name": "indeterminate",
@@ -160,14 +160,14 @@
                 "slots": [
                     {
                         "name": "default",
-                        "description": "Sets the innerHTML for cdr-checkbox. This is the readable text for the <label> element"
+                        "description": "Sets the innerHTML for CdrCheckbox. This is the readable text for the <label> element."
                     }
                 ],
                 "events": [
                     {
                         "name": "change",
                         "arguments": "newValue, event",
-                        "description": "$emit event fired on check/uncheck"
+                        "description": "$emit event fired on check/uncheck."
                     }
                 ],
                 "installation": [
@@ -272,7 +272,7 @@ Custom styles for checkboxes.
 
 To ensure that usage of this component complies with accessibility guidelines:
 - Each checkbox must be focusable and keyboard accessible:
-  - When the checkbox has focus, the **space** key changes the selection
+  - When the checkbox has focus, the **Space** key changes the selection
   - **Tab** key moves to next element in list 
 - Fieldsets (or grouped checkboxes) should be: 
   - Used when associating group of checkboxes
@@ -394,7 +394,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the CdrCheckbox package using `npm` in your terminal:
+Install the **CdrCheckbox** package using `npm` in your terminal:
 
 _Terminal_
 
@@ -412,8 +412,6 @@ import "@rei/cdr-link/dist/cdr-checkbox.css";
 ```
 
 ### 3. Add component to a template
-
-In this example we’ll create a medium-sized primary button, which is the default.
 
 _local.vue_
 
@@ -439,7 +437,7 @@ export default {
 
 ## Usage
 
-`CdrCheckbox` requires  `v-model`  to track  `:checked`  values.
+The **CdrCheckbox** component requires  `v-model`  to track  `:checked`  values.
 
 This example uses  `true-value`  and  `false-value`  props to change what’s saved to the model.
 
@@ -499,7 +497,7 @@ Default checkbox to checked/unchecked state by setting the model in Javascript.
 </script>
 ```
 
-Set the indeterminate prop to true to generate an indeterminate checkbox, which looks different than the default. This is a visual styling only; it does not include any of the functional aspects of an indeterminate checkbox.
+Set the `indeterminate` prop to `true` to generate an indeterminate checkbox, which looks different than the default. This is a visual styling only; it does not include any of the functional aspects of an indeterminate checkbox.
 
 ```vue
 <template>

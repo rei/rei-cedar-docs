@@ -2,7 +2,7 @@
 {
    "title": "Paragraphs",
    "layout": "LayoutComponent",
-   "summary": "The HTML <p> element contains text elements such as paragraphs, headings, and lists to establish vertical spacing and optimize the reading experience",
+   "summary": "Text container used for any text element such as paragraphs, headings, and lists. Establishes vertical spacing and optimizes the reading experience",
    "title_metadata": "CdrText",
    "see_also": [
       {
@@ -11,6 +11,14 @@
       {
         "text": 'Typography',
         "href": '../../foundation/typography/'
+      },
+      {
+        "text": 'Caption',
+        "href": '../caption/'
+      },
+      {
+        "text": 'Block Quote',
+        "href": '../block-quote/'
       },
       {
         "text": 'Headings',
@@ -60,7 +68,7 @@
                 "name": "tag",
                 "type": "string",
                 "default": "'p'",
-                "description": "Sets valid HTML element tag"
+                "description": "Sets valid HTML element tag."
               },
               {
                 "name": "modifier",
@@ -72,7 +80,7 @@
             "slots": [
               {
                 "name": "default",
-                "description": "Sets the innerHTML for cdr-text. This includes text and html markup"
+                "description": "Sets the innerHTML for CdrText. This includes text and html markup."
               }
             ]
           }
@@ -176,7 +184,7 @@ Sentinel carries a stronger brand impression with other brand material, and is p
   - Follow [REI Copy Guidelines](http://pcempub.rei.com/content/asset-guides/en_us/site/brand-assets-guides/copy/master-brand-copy-guides.html) for dates, time, dimensions, measurements, electrical units, and geographic reference
   - Expand abbreviations by explaining the definition the first time it is used
   - Use the `<abbr>` element, or link to a definition or glossary
-- Readability level on Flesch-Kincaid Grade Level should be roughly 9 years of primary education. For more information, view [Test your document’s readability](https://support.office.com/en-us/article/Test-your-document-s-readability-85b4969e-e80a-4777-8dd3-f7fc3c8b3fd2) on Microsoft’s website
+- For ease of reading, readability level should be about Grade 7. To test the body text, use the [Hemingway Editor](http://www.hemingwayapp.com/). For more information, view the [Help information](http://www.hemingwayapp.com/help.html)
 - When possible, write the first sentence as an introduction to the paragraph. With screen readers, users can jump from paragraph to paragraph, listening to the first sentence or two before moving on to the next paragraph
 
 ## Behavior
@@ -221,7 +229,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM 
 
-Install the Cdr-Text package using `npm` in your terminal:
+Install the **CdrText** package using `npm` in your terminal:
 
 _Terminal_
 
@@ -265,14 +273,14 @@ export default {
 
 ## Usage
 
-The CdrText component allows for styling any html element with available text styles. Visual style and semantic meaning are managed independently by providing: 
+The **CdrText** component allows for styling any html element with available text styles. Visual style and semantic meaning are managed independently by providing: 
 
 * Element to the `tag` prop 
 * Style to the `modifier` prop
 
 <br />
 
-By default the cdrText component renders as a paragraph, this default paragraph is intended for most standard use cases.
+By default the **CdrText** component renders as a paragraph, this default paragraph is intended for most standard use cases.
 
 ```vue
   <cdr-text>
@@ -305,11 +313,11 @@ Define custom tags by applying a specific `cdr-text` style with modifiers to it.
 
 ## 1.0.0
 
-- Enables a consistent visual paragraph style applied to any html element using the tag property
+- Enables a consistent visual paragraph style applied to any HTML element using the `tag` property
 - By default, results in a generic `<p>` tag
-- Visual style is applied with the modifier property and supports:
-  - **Unmodified variant**:  Used as default font style. It may be used for paragraphs, lists, or any basic information
-  - **Body**: intended for long-form articles like Expert Advice pages or editorial content on PDP pages
+- Visual style is applied with the `modifier` property and supports:
+  - **Default**:  Used as default font style. It may be used for paragraphs, lists, or any basic information
+  - **Body**: Intended for long-form articles like Expert Advice pages or editorial content on PDP pages
 
 </template>
 </cdr-doc-tabs>

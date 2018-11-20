@@ -21,14 +21,14 @@
         {
             "type": "do",
             "image": "pull-quote/quotes_pull__do__9-16.png",
-            "ratio": "16-9",
+            "ratio": "9-16",
             "alt": "Image showing proper pull quote use.",
             "caption": "position the quote near the surrounding text."
         },
         {
             "type": "dont",
             "image": "pull-quote/quotes_pull__indent_text__dont_9-16.png",
-            "ratio": "16-9",
+            "ratio": "9-16",
             "alt": "Image showing improper pull quote use in an article",
             "caption": "use for indenting text content."
         }
@@ -37,14 +37,14 @@
         {
             "type": "do",
             "image": "pull-quote/quotes_pull__do__9-16.png",
-            "ratio": "16-9",
+            "ratio": "9-16",
             "alt": "Image showing proper pull quote use.",
             "caption": "relate the quote to the surrounding text."
         },
         {
             "type": "dont",
             "image": "pull-quote/quotes_pull__random__dont_9-16.png",
-            "ratio": "16-9",
+            "ratio": "9-16",
             "alt": "Image showing improper pull quote use in an article",
             "caption": "position quotes in a random location on the page."
         }
@@ -53,14 +53,14 @@
         {
             "type": "do",
             "image": "pull-quote/quotes_pull__do__9-16.png",
-            "ratio": "16-9",
+            "ratio": "9-16",
             "alt": "Image showing proper pull quote use.",
             "caption": "use for emphasizing content or additional content."
         },
         {
             "type": "dont",
             "image": "pull-quote/quotes_pull__too_many__dont_9-16.png",
-            "ratio": "16-9",
+            "ratio": "9-16",
             "alt": "Image showing too many pull quotes in an article",
             "caption": "use too many pull quotes."
         }
@@ -109,14 +109,14 @@
                         "type": "string",
                         "default": "",
                         "required": "false",
-                        "description": "Sets the pull quote body text"
+                        "description": "Sets the pull quote body text."
                     },
                     {
                         "name": "citation",
                         "type": "string",
                         "default": "",
                         "required": "false",
-                        "description": "Sets the pull quote attribution text"
+                        "description": "Sets the pull quote attribution text."
                     }
                 ],
                 "installation": [
@@ -235,12 +235,12 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the CdrQuote package using `npm` in your terminal:
+Install the **CdrQuote** package using `npm` in your terminal:
 
 _Terminal_
 
 ```bash
-import "@rei/cdr-quote/dist/cdr-quote.css";
+npm i @rei/cdr-quote
 ```
 
 ### 2. Import dependencies
@@ -249,7 +249,7 @@ _main.js_
 
 ```javascript
 // import your required CSS.
-import "@rei/cdr-link/dist/cdr-quote.css";
+import "@rei/cdr-quote/dist/cdr-quote.css";
 ```
 
 ### 3. Add component to a template

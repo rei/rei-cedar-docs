@@ -88,13 +88,13 @@
                 "name": "summary",
                 "type": "string",
                 "default": "N/A",
-                "description": "Sets the string content for the description body of the caption. Not required"
+                "description": "Sets the string content for the description body of the caption. Not required."
               },
               {
                 "name": "credit",
                 "type": "string",
                 "default": "N/A",
-                "description": "Sets the string content for attribution. Not required"
+                "description": "Sets the string content for attribution. Not required."
               }
             ]
           }
@@ -306,7 +306,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM 
 
-Install the CdrCaption package using `npm` in your terminal:
+Install the **CdrCaption** package using `npm` in your terminal:
 
 _Terminal_
 
@@ -349,7 +349,7 @@ export default {
 
 ## Usage
 
-The CdrCaption component is developed to work within a composition with other components; however composition-type components have not been developed yet.
+The **CdrCaption** component is developed to work within a composition with other components; however composition-type components have not been developed yet.
 
 <br />
 

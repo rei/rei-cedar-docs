@@ -71,51 +71,51 @@
               {
                 "name": "labelClass",
                 "type": "string",
-                "default": "n/a",
-                "description": "Adds CSS class to the label for custom styles"
+                "default": "N/A",
+                "description": "Adds CSS class to the label for custom styles."
               },
               {
                 "name": "inputClass",
                 "type": "string",
-                "default": "n/a",
-                "description": "Adds CSS class to the input for custom styles"
+                "default": "N/A",
+                "description": "Adds CSS class to the input for custom styles."
               },
               {
                 "name": "contentClass",
                 "type": "string",
-                "default": "n/a",
-                "description": "Adds CSS class to the slot wrapper for custom styles"
+                "default": "N/A",
+                "description": "Adds CSS class to the slot wrapper for custom styles."
               },
               {
                 "name": "name",
                 "type": "string",
-                "default": "n/a",
-                "description": "Sets the name of the radio button. Required"
+                "default": "N/A",
+                "description": "Sets the name of the radio button. Required."
               },
               {
                 "name": "value",
                 "type": "string, number, boolean, object, array, symbol, function",
-                "default": "n/a",
-                "description": "Sets the value of the radio button. Required"
+                "default": "N/A",
+                "description": "Sets the value of the radio button. Required."
               },
               {
                 "name": "modifier",
                 "type": "string",
-                "default": "n/a",
+                "default": "N/A",
                 "description": "Modifies the style variants for this component. Possible values: {  ‘compact’  |  'hide-figure'  }"
               }
             ],
             "slots": [
               {
                 "name": "default",
-                "description": "Sets the innerHTML for cdr-radio. This is the readable text for the <label> element"
+                "description": "Sets the innerHTML for CdrRadio. This is the readable text for the <label> element."
               }
             ],
             "events": [
               {
                 "name": "change",
                 "arguments": "value",
-                "description": "$emit event fired on radio selection"
+                "description": "$emit event fired on radio selection."
               }
             ]
           }
@@ -238,7 +238,7 @@ Custom styles for radio buttons.
 To ensure that usage of this component complies with accessibility guidelines:
 
 - Each radio button must be focusable and keyboard accessible:
-  - When radio button has focus, the **space** key changes the selection
+  - When radio button has focus, the **Space** key changes the selection
   - **Tab** key moves to next element in list 
 - Fieldsets should be: 
   - Used when associating group of radio buttons
@@ -336,7 +336,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the CdrRadio package using `npm` in your terminal:
+Install the **CdrRadio** package using `npm` in your terminal:
 
 _Terminal_
 
@@ -388,7 +388,7 @@ export default {
 
 ## Usage
 
-The CdrRadio component requires `v-model` to track the value of selected radios.
+The **CdrRadio** component requires `v-model` to track the value of selected radios.
 
 ### Modifiers
 

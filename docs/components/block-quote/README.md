@@ -21,14 +21,14 @@
         {
             "type": "do",
             "image": "block-quote/quotes_block__do__9-16.png",
-            "ratio": "16-9",
+            "ratio": "9-16",
             "alt": "Image showing proper block quote use.",
             "caption": "position the quote near the surrounding text."
         },
         {
             "type": "dont",
             "image": "block-quote/quotes_block__random__dont_9-16.png",
-            "ratio": "16-9",
+            "ratio": "9-16",
             "alt": "Image showing random block quotes in an article",
             "caption": "position quotes in a random location on the page."
         }
@@ -37,14 +37,14 @@
         {
             "type": "do",
             "image": "block-quote/quotes_block__do__9-16.png",
-            "ratio": "16-9",
+            "ratio": "9-16",
             "alt": "Image showing proper block quote use.",
             "caption": "use for emphasizing content or additional content."
         },
         {
             "type": "dont",
             "image": "block-quote/quotes_block__indent_text__dont_9-16.png",
-            "ratio": "16-9",
+            "ratio": "9-16",
             "alt": "Image showing random block quotes in an article",
             "caption": "use for indenting text content."
         }
@@ -53,14 +53,14 @@
         {
             "type": "do",
             "image": "block-quote/quotes_block__do__9-16.png",
-            "ratio": "16-9",
+            "ratio": "9-16",
             "alt": "Image showing proper block quote position.",
             "caption": "position quotes so users can visually scan the page."
         },
         {
             "type": "dont",
             "image": "block-quote/quotes_block__too_many__dont_9-16.png",
-            "ratio": "16-9",
+            "ratio": "9-16",
             "alt": "Image showing too many block quotes in an article",
             "caption": "use too many block quotes."
         }
@@ -104,21 +104,21 @@
                         "type": "string",
                         "default": "",
                         "required": "false",
-                        "description": "Sets the quote body text"
+                        "description": "Sets the quote body text."
                     },
                     {
                         "name": "cite",
                         "type": "string",
                         "default": "",
                         "required": "false",
-                        "description": "When the ‘tag’ prop is set to ‘blockquote’ provide a URL to the quote’s source. This does not render but is available to screen readers and search engines"
+                        "description": "When the ‘tag’ prop is set to ‘blockquote’ provide a URL to the quote’s source. This does not render but is available to screen readers and search engines."
                     },
                     {
                         "name": "citation",
                         "type": "string",
                         "default": "",
                         "required": "false",
-                        "description": "Sets the quote attribution text for crediting media such as photos or charts"
+                        "description": "Sets the quote attribution text."
                     }
                 ],
                 "installation": [
@@ -254,7 +254,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the CdrQuote package using `npm` in your terminal:
+Install the **CdrQuote** package using `npm` in your terminal:
 
 _Terminal_
 

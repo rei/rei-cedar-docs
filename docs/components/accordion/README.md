@@ -16,14 +16,14 @@
       "image": "accordion/accordion_nest_do_4-3.png",
       "ratio": "4-3",
       "alt": "Image showing proper accordion usage",
-      "caption": "present content in a single accordion"
+      "caption": "present content in a single accordion."
     },
     {
       "type": "dont",
       "image": "accordion/accordion_nest_dont_4-3.png",
       "ratio": "4-3",
       "alt": "Image showing nested accordions",
-      "caption": "nest accordions"
+      "caption": "nest accordions."
     }
   ],
   "titles": [
@@ -32,14 +32,14 @@
       "image": "accordion/accordion_title_do_4-3.png",
       "ratio": "4-3",
       "alt": "Image showing short and succinct accordion titles",
-      "caption": "keep titles short and succinct"
+      "caption": "keep titles short and concise."
     },
     {
       "type": "dont",
       "image": "accordion/accordion_title_dont_4-3.png",
       "ratio": "4-3",
       "alt": "Image showing a too long accordion title wrapped to many lines",
-      "caption": "create labels so lengthy that they wrap to a second line"
+      "caption": "create labels so lengthy that they wrap to a second line."
     }
   ],
   "versions": [
@@ -53,25 +53,25 @@
                 "name": "compact",
                 "type": "boolean",
                 "default": "false",
-                "description": "Sets the compact style of CdrAccordionItem child components"
+                "description": "Sets the compact style of CdrAccordionItem child components."
               },
               {
                 "name": "borderAligned",
                 "type": "boolean",
                 "default": "false",
-                "description": "Sets the border-aligned style of CdrAccordionItem child components"
+                "description": "Sets the border-aligned style of CdrAccordionItem child components."
               },
               {
                 "name": "showAll",
                 "type": "boolean",
                 "default": "false",
-                "description": "Sets all child CdrAccordionItem components to display open by default"
+                "description": "Sets all child CdrAccordionItem components to display open by default."
               }
             ],
             "slots": [
               {
                 "name": "default",
-                "description": "Slot for CdrAccordionItem(s)"
+                "description": "Sets the innerHTML for CdrAccordionItem(s)."
               }
             ],
           },
@@ -83,33 +83,33 @@
               {
                 "name": "id",
                 "type": "string",
-                "default": "n/a",
-                "description": "Requires unique ID for each component reference"
+                "default": "N/A",
+                "description": "Requires unique ID for each component reference."
               },
               {
                 "name": "label",
                 "type": "string",
-                "default": "n/a",
-                "description": "Sets the readable text on the CdrAccordionItem button or trigger. Required"
+                "default": "N/A",
+                "description": "Sets the readable text on the CdrAccordionItem button or trigger. Required."
               },
               {
                 "name": "show",
                 "type": "boolean",
                 "default": "false",
-                "description": "Sets a single CdrAccordionItem to display open by default. The showAll prop takes precedence, when true"
+                "description": "Sets a single CdrAccordionItem to display open by default. The 'showAll' prop takes precedence, when true."
               }
             ],
             "slots": [
               {
                 "name": "default",
-                "description": "Slot for CdrAccordionItem content"
+                "description": "Sets the innerHTML for CdrAccordionItem content."
               }
             ],
             "events": [
               {
                   "name": "accordion-item-toggle",
                   "arguments": "isOpen, event",
-                  "description": "$emit event fired on cdr-accordion-item toggle"
+                  "description": "$emit event fired on 'cdr-accordion-item' toggle."
               }
             ]
           }
@@ -323,7 +323,8 @@ This component has compliance with WCAG guidelines by:
 ## Responsiveness
 
 - Accordion style can change variant based on breakpoint. Example: _Default_ at MD/LG, _Compact_ and _Border-Aligned_ at XS/SM
-- Switching between tab component and accordion component is not supported in Cedar components library. Do not replace the accordion component with the tab component at different breakpoints
+- Switching between tab component and accordion component is not supported in Cedar components library
+- Do not replace the accordion component with the tab component at different breakpoints
 
 </cdr-doc-table-of-contents-shell>
 </template>
@@ -331,7 +332,7 @@ This component has compliance with WCAG guidelines by:
 <template slot="API">
 <cdr-doc-table-of-contents-shell>
 
-Accordions are built from two components, CdrAccordion and CdrAccordionItem, which are meant to be used together.
+Accordions are built from two components, **CdrAccordion** and **CdrAccordionItem**, which are meant to be used together.
 
 ## Props
 
@@ -371,7 +372,7 @@ To incorporate the required assets for a component, use the following steps:
 
 ### 1. Install using NPM
 
-Install the CdrAccordion package using `npm` in your terminal:
+Install the **CdrAccordion** package using `npm` in your terminal:
 
 _Terminal_
 
@@ -455,7 +456,7 @@ Set `show-all` to `true` on `cdr-accordion`, and each `cdr-accordion-item` will 
     ...
 ```
 
-The CdrAccordionItem component can also be controlled individually. If `show-all` is `false` at the CdrAccordion level, set `show` to `true` to display an individual accordion item in an open state. Note that CdrAccordion settings will take precedence over CdrAccordionItem settings.
+The **CdrAccordionItem** component can also be controlled individually. If `show-all` is `false` at the **CdrAccordion** level, set `show` to `true` to display an individual accordion item in an open state. Note that **CdrAccordion** settings will take precedence over **CdrAccordionItem** settings.
 
 ```vue
 <template>
@@ -469,7 +470,7 @@ The CdrAccordionItem component can also be controlled individually. If `show-all
     ...
 ```
 
-Any options set at the CdrAccordion level can be set on any parent component of CdrAccordion by using Vue's provide/inject functionality. This is useful, for instance, if CdrAccordionItem ever needs to be used as a part of another group component.
+Any options set at the **CdrAccordion** level can be set on any parent component of **CdrAccordion** by using Vue's provide/inject functionality. This is useful, for instance, if **CdrAccordionItem** ever needs to be used as a part of another group component.
 
 
 ```vue
@@ -502,9 +503,15 @@ Any options set at the CdrAccordion level can be set on any parent component of 
 
 <template slot="History">
 
+## 1.0.2
+- Fix css import for SSR
+
+## 1.0.1
+- CdrAssets dependency update
+
 ## 1.0.0
 
-- Includes CdrAccordion and CdrAccordionItem components
+- Includes **CdrAccordion** and **CdrAccordionItem** components
 - Toggles initial open state at group and individual level
 - Supports compact and border-aligned styles
 - Git commit reference ([cc998a4](https://github.com/rei/rei-cedar/commit/cc998a4f7a4a0278a86c35063ba6615196a46ba2))
