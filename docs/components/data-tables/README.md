@@ -182,7 +182,7 @@
                 "name": "caption",
                 "type": "string",
                 "default": "N/A",
-                "description": "Sets the caption text for the table"
+                "description": "Sets the caption text for the table."
               }                       
             ],
             "slots": [
@@ -403,6 +403,8 @@ Data Tables are responsive when there are more than 2 columns:
 - Whenever the number of columns overflows the container, content will scroll
 - If row headers are defined, then the first column of headers will lock in place
 
+<br/>
+
 For Data Tables with 2 columns:
 - Content will not scroll
 - Text within table cells will wrap to fit the smaller container (or viewport)
@@ -488,7 +490,7 @@ export default {
 
 ### Using Props
 
-The simplest way to use CdrDataTable is using the props API. The below example shows how:
+The simplest way to use **CdrDataTable** is using the props API. The below example shows how:
 - The data props (`colHeaders`, `rowHeaders`, `rowData`) are used
 - `keyOrder` determines values displayed in each cell. The array order must match the `colHeaders` or column order
 
@@ -538,7 +540,7 @@ The simplest way to use CdrDataTable is using the props API. The below example s
 
 ### Using Slots
 
-The same table can be rendered using the `v-for` Vue directive and CdrDataTable's named slots:
+The same table can be rendered using the `v-for` Vue directive and **CdrDataTable's** named slots:
 - Iterates over the data set by looping through items in an array or object
 - Generates appropriate markup for each named slot
 
@@ -595,7 +597,7 @@ In the below examples, the `colHeaders` prop is set to true because there are co
 
 The below example uses:
 - `compact` and `borderless` modifiers
-- CdrDataTable's named slots
+- **CdrDataTable's** named slots
 - Markup is manual, not data-driven
 
 ```vue
