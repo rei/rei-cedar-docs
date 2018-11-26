@@ -632,14 +632,14 @@ export default {
 <template slot="History">
 
 ## 1.0.3
-- Fix css import for SSR
+- Fix CSS import for SSR
 
 ## 1.0.2
 - Fix CSS outline bug
 
 ## 1.0.1
-- Update CdrIcon dependency to peer/dev
-- Add CdrIcon CSS import
+- Update **CdrIcon** dependency to peer/dev
+- Add **CdrIcon** CSS import
 
 ## 1.0.0
 
@@ -647,7 +647,7 @@ export default {
 - Includes secondary button style
 - Supports small, medium, large, responsive, and full-width sizes
 - Works with `cdr-icon` for icons in buttons and icon-only buttons
-- **CdrButton** package includes `cdr-close-button` and `cdr-play-button` components
+- **CdrButton** package includes **CdrCloseButton** and **CdrPlayButton** components
 - Git commit reference [(1531860)](https://github.com/rei/rei-cedar/pull/436/commits/15318606570811a6d53549a5335e0943a3463971)
 
 </template>
