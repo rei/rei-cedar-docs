@@ -504,10 +504,10 @@ Any options set at the **CdrAccordion** level can be set on any parent component
 <template slot="History">
 
 ## 1.0.2
-- Fix css import for SSR
+- Fix CSS import for SSR
 
 ## 1.0.1
-- CdrAssets dependency update
+- **CdrAssets** dependency update
 
 ## 1.0.0
 
