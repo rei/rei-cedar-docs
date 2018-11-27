@@ -158,13 +158,13 @@
                 "name": "colHeaders",
                 "type": "array/boolean",
                 "default": "false",
-                "description": "The colHeaders prop accepts an array of column header strings or a boolean value. Renders in the `thead’ slot. If the value is false, column heads are not displayed. For example, possible values are:  [ ‘Column Header 1’, ‘Column Header 2’, ... ]"
+                "description": "The ‘colHeaders’ prop accepts an array of column header strings or a boolean value. Renders in the `thead’ slot. If the value is false, column heads are not displayed. For example, possible values are:  [ ‘Column Header 1’, ‘Column Header 2’, ... ]"
               },
               {
                 "name": "rowHeaders",
                 "type": "array/boolean",
                 "default": "false",
-                "description": "The rowHeaders prop accepts an array of row header strings or a boolean value. Renders in the ‘tbody’ slot. If the value is false, row heads are not displayed.  For example, possible values are:  [ ‘Row Header 1’, ‘Row Header 2’, ... ]"
+                "description": "The ‘rowHeaders’ prop accepts an array of row header strings or a boolean value. Renders in the ‘tbody’ slot. If the value is false, row heads are not displayed.  For example, possible values are:  [ ‘Row Header 1’, ‘Row Header 2’, ... ]"
               },
               {
                 "name": "rowData",
@@ -188,11 +188,11 @@
             "slots": [
               {
                 "name": "thead",
-                "description": "Sets the innerHTML for the thead element. Includes default slot content."
+                "description": "Sets the innerHTML for the <thead> element. Includes default slot content."
               },
               {
                 "name": "tbody",
-                "description": "Sets the innerHTML for the tbody element. Includes default slot content."
+                "description": "Sets the innerHTML for the <tbody> element. Includes default slot content."
               }
             ],
             "installation": [

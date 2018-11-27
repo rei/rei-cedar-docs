@@ -9,14 +9,14 @@
       "type": "do",
       "image": "input/Input__Length_Do__16-9.png",
       "ratio": "16-9",
-      "alt": "input with width limited.",
+      "alt": "input with width limited",
       "caption": "limit the width of the input field."
     },
     {
       "type": "dont",
       "image": "input/Input__Length_Dont__16-9.png",
       "ratio": "16-9",
-      "alt": "input with too much width.",
+      "alt": "input with too much width",
       "caption": "make the input field wider than approximately ⅓ of the information being entered."
     }
   ],
@@ -25,7 +25,7 @@
       "type": "do",
       "image": "input/Input__Label_Do__16-9.png",
       "ratio": "16-9",
-      "alt": "input with proper label.",
+      "alt": "input with proper label",
       "caption": "use concise and meaningful labels."
     },
     {
@@ -49,7 +49,7 @@
       "image": "input/Input__Case_Dont__16-9.png",
       "ratio": "16-9",
       "alt": "label with all caps",
-      "caption": "use all caps for labels"
+      "caption": "use all caps for labels."
     }
   ],
   "punctuation": [
@@ -58,14 +58,14 @@
       "image": "input/Input__Punctuation_Do__16-9.png",
       "ratio": "16-9",
       "alt": "label without terminal punctuation",
-      "caption": "remove all terminal punctuation."
+      "caption": "remove unnecessary terminal punctuation such as semicolons, colons or periods."
     },
     {
       "type": "dont",
       "image": "input/Input__Punctuation_Dont__16-9.png",
       "ratio": "16-9",
       "alt": "label with colon after",
-      "caption": "use colons after labels"
+      "caption": "use colons after labels."
     }
   ],
   "placeholder": [
@@ -73,14 +73,14 @@
       "type": "do",
       "image": "input/Input__Placeholder_Do__16-9.png",
       "ratio": "16-9",
-      "alt": "proper placeholder text usage.",
+      "alt": "proper placeholder text usage",
       "caption": "use placeholder text when providing extra help, so user understands what to enter."
     },
     {
       "type": "dont",
       "image": "input/Input__Placeholder_Dont__16-9.png",
       "ratio": "16-9",
-      "alt": "placeholder text with too much information.",
+      "alt": "placeholder text with too much information",
       "caption": "use placeholder text as an alternative to a label."
     }
   ],
@@ -89,14 +89,14 @@
       "type": "do",
       "image": "input/Input__Required_Do__16-9.png",
       "ratio": "16-9",
-      "alt": "Image showing 'Required' label next to field label.",
+      "alt": "Image showing 'Required' label next to field label",
       "caption": "position the required label next to input field label."
     },
     {
       "type": "dont",
       "image": "input/Input__Required_Dont__16-9.png",
       "ratio": "16-9",
-      "alt": "Image showing asterisk to denote required label.",
+      "alt": "Image showing asterisk to denote required label",
       "caption": "use an asterisk for a required field."
     }
   ],
@@ -105,14 +105,14 @@
       "type": "do",
       "image": "input/Input__Sizes_Do__16-9.png",
       "ratio": "16-9",
-      "alt": "Image showing two equally sized input fields as a part of a form.",
+      "alt": "Image showing two equally sized input fields as a part of a form",
       "caption": "use consistent sizes for components on a single form."
     },
     {
       "type": "dont",
       "image": "input/Input__Sizes_Dont__16-9.png",
       "ratio": "16-9",
-      "alt": "Image showing missized input and button elements in a form.",
+      "alt": "Image showing missized input and button elements in a form",
       "caption": "mix sizes for components on a single form."
     }
   ],
@@ -145,19 +145,19 @@
                 "name": "hideLabel",
                 "type": "boolean",
                 "default": "false",
-                "description": "Hides the label element and sets the input ‘aria-label’ to the ‘label’ value for a11y compliance."
+                "description": "Hides the label element and sets the input ‘aria-label’ to the value of the ‘label’ prop for a11y compliance."
               },
               {
                 "name": "rows",
                 "type": "number",
                 "default": "null",
-                "description": "Sets the number of rows for the input field and converts input field to textarea if the rows value is greater than 1."
+                "description": "Sets the number of rows for the input field and converts input field to textarea if the value of the ‘rows’ prop is greater than 1."
               },
               {
                 "name": "disabled",
                 "type": "boolean",
                 "default": "false",
-                "description": "Sets disabled input field and label styling and restricts user input."
+                "description": "Sets the disabled state for the input field and label styling. Also, restricts user input."
               },
               {
                 "name": "required",
@@ -194,7 +194,7 @@
               {
                 "name": "change",
                 "arguments": "newValue, event",
-                "description": "Event is emitted on input losing focus(onBlur) if the value has changed"
+                "description": "Event is emitted on input losing focus(onBlur) if the value has changed."
               }
             ]
           }
@@ -437,7 +437,7 @@ This component has compliance with WCAG guidelines by:
 
 ### Don’t use when
 
-- Selecting from a specific set of options. Use Selects
+- Selecting from a specific set of options. Instead, use Selects
 
 ## Foundations
 
@@ -456,7 +456,7 @@ This component has compliance with WCAG guidelines by:
 - Use when long free-form text is the desired user input such as a comment on a review or feedback form
 - Overflow text wraps to a new line
 - Scroll bar appears on right border when cursor reaches the bottom of the field
-- This input field is defined by using the `rows` prop by defining the number of rows to present the user with a recommended length for a response
+- This input field is defined by setting the number of rows for a recommended response length 
 - Resizing handle allows user to change the height of the input area
 - Min and max limits are set by the product team for:
   - Max-height of textarea

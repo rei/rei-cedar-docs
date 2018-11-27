@@ -160,7 +160,7 @@ This component has compliance with following WebAIM’s accessibility guidelines
 
 ### Don’t use when
 
-- Displaying form inputs. Instead, use Inputs
+- Displaying form inputs. Instead, use [Inputs](../input/)
 - Displaying alert messages. Instead, use Alerts
 - Listing product features. Instead, use [Lists](../lists/)
 

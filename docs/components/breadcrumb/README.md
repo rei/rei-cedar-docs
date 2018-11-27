@@ -411,7 +411,7 @@ The below image and example code shows using ```truncationXSThreshold``` to set 
 <template slot="History">
 
 ## 1.0.1
-- Update CdrAssets dependency
+- Update **CdrAssets** dependency
 
 ## 1.0.0
 
