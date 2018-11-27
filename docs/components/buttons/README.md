@@ -124,13 +124,21 @@
             "name": "size",
             "type": "string",
             "default": "'medium'",
-            "description": "Sets the button size. Possible values: { 'small' | 'medium' | 'large' }"
+            "description": "Sets the button size. Possible values: { 'small' | 'medium' | 'large' }",
+            "context": {
+              "label": "Changed",
+              "description": "in v2.0.0. See updated Usage guidelines."
+            }
           },
           {
             "name": "responsiveSize",
             "type": "array",
             "default": "N/A",
-            "description": "Sets the button size at different responsive breakpoints. Breakpoints values are: xs, sm, md, and lg. Examples: { ‘large@xs’ | ‘small@lg’ }"
+            "description": "Sets the button size at different responsive breakpoints. Breakpoints values are: xs, sm, md, and lg. Examples: { ‘large@xs’ | ‘small@lg’ }",
+            "context": {
+              "label": "Deprecated",
+              "description": "in v2.0.0"
+            }
           },
           {
             "name": "iconOnly",

@@ -31,9 +31,14 @@
         <cdr-col
           span="12"
         >
-          <p aria-lable="prop description" class="prop-description">
-            {{ apiProp.description }}
-          </p>
+          <div class="prop-description-container">
+            <p v-if="apiProp.context" class="prop-description">
+              <span class="prop-context-badge">{{ apiProp.context.label }}</span> {{ apiProp.context.description }}
+            </p>
+            <p aria-lable="prop description" class="prop-description">
+              {{ apiProp.description }}
+            </p>
+          </div>
         </cdr-col>
       </cdr-row>
     </div>
@@ -88,6 +93,15 @@
 
     .prop-description {
       font-size: 14px;
+    }
+
+    .prop-context-badge {
+      display: inline-block;
+      font-weight: bold;
+      padding: 4px 6px;
+      background: red;
+      color: #fff;
+      border-radius: 4px;
     }
 
     & + & {
