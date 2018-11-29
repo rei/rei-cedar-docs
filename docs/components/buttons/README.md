@@ -124,7 +124,7 @@
             "name": "size",
             "type": "string",
             "default": "'medium'",
-            "description": "Sets the button size. Possible values: { 'small' | 'medium' | 'large' }",
+            "description": "Sets the button size. Possible values: { 'small' | 'medium' | 'large' }. Also accepts ",
             "context": {
               "label": "Changed",
               "description": "in v2.0.0. See updated Usage guidelines."
@@ -504,13 +504,12 @@ export default {
 
 ### Size, responsive size, and full-width sizing props
 
-The below example uses both the `size` and `responsive-size` props. This button’s size is small, but it will become a large button at the `xs` and `sm` breakpoints.
+The below example uses the `size` prop to set a default and responsive size. This button’s size is small, but it will become a large button at the `xs` and `sm` breakpoints.
 
-```vue
+```vue{3}
 <template>
   <cdr-button
-    size="small"
-    :responsive-size="[‘large@xs’, ‘large@sm’]"
+    size="small large@xs large@sm"
   >
     Add to cart
   </cdr-button>
