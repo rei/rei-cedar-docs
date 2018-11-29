@@ -124,7 +124,7 @@
             "name": "size",
             "type": "string",
             "default": "'medium'",
-            "description": "Sets the button size. Possible values: { 'small' | 'medium' | 'large' }. Also accepts ",
+            "description": "Sets the button size; values can target responsive breakpoints. Breakpoint values are: xs, sm, md, and lg. Examples: { 'small' | 'medium' | 'large' | 'large@sm' }",
             "context": {
               "label": "Changed",
               "description": "in v2.0.0. See updated Usage guidelines."
@@ -184,7 +184,7 @@
         }
       }
     ],
-      "version": "1.0.0"
+      "version": "2.0.0"
     }
   ],
   "see_also": [
@@ -529,7 +529,7 @@ Following variants are available to the `cdr-button` modifier attribute:
 
 Use the `on-click` prop to attach custom actions and event handling.
 
-```vue
+```vue{3}
 <template>
   <cdr-button
     :on-click="greet"
@@ -560,7 +560,7 @@ To scale Cedar icons appropriately, include the `cdr-button__icon` class with an
 
 In the below example, a "Download" button is rendered as a button with icon and text using `cdr-icon` and the icon sprite.
 
-```vue
+```vue{5}
 <template>
   <cdr-button>
     <cdr-icon
@@ -590,13 +590,13 @@ export default {
 Use the following props to modify `cdr-button`:
 
 - Default slot must be empty. If text is present in default slot, the text will render  
-- `size` prop is disable when `icon-only` prop is true
+- `size` prop is disabled when `icon-only` prop is true
 - For the SVG files:
   - If the `fill` color is dark, assign true to the `on-dark` prop
   - `on-dark` prop only works if `icon-only` prop is also true
 - Add `aria-label` text to describe the button’s action when clicked or tapped
 
-```vue
+```vue{3,4,5}
 <template>
   <cdr-button
     :icon-only="true"
@@ -637,6 +637,10 @@ export default {
 </template>
 
 <template slot="History">
+
+## 2.0.0
+- Deprecated `responsive-size` prop
+- Responsive sizes can now be declared i
 
 ## 1.0.3
 - Fix CSS import for SSR

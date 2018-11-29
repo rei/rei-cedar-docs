@@ -32,9 +32,9 @@
           span="12"
         >
           <div class="prop-description-container">
-            <p v-if="apiProp.context" class="prop-description">
+            <!-- <p v-if="apiProp.context" class="prop-description">
               <span class="prop-context-badge">{{ apiProp.context.label }}</span> {{ apiProp.context.description }}
-            </p>
+            </p> -->
             <p aria-lable="prop description" class="prop-description">
               {{ apiProp.description }}
             </p>
