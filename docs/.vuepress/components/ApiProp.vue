@@ -5,6 +5,15 @@
         gutter="none"
       >
         <cdr-col
+          span="12"
+        >
+          <div class="api-prop-alert">
+            <div class="api-prop-alert__message prop-description">
+              Deprecated in v2.0.0
+            </div>
+          </div>
+        </cdr-col>
+        <cdr-col
           span="12 4@sm"
         >
           <div class="prop-wrap">
@@ -95,13 +104,16 @@
       font-size: 14px;
     }
 
-    .prop-context-badge {
-      display: inline-block;
-      font-weight: bold;
-      padding: 4px 6px;
-      background: red;
-      color: #fff;
-      border-radius: 4px;
+    .api-prop-alert {
+      background-color: #3278ae;
+      border: 1px solid #3278ae;
+      margin-bottom: 10px;
+      padding-left: 5px;
+
+      .api-prop-alert__message {
+        background-color: #fff;
+        padding: 5px 0 5px 5px;
+      }
     }
 
     & + & {
