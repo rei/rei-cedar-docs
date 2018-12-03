@@ -93,7 +93,7 @@
     {
       "components": [
         {
-        "name": CdrButton,
+        "name": "CdrButton",
         "api": {
         "props": [
           {
@@ -125,9 +125,9 @@
             "type": "string",
             "default": "'medium'",
             "description": "Sets the button size; values can target responsive breakpoints. Breakpoint values are: xs, sm, md, and lg. Examples: { 'small' | 'medium' | 'large' | 'large@sm' }",
-            "context": {
-              "label": "Changed",
-              "description": "in v2.0.0. See updated Usage guidelines."
+            "alert": {
+              "type": "updated", 
+              "description": "Updated in v.2.0.0. See usage examples below."
             }
           },
           {
@@ -135,9 +135,9 @@
             "type": "array",
             "default": "N/A",
             "description": "Sets the button size at different responsive breakpoints. Breakpoints values are: xs, sm, md, and lg. Examples: { ‘large@xs’ | ‘small@lg’ }",
-            "context": {
-              "label": "Deprecated",
-              "description": "in v2.0.0"
+            "alert": {
+              "type": "deprecated",
+              "description": "Deprecated in v2.0.0. Instead, use 'size' prop."
             }
           },
           {

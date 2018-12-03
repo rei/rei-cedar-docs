@@ -6,12 +6,9 @@
       >
         <cdr-col
           span="12"
+          v-if="apiProp.alert"
         >
-          <div class="api-prop-alert">
-            <div class="api-prop-alert__message prop-description">
-              Deprecated in v2.0.0
-            </div>
-          </div>
+          <api-prop-alert :alert="apiProp.alert" />
         </cdr-col>
         <cdr-col
           span="12 4@sm"
@@ -40,14 +37,9 @@
         <cdr-col
           span="12"
         >
-          <div class="prop-description-container">
-            <!-- <p v-if="apiProp.context" class="prop-description">
-              <span class="prop-context-badge">{{ apiProp.context.label }}</span> {{ apiProp.context.description }}
-            </p> -->
-            <p aria-lable="prop description" class="prop-description">
-              {{ apiProp.description }}
-            </p>
-          </div>
+          <p aria-lable="prop description" class="prop-description">
+            {{ apiProp.description }}
+          </p>
         </cdr-col>
       </cdr-row>
     </div>
@@ -55,6 +47,8 @@
 </template>
 
 <script>
+  import ApiPropAlert from './ApiPropAlert.vue';
+
   export default {
     name: 'ApiProp',
     props: ['apiData'],
@@ -102,18 +96,6 @@
 
     .prop-description {
       font-size: 14px;
-    }
-
-    .api-prop-alert {
-      background-color: #3278ae;
-      border: 1px solid #3278ae;
-      margin-bottom: 10px;
-      padding-left: 5px;
-
-      .api-prop-alert__message {
-        background-color: #fff;
-        padding: 5px 0 5px 5px;
-      }
     }
 
     & + & {
