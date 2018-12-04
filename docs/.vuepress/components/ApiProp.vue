@@ -5,6 +5,12 @@
         gutter="none"
       >
         <cdr-col
+          span="12"
+          v-if="apiProp.alert"
+        >
+          <api-prop-alert :alert="apiProp.alert" />
+        </cdr-col>
+        <cdr-col
           span="12 4@sm"
         >
           <div class="prop-wrap">
@@ -41,6 +47,8 @@
 </template>
 
 <script>
+  import ApiPropAlert from './ApiPropAlert.vue';
+
   export default {
     name: 'ApiProp',
     props: ['apiData'],
