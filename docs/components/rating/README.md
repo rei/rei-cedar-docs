@@ -101,7 +101,7 @@
                   "type": "string",
                   "default": "medium",
                   "required": "false",
-                  "description": "Modifies the style variant for this component. Possible values: {  ‘small’  |  ‘medium’  |  ‘large’  }"
+                  "description": "Modifies the size variant for this component. Possible sizes: {  ‘small’  |  ‘medium’  |  ‘large’  }. Also works with responsive breakpoints. Example: { 'large@xs' }"
                 },
               ]
             }

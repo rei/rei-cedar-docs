@@ -101,7 +101,7 @@
                 "description": "Modifies the style variant for this component.  Possible values: { 'inherit-color' }",
                 "alert": {
                   "type": "updated",
-                  "description": "Updated in v2.0.0. See 'size' prop."
+                  "description": "Updated in v2.0.0. Moved sized values to 'size' prop."
                 }
               }
             ],

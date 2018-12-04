@@ -169,7 +169,7 @@
                 "name": "size",
                 "type": "string",
                 "default": "medium",
-                "description": "Sets the input field size. Possible values: {  ‘medium’  |  ‘large’  }"
+                "description": "Sets the input field size. Possible sizes are: {  ‘medium’  |  ‘large’  }. Also works with responsive breakpoints. Example: { 'large@xs' }"
               }
             ],
             "slots": [
