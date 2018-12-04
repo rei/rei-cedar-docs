@@ -45,7 +45,7 @@ people regardless of their age, background, or ability. We meet or exceed color 
 ### Neutral colors
 Neutral colors support the cohesive use of typography, backgrounds, and borders across the digital ecosystem.
 
-<cdr-doc-color-swatch-grid :token-names="[
+<cdr-doc-color-swatch-grid :show-names="false" :token-names="[
   'clean-slate',
   'moon-shot',
   'the-tooth',
@@ -62,7 +62,7 @@ Neutral colors support the cohesive use of typography, backgrounds, and borders 
 ### Accent colors
 Accents drive a user’s attention to important actions or content. Use accents sparingly to maintain a balanced hierarchy.
 
-<cdr-doc-color-swatch-grid :token-names="[
+<cdr-doc-color-swatch-grid :show-names="false" :token-names="[
   'suede-shoes',
   'easily-excited',
   'closed-on-monday',
@@ -76,7 +76,7 @@ Accents drive a user’s attention to important actions or content. Use accents 
 ### Brand colors
 Brand colors are core to the co-op. They’re often used as backgrounds when an experience calls for a stronger brand impression.
 
-<cdr-doc-color-swatch-grid :token-names="[
+<cdr-doc-color-swatch-grid :show-names="false" :token-names="[
   'old-growth',
   'moose-tooth',
   'hissing-llamas'
@@ -85,7 +85,7 @@ Brand colors are core to the co-op. They’re often used as backgrounds when an 
 ### Feedback colors
 Feedback colors are used for [alerts](#), [notifications](#), and other components to communicate, reinforce, or prompt user action.
 
-<cdr-doc-color-swatch-grid :token-names="[
+<cdr-doc-color-swatch-grid :show-names="false" :token-names="[
   'pick-your-potion',
   'center-of-attention',
   'to-the-rescue',
