@@ -32,11 +32,11 @@
 <style lang="scss">
   .api-prop-alert {
     margin-bottom: 10px;
-    padding-left: 5px;
+    padding-left: 8px;
 
     .api-prop-alert__message {
       background-color: #fff;
-      padding: 5px 0 5px 5px;
+      padding: 8px 0 8px 8px;
     }
   }
 

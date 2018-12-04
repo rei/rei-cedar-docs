@@ -502,7 +502,7 @@ export default {
 
 ## Usage
 
-### Size, responsive size, and full-width sizing props
+### Size prop
 
 The below example uses the `size` prop to set a default and responsive size. This button’s size is small, but it will become a large button at the `xs` and `sm` breakpoints.
 

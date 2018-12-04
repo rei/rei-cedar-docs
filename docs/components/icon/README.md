@@ -89,10 +89,20 @@
                 "description": "Only on CdrIcon. Sets the href attribute for use with SVG symbol sprite (CdrIconSprite)."
               },
               {
+                "name": "size",
+                "type": "string",
+                "default": "medium",
+                "description": "Modifies the icon size. Possible values: { 'small', 'medium', 'large' }"
+              },
+              {
                 "name": "modifier",
                 "type": "string",
                 "default": "N/A",
-                "description": "Modifies the style variant for this component.  Possible values: {   ‘sm’  |  ‘md’  |  ‘lg’  } and { 'inherit-color' }"
+                "description": "Modifies the style variant for this component.  Possible values: { 'inherit-color' }",
+                "alert": {
+                  "type": "updated",
+                  "description": "Updated in v2.0.0. See 'size' prop."
+                }
               }
             ],
             "slots": [
