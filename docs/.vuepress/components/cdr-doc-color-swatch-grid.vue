@@ -1,6 +1,6 @@
 <template>
   <div class="cdr-doc-color-swatch-grid">
-    <cdr-doc-color-swatch v-for="name in tokenNames" :token-name="name" :key="name"></cdr-doc-color-swatch>
+    <cdr-doc-color-swatch v-for="name in tokenNames" :token-name="name" :key="name" :show-names="showNames"></cdr-doc-color-swatch>
     <div class="cdr-doc-color-swatch-grid-dummy"></div>
     <div class="cdr-doc-color-swatch-grid-dummy"></div>
   </div>
@@ -18,6 +18,10 @@ export default {
       default: () => {
         return ['center-of-attention', 'golden-face'];
       }
+    },
+    showNames: {
+      type: Boolean,
+      default: true,
     }
   },
   components: {
