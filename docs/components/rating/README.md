@@ -101,7 +101,7 @@
                   "type": "string",
                   "default": "medium",
                   "required": "false",
-                  "description": "Modifies the size variant for this component. Possible sizes: {  ‘small’  |  ‘medium’  |  ‘large’  }. Also works with responsive breakpoints. Example: { 'large@xs' }"
+                  "description": "Sets the rating component size; Breakpoint values are: xs, sm, md, and lg. Examples: { 'small' | 'medium' | 'large' | 'large@sm' }"
                 },
               ]
             }
