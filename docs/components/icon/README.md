@@ -92,7 +92,7 @@
                 "name": "size",
                 "type": "string",
                 "default": "medium",
-                "description": "Modifies the icon size; values can target reponsive breakpoints. Breakpoint values are: xs, sm, md, and lg. Examples: { 'small' | 'medium' | 'large' | 'large@sm' }"
+                "description": "Modifies the icon size; values can target responsive breakpoints. Breakpoint values are: xs, sm, md, and lg. Examples: { 'small' | 'medium' | 'large' | 'large@sm' }"
               },
               {
                 "name": "modifier",
