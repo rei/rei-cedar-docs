@@ -2,7 +2,9 @@
   <div class="cdr-doc-color-swatch">
     <div class="cdr-doc-color-swatch__sample" :style="{ backgroundColor: hex }">
     </div>
-    <span class="cdr-doc-color-swatch__token-name">
+    <span
+      v-if="showNames"
+      class="cdr-doc-color-swatch__token-name">
       ${{ tokenName }}
     </span>
     <div class="cdr-doc-color-swatch__values">
@@ -32,6 +34,10 @@ export default {
     tokenName: {
       type: String,
       default: '$clean-slate',
+    },
+    showNames: {
+      type: Boolean,
+      default: true,
     }
   },
   computed: {

@@ -101,7 +101,7 @@
                   "type": "string",
                   "default": "medium",
                   "required": "false",
-                  "description": "Modifies the style variant for this component. Possible values: {  ‘small’  |  ‘medium’  |  ‘large’  }"
+                  "description": "Sets the rating component size; Breakpoint values are: xs, sm, md, and lg. Examples: { 'small' | 'medium' | 'large' | 'large@sm' }"
                 },
               ]
             }
@@ -114,6 +114,8 @@
 <cdr-doc-tabs>
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell tab-name="Overview">
+
+<cdr-doc-alert>REI.com is currently using Bazaarvoice for ratings - styles documented here may not reflect the current styles provided by the tool. Reach out in #cedar-users for further guidance or questions.</cdr-doc-alert>
 
 ## Default
 

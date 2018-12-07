@@ -291,8 +291,8 @@ This component has compliance with WCAG guidelines by:
 ## Foundations
 
 - Always include a title, icon and subsequent content for each section. All are required
+- Position interactive elements (i.e. Select, Button, Link) within the container far enough from the title area to avoid accidental collapsing
 - Use on either light or dark backgrounds, background color is provided for both
-- Never nest accordions within themselves
 
 ## Content
 
@@ -302,15 +302,17 @@ This component has compliance with WCAG guidelines by:
 
 ## Behavior
 
-- Entire title area is clickable, including icon and background.
-- Accordion sections are all closed by default, however it is possible to:
-  - Open all accordion sections when page is displayed
-  - Open a single accordion section with remaining accordion section closed
-- Multiple sections can be open at the same time
-- Sections do not automatically collapse when another is expanded
-- Position interactive elements (i.e. Select, Button, Link) within the container far enough from the title area to avoid accidental collapsing
+- Entire title area is clickable, including icon and background
 - Never nest accordions within themselves
 - Use short titles for accordion labels to avoid wrapping
+
+### Show and Hide
+
+- Revealing the frist accordion section is recommended
+- Other accordion sections are all hidden by default, however it is possible to:
+  - Specify that all accordion sections are revealed when page is displayed
+  - Specify that a specific accordion section is revealed with remaining accordion section closed
+- Sections do not automatically collapse when another is expanded
 
 ### Do / Don't
 
@@ -323,8 +325,8 @@ This component has compliance with WCAG guidelines by:
 ## Responsiveness
 
 - Accordion style can change variant based on breakpoint. Example: _Default_ at MD/LG, _Compact_ and _Border-Aligned_ at XS/SM
-- Switching between tab component and accordion component is not supported in Cedar components library
-- Do not replace the accordion component with the tab component at different breakpoints
+- Switching between the Tab component and the Accordion component is not supported in Cedar components library
+- Do not replace the Accordion component with the Tab component at different breakpoints
 
 </cdr-doc-table-of-contents-shell>
 </template>
@@ -502,6 +504,8 @@ Any options set at the **CdrAccordion** level can be set on any parent component
 </template>
 
 <template slot="History">
+## 1.0.3
+- **CdrIcon** dependency update
 
 ## 1.0.2
 - Fix CSS import for SSR

@@ -385,6 +385,12 @@ Following variants are available to the `cdr-link` modifier attribute:
 
 <template slot="History">
 
+## 1.0.3
+- **CdrIcon** dependency update
+
+## 1.0.2
+- **CdrIcon** dependency update
+
 ## 1.0.0
 
 - Displays as an inline or standalone variant
