@@ -13,6 +13,21 @@
 ---
 
 <cdr-doc-table-of-contents-shell>
+
+## 18.12.1 Release
+
+### Component Updates
+
+- Updated [Buttons](../components/buttons/) component
+  - Deprecated `responsive-size` prop
+  - Updated `size` prop
+- Updated [Icon](../components/icon/) component
+  - Added `size` prop
+  - Updated `modifier` prop
+- Updated [Accordion](../components/accordion/) component CdrIcon dependency, usage
+- Updated [Link](../components/links/) component CdrIcon dependency
+
+
 ## 18.11.1 Release
 
 ### New Components
