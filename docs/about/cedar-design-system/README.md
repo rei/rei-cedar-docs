@@ -36,7 +36,7 @@ In the spirit of creating a collaborative community around the design system, th
 
 #### Vision
 
-The Cedar design system will enable cost-effective and consistent experiences across multiple platforms, while providing a toolset and shared language for teams to collaborate and solve problems quickly.
+The Cedar Design System unifies design and development with a common language and toolset, enabling teams to create and iterate faster while maintaining a cohesive customer experience. 
 
 #### Goals
 
