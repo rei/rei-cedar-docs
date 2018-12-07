@@ -640,7 +640,7 @@ export default {
 
 ## 2.0.0
 - Deprecated `responsive-size` prop
-- Responsive sizes can now be declared i
+- `size` prop accepts responsive values
 
 ## 1.0.3
 - Fix CSS import for SSR
