@@ -95,13 +95,19 @@
                 "description": "Modifies the icon size; values can target responsive breakpoints. Breakpoint values are: xs, sm, md, and lg. Examples: { 'small' | 'medium' | 'large' | 'large@sm' }"
               },
               {
+                "name": "inherit-color",
+                "type": "boolean",
+                "default": "false",
+                "description": "Sets icon fill color to 'inherit'.",
+              },
+              {
                 "name": "modifier",
                 "type": "string",
                 "default": "N/A",
-                "description": "Modifies the style variant for this component.  Possible values: { 'inherit-color' }",
+                "description": "Modifies the style variant for this component.",
                 "alert": {
-                  "type": "updated",
-                  "description": "Updated in v2.0.0. Moved sized values to 'size' prop."
+                  "type": "deprecated",
+                  "description": "Deprecated in v2.0.0. Moved sized values to 'size' prop. Added 'inherit-color' prop."
                 }
               }
             ],
