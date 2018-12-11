@@ -503,6 +503,11 @@ Use any valid SVG markup in the **CdrIcon** slot.
 
 <template slot="History">
 
+## 2.0.0
+ 
+- Deprecated `modifier` prop
+- Added `size` and `inherit-color` prop
+
 ## 1.0.0
 
 - Add grid-view, list-view, and scan-barcode icons
