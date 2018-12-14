@@ -368,9 +368,6 @@ _main.js_
 ```javascript
 // import your required CSS
 import "@rei/cdr-cta/dist/cdr-cta.css";
-
-// CTA uses cdr-icon 
-import "@rei/cdr-link/dist/cdr-icon.css";
 ```
 
 ### 3. Add component to a template
@@ -405,7 +402,7 @@ This example code renders a full width `cdr-cta`, with the `elevated` modifier a
     href="https://rei.com" 
     :full-width="true" 
     cta-style="sale" 
-    modifier"elevated"
+    modifier="elevated"
   >
     See our new gear!
   </cdr-cta>
@@ -429,6 +426,9 @@ The following variants are available to the `cdr-cta` modifier attribute:
 </template>
 
 <template slot="History">
+
+## 1.1.0
+- Remove **CdrIcon** dependency
 
 ## 1.0.3
 - Fix CSS import for SSR
