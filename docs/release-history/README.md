@@ -16,6 +16,22 @@
 
 ## 18.12.1 Release
 
+### New Components
+
+- Added new [Pagination](../components/pagination/) component v1.0 [view in github](https://github.com/rei/rei-cedar/18.12.2/src/components/pagination)
+  - Component
+  - Styles
+
+### Component Updates
+
+- Updated [Call to Action](../components/cta/) component
+  - Removed **CdrIcon** dependency
+
+### Design Assets
+
+- Sketch library
+  - Published the Sketch library with design assets for the released components above
+
 ### Component Updates
 
 - Updated [Buttons](../components/buttons/) component
