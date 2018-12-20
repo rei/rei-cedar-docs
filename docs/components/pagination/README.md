@@ -102,43 +102,25 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
 
+Live code examples for **CdrPagination** can be found on [CodeSandbox](https://codesandbox.io/s/4jnw2l193x).
+
 ## Pagination @ SM, MD, LG
 
 At the SM, MD, and LG breakponts, pagination displays as a list of number text links with Prev and Next links when applicable.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/pagination" sandbox-href="https://codesandbox.io/s/9ojj43x1op">
-
-```html
-  <cdr-pagination
-    :pages="$page.frontmatter.overviewExampleData.pages"
-    :total-pages="$page.frontmatter.overviewExampleData.pages.length"
-    v-model="1"
-    @change="preventDefault"
-  />
-```
-
-</cdr-doc-example-code-pair>
+<img src="/pagination/pagination_breakpoint_2x.png" alt="Image showing full-sized pagination component" />
 
 ## Pagination @ XS
 
 At the XS breakpoint, pagination adapts to a Select component using the native UI dropdown menu.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/pagination" sandbox-href="https://codesandbox.io/s/9ojj43x1op">
-
-```html
-  <cdr-cta 
-    href="https://rei.com"
-    cta-style="light"
-  >
-    Explore travel tips &amp; gear
-  </cdr-cta>
-```
-
-</cdr-doc-example-code-pair>
+<img src="/pagination/pagination_breakpoint_xs_2x.png" alt="Image showing responsive pagination component using Select element" />
 
 ## Degraded Pagination
 
 For use when only prev and next data is available.
+
+<img src="/pagination/pagination_degradation_2x.png" alt="Image showing pagination with only previous and next data available" />
 
 ## Accessibility
 
