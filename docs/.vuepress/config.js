@@ -76,6 +76,7 @@ module.exports = {
           { text: "Inputs", link: "/components/input/" },
           { text: "Links", link: "/components/links/" },
           { text: "Lists", link: "/components/lists/" },
+          { text: "Pagination", link: "/components/pagination/" },
           { text: "Paragraphs", link: "/components/paragraphs/" },
           { text: "Pull Quote", link: "/components/pull-quote/" },
           { text: "Radio Buttons", link: "/components/radio/" },
