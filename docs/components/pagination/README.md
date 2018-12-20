@@ -117,7 +117,7 @@
 
 ## Pagination @ SM, MD, LG
 
-At the SM, MD, and LG breakponts, pagination displays as a list of number text links with Prev and Next links when applicable.
+At the SM, MD, and LG breakpoints, pagination displays as a list of number text links with Prev and Next links when applicable.
 
 <cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/cta" sandbox-href="https://codesandbox.io/s/9ojj43x1op">
 
@@ -307,7 +307,7 @@ export default {
 
 ## Usage
 
-The **CdrPagination** component provides a current page number control and renders a list of links. The current page value should be bound via `v-model` in your app.
+The **CdrPagination** component provides a current page number control and renders a list of links. The current page value should be bound using `v-model` in your app.
 
 You will need to enable navigation manually for pagination to work at mobile widths (see below).
 
@@ -315,7 +315,7 @@ The **CdrPagination** component does not make data calls, render or track pagina
 
 ### Responsive behavior and navigation
 
-The responsive behavior for the **CdrPagination** component automatically converts to **CdrSelect** component rather than a list of links. Values for the **CdrSelect** compnent are the provided page URL.
+The responsive behavior for the **CdrPagination** component automatically converts to **CdrSelect** component rather than a list of links. Values for the **CdrSelect** component are the provided page URL.
 
 If not using Vue Router (see "Usage with Vue Router" below) you will need to manually update window location by using the `select-change` event.
 
