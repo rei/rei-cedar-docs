@@ -108,19 +108,19 @@ Live code examples for **CdrPagination** can be found on [CodeSandbox](https://c
 
 At the SM, MD, and LG breakpoints, pagination displays as a list of number text links with Prev and Next links when applicable.
 
-<img src="/pagination/pagination_breakpoint_2x.png" alt="Image showing full-sized pagination component" />
+<img :src="$withBase('/pagination/pagination_breakpoint_2x.png')" alt="Image showing full-sized pagination component" />
 
 ## Pagination @ XS
 
 At the XS breakpoint, pagination adapts to a Select component using the native UI dropdown menu.
 
-<img src="/pagination/pagination_breakpoint_xs_2x.png" alt="Image showing responsive pagination component using Select element" />
+<img :src="$withBase('/pagination/pagination_breakpoint_xs_2x.png')" alt="Image showing responsive pagination component using Select element" />
 
 ## Degraded Pagination
 
 For use when only prev and next data is available.
 
-<img src="/pagination/pagination_degradation_2x.png" alt="Image showing pagination with only previous and next data available" />
+<img :src="$withBase('/pagination/pagination_degradation_2x.png')" alt="Image showing pagination with only previous and next data available" />
 
 ## Accessibility
 
