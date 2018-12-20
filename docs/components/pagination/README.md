@@ -391,7 +391,7 @@ For general recommendations view Google's Search Console page, [Indicating pagin
 - Responsive behavior using the Select component
 - Emits events for link click ('change') and select change ('select-change')
 - Incorporates accessibility and SEO compliant features
-- Link to full dev [changelog](https://github.com/rei/rei-cedar/blob/18.12.2/src/components/pagination/CHANGELOG.md)
+- Link to full dev [changelog](https://github.com/rei/rei-cedar/blob/18.12.2/src/components/cta/CHANGELOG.md)
 
 </template>
 </cdr-doc-tabs>

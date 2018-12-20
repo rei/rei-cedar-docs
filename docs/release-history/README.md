@@ -18,13 +18,13 @@
 
 ### New Components
 
-- Added new [Pagination](../components/pagination/) component v1.0 [view in github](https://github.com/rei/rei-cedar/18.12.2/src/components/pagination)
+- Added new [Pagination](../components/pagination/) component v1.0 [view in github](https://github.com/rei/rei-cedar/tree/18.12.2/src/components/pagination)
   - Component
   - Styles
 
 ### Component Updates
 
-- Updated [Call to Action](../components/cta/) component
+- Updated [Call to Action](../components/cta/) component v1.1 [view in github](https://github.com/rei/rei-cedar/tree/18.12.2/src/components/cta)
   - Removed **CdrIcon** dependency
 
 ### Design Assets
