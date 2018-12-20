@@ -94,19 +94,6 @@
       ],
       "version": "1.0.0"
     }
-  ],
-  "see_also": [
-    {
-      "text": "See Also"
-    },
-    {
-      "text": "Buttons",
-      "href": "../buttons/"
-    },
-    {
-      "text": "Links",
-      "href": "../links/"
-    }
   ]
 }
 ---
@@ -115,43 +102,25 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
 
+Live code examples for **CdrPagination** can be found on [CodeSandbox](https://codesandbox.io/s/4jnw2l193x).
+
 ## Pagination @ SM, MD, LG
 
 At the SM, MD, and LG breakpoints, pagination displays as a list of number text links with Prev and Next links when applicable.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/cta" sandbox-href="https://codesandbox.io/s/9ojj43x1op">
-
-```html
-  <cdr-cta 
-    href="https://rei.com"
-    cta-style="dark"
-  >
-    Explore travel tips &amp; gear
-  </cdr-cta>
-```
-
-</cdr-doc-example-code-pair>
+<img src="/pagination/pagination_breakpoint_2x.png" alt="Image showing full-sized pagination component" />
 
 ## Pagination @ XS
 
 At the XS breakpoint, pagination adapts to a Select component using the native UI dropdown menu.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/cta" sandbox-href="https://codesandbox.io/s/9ojj43x1op">
-
-```html
-  <cdr-cta 
-    href="https://rei.com"
-    cta-style="light"
-  >
-    Explore travel tips &amp; gear
-  </cdr-cta>
-```
-
-</cdr-doc-example-code-pair>
+<img src="/pagination/pagination_breakpoint_xs_2x.png" alt="Image showing responsive pagination component using Select element" />
 
 ## Degraded Pagination
 
 For use when only prev and next data is available.
+
+<img src="/pagination/pagination_degradation_2x.png" alt="Image showing pagination with only previous and next data available" />
 
 ## Accessibility
 
@@ -359,7 +328,7 @@ export default {
 
 ### Usage with Vue Router
 
-Page URLs still need to be provided for SEO purposes, but the events emitted by the component can be used for routing using Vue Router by modifying $route in a method.
+Page URLs still need to be provided for SEO purposes, but the events emitted by the component can be used for routing using Vue Router by modifying `$route` in a method.
 
 ```vue
 <template>
@@ -422,7 +391,7 @@ For general recommendations view Google's Search Console page, [Indicating pagin
 - Responsive behavior using the Select component
 - Emits events for link click ('change') and select change ('select-change')
 - Incorporates accessibility and SEO compliant features
-- Git commit reference 
+- Link to full dev [changelog](https://github.com/rei/rei-cedar/blob/18.12.2/src/components/cta/CHANGELOG.md)
 
 </template>
 </cdr-doc-tabs>

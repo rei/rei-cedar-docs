@@ -110,3 +110,8 @@ import { CdrInput } from "@rei/cdr-input";
 import "@rei/cdr-input/dist/cdr-input.css";
 Vue.component("CdrInput", CdrInput);
 FullVue.component("CdrInput", CdrInput);
+
+import { CdrPagination } from "@rei/cdr-pagination";
+import "@rei/cdr-pagination/dist/cdr-pagination.css";
+Vue.component("CdrPagination", CdrPagination);
+FullVue.component("CdrPagination", CdrPagination);
