@@ -3,7 +3,7 @@
   "title": "Pagination",
   "layout": "LayoutComponent",
   "summary": "Allows users to navigate to next or previous page when content is split into several pages",
-  "title_metadata": "CTA, CTA Button, CdrCta",
+  "title_metadata": "Pagination, CdrPagination",
   "align": [
     {
       "type": "do",
@@ -81,12 +81,12 @@
               {
                 "name": "change",
                 "arguments": "pageNumber, event",
-                "notes": "$emit event fired when page changes based on user interaction by clicking a link or selecting an option from the select on mobile."
+                "description": "$emit event fired when page changes based on user interaction by clicking a link or selecting an option from the select on mobile."
               },
               {
                 "name": "select-change",
                 "arguments": "pageUrl, event",
-                "notes": "$emit event fired on select change with the URL value of the selected option. Also triggers the 'change' event (above) with the selected page number."
+                "description": "$emit event fired on select change with the URL value of the selected option. Also triggers the 'change' event (above) with the selected page number."
               }
             ]
           }
@@ -115,9 +115,9 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
 
-## Dark
+## Pagination @ SM, MD, LG
 
-Use dark Call to Action over a light background image or color to provide proper contrast. This is the default Call to Action style.
+At the SM, MD, and LG breakponts, pagination displays as a list of number text links with Prev and Next links when applicable.
 
 <cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/cta" sandbox-href="https://codesandbox.io/s/9ojj43x1op">
 
@@ -132,9 +132,9 @@ Use dark Call to Action over a light background image or color to provide proper
 
 </cdr-doc-example-code-pair>
 
-## Light
+## Pagination @ XS
 
-Use light Call to Action over a dark background image or color to provide proper contrast.
+At the XS breakpoint, pagination adapts to a Select component using the native UI dropdown menu.
 
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/cta" sandbox-href="https://codesandbox.io/s/9ojj43x1op">
 
@@ -149,9 +149,28 @@ Use light Call to Action over a dark background image or color to provide proper
 
 </cdr-doc-example-code-pair>
 
+## Degraded Pagination
+
+For use when only prev and next data is available.
+
 ## Accessibility
 
+To ensure that usage of this component complies with accessibility guidelines:
 
+- Wrap the pagination links in a `<nav>` element to let screen readers recognize the pagination controls
+- Inlcude `role=navigation` if the pagination component is not wrapped in a `<nav>`
+- Add `aria-label="pagination"` to describe the type of navigation
+- Indicate the active page by adding `aria-current="page"` to the link that points to the current page
+- View these videos at [a11ymattters, Accessible Pagination](http://www.a11ymatters.com/pattern/pagination/). They demonstrate before and after pagination tests using a screen reader voiceover
+
+<br />
+
+This component has compliance WCAG guidelines by:
+- [WCAG 2.4.8](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0&showtechniques=248#location): Information about the user's location within a set of Web pages is available 
+- [WCAG 3.2.3](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-consistent-locations.html): Navigation patterns follow a consistent pattern. Only position pagination component at the bottom of the page 
+- [WCAG 2.4.3](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#qr-navigation-mechanisms-focus-order): Focus state receives focus in an order that preserves meaning 
+- [WCAG 2.4.7](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#qr-navigation-mechanisms-focus-visible): Focus is visible
+- [WCAG 2.5.5](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html): Target size for pagination links are large enough for users to easily activate them
 
 </cdr-doc-table-of-contents-shell>
 </template>
@@ -214,9 +233,9 @@ Pagination adapts to a Select component with a native UI dropdown menu on XS bre
 ## Props
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-## Slots
+## Events
 
-<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
+<cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
 
 ## Installation
 
@@ -266,7 +285,7 @@ _local.vue_
 </template>
 
 <script>
-import { CdrPagination } from '@rei/cdr-pagination;
+import { CdrPagination } from '@rei/cdr-pagination';
 export default {
   ...
   components: {
@@ -313,7 +332,7 @@ If not using Vue Router (see "Usage with Vue Router" below) you will need to man
 </template>
 
 <script>
-import { CdrPagination } from '@rei/cdr-pagination;
+import { CdrPagination } from '@rei/cdr-pagination';
 export default {
   ...
   components: {
@@ -355,7 +374,7 @@ Page URLs still need to be provided for SEO purposes, but the events emitted by 
 </template>
 
 <script>
-import { CdrPagination } from '@rei/cdr-pagination;
+import { CdrPagination } from '@rei/cdr-pagination';
 export default {
   ...
   components: {
