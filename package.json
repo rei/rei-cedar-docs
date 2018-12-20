@@ -38,6 +38,7 @@
     "@rei/cdr-input": "^1.0.0",
     "@rei/cdr-link": "^1.0.3",
     "@rei/cdr-list": "^1.0.0",
+    "@rei/cdr-pagination": "^1.0.0",
     "@rei/cdr-quote": "^1.0.0",
     "@rei/cdr-radio": "^1.0.0",
     "@rei/cdr-rating": "^1.0.0",
