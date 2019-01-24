@@ -1,5 +1,5 @@
 <template>
-  <cdr-table id="icon-table" class="icon-table">
+  <table id="icon-table" class="icon-table">
     <tr
       v-for="(val, key) in Icons"
       :key="key"
@@ -11,7 +11,7 @@
       <td>{{getIcon(key)}}</td>
       <td>{{iconData[getIcon(key)]}}</td>
     </tr>
-  </cdr-table>
+  </table>
 </template>
 
 <script>
