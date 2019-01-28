@@ -8,6 +8,7 @@
       :id="item.text.replace(' ', '-').toLowerCase()"
       :label="item.text"
       class="nav-item cdr-accordion-nav"
+      :show="showNavGroup(item.text)"
     >
       <ul class="nav-dropdown cdr-doc-side-navigation__child-links">
         <li v-for="navItem in item.items" class="dropdown-item">
@@ -105,7 +106,12 @@ export default {
       }
 
       return 'Source'
-    },
+    }
+  },
+  methods: {
+    showNavGroup(text) {
+      return text.toLowerCase().replace(' ', '-') === this.$page.path.split('/')[1];
+    }
   },
   provide() {
     return {
