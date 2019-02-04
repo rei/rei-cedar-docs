@@ -185,7 +185,7 @@
                 "description": "Sets the caption text for the table."
               },
               {
-                "name": "constainWidth",
+                "name": "constrainWidth",
                 "type": "boolean",
                 "default": "true",
                 "description": "Applies default width constraints to table cells.",
@@ -403,30 +403,20 @@ Alignment impacts the table's readability. Make the data easy to read and simple
 
 <do-dont :examples="$page.frontmatter.alternatestripe" />
 
-## Responsiveness
+## Responsiveness 
 
-Data Tables are responsive when there are more than 2 columns:
-- Whenever the number of columns overflows the container, content will scroll
-- If row headers are defined, then the first column of headers will lock in place
-
-<br/>
-
-For Data Tables with 2 columns:
-- Content will not scroll
-- Text within table cells will wrap to fit the smaller container (or viewport)
-
-## Responsiveness - draft
-
-Data Tables are responsive by default. If the constraining element is smaller than the width of the table, it will scroll within its container.
+Data Tables are responsive by default. Whenever the number of columns overflows the container, the entire table will scroll.
 
 ### Locked column scrolling
 
-When a table has row headers and more than two columns of content, the column of row headers will lock into place and while the rest of the content scrolls.
+Data Table must have row headers and more than two columns of content, then the responsive behavior will be:
+- Column of row headers will lock into place
+- Remaining columns will scroll
 
-### Normal scrolling
+### Only two columns
 
-If a table does not have row headers or has two or fewer columns of content, the column of row headers *will not* lock into place and the entire table will scroll.
-
+- Content will not scroll
+- Text within table cells will wrap to fit the smaller container (or viewport)
 
 </cdr-doc-table-of-contents-shell>
 </template>
@@ -513,7 +503,7 @@ The simplest way to use **CdrDataTable** is using the props API. The below examp
 - The data props (`colHeaders`, `rowHeaders`, `rowData`) are used
 - `keyOrder` determines values displayed in each cell. The array order must match the `colHeaders` or column order
 
-The locked-row-headers behavior desribed [here](../data-tables/?active-tab=design-guidelines&active-link=responsiveness) is available only when using the props API.
+The locked-column behavior described in the [design guidelines](../data-tables/?active-tab=design-guidelines&active-link=responsiveness) is available only when using the props API.
 
 ```vue
 <template>
@@ -560,11 +550,11 @@ The locked-row-headers behavior desribed [here](../data-tables/?active-tab=desig
 
 ### Using Slots
 
-The same table can be rendered using **CdrDataTable's** named slots.
+The same information can be rendered using **CdrDataTable's** named slots, however the locked column behavior is not available.
 
 The below example shows: 
 
-- how to use the `thead` and `tbody` slots to define table markup
+- How to use the `thead` and `tbody` slots to define table markup
 - `colHeaders` prop set to true because the `thead` slot is being used
 - `scope` attribute on `th` elements inside a slot
 
@@ -643,6 +633,40 @@ The below example uses:
     ...
   </template>
 </cdr-data-table>
+```
+
+### Responsive Setup
+
+**CdrDataTable** relies on the `mounted` lifecycle hook to set up some responsive functionality. Use `v-if` to ensure that **CdrDataTable** doesn't render before the data is available.
+
+```vue
+<template>
+  <cdr-data-table
+    :col-headers="colHeaders"
+    :row-headers="rowHeaders"
+    :row-data="rowData"
+    :key-order="keyOrder"
+    v-if="hasData"
+  />
+</template>
+
+<script>
+  ...
+  data() {
+    hasData: false,
+    ...
+  },
+  mounted() {
+    fetch('https://swapi.co/api/people')
+     .then(response => response.json())
+     .then((json) => {
+       this.hasData = true;
+       ...
+     })
+     .catch(err => console.log(err));
+  },
+}
+</script>
 ```
 
 ### Modifiers
