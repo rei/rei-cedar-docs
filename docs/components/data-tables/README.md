@@ -183,7 +183,13 @@
                 "type": "string",
                 "default": "N/A",
                 "description": "Sets the caption text for the table."
-              }                       
+              },
+              {
+                "name": "constrainWidth",
+                "type": "boolean",
+                "default": "true",
+                "description": "Applies default width constraints to table cells.",
+              }
             ],
             "slots": [
               {
@@ -397,15 +403,18 @@ Alignment impacts the table's readability. Make the data easy to read and simple
 
 <do-dont :examples="$page.frontmatter.alternatestripe" />
 
-## Responsiveness
+## Responsiveness 
 
-Data Tables are responsive when there are more than 2 columns:
-- Whenever the number of columns overflows the container, content will scroll
-- If row headers are defined, then the first column of headers will lock in place
+Data Tables are responsive by default. Whenever the number of columns overflows the container, the entire table will scroll.
 
-<br/>
+### Locked column scrolling
 
-For Data Tables with 2 columns:
+Data Table must have row headers and more than two columns of content, then the responsive behavior will be:
+- Column of row headers will lock into place
+- Remaining columns will scroll
+
+### Only two columns
+
 - Content will not scroll
 - Text within table cells will wrap to fit the smaller container (or viewport)
 
@@ -464,7 +473,6 @@ _local.vue_
 ```vue
 <template>
   <cdr-data-table
-    id="size-details"
     :col-headers="colHeaders"
     :row-headers="rowHeaders"
     :row-data="rowData"
@@ -491,13 +499,15 @@ export default {
 ### Using Props
 
 The simplest way to use **CdrDataTable** is using the props API. The below example shows how:
+
 - The data props (`colHeaders`, `rowHeaders`, `rowData`) are used
 - `keyOrder` determines values displayed in each cell. The array order must match the `colHeaders` or column order
+
+The locked-column behavior described in the [design guidelines](../data-tables/?active-tab=design-guidelines&active-link=responsiveness) is available only when using the props API.
 
 ```vue
 <template>
   <cdr-data-table
-    id="props-example"
     :col-headers="colHeaders"
     :row-headers="rowHeaders"
     :row-data="rowData"
@@ -540,16 +550,17 @@ The simplest way to use **CdrDataTable** is using the props API. The below examp
 
 ### Using Slots
 
-The same table can be rendered using the `v-for` Vue directive and **CdrDataTable's** named slots:
-- Iterates over the data set by looping through items in an array or object
-- Generates appropriate markup for each named slot
+The same information can be rendered using **CdrDataTable's** named slots, however the locked column behavior is not available.
 
-In the below examples, the `colHeaders` prop is set to true because there are column headers for the data table.
+The below example shows: 
 
-```vue{4}
+- How to use the `thead` and `tbody` slots to define table markup
+- `colHeaders` prop set to true because the `thead` slot is being used
+- `scope` attribute on `th` elements inside a slot
+
+```vue{3,6,10,21}
 <template>
   <cdr-data-table
-    id="slots-example"
     :col-headers="true"
     caption="CdrTable slots usage"
   >
@@ -562,6 +573,7 @@ In the below examples, the `colHeaders` prop is set to true because there are co
          <th
            v-for="(header, index) in tableData.colHeaders"
            :key="index"
+           scope="col"
          >
            {{ header }}
          </th>
@@ -589,7 +601,6 @@ In the below examples, the `colHeaders` prop is set to true because there are co
   ...
   data() {
     ...
- ],
   },
 }
 </script>
@@ -624,6 +635,40 @@ The below example uses:
 </cdr-data-table>
 ```
 
+### Responsive Setup
+
+**CdrDataTable** relies on the `mounted` lifecycle hook to set up some responsive functionality. Use `v-if` to ensure that **CdrDataTable** doesn't render before the data is available.
+
+```vue
+<template>
+  <cdr-data-table
+    :col-headers="colHeaders"
+    :row-headers="rowHeaders"
+    :row-data="rowData"
+    :key-order="keyOrder"
+    v-if="hasData"
+  />
+</template>
+
+<script>
+  ...
+  data() {
+    hasData: false,
+    ...
+  },
+  mounted() {
+    fetch('https://swapi.co/api/people')
+     .then(response => response.json())
+     .then((json) => {
+       this.hasData = true;
+       ...
+     })
+     .catch(err => console.log(err));
+  },
+}
+</script>
+```
+
 ### Modifiers
 
 Following variants are available to the `cdr-data-table` modifier attribute:
@@ -637,6 +682,12 @@ Following variants are available to the `cdr-data-table` modifier attribute:
 </template>
 
 <template slot="History">
+
+## 1.1.0
+
+- Increased content resilience when using component API to render tablular data
+- Added `constrainWidth` prop
+- Changed `id` prop to be optional
 
 ## 1.0.0
 
