@@ -343,7 +343,7 @@ Input field with icon above input field on right.
     slot="info"
     use="#information-fill"
     class="cdr-button__icon"
-    modifier="inherit-color"
+    inherit-color
   />
 </cdr-input>
 ```
@@ -387,7 +387,7 @@ Input field with icon inserted into input field on left. Icon is decorative and 
     slot="pre-icon"
     use="#location-pin-stroke"
     class="cdr-button__icon"
-    modifier="inherit-color"
+    inherit-color
   />
 </cdr-input>
 ```
@@ -411,7 +411,7 @@ Input field with icon inserted into input field on right. Icon is decorative and
     slot="post-icon"
     use="#credit-card"
     class="cdr-button__icon"
-    modifier="inherit-color"
+    inherit-color
   />
 </cdr-input>
 ```

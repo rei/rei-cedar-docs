@@ -247,7 +247,7 @@ Pair an icon with text to improve recognition about an object or action.
         slot="icon"
         use="#play-stroke"
         class="cdr-button__icon"
-        modifier="inherit-color"
+        inherit-color
       />
       Play video
     </cdr-button>
@@ -259,7 +259,7 @@ Pair an icon with text to improve recognition about an object or action.
         slot="icon"
         use="#play-stroke"
         class="cdr-button__icon"
-        modifier="inherit-color"
+        inherit-color
       />
       Play video
     </cdr-button>
@@ -285,7 +285,7 @@ Use to visually communicate an object or action in limited space. Include altern
         slot="icon"
         class="cdr-button__icon"
         use="#question-fill"
-        modifier="inherit-color"
+        inherit-color
       />
     </cdr-button>
   </div>

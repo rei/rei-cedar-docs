@@ -155,7 +155,7 @@ Display standalone link with icon on left.
       <!-- Using the sprite -->
       <cdr-icon
           use="#shipping"
-          modifier="inherit-color"
+          inherit-color
           class="cdr-inline-left--sm"
       />
       This item ships for FREE!
@@ -179,7 +179,7 @@ Display standalone link with icon on right.
         <!-- Using the sprite -->
         <cdr-icon
             use="#external-link"
-            modifier="inherit-color"
+            inherit-color
             class="cdr-inline-right--sm"/>
       </cdr-link>
   </div>
