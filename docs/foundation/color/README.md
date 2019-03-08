@@ -156,11 +156,69 @@ Text choices should be paired with their corresponding background color to ensur
 
 Note: Large text is defined as 14 point (typically 18.66px) and bold or larger, or 18 point (typically 24px) or larger.
 
+<br>
+
+### For Light Backgrounds
+WCAG color contrast ratios for the most commonly used Cedar color tokens for text or foreground colors on recommended light background colors.
 
 
-**TBD - more content goes here**
+**cdr-color-background-lightest**
+|    |      |
+| :--- | :--- |
+|  image (WCAG_Rating__Bkgnd_Lightest__Primary__4-3.png) <br> alt="WCAG rating for primary text color on lightest background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"  | cdr-color-text-primary-lightmode <br>AAA 14.55:1 |
+|  image (WCAG_Rating__Bkgnd_Lightest__Secondary__4-3.png)  <br>  alt="WCAG rating for secondary text color on lightest background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"  | cdr-color-text-secondary-lightmode <br>AA 6.19:1  |
+|  image (WCAG_Rating__Bkgnd_Lightest__Link__4-3.png)  <br>  alt="WCAG rating for link text color on lightest background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"  | cdr-color-text-link-lightmode <br>AA 4.74:1   |
+|  image (WCAG_Rating__Bkgnd_Lightest__Error__4-3.png)  <br>  alt="WCAG rating for error text color on lightest background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"  | cdr-color-text-error-lightmode <br>AA 6.33:1    |
+|  image (WCAG_Rating__Bkgnd_Lightest__Disabled__4-3.png)  <br>  alt="WCAG rating for disabled text color on lightest background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"  | cdr-color-text-disabled-lightmode <br>FAIL 1.98:1    |
 
 <br>
+
+**cdr-color-background-lighter** 
+|      |      |
+| :--- | :--- |
+|  image (WCAG_Rating__Bkgnd_Lighter__Primary__4-3.png) <br> alt="WCAG rating for primary text color on lighter background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"  | cdr-color-text-primary-lightmode <br>AAA 13.94:1    |
+|  image (WCAG_Rating__Bkgnd_Lighter__Secondary__4-3.png)  <br>  alt="WCAG rating for secondary text color on lighter background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"  | cdr-color-text-secondary-lightmode  <br>AA 5.93:1       |
+|  image (WCAG_Rating__Bkgnd_Lighter__Link__4-3.png)  <br>  alt="WCAG rating for link text color on lighter background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"  | cdr-color-text-link-lightmode  <br>AA 4.54:1      |
+|  image (WCAG_Rating__Bkgnd_Lighter__Error__4-3.png)  <br>  alt="WCAG rating for error text color on lighter background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"  | cdr-color-text-error-lightmode   <br>AA 6.07:1       |
+|  image (WCAG_Rating__Bkgnd_Lighter__Disabled__4-3.png)  <br>  alt="WCAG rating for disabled text color on lighter background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"  | cdr-color-text-disabled-lightmode  <br>FAIL 1.90:1      |
+
+<br>
+
+**cdr-color-background-light** 
+|      |      |
+| :--- | :--- |
+|  image (WCAG_Rating__Bkgnd_Light__Primary__4-3.png) <br> alt="WCAG rating for primary text color on light background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"  | cdr-color-text-primary-lightmode  <br>AAA 13.58:1    |
+|  image (WCAG_Rating__Bkgnd_Light__Secondary__4-3.png)  <br>  alt="WCAG rating for secondary text color on light background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"  | cdr-color-text-secondary-lightmode <br>AA 5.78:1       |
+|  image (WCAG_Rating__Bkgnd_Light__Link__4-3.png)  <br>  alt="WCAG rating for link text color on light background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"   | cdr-color-text-link-lightmode <br>AA-LG 4.42:1    |
+|  image (WCAG_Rating__Bkgnd_Light__Error__4-3.png)  <br>  alt="WCAG rating for error text color on light background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"   | cdr-color-text-error-lightmode <br>AA 5.91:1    |
+|  image (WCAG_Rating__Bkgnd_Light__Disabled__4-3.png)  <br>  alt="WCAG rating for disabled text color on light background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"   | cdr-color-text-disabled-lightmode <br>FAIL 1.85:1    |
+
+<br>
+
+### For Dark Backgrounds
+WCAG color contrast ratios for the most commonly used Cedar color tokens for text or foreground colors on recommended dark background colors.
+
+**cdr-color-background-dark** 
+|      |      |
+| :--- | :--- |
+|  image (WCAG_Rating__Bkgnd_Dark__Primary__4-3.png) <br> alt="WCAG rating for primary text color on dark background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"  | cdr-color-text-primary-darkmode  <br>AAA 13.94:1   |
+|  image (WCAG_Rating__Bkgnd_Dark__Secondary__4-3.png)  <br>  alt="WCAG rating for secondary text color on dark background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"  | cdr-color-text-secondary-darkmode  <br>AA 5.11:1       |
+|  image (WCAG_Rating__Bkgnd_Dark__Link__4-3.png)  <br>  alt="WCAG rating for link text color on dark background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"   | cdr-color-text-link-darkmode  <br>AA 4.61:1   |
+|  image (WCAG_Rating__Bkgnd_Dark__Error__4-3.png)  <br>  alt="WCAG rating for error text color on dark background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"   | cdr-color-text-error-darkmode  <br>AA 4.58:1    |
+
+|  image (WCAG_Rating__Bkgnd_Dark__Disabled__4-3.png)  <br>  alt="WCAG rating for disabled text color on dark background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"   | cdr-color-text-disabled-darkmode  <br>FAIL 2.35:1   |
+
+<br>
+
+**cdr-color-background-darker** 
+|      |      |
+| :--- | :--- |
+|  image (WCAG_Rating__Bkgnd_Darker__Primary__4-3 .png) <br> alt="WCAG rating for primary text color on darker background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"  | cdr-color-text-primary-darkmode  <br>AAA 16.67:1    |
+|  image (WCAG_Rating__Bkgnd_Darker__Secondary__4-3 .png)  <br>  alt="WCAG rating for secondary text color on darker background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"  | cdr-color-text-secondary-darkmode  <br>AA 6.11:1      |
+|  image (WCAG_Rating__Bkgnd_Darker__Link__4-3 .png)  <br>  alt="WCAG rating for link text color on darker background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"   | cdr-color-text-link-darkmode  <br>AA 5.52:1    |
+|  image (WCAG_Rating__Bkgnd_Darker__Error__4-3 .png)  <br>  alt="WCAG rating for error text color on darker background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"   | cdr-color-text-error-darkmode  <br>AA 5.48:1    |
+|  image (WCAG_Rating__Bkgnd_Darker__Disabled__4-3.png)  <br>  alt="WCAG rating for disabled text color on darker background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"   | cdr-color-text-disabled-darkmode <br>FAIL 2.81:1    |
+
 
 </cdr-doc-table-of-contents-shell>
 </template>
@@ -172,8 +230,54 @@ Note: Large text is defined as 14 point (typically 18.66px) and bold or larger, 
 ## Color Options
 Color options are part of the Cedar base color palette. You will find these colors in use throughout Cedar components and design recommendations. Developer note: Please use the variables in your code instead of hex values, as it ensures that your application will stay current.
 
+### Color Option List
 
-**TBD - more content goes here**
+#### Grey Colors
+Grey colors support the cohesive use of typography, backgrounds, and borders across the digital ecosystem. 
+
+*TBD - Table for grey colors*
+
+<br>
+
+#### Tan Colors
+Tan or brand colors are core to the co-op. They’re often used as backgrounds when an experience calls for a stronger brand impression.
+
+*TBD - Table for tan colors*
+
+<br>
+
+#### Blue Colors
+Blue colors are used in a variety of scenarios such as:
+  - Prompting user actions 
+  - Communicate informational messaging
+  - Indicate links within body copy
+
+*TBD - Table for blue colors*
+
+<br>
+
+#### Green Colors
+Green colors are used in a variety of scenarios such as providing feedback for successful form submission.
+
+*TBD - Table for green colors*
+
+<br>
+
+#### Red Colors
+Red colors are used in a variety of scenarios such as:
+  - Announcing sale items 
+  - Communicate error messaging
+
+*TBD - Table for red colors*
+
+<br>
+
+#### Yellow Colors
+Yellow colors are used in a variety of scenarios such as providing feedback for warning messages.
+
+*TBD - Table for yellow colors*
+
+<br>
 
 <br>
 
