@@ -15,34 +15,421 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
   
-# Overview 
+Typography design tokens store the fundamental decisions of Cedar’s font system. 
+- Naming entities store visual design attributes such as font specifications
+- Replacing hard-coded values such as pixel values for font size
+- Maintaining a scalable and consistent visual system for UI development
+- Delivering updates to the brand identity with minimal impact to the code
+- Specifying a hierarchical and semantically defined system
 
-**Hi Steve, 
-Content for the Overview tab goes here.
-Please remove this message and the "#Overview" tag, after editing.
-Thanks, Pat**
+<br/>
 
+## Type Tokens
 
+### Web
 
-## Type Families
+<table>
+ <tbody>
+   <tr>
+     <td>CSS code for Default Body Compact</td>
+     <td>Suggested usage: Use only for compact spacing with informational and supplemental body content.</td>
+   </tr>
+    <tr>
+     <td><b>cdr-text-default-body-compact</b></td>
+      <td><i>Mixin</i></td>
+   </tr>
+   <tr>
+     <td>cdr-text-default-body-compact-family</td>
+     <td>Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif</td>
+   </tr>
+   <tr>
+     <td>cdr-text-default-body-compact-style</td>
+     <td>normal</td>
+   </tr>
+   <tr>
+     <td>cdr-text-default-body-compact-weight</td>
+     <td>400</td>
+   </tr>
+   <tr>
+     <td>cdr-text-default-body-compact-spacing</td>
+     <td>normal</td>
+   </tr>
+   <tr>
+     <td>cdr-text-default-body-compact-size</td>
+     <td>1.4rem / 14px</td>
+   </tr>
+   <tr>
+     <td>cdr-text-default-body-compact-height</td>
+     <td>2.4rem / 24px</td>
+   </tr>
+ </tbody>
+</table>
 
-### Sentinel
+<br/>
 
-**Sentinel** is REI’s first choice for headlines and body copy, as well as anywhere you need an editorial voice.
+<table>
+ <tbody>
+   <tr>
+     <td>CSS Code for Default Body</td>
+     <td>Suggested usage: Default for body content. Uses a more open line height to font size ratio.</td>
+   </tr>
+    <tr>
+     <td><b>cdr-text-default-body</b></td>
+      <td><i>Mixin</i></td>
+   </tr>
+   <tr>
+     <td>cdr-text-default-body-family</td>
+     <td>Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif</td>
+   </tr>
+   <tr>
+     <td>cdr-text-default-body-style</td>
+     <td>normal</td>
+   </tr>
+   <tr>
+     <td>cdr-text-default-body-weight</td>
+     <td>400</td>
+   </tr>
+   <tr>
+     <td>cdr-text-default-body-spacing</td>
+     <td>normal</td>
+   </tr>
+   <tr>
+     <td>cdr-text-default-body-size</td>
+     <td>1.6rem / 16px</td>
+   </tr>
+   <tr>
+     <td>cdr-text-default-body-height</td>
+     <td>2.6rem / 26px</td>
+   </tr>
+ </tbody>
+</table>
 
-**Sentinel** is given the alias of `spruce` in design tokens. By not specifying the typeface in the token, we’re able to respond to changes in the brand identity with minimal impact to the code.
+<br/>
 
-### Roboto
+<table>
+ <tbody>
+   <tr>
+     <td>CSS Code for Editorial Body Compact</td>
+     <td>Suggested usage: Use only for compact spacing with editorial body content.</td>
+   </tr>
+    <tr>
+     <td><b>cdr-text-editorial-body-compact</b></td>
+      <td><i>Mixin</i></td>
+   </tr>
+   <tr>
+     <td>cdr-text-editorial-body-compact-family</td>
+     <td>Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif</td>
+   </tr>
+   <tr>
+     <td>cdr-text-editorial-body-compact-style</td>
+     <td>normal</td>
+   </tr>
+   <tr>
+     <td>cdr-text-editorial-body-compact-weight</td>
+     <td>400</td>
+   </tr>
+   <tr>
+     <td>cdr-text-editorial-body-compact-spacing</td>
+     <td>normal</td>
+   </tr>
+   <tr>
+     <td>cdr-text-editorial-body-compact-size</td>
+     <td>1.8rem / 18px</td>
+   </tr>
+   <tr>
+     <td>cdr-text-editorial-body-compact-height</td>
+     <td>2.8rem / 28px</td>
+   </tr>
+ </tbody>
+</table>
 
-**Roboto** shines when you want a simple, straightforward typeface that doesn’t get in the way. It’s used liberally in the digital space as REI’s chosen font for informational or supplemental-level copy.
+<br/>
 
-**Roboto** is given the alias of `redwood` in design tokens.
+<table>
+ <tbody>
+   <tr>
+     <td>CSS Code for Editorial Body</td>
+     <td>Suggested usage: Default for editorial long-form content. Uses a more open line height to font size ratio.</td>
+   </tr>
+    <tr>
+     <td><b>cdr-text-editorial-body</b></td>
+      <td><i>Mixin</i></td>
+   </tr>
+   <tr>
+     <td>cdr-text-editorial-body-compact-family</td>
+     <td>Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif</td>
+   </tr>
+   <tr>
+     <td>cdr-text-editorial-body-style</td>
+     <td>normal</td>
+   </tr>
+   <tr>
+     <td>cdr-text-editorial-body-weight</td>
+     <td>400</td>
+   </tr>
+   <tr>
+     <td>cdr-text-editorial-body-spacing</td>
+     <td>normal</td>
+   </tr>
+   <tr>
+     <td>cdr-text-editorial-body-size</td>
+     <td>2rem / 20px</td>
+   </tr>
+   <tr>
+     <td>cdr-text-editorial-body-height</td>
+     <td>3.2rem / 32px</td>
+   </tr>
+ </tbody>
+</table>
 
-### Roboto Condensed
+### Mobile
 
-**Roboto Condensed** is used in special circumstances where size constraints exist or visual differentiation is needed. Examples of its use can be found in form labels and the Call to Action text.
+<table>
+ <tbody>
+   <tr>
+     <td>CSS Code for Display 1</td>
+     <td>Suggested usage: Frequently used as the largest title for phone apps and can be used for page titles for larger devices.</td>
+   </tr>
+    <tr>
+     <td>iOS name: Large Title</td>
+      <td>Typeface: Roboto<br/> 
+          Font weight: Medium<br/> 
+          Font size: 34sp<br/> 
+          Line height: 40sp
+      </td>
+   </tr>
+ </tbody>
+</table>
 
-**Roboto Condensed** is given the alias of `maple` in design tokens.
+<br/>
+
+<table>
+ <tbody>
+   <tr>
+     <td>CSS Code for Title 1</td>
+     <td>Suggested usage: Content titles, level 1</td>
+   </tr>
+    <tr>
+     <td>iOS name: Title 1</td>
+      <td>Typeface: Sentinel<br/> 
+          Font weight: Semi Bold<br/>
+          Font size: 28sp<br/>
+          Line height: 36sp 
+      </td>
+   </tr>
+ </tbody>
+</table>
+
+<br/>
+
+<table>
+ <tbody>
+   <tr>
+     <td>CSS Code for Title 2</td>
+     <td>Suggested usage: Content titles, product names, level 2</td>
+   </tr>
+    <tr>
+     <td>iOS name: Title 2</td>
+      <td>Typeface: Sentinel<br/> 
+          Font weight: Semi Bold<br/>
+          Font size: 26sp<br/>
+          Line height: 32sp 
+      </td>
+   </tr>
+ </tbody>
+</table>
+
+<br/>
+
+<table>
+ <tbody>
+   <tr>
+     <td>CSS Code for Title 3</td>
+     <td>Suggested usage: Content titles, product names, product prices, level 3</td>
+   </tr>
+    <tr>
+     <td>iOS name: Title 3</td>
+      <td>Typeface: Sentinel<br/> 
+          Font weight: Semi Bold<br/>
+          Font size: 21sp<br/>
+          Line height: 28sp 
+      </td>
+   </tr>
+ </tbody>
+</table>
+
+<br/>
+
+<table>
+ <tbody>
+   <tr>
+     <td>CSS Code for Headline</td>
+     <td>Suggested usage: Heading primarily used with body copy, list items, table headers</td>
+   </tr>
+    <tr>
+     <td>iOS name: Headline</td>
+      <td>Typeface: Roboto<br/>
+          Font weight: Medium<br/>
+          Font size: 17sp<br/>
+          Line height: 24sp<br/>
+      </td>
+   </tr>
+ </tbody>
+</table>
+
+<br/>
+
+<table>
+ <tbody>
+   <tr>
+     <td>CSS Code for Subhead</td>
+     <td>Suggested usage: Subheading primarily used with body copy </td>
+   </tr>
+    <tr>
+     <td>iOS name: Subhead</td>
+      <td>Typeface: Roboto<br/>
+          Font weight: Medium<br/>
+          Font size: 15sp<br/>
+          Line height: 20sp<br/>
+      </td>
+   </tr>
+ </tbody>
+</table>
+
+<br/>
+
+<table>
+ <tbody>
+   <tr>
+     <td>CSS Code for Body 2</td>
+     <td>Suggested usage: Secondary text intended for informational and supplemental body content </td>
+   </tr>
+    <tr>
+     <td>iOS name: Footnote</td>
+      <td>Typeface: Roboto<br/>
+          Font weight: Regular<br/>
+          Font size: 13sp<br/>
+          Line height: 20sp<br/>
+      </td>
+   </tr>
+ </tbody>
+</table>
+
+<br/>
+
+<table>
+ <tbody>
+   <tr>
+     <td>CSS Code for Body 1</td>
+     <td>Suggested usage: Default for body content</td>
+   </tr>
+    <tr>
+     <td>iOS name: Body</td>
+      <td>Typeface: Roboto<br/>
+          Font weight: Regular<br/>
+          Font size: 15sp<br/>
+          Line height: 20sp<br/>
+      </td>
+   </tr>
+ </tbody>
+</table>
+
+<br/>
+
+<table>
+ <tbody>
+   <tr>
+     <td>CSS Code for Caption 2</td>
+     <td>Suggested usage: Smallest text size, use sparingly or for bottom tab bar text</td>
+   </tr>
+    <tr>
+     <td>iOS name: Caption 2</td>
+      <td>Typeface: Roboto<br/>
+          Font weight: Regular<br/>
+          Font size: 11sp<br/>
+          Line height: 16sp<br/>
+      </td>
+   </tr>
+ </tbody>
+</table>
+
+<br/>
+
+<table>
+ <tbody>
+   <tr>
+     <td>CSS Code for Caption 1</td>
+     <td>Suggested usage: Tertiary text, also intended for informational and supplemental body content. Also used for bottom action bar text for larger devices </td>
+   </tr>
+    <tr>
+     <td>iOS name: Caption 1</td>
+      <td>Typeface: Roboto<br/>
+          Font weight: Regular<br/>
+          Font size: 12sp<br/>
+          Line height: 16sp<br/>
+      </td>
+   </tr>
+ </tbody>
+</table>
+
+<br/>
+
+<table>
+ <tbody>
+   <tr>
+     <td>CSS Code for Button</td>
+     <td>Suggested usage: Button text has a thicker weight than body copy </td>
+   </tr>
+    <tr>
+     <td>iOS name: none</td>
+      <td>Typeface: Roboto<br/>
+          Font weight: Medium<br/>
+          Font size: 15sp<br/>
+          Line height: 24sp<br/>
+      </td>
+   </tr>
+ </tbody>
+</table>
+
+<br/>
+
+<table>
+ <tbody>
+   <tr>
+     <td>CSS Code for Button_accent</td>
+     <td>Suggested usage: Link text has a thicker weight than body copy </td>
+   </tr>
+    <tr>
+     <td>iOS name: none</td>
+      <td>Typeface: Roboto<br/>
+          Font weight: Medium<br/>
+          Font size: 15sp<br/>
+          Line height: 24sp<br/>
+      </td>
+   </tr>
+ </tbody>
+</table>
+
+<br/>
+
+<table>
+ <tbody>
+   <tr>
+     <td>CSS Code for Error State</td>
+     <td>Suggested usage: Only for message text with error or warning states </td>
+   </tr>
+    <tr>
+     <td>iOS name: none</td>
+      <td>Typeface: Roboto<br/>
+          Font weight: Medium<br/>
+          Font size: 15sp<br/>
+          Line height: 20sp<br/>
+      </td>
+   </tr>
+ </tbody>
+</table>
+
+<br/>
 
 <hr/>
 
@@ -55,19 +442,110 @@ Thanks, Pat**
 <template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
 
-# Guidelines 
+## Type Families
 
-**Hi Steve, 
-Content for the Guidelines tab goes here.
-Please remove this message and the "#Guidelines" tag, after editing.
-Thanks, Pat**
+Cedar design system uses a limited number of tokens for typography:
+- To define core styles
+- By using tokens, Cedar can respond to changes in the brand identity with minimal impact to the code
+- List of tokens is available on the [Overview tab](?active-tab=overview)
+
+<br/>
+
+Cedar has also defined a set of options for typography:
+- Options provide great flexibility while aligning with design decisions
+- Use options with caution; type specifications could change
+- The Cedar team is tracking how options are used in components
+- List of options is available on the [Resources tab](?active-tab=resources)
 
 
 </cdr-doc-table-of-contents-shell>
 </template>
 
+### Sentinel
+
+<b>Sentinel</b> is REI’s first choice for headlines and body copy, as well as anywhere you need an editorial voice.
+
+For <b>Sentinel<b/>:
+
+<table>
+ <tbody>
+   <tr>
+     <td>Tokens start with this phrase</td>
+     <td>`cdr-text-editorial-`</td>
+   </tr>
+    <tr>
+     <td>Options start with this phrase</td>
+      <td>`cdr-spruce-`</td>
+   </tr>
+ </tbody>
+</table>
 
 
+### Roboto
+
+<b>Roboto</b> shines when you want a simple, straightforward typeface that doesn’t get in the way. It’s used liberally in the digital space as REI’s chosen font for informational or supplemental-level copy.
+
+For <b>Roboto</b>:
+
+<table>
+ <tbody>
+   <tr>
+     <td>Tokens start with this phrase</td>
+     <td>`cdr-text-default-`</td>
+   </tr>
+    <tr>
+     <td>Options start with this phrase</td>
+      <td>`cdr-redwood-`</td>
+   </tr>
+ </tbody>
+</table>
+
+
+### Roboto Condensed 
+
+<b>Roboto Condensed</b> is used in special circumstances where size constraints exist or visual differentiation is needed. Examples of its use can be found in form labels and the Call to Action text.
+
+For <b>Roboto Condensed</b>:
+
+<table>
+ <tbody>
+   <tr>
+     <td>Tokens start with this phrase</td>
+     <td>`cdr-text-utility-`</td>
+   </tr>
+    <tr>
+     <td>Options start with this phrase</td>
+      <td>`cdr-maple-`</td>
+   </tr>
+ </tbody>
+</table>
+
+
+## Type Scale
+
+The type scale powers all the typography within Cedar components. These preset options are the best way to reinforce visual hierarchy and consistency across pages. The styles can also be used standalone—all the options listed on the Resources tab are also available in the Sketch Toolkit to make your design decisions easier.
+
+
+### Display 
+
+The line height to font size ratio is catered to an overall shorter line length:
+- Best used for big moments, headings, titles, or subheadings
+- Avoid using display sizes for long-form content
+- Frequently used by Cedar components for UI text 
+
+
+### Body
+
+Using a more open line height to font size ratio:
+- Best suited for long-form content
+- Specification is available for default (Roboto) and editorial (Sentinel) tokens
+
+
+### Utility
+
+Utility type styles are used sparingly within UI elements, currently used by Cedar components for:
+- Form labels
+- Call-to-Action text
 
 <template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
