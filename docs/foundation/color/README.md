@@ -161,9 +161,7 @@ Note: Large text is defined as 14 point (typically 18.66px) and bold or larger, 
 ### For Light Backgrounds
 WCAG color contrast ratios for the most commonly used Cedar color tokens for text or foreground colors on recommended light background colors.
 
-
-**cdr-color-background-lightest**
-|    |      |
+| **cdr-color-background-lightest**    |      |
 | :--- | :--- |
 |  image (WCAG_Rating__Bkgnd_Lightest__Primary__4-3.png) <br> alt="WCAG rating for primary text color on lightest background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"  | cdr-color-text-primary-lightmode <br>AAA 14.55:1 |
 |  image (WCAG_Rating__Bkgnd_Lightest__Secondary__4-3.png)  <br>  alt="WCAG rating for secondary text color on lightest background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"  | cdr-color-text-secondary-lightmode <br>AA 6.19:1  |
@@ -173,8 +171,7 @@ WCAG color contrast ratios for the most commonly used Cedar color tokens for tex
 
 <br>
 
-**cdr-color-background-lighter** 
-|      |      |
+|  **cdr-color-background-lighter**      |      |
 | :--- | :--- |
 |  image (WCAG_Rating__Bkgnd_Lighter__Primary__4-3.png) <br> alt="WCAG rating for primary text color on lighter background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"  | cdr-color-text-primary-lightmode <br>AAA 13.94:1    |
 |  image (WCAG_Rating__Bkgnd_Lighter__Secondary__4-3.png)  <br>  alt="WCAG rating for secondary text color on lighter background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"  | cdr-color-text-secondary-lightmode  <br>AA 5.93:1       |
@@ -184,8 +181,7 @@ WCAG color contrast ratios for the most commonly used Cedar color tokens for tex
 
 <br>
 
-**cdr-color-background-light** 
-|      |      |
+|  **cdr-color-background-light**     |      |
 | :--- | :--- |
 |  image (WCAG_Rating__Bkgnd_Light__Primary__4-3.png) <br> alt="WCAG rating for primary text color on light background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"  | cdr-color-text-primary-lightmode  <br>AAA 13.58:1    |
 |  image (WCAG_Rating__Bkgnd_Light__Secondary__4-3.png)  <br>  alt="WCAG rating for secondary text color on light background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"  | cdr-color-text-secondary-lightmode <br>AA 5.78:1       |
@@ -198,8 +194,7 @@ WCAG color contrast ratios for the most commonly used Cedar color tokens for tex
 ### For Dark Backgrounds
 WCAG color contrast ratios for the most commonly used Cedar color tokens for text or foreground colors on recommended dark background colors.
 
-**cdr-color-background-dark** 
-|      |      |
+|  **cdr-color-background-dark**     |      |
 | :--- | :--- |
 |  image (WCAG_Rating__Bkgnd_Dark__Primary__4-3.png) <br> alt="WCAG rating for primary text color on dark background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"  | cdr-color-text-primary-darkmode  <br>AAA 13.94:1   |
 |  image (WCAG_Rating__Bkgnd_Dark__Secondary__4-3.png)  <br>  alt="WCAG rating for secondary text color on dark background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"  | cdr-color-text-secondary-darkmode  <br>AA 5.11:1       |
@@ -210,8 +205,7 @@ WCAG color contrast ratios for the most commonly used Cedar color tokens for tex
 
 <br>
 
-**cdr-color-background-darker** 
-|      |      |
+| **cdr-color-background-darker**      |      |
 | :--- | :--- |
 |  image (WCAG_Rating__Bkgnd_Darker__Primary__4-3 .png) <br> alt="WCAG rating for primary text color on darker background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"  | cdr-color-text-primary-darkmode  <br>AAA 16.67:1    |
 |  image (WCAG_Rating__Bkgnd_Darker__Secondary__4-3 .png)  <br>  alt="WCAG rating for secondary text color on darker background color” <br>  ratio="4-3" <br> cover <br> crop="x-center  y-center"  | cdr-color-text-secondary-darkmode  <br>AA 6.11:1      |
