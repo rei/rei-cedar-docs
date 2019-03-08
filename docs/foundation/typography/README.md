@@ -182,6 +182,8 @@ Typography design tokens store the fundamental decisions of Cedar’s font syste
  </tbody>
 </table>
 
+<br/>
+
 ### Mobile
 
 <table>
@@ -465,7 +467,7 @@ Cedar has also defined a set of options for typography:
 
 <b>Sentinel</b> is REI’s first choice for headlines and body copy, as well as anywhere you need an editorial voice.
 
-For <b>Sentinel<b/>:
+For <b>Sentinel</b>:
 
 <table>
  <tbody>
