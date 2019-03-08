@@ -11,7 +11,14 @@
   ],
 }
 ---
+<cdr-doc-tabs :labels="['Overview', 'Guidelines', 'Resources']">
+<template slot="Overview">
 <cdr-doc-table-of-contents-shell>
+
+**Hi Steve, 
+Content for the Overview tab goes here.
+Please remove this message, after editing.
+Thanks, Pat**
 
 ## Type Families
 
@@ -34,6 +41,38 @@
 **Roboto Condensed** is given the alias of `maple` in design tokens.
 
 <hr/>
+
+</cdr-doc-table-of-contents-shell>
+</template>
+
+
+
+
+<template slot="Guidelines">
+<cdr-doc-table-of-contents-shell>
+
+
+**Hi Steve, 
+Content for the Guidelines tab goes here.
+Please remove this message, after editing.
+Thanks, Pat**
+
+
+</cdr-doc-table-of-contents-shell>
+</template>
+
+
+
+
+<template slot="Guidelines">
+<cdr-doc-table-of-contents-shell>
+  
+**Hi Steve, 
+Content for the Resource tab goes here but don't add content yet.
+Please remove this message, after editing.
+Thanks, Pat**
+
+
 
 ## Type Scale
 
