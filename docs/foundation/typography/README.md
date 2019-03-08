@@ -14,11 +14,15 @@
 <cdr-doc-tabs :labels="['Overview', 'Guidelines', 'Resources']">
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
+  
+# Overview 
 
 **Hi Steve, 
 Content for the Overview tab goes here.
-Please remove this message, after editing.
+Please remove this message and the "#Overview" tag, after editing.
 Thanks, Pat**
+
+
 
 ## Type Families
 
@@ -51,10 +55,11 @@ Thanks, Pat**
 <template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
 
+# Guidelines 
 
 **Hi Steve, 
 Content for the Guidelines tab goes here.
-Please remove this message, after editing.
+Please remove this message and the "#Guidelines" tag, after editing.
 Thanks, Pat**
 
 
@@ -66,10 +71,11 @@ Thanks, Pat**
 
 <template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
-  
+ 
+# Resources 
+
 **Hi Steve, 
 Content for the Resource tab goes here but don't add content yet.
-Please remove this message, after editing.
 Thanks, Pat**
 
 
