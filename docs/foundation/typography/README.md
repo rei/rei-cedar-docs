@@ -2,7 +2,7 @@
 {
   "title": "Typography",
   "title_metadata": false,
-  "layout": "LayoutArticle",
+  "layout": "LayoutComponent",
   "summary": false,
   "breadcrumbs": [
     {
