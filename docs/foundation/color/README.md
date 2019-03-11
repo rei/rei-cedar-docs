@@ -2,7 +2,7 @@
 {
   "title": "Color",
   "title_metadata": false,
-  "layout": "LayoutArticle",
+  "layout": "LayoutComponent",
   "summary": false,
   "breadcrumbs": [
     {
@@ -14,6 +14,7 @@
 <cdr-doc-tabs :labels="['Overview', 'Guidelines', 'Resources']">
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
+  
 
 Color design tokens store the fundamental color decisions of REI’s visual language:
   - Naming entities to store visual design attributes such as color specifications
@@ -258,9 +259,9 @@ List of color tokens with descriptions, Cedar Color Options used, and values. We
 
 <br>
 
-
 </cdr-doc-table-of-contents-shell>
 </template>
+
 
 
 
@@ -457,9 +458,10 @@ WCAG color contrast ratios for the most commonly used Cedar color tokens for tex
 
 <br>
 
-
 </cdr-doc-table-of-contents-shell>
 </template>
+
+
 
 
 <template slot="Resources">
@@ -521,3 +523,7 @@ Yellow colors are used in a variety of scenarios such as providing feedback for 
 
 </cdr-doc-table-of-contents-shell>
 </template>
+
+
+
+  
