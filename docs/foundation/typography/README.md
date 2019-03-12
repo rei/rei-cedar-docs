@@ -316,6 +316,8 @@ Utility type styles are used sparingly within UI elements, currently used by Ced
 - Form labels
 - Call-to-Action text
 
+<hr/>
+
 </cdr-doc-table-of-contents-shell>
 </template>
 
