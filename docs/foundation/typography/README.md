@@ -326,7 +326,6 @@ Utility type styles are used sparingly within UI elements, currently used by Ced
 
 ## Type Scale
 
-The type scale powers all the typography within Cedar components. These preset options are the best way to reinforce visual hierarchy and consistency across pages. Use the styles standalone too—all the options below are also available in the Sketch Toolkit to make your design decisions easier.
 
 ### Display Sizes
 
