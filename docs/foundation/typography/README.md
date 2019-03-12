@@ -28,161 +28,72 @@ Typography design tokens store the fundamental decisions of Cedar’s font syste
 
 ### Web
 
-<table>
- <tbody>
-   <tr>
-     <td>CSS code for Default Body Compact</td>
-     <td>Suggested usage: Use only for compact spacing with informational and supplemental body content.</td>
-   </tr>
-    <tr>
-     <td><b>cdr-text-default-body-compact</b></td>
-      <td><i>Mixin</i></td>
-   </tr>
-   <tr>
-     <td>cdr-text-default-body-compact-family</td>
-     <td>Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif</td>
-   </tr>
-   <tr>
-     <td>cdr-text-default-body-compact-style</td>
-     <td>normal</td>
-   </tr>
-   <tr>
-     <td>cdr-text-default-body-compact-weight</td>
-     <td>400</td>
-   </tr>
-   <tr>
-     <td>cdr-text-default-body-compact-spacing</td>
-     <td>normal</td>
-   </tr>
-   <tr>
-     <td>cdr-text-default-body-compact-size</td>
-     <td>1.4rem / 14px</td>
-   </tr>
-   <tr>
-     <td>cdr-text-default-body-compact-height</td>
-     <td>2.4rem / 24px</td>
-   </tr>
- </tbody>
-</table>
+## Typography Tokens
+### Web 
+
+<br/>
+**`CSS code for default-body-compact`**  
+Suggested usage: Use only for compact spacing with informational and supplemental body content. 
+| Token Name                                  | Values      |
+| :------------------------------------------ | :---------- |
+| **cdr-text-default-body-compact**           | *Mixin*   |
+| cdr-text-default-body-compact-family        | Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif   |
+| cdr-text-default-body-compact-style         | normal  |
+| cdr-text-default-body-compact-weight        | 400   |
+| cdr-text-default-body-compact-spacing       | normal   |
+| cdr-text-default-body-compact-size          | 1.4rem / 14px   |
+| cdr-text-default-body-compact-height        | 2.4rem / 24px  |
+
 
 <br/>
 
-<table>
- <tbody>
-   <tr>
-     <td>CSS Code for Default Body</td>
-     <td>Suggested usage: Default for body content. Uses a more open line height to font size ratio.</td>
-   </tr>
-    <tr>
-     <td><b>cdr-text-default-body</b></td>
-      <td><i>Mixin</i></td>
-   </tr>
-   <tr>
-     <td>cdr-text-default-body-family</td>
-     <td>Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif</td>
-   </tr>
-   <tr>
-     <td>cdr-text-default-body-style</td>
-     <td>normal</td>
-   </tr>
-   <tr>
-     <td>cdr-text-default-body-weight</td>
-     <td>400</td>
-   </tr>
-   <tr>
-     <td>cdr-text-default-body-spacing</td>
-     <td>normal</td>
-   </tr>
-   <tr>
-     <td>cdr-text-default-body-size</td>
-     <td>1.6rem / 16px</td>
-   </tr>
-   <tr>
-     <td>cdr-text-default-body-height</td>
-     <td>2.6rem / 26px</td>
-   </tr>
- </tbody>
-</table>
+
+**`CSS code for default-body`**  
+Suggested usage: Default for body content. Uses a more open line height to font size ratio. 
+| Token Name                                  | Values      |
+| :------------------------------------------ | :---------- |
+| **cdr-text-default-body**                   | *Mixin*   |
+| cdr-text-default-body-family                | Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif   |
+| cdr-text-default-body-style                 | normal  |
+| cdr-text-default-body-weight                | 400   |
+| cdr-text-default-body-spacing               | normal   | 
+| cdr-text-default-body-size                  | 1.6rem / 16px  |
+| cdr-text-default-body-height                | 2.6rem / 26px  |
+
 
 <br/>
 
-<table>
- <tbody>
-   <tr>
-     <td>CSS Code for Editorial Body Compact</td>
-     <td>Suggested usage: Use only for compact spacing with editorial body content.</td>
-   </tr>
-    <tr>
-     <td><b>cdr-text-editorial-body-compact</b></td>
-      <td><i>Mixin</i></td>
-   </tr>
-   <tr>
-     <td>cdr-text-editorial-body-compact-family</td>
-     <td>Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif</td>
-   </tr>
-   <tr>
-     <td>cdr-text-editorial-body-compact-style</td>
-     <td>normal</td>
-   </tr>
-   <tr>
-     <td>cdr-text-editorial-body-compact-weight</td>
-     <td>400</td>
-   </tr>
-   <tr>
-     <td>cdr-text-editorial-body-compact-spacing</td>
-     <td>normal</td>
-   </tr>
-   <tr>
-     <td>cdr-text-editorial-body-compact-size</td>
-     <td>1.8rem / 18px</td>
-   </tr>
-   <tr>
-     <td>cdr-text-editorial-body-compact-height</td>
-     <td>2.8rem / 28px</td>
-   </tr>
- </tbody>
-</table>
+**`CSS code for editorial-body-compact`**  
+Suggested usage: Use only for compact spacing with editorial body content.
+| Token Name                                  | Values      |
+| :------------------------------------------ | :---------- |
+| **cdr-text-editorial-body-compact**         | *Mixin*   |
+| cdr-text-editorial-body-compact-family      | Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif   |
+| cdr-text-editorial-body-compact-style       | normal  |
+| cdr-text-editorial-body-compact-weight      | 400   |
+| cdr-text-editorial-body-compact-spacing     | normal   |
+| cdr-text-editorial-body-compact-size        | 1.8rem / 18px |
+| cdr-text-editorial-body-compact-height      | 2.8rem / 28px |
+
 
 <br/>
 
-<table>
- <tbody>
-   <tr>
-     <td>CSS Code for Editorial Body</td>
-     <td>Suggested usage: Default for editorial long-form content. Uses a more open line height to font size ratio.</td>
-   </tr>
-    <tr>
-     <td><b>cdr-text-editorial-body</b></td>
-      <td><i>Mixin</i></td>
-   </tr>
-   <tr>
-     <td>cdr-text-editorial-body-compact-family</td>
-     <td>Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif</td>
-   </tr>
-   <tr>
-     <td>cdr-text-editorial-body-style</td>
-     <td>normal</td>
-   </tr>
-   <tr>
-     <td>cdr-text-editorial-body-weight</td>
-     <td>400</td>
-   </tr>
-   <tr>
-     <td>cdr-text-editorial-body-spacing</td>
-     <td>normal</td>
-   </tr>
-   <tr>
-     <td>cdr-text-editorial-body-size</td>
-     <td>2rem / 20px</td>
-   </tr>
-   <tr>
-     <td>cdr-text-editorial-body-height</td>
-     <td>3.2rem / 32px</td>
-   </tr>
- </tbody>
-</table>
+
+**`CSS code for editorial-body`**  
+Suggested usage: Default for editorial long-form content. Uses a more open line height to font size ratio.
+| Token Name                                  | Values      |
+| :------------------------------------------ | :---------- |
+| **cdr-text-editorial-body**                 | *Mixin*   |
+| cdr-text-editorial-body-family              | Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif   | 
+| cdr-text-editorial-body-style               | normal  |
+| cdr-text-editorial-body-weight              | 400   |
+| cdr-text-editorial-body-spacing             | normal   | 
+| cdr-text-editorial-body-size                | 2rem / 20px |
+| cdr-text-editorial-body-height              | 3.2rem / 32px |
+
 
 <br/>
+
 
 ### Mobile
 
@@ -463,60 +374,30 @@ Cedar has also defined a set of options for typography:
 <b>Sentinel</b> is REI’s first choice for headlines and body copy, as well as anywhere you need an editorial voice.
 
 For <b>Sentinel</b>:
+- Tokens start with this phrase: `cdr-text-editorial-`
+- Options start with this phrase: `cdr-spruce-`
 
-<table>
- <tbody>
-   <tr>
-     <td>Tokens start with this phrase</td>
-     <td>`cdr-text-editorial-`</td>
-   </tr>
-    <tr>
-     <td>Options start with this phrase</td>
-      <td>`cdr-spruce-`</td>
-   </tr>
- </tbody>
-</table>
-
+<br>
 
 ### Roboto
 
 <b>Roboto</b> shines when you want a simple, straightforward typeface that doesn’t get in the way. It’s used liberally in the digital space as REI’s chosen font for informational or supplemental-level copy.
 
 For <b>Roboto</b>:
+- Tokens start with this phrase: `cdr-text-default-`
+- Options start with this phrase:`cdr-redwood-`
 
-<table>
- <tbody>
-   <tr>
-     <td>Tokens start with this phrase</td>
-     <td>`cdr-text-default-`</td>
-   </tr>
-    <tr>
-     <td>Options start with this phrase</td>
-      <td>`cdr-redwood-`</td>
-   </tr>
- </tbody>
-</table>
-
+<br>
 
 ### Roboto Condensed 
 
 <b>Roboto Condensed</b> is used in special circumstances where size constraints exist or visual differentiation is needed. Examples of its use can be found in form labels and the Call to Action text.
 
 For <b>Roboto Condensed</b>:
+- Tokens start with this phrase: `cdr-text-utility-`
+- Options start with this phrase: `cdr-maple-`
 
-<table>
- <tbody>
-   <tr>
-     <td>Tokens start with this phrase</td>
-     <td>`cdr-text-utility-`</td>
-   </tr>
-    <tr>
-     <td>Options start with this phrase</td>
-      <td>`cdr-maple-`</td>
-   </tr>
- </tbody>
-</table>
-
+<br>
 
 ## Type Scale
 
@@ -547,16 +428,10 @@ Utility type styles are used sparingly within UI elements, currently used by Ced
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Guidelines">
+
+<template slot="Resources">
 <cdr-doc-table-of-contents-shell>
  
-# Resources 
-
-**Hi Steve, 
-Content for the Resource tab goes here but don't add content yet.
-Thanks, Pat**
-
-
 
 ## Type Scale
 
