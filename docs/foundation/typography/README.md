@@ -439,8 +439,6 @@ Typography design tokens store the fundamental decisions of Cedar’s font syste
 </template>
 
 
-
-
 <template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
 
@@ -459,9 +457,6 @@ Cedar has also defined a set of options for typography:
 - The Cedar team is tracking how options are used in components
 - List of options is available on the [Resources tab](?active-tab=resources)
 
-
-</cdr-doc-table-of-contents-shell>
-</template>
 
 ### Sentinel
 
@@ -549,8 +544,8 @@ Utility type styles are used sparingly within UI elements, currently used by Ced
 - Form labels
 - Call-to-Action text
 
-</template>
 </cdr-doc-table-of-contents-shell>
+</template>
 
 <template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
@@ -624,4 +619,5 @@ Utility type styles are used sparingly within UI elements such as form labels an
 <cdr-doc-typography-sample token="maple-utility-70" weight="400" size="28" height="36"/>
 
 </cdr-doc-table-of-contents-shell>
+</template>
 </cdr-doc-tabs>
