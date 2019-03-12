@@ -33,7 +33,8 @@ Typography design tokens store the fundamental decisions of Cedar’s font syste
 
 <br/>
 `CSS code for default-body-compact`  
-Suggested usage: Use only for compact spacing with informational and supplemental body content. 
+Suggested usage: Use only for compact spacing with informational and supplemental body content
+
 | Token Name                                  | Values      |
 | :------------------------------------------ | :---------- |
 | **cdr-text-default-body-compact**           | *Mixin*   |
@@ -49,7 +50,8 @@ Suggested usage: Use only for compact spacing with informational and supplementa
 
 
 `CSS code for default-body` 
-Suggested usage: Default for body content. Uses a more open line height to font size ratio. 
+Suggested usage: Default for body content. Uses a more open line height to font size ratio
+
 | Token Name                                  | Values      |
 | :------------------------------------------ | :---------- |
 | **cdr-text-default-body**                   | *Mixin*   |
@@ -64,7 +66,8 @@ Suggested usage: Default for body content. Uses a more open line height to font 
 <br/>
 
 `CSS code for editorial-body-compact`  
-Suggested usage: Use only for compact spacing with editorial body content.
+Suggested usage: Use only for compact spacing with editorial body content
+
 | Token Name                                  | Values      |
 | :------------------------------------------ | :---------- |
 | **cdr-text-editorial-body-compact**         | *Mixin*   |
@@ -80,7 +83,8 @@ Suggested usage: Use only for compact spacing with editorial body content.
 
 
 `CSS code for editorial-body` 
-Suggested usage: Default for editorial long-form content. Uses a more open line height to font size ratio.
+Suggested usage: Default for editorial long-form content. Uses a more open line height to font size ratio
+
 | Token Name                                  | Values      |
 | :------------------------------------------ | :---------- |
 | **cdr-text-editorial-body**                 | *Mixin*   |
