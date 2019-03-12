@@ -446,7 +446,7 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
       <td>cdr-color-text-link-darkmode <br>AA 5.52:1  </td>
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_darker_error_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_darker_error_4-3 .png`)"/> </td>
       <td>cdr-color-text-error-darkmode <br>AA 5.48:1  </td>
     </tr>
     <tr>
