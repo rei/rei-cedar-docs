@@ -523,7 +523,4 @@ Yellow colors are used in a variety of scenarios such as providing feedback for 
 
 </cdr-doc-table-of-contents-shell>
 </template>
-
-
-
-  
+</cdr-doc-tabs>

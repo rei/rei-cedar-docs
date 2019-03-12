@@ -549,6 +549,9 @@ Utility type styles are used sparingly within UI elements, currently used by Ced
 - Form labels
 - Call-to-Action text
 
+</template>
+</cdr-doc-table-of-contents-shell>
+
 <template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
  
@@ -621,3 +624,4 @@ Utility type styles are used sparingly within UI elements such as form labels an
 <cdr-doc-typography-sample token="maple-utility-70" weight="400" size="28" height="36"/>
 
 </cdr-doc-table-of-contents-shell>
+</cdr-doc-tabs>
