@@ -106,252 +106,134 @@ Suggested usage: Default for editorial long-form content. Uses a more open line 
 
 ### Mobile
 
-<table>
- <tbody>
-   <tr>
-     <td>CSS Code for Display 1</td>
-     <td>Suggested usage: Frequently used as the largest title for phone apps and can be used for page titles for larger devices.</td>
-   </tr>
-    <tr>
-     <td>iOS name: Large Title</td>
-      <td>Typeface: Roboto<br/> 
-          Font weight: Medium<br/> 
-          Font size: 34sp<br/> 
-          Line height: 40sp
-      </td>
-   </tr>
- </tbody>
-</table>
+`CSS code for Display 1`
 
-<br/>
+Suggested usage: Frequently used as the largest title for phone apps and can be used for page titles for larger devices 
 
-<table>
- <tbody>
-   <tr>
-     <td>CSS Code for Title 1</td>
-     <td>Suggested usage: Content titles, level 1</td>
-   </tr>
-    <tr>
-     <td>iOS name: Title 1</td>
-      <td>Typeface: Sentinel<br/> 
-          Font weight: Semi Bold<br/>
-          Font size: 28sp<br/>
-          Line height: 36sp 
-      </td>
-   </tr>
- </tbody>
-</table>
+| Token Name                                  | Values                       |
+| :------------------------------------------ | :--------------------------- |
+| Android name: Display 1 <br>iOS name: Large Title <br> <br> <br>          | Typeface: Roboto <br>Font weight: Medium <br>Font size: 34sp <br>Line height: 40sp |
 
-<br/>
+<br>
 
-<table>
- <tbody>
-   <tr>
-     <td>CSS Code for Title 2</td>
-     <td>Suggested usage: Content titles, product names, level 2</td>
-   </tr>
-    <tr>
-     <td>iOS name: Title 2</td>
-      <td>Typeface: Sentinel<br/> 
-          Font weight: Semi Bold<br/>
-          Font size: 26sp<br/>
-          Line height: 32sp 
-      </td>
-   </tr>
- </tbody>
-</table>
+`CSS code for Title 1`  
 
-<br/>
+Suggested usage: Content titles, level 1
 
-<table>
- <tbody>
-   <tr>
-     <td>CSS Code for Title 3</td>
-     <td>Suggested usage: Content titles, product names, product prices, level 3</td>
-   </tr>
-    <tr>
-     <td>iOS name: Title 3</td>
-      <td>Typeface: Sentinel<br/> 
-          Font weight: Semi Bold<br/>
-          Font size: 21sp<br/>
-          Line height: 28sp 
-      </td>
-   </tr>
- </tbody>
-</table>
+| Token Name                                  | Values                       |
+| :------------------------------------------ | :--------------------------- |
+| Android name: Title 1 <br>iOS name: Title 1 <br> <br> <br>          | Typeface: Sentinel <br>Font weight: Semi Bold <br>Font size: 28sp <br> Line height: 36sp |
 
-<br/>
+<br>
 
-<table>
- <tbody>
-   <tr>
-     <td>CSS Code for Headline</td>
-     <td>Suggested usage: Heading primarily used with body copy, list items, table headers</td>
-   </tr>
-    <tr>
-     <td>iOS name: Headline</td>
-      <td>Typeface: Roboto<br/>
-          Font weight: Medium<br/>
-          Font size: 17sp<br/>
-          Line height: 24sp<br/>
-      </td>
-   </tr>
- </tbody>
-</table>
+`CSS code for Title 2` 
 
-<br/>
+Suggested usage: Content titles, product names, level 2
 
-<table>
- <tbody>
-   <tr>
-     <td>CSS Code for Subhead</td>
-     <td>Suggested usage: Subheading primarily used with body copy </td>
-   </tr>
-    <tr>
-     <td>iOS name: Subhead</td>
-      <td>Typeface: Roboto<br/>
-          Font weight: Medium<br/>
-          Font size: 15sp<br/>
-          Line height: 20sp<br/>
-      </td>
-   </tr>
- </tbody>
-</table>
+| Token Name                                  | Values                       |
+| :------------------------------------------ | :--------------------------- |
+| Android name: Title 2 <br>iOS name: Title 2 <br> <br> <br>          | Typeface: Sentinel <br>Font weight: Semi Bold <br>Font size: 26sp <br>Line height: 32sp  |
 
-<br/>
+<br>
 
-<table>
- <tbody>
-   <tr>
-     <td>CSS Code for Body 2</td>
-     <td>Suggested usage: Secondary text intended for informational and supplemental body content </td>
-   </tr>
-    <tr>
-     <td>iOS name: Footnote</td>
-      <td>Typeface: Roboto<br/>
-          Font weight: Regular<br/>
-          Font size: 13sp<br/>
-          Line height: 20sp<br/>
-      </td>
-   </tr>
- </tbody>
-</table>
+`CSS code for Title 3` 
 
-<br/>
+Suggested usage: Content titles, product names, product prices, level 3
 
-<table>
- <tbody>
-   <tr>
-     <td>CSS Code for Body 1</td>
-     <td>Suggested usage: Default for body content</td>
-   </tr>
-    <tr>
-     <td>iOS name: Body</td>
-      <td>Typeface: Roboto<br/>
-          Font weight: Regular<br/>
-          Font size: 15sp<br/>
-          Line height: 20sp<br/>
-      </td>
-   </tr>
- </tbody>
-</table>
+| Token Name                                  | Values                       |
+| :------------------------------------------ | :--------------------------- |
+| Android name: Title 3 <br>iOS name: Title 3<br> <br> <br>          | Typeface: Sentinel <br>Font weight: Semi Bold <br>Font size: 21sp <br>Line height: 28sp  |
 
-<br/>
+<br>
 
-<table>
- <tbody>
-   <tr>
-     <td>CSS Code for Caption 2</td>
-     <td>Suggested usage: Smallest text size, use sparingly or for bottom tab bar text</td>
-   </tr>
-    <tr>
-     <td>iOS name: Caption 2</td>
-      <td>Typeface: Roboto<br/>
-          Font weight: Regular<br/>
-          Font size: 11sp<br/>
-          Line height: 16sp<br/>
-      </td>
-   </tr>
- </tbody>
-</table>
+`CSS code for Headline`
 
-<br/>
+Suggested usage: Heading primarily used with body copy, list items, table headers
 
-<table>
- <tbody>
-   <tr>
-     <td>CSS Code for Caption 1</td>
-     <td>Suggested usage: Tertiary text, also intended for informational and supplemental body content. Also used for bottom action bar text for larger devices </td>
-   </tr>
-    <tr>
-     <td>iOS name: Caption 1</td>
-      <td>Typeface: Roboto<br/>
-          Font weight: Regular<br/>
-          Font size: 12sp<br/>
-          Line height: 16sp<br/>
-      </td>
-   </tr>
- </tbody>
-</table>
+| Token Name                                  | Values                       |
+| :------------------------------------------ | :--------------------------- |
+| Android name: Headline <br>iOS name: Headline <br> <br> <br>          | Typeface: Roboto <br>Font weight: Medium <br>Font size: 17sp <br>Line height: 24sp  |
 
-<br/>
+<br>
 
-<table>
- <tbody>
-   <tr>
-     <td>CSS Code for Button</td>
-     <td>Suggested usage: Button text has a thicker weight than body copy </td>
-   </tr>
-    <tr>
-     <td>iOS name: none</td>
-      <td>Typeface: Roboto<br/>
-          Font weight: Medium<br/>
-          Font size: 15sp<br/>
-          Line height: 24sp<br/>
-      </td>
-   </tr>
- </tbody>
-</table>
+`CSS code for Subhead`
 
-<br/>
+Suggested usage: Subheading primarily used with body copy 
 
-<table>
- <tbody>
-   <tr>
-     <td>CSS Code for Button_accent</td>
-     <td>Suggested usage: Link text has a thicker weight than body copy </td>
-   </tr>
-    <tr>
-     <td>iOS name: none</td>
-      <td>Typeface: Roboto<br/>
-          Font weight: Medium<br/>
-          Font size: 15sp<br/>
-          Line height: 24sp<br/>
-      </td>
-   </tr>
- </tbody>
-</table>
+| Token Name                                  | Values                       |
+| :------------------------------------------ | :--------------------------- |
+| Android name: Subhead <br>iOS name: Subhead <br> <br> <br>          | Typeface: Roboto <br>Font weight: Medium <br>Font size: 15sp <br>Line height: 20sp |
 
-<br/>
+<br>
 
-<table>
- <tbody>
-   <tr>
-     <td>CSS Code for Error State</td>
-     <td>Suggested usage: Only for message text with error or warning states </td>
-   </tr>
-    <tr>
-     <td>iOS name: none</td>
-      <td>Typeface: Roboto<br/>
-          Font weight: Medium<br/>
-          Font size: 15sp<br/>
-          Line height: 20sp<br/>
-      </td>
-   </tr>
- </tbody>
-</table>
+`CSS code for Body 2`
 
-<br/>
+Suggested usage: Secondary text intended for informational and supplemental body content
+
+| Token Name                                  | Values                       |
+| :------------------------------------------ | :--------------------------- |
+| Android name: Body 2 <br>iOS name: Footnote <br> <br> <br>          | Typeface: Roboto <br>Font weight: Regular <br>Font size: 13sp <br> Line height: 20sp |
+
+<br>
+
+`CSS code for Body 1`
+
+Suggested usage: Default for body content
+
+| Token Name                                  | Values                       |
+| :------------------------------------------ | :--------------------------- |
+| Android name: Body 1 <br>iOS name: Body <br> <br> <br>          | Typeface: Roboto <br>Font weight: Regular <br>Font size: 15sp <br>Line height:  20sp  |
+
+<br>
+
+`CSS code for Caption 2`
+
+Suggested usage: Smallest text size, use sparingly or for bottom tab bar text
+
+| Token Name                                  | Values                       |
+| :------------------------------------------ | :--------------------------- |
+| Android name: Caption 2 <br>iOS name: Caption 2 <br> <br> <br>          | Typeface: Roboto <br>Font weight: Regular <br>Font size: 11sp <br>Line height: 16sp  |
+
+<br>
+
+`CSS code for Caption 1`
+
+Suggested usage: Tertiary text, also intended for informational and supplemental body content. Also used for bottom action bar text for larger devices 
+
+| Token Name                                  | Values                       |
+| :------------------------------------------ | :--------------------------- |
+| Android name: Caption 1 <br>iOS name: Caption 1<br> <br> <br>          | Typeface: Roboto <br>Font weight: Regular <br>Font size: 12sp <br>Line height: 16sp  |
+
+<br>
+
+`CSS code for Button`
+
+Suggested usage: Button text has a thicker weight than body copy
+
+| Token Name                                  | Values                       |
+| :------------------------------------------ | :--------------------------- |
+| Android name: Button <br>iOS name: none <br> <br> <br>          | Typeface: Roboto <br>Font weight: Medium <br>Font size: 15sp <br>Line height: 24sp  |
+
+<br>
+
+`CSS code for Button_accent`
+
+Suggested usage: Link text has a thicker weight than body copy
+
+| Token Name                                  | Values                       |
+| :------------------------------------------ | :--------------------------- |
+| Android name: Button_accent <br>iOS name: none <br> <br> <br>          | Typeface: Roboto <br>Font weight: Medium <br>Font size: 15sp <br>Line height: 24sp  |
+
+<br>
+
+`CSS code for Error State`  
+Suggested usage: Only for message text with error or warning states
+
+| Token Name                                  | Values                       |
+| :------------------------------------------ | :--------------------------- |
+| Android name: Error State <br>iOS name: none <br> <br> <br>          | Typeface: Roboto <br>Font weight: Medium <br>Font size: 15sp <br>Line height: 20sp  |
+
+<br>
 
 <hr/>
 
