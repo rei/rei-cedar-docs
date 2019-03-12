@@ -27,12 +27,12 @@ Color design tokens store the fundamental color decisions of REI’s visual lang
 ## Color Tokens
 
 ### Web and Mobile
-List of color tokens with descriptions, Cedar Color Options used, and values. Web and mobile color tokens have identical hex values but the naming pattern differs. For example, color token names are:
+List of color tokens with descriptions and values. Web and mobile color tokens have identical hex values but the naming pattern differs. For example, color token names are:
   - **For Web:** cdr-color-text-primary-lightmode 
   - **For Android:** cdr_color_text_primary_lightmode
 
 
-#### Background
+#### Background Colors
 
 <table>
   <tbody>
@@ -300,19 +300,19 @@ Cedar offers a range of colors designed to be accessed, understood, and used by 
 ]" />
 
 <br>
-<hr>
+
 ## Accessibility 
 Text choices should be paired with their corresponding background color to ensure accessibility. Legend descriptions for WCAG contrast ratios requirements are:
   - **AAA:** 7:1 for normal text and 4.5:1 for large text 
   - **AA:** 4.5:1 for normal text and 3:1 for large text
-  - **AA-LG:** Only for large text and graphical objects and user interface components
+  - **AA-LG:** Only for large text, graphical objects and user interface components
 
-Note: Large text is defined as 14 point (typically 18.66px) and bold or larger, or 18 point (typically 24px) or larger.
+Note: Large text is defined as 18 point (typically 24px) or larger or with bold style, 14 point (typically 18.66px) or larger
 
 <br>
 
 ### For Light Backgrounds
-WCAG color contrast ratios for the most commonly used Cedar color tokens for text or foreground colors on recommended light background colors.
+WCAG color contrast ratios for frequently used Cedar color tokens for text or foreground colors on light background colors.
 
 #### cdr-color-background-lightest
 <table>
@@ -400,7 +400,7 @@ WCAG color contrast ratios for the most commonly used Cedar color tokens for tex
 
 
 ### For Dark Backgrounds
-WCAG color contrast ratios for the most commonly used Cedar color tokens for text or foreground colors on recommended dark background colors.
+WCAG color contrast ratios for frequently used Cedar color tokens for text or foreground colors on dark background colors.
 
 #### cdr-color-background-dark
 <table>
@@ -450,7 +450,7 @@ WCAG color contrast ratios for the most commonly used Cedar color tokens for tex
       <td>cdr-color-text-error-darkmode <br>AA 5.48:1  </td>
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_darker_disabled_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_darker_disabled_4-3.png`)"/> </td>  
       <td>cdr-color-text-disabled-darkmode <br>FAIL 2.81:1  </td>
     </tr>
   </tbody>
