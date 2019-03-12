@@ -38,7 +38,7 @@ Some packages contain more (or fewer) than these two files which is noted in the
 
 <hr>
 
-## Setup a project
+## Setting Up Projects
 All components depend upon core style and font assets. Without these assets included, components may be styled incorrectly.
 
 First, install the assets package:
@@ -52,7 +52,7 @@ The [cdr-assets package](https://www.npmjs.com/package/@rei/cdr-assets) contains
   * cdr-core.css
   * cdr-fonts.css
 
-### Install required core styles
+### Install Required Core Styles
 Cedar requires a core stylesheet to render components properly.
 
 To include the stylesheet, import `cdr-core.css`:
@@ -62,7 +62,7 @@ _main.js_
 import '@rei/cdr-assets/dist/cdr-core.css';
 ```
 
-## Install required fonts
+## Install Required Fonts
 Cedar uses specific fonts – Roboto, Roboto Condensed, and Sentinel – that are required for your project. 
 
 Roboto and Roboto Condensed are available from [Google Fonts](https://fonts.google.com/selection?selection.family=Roboto%7CRoboto+Condensed&query=robo) (preselected for quick use).
@@ -78,53 +78,60 @@ import '@rei/cdr-assets/dist/cdr-fonts.css';
 
 <hr>
 
-## Install a component
-Examples below demo the `CdrButton` component.
+## Accessibility
+REI requires 100% compliance with WCAG AA guidelines. Relevant guidelines are provided in each component's documentation.
+
+<hr>
+
+## Developing for Web
+
+### Install Components
+The following example demonstrates the **CdrButton** component.
 
 _Terminal_
 ```bash
 npm install --save @rei/cdr-button
 ```
 
-### Including component-specific CSS
+#### Include Component-Specific CSS
 How you include CSS depends on your tech stack and varies from project to project. 
 
 Here are a few common methods:
 
-#### Webpack (css-loader)
-If using a bundler, import CSS into javascript and let loaders extract it.
+##### Webpack
+If using a bundler, import CSS into JavaScript and let loaders such as `css-loader` extract it.
 
 _main.js_
 ```js
 import '@rei/cdr-button/dist/cdr-button.css';
 ```
 
-#### Postcss-import
-Cedar packages include the [unofficial style field](https://jaketrent.com/post/package-json-style-attribute/) supported by postcss-import.
+##### PostCSS
+Cedar packages include the [unofficial style field](https://jaketrent.com/post/package-json-style-attribute/) supported by `postcss-import`.
 
 _cedar.postcss_
 ```css
 import '@rei/cdr-button’;
 ```
 
-#### SCSS (or another pre-processor)
-You can also import CSS from the node_modules folder.
+##### SCSS
+You can also import CSS from the node_modules folder such as SCSS or another pre-processor.
 
 _cedar.scss_
 ```js
 import '~@rei/cdr-button/dist/cdr-button.css';
 ```
 
-**Note**: Code snippets provided throughout the docs will demonstrate the webpack + css-loader method.
+**Note**: Code snippets provided throughout the docs will demonstrate the `webpack` and `css-loader` method.
 
 <hr>
 
-## Use a component
+### Using Components
 The examples in our documentation demonstrate usage in a [Single File Component](https://vuejs.org/v2/guide/single-file-components.html). If you aren’t using SFCs, read the vue docs for [registering components](https://vuejs.org/v2/guide/components-registration.html).
 
-Examples below demonstrate the `CdrButton` component. Refer to each component’s documentation for a complete component API and advanced examples.
+Examples below demonstrate the **CdrButton** component. Refer to each component’s documentation for a complete component API and advanced examples.
 
-### Including component-specific CSS
+#### Including Component-Specific CSS
 1. Import the component within the `script` block.
 
 _local.vue_
@@ -167,11 +174,11 @@ export default {
 </script>
 ```
 
-### Configure component props
+#### Configure Component Props
 
 Props are custom attributes registered on a component. For further information about props see [Vue's prop documentation](https://vuejs.org/v2/guide/components-props.html).
 
-Most Cedar components provide props to configure component data, display, and logic. For example, the `<cdr-button>` component provides a `size` prop to configure the button’s size.
+Most Cedar components provide props to configure component data, display, and logic. For example, the **cdr-button** component provides a `size` prop to configure the button’s size.
 
 ```html
 <cdr-button size="large">I'm a large button</cdr-button>
@@ -179,10 +186,10 @@ Most Cedar components provide props to configure component data, display, and lo
 
 Refer to each component’s API documentation for a full list of available props.
 
-#### Bind dynamic data to the component
-Props can be [static or dynamic](https://vuejs.org/v2/guide/components-props.html#Passing-Static-or-Dynamic-Props). To provide dynamic data (or non-string data) add a ‘:’ before the prop name.
+##### Bind Dynamic Data to Components
+Props can be [static or dynamic](https://vuejs.org/v2/guide/components-props.html#Passing-Static-or-Dynamic-Props). To provide dynamic data (or non-string data) add a colon (`:`) before the prop name.
 
-Prop names are also documented and referenced in javascript as camel case, but [used in the template in kebab-case](https://vuejs.org/v2/guide/components-props.html#Prop-Casing-camelCase-vs-kebab-case).
+Prop names are also documented and referenced in JavaScript as camel case, but [used in the template as kebab-case](https://vuejs.org/v2/guide/components-props.html#Prop-Casing-camelCase-vs-kebab-case).
 
 In this example, the `responsiveSize` prop accepts an array of strings denoting size at different breakpoints. Note that `responsiveSize` is used as `responsive-size` in the template.
 
@@ -190,7 +197,7 @@ In this example, the `responsiveSize` prop accepts an array of strings denoting 
 <cdr-button :responsive-size="['small@xs', 'large@sm']">I'm a responsive button</cdr-button>
 ```
 
-### Add content via slots
+#### Add Content Using Slots
 
 Some components use slots for content distribution. Most components will have a single default slot others will have named slots. Slots are listed as part of the API for all components. See [Vue's documentation on slots](https://vuejs.org/v2/guide/components-slots.html) for further information.
 
@@ -212,21 +219,24 @@ Adding content to a named slot
 
 <hr>
 
-## Customize components using token variables
+
+## Using Token Variables
 Cedar provides a robust collection of [design tokens](https://rei.github.io/rei-cedar-tokens/#/) corresponding to Cedar's foundations. Standard colors, typography mixins, space, size and other properties are available in the `cdr-tokens` package as Sass/SCSS variables. If you need them in a different format such as LESS or XML, please [submit a feature request](https://airtable.com/shrcbq9CHthuMO7AC).
 
 As you extend Cedar components and create your own components, work with your designer to take advantage of this inventory in your custom classes. Using them this way will ensure your custom styles remain consistent with design guidelines.
 
-### Install tokens package
+### Web
+
+#### Install Tokens Package
 
 _Terminal_
 ```js
 npm install --save @rei/cdr-tokens
 ```
 
-### Use Cedar design tokens
+#### Using Cedar Design Tokens
 
-The package contains files for using tokens in both CSS (as SCSS variables) and Javascript (as commonjs).
+The package contains files for using tokens in both CSS (as SCSS variables) and JavaScript (as commonJS).
 
 Here we’re using a typography mixin and a color token to style `.myClass` from the SCSS tokens file.
 
@@ -254,16 +264,14 @@ export default {
 
 <hr/>
 
-## Accessibility
-REI requires 100% compliance with WCAG AA guidelines.
-Relevant guidelines are provided in each component's documentation.
+
 
 <hr/>
 
-## CSS Modules and custom class names
+## CSS Modules and Custom Class Names
 Component CSS class names are [CSS modules](https://github.com/css-modules/css-modules) that reflect the package version. For example, `CdrButton@0.2.0` will have classes that end in ‘_0-2-0’. This allows the possibility of components at different versions to live together without having CSS class name collisions. 
 
-Never use Cedar class names within your own CSS or target them in javascript; they will change as you upgrade the package and break any functionality/styling you attach to them. 
+Never use Cedar class names within your own CSS or target them in JavaScript; they will change as you upgrade the package and break any functionality or styling you attach to them. 
 
 To target CSS, create custom selectors such as `my-wrapper` and `my-selector` in the following example…
 
