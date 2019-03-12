@@ -32,7 +32,7 @@ Typography design tokens store the fundamental decisions of Cedar’s font syste
 ### Web 
 
 <br/>
-**`CSS code for default-body-compact`**  
+`CSS code for default-body-compact`  
 Suggested usage: Use only for compact spacing with informational and supplemental body content. 
 | Token Name                                  | Values      |
 | :------------------------------------------ | :---------- |
@@ -48,7 +48,7 @@ Suggested usage: Use only for compact spacing with informational and supplementa
 <br/>
 
 
-**`CSS code for default-body`**  
+`CSS code for default-body` 
 Suggested usage: Default for body content. Uses a more open line height to font size ratio. 
 | Token Name                                  | Values      |
 | :------------------------------------------ | :---------- |
@@ -63,7 +63,7 @@ Suggested usage: Default for body content. Uses a more open line height to font 
 
 <br/>
 
-**`CSS code for editorial-body-compact`**  
+`CSS code for editorial-body-compact`  
 Suggested usage: Use only for compact spacing with editorial body content.
 | Token Name                                  | Values      |
 | :------------------------------------------ | :---------- |
@@ -79,7 +79,7 @@ Suggested usage: Use only for compact spacing with editorial body content.
 <br/>
 
 
-**`CSS code for editorial-body`**  
+`CSS code for editorial-body` 
 Suggested usage: Default for editorial long-form content. Uses a more open line height to font size ratio.
 | Token Name                                  | Values      |
 | :------------------------------------------ | :---------- |
