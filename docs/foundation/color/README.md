@@ -31,231 +31,79 @@ List of color tokens with descriptions and values. Web and mobile color tokens h
   - **For Web:** cdr-color-text-primary-lightmode 
   - **For Android:** cdr_color_text_primary_lightmode
 
-
-#### Background Colors
-
-<table>
-  <tbody>
-    <tr>
-      <td>CSS code</td>
-      <td><b>cdr-color-background-lightest</b> <br>Only use for light background color - lightest value </td>
-      <td>#ffffff<br>r255  g255  b255</td>
-    </tr>
-    <tr>
-      <td>CSS code</td>
-      <td><b>cdr-color-background-lighter</b> <br>Only use for light background color - value is between light and lightest  </td>
-      <td>#fafafa<br>r250  g250  b250 </td>
-    </tr>
-    <tr>
-      <td>CSS code</td>
-      <td><b>cdr-color-background-light</b> <br>Only use for light background color </td>
-      <td>#f7f7f7<br>r247  g247  b247 </td>
-    </tr>
-    <tr>
-      <td>CSS code</td>
-      <td><b>cdr-color-background-dark</b> <br>Only use for dark background color  </td>
-      <td>#292929<br>r41  g41  b41 </td>
-    </tr>
-    <tr>
-      <td>CSS code</td>
-      <td><b>cdr-color-background-darker</b> <br>Only use for dark background color - darkest value  </td>
-      <td>#1a1a1a<br>r26  g26  b26 </td>
-    </tr>
-  </tbody>
-</table>
+#### Background
+| Token              | Token Name and Usage                   | Token Values        |
+| :----------------- | :------------------------------------- | :------------------ |
+| `CSS code` | **cdr-color-background-form-input-lightmode** <br>Only use for light background color - lightest value    | #ffffff <br>r255  g255  b255  |
+| `CSS code` | **cdr-color-background-lighter** <br>Only use for light background color - value is between light and lightest   | #fafafa <br>r250  g250  b250  |
+| `CSS code` | **cdr-color-background-light** <br>Only use for light background color <br>  | #f7f7f7 <br>r247  g247  b247  |
+| `CSS code` | **cdr-color-background-dark** <br>Only use for dark background color   | #292929 <br>r41  g41  b41  |
+| `CSS code` | **cdr-color-background-darker** <br>Only use for dark background color - darkest value   | #1a1a1a <br>r26  g26  b26  |
 
 <br>
-
-
 #### Typography Colors
 ##### Text or Foreground Colors on Light Backgrounds
-
-<table>
-  <tbody>
-    <tr>
-      <td>CSS code</td>
-      <td><b>cdr-color-text-primary-lightmode</b> <br>Primary body text color on a light background  </td>
-      <td>#292929 <br>r41  g41  b41 </td>
-    </tr>
-    <tr>
-      <td>CSS code</td>
-      <td><b>cdr-color-text-secondary-lightmode </b> <br>Secondary or supplemental text color on a light background </td>
-      <td>#616161 <br>r97  g97  b97 </td>
-    </tr>
-    <tr>
-      <td>CSS code</td>
-      <td><b>cdr-color-text-link-lightmode </b> <br>Link text color on a light background </td>
-      <td>#3278ae <br>r50  g120  b174 </td>
-    </tr>
-    <tr>
-      <td>CSS code</td>
-      <td><b>cdr-color-text-disabled-lightmode </b> <br>Disabled text color for interactive UI elements on a light background </td>
-      <td>#b8b8b8 <br>r184  g184  b184 </td>
-    </tr>
-    <tr>
-      <td>CSS code</td>
-      <td><b>cdr-color-text-error-lightmode </b> <br>Error text color on a light background </td>
-      <td>#b5292b <br>r181  g41  b43  </td>
-    </tr>
-  </tbody>
-</table>
+| Token              | Token Name and Usage                   | Token Values        |
+| :----------------- | :------------------------------------- | :------------------ |
+| `CSS code` | **cdr-color-text-primary-lightmode** <br>Primary body text color on a light background    | #292929<br>r41  g41  b41  |
+| `CSS code` | **cdr-color-text-secondary-lightmode** <br>Secondary or supplemental text color on a light background   | #616161<br>r97  g97  b97  |
+| `CSS code` | **cdr-color-text-link-lightmode** <br>Link text color on a light background   | #3278ae<br>r50  g120  b174  |
+| `CSS code` | **cdr-color-text-disabled-lightmode** <br>Disabled text color for interactive UI elements on a light background   | #b8b8b8<br>r184  g184  b184  |
+| `CSS code` | **cdr-color-text-error-lightmode** <br>Error text color on a light background   | #b5292b<br>r181  g41  b43  |
 
 <br>
-
 
 ##### Text or Foreground Colors on Dark Backgrounds
+| Token              | Token Name and Usage                   | Token Values        |
+| :----------------- | :------------------------------------- | :------------------ |
+| `CSS code` | **cdr-color-text-primary-darkmode** <br>Primary body text color on a dark background     | #fafafa<br>r250  g250  b250  |
+| `CSS code` | **cdr-color-text-secondary-darkmode** <br>Secondary or supplemental text color on a dark background    | #999999<br>r153  g153  b153  |
+| `CSS code` | **cdr-color-text-link-darkmode** <br>Link text color on a dark background    | #5197cd<br>r81  g151  b205  |
+| `CSS code` | **cdr-color-text-disabled-darkmode** <br>Disabled text color for interactive UI elements on a dark background    | #616161<br>r97  g97  b97  |
+| `CSS code` | **cdr-color-text-error-darkmode** <br>Error text color on a dark background     | #e86868<br>r232  g104  b104  |
 
-<table>
-  <tbody>
-    <tr>
-      <td>CSS code</td>
-      <td><b>cdr-color-text-primary-darkmode </b> <br>Primary body text color on a dark background  </td>
-      <td>#fafafa <br>r250  g250  b250 </td>
-    </tr>
-    <tr>
-      <td>CSS code</td>
-      <td><b>cdr-color-text-secondary-darkmode </b> <br>Secondary or supplemental text color on a dark background </td>
-      <td>#999999 <br>r153  g153  b153 </td>
-    </tr>
-    <tr>
-      <td>CSS code</td>
-      <td><b>cdr-color-text-link-darkmode </b> <br>Link text color on a dark background  </td>
-      <td>#5197cd <br>r81  g151  b205 </td>
-    </tr>
-    <tr>
-      <td>CSS code</td>
-      <td><b>cdr-color-text-disabled-darkmode </b> <br>Disabled text color for interactive UI elements on a dark background </td>
-      <td>#616161 <br>r97  g97  b97 </td>
-    </tr>
-    <tr>
-      <td>CSS code</td>
-      <td><b>cdr-color-text-error-darkmode </b> <br>Error text color on a dark background   </td>
-      <td>#e86868 <br>r232  g104  b104 </td>
-    </tr>
-  </tbody>
-</table>
 
 <br>
-
-
 #### Forms Colors
 ##### Text and Backgrounds for Forms on Light Backgrounds
-
-<table>
-  <tbody>
-    <tr>
-      <td>CSS code</td>
-      <td><b>cdr-color-text-form-label-lightmode </b> <br>Label text color for forms on a light background. Can also be used for input entry text  </td>
-      <td>#292929 <br>r41  g41  b41 </td>
-    </tr>
-    <tr>
-      <td>CSS code</td>
-      <td><b>cdr-color-text-form-placeholder-lightmode </b> <br>Placeholder text color for forms on a light background </td>
-      <td>#616161 <br>r97  g97  b97 </td>
-    </tr>
-    <tr>
-      <td>CSS code</td>
-      <td><b>cdr-color-text-form-disabled-lightmode </b> <br>Disabled text color for forms on a light background </td>
-      <td>#b8b8b8 <br>r184  g184  b184 </td>
-    </tr>
-    <tr>
-      <td>CSS code</td>
-      <td><b>cdr-color-background-form-lightmode </b> <br>Light background color for forms </td>
-      <td>#ffffff <br>r255  g255  b255 </td>
-    </tr>
-    <tr>
-      <td>CSS code</td>
-      <td><b>cdr-color-background-form-input-lightmode </b> <br>Light background color for input control </td>
-      <td>#ffffff <br>r255  g255  b255 </td>
-    </tr>
-  </tbody>
-</table>
+| Token              | Token Name and Usage                   | Token Values        |
+| :----------------- | :------------------------------------- | :------------------ |
+| `CSS code` | **cdr-color-text-form-label-lightmode** <br>Label text color for forms on a light background. Can also be used for input entry text    | #292929<br>r41  g41  b41  |
+| `CSS code` | **cdr-color-text-form-placeholder-lightmode** <br>Placeholder text color for forms on a light background     | #616161<br>r97  g97  b97  |
+| `CSS code` | **cdr-color-text-form-disabled-lightmode** <br>Disabled text color for forms on a light background     | #b8b8b8<br>r184  g184  b184  |
+| `CSS code` | **cdr-color-background-form-lightmode** <br>Light background color for forms    | #ffffff<br>r255  g255  b255  |
+| `CSS code` | **cdr-color-background-form-input-lightmode** <br>Light background color for input control    | #ffffff<br>r255  g255  b255  |
 
 <br>
-
 
 ##### Text and Backgrounds for Forms on Dark Backgrounds
-
-<table>
-  <tbody>
-    <tr>
-      <td>CSS code</td>
-      <td><b>cdr-color-text-form-label-darkmode </b> <br>Label text color for forms on a dark background. Can also be used for input entry text </td>
-      <td>#fafafa <br>r250  g250  b250 </td>
-    </tr>
-    <tr>
-      <td>CSS code</td>
-      <td><b>cdr-color-text-form-placeholder-darkmode </b> <br>Placeholder text color for forms on a dark background </td>
-      <td>#999999 <br>r153  g153  b153 </td>
-    </tr>
-    <tr>
-      <td>CSS code</td>
-      <td><b>cdr-color-text-form-disabled-darkmode </b> <br>Disabled text color for forms on a dark background </td>
-      <td>#616161 <br>r97  g97  b97 </td>
-    </tr>
-    <tr>
-      <td>CSS code</td>
-      <td><b>cdr-color-background-form-darkmode </b> <br>Dark background color for forms </td>
-      <td>#292929 <br>r41  g41  b41 </td>
-    </tr>
-    <tr>
-      <td>CSS code</td>
-      <td><b>cdr-color-background-form-input-darkmode </b> <br>Dark background color for input control </td>
-      <td>#292929<br>r41  g41  b41</td>
-    </tr>
-  </tbody>
-</table>
+| Token              | Token Name and Usage                   | Token Values        |
+| :----------------- | :------------------------------------- | :------------------ |
+| `CSS code` | **cdr-color-text-form-label-darkmode** <br>Label text color for forms on a dark background. Can also be used for input entry text    | #fafafa<br>r250  g250  b250   |
+| `CSS code` | **cdr-color-text-form-placeholder-darkmode** <br>Placeholder text color for forms on a dark background     | #999999<br>r153  g153  b153   |
+| `CSS code` | **cdr-color-text-form-disabled-darkmode** <br>Disabled text color for forms on a dark background     | #616161<br>r97  g97  b97   |
+| `CSS code` | **cdr-color-background-form-darkmode** <br>Dark background color for forms    | #292929<br>r41  g41  b41  |
+| `CSS code` | **cdr-color-background-form-input-darkmode** <br>Dark background color for input control    | #292929<br>r41  g41  b41  |
 
 <br>
-
 
 #### Border Colors
 ##### For Light Backgrounds
-
-<table>
-  <tbody>
-    <tr>
-      <td>CSS code</td>
-      <td><b>cdr-color-border-primary-lightmode </b> <br>Primary border color for light background </td>
-      <td>#616161 <br>r97  g97  b97 </td>
-    </tr>
-    <tr>
-      <td>CSS code</td>
-      <td><b>cdr-color-border-secondary-lightmode </b> <br>Secondary border color for light background </td>
-      <td>#b8b8b8 <br>r184  g184  b184 </td>
-    </tr>
-    <tr>
-      <td>CSS code</td>
-      <td><b>cdr-color-border-disabled-lightmode </b> <br>Border color for disabled state for light background </td>
-      <td>#dadada <br>r218  g218  b218 </td>
-    </tr>
-    <tr>
-      <td>CSS code</td>
-      <td><b>cdr-color-border-error-lightmode </b> <br>Border color for error validation state for light background </td>
-      <td>#e86868 <br>r232  g104  b104  </td>
-    </tr>
-    <tr>
-      <td>CSS code</td>
-      <td><b>cdr-color-border-selected-lightmode </b>  </td>
-      <td>#2b6692 <br>r43  g102  b146  </td>
-    </tr>
-  </tbody>
-</table>
+| Token              | Token Name and Usage                   | Token Values        |
+| :----------------- | :------------------------------------- | :------------------ |
+| `CSS code` | **cdr-color-border-primary-lightmode** <br>Primary border color for light background    | #616161<br>r97  g97  b97  |
+| `CSS code` | **cdr-color-border-secondary-lightmode** <br>Secondary border color for light background    | #b8b8b8<br>r184  g184  b184  |
+| `CSS code` | **cdr-color-border-disabled-lightmode** <br>Border color for disabled state for light background     | #dadada<br>r218  g218  b218  |
+| `CSS code` | **cdr-color-border-error-lightmode** <br>Border color for error validation state for light background     | #e86868<br>r232  g104  b104  |
+| `CSS code` | **cdr-color-border-selected-lightmode** <br>     | #2b6692<br><nobr>r43  g102  b146  |
 
 <br>
 
-
 ##### For Dark Backgrounds
+| Token              | Token Name and Usage                   | Token Values        |
+| :----------------- | :------------------------------------- | :------------------ |
+| `CSS code` | **cdr-color-border-secondary-darkmode** <br>Secondary border color for dark background    | #999999<br>r153  g153  b153   | 
 
-<table>
-  <tbody>
-    <tr>
-      <td>CSS code</td>
-      <td><b>cdr-color-border-secondary-darkmode </b> <br>Secondary border color for dark background </td>
-      <td>#999999 <br>r153  g153  b153 </td>
-    </tr>
-  </tbody>
-</table>
 
 <br>
 
