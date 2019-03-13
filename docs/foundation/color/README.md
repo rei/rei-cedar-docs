@@ -435,22 +435,22 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
   <tbody>
     <tr>
       <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_darker_primary_4-3.png`)"/> </td>
-      <td>cdr-color-text-primary-darkmode  <br>AAA 16.67:1   </td>
+      <td>cdr-color-text-primary-darkmode  <br>AAA 16.67:1 </td>
     </tr>
     <tr>
       <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_darker_secondary_4-3.png`)"/> </td>
-      <td>cdr-color-text-secondary-darkmode <br>AA 6.11:1  </td>
+      <td>cdr-color-text-secondary-darkmode <br>AA 6.11:1 </td>
     </tr>
     <tr>
       <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_darker_link_4-3.png`)"/> </td>
       <td>cdr-color-text-link-darkmode <br>AA 5.52:1  </td>
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_darker_error_4-3 .png`)"/> </td>
-      <td>cdr-color-text-error-darkmode <br>AA 5.48:1  </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_darker_error_4-3.png`)"/> </td>
+      <td>cdr-color-text-error-darkmode <br>AA 5.48:1 </td>
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_darker_disabled_4-3.png`)"/> </td>  
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_darker_disabled_4-3.png`)"/> </td>
       <td>cdr-color-text-disabled-darkmode <br>FAIL 2.81:1  </td>
     </tr>
   </tbody>
