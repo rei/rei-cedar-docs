@@ -24,11 +24,9 @@ Typography design tokens store the fundamental decisions of Cedar’s font syste
 
 <br/>
 
-## Type Tokens
-
-### Web
 
 ## Typography Tokens
+
 ### Web 
 
 <br/>
@@ -40,7 +38,7 @@ Suggested usage: Use only for compact spacing with informational and supplementa
 | Token Name                                  | Values      |
 | :------------------------------------------ | :---------- |
 | **cdr-text-default-body-compact**           | *Mixin*   |
-| cdr-text-default-body-compact-family        | Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif   |
+| cdr-text-default-body-compact-family        | Roboto, "Helvetica Neue",<br> Helvetica, Arial, sans-serif   |
 | cdr-text-default-body-compact-style         | normal  |
 | cdr-text-default-body-compact-weight        | 400   |
 | cdr-text-default-body-compact-spacing       | normal   |
@@ -58,7 +56,7 @@ Suggested usage: Default for body content. Uses a more open line height to font 
 | Token Name                                  | Values      |
 | :------------------------------------------ | :---------- |
 | **cdr-text-default-body**                   | *Mixin*   |
-| cdr-text-default-body-family                | Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif   |
+| cdr-text-default-body-family                | Roboto, "Helvetica Neue",<br> Helvetica, Arial, sans-serif   |
 | cdr-text-default-body-style                 | normal  |
 | cdr-text-default-body-weight                | 400   |
 | cdr-text-default-body-spacing               | normal   | 
@@ -75,7 +73,7 @@ Suggested usage: Use only for compact spacing with editorial body content
 | Token Name                                  | Values      |
 | :------------------------------------------ | :---------- |
 | **cdr-text-editorial-body-compact**         | *Mixin*   |
-| cdr-text-editorial-body-compact-family      | Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif   |
+| cdr-text-editorial-body-compact-family      | Sentinel, Roboto, "Helvetica Neue",<br> Helvetica, Arial, sans-serif   |
 | cdr-text-editorial-body-compact-style       | normal  |
 | cdr-text-editorial-body-compact-weight      | 400   |
 | cdr-text-editorial-body-compact-spacing     | normal   |
@@ -93,7 +91,7 @@ Suggested usage: Default for editorial long-form content. Uses a more open line 
 | Token Name                                  | Values      |
 | :------------------------------------------ | :---------- |
 | **cdr-text-editorial-body**                 | *Mixin*   |
-| cdr-text-editorial-body-family              | Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif   | 
+| cdr-text-editorial-body-family              | Sentinel, Roboto, "Helvetica Neue",<br> Helvetica, Arial, sans-serif   | 
 | cdr-text-editorial-body-style               | normal  |
 | cdr-text-editorial-body-weight              | 400   |
 | cdr-text-editorial-body-spacing             | normal   | 
