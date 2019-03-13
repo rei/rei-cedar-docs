@@ -32,6 +32,7 @@ List of color tokens with descriptions and values. Web and mobile color tokens h
   - **For Android:** cdr_color_text_primary_lightmode
 
 #### Background
+
 | Token              | Token Name and Usage                   | Token Values        |
 | :----------------- | :------------------------------------- | :------------------ |
 | `CSS code` | **cdr-color-background-form-input-lightmode** <br>Only use for light background color - lightest value    | #ffffff <br>r255  g255  b255  |
@@ -41,8 +42,10 @@ List of color tokens with descriptions and values. Web and mobile color tokens h
 | `CSS code` | **cdr-color-background-darker** <br>Only use for dark background color - darkest value   | #1a1a1a <br>r26  g26  b26  |
 
 <br>
+
 #### Typography Colors
 ##### Text or Foreground Colors on Light Backgrounds
+
 | Token              | Token Name and Usage                   | Token Values        |
 | :----------------- | :------------------------------------- | :------------------ |
 | `CSS code` | **cdr-color-text-primary-lightmode** <br>Primary body text color on a light background    | #292929<br>r41  g41  b41  |
@@ -54,6 +57,7 @@ List of color tokens with descriptions and values. Web and mobile color tokens h
 <br>
 
 ##### Text or Foreground Colors on Dark Backgrounds
+
 | Token              | Token Name and Usage                   | Token Values        |
 | :----------------- | :------------------------------------- | :------------------ |
 | `CSS code` | **cdr-color-text-primary-darkmode** <br>Primary body text color on a dark background     | #fafafa<br>r250  g250  b250  |
@@ -64,8 +68,10 @@ List of color tokens with descriptions and values. Web and mobile color tokens h
 
 
 <br>
+
 #### Forms Colors
 ##### Text and Backgrounds for Forms on Light Backgrounds
+
 | Token              | Token Name and Usage                   | Token Values        |
 | :----------------- | :------------------------------------- | :------------------ |
 | `CSS code` | **cdr-color-text-form-label-lightmode** <br>Label text color for forms on a light background. Can also be used for input entry text    | #292929<br>r41  g41  b41  |
@@ -77,6 +83,7 @@ List of color tokens with descriptions and values. Web and mobile color tokens h
 <br>
 
 ##### Text and Backgrounds for Forms on Dark Backgrounds
+
 | Token              | Token Name and Usage                   | Token Values        |
 | :----------------- | :------------------------------------- | :------------------ |
 | `CSS code` | **cdr-color-text-form-label-darkmode** <br>Label text color for forms on a dark background. Can also be used for input entry text    | #fafafa<br>r250  g250  b250   |
@@ -89,6 +96,7 @@ List of color tokens with descriptions and values. Web and mobile color tokens h
 
 #### Border Colors
 ##### For Light Backgrounds
+
 | Token              | Token Name and Usage                   | Token Values        |
 | :----------------- | :------------------------------------- | :------------------ |
 | `CSS code` | **cdr-color-border-primary-lightmode** <br>Primary border color for light background    | #616161<br>r97  g97  b97  |
@@ -100,6 +108,7 @@ List of color tokens with descriptions and values. Web and mobile color tokens h
 <br>
 
 ##### For Dark Backgrounds
+
 | Token              | Token Name and Usage                   | Token Values        |
 | :----------------- | :------------------------------------- | :------------------ |
 | `CSS code` | **cdr-color-border-secondary-darkmode** <br>Secondary border color for dark background    | #999999<br>r153  g153  b153   | 
