@@ -344,49 +344,82 @@ The Cedar team welcomes contributions from the digital community at REI. If you 
 
 
 ## Color Palette
-Color options are part of the Cedar base color palette. You will find these colors in use throughout Cedar components and design recommendations. Developer note: Please use the variables in your code instead of hex values, as it ensures that your application will stay current.
-
 ### Grey Colors
 Grey colors support the cohesive use of typography, backgrounds, and borders across the digital ecosystem. 
 
-*TBD - Table for grey colors*
+| Color               | Values              | TokenS Using                 |
+| :------------------ | :------------------ | :--------------------------- |
+| *IMAGE: clean-slate* | #ffffff<br> r255  g255  b255 | cdr-color-background-lightest <br>cdr-color-background-form-lightmode<br>cdr-color-background-form-input-lightmode  |
+| *IMAGE: moon-shot* | #fafafa<br>r250  g250  b250 | cdr-color-background-lighter <br>cdr-color-text-primary-darkmode <br>cdr-color-text-form-label-darkmode <br>cdr-color-border-primary-darkmode  |
+| *IMAGE: the-tooth* | #f7f7f7<br>r247  g247  b247 | cdr-color-background-light  |
+| *IMAGE: partly-cloudy* | #dadada<br>r218  g218  b218 | cdr-color-border-disabled-lightmode  |
+| *IMAGE: grey-matter* | #b8b8b8<br>r184  g184  b184 | cdr-color-text-disabled-lightmode <br>cdr-color-text-form-disabled-lightmode <br>cdr-color-border-secondary-lightmode  |
+| *IMAGE: holy-smoke* | #999999<br>r153  g153  b153 | cdr-color-text-secondary-darkmode <br>cdr-color-text-form-placeholder-darkmode <br>cdr-color-border-secondary-darkmode   |
+| *IMAGE: coal-train* | #7a7a7a<br> r122  g122  b122 | N/A  |
+| *IMAGE: taken-for-granite* | #616161<br>r97  g97  b97 | cdr-color-text-secondary-lightmode <br>cdr-color-text-form-placeholder-lightmode <br>cdr-color-text-disabled-darkmode <br>cdr-color-text-form-disabled-darkmode <br>cdr-color-border-primary-lightmode  |
+| *IMAGE: threat-level-midnight* | #434343<br>r67  g67  b67 | N/A  |
+| *IMAGE: heart-of-darkness* | #292929<br>r41  g41  b41 | cdr-color-background-dark <br>cdr-color-background-form-darkmode <br>cdr-color-background-form-input-darkmode <br>cdr-color-text-primary-lightmode <br>cdr-color-text-form-label-lightmode  |
+| *IMAGE: lost-in-space* | #1a1a1a<br>r26  g26  b26  | cdr-color-background-darker  |
 
 <br>
 
 ### Tan Colors
 Tan or brand colors are core to the co-op. They’re often used as backgrounds when an experience calls for a stronger brand impression.
 
-*TBD - Table for tan colors*
+| Color               | Values              | Tokens Using                 |
+| :------------------ | :------------------ | :--------------------------- |
+| *IMAGE: moose-tooth* | #faf9f5<br>r250  g249  b245 | N/A  |
+| *IMAGE: hissing-llamas* | #f1efe4<br>r241  g239  b228  | N/A  |
+
 
 <br>
 
 ### Blue Colors
 Blue colors are used in a variety of scenarios such as prompting user actions, communicating informational messaging, and indicating links within body copy.
 
-*TBD - Table for blue colors*
+| Color               | Values              | Tokens Using                 |
+| :------------------ | :------------------ | :--------------------------- |
+| *IMAGE: suede-shoes* | #5197cd<br>r81  g151  b205  | cdr-color-text-link-darkmode  |
+| *IMAGE: easily-excited* | #3278ae<br>r50  g120  b174  | cdr-color-text-link-lightmode  |
+| *IMAGE: closed-on-monday* | #2b6692<br>r43  g102  b146 | cdr-color-border-selected-lightmode  |
+| *IMAGE: go-van-gogh* | #1e4e72<br>r30  g78  b114  | N/A  |
+
 
 <br>
 
 ### Green Colors
 Green colors are used in a variety of scenarios such as providing feedback for successful form submission.
 
-*TBD - Table for green colors*
+| Color               | Values              | Tokens Using                 |
+| :------------------ | :------------------ | :--------------------------- |
+| *IMAGE: thin-mint* | #edf7ee<br> r237  g247  b238  | N/A  |
+| *IMAGE: cdr-color-crimp-son-and-clover* | #6c9f71<br> r108  g159  b113  | N/A  |
+| *IMAGE: cdr-color-instant-winner* | #367c3c<br> r54  g124  b60  | N/A  |
+
 
 <br>
 
 ### Red Colors
 Red colors are used in a variety of scenarios such as announcing sale items and communicating error messaging.
 
-*TBD - Table for red colors*
+| Color               | Values              | Tokens Using                 |
+| :------------------ | :------------------ | :--------------------------- |           
+| *IMAGE: snap-decision* | #e86868<br>r232  g104  b104  | cdr-color-text-error-darkmode <br>cdr-color-border-error-lightmode  |
+| *IMAGE: attention-grabber* | #c83232<br>r200  g50  b50  | N/A  |
+| *IMAGE: high-stakes* | #b5292b<br>r181  g41  b43 | cdr-color-text-error-lightmode  |
+| *IMAGE: quick-fixe* | #a12024<br> r161  g32  b36  | N/A  |
+
 
 <br>
 
 ### Yellow Colors
 Yellow colors are used in a variety of scenarios such as providing feedback for warning messages.
 
-*TBD - Table for yellow colors*
-
-<br>
+| Color               | Values              | Tokens Using                 |
+| :------------------ | :------------------ | :--------------------------- |
+| *IMAGE: light-tension* | #fff5be<br>r255  g245  b190  | N/A  |
+| *IMAGE: golden-face* | #f8b877<br>r248  g184  b119  | N/A  |
+| *IMAGE: dehydrated-lemon* | #c77523<br>r199  g117  b35 | N/A  |
 
 <br>
 
