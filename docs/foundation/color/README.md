@@ -11,7 +11,7 @@
   ],
 }
 ---
-<cdr-doc-tabs :labels="['Overview', 'Guidelines', 'Resources']">
+<cdr-doc-tabs :labels="['Overview', 'Guidelines', 'Brand Palette']">
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
   
@@ -321,55 +321,67 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
 
 
 
-<template slot="Resources">
+<template slot="Brand Palette">
 <cdr-doc-table-of-contents-shell>
 
-## Color Options
+<cdr-doc-alert style="border: 1px solid #c77523; border-left: 8px solid #c77523;">These values are NOT to be used by developers for creating custom UI.<br>If you are extending or modifying an existing Cedar component please work with the design system team to add support for your enhancements.</cdr-doc-alert>
+
+Colors from Cedar’s base color palette are use throughout Cedar components and design recommendations. Use these values when:
+  - Requesting or updating for an existing Cedar component
+  - Requesting a new token 
+  - Developing a new component that will be adopted by Cedar Design System
+  
+Note that the values on this page:
+  - May not have a long lifespan
+  - May alter the value more frequently
+  - May be used for a wide variety of purposes
+
+**Requesting a Token**
+If you have a request for a token that is missing, you can [submit a pull request to the cedar-token repo](https://www.npmjs.com/package/@rei/cdr-tokens#addingupdating-tokens) or ask in the #cedar-users-support Slack channel. View <cdr-link :href=“$withBase(‘/foundation/design-tokens?active-link=adding-tokens-to-the-repository’)“>requirements</cdr-link> in the Adding Tokens to the repository on the Design Tokens article.  
+
+**Developing or Updating Cedar Components**
+The Cedar team welcomes contributions from the digital community at REI. If you are interested in contributing design or code, please reach out at in Slack at #cedar-user-support, email cedar@rei.com, or talk to your manager.
+
+
+## Color Palette
 Color options are part of the Cedar base color palette. You will find these colors in use throughout Cedar components and design recommendations. Developer note: Please use the variables in your code instead of hex values, as it ensures that your application will stay current.
 
-### Color Option List
-
-#### Grey Colors
+### Grey Colors
 Grey colors support the cohesive use of typography, backgrounds, and borders across the digital ecosystem. 
 
 *TBD - Table for grey colors*
 
 <br>
 
-#### Tan Colors
+### Tan Colors
 Tan or brand colors are core to the co-op. They’re often used as backgrounds when an experience calls for a stronger brand impression.
 
 *TBD - Table for tan colors*
 
 <br>
 
-#### Blue Colors
-Blue colors are used in a variety of scenarios such as:
-  - Prompting user actions 
-  - Communicate informational messaging
-  - Indicate links within body copy
+### Blue Colors
+Blue colors are used in a variety of scenarios such as prompting user actions, communicating informational messaging, and indicating links within body copy.
 
 *TBD - Table for blue colors*
 
 <br>
 
-#### Green Colors
+### Green Colors
 Green colors are used in a variety of scenarios such as providing feedback for successful form submission.
 
 *TBD - Table for green colors*
 
 <br>
 
-#### Red Colors
-Red colors are used in a variety of scenarios such as:
-  - Announcing sale items 
-  - Communicate error messaging
+### Red Colors
+Red colors are used in a variety of scenarios such as announcing sale items and communicating error messaging.
 
 *TBD - Table for red colors*
 
 <br>
 
-#### Yellow Colors
+### Yellow Colors
 Yellow colors are used in a variety of scenarios such as providing feedback for warning messages.
 
 *TBD - Table for yellow colors*
