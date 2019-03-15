@@ -11,7 +11,7 @@
   ],
 }
 ---
-<cdr-doc-tabs :labels="['Overview', 'Guidelines', 'Resources']">
+<cdr-doc-tabs :labels="['Overview', 'Guidelines', 'Brand Typography']">
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
   
@@ -320,54 +320,259 @@ Utility type styles are used sparingly within UI elements, currently used by Ced
 </template>
 
 
-<template slot="Resources">
+<template slot="Brand Typography">
 <cdr-doc-table-of-contents-shell>
- 
 
+<cdr-doc-alert style="border: 1px solid #c77523; border-left: 8px solid #c77523;">These values are NOT to be used by developers for creating custom UI.<br>If you are extending or modifying an existing Cedar component please work with the design system team to add support for your enhancements.</cdr-doc-alert>
+
+Colors from Cedar’s base color palette are use throughout Cedar components and design recommendations. Use these values when:
+  - Requesting or updating for an existing Cedar component
+  - Requesting a new token 
+  - Developing a new component that will be adopted by Cedar Design System
+  
+Note that the values on this page:
+  - May not have a long lifespan
+  - May alter the value more frequently
+  - May be used for a wide variety of purposes
+
+**Requesting a Token**
+If you have a request for a token that is missing, you can [submit a pull request to the cedar-token repo](https://www.npmjs.com/package/@rei/cdr-tokens#addingupdating-tokens) or ask in the #cedar-users-support Slack channel. View <cdr-link :href=“$withBase(‘/foundation/design-tokens?active-link=adding-tokens-to-the-repository’)“>requirements</cdr-link> in the Adding Tokens to the repository on the Design Tokens article.  
+
+**Developing or Updating Cedar Components**
+The Cedar team welcomes contributions from the digital community at REI. If you are interested in contributing design or code, please reach out at in Slack at #cedar-user-support, email cedar@rei.com, or talk to your manager.
+
+
+ 
 ## Type Scale
 
-
-### Display Sizes
-
-The line height to font size ratio is catered to an overall shorter line length and is best used for big moments, headings, titles, or subheadings. Avoid using display sizes for long-form content.
-
-<cdr-doc-typography-sample token="spruce-display-00" weight="600" size="14" height="20"/>
-<cdr-doc-typography-sample token="spruce-display-10" weight="600" size="16" height="24"/>
-<cdr-doc-typography-sample token="spruce-display-20" weight="600" size="18" height="24"/>
-<cdr-doc-typography-sample token="spruce-display-30" weight="600" size="20" height="28"/>
-<cdr-doc-typography-sample token="spruce-display-40" weight="600" size="24" height="32"/>
-<cdr-doc-typography-sample token="spruce-display-50" weight="600" size="28" height="36"/>
-<cdr-doc-typography-sample token="spruce-display-60" weight="600" size="32" height="40"/>
-<cdr-doc-typography-sample token="spruce-display-70" weight="600" size="40" height="48"/>
-<cdr-doc-typography-sample token="spruce-display-80" weight="600" size="56" height="60"/>
-<cdr-doc-typography-sample token="spruce-display-90" weight="600" size="76" height="84"/>
-<cdr-doc-typography-sample token="spruce-display-100" weight="600" size="96" height="104"/>
-
-<hr />
-
-<cdr-doc-typography-sample token="redwood-display-10" weight="400" size="12" height="16"/>
-<cdr-doc-typography-sample token="redwood-display-20" weight="400" size="14" height="20"/>
-<cdr-doc-typography-sample token="redwood-display-30" weight="400" size="16" height="24"/>
-<cdr-doc-typography-sample token="redwood-display-40" weight="400" size="18" height="24"/>
-<cdr-doc-typography-sample token="redwood-display-50" weight="400" size="20" height="28"/>
-<cdr-doc-typography-sample token="redwood-display-60" weight="400" size="24" height="32"/>
-<cdr-doc-typography-sample token="redwood-display-70" weight="400" size="28" height="36"/>
-
-<hr />
-
-### Body
-
+### Body 
 Using a more open line height to font size ratio, body typography is best suited for long-form content.
 
-<cdr-doc-typography-sample token="spruce-body-20" weight="400" size="18" height="28"/>
-<cdr-doc-typography-sample token="spruce-body-30" weight="400" size="20" height="32"/>
+#### Default 
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_redwood_body_10.png`)"/>
+
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Roboto <br>Font Weight: 400 <br>Font Size: 14 <br>Line Height: 24    | cdr-text-default-body-compact   | 
+
+<br>
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_redwood_body_20.png`)"/>
+
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Roboto <br>Font Weight: 400 <br>Font Size: 16 <br>Line Height: 26    | cdr-text-default-body   | 
+
+<br>
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_redwood_body_30.png`)"/>
+
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Roboto <br>Font Weight: 400 <br>Font Size: 18 <br>Line Height: 28    | N/A  |  
+
+<br>
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_redwood_body_40.png`)"/>
+ 
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Roboto <br>Font Weight: 400 <br>Font Size: 20 <br>Line Height: 32    | N/A  | 
+        
+<br>
 
 <hr />
 
-<cdr-doc-typography-sample token="redwood-body-10" weight="400" size="14" height="24"/>
-<cdr-doc-typography-sample token="redwood-body-20" weight="400" size="16" height="26"/>
-<cdr-doc-typography-sample token="redwood-body-30" weight="400" size="18" height="28"/>
-<cdr-doc-typography-sample token="redwood-body-40" weight="400" size="20" height="32"/>
+#### Editorial 
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_body_10.png`)"/>
+
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Sentinel <br>Font Weight: 400 <br>Font Size: 16 <br>Line Height: 26    | N/A  | 
+
+<br>
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_body_20.png`)"/>
+
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Sentinel <br>Font Weight: 400 <br>Font Size: 18 <br>Line Height: 28    | cdr-text-editorial-body-compact   |  
+
+<br>
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_body_30.png`)"/>
+
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Sentinel <br>Font Weight: 400 <br>Font Size: 20 <br>Line Height: 32    | cdr-text-editorial-body   |   
+
+<br>
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_body_40.png`)"/>
+ 
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Sentinel <br>Font Weight: 400 <br>Font Size: 24 <br>Line Height: 36    | N/A  | 
+
+<br>
+
+<hr />
+
+### Display
+The line height to font size ratio is catered to an overall shorter line length and is best used for big moments, headings, titles, or subheadings. Avoid using display sizes for long-form content.
+
+#### Default 
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_redwood_display_10.png`)"/>
+
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Roboto <br>Font Weight: 400 <br>Font Size: 12 <br>Line Height: 16    | N/A  |  
+
+<br>
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_redwood_display_20.png`)"/>
+
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Roboto <br>Font Weight: 400 <br>Font Size: 14 <br>Line Height: 20    | N/A  |  
+
+<br>
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_redwood_display_30.png`)"/>
+
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Roboto <br>Font Weight: 400 <br>Font Size: 16 <br>Line Height: 24    | N/A  |  
+
+<br>
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_redwood_display_40.png`)"/>
+
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Roboto <br>Font Weight: 400 <br>Font Size: 18 <br>Line Height: 24    | N/A  |  
+
+<br>
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_redwood_display_50.png`)"/>
+
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Roboto <br>Font Weight: 400 <br>Font Size: 20 <br>Line Height: 28    | N/A  |  
+
+<br>
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_redwood_display_60.png`)"/>
+
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Roboto <br>Font Weight: 400 <br>Font Size: 24 <br>Line Height: 32    | N/A  |  
+
+<br>
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_redwood_display_70.png`)"/>
+
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Roboto <br>Font Weight: 400 <br>Font Size: 28 <br>Line Height: 36    | N/A  |  
+
+
+<br>
+
+<hr />
+
+#### Editorial 
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_display_00.png`)"/>
+
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Sentinel <br>Font Weight: 600 <br>Font Size: 14 <br>Line Height: 20    | N/A  |  
+
+<br>
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_display_10.png`)"/>
+
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Sentinel <br>Font Weight: 600 <br>Font Size: 16 <br>Line Height: 24    | N/A  |  
+
+<br>
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_display_20.png`)"/>
+
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Sentinel <br>Font Weight: 600 <br>Font Size: 18 <br>Line Height: 24    | N/A  |  
+
+<br>
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_display_30.png`)"/>
+
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Sentinel <br>Font Weight: 600 <br>Font Size: 20 <br>Line Height: 28    | N/A  |  
+
+<br>
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_display_40.png`)"/>
+
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Sentinel <br>Font Weight: 600 <br>Font Size: 24 <br>Line Height: 32    | N/A  |  
+
+<br>
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_display_50.png`)"/>
+
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Sentinel <br>Font Weight: 600 <br>Font Size: 28 <br>Line Height: 36    | N/A  |  
+
+<br>
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_display_60.png`)"/>
+
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Sentinel <br>Font Weight: 600 <br>Font Size: 32 <br>Line Height: 40    | N/A  |  
+
+<br>
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_display_70.png`)"/>
+
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Sentinel <br>Font Weight: 600 <br>Font Size: 40 <br>Line Height: 48    | N/A  |  
+
+<br>
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_display_80.png`)"/>
+
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Sentinel <br>Font Weight: 600 <br>Font Size: 56 <br>Line Height: 60    | N/A  |  
+
+<br>
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_display_90.png`)"/>
+
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Sentinel <br>Font Weight: 600 <br>Font Size: 76 <br>Line Height: 84    | N/A  |  
+
+<br>
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_display_100.png`)"/>
+
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Sentinel <br>Font Weight: 600 <br>Font Size: 96 <br>Line Height: 104    | N/A  |  
+
+<br>
 
 <hr />
 
@@ -375,13 +580,63 @@ Using a more open line height to font size ratio, body typography is best suited
 
 Utility type styles are used sparingly within UI elements such as form labels and Call-to-Action text.
 
-<cdr-doc-typography-sample token="maple-utility-10" weight="400" size="12" height="16"/>
-<cdr-doc-typography-sample token="maple-utility-20" weight="400" size="14" height="20"/>
-<cdr-doc-typography-sample token="maple-utility-30" weight="400" size="16" height="24"/>
-<cdr-doc-typography-sample token="maple-utility-40" weight="400" size="18" height="24"/>
-<cdr-doc-typography-sample token="maple-utility-50" weight="400" size="20" height="28"/>
-<cdr-doc-typography-sample token="maple-utility-60" weight="400" size="24" height="32"/>
-<cdr-doc-typography-sample token="maple-utility-70" weight="400" size="28" height="36"/>
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_maple_utility_10).png`)"/>
+
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Roboto Condensed <br>Font Weight: 400 <br>Font Size: 12 <br>Line Height: 16    | N/A  |  
+
+<br>
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_maple_utility_20).png`)"/>
+
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Roboto Condensed <br>Font Weight: 400 <br>Font Size: 14 <br>Line Height: 20    | N/A  |  
+
+<br>
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_maple_utility_30).png`)"/>
+
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Roboto Condensed <br>Font Weight: 400 <br>Font Size: 16 <br>Line Height: 24    | N/A  |  
+
+<br>
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_maple_utility_40).png`)"/>
+
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Roboto Condensed <br>Font Weight: 400 <br>Font Size: 18 <br>Line Height: 24    | N/A  |  
+
+<br>
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_maple_utility_50).png`)"/>
+
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Roboto Condensed <br>Font Weight: 400 <br>Font Size: 20 <br>Line Height: 28    | N/A  |  
+
+<br>
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_maple_utility_60).png`)"/>
+
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Roboto Condensed <br>Font Weight: 400 <br>Font Size: 24 <br>Line Height: 32    | N/A  |  
+
+<br>
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_maple_utility_70).png`)"/>
+
+| Values                        | Tokens Using                                 |
+| :---------------------------- | :------------------------------------------  |
+| Typeface: Roboto Condensed <br>Font Weight: 400 <br>Font Size: 28 <br>Line Height: 36    | N/A  |  
+
+<br>
+
+<hr />
 
 </cdr-doc-table-of-contents-shell>
 </template>
