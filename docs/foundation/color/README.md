@@ -347,7 +347,7 @@ The Cedar team welcomes contributions from the digital community at REI. If you 
 ### Grey Colors
 Grey colors support the cohesive use of typography, backgrounds, and borders across the digital ecosystem. 
 
-| Color               | Values              | TokenS Using                 |
+| Color               | Values              | Tokens Using                 |
 | :------------------ | :------------------ | :--------------------------- |
 | <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_grey_clean_slate_4-3.png`)"/> | #ffffff<br> r255  g255  b255 | cdr-color-background-lightest <br>cdr-color-background-form-lightmode<br>cdr-color-background-form-input-lightmode  |
 | <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_grey_moon_shot_4-3.png`)"/>  | #fafafa<br>r250  g250  b250 | cdr-color-background-lighter <br>cdr-color-text-primary-darkmode <br>cdr-color-text-form-label-darkmode <br>cdr-color-border-primary-darkmode  |
@@ -368,8 +368,8 @@ Tan or brand colors are core to the co-op. They’re often used as backgrounds w
 
 | Color               | Values              | Tokens Using                 |
 | :------------------ | :------------------ | :--------------------------- |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_tan_moose-tooth_4-3.png`)"/> | #faf9f5<br>r250  g249  b245 | N/A  |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_tan_hissing-llamas_4-3.png`)"/> | #f1efe4<br>r241  g239  b228  | N/A  |
+| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_tan_moose_tooth_4-3.png`)"/> | #faf9f5<br>r250  g249  b245 | N/A  |
+| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_tan_hissing_llamas_4-3.png`)"/> | #f1efe4<br>r241  g239  b228  | N/A  |
 
 
 <br>
@@ -379,10 +379,10 @@ Blue colors are used in a variety of scenarios such as prompting user actions, c
 
 | Color               | Values              | Tokens Using                 |
 | :------------------ | :------------------ | :--------------------------- |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_blue_suede-shoes_4-3.png`)"/> | #5197cd<br>r81  g151  b205  | cdr-color-text-link-darkmode  |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_blue_easily-excited_4-3.png`)"/> | #3278ae<br>r50  g120  b174  | cdr-color-text-link-lightmode  |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_blue_closed-on-monday_4-3.png`)"/> | #2b6692<br>r43  g102  b146 | cdr-color-border-selected-lightmode  |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_blue_go-van-gogh_4-3.png`)"/> | #1e4e72<br>r30  g78  b114  | N/A  |
+| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_blue_suede_shoes_4-3.png`)"/> | #5197cd<br>r81  g151  b205  | cdr-color-text-link-darkmode  |
+| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_blue_easily_excited_4-3.png`)"/> | #3278ae<br>r50  g120  b174  | cdr-color-text-link-lightmode  |
+| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_blue_closed_on_monday_4-3.png`)"/> | #2b6692<br>r43  g102  b146 | cdr-color-border-selected-lightmode  |
+| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_blue_go_van_gogh_4-3.png`)"/> | #1e4e72<br>r30  g78  b114  | N/A  |
 
 
 <br>
@@ -392,9 +392,9 @@ Green colors are used in a variety of scenarios such as providing feedback for s
 
 | Color               | Values              | Tokens Using                 |
 | :------------------ | :------------------ | :--------------------------- |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_green_thin-mint_4-3.png`)"/> | #edf7ee<br> r237  g247  b238  | N/A  |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_green_crimp-son-and-clover_4-3.png`)"/> | #6c9f71<br> r108  g159  b113  | N/A  |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_green_instant-winner_4-3.png`)"/> | #367c3c<br> r54  g124  b60  | N/A  |
+| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_green_thin_mint_4-3.png`)"/> | #edf7ee<br> r237  g247  b238  | N/A  |
+| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_green_crimp_son_and_clover_4-3.png`)"/> | #6c9f71<br> r108  g159  b113  | N/A  |
+| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_green_instant_winner_4-3.png`)"/> | #367c3c<br> r54  g124  b60  | N/A  |
 
 
 <br>
@@ -404,10 +404,10 @@ Red colors are used in a variety of scenarios such as announcing sale items and 
 
 | Color               | Values              | Tokens Using                 |
 | :------------------ | :------------------ | :--------------------------- |           
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_red_snap-decision_4-3.png`)"/>| #e86868<br>r232  g104  b104  | cdr-color-text-error-darkmode <br>cdr-color-border-error-lightmode  |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_red_attention-grabber_4-3.png`)"/> | #c83232<br>r200  g50  b50  | N/A  |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_red_high-stakes_4-3.png`)"/> | #b5292b<br>r181  g41  b43 | cdr-color-text-error-lightmode  |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_red_quick-fixe_4-3.png`)"/> | #a12024<br> r161  g32  b36  | N/A  |
+| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_red_snap_decision_4-3.png`)"/>| #e86868<br>r232  g104  b104  | cdr-color-text-error-darkmode <br>cdr-color-border-error-lightmode  |
+| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_red_attention_grabber_4-3.png`)"/> | #c83232<br>r200  g50  b50  | N/A  |
+| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_red_high_stakes_4-3.png`)"/> | #b5292b<br>r181  g41  b43 | cdr-color-text-error-lightmode  |
+| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_red_quick_fixe_4-3.png`)"/> | #a12024<br> r161  g32  b36  | N/A  |
 
 
 <br>
@@ -417,9 +417,9 @@ Yellow colors are used in a variety of scenarios such as providing feedback for 
 
 | Color               | Values              | Tokens Using                 |
 | :------------------ | :------------------ | :--------------------------- |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_yellow_light-tension_4-3.png`)"/> | #fff5be<br>r255  g245  b190  | N/A  |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_yellow_golden-face_4-3.png`)"/> | #f8b877<br>r248  g184  b119  | N/A  |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_yellow_dehydrated-lemon_4-3.png`)"/>| #c77523<br>r199  g117  b35 | N/A  |
+| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_yellow_light_tension_4-3.png`)"/> | #fff5be<br>r255  g245  b190  | N/A  |
+| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_yellow_golden_face_4-3.png`)"/> | #f8b877<br>r248  g184  b119  | N/A  |
+| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_yellow_dehydrated_lemon_4-3.png`)"/>| #c77523<br>r199  g117  b35 | N/A  |
 
 <br>
 
