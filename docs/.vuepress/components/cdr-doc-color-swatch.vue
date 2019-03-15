@@ -27,7 +27,7 @@
 </template>
 
 <script>
-import tokens from '@rei/cdr-tokens/dist/raw-tokens.json';
+// import tokens from '@rei/cdr-tokens/dist/raw-tokens.json';
 export default {
   name: 'CdrDocColorSwatch',
   props: {
@@ -66,20 +66,20 @@ export default {
 
   .cdr-doc-color-swatch {
     @include redwood-display-20;
-    margin-bottom: $space-2-x;
+    margin-bottom: $cdr-space-two-x;
   }
 
   .cdr-doc-color-swatch__sample {
     border: $cdr-doc-border-separator;
     border-radius: $cdr-doc-border-radius-default;
     height: 30px;
-    margin-bottom: $space-half-x;
+    margin-bottom: $cdr-space-half-x;
   }
 
   .cdr-doc-color-swatch__token-name {
     color: $cdr-doc-text-color-primary;
     font-weight: 600;
-    margin-bottom: $space-half-x;
+    margin-bottom: $cdr-space-half-x;
   }
 
   .cdr-doc-color-swatch__values {
@@ -87,7 +87,7 @@ export default {
   }
 
   .cdr-doc-color-swatch__hex {
-    margin-right: $space-1-x;
+    margin-right: $cdr-space-one-x;
     text-transform: uppercase;
   }
 </style>

@@ -103,7 +103,7 @@ List of color tokens with descriptions and values. Web and mobile color tokens h
 | `CSS code` | **cdr-color-border-secondary-lightmode** <br>Secondary border color for light background    | #b8b8b8<br>r184  g184  b184  |
 | `CSS code` | **cdr-color-border-disabled-lightmode** <br>Border color for disabled state for light background     | #dadada<br>r218  g218  b218  |
 | `CSS code` | **cdr-color-border-error-lightmode** <br>Border color for error validation state for light background     | #e86868<br>r232  g104  b104  |
-| `CSS code` | **cdr-color-border-selected-lightmode** <br>     | #2b6692<br><nobr>r43  g102  b146  |
+| `CSS code` | **cdr-color-border-selected-lightmode** <br>     | #2b6692<br><span style="white-space: nowrap;">r43  g102  b146</span>  |
 
 <br>
 

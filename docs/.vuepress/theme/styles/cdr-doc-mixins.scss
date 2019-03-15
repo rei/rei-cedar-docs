@@ -18,16 +18,16 @@
   & > img {
     display: block;
     max-width: 100%;
-    margin-bottom: $space-2-x;
-    margin-top: $space-1-x;
+    margin-bottom: $cdr-space-two-x;
+    margin-top: $cdr-space-one-x;
     margin-left: auto;
     margin-right: auto;
   }
 
   & > h2 {
     @include spruce-display-50;
-    margin-bottom: $space-1-x;
-    margin-top: $space-2-x;
+    margin-bottom: $cdr-space-one-x;
+    margin-top: $cdr-space-two-x;
     max-width: $cdr-doc-long-form-text-max-line-length;
 
     &:first-child {
@@ -37,8 +37,8 @@
 
   & > h3 {
     @include spruce-display-40;
-    margin-bottom: $space-1-x;
-    margin-top: $space-2-x;
+    margin-bottom: $cdr-space-one-x;
+    margin-top: $cdr-space-two-x;
     max-width: $cdr-doc-long-form-text-max-line-length;
 
     &:first-child {
@@ -48,8 +48,8 @@
 
   & > h4 {
     @include spruce-display-30;
-    margin-bottom: $space-1-x;
-    margin-top: $space-2-x;
+    margin-bottom: $cdr-space-one-x;
+    margin-top: $cdr-space-two-x;
     max-width: $cdr-doc-long-form-text-max-line-length;
 
     &:first-child {
@@ -59,16 +59,16 @@
 
   & > p {
     @include redwood-display-30;
-    margin-bottom: $space-half-x;
+    margin-bottom: $cdr-space-half-x;
     max-width: $cdr-doc-long-form-text-max-line-length;
 
     + p {
-      margin-top: $space-2-x;
+      margin-top: $cdr-space-two-x;
     }
   }
 
   & > div[class^='language-'] {
-    margin-bottom: $space-2-x;
+    margin-bottom: $cdr-space-two-x;
   }
 
   // List resets
@@ -129,7 +129,7 @@
     padding-left: $ordered-list-indentation-space;
     
     & li {
-      padding-left: $space-quarter-x;
+      padding-left: $cdr-space-quarter-x;
 
       /* nesting
       ---------- */
@@ -154,8 +154,8 @@
   & > hr {
     border: 0;
     border-top: $cdr-doc-border-separator;
-    margin-bottom: $space-2-x;
-    margin-top: $space-2-x;    
+    margin-bottom: $cdr-space-two-x;
+    margin-top: $cdr-space-two-x;    
   }
 
   & > a,
@@ -180,7 +180,7 @@
       color: $cdr-doc-text-color-code;
       font-family: $cdr-doc-font-family-mono;
       font-size: 14px;
-      padding: 0 $space-half-x;
+      padding: 0 $cdr-space-half-x;
       white-space: nowrap;
     }
   }

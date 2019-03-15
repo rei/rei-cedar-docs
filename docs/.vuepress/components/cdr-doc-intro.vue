@@ -51,16 +51,16 @@ export default {
   @import '../theme/styles/cdr-doc-tokens.scss';
   
   $background-color-intro: #46522C; // Copied from InVision comp
-  $text-color-intro: $clean-slate;
+  $text-color-intro: $cdr-color-text-primary-darkmode;
 
   .cdr-doc-intro {
     background: $background-color-intro;
     color: $text-color-intro;
-    padding: $space-4-x $space-1-x;
+    padding: $cdr-space-four-x $cdr-space-one-x;
   }
 
   .cdr-doc-intro--small {
-    padding: $space-2-x $space-1-x;
+    padding: $cdr-space-two-x $cdr-space-one-x;
   }
 
   .cdr-doc-intro__inner {
@@ -71,7 +71,7 @@ export default {
   .cdr-doc-intro__title {
     @include spruce-display-80;
     margin: 0;
-    // padding-bottom: $space-1-x;
+    // padding-bottom: $cdr-space-one-x;
   }
 
   .cdr-doc-intro__breadcrumbs {
@@ -86,7 +86,7 @@ export default {
   .cdr-doc-intro__breadcrumb-link {
     @include spruce-display-00;
     color: $text-color-intro;
-    margin-right: $space-half-x;
+    margin-right: $cdr-space-half-x;
     margin-bottom: 0;
 
     &:hover {
@@ -97,12 +97,12 @@ export default {
   .cdr-doc-intro__title-metadata {
     @include redwood-display-20;
     margin: 0;
-    margin-bottom: $space-half-x;
+    margin-bottom: $cdr-space-half-x;
 
     .cdr-doc-intro__title + & {
-      border-top: solid 1px $grey-matter;
-      margin-top: $space-1-x;
-      padding-top: $space-1-x;
+      border-top: solid 1px $cdr-color-border-secondary-lightmode;
+      margin-top: $cdr-space-one-x;
+      padding-top: $cdr-space-one-x;
     }
   }
 
@@ -111,9 +111,9 @@ export default {
     margin: 0;
     
     .cdr-doc-intro__title + & {
-      border-top: solid 1px $grey-matter;
-      margin-top: $space-1-x;
-      padding-top: $space-1-x;
+      border-top: solid 1px $cdr-color-border-secondary-lightmode;
+      margin-top: $cdr-space-one-x;
+      padding-top: $cdr-space-one-x;
     }
   }
 </style>

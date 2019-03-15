@@ -26,18 +26,18 @@ export default {
     @include redwood-display-10;
     align-items: center;
     border: solid 1px $border-color;
-    border-radius: $radius-soft;
+    border-radius: $cdr-radius-soft;
     box-sizing: border-box;
     color: $text-color-primary;
     display: flex;
-    margin-bottom: $space-1-x;
-    padding: $inset-quarter-x;
+    margin-bottom: $cdr-space-one-x;
+    padding: $cdr-space-inset-quarter-x;
   }
 
   .rei-doc-alert .rei-doc-alert__icon {
     fill: $icon-color;
     // height: $icon-size-sm;
-    margin-right: $space-quarter-x;
+    margin-right: $cdr-space-quarter-x;
     // width: $icon-size-sm;
   }
 </style>

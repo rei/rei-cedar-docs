@@ -36,12 +36,12 @@ export default {
   }
   .cdr-doc-article-img {
     border: 1px solid $partly-cloudy;
-    border-radius:  $radius-softer;
+    border-radius:  $cdr-radius-softer;
   }
 
   .cdr-doc-article-layout__body {
     flex: 1 0 100%;
-    padding: $inset-1-x;
+    padding: $cdr-space-inset-one-x;
     padding-bottom: $cdr-doc-long-form-text-top-and-bottom-inset-space;
     padding-top: $cdr-doc-long-form-text-top-and-bottom-inset-space;
   }

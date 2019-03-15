@@ -42,7 +42,7 @@ export default {
 
   .cdr-doc-homepage-asset-card {
     display: block;
-    margin-right: $space-4-x;
+    margin-right: $cdr-space-four-x;
     text-align: center;
 
     &,
@@ -66,7 +66,7 @@ export default {
     @include redwood-display-40;
     color: $cdr-doc-text-color-primary;
     font-weight: bold;
-    margin-bottom: $space-half-x;
+    margin-bottom: $cdr-space-half-x;
   }
 
   .cdr-doc-homepage-asset-card__description {

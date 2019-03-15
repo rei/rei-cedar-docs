@@ -38,10 +38,10 @@
   @import '../theme/styles/cdr-doc-tokens.scss';
 
   .api-slot {
-    background-color: $clean-slate;
+    background-color: $cdr-color-background-lightest;
     border: 1px solid $partly-cloudy;
     border-radius: 4px;
-    padding: $space-half-x;
+    padding: $cdr-space-half-x;
 
     .slot-name {
       color: $quick-fixe;
@@ -65,7 +65,7 @@
     }
 
     & + & {
-      margin-top: $space-1-x;
+      margin-top: $cdr-space-one-x;
     }
   }
 </style>

@@ -157,10 +157,10 @@ export default {
 <style lang="scss">
   @import '../theme/styles/cdr-tokens.scss';
   @import '../theme/styles/cdr-doc-tokens.scss';
-  $cdr-doc-code-snippet-actions-background-color: $moon-shot;
+  $cdr-doc-code-snippet-actions-background-color: $cdr-color-background-lighter;
 
   .cdr-doc-code-snippet {
-    margin-bottom: $space-1-x;
+    margin-bottom: $cdr-space-one-x;
     // max-width: 100%;
     width: 100%;
   }
@@ -172,7 +172,7 @@ export default {
     border-bottom: 0;
     border-radius: $cdr-doc-border-radius-default $cdr-doc-border-radius-default 0 0;
     display: flex;
-    padding: $space-three-quarter-x $inset-1-x;
+    padding: $cdr-space-three-quarter-x $cdr-space-inset-one-x;
 
     .cdr-doc-code-snippet--code-hidden & {
       border-radius: $cdr-doc-border-radius-default;
@@ -216,7 +216,7 @@ export default {
   }
 
   .cdr-doc-code-snippet__copy-action {
-    margin-right: $space-1-x;
+    margin-right: $cdr-space-one-x;
     position: relative;
   }
 
@@ -235,11 +235,11 @@ export default {
   .cdr-doc-code-snippet__tooltip {
     background: $cdr-doc-code-snippet-tooltip-background-color;
     border-radius: $cdr-doc-border-radius-default;
-    color: $clean-slate;
+    color: $cdr-color-text-primary-darkmode;
     font-size: 14px;
     left: 50%;
     opacity: 0;
-    padding: $inset-1-x-squish;
+    padding: $cdr-space-inset-one-x-squish;
     pointer-events: none;
     position: absolute;
     text-align: center;
@@ -264,7 +264,7 @@ export default {
 
   .cdr-doc-code-snippet__action-wrapper {
     position: relative;
-    margin-right: $space-1-x;
+    margin-right: $cdr-space-one-x;
   }
 
   .cdr-doc-code-snippet__action:hover + .cdr-doc-code-snippet__tooltip--show-on-hover,

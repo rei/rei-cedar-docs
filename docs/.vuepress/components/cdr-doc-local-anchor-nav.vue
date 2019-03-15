@@ -337,7 +337,7 @@ export default {
   }
 
   .cdr-doc-local-anchor-nav__link--child {
-    padding-left: $space-2-x;
+    padding-left: $cdr-space-two-x;
 
     &:before {
       content: '\2014'; // &mdash;
@@ -349,19 +349,19 @@ export default {
   }
 
   .cdr-doc-local-anchor-nav__list-item {
-    margin-bottom: $space-quarter-x;
+    margin-bottom: $cdr-space-quarter-x;
   }
 
   .cdr-doc-local-anchor-nav__list-item--parent {
     .cdr-doc-local-anchor-nav__list-item--child + & {
-      margin-top: $space-half-x;
+      margin-top: $cdr-space-half-x;
     }
   }
 
   .cdr-doc-local-anchor-nav__appended-items {
     list-style: none;
     padding: 0;
-    margin-top: $space-2-x;
+    margin-top: $cdr-space-two-x;
   }
 
   .cdr-doc-local-anchor-nav__appended-item-link {

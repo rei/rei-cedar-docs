@@ -84,7 +84,7 @@ export default {
 
   .cdr-doc-tabs__labels {
     border-bottom: $cdr-doc-border-separator;
-    padding: $inset-1-x;
+    padding: $cdr-space-inset-one-x;
     padding-bottom: 0;
     padding-top: 0;
   }
@@ -99,7 +99,7 @@ export default {
   }
 
   .cdr-doc-tabs__panels {
-    padding: $inset-1-x;
+    padding: $cdr-space-inset-one-x;
     padding-bottom: 0;
     padding-top: 0;
   }
@@ -112,13 +112,13 @@ export default {
   }
 
   .cdr-doc-tabs__list-item {
-    margin-right: $space-2-x;
+    margin-right: $cdr-space-two-x;
   }
 
   .cdr-doc-tabs__link {
     color: $cdr-doc-text-color-primary;
     display: block;
-    padding: $inset-1-x;
+    padding: $cdr-space-inset-one-x;
     padding-left: 0;
     padding-right: 0;
     position: relative;
