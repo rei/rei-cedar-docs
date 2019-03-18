@@ -251,20 +251,15 @@ Cedar design system uses a limited number of tokens for typography:
 
 <br/>
 
-Cedar has also defined a set of options for typography:
-- Options provide great flexibility while aligning with design decisions
-- Use options with caution; type specifications could change
-- The Cedar team is tracking how options are used in components
-- List of options is available on the [Resources tab](?active-tab=resources)
+REI Digital Experience team has also defined typography specifications and values based on REI Brand:
+- Use these values with caution; type specifications could change
+- Cedar Design Systems team is tracking how options are used in components
+- List of typography values is available on the [Resources tab](?active-tab=resources)
 
 
 ### Sentinel
 
 <b>Sentinel</b> is REI’s first choice for headlines and body copy, as well as anywhere you need an editorial voice.
-
-For <b>Sentinel</b>:
-- Tokens start with this phrase: `cdr-text-editorial-`
-- Options start with this phrase: `cdr-spruce-`
 
 <br>
 
@@ -272,19 +267,11 @@ For <b>Sentinel</b>:
 
 <b>Roboto</b> shines when you want a simple, straightforward typeface that doesn’t get in the way. It’s used liberally in the digital space as REI’s chosen font for informational or supplemental-level copy.
 
-For <b>Roboto</b>:
-- Tokens start with this phrase: `cdr-text-default-`
-- Options start with this phrase:`cdr-redwood-`
-
 <br>
 
 ### Roboto Condensed 
 
 <b>Roboto Condensed</b> is used in special circumstances where size constraints exist or visual differentiation is needed. Examples of its use can be found in form labels and the Call to Action text.
-
-For <b>Roboto Condensed</b>:
-- Tokens start with this phrase: `cdr-text-utility-`
-- Options start with this phrase: `cdr-maple-`
 
 <br>
 
@@ -344,9 +331,12 @@ The Cedar team welcomes contributions from the digital community at REI. If you 
 
  
 ## Type Scale
+The type scale powers all the typography within Cedar components. These preset values are the best way to reinforce visual hierarchy and consistency across pages. 
 
 ### Body 
-Using a more open line height to font size ratio, body typography is best suited for long-form content.
+Uses a more open line height to font size ratio:
+- Best suited for long-form content
+- Specifications are available for default (Roboto or sans type styles) and editorial (Sentinel or serif type styles)
 
 #### Default 
 
