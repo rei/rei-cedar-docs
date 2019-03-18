@@ -2,7 +2,7 @@
 {
   "title": "Tokens",
   "title_metadata": false,
-  "layout": "LayoutArticle",
+  "layout": "LayoutComponent",
   "summary": false,
   "breadcrumbs": [
     {
@@ -12,6 +12,9 @@
 }
 ---
 
+
+<cdr-doc-tabs>
+<template slot="Overview">
 <cdr-doc-table-of-contents-shell>
 
 ## Overview
