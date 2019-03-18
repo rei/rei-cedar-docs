@@ -276,30 +276,14 @@ REI Digital Experience team has also defined typography specifications and value
 <br>
 
 ## Type Scale
+For type scale specifications are located on the [Brand Typography tab](?active-tab="brand typography"). Specifications are available for: 
 
-The type scale powers all the typography within Cedar components. These preset options are the best way to reinforce visual hierarchy and consistency across pages. The styles can also be used standalone—all the options listed on the Resources tab are also available in the Sketch Toolkit to make your design decisions easier.
+- **Body:** Uses a more open line height to font size ratio and is best suited for long-form content 
 
+- **Display:** Line height to font size ratio is more condensed than body type specifications and caters to an overall shorter line length. It is best used for big moments, headings, titles, or subheadings. Avoid using display sizes for long-form content 
 
-### Display 
+- **Utility:** Use sparingly within UI elements for Cedar components such as Form labels and Call-to-Action text
 
-The line height to font size ratio is catered to an overall shorter line length:
-- Best used for big moments, headings, titles, or subheadings
-- Avoid using display sizes for long-form content
-- Frequently used by Cedar components for UI text 
-
-
-### Body
-
-Using a more open line height to font size ratio:
-- Best suited for long-form content
-- Specification is available for default (Roboto) and editorial (Sentinel) tokens
-
-
-### Utility
-
-Utility type styles are used sparingly within UI elements, currently used by Cedar components for:
-- Form labels
-- Call-to-Action text
 
 <hr/>
 
@@ -411,7 +395,12 @@ Uses a more open line height to font size ratio:
 <hr />
 
 ### Display
-The line height to font size ratio is catered to an overall shorter line length and is best used for big moments, headings, titles, or subheadings. Avoid using display sizes for long-form content.
+Line height to font size ratio is more condensed than body type specifications and caters catered to an overall shorter line length:
+- Best used for big moments, headings, titles, or subheadings
+- Specifications are available for default (Roboto or sans type styles) and editorial (Sentinel or serif type styles)
+- Avoid using display sizes for long-form content
+- Frequently used by Cedar components for UI text 
+
 
 #### Default 
 
@@ -558,6 +547,26 @@ The line height to font size ratio is catered to an overall shorter line length 
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_display_100.png`)"/>
 
+<div style="font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 96rem; line-height: 104rem; letter-spacing: normal; color: #292929; display: inline-block; margin: 0; margin-bottom: 1.6rem; overflow: hidden;”>A different kind of company</div>
+
+<table>
+  <tbody>
+    <tr>
+      <td>
+          Typeface: Sentinel<br>
+	        Font Weight: 600 <br>
+          Font Size: 96 <br>
+          Line Height: 194  
+      </td>
+      <td>
+          <b>Tokens Using:</b>N/A
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
 | Values                        | Tokens Using                                 |
 | :---------------------------- | :------------------------------------------  |
 | Typeface: Sentinel <br>Font Weight: 600 <br>Font Size: 96 <br>Line Height: 104    | N/A  |  
@@ -567,18 +576,39 @@ The line height to font size ratio is catered to an overall shorter line length 
 <hr />
 
 ### Utility
-
-Utility type styles are used sparingly within UI elements such as form labels and Call-to-Action text.
+Used sparingly within UI elements, currently used by Cedar components for:
+- Form labels
+- Call-to-Action text
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_maple_utility_10).png`)"/>
+
+<div style="font-family: Roboto Condensed; font-variant: normal; font-weight: 400; font-size: 1.2rem; line-height: 1.6rem; letter-spacing: normal; color: #292929; display: inline-block; margin: 0; margin-bottom: 1.6rem; overflow: hidden;”>A different kind of company</div>
+
+<table>
+  <tbody>
+    <tr>
+      <td>
+          Typeface: Roboto Condensed<br>
+	        Font Weight: 400 <br>
+          Font Size: 12 <br>
+          Line Height: 16  
+      </td>
+      <td>
+          <b>Tokens Using:</b>N/A
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 | Values                        | Tokens Using                                 |
 | :---------------------------- | :------------------------------------------  |
 | Typeface: Roboto Condensed <br>Font Weight: 400 <br>Font Size: 12 <br>Line Height: 16    | N/A  |  
+<br>
+
 
 <br>
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_maple_utility_20).png`)"/>
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_maple_utility_20.png`)"/>
 
 | Values                        | Tokens Using                                 |
 | :---------------------------- | :------------------------------------------  |
@@ -586,7 +616,7 @@ Utility type styles are used sparingly within UI elements such as form labels an
 
 <br>
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_maple_utility_30).png`)"/>
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_maple_utility_30.png`)"/>
 
 | Values                        | Tokens Using                                 |
 | :---------------------------- | :------------------------------------------  |
@@ -594,7 +624,7 @@ Utility type styles are used sparingly within UI elements such as form labels an
 
 <br>
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_maple_utility_40).png`)"/>
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_maple_utility_40.png`)"/>
 
 | Values                        | Tokens Using                                 |
 | :---------------------------- | :------------------------------------------  |
@@ -602,7 +632,7 @@ Utility type styles are used sparingly within UI elements such as form labels an
 
 <br>
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_maple_utility_50).png`)"/>
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_maple_utility_50.png`)"/>
 
 | Values                        | Tokens Using                                 |
 | :---------------------------- | :------------------------------------------  |
@@ -610,7 +640,7 @@ Utility type styles are used sparingly within UI elements such as form labels an
 
 <br>
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_maple_utility_60).png`)"/>
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_maple_utility_60.png`)"/>
 
 | Values                        | Tokens Using                                 |
 | :---------------------------- | :------------------------------------------  |
@@ -618,7 +648,7 @@ Utility type styles are used sparingly within UI elements such as form labels an
 
 <br>
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_maple_utility_70).png`)"/>
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_maple_utility_70.png`)"/>
 
 | Values                        | Tokens Using                                 |
 | :---------------------------- | :------------------------------------------  |
