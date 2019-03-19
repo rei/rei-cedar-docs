@@ -15,12 +15,11 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
   
-Typography design tokens store the fundamental decisions of Cedar’s font system. 
-- Naming entities store visual design attributes such as font specifications
-- Replacing hard-coded values such as pixel values for font size
-- Maintaining a scalable and consistent visual system for UI development
-- Delivering updates to the brand identity with minimal impact to the code
-- Specifying a hierarchical and semantically defined system
+Typography design tokens store the fundamental decisions of Cedar’s visual language: 
+- Stores font specifications using variable names, not hard-coded values such as pixel values for font size
+- Allows us to maintain a scalable, adjustable, and consistent visual system 
+- Delivers updates to the brand identity with minimal impact to the code
+- Specifies a hierarchical and semantically defined system
 
 <br/>
 
@@ -254,7 +253,7 @@ Cedar design system uses a limited number of tokens for typography:
 REI Digital Experience team has also defined typography specifications and values based on REI Brand:
 - Use these values with caution; type specifications could change
 - Cedar Design Systems team is tracking how options are used in components
-- List of typography values is available on the [Resources tab](?active-tab=resources)
+- List of typography values is available on the [Brand Typography tab](?active-tab=brand typography)
 
 
 ### Sentinel
@@ -276,13 +275,13 @@ REI Digital Experience team has also defined typography specifications and value
 <br>
 
 ## Type Scale
-For type scale specifications are located on the [Brand Typography tab](?active-tab="brand typography"). Specifications are available for: 
+For type scale specifications are located on the [Brand Typography tab](?active-tab=brand typography). Specifications are available for:
 
 - **Body:** Uses a more open line height to font size ratio and is best suited for long-form content 
 
 - **Display:** Line height to font size ratio is more condensed than body type specifications and caters to an overall shorter line length. It is best used for big moments, headings, titles, or subheadings. Avoid using display sizes for long-form content 
 
-- **Utility:** Use sparingly within UI elements for Cedar components such as Form labels and Call-to-Action text
+- **Utility:** Use sparingly within UI elements for Cedar components such as form labels and Call-to-Action text
 
 
 <hr/>
@@ -399,7 +398,6 @@ Line height to font size ratio is more condensed than body type specifications a
 - Best used for big moments, headings, titles, or subheadings
 - Specifications are available for default (Roboto or sans type styles) and editorial (Sentinel or serif type styles)
 - Avoid using display sizes for long-form content
-- Frequently used by Cedar components for UI text 
 
 
 #### Default 
