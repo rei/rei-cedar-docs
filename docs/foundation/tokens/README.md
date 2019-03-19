@@ -28,7 +28,7 @@ Key: value;
 cdr-text-primary-lightmode: #292929;
 ```
 
-  - The key name defines the usage or how to apply the value to a specific context such as using text on a light background color background darkmode
+  - The key name defines the usage or how to apply the value to a specific context such as using text on a light background
   - The key stores visual design attributes
   - The key replaces hard-coded values, such as hex values for color or pixel values for spacing
   - Contract of intent will not change when a variable value is updated over time
@@ -47,7 +47,7 @@ cdr-text-primary-lightmode: #292929;
 
 #### Ease of Maintainability
 Tokens can streamline redesign processes by:
-  - When the Cedar team updates an value (such as with a new typeface or color hex value), the tokens do not need to be changed in code by consumers
+  - When the Cedar team updates an **value** (such as with a new typeface or color hex value), the **tokens** do not need to be changed in code by consumers
   - Teams can consume these changes from SEMVER releases to our supported packages
 
 #### Brand Consistency on Any Platform
@@ -55,7 +55,7 @@ Tokens can streamline redesign processes by:
   - Ensures brand consistency across all digital channels
 
 #### Extensibility 
-  - Designers and developers have access to these tokens when creating custom styling   components for their applications (within brand standards) 
+  - Designers and developers have access to these tokens when creating custom components for their applications (within brand standards) 
 
 
 ### Use When  
@@ -127,7 +127,7 @@ There are a couple of primary use cases for using tokens in place of components:
     </tr>
     <tr>
        <td>Is this token used for multiple elements and NOT specific to one element? </td>
-      <td>No </td>
+      <td><b>No</b></td>
     </tr>
   </tbody>
 </table>
@@ -144,8 +144,8 @@ There are a couple of primary use cases for using tokens in place of components:
       <td>Yes </td>
     </tr>
     <tr>
-      <td>Is it clear where this is to be used based on its nam </td>
-      <td>No </td>
+      <td>Is it clear where this is to be used based on its name? </td>
+      <td><b>No</b></td>
     </tr>
     <tr>
       <td>If I apply this token in my component and use it to specify a color will it still be used for that color in a future design update? </td>
@@ -153,7 +153,7 @@ There are a couple of primary use cases for using tokens in place of components:
     </tr>
     <tr>
       <td>Is this token used for multiple elements and NOT specific to one element? </td>
-      <td>**Perhaps but it is not used consistently**</td>
+      <td><b>Perhaps but it is not used consistently</b></td>
     </tr>
   </tbody>
 </table>
@@ -179,7 +179,7 @@ The naming structure for tokens follows:
 ### Examples 
 The below table is intended to show the naming structure. Levels will be skipped when not used. 
 
-|                        | **Category** | **Sub-Category**  | **Item**  | **Sub-Item**  | **Variant**  | **Size**  | **Theme**  | **Complete Token Name**           |
+|                        | **Category** | **Sub-Category**  | **Item**  | **Sub-Item**  | **Variant**  | **Size**  | **Mode**  | **Complete Token Name**           |
 | :--------------------- | :----------- | :---------------- | :-------- | :------------ | :----------- | :-------- | :--------- | :-------------------------------- |
 | Example 1 (color)      |  color-      | text-             |           |               |  primary-    |           | lightmode  | color-text-primary-lightmode      |
 | Example 2 (color)      |  color-      | text-             | link-     | label-        |              |           | lightmode  | color-text-link-lightmode         |
@@ -203,7 +203,7 @@ Information coming soon
 ### For Developers
 A base requirement for using Cedar tokens is that you are able to consume and maintain packages through the following development processes:
 - Web consumers:
-  - Your project can compile css variables 
+  - Your project can compile CSS variables 
   - You can import NPM packages
 - Native iOS consumers using CocoaPods
 - Android consumers using Android package manager
@@ -214,16 +214,16 @@ This repository follows SEMVER practices and will notify users of changes and up
 
 
 ## Adding Tokens to the Repository
-The number of Tokens Cedar provides is kept small intentionally as it is critical for a token to meet all requirements based on the above criterium prior to being added to Cedar’s Token list.
+The number of tokens Cedar provides is kept small intentionally as it is critical for a token to meet all requirements based on the above criterium prior to being added to Cedar’s Token list.
 
 If you have a request for a token that is missing, you can [submit a pull request to the cedar-token repo](https://www.npmjs.com/package/@rei/cdr-tokens#addingupdating-tokens) or ask in the #cedar-users-support Slack channel. Ensure that the token meets the following requirements:
 - Token is used in several components or layouts
 - Token is used for multiple elements and NOT specific to one element
 - Token name will continue to have the same semantic meaning in future releases
 - Token name follows platform requirements: 
-  - For web, token name tells consumers where it will be used 
+  - For web, token name tells consumers where it will be used and kebab case is used. For example, cdr-color-background-dark
   - For iOS, TBD or link to outside source for naming conventions 
-  - For Android, TBD or link to outside source for naming conventions 
+  - For Android, token name tells consumers where it will be used and snake case is used. For example, cdr_color_background_dark
 
 <hr/>
 
