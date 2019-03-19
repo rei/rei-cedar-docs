@@ -540,14 +540,16 @@ Line height to font size ratio is more condensed than body type specifications a
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_display_90.png`)"/>
 
 | Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
+| :-x--------------------------- | :------------------------------------------  |
 | Typeface: Sentinel <br>Font Weight: 600 <br>Font Size: 76 <br>Line Height: 84    | N/A  |  
 
 <br>
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_display_100.png`)"/>
 
-<div style="font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 96rem; line-height: 104rem; letter-spacing: normal; color: #292929; display: inline-block; margin: 0; margin-bottom: 1.6rem; overflow: hidden;”>A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 96px; line-height: 104px; letter-spacing: normal; color: #292929;">
+  A different kind of company
+</div>
 
 <table>
   <tbody>
@@ -582,7 +584,9 @@ Used sparingly within UI elements, currently used by Cedar components for:
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_maple_utility_10).png`)"/>
 
-<div style="font-family: Roboto Condensed; font-variant: normal; font-weight: 400; font-size: 1.2rem; line-height: 1.6rem; letter-spacing: normal; color: #292929; display: inline-block; margin: 0; margin-bottom: 1.6rem; overflow: hidden;”>A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto Condensed; font-variant: normal; font-weight: 400; font-size: 12px; line-height: 16rem; letter-spacing: normal; color: #292929; display: inline-block; margin: 0; margin-bottom: 16px; overflow: hidden;"">A different kind of company</div>
+
+
 
 <table>
   <tbody>
