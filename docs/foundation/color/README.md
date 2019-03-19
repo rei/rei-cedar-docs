@@ -16,12 +16,11 @@
 <cdr-doc-table-of-contents-shell>
   
 
-Color design tokens store the fundamental color decisions of REI’s visual language:
-  - Naming entities to store visual design attributes such as color specifications
-  - Replacing hard-coded values such as hex values for color
-  - Maintaining a scalable and consistent visual system for UI development
-  - Delivering updates to the brand identity with minimal impact to the code
-  - Specifying a hierarchical and semantically defined system
+Color design tokens store the fundamental decisions of Cedar’s visual language: 
+  - Stores color specifications using variable names, not hard-coded values such as hex values for color
+  - Allows us to maintain a scalable, adjustable, and consistent visual system 
+  - Delivers updates to the brand identity with minimal impact to the code
+  - Specifies a hierarchical and semantically defined system
 
 
 ## Color Tokens
