@@ -323,71 +323,183 @@ Uses a more open line height to font size ratio:
 
 #### Default 
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_redwood_body_10.png`)"/>
-
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Roboto <br>Font Weight: 400 <br>Font Size: 14 <br>Line Height: 24    | cdr-text-default-body-compact   | 
-
-<br>
-
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_redwood_body_20.png`)"/>
-
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Roboto <br>Font Weight: 400 <br>Font Size: 16 <br>Line Height: 26    | cdr-text-default-body   | 
-
-<br>
-
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_redwood_body_30.png`)"/>
-
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Roboto <br>Font Weight: 400 <br>Font Size: 18 <br>Line Height: 28    | N/A  |  
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 14px; line-height: 24px; letter-spacing: normal; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        font-family: Roboto <br>
+        font-weight: 400 <br>
+        font-size: 14 <br>
+        line-height: 24  
+      </td>
+      <td>
+        <b>Tokens:</b><br>
+        cdr-text-default-body-compact <br>
+        <br>
+        <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <br>
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_redwood_body_40.png`)"/>
- 
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Roboto <br>Font Weight: 400 <br>Font Size: 20 <br>Line Height: 32    | N/A  | 
-        
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 16px; line-height: 26px; letter-spacing: normal; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        font-family: Roboto <br>
+        font-weight: 400 <br>
+        font-size: 16 <br>
+        line-height: 26  
+      </td>
+      <td>
+        <b>Tokens:</b><br>
+        cdr-text-default-body  <br>
+        <br>
+        <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 18px; line-height: 28px; letter-spacing: normal; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        font-family: Roboto <br>
+        font-weight: 400 <br>
+        font-size: 18 <br>
+        line-height: 28  
+      </td>
+      <td>
+        <b>Tokens:</b><br>
+        N/A<br>
+        <br>
+        <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 20px; line-height: 32px; letter-spacing: normal; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        font-family: Roboto <br>
+        font-weight: 400 <br>
+        font-size: 20 <br>
+        line-height: 32  
+      </td>
+      <td>
+        <b>Tokens:</b><br>
+        N/A<br>
+        <br>
+        <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
 <br>
 
 <hr />
 
 #### Editorial 
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_body_10.png`)"/>
-
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Sentinel <br>Font Weight: 400 <br>Font Size: 16 <br>Line Height: 26    | N/A  | 
-
-<br>
-
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_body_20.png`)"/>
-
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Sentinel <br>Font Weight: 400 <br>Font Size: 18 <br>Line Height: 28    | cdr-text-editorial-body-compact   |  
-
-<br>
-
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_body_30.png`)"/>
-
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Sentinel <br>Font Weight: 400 <br>Font Size: 20 <br>Line Height: 32    | cdr-text-editorial-body   |   
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 400; font-size: 16px; line-height: 26px; letter-spacing: normal; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        font-family: Sentinel <br>
+        font-weight: 400 <br>
+        font-size: 16 <br>
+        line-height: 26  
+      </td>
+      <td>
+        <b>Tokens:</b><br>
+        N/A<br>
+        <br>
+        <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <br>
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_body_40.png`)"/>
- 
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Sentinel <br>Font Weight: 400 <br>Font Size: 24 <br>Line Height: 36    | N/A  | 
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 400; font-size: 18px; line-height: 28px; letter-spacing: normal; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        font-family: Sentinel <br>
+        font-weight: 400 <br>
+        font-size: 18 <br>
+        line-height: 28  
+      </td>
+      <td>
+        <b>Tokens:</b><br>
+        cdr-text-editorial-body-compact<br>
+        <br>
+        <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 400; font-size: 20px; line-height: 32px; letter-spacing: normal; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        font-family: Sentinel <br>
+        font-weight: 400 <br>
+        font-size: 20 <br>
+        line-height: 32  
+      </td>
+      <td>
+        <b>Tokens:</b><br>
+        cdr-text-editorial-body<br>
+        <br>
+        <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 400; font-size: 24px; line-height: 36px; letter-spacing: normal; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        font-family: Sentinel <br>
+        font-weight: 400 <br>
+        font-size: 24 <br>
+        line-height: 36  
+      </td>
+      <td>
+        <b>Tokens:</b><br>
+        N/A<br>
+        <br>
+        <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <br>
 
@@ -399,167 +511,23 @@ Line height to font size ratio is more condensed than body type specifications a
 - Specifications are available for default (Roboto or sans type styles) and editorial (Sentinel or serif type styles)
 - Avoid using display sizes for long-form content
 
-
 #### Default 
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_redwood_display_10.png`)"/>
-
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Roboto <br>Font Weight: 400 <br>Font Size: 12 <br>Line Height: 16    | N/A  |  
-
-<br>
-
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_redwood_display_20.png`)"/>
-
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Roboto <br>Font Weight: 400 <br>Font Size: 14 <br>Line Height: 20    | N/A  |  
-
-<br>
-
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_redwood_display_30.png`)"/>
-
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Roboto <br>Font Weight: 400 <br>Font Size: 16 <br>Line Height: 24    | N/A  |  
-
-<br>
-
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_redwood_display_40.png`)"/>
-
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Roboto <br>Font Weight: 400 <br>Font Size: 18 <br>Line Height: 24    | N/A  |  
-
-<br>
-
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_redwood_display_50.png`)"/>
-
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Roboto <br>Font Weight: 400 <br>Font Size: 20 <br>Line Height: 28    | N/A  |  
-
-<br>
-
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_redwood_display_60.png`)"/>
-
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Roboto <br>Font Weight: 400 <br>Font Size: 24 <br>Line Height: 32    | N/A  |  
-
-<br>
-
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_redwood_display_70.png`)"/>
-
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Roboto <br>Font Weight: 400 <br>Font Size: 28 <br>Line Height: 36    | N/A  |  
-
-
-<br>
-
-<hr />
-
-#### Editorial 
-
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_display_00.png`)"/>
-
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Sentinel <br>Font Weight: 600 <br>Font Size: 14 <br>Line Height: 20    | N/A  |  
-
-<br>
-
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_display_10.png`)"/>
-
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Sentinel <br>Font Weight: 600 <br>Font Size: 16 <br>Line Height: 24    | N/A  |  
-
-<br>
-
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_display_20.png`)"/>
-
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Sentinel <br>Font Weight: 600 <br>Font Size: 18 <br>Line Height: 24    | N/A  |  
-
-<br>
-
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_display_30.png`)"/>
-
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Sentinel <br>Font Weight: 600 <br>Font Size: 20 <br>Line Height: 28    | N/A  |  
-
-<br>
-
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_display_40.png`)"/>
-
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Sentinel <br>Font Weight: 600 <br>Font Size: 24 <br>Line Height: 32    | N/A  |  
-
-<br>
-
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_display_50.png`)"/>
-
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Sentinel <br>Font Weight: 600 <br>Font Size: 28 <br>Line Height: 36    | N/A  |  
-
-<br>
-
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_display_60.png`)"/>
-
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Sentinel <br>Font Weight: 600 <br>Font Size: 32 <br>Line Height: 40    | N/A  |  
-
-<br>
-
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_display_70.png`)"/>
-
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Sentinel <br>Font Weight: 600 <br>Font Size: 40 <br>Line Height: 48    | N/A  |  
-
-<br>
-
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_display_80.png`)"/>
-
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Sentinel <br>Font Weight: 600 <br>Font Size: 56 <br>Line Height: 60    | N/A  |  
-
-<br>
-
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_display_90.png`)"/>
-
-| Values                        | Tokens Using                                 |
-| :-x--------------------------- | :------------------------------------------  |
-| Typeface: Sentinel <br>Font Weight: 600 <br>Font Size: 76 <br>Line Height: 84    | N/A  |  
-
-<br>
-
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_spruce_display_100.png`)"/>
-
-<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 96px; line-height: 104px; letter-spacing: normal; color: #292929;">
-  A different kind of company
-</div>
-
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 12px; line-height: 16px; letter-spacing: normal; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
       <td>
-          Typeface: Sentinel<br>
-	        Font Weight: 600 <br>
-          Font Size: 96 <br>
-          Line Height: 194  
+        font-family: Roboto <br>
+        font-weight: 400 <br>
+        font-size: 12 <br>
+        line-height: 16  
       </td>
       <td>
-          <b>Tokens Using:</b>N/A
+        <b>Tokens:</b><br>
+        N/A<br>
+        <br>
+        <br>
       </td>
     </tr>
   </tbody>
@@ -567,9 +535,382 @@ Line height to font size ratio is more condensed than body type specifications a
 
 <br>
 
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Sentinel <br>Font Weight: 600 <br>Font Size: 96 <br>Line Height: 104    | N/A  |  
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 14px; line-height: 20px; letter-spacing: normal; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        font-family: Roboto <br>
+        font-weight: 400 <br>
+        font-size: 14 <br>
+        line-height: 20  
+      </td>
+      <td>
+        <b>Tokens:</b><br>
+        N/A<br>
+        <br>
+        <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 16px; line-height: 24px; letter-spacing: normal; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        font-family: Roboto <br>
+        font-weight: 400 <br>
+        font-size: 16 <br>
+        line-height: 24  
+      </td>
+      <td>
+        <b>Tokens:</b><br>
+        N/A<br>
+        <br>
+        <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 18px; line-height: 24px; letter-spacing: normal; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        font-family: Roboto <br>
+        font-weight: 400 <br>
+        font-size: 18 <br>
+        line-height: 24  
+      </td>
+      <td>
+        <b>Tokens:</b><br>
+        N/A<br>
+        <br>
+        <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 20px; line-height: 28px; letter-spacing: normal; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        font-family: Roboto <br>
+        font-weight: 400 <br>
+        font-size: 20 <br>
+        line-height: 28  
+      </td>
+      <td>
+        <b>Tokens:</b><br>
+        N/A<br>
+        <br>
+        <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 24px; line-height: 32px; letter-spacing: normal; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        font-family: Roboto <br>
+        font-weight: 400 <br>
+        font-size: 24 <br>
+        line-height: 32  
+      </td>
+      <td>
+        <b>Tokens:</b><br>
+        N/A<br>
+        <br>
+        <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 28px; line-height: 36px; letter-spacing: normal; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        font-family: Roboto <br>
+        font-weight: 400 <br>
+        font-size: 28 <br>
+        line-height: 36  
+      </td>
+      <td>
+        <b>Tokens:</b><br>
+        N/A<br>
+        <br>
+        <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<hr />
+
+#### Editorial 
+
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 14px; line-height: 20px; letter-spacing: 0.2; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        font-family: Sentinel<br>
+        font-weight: 600 <br>
+        font-size: 14 <br>
+        line-height: 20  
+      </td>
+      <td>
+        <b>Tokens:</b><br>
+        N/A<br>
+        <br>
+        <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 16px; line-height: 24px; letter-spacing: 0.2; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        font-family: Sentinel<br>
+        font-weight: 600 <br>
+        font-size: 16 <br>
+        line-height: 24  
+      </td>
+      <td>
+        <b>Tokens:</b><br>
+        N/A<br>
+        <br>
+        <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 18px; line-height: 24px; letter-spacing: 0.2; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        font-family: Sentinel<br>
+        font-weight: 600 <br>
+        font-size: 18 <br>
+        line-height: 24  
+      </td>
+      <td>
+        <b>Tokens:</b><br>
+        N/A<br>
+        <br>
+        <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 20px; line-height: 28px; letter-spacing: 0.2; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        font-family: Sentinel<br>
+        font-weight: 600 <br>
+        font-size: 20 <br>
+        line-height: 28  
+      </td>
+      <td>
+        <b>Tokens:</b><br>
+        N/A<br>
+        <br>
+        <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 24px; line-height: 32px; letter-spacing: 0.2; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        font-family: Sentinel<br>
+        font-weight: 600 <br>
+        font-size: 24 <br>
+        line-height: 32  
+      </td>
+      <td>
+        <b>Tokens:</b><br>
+        N/A<br>
+        <br>
+        <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 28px; line-height: 36px; letter-spacing: 0.2; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        font-family: Sentinel<br>
+        font-weight: 600 <br>
+        font-size: 28 <br>
+        line-height: 36  
+      </td>
+      <td>
+        <b>Tokens:</b><br>
+        N/A<br>
+        <br>
+        <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 32px; line-height: 40px; letter-spacing: 0.2; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        font-family: Sentinel<br>
+        font-weight: 600 <br>
+        font-size: 32 <br>
+        line-height: 40  
+      </td>
+      <td>
+        <b>Tokens:</b><br>
+        N/A<br>
+        <br>
+        <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 40px; line-height: 48px; letter-spacing: 0.2; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        font-family: Sentinel<br>
+        font-weight: 600 <br>
+        font-size: 40 <br>
+        line-height: 48  
+      </td>
+      <td>
+        <b>Tokens:</b><br>
+        N/A<br>
+        <br>
+        <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 56px; line-height: 60px; letter-spacing: 0.2; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        font-family: Sentinel<br>
+        font-weight: 600 <br>
+        font-size: 56 <br>
+        line-height: 60  
+      </td>
+      <td>
+        <b>Tokens:</b><br>
+        N/A<br>
+        <br>
+        <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 76px; line-height: 84px; letter-spacing: 0.2; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        font-family: Sentinel<br>
+        font-weight: 600 <br>
+        font-size: 76 <br>
+        line-height: 84  
+      </td>
+      <td>
+        <b>Tokens:</b><br>
+        N/A<br>
+        <br>
+        <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 96px; line-height: 104px; letter-spacing: 0.2; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        font-family: Sentinel<br>
+        font-weight: 600 <br>
+        font-size: 96 <br>
+        line-height: 104  
+      </td>
+      <td>
+        <b>Tokens:</b><br>
+        N/A<br>
+        <br>
+        <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <br>
 
@@ -580,81 +921,157 @@ Used sparingly within UI elements, currently used by Cedar components for:
 - Form labels
 - Call-to-Action text
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_maple_utility_10).png`)"/>
-
-<div style="overflow: hidden; white-space: nowrap; font-family: Roboto Condensed; font-variant: normal; font-weight: 400; font-size: 12px; line-height: 16rem; letter-spacing: normal; color: #292929; display: inline-block; margin: 0; margin-bottom: 16px; overflow: hidden;"">A different kind of company</div>
-
-
-
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto Condensed; font-variant: normal; font-weight: 400; font-size: 12px; line-height: 16px; letter-spacing: normal; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
       <td>
-          Typeface: Roboto Condensed<br>
-	        Font Weight: 400 <br>
-          Font Size: 12 <br>
-          Line Height: 16  
+        font-family: Roboto Condensed<br>
+        font-weight: 400 <br>
+        font-size: 12 <br>
+        line-height: 16  
       </td>
       <td>
-          <b>Tokens Using:</b>N/A
+        <b>Tokens:</b><br>
+        N/A<br>
+        <br>
+        <br>
       </td>
     </tr>
   </tbody>
 </table>
 
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Roboto Condensed <br>Font Weight: 400 <br>Font Size: 12 <br>Line Height: 16    | N/A  |  
 <br>
 
-
-<br>
-
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_maple_utility_20.png`)"/>
-
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Roboto Condensed <br>Font Weight: 400 <br>Font Size: 14 <br>Line Height: 20    | N/A  |  
-
-<br>
-
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_maple_utility_30.png`)"/>
-
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Roboto Condensed <br>Font Weight: 400 <br>Font Size: 16 <br>Line Height: 24    | N/A  |  
-
-<br>
-
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_maple_utility_40.png`)"/>
-
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Roboto Condensed <br>Font Weight: 400 <br>Font Size: 18 <br>Line Height: 24    | N/A  |  
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto Condensed; font-variant: normal; font-weight: 400; font-size: 14px; line-height: 20px; letter-spacing: normal; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        font-family: Roboto Condensed<br>
+        font-weight: 400 <br>
+        font-size: 14 <br>
+        line-height: 20  
+      </td>
+      <td>
+        <b>Tokens:</b><br>
+        N/A<br>
+        <br>
+        <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <br>
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_maple_utility_50.png`)"/>
-
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Roboto Condensed <br>Font Weight: 400 <br>Font Size: 20 <br>Line Height: 28    | N/A  |  
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto Condensed; font-variant: normal; font-weight: 400; font-size: 16px; line-height: 24px; letter-spacing: normal; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        font-family: Roboto Condensed<br>
+        font-weight: 400 <br>
+        font-size: 16 <br>
+        line-height: 24  
+      </td>
+      <td>
+        <b>Tokens:</b><br>
+        N/A<br>
+        <br>
+        <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <br>
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_maple_utility_60.png`)"/>
-
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Roboto Condensed <br>Font Weight: 400 <br>Font Size: 24 <br>Line Height: 32    | N/A  |  
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto Condensed; font-variant: normal; font-weight: 400; font-size: 18px; line-height: 24px; letter-spacing: normal; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        font-family: Roboto Condensed<br>
+        font-weight: 400 <br>
+        font-size: 18 <br>
+        line-height: 24  
+      </td>
+      <td>
+        <b>Tokens:</b><br>
+        N/A<br>
+       <br>
+       <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <br>
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/typography/ex_typography_maple_utility_70.png`)"/>
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto Condensed; font-variant: normal; font-weight: 400; font-size: 20px; line-height: 28px; letter-spacing: normal; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        font-family: Roboto Condensed<br>
+        font-weight: 400 <br>
+        font-size: 20 <br>
+        line-height: 28  
+      </td>
+      <td>
+        <b>Tokens:</b><br>
+        N/A<br>
+        <br>
+        <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
-| Values                        | Tokens Using                                 |
-| :---------------------------- | :------------------------------------------  |
-| Typeface: Roboto Condensed <br>Font Weight: 400 <br>Font Size: 28 <br>Line Height: 36    | N/A  |  
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto Condensed; font-variant: normal; font-weight: 400; font-size: 24px; line-height: 32px; letter-spacing: normal; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        font-family: Roboto Condensed<br>
+        font-weight: 400 <br>
+        font-size: 24 <br>
+        line-height: 32  
+      </td>
+      <td>
+        <b>Tokens:</b><br>
+        N/A<br>
+        <br>
+        <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto Condensed; font-variant: normal; font-weight: 400; font-size: 28px; line-height: 36px; letter-spacing: normal; color: #292929; margin: 0 0 16px 0;">A different kind of company</div>
+<table>
+  <tbody>
+    <tr>
+      <td>
+        font-family: Roboto Condensed<br>
+        font-weight: 400 <br>
+        font-size: 28 <br>
+        line-height: 36  
+      </td>
+      <td>
+        <b>Tokens:</b><br>
+        N/A<br>
+       <br>
+       <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <br>
 
