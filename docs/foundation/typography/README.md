@@ -30,7 +30,7 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 
 <br/>
 
-`CSS code for default-body-compact`  
+<typography-example name="cdr-text-default-body-compact" />
 
 Suggested usage: Use only for compact spacing with informational and supplemental body content
 
@@ -48,7 +48,7 @@ Suggested usage: Use only for compact spacing with informational and supplementa
 <br/>
 
 
-`CSS code for default-body` 
+<typography-example name="cdr-text-default-body" />
 
 Suggested usage: Default for body content. Uses a more open line height to font size ratio
 
@@ -65,7 +65,7 @@ Suggested usage: Default for body content. Uses a more open line height to font 
 
 <br/>
 
-`CSS code for editorial-body-compact`  
+<typography-example name="cdr-text-editorial-body-compact" />
 
 Suggested usage: Use only for compact spacing with editorial body content
 
@@ -83,7 +83,7 @@ Suggested usage: Use only for compact spacing with editorial body content
 <br/>
 
 
-`CSS code for editorial-body` 
+<typography-example name="cdr-text-editorial-body" />
 
 Suggested usage: Default for editorial long-form content. Uses a more open line height to font size ratio
 
