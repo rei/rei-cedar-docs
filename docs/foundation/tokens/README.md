@@ -177,22 +177,188 @@ The naming structure for tokens follows:
 - **Mode:** Defines tokens based on themes, such as a dark or light background  
 
 ### Examples 
-The below table is intended to show the naming structure. Levels will be skipped when not used. 
+The below tables for a token naming structure show that levels will be skipped when not used. 
 
-|                        | **Category** | **Sub-Category**  | **Item**  | **Sub-Item**  | **Variant**  | **Size**  | **Mode**  | **Complete Token Name**           |
-| :--------------------- | :----------- | :---------------- | :-------- | :------------ | :----------- | :-------- | :--------- | :-------------------------------- |
-| Example 1 (color)      |  color-      | text-             |           |               |  primary-    |           | lightmode  | color-text-primary-lightmode      |
-| Example 2 (color)      |  color-      | text-             | link-     | label-        |              |           | lightmode  | color-text-link-lightmode         |
-| Example 3 (color)      |  color-      | text-             | form-     |               |              |           | lightmode  | color-text-form-label-darkmode    | 
-| Example 4 (color)      |  color-      | background-       |           |               | light        |           |            | color-background-light            |
-| Example 5 (color)      |  color-      | border-           |           |               | secondary-   |           | lightmode  | color-border-secondary-lightmode  |
-| Example 6 (typography) |  text-       | editorial-        | body      |               |              |           |            | text-editorial-body               |
-| Example 7 (typography) |  text-       | default-          | body-     |               |              | compact   |            | text-default-body-compact         |
-| Example 8 (spacing)    |  space-      |                   |           |               |              | half-x    |            | space-half-x                      |
+#### color-text-link-lightmode
+<table>
+  <tbody>
+    <tr>
+      <td>Category </td>
+      <td width=240>color- </td>
+    </tr>
+    <tr>
+      <td>Sub-Category </td>
+      <td width=240>text- </td>
+    </tr>
+    <tr>
+      <td>Item </td>
+      <td width=240>link- </td>
+    </tr>
+    <tr>
+      <td>Sub-Item </td>
+      <td width=240>  </td>
+    </tr>
+    <tr>
+      <td>Variant </td>
+      <td width=240>  </td>
+    </tr>
+    <tr>
+      <td>Size </td>
+      <td width=240>  </td>
+    </tr>
+    <tr>
+      <td>Mode </td>
+      <td width=240>lightmode </td>
+    </tr>
+  </tbody>
+</table>
 
+<br>
 
+#### cdr-color-text-form-label-lightmode
+<table>
+  <tbody>
+    <tr>
+      <td>Category </td>
+      <td width=240>color- </td>
+    </tr>
+    <tr>
+      <td>Sub-Category </td>
+      <td width=240>text- </td>
+    </tr>
+    <tr>
+      <td>Item </td>
+      <td width=240>form- </td>
+    </tr>
+    <tr>
+      <td>Sub-Item </td>
+      <td width=240>label- </td>
+    </tr>
+    <tr>
+      <td>Variant </td>
+      <td width=240>  </td>
+    </tr>
+    <tr>
+      <td>Size </td>
+      <td width=240>  </td>
+    </tr>
+    <tr>
+      <td>Mode </td>
+      <td width=240>lightmode </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+#### cdr-color-background-light
+<table>
+  <tbody>
+    <tr>
+      <td>Category </td>
+      <td width=240>color- </td>
+    </tr>
+    <tr>
+      <td>Sub-Category </td>
+      <td width=240>background- </td>
+    </tr>
+    <tr>
+      <td>Item </td>
+      <td width=240>  </td>
+    </tr>
+    <tr>
+      <td>Sub-Item </td>
+      <td width=240>  </td>
+    </tr>
+    <tr>
+      <td>Variant </td>
+      <td width=240>light  </td>
+    </tr>
+    <tr>
+      <td>Size </td>
+      <td width=240>  </td>
+    </tr>
+    <tr>
+      <td>Mode </td>
+      <td width=240>  </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+#### cdr-text-editorial-body-compact
+<table>
+  <tbody>
+    <tr>
+      <td>Category </td>
+      <td width=240>text- </td>
+    </tr>
+    <tr>
+      <td>Sub-Category </td>
+      <td width=360>editorial- </td>
+    </tr>
+    <tr>
+      <td>Item </td>
+      <td width=240>body-  </td>
+    </tr>
+    <tr>
+      <td>Sub-Item </td>
+      <td width=240>  </td>
+    </tr>
+    <tr>
+      <td>Variant </td>
+      <td width=240> </td>
+    </tr>
+    <tr>
+      <td>Size </td>
+      <td width=240>compact   </td>
+    </tr>
+    <tr>
+      <td>Mode </td>
+      <td width=240>  </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+#### cdr-space-half-x
+<table>
+  <tbody>
+    <tr>
+      <td>Category </td>
+      <td width=240>space- </td>
+    </tr>
+    <tr>
+      <td>Sub-Category </td>
+      <td width=240>  </td>
+    </tr>
+    <tr>
+      <td>Item </td>
+      <td width=240>  </td>
+    </tr>
+    <tr>
+      <td>Sub-Item </td>
+      <td width=240>  </td>
+    </tr>
+    <tr>
+      <td>Variant </td>
+      <td width=240> </td>
+    </tr>
+    <tr>
+      <td>Size </td>
+      <td width=240>half-x </td>
+    </tr>
+    <tr>
+      <td>Mode </td>
+      <td width=240>  </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
 <hr/>
-
 
 ## How to Use Tokens
 
