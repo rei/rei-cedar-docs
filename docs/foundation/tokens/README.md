@@ -177,7 +177,7 @@ The naming structure for tokens follows:
 - **Mode:** Defines tokens based on themes, such as a dark or light background  
 
 ### Examples 
-The below tables for a token naming structure show that levels will be skipped when not used. 
+The below tables for the naming structure show that levels will be skipped when not used. 
 
 #### color-text-link-lightmode
 <table>
