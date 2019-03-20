@@ -346,81 +346,602 @@ The Cedar team welcomes contributions from the digital community at REI. If you 
 ### Grey Colors
 Grey colors support the cohesive use of typography, backgrounds, and borders across the digital ecosystem. 
 
-| Color               | Values              | Tokens Using                 |
-| :------------------ | :------------------ | :--------------------------- |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_grey_clean_slate_4-3.png`)"/> | #ffffff<br> r255  g255  b255 | cdr-color-background-lightest <br>cdr-color-background-form-lightmode<br>cdr-color-background-form-input-lightmode  |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_grey_moon_shot_4-3.png`)"/>  | #fafafa<br>r250  g250  b250 | cdr-color-background-lighter <br>cdr-color-text-primary-darkmode <br>cdr-color-text-form-label-darkmode <br>cdr-color-border-primary-darkmode  |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_grey_the_tooth_4-3.png`)"/> | #f7f7f7<br>r247  g247  b247 | cdr-color-background-light  |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_grey_partly_cloudy_4-3.png`)"/> | #dadada<br>r218  g218  b218 | cdr-color-border-disabled-lightmode  |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_grey_grey_matter_4-3.png`)"/> | #b8b8b8<br>r184  g184  b184 | cdr-color-text-disabled-lightmode <br>cdr-color-text-form-disabled-lightmode <br>cdr-color-border-secondary-lightmode  |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_grey_holy_smoke_4-3.png`)"/> | #999999<br>r153  g153  b153 | cdr-color-text-secondary-darkmode <br>cdr-color-text-form-placeholder-darkmode <br>cdr-color-border-secondary-darkmode   |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_grey_coal_train_4-3.png`)"/> | #7a7a7a<br> r122  g122  b122 | N/A  |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_grey_taken_for_granite_4-3.png`)"/> | #616161<br>r97  g97  b97 | cdr-color-text-secondary-lightmode <br>cdr-color-text-form-placeholder-lightmode <br>cdr-color-text-disabled-darkmode <br>cdr-color-text-form-disabled-darkmode <br>cdr-color-border-primary-lightmode  |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_grey_threat_level_midnight_4-3.png`)"/> | #434343<br>r67  g67  b67 | N/A  |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_grey_heart_of_darkness_4-3.png`)"/> | #292929<br>r41  g41  b41 | cdr-color-background-dark <br>cdr-color-background-form-darkmode <br>cdr-color-background-form-input-darkmode <br>cdr-color-text-primary-lightmode <br>cdr-color-text-form-label-lightmode  |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_grey_lost_in_space_4-3.png`)"/> | #1a1a1a<br>r26  g26  b26  | cdr-color-background-darker  |
+<table>
+  <tbody>
+    <tr>
+      <td colspan=2 height=32 bgcolor="#ffffff"> </td>
+    </tr>
+    <tr>
+      <td width=144>
+        #ffffff <br>
+        r255  g255  b255 <br>
+        <br>
+        <br>
+      </td>
+      <td width=360>
+        <b>Tokens:</b><br>
+        cdr-color-background-lightest <br>
+        cdr-color-background-form-lightmode <br>
+        cdr-color-background-form-input-lightmode      
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <br>
+
+<table>
+  <tbody>
+    <tr>
+      <td colspan=2 height=32 bgcolor="#fafafa"> </td>
+    </tr>
+    <tr>
+      <td width=144>
+        #fafafa <br>
+        r250  g250  b250 <br>
+        <br>
+        <br>
+        <br>
+      </td>
+      <td width=360>
+        <b>Tokens:</b><br>
+        cdr-color-background-lighter <br>
+        cdr-color-text-primary-darkmode <br>
+        cdr-color-text-form-label-darkmode <br>
+        cdr-color-border-primary-darkmode <br>   
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <tbody>
+    <tr>
+      <td colspan=2 height=32 bgcolor="#f7f7f7"> </td>
+    </tr>
+    <tr>
+      <td width=144>
+        #f7f7f7 <br>
+        r247  g247  b247  <br>
+      </td>
+      <td width=360>
+        <b>Tokens:</b><br>
+        cdr-color-background-light <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <tbody>
+    <tr>
+      <td colspan=2 height=32 bgcolor="#dadada"> </td>
+    </tr>
+    <tr>
+      <td width=144>
+        #dadada <br>
+        r218  g218  b218  <br>
+      </td>
+      <td width=360>
+        <b>Tokens:</b><br>
+        cdr-color-border-disabled-lightmode <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <tbody>
+    <tr>
+      <td colspan=2 height=32 bgcolor="#b8b8b8"> </td>
+    </tr>
+    <tr>
+      <td width=144>
+        #b8b8b8 <br>
+        r184  g184  b184  <br>
+        <br>
+        <br>
+      </td>
+      <td width=360>
+        <b>Tokens:</b><br>
+        cdr-color-text-disabled-lightmode <br>
+        cdr-color-text-form-disabled-lightmode <br>
+        cdr-color-border-secondary-lightmode 
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <tbody>
+    <tr>
+      <td colspan=2 height=32 bgcolor="#999999"> </td>
+    </tr>
+    <tr>
+      <td width=144>
+        #999999 <br>
+        r153  g153  b153  <br>
+        <br>
+        <br>
+      </td>
+      <td width=360>
+        <b>Tokens:</b><br>
+        cdr-color-text-secondary-darkmode  <br>
+        cdr-color-text-form-placeholder-darkmode <br>
+        cdr-color-border-secondary-darkmode
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <tbody>
+    <tr>
+      <td colspan=2 height=32 bgcolor="#7a7a7a"> </td>
+    </tr>
+    <tr>
+      <td width=144>
+        #7a7a7a <br>
+        r122  g122  b122  <br>
+      </td>
+      <td width=360>
+        <b>Tokens:</b><br>
+        N/A  <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <tbody>
+    <tr>
+      <td colspan=2 height=32 bgcolor="#616161"> </td>
+    </tr>
+    <tr>
+      <td width=144>
+        #616161 <br>
+        r97  g97  b97   <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </td>
+      <td width=360>
+        <b>Tokens:</b><br>
+        cdr-color-text-secondary-lightmode <br>
+        cdr-color-text-form-placeholder-lightmode <br>
+        cdr-color-text-disabled-darkmode <br>
+        cdr-color-text-form-disabled-darkmode <br>
+        cdr-color-border-primary-lightmode
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <tbody>
+    <tr>
+      <td colspan=2 height=32 bgcolor="#434343"> </td>
+    </tr>
+    <tr>
+      <td width=144>
+        #434343 <br>
+        r67  g67  b67  <br>
+      </td>
+      <td width=360>
+        <b>Tokens:</b><br>
+        N/A  <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <tbody>
+    <tr>
+      <td colspan=2 height=32 bgcolor="#292929"> </td>
+    </tr>
+    <tr>
+      <td width=144>
+        #292929 <br>
+        r41  g41  b41  <br>
+        <br>
+        <br>
+        <br>
+        <br>
+      </td>
+      <td width=360>
+        <b>Tokens:</b><br>
+        cdr-color-background-dark <br>
+        cdr-color-background-form-darkmode <br>
+        cdr-color-background-form-input-darkmode <br>
+        cdr-color-text-primary-lightmode <br>
+        cdr-color-text-form-label-lightmode
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <tbody>
+    <tr>
+      <td colspan=2 height=32 bgcolor="#1a1a1a"> </td>
+    </tr>
+    <tr>
+      <td width=144>
+        #1a1a1a <br>
+        r26  g26  b26   <br>
+      </td>
+      <td width=360>
+        <b>Tokens:</b><br>
+        cdr-color-background-darker <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<hr>
 
 ### Tan Colors
 Tan or brand colors are core to the co-op. They’re often used as backgrounds when an experience calls for a stronger brand impression.
 
-| Color               | Values              | Tokens Using                 |
-| :------------------ | :------------------ | :--------------------------- |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_tan_moose_tooth_4-3.png`)"/> | #faf9f5<br>r250  g249  b245 | N/A  |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_tan_hissing_llamas_4-3.png`)"/> | #f1efe4<br>r241  g239  b228  | N/A  |
-
+<table>
+  <tbody>
+    <tr>
+      <td colspan=2 height=32 bgcolor="#faf9f5"> </td>
+    </tr>
+    <tr>
+      <td width=144>
+        #faf9f5 <br>
+        r250  g249  b245  <br>
+      </td>
+      <td width=360>
+        <b>Tokens:</b><br>
+        N/A  <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <br>
+
+<table>
+  <tbody>
+    <tr>
+      <td colspan=2 height=32 bgcolor="#f1efe4"> </td>
+    </tr>
+    <tr>
+      <td width=144>
+        #f1efe4 <br>
+        r241  g239  b228  <br>
+      </td>
+      <td width=360>
+        <b>Tokens:</b><br>
+        N/A  <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<hr>
 
 ### Blue Colors
 Blue colors are used in a variety of scenarios such as prompting user actions, communicating informational messaging, and indicating links within body copy.
 
-| Color               | Values              | Tokens Using                 |
-| :------------------ | :------------------ | :--------------------------- |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_blue_suede_shoes_4-3.png`)"/> | #5197cd<br>r81  g151  b205  | cdr-color-text-link-darkmode  |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_blue_easily_excited_4-3.png`)"/> | #3278ae<br>r50  g120  b174  | cdr-color-text-link-lightmode  |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_blue_closed_on_monday_4-3.png`)"/> | #2b6692<br>r43  g102  b146 | cdr-color-border-selected-lightmode  |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_blue_go_van_gogh_4-3.png`)"/> | #1e4e72<br>r30  g78  b114  | N/A  |
-
+<table>
+  <tbody>
+    <tr>
+      <td colspan=2 height=32 bgcolor="#5197cd"> </td>
+    </tr>
+    <tr>
+      <td width=144>
+        #5197cd <br>
+        r81  g151  b205  <br>
+      </td>
+      <td width=360>
+        <b>Tokens:</b><br>
+        cdr-color-text-link-darkmode  <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <br>
+
+<table>
+  <tbody>
+    <tr>
+      <td colspan=2 height=32 bgcolor="#3278ae"> </td>
+    </tr>
+    <tr>
+      <td width=144>
+        #3278ae <br>
+        r50  g120  b174 <br>
+      </td>
+      <td width=360>
+        <b>Tokens:</b><br>
+        cdr-color-text-link-lightmode  <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <tbody>
+    <tr>
+      <td colspan=2 height=32 bgcolor="#2b6692"> </td>
+    </tr>
+    <tr>
+      <td width=144>
+        #2b6692 <br>
+        r43  g102  b146  <br>
+      </td>
+      <td width=360>
+        <b>Tokens:</b><br>
+        cdr-color-border-selected-lightmode  <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <tbody>
+    <tr>
+      <td colspan=2 height=32 bgcolor="#1e4e72"> </td>
+    </tr>
+    <tr>
+      <td width=144>
+        #1e4e72 <br>
+        r30  g78  b114  <br>
+      </td>
+      <td width=360>
+        <b>Tokens:</b><br>
+        N/A  <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<hr>
 
 ### Green Colors
 Green colors are used in a variety of scenarios such as providing feedback for successful form submission.
 
-| Color               | Values              | Tokens Using                 |
-| :------------------ | :------------------ | :--------------------------- |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_green_thin_mint_4-3.png`)"/> | #edf7ee<br> r237  g247  b238  | N/A  |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_green_crimp_son_and_clover_4-3.png`)"/> | #6c9f71<br> r108  g159  b113  | N/A  |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_green_instant_winner_4-3.png`)"/> | #367c3c<br> r54  g124  b60  | N/A  |
-
+<table>
+  <tbody>
+    <tr>
+      <td colspan=2 height=32 bgcolor="#edf7ee"> </td>
+    </tr>
+    <tr>
+      <td width=144>
+        #edf7ee <br>
+        r237  g247  b238  <br>
+      </td>
+      <td width=360>
+        <b>Tokens:</b><br>
+        N/A  <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <br>
+
+<table>
+  <tbody>
+    <tr>
+      <td colspan=2 height=32 bgcolor="#6c9f71"> </td>
+    </tr>
+    <tr>
+      <td width=144>
+        #6c9f71 <br>
+        r108  g159  b113  <br>
+      </td>
+      <td width=360>
+        <b>Tokens:</b><br>
+        N/A  <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <tbody>
+    <tr>
+      <td colspan=2 height=32 bgcolor="#367c3c"> </td>
+    </tr>
+    <tr>
+      <td width=144>
+        #367c3c <br>
+        r54  g124  b60  <br>
+      </td>
+      <td width=360>
+        <b>Tokens:</b><br>
+        N/A  <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<hr>
 
 ### Red Colors
 Red colors are used in a variety of scenarios such as announcing sale items and communicating error messaging.
 
-| Color               | Values              | Tokens Using                 |
-| :------------------ | :------------------ | :--------------------------- |           
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_red_snap_decision_4-3.png`)"/>| #e86868<br>r232  g104  b104  | cdr-color-text-error-darkmode <br>cdr-color-border-error-lightmode  |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_red_attention_grabber_4-3.png`)"/> | #c83232<br>r200  g50  b50  | N/A  |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_red_high_stakes_4-3.png`)"/> | #b5292b<br>r181  g41  b43 | cdr-color-text-error-lightmode  |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_red_quick_fixe_4-3.png`)"/> | #a12024<br> r161  g32  b36  | N/A  |
-
+<table>
+  <tbody>
+    <tr>
+      <td colspan=2 height=32 bgcolor="#e86868"> </td>
+    </tr>
+    <tr>
+      <td width=144>
+        #e86868 <br>
+        r232  g104  b104 <br>
+      </td>
+      <td width=360>
+        <b>Tokens:</b> <br> 
+        cdr-color-text-error-darkmode <br>
+        cdr-color-border-error-lightmode 
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <br>
+
+<table>
+  <tbody>
+    <tr>
+      <td colspan=2 height=32 bgcolor="#c83232"> </td>
+    </tr>
+    <tr>
+      <td width=144>
+        #c83232 <br>
+        r200  g50  b50  <br>
+      </td>
+      <td width=360>
+        <b>Tokens:</b><br>
+        N/A  <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <tbody>
+    <tr>
+      <td colspan=2 height=32 bgcolor="#b5292b"> </td>
+    </tr>
+    <tr>
+      <td width=144>
+        #b5292b <br>
+        r181  g41  b43  <br>
+      </td>
+      <td width=360>
+        <b>Tokens:</b><br>
+        cdr-color-text-error-lightmode  <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <tbody>
+    <tr>
+      <td colspan=2 height=32 bgcolor="#a12024"> </td>
+    </tr>
+    <tr>
+      <td width=144>
+        #a12024 <br>
+        r161  g32  b36  <br>
+      </td>
+      <td width=360>
+        <b>Tokens:</b><br>
+        N/A  <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<hr>
 
 ### Yellow Colors
 Yellow colors are used in a variety of scenarios such as providing feedback for warning messages.
 
-| Color               | Values              | Tokens Using                 |
-| :------------------ | :------------------ | :--------------------------- |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_yellow_light_tension_4-3.png`)"/> | #fff5be<br>r255  g245  b190  | N/A  |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_yellow_golden_face_4-3.png`)"/> | #f8b877<br>r248  g184  b119  | N/A  |
-| <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/ex_color_yellow_dehydrated_lemon_4-3.png`)"/>| #c77523<br>r199  g117  b35 | N/A  |
+<table>
+  <tbody>
+    <tr>
+      <td colspan=2 height=32 bgcolor="#fff5be"> </td>
+    </tr>
+    <tr>
+      <td width=144>
+        #fff5be <br>
+        r255  g245  b190 <br>
+      </td>
+      <td width=360>
+        <b>Tokens:</b><br>
+        N/A  <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 <br>
+
+<table>
+  <tbody>
+    <tr>
+      <td colspan=2 height=32 bgcolor="#f8b877"> </td>
+    </tr>
+    <tr>
+      <td width=144>
+        #f8b877 <br>
+        r248  g184  b119 <br>
+      </td>
+      <td width=360>
+        <b>Tokens:</b><br>
+        N/A  <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table>
+  <tbody>
+    <tr>
+      <td colspan=2 height=32 bgcolor="#c77523"> </td>
+    </tr>
+    <tr>
+      <td width=144>
+        #c77523 <br>
+        r199  g117  b35 <br>
+      </td>
+      <td width=360>
+        <b>Tokens:</b><br>
+        N/A  <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<hr>
+ 
 
 </cdr-doc-table-of-contents-shell>
 </template>
