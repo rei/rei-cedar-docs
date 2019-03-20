@@ -1,5 +1,7 @@
 <template>
-  <p :style="mixinStyles">Get outside with REI</p>
+  <div class="typography-example">
+    <span :style="mixinStyles">A different kind of company</span>
+  </div>
 </template>
 
 <script>
@@ -45,6 +47,10 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import '~@rei/cdr-tokens/dist/scss/cdr-tokens';
 
+.typography-example {
+  background-color: $cdr-color-background-lightest;
+}
 </style>
