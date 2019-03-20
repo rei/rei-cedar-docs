@@ -109,7 +109,7 @@ Suggested usage: Frequently used as the largest title for phone apps and can be 
 
 | Token Name                                  | Values                       |
 | :------------------------------------------ | :--------------------------- |
-| Android name: Display 1 <br>iOS name: Large Title <br> <br> <br>          | Typeface: Roboto <br>Font weight: Medium <br>Font size: 34sp <br>Line height: 40sp |
+| Android name: Display 1 <br>iOS name: Large Title <br> <br> <br>          | font-family: Roboto <br>font-weight: Medium <br>font-size: 34sp <br>line-height: 40sp |
 
 <br>
 
@@ -119,7 +119,7 @@ Suggested usage: Content titles, level 1
 
 | Token Name                                  | Values                       |
 | :------------------------------------------ | :--------------------------- |
-| Android name: Title 1 <br>iOS name: Title 1 <br> <br> <br>          | Typeface: Sentinel <br>Font weight: Semi Bold <br>Font size: 28sp <br> Line height: 36sp |
+| Android name: Title 1 <br>iOS name: Title 1 <br> <br> <br>          | font-family: Sentinel <br>font-weight: Semi Bold <br>font-size: 28sp <br>line-height: 36sp |
 
 <br>
 
@@ -129,7 +129,7 @@ Suggested usage: Content titles, product names, level 2
 
 | Token Name                                  | Values                       |
 | :------------------------------------------ | :--------------------------- |
-| Android name: Title 2 <br>iOS name: Title 2 <br> <br> <br>          | Typeface: Sentinel <br>Font weight: Semi Bold <br>Font size: 26sp <br>Line height: 32sp  |
+| Android name: Title 2 <br>iOS name: Title 2 <br> <br> <br>          | font-family: Sentinel <br>font-weight: Semi Bold <br>font-size: 26sp <br>line-height: 32sp  |
 
 <br>
 
@@ -139,7 +139,7 @@ Suggested usage: Content titles, product names, product prices, level 3
 
 | Token Name                                  | Values                       |
 | :------------------------------------------ | :--------------------------- |
-| Android name: Title 3 <br>iOS name: Title 3<br> <br> <br>          | Typeface: Sentinel <br>Font weight: Semi Bold <br>Font size: 21sp <br>Line height: 28sp  |
+| Android name: Title 3 <br>iOS name: Title 3<br> <br> <br>          | font-family: Sentinel <br>font-weight: Semi Bold <br>font-size: 21sp <br>line-height: 28sp  |
 
 <br>
 
@@ -149,7 +149,7 @@ Suggested usage: Heading primarily used with body copy, list items, table header
 
 | Token Name                                  | Values                       |
 | :------------------------------------------ | :--------------------------- |
-| Android name: Headline <br>iOS name: Headline <br> <br> <br>          | Typeface: Roboto <br>Font weight: Medium <br>Font size: 17sp <br>Line height: 24sp  |
+| Android name: Headline <br>iOS name: Headline <br> <br> <br>          | font-family: Roboto <br>font-weight: Medium <br>font-size: 17sp <br>line-height: 24sp  |
 
 <br>
 
@@ -159,7 +159,7 @@ Suggested usage: Subheading primarily used with body copy
 
 | Token Name                                  | Values                       |
 | :------------------------------------------ | :--------------------------- |
-| Android name: Subhead <br>iOS name: Subhead <br> <br> <br>          | Typeface: Roboto <br>Font weight: Medium <br>Font size: 15sp <br>Line height: 20sp |
+| Android name: Subhead <br>iOS name: Subhead <br> <br> <br>          | font-family: Roboto <br>font-weight: Medium <br>font-size: 15sp <br>line-height: 20sp |
 
 <br>
 
@@ -169,7 +169,7 @@ Suggested usage: Secondary text intended for informational and supplemental body
 
 | Token Name                                  | Values                       |
 | :------------------------------------------ | :--------------------------- |
-| Android name: Body 2 <br>iOS name: Footnote <br> <br> <br>          | Typeface: Roboto <br>Font weight: Regular <br>Font size: 13sp <br> Line height: 20sp |
+| Android name: Body 2 <br>iOS name: Footnote <br> <br> <br>          | font-family: Roboto <br>font-weight: Regular <br>font-size: 13sp <br>line-height: 20sp |
 
 <br>
 
@@ -179,7 +179,7 @@ Suggested usage: Default for body content
 
 | Token Name                                  | Values                       |
 | :------------------------------------------ | :--------------------------- |
-| Android name: Body 1 <br>iOS name: Body <br> <br> <br>          | Typeface: Roboto <br>Font weight: Regular <br>Font size: 15sp <br>Line height:  20sp  |
+| Android name: Body 1 <br>iOS name: Body <br> <br> <br>          | font-family: Roboto <br>font-weight: Regular <br>font-size: 15sp <br>line-height: 20sp  |
 
 <br>
 
@@ -189,7 +189,7 @@ Suggested usage: Smallest text size, use sparingly or for bottom tab bar text
 
 | Token Name                                  | Values                       |
 | :------------------------------------------ | :--------------------------- |
-| Android name: Caption 2 <br>iOS name: Caption 2 <br> <br> <br>          | Typeface: Roboto <br>Font weight: Regular <br>Font size: 11sp <br>Line height: 16sp  |
+| Android name: Caption 2 <br>iOS name: Caption 2 <br> <br> <br>          | font-family: Roboto <br>font-weight: Regular <br>font-size: 11sp <br>line-height: 16sp  |
 
 <br>
 
@@ -199,7 +199,7 @@ Suggested usage: Tertiary text, also intended for informational and supplemental
 
 | Token Name                                  | Values                       |
 | :------------------------------------------ | :--------------------------- |
-| Android name: Caption 1 <br>iOS name: Caption 1<br> <br> <br>          | Typeface: Roboto <br>Font weight: Regular <br>Font size: 12sp <br>Line height: 16sp  |
+| Android name: Caption 1 <br>iOS name: Caption 1<br> <br> <br>          | font-family: Roboto <br>font-weight: Regular <br>font-size: 12sp <br>line-height: 16sp  |
 
 <br>
 
@@ -209,7 +209,7 @@ Suggested usage: Button text has a thicker weight than body copy
 
 | Token Name                                  | Values                       |
 | :------------------------------------------ | :--------------------------- |
-| Android name: Button <br>iOS name: none <br> <br> <br>          | Typeface: Roboto <br>Font weight: Medium <br>Font size: 15sp <br>Line height: 24sp  |
+| Android name: Button <br>iOS name: none <br> <br> <br>          | font-family: Roboto <br>font-weight: Medium <br>font-size: 15sp <br>line-height: 24sp  |
 
 <br>
 
@@ -219,7 +219,7 @@ Suggested usage: Link text has a thicker weight than body copy
 
 | Token Name                                  | Values                       |
 | :------------------------------------------ | :--------------------------- |
-| Android name: Button_accent <br>iOS name: none <br> <br> <br>          | Typeface: Roboto <br>Font weight: Medium <br>Font size: 15sp <br>Line height: 24sp  |
+| Android name: Button_accent <br>iOS name: none <br> <br> <br>          | font-family: Roboto <br>font-weight: Medium <br>font-size: 15sp <br>line-height: 24sp  |
 
 <br>
 
@@ -228,7 +228,7 @@ Suggested usage: Only for message text with error or warning states
 
 | Token Name                                  | Values                       |
 | :------------------------------------------ | :--------------------------- |
-| Android name: Error State <br>iOS name: none <br> <br> <br>          | Typeface: Roboto <br>Font weight: Medium <br>Font size: 15sp <br>Line height: 20sp  |
+| Android name: Error State <br>iOS name: none <br> <br> <br>          | font-family: Roboto <br>font-weight: Medium <br>font-size: 15sp <br>line-height: 20sp  |
 
 <br>
 
@@ -306,7 +306,7 @@ Note that the values on this page:
   - May be used for a wide variety of purposes
 
 **Requesting a Token**
-If you have a request for a token that is missing, you can [submit a pull request to the cedar-token repo](https://www.npmjs.com/package/@rei/cdr-tokens#addingupdating-tokens) or ask in the #cedar-users-support Slack channel. View <cdr-link :href=“$withBase(‘/foundation/design-tokens?active-link=adding-tokens-to-the-repository’)“>requirements</cdr-link> in the Adding Tokens to the repository on the Design Tokens article.  
+If you have a request for a token that is missing, you can [submit a pull request to the cedar-token repo](https://www.npmjs.com/package/@rei/cdr-tokens#addingupdating-tokens) or ask in the #cedar-users-support Slack channel. View requirements on the(<cdr-link :href="$withBase('/foundation/tokens?active-link=adding-tokens-to-the-repository')">Adding Tokens to the Repository</cdr-link>) on the Design Tokens article.  
 
 **Developing or Updating Cedar Components**
 The Cedar team welcomes contributions from the digital community at REI. If you are interested in contributing design or code, please reach out at in Slack at #cedar-user-support, email cedar@rei.com, or talk to your manager.
