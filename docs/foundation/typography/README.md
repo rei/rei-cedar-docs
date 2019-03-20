@@ -327,13 +327,13 @@ Uses a more open line height to font size ratio:
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=192>
         font-family: Roboto <br>
         font-weight: 400 <br>
         font-size: 14 <br>
         line-height: 24  
       </td>
-      <td>
+      <td width=400>
         <b>Tokens:</b><br>
         cdr-text-default-body-compact <br>
         <br>
@@ -349,13 +349,13 @@ Uses a more open line height to font size ratio:
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=192>
         font-family: Roboto <br>
         font-weight: 400 <br>
         font-size: 16 <br>
         line-height: 26  
       </td>
-      <td>
+      <td width=400>
         <b>Tokens:</b><br>
         cdr-text-default-body  <br>
         <br>
@@ -371,13 +371,13 @@ Uses a more open line height to font size ratio:
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=192>
         font-family: Roboto <br>
         font-weight: 400 <br>
         font-size: 18 <br>
         line-height: 28  
       </td>
-      <td>
+      <td width=400>
         <b>Tokens:</b><br>
         N/A<br>
         <br>
@@ -393,13 +393,13 @@ Uses a more open line height to font size ratio:
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=192>
         font-family: Roboto <br>
         font-weight: 400 <br>
         font-size: 20 <br>
         line-height: 32  
       </td>
-      <td>
+      <td width=400>
         <b>Tokens:</b><br>
         N/A<br>
         <br>
@@ -419,13 +419,13 @@ Uses a more open line height to font size ratio:
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=192>
         font-family: Sentinel <br>
         font-weight: 400 <br>
         font-size: 16 <br>
         line-height: 26  
       </td>
-      <td>
+      <td width=400>
         <b>Tokens:</b><br>
         N/A<br>
         <br>
@@ -441,13 +441,13 @@ Uses a more open line height to font size ratio:
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=192>
         font-family: Sentinel <br>
         font-weight: 400 <br>
         font-size: 18 <br>
         line-height: 28  
       </td>
-      <td>
+      <td width=400>
         <b>Tokens:</b><br>
         cdr-text-editorial-body-compact<br>
         <br>
@@ -463,13 +463,13 @@ Uses a more open line height to font size ratio:
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=192>
         font-family: Sentinel <br>
         font-weight: 400 <br>
         font-size: 20 <br>
         line-height: 32  
       </td>
-      <td>
+      <td width=400>
         <b>Tokens:</b><br>
         cdr-text-editorial-body<br>
         <br>
@@ -485,13 +485,13 @@ Uses a more open line height to font size ratio:
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=192>
         font-family: Sentinel <br>
         font-weight: 400 <br>
         font-size: 24 <br>
         line-height: 36  
       </td>
-      <td>
+      <td width=400>
         <b>Tokens:</b><br>
         N/A<br>
         <br>
@@ -517,13 +517,13 @@ Line height to font size ratio is more condensed than body type specifications a
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=192>
         font-family: Roboto <br>
         font-weight: 400 <br>
         font-size: 12 <br>
         line-height: 16  
       </td>
-      <td>
+      <td width=400>
         <b>Tokens:</b><br>
         N/A<br>
         <br>
@@ -539,13 +539,13 @@ Line height to font size ratio is more condensed than body type specifications a
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=192>
         font-family: Roboto <br>
         font-weight: 400 <br>
         font-size: 14 <br>
         line-height: 20  
       </td>
-      <td>
+      <td width=400>
         <b>Tokens:</b><br>
         N/A<br>
         <br>
@@ -561,13 +561,13 @@ Line height to font size ratio is more condensed than body type specifications a
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=192>
         font-family: Roboto <br>
         font-weight: 400 <br>
         font-size: 16 <br>
         line-height: 24  
       </td>
-      <td>
+      <td width=400>
         <b>Tokens:</b><br>
         N/A<br>
         <br>
@@ -583,13 +583,13 @@ Line height to font size ratio is more condensed than body type specifications a
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=192>
         font-family: Roboto <br>
         font-weight: 400 <br>
         font-size: 18 <br>
         line-height: 24  
       </td>
-      <td>
+      <td width=400>
         <b>Tokens:</b><br>
         N/A<br>
         <br>
@@ -605,13 +605,13 @@ Line height to font size ratio is more condensed than body type specifications a
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=192>
         font-family: Roboto <br>
         font-weight: 400 <br>
         font-size: 20 <br>
         line-height: 28  
       </td>
-      <td>
+      <td width=400>
         <b>Tokens:</b><br>
         N/A<br>
         <br>
@@ -627,13 +627,13 @@ Line height to font size ratio is more condensed than body type specifications a
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=192>
         font-family: Roboto <br>
         font-weight: 400 <br>
         font-size: 24 <br>
         line-height: 32  
       </td>
-      <td>
+      <td width=400>
         <b>Tokens:</b><br>
         N/A<br>
         <br>
@@ -649,13 +649,13 @@ Line height to font size ratio is more condensed than body type specifications a
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=192>
         font-family: Roboto <br>
         font-weight: 400 <br>
         font-size: 28 <br>
         line-height: 36  
       </td>
-      <td>
+      <td width=400>
         <b>Tokens:</b><br>
         N/A<br>
         <br>
@@ -676,13 +676,13 @@ Line height to font size ratio is more condensed than body type specifications a
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=192>
         font-family: Sentinel<br>
         font-weight: 600 <br>
         font-size: 14 <br>
         line-height: 20  
       </td>
-      <td>
+      <td width=400>
         <b>Tokens:</b><br>
         N/A<br>
         <br>
@@ -698,13 +698,13 @@ Line height to font size ratio is more condensed than body type specifications a
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=192>
         font-family: Sentinel<br>
         font-weight: 600 <br>
         font-size: 16 <br>
         line-height: 24  
       </td>
-      <td>
+      <td width=400>
         <b>Tokens:</b><br>
         N/A<br>
         <br>
@@ -720,13 +720,13 @@ Line height to font size ratio is more condensed than body type specifications a
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=192>
         font-family: Sentinel<br>
         font-weight: 600 <br>
         font-size: 18 <br>
         line-height: 24  
       </td>
-      <td>
+      <td width=400>
         <b>Tokens:</b><br>
         N/A<br>
         <br>
@@ -742,13 +742,13 @@ Line height to font size ratio is more condensed than body type specifications a
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=192>
         font-family: Sentinel<br>
         font-weight: 600 <br>
         font-size: 20 <br>
         line-height: 28  
       </td>
-      <td>
+      <td width=400>
         <b>Tokens:</b><br>
         N/A<br>
         <br>
@@ -764,13 +764,13 @@ Line height to font size ratio is more condensed than body type specifications a
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=192>
         font-family: Sentinel<br>
         font-weight: 600 <br>
         font-size: 24 <br>
         line-height: 32  
       </td>
-      <td>
+      <td width=400>
         <b>Tokens:</b><br>
         N/A<br>
         <br>
@@ -786,13 +786,13 @@ Line height to font size ratio is more condensed than body type specifications a
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=192>
         font-family: Sentinel<br>
         font-weight: 600 <br>
         font-size: 28 <br>
         line-height: 36  
       </td>
-      <td>
+      <td width=400>
         <b>Tokens:</b><br>
         N/A<br>
         <br>
@@ -808,13 +808,13 @@ Line height to font size ratio is more condensed than body type specifications a
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=192>
         font-family: Sentinel<br>
         font-weight: 600 <br>
         font-size: 32 <br>
         line-height: 40  
       </td>
-      <td>
+      <td width=400>
         <b>Tokens:</b><br>
         N/A<br>
         <br>
@@ -830,13 +830,13 @@ Line height to font size ratio is more condensed than body type specifications a
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=192>
         font-family: Sentinel<br>
         font-weight: 600 <br>
         font-size: 40 <br>
         line-height: 48  
       </td>
-      <td>
+      <td width=400>
         <b>Tokens:</b><br>
         N/A<br>
         <br>
@@ -852,13 +852,13 @@ Line height to font size ratio is more condensed than body type specifications a
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=192>
         font-family: Sentinel<br>
         font-weight: 600 <br>
         font-size: 56 <br>
         line-height: 60  
       </td>
-      <td>
+      <td width=400>
         <b>Tokens:</b><br>
         N/A<br>
         <br>
@@ -874,13 +874,13 @@ Line height to font size ratio is more condensed than body type specifications a
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=192>
         font-family: Sentinel<br>
         font-weight: 600 <br>
         font-size: 76 <br>
         line-height: 84  
       </td>
-      <td>
+      <td width=400>
         <b>Tokens:</b><br>
         N/A<br>
         <br>
@@ -896,13 +896,13 @@ Line height to font size ratio is more condensed than body type specifications a
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=192>
         font-family: Sentinel<br>
         font-weight: 600 <br>
         font-size: 96 <br>
         line-height: 104  
       </td>
-      <td>
+      <td width=400>
         <b>Tokens:</b><br>
         N/A<br>
         <br>
@@ -925,13 +925,13 @@ Used sparingly within UI elements, currently used by Cedar components for:
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=264>
         font-family: Roboto Condensed<br>
         font-weight: 400 <br>
         font-size: 12 <br>
         line-height: 16  
       </td>
-      <td>
+      <td width=328>
         <b>Tokens:</b><br>
         N/A<br>
         <br>
@@ -947,13 +947,13 @@ Used sparingly within UI elements, currently used by Cedar components for:
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=264>
         font-family: Roboto Condensed<br>
         font-weight: 400 <br>
         font-size: 14 <br>
         line-height: 20  
       </td>
-      <td>
+      <td width=328>
         <b>Tokens:</b><br>
         N/A<br>
         <br>
@@ -969,13 +969,13 @@ Used sparingly within UI elements, currently used by Cedar components for:
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=264>
         font-family: Roboto Condensed<br>
         font-weight: 400 <br>
         font-size: 16 <br>
         line-height: 24  
       </td>
-      <td>
+      <td width=328>
         <b>Tokens:</b><br>
         N/A<br>
         <br>
@@ -991,13 +991,13 @@ Used sparingly within UI elements, currently used by Cedar components for:
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=264>
         font-family: Roboto Condensed<br>
         font-weight: 400 <br>
         font-size: 18 <br>
         line-height: 24  
       </td>
-      <td>
+      <td width=328>
         <b>Tokens:</b><br>
         N/A<br>
        <br>
@@ -1013,13 +1013,13 @@ Used sparingly within UI elements, currently used by Cedar components for:
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=264>
         font-family: Roboto Condensed<br>
         font-weight: 400 <br>
         font-size: 20 <br>
         line-height: 28  
       </td>
-      <td>
+      <td width=328>
         <b>Tokens:</b><br>
         N/A<br>
         <br>
@@ -1035,13 +1035,13 @@ Used sparingly within UI elements, currently used by Cedar components for:
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=264>
         font-family: Roboto Condensed<br>
         font-weight: 400 <br>
         font-size: 24 <br>
         line-height: 32  
       </td>
-      <td>
+      <td width=328>
         <b>Tokens:</b><br>
         N/A<br>
         <br>
@@ -1057,13 +1057,13 @@ Used sparingly within UI elements, currently used by Cedar components for:
 <table>
   <tbody>
     <tr>
-      <td>
+      <td width=264>
         font-family: Roboto Condensed<br>
         font-weight: 400 <br>
         font-size: 28 <br>
         line-height: 36  
       </td>
-      <td>
+      <td width=328>
         <b>Tokens:</b><br>
         N/A<br>
        <br>
