@@ -17,8 +17,8 @@
 Cedar components are built using [Vue](https://vuejs.org) and can only be used in Vue projects
 <hr>
 
-## About component packages
-All components are available as a package on [npm within the REI organization](https://www.npmjs.com/search?q=%40rei).
+## About Component Packages
+All components are available as a package on [NPM within the REI organization](https://www.npmjs.com/search?q=%40rei).
 
 Each component is a separate NPM package. This ensures that you only have the essentials for your application - nothing more.
 
@@ -48,7 +48,7 @@ _Terminal_
 npm install --save @rei/cdr-assets
 ```
 
-The [cdr-assets package](https://www.npmjs.com/package/@rei/cdr-assets) contains these files:
+The [CdrAssets package](https://www.npmjs.com/package/@rei/cdr-assets) contains these files:
   * cdr-core.css
   * cdr-fonts.css
 
@@ -127,7 +127,7 @@ import '~@rei/cdr-button/dist/cdr-button.css';
 <hr>
 
 ### Using Components
-The examples in our documentation demonstrate usage in a [Single File Component](https://vuejs.org/v2/guide/single-file-components.html). If you aren’t using SFCs, read the vue docs for [registering components](https://vuejs.org/v2/guide/components-registration.html).
+The examples in our documentation demonstrate usage in a [Single File Component](https://vuejs.org/v2/guide/single-file-components.html). If you aren’t using SFCs, read the Vue.js documentation for [registering components](https://vuejs.org/v2/guide/components-registration.html).
 
 Examples below demonstrate the **CdrButton** component. Refer to each component’s documentation for a complete component API and advanced examples.
 
@@ -176,7 +176,7 @@ export default {
 
 #### Configure Component Props
 
-Props are custom attributes registered on a component. For further information about props see [Vue's prop documentation](https://vuejs.org/v2/guide/components-props.html).
+Props are custom attributes registered on a component. For more information about props, read [Vue's Props documentation](https://vuejs.org/v2/guide/components-props.html).
 
 Most Cedar components provide props to configure component data, display, and logic. For example, the **CdrButton** component provides a `size` prop to configure the button’s size.
 
@@ -199,7 +199,7 @@ In this example, the `responsiveSize` prop accepts an array of strings denoting 
 
 #### Add Content Using Slots
 
-Some components use slots for content distribution. Most components will have a single default slot; others will have named slots. Slots are listed as part of the API for all components. See [Vue's documentation on slots](https://vuejs.org/v2/guide/components-slots.html) for further information.
+Some components use slots for content distribution. Most components will have a single default slot; others will have named slots. Slots are listed as part of the API for all components. For more information about slots, read [Vue's Slots documentation](https://vuejs.org/v2/guide/components-slots.html).
 
 Adding content to a default slot
 
@@ -220,7 +220,7 @@ Adding content to a named slot
 <hr>
 
 ### CSS Modules and Custom Class Names
-Component CSS class names are [CSS modules](https://github.com/css-modules/css-modules) that reflect the package version. For example, `CdrButton@0.2.0` will have classes that end in ‘_0-2-0’. This allows the possibility of components at different versions to live together without having CSS class name collisions. 
+Component CSS class names are [CSS Modules](https://github.com/css-modules/css-modules) that reflect the package version. For example, `CdrButton@0.2.0` will have classes that end in ‘_0-2-0’. This allows the possibility of components at different versions to live together without having CSS class name collisions. 
 
 Never use Cedar class names within your own CSS or target them in JavaScript; they will change as you upgrade the package and break any functionality or styling you attach to them. 
 
@@ -328,7 +328,7 @@ export default {
 
 Currently development for iOS and Android is through the usage of Cedar Tokens as documented below.  
 
-Our mobile development packages include fonts that are licensed and proprietary to REI. For more information or questions regarding Cedar’s support for external consumers using the mobile development packages on GitHub or NPM, please reach out to cedar@rei.com. **ADD LINK**
+Our mobile development packages include fonts that are licensed and proprietary to REI. For more information or questions regarding Cedar’s support for external consumers using the mobile development packages on GitHub or NPM, please reach out to cedar@rei.com.
 
 #### iOS
 
@@ -444,8 +444,7 @@ Implementation mvnrepos.rei.com:cedar-android.aar:0.2.0
 ```
 
 ##### Manual Consumption
-If you don’t use Maven, you can import the Cedar Tokens into your Android project/workspace manually by dragging the resources into your project within Android Studio.  The resources are located at the [cedar-android repository on Bitbucket
-]( https://git.rei.com/projects/CDR/repos/cedar-android) 
+If you don’t use Maven, you can import the Cedar Tokens into your Android project/workspace manually by dragging the resources into your project within Android Studio.  The resources are located at the [cedar-android repository on Bitbucket]( https://git.rei.com/projects/CDR/repos/cedar-android) 
 
 
 <hr/>
