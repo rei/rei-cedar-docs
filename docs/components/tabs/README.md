@@ -71,7 +71,7 @@
   "sandboxData": {
     "name": "CdrTabs, CdrTabPanel",
     "dependencies": { "@rei/cdr-tabs": "^1.0.0" },
-    "loadComponentCss": "true"
+    "loadComponentCss": true
   },
   "versions": [
     {

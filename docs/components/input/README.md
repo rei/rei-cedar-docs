@@ -119,7 +119,7 @@
   "sandboxData": {
     "name": "CdrInput",
     "dependencies": { "@rei/cdr-input": "^1.0.0" },
-    "loadComponentCss": "true"
+    "loadComponentCss": true
   },
   "versions": [
     {

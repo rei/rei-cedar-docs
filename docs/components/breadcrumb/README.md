@@ -71,7 +71,7 @@
   "sandboxData": {
     "name": "CdrBreadcrumb",
     "dependencies": { "@rei/cdr-breadcrumb": "^1.0.0" },
-    "loadComponentCss": "true"
+    "loadComponentCss": true
   },
   "versions": [
     {

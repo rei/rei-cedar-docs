@@ -78,7 +78,7 @@
   "sandboxData": {
     "name": "CdrIcon",
     "dependencies": { "@rei/cdr-icon": "^2.0.0" },
-    "loadComponentCss": "true"
+    "loadComponentCss": true
   },
   "versions": [
     {

@@ -53,7 +53,7 @@
   "sandboxData": {
     "name": "CdrList",
     "dependencies": { "@rei/cdr-list": "^1.0.0" },
-    "loadComponentCss": "true"
+    "loadComponentCss": true
   },
   "versions": [
     {

@@ -7,7 +7,7 @@
   "sandboxData": {
     "name": "CdrImg",
     "dependencies": { "@rei/cdr-img": "^1.0.0" },
-    "loadComponentCss": "true"
+    "loadComponentCss": true
   },
   "versions": [
     {

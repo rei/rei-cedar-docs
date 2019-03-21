@@ -63,8 +63,8 @@
   ],
   "sandboxData": {
     "name": "CdrRadio",
-    "dependencies": { "@rei/cdr-radio": "^1.0.0" },
-    "loadComponentCss": "true"
+    "dependencies": { "@rei/cdr-radio": "^1.0.0", "lodash": "^4.17.4" },
+    "loadComponentCss": true
   },
   "versions": [
     {

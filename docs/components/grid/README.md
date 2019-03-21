@@ -50,7 +50,7 @@
   "sandboxData": {
     "name": "CdrRow, CdrCol",
     "dependencies": { "@rei/cdr-grid": "^1.0.0" },
-    "loadComponentCss": "true"
+    "loadComponentCss": true
   },
   #API
   "versions": [

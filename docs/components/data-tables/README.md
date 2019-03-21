@@ -143,7 +143,7 @@
   "sandboxData": {
     "name": "CdrDataTable",
     "dependencies": { "@rei/cdr-data-table": "^1.0.0" },
-    "loadComponentCss": "true"
+    "loadComponentCss": true
   },
   "versions": [
     {

@@ -61,7 +61,7 @@
   #"sandboxData": {
 #    "name": "CdrPagination",
 #    "dependencies": { "@rei/cdr-pagination": "^1.0.0" },
-#    "loadComponentCss": "true"
+#    "loadComponentCss": true
   #},
   "versions": [
     {

@@ -92,7 +92,7 @@
   "sandboxData": {
     "name": "CdrCta",
     "dependencies": { "@rei/cdr-cta": "^1.1.0" },
-    "loadComponentCss": "true"
+    "loadComponentCss": true
   },
   "versions": [
     {

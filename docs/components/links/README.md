@@ -52,7 +52,7 @@
   "sandboxData": {
     "name": "CdrLink",
     "dependencies": { "@rei/cdr-link": "^1.0.0" },
-    "loadComponentCss": "true"
+    "loadComponentCss": true
   },
   "versions": [
     {
