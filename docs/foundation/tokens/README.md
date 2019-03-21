@@ -179,42 +179,6 @@ The naming structure for tokens follows:
 ### Examples 
 The below tables for the naming structure show that levels will be skipped when not used. 
 
-#### color-text-link-lightmode
-<table>
-  <tbody>
-    <tr>
-      <td>Category </td>
-      <td width=240>color- </td>
-    </tr>
-    <tr>
-      <td>Sub-Category </td>
-      <td width=240>text- </td>
-    </tr>
-    <tr>
-      <td>Item </td>
-      <td width=240>link- </td>
-    </tr>
-    <tr>
-      <td>Sub-Item </td>
-      <td width=240>  </td>
-    </tr>
-    <tr>
-      <td>Variant </td>
-      <td width=240>  </td>
-    </tr>
-    <tr>
-      <td>Size </td>
-      <td width=240>  </td>
-    </tr>
-    <tr>
-      <td>Mode </td>
-      <td width=240>lightmode </td>
-    </tr>
-  </tbody>
-</table>
-
-<br>
-
 #### cdr-color-text-form-label-lightmode
 <table>
   <tbody>
@@ -322,42 +286,6 @@ The below tables for the naming structure show that levels will be skipped when 
 </table>
 
 <br>
-
-#### cdr-space-half-x
-<table>
-  <tbody>
-    <tr>
-      <td>Category </td>
-      <td width=240>space- </td>
-    </tr>
-    <tr>
-      <td>Sub-Category </td>
-      <td width=240>  </td>
-    </tr>
-    <tr>
-      <td>Item </td>
-      <td width=240>  </td>
-    </tr>
-    <tr>
-      <td>Sub-Item </td>
-      <td width=240>  </td>
-    </tr>
-    <tr>
-      <td>Variant </td>
-      <td width=240> </td>
-    </tr>
-    <tr>
-      <td>Size </td>
-      <td width=240>half-x </td>
-    </tr>
-    <tr>
-      <td>Mode </td>
-      <td width=240>  </td>
-    </tr>
-  </tbody>
-</table>
-
-<br>
 <hr/>
 
 ## How to Use Tokens
@@ -382,14 +310,14 @@ This repository follows SEMVER practices and will notify users of changes and up
 ## Adding Tokens to the Repository
 The number of tokens Cedar provides is kept small intentionally as it is critical for a token to meet all requirements based on the above criterium prior to being added to Cedar’s Token list.
 
-If you have a request for a token that is missing, you can [submit a pull request to the cedar-token repo](https://www.npmjs.com/package/@rei/cdr-tokens#addingupdating-tokens) or ask in the #cedar-users-support Slack channel. Ensure that the token meets the following requirements:
+If you have a request for a token that is missing, you can [submit a pull request to the cedar-token repo](https://www.npmjs.com/package/@rei/cdr-tokens#addingupdating-tokens) or reach out in Slack at [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4). Ensure that the token meets the following requirements:
 - Token is used in several components or layouts
 - Token is used for multiple elements and NOT specific to one element
 - Token name will continue to have the same semantic meaning in future releases
 - Token name follows platform requirements: 
-  - For web, token name tells consumers where it will be used and kebab case is used. For example, cdr-color-background-dark
-  - For iOS, TBD or link to outside source for naming conventions 
-  - For Android, token name tells consumers where it will be used and snake case is used. For example, cdr_color_background_dark
+  - **Web:** Uses Kebab case. For example, cdr-color-background-dark
+  - **iOS:** Uses Pascal case. For example, CdrColorBackgroundColor
+  - **Android:** Uses Snake case. For example, cdr_color_background_dark
 
 <hr/>
 
