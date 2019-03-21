@@ -131,7 +131,7 @@ The examples in our documentation demonstrate usage in a [Single File Component]
 
 Examples below demonstrate the **CdrButton** component. Refer to each component’s documentation for a complete component API and advanced examples.
 
-#### Including Component-Specific CSS
+#### Include Component-Specific CSS
 1. Import the component within the `script` block.
 
 _local.vue_
@@ -186,7 +186,7 @@ Most Cedar components provide props to configure component data, display, and lo
 
 Refer to each component’s API documentation for a full list of available props.
 
-##### Bind Dynamic Data to Components
+#### Bind Dynamic Data to Components
 Props can be [static or dynamic](https://vuejs.org/v2/guide/components-props.html#Passing-Static-or-Dynamic-Props). To provide dynamic data (or non-string data) add a colon (`:`) before the prop name.
 
 Prop names are also documented and referenced in JavaScript as camel case, but [used in the template as kebab-case](https://vuejs.org/v2/guide/components-props.html#Prop-Casing-camelCase-vs-kebab-case).
@@ -295,7 +295,7 @@ npm install --save @rei/cdr-tokens
 
 #### Using Cedar Design Tokens
 
-The package contains files for using tokens in both CSS (as SCSS variables) and JavaScript (as commonJS).
+The package contains files for using tokens in both CSS (as SCSS and LESS variables) and JavaScript (as commonJS and ES modules).
 
 Here we’re using a typography mixin and a color token to style `.myClass` from the SCSS tokens file.
 
@@ -333,7 +333,7 @@ Our mobile development packages include fonts that are licensed and proprietary 
 #### iOS
 
 ##### CocoaPods
-The preferred way to consume Cedar for iOS is through CocoaPods.  See https://cocoapods.org/ for information about CocoaPods.
+The preferred way to consume Cedar for iOS is through CocoaPods.  View [www.cocoapods.org](https://www.cocoapods.org/) for information.
 
 To find out if Cocoapods is already installed, open the terminal and run:
 
@@ -345,6 +345,7 @@ pod --version
 If “command not found” is returned then Cocoapods in not installed.
 
 To install Cocoapods: 
+
 _Terminal_
 ```bash
 sudo gem install cocoapods 
@@ -359,10 +360,10 @@ pod init
 
 The above command will create a Podfile in your current directory.
  
-
+ 
 The Podfile must be modified with the following to include Cedar as a dependency:
 
-**1.Prior to the Targets Section of the Podfile:**
+**1. Prior to the Targets Section of the Podfile:**
 
 _Terminal_
 ```bash
@@ -399,6 +400,7 @@ end
 If you don’t use Cocoapods, you can manually import files into your iOS project/workspace.  
 
 **Colors**
+
 Color Sets in a .xcasset file.  Import the file by dragging the `Cedar.xcassets > Colors` folder into your project's asset folder.
 
 You can set the colors in Interface Builder, or by:
@@ -409,6 +411,7 @@ Button1.backgroundColor = UIColor(named: "cdr_color_text_primary_lightmode");
 ```
 
 **Text**
+
 The package includes Sentinel and Roboto font source files along with Swift Classes for applying Apple's Dynamic Type behavior to the font.  
 
 Importing the source font is done by creating a group under your target in xcode and dragging the font files into that group.  Add the fonts to the info.plist under `Fonts provided by application`.
@@ -423,6 +426,7 @@ _Terminal_
 ```
 
 **Icons**
+
 Cedar provides icons  in vector pdf format for iOS scaling.  According to initial investigation, only one file per icon is needed in this format. There is no need for @1x, @2x, and @3x variants. 
 
 
@@ -440,7 +444,8 @@ Implementation mvnrepos.rei.com:cedar-android.aar:0.2.0
 ```
 
 ##### Manual Consumption
-If you don’t use Maven, you can import the Cedar Tokens into your Android project/workspace manually by dragging the resources into your project within Android Studio.  The resources are located at: https://git.rei.com/projects/CDR/repos/cedar-android 
+If you don’t use Maven, you can import the Cedar Tokens into your Android project/workspace manually by dragging the resources into your project within Android Studio.  The resources are located at the [cedar-android repository on Bitbucket
+]( https://git.rei.com/projects/CDR/repos/cedar-android) 
 
 
 <hr/>
