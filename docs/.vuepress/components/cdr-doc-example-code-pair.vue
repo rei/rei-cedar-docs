@@ -39,7 +39,7 @@
       </div>
     </div>
 
-    <cdr-doc-code-snippet :copy-button="copyButton" :line-numbers="lineNumbers" :max-height="codeMaxHeight" :repository-href="repositoryHref" :sandbox-href="sandboxHref" :code-toggle="codeToggle" :hide-code="hideCode">
+    <cdr-doc-code-snippet :copy-button="copyButton" :line-numbers="lineNumbers" :max-height="codeMaxHeight" :repository-href="repositoryHref" :sandbox-href="sandboxHref" :sandbox-data="Object.assign({}, sandboxData, {code: sandboxCode})" :model="model" :code-toggle="codeToggle" :hide-code="hideCode">
       <slot :name="slotNames[0]"/> <!-- Only display the code snippet for the first (or only) slot content -->
     </cdr-doc-code-snippet>
   </div>
@@ -101,6 +101,14 @@
         default: false,
         type: [String, Boolean]
       },
+      sandboxData: {
+        default: false,
+        type: [Object, Boolean]
+      },
+      sandboxTitle: {
+        default: false,
+        type: [String, Boolean]
+      },
       codeToggle: {
         default: true,
         type: Boolean
@@ -125,6 +133,9 @@
     computed: {
       instanceId() {
         return this._uid;
+      },
+      sandboxCode() {
+        return this.slotNames.map(label => this.templateSources[label]).join('\n')
       }
     },
     beforeMount() {
