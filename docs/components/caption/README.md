@@ -13,70 +13,76 @@
         "href": "../image/"
       }
     ],
-	  "align": [
-      {
-        "type": "do",
-        "image": "caption/caption_align_do_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing proper alignment use.",
-        "caption": "left align the caption to the body copy."
-      },
-      {
-        "type": "dont",
-        "image": "caption/caption_align_dont_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing improper alignment use.",
-        "caption": "center the caption beneath the media."
-      }
-    ],
-    "media": [
-      {
-        "type": "do",
-        "image": "caption/caption_media_do_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing proper media use.",
-        "caption": "provide a caption for images when attribution information is available."
-      },
-      {
-        "type": "dont",
-        "image": "caption/caption_media_dont_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing improper media use.",
-        "caption": "use captions without associated media content (image, video, chart, etc.)."
-      }
-    ],
-    "separate": [
-      {
-        "type": "do",
-        "image": "caption/caption_separate_do_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing proper use of summary and credit separation.",
-        "caption": "provide further explanation of media in the Summary field and attribution in the Credit field."
-      },
-      {
-        "type": "dont",
-        "image": "caption/caption_separate_dont_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing improper use of summary and credit separation.",
-        "caption": "combine attribution within the Summary field."
-      }
-    ],
-    "summaries": [
-      {
-        "type": "do",
-        "image": "caption/caption_summary_do_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing proper summary use.",
-        "caption": "write succinct, informative summaries."
-      },
-      {
-        "type": "dont",
-        "image": "caption/caption_summary_dont_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing improper summary use.",
-        "caption": "write long summaries that wrap to more than 3 lines on desktop breakpoints."
-      }
-    ],
+  "align": [
+    {
+      "type": "do",
+      "image": "caption/caption_align_do_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing proper alignment use.",
+      "caption": "left align the caption to the body copy."
+    },
+    {
+      "type": "dont",
+      "image": "caption/caption_align_dont_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing improper alignment use.",
+      "caption": "center the caption beneath the media."
+    }
+  ],
+  "media": [
+    {
+      "type": "do",
+      "image": "caption/caption_media_do_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing proper media use.",
+      "caption": "provide a caption for images when attribution information is available."
+    },
+    {
+      "type": "dont",
+      "image": "caption/caption_media_dont_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing improper media use.",
+      "caption": "use captions without associated media content (image, video, chart, etc.)."
+    }
+  ],
+  "separate": [
+    {
+      "type": "do",
+      "image": "caption/caption_separate_do_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing proper use of summary and credit separation.",
+      "caption": "provide further explanation of media in the Summary field and attribution in the Credit field."
+    },
+    {
+      "type": "dont",
+      "image": "caption/caption_separate_dont_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing improper use of summary and credit separation.",
+      "caption": "combine attribution within the Summary field."
+    }
+  ],
+  "summaries": [
+    {
+      "type": "do",
+      "image": "caption/caption_summary_do_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing proper summary use.",
+      "caption": "write succinct, informative summaries."
+    },
+    {
+      "type": "dont",
+      "image": "caption/caption_summary_dont_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing improper summary use.",
+      "caption": "write long summaries that wrap to more than 3 lines on desktop breakpoints."
+    }
+  ],
+  "sandboxData": {
+    "name": "CdrCaption",
+    "dependencies": { "@rei/cdr-caption": "^1.0.0" },
+    "loadComponentCss": "true",
+    "loadImg": "true"
+  },
   "versions": [
     {
       "components": [
@@ -114,7 +120,7 @@
 
 Caption aligns to the left alongside the body copy with inset padding. Default caption includes summary and credit.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/caption" sandbox-href="https://codesandbox.io/s/889z57925l" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/caption" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-caption 
@@ -128,7 +134,7 @@ Caption aligns to the left alongside the body copy with inset padding. Default c
 
 Summary has same CSS styles as the default; however, only the summary element is displayed.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/caption" sandbox-href="https://codesandbox.io/s/889z57925l">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/caption" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <cdr-caption 
@@ -142,7 +148,7 @@ Summary has same CSS styles as the default; however, only the summary element is
 
 Credit has same CSS styles as the default; however, only the credit element is displayed.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/caption" sandbox-href="https://codesandbox.io/s/889z57925l">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/caption" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <cdr-caption 
@@ -156,7 +162,7 @@ Credit has same CSS styles as the default; however, only the credit element is d
 
 The captions component is text-only; however, it is meant to be displayed in the context of a media object.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/caption" sandbox-href="https://codesandbox.io/s/889z57925l" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/caption" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <figure>

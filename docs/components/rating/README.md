@@ -62,6 +62,11 @@
             "text": "Components/"
         }
     ],
+    "sandboxData": {
+      "name": "CdrRating",
+      "dependencies": { "@rei/cdr-rating": "^1.0.0" },
+      "loadComponentCss": "true"
+    },
     "versions": [{
       "components": [
           {
@@ -121,7 +126,7 @@
 
 Shows review rating with up to 5 stars highlighted. If rating is zero, star icons are displayed using the grey outline star icon. 
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/rating" sandbox-href="https://codesandbox.io/s/30r682534m">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/rating" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 <div>
@@ -136,7 +141,7 @@ Shows review rating with up to 5 stars highlighted. If rating is zero, star icon
 
 Creates a link to the corresponding review content if on the same page.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/rating" sandbox-href="https://codesandbox.io/s/30r682534m">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/rating" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 <div>
@@ -155,7 +160,7 @@ Creates a link to the corresponding review content if on the same page.
 
 Removes the word "Reviews" from the label for limited space layout.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/rating" sandbox-href="https://codesandbox.io/s/30r682534m">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/rating" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 <div>
@@ -170,7 +175,7 @@ Removes the word "Reviews" from the label for limited space layout.
 
 Change size for the star icon and text. Default size is medium.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/rating" sandbox-href="https://codesandbox.io/s/30r682534m">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/rating" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 <div>

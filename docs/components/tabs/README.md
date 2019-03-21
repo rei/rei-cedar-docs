@@ -68,6 +68,11 @@
       "caption": "truncate tab labels. If a label overruns the container, find a shorter alternative."
     }
   ],
+  "sandboxData": {
+    "name": "CdrTabs, CdrTabPanel",
+    "dependencies": { "@rei/cdr-tabs": "^1.0.0" },
+    "loadComponentCss": "true"
+  },
   "versions": [
     {
       "components": [
@@ -130,7 +135,7 @@
 ## Default
 Tab buttons align left and bottom border expands to full width of container.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/6w37mxwozn" :backgroundToggle="false" :codeMaxHeight="false" >
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" >
 
 ```html
 
@@ -149,7 +154,7 @@ Tab buttons align left and bottom border expands to full width of container.
 
 Reduced spacing around the tab buttons create a denser visual design.
 
-<cdr-doc-example-code-pair repository-href="/src/components/tabs" sandbox-href="https://codesandbox.io/s/6w37mxwozn" :backgroundToggle="false" :codeMaxHeight="false">
+<cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false">
 
 ```html
 <cdr-tabs modifier="compact" height="100px">
@@ -166,7 +171,7 @@ Reduced spacing around the tab buttons create a denser visual design.
 
 Tab buttons space evenly across the container.
 
-<cdr-doc-example-code-pair repository-href="/src/components/tabs" sandbox-href="https://codesandbox.io/s/6w37mxwozn" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
+<cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
 
 ```html
 <cdr-tabs modifier="full-width" height="100px">
@@ -183,7 +188,7 @@ Tab buttons space evenly across the container.
 
 Bottom border of tab header list is removed.
 
-<cdr-doc-example-code-pair repository-href="/src/components/tabs" sandbox-href="https://codesandbox.io/s/6w37mxwozn" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
+<cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
 
 ```html
 <cdr-tabs modifier="no-border" height="100px">

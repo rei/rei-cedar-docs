@@ -86,6 +86,11 @@
         {
         "text": "Components/"
     }],
+    "sandboxData": {
+      "name": "CdrQuote",
+      "dependencies": { "@rei/cdr-quote": "^1.0.0", "@rei/cdr-text": "^1.0.0" },
+      "loadComponentCss": "true"
+    },
     "versions": [{
         "components": [
             {
@@ -148,7 +153,7 @@
 
 Default block quote can be used with the following HTML tags: `<p>`, `<div>`, `<aside>`. This is responsive with styles for XS breakpoint
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/quote" sandbox-href="https://codesandbox.io/s/q722z00mk4">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/quote" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 <div>

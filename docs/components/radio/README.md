@@ -61,6 +61,11 @@
       "caption": "add terminal punctuation at the end of a label."
     }
   ],
+  "sandboxData": {
+    "name": "CdrRadio",
+    "dependencies": { "@rei/cdr-radio": "^1.0.0" },
+    "loadComponentCss": "true"
+  },
   "versions": [
     {
       "components": [
@@ -134,7 +139,7 @@
 ## Default
 Default and standard spacing for radio buttons.
 
-<cdr-doc-example-code-pair repository-href="/src/components/radio" sandbox-href="https://codesandbox.io/s/4rx86n66l9" :backgroundToggle="false" :codeMaxHeight="false" :model="{ex: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/radio" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{ex: ''}">
 
 ```html
 <div>
@@ -164,7 +169,7 @@ Default and standard spacing for radio buttons.
 
 Compact spacing for radio buttons.
 
-<cdr-doc-example-code-pair repository-href="/src/components/radio" sandbox-href="https://codesandbox.io/s/4rx86n66l9" :backgroundToggle="false" :codeMaxHeight="false" :model="{ex: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/radio" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{ex: ''}">
 
 ```html
 <div>
@@ -197,7 +202,7 @@ Compact spacing for radio buttons.
 
 Custom styles for radio buttons.
 
-<cdr-doc-example-code-pair repository-href="/src/components/radio" sandbox-href="https://codesandbox.io/s/4rx86n66l9" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example" :model="{ex: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/radio" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example" :model="{ex: ''}">
 
 ```html
 <div>

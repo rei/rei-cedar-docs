@@ -17,38 +17,43 @@
         "href": '../cta/'
       }
     ],
-	  "standalone": [
-      {
-        "type": "do",
-        "image": "links/links_descriptivetext_do__16-9.png",
-        "ratio": "16-9",
-        "alt": "Image showing proper link usage",
-        "caption": "use clear, concise, and descriptive text."
-      },
-      {
-        "type": "dont",
-        "image": "links/links_descriptivetext_dont__16-9.png",
-        "ratio": "16-9",
-        "alt": "Image showing click here link",
-        "caption": "use “click here” or “start here” for link text."
-      }
-    ],
-    "link": [
-      {
-        "type": "do",
-        "image": "links/links_underlinestyle_text_do__16-9.png",
-        "ratio": "16-9",
-        "alt": "The link in this copy uses the cdr-link component, and, so correctly uses an underline",
-        "caption": "underline every link."
-      },
-      {
-        "type": "dont",
-        "image": "links/links_underlinestyle_text_dont__16-9.png",
-        "ratio": "16-9",
-        "alt": "The default link in body copy incorrectly does not use an underline",
-        "caption": "apply different visual treatments for hyperlinks."
-      }
-    ],
+  "standalone": [
+    {
+      "type": "do",
+      "image": "links/links_descriptivetext_do__16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing proper link usage",
+      "caption": "use clear, concise, and descriptive text."
+    },
+    {
+      "type": "dont",
+      "image": "links/links_descriptivetext_dont__16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing click here link",
+      "caption": "use “click here” or “start here” for link text."
+    }
+  ],
+  "link": [
+    {
+      "type": "do",
+      "image": "links/links_underlinestyle_text_do__16-9.png",
+      "ratio": "16-9",
+      "alt": "The link in this copy uses the cdr-link component, and, so correctly uses an underline",
+      "caption": "underline every link."
+    },
+    {
+      "type": "dont",
+      "image": "links/links_underlinestyle_text_dont__16-9.png",
+      "ratio": "16-9",
+      "alt": "The default link in body copy incorrectly does not use an underline",
+      "caption": "apply different visual treatments for hyperlinks."
+    }
+  ],
+  "sandboxData": {
+    "name": "CdrLink",
+    "dependencies": { "@rei/cdr-link": "^1.0.0" },
+    "loadComponentCss": "true"
+  },
   "versions": [
     {
       "components": [
@@ -110,7 +115,7 @@
 
 Display within body copy for articles, hub cards, footer, or recommendations.
 
-<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9" >
+<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/link" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <cdr-text>
@@ -132,7 +137,7 @@ Display within body copy for articles, hub cards, footer, or recommendations.
 
 Display independently with a call to action. Some examples are for finding a store, or viewing related products.
 
-<cdr-doc-example-code-pair repository-href="/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
+<cdr-doc-example-code-pair repository-href="/src/components/link" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <cdr-link href="https://www.rei.com" modifier="standalone">
@@ -146,7 +151,7 @@ Display independently with a call to action. Some examples are for finding a sto
 
 Display standalone link with icon on left.
 
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
+<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {loadIcon: true})">
 
 ```html
   <div>
@@ -169,7 +174,7 @@ Display standalone link with icon on left.
 
 Display standalone link with icon on right.
 
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
+<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {loadIcon: true})">
 
 ```html
   <div>

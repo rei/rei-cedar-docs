@@ -42,6 +42,12 @@
       "caption": "create labels so lengthy that they wrap to a second line."
     }
   ],
+  "sandboxData": {
+    "name": "CdrAccordion, CdrAccordionItem",
+    "dependencies": { "@rei/cdr-accordion": "^1.0.0" },
+    "loadComponentCss": "true",
+    "loadIcon": "true"
+  },
   "versions": [
     {
       "components": [
@@ -139,7 +145,7 @@
 
 Section borders expand to full width of container.
 
-<cdr-doc-example-code-pair repository-href="/src/components/accordion" sandbox-href="https://codesandbox.io/s/m9jm5rw1zx">
+<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <cdr-accordion>
@@ -177,7 +183,7 @@ Section borders expand to full width of container.
 
 Reduced spacing around title and content body. Also, smaller font sizes resulting in an overall denser display of content.
 
-<cdr-doc-example-code-pair repository-href="/src/components/accordion" sandbox-href="https://codesandbox.io/s/m9jm5rw1zx">
+<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <cdr-accordion :compact="true">
@@ -217,7 +223,7 @@ Reduced spacing around title and content body. Also, smaller font sizes resultin
 
 Border aligns to the title text and expand/collapse icon.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/accordion" sandbox-href="https://codesandbox.io/s/m9jm5rw1zx">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <cdr-accordion :border-aligned="true">
