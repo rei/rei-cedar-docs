@@ -248,7 +248,7 @@ Displays status for checkbox group by indicating that some of the sub-selections
 
 Custom styles for checkboxes.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/checkbox" :sandbox-data="$page.frontmatter.sandboxData" class="custom-checkbox-example" :model="{ex1: true, ex2: false, ex3: false}">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/checkbox" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {styleTag: '.no-box:checked ~ .no-box__content {color: green;}'})" class="custom-checkbox-example" :model="{ex1: true, ex2: false, ex3: false}">
 
 ```html
 <div>

@@ -8,19 +8,13 @@ import { getParameters } from 'codesandbox/lib/api/define';
 // data.loadImg: Boolean, if your component or examples needs to use cdr-img, set this value to `true`
 // model: Object, if component depends on model data, pass it here (TODO: can we inline this instead?)
 
-
-
-// TODO: do we need to load roboto/sentinel/etc.?
-// TODO: make the container div centered or something? add some body margin to every example?
-// TODO: how to handle including CSS in a sandbox? (just for custom checkbox/radio style examples i think?)
-
-
 export default function makeMeASandbox(data, model) {
   if(!data.name || !data.dependencies || !data.code) return false
 
   const mainDependency = Object.keys(data.dependencies)[0]
   const componentPath = mainDependency.split("/")[1];
   const componentCss = `import "@rei/${componentPath}/dist/${componentPath}.css"`;
+  const fontImport = "@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400|Roboto:400|Roboto+Mono:400');";
 
   let dependencies = {
     ...data.dependencies,
@@ -34,7 +28,7 @@ export default function makeMeASandbox(data, model) {
         content: buildIndexFile(data, componentCss),
       },
       'App.vue': {
-        content: `<template>\n<div style="margin: 32px;">\n\n${data.code}\n</div>\n</template>\n\n<script>\n${buildScriptTag(data, model, mainDependency)}\n</script>`
+        content: `<template>\n<div style="margin: 32px;">\n\n${data.code}\n</div>\n</template>\n\n<script>\n${buildScriptTag(data, model, mainDependency)}\n</script>\n<style>\n${fontImport}\n${data.styleTag || ''}</style>`
       },
       'package.json': {
         content: {
