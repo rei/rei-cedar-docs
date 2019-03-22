@@ -71,6 +71,7 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 
 
 <div style="overflow: hidden; white-space: nowrap; margin: 8px 0 8px 0;  padding: 16px 0 16px 0; background-color: #FFFFFF ;"><typography-example name="cdr-text-default-body-compact" /> </div>
+
 **cdr-text-default-body-compact** 
 <br>
 **Suggested usage:** Use only for compact spacing with informational and supplemental body content 
