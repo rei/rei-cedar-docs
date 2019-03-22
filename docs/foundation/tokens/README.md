@@ -19,7 +19,7 @@
 
 ## Overview
 
-Our design tokens are special variables used to maintain a scalable visual system for UI development and brand consistent. Cedar design tokens store the visual design attributes that define the foundation of REI’s visual language, including color, typography and spacing.
+Our design tokens are special variables used to maintain a scalable visual system for UI development and brand consistency. Cedar design tokens store the visual design attributes that define the foundation of REI’s visual language, including color, typography and spacing.
 
 Design tokens are key-value pairs. For example:
 
@@ -36,7 +36,7 @@ cdr-text-primary-lightmode: #292929;
 
 ### Contract of Intent
   - Tokens are versioned and maintained by the design systems team 
-  - Consumers will be responsible to keep up to no less than one major version back from the current release
+  - Consumers are required to stay within one major version of the current release 
 
 ### Benefits 
 
@@ -46,8 +46,8 @@ cdr-text-primary-lightmode: #292929;
   - Consumers can stay in sync with any changes to the visual language with minimal impact to the code
 
 #### Ease of Maintainability
-Tokens can streamline redesign processes by:
-  - When the Cedar team updates an **value** (such as with a new typeface or color hex value), the **tokens** do not need to be changed in code by consumers
+Tokens can streamline redesign processes when:
+  - The Cedar team updates an **value** (such as with a new typeface or color hex value), the **tokens** do not need to be changed in code by consumers
   - Teams can consume these changes from SEMVER releases to our supported packages
 
 #### Brand Consistency on Any Platform
@@ -140,7 +140,7 @@ There are a couple of primary use cases for using tokens in place of components:
 <table>
   <tbody>
     <tr>
-      <td>Is “easily-excited”” used in several components or layouts? </td>
+      <td>Is “easily-excited” used in several components or layouts? </td>
       <td>Yes </td>
     </tr>
     <tr>
@@ -301,6 +301,7 @@ A base requirement for using Cedar tokens is that you are able to consume and ma
   - You can import NPM packages
 - Native iOS consumers using CocoaPods
 - Android consumers using Android package manager
+
 This repository follows SEMVER practices and will notify users of changes and updates on the #cedar-user-support Slack channel.
 
 
