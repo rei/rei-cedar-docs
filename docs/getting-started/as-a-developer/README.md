@@ -62,7 +62,7 @@ _main.js_
 import '@rei/cdr-assets/dist/cdr-core.css';
 ```
 
-## Install Required Fonts
+### Install Required Fonts
 Cedar uses specific fonts – Roboto, Roboto Condensed, and Sentinel – that are required for your project. 
 
 Roboto and Roboto Condensed are available from [Google Fonts](https://fonts.google.com/selection?selection.family=Roboto%7CRoboto+Condensed&query=robo) (preselected for quick use).
@@ -279,14 +279,15 @@ As you extend Cedar components and create your own components, work with your de
 
 #### Install Tokens Package
 
-Resources are available within the CdrToken package:
+Resources are available within the **CdrToken package**:
   - SCSS variables at `dist/scss/cdr-tokens.scss`
   - LESS variables at `dist/less/cdr-tokens.less`
   - JS as both commonJS and ES module at `dist/js`. Also noted in package.json as `main` and `module` respectively
 
+<br>
 
 To incorporate the required assets, use the following steps:
-1. Install the CdrToken package using `npm` in your terminal:
+1. Install the **CdrToken package** using `npm` in your terminal:
 
 _Terminal_
 ```js
@@ -328,7 +329,7 @@ export default {
 
 Currently development for iOS and Android is through the usage of Cedar Tokens as documented below.  
 
-Our mobile development packages include fonts that are licensed and proprietary to REI. For more information or questions regarding Cedar’s support for external consumers using the mobile development packages on GitHub or NPM, please reach out to cedar@rei.com.
+Our mobile development packages include fonts that are licensed and proprietary to REI. For more information or questions regarding Cedar’s support for external consumers using the mobile development packages on GitHub or NPM, please reach out to [cedar@rei.com](mailto:cedar@rei.com).
 
 #### iOS
 
@@ -351,7 +352,7 @@ _Terminal_
 sudo gem install cocoapods 
 ```
 
-To set up Cocoapods , from the project/workspace directory, run:
+To set up Cocoapods from the project/workspace directory, run:
 
 _Terminal_
 ```bash
