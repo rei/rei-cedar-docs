@@ -30,23 +30,121 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 
 <br/>
 
-<typography-example name="cdr-text-default-body-compact" />
+**NOTE: Testing new format (Web 2)**
+<br>
 
-Suggested usage: Use only for compact spacing with informational and supplemental body content
+<div style="overflow: hidden; white-space: nowrap; margin: 8px 0 8px 0;  padding: 16px 0 16px 0; background-color: #FFFFFF ;"><typography-example name="cdr-text-default-body-compact" /> </div>
 
-| Token Name                                  | Values      |
-| :------------------------------------------ | :---------- |
-| **cdr-text-default-body-compact**           | *Mixin*   |
-| cdr-text-default-body-compact-family        | Roboto, "Helvetica Neue",<br> Helvetica, Arial, sans-serif   |
-| cdr-text-default-body-compact-style         | normal  |
-| cdr-text-default-body-compact-weight        | 400   |
-| cdr-text-default-body-compact-spacing       | normal   |
-| cdr-text-default-body-compact-size          | 1.4rem / 14px   |
-| cdr-text-default-body-compact-height        | 2.4rem / 24px  |
-
+**cdr-text-default-body-compact** 
+<br><br> 
+**Suggested usage:** Use only for compact spacing with informational and supplemental body content 
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td>cdr-text-default-body-compact-family </td>
+      <td>Roboto, "Helvetica Neue", Helvetica,<br> Arial, sans-serif </td>
+    </tr>
+    <tr>
+      <td>cdr-text-default-body-compact-style </td>
+      <td>Normal </td>
+    </tr>
+    <tr>
+      <td>cdr-text-default-body-compact-weight </td>
+      <td>400 </td>
+    </tr>
+    <tr>
+      <td>cdr-text-default-body-compact-spacing </td>
+      <td>Normal </td>
+    </tr>
+    <tr>
+      <td>cdr-text-default-body-compact-size </td>
+      <td>14px </td>
+    </tr>   
+    <tr>
+      <td>cdr-text-default-body-compact-height  </td>
+      <td>24px </td>
+    </tr>   
+  </tbody>
+</table>
 
 <br/>
 
+
+<div style="overflow: hidden; white-space: nowrap; margin: 8px 0 8px 0;  padding: 16px 0 16px 0; background-color: #FFFFFF ;"><typography-example name="cdr-text-default-body-compact" /> </div>
+
+**cdr-text-default-body-compact** 
+<br><br> 
+**Suggested usage:** Use only for compact spacing with informational and supplemental body content 
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td>cdr-text-default-body-compact-family </td>
+      <td>Roboto, "Helvetica Neue", Helvetica,<br> Arial, sans-serif </td>
+    </tr>
+    <tr>
+      <td>cdr-text-default-body-compact-style </td>
+      <td>Normal </td>
+    </tr>
+    <tr>
+      <td>cdr-text-default-body-compact-weight </td>
+      <td>400 </td>
+    </tr>
+    <tr>
+      <td>cdr-text-default-body-compact-spacing </td>
+      <td>Normal </td>
+    </tr>
+    <tr>
+      <td>cdr-text-default-body-compact-size </td>
+      <td>14px </td>
+    </tr>   
+    <tr>
+      <td>cdr-text-default-body-compact-height  </td>
+      <td>24px </td>
+    </tr>   
+  </tbody>
+</table>
+
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; margin: 8px 0 8px 0;  padding: 16px 0 16px 0; background-color: #FFFFFF ;"><typography-example name="cdr-text-default-body" /> </div>
+
+**cdr-text-default-body** 
+<br><br> 
+**Suggested usage:** Default for body content. Uses a more open line height to font size ratio
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td>cdr-text-default-body-compact-family </td>
+      <td>Roboto, "Helvetica Neue", Helvetica,<br> Arial, sans-serif </td>
+    </tr>
+    <tr>
+      <td>cdr-text-default-body-compact-style </td>
+      <td>Normal </td>
+    </tr>
+    <tr>
+      <td>cdr-text-default-body-compact-weight </td>
+      <td>400 </td>
+    </tr>
+    <tr>
+      <td>cdr-text-default-body-compact-spacing </td>
+      <td>Normal </td>
+    </tr>
+    <tr>
+      <td>cdr-text-default-body-compact-size </td>
+      <td>16px </td>
+    </tr>   
+    <tr>
+      <td>cdr-text-default-body-compact-height  </td>
+      <td>26px </td>
+    </tr>   
+  </tbody>
+</table>
+
+**NOTE: Keep this - previous formatting**
+<br>
 
 <typography-example name="cdr-text-default-body" />
 
@@ -102,6 +200,69 @@ Suggested usage: Default for editorial long-form content. Uses a more open line 
 
 
 ### Mobile
+
+**NOTE: Testing new format (Mobile 2)**
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 500; font-size: 34px; line-height: 40px; letter-spacing: normal; color: #292929; margin: 8px 0 8px 0;  padding: 16px 0 16px 0; background-color: #FFFFFF ;">A different kind of company</div>
+
+<b>Display 1</b> (Android)<br>
+<b>Large Title</b> (iOS)<br>
+<b>Suggested Usage:</b> Frequently used as the largest title for phone apps and can be used for page titles for larger devices 
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td>font-family </td>
+      <td>Roboto </td>
+    </tr>
+    <tr>
+      <td>font-weight </td>
+      <td>Medium </td>
+    </tr>
+    <tr>
+      <td>font-size </td>
+      <td>34sp </td>
+    </tr>
+    <tr>
+      <td>line-height </td>
+      <td>40sp </td>
+    </tr>   
+  </tbody>
+</table>
+
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 28px; line-height: 36px; letter-spacing: normal; color: #292929; margin: 8px 0 8px 0;  padding: 16px 0 16px 0; background-color: #FFFFFF ;">A different kind of company</div>
+
+<b>Title 1</b> (Android and iOS)<br>
+<b>Suggested Usage:</b> Content titles, level 1
+<br>
+<table>
+  <tbody>
+    <tr>
+      <td>font-family </td>
+      <td>Sentinel </td>
+    </tr>
+    <tr>
+      <td>font-weight </td>
+      <td>Semi Bold </td>
+    </tr>
+    <tr>
+      <td>font-size </td>
+      <td>28sp </td>
+    </tr>
+    <tr>
+      <td>line-height </td>
+      <td>36sp </td>
+    </tr>   
+  </tbody>
+</table>
+
+<br>
+
+**NOTE: Keep this - previous formatting**
+<br>
 
 `CSS code for Display 1`
 
