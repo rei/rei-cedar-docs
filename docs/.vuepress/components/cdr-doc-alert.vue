@@ -32,10 +32,11 @@ export default {
     display: flex;
     margin-bottom: $cdr-space-one-x;
     padding: $cdr-space-inset-quarter-x;
+    fill: $holy-smoke;
   }
 
   .rei-doc-alert .rei-doc-alert__icon {
-    fill: $icon-color;
+    fill: inherit;
     // height: $icon-size-sm;
     margin-right: $cdr-space-quarter-x;
     // width: $icon-size-sm;

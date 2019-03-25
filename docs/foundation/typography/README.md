@@ -452,7 +452,7 @@ For type scale specifications are located on the [Brand Typography tab](?active-
 <template slot="Brand Typography">
 <cdr-doc-table-of-contents-shell>
 
-<cdr-doc-alert style="border: 1px solid #c77523; border-left: 8px solid #c77523;">These values are NOT to be used by developers for creating custom UI.<br>If you are extending or modifying an existing Cedar component please work with the design system team to add support for your enhancements.</cdr-doc-alert>
+<cdr-doc-alert style="border: 1px solid #c77523; border-left: 8px solid #c77523; fill: #c77523">These values are NOT to be used by developers for creating custom UI.<br>If you are extending or modifying an existing Cedar component please work with the design system team to add support for your enhancements.</cdr-doc-alert>
 
 Colors from Cedar’s base color palette are use throughout Cedar components and design recommendations. Use these values when:
   - Requesting or updating for an existing Cedar component
