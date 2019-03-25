@@ -18,7 +18,7 @@ Cedar components are built using [Vue](https://vuejs.org) and can only be used i
 <hr>
 
 ## About Component Packages
-All components are available as a package on [NPM within the REI organization](https://www.npmjs.com/search?q=%40rei).
+All components are available as a package on [NPM within the REI organization](https://www.npmjs.com/org/rei).
 
 Each component is a separate NPM package. This ensures that you only have the essentials for your application - nothing more.
 
@@ -270,16 +270,16 @@ If you find that a component needs to have a targeted prop class added, please [
 
 
 ## Using Token Variables
-Cedar provides a robust collection of [design tokens](https://rei.github.io/rei-cedar-tokens/#/) corresponding to Cedar's foundations. Standard colors, typography mixins, space, size and other properties are available in the `cdr-tokens` package as Sass/SCSS variables. If you need them in a different format such as LESS or XML, please [submit a feature request](https://airtable.com/shrcbq9CHthuMO7AC).
+Cedar provides a robust collection of [design tokens](https://rei.github.io/rei-cedar-tokens/#/) corresponding to Cedar's foundations. Standard colors, typography, space, size and other properties are available in the `cdr-tokens` package. Outputs support web, IOS, and Android consumers.
 
-As you extend Cedar components and create your own components, work with your designer to take advantage of this inventory in your custom classes. Using them this way will ensure your custom styles remain consistent with design guidelines.
+As you create your own components, work with your designer to take advantage of this inventory in your custom classes. Using them this way will ensure your custom styles remain consistent with design guidelines.
 
 
 ### Web
 
 #### Install Tokens Package
 
-Resources are available within the **CdrToken package**:
+Resources are available within the **[CdrToken package](https://www.npmjs.com/package/@rei/cdr-tokens)**:
   - SCSS variables at `dist/scss/cdr-tokens.scss`
   - LESS variables at `dist/less/cdr-tokens.less`
   - JS as both commonJS and ES module at `dist/js`. Also noted in package.json as `main` and `module` respectively
@@ -334,7 +334,7 @@ Our mobile development packages include fonts that are licensed and proprietary 
 #### iOS
 
 ##### CocoaPods
-The preferred way to consume Cedar for iOS is through CocoaPods.  View [www.cocoapods.org](https://www.cocoapods.org/) for information.
+The preferred way to consume Cedar for iOS is through CocoaPods.  View [www.cocoapods.org](https://www.cocoapods.org/) for more information.
 
 To find out if Cocoapods is already installed, open the terminal and run:
 
