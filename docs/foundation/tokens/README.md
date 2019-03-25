@@ -47,7 +47,7 @@ cdr-text-primary-lightmode: #292929;
 
 #### Ease of Maintainability
 Tokens can streamline redesign processes when:
-  - The Cedar team updates an **value** (such as with a new typeface or color hex value), the **tokens** do not need to be changed in code by consumers
+  - The Cedar team updates a **value** (such as with a new typeface or color hex value), the **tokens** do not need to be changed in code by consumers
   - Teams can consume these changes from SEMVER releases to our supported packages
 
 #### Brand Consistency on Any Platform
