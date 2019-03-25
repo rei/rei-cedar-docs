@@ -35,32 +35,33 @@ List of color tokens with descriptions and values. Web and mobile color tokens h
 <table>
   <tbody>
     <tr>
-      <td> <color-example color="cdr-color-background-lightest" /> </td>
+      <td width=64> <color-example color="cdr-color-background-lightest" /> </td>
       <td><b>cdr-color-background-lightest </b> <br>Only use for light background color - lightest value </td>
-      <td>#ffffff <br>r255  g255  b255 </td>
+      <td width=160>#ffffff <br>r255  g255  b255 </td>
     </tr>
     <tr>
-      <td> <color-example color="cdr-color-background-lighter" /> </td>
+      <td width=64> <color-example color="cdr-color-background-lighter" /> </td>
       <td><b>cdr-color-background-lighter </b> <br>Only use for light background color - value is between light and lightest  </td>
-      <td>#fafafa <br>r250  g250  b250 </td>
+      <td width=160>#fafafa <br>r250  g250  b250 </td>
     </tr>
     <tr>
-      <td> <color-example color="cdr-color-background-light" /> </td>
+      <td width=64> <color-example color="cdr-color-background-light" /> </td>
       <td><b>cdr-color-background-light</b> <br>Only use for light background color </td>
-      <td>#f7f7f7 <br>r247  g247  b247 </td>
+      <td width=160>#f7f7f7 <br>r247  g247  b247 </td>
     </tr>
     <tr>
-      <td> <color-example color="cdr-color-background-dark" /> </td>
+      <td width=64> <color-example color="cdr-color-background-dark" /> </td>
       <td><b>cdr-color-background-dark</b> <br>Only use for dark background color  </td>
-      <td>#292929 <br>r41  g41  b41 </td>
+      <td width=160>#292929 <br>r41  g41  b41 </td>
     </tr>
     <tr>
-      <td> <color-example color="cdr-color-background-darker" /> </td>
+      <td width=64> <color-example color="cdr-color-background-darker" /> </td>
       <td><b>cdr-color-background-darker</b> <br>Only use for dark background color - darkest value  </td>
-      <td>#1a1a1a <br>r26  g26  b26 </td>
+      <td width=160>#1a1a1a <br>r26  g26  b26 </td>
     </tr>
   </tbody>
 </table>
+
 
 <br>
 
@@ -70,32 +71,33 @@ List of color tokens with descriptions and values. Web and mobile color tokens h
 <table>
   <tbody>
     <tr>
-      <td> <color-example color="cdr-color-text-primary-lightmode" /> </td>
+      <td width=64> <color-example color="cdr-color-text-primary-lightmode" /> </td>
       <td><b>cdr-color-text-primary-lightmode</b> <br>Primary body text color on a light background</td>
-      <td>#292929 <br> r41  g41  b41 </td>
+      <td width=160>#292929 <br> r41  g41  b41 </td>
     </tr>
     <tr>
-      <td> <color-example color="cdr-color-text-secondary-lightmode" /> </td>
+      <td width=64> <color-example color="cdr-color-text-secondary-lightmode" /> </td>
       <td><b>cdr-color-text-secondary-lightmode</b> <br>Secondary or supplemental text color on a light background  </td>
-      <td>#616161 <br>r97  g97  b97 </td>
+      <td width=160>#616161 <br>r97  g97  b97 </td>
     </tr>
     <tr>
-      <td> <color-example color="cdr-color-text-link-lightmode" />  </td>
+      <td width=64> <color-example color="cdr-color-text-link-lightmode" />  </td>
       <td><b>cdr-color-text-link-lightmode</b> <br>Link text color on a light background  </td>
-      <td>#3278ae <br>r50  g120  b174 </td>
+      <td width=160>#3278ae <br>r50  g120  b174 </td>
     </tr>
     <tr>
-      <td> <color-example color="cdr-color-text-error-lightmode" /> </td>
+      <td width=64> <color-example color="cdr-color-text-error-lightmode" /> </td>
       <td><b>cdr-color-text-error-lightmode</b> <br>Error text color on a light background  </td>
-      <td>#b5292b <br>r181  g41  b43 </td>
+      <td width=160>#b5292b <br>r181  g41  b43 </td>
     </tr>
     <tr>
-      <td> <color-example color="cdr-color-text-disabled-lightmode" />  </td>
+      <td width=64> <color-example color="cdr-color-text-disabled-lightmode" />  </td>
       <td><b>cdr-color-text-disabled-lightmode</b> <br>Disabled text color for interactive UI elements on a light background  </td>
-      <td>#b8b8b8 <br>r184  g184  b184 </td>
+      <td width=160>#b8b8b8 <br>r184  g184  b184 </td>
     </tr>
   </tbody>
 </table>
+
 
 <br>
 
@@ -104,29 +106,29 @@ List of color tokens with descriptions and values. Web and mobile color tokens h
 <table>
   <tbody>
     <tr>
-      <td> <color-example color="cdr-color-text-primary-darkmode" />  </td>
+      <td width=64> <color-example color="cdr-color-text-primary-darkmode" />  </td>
       <td><b>cdr-color-text-primary-darkmode </b> <br>Primary body text color on a dark background  </td>
-      <td>#fafafa <br>r250  g250  b250 </td>
+      <td width=160>#fafafa <br>r250  g250  b250 </td>
     </tr>
     <tr>
-      <td> <color-example color="cdr-color-text-secondary-darkmode" />  </td>
+      <td width=64> <color-example color="cdr-color-text-secondary-darkmode" />  </td>
       <td><b>cdr-color-text-secondary-darkmode </b> <br>Secondary or supplemental text color on a dark background </td>
-      <td>#999999 <br>r153  g153  b153 </td>
+      <td width=160>#999999 <br>r153  g153  b153 </td>
     </tr>
     <tr>
-      <td> <color-example color="cdr-color-text-link-darkmode" />  </td>
+      <td width=64> <color-example color="cdr-color-text-link-darkmode" />  </td>
       <td><b>cdr-color-text-link-darkmode </b> <br>Link text color on a dark background  </td>
-      <td>#5197cd <br>r81  g151  b205 </td>
+      <td width=160>#5197cd <br>r81  g151  b205 </td>
     </tr>
     <tr>
-      <td> <color-example color="cdr-color-text-error-darkmode" /> </td>
+      <td width=64> <color-example color="cdr-color-text-error-darkmode" /> </td>
       <td><b>cdr-color-text-error-darkmode </b> <br>Error text color on a dark background   </td>
-      <td>#e86868 <br>r232  g104  b104 </td>
+      <td width=160>#e86868 <br>r232  g104  b104 </td>
     </tr>
     <tr>
-      <td> <color-example color="cdr-color-text-disabled-darkmode" />  </td>
+      <td width=64> <color-example color="cdr-color-text-disabled-darkmode" />  </td>
       <td><b>cdr-color-text-disabled-darkmode </b> <br>Disabled text color for interactive UI elements on a dark background </td>
-      <td>#616161 <br>r97  g97  b97 </td>
+      <td width=160>#616161 <br>r97  g97  b97 </td>
     </tr>
   </tbody>
 </table>
@@ -138,17 +140,18 @@ List of color tokens with descriptions and values. Web and mobile color tokens h
 <table>
   <tbody>
     <tr>
-      <td> <color-example color="cdr-color-icon-primary-lightmode" />  </td>
+      <td width=64> <color-example color="cdr-color-icon-primary-lightmode" />  </td>
       <td><b>cdr-color-icon-primary-lightmode </b> <br>Primary icon color on a light background  </td>
-      <td>#292929 <br>r41  g41  b41 </td>
+      <td width=160>#292929 <br>r41  g41  b41 </td>
     </tr>
     <tr>
-      <td> <color-example color="cdr-color-icon-primary-darkmode" />  </td>
+      <td width=64> <color-example color="cdr-color-icon-primary-darkmode" />  </td>
       <td><b>cdr-color-icon-primary-darkmode  </b> <br>Primary icon color on a dark background </td>
-      <td>#fafafa <br>r250  g250  b250 </td>
+      <td width=160>#fafafa <br>r250  g250  b250 </td>
     </tr>
   </tbody>
 </table>
+
 
 <br>
 
@@ -158,32 +161,33 @@ List of color tokens with descriptions and values. Web and mobile color tokens h
 <table>
   <tbody>
     <tr>
-      <td> <color-example color="cdr-color-text-form-label-lightmode" /> </td>
+      <td width=64> <color-example color="cdr-color-text-form-label-lightmode" /> </td>
       <td><b>cdr-color-text-form-label-lightmode </b> <br>Label text color for forms on a light background. Can also be used for input entry text  </td>
-      <td>#292929 <br>r41  g41  b41 </td>
+      <td width=160>#292929 <br>r41  g41  b41 </td>
     </tr>
     <tr>
-      <td> <color-example color="cdr-color-text-form-placeholder-lightmode" />  </td>
+      <td width=64> <color-example color="cdr-color-text-form-placeholder-lightmode" />  </td>
       <td><b>cdr-color-text-form-placeholder-lightmode </b> <br>Placeholder text color for forms on a light background </td>
-      <td>#616161 <br>r97  g97  b97 </td>
+      <td width=160>#616161 <br>r97  g97  b97 </td>
     </tr>
     <tr>
-      <td> <color-example color="cdr-color-text-form-disabled-lightmode" />  </td>
+      <td width=64> <color-example color="cdr-color-text-form-disabled-lightmode" />  </td>
       <td><b>cdr-color-text-form-disabled-lightmode </b> <br>Disabled text color for forms on a light background </td>
-      <td>#b8b8b8 <br>r184  g184  b184 </td>
+      <td width=160>#b8b8b8 <br>r184  g184  b184 </td>
     </tr>
     <tr>
-      <td> <color-example color="cdr-color-background-form-lightmode" />  </td>
+      <td width=64> <color-example color="cdr-color-background-form-lightmode" />  </td>
       <td><b>cdr-color-background-form-lightmode </b> <br>Light background color for forms </td>
-      <td>#ffffff <br>r255  g255  b255 </td>
+      <td width=160>#ffffff <br>r255  g255  b255 </td>
     </tr>
     <tr>
-      <td> <color-example color="cdr-color-background-form-input-lightmode" />  </td>
+      <td width=64> <color-example color="cdr-color-background-form-input-lightmode" />  </td>
       <td><b>cdr-color-background-form-input-lightmode </b> <br>Light background color for input control </td>
-      <td>#ffffff <br>r255  g255  b255 </td>
+      <td width=160>#ffffff <br>r255  g255  b255 </td>
     </tr>
   </tbody>
 </table>
+
 
 <br>
 
@@ -192,32 +196,33 @@ List of color tokens with descriptions and values. Web and mobile color tokens h
 <table>
   <tbody>
     <tr>
-      <td> <color-example color="cdr-color-text-form-label-darkmode" />  </td>
+      <td width=64> <color-example color="cdr-color-text-form-label-darkmode" />  </td>
       <td><b>cdr-color-text-form-label-darkmode </b> <br>Label text color for forms on a dark background. Can also be used for input entry text </td>
-      <td>#fafafa <br>r250  g250  b250 </td>
+      <td width=160>#fafafa <br>r250  g250  b250 </td>
     </tr>
     <tr>
-      <td> <color-example color="cdr-color-text-form-placeholder-darkmode" />  </td>
+      <td width=64> <color-example color="cdr-color-text-form-placeholder-darkmode" />  </td>
       <td><b>cdr-color-text-form-placeholder-darkmode </b> <br>Placeholder text color for forms on a dark background </td>
-      <td>#999999 <br>r153  g153  b153 </td>
+      <td width=160>#999999 <br>r153  g153  b153 </td>
     </tr>
     <tr>
-      <td> <color-example color="cdr-color-text-form-disabled-darkmode" /> </td>
+      <td width=64> <color-example color="cdr-color-text-form-disabled-darkmode" /> </td>
       <td><b>cdr-color-text-form-disabled-darkmode </b> <br>Disabled text color for forms on a dark background </td>
-      <td>#616161 <br>r97  g97  b97 </td>
+      <td width=160>#616161 <br>r97  g97  b97 </td>
     </tr>
     <tr>
-      <td> <color-example color="cdr-color-background-form-darkmode" />  </td>
+      <td width=64> <color-example color="cdr-color-background-form-darkmode" />  </td>
       <td><b>cdr-color-background-form-darkmode </b> <br>Dark background color for forms </td>
-      <td>#292929 <br>r41  g41  b41 </td>
+      <td width=160>#292929 <br>r41  g41  b41 </td>
     </tr>
     <tr>
-      <td> <color-example color="cdr-color-background-form-input-darkmode" /> </td>
+      <td width=64> <color-example color="cdr-color-background-form-input-darkmode" /> </td>
       <td><b>cdr-color-background-form-input-darkmode </b> <br>Dark background color for input control </td>
-      <td>#292929 <br>r41  g41  b41 </td>
+      <td width=160>#292929 <br>r41  g41  b41 </td>
     </tr>
   </tbody>
 </table>
+
 
 <br>
 
@@ -227,32 +232,33 @@ List of color tokens with descriptions and values. Web and mobile color tokens h
 <table>
   <tbody>
     <tr>
-      <td> <color-example color="cdr-color-border-primary-lightmode" />  </td>
+      <td width=64> <color-example color="cdr-color-border-primary-lightmode" />  </td>
       <td><b>cdr-color-border-primary-lightmode </b> <br>Primary border color for light background </td>
-      <td>#616161 <br>r97  g97  b97 </td>
+      <td width=160>#616161 <br>r97  g97  b97 </td>
     </tr>
     <tr>
-      <td> <color-example color="cdr-color-border-secondary-lightmode" /> </td>
+      <td width=64> <color-example color="cdr-color-border-secondary-lightmode" /> </td>
       <td><b>cdr-color-border-secondary-lightmode </b> <br>Secondary border color for light background </td>
-      <td>#b8b8b8 <br>r184  g184  b184 </td>
+      <td width=160>#b8b8b8 <br>r184  g184  b184 </td>
     </tr>
     <tr>
-      <td> <color-example color="cdr-color-border-disabled-lightmode" />  </td>
+      <td width=64> <color-example color="cdr-color-border-disabled-lightmode" />  </td>
       <td><b>cdr-color-border-disabled-lightmode </b> <br>Border color for disabled state for light background </td>
-      <td>#dadada <br>r218  g218  b218 </td>
+      <td width=160>#dadada <br>r218  g218  b218 </td>
     </tr>
     <tr>
-      <td> <color-example color="cdr-color-border-error-lightmode" /> </td>
+      <td width=64> <color-example color="cdr-color-border-error-lightmode" /> </td>
       <td><b>cdr-color-border-error-lightmode </b> <br>Border color for error validation state for light background </td>
-      <td>#e86868 <br>r232  g104  b104  </td>
+      <td width=160>#e86868 <br>r232  g104  b104  </td>
     </tr>
     <tr>
-      <td> <color-example color="cdr-color-border-selected-lightmode" /> </td>
+      <td width=64> <color-example color="cdr-color-border-selected-lightmode" /> </td>
       <td><b>cdr-color-border-selected-lightmode </b>  </td>
-      <td>#2b6692 <br>r43  g102  b146  </td>
+      <td width=160>#2b6692 <br>r43  g102  b146  </td>
     </tr>
   </tbody>
 </table>
+
 
 
 <br>
@@ -262,12 +268,13 @@ List of color tokens with descriptions and values. Web and mobile color tokens h
 <table>
   <tbody>
     <tr>
-      <td> <color-example color="cdr-color-border-secondary-darkmode" />  </td>
+      <td width=64> <color-example color="cdr-color-border-secondary-darkmode" />  </td>
       <td> <b>cdr-color-border-secondary-darkmode </b> <br>Secondary border color for dark background </td>
-      <td>#999999  <br>r153  g153  b153  </td>
+      <td width=160>#999999  <br>r153  g153  b153  </td>
     </tr>
   </tbody>
 </table>
+
 
 
 <br>
@@ -329,6 +336,7 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
 
 #### cdr-color-background-lightest
 (Values for cdr-color-background-lightest: #ffffff or r255 g255 b255)
+
 <table>
   <tbody>
     <tr>
@@ -362,32 +370,33 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
 
 <br>
 
-#### cdr-color-background-lighter
+#### cdr-color-background-lighter
 (Values for cdr-color-background-lighter: #fafafa or r250 g250 b250)
+
 <table>
   <tbody>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/colors/wcag_rating_bkgnd_lighter_primary_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_lighter_primary_4-3.png`)"/> </td>
       <td>AAA 13.94:1   </td>
       <td>cdr-color-text-primary-lightmode  <br>Values: #292929 &nbsp; / &nbsp; r41 g41 b41 </td>   
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/colors/wcag_rating_bkgnd_lighter_secondary_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_lighter_secondary_4-3.png`)"/> </td>
       <td>AA 5.93:1   </td>
       <td>cdr-color-text-secondary-lightmode <br>Values: #616161 &nbsp; / &nbsp; r97 g97 b97</td>    
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/colors/wcag_rating_bkgnd_lighter_link_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_lighter_link_4-3.png`)"/> </td>
       <td>AA 4.54:1  </td>
       <td>cdr-color-text-link-lightmode <br>Values: #3278ae &nbsp; / &nbsp; r50 g120 b174</td>   
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/colors/wcag_rating_bkgnd_lighter_error_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_lighter_error_4-3.png`)"/> </td>
       <td>AA 6.07:1 </td>
       <td>cdr-color-text-error-lightmode <br>Values: #b5292b &nbsp; / &nbsp; r181 g41 b43</td>  
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/colors/wcag_rating_bkgnd_lighter_disabled_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_lighter_disabled_4-3.png`)"/> </td>
       <td>N/A* </td>
       <td>cdr-color-text-disabled-lightmode <br>Values: #b8b8b8 &nbsp; / &nbsp; r184 g184 b184 <br><b>*When text is disabled </b> </td>   
     </tr>
@@ -395,32 +404,34 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
 </table>
 
 <br>
+
 #### cdr-color-background-light
 (Values for cdr-color-background-light: #f7f7f7 or r247 g247 b247)
+
 <table>
   <tbody>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/colors/wcag_rating_bkgnd_light_primary_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_light_primary_4-3.png`)"/> </td>
       <td>AAA 13.58:1  </td>
       <td>cdr-color-text-primary-lightmode  <br>Values: #292929 &nbsp; / &nbsp; r41 g41 b41 </td>   
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/colors/wcag_rating_bkgnd_light_secondary_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_light_secondary_4-3.png`)"/> </td>
       <td>AA 5.78:1  </td>
       <td>cdr-color-text-secondary-lightmode <br>Values: #616161 &nbsp; / &nbsp; r97 g97 b97</td>    
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/colors/wcag_rating_bkgnd_light_link_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_light_link_4-3.png`)"/> </td>
       <td>AA-LG 4.42:1 </td>
       <td>cdr-color-text-link-lightmode <br>Values: #3278ae &nbsp; / &nbsp; r50 g120 b174</td>   
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/colors/wcag_rating_bkgnd_light_error_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_light_error_4-3.png`)"/> </td>
       <td>AA 5.91:1 </td>
       <td>cdr-color-text-error-lightmode <br>Values: #b5292b &nbsp; / &nbsp; r181 g41 b43</td>  
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/colors/wcag_rating_bkgnd_light_disabled_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_light_disabled_4-3.png`)"/> </td>
       <td>N/A* </td>
       <td>cdr-color-text-disabled-lightmode <br>Values: #b8b8b8 &nbsp; / &nbsp; r184 g184 b184 <br><b>*When text is disabled </b> </td>   
     </tr>
@@ -435,30 +446,31 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
 
 #### cdr-color-background-dark
 (Values for cdr-color-background-dark: #292929 or r41 g41 b41)
+
 <table>
   <tbody>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/colors/wcag_rating_bkgnd_dark_primary_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_dark_primary_4-3.png`)"/> </td>
       <td>AAA 13.94:1 </td>
       <td>cdr-color-text-primary-darkmode <br>Values: #fafafa &nbsp; / &nbsp; r250 g250 b250 </td>
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/colors/wcag_rating_bkgnd_dark_secondary_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_dark_secondary_4-3.png`)"/> </td>
       <td>AA 5.11:1 </td>
       <td>cdr-color-text-secondary-darkmode <br>Values: #999999 &nbsp; / &nbsp; r153 g153 b153 </td>
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/colors/wcag_rating_bkgnd_dark_link_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_dark_link_4-3.png`)"/> </td>
       <td>AA 4.61:1  </td>
       <td>cdr-color-text-link-darkmode <br>Values: #5197cd &nbsp; / &nbsp; r81 g151 b205 </td>
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/colors/wcag_rating_bkgnd_dark_error_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_dark_error_4-3.png`)"/> </td>
       <td>AA 4.58:1 </td>
       <td>cdr-color-text-error-darkmode <br>Values: #e86868 &nbsp; / &nbsp; r232 g104 b104 </td>
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/colors/wcag_rating_bkgnd_dark_disabled_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_dark_disabled_4-3.png`)"/> </td>
       <td>N/A* </td>
       <td>cdr-color-text-disabled-darkmode <br>Values: #616161 &nbsp; / &nbsp; r97 g97 b97 <br><b>*When text is disabled </b> </td>   
     </tr>
@@ -466,32 +478,34 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
 </table>
 
 <br>
-#### cdr-color-background-darker
+
+#### cdr-color-background-darker
 (Values for cdr-color-background-darker: #1a1a1a or r26 g26 b26)
+
 <table>
   <tbody>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/colors/wcag_rating_bkgnd_darker_primary_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_darker_primary_4-3.png`)"/> </td>
       <td>AAA 16.67:1   </td>
       <td>cdr-color-text-primary-darkmode <br>Values: #fafafa &nbsp; / &nbsp; r250 g250 b250 </td>
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/colors/wcag_rating_bkgnd_darker_secondary_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_darker_secondary_4-3.png`)"/> </td>
       <td>AA 6.11:1  </td>
       <td>cdr-color-text-secondary-darkmode <br>Values: #999999 &nbsp; / &nbsp; r153 g153 b153 </td>
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/colors/wcag_rating_bkgnd_darker_link_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_darker_link_4-3.png`)"/> </td>
       <td>AA 5.52:1  </td>
       <td>cdr-color-text-link-darkmode <br>Values: #5197cd &nbsp; / &nbsp; r81 g151 b205 </td>
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/colors/wcag_rating_bkgnd_darker_error_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_darker_error_4-3.png`)"/> </td>
       <td>AA 5.48:1  </td>
       <td>cdr-color-text-error-darkmode <br>Values: #e86868 &nbsp; / &nbsp; r232 g104 b104 </td>
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/colors/wcag_rating_bkgnd_darker_disabled_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_darker_disabled_4-3.png`)"/> </td>
       <td>N/A* </td>
       <td>cdr-color-text-disabled-darkmode <br>Values: #616161 &nbsp; / &nbsp; r97 g97 b97 <br><b>*When text is disabled </b> </td>   
     </tr>
