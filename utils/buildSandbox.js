@@ -1,12 +1,4 @@
 import { getParameters } from 'codesandbox/lib/api/define';
-// API for this function
-// data.name: String, the name of the component(s). This must match what the package exports  (i.e, CdrComponent not cdr-component). for packages that export multiple components, separate the names with a comma (i.e, "CdrMainComponent, CdrSubComponent")
-// data.description: String, a simple description of what the sandbox is demonstrating.
-// data.dependencies: Object, should be an object with a single key value pair like `{ "@rei/cdr-component": "1.0.0"}`. If your component has peerDeps, they should be added here. If using the loadImg or loadIcon options, those deps and css improts will automatically be added
-// data.loadComponentCss: Boolean, whether or not the package has a CSS file that needs to be loaded. Will be inferred based on the dependency name
-// data.loadIcon: Boolean, if your component or examples needs to use cdr-icon or cdr-icon-sprite, set this value to `true`
-// data.loadImg: Boolean, if your component or examples needs to use cdr-img, set this value to `true`
-// model: Object, if component depends on model data, pass it here (TODO: can we inline this instead?)
 
 export default function makeMeASandbox(data, model) {
   if(!data.name || !data.dependencies || !data.code) return false
