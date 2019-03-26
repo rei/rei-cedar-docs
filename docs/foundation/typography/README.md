@@ -28,16 +28,11 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 
 ### Web 
 
-<br/>
+<div style="overflow: hidden; white-space: nowrap; margin: 8px 0 8px 0;  padding: 16px 0 16px 8px; background-color: #FFFFFF ;"><typography-example name="cdr-text-default-body-compact" /> </div>
 
-**NOTE: Testing new format (Web 2)**
-<br>
+**cdr-text-default-body-compact**  <br>
+**Suggested usage:** Use only for compact spacing with informational and supplemental body content
 
-<div style="overflow: hidden; white-space: nowrap; margin: 8px 0 8px 0;  padding: 16px 0 16px 0; background-color: #FFFFFF ;"><typography-example name="cdr-text-default-body-compact" /> </div>
-
-**cdr-text-default-body-compact** 
-<br>
-**Suggested usage:** Use only for compact spacing with informational and supplemental body content 
 <table>
   <tbody>
     <tr>
@@ -70,144 +65,125 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 <br/>
 
 
-<div style="overflow: hidden; white-space: nowrap; margin: 8px 0 8px 0;  padding: 16px 0 16px 0; background-color: #FFFFFF ;"><typography-example name="cdr-text-default-body-compact" /> </div>
+<div style="overflow: hidden; white-space: nowrap; margin: 8px 0 8px 0;  padding: 16px 0 16px 8px; background-color: #FFFFFF ;"><typography-example name="cdr-text-default-body" /> </div>
 
-**cdr-text-default-body-compact** 
-<br>
-**Suggested usage:** Use only for compact spacing with informational and supplemental body content 
-<table>
-  <tbody>
-    <tr>
-      <td>cdr-text-default-body-compact-family </td>
-      <td>Roboto, "Helvetica Neue", Helvetica,<br> Arial, sans-serif </td>
-    </tr>
-    <tr>
-      <td>cdr-text-default-body-compact-style </td>
-      <td>Normal </td>
-    </tr>
-    <tr>
-      <td>cdr-text-default-body-compact-weight </td>
-      <td>400 </td>
-    </tr>
-    <tr>
-      <td>cdr-text-default-body-compact-spacing </td>
-      <td>Normal </td>
-    </tr>
-    <tr>
-      <td>cdr-text-default-body-compact-size </td>
-      <td>14px </td>
-    </tr>   
-    <tr>
-      <td>cdr-text-default-body-compact-height  </td>
-      <td>24px </td>
-    </tr>   
-  </tbody>
-</table>
-
-<br>
-
-<div style="overflow: hidden; white-space: nowrap; margin: 8px 0 8px 0;  padding: 16px 0 16px 0; background-color: #FFFFFF ;"><typography-example name="cdr-text-default-body" /> </div>
-
-**cdr-text-default-body** 
-<br><br> 
+**cdr-text-default-body**  <br>
 **Suggested usage:** Default for body content. Uses a more open line height to font size ratio
-<br>
+
 <table>
   <tbody>
     <tr>
-      <td>cdr-text-default-body-compact-family </td>
+      <td>cdr-text-default-body-family </td>
       <td>Roboto, "Helvetica Neue", Helvetica,<br> Arial, sans-serif </td>
     </tr>
     <tr>
-      <td>cdr-text-default-body-compact-style </td>
+      <td>cdr-text-default-body-style </td>
       <td>Normal </td>
     </tr>
     <tr>
-      <td>cdr-text-default-body-compact-weight </td>
+      <td>cdr-text-default-body-weight </td>
       <td>400 </td>
     </tr>
     <tr>
-      <td>cdr-text-default-body-compact-spacing </td>
+      <td>cdr-text-default-body-spacing </td>
       <td>Normal </td>
     </tr>
     <tr>
-      <td>cdr-text-default-body-compact-size </td>
+      <td>cdr-text-default-body-size </td>
       <td>16px </td>
     </tr>   
     <tr>
-      <td>cdr-text-default-body-compact-height  </td>
+      <td>cdr-text-default-body-height  </td>
       <td>26px </td>
     </tr>   
   </tbody>
 </table>
 
-**NOTE: Keep this - previous formatting**
 <br>
 
-<typography-example name="cdr-text-default-body" />
+<div style="overflow: hidden; white-space: nowrap; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;"> <typography-example name="cdr-text-editorial-body-compact" /> </div>
 
-Suggested usage: Default for body content. Uses a more open line height to font size ratio
+**cdr-text-editorial-body-compact**  <br>
+**Suggested Usage:** Use only for compact spacing with editorial body content
 
-| Token Name                                  | Values      |
-| :------------------------------------------ | :---------- |
-| **cdr-text-default-body**                   | *Mixin*   |
-| cdr-text-default-body-family                | Roboto, "Helvetica Neue",<br> Helvetica, Arial, sans-serif   |
-| cdr-text-default-body-style                 | normal  |
-| cdr-text-default-body-weight                | 400   |
-| cdr-text-default-body-spacing               | normal   | 
-| cdr-text-default-body-size                  | 1.6rem / 16px  |
-| cdr-text-default-body-height                | 2.6rem / 26px  |
+<table>
+  <tbody>
+    <tr>
+      <td>cdr-text-editorial-body-compact-family </td>
+      <td>Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif </td>
+    </tr>
+    <tr>
+      <td>cdr-text-editorial-body-compact-style</td>
+      <td>Normal </td>
+    </tr>
+    <tr>
+      <td>cdr-text-editorial-body-compact-weight</td>
+      <td>400 </td>
+    </tr>
+    <tr>
+      <td>cdr-text-editorial-body-compact-spacing</td>
+      <td>Normal </td>
+    </tr>
+    <tr>
+      <td>cdr-text-editorial-body-compact-size</td>
+      <td>18px </td>
+    </tr>
+    <tr>
+      <td>cdr-text-editorial-body-compact-height</td>
+      <td>28px </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;"> <typography-example name="cdr-text-editorial-body" /> </div>
+
+**cdr-text-editorial-body**  <br>
+**Suggested Usage:** Default for editorial long-form content. Uses a more open line height to font size ratio
+
+<table>
+  <tbody>
+    <tr>
+      <td>cdr-text-editorial-body-family </td>
+      <td>Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif </td>
+    </tr>
+    <tr>
+      <td>cdr-text-editorial-body-style</td>
+      <td>Normal </td>
+    </tr>
+    <tr>
+      <td>cdr-text-editorial-body-weight</td>
+      <td>400 </td>
+    </tr>
+    <tr>
+      <td>cdr-text-editorial-body-spacing</td>
+      <td>Normal </td>
+    </tr>
+    <tr>
+      <td>cdr-text-editorial-body-size</td>
+      <td>20px </td>
+    </tr>
+    <tr>
+      <td>cdr-text-editorial-body-height</td>
+      <td>32px </td>
+    </tr>
+  </tbody>
+</table>
 
 
 <br/>
-
-<typography-example name="cdr-text-editorial-body-compact" />
-
-Suggested usage: Use only for compact spacing with editorial body content
-
-| Token Name                                  | Values      |
-| :------------------------------------------ | :---------- |
-| **cdr-text-editorial-body-compact**         | *Mixin*   |
-| cdr-text-editorial-body-compact-family      | Sentinel, Roboto, "Helvetica Neue",<br> Helvetica, Arial, sans-serif   |
-| cdr-text-editorial-body-compact-style       | normal  |
-| cdr-text-editorial-body-compact-weight      | 400   |
-| cdr-text-editorial-body-compact-spacing     | normal   |
-| cdr-text-editorial-body-compact-size        | 1.8rem / 18px |
-| cdr-text-editorial-body-compact-height      | 2.8rem / 28px |
-
-
-<br/>
-
-
-<typography-example name="cdr-text-editorial-body" />
-
-Suggested usage: Default for editorial long-form content. Uses a more open line height to font size ratio
-
-| Token Name                                  | Values      |
-| :------------------------------------------ | :---------- |
-| **cdr-text-editorial-body**                 | *Mixin*   |
-| cdr-text-editorial-body-family              | Sentinel, Roboto, "Helvetica Neue",<br> Helvetica, Arial, sans-serif   | 
-| cdr-text-editorial-body-style               | normal  |
-| cdr-text-editorial-body-weight              | 400   |
-| cdr-text-editorial-body-spacing             | normal   | 
-| cdr-text-editorial-body-size                | 2rem / 20px |
-| cdr-text-editorial-body-height              | 3.2rem / 32px |
-
-
-<br/>
+<hr>
 
 
 ### Mobile
 
-**NOTE: Testing new format (Mobile 2)**
-<br>
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 500; font-size: 34px; line-height: 40px; letter-spacing: normal; color: #292929; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;">A different kind of company</div>
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 500; font-size: 34px; line-height: 40px; letter-spacing: normal; color: #292929; margin: 8px 0 8px 0;  padding: 16px 0 16px 0; background-color: #FFFFFF ;">A different kind of company</div>
+**Display 1** (Android) <br>
+**Large Title** (iOS) <br>
+**Suggested Usage:** Frequently used as the largest title for phone apps and can be used for page titles for larger devices 
 
-<b>Display 1</b> (Android)<br>
-<b>Large Title</b> (iOS)<br>
-<b>Suggested Usage:</b> Frequently used as the largest title for phone apps and can be used for page titles for larger devices 
-<br>
 <table>
   <tbody>
     <tr>
@@ -215,27 +191,55 @@ Suggested usage: Default for editorial long-form content. Uses a more open line 
       <td>Roboto </td>
     </tr>
     <tr>
-      <td>font-weight </td>
+      <td>font-weight</td>
       <td>Medium </td>
     </tr>
     <tr>
-      <td>font-size </td>
-      <td>34sp </td>
+      <td>font-size</td>
+      <td>34sp</td>
     </tr>
     <tr>
-      <td>line-height </td>
+      <td>font-height</td>
       <td>40sp </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 28px; line-height: 36px; letter-spacing: normal; color: #292929; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;">A different kind of company</div>
+
+**Title 1** (Android and iOS)<br>
+**Suggested Usage:** Content titles, level 1
+
+<table>
+  <tbody>
+    <tr>
+      <td width=160>font-family </td>
+      <td>Sentinel </td>
+    </tr>
+    <tr>
+      <td width=160>font-weight </td>
+      <td>Semi Bold </td>
+    </tr>
+    <tr>
+      <td width=160>font-size </td>
+      <td>28sp </td>
+    </tr>
+    <tr>
+      <td width=160>line-height </td>
+      <td>36sp </td>
     </tr>   
   </tbody>
 </table>
 
 <br>
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 28px; line-height: 36px; letter-spacing: normal; color: #292929; margin: 8px 0 8px 0;  padding: 16px 0 16px 0; background-color: #FFFFFF ;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 26px; line-height: 32px; letter-spacing: normal; color: #292929; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;">A different kind of company</div>
 
-<b>Title 1</b> (Android and iOS)<br>
-<b>Suggested Usage:</b> Content titles, level 1
-<br>
+**Title 2** (Android and iOS) <br>
+**Suggested Usage:** Content titles, product names, level 2
+
 <table>
   <tbody>
     <tr>
@@ -248,150 +252,378 @@ Suggested usage: Default for editorial long-form content. Uses a more open line 
     </tr>
     <tr>
       <td>font-size </td>
-      <td>28sp </td>
+      <td>26sp </td>
     </tr>
     <tr>
       <td>line-height </td>
-      <td>36sp </td>
+      <td>32sp </td>
     </tr>   
   </tbody>
 </table>
 
 <br>
 
-**NOTE: Keep this - previous formatting**
-<br>
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 21px; line-height: 28px; letter-spacing: normal; color: #292929; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;">A different kind of company</div>
 
-`CSS code for Display 1`
+**Title 3** (Android and iOS) <br>
+**Suggested Usage:** Content titles, product names, product prices, level 3
 
-Suggested usage: Frequently used as the largest title for phone apps and can be used for page titles for larger devices 
-
-| Token Name                                  | Values                       |
-| :------------------------------------------ | :--------------------------- |
-| Android name: Display 1 <br>iOS name: Large Title <br> <br> <br>          | font-family: Roboto <br>font-weight: Medium <br>font-size: 34sp <br>line-height: 40sp |
-
-<br>
-
-`CSS code for Title 1`  
-
-Suggested usage: Content titles, level 1
-
-| Token Name                                  | Values                       |
-| :------------------------------------------ | :--------------------------- |
-| Android name: Title 1 <br>iOS name: Title 1 <br> <br> <br>          | font-family: Sentinel <br>font-weight: Semi Bold <br>font-size: 28sp <br>line-height: 36sp |
-
-<br>
-
-`CSS code for Title 2` 
-
-Suggested usage: Content titles, product names, level 2
-
-| Token Name                                  | Values                       |
-| :------------------------------------------ | :--------------------------- |
-| Android name: Title 2 <br>iOS name: Title 2 <br> <br> <br>          | font-family: Sentinel <br>font-weight: Semi Bold <br>font-size: 26sp <br>line-height: 32sp  |
+<table>
+  <tbody>
+    <tr>
+      <td>font-family </td>
+      <td>Sentinel </td>
+    </tr>
+    <tr>
+      <td>font-weight </td>
+      <td>Semi Bold </td>
+    </tr>
+    <tr>
+      <td>font-size </td>
+      <td>21sp </td>
+    </tr>
+    <tr>
+      <td>line-height </td>
+      <td>28sp </td>
+    </tr>   
+  </tbody>
+</table>
 
 <br>
 
-`CSS code for Title 3` 
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 500; font-size: 17px; line-height: 24px; letter-spacing: normal; color: #292929; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;">A different kind of company</div>
 
-Suggested usage: Content titles, product names, product prices, level 3
+**Headline** (Android and iOS) <br>
+**Suggested Usage:** Heading primarily used with body copy, list items, table headers
 
-| Token Name                                  | Values                       |
-| :------------------------------------------ | :--------------------------- |
-| Android name: Title 3 <br>iOS name: Title 3<br> <br> <br>          | font-family: Sentinel <br>font-weight: Semi Bold <br>font-size: 21sp <br>line-height: 28sp  |
-
-<br>
-
-`CSS code for Headline`
-
-Suggested usage: Heading primarily used with body copy, list items, table headers
-
-| Token Name                                  | Values                       |
-| :------------------------------------------ | :--------------------------- |
-| Android name: Headline <br>iOS name: Headline <br> <br> <br>          | font-family: Roboto <br>font-weight: Medium <br>font-size: 17sp <br>line-height: 24sp  |
-
-<br>
-
-`CSS code for Subhead`
-
-Suggested usage: Subheading primarily used with body copy 
-
-| Token Name                                  | Values                       |
-| :------------------------------------------ | :--------------------------- |
-| Android name: Subhead <br>iOS name: Subhead <br> <br> <br>          | font-family: Roboto <br>font-weight: Medium <br>font-size: 15sp <br>line-height: 20sp |
+<table>
+  <tbody>
+    <tr>
+      <td>font-family </td>
+      <td>Roboto </td>
+    </tr>
+    <tr>
+      <td>font-weight </td>
+      <td>Medium </td>
+    </tr>
+    <tr>
+      <td>font-size </td>
+      <td>17sp </td>
+    </tr>
+    <tr>
+      <td>line-height </td>
+      <td>24sp </td>
+    </tr>   
+  </tbody>
+</table>
 
 <br>
 
-`CSS code for Body 2`
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 500; font-size: 15px; line-height: 20px; letter-spacing: normal; color: #292929; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;">A different kind of company</div>
 
-Suggested usage: Secondary text intended for informational and supplemental body content
+**Subhead** (Android and iOS) <br>
+**Suggested Usage:** Subheading primarily used with body copy 
 
-| Token Name                                  | Values                       |
-| :------------------------------------------ | :--------------------------- |
-| Android name: Body 2 <br>iOS name: Footnote <br> <br> <br>          | font-family: Roboto <br>font-weight: Regular <br>font-size: 13sp <br>line-height: 20sp |
-
-<br>
-
-`CSS code for Body 1`
-
-Suggested usage: Default for body content
-
-| Token Name                                  | Values                       |
-| :------------------------------------------ | :--------------------------- |
-| Android name: Body 1 <br>iOS name: Body <br> <br> <br>          | font-family: Roboto <br>font-weight: Regular <br>font-size: 15sp <br>line-height: 20sp  |
-
-<br>
-
-`CSS code for Caption 2`
-
-Suggested usage: Smallest text size, use sparingly or for bottom tab bar text
-
-| Token Name                                  | Values                       |
-| :------------------------------------------ | :--------------------------- |
-| Android name: Caption 2 <br>iOS name: Caption 2 <br> <br> <br>          | font-family: Roboto <br>font-weight: Regular <br>font-size: 11sp <br>line-height: 16sp  |
+<table>
+  <tbody>
+    <tr>
+      <td>font-family </td>
+      <td>Roboto </td>
+    </tr>
+    <tr>
+      <td>font-weight </td>
+      <td>Medium </td>
+    </tr>
+    <tr>
+      <td>font-size </td>
+      <td>15sp </td>
+    </tr>
+    <tr>
+      <td>line-height </td>
+      <td>20sp </td>
+    </tr>   
+  </tbody>
+</table>
 
 <br>
 
-`CSS code for Caption 1`
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 13px; line-height: 20px; letter-spacing: normal; color: #292929; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;">A different kind of company</div>
 
-Suggested usage: Tertiary text, also intended for informational and supplemental body content. Also used for bottom action bar text for larger devices 
+**Body 2** (Android) <br>
+**Footnote** (iOS) <br>
+**Suggested Usage:** Secondary text intended for informational and supplemental body content 
 
-| Token Name                                  | Values                       |
-| :------------------------------------------ | :--------------------------- |
-| Android name: Caption 1 <br>iOS name: Caption 1<br> <br> <br>          | font-family: Roboto <br>font-weight: Regular <br>font-size: 12sp <br>line-height: 16sp  |
-
-<br>
-
-`CSS code for Button`
-
-Suggested usage: Button text has a thicker weight than body copy
-
-| Token Name                                  | Values                       |
-| :------------------------------------------ | :--------------------------- |
-| Android name: Button <br>iOS name: none <br> <br> <br>          | font-family: Roboto <br>font-weight: Medium <br>font-size: 15sp <br>line-height: 24sp  |
-
-<br>
-
-`CSS code for Button_accent`
-
-Suggested usage: Link text has a thicker weight than body copy
-
-| Token Name                                  | Values                       |
-| :------------------------------------------ | :--------------------------- |
-| Android name: Button_accent <br>iOS name: none <br> <br> <br>          | font-family: Roboto <br>font-weight: Medium <br>font-size: 15sp <br>line-height: 24sp  |
-
-<br>
-
-`CSS code for Error State`  
-Suggested usage: Only for message text with error or warning states
-
-| Token Name                                  | Values                       |
-| :------------------------------------------ | :--------------------------- |
-| Android name: Error State <br>iOS name: none <br> <br> <br>          | font-family: Roboto <br>font-weight: Medium <br>font-size: 15sp <br>line-height: 20sp  |
+<table>
+  <tbody>
+    <tr>
+      <td>font-family </td>
+      <td>Roboto </td>
+    </tr>
+    <tr>
+      <td>font-weight </td>
+      <td>Regular </td>
+    </tr>
+    <tr>
+      <td>font-size </td>
+      <td>13sp </td>
+    </tr>
+    <tr>
+      <td>line-height </td>
+      <td>20sp </td>
+    </tr>   
+  </tbody>
+</table>
 
 <br>
 
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 15px; line-height: 20px; letter-spacing: normal; color: #292929; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;">A different kind of company</div>
+
+**Body 1** (Android) <br>
+**Body** (iOS) <br>
+**Suggested Usage:** Default for body content 
+
+<table>
+  <tbody>
+    <tr>
+      <td>font-family </td>
+      <td>Roboto </td>
+    </tr>
+    <tr>
+      <td>font-weight </td>
+      <td>Regular </td>
+    </tr>
+    <tr>
+      <td>font-size </td>
+      <td>15sp </td>
+    </tr>
+    <tr>
+      <td>line-height </td>
+      <td>20sp </td>
+    </tr>   
+  </tbody>
+</table>
+
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 11px; line-height: 16px; letter-spacing: normal; color: #292929; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;">A different kind of company</div>
+
+**Caption 2** (Android and iOS) <br>
+**Suggested Usage:** Smallest text size, use sparingly or for bottom tab bar text 
+
+<table>
+  <tbody>
+    <tr>
+      <td>font-family </td>
+      <td>Roboto </td>
+    </tr>
+    <tr>
+      <td>font-weight </td>
+      <td>Regular </td>
+    </tr>
+    <tr>
+      <td>font-size </td>
+      <td>11sp </td>
+    </tr>
+    <tr>
+      <td>line-height </td>
+      <td>16sp </td>
+    </tr>   
+  </tbody>
+</table>
+
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 12px; line-height: 20px; letter-spacing: normal; color: #292929; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;">A different kind of company</div>
+
+**Caption 1** (Android and iOS) <br>
+**Suggested Usage:** Tertiary text, also intended for informational and supplemental body content. Also used for bottom action bar text for larger devices  
+
+<table>
+  <tbody>
+    <tr>
+      <td>font-family </td>
+      <td>Roboto </td>
+    </tr>
+    <tr>
+      <td>font-weight </td>
+      <td>Regular </td>
+    </tr>
+    <tr>
+      <td>font-size </td>
+      <td>12sp </td>
+    </tr>
+    <tr>
+      <td>line-height </td>
+      <td>16sp </td>
+    </tr>   
+  </tbody>
+</table>
+
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 500; font-size: 15px; line-height: 24px; letter-spacing: normal; color: #292929; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;">A different kind of company</div>
+
+**Button** (Android) <br>
+iOS: N/A <br>
+**Suggested Usage:** Button text has a thicker weight than body copy
+
+<table>
+  <tbody>
+    <tr>
+      <td>font-family </td>
+      <td>Roboto </td>
+    </tr>
+    <tr>
+      <td>font-weight </td>
+      <td>Medium </td>
+    </tr>
+    <tr>
+      <td>font-size </td>
+      <td>15sp </td>
+    </tr>
+    <tr>
+      <td>line-height </td>
+      <td>24sp </td>
+    </tr>   
+  </tbody>
+</table>
+
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 500; font-size: 15px; line-height: 24px; letter-spacing: normal; color: #3278ae; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;">A different kind of company</div>
+
+**Button_accent** (Android) <br>
+iOS: N/A <br>
+**Suggested Usage:** Link text has a thicker weight than body copy. Use #3278ae only on light background
+
+<table>
+  <tbody>
+    <tr>
+      <td>font-family </td>
+      <td>Roboto </td>
+    </tr>
+    <tr>
+      <td>font-weight </td>
+      <td>Medium </td>
+    </tr>
+    <tr>
+      <td>font-size </td>
+      <td>15sp </td>
+    </tr>
+    <tr>
+      <td>line-height </td>
+      <td>24sp </td>
+    </tr>    
+    <tr>
+      <td>color </td>
+      <td>#3278ae </td>
+    </tr>   
+  </tbody>
+</table>
+
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 500; font-size: 15px; line-height: 24px; letter-spacing: normal; color: #5197cd; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #292929 ;">A different kind of company</div>
+
+**Button_accent** (Android) <br>
+iOS: N/A <br>
+**Suggested Usage:** Link text has a thicker weight than body copy. Use #5197cd only on dark background
+
+<table>
+  <tbody>
+    <tr>
+      <td>font-family </td>
+      <td>Roboto </td>
+    </tr>
+    <tr>
+      <td>font-weight </td>
+      <td>Medium </td>
+    </tr>
+    <tr>
+      <td>font-size </td>
+      <td>15sp </td>
+    </tr>
+    <tr>
+      <td>line-height </td>
+      <td>24sp </td>
+    </tr>    
+    <tr>
+      <td>color </td>
+      <td>#5197cd </td>
+    </tr>   
+  </tbody>
+</table>
+
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 500; font-size: 15px; line-height: 20px; letter-spacing: normal; color: #c32a2e; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;">A different kind of company</div>
+
+**Error State** (Android) <br>
+iOS: N/A <br>
+**Suggested Usage:** Only for message text with error or warning states. Use #c32a2e only on light background
+
+<table>
+  <tbody>
+    <tr>
+      <td>font-family </td>
+      <td>Roboto </td>
+    </tr>
+    <tr>
+      <td>font-weight </td>
+      <td>Medium </td>
+    </tr>
+    <tr>
+      <td>font-size </td>
+      <td>15sp </td>
+    </tr>
+    <tr>
+      <td>line-height </td>
+      <td>20sp </td>
+    </tr>    
+    <tr>
+      <td>color </td>
+      <td>#c32a2e </td>
+    </tr>   
+  </tbody>
+</table>
+
+<br>
+
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 500; font-size: 15px; line-height: 20px; letter-spacing: normal; color: #e86868; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #292929 ;">A different kind of company</div>
+
+**Error State** (Android) <br>
+iOS: N/A <br>
+**Suggested Usage:** Only for message text with error or warning states. Use #e86868 only on dark background
+
+<table>
+  <tbody>
+    <tr>
+      <td>font-family </td>
+      <td>Roboto </td>
+    </tr>
+    <tr>
+      <td>font-weight </td>
+      <td>Medium </td>
+    </tr>
+    <tr>
+      <td>font-size </td>
+      <td>15sp </td>
+    </tr>
+    <tr>
+      <td>line-height </td>
+      <td>20sp </td>
+    </tr>    
+    <tr>
+      <td>color </td>
+      <td>#e86868 </td>
+    </tr>   
+  </tbody>
+</table>
+
+
+<br>
 <hr/>
+
 
 </cdr-doc-table-of-contents-shell>
 </template>
