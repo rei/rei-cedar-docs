@@ -234,13 +234,14 @@
 
 Basic layout with a column of row headers.  Rows alternate background colors.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" :model="{rowHeaders: $page.frontmatter.exampleTableData.rowHeaders, rowData: $page.frontmatter.exampleTableData.rowData, keyOrder: ['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']}">
+
 
 ```html
   <cdr-data-table
-    :row-headers="$page.frontmatter.exampleTableData.rowHeaders"
-    :row-data="$page.frontmatter.exampleTableData.rowData"
-    :key-order="['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']"
+    :row-headers="rowHeaders"
+    :row-data="rowData"
+    :key-order="keyOrder"
     id="default-example"
   />
 ```
@@ -251,14 +252,14 @@ Basic layout with a column of row headers.  Rows alternate background colors.
 
 Layout for making comparisons such as between size/sleeve length. Column headers and row headers are displayed. When columns scroll, row header column is locked in place.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" :model="{colHeaders: $page.frontmatter.exampleTableData.colHeaders, rowHeaders: $page.frontmatter.exampleTableData.rowHeaders, rowData: $page.frontmatter.exampleTableData.rowData, keyOrder: ['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']}">
 
 ```html
   <cdr-data-table
-    :col-headers="$page.frontmatter.exampleTableData.colHeaders"
-    :row-headers="$page.frontmatter.exampleTableData.rowHeaders"
-    :row-data="$page.frontmatter.exampleTableData.rowData"
-    :key-order="['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']"
+    :col-headers="colHeaders"
+    :row-headers="rowHeaders"
+    :row-data="rowData"
+    :key-order="keyOrder"
     id="col-headers-example"
   />
 ```
