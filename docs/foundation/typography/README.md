@@ -22,11 +22,12 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 - Specifies a hierarchical and semantically defined system
 
 <br/>
+<hr>
 
 
-## Typography Tokens
+## Web 
 
-### Web 
+### Body - Default 
 
 <div style="overflow: hidden; white-space: nowrap; margin: 8px 0 8px 0;  padding: 16px 0 16px 8px; background-color: #FFFFFF ;"><typography-example name="cdr-text-default-body-compact" /> </div>
 
@@ -100,6 +101,8 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 </table>
 
 <br>
+
+### Body - Editorial 
 
 <div style="overflow: hidden; white-space: nowrap; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;"> <typography-example name="cdr-text-editorial-body-compact" /> </div>
 
@@ -176,7 +179,9 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 <hr>
 
 
-### Mobile
+## Mobile
+
+### Headings 
 
 <div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 500; font-size: 34px; line-height: 40px; letter-spacing: normal; color: #292929; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;">A different kind of company</div>
 
@@ -347,6 +352,8 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 
 <br>
 
+### Body 
+
 <div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 13px; line-height: 20px; letter-spacing: normal; color: #292929; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;">A different kind of company</div>
 
 **Body 2** (Android) <br>
@@ -461,6 +468,8 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 
 <br>
 
+### Buttons 
+
 <div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 500; font-size: 15px; line-height: 24px; letter-spacing: normal; color: #292929; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;">A different kind of company</div>
 
 **Button** (Android) <br>
@@ -489,6 +498,8 @@ iOS: N/A <br>
 </table>
 
 <br>
+
+### Links 
 
 <div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 500; font-size: 15px; line-height: 24px; letter-spacing: normal; color: #3278ae; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;">A different kind of company</div>
 
@@ -555,6 +566,8 @@ iOS: N/A <br>
 </table>
 
 <br>
+
+### Message States 
 
 <div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 500; font-size: 15px; line-height: 20px; letter-spacing: normal; color: #c32a2e; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;">A different kind of company</div>
 
@@ -689,22 +702,27 @@ Typography from Cedar’s base style guide are use throughout Cedar components a
   - Requesting a new token 
   - Developing a new component that will be adopted by Cedar Design System
 
-<br>
+<br> 
+
 Note that the values on this page:
   - May not have a long lifespan
   - May alter the value more frequently
   - May be used for a wide variety of purposes
 
-<br>
+<br>  
+
 **Requesting a Token**
-If you have a request for a token that is missing, you can [submit a pull request to the cedar-token repo](https://www.npmjs.com/package/@rei/cdr-tokens#addingupdating-tokens) or ask in the #cedar-users-support Slack channel. View requirements on the <cdr-link :href="$withBase('/foundation/tokens?active-link=adding-tokens-to-the-repository')">adding tokens</cdr-link> on the Tokens article.  
+
+If you have a request for a token that is missing, you can [submit a pull request to the cedar-token repo](https://www.npmjs.com/package/@rei/cdr-tokens#addingupdating-tokens) or ask in the [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) Slack channel. View requirements on the <cdr-link :href="$withBase('/foundation/tokens?active-link=adding-tokens-to-the-repository')">adding tokens</cdr-link> on the Tokens article.   
 
 **Developing or Updating Cedar Components**
+
 The Cedar team welcomes contributions from the digital community at REI. If you are interested in contributing design or code, please reach out at in Slack at [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4), email [cedar@rei.com](mailto:cedar@rei.com), or talk to your manager.
 
 
- 
-## Type Scale
+<br>
+<hr>
+
 The type scale powers all the typography within Cedar components. These preset values are the best way to reinforce visual hierarchy and consistency across pages. 
 
 ### Body 
@@ -712,7 +730,7 @@ Uses a more open line height to font size ratio:
 - Best suited for long-form content
 - Specifications are available for default (Roboto or sans type styles) and editorial (Sentinel or serif type styles)
 
-<hr>
+<br>
 
 #### Default 
 
@@ -803,7 +821,6 @@ Uses a more open line height to font size ratio:
 </table>
 
 <br>
-<hr />
 
 #### Editorial 
 
@@ -1057,7 +1074,6 @@ Line height to font size ratio is more condensed than body type specifications a
 </table>
 
 <br>
-<hr />
 
 #### Editorial 
 
