@@ -23,14 +23,14 @@ Color design tokens store the fundamental decisions of Cedar’s visual language
   - Specifies a hierarchical and semantically defined system
 
 
-## Color Tokens
+<br/>
+<hr>
 
-### Web and Mobile
 List of color tokens with descriptions and values. Web and mobile color tokens have identical hex values but the naming pattern differs. For example, color token names are:
   - **For Web:** cdr-color-text-primary-lightmode 
   - **For Android:** cdr_color_text_primary_lightmode
 
-#### Background Colors
+## Background Colors
 
 <table>
   <tbody>
@@ -65,8 +65,8 @@ List of color tokens with descriptions and values. Web and mobile color tokens h
 
 <br>
 
-#### Typography Colors
-##### Text or Foreground Colors on Light Backgrounds
+## Typography Colors
+### For Light Backgrounds
 
 <table>
   <tbody>
@@ -101,7 +101,7 @@ List of color tokens with descriptions and values. Web and mobile color tokens h
 
 <br>
 
-##### Text or Foreground Colors on Dark Backgrounds
+### For Dark Backgrounds
 
 <table>
   <tbody>
@@ -135,7 +135,7 @@ List of color tokens with descriptions and values. Web and mobile color tokens h
 
 <br>
 
-#### Icon Colors
+## Icon Colors
 
 <table>
   <tbody>
@@ -155,8 +155,8 @@ List of color tokens with descriptions and values. Web and mobile color tokens h
 
 <br>
 
-#### Form Colors
-##### For Light Backgrounds
+## Form Colors
+### For Light Backgrounds
 
 <table>
   <tbody>
@@ -191,7 +191,7 @@ List of color tokens with descriptions and values. Web and mobile color tokens h
 
 <br>
 
-##### For Dark Backgrounds
+### For Dark Backgrounds
 
 <table>
   <tbody>
@@ -226,8 +226,8 @@ List of color tokens with descriptions and values. Web and mobile color tokens h
 
 <br>
 
-#### Border Colors
-##### For Light Backgrounds
+## Border Colors
+### For Light Backgrounds
 
 <table>
   <tbody>
@@ -263,7 +263,7 @@ List of color tokens with descriptions and values. Web and mobile color tokens h
 
 <br>
 
-##### For Dark Backgrounds
+### For Dark Backgrounds
 
 <table>
   <tbody>
@@ -540,14 +540,18 @@ Note that the values on this page:
 <br>  
 
 **Requesting a Token**
-If you have a request for a token that is missing, you can [submit a pull request to the cedar-token repo](https://www.npmjs.com/package/@rei/cdr-tokens#addingupdating-tokens) or ask in the #cedar-users-support Slack channel. View <cdr-link :href=“$withBase(‘/foundation/design-tokens?active-link=adding-tokens-to-the-repository’)“>requirements</cdr-link> in the Adding Tokens to the repository on the Design Tokens article.  
+
+If you have a request for a token that is missing, you can [submit a pull request to the cedar-token repo](https://www.npmjs.com/package/@rei/cdr-tokens#addingupdating-tokens) or ask in the [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) Slack channel. View requirements on the <cdr-link :href="$withBase('/foundation/tokens?active-link=adding-tokens-to-the-repository')">adding tokens</cdr-link> on the Tokens article.   
 
 **Developing or Updating Cedar Components**
-The Cedar team welcomes contributions from the digital community at REI. If you are interested in contributing design or code, please reach out at in Slack at #cedar-user-support, email cedar@rei.com, or talk to your manager.
+
+The Cedar team welcomes contributions from the digital community at REI. If you are interested in contributing design or code, please reach out at in Slack at [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4), email [cedar@rei.com](mailto:cedar@rei.com), or talk to your manager.
 
 
-## Color Palette
-### Grey Colors
+<br>
+<hr>
+
+## Grey Colors
 Grey colors support the cohesive use of typography, backgrounds, and borders across the digital ecosystem. 
 
 <table>
@@ -805,7 +809,7 @@ Grey colors support the cohesive use of typography, backgrounds, and borders acr
 <br>
 <hr>
 
-### Tan Colors
+## Tan Colors
 Tan or brand colors are core to the co-op. They’re often used as backgrounds when an experience calls for a stronger brand impression.
 
 <table>
@@ -849,7 +853,7 @@ Tan or brand colors are core to the co-op. They’re often used as backgrounds w
 <br>
 <hr>
 
-### Blue Colors
+## Blue Colors
 Blue colors are used in a variety of scenarios such as prompting user actions, communicating informational messaging, and indicating links within body copy.
 
 <table>
@@ -933,7 +937,7 @@ Blue colors are used in a variety of scenarios such as prompting user actions, c
 <br>
 <hr>
 
-### Green Colors
+## Green Colors
 Green colors are used in a variety of scenarios such as providing feedback for successful form submission.
 
 <table>
@@ -997,7 +1001,7 @@ Green colors are used in a variety of scenarios such as providing feedback for s
 <br>
 <hr>
 
-### Red Colors
+## Red Colors
 Red colors are used in a variety of scenarios such as announcing sale items and communicating error messaging.
 
 <table>
@@ -1082,7 +1086,7 @@ Red colors are used in a variety of scenarios such as announcing sale items and 
 <br>
 <hr>
 
-### Yellow Colors
+## Yellow Colors
 Yellow colors are used in a variety of scenarios such as providing feedback for warning messages.
 
 <table>
