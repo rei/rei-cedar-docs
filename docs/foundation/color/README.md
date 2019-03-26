@@ -155,8 +155,8 @@ List of color tokens with descriptions and values. Web and mobile color tokens h
 
 <br>
 
-#### Forms Colors
-##### Text and Backgrounds for Forms on Light Backgrounds
+#### Form Colors
+##### For Light Backgrounds
 
 <table>
   <tbody>
@@ -191,7 +191,7 @@ List of color tokens with descriptions and values. Web and mobile color tokens h
 
 <br>
 
-##### Text and Backgrounds for Forms on Dark Backgrounds
+##### For Dark Backgrounds
 
 <table>
   <tbody>
