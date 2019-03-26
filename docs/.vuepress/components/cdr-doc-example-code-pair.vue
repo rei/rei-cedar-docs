@@ -135,7 +135,7 @@
         return this._uid;
       },
       sandboxCode() {
-        return this.slotNames.map(label => this.templateSources[label]).join('\n')
+        return this.slotNames.map(label => this.templateSources[label]).join('\n<br>\n')
       }
     },
     beforeMount() {
