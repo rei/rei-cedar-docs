@@ -530,13 +530,15 @@ Colors from Cedar’s base color palette are use throughout Cedar components and
   - Requesting a new token 
   - Developing a new component that will be adopted by Cedar Design System
 
-<br>  
+<br> 
+
 Note that the values on this page:
   - May not have a long lifespan
   - May alter the value more frequently
   - May be used for a wide variety of purposes
 
 <br>  
+
 **Requesting a Token**
 If you have a request for a token that is missing, you can [submit a pull request to the cedar-token repo](https://www.npmjs.com/package/@rei/cdr-tokens#addingupdating-tokens) or ask in the #cedar-users-support Slack channel. View <cdr-link :href=“$withBase(‘/foundation/design-tokens?active-link=adding-tokens-to-the-repository’)“>requirements</cdr-link> in the Adding Tokens to the repository on the Design Tokens article.  
 
