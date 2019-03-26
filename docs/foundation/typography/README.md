@@ -187,19 +187,19 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 <table>
   <tbody>
     <tr>
-      <td>font-family </td>
+      <td width=160>font-family </td>
       <td>Roboto </td>
     </tr>
     <tr>
-      <td>font-weight</td>
+      <td width=160>font-weight</td>
       <td>Medium </td>
     </tr>
     <tr>
-      <td>font-size</td>
+      <td width=160>font-size</td>
       <td>34sp</td>
     </tr>
     <tr>
-      <td>font-height</td>
+      <td width=160>font-height</td>
       <td>40sp </td>
     </tr>
   </tbody>
@@ -243,19 +243,19 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 <table>
   <tbody>
     <tr>
-      <td>font-family </td>
+      <td width=160>font-family </td>
       <td>Sentinel </td>
     </tr>
     <tr>
-      <td>font-weight </td>
+      <td width=160>font-weight </td>
       <td>Semi Bold </td>
     </tr>
     <tr>
-      <td>font-size </td>
+      <td width=160>font-size </td>
       <td>26sp </td>
     </tr>
     <tr>
-      <td>line-height </td>
+      <td width=160>line-height </td>
       <td>32sp </td>
     </tr>   
   </tbody>
@@ -271,19 +271,19 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 <table>
   <tbody>
     <tr>
-      <td>font-family </td>
+      <td width=160>font-family </td>
       <td>Sentinel </td>
     </tr>
     <tr>
-      <td>font-weight </td>
+      <td width=160>font-weight </td>
       <td>Semi Bold </td>
     </tr>
     <tr>
-      <td>font-size </td>
+      <td width=160>font-size </td>
       <td>21sp </td>
     </tr>
     <tr>
-      <td>line-height </td>
+      <td width=160>line-height </td>
       <td>28sp </td>
     </tr>   
   </tbody>
@@ -299,19 +299,19 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 <table>
   <tbody>
     <tr>
-      <td>font-family </td>
+      <td width=160>font-family </td>
       <td>Roboto </td>
     </tr>
     <tr>
-      <td>font-weight </td>
+      <td width=160>font-weight </td>
       <td>Medium </td>
     </tr>
     <tr>
-      <td>font-size </td>
+      <td width=160>font-size </td>
       <td>17sp </td>
     </tr>
     <tr>
-      <td>line-height </td>
+      <td width=160>line-height </td>
       <td>24sp </td>
     </tr>   
   </tbody>
@@ -327,19 +327,19 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 <table>
   <tbody>
     <tr>
-      <td>font-family </td>
+      <td width=160>font-family </td>
       <td>Roboto </td>
     </tr>
     <tr>
-      <td>font-weight </td>
+      <td width=160>font-weight </td>
       <td>Medium </td>
     </tr>
     <tr>
-      <td>font-size </td>
+      <td width=160>font-size </td>
       <td>15sp </td>
     </tr>
     <tr>
-      <td>line-height </td>
+      <td width=160>line-height </td>
       <td>20sp </td>
     </tr>   
   </tbody>
@@ -356,19 +356,19 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 <table>
   <tbody>
     <tr>
-      <td>font-family </td>
+      <td width=160>font-family </td>
       <td>Roboto </td>
     </tr>
     <tr>
-      <td>font-weight </td>
+      <td width=160>font-weight </td>
       <td>Regular </td>
     </tr>
     <tr>
-      <td>font-size </td>
+      <td width=160>font-size </td>
       <td>13sp </td>
     </tr>
     <tr>
-      <td>line-height </td>
+      <td width=160>line-height </td>
       <td>20sp </td>
     </tr>   
   </tbody>
@@ -385,19 +385,19 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 <table>
   <tbody>
     <tr>
-      <td>font-family </td>
+      <td width=160>font-family </td>
       <td>Roboto </td>
     </tr>
     <tr>
-      <td>font-weight </td>
+      <td width=160>font-weight </td>
       <td>Regular </td>
     </tr>
     <tr>
-      <td>font-size </td>
+      <td width=160>font-size </td>
       <td>15sp </td>
     </tr>
     <tr>
-      <td>line-height </td>
+      <td width=160>line-height </td>
       <td>20sp </td>
     </tr>   
   </tbody>
@@ -413,19 +413,19 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 <table>
   <tbody>
     <tr>
-      <td>font-family </td>
+      <td width=160>font-family </td>
       <td>Roboto </td>
     </tr>
     <tr>
-      <td>font-weight </td>
+      <td width=160>font-weight </td>
       <td>Regular </td>
     </tr>
     <tr>
-      <td>font-size </td>
+      <td width=160>font-size </td>
       <td>11sp </td>
     </tr>
     <tr>
-      <td>line-height </td>
+      <td width=160>line-height </td>
       <td>16sp </td>
     </tr>   
   </tbody>
@@ -441,19 +441,19 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 <table>
   <tbody>
     <tr>
-      <td>font-family </td>
+      <td width=160>font-family </td>
       <td>Roboto </td>
     </tr>
     <tr>
-      <td>font-weight </td>
+      <td width=160>font-weight </td>
       <td>Regular </td>
     </tr>
     <tr>
-      <td>font-size </td>
+      <td width=160>font-size </td>
       <td>12sp </td>
     </tr>
     <tr>
-      <td>line-height </td>
+      <td width=160>line-height </td>
       <td>16sp </td>
     </tr>   
   </tbody>
@@ -470,19 +470,19 @@ iOS: N/A <br>
 <table>
   <tbody>
     <tr>
-      <td>font-family </td>
+      <td width=160>font-family </td>
       <td>Roboto </td>
     </tr>
     <tr>
-      <td>font-weight </td>
+      <td width=160>font-weight </td>
       <td>Medium </td>
     </tr>
     <tr>
-      <td>font-size </td>
+      <td width=160>font-size </td>
       <td>15sp </td>
     </tr>
     <tr>
-      <td>line-height </td>
+      <td width=160>line-height </td>
       <td>24sp </td>
     </tr>   
   </tbody>
@@ -499,23 +499,23 @@ iOS: N/A <br>
 <table>
   <tbody>
     <tr>
-      <td>font-family </td>
+      <td width=160>font-family </td>
       <td>Roboto </td>
     </tr>
     <tr>
-      <td>font-weight </td>
+      <td width=160>font-weight </td>
       <td>Medium </td>
     </tr>
     <tr>
-      <td>font-size </td>
+      <td width=160>font-size </td>
       <td>15sp </td>
     </tr>
     <tr>
-      <td>line-height </td>
+      <td width=160>line-height </td>
       <td>24sp </td>
     </tr>    
     <tr>
-      <td>color </td>
+      <td width=160>color </td>
       <td>#3278ae </td>
     </tr>   
   </tbody>
@@ -532,23 +532,23 @@ iOS: N/A <br>
 <table>
   <tbody>
     <tr>
-      <td>font-family </td>
+      <td width=160>font-family </td>
       <td>Roboto </td>
     </tr>
     <tr>
-      <td>font-weight </td>
+      <td width=160>font-weight </td>
       <td>Medium </td>
     </tr>
     <tr>
-      <td>font-size </td>
+      <td width=160>font-size </td>
       <td>15sp </td>
     </tr>
     <tr>
-      <td>line-height </td>
+      <td width=160>line-height </td>
       <td>24sp </td>
     </tr>    
     <tr>
-      <td>color </td>
+      <td width=160>color </td>
       <td>#5197cd </td>
     </tr>   
   </tbody>
@@ -565,23 +565,23 @@ iOS: N/A <br>
 <table>
   <tbody>
     <tr>
-      <td>font-family </td>
+      <td width=160>font-family </td>
       <td>Roboto </td>
     </tr>
     <tr>
-      <td>font-weight </td>
+      <td width=160>font-weight </td>
       <td>Medium </td>
     </tr>
     <tr>
-      <td>font-size </td>
+      <td width=160>font-size </td>
       <td>15sp </td>
     </tr>
     <tr>
-      <td>line-height </td>
+      <td width=160>line-height </td>
       <td>20sp </td>
     </tr>    
     <tr>
-      <td>color </td>
+      <td width=160>color </td>
       <td>#c32a2e </td>
     </tr>   
   </tbody>
@@ -598,23 +598,23 @@ iOS: N/A <br>
 <table>
   <tbody>
     <tr>
-      <td>font-family </td>
+      <td width=160>font-family </td>
       <td>Roboto </td>
     </tr>
     <tr>
-      <td>font-weight </td>
+      <td width=160>font-weight </td>
       <td>Medium </td>
     </tr>
     <tr>
-      <td>font-size </td>
+      <td width=160>font-size </td>
       <td>15sp </td>
     </tr>
     <tr>
-      <td>line-height </td>
+      <td width=160>line-height </td>
       <td>20sp </td>
     </tr>    
     <tr>
-      <td>color </td>
+      <td width=160>color </td>
       <td>#e86868 </td>
     </tr>   
   </tbody>
@@ -640,7 +640,7 @@ Cedar design system uses a limited number of tokens for typography:
 
 <br/>
 
-REI Digital Experience team has defined typography specifications and values based on REI Brand:
+The Cedar team has defined typography specifications and values based on REI Brand:
 - Use these values with caution; type specifications could change
 - Cedar Design Systems team is tracking how options are used in components
 - List of typography values are available on the [Brand Typography tab](?active-tab=brand-typography)
@@ -668,7 +668,7 @@ REI Digital Experience team has defined typography specifications and values bas
 
 - **Body:** Uses a more open line height to font size ratio and is best suited for long-form content 
 
-- **Display:** Line height to font size ratio is more condensed than body type specifications and caters to an overall shorter line length. It is best used for big moments, headings, titles, or subheadings. Avoid using display sizes for long-form content 
+- **Display:** Line height to font size ratio is more condensed than body type specifications and caters to an overall shorter line length. It is best used for big moments, headings, titles, or subheadings. Avoid using display sizes for long-form content
 
 - **Utility:** Use sparingly within UI elements for Cedar components such as form labels and Call-to-Action text
 
@@ -682,20 +682,22 @@ REI Digital Experience team has defined typography specifications and values bas
 <template slot="Brand Typography">
 <cdr-doc-table-of-contents-shell>
 
-<cdr-doc-alert style="border: 1px solid #c77523; border-left: 8px solid #c77523; fill: #c77523">These values are NOT to be used by developers for creating custom UI.<br>If you are extending or modifying an existing Cedar component please work with the design system team to add support for your enhancements.</cdr-doc-alert>
+<cdr-doc-alert style="border: 1px solid #c77523; border-left: 8px solid #c77523; fill: #c77523">These values are **NOT** to be used by developers for creating custom UI.<br>If you are extending or modifying an existing Cedar component please work with the design system team to add support for your enhancements.</cdr-doc-alert>
 
 Typography from Cedar’s base style guide are use throughout Cedar components and design recommendations. Use these values when:
   - Requesting or updating for an existing Cedar component
   - Requesting a new token 
   - Developing a new component that will be adopted by Cedar Design System
-  
+
+<br>
 Note that the values on this page:
   - May not have a long lifespan
   - May alter the value more frequently
   - May be used for a wide variety of purposes
 
+<br>
 **Requesting a Token**
-If you have a request for a token that is missing, you can [submit a pull request to the cedar-token repo](https://www.npmjs.com/package/@rei/cdr-tokens#addingupdating-tokens) or ask in the #cedar-users-support Slack channel. View requirements on the(<cdr-link :href="$withBase('/foundation/tokens?active-link=adding-tokens-to-the-repository')">adding tokens</cdr-link>) on the Tokens article.  
+If you have a request for a token that is missing, you can [submit a pull request to the cedar-token repo](https://www.npmjs.com/package/@rei/cdr-tokens#addingupdating-tokens) or ask in the #cedar-users-support Slack channel. View requirements on the <cdr-link :href="$withBase('/foundation/tokens?active-link=adding-tokens-to-the-repository')">adding tokens</cdr-link> on the Tokens article.  
 
 **Developing or Updating Cedar Components**
 The Cedar team welcomes contributions from the digital community at REI. If you are interested in contributing design or code, please reach out at in Slack at [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4), email [cedar@rei.com](mailto:cedar@rei.com), or talk to your manager.
@@ -709,6 +711,8 @@ The type scale powers all the typography within Cedar components. These preset v
 Uses a more open line height to font size ratio:
 - Best suited for long-form content
 - Specifications are available for default (Roboto or sans type styles) and editorial (Sentinel or serif type styles)
+
+<hr>
 
 #### Default 
 
@@ -799,7 +803,6 @@ Uses a more open line height to font size ratio:
 </table>
 
 <br>
-
 <hr />
 
 #### Editorial 
@@ -891,7 +894,6 @@ Uses a more open line height to font size ratio:
 </table>
 
 <br>
-
 <hr />
 
 ### Display
@@ -1055,11 +1057,9 @@ Line height to font size ratio is more condensed than body type specifications a
 </table>
 
 <br>
-
 <hr />
 
 #### Editorial 
-
 
 <div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 14px; line-height: 20px; letter-spacing: 0.2; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
