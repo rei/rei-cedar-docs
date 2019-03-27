@@ -31,8 +31,8 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 
 <div style="overflow: hidden; white-space: nowrap; margin: 8px 0 8px 0;  padding: 16px 0 16px 8px; background-color: #FFFFFF ;"><typography-example name="cdr-text-default-body-compact" /> </div>
 
-**cdr-text-default-body-compact**  <br>
-**Suggested usage:** Use only for compact spacing with informational and supplemental body content
+cdr-text-default-body-compact  <br>
+Suggested usage: Use only for compact spacing with informational and supplemental body content
 
 <table>
   <tbody>
@@ -68,8 +68,8 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 
 <div style="overflow: hidden; white-space: nowrap; margin: 8px 0 8px 0;  padding: 16px 0 16px 8px; background-color: #FFFFFF ;"><typography-example name="cdr-text-default-body" /> </div>
 
-**cdr-text-default-body**  <br>
-**Suggested usage:** Default for body content. Uses a more open line height to font size ratio
+cdr-text-default-body <br>
+Suggested usage: Default for body content. Uses a more open line height to font size ratio
 
 <table>
   <tbody>
@@ -106,8 +106,8 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 
 <div style="overflow: hidden; white-space: nowrap; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;"> <typography-example name="cdr-text-editorial-body-compact" /> </div>
 
-**cdr-text-editorial-body-compact**  <br>
-**Suggested Usage:** Use only for compact spacing with editorial body content
+cdr-text-editorial-body-compact <br>
+Suggested Usage: Use only for compact spacing with editorial body content
 
 <table>
   <tbody>
@@ -142,8 +142,8 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 
 <div style="overflow: hidden; white-space: nowrap; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;"> <typography-example name="cdr-text-editorial-body" /> </div>
 
-**cdr-text-editorial-body**  <br>
-**Suggested Usage:** Default for editorial long-form content. Uses a more open line height to font size ratio
+cdr-text-editorial-body  <br>
+Suggested Usage: Default for editorial long-form content. Uses a more open line height to font size ratio
 
 <table>
   <tbody>
@@ -185,9 +185,9 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 
 <div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 500; font-size: 34px; line-height: 40px; letter-spacing: normal; color: #292929; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;">A different kind of company</div>
 
-**Display 1** (Android) <br>
-**Large Title** (iOS) <br>
-**Suggested Usage:** Frequently used as the largest title for phone apps and can be used for page titles for larger devices 
+Android: Display 1 <br>
+iOS: Large Title <br>
+Suggested Usage: Frequently used as the largest title for phone apps and can be used for page titles for larger devices 
 
 <table>
   <tbody>
@@ -214,8 +214,8 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 
 <div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 28px; line-height: 36px; letter-spacing: normal; color: #292929; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;">A different kind of company</div>
 
-**Title 1** (Android and iOS)<br>
-**Suggested Usage:** Content titles, level 1
+Android and iOS: Title 1 <br>
+Suggested Usage: Content titles, level 1
 
 <table>
   <tbody>
@@ -242,8 +242,8 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 
 <div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 26px; line-height: 32px; letter-spacing: normal; color: #292929; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;">A different kind of company</div>
 
-**Title 2** (Android and iOS) <br>
-**Suggested Usage:** Content titles, product names, level 2
+Android and iOS: Title 2 <br>
+Suggested Usage: Content titles, product names, level 2
 
 <table>
   <tbody>
@@ -270,8 +270,8 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 
 <div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 21px; line-height: 28px; letter-spacing: normal; color: #292929; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;">A different kind of company</div>
 
-**Title 3** (Android and iOS) <br>
-**Suggested Usage:** Content titles, product names, product prices, level 3
+Android and iOS: Title 3 <br>
+Suggested Usage: Content titles, product names, product prices, level 3
 
 <table>
   <tbody>
@@ -298,8 +298,8 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 
 <div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 500; font-size: 17px; line-height: 24px; letter-spacing: normal; color: #292929; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;">A different kind of company</div>
 
-**Headline** (Android and iOS) <br>
-**Suggested Usage:** Heading primarily used with body copy, list items, table headers
+Android and iOS: Headline  <br>
+Suggested Usage: Heading primarily used with body copy, list items, table headers
 
 <table>
   <tbody>
@@ -326,8 +326,8 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 
 <div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 500; font-size: 15px; line-height: 20px; letter-spacing: normal; color: #292929; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;">A different kind of company</div>
 
-**Subhead** (Android and iOS) <br>
-**Suggested Usage:** Subheading primarily used with body copy 
+Android and iOS: Subhead  <br>
+Suggested Usage: Subheading primarily used with body copy 
 
 <table>
   <tbody>
@@ -356,9 +356,9 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 
 <div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 13px; line-height: 20px; letter-spacing: normal; color: #292929; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;">A different kind of company</div>
 
-**Body 2** (Android) <br>
-**Footnote** (iOS) <br>
-**Suggested Usage:** Secondary text intended for informational and supplemental body content 
+Android: Body 2  <br>
+iOS: Footnote <br>
+Suggested Usage: Secondary text intended for informational and supplemental body content 
 
 <table>
   <tbody>
@@ -385,9 +385,9 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 
 <div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 15px; line-height: 20px; letter-spacing: normal; color: #292929; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;">A different kind of company</div>
 
-**Body 1** (Android) <br>
-**Body** (iOS) <br>
-**Suggested Usage:** Default for body content 
+Android: Body 1  <br>
+iOS: Body <br>
+Suggested Usage: Default for body content 
 
 <table>
   <tbody>
@@ -414,8 +414,8 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 
 <div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 11px; line-height: 16px; letter-spacing: normal; color: #292929; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;">A different kind of company</div>
 
-**Caption 2** (Android and iOS) <br>
-**Suggested Usage:** Smallest text size, use sparingly or for bottom tab bar text 
+Android and iOS: Caption 2  <br>
+Suggested Usage: Smallest text size, use sparingly or for bottom tab bar text 
 
 <table>
   <tbody>
@@ -442,8 +442,8 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 
 <div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 12px; line-height: 20px; letter-spacing: normal; color: #292929; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;">A different kind of company</div>
 
-**Caption 1** (Android and iOS) <br>
-**Suggested Usage:** Tertiary text, also intended for informational and supplemental body content. Also used for bottom action bar text for larger devices  
+Android and iOS: Caption 1 <br>
+Suggested Usage: Tertiary text, also intended for informational and supplemental body content. Also used for bottom action bar text for larger devices  
 
 <table>
   <tbody>
@@ -472,9 +472,9 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 
 <div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 500; font-size: 15px; line-height: 24px; letter-spacing: normal; color: #292929; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;">A different kind of company</div>
 
-**Button** (Android) <br>
+Android: Button <br>
 iOS: N/A <br>
-**Suggested Usage:** Button text has a thicker weight than body copy
+Suggested Usage: Button text has a thicker weight than body copy
 
 <table>
   <tbody>
@@ -503,9 +503,9 @@ iOS: N/A <br>
 
 <div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 500; font-size: 15px; line-height: 24px; letter-spacing: normal; color: #3278ae; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;">A different kind of company</div>
 
-**Button_accent** (Android) <br>
+Android: Button_accent <br>
 iOS: N/A <br>
-**Suggested Usage:** Link text has a thicker weight than body copy. Use #3278ae only on light background
+Suggested Usage: Link text has a thicker weight than body copy. Use #3278ae only on light background
 
 <table>
   <tbody>
@@ -536,9 +536,9 @@ iOS: N/A <br>
 
 <div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 500; font-size: 15px; line-height: 24px; letter-spacing: normal; color: #5197cd; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #292929 ;">A different kind of company</div>
 
-**Button_accent** (Android) <br>
+Android: Button_accent  <br>
 iOS: N/A <br>
-**Suggested Usage:** Link text has a thicker weight than body copy. Use #5197cd only on dark background
+Suggested Usage: Link text has a thicker weight than body copy. Use #5197cd only on dark background
 
 <table>
   <tbody>
@@ -571,9 +571,9 @@ iOS: N/A <br>
 
 <div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 500; font-size: 15px; line-height: 20px; letter-spacing: normal; color: #c32a2e; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;">A different kind of company</div>
 
-**Error State** (Android) <br>
+Android: Error State <br>
 iOS: N/A <br>
-**Suggested Usage:** Only for message text with error or warning states. Use #c32a2e only on light background
+Suggested Usage: Only for message text with error or warning states. Use #c32a2e only on light background
 
 <table>
   <tbody>
@@ -604,9 +604,9 @@ iOS: N/A <br>
 
 <div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 500; font-size: 15px; line-height: 20px; letter-spacing: normal; color: #e86868; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #292929 ;">A different kind of company</div>
 
-**Error State** (Android) <br>
+Android: Error State <br>
 iOS: N/A <br>
-**Suggested Usage:** Only for message text with error or warning states. Use #e86868 only on dark background
+Suggested Usage: Only for message text with error or warning states. Use #e86868 only on dark background
 
 <table>
   <tbody>
@@ -712,11 +712,9 @@ Note that the values on this page:
 <br>  
 
 **Requesting a Token**
-
-If you have a request for a token that is missing, you can [submit a pull request to the cedar-token repo](https://www.npmjs.com/package/@rei/cdr-tokens#addingupdating-tokens) or ask in the [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) Slack channel. View requirements on the <cdr-link :href="$withBase('/foundation/tokens?active-link=adding-tokens-to-the-repository')">adding tokens</cdr-link> on the Tokens article.   
+If you have a request for a token that is missing, you can [submit a pull request to the cedar-token repo](https://www.npmjs.com/package/@rei/cdr-tokens#addingupdating-tokens) or ask in the [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) Slack channel. View requirements in the <cdr-link :href="$withBase('/foundation/tokens/?active-link=adding-tokens-to-the-repository')">Adding Tokens to the Repository</cdr-link> section on the Tokens article.   
 
 **Developing or Updating Cedar Components**
-
 The Cedar team welcomes contributions from the digital community at REI. If you are interested in contributing design or code, please reach out at in Slack at [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4), email [cedar@rei.com](mailto:cedar@rei.com), or talk to your manager.
 
 
@@ -725,14 +723,14 @@ The Cedar team welcomes contributions from the digital community at REI. If you 
 
 The type scale powers all the typography within Cedar components. These preset values are the best way to reinforce visual hierarchy and consistency across pages. 
 
-### Body 
+## Body 
 Uses a more open line height to font size ratio:
 - Best suited for long-form content
 - Specifications are available for default (Roboto or sans type styles) and editorial (Sentinel or serif type styles)
 
 <br>
 
-#### Default 
+### Default 
 
 <div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 14px; line-height: 24px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
@@ -822,7 +820,7 @@ Uses a more open line height to font size ratio:
 
 <br>
 
-#### Editorial 
+### Editorial 
 
 <div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 400; font-size: 16px; line-height: 26px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
@@ -913,13 +911,13 @@ Uses a more open line height to font size ratio:
 <br>
 <hr />
 
-### Display
+## Display
 Line height to font size ratio is more condensed than body type specifications and caters catered to an overall shorter line length:
 - Best used for big moments, headings, titles, or subheadings
 - Specifications are available for default (Roboto or sans type styles) and editorial (Sentinel or serif type styles)
 - Avoid using display sizes for long-form content
 
-#### Default 
+### Default 
 
 <div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 12px; line-height: 16px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
@@ -1075,7 +1073,7 @@ Line height to font size ratio is more condensed than body type specifications a
 
 <br>
 
-#### Editorial 
+### Editorial 
 
 <div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 14px; line-height: 20px; letter-spacing: 0.2; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
