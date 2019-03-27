@@ -327,6 +327,8 @@ Text choices should be paired with their corresponding background color to ensur
   - **AA:** 4.5:1 for normal text and 3:1 for large text
   - **AA-LG:** Only for large text, graphical objects and user interface components
 
+<br>
+
 Note: Large text is defined as 18 point (typically 24px) or larger or with bold style, 14 point (typically 18.66px) or larger
 
 <br>
@@ -525,7 +527,7 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
 
 <cdr-doc-alert style="border: 1px solid #c77523; border-left: 8px solid #c77523; fill: #c77523">These values are NOT to be used by developers for creating custom UI.<br>If you are extending or modifying an existing Cedar component please work with the design system team to add support for your enhancements.</cdr-doc-alert>
 
-Colors from Cedar’s base color palette are use throughout Cedar components and design recommendations. Use these values when:
+Colors from Cedar’s base color palette are used throughout Cedar components and design recommendations. Use these values when:
   - Requesting or updating for an existing Cedar component
   - Requesting a new token 
   - Developing a new component that will be adopted by Cedar Design System
@@ -540,11 +542,9 @@ Note that the values on this page:
 <br>  
 
 **Requesting a Token**
-
-If you have a request for a token that is missing, you can [submit a pull request to the cedar-token repo](https://www.npmjs.com/package/@rei/cdr-tokens#addingupdating-tokens) or ask in the [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) Slack channel. View requirements on the <cdr-link :href="$withBase('/foundation/tokens?active-link=adding-tokens-to-the-repository')">adding tokens</cdr-link> on the Tokens article.   
+If you have a request for a token that is missing, you can [submit a pull request to the cedar-token repo](https://www.npmjs.com/package/@rei/cdr-tokens#addingupdating-tokens) or ask in the [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) Slack channel. View requirements in the <cdr-link :href="$withBase('/foundation/tokens/?active-link=adding-tokens-to-the-repository')">Adding Tokens to the Repository</cdr-link> section on the Tokens article. 
 
 **Developing or Updating Cedar Components**
-
 The Cedar team welcomes contributions from the digital community at REI. If you are interested in contributing design or code, please reach out at in Slack at [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4), email [cedar@rei.com](mailto:cedar@rei.com), or talk to your manager.
 
 
