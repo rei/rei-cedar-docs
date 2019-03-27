@@ -25,7 +25,7 @@ Use to create a consistent space within the content container:
 - Default spacing model
 - Examples: Buttons, Tabs, and Date Tables 
 
-<nr>
+<hr>
   
 #### TESTING - VERSION 1  
 
@@ -225,3 +225,6 @@ The specific options for `inset` may not fit every solution. When this is the ca
 <pre>space-4-x: 64px</pre>
 
 </cdr-doc-table-of-contents-shell>
+</template>
+
+</cdr-doc-tabs>
