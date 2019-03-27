@@ -2,7 +2,7 @@
 {
   "title": "Spacing",
   "title_metadata": false,
-  "layout": "LayoutArticle",
+  "layout": "LayoutComponent",
   "summary": false,
   "breadcrumbs": [
     {
@@ -12,6 +12,161 @@
 }
 ---
 
+<cdr-doc-tabs :labels="['Overview', 'Guidelines']">
+<template slot="Overview">
+<cdr-doc-table-of-contents-shell>
+
+## Base Inset
+
+Use to create a consistent space within the content container:
+- All four sides have equal values
+- Base Inset token value is 16 pixels 
+- Options range from 2 pixels to 64 pixels
+- Default spacing model
+- Examples: Buttons, Tabs, and Date Tables 
+
+<nr>
+  
+#### TESTING - VERSION 1  
+
+<div class="inset-example" style="box-shadow: rgb(199, 220, 191) -2px -2px 0px inset, rgb(199, 220, 191) 2px 2px 0px inset; padding: 2px;,text-align: center;">content</div>
+<table>
+  <tbody>
+    <tr>
+      <td><b>cdr-space-inset-eighth-x</b></td>
+      <td>2px </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div class="inset-example" style="box-shadow: rgb(199, 220, 191) -0.4rem -0.4rem 0px inset, rgb(199, 220, 191) 0.4rem 0.4rem 0px inset; padding: 0.4rem;">content</div>
+<table>
+  <tbody>
+    <tr>
+      <td><b>cdr-space-inset-quarter-x </b></td>
+      <td>4px </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div class="inset-example" style="box-shadow: rgb(199, 220, 191) -0.8rem -0.8rem 0px inset, rgb(199, 220, 191) 0.8rem 0.8rem 0px inset; padding: 0.8rem;">content</div>
+<table>
+  <tbody>
+    <tr>
+      <td><b>cdr-space-inset-half-x </b></td>
+      <td>8px </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div class="inset-example" style="box-shadow: rgb(199, 220, 191) -1.2rem -1.2rem 0px inset, rgb(199, 220, 191) 1.2rem 1.2rem 0px inset; padding: 1.2rem;">content</div>
+<table>
+  <tbody>
+    <tr>
+      <td><b>cdr-space-inset-three-quarter-x </b></td>
+      <td>12px </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div class="inset-example" style="box-shadow: rgb(199, 220, 191) -1.6rem -1.6rem 0px inset, rgb(199, 220, 191) 1.6rem 1.6rem 0px inset; padding: 1.6rem;">content</div>
+<div class="inset-example" style="box-shadow: rgb(199, 220, 191) -1.2rem -1.2rem 0px inset, rgb(199, 220, 191) 1.2rem 1.2rem 0px inset; padding: 1.2rem;">content</div>
+<table>
+  <tbody>
+    <tr>
+      <td><b>cdr-space-inset-one-x </b></td>
+      <td>16px </td>
+    </tr>
+  </tbody>
+</table>
+
+</table>
+
+<br>
+
+<div class="inset-example" style="box-shadow: rgb(199, 220, 191) -2.4rem -2.4rem 0px inset, rgb(199, 220, 191) 2.4rem 2.4rem 0px inset; padding: 2.4rem;">content</div>
+<table>
+  <tbody>
+    <tr>
+      <td><b>cdr-space-inset-one-and-a-half-x</b></td>
+      <td>24px </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div class="inset-example" style="box-shadow: rgb(199, 220, 191) -3.2rem -3.2rem 0px inset, rgb(199, 220, 191) 3.2rem 3.2rem 0px inset; padding: 3.2rem;">content</div>
+<table>
+  <tbody>
+    <tr>
+      <td><b>cdr-space-inset-two-x</b></td>
+      <td>32px </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<div class="inset-example" style="box-shadow: rgb(199, 220, 191) -6.4rem -6.4rem 0px inset, rgb(199, 220, 191) 6.4rem 6.4rem 0px inset; padding: 6.4rem;">content</div>
+<div class="inset-example" style="box-shadow: rgb(199, 220, 191) -3.2rem -3.2rem 0px inset, rgb(199, 220, 191) 3.2rem 3.2rem 0px inset; padding: 3.2rem;">content</div>
+<table>
+  <tbody>
+    <tr>
+      <td><b>cdr-space-inset-four-x</b></td>
+      <td>64px </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<hr>
+
+#### TESTING - VERSION 2
+
+<table>
+  <tbody>
+    <tr>
+      <td><div class="inset-example" style="box-shadow: rgb(199, 220, 191) -2px -2px 0px inset, rgb(199, 220, 191) 2px 2px 0px inset; padding: 2px;,text-align: center;">content</div></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>
+        <b>cdr-space-inset-eighth-x</b>  
+        <br>
+      </td>
+      <td>2px </td>
+    </tr>  
+    <tr>
+      <td><div class="inset-example" style="box-shadow: rgb(199, 220, 191) -0.4rem -0.4rem 0px inset, rgb(199, 220, 191) 0.4rem 0.4rem 0px inset; padding: 0.4rem;">content</div></td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>
+        <b>cdr-space-inset-quarter-x</b>  
+        <br>
+      </td>
+      <td>4px </td>
+    </tr> 
+  </tbody>
+</table>
+  
+
+
+</cdr-doc-table-of-contents-shell>
+</template>
+
+
+
+<template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
 
 ## Spacing
