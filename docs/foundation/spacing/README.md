@@ -29,7 +29,7 @@ Use to create a consistent space within the content container:
   
 #### TESTING - VERSION 1  
 
-<div class="inset-example" style="box-shadow: rgb(199, 220, 191) -2px -2px 0px inset, rgb(199, 220, 191) 2px 2px 0px inset; padding: 2px;,text-align: center;">content</div>
+<space-example name="cdr-space-inset-eighth-x" />
 <table>
   <tbody>
     <tr>
