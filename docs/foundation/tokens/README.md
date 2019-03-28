@@ -291,8 +291,12 @@ The below tables for the naming structure show that levels will be skipped when 
 ## How to Use Tokens
 
 ### For Designers
-Information coming soon
+- A base requirement for accessing Cedar tokens and using them in designs and wireframes is that you are able to use Sketch version 53.2
+- Toolkits are platform specific. If designing for the web, use the UI Web Toolkit 
+- Tokens are available in Cedar’s UI Toolkit and found on the Tokens page 
+- When using tokens, it’s your responsibility to pass the entire token name to the developer during the design hand-off process—this can be through automated or manual methods
 
+<br>
 
 ### For Developers
 A base requirement for using Cedar tokens is that you are able to consume and maintain packages through the following development processes:
