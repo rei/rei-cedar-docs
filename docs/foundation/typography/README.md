@@ -31,7 +31,7 @@ Typography design tokens store the fundamental decisions of Cedar’s visual lan
 
 <div style="overflow: hidden; white-space: nowrap; margin: 8px 0 8px 0;  padding: 16px 0 16px 8px; background-color: #FFFFFF ;"><typography-example name="cdr-text-default-body-compact" /> </div>
 
-cdr-text-default-body-compact  <br>
+**cdr-text-default-body-compact** *(Mixin)  <br>
 Suggested usage: Use only for compact spacing with informational and supplemental body content
 
 <table>
@@ -68,7 +68,7 @@ Suggested usage: Use only for compact spacing with informational and supplementa
 
 <div style="overflow: hidden; white-space: nowrap; margin: 8px 0 8px 0;  padding: 16px 0 16px 8px; background-color: #FFFFFF ;"><typography-example name="cdr-text-default-body" /> </div>
 
-cdr-text-default-body <br>
+**cdr-text-default-body** *(Mixin)  <br>
 Suggested usage: Default for body content. Uses a more open line height to font size ratio
 
 <table>
@@ -106,7 +106,7 @@ Suggested usage: Default for body content. Uses a more open line height to font 
 
 <div style="overflow: hidden; white-space: nowrap; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;"> <typography-example name="cdr-text-editorial-body-compact" /> </div>
 
-cdr-text-editorial-body-compact <br>
+**cdr-text-editorial-body-compact** *(Mixin)  <br>
 Suggested Usage: Use only for compact spacing with editorial body content
 
 <table>
@@ -142,7 +142,7 @@ Suggested Usage: Use only for compact spacing with editorial body content
 
 <div style="overflow: hidden; white-space: nowrap; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;"> <typography-example name="cdr-text-editorial-body" /> </div>
 
-cdr-text-editorial-body  <br>
+**cdr-text-editorial-body** *(Mixin)  <br>
 Suggested Usage: Default for editorial long-form content. Uses a more open line height to font size ratio
 
 <table>
@@ -711,10 +711,10 @@ Note that the values on this page:
 
 <br>  
 
-**Requesting a Token**
+**Requesting a Token** <br>
 If you have a request for a token that is missing, you can [submit a pull request to the cedar-token repo](https://www.npmjs.com/package/@rei/cdr-tokens#addingupdating-tokens) or ask in the [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) Slack channel. View requirements in the <cdr-link :href="$withBase('/foundation/tokens/?active-link=adding-tokens-to-the-repository')">Adding Tokens to the Repository</cdr-link> section on the Tokens article.   
 
-**Developing or Updating Cedar Components**
+**Developing or Updating Cedar Components** <br>
 The Cedar team welcomes contributions from the digital community at REI. If you are interested in contributing design or code, please reach out at in Slack at [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4), email [cedar@rei.com](mailto:cedar@rei.com), or talk to your manager.
 
 
@@ -732,7 +732,7 @@ Uses a more open line height to font size ratio:
 
 ### Default 
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 14px; line-height: 24px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 14px; line-height: 24px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -754,7 +754,7 @@ Uses a more open line height to font size ratio:
 
 <br>
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 16px; line-height: 26px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 16px; line-height: 26px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -776,7 +776,7 @@ Uses a more open line height to font size ratio:
 
 <br>
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 18px; line-height: 28px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 18px; line-height: 28px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -798,7 +798,7 @@ Uses a more open line height to font size ratio:
 
 <br>
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 20px; line-height: 32px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 20px; line-height: 32px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -822,7 +822,7 @@ Uses a more open line height to font size ratio:
 
 ### Editorial 
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 400; font-size: 16px; line-height: 26px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 400; font-size: 16px; line-height: 26px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -844,7 +844,7 @@ Uses a more open line height to font size ratio:
 
 <br>
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 400; font-size: 18px; line-height: 28px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 400; font-size: 18px; line-height: 28px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -866,7 +866,7 @@ Uses a more open line height to font size ratio:
 
 <br>
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 400; font-size: 20px; line-height: 32px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 400; font-size: 20px; line-height: 32px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -888,7 +888,7 @@ Uses a more open line height to font size ratio:
 
 <br>
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 400; font-size: 24px; line-height: 36px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 400; font-size: 24px; line-height: 36px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -919,7 +919,7 @@ Line height to font size ratio is more condensed than body type specifications a
 
 ### Default 
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 12px; line-height: 16px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 12px; line-height: 16px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -941,7 +941,7 @@ Line height to font size ratio is more condensed than body type specifications a
 
 <br>
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 14px; line-height: 20px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 14px; line-height: 20px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -963,7 +963,7 @@ Line height to font size ratio is more condensed than body type specifications a
 
 <br>
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 16px; line-height: 24px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 16px; line-height: 24px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -985,7 +985,7 @@ Line height to font size ratio is more condensed than body type specifications a
 
 <br>
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 18px; line-height: 24px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 18px; line-height: 24px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -1007,7 +1007,7 @@ Line height to font size ratio is more condensed than body type specifications a
 
 <br>
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 20px; line-height: 28px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 20px; line-height: 28px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -1029,7 +1029,7 @@ Line height to font size ratio is more condensed than body type specifications a
 
 <br>
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 24px; line-height: 32px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 24px; line-height: 32px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -1051,7 +1051,7 @@ Line height to font size ratio is more condensed than body type specifications a
 
 <br>
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 28px; line-height: 36px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto; font-variant: normal; font-weight: 400; font-size: 28px; line-height: 36px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -1075,7 +1075,7 @@ Line height to font size ratio is more condensed than body type specifications a
 
 ### Editorial 
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 14px; line-height: 20px; letter-spacing: 0.2; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 14px; line-height: 20px; letter-spacing: 0.2; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0;padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -1097,7 +1097,7 @@ Line height to font size ratio is more condensed than body type specifications a
 
 <br>
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 16px; line-height: 24px; letter-spacing: 0.2; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 16px; line-height: 24px; letter-spacing: 0.2; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -1119,7 +1119,7 @@ Line height to font size ratio is more condensed than body type specifications a
 
 <br>
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 18px; line-height: 24px; letter-spacing: 0.2; color: #292929; background-color: #FFFFFF; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 18px; line-height: 24px; letter-spacing: 0.2; color: #292929; background-color: #FFFFFF; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -1141,7 +1141,7 @@ Line height to font size ratio is more condensed than body type specifications a
 
 <br>
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 20px; line-height: 28px; letter-spacing: 0.2; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 20px; line-height: 28px; letter-spacing: 0.2; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -1163,7 +1163,7 @@ Line height to font size ratio is more condensed than body type specifications a
 
 <br>
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 24px; line-height: 32px; letter-spacing: 0.2; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 24px; line-height: 32px; letter-spacing: 0.2; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -1185,7 +1185,7 @@ Line height to font size ratio is more condensed than body type specifications a
 
 <br>
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 28px; line-height: 36px; letter-spacing: 0.2; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 28px; line-height: 36px; letter-spacing: 0.2; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -1207,7 +1207,7 @@ Line height to font size ratio is more condensed than body type specifications a
 
 <br>
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 32px; line-height: 40px; letter-spacing: 0.2; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 32px; line-height: 40px; letter-spacing: 0.2; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -1229,7 +1229,7 @@ Line height to font size ratio is more condensed than body type specifications a
 
 <br>
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 40px; line-height: 48px; letter-spacing: 0.2; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 40px; line-height: 48px; letter-spacing: 0.2; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -1251,7 +1251,7 @@ Line height to font size ratio is more condensed than body type specifications a
 
 <br>
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 56px; line-height: 60px; letter-spacing: 0.2; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 56px; line-height: 60px; letter-spacing: 0.2; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -1273,7 +1273,7 @@ Line height to font size ratio is more condensed than body type specifications a
 
 <br>
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 76px; line-height: 84px; letter-spacing: 0.2; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 76px; line-height: 84px; letter-spacing: 0.2; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -1295,7 +1295,7 @@ Line height to font size ratio is more condensed than body type specifications a
 
 <br>
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 96px; line-height: 104px; letter-spacing: 0.2; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Sentinel; font-variant: normal; font-weight: 600; font-size: 96px; line-height: 104px; letter-spacing: 0.2; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -1324,7 +1324,7 @@ Used sparingly within UI elements, currently used by Cedar components for:
 - Form labels
 - Call-to-Action text
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Roboto Condensed; font-variant: normal; font-weight: 400; font-size: 12px; line-height: 16px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto Condensed; font-variant: normal; font-weight: 400; font-size: 12px; line-height: 16px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -1346,7 +1346,7 @@ Used sparingly within UI elements, currently used by Cedar components for:
 
 <br>
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Roboto Condensed; font-variant: normal; font-weight: 400; font-size: 14px; line-height: 20px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto Condensed; font-variant: normal; font-weight: 400; font-size: 14px; line-height: 20px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -1368,7 +1368,7 @@ Used sparingly within UI elements, currently used by Cedar components for:
 
 <br>
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Roboto Condensed; font-variant: normal; font-weight: 400; font-size: 16px; line-height: 24px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto Condensed; font-variant: normal; font-weight: 400; font-size: 16px; line-height: 24px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -1390,7 +1390,7 @@ Used sparingly within UI elements, currently used by Cedar components for:
 
 <br>
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Roboto Condensed; font-variant: normal; font-weight: 400; font-size: 18px; line-height: 24px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto Condensed; font-variant: normal; font-weight: 400; font-size: 18px; line-height: 24px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -1412,7 +1412,7 @@ Used sparingly within UI elements, currently used by Cedar components for:
 
 <br>
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Roboto Condensed; font-variant: normal; font-weight: 400; font-size: 20px; line-height: 28px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto Condensed; font-variant: normal; font-weight: 400; font-size: 20px; line-height: 28px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -1434,7 +1434,7 @@ Used sparingly within UI elements, currently used by Cedar components for:
 
 <br>
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Roboto Condensed; font-variant: normal; font-weight: 400; font-size: 24px; line-height: 32px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto Condensed; font-variant: normal; font-weight: 400; font-size: 24px; line-height: 32px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
@@ -1456,7 +1456,7 @@ Used sparingly within UI elements, currently used by Cedar components for:
 
 <br>
 
-<div style="overflow: hidden; white-space: nowrap; font-family: Roboto Condensed; font-variant: normal; font-weight: 400; font-size: 28px; line-height: 36px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 8px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
+<div style="overflow: hidden; white-space: nowrap; font-family: Roboto Condensed; font-variant: normal; font-weight: 400; font-size: 28px; line-height: 36px; letter-spacing: normal; color: #292929; background-color: #FFFFFF; margin: 0 0 2px 0; padding: 16px 0 16px 8px;">A different kind of company</div>
 <table>
   <tbody>
     <tr>
