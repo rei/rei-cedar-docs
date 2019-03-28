@@ -41,10 +41,10 @@ Once familiar with the design system, teams can then begin to address accrued te
 
 - [Getting Started for Designers](../as-a-designer/)
 - [Getting Started for Developers](../as-a-developer/)
-- Confluence (for REI-internal processes and info): [https://confluence.rei.com/display/TP/Cedar+Design+System](https://confluence.rei.com/display/TP/Cedar+Design+System)
-- Github repo: [https://github.com/rei/rei-cedar](https://github.com/rei/rei-cedar)
-- Glossary of terms: [https://confluence.rei.com/display/TP/Terminology](https://confluence.rei.com/display/TP/Terminology)
-- Roadmap: [https://confluence.rei.com/display/TP/Roadmap](https://confluence.rei.com/display/TP/Roadmap)
+- [Cedar Design System](https://confluence.rei.com/display/TP/Cedar+Design+System) - Confluence (REI-internal processes and info)  
+- Github repo: [www.github.com/rei/rei-cedar](https://github.com/rei/rei-cedar)
+- Glossary of terms on Confluence ((REI-internal): [www.confluence.rei.com/ ... /Terminology](https://confluence.rei.com/display/TP/Terminology)
+- Cedar Roadmap on Confluence ((REI-internal): : [www.confluence.rei.com/ ... /Roadmap](https://confluence.rei.com/display/TP/Roadmap)
 - Slack channels
   - Stay up-to-date on Cedar releases and events: [#cedar-news](https://rei.slack.com/messages/C5W0VMKGU)
   - For design and developer questions: [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4)
@@ -60,7 +60,7 @@ If you are interested in contributing design or code, please reach out at in Sla
 
 The Cedar team will evaluate all new requests for components, beginning with a discovery process that includes an audit of visual patterns and weighs factors such as reusability across the product ecosystem (ideally can be used by 3-5 teams), investment and maturity of the product, and team bandwidth. 
 
-New feature and enhancement requests can be submitted via the [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC). 
+New feature and enhancement requests can be submitted using the [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC). 
 
 ### Report an Issue
 
