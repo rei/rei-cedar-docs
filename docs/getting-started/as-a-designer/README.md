@@ -152,8 +152,8 @@ One of the best ways to influence the visual language of the co-op’s digital p
 ## Common Questions
 
 - [How will I know when an update is available?](#how-will-i-know-when-an-update-is-available)
-- [I found a bug in the UI Toolkit. How do I let you know?](https://airtable.com/shr3wSPCYQbycVx7i)
-- [I have an idea for an enhancement to the Cedar UI Toolkit. Who do I talk to?](https://airtable.com/shrcbq9CHthuMO7AC)
+- [I found a bug in the UI Toolkit. How do I let you know?](#i-found-a-bug-in-the-ui-toolkit-how-do-i-let-you-know)
+- [I have an idea for an enhancement to the Cedar UI Toolkit. Who do I talk to?](#i-have-an-idea-for-an-enhancement-to-the-cedar-ui-toolkit-who-do-i-talk-to)
 - [Should I always update Sketch versions when it tells me to?](#should-i-always-update-sketch-versions-when-it-tells-me-to)
 - [Can I break the Library?](#can-i-break-the-library)
 - [Do I need to install the Library for every new Sketch file?](#do-i-need-to-install-the-library-for-every-new-sketch-file)
