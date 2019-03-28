@@ -145,7 +145,7 @@ Use to create a consistent space within the content container:
 - Base Inset token value is 16 pixels 
 - Options range from 2 pixels to 64 pixels
 - Default spacing model
-- Examples: Buttons, Tabs, and Date Tables 
+- Examples: <cdr-link :href="$withBase('/components/buttons/')">Buttons</cdr-link>, <cdr-link :href="$withBase('/components/data-tables/')">Data Tables</cdr-link>, and <cdr-link :href="$withBase('/components/tabs/')">Tabs</cdr-link> 
 
 <hr>
   
@@ -256,7 +256,7 @@ Use to create a compact vertical space within the content container:
   - - 0 to 32 pixels for top and bottom values
   - - 2 pixels to 64 pixels for left and right values
 - Compact spacing model, best used with stacking lists or menu items
-- Examples: Compact versions for Lists and Accordion 
+- Examples: Compact versions for <cdr-link :href="$withBase('/components/accordion/')">Accordion</cdr-link> and <cdr-link :href="$withBase('/components/lists/')">Lists</cdr-link>   
 
 <br>
 
@@ -430,7 +430,7 @@ Use to create an expanded vertical space within the content container:
   - - 4 pixels to 96 pixels for top and bottom values
   - - 2 pixels to 64 pixels for left and right values
 - Expanded spacing model, best used with multi-line input (textareas) or other form elements 
-- Example: Large version for Inputs 
+- Example: Large version for <cdr-link :href="$withBase('/components/input/')">Inputs</cdr-link>  
 
 <br>
 
