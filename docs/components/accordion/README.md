@@ -346,7 +346,7 @@ Accordions are built from two components, **CdrAccordion** and **CdrAccordionIte
 
 ## Slots
 
-<api-slot slots-getting-started-link />
+<api-slot :slots-getting-started-link="true" />
 
 ### CdrAccordion
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" :slots-getting-started-link="false" />
