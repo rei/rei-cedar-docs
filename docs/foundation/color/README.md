@@ -136,22 +136,38 @@ List of color tokens with descriptions and values. Web and mobile color tokens h
 <br>
 
 ## Icon Colors
+### For Light Backgrounds
 
 <table>
   <tbody>
     <tr>
-      <td width=64> <color-example color="cdr-color-icon-primary-lightmode" />  </td>
-      <td><b>cdr-color-icon-primary-lightmode </b> <br>Primary icon color on a light background  </td>
+      <td width=64> <color-example color="cdr-color-icon-emphasis-lightmode" />  </td>
+      <td><b>cdr-color-icon-emphasis-lightmode </b> <br>Emphasis or darkest icon color on a light background  </td>
       <td width=160>#292929 <br>r41  g41  b41 </td>
     </tr>
     <tr>
-      <td width=64> <color-example color="cdr-color-icon-primary-darkmode" />  </td>
-      <td><b>cdr-color-icon-primary-darkmode  </b> <br>Primary icon color on a dark background </td>
-      <td width=160>#fafafa <br>r250  g250  b250 </td>
+      <td width=64> <color-example color="cdr-color-icon-primary-lightmode" />  </td>
+      <td><b>cdr-color-icon-primary-lightmode </b> <br>Primary icon color on a light background </td>
+      <td width=160>#616161 <br>r97  g97  b97 </td>
     </tr>
   </tbody>
 </table>
 
+### For Dark Backgrounds
+<table>
+  <tbody>
+    <tr>
+      <td width=64> <color-example color="cdr-color-icon-emphasis-darkmode" />  </td>
+      <td><b>cdr-color-icon-emphasis-darkmode </b> <br>Emphasis or lightest icon color on a dark background  </td>
+      <td width=160>#fafafa <br>r250  g250  b250 </td>
+    </tr>
+    <tr>
+      <td width=64> <color-example color="cdr-color-icon-primary-darkmode" />  </td>
+      <td><b>cdr-color-icon-primary-darkmode  </b> <br>Primary icon color on a dark background </td>
+      <td width=160>#999999 <br>r153  g153  b153 </td>
+    </tr>
+  </tbody>
+</table>
 
 <br>
 
