@@ -16,6 +16,128 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
 
+
+Cedar provides easy-to-use, preset values to apply consistent spacing within and between components. Spacing tokens help maintain a cohesive visual style across all REI properties by:
+- Storing pixel values that are converted to the proper spacing unit for web and native platforms 
+- Replacing hard-coded values
+- Allowing us to maintain a scalable, adjustable, and consistent visual system 
+- Delivering updates to the brand identity with minimal impact to the code
+
+Spacing symbols are available within the Cedar UI Toolkit and directly reflect the token names in the code ensuring a more efficient handoff between design and development. 
+
+
+<br> 
+<hr>
+
+
+List of spacing tokens with descriptions, values and related tokens. Web and mobile spacing tokens have identical values but the naming pattern differs. For example, spacing token names are:
+- **For Web:** cdr-space-one-and-a-half-x
+- **For Android:** cdr_space_one_and_a_half_x
+- **For iOS:** CdrSpaceOneAndAHalfX
+
+<br>
+
+## Default Spacing 
+These spacing values are in use throughout Cedar components and design recommendations. Use these tokens to keep consistent spatial concepts.
+<br>
+
+<spacing-example name="cdr-space-eighth-x" />
+<table>
+  <tbody>
+    <tr>
+      <td width=280>cdr-space-eighth-x </td>
+      <td>2px </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<spacing-example name="cdr-space-quarter-x" />
+<table>
+  <tbody>
+    <tr>
+      <td width=280>cdr-space-quarter-x </td>
+      <td>4px </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<spacing-example name="cdr-space-half-x" />
+<table>
+  <tbody>
+    <tr>
+      <td width=280>cdr-space-half-x </td>
+      <td>8px </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<spacing-example name="cdr-space-three-quarter-x" />
+<table>
+  <tbody>
+    <tr>
+      <td width=280>cdr-space-three-quarter-x </td>
+      <td>12px </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<spacing-example name="cdr-space-one-x" />
+<table>
+  <tbody>
+    <tr>
+      <td width=280>cdr-space-one-x </td>
+      <td>16px </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<spacing-example name="cdr-space-one-and-a-half-x" />
+<table>
+  <tbody>
+    <tr>
+      <td width=280>cdr-space-one-and-a-half-x </td>
+      <td>24px </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<spacing-example name="cdr-space-two-x" />
+<table>
+  <tbody>
+    <tr>
+      <td width=280>cdr-space-two-x </td>
+      <td>32px </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<spacing-example name="cdr-space-four-x" />
+<table>
+  <tbody>
+    <tr>
+      <td width=280>cdr-space-four-x </td>
+      <td>64px </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+<hr>
+
 ## Base Inset
 
 Use to create a consistent space within the content container:
@@ -27,13 +149,13 @@ Use to create a consistent space within the content container:
 
 <hr>
   
-#### TESTING - VERSION 1  
+<br>
 
-<space-example name="cdr-space-inset-eighth-x" />
+<spacing-example name="cdr-space-inset-eighth-x" />
 <table>
   <tbody>
     <tr>
-      <td><b>cdr-space-inset-eighth-x</b></td>
+      <td width=320>cdr-space-inset-eighth-x </td>
       <td>2px </td>
     </tr>
   </tbody>
@@ -41,11 +163,11 @@ Use to create a consistent space within the content container:
 
 <br>
 
-<div class="inset-example" style="box-shadow: rgb(199, 220, 191) -0.4rem -0.4rem 0px inset, rgb(199, 220, 191) 0.4rem 0.4rem 0px inset; padding: 0.4rem;">content</div>
+<spacing-example name="cdr-space-inset-quarter-x" />
 <table>
   <tbody>
     <tr>
-      <td><b>cdr-space-inset-quarter-x </b></td>
+      <td width=320>cdr-space-inset-quarter-x </td>
       <td>4px </td>
     </tr>
   </tbody>
@@ -53,11 +175,11 @@ Use to create a consistent space within the content container:
 
 <br>
 
-<div class="inset-example" style="box-shadow: rgb(199, 220, 191) -0.8rem -0.8rem 0px inset, rgb(199, 220, 191) 0.8rem 0.8rem 0px inset; padding: 0.8rem;">content</div>
+<spacing-example name="cdr-space-inset-half-x" />
 <table>
   <tbody>
     <tr>
-      <td><b>cdr-space-inset-half-x </b></td>
+      <td width=320>cdr-space-inset-half-x </td>
       <td>8px </td>
     </tr>
   </tbody>
@@ -65,11 +187,11 @@ Use to create a consistent space within the content container:
 
 <br>
 
-<div class="inset-example" style="box-shadow: rgb(199, 220, 191) -1.2rem -1.2rem 0px inset, rgb(199, 220, 191) 1.2rem 1.2rem 0px inset; padding: 1.2rem;">content</div>
+<spacing-example name="cdr-space-inset-three-quarter-x" />
 <table>
   <tbody>
     <tr>
-      <td><b>cdr-space-inset-three-quarter-x </b></td>
+      <td width=320>cdr-space-inset-three-quarter-x </td>
       <td>12px </td>
     </tr>
   </tbody>
@@ -77,26 +199,23 @@ Use to create a consistent space within the content container:
 
 <br>
 
-<div class="inset-example" style="box-shadow: rgb(199, 220, 191) -1.6rem -1.6rem 0px inset, rgb(199, 220, 191) 1.6rem 1.6rem 0px inset; padding: 1.6rem;">content</div>
-<div class="inset-example" style="box-shadow: rgb(199, 220, 191) -1.2rem -1.2rem 0px inset, rgb(199, 220, 191) 1.2rem 1.2rem 0px inset; padding: 1.2rem;">content</div>
+<spacing-example name="cdr-space-inset-one-x" />
 <table>
   <tbody>
     <tr>
-      <td><b>cdr-space-inset-one-x </b></td>
+      <td width=320>cdr-space-inset-one-x </td>
       <td>16px </td>
     </tr>
   </tbody>
 </table>
 
-</table>
-
 <br>
 
-<div class="inset-example" style="box-shadow: rgb(199, 220, 191) -2.4rem -2.4rem 0px inset, rgb(199, 220, 191) 2.4rem 2.4rem 0px inset; padding: 2.4rem;">content</div>
+<spacing-example name="cdr-space-inset-one-and-a-half-x" />
 <table>
   <tbody>
     <tr>
-      <td><b>cdr-space-inset-one-and-a-half-x</b></td>
+      <td width=320>cdr-space-inset-one-and-a-half-x </td>
       <td>24px </td>
     </tr>
   </tbody>
@@ -104,11 +223,11 @@ Use to create a consistent space within the content container:
 
 <br>
 
-<div class="inset-example" style="box-shadow: rgb(199, 220, 191) -3.2rem -3.2rem 0px inset, rgb(199, 220, 191) 3.2rem 3.2rem 0px inset; padding: 3.2rem;">content</div>
+<spacing-example name="cdr-space-inset-two-x" />
 <table>
   <tbody>
     <tr>
-      <td><b>cdr-space-inset-two-x</b></td>
+      <td width=320>cdr-space-inset-two-x </td>
       <td>32px </td>
     </tr>
   </tbody>
@@ -116,49 +235,366 @@ Use to create a consistent space within the content container:
 
 <br>
 
-<div class="inset-example" style="box-shadow: rgb(199, 220, 191) -6.4rem -6.4rem 0px inset, rgb(199, 220, 191) 6.4rem 6.4rem 0px inset; padding: 6.4rem;">content</div>
-<div class="inset-example" style="box-shadow: rgb(199, 220, 191) -3.2rem -3.2rem 0px inset, rgb(199, 220, 191) 3.2rem 3.2rem 0px inset; padding: 3.2rem;">content</div>
+<spacing-example name="cdr-space-inset-four-x" />
 <table>
   <tbody>
     <tr>
-      <td><b>cdr-space-inset-four-x</b></td>
+      <td width=320>cdr-space-inset-four-x </td>
       <td>64px </td>
     </tr>
   </tbody>
 </table>
 
+
 <br>
 <hr>
 
-#### TESTING - VERSION 2
+## Inset - Squish
+Use to create a compact vertical space within the content container:
+- Reduces top and bottom padding by 50% relative to left and right padding
+- Options range from:
+  - - 0 to 32 pixels for top and bottom values
+  - - 2 pixels to 64 pixels for left and right values
+- Compact spacing model, best used with stacking lists or menu items
+- Examples: Compact versions for Lists and Accordion 
 
+<br>
+
+<spacing-example name="cdr-space-inset-eighth-x-squish" />
 <table>
   <tbody>
     <tr>
-      <td><div class="inset-example" style="box-shadow: rgb(199, 220, 191) -2px -2px 0px inset, rgb(199, 220, 191) 2px 2px 0px inset; padding: 2px;,text-align: center;">content</div></td>
-      <td> </td>
+      <td width=440>cdr-space-inset-eighth-x-squish </td>
+      <td><i>Mixin</i> </td>
     </tr>
     <tr>
-      <td>
-        <b>cdr-space-inset-eighth-x</b>  
-        <br>
-      </td>
+      <td width=440>cdr-space-inset-eighth-x-squish-top-bottom </td>
+      <td>0 </td>
+    </tr>
+    <tr>
+      <td width=440>cdr-space-inset-eighth-x-squish-left-right </td>
       <td>2px </td>
-    </tr>  
-    <tr>
-      <td><div class="inset-example" style="box-shadow: rgb(199, 220, 191) -0.4rem -0.4rem 0px inset, rgb(199, 220, 191) 0.4rem 0.4rem 0px inset; padding: 0.4rem;">content</div></td>
-      <td> </td>
     </tr>
-    <tr>
-      <td>
-        <b>cdr-space-inset-quarter-x</b>  
-        <br>
-      </td>
-      <td>4px </td>
-    </tr> 
   </tbody>
 </table>
-  
+
+<br>
+
+<spacing-example name="cdr-space-inset-quarter-x-squish" />
+<table>
+  <tbody>
+    <tr>
+      <td width=440>cdr-space-inset-quarter-x-squish </td>
+      <td><i>Mixin</i> </td>
+    </tr>
+    <tr>
+      <td width=440>cdr-space-inset-quarter-x-squish-top-bottom </td>
+      <td>2px </td>
+    </tr>
+    <tr>
+      <td width=440>cdr-space-inset-quarter-x-squish-left-right </td>
+      <td>4px </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<spacing-example name="cdr-space-inset-half-x-squish" />
+<table>
+  <tbody>
+    <tr>
+      <td width=440>cdr-space-inset-half-x-squish </td>
+      <td><i>Mixin</i> </td>
+    </tr>
+    <tr>
+      <td width=440>cdr-space-inset-half-x-squish-top-bottom </td>
+      <td>4px </td>
+    </tr>
+    <tr>
+      <td width=440>cdr-space-inset-half-x-squish-left-right </td>
+      <td>8px </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<spacing-example name="cdr-space-inset-three-quarter-x-squish" />
+<table>
+  <tbody>
+    <tr>
+      <td width=440>cdr-space-inset-three-quarter-x-squish </td>
+      <td><i>Mixin</i> </td>
+    </tr>
+    <tr>
+      <td width=440>cdr-space-inset-three-quarter-x-squish-top-bottom </td>
+      <td>6px </td>
+    </tr>
+    <tr>
+      <td width=440>cdr-space-inset-three-quarter-x-squish-left-right </td>
+      <td>12px </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<spacing-example name="cdr-space-inset-one-x-squish" />
+<table>
+  <tbody>
+    <tr>
+      <td width=440>cdr-space-inset-one-x-squish </td>
+      <td><i>Mixin</i> </td>
+    </tr>
+    <tr>
+      <td width=440>cdr-space-inset-one-x-squish-top-bottom </td>
+      <td>8px </td>
+    </tr>
+    <tr>
+      <td width=440>cdr-space-inset-one-x-squish-left-right </td>
+      <td>16px </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<spacing-example name="cdr-space-inset-one-and-a-half-x-squish" />
+<table>
+  <tbody>
+    <tr>
+      <td width=440>cdr-space-inset-one-and-a-half-x-squish </td>
+      <td><i>Mixin</i> </td>
+    </tr>
+    <tr>
+      <td width=440>cdr-space-inset-one-and-a-half-x-squish-top-bottom </td>
+      <td>12px </td>
+    </tr>
+    <tr>
+      <td width=440>cdr-space-inset-one-and-a-half-x-squish-left-right </td>
+      <td>24px </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<spacing-example name="cdr-space-inset-two-x-squish" />
+<table>
+  <tbody>
+    <tr>
+      <td width=440>cdr-space-inset-two-x-squish </td>
+      <td><i>Mixin</i> </td>
+    </tr>
+    <tr>
+      <td width=440>cdr-space-inset-two-x-squish-top-bottom </td>
+      <td>16px </td>
+    </tr>
+    <tr>
+      <td width=440>cdr-space-inset-two-x-squish-left-right </td>
+      <td>32px </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<spacing-example name="cdr-space-inset-four-x-squish" />
+<table>
+  <tbody>
+    <tr>
+      <td width=440>cdr-space-inset-four-x-squish </td>
+      <td><i>Mixin</i> </td>
+    </tr>
+    <tr>
+      <td width=440>cdr-space-inset-four-x-squish-top-bottom </td>
+      <td>32px </td>
+    </tr>
+    <tr>
+      <td width=440>cdr-space-inset-four-x-squish-left-right </td>
+      <td>64px </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<br>
+<hr>
+
+
+## Inset - Stretch
+Use to create an expanded vertical space within the content container:
+- Increases top and bottom padding by 50% relative to left and right padding
+- Options range from:
+  - - 4 pixels to 96 pixels for top and bottom values
+  - - 2 pixels to 64 pixels for left and right values
+- Expanded spacing model, best used with multi-line input (textareas) or other form elements 
+- Example: Large version for Inputs 
+
+<br>
+
+<spacing-example name="cdr-space-inset-eighth-x-stretch" />
+<table>
+  <tbody>
+    <tr>
+      <td width=440>cdr-space-inset-eighth-x-stretch </td>
+      <td><i>Mixin</i> </td>
+    </tr>
+    <tr>
+      <td width=440>cdr-space-inset-eighth-x-stretch-top-bottom </td>
+      <td>4px </td>
+    </tr>
+    <tr>
+      <td width=440>cdr-space-inset-eighth-x-stretch-left-right </td>
+      <td>2px </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<spacing-example name="cdr-space-inset-quarter-x-stretch" />
+<table>
+  <tbody>
+    <tr>
+      <td width=440>cdr-space-inset-quarter-x-stretch </td>
+      <td><i>Mixin</i> </td>
+    </tr>
+    <tr>
+      <td width=440>cdr-space-inset-quarter-x-stretch-top-bottom </td>
+      <td>6px </td>
+    </tr>
+    <tr>
+      <td width=440>cdr-space-inset-quarter-x-stretch-left-right </td>
+      <td>4px </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<spacing-example name="cdr-space-inset-half-x-stretch" />
+<table>
+  <tbody>
+    <tr>
+      <td width=440>cdr-space-inset-half-x-stretch </td>
+      <td><i>Mixin</i> </td>
+    </tr>
+    <tr>
+      <td width=440>cdr-space-inset-half-x-stretch-top-bottom </td>
+      <td>12px </td>
+    </tr>
+    <tr>
+      <td width=440>cdr-space-inset-half-x-stretch-left-right </td>
+      <td>8px </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<spacing-example name="cdr-space-inset-three-quarter-x-stretch" />
+<table>
+  <tbody>
+    <tr>
+      <td width=440>cdr-space-inset-three-quarter-x-stretch </td>
+      <td><i>Mixin</i> </td>
+    </tr>
+    <tr>
+      <td width=440>cdr-space-inset-three-quarter-x-stretch-top-bottom </td>
+      <td>18px </td>
+    </tr>
+    <tr>
+      <td width=440>cdr-space-inset-three-quarter-x-stretch-left-right </td>
+      <td>12px </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<spacing-example name="cdr-space-inset-one-x-stretch" />
+<table>
+  <tbody>
+    <tr>
+      <td width=440>cdr-space-inset-one-x-stretch </td>
+      <td><i>Mixin</i> </td>
+    </tr>
+    <tr>
+      <td width=440>cdr-space-inset-one-x-stretch-top-bottom </td>
+      <td>24px </td>
+    </tr>
+    <tr>
+      <td width=440>cdr-space-inset-one-x-stretch-left-right </td>
+      <td>16px </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<spacing-example name="cdr-space-inset-one-and-a-half-x-stretch" />
+<table>
+  <tbody>
+    <tr>
+      <td width=440>cdr-space-inset-one-and-a-half-x-stretch </td>
+      <td><i>Mixin</i> </td>
+    </tr>
+    <tr>
+      <td width=440>cdr-space-inset-one-and-a-half-x-stretch-top-bottom </td>
+      <td>36px </td>
+    </tr>
+    <tr>
+      <td width=440>cdr-space-inset-one-and-a-half-x-stretch-left-right </td>
+      <td>24px </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<spacing-example name="cdr-space-inset-two-x-stretch" />
+<table>
+  <tbody>
+    <tr>
+      <td width=440>cdr-space-inset-two-x-stretch </td>
+      <td><i>Mixin</i> </td>
+    </tr>
+    <tr>
+      <td width=440>cdr-space-inset-two-x-stretch-top-bottom </td>
+      <td>48px </td>
+    </tr>
+    <tr>
+      <td width=440>cdr-space-inset-two-x-stretch-left-right </td>
+      <td>32px </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<spacing-example name="cdr-space-inset-four-x-stretch" />
+<table>
+  <tbody>
+    <tr>
+      <td width=440>cdr-space-inset-four-x-stretch </td>
+      <td><i>Mixin</i> </td>
+    </tr>
+    <tr>
+      <td width=440>cdr-space-inset-four-x-stretch-top-bottom </td>
+      <td>96px </td>
+    </tr>
+    <tr>
+      <td width=440>cdr-space-inset-four-x-stretch-left-right </td>
+      <td>64px </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<br>
+<hr>
 
 
 </cdr-doc-table-of-contents-shell>
@@ -169,16 +605,70 @@ Use to create a consistent space within the content container:
 <template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
 
-## Spacing
+
+The Cedar spacing system is based on 16px units. The scaling system uses fractions and multiples of the base size (16px). The result is easy to understand. Please note that 1 rem equals 10 pixels. 
+
+<br>
+
+| System Scale        | Pixel Values        | Rem Values        |
+| :------------------ | :------------------ | :---------------- |
+| 1/8 space           | 2px                 | 0.2rem            | 
+| 1/4 space           | 4px                 | 0.4rem            | 
+| 1/2 space           | 8px                 | 0.8rem            | 
+| 3/4 space           | 12px                | 1.2rem            | 
+| 1 space             | 16px                | 1.6rem            | 
+| 1  1/2  spaces      | 24px                | 2.4rem            | 
+| 2 spaces            | 32px                | 3.2rem            | 
+| 4 spaces            | 64px                | 6.4rem            | 
+
+<br>
+
+### Inset
+
+An inset is intended to provide space within the content container. It defines how the typography, images, icons, and any content is separated from the edge. Cedar provides different options for inset tokens:
+- **Default:** All four sides match in value and results in consistent space within the content container
+- **Squish:** Reduces top and bottom spacing by 50% relative to the left and right padding values, resulting in a vertically condensed visual display
+- **Stretch:** Increases top and bottom spacing by 50% relative to the left and right padding values, resulting in a vertically expanded visual display
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/spacing/inset-options.gif`)" alt="examples demoing spacing of inset, inset squish, and inset stretch" />
+
+<br>
+
+The base `inset` tokens have all four sides matching in value, resulting in consistent space within the container. The base inset is 16px with options ranging from 2px to 64px. Names are tied to the base 16 and increase or decrease accordingly.
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/spacing/inset.jpg`)" alt="inset examples"/>
+
+
+### Inset-Squish
+An `inset-squish` reduces top and bottom spacing by 50% relative to the default inset value, resulting in a vertically condensed visual display.
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/spacing/inset-squish.gif`)" alt="inset squish examples"/>
+
+<br>
+
+### Inset-Stretch
+An `inset-stretch` increases top and bottom spacing by 50% relative to the default inset value, resulting in a vertically expanded visual display.
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/spacing/inset-stretch.gif`)" alt="inset stretch examples"/>
+
+<br>
+<br>
+<hr
+
+
+### EXISTING CONTENT
+
+**Reusing graphics; need to determine correct image**
+<br>
 
 Cedar provides easy-to-use, preset values to apply consistent spacing within and between components. These spacing tokens help maintain a cohesive visual style across all REI properties.
 
 Spacing symbols are available within the Cedar UI Toolkit and directly reflect the token names in the code ensuring a [more efficient handoff](../../getting-started/as-a-designer/?active-link=annotating-delivering-cedar-based-designs) between design and development. 
 
-## Concepts
+#### Concepts
 The Cedar spacing system is built on three core concepts: `inset`, `stack` and `inline`. Whether applying space within a container or between two components, the included options make for easier and more consistent design decisions. 
 
-### Inset
+##### Inset
 An `inset` is the space within a block from which elements—typography, images, icons, and more—are separated from the edge. Cedar offers different options for inset tokens including default, squish and stretch. 
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/spacing/inset-options.gif`)" alt="examples demoing spacing of inset, inset squish, and inset stretch" />
@@ -187,32 +677,32 @@ The base `inset` tokens have all four sides matching in value, resulting in cons
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/spacing/inset.jpg`)" alt="inset examples"/>
 
-### Inset-Squish
+##### Inset-Squish
 An `inset-squish` reduces top and bottom spacing by 50% relative to the default inset value, resulting in a vertically condensed visual display.
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/spacing/inset-squish.gif`)" alt="inset squish examples"/>
 
-### Inset-Stretch
+##### Inset-Stretch
 An `inset-stretch` increases top and bottom spacing by 50% relative to the default inset value, resulting in a vertically expanded visual display.
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/spacing/inset-stretch.gif`)" alt="inset stretch examples"/>
 
-## Stack vs Inline
+#### Stack vs Inline
 `Inset` tokens are for space within a container, while `stack` and `inline` tokens adjust the space outside of a component/object. In CSS terms, think of `inset` as padding and `stack` & `inline` as margin.
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/spacing/stack-vs-inline.jpg`)" alt="image showing stack vs inline"/>
 
-### Stack
+##### Stack
 Use `stack` tokens to separate components arranged vertically. The last instance of a component should omit this space. The default `stack` is 16px with options ranging from 2px to 64px. Names are tied to the base 16 and increase or decrease accordingly.
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/spacing/stack.jpg`)" alt="stack examples"/>
 
-### Inline
+##### Inline
 Use `inline` tokens to separate elements arranged horizontally and that may wrap on the right. The last instance of a component should omit this space. The default `inline` is 16px with options ranging from 2px to 64px. Names are tied to the base 16 and increase or decrease accordingly.
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/spacing/inline.jpg`)" alt="inline examples"/>
 
-## Generic Space Values
+#### Generic Space Values
 The specific options for `inset` may not fit every solution. When this is the case, use the generic spacing tokens to keep consistent spatial concepts and maintenance in code.
 
 <pre>space-eighth-x: 2px</pre>
