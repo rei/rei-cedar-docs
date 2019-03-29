@@ -147,11 +147,11 @@ This component has compliance WCAG guidelines by:
 <template slot="Design Guidelines">
 <cdr-doc-table-of-contents-shell>
 
-## Use when
+## Use When
 - Providing navigation to break apart large quantities of content
 - Breaking up search result pages into manageable sections
 
-### Don't use when
+### Don't Use When
 
 - Using lazy load or infinite scroll within an experience
 - Switching between slides or content in a carousel
@@ -238,7 +238,7 @@ _main.js_
 import "@rei/cdr-pagination/dist/cdr-pagination.css";
 ```
 
-### 3. Add component to a template
+### 3. Add Component to a Template
 
 _local.vue_
 
@@ -282,7 +282,7 @@ You will need to enable navigation manually for pagination to work at mobile wid
 
 The **CdrPagination** component does not make data calls, render or track paginated data, or handle routing beyond simple anchor links. However, it does emit events if you need to customize routing or need to add additional application logic. See section below, "Usage with Vue Router".
 
-### Responsive behavior and navigation
+### Responsive Behavior and Navigation
 
 The responsive behavior for the **CdrPagination** component automatically converts to **CdrSelect** component rather than a list of links. Values for the **CdrSelect** component are the provided page URL.
 
