@@ -65,12 +65,12 @@ Tokens can be used by teams:
 - To create new components that can be contributed back to the system 
 - When there are technical limitations to consuming components
 
-<br>
+
 #### Don’t Use When
 - Don’t use tokens to make modifications to an existing component. **Instead,** submit a change request for existing component
 - Don’t use tokens to only access a value or values. **Instead,** create a new token in the [shared-tokens repo](https://git.rei.com/projects/FEDPACK/repos/shared-tokens/browse) that meets your specific semantic use case
 
-<br>
+
 Questions about when to use tokens? Ask the Cedar team in [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) 
 
 <hr/>
@@ -309,7 +309,7 @@ The number of tokens Cedar provides is kept small intentionally as it is critica
 
 If you have a request for a token that is missing, you can [submit a pull request](https://www.npmjs.com/package/@rei/cdr-tokens#addingupdating-tokens) to the cedar-token repo or create a token in the [shared-tokens repo](https://git.rei.com/projects/FEDPACK/repos/shared-tokens/browse) for future integration in Cedar. 
 
-<br>
+
 Ensure that the token meets the following requirements:
 - Token is used in several components or layouts
 - Token is used for multiple elements and NOT specific to one element
