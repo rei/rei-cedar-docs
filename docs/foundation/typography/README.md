@@ -15,10 +15,8 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
   
-Typography design tokens store the fundamental decisions of Cedar’s visual language: 
-- Stores font specifications using variable names, not hard-coded values such as pixel values for font size
-- Allows us to maintain a scalable, adjustable, and consistent visual system 
-- Delivers updates to the brand identity with minimal impact to the code
+Typography design tokens represent the fundamental decisions of Cedar’s visual language: 
+- Stores font specifications using variable names, not hard-coded values such as font family name or pixel values for font size
 - Specifies a hierarchical and semantically defined system
 
 <br/>
@@ -892,15 +890,13 @@ Suggested Usage: Only for message text with error or warning states. Use #e86868
 
 ## Type Families
 
-Cedar design system uses a limited number of tokens for typography:
-- To define core styles
-- By using tokens, Cedar can respond to changes in the brand identity with minimal impact to the code
+Cedar design system uses a limited number of tokens for typography to define core styles. By using tokens, Cedar can respond to changes in the brand identity with minimal impact to the code.
 
 <br/>
 
-The Cedar team has defined typography specifications and values based on REI Brand:
+Cedar has defined typography specifications and values based on REI's brand guidelines:
 - Use these values with caution; type specifications could change
-- Cedar Design Systems team is tracking how options are used in components
+- The design systems team is tracking how options are used in components
 - List of typography values are available on the [Brand Typography tab](?active-tab=brand-typography)
 
 
@@ -942,7 +938,7 @@ The Cedar team has defined typography specifications and values based on REI Bra
 
 <cdr-doc-alert style="border: 1px solid #c77523; border-left: 8px solid #c77523; fill: #c77523">These values are **NOT** to be used by developers for creating custom UI.<br>If you are extending or modifying an existing Cedar component please work with the design system team to add support for your enhancements.</cdr-doc-alert>
 
-Typography from REI’s base style guide are used throughout Cedar components and design recommendations. Use these values when:
+Typography from REI’s brand guidelines are used throughout Cedar components and design recommendations. Use these values when:
   - Requesting an update to an existing Cedar component
   - Requesting a new token 
   - Developing a new component that will be adopted by Cedar Design System
@@ -1564,7 +1560,7 @@ Line height to font size ratio is more condensed than body type specifications a
 
 <hr />
 
-### Utility
+## Utility
 Used sparingly within UI elements, currently used by Cedar components for:
 - Form labels
 - Call-to-Action text
