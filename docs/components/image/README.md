@@ -128,7 +128,7 @@ Use for images with no responsive qualities.
 ```
 </cdr-doc-example-code-pair>
 
-## Managing images
+## Managing Images
 
 Apply rules to an image using ratio and crop properties. The below example is cropped using top alignment with the aspect ratio set as 9-16
 
@@ -144,7 +144,7 @@ Apply rules to an image using ratio and crop properties. The below example is cr
 ```
 </cdr-doc-example-code-pair>
 
-## Displaying images as backgrounds
+## Displaying Images as Backgrounds
 
 Use the cover property to resize the background image to fill the entire container.
 
@@ -163,7 +163,7 @@ Use the cover property to resize the background image to fill the entire contain
 </cdr-doc-example-code-pair>
 
 
-## Shaping images
+## Shaping Images
 
 Apply a radius to an image.
 
@@ -229,7 +229,7 @@ This component has compliance with WCAG guidelines by:
 <template slot="Design Guidelines">
 <cdr-doc-table-of-contents-shell>
 
-## Use when
+## Use When
 
 - Illustrating a product feature
 - Allowing comparisons between similar items
@@ -323,7 +323,7 @@ Images are cropped on y-axis with bottom value and on x-axis with left, x-center
 - If using the HTML `<img>` element, add an empty `alt` attribute
 - If using the HTML `<img>` element, add the following attribute: ` role="presentation" `
 
-### Alternative text
+### Alternative Text
 
 - Use [this decision tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) to determine how to use the `alt` attribute
 - Be succinct. Ideally, one sentence or less
@@ -394,7 +394,7 @@ _main.js_
 import '@rei/cdr-img/dist/cdr-img.css';
 ```
 
-### 3. Add component to a template
+### 3. Add Component to a Template
 
 _local.vue_
 
