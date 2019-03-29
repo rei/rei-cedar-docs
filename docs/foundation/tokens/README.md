@@ -2,7 +2,7 @@
 {
   "title": "Tokens",
   "title_metadata": false,
-  "layout": "LayoutComponent",
+  "layout": "LayoutArticle",
   "summary": false,
   "breadcrumbs": [
     {
@@ -13,8 +13,6 @@
 ---
 
 
-<cdr-doc-tabs>
-<template slot="Overview">
 <cdr-doc-table-of-contents-shell>
 
 ## Overview
@@ -323,5 +321,4 @@ Ensure that the token meets the following requirements:
 
 
 </cdr-doc-table-of-contents-shell>
-</template>
-</cdr-doc-tabs>
+
