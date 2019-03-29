@@ -184,12 +184,12 @@ This component has compliance with WCAG guidelines by:
 <template slot="Design Guidelines">
 <cdr-doc-table-of-contents-shell>
 
-## Use when
+## Use When
 
 - Helping users understand where they are within the site hierarchy
 - Providing a shortcut to explore similar products within common parent categories
 
-### Don’t use when
+### Don’t Use When
 
 - Displaying a top-level page, such as a home or high level category page
 - Linking to previous steps of a sequential process
@@ -245,7 +245,7 @@ Truncate breadcrumbs left to right to show the final two links in the trail, so 
 <do-dont :examples="$page.frontmatter.truncation" />
 
 
-### Avoid customization
+### Avoid Customization
 
 <do-dont :examples="$page.frontmatter.path_symbol" />
 
@@ -297,7 +297,7 @@ _main.js_
 import "@rei/cdr-breadcrumb/dist/cdr-breadcrumb.css";
 ```
 
-### 3. Add component to a template
+### 3. Add Component to a Template
 
 _local.vue_
 
