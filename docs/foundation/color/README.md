@@ -16,19 +16,19 @@
 <cdr-doc-table-of-contents-shell>
   
 
-Color design tokens store the fundamental decisions of Cedar’s visual language: 
+Color design tokens represent the fundamental decisions of Cedar’s visual language: 
   - Stores color specifications using variable names, not hard-coded values such as hex values for color
-  - Allows us to maintain a scalable, adjustable, and consistent visual system 
-  - Delivers updates to the brand identity with minimal impact to the code
   - Specifies a hierarchical and semantically defined system
 
 
 <br/>
 <hr>
 
-List of color tokens with descriptions and values. Web and mobile color tokens have identical hex values but the naming pattern differs. For example, color token names are:
+Below is a list of color tokens with descriptions and values. Web and mobile color tokens have identical hex values but the naming pattern differs. For example, color token names are:
   - **For Web:** cdr-color-text-primary-lightmode 
   - **For Android:** cdr_color_text_primary_lightmode
+  - **For iOS:** CdrColorTextPrimaryLightmode  
+  
 
 ## Background Colors
 
@@ -380,7 +380,7 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
     <tr>
       <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_lightest_disabled_4-3.png`)"/> </td>
       <td>N/A* </td>
-      <td>cdr-color-text-disabled-lightmode <br>Values: #b8b8b8 &nbsp; / &nbsp; r184 g184 b184 <br><b>*When text is disabled </b> </td>      
+      <td>cdr-color-text-disabled-lightmode <br>Values: #b8b8b8 &nbsp; / &nbsp; r184 g184 b184 <br>*When text is disabled </td>      
     </tr>
   </tbody>
 </table>
@@ -416,7 +416,7 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
     <tr>
       <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_lighter_disabled_4-3.png`)"/> </td>
       <td>N/A* </td>
-      <td>cdr-color-text-disabled-lightmode <br>Values: #b8b8b8 &nbsp; / &nbsp; r184 g184 b184 <br><b>*When text is disabled </b> </td>   
+      <td>cdr-color-text-disabled-lightmode <br>Values: #b8b8b8 &nbsp; / &nbsp; r184 g184 b184 <br>*When text is disabled </td>   
     </tr>
   </tbody>
 </table>
@@ -451,7 +451,7 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
     <tr>
       <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_light_disabled_4-3.png`)"/> </td>
       <td>N/A* </td>
-      <td>cdr-color-text-disabled-lightmode <br>Values: #b8b8b8 &nbsp; / &nbsp; r184 g184 b184 <br><b>*When text is disabled </b> </td>   
+      <td>cdr-color-text-disabled-lightmode <br>Values: #b8b8b8 &nbsp; / &nbsp; r184 g184 b184 <br>*When text is disabled </td>   
     </tr>
   </tbody>
 </table> 
@@ -490,7 +490,7 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
     <tr>
       <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_dark_disabled_4-3.png`)"/> </td>
       <td>N/A* </td>
-      <td>cdr-color-text-disabled-darkmode <br>Values: #616161 &nbsp; / &nbsp; r97 g97 b97 <br><b>*When text is disabled </b> </td>   
+      <td>cdr-color-text-disabled-darkmode <br>Values: #616161 &nbsp; / &nbsp; r97 g97 b97 <br>*When text is disabled </td>   
     </tr>
   </tbody>
 </table>
@@ -525,7 +525,7 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
     <tr>
       <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_darker_disabled_4-3.png`)"/> </td>
       <td>N/A* </td>
-      <td>cdr-color-text-disabled-darkmode <br>Values: #616161 &nbsp; / &nbsp; r97 g97 b97 <br><b>*When text is disabled </b> </td>   
+      <td>cdr-color-text-disabled-darkmode <br>Values: #616161 &nbsp; / &nbsp; r97 g97 b97 <br>*When text is disabled </td>   
     </tr>
   </tbody>
 </table>
@@ -543,8 +543,8 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
 
 <cdr-doc-alert style="border: 1px solid #c77523; border-left: 8px solid #c77523; fill: #c77523">These values are NOT to be used by developers for creating custom UI.<br>If you are extending or modifying an existing Cedar component please work with the design system team to add support for your enhancements.</cdr-doc-alert>
 
-Colors from Cedar’s base color palette are used throughout Cedar components and design recommendations. Use these values when:
-  - Requesting or updating for an existing Cedar component
+Colors from REI’s brand color palette are used throughout Cedar components and design recommendations. Use these values when:
+  - Requesting an update to an existing Cedar component
   - Requesting a new token 
   - Developing a new component that will be adopted by Cedar Design System
 
