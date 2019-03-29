@@ -59,27 +59,19 @@ Tokens can streamline redesign processes when:
 
 
 ### Use When  
-There are a couple of primary use cases for using tokens in place of components:
-- **Technical Limitations:** When teams: 
-  - Are unable to consume components
-  - Need to use their own markup structure for mobile apps or third party development
-  - Have custom components that retain requirements for a consistent brand UI
+Tokens can be used by teams: 
+- To supplement components when designing page layouts 
+- To create custom components that are visually aligned to the REI brand styles
+- To create new components that can be contributed back to the system 
+- When there are technical limitations to consuming components
 
-- **Custom Experiences:** When a component does not (or will not) exist in the system:
-  - Teams can use tokens to create custom components
-  - Align new experiences with the current visual guidelines
-
-- **Design System Internal:** Used by the Cedar design system:
-  - To create components or compositions
-
+<br>
 #### Don’t Use When
-- Don’t use tokens to recreate existing components that need slight modifications to the component’s API. **Instead:**
-  - Submit change request to existing component
-  - Submit PR to existing component
-  
-- Don’t use tokens that do not meet your specific semantic use case just to access a value. **Instead:**
-  - Create a new token in the FED-COMPONENTS Token staging file (we need to create this)
-  - Use a hardcoded value 
+- Don’t use tokens to make modifications to an existing component. **Instead,** submit a change request for existing component
+- Don’t use tokens to only access a value or values. **Instead,** create a new token in the [shared-tokens repo](https://git.rei.com/projects/FEDPACK/repos/shared-tokens/browse) that meets your specific semantic use case
+
+<br>
+Questions about when to use tokens? Ask the Cedar team in [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) 
 
 <hr/>
 
@@ -315,7 +307,10 @@ This repository follows SEMVER practices and will notify users of changes and up
 ## Adding Tokens to the Repository
 The number of tokens Cedar provides is kept small intentionally as it is critical for a token to meet all requirements based on the above criterium prior to being added to Cedar’s Token list.
 
-If you have a request for a token that is missing, you can [submit a pull request to the cedar-token repo](https://www.npmjs.com/package/@rei/cdr-tokens#addingupdating-tokens) or reach out in Slack at [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4). Ensure that the token meets the following requirements:
+If you have a request for a token that is missing, you can [submit a pull request](https://www.npmjs.com/package/@rei/cdr-tokens#addingupdating-tokens) to the cedar-token repo or create a token in the [shared-tokens repo](https://git.rei.com/projects/FEDPACK/repos/shared-tokens/browse) for future integration in Cedar. 
+
+<br>
+Ensure that the token meets the following requirements:
 - Token is used in several components or layouts
 - Token is used for multiple elements and NOT specific to one element
 - Token name will continue to have the same semantic meaning in future releases
