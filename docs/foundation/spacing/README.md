@@ -637,14 +637,14 @@ The base `inset` tokens have all four sides matching in value, resulting in cons
 
 <br>
 
-### Inset-Squish
+### Inset - Squish
 An `inset-squish` reduces top and bottom spacing by 50% relative to the default inset value, resulting in a vertically condensed visual display.
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/spacing/inset-squish.gif`)" alt="inset squish examples"/>
 
 <br>
 
-### Inset-Stretch
+### Inset - Stretch
 An `inset-stretch` increases top and bottom spacing by 50% relative to the default inset value, resulting in a vertically expanded visual display.
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/spacing/inset-stretch.gif`)" alt="inset stretch examples"/>
