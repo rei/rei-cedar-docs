@@ -276,13 +276,13 @@ This component has compliance with WCAG guidelines by:
 <template slot="Design Guidelines">
 <cdr-doc-table-of-contents-shell>
 
-## Use when
+## Use When
 
 - Providing users more content within the same layout
 - Displaying content that's directly related, or supplemental, to the main subject of the page
 - Designing with limited vertical space and there is enough content to condense
 
-### Don't use when
+### Don't Use When
 
 - Linking a title to another page. Instead, use [Links](../links/)
 - Designing with sparse content. Instead, use [Lists](../lists/) or [Paragraphs](../paragraphs/)
@@ -391,7 +391,7 @@ _main.js_
 import "@rei/cdr-accordion/dist/cdr-accordion.css";
 ```
 
-### 3. Add component to a template
+### 3. Add Component to a Template
 
 _local.vue_
 
@@ -504,13 +504,14 @@ Any options set at the **CdrAccordion** level can be set on any parent component
 </template>
 
 <template slot="History">
+  
 ## 1.0.3
 - **CdrIcon** dependency update
 
 ## 1.0.2
 - Fix CSS import for SSR
 
-## 1.0.1
+## 1.0.1 
 - **CdrAssets** dependency update
 
 ## 1.0.0
