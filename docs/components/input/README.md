@@ -289,7 +289,7 @@ Input field with no label.
 
 </cdr-doc-example-code-pair>
 
-## Multi-line input
+## Multi-Line Input
 
 Multiple line input field with expander control in lower right.
 
@@ -306,7 +306,7 @@ Multiple line input field with expander control in lower right.
 
 </cdr-doc-example-code-pair>
 
-## Input with link text
+## Input with Link Text
 
 Input field with link text on right.
 
@@ -326,7 +326,7 @@ Input field with link text on right.
 
 </cdr-doc-example-code-pair>
 
-## Input with icon above
+## Input with Icon Above
 
 Input field with icon above input field on right.
 
@@ -350,7 +350,7 @@ Input field with icon above input field on right.
 
 </cdr-doc-example-code-pair>
 
-## Input with helper text
+## Input with Helper Text
 
 Input field with helper or hint text below input field.
 
@@ -370,7 +370,7 @@ Input field with helper or hint text below input field.
 
 </cdr-doc-example-code-pair>
 
-## Input with icon inserted left
+## Input with Icon Inserted Left
 
 Input field with icon inserted into input field on left. Icon is decorative and not intended for any action.
 
@@ -394,7 +394,7 @@ Input field with icon inserted into input field on left. Icon is decorative and 
 
 </cdr-doc-example-code-pair>
 
-## Input with icon inserted right
+## Input with Icon Inserted Right
 
 Input field with icon inserted into input field on right. Icon is decorative and not intended for any action.
 
@@ -430,12 +430,12 @@ This component has compliance with WCAG guidelines by:
 <template slot="Design Guidelines">
 <cdr-doc-table-of-contents-shell>
 
-## Use when
+## Use When
 
 - Entering data with a wide variety of responses
 - Searching for content
 
-### Don’t use when
+### Don’t Use When
 
 - Selecting from a specific set of options. Instead, use Selects
 
@@ -451,7 +451,7 @@ This component has compliance with WCAG guidelines by:
 - Height options are medium or large. For more information, view Overview tab
 - Ability to specify field type for text, email, number, password, search, and URL
 
-### Multi-line input fields
+### Multi-Line Input Fields
 
 - Use when long free-form text is the desired user input such as a comment on a review or feedback form
 - Overflow text wraps to a new line
@@ -474,13 +474,13 @@ This component has compliance with WCAG guidelines by:
 - Use sentence case; not all caps, title caps or all lowercase
 - Don’t use colons after labels
 
-### Placeholder text
+### Placeholder Text
 
 - When user enters data into the input field, the placeholder text is not visible
 - Placeholder text gives context about a field’s input, such as what type of input is expected.  For example, for a date input field, use “mm/dd/yyyy”
 - Limit placeholder text to 1–3 words
 
-### Helper text
+### Helper Text
 
 - Use helper text for hints or suggestions
 - If help text is long or complex, use a tooltip or popover that is opened from the support link above the input field
@@ -500,11 +500,11 @@ This component has compliance with WCAG guidelines by:
 
 ## Behavior
 
-### Inputs with icons
+### Inputs with Icons
 
 - Icons inserted into input fields are decorative, not inteded for any action
 
-### Required fields
+### Required Fields
 
 - The default status of an input field is “optional”
 - If the status is set to “required”, the text, “Required” will appear next to the input label
@@ -554,7 +554,7 @@ _Terminal_
 npm i -s @rei/cdr-input
 ```
 
-## 2. Import Dependencies
+### 2. Import Dependencies
 
 _main.js_
 
@@ -563,7 +563,7 @@ _main.js_
 import "@rei/cdr-input/dist/cdr-input.css";
 ```
 
-### 3. Add component to a template
+### 3. Add Component to a Template
 
 _local.vue_
 
