@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div :class="[!isInset ? 'space-wrapper' : '']">
     <div v-if="isInset" class="inset-example" :style="{boxShadow: inset, padding: pad}">content</div>
-    <div v-else class="space-example" :style="{width: spaceValue}"/>
+    <div v-else class="space-example" :style="{width: spaceValue, height: spaceValue}"/>
   </div>
 </template>
 
@@ -64,30 +64,12 @@ export default {
     background-color: beige;
   }
 
+  .space-wrapper {
+    background-color: white;
+    padding: 8px;
+  }
+
   .space-example {
-    height: 1px;
     background-color: black;
-    position: relative;
-    margin: 8px;
-
-    &::before {
-      content: '';
-      position: absolute;
-      height: 5px;
-      width: 1px;
-      background-color: black;
-      top: -2px;
-      left: -1px;
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      height: 5px;
-      width: 1px;
-      background-color: black;
-      top: -2px;
-      right: -1px;
-    }
   }
 </style>
