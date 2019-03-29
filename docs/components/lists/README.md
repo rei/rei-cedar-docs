@@ -296,11 +296,11 @@ This component has compliance with WCAG guidelines by:
 <template slot="Design Guidelines">
 <cdr-doc-table-of-contents-shell>
 
-## Use when
+## Use When
 
 - Displaying groups of related items represented by text
 
-### Don’t use when
+### Don’t Use When
 
 - Displaying content that is not primarily text
 - Displaying content with two or more well-defined dimensions. Instead, use [Data Tables](../data-tables/)
@@ -390,7 +390,7 @@ npm i -S @rei/cdr-list
 
 </cdr-doc-code-snippet>
 
-### 2. Import dependencies
+### 2. Import Dependencies
 
 _main.js_
 
@@ -402,7 +402,7 @@ import '@rei/cdr-list/dist/cdr-list.css';
 ```
 </cdr-doc-code-snippet>
 
-### 3. Add component to a template
+### 3. Add Component to a Template
 
 _local.vue_
 
@@ -448,7 +448,7 @@ The **CdrList** component has decoupled the semantic tags `<ul>` and `<ol>` from
 
 It is possible to render a semantic ordered list `<ol>` as a visually non styled or bulleted list using the `cdr-list` modifiers. With this decoupling, individual list items can contain a variety of HTML elements, including paragraphs, headings, form elements, and other (nested) lists. Ensure that content is structured and follows design guidelines.
 
-### Tag variants
+### Tag Variants
 
 Following are different types of lists:
 
