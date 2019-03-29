@@ -16,7 +16,7 @@
 
 ## About Cedar
 
-Cedar is REI’s digital visual language built into accessible UI components, offered as dual Vue-based code and Sketch design assets with full documentation.
+Cedar is REI’s Design System: a foundational tool built to serve the design and engineering of digital products. It is REI’s digital visual language built into accessible UI components and token variables, offered as dual Vue-based code and Sketch design assets with full documentation.
 
 <cdr-img :src="$withBase(`/about/cedar1.png`)" alt="Cedar provides design assets for sketch, Vue.js components and the documentation to use them."/>
 

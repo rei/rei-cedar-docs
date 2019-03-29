@@ -310,7 +310,7 @@ For more information, review techniques and failures for:
 - Viewing all available options is needed
 - Comparing between a list of selections is desired
 
-### Don't use when
+### Don't Use When
 
 - Selecting from a list when only one choice is allowed. Instead, use [Radio Buttons](../radio/)
 
@@ -402,7 +402,7 @@ _Terminal_
 npm i -s @rei/cdr-checkbox
 ```
 
-### 2. Import dependencies
+### 2. Import Dependencies
 
 _main.js_
 
@@ -411,7 +411,7 @@ _main.js_
 import "@rei/cdr-link/dist/cdr-checkbox.css";
 ```
 
-### 3. Add component to a template
+### 3. Add Component to a Template
 
 _local.vue_
 

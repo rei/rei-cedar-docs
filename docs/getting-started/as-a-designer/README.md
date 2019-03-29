@@ -137,7 +137,7 @@ Manage and sync your Sketch plugins across machines and teams.<br/>
 Change your large (shift+arrow) nudge from 10 to 8 to easily align with spacing system.<br/>
 [Download from Nudg.it](http://nudg.it/)
 
-## Annotating/Delivering Cedar-based Designs
+## Annotating/Delivering Cedar-Based Designs
 
 The Cedar team suggests using Sketch Measure to label and shade Cedar components when redlining final designs. An advantage of working with the REI UI Toolkit is the name of the component symbols closely align to the names used in development. This provides a common language among the two teams and allows for smoother, more efficient handoffs.
 

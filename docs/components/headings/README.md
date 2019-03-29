@@ -226,12 +226,12 @@ This component has compliance with WCAG guidelines by:
 <template slot="Design Guidelines">
 <cdr-doc-table-of-contents-shell>
 
-## Use when
+## Use When
 
 - Creating hierarchical structure of information in a page layout
 - Improving quick scanning of page content for sighted users and screen readers
 
-### Don’t use when
+### Don’t Use When
 
 - Tagging as a semantic heading when an element only needs to be highlighted or emphasized within your content. Instead, use sizing modifier for this component
 
@@ -306,7 +306,7 @@ _Terminal_
 npm i -S @rei/cdr-text
 ```
 
-### 2. Import dependencies
+### 2. Import Dependencies
 
 _main.js_
 
@@ -316,7 +316,7 @@ import '@rei/cdr-assets/dist/cdr-core.css';
 import '@rei/cdr-assets/dist/cdr-fonts.css';
 ```
 
-### 3. Add component to a template
+### 3. Add Component to a Template
 
 _local.vue_
 
@@ -395,7 +395,7 @@ This will result in the following HTML:
   </h2>
 ```
 
-### Responsive headings
+### Responsive Headings
 
 - Heading modifiers (without the “-static” ending) are responsive
 - To disable resizing at breakpoints use static variants (ending with “-static”)
@@ -408,7 +408,7 @@ This will result in the following HTML:
   </cdr-text>
 ```
 
-## Heading levels
+## Heading Levels
 
 When using actual heading elements via the tag property, nest headings by their level:
 
@@ -421,7 +421,7 @@ Skipping heading levels can be confusing and should be avoided where possible:
 - Avoid following an `<h2>` tag by an `<h4>` tag
 - If an `<h4>` tag closes a previous section, follow with a `<h2>` tag to open the next section
 
-### Exception for fixed page sections
+### Exception for Fixed Page Sections
 
 In fixed sections of the page (e.g. sidebars), heading levels **should not** change depending on the heading levels in other areas of the page. Consistency across pages is required throughout the REI digital properties as explained on the [Navigation Design Principles Confluence page](https://confluence.rei.com/display/NAV/Navigation+Design+Principles).
 

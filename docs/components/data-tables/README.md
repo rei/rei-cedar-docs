@@ -335,7 +335,7 @@ This component has compliance with WCAG guidelines by:
 - Presenting multiple metrics and categories together
 - Displaying tabular data for users to compare
 
-### Don't use when
+### Don't Use When
 
 - Positioning contents on page. Instead, use [Grid](../grid/)
 - Laying out a page design. Instead, use [Grid](../grid/)
@@ -407,13 +407,13 @@ Alignment impacts the table's readability. Make the data easy to read and simple
 
 Data Tables are responsive by default. Whenever the number of columns overflows the container, the entire table will scroll.
 
-### Locked column scrolling
+### Locked Column Scrolling
 
 Data Table must have row headers and more than two columns of content, then the responsive behavior will be:
 - Column of row headers will lock into place
 - Remaining columns will scroll
 
-### Only two columns
+### Only Two Columns
 
 - Content will not scroll
 - Text within table cells will wrap to fit the smaller container (or viewport)
@@ -457,7 +457,7 @@ _Terminal_
 npm i -S @rei/cdr-data-table
 ```
 
-### 2. Import dependencies
+### 2. Import Dependencies
 
 _main.js_
 
@@ -466,7 +466,7 @@ _main.js_
 import "@rei/cdr-data-table/dist/cdr-data-table.css";
 ```
 
-### 3. Add component to a template
+### 3. Add Component to a Template
 
 _local.vue_
 
