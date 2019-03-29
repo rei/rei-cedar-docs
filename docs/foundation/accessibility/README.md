@@ -22,7 +22,7 @@ The design and development of Cedar is a starting point to incorporate required 
 
 However, how you use Cedar also affects the accessibility of a product. Read this page to learn about accessibility in general. Then, while you're working, use the accessibility guidelines for each Cedar component to help you make products that anyone can use.
 
-## Why does accessibility matter?
+## Why Does Accessibility Matter?
 Designing for accessibility means being inclusive to the needs of our users - including our target users, users outside our target demographic, users with disabilities, and even users from different cultures and countries. Understanding those needs is the key to creating better and more accessible experiences for all users. 
 
 Disabilities can be a mismatch between one's ability and one's environment. Some examples are: 
@@ -30,7 +30,7 @@ Disabilities can be a mismatch between one's ability and one's environment. Some
 - **Temporary:** A person with a broken wrist may struggle to use a laptop and phone while recovering from an accident
 - **Long-lasting:** This is what people typically think of when they hear "disability”
  
-## How to make your product accessible
+## How to Make Your Product Accessible
 Most accessibility principles can be implemented easily and will not impact the overall “look and feel” of REI’s website. Some of the key principles are:
 - Ensuring that content is available through sight, hearing or touch
 - Compatibility with keyboard or mouse navigation
@@ -56,7 +56,7 @@ Cedar components have accessibility attributes built in and provides guidelines 
 
 <br />
 
-## Testing and validating 
+## Testing and Validating 
 Cedar Design System is only the foundation for accessible application development. We recommend that you review the accessibility of your web pages before release and ensure that it meets the WCAG 2.1 Guidelines at the AA Level.
 
 We also recommend that you:
@@ -66,7 +66,7 @@ We also recommend that you:
  
 Cedar is working in tandem with the Accessibility team to provide standard testing processes for components and applications.
 
-## Information about specific disabilities
+## Information About Specific Disabilities
  
 ### Auditory 
 - Users with hearing disabilities will have difficulty with audio or video content
@@ -101,7 +101,7 @@ Cedar is working in tandem with the Accessibility team to provide standard testi
     - Follow recommendations for color pairings on the [Color](https://rei.github.io/rei-cedar-docs/foundation/color/) page   
     - For gradient backgrounds or images, check contrast ratios using WebAIM’s [Color Contrast Checker](https://webaim.org/resources/contrastchecker/) 
  
-#### Designing for color blindness
+#### Designing for Color Blindness
 Color blindness involves difficulty in distinguishing between colors, and sensitivity to color brightness. It affects approximately 1 in 12 men and 1 in 200 women worldwide.
  
 Don't convey information using color alone. Use multiple visual cues, such as stroke weight, patterns, shape, or text. 
