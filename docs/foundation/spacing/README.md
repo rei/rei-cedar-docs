@@ -19,9 +19,6 @@
 
 Cedar provides easy-to-use, preset values to apply consistent spacing within and between components. Spacing tokens help maintain a cohesive visual style across all REI properties by:
 - Stores pixel values that are converted to the proper spacing unit for web and native platforms 
-- Replaces hard-coded values
-- Allows us to maintain a scalable, adjustable, and consistent visual system 
-- Delivers updates to the brand identity with minimal impact to the code
 - Specifies a hierarchical and semantically defined system
 
 Spacing symbols are available within the Cedar UI Toolkit and directly reflect the token names in the code ensuring a more efficient handoff between design and development. 
