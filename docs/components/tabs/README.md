@@ -319,7 +319,7 @@ _Terminal_
 npm i -s @rei/cdr-tabs
 ```
 
-## 2. Import Dependencies
+### 2. Import Dependencies
 
 _main.js_
 
