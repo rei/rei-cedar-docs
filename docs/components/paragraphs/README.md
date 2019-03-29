@@ -151,14 +151,14 @@ This component has compliance with following WebAIM’s accessibility guidelines
 <template slot="Design Guidelines">
 <cdr-doc-table-of-contents-shell>
 
-## Use when
+## Use When
 
 - Displaying articles for long-form content, such as Expert Advice articles or Co-op Journal entries
 - Displaying member or legal messages, such as on PDP pages
 - Displaying product descriptions
 - Displaying customer reviews, such as on PDP pages
 
-### Don’t use when
+### Don’t Use When
 
 - Displaying form inputs. Instead, use [Inputs](../input/)
 - Displaying alert messages. Instead, use Alerts
@@ -237,7 +237,7 @@ _Terminal_
 npm i -S @rei/cdr-text
 ```
 
-### 2. Import dependencies
+### 2. Import Dependencies
 
 _main.js_
 
@@ -247,7 +247,7 @@ import "@rei/cdr-assets/dist/cdr-core.css";
 import "@rei/cdr-assets/dist/cdr-fonts.css";
 ```
 
-### 3. Add component to a template
+### 3. Add Component to a Template
 
 _local.vue_
 
