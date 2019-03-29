@@ -211,7 +211,7 @@ This component has compliance with WCAG guidelines by:
 
 - Providing a tool for comparing others’ opinions
 
-### Don't use when
+### Don't Use When
 
 - Displaying a range of data
 
@@ -275,7 +275,7 @@ _Terminal_
 npm i @rei/cdr-rating
 ```
 
-### 2. Import dependencies
+### 2. Import Dependencies
 
 _main.js_
 
@@ -284,7 +284,7 @@ _main.js_
 import "@rei/cdr-rating/dist/cdr-rating.css";
 ```
 
-### 3. Add component to a template
+### 3. Add Component to a Template
 
 _local.vue_
 
