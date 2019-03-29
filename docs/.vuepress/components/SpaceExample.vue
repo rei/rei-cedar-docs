@@ -10,7 +10,7 @@ import tokens from '@rei/cdr-tokens';
 import camelCase from 'lodash/camelCase';
 
 export default {
-  name: 'TypeSpace',
+  name: 'SpaceExample',
   props: {
     name: String,
   },

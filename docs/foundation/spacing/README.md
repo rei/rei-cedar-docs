@@ -41,7 +41,7 @@ List of spacing tokens with descriptions, values and related tokens. Web and mob
 These spacing values are in use throughout Cedar components and design recommendations. Use these tokens to keep consistent spatial concepts.
 <br>
 
-<spacing-example name="cdr-space-eighth-x" />
+<space-example name="cdr-space-eighth-x" />
 <table>
   <tbody>
     <tr>
@@ -53,7 +53,7 @@ These spacing values are in use throughout Cedar components and design recommend
 
 <br>
 
-<spacing-example name="cdr-space-quarter-x" />
+<space-example name="cdr-space-quarter-x" />
 <table>
   <tbody>
     <tr>
@@ -65,7 +65,7 @@ These spacing values are in use throughout Cedar components and design recommend
 
 <br>
 
-<spacing-example name="cdr-space-half-x" />
+<space-example name="cdr-space-half-x" />
 <table>
   <tbody>
     <tr>
@@ -77,7 +77,7 @@ These spacing values are in use throughout Cedar components and design recommend
 
 <br>
 
-<spacing-example name="cdr-space-three-quarter-x" />
+<space-example name="cdr-space-three-quarter-x" />
 <table>
   <tbody>
     <tr>
@@ -89,7 +89,7 @@ These spacing values are in use throughout Cedar components and design recommend
 
 <br>
 
-<spacing-example name="cdr-space-one-x" />
+<space-example name="cdr-space-one-x" />
 <table>
   <tbody>
     <tr>
@@ -101,7 +101,7 @@ These spacing values are in use throughout Cedar components and design recommend
 
 <br>
 
-<spacing-example name="cdr-space-one-and-a-half-x" />
+<space-example name="cdr-space-one-and-a-half-x" />
 <table>
   <tbody>
     <tr>
@@ -113,7 +113,7 @@ These spacing values are in use throughout Cedar components and design recommend
 
 <br>
 
-<spacing-example name="cdr-space-two-x" />
+<space-example name="cdr-space-two-x" />
 <table>
   <tbody>
     <tr>
@@ -125,7 +125,7 @@ These spacing values are in use throughout Cedar components and design recommend
 
 <br>
 
-<spacing-example name="cdr-space-four-x" />
+<space-example name="cdr-space-four-x" />
 <table>
   <tbody>
     <tr>
@@ -151,7 +151,7 @@ Use to create a consistent space within the content container:
   
 <br>
 
-<spacing-example name="cdr-space-inset-eighth-x" />
+<space-example name="cdr-space-inset-eighth-x" />
 <table>
   <tbody>
     <tr>
@@ -163,7 +163,7 @@ Use to create a consistent space within the content container:
 
 <br>
 
-<spacing-example name="cdr-space-inset-quarter-x" />
+<space-example name="cdr-space-inset-quarter-x" />
 <table>
   <tbody>
     <tr>
@@ -175,7 +175,7 @@ Use to create a consistent space within the content container:
 
 <br>
 
-<spacing-example name="cdr-space-inset-half-x" />
+<space-example name="cdr-space-inset-half-x" />
 <table>
   <tbody>
     <tr>
@@ -187,7 +187,7 @@ Use to create a consistent space within the content container:
 
 <br>
 
-<spacing-example name="cdr-space-inset-three-quarter-x" />
+<space-example name="cdr-space-inset-three-quarter-x" />
 <table>
   <tbody>
     <tr>
@@ -199,7 +199,7 @@ Use to create a consistent space within the content container:
 
 <br>
 
-<spacing-example name="cdr-space-inset-one-x" />
+<space-example name="cdr-space-inset-one-x" />
 <table>
   <tbody>
     <tr>
@@ -211,7 +211,7 @@ Use to create a consistent space within the content container:
 
 <br>
 
-<spacing-example name="cdr-space-inset-one-and-a-half-x" />
+<space-example name="cdr-space-inset-one-and-a-half-x" />
 <table>
   <tbody>
     <tr>
@@ -223,7 +223,7 @@ Use to create a consistent space within the content container:
 
 <br>
 
-<spacing-example name="cdr-space-inset-two-x" />
+<space-example name="cdr-space-inset-two-x" />
 <table>
   <tbody>
     <tr>
@@ -235,7 +235,7 @@ Use to create a consistent space within the content container:
 
 <br>
 
-<spacing-example name="cdr-space-inset-four-x" />
+<space-example name="cdr-space-inset-four-x" />
 <table>
   <tbody>
     <tr>
@@ -260,7 +260,7 @@ Use to create a compact vertical space within the content container:
 
 <br>
 
-<spacing-example name="cdr-space-inset-eighth-x-squish" />
+<space-example name="cdr-space-inset-eighth-x-squish" />
 <table>
   <tbody>
     <tr>
@@ -280,7 +280,7 @@ Use to create a compact vertical space within the content container:
 
 <br>
 
-<spacing-example name="cdr-space-inset-quarter-x-squish" />
+<space-example name="cdr-space-inset-quarter-x-squish" />
 <table>
   <tbody>
     <tr>
@@ -300,7 +300,7 @@ Use to create a compact vertical space within the content container:
 
 <br>
 
-<spacing-example name="cdr-space-inset-half-x-squish" />
+<space-example name="cdr-space-inset-half-x-squish" />
 <table>
   <tbody>
     <tr>
@@ -320,7 +320,7 @@ Use to create a compact vertical space within the content container:
 
 <br>
 
-<spacing-example name="cdr-space-inset-three-quarter-x-squish" />
+<space-example name="cdr-space-inset-three-quarter-x-squish" />
 <table>
   <tbody>
     <tr>
@@ -340,7 +340,7 @@ Use to create a compact vertical space within the content container:
 
 <br>
 
-<spacing-example name="cdr-space-inset-one-x-squish" />
+<space-example name="cdr-space-inset-one-x-squish" />
 <table>
   <tbody>
     <tr>
@@ -360,7 +360,7 @@ Use to create a compact vertical space within the content container:
 
 <br>
 
-<spacing-example name="cdr-space-inset-one-and-a-half-x-squish" />
+<space-example name="cdr-space-inset-one-and-a-half-x-squish" />
 <table>
   <tbody>
     <tr>
@@ -380,7 +380,7 @@ Use to create a compact vertical space within the content container:
 
 <br>
 
-<spacing-example name="cdr-space-inset-two-x-squish" />
+<space-example name="cdr-space-inset-two-x-squish" />
 <table>
   <tbody>
     <tr>
@@ -400,7 +400,7 @@ Use to create a compact vertical space within the content container:
 
 <br>
 
-<spacing-example name="cdr-space-inset-four-x-squish" />
+<space-example name="cdr-space-inset-four-x-squish" />
 <table>
   <tbody>
     <tr>
@@ -434,7 +434,7 @@ Use to create an expanded vertical space within the content container:
 
 <br>
 
-<spacing-example name="cdr-space-inset-eighth-x-stretch" />
+<space-example name="cdr-space-inset-eighth-x-stretch" />
 <table>
   <tbody>
     <tr>
@@ -454,7 +454,7 @@ Use to create an expanded vertical space within the content container:
 
 <br>
 
-<spacing-example name="cdr-space-inset-quarter-x-stretch" />
+<space-example name="cdr-space-inset-quarter-x-stretch" />
 <table>
   <tbody>
     <tr>
@@ -474,7 +474,7 @@ Use to create an expanded vertical space within the content container:
 
 <br>
 
-<spacing-example name="cdr-space-inset-half-x-stretch" />
+<space-example name="cdr-space-inset-half-x-stretch" />
 <table>
   <tbody>
     <tr>
@@ -494,7 +494,7 @@ Use to create an expanded vertical space within the content container:
 
 <br>
 
-<spacing-example name="cdr-space-inset-three-quarter-x-stretch" />
+<space-example name="cdr-space-inset-three-quarter-x-stretch" />
 <table>
   <tbody>
     <tr>
@@ -514,7 +514,7 @@ Use to create an expanded vertical space within the content container:
 
 <br>
 
-<spacing-example name="cdr-space-inset-one-x-stretch" />
+<space-example name="cdr-space-inset-one-x-stretch" />
 <table>
   <tbody>
     <tr>
@@ -534,7 +534,7 @@ Use to create an expanded vertical space within the content container:
 
 <br>
 
-<spacing-example name="cdr-space-inset-one-and-a-half-x-stretch" />
+<space-example name="cdr-space-inset-one-and-a-half-x-stretch" />
 <table>
   <tbody>
     <tr>
@@ -554,7 +554,7 @@ Use to create an expanded vertical space within the content container:
 
 <br>
 
-<spacing-example name="cdr-space-inset-two-x-stretch" />
+<space-example name="cdr-space-inset-two-x-stretch" />
 <table>
   <tbody>
     <tr>
@@ -574,7 +574,7 @@ Use to create an expanded vertical space within the content container:
 
 <br>
 
-<spacing-example name="cdr-space-inset-four-x-stretch" />
+<space-example name="cdr-space-inset-four-x-stretch" />
 <table>
   <tbody>
     <tr>
