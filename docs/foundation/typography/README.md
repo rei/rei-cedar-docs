@@ -25,37 +25,37 @@ Typography design tokens represent the fundamental decisions of Cedar’s visual
 
 ## Web 
 
-### Body - Default 
+### Default 
 
-<div style="overflow: hidden; white-space: nowrap; margin: 8px 0 8px 0;  padding: 16px 0 16px 8px; background-color: #FFFFFF ;"><typography-example name="cdr-text-default-body-compact" /> </div>
+<div style="overflow: hidden; white-space: nowrap; margin: 8px 0 8px 0;  padding: 16px 0 16px 8px; background-color: #FFFFFF ;"><typography-example name="cdr-text-default-compact" /> </div>
 
-**cdr-text-default-body-compact**  _(Mixin)_  <br>
+**cdr-text-default-compact**  _(Mixin)_  <br>
 Suggested usage: Use only for compact spacing with informational and supplemental body content
 
 <table>
   <tbody>
     <tr>
-      <td>cdr-text-default-body-compact-family </td>
+      <td>cdr-text-default-compact-family </td>
       <td>Roboto, "Helvetica Neue", Helvetica,<br> Arial, sans-serif </td>
     </tr>
     <tr>
-      <td>cdr-text-default-body-compact-style </td>
+      <td>cdr-text-default-compact-style </td>
       <td>Normal </td>
     </tr>
     <tr>
-      <td>cdr-text-default-body-compact-weight </td>
+      <td>cdr-text-default-compact-weight </td>
       <td>400 </td>
     </tr>
     <tr>
-      <td>cdr-text-default-body-compact-spacing </td>
+      <td>cdr-text-default-compact-spacing </td>
       <td>Normal </td>
     </tr>
     <tr>
-      <td>cdr-text-default-body-compact-size </td>
+      <td>cdr-text-default-compact-size </td>
       <td>14px </td>
     </tr>   
     <tr>
-      <td>cdr-text-default-body-compact-height </td>
+      <td>cdr-text-default-compact-height </td>
       <td>24px </td>
     </tr>   
   </tbody>
@@ -64,35 +64,35 @@ Suggested usage: Use only for compact spacing with informational and supplementa
 <br/>
 
 
-<div style="overflow: hidden; white-space: nowrap; margin: 8px 0 8px 0;  padding: 16px 0 16px 8px; background-color: #FFFFFF ;"><typography-example name="cdr-text-default-body" /> </div>
+<div style="overflow: hidden; white-space: nowrap; margin: 8px 0 8px 0;  padding: 16px 0 16px 8px; background-color: #FFFFFF ;"><typography-example name="cdr-text-default" /> </div>
 
-**cdr-text-default-body**  _(Mixin)_  <br>
+**cdr-text-default**  _(Mixin)_  <br>
 Suggested usage: Default for body content. Uses a more open line height to font size ratio
 
 <table>
   <tbody>
     <tr>
-      <td>cdr-text-default-body-family </td>
+      <td>cdr-text-default-family </td>
       <td>Roboto, "Helvetica Neue", Helvetica,<br> Arial, sans-serif </td>
     </tr>
     <tr>
-      <td>cdr-text-default-body-style </td>
+      <td>cdr-text-default-style </td>
       <td>Normal </td>
     </tr>
     <tr>
-      <td>cdr-text-default-body-weight </td>
+      <td>cdr-text-default-weight </td>
       <td>400 </td>
     </tr>
     <tr>
-      <td>cdr-text-default-body-spacing </td>
+      <td>cdr-text-default-spacing </td>
       <td>Normal </td>
     </tr>
     <tr>
-      <td>cdr-text-default-body-size </td>
+      <td>cdr-text-default-size </td>
       <td>16px </td>
     </tr>   
     <tr>
-      <td>cdr-text-default-body-height  </td>
+      <td>cdr-text-default-height  </td>
       <td>26px </td>
     </tr>   
   </tbody>
@@ -100,37 +100,37 @@ Suggested usage: Default for body content. Uses a more open line height to font 
 
 <br>
 
-### Body - Editorial 
+### Editorial 
 
-<div style="overflow: hidden; white-space: nowrap; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;"> <typography-example name="cdr-text-editorial-body-compact" /> </div>
+<div style="overflow: hidden; white-space: nowrap; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;"> <typography-example name="cdr-text-editorial-compact" /> </div>
 
-**cdr-text-editorial-body-compact**  _(Mixin)_  <br>
+**cdr-text-editorial-compact**  _(Mixin)_  <br>
 Suggested Usage: Use only for compact spacing with editorial body content
 
 <table>
   <tbody>
     <tr>
-      <td>cdr-text-editorial-body-compact-family </td>
+      <td>cdr-text-editorial-compact-family </td>
       <td>Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif </td>
     </tr>
     <tr>
-      <td>cdr-text-editorial-body-compact-style</td>
+      <td>cdr-text-editorial-compact-style</td>
       <td>Normal </td>
     </tr>
     <tr>
-      <td>cdr-text-editorial-body-compact-weight</td>
+      <td>cdr-text-editorial-compact-weight</td>
       <td>400 </td>
     </tr>
     <tr>
-      <td>cdr-text-editorial-body-compact-spacing</td>
+      <td>cdr-text-editorial-compact-spacing</td>
       <td>Normal </td>
     </tr>
     <tr>
-      <td>cdr-text-editorial-body-compact-size</td>
+      <td>cdr-text-editorial-compact-size</td>
       <td>18px </td>
     </tr>
     <tr>
-      <td>cdr-text-editorial-body-compact-height</td>
+      <td>cdr-text-editorial-compact-height</td>
       <td>28px </td>
     </tr>
   </tbody>
@@ -138,35 +138,35 @@ Suggested Usage: Use only for compact spacing with editorial body content
 
 <br>
 
-<div style="overflow: hidden; white-space: nowrap; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;"> <typography-example name="cdr-text-editorial-body" /> </div>
+<div style="overflow: hidden; white-space: nowrap; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;"> <typography-example name="cdr-text-editorial" /> </div>
 
-**cdr-text-editorial-body**  _(Mixin)_  <br>
+**cdr-text-editorial**  _(Mixin)_  <br>
 Suggested Usage: Default for editorial long-form content. Uses a more open line height to font size ratio
 
 <table>
   <tbody>
     <tr>
-      <td>cdr-text-editorial-body-family </td>
+      <td>cdr-text-editorial-family </td>
       <td>Sentinel, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif </td>
     </tr>
     <tr>
-      <td>cdr-text-editorial-body-style</td>
+      <td>cdr-text-editorial-style</td>
       <td>Normal </td>
     </tr>
     <tr>
-      <td>cdr-text-editorial-body-weight</td>
+      <td>cdr-text-editorial-weight</td>
       <td>400 </td>
     </tr>
     <tr>
-      <td>cdr-text-editorial-body-spacing</td>
+      <td>cdr-text-editorial-spacing</td>
       <td>Normal </td>
     </tr>
     <tr>
-      <td>cdr-text-editorial-body-size</td>
+      <td>cdr-text-editorial-size</td>
       <td>20px </td>
     </tr>
     <tr>
-      <td>cdr-text-editorial-body-height</td>
+      <td>cdr-text-editorial-height</td>
       <td>32px </td>
     </tr>
   </tbody>
@@ -985,7 +985,7 @@ Uses a more open line height to font size ratio:
       </td>
       <td width=400>
         <b>Tokens:</b><br>
-        cdr-text-default-body-compact <br>
+        cdr-text-default-compact <br>
         <br>
         <br>
       </td>
@@ -1007,7 +1007,7 @@ Uses a more open line height to font size ratio:
       </td>
       <td width=400>
         <b>Tokens:</b><br>
-        cdr-text-default-body  <br>
+        cdr-text-default  <br>
         <br>
         <br>
       </td>
@@ -1097,7 +1097,7 @@ Uses a more open line height to font size ratio:
       </td>
       <td width=400>
         <b>Tokens:</b><br>
-        cdr-text-editorial-body-compact<br>
+        cdr-text-editorial-compact<br>
         <br>
         <br>
       </td>
@@ -1119,7 +1119,7 @@ Uses a more open line height to font size ratio:
       </td>
       <td width=400>
         <b>Tokens:</b><br>
-        cdr-text-editorial-body<br>
+        cdr-text-editorial<br>
         <br>
         <br>
       </td>
