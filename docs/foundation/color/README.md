@@ -541,7 +541,7 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
 <template slot="Brand Palette">
 <cdr-doc-table-of-contents-shell>
 
-<cdr-doc-alert style="border: 1px solid #c77523; border-left: 8px solid #c77523; fill: #c77523" icon="warning">These values are NOT to be used by developers for creating custom UI.<br>If you are extending or modifying an existing Cedar component please work with the design system team to add support for your enhancements.</cdr-doc-alert>
+<cdr-doc-alert icon="warning">These values are NOT to be used by developers for creating custom UI.<br>If you are extending or modifying an existing Cedar component please work with the design system team to add support for your enhancements.</cdr-doc-alert>
 
 Colors from REI’s brand color palette are used throughout Cedar components and design recommendations. Use these values when:
   - Requesting an update to an existing Cedar component

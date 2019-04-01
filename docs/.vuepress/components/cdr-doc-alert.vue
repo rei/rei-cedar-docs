@@ -1,9 +1,9 @@
 <template>
-  <div class="rei-doc-alert">
+  <div :class="['rei-doc-alert', colorClass]">
     <icon-information-stroke 
       modifier="sm" 
       class="rei-doc-alert__icon"
-      v-if="icon === 'alert'"
+      v-if="icon === 'info'"
     />
     <icon-warning-tri
       modifier="sm"
@@ -26,8 +26,13 @@ export default {
   props: {
     icon: {
       type: String,
-      default: 'alert',
-      validator: value => (['alert', 'warning'].indexOf(value) >= 0) || false,
+      default: 'info',
+      validator: value => (['info', 'warning'].indexOf(value) >= 0) || false,
+    }
+  },
+  computed: {
+    colorClass() {
+      return this.icon === 'info' ? 'alert-color-info' : 'alert-color-warning';
     }
   }
 }
@@ -50,6 +55,18 @@ export default {
     margin-bottom: $cdr-space-one-x;
     padding: $cdr-space-inset-quarter-x;
     fill: $holy-smoke;
+
+    &.alert-color-warning {
+      fill: #c77523;
+      border-left: 8px solid #c77523;
+      border-color: #c77523;
+    }
+
+    &.alert-color-info {
+      fill: #3278ae;
+      border-left: 8px solid #3278ae;
+      border-color: #3278ae;
+    }
   }
 
   .rei-doc-alert .rei-doc-alert__icon {
