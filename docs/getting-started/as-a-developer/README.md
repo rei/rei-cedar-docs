@@ -275,9 +275,8 @@ Cedar provides a robust collection of [design tokens](https://rei.github.io/rei-
 As you create your own components, work with your designer to take advantage of this inventory in your custom classes. Using them this way will ensure your custom styles remain consistent with design guidelines.
 
 
-### Web
 
-#### Install Tokens Package
+### Install Tokens Package
 
 Resources are available within the **[CdrToken package](https://www.npmjs.com/package/@rei/cdr-tokens)**:
   - SCSS variables at `dist/scss/cdr-tokens.scss`
@@ -294,7 +293,7 @@ _Terminal_
 npm install --save @rei/cdr-tokens
 ```
 
-#### Using Cedar Design Tokens
+### Using Cedar Design Tokens
 
 The package contains files for using tokens in both CSS (as SCSS and LESS variables) and JavaScript (as commonJS and ES modules).
 
@@ -325,15 +324,15 @@ export default {
 <hr/>
 
 
-### Developing for Mobile
+## Developing for Mobile with Tokens
 
 Currently development for iOS and Android is through the usage of Cedar Tokens as documented below.  
 
 Our mobile development packages include fonts that are licensed and proprietary to REI. For more information or questions regarding Cedar’s support for external consumers using the mobile development packages on GitHub or NPM, please reach out to [cedar@rei.com](mailto:cedar@rei.com).
 
-#### iOS
+### iOS
 
-##### CocoaPods
+#### CocoaPods
 The preferred way to consume Cedar for iOS is through CocoaPods.  View [www.cocoapods.org](https://www.cocoapods.org/) for more information.
 
 To find out if Cocoapods is already installed, open the terminal and run:
@@ -397,10 +396,10 @@ end
 
 <hr/>
 
-##### Manual Consumption
+#### Manual Consumption
 If you don’t use Cocoapods, you can manually import files into your iOS project/workspace.  
 
-**Colors**
+##### Colors
 
 Color Sets in a .xcasset file.  Import the file by dragging the `Cedar.xcassets > Colors` folder into your project's asset folder.
 
@@ -411,7 +410,7 @@ _Terminal_
 Button1.backgroundColor = UIColor(named: "cdr_color_text_primary_lightmode");
 ```
 
-**Text**
+##### Text
 
 The package includes Sentinel and Roboto font source files along with Swift Classes for applying Apple's Dynamic Type behavior to the font.  
 
@@ -426,15 +425,15 @@ _Terminal_
   Button1.titleLabel?.adjustsFontForContentSizeCategory = true;
 ```
 
-**Icons**
+##### Icons
 
 Cedar provides icons  in vector pdf format for iOS scaling.  According to initial investigation, only one file per icon is needed in this format. There is no need for @1x, @2x, and @3x variants. 
 
 
 <hr/>
 
-#### Android
-##### Maven
+### Android
+#### Maven
 The preferred way to consume Cedar Tokens on Android is to use Maven.
 
 Add the following to the build.gradle file in your Android project:
@@ -444,7 +443,7 @@ _Terminal_
 Implementation mvnrepos.rei.com:cedar-android.aar:0.2.0
 ```
 
-##### Manual Consumption
+#### Manual Consumption
 If you don’t use Maven, you can import the Cedar Tokens into your Android project/workspace manually by dragging the resources into your project within Android Studio.  The resources are located at the [cedar-android repository on Bitbucket]( https://git.rei.com/projects/CDR/repos/cedar-android) 
 
 
