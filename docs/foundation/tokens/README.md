@@ -2,7 +2,7 @@
 {
   "title": "Tokens",
   "title_metadata": false,
-  "layout": "LayoutComponent",
+  "layout": "LayoutArticle",
   "summary": false,
   "breadcrumbs": [
     {
@@ -13,13 +13,11 @@
 ---
 
 
-<cdr-doc-tabs>
-<template slot="Overview">
 <cdr-doc-table-of-contents-shell>
 
 ## Overview
 
-Our design tokens are special variables used to maintain a scalable visual system for UI development and brand consistency. Cedar design tokens store the visual design attributes that define the foundation of REI’s visual language, including color, typography and spacing.
+Design tokens are special variables used to maintain a scalable visual system for UI development and brand consistency. Cedar design tokens store the visual design attributes that define the foundation of REI’s visual language, including color, typography and spacing.
 
 Design tokens are key-value pairs. For example:
 
@@ -28,7 +26,7 @@ Key: value;
 cdr-text-primary-lightmode: #292929;
 ```
 
-  - The key name defines the usage or how to apply the value to a specific context such as using text on a light background
+  - The key name defines the usage or how to apply the value to a specific context, such as using text on a light background
   - The key stores visual design attributes
   - The key replaces hard-coded values, such as hex values for color or pixel values for spacing
   - Contract of intent will not change when a variable value is updated over time
@@ -55,7 +53,7 @@ Tokens can streamline redesign processes when:
   - Ensures brand consistency across all digital channels
 
 #### Extensibility 
-  - Designers and developers have access to these tokens when creating custom components for their applications (within brand standards) 
+  - Designers and developers have access to tokens when creating custom components for their applications (within brand standards) 
 
 
 ### Use When  
@@ -65,12 +63,12 @@ Tokens can be used by teams:
 - To create new components that can be contributed back to the system 
 - When there are technical limitations to consuming components
 
-<br>
+
 #### Don’t Use When
 - Don’t use tokens to make modifications to an existing component. **Instead,** submit a change request for existing component
 - Don’t use tokens to only access a value or values. **Instead,** create a new token in the [shared-tokens repo](https://git.rei.com/projects/FEDPACK/repos/shared-tokens/browse) that meets your specific semantic use case
 
-<br>
+
 Questions about when to use tokens? Ask the Cedar team in [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) 
 
 <hr/>
@@ -307,9 +305,9 @@ This repository follows SEMVER practices and will notify users of changes and up
 ## Adding Tokens to the Repository
 The number of tokens Cedar provides is kept small intentionally as it is critical for a token to meet all requirements based on the above criterium prior to being added to Cedar’s Token list.
 
-If you have a request for a token that is missing, you can [submit a pull request](https://www.npmjs.com/package/@rei/cdr-tokens#addingupdating-tokens) to the cedar-token repo or create a token in the [shared-tokens repo](https://git.rei.com/projects/FEDPACK/repos/shared-tokens/browse) for future integration in Cedar. 
+If a token is missing, you can [submit a pull request](https://www.npmjs.com/package/@rei/cdr-tokens#addingupdating-tokens) to the cedar-token repo or create a token in the [shared-tokens repo](https://git.rei.com/projects/FEDPACK/repos/shared-tokens/browse) for future integration in Cedar. 
 
-<br>
+
 Ensure that the token meets the following requirements:
 - Token is used in several components or layouts
 - Token is used for multiple elements and NOT specific to one element
@@ -323,5 +321,4 @@ Ensure that the token meets the following requirements:
 
 
 </cdr-doc-table-of-contents-shell>
-</template>
-</cdr-doc-tabs>
+

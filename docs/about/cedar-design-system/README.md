@@ -24,7 +24,7 @@ The Cedar design system promotes reusability of modular components to spread a m
 
 ### Community
 
-The system is made by the core Cedar team & REI digital community, intended for use by all teams making web-based digital experiences.
+The system is made by the core Cedar team and REI digital community, intended for use by all teams making web-based digital experiences.
 
 Cedar has a core team of designers and front-end engineers that are dedicated to developing and supporting the system. Contributions from the greater design and engineering community at REI are encouraged to help grow and evolve the system.
 
@@ -38,7 +38,7 @@ Fonts used in the Cedar Design System are licensed and proprietary to REI, and a
 
 For more information or questions regarding Cedar’s support for external consumers using the open source project, please reach out to [cedar@rei.com](mailto:cedar@rei.com).  
 
-### Vision & Goals
+### Vision and Goals
 
 #### Vision
 
