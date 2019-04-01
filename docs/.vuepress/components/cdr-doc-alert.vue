@@ -1,17 +1,34 @@
 <template>
   <div class="rei-doc-alert">
-    <icon-information-stroke modifier="sm" class="rei-doc-alert__icon"/>
+    <icon-information-stroke 
+      modifier="sm" 
+      class="rei-doc-alert__icon"
+      v-if="icon === 'alert'"
+    />
+    <icon-warning-tri
+      modifier="sm"
+      class="rei-doc-alert__icon"
+      v-if="icon === 'warning'"
+    />
     <slot>Last updated on July 2, 2018. Consistent with v 1.0.0</slot>
   </div>
 </template>
 
 <script>
-import { IconInformationStroke } from '@rei/cdr-icon';
+import { IconInformationStroke, IconWarningTri } from '@rei/cdr-icon';
 
 export default {
   name: 'CdrDocAlert',
   components: {
-    IconInformationStroke
+    IconInformationStroke,
+    IconWarningTri
+  },
+  props: {
+    icon: {
+      type: String,
+      default: 'alert',
+      validator: value => (['alert', 'warning'].indexOf(value) >= 0) || false,
+    }
   }
 }
 </script>
