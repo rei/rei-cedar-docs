@@ -65,7 +65,7 @@ Tokens can be used by teams:
 
 
 #### Don’t Use When
-- Don’t use tokens to make modifications to an existing component. **Instead,** submit a change request for existing component
+- Don’t use tokens to make modifications to an existing component. **Instead,** submit a request using the [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC) for an existing component
 - Don’t use tokens to only access a value or values. **Instead,** create a new token in the [shared-tokens repo](https://git.rei.com/projects/FEDPACK/repos/shared-tokens/browse) that meets your specific semantic use case
 
 
@@ -305,7 +305,7 @@ This repository follows SEMVER practices and will notify users of changes and up
 ## Adding Tokens to the Repository
 The number of tokens Cedar provides is kept small intentionally as it is critical for a token to meet all requirements based on the above criterium prior to being added to Cedar’s Token list.
 
-If a token is missing, you can [submit a pull request](https://www.npmjs.com/package/@rei/cdr-tokens#addingupdating-tokens) to the cedar-token repo or create a token in the [shared-tokens repo](https://git.rei.com/projects/FEDPACK/repos/shared-tokens/browse) for future integration in Cedar. 
+If you have a request for a token that is missing, you can submit a request using the [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC) or create a token in the [shared-tokens repo](https://git.rei.com/projects/FEDPACK/repos/shared-tokens/browse) for future integration in Cedar. 
 
 
 Ensure that the token meets the following requirements:
