@@ -29,7 +29,7 @@ Typography design tokens represent the fundamental decisions of Cedar’s visual
 
 <div style="overflow: hidden; white-space: nowrap; margin: 8px 0 8px 0;  padding: 16px 0 16px 8px; background-color: #FFFFFF ;"><typography-example name="cdr-text-default-compact" /> </div>
 
-**cdr-text-default-compact**  _(Mixin)_  <br>
+**cdr-text-default-compact**  (_Mixin_)  <br>
 Suggested usage: Use only for compact spacing with informational and supplemental body content
 
 <table>
@@ -66,7 +66,7 @@ Suggested usage: Use only for compact spacing with informational and supplementa
 
 <div style="overflow: hidden; white-space: nowrap; margin: 8px 0 8px 0;  padding: 16px 0 16px 8px; background-color: #FFFFFF ;"><typography-example name="cdr-text-default" /> </div>
 
-**cdr-text-default**  _(Mixin)_  <br>
+**cdr-text-default**  (_Mixin_)  <br>
 Suggested usage: Default for body content. Uses a more open line height to font size ratio
 
 <table>
@@ -104,7 +104,7 @@ Suggested usage: Default for body content. Uses a more open line height to font 
 
 <div style="overflow: hidden; white-space: nowrap; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;"> <typography-example name="cdr-text-editorial-compact" /> </div>
 
-**cdr-text-editorial-compact**  _(Mixin)_  <br>
+**cdr-text-editorial-compact**  (_Mixin_)  <br>
 Suggested Usage: Use only for compact spacing with editorial body content
 
 <table>
@@ -140,7 +140,7 @@ Suggested Usage: Use only for compact spacing with editorial body content
 
 <div style="overflow: hidden; white-space: nowrap; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;"> <typography-example name="cdr-text-editorial" /> </div>
 
-**cdr-text-editorial**  _(Mixin)_  <br>
+**cdr-text-editorial**  (_Mixin_)  <br>
 Suggested Usage: Default for editorial long-form content. Uses a more open line height to font size ratio
 
 <table>
@@ -177,7 +177,7 @@ Suggested Usage: Default for editorial long-form content. Uses a more open line 
 
 <div style="overflow: hidden; white-space: nowrap; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;"> <typography-example name="cdr-text-header-1" /> </div>
 
-**cdr-text-header-1**  _(Mixin)_ <br>
+**cdr-text-header-1**  (_Mixin_)  <br>
 
 <table>
   <tbody>
@@ -212,7 +212,7 @@ Suggested Usage: Default for editorial long-form content. Uses a more open line 
 
 <div style="overflow: hidden; white-space: nowrap; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;"> <typography-example name="cdr-text-header-2" /> </div>
 
-**cdr-text-header-2**  _(Mixin)_ <br>
+**cdr-text-header-2**  (_Mixin_)  <br>
 
 <table>
   <tbody>
@@ -247,7 +247,7 @@ Suggested Usage: Default for editorial long-form content. Uses a more open line 
 
 <div style="overflow: hidden; white-space: nowrap; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;"> <typography-example name="cdr-text-header-3" /> </div>
 
-**cdr-text-header-3**  _(Mixin)_ <br>
+**cdr-text-header-3**  (_Mixin_)  <br>
 
 <table>
   <tbody>
@@ -282,7 +282,7 @@ Suggested Usage: Default for editorial long-form content. Uses a more open line 
 
 <div style="overflow: hidden; white-space: nowrap; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;"> <typography-example name="cdr-text-header-4" /> </div>
 
-**cdr-text-header-4**  _(Mixin)_ <br>
+**cdr-text-header-4**  (_Mixin_)  <br>
 
 <table>
   <tbody>
@@ -317,7 +317,7 @@ Suggested Usage: Default for editorial long-form content. Uses a more open line 
 
 <div style="overflow: hidden; white-space: nowrap; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;"> <typography-example name="cdr-text-header-5" /> </div>
 
-**cdr-text-header-5**  _(Mixin)_ <br>
+**cdr-text-header-5**  (_Mixin_)  <br>
 
 <table>
   <tbody>
@@ -352,7 +352,7 @@ Suggested Usage: Default for editorial long-form content. Uses a more open line 
 
 <div style="overflow: hidden; white-space: nowrap; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;"> <typography-example name="cdr-text-header-6" /> </div>
 
-**cdr-text-header-6**  _(Mixin)_ <br>
+**cdr-text-header-6**  (_Mixin_)  <br>
 
 <table>
   <tbody>
@@ -387,7 +387,7 @@ Suggested Usage: Default for editorial long-form content. Uses a more open line 
 
 <div style="overflow: hidden; white-space: nowrap; margin: 0 0 8px 0; padding: 16px 0 16px 8px; background-color: #FFFFFF ;"> <typography-example name="cdr-text-header-7" /> </div>
 
-**cdr-text-header-7**  _(Mixin)_ <br>
+**cdr-text-header-7**  (_Mixin_)  <br>
 
 <table>
   <tbody>
@@ -953,7 +953,7 @@ Note that the values on this page:
 <br>  
 
 **Requesting a Token** <br>
-If you have a request for a token that is missing, you can [submit a pull request to the cedar-token repo](https://www.npmjs.com/package/@rei/cdr-tokens#addingupdating-tokens) or ask in the [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) Slack channel. View requirements in the <cdr-link :href="$withBase('/foundation/tokens/?active-link=adding-tokens-to-the-repository')">Adding Tokens to the Repository</cdr-link> section on the Tokens article.   
+If you have a request for a token that is missing, you can submit a request using the [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC), or ask in the [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) Slack channel. View requirements in the <cdr-link :href="$withBase('/foundation/tokens/?active-link=adding-tokens-to-the-repository')">Adding Tokens to the Repository</cdr-link> section on the Tokens article.   
 
 **Developing or Updating Cedar Components** <br>
 The Cedar team welcomes contributions from the digital community at REI. If you are interested in contributing design or code, please reach out at in Slack at [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4), email [cedar@rei.com](mailto:cedar@rei.com), or talk to your manager.
