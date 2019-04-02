@@ -25,7 +25,7 @@
   }
 
   & > h2 {
-    @include spruce-display-50;
+    @include cdr-text-header-4;
     margin-bottom: $cdr-space-one-x;
     margin-top: $cdr-space-two-x;
     max-width: $cdr-doc-long-form-text-max-line-length;
@@ -36,7 +36,7 @@
   }
 
   & > h3 {
-    @include spruce-display-40;
+    @include cdr-text-header-5;
     margin-bottom: $cdr-space-one-x;
     margin-top: $cdr-space-two-x;
     max-width: $cdr-doc-long-form-text-max-line-length;
@@ -47,7 +47,7 @@
   }
 
   & > h4 {
-    @include spruce-display-30;
+    @include cdr-text-header-6;
     margin-bottom: $cdr-space-one-x;
     margin-top: $cdr-space-two-x;
     max-width: $cdr-doc-long-form-text-max-line-length;

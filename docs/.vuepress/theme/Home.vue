@@ -238,7 +238,7 @@ export default {
 }
 
 .home-heading {
-  @include spruce-display-60();
+  @include cdr-text-header-3;
   margin-bottom: $cdr-space-one-x;
 
   @media (max-width: $cdr-breakpoint-md) {

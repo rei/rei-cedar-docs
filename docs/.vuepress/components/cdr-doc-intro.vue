@@ -69,7 +69,7 @@ export default {
   }
 
   .cdr-doc-intro__title {
-    @include spruce-display-80;
+    @include cdr-text-header-1;
     margin: 0;
     // padding-bottom: $cdr-space-one-x;
   }
