@@ -72,7 +72,7 @@ export default {
   }
 
   .cdr-doc-side-navigation__child-link {
-    @include redwood-body-10;
+    @include cdr-text-default-compact;
     color: $cdr-doc-text-color-secondary;
   }
 </style>
