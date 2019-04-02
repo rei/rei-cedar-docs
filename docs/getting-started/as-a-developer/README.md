@@ -270,7 +270,7 @@ If you find that a component needs to have a targeted prop class added, please [
 
 
 ## Using Token Variables
-Cedar provides a robust collection of [design tokens](https://rei.github.io/rei-cedar-tokens/#/) corresponding to Cedar's foundations. Standard colors, typography, space, size and other properties are available in the `cdr-tokens` package. Outputs support web, IOS, and Android consumers.
+Cedar provides a robust collection of [design tokens](https://rei.github.io/rei-cedar-tokens/#/) corresponding to Cedar's foundations. Standard colors, typography, space, size and other properties are available in the `cdr-tokens` package. Outputs support web, iOS, and Android consumers.
 
 As you create your own components, work with your designer to take advantage of this inventory in your custom classes. Using them this way will ensure your custom styles remain consistent with design guidelines.
 
@@ -324,7 +324,7 @@ export default {
 <hr/>
 
 
-## Developing for Mobile with Tokens
+## Developing for Mobile
 
 Currently development for iOS and Android is through the usage of Cedar Tokens as documented below.  
 
