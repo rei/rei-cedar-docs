@@ -115,7 +115,7 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell tab-name="Overview">
 
-<cdr-doc-alert icon="info"><strong>REI.com is currently using Bazaarvoice for ratings.</strong>Styles documented here may not reflect the current styles provided by the tool. Reach out in <cdr-link :href="https://rei.slack.com/messages/CA58YCGN4">#cedar-user-support</cdr-link> for further guidance or questions.</cdr-doc-alert>
+<cdr-doc-alert icon="info"><strong>REI.com is currently using Bazaarvoice for ratings.</strong>Styles documented here may not reflect the current styles provided by the tool. Reach out in <cdr-link href="https://rei.slack.com/messages/CA58YCGN4">#cedar-user-support</cdr-link> for further guidance or questions.</cdr-doc-alert>
 
 ## Default
 
