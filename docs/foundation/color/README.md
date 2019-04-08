@@ -394,27 +394,27 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
 <table>
   <tbody>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_lighter_primary_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_lighter_primary_4-3.png`)"/> </td>
       <td>AAA 13.94:1   </td>
       <td>cdr-color-text-primary-lightmode  <br>Values: #292929 &nbsp; / &nbsp; r41 g41 b41 </td>   
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_lighter_secondary_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_lighter_secondary_4-3.png`)"/> </td>
       <td>AA 5.93:1   </td>
       <td>cdr-color-text-secondary-lightmode <br>Values: #616161 &nbsp; / &nbsp; r97 g97 b97</td>    
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_lighter_link_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_lighter_link_4-3.png`)"/> </td>
       <td>AA 4.54:1  </td>
       <td>cdr-color-text-link-lightmode <br>Values: #3278ae &nbsp; / &nbsp; r50 g120 b174</td>   
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_lighter_error_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_lighter_error_4-3.png`)"/> </td>
       <td>AA 6.07:1 </td>
       <td>cdr-color-text-error-lightmode <br>Values: #b5292b &nbsp; / &nbsp; r181 g41 b43</td>  
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_lighter_disabled_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_lighter_disabled_4-3.png`)"/> </td>
       <td>N/A* </td>
       <td>cdr-color-text-disabled-lightmode <br>Values: #b8b8b8 &nbsp; / &nbsp; r184 g184 b184 <br>*When text is disabled </td>   
     </tr>
@@ -429,27 +429,27 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
 <table>
   <tbody>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_light_primary_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_light_primary_4-3.png`)"/> </td>
       <td>AAA 13.58:1  </td>
       <td>cdr-color-text-primary-lightmode  <br>Values: #292929 &nbsp; / &nbsp; r41 g41 b41 </td>   
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_light_secondary_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_light_secondary_4-3.png`)"/> </td>
       <td>AA 5.78:1  </td>
       <td>cdr-color-text-secondary-lightmode <br>Values: #616161 &nbsp; / &nbsp; r97 g97 b97</td>    
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_light_link_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_light_link_4-3.png`)"/> </td>
       <td>AA-LG 4.42:1 </td>
       <td>cdr-color-text-link-lightmode <br>Values: #3278ae &nbsp; / &nbsp; r50 g120 b174</td>   
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_light_error_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_light_error_4-3.png`)"/> </td>
       <td>AA 5.91:1 </td>
       <td>cdr-color-text-error-lightmode <br>Values: #b5292b &nbsp; / &nbsp; r181 g41 b43</td>  
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_light_disabled_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_light_disabled_4-3.png`)"/> </td>
       <td>N/A* </td>
       <td>cdr-color-text-disabled-lightmode <br>Values: #b8b8b8 &nbsp; / &nbsp; r184 g184 b184 <br>*When text is disabled </td>   
     </tr>
@@ -468,27 +468,27 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
 <table>
   <tbody>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_dark_primary_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_dark_primary_4-3.png`)"/> </td>
       <td>AAA 13.94:1 </td>
       <td>cdr-color-text-primary-darkmode <br>Values: #fafafa &nbsp; / &nbsp; r250 g250 b250 </td>
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_dark_secondary_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_dark_secondary_4-3.png`)"/> </td>
       <td>AA 5.11:1 </td>
       <td>cdr-color-text-secondary-darkmode <br>Values: #999999 &nbsp; / &nbsp; r153 g153 b153 </td>
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_dark_link_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_dark_link_4-3.png`)"/> </td>
       <td>AA 4.61:1  </td>
       <td>cdr-color-text-link-darkmode <br>Values: #5197cd &nbsp; / &nbsp; r81 g151 b205 </td>
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_dark_error_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_dark_error_4-3.png`)"/> </td>
       <td>AA 4.58:1 </td>
       <td>cdr-color-text-error-darkmode <br>Values: #e86868 &nbsp; / &nbsp; r232 g104 b104 </td>
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_dark_disabled_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_dark_disabled_4-3.png`)"/> </td>
       <td>N/A* </td>
       <td>cdr-color-text-disabled-darkmode <br>Values: #616161 &nbsp; / &nbsp; r97 g97 b97 <br>*When text is disabled </td>   
     </tr>
@@ -503,27 +503,27 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
 <table>
   <tbody>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_darker_primary_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_darker_primary_4-3.png`)"/> </td>
       <td>AAA 16.67:1   </td>
       <td>cdr-color-text-primary-darkmode <br>Values: #fafafa &nbsp; / &nbsp; r250 g250 b250 </td>
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_darker_secondary_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_darker_secondary_4-3.png`)"/> </td>
       <td>AA 6.11:1  </td>
       <td>cdr-color-text-secondary-darkmode <br>Values: #999999 &nbsp; / &nbsp; r153 g153 b153 </td>
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_darker_link_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_darker_link_4-3.png`)"/> </td>
       <td>AA 5.52:1  </td>
       <td>cdr-color-text-link-darkmode <br>Values: #5197cd &nbsp; / &nbsp; r81 g151 b205 </td>
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_darker_error_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_darker_error_4-3.png`)"/> </td>
       <td>AA 5.48:1  </td>
       <td>cdr-color-text-error-darkmode <br>Values: #e86868 &nbsp; / &nbsp; r232 g104 b104 </td>
     </tr>
     <tr>
-      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations//wcag_rating_bkgnd_darker_disabled_4-3.png`)"/> </td>
+      <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_darker_disabled_4-3.png`)"/> </td>
       <td>N/A* </td>
       <td>cdr-color-text-disabled-darkmode <br>Values: #616161 &nbsp; / &nbsp; r97 g97 b97 <br>*When text is disabled </td>   
     </tr>
