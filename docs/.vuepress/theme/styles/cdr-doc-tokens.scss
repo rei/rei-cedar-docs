@@ -1,13 +1,13 @@
-$cdr-doc-color-white: $clean-slate;
+$cdr-doc-color-white: $cdr-color-background-lightest;
 
-$cdr-doc-text-color-primary: $text-color-primary-on-light;
-$cdr-doc-text-color-secondary: $taken-for-granite;
+$cdr-doc-text-color-primary: $cdr-color-text-primary-lightmode;
+$cdr-doc-text-color-secondary: $cdr-color-text-secondary-lightmode;
 $cdr-doc-text-color-code: $quick-fixe;
 
-$cdr-doc-link-color-primary: $easily-excited;
+$cdr-doc-link-color-primary: $cdr-color-text-link-lightmode;
 
-$cdr-doc-background-color-main-body: $moon-shot;
-$cdr-doc-background-color-default: $clean-slate;
+$cdr-doc-background-color-main-body: $cdr-color-background-lighter;
+$cdr-doc-background-color-default: $cdr-color-background-lightest;
 
 $cdr-doc-border-separator: solid 1px $partly-cloudy;
 $cdr-doc-border-radius-default: 4px;

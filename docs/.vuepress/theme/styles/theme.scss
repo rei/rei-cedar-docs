@@ -58,7 +58,7 @@ body {
 
 .cdr-doc-proving-ground {
   box-sizing: border-box;
-  padding: $inset-1-x;
+  padding: $cdr-space-inset-one-x;
   width: 100vw;
 
   .cdr-doc-page-shell,
@@ -87,7 +87,7 @@ div[class^='language-'] {
   color: $cdr-doc-text-color-secondary;
   font-size: 14px;
   line-height: 1.4;
-  padding: $inset-1-x;
+  padding: $cdr-space-inset-one-x;
   overflow: auto;
   position: relative;
 
@@ -97,7 +97,7 @@ div[class^='language-'] {
 
   pre {
     margin: 0;
-    padding-left: $space-1-x * 3;
+    padding-left: $cdr-space-one-x * 3;
     position: relative;
     z-index: 10;
   }
@@ -158,16 +158,16 @@ div[class^='language-'] {
     font-family: 'Roboto Mono', monospace;
     font-size: 14px;
     line-height: 1.4;
-    padding-right: $space-1-x;
+    padding-right: $cdr-space-one-x;
     position: absolute;
     text-align: right;
-    top: $space-1-x;
+    top: $cdr-space-one-x;
   }
 
   .highlight-lines {
     left: 0;
     position: absolute;
-    top: $space-1-x;
+    top: $cdr-space-one-x;
     width: 100%;
 
     .highlighted {
@@ -212,8 +212,8 @@ div[class^='language-'] {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  margin-bottom: $space-2-x;
-  margin-top: $space-2-x;
+  margin-bottom: $cdr-space-two-x;
+  margin-top: $cdr-space-two-x;
 }
 
 // Colors page styles
@@ -227,7 +227,7 @@ div[class^='language-'] {
 
 .cdr-doc-colors-intro__text {
   @include cdr-doc-long-form-text;
-  margin-right: $space-4-x;
+  margin-right: $cdr-space-four-x;
 }
 
 /* 

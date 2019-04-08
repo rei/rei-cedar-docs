@@ -43,25 +43,25 @@ export default {
     border-top: $cdr-doc-border-separator;
     color: $cdr-doc-text-color-primary;
     display: block;
-    padding: $inset-1-x;
+    padding: $cdr-space-inset-one-x;
     text-decoration: none;
 
     &:hover {
-      color: $easily-excited;
+      color: $cdr-color-text-link-lightmode;
     }
 
     .cdr-doc-side-navigation__child-links & {
       border-top: 0;
-      padding: $inset-2-x-squish;
+      padding: $cdr-space-inset-two-x-squish;
     }
   
     &.router-link-active {
-      color: $easily-excited;
+      color: $cdr-color-text-link-lightmode;
       position: relative;
 
       &:before {
         content: '';
-        background: $easily-excited;
+        background: $cdr-color-text-link-lightmode;
         bottom: 0;
         left: 0;
         position: absolute;
@@ -72,7 +72,7 @@ export default {
   }
 
   .cdr-doc-side-navigation__child-link {
-    @include redwood-body-10;
+    @include cdr-text-default-compact;
     color: $cdr-doc-text-color-secondary;
   }
 </style>

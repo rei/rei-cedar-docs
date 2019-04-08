@@ -189,7 +189,7 @@ This component has compliance with WCAG guidelines by:
 - Providing the reader with visual markers 
 - Maintaining a sense of sequence and place
 
-### Don't use when
+### Don't Use When
 
 - Displaying a citation reference. Instead, use [Block Quote](../block-quote/)
 - Displaying for a decorative treatment only
@@ -243,7 +243,7 @@ _Terminal_
 npm i @rei/cdr-quote
 ```
 
-### 2. Import dependencies
+### 2. Import Dependencies
 
 _main.js_
 
@@ -252,7 +252,7 @@ _main.js_
 import "@rei/cdr-quote/dist/cdr-quote.css";
 ```
 
-### 3. Add component to a template
+### 3. Add Component to a Template
 
 _local.vue_
 

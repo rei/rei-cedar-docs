@@ -137,7 +137,7 @@ Manage and sync your Sketch plugins across machines and teams.<br/>
 Change your large (shift+arrow) nudge from 10 to 8 to easily align with spacing system.<br/>
 [Download from Nudg.it](http://nudg.it/)
 
-## Annotating/Delivering Cedar-based Designs
+## Annotating/Delivering Cedar-Based Designs
 
 The Cedar team suggests using Sketch Measure to label and shade Cedar components when redlining final designs. An advantage of working with the REI UI Toolkit is the name of the component symbols closely align to the names used in development. This provides a common language among the two teams and allows for smoother, more efficient handoffs.
 
@@ -152,8 +152,8 @@ One of the best ways to influence the visual language of the co-op’s digital p
 ## Common Questions
 
 - [How will I know when an update is available?](#how-will-i-know-when-an-update-is-available)
-- [I found a bug in the UI Toolkit. How do I let you know?](https://airtable.com/shr3wSPCYQbycVx7i)
-- [I have an idea for an enhancement to the Cedar UI Toolkit. Who do I talk to?](https://airtable.com/shrcbq9CHthuMO7AC)
+- [I found a bug in the UI Toolkit (or some other Cedar service). How do I let you know?](#i-found-a-bug-with-the-ui-toolkit-or-some-other-cedar-service-how-do-i-let-you-know)
+- [I have an idea for an enhancement to the Cedar UI Toolkit. Who do I talk to?](#i-have-an-idea-for-an-enhancement-to-the-cedar-ui-toolkit-who-do-i-talk-to)
 - [Should I always update Sketch versions when it tells me to?](#should-i-always-update-sketch-versions-when-it-tells-me-to)
 - [Can I break the Library?](#can-i-break-the-library)
 - [Do I need to install the Library for every new Sketch file?](#do-i-need-to-install-the-library-for-every-new-sketch-file)

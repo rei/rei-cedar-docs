@@ -339,7 +339,7 @@ This component has no specific WCAG compliance attributes built into the control
 - Submitting requested information
 - Confirming the completion of a flow or cancelling out of it
 
-### Don't use when
+### Don't Use When
 
 - Navigating to another page on a site. Instead use [Call to Action](../cta/)
 - Taking users to a different part within the same page. Instead, use [Links](../links/)
@@ -465,7 +465,7 @@ _Terminal_
 npm i -S @rei/cdr-button
 ```
 
-### 2. Import dependencies
+### 2. Import Dependencies
 
 _main.js_
 
@@ -474,7 +474,7 @@ _main.js_
 import "@rei/cdr-button/dist/cdr-button.css";
 ```
 
-### 3. Add component to a template
+### 3. Add Component to a Template
 
 In this example we’ll create a medium-sized primary button, which is the default.
 
@@ -502,7 +502,7 @@ export default {
 
 ## Usage
 
-### Size prop
+### Size Prop
 
 The below example uses the `size` prop to set a default and responsive size. This button’s size is small, but it will become a large button at the `xs` and `sm` breakpoints.
 
@@ -550,7 +550,7 @@ export default {
 </script>
 ```
 
-## Composing with icons
+## Composing with Icons
 
 **CdrButton** component can be used with the icon component from the **CdrIcon** package.
 
@@ -612,7 +612,7 @@ Use the following props to modify `cdr-button`:
 ```
 
 
-### CdrCloseButton & CdrPlayButton
+### CdrCloseButton and CdrPlayButton
 
 The **CdrButton** package includes two specific icon-only variants. **CdrCloseButton** and **CdrPlayButton** include their respective icons and `aria-label` text for accessibility.
 

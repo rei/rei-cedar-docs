@@ -115,7 +115,7 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell tab-name="Overview">
 
-<cdr-doc-alert>REI.com is currently using Bazaarvoice for ratings - styles documented here may not reflect the current styles provided by the tool. Reach out in #cedar-users for further guidance or questions.</cdr-doc-alert>
+<cdr-doc-alert icon="info"><strong>REI.com is currently using Bazaarvoice for ratings.</strong>Styles documented here may not reflect the current styles provided by the tool. Reach out in <cdr-link href="https://rei.slack.com/messages/CA58YCGN4" target="_blank">#cedar-user-support</cdr-link> for further guidance or questions.</cdr-doc-alert>
 
 ## Default
 
@@ -211,7 +211,7 @@ This component has compliance with WCAG guidelines by:
 
 - Providing a tool for comparing others’ opinions
 
-### Don't use when
+### Don't Use When
 
 - Displaying a range of data
 
@@ -275,7 +275,7 @@ _Terminal_
 npm i @rei/cdr-rating
 ```
 
-### 2. Import dependencies
+### 2. Import Dependencies
 
 _main.js_
 
@@ -284,7 +284,7 @@ _main.js_
 import "@rei/cdr-rating/dist/cdr-rating.css";
 ```
 
-### 3. Add component to a template
+### 3. Add Component to a Template
 
 _local.vue_
 

@@ -270,11 +270,11 @@ This component has compliance with [WCAG SC 1.4.3: Contrast (Minimum)](https://w
 <template slot="Design Guidelines">
 <cdr-doc-table-of-contents-shell>
 
-## Use when
+## Use When
 - Encouraging a user to navigate to a new location
 - Promoting a campaign, promotional advertisements, or email offers
 
-### Don't use when
+### Don't Use When
 
 - Triggering interface interactions. Instead, use [Buttons](../buttons/)
 
@@ -370,7 +370,7 @@ _main.js_
 import "@rei/cdr-cta/dist/cdr-cta.css";
 ```
 
-### 3. Add component to a template
+### 3. Add Component to a Template
 
 _local.vue_
 

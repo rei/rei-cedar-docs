@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import '@rei/cdr-tokens/dist/raw-tokens.json';
+// import '@rei/cdr-tokens/dist/raw-tokens.json';
 import CdrDocColorSwatch from './cdr-doc-color-swatch.vue';
 
 export default {

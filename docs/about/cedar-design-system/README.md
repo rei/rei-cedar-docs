@@ -16,7 +16,7 @@
 
 ## About Cedar
 
-Cedar is REI’s digital visual language built into accessible UI components, offered as dual Vue-based code and Sketch design assets with full documentation.
+Cedar is REI’s Design System: a foundational tool built to serve the design and engineering of digital products. It is REI’s digital visual language built into accessible UI components and token variables, offered as dual Vue-based code and Sketch design assets with full documentation.
 
 <cdr-img :src="$withBase(`/about/cedar1.png`)" alt="Cedar provides design assets for sketch, Vue.js components and the documentation to use them."/>
 
@@ -24,15 +24,21 @@ The Cedar design system promotes reusability of modular components to spread a m
 
 ### Community
 
-The system is made by the core Cedar team & REI digital community, intended for use by all teams making web-based digital experiences.
+The system is made by the core Cedar team and REI digital community, intended for use by all teams making web-based digital experiences.
 
-Cedar has a core team of designers and front-end engineers that are dedicated to developing and supporting the system. There are also plans to incorporate contributions from the greater design and engineering community at REI as the system matures. Both the core Cedar team and individual Product teams will bear some costs of future development, as identified on an ongoing basis.
+Cedar has a core team of designers and front-end engineers that are dedicated to developing and supporting the system. Contributions from the greater design and engineering community at REI are encouraged to help grow and evolve the system.
 
-The Cedar team will be reaching out to individual product teams to discuss adoption strategy, assist with integration, and align roadmaps. Product teams should also feel free to reach out to the Cedar team proactively to discuss any questions, ideas, or share feedback.
+In the spirit of creating a collaborative community around the design system, the Cedar team will host demos and reviews that will be open to any interested parties, and participate in vertical team meetings for deeper dives into specific topics. 
 
-In the spirit of creating a collaborative community around the design system, the Cedar team will also host sprint reviews and critiques that will be open to any interested parties, and participating in vertical team meetings for deeper dives into specific topics.
+#### Open Source
 
-### Vision & Goals
+While Cedar is primarily focused on serving teams building experiences for REI, the system is also available as an open source project in GitHub and NPM.
+
+Fonts used in the Cedar Design System are licensed and proprietary to REI, and are not for usage by unapproved parties. 
+
+For more information or questions regarding Cedar’s support for external consumers using the open source project, please reach out to [cedar@rei.com](mailto:cedar@rei.com).  
+
+### Vision and Goals
 
 #### Vision
 
@@ -46,7 +52,6 @@ As a future-friendly foundation for REI’s digital portfolio, Cedar is an inter
 - Enable a consistent customer experience by promoting visual cohesion at scale
 - Reduce costs of duplicative work and allow teams to focus their time on creating great customer experiences 
 - Streamline time to market by increasing the speed of prototyping and development
-- Establish shared processes and governance
 - Allow better cross-functional collaboration with a common language and standards
 
 </cdr-doc-table-of-contents-shell>
