@@ -21,6 +21,7 @@
 - Released [cdr-tokens](../foundation/tokens/) NPM package v1.0 [view in NPM](https://www.npmjs.com/package/@rei/cdr-tokens)
   - [Color](../foundation/color/)
   - [Spacing](../foundation/spacing/)
+  - [Typography](../foundation/typography/)
 
 ## 18.12.1 Release
 
