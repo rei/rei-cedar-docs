@@ -14,6 +14,15 @@
 
 <cdr-doc-table-of-contents-shell>
 
+## 19.04.1 Release
+
+### Cedar Tokens
+
+- Released [cdr-tokens](../foundation/tokens/) NPM package v1.0 [view in NPM](https://www.npmjs.com/package/@rei/cdr-tokens)
+  - [Color](../foundation/color/)
+  - [Spacing](../foundation/spacing/)
+  - [Typography](../foundation/typography/)
+
 ## 18.12.1 Release
 
 ### New Components
