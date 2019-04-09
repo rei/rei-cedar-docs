@@ -936,12 +936,22 @@ Cedar has defined typography specifications and values based on REI's brand guid
 <template slot="Brand Typography">
 <cdr-doc-table-of-contents-shell>
 
-<cdr-doc-alert icon="warning"><strong>These values are NOT to be used by developers for creating custom UI.</strong>If you are extending or modifying an existing Cedar component please work with the design system team to add support for your enhancements.</cdr-doc-alert>
+<cdr-doc-alert icon="warning"><strong>These values should not be used standalone to create custom UI.</strong></cdr-doc-alert>
 
-Typography from REI’s brand guidelines are used throughout Cedar components and design recommendations. Use these values when:
+Typography from REI’s brand guidelines are used throughout Cedar components and design recommendations. 
+
+**Use these values when:**
   - Requesting an update to an existing Cedar component
   - Requesting a new token 
   - Developing a new component that will be adopted by Cedar Design System
+  - Creating a custom or product-specific solution that will not be reused 
+
+<br> 
+
+**Don't use these values when:**
+  - Creating a broad solution that can be shared across teams. Instead, develop a new component or utility
+  - Wanting the benefit of dynamically-updated styles when there are changes in the brand guidelines. Instead, use tokens
+  - Typography values are repeated throughout the page. Instead, request a new token
 
 <br> 
 
