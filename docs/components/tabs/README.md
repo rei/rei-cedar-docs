@@ -219,14 +219,14 @@ This component has compliance with WCAG guidelines by:
 <template slot="Design Guidelines">
 <cdr-doc-table-of-contents-shell>
 
-## Use when
+## Use When
 
 - Organizing related content in a single container
 - Flipping between multiple panes or sections
 - Grouping content to display horizontally
 - Content is lengthy and can be broken into discrete parts
 
-### Don’t use when
+### Don’t Use When
 
 - Grouping content to display vertically. Instead, use [Accordion](../accordion/)
 - Creating primary navigation that links to other pages
@@ -319,7 +319,7 @@ _Terminal_
 npm i -s @rei/cdr-tabs
 ```
 
-## 2. Import Dependencies
+### 2. Import Dependencies
 
 _main.js_
 
@@ -328,7 +328,7 @@ _main.js_
 import "@rei/cdr-tabs/dist/cdr-tabs.css";
 ```
 
-### 3. Add component to a template
+### 3. Add Component to a Template
 
 _local.vue_
 

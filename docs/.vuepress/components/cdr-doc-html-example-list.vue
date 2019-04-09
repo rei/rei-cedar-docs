@@ -163,7 +163,7 @@
   .cdr-doc-html-example-list {
     border: $cdr-doc-border-separator;
     border-radius: $cdr-doc-border-radius-default;
-    margin-bottom: $space-1-x;
+    margin-bottom: $cdr-space-one-x;
   }
 
   .cdr-doc-html-example-list__item {
@@ -171,7 +171,7 @@
     border-bottom: $cdr-doc-border-separator;
     display: flex;
     justify-content: center;
-    padding: $inset-2-x;
+    padding: $cdr-space-inset-two-x;
     position: relative;
 
     &:last-child {
@@ -188,11 +188,11 @@
   }
 
   .cdr-doc-html-example-list__item-background--light {
-    background: $clean-slate;
+    background: $cdr-color-background-lightest;
   }
 
   .cdr-doc-html-example-list__item-background--dark {
-    background: $lost-in-space;
+    background: $cdr-color-background-dark;
   }
 
   .cdr-doc-html-example-list__code {
@@ -201,31 +201,31 @@
 
   .cdr-doc-html-example-list__item-label {
     @include redwood-display-10;
-    bottom: $space-half-x;
+    bottom: $cdr-space-half-x;
     position: absolute;
-    right: $space-half-x;
+    right: $cdr-space-half-x;
 
     .cdr-doc-html-example-list__item-background--dark & {
-      color: $clean-slate;
+      color: $cdr-color-text-primary-darkmode;
     }
   }
 
   .cdr-doc-html-example-list__item-background-toggle {
     display: flex;
     position: absolute;
-    right: $space-half-x;
-    top: $space-half-x;
+    right: $cdr-space-half-x;
+    top: $cdr-space-half-x;
   }
 
   .cdr-doc-item-background-toggle__button {
     @include redwood-display-20;
-    background-color: $clean-slate;
+    background-color: $cdr-color-background-lightest;
     border: solid 1px $holy-smoke;
     border-right-width: 0;
     cursor: pointer;
-    padding: $space-half-x;
-    padding-bottom: $space-half-x-squish;
-    padding-top: $space-half-x-squish;
+    padding: $cdr-space-half-x;
+    padding-bottom: $cdr-space-inset-half-x-squish-top-bottom;
+    padding-top: $cdr-space-inset-half-x-squish-top-bottom;
 
     &:first-child {
       border-radius: $cdr-doc-border-radius-default 0 0 $cdr-doc-border-radius-default;

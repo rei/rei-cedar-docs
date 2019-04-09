@@ -265,14 +265,14 @@ For more information, review techniques and failures for:
 <template slot="Design Guidelines">
 <cdr-doc-table-of-contents-shell>
 
-## Use when
+## Use When
 
 - Selecting only 1 choice from a list is allowed
 - Viewing all available options is needed
 - Comparing between list of selections is desired
 
 
-### Don’t use when
+### Don’t Use When
 
 - Selecting from a list when multiple choices are allowed. Instead, use [Checkboxes](../checkboxes/)
 - Providing a single selectable option. Instead, use [Checkboxes](../checkboxes/) (stand-alone checkbox)
@@ -353,7 +353,7 @@ _main.js_
 import "@rei/cdr-radio/dist/cdr-radio.css";
 ```
 
-### 3. Add component to a template
+### 3. Add Component to a Template
 
 _local.vue_
 

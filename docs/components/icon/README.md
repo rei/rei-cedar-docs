@@ -130,7 +130,7 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
 
-## SVG sprite
+## SVG Sprite
 
 A collection of SVG icon files composed into a single file. This method provides a single server download request and caches icons for display. This is the most efficient way of displaying large numbers of icons.
 
@@ -145,7 +145,7 @@ A collection of SVG icon files composed into a single file. This method provides
 
 </cdr-doc-example-code-pair>
 
-## Individual icon components
+## Individual Icon Components
 
 Display any icon separately. This may be the easiest way to use an icon on a page however it is not recommended for every circumstance. When using a large number of icons, it will generate multiple server requests and slow down performance.
 
@@ -220,7 +220,7 @@ W3C recommends using `<title>` and `<desc>` elements in SVG for assistive techno
 <template slot="Design Guidelines">
 <cdr-doc-table-of-contents-shell>
 
-## Use when
+## Use When
 - Communicating simple actions and concepts that are easily understood, such as printing a receipt or sending email
 - Making navigation easier for common actions. such as return to home page or search
 - Representing an action, object or concept at a high level of abstraction, such as using the snowflake icon to represent snow sports
@@ -305,7 +305,7 @@ _Terminal_
 npm i -S @rei/cdr-icon
 ```
 
-### 2. Import dependencies
+### 2. Import Dependencies
 
 _main.js_
 
@@ -314,7 +314,7 @@ _main.js_
 import '@rei/cdr-icon/dist/cdr-icon.css';
 ```
 
-### 3. Add component to a template
+### 3. Add Component to a Template
 
 _local.vue_
 
@@ -349,7 +349,7 @@ There are 3 different options to display SVG icons on your page using the **CdrI
 
 ### 1. SVG Sprite
 
-#### Option A: Inline symbol sprite
+#### Option A: Inline Symbol Sprite
 
 Requires:
 - Icon sprite inline on page
@@ -399,7 +399,7 @@ components: {
 </script>
 ```
 
-#### Option B: External symbol defs
+#### Option B: External Symbol Defs
 
 Requires:
 - `@rei/cdr-icon/sprite/cdr-icon-sprite.svg`
@@ -432,7 +432,7 @@ export default {
 </script>
 ```
 
-### 2. Individual icon components
+### 2. Individual Icon Components
 
 This may be the easiest way to use an icon on a page however use this method carefully. This method will increase HTML file size and slow down performance if using a lot of icons.
 

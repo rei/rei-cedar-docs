@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p v-if="slotsGettingStartedLink">Find more information about using Slots in the article, <cdr-link :href="$withBase('/getting-started/as-a-developer/?active-link=add-content-via-slots')">Getting Started as a Developer</cdr-link></p>
+    <p v-if="slotsGettingStartedLink">Find more information about using Slots in the article, <cdr-link :href="$withBase('/getting-started/as-a-developer/?active-link=add-content-using-slots')">Getting Started as a Developer</cdr-link></p>
 
     <div class="api-slot" v-for="(apiSlot, index) in apiData" :key="apiSlot.text">
       <cdr-row
@@ -38,10 +38,10 @@
   @import '../theme/styles/cdr-doc-tokens.scss';
 
   .api-slot {
-    background-color: $clean-slate;
+    background-color: $cdr-color-background-lightest;
     border: 1px solid $partly-cloudy;
     border-radius: 4px;
-    padding: $space-half-x;
+    padding: $cdr-space-half-x;
 
     .slot-name {
       color: $quick-fixe;
@@ -65,7 +65,7 @@
     }
 
     & + & {
-      margin-top: $space-1-x;
+      margin-top: $cdr-space-one-x;
     }
   }
 </style>

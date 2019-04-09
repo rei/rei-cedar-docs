@@ -142,7 +142,7 @@ Display independently with a call to action. Some examples are for finding a sto
 
 </cdr-doc-example-code-pair>
 
-## Icon on left
+## Icon on Left
 
 Display standalone link with icon on left.
 
@@ -155,7 +155,7 @@ Display standalone link with icon on left.
       <!-- Using the sprite -->
       <cdr-icon
           use="#shipping"
-          modifier="inherit-color"
+          inherit-color
           class="cdr-inline-left--sm"
       />
       This item ships for FREE!
@@ -165,7 +165,7 @@ Display standalone link with icon on left.
 
 </cdr-doc-example-code-pair>
 
-## Icon on right
+## Icon on Right
 
 Display standalone link with icon on right.
 
@@ -179,7 +179,7 @@ Display standalone link with icon on right.
         <!-- Using the sprite -->
         <cdr-icon
             use="#external-link"
-            modifier="inherit-color"
+            inherit-color
             class="cdr-inline-right--sm"/>
       </cdr-link>
   </div>
@@ -224,11 +224,11 @@ This component has compliance with following WebAIM’s accessibility guidelines
 <template slot="Design Guidelines">
 <cdr-doc-table-of-contents-shell>
 
-## Use when
+## Use When
 
 - Navigating to another page or a different portion of the same page
 
-### Don’t use when
+### Don’t Use When
 
 - Navigating a user from promotional or campaign content. Instead, use [Call to Action](../cta/)
 
@@ -319,7 +319,7 @@ _Terminal_
 npm i -S @rei/cdr-link
 ```
 
-### 2. Import dependencies
+### 2. Import Dependencies
 
 _main.js_
 
@@ -331,7 +331,7 @@ import "@rei/cdr-link/dist/cdr-link.css";
 import "@rei/cdr-link/dist/cdr-icon.css";
 ```
 
-### 3. Add component to a template
+### 3. Add Component to a Template
 
 _local.vue_
 

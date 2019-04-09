@@ -1,1 +1,8 @@
-@import '~@rei/cdr-tokens/dist/cdr-tokens.scss'
+@import './options.scss';
+@import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
+
+/* Temporary element styles */
+$unordered-list-indentation-space: 1em;
+$nested-list-indentation-space: 1em;
+$ordered-list-indentation-space: 1.5em;
+$list-item-indentation-space: 0;

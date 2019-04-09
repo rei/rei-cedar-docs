@@ -152,7 +152,7 @@ Credit has same CSS styles as the default; however, only the credit element is d
 </cdr-doc-example-code-pair>
 
 
-## Caption with image
+## Caption with Image
 
 The captions component is text-only; however, it is meant to be displayed in the context of a media object.
 
@@ -192,11 +192,11 @@ This component has compliance with WCAG guidelines by:
 <template slot="Design Guidelines">
 <cdr-doc-table-of-contents-shell>
 
-## Use when
+## Use When
 
 - Providing further context and attribution to any figure or media asset such as an image, video or chart
 
-### Don’t use when
+### Don’t Use When
 
 - Displaying body copy. Instead, use [Paragraphs](../paragraphs/)
 - Breaking up the text styles in a layout for aesthetic purposes
@@ -227,7 +227,7 @@ Text fields within a caption:
       - Begin credit text with “Video Credit” or “Image Credit” 
 
 
-### Types of accreditations
+### Types of Accreditations
 
 For photos submitted by customers or members:
   - Provide first name, initial of last name (not full last name)
@@ -250,7 +250,7 @@ For copyrighted media (photos or video):
   - Use © symbol and date separated by (non-breaking) spaces and photographer name. (e.g. © 2017 Norm Bellows)
   - If date is not available, use © symbol and photographer name separated by a (non-breaking) space. (e.g. © Norm Bellows)
 
-### For more information
+### For More Information
 
 - For more information about photo accreditation recommendations:
   - Noble Blogger Guidelines: [How to Cite Pictures](https://writtent.com/blog/the-honor-code-of-a-noble-blogger-how-to-cite-pictures)
@@ -314,7 +314,7 @@ _Terminal_
 npm i -S @rei/cdr-text
 ```
 
-### 2. Import dependencies
+### 2. Import Dependencies
 
 _main.js_
 
@@ -323,7 +323,7 @@ _main.js_
 import "@rei/cdr-caption/dist/cdr-caption.css";
 ```
 
-### 3. Add component to a template
+### 3. Add Component to a Template
 
 _local.vue_
 

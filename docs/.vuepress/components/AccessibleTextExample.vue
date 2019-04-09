@@ -27,19 +27,19 @@ export default {
 .a-t-example {
   
   &__primary {
-    color: $moon-shot; // TODO: update to $text-color-primary-on-dark once available
+    color: $cdr-color-text-primary-darkmode;
   }
   &__secondary {
-    color: $holy-smoke; // TODO: update to $text-color-secondary-on-dark once available
+    color: $cdr-color-text-secondary-darkmode;
   }
 
   td {
     padding: 16px;
     border: none;
-    background-color: $heart-of-darkness;
+    background-color: $cdr-color-background-darker;
 
     &:nth-of-type(3) {
-      background-color: $lost-in-space;
+      background-color: cdr-color-background-dark;
     }
 
     &:nth-of-type(n+2) {

@@ -590,7 +590,7 @@ Defines direction for items in a container for all columns of a row. This applie
 
 Wrapping columns is the default; however, it is possible to disable or enable column wrapping of a row with the ability to set values based on breakpoint. The disable value also invokes overflow scrolling. This applies to all columns.
 
-### Wrap (default)
+### Wrap (Default)
 
 <cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/grid" sandbox-href="https://codesandbox.io/s/r48j2yw7kq" >
 
@@ -618,7 +618,7 @@ Wrapping columns is the default; however, it is possible to disable or enable co
 
 </cdr-doc-example-code-pair>
 
-### Nowrap (scroll)
+### Nowrap (Scroll)
 
 <cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/grid" sandbox-href="https://codesandbox.io/s/r48j2yw7kq" >
 
@@ -650,7 +650,7 @@ Wrapping columns is the default; however, it is possible to disable or enable co
 
 Controls column width by overriding columns value for a specific column or columns. Span will override values from columns.
 
-### 12 cols
+### 12 Cols
 
 <cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/grid" >
 
@@ -1021,14 +1021,14 @@ This component has compliance with following WCAG guidelines:
 <template slot="Design Guidelines">
 <cdr-doc-table-of-contents-shell>
 
-## Use when
+## Use When
 
 - Arranging content and components into rows and columns
 - Laying out a page of 2+ rows of body content (apart from site navigation), some of which may or may not have columns
 - Applying responsive rules to columns of a row and/or regions of a page layout or a container of many components
 - Arranging elements within a single component with two or more zones, including those aligned to the left or right edge
 
-### Don’t use when
+### Don’t Use When
 
 - Presenting a multi-row columnar data display, such as features or specs of a product. Instead, use [Data Tables](../data-tables/)
 
@@ -1161,7 +1161,7 @@ Grids are built from two components, **CdrRow** and **CdrCol**.
 
 ## Slots
 
-Find more information about using Slots in the article, <cdr-link :href="$withBase('/getting-started/as-a-developer/?active-link=add-content-via-slots')">Getting Started as a Developer</cdr-link>
+<api-slot :slots-getting-started-link="true" />
 
 ### CdrRow
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" :slots-getting-started-link="false" />
@@ -1201,7 +1201,7 @@ _main.js_
 import "@rei/cdr-grid/dist/cdr-grid.css";
 ```
 
-### 3. Add component to a template
+### 3. Add Component to a Template
 
 _local.vue_
 

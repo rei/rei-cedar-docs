@@ -223,7 +223,7 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    color: $clean-slate;
+    color: $cdr-color-text-primary-darkmode;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -238,19 +238,19 @@ export default {
 }
 
 .home-heading {
-  @include spruce-display-60();
-  margin-bottom: $space-1-x;
+  @include cdr-text-header-3;
+  margin-bottom: $cdr-space-one-x;
 
-  @media (max-width: $breakpoint-md) {
+  @media (max-width: $cdr-breakpoint-md) {
     text-align: center;
   }
 }
 
 .home-subheading {
   @include redwood-body-40();
-  margin-bottom: $space-1-x;
+  margin-bottom: $cdr-space-one-x;
 
-  @media (max-width: $breakpoint-md) {
+  @media (max-width: $cdr-breakpoint-md) {
     text-align: center;
   }
 }
@@ -262,13 +262,13 @@ export default {
 
 .home-start-image {
   max-width: 170px;
-  margin: 0 auto $space-1-x;
+  margin: 0 auto $cdr-space-one-x;
 }
 
 .home-adopt {
   background-color: #EFEEE1;
   text-align: center;
-  padding: $space-2-x;
+  padding: $cdr-space-two-x;
 }
 
 .home-hr {
@@ -308,9 +308,9 @@ export default {
 }
 
 .home-card {
-  background-color: $clean-slate;
+  background-color: $cdr-color-background-lightest;
   border: 1px solid $partly-cloudy;
-  border-radius: $radius-softer;
+  border-radius: $cdr-radius-softer;
 }
 
 .home-resource-icon {
@@ -321,6 +321,6 @@ export default {
 
 .adopt-text {
   max-width: 700px;
-  margin: 0 auto $space-2-x;
+  margin: 0 auto $cdr-space-two-x;
 }
 </style>

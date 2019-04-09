@@ -64,7 +64,7 @@ export default {
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    padding: $inset-1-x;
+    padding: $cdr-space-inset-one-x;
     text-decoration: none;
   }
 

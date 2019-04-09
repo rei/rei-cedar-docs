@@ -184,12 +184,12 @@ This component has compliance with WCAG guidelines by:
 <template slot="Design Guidelines">
   <cdr-doc-table-of-contents-shell tab-name="Design Guidelines">
 
-## Use when
+## Use When
 
 - Highlighting valuable customer feedback
 - Encouraging a customer to try out an experience or product
 
-### Don't use when
+### Don't Use When
 
 - Pulling a direct quote from an article. Instead, use [Pull Quote](../pull-quote/)
 - Displaying for a decorative treatment only
@@ -262,7 +262,7 @@ _Terminal_
 import "@rei/cdr-quote/dist/cdr-quote.css";
 ```
 
-### 2. Import dependencies
+### 2. Import Dependencies
 
 _main.js_
 
@@ -271,7 +271,7 @@ _main.js_
 import "@rei/cdr-link/dist/cdr-quote.css";
 ```
 
-### 3. Add component to a template
+### 3. Add Component to a Template
 
 _local.vue_
 
