@@ -18,10 +18,10 @@
     "url": "git+https://github.com/rei/rei-cedar-docs.git"
   },
   "devDependencies": {
-    "@rei/cdr-tokens": "^1.0.0",
+    "@rei/cdr-tokens": "^1.0.0-beta.5",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
-    "vuepress": "^0.14.10"
+    "vuepress": "^0.12.0"
   },
   "dependencies": {
     "@rei/cdr-accordion": "^1.0.4",
