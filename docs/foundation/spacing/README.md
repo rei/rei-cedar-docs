@@ -261,7 +261,7 @@ Use to create a compact vertical space **within** the content container:
   <tbody>
     <tr>
       <td width=440><b>cdr-space-inset-eighth-x-squish </b> </td>
-      <td><i>Mixin</i> </td>
+      <td>0 2px</td>
     </tr>
     <tr>
       <td width=440>cdr-space-inset-eighth-x-squish-top-bottom </td>
@@ -281,7 +281,7 @@ Use to create a compact vertical space **within** the content container:
   <tbody>
     <tr>
       <td width=440><b>cdr-space-inset-quarter-x-squish </b> </td>
-      <td><i>Mixin</i> </td>
+      <td>2px 4px</td>
     </tr>
     <tr>
       <td width=440>cdr-space-inset-quarter-x-squish-top-bottom </td>
@@ -301,7 +301,7 @@ Use to create a compact vertical space **within** the content container:
   <tbody>
     <tr>
       <td width=440><b>cdr-space-inset-half-x-squish </b> </td>
-      <td><i>Mixin</i> </td>
+      <td>4px 8px</td>
     </tr>
     <tr>
       <td width=440>cdr-space-inset-half-x-squish-top-bottom </td>
@@ -321,7 +321,7 @@ Use to create a compact vertical space **within** the content container:
   <tbody>
     <tr>
       <td width=440><b>cdr-space-inset-three-quarter-x-squish </b> </td>
-      <td><i>Mixin</i> </td>
+      <td>6px 12px</td>
     </tr>
     <tr>
       <td width=440>cdr-space-inset-three-quarter-x-squish-top-bottom </td>
@@ -341,7 +341,7 @@ Use to create a compact vertical space **within** the content container:
   <tbody>
     <tr>
       <td width=440><b>cdr-space-inset-one-x-squish </b> </td>
-      <td><i>Mixin</i> </td>
+      <td>8px 16px</td>
     </tr>
     <tr>
       <td width=440>cdr-space-inset-one-x-squish-top-bottom </td>
@@ -361,7 +361,7 @@ Use to create a compact vertical space **within** the content container:
   <tbody>
     <tr>
       <td width=440><b>cdr-space-inset-one-and-a-half-x-squish </b> </td>
-      <td><i>Mixin</i> </td>
+      <td>12px 24px</td>
     </tr>
     <tr>
       <td width=440>cdr-space-inset-one-and-a-half-x-squish-top-bottom </td>
@@ -381,7 +381,7 @@ Use to create a compact vertical space **within** the content container:
   <tbody>
     <tr>
       <td width=440><b>cdr-space-inset-two-x-squish </b> </td>
-      <td><i>Mixin</i> </td>
+      <td>16px 32px</td>
     </tr>
     <tr>
       <td width=440>cdr-space-inset-two-x-squish-top-bottom </td>
@@ -401,7 +401,7 @@ Use to create a compact vertical space **within** the content container:
   <tbody>
     <tr>
       <td width=440><b>cdr-space-inset-four-x-squish </b> </td>
-      <td><i>Mixin</i> </td>
+      <td>32px 64px</td>
     </tr>
     <tr>
       <td width=440>cdr-space-inset-four-x-squish-top-bottom </td>
@@ -435,7 +435,7 @@ Use to create an expanded vertical space **within** the content container:
   <tbody>
     <tr>
       <td width=440><b>cdr-space-inset-eighth-x-stretch </b> </td>
-      <td><i>Mixin</i> </td>
+      <td>4px 2px</td>
     </tr>
     <tr>
       <td width=440>cdr-space-inset-eighth-x-stretch-top-bottom </td>
@@ -455,7 +455,7 @@ Use to create an expanded vertical space **within** the content container:
   <tbody>
     <tr>
       <td width=440><b>cdr-space-inset-quarter-x-stretch </b> </td>
-      <td><i>Mixin</i> </td>
+      <td>6px 4px</td>
     </tr>
     <tr>
       <td width=440>cdr-space-inset-quarter-x-stretch-top-bottom </td>
@@ -475,7 +475,7 @@ Use to create an expanded vertical space **within** the content container:
   <tbody>
     <tr>
       <td width=440><b>cdr-space-inset-half-x-stretch </b> </td>
-      <td><i>Mixin</i> </td>
+      <td>12px 8px</td>
     </tr>
     <tr>
       <td width=440>cdr-space-inset-half-x-stretch-top-bottom </td>
@@ -495,7 +495,7 @@ Use to create an expanded vertical space **within** the content container:
   <tbody>
     <tr>
       <td width=440><b>cdr-space-inset-three-quarter-x-stretch </b> </td>
-      <td><i>Mixin</i> </td>
+      <td>18px 12px</td>
     </tr>
     <tr>
       <td width=440>cdr-space-inset-three-quarter-x-stretch-top-bottom </td>
@@ -515,7 +515,7 @@ Use to create an expanded vertical space **within** the content container:
   <tbody>
     <tr>
       <td width=440><b>cdr-space-inset-one-x-stretch </b> </td>
-      <td><i>Mixin</i> </td>
+      <td>24px 16px</td>
     </tr>
     <tr>
       <td width=440>cdr-space-inset-one-x-stretch-top-bottom </td>
@@ -535,7 +535,7 @@ Use to create an expanded vertical space **within** the content container:
   <tbody>
     <tr>
       <td width=440><b>cdr-space-inset-one-and-a-half-x-stretch </b> </td>
-      <td><i>Mixin</i> </td>
+      <td>36px 24px</td>
     </tr>
     <tr>
       <td width=440>cdr-space-inset-one-and-a-half-x-stretch-top-bottom </td>
@@ -555,7 +555,7 @@ Use to create an expanded vertical space **within** the content container:
   <tbody>
     <tr>
       <td width=440><b>cdr-space-inset-two-x-stretch </b> </td>
-      <td><i>Mixin</i> </td>
+      <td>48px 32px</td>
     </tr>
     <tr>
       <td width=440>cdr-space-inset-two-x-stretch-top-bottom </td>
@@ -575,7 +575,7 @@ Use to create an expanded vertical space **within** the content container:
   <tbody>
     <tr>
       <td width=440><b>cdr-space-inset-four-x-stretch </b> </td>
-      <td><i>Mixin</i> </td>
+      <td>96px 64px</td>
     </tr>
     <tr>
       <td width=440>cdr-space-inset-four-x-stretch-top-bottom </td>
