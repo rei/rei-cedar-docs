@@ -282,6 +282,8 @@ Resources are available within the **[CdrToken package](https://www.npmjs.com/pa
   - SCSS variables at `dist/scss/cdr-tokens.scss`
   - LESS variables at `dist/less/cdr-tokens.less`
   - JS as both commonJS and ES module at `dist/js`. Also noted in package.json as `main` and `module` respectively
+    - `dist/js/cdr-tokens.common.js`
+    - `dist/js/cdr-tokens.esm.js`
 
 <br>
 
@@ -312,7 +314,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~@rei/cdr-tokens/dist/cdr-tokens.scss';
+@import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
 
 .myClass {
   @include cdr-text-default-body();
