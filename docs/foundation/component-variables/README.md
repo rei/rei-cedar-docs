@@ -39,54 +39,55 @@ https://rei.github.io/rei-cedar-component-variables/#/). For more information on
 
 ### Contract of Intent
   - Component variables are a versioned export of the exact styles being used in Cedar vue components.
-  <!-- - Consumers are required to stay within one major version of the current Cedar release. -->
-  <!-- - TODO: note about versioning wrt to cedar/tokens? -->
+  - Each release of component variables will depend on a version of the Cedar design tokens, and will be an export of a particular version of the Cedar vue component package.
   - These variables and mixins are intended to be used to match the styling of the component/element that they correspond to. For example, `$cdr-button-base-border-radius` should only be used to style the border-radius of a "button-like" element. If you use that variable to set the border-radius on something that is not a button, then that element would be affected any time the Cedar button border radius is changed.
 
 ### Benefits
 
+#### Brand Consistency on More Platforms
+  - Component variables are an export of the exact CSS styles that are being used in the Cedar vue components, which helps ensure that our most atomic front-end components remain visually consistent across the co-op.
+  - Third party teams can easily consume the component variables as a way to integrate the Cedar design system into their architecture.
+
 #### Ease of Maintainability
-  - In the past, projects that could not consume Cedar vue components would need to copy and paste styling out of Cedar and into their own project. This prevents the design systems team from pushing out updates without having the consuming team manually update their styling.
-  - By making component variables and mixins available, teams that are not using vue can still stay in sync with the visual styling for the vue components without needing to duplicate code from Cedar or perform tedious manually updates.
+  - In the past, projects that could not consume Cedar vue components had no way of using Cedar directly. This prevented the design systems team from pushing out updates across the co-op without having the consuming teams manually implement design updates.
+  - By making component variables and mixins available, teams that are not using vue can stay in sync with the visual styling for the vue components in a versioned and maintainable way.
 
 #### More Options for Consuming Teams   
-  - Not all teams are on the current architecture.  TODO
-  - Some teams are way ahead of that architecture, or require a highly optimized and minified bundle. TODO
-
-#### Brand Consistency on More Platforms
-  - Component variables are the exact same CSS styles that are being used in the Cedar vue components, so we can be sure that the visual styling of our most atomic components are consistent across REI.
-  - TODO
+  - Not all codebases at REI are up to date with our current vue based front-end architecture. Component variables provide a method to consume Cedar without needing to migrate to Vue.
+  - Some teams may have strict requirements around performance and bundle size, in which case component variables provide the most lightweight and lowest impact method of consuming Cedar. However this does come at an additional maintenance and development cost.
 
 #### Extensibility
-  -
+  - While the Cedar vue components strive to provide an un-opinionated API for teams to build on, there may be some use cases that conflict with that API, or teams may require a lower level of control over their components. In those cases where extending the Cedar vue component is not an option, the component variables can be used to create a new component that implements the desired functionality.
+
+<hr />
 
 ### Use When  
-- one TODO
-- two
-- three
-
+  - Your project does not use vue, but you want to use Cedar components.
+  - Your project seeks the smallest possible bundle size, and is willing to take on additional maintenance overhead to achieve that.
+  - Your project must strictly control the behavior of it's components, and it is not possible to do this through the public Cedar API.
+  - You are building a component that must visually match an existing Cedar component, but not it's functionality. For example, a vue-router Link component that looks like a CdrLink.
 
 ### Don’t Use When
-- one TODO
-- two
-- three
+  - Only use component variables to style the specific element/property for which they are named.
+  - Do not publish copies of Cedar components using the variables, as that creates duplication and confusion.
+  - Do not use component variables to simply extend or add functionality to existing Cedar components. Instead, you should do that using the actual Cedar vue component if possible.
 
-Questions about when to use tokens? Ask the Cedar team in [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4)
+Questions about when to use component variables? Ask the Cedar team in [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4)
 
 <hr/>
 
 
-## Naming Structure for Component Variables and Mixins
+## Naming Structure
 
-The naming structure for tokens follows:
-- **Namespace:** Top level namespace i.e, `cdr-`
-- **Component:** The name of the Cedar component that this variable is exported from
-- **Modifier:** The variant of this Cedar component that this variable applies to. The `base` modifier is used to indicate variables that apply to all instances of that Cedar component, and additional modifier variables can be stacked on top of that. For example, to make a primary large button you would use the variables that have `base`, `primary`, and `large` modifiers.
-- **Sub-Element:** Used to indicate styles that should be applied to a sub-element of a component. For example, `cdr-input-base-label-color` indicates the color of the label element used inside the input component.
-- **CSS Property:** Describes the CSS property that this variable should be applied to
-- **State:** Describes the element state for which this variable should be applied. These generally correspond to CSS selectors like `:focus`, `:active`, `:hover`, `:disabled`, etc.
+The naming structure for component variables and mixins is as follows:
+  - **Namespace:** Top level namespace i.e, `cdr-`
+  - **Component:** The name of the Cedar component that this variable is exported from
+  - **Modifier:** The variant of this Cedar component that this variable applies to. The `base` modifier is used to indicate variables that apply to all instances of that Cedar component, and additional modifier variables can be stacked on top of that. For example, to make a primary large button you would use the variables that have `base`, `primary`, and `large` modifiers.
+  - **Sub-Element:** Used to indicate styles that should be applied to a sub-element of a component. For example, `cdr-input-base-label-color` indicates the color of the label element used inside the input component.
+  - **CSS Property:** Describes the CSS property that this variable should be applied to. Or, if the property is listed as `mixin` then this is a mixin that should be included in this component.
+  - **State:** Describes the element state for which this variable should be applied. These generally correspond to CSS selectors like `:focus`, `:active`, `:hover`, `:disabled`, etc. These states are included in the mixins.
 
-### examples
+### Examples
 <table>
   <tbody>
     <tr>
@@ -133,6 +134,22 @@ The naming structure for tokens follows:
       <td>color-</td>
       <td>disabled</td>
     </tr>
+    <tr>
+      <td>cdr-</td>
+      <td>input-</td>
+      <td>base-</td>
+      <td></td>
+      <td>mixin</td>
+      <td></td>
+    </tr>
+    <tr>
+      <td>cdr-</td>
+      <td>button-</td>
+      <td>secondary-</td>
+      <td></td>
+      <td>mixin</td>
+      <td></td>
+    </tr>
   </tbody>
 </table>
 
@@ -141,8 +158,8 @@ The naming structure for tokens follows:
 ## How to Use Component Variables
 
 ### For Designers
-- You can continue using Cedar components as you normally would, and your developers will determine whether to use the vue components or the component variables.
-- Note about which components are supported?
+
+TODO: note about supported components? 
 
 <br>
 
@@ -159,7 +176,7 @@ This repository follows SEMVER practices and will notify users of changes and up
 
 ## Adding Component Variables to the Repository
 Component variables should never be added to this repository directly. Instead, they should be created inside of the main Cedar repository either as part of styling for a component or as a global shared variable.
-For a variety of reasons, not all Cedar vue components export their component variables. If there is a Cedar component that you would like to see supported here, [open an issue](https://github.com/rei/rei-cedar-component-variables/issues) or reach out to us in #cedar-user-support.
+For a variety of reasons, not all Cedar vue components export their component variables. If there is a Cedar component that you would like to see supported here, [open an issue here](https://github.com/rei/rei-cedar-component-variables/issues) or reach out to us in #cedar-user-support.
 
 
 
