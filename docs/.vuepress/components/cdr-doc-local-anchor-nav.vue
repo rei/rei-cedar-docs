@@ -313,6 +313,7 @@ export default {
   .cdr-doc-local-anchor-nav {
     overflow-y: auto;
     position: sticky;
+    padding-top: $cdr-space-inset-two-x;
   }
 
   .cdr-doc-local-anchor-nav__list {
