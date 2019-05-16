@@ -32,13 +32,8 @@ This project will automatically generate Codesandbox.io links for any examples t
 
 ```
 "sandboxData": {
-  "name": "CdrAccordion, CdrAccordionItem", // String, the names of the components being demonstrated. If a package exports multiple components, separate them with a comma
-  "dependencies": { "@rei/cdr-accordion": "^1.0.0" }, // Object, the package name and version of the component 
-  "loadComponentCss": true, // Boolean, whether or not the package has a CSS file that needs to be loaded
-  "loadIcon": true, // Boolean, whether or not the codesandbox needs to load CdrIcon and CdrIconSprite in the example code
-  "loadImage": true, // Boolean, whether or not the codesandbox needs to load CdrImg in the example code
+  "components": "CdrAccordion, CdrAccordionItem", // String, the names of the components being used directly in the example
   "styleTag": ".no-box:checked ~ .no-box__content {color: green;}", // String, allows you to pass custom CSS styles into the codesandbox 
-  
 },
 ```
 

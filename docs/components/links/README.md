@@ -50,9 +50,7 @@
     }
   ],
   "sandboxData": {
-    "name": "CdrLink",
-    "dependencies": { "@rei/cdr-link": "^1.0.0" },
-    "loadComponentCss": true
+    "components": "CdrLink"
   },
   "versions": [
     {
@@ -151,7 +149,7 @@ Display independently with a call to action. Some examples are for finding a sto
 
 Display standalone link with icon on left.
 
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {loadIcon: true})">
+<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrLink, CdrIconSprite'})">
 
 ```html
   <div>
@@ -174,7 +172,7 @@ Display standalone link with icon on left.
 
 Display standalone link with icon on right.
 
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {loadIcon: true})">
+<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrLink, CdrIconSprite'})">
 
 ```html
   <div>

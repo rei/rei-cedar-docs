@@ -43,10 +43,7 @@
     }
   ],
   "sandboxData": {
-    "name": "CdrAccordion, CdrAccordionItem",
-    "dependencies": { "@rei/cdr-accordion": "^1.0.0" },
-    "loadComponentCss": true,
-    "loadIcon": "true"
+    "components": "CdrAccordion, CdrAccordionItem"
   },
   "versions": [
     {

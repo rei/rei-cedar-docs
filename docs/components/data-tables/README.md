@@ -141,9 +141,7 @@
     }
   ],  
   "sandboxData": {
-    "name": "CdrDataTable",
-    "dependencies": { "@rei/cdr-data-table": "^1.0.0" },
-    "loadComponentCss": true
+    "components": "CdrDataTable"
   },
   "versions": [
     {

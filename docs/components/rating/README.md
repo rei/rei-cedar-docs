@@ -63,9 +63,7 @@
         }
     ],
     "sandboxData": {
-      "name": "CdrRating",
-      "dependencies": { "@rei/cdr-rating": "^1.0.0" },
-      "loadComponentCss": true
+      "components": "CdrRating"
     },
     "versions": [{
       "components": [

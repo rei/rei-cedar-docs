@@ -5,9 +5,7 @@
   "summary": "Capture the user’s attention and communicate your message",
   "title_metadata": "CdrImg",
   "sandboxData": {
-    "name": "CdrImg",
-    "dependencies": { "@rei/cdr-img": "^1.0.0" },
-    "loadComponentCss": true
+    "components": "CdrImg"
   },
   "versions": [
     {

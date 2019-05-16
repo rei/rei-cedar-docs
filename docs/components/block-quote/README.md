@@ -87,9 +87,7 @@
         "text": "Components/"
     }],
     "sandboxData": {
-      "name": "CdrQuote",
-      "dependencies": { "@rei/cdr-quote": "^1.0.0", "@rei/cdr-text": "^1.0.0" },
-      "loadComponentCss": true
+      "components": "CdrQuote"
     },
     "versions": [{
         "components": [

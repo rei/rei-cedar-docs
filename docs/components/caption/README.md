@@ -78,10 +78,7 @@
     }
   ],
   "sandboxData": {
-    "name": "CdrCaption",
-    "dependencies": { "@rei/cdr-caption": "^1.0.0" },
-    "loadComponentCss": true,
-    "loadImg": "true"
+    "components": "CdrCaption"
   },
   "versions": [
     {
@@ -162,7 +159,7 @@ Credit has same CSS styles as the default; however, only the credit element is d
 
 The captions component is text-only; however, it is meant to be displayed in the context of a media object.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/caption" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/caption" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, { components: 'CdrCaption, CdrImg' })" >
 
 ```html
 <figure>

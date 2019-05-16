@@ -103,9 +103,7 @@
         "text": "Components/"
     }],
     "sandboxData": {
-      "name": "CdrCheckbox",
-      "dependencies": { "@rei/cdr-checkbox": "^1.0.0" },
-      "loadComponentCss": true
+      "components": "CdrCheckbox"
     },
     "versions": [{
         "components": [
