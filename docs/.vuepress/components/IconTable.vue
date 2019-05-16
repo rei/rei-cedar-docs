@@ -15,6 +15,7 @@
 </template>
 
 <script>
+// TODO: not sure how to do this with single package.
 import * as Icons from '@rei/cdr-icon';
 import iconData from '../public/icon/iconData.json';
 

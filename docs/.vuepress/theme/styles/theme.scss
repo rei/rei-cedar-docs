@@ -2,8 +2,9 @@
 @import 'cdr-doc-tokens';
 @import 'cdr-doc-mixins';
 @import 'examples.scss';
-@import '../../../../node_modules/@rei/cdr-assets/dist/cdr-fonts.css';
-@import '../../../../node_modules/@rei/cdr-assets/dist/cdr-core.css';
+
+// @import '../../../../node_modules/@rei/cedar/dist/cdr-fonts.css'; // TODO: fonts not in alpha.3?
+@import '../../../../node_modules/@rei/cedar/dist/cedar.css';
 
 $side-navigation-logo-width: 162px;
 $side-navigation-width: 262px;
