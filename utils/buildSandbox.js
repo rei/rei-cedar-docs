@@ -31,7 +31,7 @@ export default function makeMeASandbox(data, model) {
             // TODO: can we grab the preceding text to use for description?
           "description": "https://rei.github.io/rei-cedar-docs/",
           "dependencies": {
-            "@rei/cedar": "^1.0.0-alpha.1",
+            "@rei/cedar": "^1.0.0-alpha.3",
             "lodash": "^4.17.4",
             "vue": "^2.5.22"
           }
