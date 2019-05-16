@@ -121,7 +121,7 @@
 
 Shows review rating with up to 5 stars highlighted. If rating is zero, star icons are displayed using the grey outline star icon. 
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.11.1/src/components/rating" sandbox-href="https://codesandbox.io/s/30r682534m">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/rating" sandbox-href="https://codesandbox.io/s/30r682534m">
 
 ```html
 <div>
@@ -136,7 +136,7 @@ Shows review rating with up to 5 stars highlighted. If rating is zero, star icon
 
 Creates a link to the corresponding review content if on the same page.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.11.1/src/components/rating" sandbox-href="https://codesandbox.io/s/30r682534m">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/rating" sandbox-href="https://codesandbox.io/s/30r682534m">
 
 ```html
 <div>
@@ -155,7 +155,7 @@ Creates a link to the corresponding review content if on the same page.
 
 Removes the word "Reviews" from the label for limited space layout.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.11.1/src/components/rating" sandbox-href="https://codesandbox.io/s/30r682534m">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/rating" sandbox-href="https://codesandbox.io/s/30r682534m">
 
 ```html
 <div>
@@ -170,7 +170,7 @@ Removes the word "Reviews" from the label for limited space layout.
 
 Change size for the star icon and text. Default size is medium.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.11.1/src/components/rating" sandbox-href="https://codesandbox.io/s/30r682534m">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/rating" sandbox-href="https://codesandbox.io/s/30r682534m">
 
 ```html
 <div>

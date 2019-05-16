@@ -27,7 +27,7 @@
         </span>
       </div>
       <div class="cdr-doc-code-snippet__action-wrapper">
-        <a class="cdr-doc-code-snippet__action" :href="repositoryHref" target="_blank" rel="noopener noreferrer" v-if="repositoryHref">
+        <a class="cdr-doc-code-snippet__action" :href="repositoryRoot + repositoryHref" target="_blank" rel="noopener noreferrer" v-if="repositoryHref">
           <img class="cdr-doc-code-snippet__action-icon" :src="$withBase(`/GitHub@2x.png`)" alt="View source in repository"/>
         </a>
         <span class="cdr-doc-code-snippet__tooltip cdr-doc-code-snippet__tooltip--show-on-hover">
@@ -90,7 +90,8 @@ export default {
       copyError: false,
       copyNotSupported: false,
       codeHidden: false,
-      hideCodeToggleText: 'Hide code'
+      hideCodeToggleText: 'Hide code',
+      repositoryRoot: 'https://github.com/rei/rei-cedar/tree/19.02.1'
     }
   },
   created: function() {

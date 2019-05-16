@@ -207,7 +207,7 @@
 
 Use primary buttons for actions to complete a task or move forward in a process such as &quot;Add to cart.&quot; There is only 1 primary action per major page section.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
+<cdr-doc-example-code-pair repository-href="/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
 
 ```html
   <cdr-button>Add to cart</cdr-button>
@@ -222,7 +222,7 @@ Use primary buttons for actions to complete a task or move forward in a process 
 
 Use secondary buttons for all actions that do not move the user to the next step or are additional user actions such as &quot;Add to wish list&quot; or &quot;Find a campout near you.&quot;
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
+<cdr-doc-example-code-pair repository-href="/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
 
 ```html
   <cdr-button modifier="secondary">Add to wish list</cdr-button>
@@ -235,7 +235,7 @@ Use secondary buttons for all actions that do not move the user to the next step
 
 Pair an icon with text to improve recognition about an object or action.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
+<cdr-doc-example-code-pair repository-href="/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
 
 ```html
   <div>
@@ -272,7 +272,7 @@ Pair an icon with text to improve recognition about an object or action.
 
 Use to visually communicate an object or action in limited space. Include alternative text to describe what button does.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
 
 ```html
   <div>
@@ -297,7 +297,7 @@ Use to visually communicate an object or action in limited space. Include altern
 
 Change the button size based on where button is used. Default size is medium. Small is used for supplemental user actions such as product comparison or filter. Large is used for &quot;Add to cart&quot; on product pages or Call to Action.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
 
 ```html
     <div>
