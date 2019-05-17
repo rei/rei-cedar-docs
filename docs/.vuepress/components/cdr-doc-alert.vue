@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import { IconInformationStroke, IconWarningTri } from '@rei/cdr-icon';
+import { IconInformationStroke, IconWarningTri } from '@rei/cedar';
 
 export default {
   name: 'CdrDocAlert',
