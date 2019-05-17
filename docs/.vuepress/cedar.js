@@ -1,12 +1,10 @@
 import Vue from 'vue'; // for registering components globally
 import FullVue from '$vue'; // for registering components globally
 
-import "@rei/cedar/dist/cedar.css";
+import * as Components from '@rei/cedar';
 
-import * as components from '@rei/cedar';
-
-Object.keys(components).forEach((key) => {
-  Vue.component(key, components[key]);
-  FullVue.component(key, components[key]);
+Object.keys(Components).forEach((key) => {
+  Vue.component(key, Components[key]);
+  FullVue.component(key, Components[key]);
 });
 
