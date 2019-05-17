@@ -3,7 +3,7 @@
 @import 'cdr-doc-mixins';
 @import 'examples.scss';
 
-// @import '../../../../node_modules/@rei/cedar/dist/cdr-fonts.css'; // TODO: fonts not in alpha.3?
+@import '../../../../node_modules/@rei/cedar/dist/cdr-fonts.css';
 @import '../../../../node_modules/@rei/cedar/dist/cedar.css';
 
 $side-navigation-logo-width: 162px;
