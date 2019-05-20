@@ -377,3 +377,22 @@ $ice-age: #ecf2f7;
 // $background-color-dark: #292929;
 // $suede-shoes: #5197cd;
 // $snap-decision: #e86868;
+
+
+// LEGACY UTILTIY CLASSES // 
+// !important is necessary to override
+
+.cdr-stack {
+  margin-bottom: 1.6rem !important;
+}
+.cdr-stack--lg {
+  margin-bottom: 3.2rem !important;
+}
+.cdr-stack--xl {
+  margin-bottom: 6.4rem !important;
+}
+
+.cdr-inset {
+  padding: 1.6rem !important;
+  display: block !important;
+}
