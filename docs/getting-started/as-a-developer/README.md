@@ -18,62 +18,56 @@ Cedar components are built using [Vue](https://vuejs.org) and can only be used i
 <hr>
 
 ## About Component Packages
-All components are available as a package on [NPM within the REI organization](https://www.npmjs.com/org/rei).
+All components are available via an [NPM package](https://www.npmjs.com/package/@rei/cedar).
 
-Each component is a separate NPM package. This ensures that you only have the essentials for your application - nothing more.
+Each component is available as a separate import, ensuring that you only have the essentials for your application - nothing more.
 
 _Terminal_
 ```bash
-npm install --save @rei/cdr-<component-name>
+npm install --save @rei/cedar
 ```
 
-Once installed, files are located in the package&lsquo;s `dist/` folder. Component packages often contain one JS file and one CSS file. 
+Once installed, you can import individual cedar components from the main package
 
 ```js
-node_modules/@rei/cdr-<component-name>/dist/cdr-<component-name>.js
-node_modules/@rei/cdr-<component-name>/dist/cdr-<component-name>.css
+const { CdrText, CdrButton, CdrLink } from '@rei/cedar'
 ```
 
-Some packages contain more (or fewer) than these two files which is noted in the package’s documentation.
+Individual component exports are located in the `dist/` folder.
+
+```js
+TODO: explain single component folder structure
+```
 
 <hr>
 
 ## Setting Up Projects
-All components depend upon core style and font assets. Without these assets included, components may be styled incorrectly.
-
-First, install the assets package:
-
-_Terminal_
-```bash
-npm install --save @rei/cdr-assets
-```
-
-The [CdrAssets package](https://www.npmjs.com/package/@rei/cdr-assets) contains these files:
-  * cdr-core.css
-  * cdr-fonts.css
+All components depend upon core style and font assets. Without these assets included, components may be styled incorrectly. These files are distributed as part of the Cedar NPM package.
 
 ### Install Required Core Styles
-Cedar requires a core stylesheet to render components properly.
+Cedar requires a core stylesheet to render components properly. This stylesheet contains a CSS reset, component CSS, as well as global utility classes.
 
-To include the stylesheet, import `cdr-core.css`:
+To include the stylesheet, import the `cedar.css` file:
 
 _main.js_
 ```js
-import '@rei/cdr-assets/dist/cdr-core.css';
+import '@rei/cedar/dist/cedar.css';
 ```
+
+<!-- TODO: document scss/postcss import here? -->
 
 ### Install Required Fonts
 Cedar uses specific fonts – Roboto, Roboto Condensed, and Sentinel – that are required for your project. 
 
 Roboto and Roboto Condensed are available from [Google Fonts](https://fonts.google.com/selection?selection.family=Roboto%7CRoboto+Condensed&query=robo) (preselected for quick use).
 
-Sentinel is available in the `cdr-assets` package and mapped using the `cdr-fonts.css` file.
+Sentinel is available in the Cedar NPM package and mapped using the `cdr-fonts.css` file.
 
 To include these fonts, import `cdr-fonts.css`:
 
 _main.js_
 ```js
-import '@rei/cdr-assets/dist/cdr-fonts.css';
+import '@rei/cedar/dist/cdr-fonts.css';
 ```
 
 <hr>
@@ -90,9 +84,11 @@ The following example demonstrates the **CdrButton** component.
 
 _Terminal_
 ```bash
-npm install --save @rei/cdr-button
+npm install --save @rei/cedar
 ```
 
+<!-- TODO: we don't currently export component specific CSS -->
+<!-- 
 #### Include Component-Specific CSS
 How you include CSS depends on your tech stack and varies from project to project. 
 
@@ -111,7 +107,7 @@ Cedar packages include the [unofficial style field](https://jaketrent.com/post/p
 
 _cedar.postcss_
 ```css
-import '@rei/cdr-button’;
+import '@rei/cedar’;
 ```
 
 ##### SCSS
@@ -122,21 +118,22 @@ _cedar.scss_
 import '~@rei/cdr-button/dist/cdr-button.css';
 ```
 
-**Note**: Code snippets provided throughout the docs will demonstrate the `webpack` and `css-loader` method.
+**Note**: Code snippets provided throughout the docs will demonstrate the `webpack` and `css-loader` method. -->
 
-<hr>
+<hr/>
 
 ### Using Components
+
 The examples in our documentation demonstrate usage in a [Single File Component](https://vuejs.org/v2/guide/single-file-components.html). If you aren’t using SFCs, read the Vue.js documentation for [registering components](https://vuejs.org/v2/guide/components-registration.html).
 
 Examples below demonstrate the **CdrButton** component. Refer to each component’s documentation for a complete component API and advanced examples.
 
-#### Include Component-Specific CSS
+#### Loading a component in Vue
 1. Import the component within the `script` block.
 
 _local.vue_
 ```js
-import { CdrButton } from '@rei/cdr-button';
+import { CdrButton } from '@rei/cedar';
 ```
 
 2. Register the component in the `components:` object.
@@ -164,7 +161,7 @@ _local.vue_
 </template>
 
 <script>
-import { CdrButton } from '@rei/cdr-button';
+import { CdrButton } from '@rei/cedar';
 export default {
   ...
   components: {
