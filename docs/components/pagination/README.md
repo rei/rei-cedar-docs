@@ -57,6 +57,12 @@
       "text": "Components/"
     }
   ],
+  # TODO: update these examples to use sandbox
+  #"sandboxData": {
+#    "name": "CdrPagination",
+#    "dependencies": { "@rei/cdr-pagination": "^1.0.0" },
+#    "loadComponentCss": true
+  #},
   "versions": [
     {
       "components": [

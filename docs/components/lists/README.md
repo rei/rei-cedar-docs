@@ -17,39 +17,42 @@
         "href": '../breadcrumb/'
       }
     ],
-	  "list1": [
-      {
-        "type": "do",
-        "image": "lists/lists_grammar_do__4-3.png",
-        "ratio": "4-3",
-        "alt": "",
-        "caption": "link independent clauses and product details."
-      },
-      {
-        "type": "dont",
-        "image": "lists/lists_grammar_dont__4-3.png",
-        "ratio": "4-3",
-        "alt": "",
-        "caption": "link unrelated items together."
-      }
-    ],
-    "list2": [
-      {
-        "type": "do",
-        "image": "lists/lists_punctuation_do_3-4.png",
-        "ratio": "3-4",
-        "alt": "",
-        "caption": "end each sentence with a period except last sentence."
-      },
-      {
-        "type": "dont",
-        "image": "lists/lists_punctuation_dont_3-4.png",
-        "ratio": "3-4",
-        "alt": "",
-        "caption": "add terminal punctuation."
-      }
-    ],
+  "list1": [
+    {
+      "type": "do",
+      "image": "lists/lists_grammar_do__4-3.png",
+      "ratio": "4-3",
+      "alt": "",
+      "caption": "link independent clauses and product details."
+    },
+    {
+      "type": "dont",
+      "image": "lists/lists_grammar_dont__4-3.png",
+      "ratio": "4-3",
+      "alt": "",
+      "caption": "link unrelated items together."
+    }
+  ],
+  "list2": [
+    {
+      "type": "do",
+      "image": "lists/lists_punctuation_do_3-4.png",
+      "ratio": "3-4",
+      "alt": "",
+      "caption": "end each sentence with a period except last sentence."
+    },
+    {
+      "type": "dont",
+      "image": "lists/lists_punctuation_dont_3-4.png",
+      "ratio": "3-4",
+      "alt": "",
+      "caption": "add terminal punctuation."
+    }
+  ],
   "name": "CdrList",
+  "sandboxData": {
+    "components": "CdrList"
+  },
   "versions": [
     {
       "components": [
@@ -93,7 +96,8 @@
 
 Collect items to be displayed in a list when items are not marked with bullets.  This is the default and is also known as unordered and undecorated “bare” list.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/list" sandbox-href="https://codesandbox.io/s/1q95wpz4rq" :codeMaxHeight= false >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight= false >
+
 <template slot="Default">
 
 ```html
@@ -131,7 +135,7 @@ Collect items to be displayed in a list when items are not marked with bullets. 
 
 Collect related items that don’t need to be in a specific order or sequence. List items are typically marked with bullets.
 
-<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/list" sandbox-href="https://codesandbox.io/s/1q95wpz4rq" >
+<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
 <template slot="Default">
 
 ```html
@@ -170,7 +174,8 @@ Collect related items that don’t need to be in a specific order or sequence. L
 
 Collect related items with numeric order or sequence. Numbering starts at 1 with the first list item and increases by increments of 1 for each successive ordered list item.
 
-<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/list" sandbox-href="https://codesandbox.io/s/1q95wpz4rq" >
+<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
+
 <template slot="Default">
 
 ```html
@@ -208,7 +213,8 @@ Collect related items with numeric order or sequence. Numbering starts at 1 with
 
 Display items horizontally with no divider.
 
-<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/list" sandbox-href="https://codesandbox.io/s/1q95wpz4rq" >
+<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
+
 <template slot="Default">
 
 ```html
@@ -238,7 +244,8 @@ Display items horizontally with no divider.
 
 Display items horizontally, separated by a bullet character.
 
-<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/list" sandbox-href="https://codesandbox.io/s/1q95wpz4rq" >
+<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
+
 <template slot="Default">
 
 ```html

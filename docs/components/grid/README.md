@@ -47,6 +47,9 @@
       "caption": "make gutters too large."
     },
   ],
+  "sandboxData": {
+    "components": "CdrRow, CdrCol"
+  },
   #API
   "versions": [
     {
@@ -170,7 +173,7 @@
 
 Use rows and columns to lay out content by specifying equal-widths for all columns
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" sandbox-href="https://codesandbox.io/s/18r9z588l" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -223,7 +226,7 @@ Define x-axis alignment and distribute space for all columns per row. Containers
 
 ### Left
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" sandbox-href="https://codesandbox.io/s/9z3nqnp2lw" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -245,7 +248,7 @@ Define x-axis alignment and distribute space for all columns per row. Containers
 
 ### Center
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" sandbox-href="https://codesandbox.io/s/9z3nqnp2lw" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -267,7 +270,7 @@ Define x-axis alignment and distribute space for all columns per row. Containers
 
 ### Right
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" sandbox-href="https://codesandbox.io/s/9z3nqnp2lw" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -289,7 +292,7 @@ Define x-axis alignment and distribute space for all columns per row. Containers
 
 ### Around
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" sandbox-href="https://codesandbox.io/s/9z3nqnp2lw" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -311,7 +314,7 @@ Define x-axis alignment and distribute space for all columns per row. Containers
 
 ### Between
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" sandbox-href="https://codesandbox.io/s/9z3nqnp2lw" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -337,7 +340,7 @@ Define y-axis alignment per row and distribute space across all columns per row.
 
 ### Top
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" sandbox-href="https://codesandbox.io/s/18j2kwqy8j" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -359,7 +362,7 @@ Define y-axis alignment per row and distribute space across all columns per row.
 
 ### Bottom
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" sandbox-href="https://codesandbox.io/s/18j2kwqy8j" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -381,7 +384,7 @@ Define y-axis alignment per row and distribute space across all columns per row.
 
 ### Middle
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" sandbox-href="https://codesandbox.io/s/18j2kwqy8j" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -403,7 +406,7 @@ Define y-axis alignment per row and distribute space across all columns per row.
 
 ### Stretch
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" sandbox-href="https://codesandbox.io/s/18j2kwqy8j" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -429,7 +432,7 @@ Defines gutter size for all columns on a row and maintains gutter size by breakp
 
 ### Default
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" sandbox-href="https://codesandbox.io/s/l72jz831mq" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -460,7 +463,7 @@ Defines gutter size for all columns on a row and maintains gutter size by breakp
 
 ### xxs
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" sandbox-href="https://codesandbox.io/s/l72jz831mq" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -491,7 +494,8 @@ Defines gutter size for all columns on a row and maintains gutter size by breakp
 
 ### None
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" sandbox-href="https://codesandbox.io/s/l72jz831mq" >
+
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -526,7 +530,7 @@ Defines direction for items in a container for all columns of a row. This applie
 
 ### Default
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" sandbox-href="https://codesandbox.io/s/nn29799pyj" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -557,7 +561,7 @@ Defines direction for items in a container for all columns of a row. This applie
 
 ### Vertical
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" sandbox-href="https://codesandbox.io/s/nn29799pyj" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -592,7 +596,7 @@ Wrapping columns is the default; however, it is possible to disable or enable co
 
 ### Wrap (Default)
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" sandbox-href="https://codesandbox.io/s/r48j2yw7kq" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -620,7 +624,7 @@ Wrapping columns is the default; however, it is possible to disable or enable co
 
 ### Nowrap (Scroll)
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" sandbox-href="https://codesandbox.io/s/r48j2yw7kq" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -887,7 +891,7 @@ Defines nested columns (also known as `isRow`).
 
 ### Simple
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" sandbox-href="https://codesandbox.io/s/x931y6r7q" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -914,7 +918,7 @@ Defines nested columns (also known as `isRow`).
 
 ### Complex
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" sandbox-href="https://codesandbox.io/s/x931y6r7q" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">

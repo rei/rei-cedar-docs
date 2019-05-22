@@ -75,6 +75,9 @@
       "caption": "create new color tokens for icons or use secondary color tokens."
     }
   ],
+  "sandboxData": {
+    "components": "CdrIcon"
+  },
   "versions": [
     {
       "components": [
@@ -134,7 +137,7 @@
 
 A collection of SVG icon files composed into a single file. This method provides a single server download request and caches icons for display. This is the most efficient way of displaying large numbers of icons.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/icon" sandbox-href="https://codesandbox.io/s/wq7x673mol" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/icon" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrIcon, CdrIconSprite'})" >
 
 ```html
   <cdr-icon-sprite />
@@ -149,7 +152,7 @@ A collection of SVG icon files composed into a single file. This method provides
 
 Display any icon separately. This may be the easiest way to use an icon on a page however it is not recommended for every circumstance. When using a large number of icons, it will generate multiple server requests and slow down performance.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/icon" sandbox-href="https://codesandbox.io/s/wq7x673mol" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/icon" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'IconCaretUp, IconCaretDown'})" >
 
 ```html
   <icon-caret-up />
@@ -162,7 +165,7 @@ Display any icon separately. This may be the easiest way to use an icon on a pag
 
 Create a new SVG icon using any valid internal SVG markup. This method creates an outer SVG wrapper for accessibility and styles. This is not recommended if using a large number of icons.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/icon" sandbox-href="https://codesandbox.io/s/wq7x673mol" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/icon" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-icon>

@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@rei/cdr-tokens": "^1.0.0",
+    "codesandbox": "^2.1.1",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
     "vuepress": "^0.14.10"

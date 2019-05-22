@@ -116,6 +116,9 @@
       "caption": "mix sizes for components on a single form."
     }
   ],
+  "sandboxData": {
+    "components": "CdrInput"
+  },
   "versions": [
     {
       "components": [
@@ -213,7 +216,8 @@
 ## Default
 Basic input field with label.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" sandbox-href="https://codesandbox.io/s/7wkl26oyoj" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
@@ -236,7 +240,8 @@ Basic input field with label.
 
 Basic input field with label and required tag.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" sandbox-href="https://codesandbox.io/s/7wkl26oyoj" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
@@ -253,7 +258,8 @@ Basic input field with label and required tag.
 
 Change size for the input field. Default size is medium.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" sandbox-href="https://codesandbox.io/s/7wkl26oyoj" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
@@ -276,7 +282,8 @@ Change size for the input field. Default size is medium.
 
 Input field with no label.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" sandbox-href="https://codesandbox.io/s/7wkl26oyoj" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
@@ -293,7 +300,8 @@ Input field with no label.
 
 Multiple line input field with expander control in lower right.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" sandbox-href="https://codesandbox.io/s/7wkl26oyoj" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
@@ -310,7 +318,8 @@ Multiple line input field with expander control in lower right.
 
 Input field with link text on right.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" sandbox-href="https://codesandbox.io/s/7wkl26oyoj" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
@@ -330,7 +339,7 @@ Input field with link text on right.
 
 Input field with icon above input field on right.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" sandbox-href="https://codesandbox.io/s/7wkl26oyoj" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrIcon, CdrIconSprite'})" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-icon-sprite />
@@ -354,7 +363,7 @@ Input field with icon above input field on right.
 
 Input field with helper or hint text below input field.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" sandbox-href="https://codesandbox.io/s/7wkl26oyoj" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
@@ -374,7 +383,7 @@ Input field with helper or hint text below input field.
 
 Input field with icon inserted into input field on left. Icon is decorative and not intended for any action.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" sandbox-href="https://codesandbox.io/s/7wkl26oyoj" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrIcon, CdrIconSprite'})" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
 
 ```html
 <cdr-icon-sprite />
@@ -398,7 +407,7 @@ Input field with icon inserted into input field on left. Icon is decorative and 
 
 Input field with icon inserted into input field on right. Icon is decorative and not intended for any action.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" sandbox-href="https://codesandbox.io/s/7wkl26oyoj" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrIcon, CdrIconSprite'})" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
 
 ```html
 <cdr-icon-sprite />

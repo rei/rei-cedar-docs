@@ -34,8 +34,8 @@
           View in repository
         </span>
       </div>
-      <div class="cdr-doc-code-snippet__action-wrapper">
-        <a class="cdr-doc-code-snippet__action" :href="sandboxHref" target="_blank" rel="noopener noreferrer" v-if="sandboxHref">
+      <div class="cdr-doc-code-snippet__action-wrapper" v-if="sandboxHrefComputed">
+        <a class="cdr-doc-code-snippet__action" :href="sandboxHrefComputed" target="_blank" rel="noopener noreferrer">
           <img class="cdr-doc-code-snippet__action-icon" :src="$withBase(`/CodeSandbox@2x.png`)" alt="View in code sandbox"/>
         </a>
         <span class="cdr-doc-code-snippet__tooltip cdr-doc-code-snippet__tooltip--show-on-hover">
@@ -52,6 +52,8 @@
 </template>
 
 <script>
+import buildSandbox from '../../../utils/buildSandbox';
+
 export default {
   name: 'CdrDocCodeSnippet',
   props: {
@@ -71,6 +73,10 @@ export default {
       default: false,
       type: [String, Boolean]
     },
+    sandboxData: {
+      default: false,
+      type: [Object, Boolean]
+    },
     sandboxHref: {
       default: false,
       type: [String, Boolean]
@@ -82,7 +88,11 @@ export default {
     hideCode: {
       default: false,
       type: Boolean
-    }
+    },
+    model: {
+      type: Object,
+      default: () => {}
+    },
   },
   data: function() {
     return {
@@ -97,6 +107,11 @@ export default {
   created: function() {
     this.codeHidden = this.hideCode;
     this.setCodeToggleText();
+  },
+  computed: {
+    sandboxHrefComputed() {
+      return this.sandboxHref || buildSandbox(this.sandboxData, this.model);
+    }
   },
   methods: {
     setCodeToggleText() {

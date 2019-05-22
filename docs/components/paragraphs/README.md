@@ -25,38 +25,41 @@
         "href": '../headings/'
       }
     ],
-	  "width": [
-      {
-        "type": "do",
-        "image": "paragraphs/paragraphs_characterlength_text_do.png",
-        "ratio": "4-3",
-        "alt": "Image showing proper link usage",
-        "caption": "set max-width for paragraphs."
-      },
-      {
-        "type": "dont",
-        "image": "paragraphs/paragraphs_characterlength_text_dont.png",
-        "ratio": "4-3",
-        "alt": "Image showing mixed button sizes",
-        "caption": "allow text to span beyond max-width for paragraphs."
-      }
-    ],
-    "backgrounds": [
-      {
-        "type": "do",
-        "image": "paragraphs/paragraphs_standardfont_text_do.png",
-        "ratio": "4-3",
-        "alt": "The link in this copy uses the cdr-link component, and, so correctly uses an underline",
-        "caption": "use standard font color."
-      },
-      {
-        "type": "dont",
-        "image": "paragraphs/paragraphs_reversedfont_text_dont.png",
-        "ratio": "4-3",
-        "alt": "The default link in body copy incorrectly does not use an underline",
-        "caption": "display long passages of text  on dark backgrounds. "
-      }
-    ],
+  "width": [
+    {
+      "type": "do",
+      "image": "paragraphs/paragraphs_characterlength_text_do.png",
+      "ratio": "4-3",
+      "alt": "Image showing proper link usage",
+      "caption": "set max-width for paragraphs."
+    },
+    {
+      "type": "dont",
+      "image": "paragraphs/paragraphs_characterlength_text_dont.png",
+      "ratio": "4-3",
+      "alt": "Image showing mixed button sizes",
+      "caption": "allow text to span beyond max-width for paragraphs."
+    }
+  ],
+  "backgrounds": [
+    {
+      "type": "do",
+      "image": "paragraphs/paragraphs_standardfont_text_do.png",
+      "ratio": "4-3",
+      "alt": "The link in this copy uses the cdr-link component, and, so correctly uses an underline",
+      "caption": "use standard font color."
+    },
+    {
+      "type": "dont",
+      "image": "paragraphs/paragraphs_reversedfont_text_dont.png",
+      "ratio": "4-3",
+      "alt": "The default link in body copy incorrectly does not use an underline",
+      "caption": "display long passages of text  on dark backgrounds. "
+    }
+  ],
+  "sandboxData": {
+    "components": "CdrText"
+  },
   "versions": [
     {
       "components": [
@@ -100,7 +103,8 @@
 
 Used as default font style for all text information. Also known as body-default in UI ToolKit.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4" >
+
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-text>Pack everything you need with this handy checklist! We include the 10 essentials and more for comfort in the backcountry.</cdr-text>
@@ -112,7 +116,8 @@ Used as default font style for all text information. Also known as body-default 
 
 Used for editorial content such as long-form articles like Expert Advice pages or editorial content on PDP pages.  Also known as body-editorial in UI ToolKit.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4">
+
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <div>
