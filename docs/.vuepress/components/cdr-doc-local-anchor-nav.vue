@@ -51,6 +51,10 @@ export default {
       type: String,
       default: '48'
     },
+    tabPanelOffset: {
+      type: String,
+      default: '64'
+    },
     appendedItems: {
       type: Array,
       default: function() {
@@ -291,7 +295,7 @@ export default {
     },
     softScroll(id) {
       const anchoredSection = document.querySelector(id);
-      const scrollPosition = anchoredSection.offsetTop;
+      const scrollPosition = anchoredSection.offsetTop - this.tabPanelOffset;
 
       window.scroll({
         top: scrollPosition,
@@ -313,6 +317,7 @@ export default {
   .cdr-doc-local-anchor-nav {
     overflow-y: auto;
     position: sticky;
+    padding-top: $cdr-space-inset-two-x;
   }
 
   .cdr-doc-local-anchor-nav__list {
