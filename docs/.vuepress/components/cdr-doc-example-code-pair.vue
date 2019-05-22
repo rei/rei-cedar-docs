@@ -50,7 +50,7 @@
   // Note the '$vue', which is the full build of Vue, not the default runtime 'vue'. We need to import the full build to have access to the compiler
   
   // Import components that will be shown as examples
-  import { IconInformationStroke } from '@rei/cdr-icon';
+  import { IconInformationStroke } from '@rei/cedar';
 
   export default {
     name: 'CdrDocExampleCodePair',

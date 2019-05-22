@@ -33,9 +33,10 @@
 <script>
 import OutboundLink from './OutboundLink.vue'
 import DropdownLink from './DropdownLink.vue'
-import { CdrAccordionItem } from '@rei/cdr-accordion';
-import '@rei/cdr-accordion/dist/cdr-accordion.css';
-import { CdrList } from '@rei/cdr-list';
+import { CdrAccordionItem, CdrList } from '@rei/cedar';
+
+// TODO: all cedar css should get glovally loaded
+// import '@rei/cdr-accordion/dist/cdr-accordion.css';
 import { resolveNavLinkItem } from './util'
 import NavLink from './NavLink.vue'
 

@@ -13,7 +13,7 @@
 </template>
 
 <script>
-  import { IconInformationFill, IconWarningTri } from "@rei/cdr-icon";
+  import { IconInformationFill, IconWarningTri } from "@rei/cedar";
 
   export default {
     name: 'ApiPropAlert',
