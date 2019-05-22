@@ -31,7 +31,7 @@ export default function makeMeASandbox(data, model) {
             // TODO: can we grab the preceding text to use for description?
           "description": "https://rei.github.io/rei-cedar-docs/",
           "dependencies": {
-            "@rei/cedar": "^1.0.0-alpha.3",
+            "@rei/cedar": "^1.0.0-alpha.5",
             "lodash": "^4.17.4",
             "vue": "^2.5.22"
           }
@@ -54,7 +54,6 @@ function buildIndexHtml(title) {
   	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width,initial-scale=1.0">
   	<title>${title}</title>
-  	<link href="https://www.rei.com/static/rev/global/head/rei-cedar-fontless-7478200331.min.css" />
   	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
   </head>
   
