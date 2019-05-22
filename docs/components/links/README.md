@@ -110,7 +110,7 @@
 
 Display within body copy for articles, hub cards, footer, or recommendations.
 
-<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9" >
+<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9" >
 
 ```html
 <cdr-text>
@@ -132,7 +132,7 @@ Display within body copy for articles, hub cards, footer, or recommendations.
 
 Display independently with a call to action. Some examples are for finding a store, or viewing related products.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
+<cdr-doc-example-code-pair repository-href="/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
 
 ```html
   <cdr-link href="https://www.rei.com" modifier="standalone">
@@ -146,7 +146,7 @@ Display independently with a call to action. Some examples are for finding a sto
 
 Display standalone link with icon on left.
 
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
+<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
 
 ```html
   <div>
@@ -169,7 +169,7 @@ Display standalone link with icon on left.
 
 Display standalone link with icon on right.
 
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
+<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
 
 ```html
   <div>

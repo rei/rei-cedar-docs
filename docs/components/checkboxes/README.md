@@ -197,7 +197,7 @@
 
 Default and standard spacing for checkboxes.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/checkbox" sandbox-href="https://codesandbox.io/s/z30opplw43" :model="{ex1: true, ex2: false, ex3: false}" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/checkbox" sandbox-href="https://codesandbox.io/s/z30opplw43" :model="{ex1: true, ex2: false, ex3: false}" >
 
 ```html
 <div>
@@ -213,7 +213,7 @@ Default and standard spacing for checkboxes.
 
 Compact spacing for checkboxes.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/checkbox" sandbox-href="https://codesandbox.io/s/z30opplw43" :model="{ex1: true, ex2: false, ex3: false}">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/checkbox" sandbox-href="https://codesandbox.io/s/z30opplw43" :model="{ex1: true, ex2: false, ex3: false}">
 
 ```html
 <div>
@@ -229,7 +229,7 @@ Compact spacing for checkboxes.
 
 Displays status for checkbox group by indicating that some of the sub-selections in a list are selected. Provides user with ability to select or unselect all items in the list’s sub-group.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/checkbox" sandbox-href="https://codesandbox.io/s/z30opplw43" :model="{ex1: false}">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/checkbox" sandbox-href="https://codesandbox.io/s/z30opplw43" :model="{ex1: false}">
 
 ```html
 <div>
@@ -243,7 +243,7 @@ Displays status for checkbox group by indicating that some of the sub-selections
 
 Custom styles for checkboxes.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/checkbox" sandbox-href="https://codesandbox.io/s/z30opplw43" class="custom-checkbox-example" :model="{ex1: true, ex2: false, ex3: false}">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/checkbox" sandbox-href="https://codesandbox.io/s/z30opplw43" class="custom-checkbox-example" :model="{ex1: true, ex2: false, ex3: false}">
 
 ```html
 <div>
