@@ -159,7 +159,7 @@ Display standalone link with icon on left.
       <cdr-icon
           use="#shipping"
           inherit-color
-          class="cdr-inline-left--sm"
+          class="cdr-mr-space-half-x"
       />
       This item ships for FREE!
     </cdr-link>
@@ -183,7 +183,7 @@ Display standalone link with icon on right.
         <cdr-icon
             use="#external-link"
             inherit-color
-            class="cdr-inline-right--sm"/>
+            class="cdr-ml-space-half-x"/>
       </cdr-link>
   </div>
 ```

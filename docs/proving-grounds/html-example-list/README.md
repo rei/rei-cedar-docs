@@ -32,7 +32,7 @@ pageClass: cdr-doc-proving-ground
 ```html
   <cdr-list
     modifier="unordered"
-    class="cdr-stack--lg"
+    class="cdr-mb-space-two-x"
   >
     <li>List item text</li>
     <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmodList ordered

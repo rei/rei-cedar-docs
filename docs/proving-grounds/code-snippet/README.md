@@ -110,7 +110,7 @@ pageClass: cdr-doc-proving-ground
     <cdr-icon
       use="#mail"
       inherit-color
-      class="cdr-inline-left--sm"/>
+      class="cdr-mr-space-half-x"/>
     Icon on the left
   </cdr-link>
   ```

@@ -261,15 +261,15 @@ List of icons with names and descriptions about when or how to use each icon. Ic
 ## Behavior
 When using icons with links or buttons, make sure that the icon communicates intended meaning.
 
-<do-dont :examples="$page.frontmatter.meaning" class="cdr-stack--lg"/>
+<do-dont :examples="$page.frontmatter.meaning" class="cdr-mb-space-two-x"/>
 
 Ensure that icons are sized to provide a minimum click or touch target.
 
-<do-dont :examples="$page.frontmatter.clearance" class="cdr-stack--lg"/>
+<do-dont :examples="$page.frontmatter.clearance" class="cdr-mb-space-two-x"/>
 
 Ensure that icons use contrast ratio of 4.5:1 between icon color and background color.
 
-<do-dont :examples="$page.frontmatter.color" class="cdr-stack--lg"/>
+<do-dont :examples="$page.frontmatter.color" class="cdr-mb-space-two-x"/>
 
 
 </cdr-doc-table-of-contents-shell>
