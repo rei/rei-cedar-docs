@@ -1,7 +1,7 @@
 <template>
   <cdr-row
       cols="3 6@md 10@lg"
-      class="cdr-stack--lg icon-demo-grid"
+      class="cdr-mb-space-two-x icon-demo-grid"
       gutter="xxs"
     >
       <cdr-col

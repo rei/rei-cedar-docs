@@ -128,7 +128,7 @@ Shows review rating with up to 5 stars highlighted. If rating is zero, star icon
 
 ```html
 <div>
-  <cdr-rating rating="3.33333" count="100" class="cdr-stack" />
+  <cdr-rating rating="3.33333" count="100" class="cdr-mb-space-one-x" />
   <cdr-rating rating="0" count="0" />
 </div>
 ```
@@ -162,7 +162,7 @@ Removes the word "Reviews" from the label for limited space layout.
 
 ```html
 <div>
-  <cdr-rating rating="3.33333" count="100" compact class="cdr-stack" />
+  <cdr-rating rating="3.33333" count="100" compact class="cdr-mb-space-one-x" />
   <cdr-rating rating="0" count="0" compact />
 </div>
 ```
@@ -177,12 +177,12 @@ Change size for the star icon and text. Default size is medium.
 
 ```html
 <div>
-  <cdr-rating size="small" rating="3.33333" count="100" compact class="cdr-stack" />
-  <cdr-rating size="medium" rating="3.33333" count="100" compact class="cdr-stack" />
-  <cdr-rating size="large" rating="3.33333" count="100" compact class="cdr-stack" />
-  <cdr-rating size="small" rating="0" count="0" compact class="cdr-stack" />
-  <cdr-rating size="medium" rating="0" count="0" compact class="cdr-stack" />
-  <cdr-rating size="large" rating="0" count="0" compact class="cdr-stack" />
+  <cdr-rating size="small" rating="3.33333" count="100" compact class="cdr-mb-space-one-x" />
+  <cdr-rating size="medium" rating="3.33333" count="100" compact class="cdr-mb-space-one-x" />
+  <cdr-rating size="large" rating="3.33333" count="100" compact class="cdr-mb-space-one-x" />
+  <cdr-rating size="small" rating="0" count="0" compact class="cdr-mb-space-one-x" />
+  <cdr-rating size="medium" rating="0" count="0" compact class="cdr-mb-space-one-x" />
+  <cdr-rating size="large" rating="0" count="0" compact class="cdr-mb-space-one-x" />
 </div>
 ```
 
