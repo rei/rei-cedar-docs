@@ -372,65 +372,6 @@ WebAIM: [Semantic Structure: Using Lists Correctly](https://webaim.org/technique
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Installation
-
-Resources are available within the [CdrList package](https://www.npmjs.com/package/@rei/cdr-list):
-
-- Component: `@rei/cdr-list`
-- Component styles: `cdr-list.css`
-
-<br/>
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrList** package using `npm` in your terminal:
-
-_Terminal_
-
-<cdr-doc-code-snippet :line-numbers="false" :copy-button="false">
-
-```bash
-npm i -S @rei/cdr-list
-```
-
-</cdr-doc-code-snippet>
-
-### 2. Import Dependencies
-
-_main.js_
-
-<cdr-doc-code-snippet :line-numbers="false" :copy-button="false">
-
-```javascript
-// import your required CSS.
-import '@rei/cdr-list/dist/cdr-list.css';
-```
-</cdr-doc-code-snippet>
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  <cdr-list>
-    <li> item one </li>
-    <li> item two </li>
-  </cdr-list>
-</template>
-
-<script>
-import { CdrList } from '@rei/cdr-list';
-export default {
-  components: {
-     CdrList  
-  }
-}
-</script>
-```
-
 ## Usage
 
 Visual style and semantic meaning are managed independently by providing: 

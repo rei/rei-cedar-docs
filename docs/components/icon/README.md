@@ -288,57 +288,6 @@ Ensure that icons use contrast ratio of 4.5:1 between icon color and background 
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Installation
-
-Resources are available within the [CdrIcon package](https://www.npmjs.com/package/@rei/cdr-icon):
-
-- Component: `@rei/cdr-icon`
-- Component styles: `cdr-icon.css`
-
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrIcon** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -S @rei/cdr-icon
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```bash
-// import your required CSS.
-import '@rei/cdr-icon/dist/cdr-icon.css';
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  ...
-    <icon-arrow-down />
-  ...
-</template>
-
-<script>
-import { IconArrowDown } from '@rei/cdr-icon';
-export default {
-  ...
-  components: {
-     IconArrowDown
-  }
-}
-</script>
-```
-
 ## Usage
 
 The **CdrIcon** package contains many different components:
@@ -372,7 +321,7 @@ _App.vue (base template)_
 </template>
 
 <script>
-import { CdrIconSprite } from '@rei/cdr-icon';
+import { CdrIconSprite } from '@rei/cedar';
 
 ...
 components: {
@@ -392,7 +341,7 @@ _Child.vue (any descendant component of App.vue above)_
 </template>
 
 <script>
-import { CdrIcon } from '@rei/cdr-icon';
+import { CdrIcon } from '@rei/cedar';
 
 ...
 components: {
@@ -439,10 +388,6 @@ export default {
 
 This may be the easiest way to use an icon on a page however use this method carefully. This method will increase HTML file size and slow down performance if using a lot of icons.
 
-Requires:
-- Install  `@rei/cdr-icon`
-
-
 ```vue
 <template>
   ...
@@ -452,7 +397,7 @@ Requires:
 </template>
 
 <script>
-import { IconCaretRight, IconClock } from '@rei/cdr-icon';
+import { IconCaretRight, IconClock } from '@rei/cedar';
 
 ...
   components: {
@@ -490,7 +435,7 @@ Use any valid SVG markup in the **CdrIcon** slot.
 </template>
 
 <script>
-@import { CdrIcon } from '@rei/cdr-icon';
+@import { CdrIcon } from '@rei/cedar';
 
 ...
   components: {

@@ -301,63 +301,6 @@ Tabs are built from two components, **CdrTabs** and **CdrTabPanel**, which are m
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
 
-## Installation
-
-Resources are available within the [CdrTabs package](https://www.npmjs.com/package/@rei/cdr-tabs):
-
-- Component: `@rei/cdr-tabs`
-- Component styles: `cdr-tabs.css`
-
-<br/>
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrTabs** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -s @rei/cdr-tabs
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS.
-import "@rei/cdr-tabs/dist/cdr-tabs.css";
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  ...
-     <cdr-tabs>
-       <cdr-tab-panel name=”tab1”>TAB1 CONTENT GOES HERE</cdr-tab-panel>
-       <cdr-tab-panel name=”tab2”>TAB2 CONTENT GOES HERE</cdr-tab-panel>
-       <cdr-tab-panel name=”tab3”>TAB3 CONTENT GOES HERE</cdr-tab-panel>
-     </cdr-tabs>
-  ...
-</template>
-
-<script>
-import { CdrTabs, CdrTabPanel } from '@rei/cdr-tabs’;
-export default {
-  ...
-  components: {
-     CdrTabs,
-     CdrTabPanel
-  },
-}
-</script>
-```
-
 ## Usage
 
 The `cdr-tab-panel name` property sets the tab display value and is used for reference.

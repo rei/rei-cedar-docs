@@ -173,18 +173,6 @@
                         "description": "$emit event fired on check/uncheck."
                     }
                 ],
-                "installation": [
-                    {
-                        "name": "@rei/cdr-checkbox",
-                        "type": "Node module package",
-                        "description": "Import the component into your project"
-                    },
-                    {
-                        "name": "cdr-checkbox.css",
-                        "type": "Style sheet",
-                        "description": "Component specific styles"
-                    }
-                ]
             }
         }],
         "version": "1.0.0"
@@ -383,60 +371,6 @@ Checkboxes work independently from each other:
 ## Events
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
-
-## Installation
-
-Resources are available within the [CdrCheckbox package:](https://www.npmjs.com/search?q=cdr-checkbox)
-
-- Component: `@rei/cdr-checkbox`
-- Component styles: `cdr-checkbox.css`
-
-<br/>
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrCheckbox** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -s @rei/cdr-checkbox
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS.
-import "@rei/cdr-link/dist/cdr-checkbox.css";
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  <cdr-checkbox
-    v-model="model"
-  >
-    True
-  </cdr-checkbox>
-</template>
-
-<script>
-import { CdrCheckbox } from '@rei/cdr-checkbox;
-export default {
-  ...
-  components: {
-     CdrCheckbox,
-  }
-}
-</script>
-```
 
 ## Usage
 

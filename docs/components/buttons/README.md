@@ -172,18 +172,6 @@
             "description": "Sets the innerHTML for CdrButton. This is for the icon."
           }
         ],
-        "installation": [
-          {
-            "name": "@rei/cdr-button",
-            "type": "Node module package",
-            "description": "Import the component into your project"
-          },
-          {
-            "name": "cdr-button.css",
-            "type": "Style sheet",
-            "description": "Component specific styles"
-          }
-        ]
         }
       }
     ],
@@ -445,64 +433,6 @@ Apply the following use cases when deciding when to use links as anchors or butt
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Installation
-
-Resources are available within the [CdrButton package:](https://www.npmjs.com/search?q=cdr-button)
-
-<cdr-doc-api type="installation" />
-
-- Component: `@rei/cdr-button`
-- Component styles: `cdr-button.css`
-
-<br />
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrButton** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -S @rei/cdr-button
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS.
-import "@rei/cdr-button/dist/cdr-button.css";
-```
-
-### 3. Add Component to a Template
-
-In this example we’ll create a medium-sized primary button, which is the default.
-
-_local.vue_
-
-```vue
-<template>
-  <cdr-button
-    type="button"
-  >
-    Add to cart
-  </cdr-button>
-</template>
-
-<script>
-import { CdrButton } from '@rei/cdr-button';
-export default {
-  ...
-  components: {
-     CdrButton  
-  }
-}
-</script>
-```
-
 ## Usage
 
 ### Size Prop
@@ -576,8 +506,8 @@ In the below example, a "Download" button is rendered as a button with icon and 
 </template>
 
 <script>
-import { CdrButton } from '@rei/cdr-button';
-import { CdrIcon } from '@rei/cdr-icon';
+import { CdrButton } from '@rei/cedar';
+import { CdrIcon } from '@rei/cedar';
 export default {
   ...
   components: {
@@ -625,7 +555,7 @@ The **CdrButton** package includes two specific icon-only variants. **CdrCloseBu
 </template>
 
 <script>
-import { CdrCloseButton } from '@rei/cdr-button';
+import { CdrCloseButton } from '@rei/cedar';
 
 export default {
   ...

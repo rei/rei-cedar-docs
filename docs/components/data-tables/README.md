@@ -204,18 +204,6 @@
                 "description": "Sets the innerHTML for the <tbody> element. Includes default slot content."
               }
             ],
-            "installation": [
-              {
-                "name": "@rei/cdr-data-table",
-                "type": "Node module package",
-                "description": "Import the component into your project"
-              },
-              {
-                "name": "cdr-data-table.css",
-                "type": "Style sheet",
-                "description": "Component specific styles"
-              }
-            ]
           }
         }
       ]
@@ -437,66 +425,6 @@ Data Table must have row headers and more than two columns of content, then the 
 ## Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
-
-## Installation
-
-Resources are available within the [CdrDataTable package:](https://www.npmjs.com/search?q=cdr-data-table)
-
-<cdr-doc-api type="installation" />
-
-- Component: `@rei/cdr-data-table`
-- Component styles: `cdr-data-table.css`
-
-<br />
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrDataTable** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -S @rei/cdr-data-table
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS.
-import "@rei/cdr-data-table/dist/cdr-data-table.css";
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  <cdr-data-table
-    :col-headers="colHeaders"
-    :row-headers="rowHeaders"
-    :row-data="rowData"
-    :key-order="keyOrder"
-  />
-</template>
-
-<script>
-import { CdrDataTable } from '@rei/cdr-data-table';
-export default {
-  ...
-  components: {
-     CdrDataTable  
-  }, 
-  data() {
-    ...
-  },
-}
-</script>
-```
 
 ## Usage
 

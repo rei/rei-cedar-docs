@@ -255,61 +255,8 @@ This component has compliance with WCAG guidelines by:
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-## Installation
-
-Resources are available within the [CdrRating package:](https://www.npmjs.com/package/@rei/cdr-rating)
-
-<cdr-doc-api type="installation" />
-
-- Component: `@rei/cdr-rating`
-- Component styles: `cdr-rating.css`
-
-<br/>
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrRating** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i @rei/cdr-rating
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS.
-import "@rei/cdr-rating/dist/cdr-rating.css";
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  ...
-     <cdr-rating rating="4.2" count="77" />
-  ...
-</template>
-
-<script>
-import { CdrRating } from '@rei/cdr-rating;
-export default {
-  ...
-  components: {
-     CdrRating  
-  }
-}
-</script>
-```
-
 ## Usage
+
 By default the **CdrRating** component renders the icons in medium size (24px) with the total number of reviews. 
 
 ### Rating Values

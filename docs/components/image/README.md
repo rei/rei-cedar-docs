@@ -372,56 +372,6 @@ Any other properties supplied will be assigned to the root element (native eleme
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Installation
-
-Resources are available within the [CdrImg package](https://www.npmjs.com/package/@rei/cdr-img):
-
-- Component: `@rei/cdr-img`
-- Component styles: `cdr-img.css`
-
-<br/>
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrImg** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -S @rei/cdr-img
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS.
-import '@rei/cdr-img/dist/cdr-img.css';
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  <cdr-img />
-</template>
-
-<script>
-import { CdrImg } from '@rei/cdr-img';
-export default {
-  ...
-  components: {
-     CdrImg  
-  }
-}
-</script>
-```
-
 ## Usage
 
 ### Ratio
