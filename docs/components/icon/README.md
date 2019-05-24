@@ -370,7 +370,7 @@ Within an individual component (there may be a better way to scale this if the c
 
 <script>
 // import the sprite so file-loader will do its magic
-@import iconUrl from '@rei/cdr-assets/dist/cdr-icons.svg`;
+import iconUrl from '@rei/cdr-assets/dist/cdr-icons.svg`;
 
 export default {
   ...
@@ -435,7 +435,7 @@ Use any valid SVG markup in the **CdrIcon** slot.
 </template>
 
 <script>
-@import { CdrIcon } from '@rei/cedar';
+import { CdrIcon } from '@rei/cedar';
 
 ...
   components: {

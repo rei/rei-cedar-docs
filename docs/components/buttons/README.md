@@ -506,8 +506,7 @@ In the below example, a "Download" button is rendered as a button with icon and 
 </template>
 
 <script>
-import { CdrButton } from '@rei/cedar';
-import { CdrIcon } from '@rei/cedar';
+import { CdrButton, CdrIcon } from '@rei/cedar';
 export default {
   ...
   components: {
