@@ -15,12 +15,10 @@
 
 ## Cedar + Vue
 Cedar components are built using [Vue](https://vuejs.org) and can only be used in Vue projects
-<hr>
 
-## About Component Packages
 All components are available via an [NPM package](https://www.npmjs.com/package/@rei/cedar).
 
-Each component is available as a separate import, ensuring that you only have the essentials for your application - nothing more.
+Each component is available as a separate import, ensuring that you only have the essentials for your application - nothing more. TODO: not technically true due to the CSS stuff
 
 _Terminal_
 ```bash
@@ -33,10 +31,10 @@ Once installed, you can import individual cedar components from the main package
 const { CdrText, CdrButton, CdrLink } from '@rei/cedar'
 ```
 
+TODO: explain single component es6 imports 
 Individual component exports are located in the `dist/` folder.
 
 ```js
-TODO: explain single component folder structure
 ```
 
 <hr>
@@ -53,8 +51,6 @@ _main.js_
 ```js
 import '@rei/cedar/dist/cedar.css';
 ```
-
-<!-- TODO: document scss/postcss import here? -->
 
 ### Install Required Fonts
 Cedar uses specific fonts – Roboto, Roboto Condensed, and Sentinel – that are required for your project. 
@@ -79,17 +75,14 @@ REI requires 100% compliance with WCAG AA guidelines. Relevant guidelines are pr
 
 ## Developing for Web
 
-### Install Components
-The following example demonstrates the **CdrButton** component.
+### Install Vue Components Package
 
 _Terminal_
 ```bash
 npm install --save @rei/cedar
 ```
 
-<!-- TODO: we don't currently export component specific CSS -->
-<!-- 
-#### Include Component-Specific CSS
+#### Include  CSS
 How you include CSS depends on your tech stack and varies from project to project. 
 
 Here are a few common methods:
@@ -99,7 +92,8 @@ If using a bundler, import CSS into JavaScript and let loaders such as `css-load
 
 _main.js_
 ```js
-import '@rei/cdr-button/dist/cdr-button.css';
+import '@rei/cedar/dist/cdr-fonts.css';
+import '@rei/cedar/dist/cedar.css';
 ```
 
 ##### PostCSS
@@ -107,6 +101,7 @@ Cedar packages include the [unofficial style field](https://jaketrent.com/post/p
 
 _cedar.postcss_
 ```css
+import '@rei/cedar/dist/cdr-fonts.css';
 import '@rei/cedar’;
 ```
 
@@ -115,10 +110,11 @@ You can also import CSS from the node_modules folder such as SCSS or another pre
 
 _cedar.scss_
 ```js
-import '~@rei/cdr-button/dist/cdr-button.css';
+import '~@rei/cedar/dist/cdr-fonts.css';
+import '~@rei/cedar/dist/cedar.css';
 ```
 
-**Note**: Code snippets provided throughout the docs will demonstrate the `webpack` and `css-loader` method. -->
+**Note**: Code snippets provided throughout the docs will demonstrate the `webpack` and `css-loader` method.
 
 <hr/>
 
