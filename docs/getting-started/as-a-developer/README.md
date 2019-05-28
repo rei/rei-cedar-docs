@@ -18,32 +18,48 @@ Cedar components are built using [Vue](https://vuejs.org) and can only be used i
 
 All components are available via an [NPM package](https://www.npmjs.com/package/@rei/cedar).
 
-Each component is available as a separate import, ensuring that you only have the essentials for your application - nothing more. TODO: not technically true due to the CSS stuff
-
 _Terminal_
 ```bash
 npm install --save @rei/cedar
 ```
 
-Once installed, you can import individual cedar components from the main package
+Once installed, you can import individual Cedar components from the main package into your project:
 
 ```js
-const { CdrText, CdrButton, CdrLink } from '@rei/cedar'
-```
+<script>
+// import packages from Cedar
+import { CdrText, CdrButton, CdrLink } from '@rei/cedar'
 
-TODO: explain single component es6 imports 
-Individual component exports are located in the `dist/` folder.
+export default {
+  name: 'ExampleComponent',
+  // register your Cedar components
+  components: {
+    CdrText,
+    CdrButton,
+    CdrLink
+  }
+};
+</script>
 
-```js
+<template>
+  // use the registered Cedar components in your template
+  <cdr-text>Foo</cdr-text>
+  <cdr-button>Bar</cdr-button>
+  <cdr-link>Baz</cdr-link>
+</template>
+
+<style>
+  // no need to import any Cedar related CSS here 
+</style>
 ```
 
 <hr>
 
 ## Setting Up Projects
-All components depend upon core style and font assets. Without these assets included, components may be styled incorrectly. These files are distributed as part of the Cedar NPM package.
+All components depend upon core style and font assets. Without these assets included, components will not render correctly. These files are distributed as part of the Cedar NPM package.
 
 ### Install Required Core Styles
-Cedar requires a core stylesheet to render components properly. This stylesheet contains a CSS reset, component CSS, as well as global utility classes.
+Cedar requires a core stylesheet to render properly. This stylesheet contains a CSS reset, component CSS, as well as global utility classes.
 
 To include the stylesheet, import the `cedar.css` file:
 
