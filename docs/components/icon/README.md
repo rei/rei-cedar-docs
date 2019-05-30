@@ -290,11 +290,13 @@ Ensure that icons use contrast ratio of 4.5:1 between icon color and background 
 
 ## Usage
 
+For a list of all available icons and their names, see the [Icon Library](?active-tab=design-guidelines&active-link=icon-library)
+
 The **CdrIcon** package contains many different components:
 
 1. **CdrIcon**: This is a basic SVG wrapper. This component allows for using Non-Cedar SVGs. Use this component in conjunction with the CdrIconSprite package
 2. **CdrIconSprite**: A symbol definition sprite with all Cedar icons
-3. **Individual icons**: For available icons, view [Cedar Icon Library](?active-tab=design-guidelines&active-link=icon-library) on Design Guidelines tab
+3. **Individual icons components**: A component with the icon's svg inlined
 
 
 There are 3 different options to display SVG icons on your page using the **CdrIcon** package.
