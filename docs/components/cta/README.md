@@ -341,60 +341,6 @@ To construct consistent and universal Call to Actions across the site:
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Installation
-
-Resources are available with the [CdrCta package](https://www.npmjs.com/package/@rei/cdr-cta):
-
-<cdr-doc-api type="installation" />
-
-- Component: `@rei/cdr-cta`
-- Component styles: `cdr-cta.css`
-
-<br />
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrCta** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -s @rei/cdr-cta
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS
-import "@rei/cdr-cta/dist/cdr-cta.css";
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-...
-  <cdr-cta href="rei.com"></cdr-cta>
-...
-</template>
-
-<script>
-import { CdrCta } from '@rei/cdr-cta';
-export default {
-  ...
-  components: {
-    CdrCta
-  }
-}
-</script>
-```
-
 ## Usage
 
 This example code renders a full width `cdr-cta`, with the `elevated` modifier and the `sale` theme.

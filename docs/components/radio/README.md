@@ -326,69 +326,6 @@ Radio button labels should:
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events"/>
 
-## Installation
-
-Resources are available within the [CdrRadio package](https://www.npmjs.com/package/@rei/cdr-radio):
-
-- Component: `@rei/cdr-radio`
-- Component styles: `cdr-radio.css`
-
-<br/>
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrRadio** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -s @rei/cdr-radio
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS.
-import "@rei/cdr-radio/dist/cdr-radio.css";
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  <cdr-radio
-    v-model="model"
-    name="ship-pref"
-    value="ship"
-  >
-    Ship to address
-  </cdr-radio>
-  <cdr-radio
-    v-model="model"
-    name="ship-pref"
-    value="pickup"
-  >
-    Pick up in store
-  </cdr-radio>
-</template>
-
-<script>
-import { CdrRadio} from '@rei/cdr-radio';
-export default {
-  ...
-  components: {
-     CdrRadio
-  }
-}
-</script>
-```
-
 ## Usage
 
 The **CdrRadio** component requires `v-model` to track the value of selected radios.

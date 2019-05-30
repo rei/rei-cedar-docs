@@ -295,61 +295,6 @@ Caption stays left aligned with body copy regardless of the width of the media.
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-
-## Installation
-
-Resources are available within the [CdrCaption package](https://www.npmjs.com/package/@rei/cdr-caption)
-
-- Component: `@rei/cdr-caption`
-- Component styles: `cdr-caption.css`
-
-<br />
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM 
-
-Install the **CdrCaption** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -S @rei/cdr-text
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required css.
-import "@rei/cdr-caption/dist/cdr-caption.css";
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  <cdr-caption
-     summary="Lorem ipsum dolor sit amet elit."
-     credit="Lorem ipsum dolor sit"
-   />
-
-</template>
-
-<script>
-import { CdrCaption } from '@rei/cdr-caption';
-export default {
-  ...
-  components: {
-     CdrCaption  
-  }
-}
-</script>
-```
-
 ## Usage
 
 The **CdrCaption** component is developed to work within a composition with other components; however composition-type components have not been developed yet.

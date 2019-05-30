@@ -222,60 +222,6 @@ Sentinel carries a stronger brand impression with other brand material, and is p
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Installation
-
-Resources are available within the [CdrText package](https://www.npmjs.com/package/@rei/cdr-text)
-
-- Component: `@rei/cdr-text`
-
-<br />
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM 
-
-Install the **CdrText** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -S @rei/cdr-text
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS.
-import "@rei/cdr-assets/dist/cdr-core.css";
-import "@rei/cdr-assets/dist/cdr-fonts.css";
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  <cdr-text
-    modifier="body"
-  >
-    For long-form content like expert advice articles or co-op journal entries.
-  </cdr-text>
-</template>
-
-<script>
-import { CdrText } from '@rei/cdr-text';
-export default {
-  ...
-  components: {
-     CdrText  
-  }
-}
-</script>
-```
-
 ## Usage
 
 The **CdrText** component allows for styling any html element with available text styles. Visual style and semantic meaning are managed independently by providing: 

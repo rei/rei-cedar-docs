@@ -212,74 +212,6 @@ Pagination adapts to a Select component with a native UI dropdown menu on XS bre
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
 
-## Installation
-
-Resources are available with the [CdrPagination package](https://www.npmjs.com/package/@rei/cdr-pagination):
-
-<cdr-doc-api type="installation" />
-
-- Component: `@rei/cdr-pagination`
-- Component styles: `cdr-pagination.css`
-
-<br />
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrPagination** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -s @rei/cdr-pagination
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS
-import "@rei/cdr-pagination/dist/cdr-pagination.css";
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  ...
-    <cdr-pagination
-      :pages="pageData"
-      :total-pages="pageData.length"
-      v-model="ex1Page"
-    />
-  ...
-</template>
-
-<script>
-import { CdrPagination } from '@rei/cdr-pagination';
-export default {
-  ...
-  components: {
-     CdrPagination  
-  },
-  data() {
-    return {
-      ex1Page: 1,
-      pageData: [
-        { page: 1, url: 'https://www.rei.com/search?page=1' },
-        { page: 2, url: 'https://www.rei.com/search?page=2' },
-        { page: 3, url: 'https://www.rei.com/search?page=3' }
-      ]
-    };
-  },
-}
-</script>
-```
-
 ## Usage
 
 The **CdrPagination** component provides a current page number control and renders a list of links. The current page value should be bound using `v-model` in your app.
@@ -307,7 +239,7 @@ If not using Vue Router (see "Usage with Vue Router" below) you will need to man
 </template>
 
 <script>
-import { CdrPagination } from '@rei/cdr-pagination';
+import { CdrPagination } from '@rei/cedar';
 export default {
   ...
   components: {
@@ -349,7 +281,7 @@ Page URLs still need to be provided for SEO purposes, but the events emitted by 
 </template>
 
 <script>
-import { CdrPagination } from '@rei/cdr-pagination';
+import { CdrPagination } from '@rei/cedar';
 export default {
   ...
   components: {

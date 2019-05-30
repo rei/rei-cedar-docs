@@ -1173,66 +1173,6 @@ Grids are built from two components, **CdrRow** and **CdrCol**.
 ### CdrCol
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[1].api.slots" :slots-getting-started-link="false" />
 
-## Installation
-
-Resources are available within the [CdrGrid package](https://www.npmjs.com/package/@rei/cdr-grid):
-
-<cdr-doc-api type="installation" />
-
-- Component: `@rei/cdr-grid`
-- Component styles: `cdr-grid.css`
-
-<br/>
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrGrid** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -s @rei/cdr-grid
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS.
-import "@rei/cdr-grid/dist/cdr-grid.css";
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  <cdr-row>
-    <cdr-col>
-      ...
-    </cdr-col>
-    <cdr-col>
-      ...
-    </cdr-col>
-  </cdr-row>
-</template>
-
-<script>
-import { CdrRow, CdrCol } from '@rei/cdr-grid';
-export default {
-  ...
-  components: {
-     CdrRow,
-     CdrCol  
-  }
-}
-</script>
-```
-
 ## Usage
 
 **CdrRow** functions as a flexbox container, and **CdrCol** functions as a flexbox item.

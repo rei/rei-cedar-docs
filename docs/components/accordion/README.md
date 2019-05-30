@@ -362,67 +362,6 @@ Accordions are built from two components, **CdrAccordion** and **CdrAccordionIte
 ### CdrAccordionItem
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[1].api.events" />
 
-## Installation
-
-Resources are available within the [CdrAccordion package](https://www.npmjs.com/package/@rei/cdr-accordion):
-
-<cdr-doc-api type="installation" />
-
-- Component: `@rei/cdr-accordion`
-- Component styles: `cdr-accordion.css`
-
-<br />
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrAccordion** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -s @rei/cdr-accordion
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS
-import "@rei/cdr-accordion/dist/cdr-accordion.css";
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  <cdr-accordion>
-    <cdr-accordion-item
-      id="default-example"
-      label="This is the label text"
-    >
-      This is the accordion content.
-    </cdr-accordion-item>
-  </cdr-accordion>
-</template>
-
-<script>
-  import { CdrAccordion, CdrAccordionItem } from "@rei/cdr-accordion";
-
-  export default {
-    ...
-    components: {
-      CdrAccordion,
-      CdrAccordionItem
-    }
-  }
-</script>
-```
-
 ## Usage
 
 ### Style

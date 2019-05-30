@@ -103,18 +103,6 @@
                 "description": "Sets the ratio between breadcrumb path width and container width when truncation will occur at the XS breakpoint."
               }
             ],
-            "installation": [
-              {
-                "name": "@rei/cdr-breadcrumb",
-                "type": "Node module package",
-                "description": "Import the component into your project"
-              },
-              {
-                "name": "cdr-breadcrumb.css",
-                "type": "css",
-                "description": "Component specific styles"
-              }
-            ]
           }
         }
       ],
@@ -266,80 +254,6 @@ Truncate breadcrumbs left to right to show the final two links in the trail, so 
 ## Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props"/>
-
-## Installation
-
-Resources are available within the [CdrBreadcrumb package](https://www.npmjs.com/package/@rei/cdr-breadcrumb):
-
-<cdr-doc-api type="installation" />
-
-  - Component: `@rei/cdr-breadcrumb`
-  - Component styles: `cdr-breadcrumb.css`
-
-<br>
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrBreadcrumb** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -S @rei/cdr-breadcrumb
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS.
-import "@rei/cdr-breadcrumb/dist/cdr-breadcrumb.css";
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  <cdr-breadcrumb :items="breadcrumbItems"/>
-</template>
-
-<script>
-import { CdrBreadcrumb } from '@rei/cdr-breadcrumb';
-export default {
-
-  components: {
-     CdrBreadcrumb
-  },
-  data () {
-    breadcrumbItems: [
-      {
-        item: {
-          name: ‘Great GrandParent Page’,
-          url: “<UrlBreadcrumb1>”
-        }
-      },
-      {
-        item: {
-          name: “Grandparent Page”,
-          url: “<UrlBreadcrumb2>”
-        }
-      }
-      {
-        item: {
-          name: “Parent Page”,
-          url: “<UrlBreadcrumb3>”
-        }
-      }
-    ]
-  }
-}
-</script>
-```
 
 ## Usage
 

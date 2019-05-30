@@ -84,18 +84,6 @@
                 "description": "Sets the innerHTML for CdrLink. This includes text and html markup for icons."
               }
             ],
-            "installation": [
-              {
-                "name": "@rei/cdr-link",
-                "type": "Node module package",
-                "description": "Import the component into your project"
-              },
-              { 
-                "name": "cdr-link.css", 
-                "type": "css", 
-                "description": "Component specific styles" 
-              }
-            ]
           }
         }
       ],
@@ -300,61 +288,6 @@ WebAIM: Links and Hypertext [Introduction to Links and Hypertext](https://webaim
 ## Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
-
-## Installation
-
-Resources are available within the [CdrLink package](https://www.npmjs.com/package/@rei/cdr-link):
-
-- Component: `@rei/cdr-link`
-- Component styles: `cdr-link.css`
-
-<br/>
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrLink** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -S @rei/cdr-link
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS.
-import "@rei/cdr-link/dist/cdr-link.css";
-
-// If your link will display an icon ensure you also include the icon’s CSS file.
-import "@rei/cdr-link/dist/cdr-icon.css";
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-...
-    <cdr-link href="rei.com">Ten Essentials.</cdr-link>
-...
-</template>
-
-<script>
-import { CdrLink } from '@rei/cdr-link';
-export default {
-  ...
-  components: {
-     CdrLink  
-  }
-}
-</script>
-```
 
 ## Usage
 

@@ -542,65 +542,6 @@ This component has compliance with WCAG guidelines by:
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
 
-## Installation
-
-Resources are available within the [CdrInput package](https://www.npmjs.com/package/@rei/cdr-input):
-
-- Component: `@rei/cdr-input`
-- Component styles: `cdr-input.css`
-
-<br/>
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrInput** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -s @rei/cdr-input
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS.
-import "@rei/cdr-input/dist/cdr-input.css";
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  ...
-     <cdr-input
-       v-model="inputModel"
-       label="Input Label Text"
-       placeholder="Input Placeholder Text"
-     />
-  ...
-</template>
-
-<script>
-import { CdrInput } from '@rei/cdr-input';
-export default {
-  ...
-  components: {
-    CdrInput,
-  },
-  data() {
-    inputModel: ‘Default Value’
-  }
-}
-</script>
-```
-
 ## Usage
 
 The **CdrInput** component requires `v-model` to bind the input value to your data model.  You can also use   `helper-text` to display additional information below the input.

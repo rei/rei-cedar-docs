@@ -122,18 +122,6 @@
                         "description": "Sets the pull quote attribution text."
                     }
                 ],
-                "installation": [
-                    {
-                        "name": "@rei/cdr-quote",
-                        "type": "Node module package",
-                        "description": "Import the component into your project"
-                    },
-                    {
-                        "name": "cdr-quote.css",
-                        "type": "Style sheet",
-                        "description": "Component specific styles"
-                    }
-                ]
             }
         }],
         "version": "1.0.0"
@@ -222,66 +210,6 @@ When a pull quote is displayed in at XS breakpoints, the left border will appear
 ## Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
-
-## Installation
-
-Resources are available within the [CdrQuote package:](https://www.npmjs.com/package/@rei/cdr-quote)
-
-<cdr-doc-api type="installation" />
-
-- Component: `@rei/cdr-quote`
-- Component styles: `cdr-quote.css`
-
-<br/>
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrQuote** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i @rei/cdr-quote
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS.
-import "@rei/cdr-quote/dist/cdr-quote.css";
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  <cdr-quote
-     tag="aside"
-     modifier="pull"
-     summary="As a co-op, we’re a different kind of company.
-     We put purpose before profits and act with the long-term
-     interests of our members in mind. Being a co-op also means
-     we engage with our community and believe in collective
-     accountability."
- />
-</template>
-
-<script>
-import { CdrQuote } from '@rei/cdr-quote';
-export default {
-  ...
-  components: {
-     CdrQuote
-  }
-}
-</script>
-```
 
 </cdr-doc-table-of-contents-shell>
 </template>
