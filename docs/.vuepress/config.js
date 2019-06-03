@@ -25,7 +25,8 @@ module.exports = {
     ['@vuepress/google-analytics', { ga: 'UA-129829250-1' }]
   ],
   markdown: {
-    lineNumbers: true
+    lineNumbers: true,
+    anchor: { permalink: true, permalinkBefore: true, permalinkSymbol: '#' } // generate links to headings
   },
   themeConfig: {
     logo: "/doc-site-logo.svg",
