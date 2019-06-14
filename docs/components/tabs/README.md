@@ -150,7 +150,7 @@ Tab buttons align left and bottom border expands to full width of container.
 
 ## Compact
 
-Reduced spacing around the tab buttons create a denser visual design.
+Reduced spacing around the tab buttons to create a denser visual design.
 
 <cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false">
 
@@ -246,6 +246,7 @@ This component has compliance with WCAG guidelines by:
 
 - Order the tab buttons by priority or importance from left to right
 - Keep tab labels short and meaningful. Between 1-2 words is best and written in plain language
+- Ensure that each tab label is unique
 - Never truncate tab labels
 - Use title caps for tab labels
 
