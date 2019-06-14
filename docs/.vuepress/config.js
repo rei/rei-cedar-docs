@@ -30,7 +30,11 @@ module.exports = {
     nav: [
       {
         text: "Release History",
-        link: "/release-history/"
+        items: [
+          { text: "Summer 2019", link: "/release-history/summer-2019/"},
+          { text: "Spring 2019", link: "/release-history/spring-2019/"},
+          { text: "Archived", link: "/release-history/archived/"}
+        ]
       },
       {
         text: "Getting Started",
