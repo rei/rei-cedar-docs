@@ -196,7 +196,7 @@
             "events": [
               {
                 "name": "input",
-                "arguments": "event",
+                "arguments": "value, event",
                 "description": "Input event is emitted while typing with the current input value.",
               },
               {
