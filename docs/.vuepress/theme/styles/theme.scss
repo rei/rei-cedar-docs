@@ -54,8 +54,9 @@ body {
 }
 
 .header-anchor {
-  // TODO: make pretty :>
-  // display: none;
+  @include cdr-text-header-5;
+  color: 	$cdr-color-text-link-lightmode;
+  text-decoration: none;
 }
 
 .cdr-doc-proving-ground {
