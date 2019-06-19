@@ -1,7 +1,7 @@
 ---
 {
   "title": "Call to Action",
-  "layout": "LayoutComponent",
+  "layout_type": "LayoutComponent",
   "summary": "Stylized link used in campaigns and promotions to encourage users to further explore featured products, services or offers",
   "title_metadata": "CTA, CTA Button, CdrCta",
   "placement": [
@@ -374,25 +374,4 @@ The following variants are available to the `cdr-cta` modifier attribute:
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.1.0
-- Remove **CdrIcon** dependency
-
-## 1.0.3
-- Fix CSS import for SSR
-
-## 1.0.2
-- Update **CdrIcon** dependency
-
-## 1.0.1
-- Update **CdrAssets** dependency
-
-## 1.0.0
-
-- Includes suppoort for various themes
-- Renders default and full-width sizes
-- Git commit reference [(b944d3a)](https://github.com/rei/rei-cedar/commit/b944d3a91b45dd1778d71674eaf26073f4521caa)
-
-</template>
 </cdr-doc-tabs>

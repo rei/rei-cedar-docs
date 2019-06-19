@@ -1,7 +1,7 @@
 ---
 {
   "title": "Inputs",
-  "layout": "LayoutComponent",
+  "layout_type": "LayoutComponent",
   "summary": "Allows a user to enter and edit data. Also used for search",
   "title_metadata": "Text field, CdrInput, cdr-input",
   "length": [
@@ -195,9 +195,29 @@
             ],
             "events": [
               {
-                "name": "change",
-                "arguments": "newValue, event",
-                "description": "Event is emitted on input losing focus(onBlur) if the value has changed."
+                "name": "input",
+                "arguments": "value, event",
+                "description": "Input event is emitted while typing with the current input value.",
+              },
+              {
+                "name": "blur",
+                "arguments": "event",
+                "description": "Blur event is emitted when input loses focus.",
+              },
+              {
+                "name": "focus",
+                "arguments": "event",
+                "description": "Focus event is emitted when input gains focus.",
+              },
+              {
+                "name": "paste",
+                "arguments": "event",
+                "description": "Paste event is emitted when text is pasted into input.",
+              },
+              {
+                "name": "keydown",
+                "arguments": "event",
+                "description": "Keydown event is emitted when a key is pressed.",
               }
             ]
           }
@@ -599,12 +619,4 @@ Input inherits the `placeholder` attribute for the placeholder text. You can als
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.0.0
-
-- Enables users to set the type of input field: text, email, number, password, search, url
-- [Complete component history](https://github.com/rei/rei-cedar/blob/master/src/components/input/CHANGELOG.md)
-
-</template>
 </cdr-doc-tabs>

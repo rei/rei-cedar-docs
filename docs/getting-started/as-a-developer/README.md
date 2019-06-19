@@ -2,7 +2,7 @@
 {
   "title": "As a Developer",
   "title_metadata": false,
-  "layout": "LayoutArticle",
+  "layout_type": "LayoutArticle",
   "breadcrumbs": [
     {
       "text": "Getting Started/"
@@ -14,9 +14,9 @@
 <cdr-doc-table-of-contents-shell>
 
 ## Cedar + Vue
-Cedar components are built using [Vue](https://vuejs.org) and can only be used in Vue projects
+Cedar components are built using [Vue](https://vuejs.org) and can only be used in Vue projects.
 
-All components are available via an [NPM package](https://www.npmjs.com/package/@rei/cedar).
+All components are available using an [NPM package](https://www.npmjs.com/package/@rei/cedar).
 
 _Terminal_
 ```bash
@@ -130,7 +130,7 @@ import '~@rei/cedar/dist/cdr-fonts.css';
 import '~@rei/cedar/dist/cedar.css';
 ```
 
-**Note**: Code snippets provided throughout the docs will demonstrate the `webpack` and `css-loader` method.
+**Note**: Code snippets provided throughout this documentation will demonstrate the `webpack` and `css-loader` method.
 
 <hr/>
 
@@ -193,7 +193,7 @@ Most Cedar components provide props to configure component data, display, and lo
 <cdr-button size="large">I'm a large button</cdr-button>
 ```
 
-Refer to each component’s API documentation for a full list of available props.
+Refer to each component’s API documentation for a full list of available properties.
 
 #### Bind Dynamic Data to Components
 Props can be [static or dynamic](https://vuejs.org/v2/guide/components-props.html#Passing-Static-or-Dynamic-Props). To provide dynamic data (or non-string data) add a colon (`:`) before the prop name.
@@ -251,7 +251,7 @@ To target CSS, create custom selectors such as `my-wrapper` and `my-selector` in
 </style>
 ```
 
-Some components are more complex and have templates with multiple areas you may wish to add your own selectors. We try to be mindful of this and add props that will allow you to target your own classes to various elements. 
+Some components are more complex and have templates with multiple areas where you may wish to add your own selectors. We try to be mindful of this and add props that will allow you to target your own classes to various elements. 
 
 For example with checkbox you may want to target both the label and the content areas. 
 
@@ -438,7 +438,7 @@ _Terminal_
 
 ##### Icons
 
-Cedar provides icons  in vector pdf format for iOS scaling.  According to initial investigation, only one file per icon is needed in this format. There is no need for @1x, @2x, and @3x variants. 
+Cedar provides icons  in vector PDF format for iOS scaling.  According to initial investigation, only one file per icon is needed in this format. There is no need for @1x, @2x, and @3x variants. 
 
 
 <hr/>

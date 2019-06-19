@@ -1,7 +1,7 @@
 ---
 {
   "title": "Data Tables",
-  "layout": "LayoutComponent",
+  "layout_type": "LayoutComponent",
   "summary": "Organizes structured content so that it is easy to scan, make comparisons, and analyze the data",
   "title_metadata": "CdrDataTable",
   "tablelayout": [
@@ -613,20 +613,4 @@ Following variants are available to the `cdr-data-table` modifier attribute:
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.1.0
-
-- Increased content resilience when using component API to render tablular data
-- Added `constrainWidth` prop
-- Changed `id` prop to be optional
-
-## 1.0.0
-
-- Supports size chart and technical specs table designs
-- Responsive scroll behavior by default
-- Supports accessible table captions
-- Git commit reference [(3169234)](https://github.com/rei/rei-cedar/commit/3169234cb99b8fc750efd2e3d5813e19c10f8e71)
-
-</template>
 </cdr-doc-tabs>

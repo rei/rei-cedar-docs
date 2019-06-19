@@ -1,7 +1,7 @@
 ---
 {
    "title": "Lists",
-   "layout": "LayoutComponent",
+   "layout_type": "LayoutComponent",
    "summary": "Group related content items together either vertically or horizontally",
    "title_metadata": "CdrList",
    "see_also": [
@@ -438,18 +438,4 @@ Note that the tag itself does not determine display, a modifier must be added fo
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.0.0
-
-- Displays with following variants:
-  - Bare (default)
-  - Ordered
-  - Unordered
-  - Compact
-  - Inline
-- Can be an ordered `<ol>` or unordered `<ul>` list, the tag itself does not determine styling
-- [Complete component history](https://github.com/rei/rei-cedar/blob/master/src/components/list/CHANGELOG.md)
-
-</template>
 </cdr-doc-tabs>

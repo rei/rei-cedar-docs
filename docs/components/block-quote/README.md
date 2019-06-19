@@ -1,7 +1,7 @@
 ---
 {
     "title": "Block Quote",
-    "layout": "LayoutComponent",
+    "layout_type": "LayoutComponent",
     "title_metadata": "Quote, CdrQuote",
     "summary": "Short excerpt with an external citation and citation URL that is set off from the main body of text",
     "see_also": [
@@ -233,13 +233,4 @@ When block quotes are displayed in at XS breakpoints, the text will use a smalle
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.0.0
-
-- Includes support for Block Quote component
-- Includes support for Pull Quote component
-- Link to full dev [changelog](https://github.com/rei/rei-cedar/blob/18.09.2/src/components/quote/CHANGELOG.md)
-
-</template>
 </cdr-doc-tabs>

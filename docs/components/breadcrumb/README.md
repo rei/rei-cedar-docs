@@ -1,7 +1,7 @@
 ---
 {
   "title": "Breadcrumb",
-  "layout": "LayoutComponent",
+  "layout_type": "LayoutComponent",
   "summary": "Navigation to reveal a page’s location within the site hierarchy",
   "title_metadata": "CdrBreadcrumb",
   "path": [
@@ -324,18 +324,4 @@ The below image and example code shows using ```truncationXSThreshold``` to set 
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.0.1
-- Update **CdrAssets** dependency
-
-## 1.0.0
-
-- Displays as an inline list with links to previous sections
-- Truncates when entire breadcrumb string gets too long
-- Enables customization of whitespace threshold to the right, by default and in narrow viewports
-- Incorporates accessibility and SEO compliant features
-- Git commit reference [(08b883c)](https://github.com/rei/rei-cedar/commit/08b883c)
-
-</template>
 </cdr-doc-tabs>

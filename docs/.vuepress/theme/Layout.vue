@@ -15,8 +15,8 @@
           <slot name="sidebar-top" slot="top"/>
           <slot name="sidebar-bottom" slot="bottom"/>
         </Sidebar> -->
-        <div class="custom-layout" v-if="$page.frontmatter.layout">
-          <component :is="$page.frontmatter.layout"/>
+        <div class="custom-layout" v-if="$page.frontmatter.layout_type">
+          <component :is="$page.frontmatter.layout_type"/>
         </div>
         <Home v-else-if="$page.frontmatter.home"/>
         <Page v-else :sidebar-items="sidebarItems">

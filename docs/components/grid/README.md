@@ -1,7 +1,7 @@
 ---
 {
   "title": "Grid",
-  "layout": "LayoutComponent",
+  "layout_type": "LayoutComponent",
   "summary": "A responsive, mobile first, fluid system that appropriately scales 12 columns as the device or viewport size increases",
   "title_metadata": "Layout, CdrGrid",
   #DO-DON'T
@@ -1224,17 +1224,4 @@ Nested grids are made by nesting `cdr-col` and adding the `is-row` prop to the `
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.0.2
-
-- Add missing style property to package.json
-
-## 1.0.0
-
-- Consolidate responsive props to single prop that accepts responsive values. See full dev [changelog](https://github.com/rei/rei-cedar/blob/master/src/components/grid/CHANGELOG.md)
-- Replaces `@rei/cdr-row` and `@rei/cdr-col` packages (both components are available from this package)
-- The Grid CSS is contained in this package and not in `@rei/cdr-assets core.css`
-
-</template>
 </cdr-doc-tabs>
