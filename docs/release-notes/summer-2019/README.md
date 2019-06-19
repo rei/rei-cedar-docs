@@ -1,6 +1,6 @@
 ---
 {
-  "title": "Release History",
+  "title": "Summer 2019 Release",
   "title_metadata": false,
   "layout_type": "LayoutArticle",
   "summary": false,
