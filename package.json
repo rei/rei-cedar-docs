@@ -5,7 +5,7 @@
   "private": false,
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "cross-env NODE_ENV=production vuepress build docs"
   },
   "author": "REI Software Engineering",
   "license": "ISC",
@@ -24,6 +24,7 @@
     "@rei/cdr-tokens": "^1.0.0",
     "@vuepress/plugin-google-analytics": "^1.0.0-rc.1",
     "codesandbox": "^2.1.6",
+    "cross-env": "^5.2.0",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
     "vuepress": "^1.0.1"
