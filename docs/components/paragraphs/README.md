@@ -1,7 +1,7 @@
 ---
 {
    "title": "Paragraphs",
-   "layout": "LayoutComponent",
+   "layout_type": "LayoutComponent",
    "summary": "Text container used for any text element such as paragraphs, headings, and lists. Establishes vertical spacing and optimizes the reading experience",
    "title_metadata": "CdrText",
    "see_also": [

@@ -2,7 +2,7 @@
 {
   "title": "Accessibility",
   "title_metadata": false,
-  "layout": "LayoutArticle",
+  "layout_type": "LayoutArticle",
   "summary": false,
   "breadcrumbs": [
     {

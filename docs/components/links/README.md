@@ -1,7 +1,7 @@
 ---
 {
    "title": "Links",
-   "layout": "LayoutComponent",
+   "layout_type": "LayoutComponent",
    "summary": "Clickable text element to navigate to page section, another page or open an overlaid window such as modal dialog or popover",
    "title_metadata": "Hyperlink, Anchor, CdrButton, CdrLink",
    "see_also": [

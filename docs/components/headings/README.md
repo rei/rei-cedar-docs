@@ -1,7 +1,7 @@
 ---
 {
   "title": "Headings",
-  "layout": "LayoutComponent",
+  "layout_type": "LayoutComponent",
   "summary": "Used as titles to create hierarchical information structure within a page layout",
   "title_metadata": "CdrText",
   "see_also": [

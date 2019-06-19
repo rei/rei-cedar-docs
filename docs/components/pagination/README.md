@@ -1,7 +1,7 @@
 ---
 {
   "title": "Pagination",
-  "layout": "LayoutComponent",
+  "layout_type": "LayoutComponent",
   "summary": "Allows users to navigate to next or previous page when content is split into several pages",
   "title_metadata": "Pagination, CdrPagination",
   "align": [

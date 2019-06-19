@@ -1,7 +1,7 @@
 ---
 {
   "title": "Call to Action",
-  "layout": "LayoutComponent",
+  "layout_type": "LayoutComponent",
   "summary": "Stylized link used in campaigns and promotions to encourage users to further explore featured products, services or offers",
   "title_metadata": "CTA, CTA Button, CdrCta",
   "placement": [

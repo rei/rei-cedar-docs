@@ -1,7 +1,7 @@
 ---
 {
   "title": "Breadcrumb",
-  "layout": "LayoutComponent",
+  "layout_type": "LayoutComponent",
   "summary": "Navigation to reveal a page’s location within the site hierarchy",
   "title_metadata": "CdrBreadcrumb",
   "path": [

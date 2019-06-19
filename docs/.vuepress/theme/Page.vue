@@ -26,7 +26,7 @@
 <script>
 import OutboundLink from './OutboundLink.vue'
 import { resolvePage, normalize, outboundRE, endingSlashRE } from './util'
-import '../cedar.js'; // Make components available on all pages
+import '../cedar.js'
 
 export default {
   components: { OutboundLink },
@@ -118,16 +118,16 @@ function find (page, items, offset) {
 
 <style lang="scss">
 // @import './styles/config.styl'
-
+// 
 // .page
 //   padding-bottom 2rem
-
+// 
 // .edit-link.content
 //   padding-top 0 !important
 //   a
 //     color lighten($textColor, 25%)
 //     margin-right 0.25rem
-
+// 
 // .page-nav.content
 //   padding-top 1rem !important
 //   padding-bottom 0 !important

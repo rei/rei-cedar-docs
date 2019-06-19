@@ -1,7 +1,7 @@
 ---
 {
   "title": "Data Tables",
-  "layout": "LayoutComponent",
+  "layout_type": "LayoutComponent",
   "summary": "Organizes structured content so that it is easy to scan, make comparisons, and analyze the data",
   "title_metadata": "CdrDataTable",
   "tablelayout": [

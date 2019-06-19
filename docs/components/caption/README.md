@@ -1,7 +1,7 @@
 ---
 {
    "title": "Caption",
-   "layout": "LayoutComponent",
+   "layout_type": "LayoutComponent",
    "summary": "Provides further context and attribution for a figure or media asset such as an image, video, or chart",
    "title_metadata": "CdrCaption",
    "see_also": [
