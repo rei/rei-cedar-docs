@@ -354,12 +354,12 @@ textEl.style.fontSize = CedarTokens.cdrTextDefaultSize;
 textEl.style.lineHeight = CedarTokens.cdrTextDefaultHeight;
 
 for(let i = 0; i < otherTextElements.length; i++ ){
-  otherTextElements[i].style.fontFamily = CedarTokens.cdrTextDefaultFamily;
-  otherTextElements[i].style.fontStyle = CedarTokens.cdrTextDefaultStyle;
-  otherTextElements[i].style.fontWeight = CedarTokens.cdrTextDefaultWeight;
-  otherTextElements[i].style.fontSpacing = CedarTokens.cdrTextDefaultSpacing;
-  otherTextElements[i].style.fontSize = CedarTokens.cdrTextDefaultSize;
-  otherTextElements[i].style.lineHeight = CedarTokens.cdrTextDefaultHeight;
+  otherTextElements[i].style.fontFamily = CedarTokens.cdrTextEditorialFamily;
+  otherTextElements[i].style.fontStyle = CedarTokens.cdrTextEditorialStyle;
+  otherTextElements[i].style.fontWeight = CedarTokens.cdrTextEditorialWeight;
+  otherTextElements[i].style.fontSpacing = CedarTokens.cdrTextEditorialSpacing;
+  otherTextElements[i].style.fontSize = CedarTokens.cdrTextEditorialSize;
+  otherTextElements[i].style.lineHeight = CedarTokens.cdrTextEditorialHeight;
 }
 ```
 
