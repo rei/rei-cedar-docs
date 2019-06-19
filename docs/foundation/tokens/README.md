@@ -33,10 +33,10 @@ cdr-text-primary-lightmode: #292929;
 
 
 ### Contract of Intent
-  - Tokens are versioned and maintained by the design systems team 
-  - Consumers are required to stay within one major version of the current release 
+  - Tokens are versioned and maintained by the design systems team
+  - Consumers are required to stay within one major version of the current release
 
-### Benefits 
+### Benefits
 
 #### Improved UI Development
   - Promotes greater visual consistency and maintainability (when there are changes to brand elements)
@@ -52,15 +52,15 @@ Tokens can streamline redesign processes when:
   - Extends the distribution of the REI visual language across platforms
   - Ensures brand consistency across all digital channels
 
-#### Extensibility 
-  - Designers and developers have access to tokens when creating custom components for their applications (within brand standards) 
+#### Extensibility
+  - Designers and developers have access to tokens when creating custom components for their applications (within brand standards)
 
 
-### Use When  
-Tokens can be used by teams: 
-- To supplement components when designing page layouts 
+### Use When
+Tokens can be used by teams:
+- To supplement components when designing page layouts
 - To create custom components that are visually aligned to the REI brand styles
-- To create new components that can be contributed back to the system 
+- To create new components that can be contributed back to the system
 - When there are technical limitations to consuming components
 
 
@@ -69,7 +69,7 @@ Tokens can be used by teams:
 - Don’t use tokens to only access a value or values. **Instead,** create a new token in the [shared-tokens repo](https://git.rei.com/projects/FEDPACK/repos/shared-tokens/browse) that meets your specific semantic use case
 
 
-Questions about when to use tokens? Ask the Cedar team in [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) 
+Questions about when to use tokens? Ask the Cedar team in [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4)
 
 <hr/>
 
@@ -164,10 +164,10 @@ The naming structure for tokens follows:
 - **Sub-Item:** Describes and narrows category for token. For instance, “form” could be modified by “input”
 - **Variant:** Describes prominence or state for a token
 - **Size:** Describes size for a token, if applicable
-- **Mode:** Defines tokens based on themes, such as a dark or light background  
+- **Mode:** Defines tokens based on themes, such as a dark or light background
 
-### Examples 
-The below tables for the naming structure show that levels will be skipped when not used. 
+### Examples
+The below tables for the naming structure show that levels will be skipped when not used.
 
 #### cdr-color-text-form-label-lightmode
 <table>
@@ -282,8 +282,8 @@ The below tables for the naming structure show that levels will be skipped when 
 
 ### For Designers
 - A base requirement for accessing Cedar tokens and using them in designs and wireframes is that you are able to use Sketch version 53.2
-- Toolkits are platform specific. If designing for the web, use the UI Web Toolkit 
-- Tokens are available in Cedar’s UI Toolkit and found on the Tokens page 
+- Toolkits are platform specific. If designing for the web, use the UI Web Toolkit
+- Tokens are available in Cedar’s UI Toolkit and found on the Tokens page
 - When using tokens, it’s your responsibility to pass the entire token name to the developer during the design hand-off process—this can be through automated or manual methods
 
 <br>
@@ -291,10 +291,77 @@ The below tables for the naming structure show that levels will be skipped when 
 ### For Developers
 A base requirement for using Cedar tokens is that you are able to consume and maintain packages through the following development processes:
 - Web consumers:
-  - Your project can compile CSS variables 
+  - Your project can compile CSS variables
   - You can import NPM packages
 - Native iOS consumers using CocoaPods
 - Android consumers using Android package manager
+
+#### install
+
+To install the token package:
+
+`npm install --save-dev @rei/cdr-tokens@DESIRED_VERSION`
+
+Your project must be able to compile SCSS or LESS in order to make use of the SCSS and LESS modules.
+
+The token package contains `/dist/less` and `/dist/scss` folders, each of which contains `cdr-tokens.{less|scss}` files containing all the tokens in the corresponding format.
+
+Alternatively you could use `/dist/js` and/or `/dist/json` if your project cannot build SCSS and LESS.
+
+#### usage
+
+SCSS example:
+```
+@import '@rei/cdr-tokens/dist/scss/cdr-tokens.scss'; /* import the tokens file */
+
+.your-default-text-class {
+  /* use mixins to apply many properties at once */
+  @include cdr-text-default;
+}
+
+.your-other-text-class {
+  /* use scss variables if you need to apply specific properties */
+  color: $cdr-color-text-error-lightmode;
+}
+```
+
+LESS example:
+```
+@import '@rei/cdr-tokens/dist/less/cdr-tokens.less'; /* import the tokens file */
+
+.your-default-text-class {
+  /* use mixins to apply many properties at once */
+  .cdr-text-default();
+}
+
+.your-other-text-class {
+  /* use variables if you need to apply specific properties */
+  color: @cdr-color-text-error-lightmode;
+}
+```
+
+JS example:
+```
+const CdrTokens = require('@rei/cdr-tokens/'); /* import the tokens file */
+let textEl = document.getElementById("app-text");
+let otherTextElements = document.getElementByClassName("other-app-text");
+
+textEl.style.fontFamily = CedarTokens.cdrTextDefaultFamily;
+textEl.style.fontStyle = CedarTokens.cdrTextDefaultStyle;
+textEl.style.fontWeight = CedarTokens.cdrTextDefaultWeight;
+textEl.style.fontSpacing = CedarTokens.cdrTextDefaultSpacing;
+textEl.style.fontSize = CedarTokens.cdrTextDefaultSize;
+textEl.style.lineHeight = CedarTokens.cdrTextDefaultHeight;
+
+for(let i = 0; i < otherTextElements.length; i++ ){
+  otherTextElements[i].style.fontFamily = CedarTokens.cdrTextDefaultFamily;
+  otherTextElements[i].style.fontStyle = CedarTokens.cdrTextDefaultStyle;
+  otherTextElements[i].style.fontWeight = CedarTokens.cdrTextDefaultWeight;
+  otherTextElements[i].style.fontSpacing = CedarTokens.cdrTextDefaultSpacing;
+  otherTextElements[i].style.fontSize = CedarTokens.cdrTextDefaultSize;
+  otherTextElements[i].style.lineHeight = CedarTokens.cdrTextDefaultHeight;
+}
+```
 
 This repository follows SEMVER practices and will notify users of changes and updates on the #cedar-user-support Slack channel.
 
@@ -305,14 +372,14 @@ This repository follows SEMVER practices and will notify users of changes and up
 ## Adding Tokens to the Repository
 The number of tokens Cedar provides is kept small intentionally as it is critical for a token to meet all requirements based on the above criterium prior to being added to Cedar’s Token list.
 
-If you have a request for a token that is missing, you can submit a request using the [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC) or create a token in the [shared-tokens repo](https://git.rei.com/projects/FEDPACK/repos/shared-tokens/browse) for future integration in Cedar. 
+If you have a request for a token that is missing, you can submit a request using the [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC) or create a token in the [shared-tokens repo](https://git.rei.com/projects/FEDPACK/repos/shared-tokens/browse) for future integration in Cedar.
 
 
 Ensure that the token meets the following requirements:
 - Token is used in several components or layouts
 - Token is used for multiple elements and NOT specific to one element
 - Token name will continue to have the same semantic meaning in future releases
-- Token name follows platform requirements: 
+- Token name follows platform requirements:
   - **Web:** Uses Kebab case. For example, cdr-color-background-dark
   - **iOS:** Uses Pascal case. For example, CdrColorBackgroundColor
   - **Android:** Uses Snake case. For example, cdr_color_background_dark
