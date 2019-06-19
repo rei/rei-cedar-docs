@@ -1,7 +1,7 @@
 ---
 {
   "title": "Buttons",
-  "layout": "LayoutComponent",
+  "layout_type": "LayoutComponent",
   "summary": "Invoke and communicate an action that will occur",
   "title_metadata": "CdrButton",
   "vertical": [

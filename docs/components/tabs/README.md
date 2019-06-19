@@ -1,7 +1,7 @@
 ---
 {
   "title": "Tabs",
-  "layout": "LayoutComponent",
+  "layout_type": "LayoutComponent",
   "summary": "Organize and group related content into smaller sections navigable within a single container",
   "title_metadata": "Tab Panels, CdrTabs",
   "select": [

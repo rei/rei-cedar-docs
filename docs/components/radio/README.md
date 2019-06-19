@@ -1,7 +1,7 @@
 ---
 {
   "title": "Radio Buttons",
-  "layout": "LayoutComponent",
+  "layout_type": "LayoutComponent",
   "summary": "Permits user to select only one option from a list of two or more",
   "title_metadata": "Radios, CdrRadio",
   "see_also": [

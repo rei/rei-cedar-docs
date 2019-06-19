@@ -1,7 +1,7 @@
 ---
 {
     "title": "Rating",
-    "layout": "LayoutComponent",
+    "layout_type": "LayoutComponent",
     "title_metadata": "Rating, Stars, Reviews, CdrRating",
     "summary": "Provide insight of others’ opinions for products, experiences and expert information",
     # "see_also": [

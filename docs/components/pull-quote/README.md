@@ -1,7 +1,7 @@
 ---
 {
     "title": "Pull Quote",
-    "layout": "LayoutComponent",
+    "layout_type": "LayoutComponent",
     "title_metadata": "Quote, CdrQuote",
     "summary": "Short excerpt taken from the main body of text to give a dominant position",
     "see_also": [

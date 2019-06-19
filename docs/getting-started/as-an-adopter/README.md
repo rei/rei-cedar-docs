@@ -2,7 +2,7 @@
 {
   "title": "As an Adopting Team",
   "title_metadata": false,
-  "layout": "LayoutArticle",
+  "layout_type": "LayoutArticle",
   "breadcrumbs": [
     {
       "text": "Getting Started/"

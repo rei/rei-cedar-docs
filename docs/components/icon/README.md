@@ -1,7 +1,7 @@
 ---
 {
   "title": "Icons",
-  "layout": "LayoutComponent",
+  "layout_type": "LayoutComponent",
   "summary": "Communicates meaning through the use of graphics",
   "title_metadata": "CdrIcon",
   "breadcrumbs": [

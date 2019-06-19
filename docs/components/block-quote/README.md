@@ -1,7 +1,7 @@
 ---
 {
     "title": "Block Quote",
-    "layout": "LayoutComponent",
+    "layout_type": "LayoutComponent",
     "title_metadata": "Quote, CdrQuote",
     "summary": "Short excerpt with an external citation and citation URL that is set off from the main body of text",
     "see_also": [

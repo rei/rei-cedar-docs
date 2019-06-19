@@ -2,7 +2,7 @@
 {
   "title": "Color",
   "title_metadata": false,
-  "layout": "LayoutComponent",
+  "layout_type": "LayoutComponent",
   "summary": false,
   "breadcrumbs": [
     {
