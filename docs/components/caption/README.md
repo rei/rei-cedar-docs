@@ -318,12 +318,4 @@ The below example demonstrates how to extend this component for use within a fig
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.0.0
-
-- Supports summary and credit
-- Link to full dev [changelog](https://github.com/rei/rei-cedar/blob/18.09.2/src/compositions/caption/CHANGELOG.md)
-
-</template>
 </cdr-doc-tabs>

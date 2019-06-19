@@ -32,8 +32,11 @@ module.exports = {
     search: false,
     nav: [
       {
-        text: "Release History",
-        link: "/release-history/"
+        text: "Release Notes",
+        items: [
+          { text: "Summer 2019", link: "/release-notes/summer-2019/" },
+          { text: "Archive", link: "/release-notes/archive/" },
+        ]
       },
       {
         text: "Getting Started",

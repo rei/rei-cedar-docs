@@ -324,15 +324,4 @@ Following variants are available to the `cdr-tabs` modifier attribute:
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.0.0
-
-- Organizes content across different screens
-- Enables navigation between content with Tab Header List
-- Tabs Header List supports overflow by allowing horizontal scrolling of header
-- Incorporates accessibility and SEO compliant features
-- Git commit reference [(cc6b3fb)](https://github.com/rei/rei-cedar/blob/next/src/components/tabs/CHANGELOG.md)
-
-</template>
 </cdr-doc-tabs>

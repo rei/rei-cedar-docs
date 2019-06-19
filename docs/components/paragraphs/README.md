@@ -260,15 +260,4 @@ Define custom tags by applying a specific `cdr-text` style with modifiers to it.
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.0.0
-
-- Enables a consistent visual paragraph style applied to any HTML element using the `tag` property
-- By default, results in a generic `<p>` tag
-- Visual style is applied with the `modifier` property and supports:
-  - **Default**:  Used as default font style. It may be used for paragraphs, lists, or any basic information
-  - **Body**: Intended for long-form articles like Expert Advice pages or editorial content on PDP pages
-
-</template>
 </cdr-doc-tabs>
