@@ -195,9 +195,29 @@
             ],
             "events": [
               {
-                "name": "change",
-                "arguments": "newValue, event",
-                "description": "Event is emitted on input losing focus(onBlur) if the value has changed."
+                "name": "input",
+                "arguments": "value, event",
+                "description": "Input event is emitted while typing with the current input value.",
+              },
+              {
+                "name": "blur",
+                "arguments": "event",
+                "description": "Blur event is emitted when input loses focus.",
+              },
+              {
+                "name": "focus",
+                "arguments": "event",
+                "description": "Focus event is emitted when input gains focus.",
+              },
+              {
+                "name": "paste",
+                "arguments": "event",
+                "description": "Paste event is emitted when text is pasted into input.",
+              },
+              {
+                "name": "keydown",
+                "arguments": "event",
+                "description": "Keydown event is emitted when a key is pressed.",
               }
             ]
           }
