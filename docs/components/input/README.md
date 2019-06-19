@@ -619,12 +619,4 @@ Input inherits the `placeholder` attribute for the placeholder text. You can als
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.0.0
-
-- Enables users to set the type of input field: text, email, number, password, search, url
-- [Complete component history](https://github.com/rei/rei-cedar/blob/master/src/components/input/CHANGELOG.md)
-
-</template>
 </cdr-doc-tabs>

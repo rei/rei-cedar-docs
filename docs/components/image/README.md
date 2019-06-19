@@ -426,19 +426,4 @@ For internal applications with large images or images that would benefit from ch
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.0.0
-
-- Enforces WCAG A 1.1.1 criteria for decorative images by adding an empty alt attribute to all **CdrImg** source files
-- Provides integration support for image best practices available using [rei-lazy-image-loader](https://git.rei.com/projects/FEDPACK/repos/rei-lazy-image-loader/browse)
-- Enables the following aspect ratios at breakpoints with following variants: Auto, Square, 1-2, 2-3, 3-4, 9-16, 2-1, 3-2, 4-3, 16-9
-- Enables user defined cropping and covering
-- Provides image shapes using the radius property with the following variants: Circle, Rounded
-- Enables users to set the image to be 100% width with a responsive modifier
-- [Complete component history](https://github.com/rei/rei-cedar/blob/master/src/components/image/CHANGELOG.md)
-
-
-
-</template>
 </cdr-doc-tabs>

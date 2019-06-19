@@ -214,13 +214,4 @@ When a pull quote is displayed in at XS breakpoints, the left border will appear
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.0.0
-
-- Includes support for Block Quote component
-- Includes support for Pull Quote component
-- Link to full dev [changelog](https://github.com/rei/rei-cedar/blob/18.09.2/src/components/quote/CHANGELOG.md)
-
-</template>
 </cdr-doc-tabs>

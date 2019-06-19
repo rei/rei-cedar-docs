@@ -369,14 +369,4 @@ Use the `hide-figure` modifier to hide the radio button itself, which leaves tex
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.0.0
-
-- Sets radio value to String, Number, Boolean, Object, Array, Symbol or Function
-- Hides radio buttons with `hide-figure` modifier
-- Includes default and compact styling
-- Git commit reference [5fe44c8](https://github.com/rei/rei-cedar/commit/5fe44c8d3f53a50e0d21e77a4c9beb23486f6a53)
-
-</template>
 </cdr-doc-tabs>

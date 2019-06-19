@@ -319,21 +319,4 @@ Following variants are available to the `cdr-link` modifier attribute:
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.0.3
-- **CdrIcon** dependency update
-
-## 1.0.2
-- **CdrIcon** dependency update
-
-## 1.0.0
-
-- Displays as an inline or standalone variant
-- Renders using an anchor or button element
-- Includes a property to allow the `cdr-icon` fill color to inherit the link color value
-- Supports `cdr-icon` to display on left, on right, or, both. 
-- Git commit reference [9d404f4](https://github.com/rei/rei-cedar/commit/9d404f4)
-
-</template>
 </cdr-doc-tabs>

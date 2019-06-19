@@ -451,20 +451,4 @@ import { CdrIcon } from '@rei/cedar';
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 2.0.0
- 
-- Deprecated `modifier` prop
-- Added `size` and `inherit-color` prop
-
-## 1.0.0
-
-- Add grid-view, list-view, and scan-barcode icons
-- All icon components have a slot that accepts any SVG xml
-- Individual icon components for all icons (use only what you need)
-- **CdrIcon** is lower-level component that acts as an SVG wrapper
-- Link to full dev [changelog](https://github.com/rei/rei-cedar/blob/18.09.1/src/components/icon/CHANGELOG.md)
-
-</template>
 </cdr-doc-tabs>

@@ -488,15 +488,4 @@ Use the `hide-figure` modifier to hide the checkbox itself, which leaves the tex
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.0.0
-
-- Supports custom checkbox values
-- Hides checkboxes with  `hide-figure`  modifier
-- Includes default and compact styling
-- Includes indeterminate state visual style
-- Git commit reference [(1531860)](https://github.com/rei/rei-cedar/pull/436/commits/15318606570811a6d53549a5335e0943a3463971)
-
-</template>
 </cdr-doc-tabs>

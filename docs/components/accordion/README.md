@@ -445,24 +445,4 @@ Any options set at the **CdrAccordion** level can be set on any parent component
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-  
-## 1.0.3
-- **CdrIcon** dependency update
-
-## 1.0.2
-- Fix CSS import for SSR
-
-## 1.0.1 
-- **CdrAssets** dependency update
-
-## 1.0.0
-
-- Includes **CdrAccordion** and **CdrAccordionItem** components
-- Toggles initial open state at group and individual level
-- Supports compact and border-aligned styles
-- Git commit reference ([cc998a4](https://github.com/rei/rei-cedar/commit/cc998a4f7a4a0278a86c35063ba6615196a46ba2))
-
-</template>
-
 </cdr-doc-tabs>
