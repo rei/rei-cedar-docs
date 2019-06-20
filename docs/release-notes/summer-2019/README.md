@@ -14,7 +14,7 @@
 
 <cdr-doc-table-of-contents-shell>
 
-## Summer 2019 Release: Single Package Cedar Re-Architecture
+## Single Package Cedar Re-Architecture
 
 For our Summer 2019 release, the Cedar Vue components are moving from a multi-package component architecture to a single-package one. This means that `@rei/cdr-assets` as well as all of the existing Vue component packages under the `@rei/cdr-` namespace will now be distributed as one package named `@rei/cedar`. The `@rei/cdr-tokens` is unaffected by this change. 
 
@@ -24,11 +24,11 @@ This release also comes with some breaking updates to our "assets", such as the 
 
 We acknowledge that dealing with [breaking changes](#breaking-changes) in widely-used dependencies like Cedar can be problematic for your team, but we believe that this new architecture will allow us to better limit and control these kinds of breaking changes in the future. 
 
-### Update your NPM dependencies, CSS imports, and JS imports
+### Update your Cedar Dependencies and Imports
 
 Assuming you are already consuming the multi-package form of the Cedar Vue components (i.e, `@rei/cdr-assets`, `@rei/cdr-button`, `@rei/cdr-link`, etc.), you will need to update your Cedar dependencies in your `package.json` file, as well as update any Cedar imports in your code. If you are not yet using the Cedar Vue components, please see our [Getting Started as a Developer Guide](https://rei.github.io/rei-cedar-docs/getting-started/as-a-developer/) for more information.
 
-Note that these steps will differ slightly depending on whether you are updating a micro-site or a single-package component. Please reach out to the Cedar team if you have any questions, concerns, or need assistance with upgrading.
+Note that these steps will differ slightly depending on whether you are updating a micro-site or a component. Please reach out to the Cedar team if you have any questions, concerns, or need assistance with upgrading.
 
 #### For a micro-site
 
@@ -67,7 +67,7 @@ import { CdrButton, CdrLink } from '@rei/cedar';
 
 5. You can always reach out to the Cedar team in the #cedar-user-support slack channel for assistance
 
-#### For a FED component 
+#### For a Component 
 
 Generally speaking you should only install Cedar as a direct dependency once at the top level of your micro-site, and any component packages that you depend on should install Cedar as a `peerDependency` and `devDependency`. This ensures that Cedar is only loaded once in each micro-site, and that all of your code is running the same version of Cedar. 
 
