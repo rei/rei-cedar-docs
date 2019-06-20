@@ -342,9 +342,7 @@ export default {
   }
 
   .cdr-doc-local-anchor-nav__link--child {
-    // !important needed to fix precedence issue with cdr-link defaults
-    // TODO: fix CSS loading order so custom CSS is loaded after Cedar 
-    padding-left: $cdr-space-two-x !important;
+    padding-left: $cdr-space-two-x;
 
     &:before {
       content: '\2014'; // &mdash;
