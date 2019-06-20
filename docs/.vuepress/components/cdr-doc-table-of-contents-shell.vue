@@ -59,6 +59,6 @@ export default {
   .cdr-doc-table-of-contents-shell__navigation {
     flex-shrink: 0;
     min-width: 0;
-    width: 200px;
+    width: 131px;
   }
 </style>

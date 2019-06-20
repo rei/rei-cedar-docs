@@ -30,7 +30,7 @@ Assuming you are already consuming the multi-package form of the Cedar Vue compo
 
 Note that these steps will differ slightly depending on whether you are updating a micro-site or a component. Please reach out to the Cedar team if you have any questions, concerns, or need assistance with upgrading.
 
-#### For a micro-site
+#### For A Micro-Site
 
 1. Install the new Cedar single-package module: `npm install --save @rei/cedar`
 
@@ -51,16 +51,23 @@ import { CdrButton, CdrLink } from '@rei/cedar';
 ```
 /* old CSS import example: */
 
-@import '@rei/cdr-assets/dist/cdr-fonts.css'; // import Cedar fonts
-@import '@rei/cdr-assets/dist/cdr-core.css'; // import Cedar reset and utility classes
+// import Cedar fonts
+@import '@rei/cdr-assets/dist/cdr-fonts.css';
 
-@import '@rei/cdr-COMPONENT_NAME/dist/cdr-COMPONENT_NAME.css'; // import CSS for individual components
+// import Cedar reset and utility classes
+@import '@rei/cdr-assets/dist/cdr-core.css';
+
+// import CSS for individual components
+@import '@rei/cdr-COMPONENT_NAME/dist/cdr-COMPONENT_NAME.css'; 
 @import '@rei/cdr-button/dist/cdr-button.css'; // etc.
 
 /* new CSS import example: */
 
-@import '@rei/cedar/dist/cdr-fonts.css'; // import Cedar fonts
-@import '@rei/cedar/dist/cedar.css'; // import Cedar reset, utility classes, and component CSS
+// import Cedar fonts
+@import '@rei/cedar/dist/cdr-fonts.css'; 
+
+// import Cedar reset, utility classes, and component CSS
+@import '@rei/cedar/dist/cedar.css'; 
 ```
 
 4. Delete the old `@rei/cdr-` dependencies from your package.json (excluding `cdr-tokens` if you are using that), run npm install, and verify that your app builds correctly
