@@ -29,9 +29,10 @@ export default function makeMeASandbox(data, model) {
         content: {
           "name": name,
             // TODO: can we grab the preceding text to use for description?
+            // TODO: pull cedar version from package.json
           "description": "https://rei.github.io/rei-cedar-docs/",
           "dependencies": {
-            "@rei/cedar": "^1.0.0-alpha.5",
+            "@rei/cedar": "^2.0.0-alpha.0",
             "lodash": "^4.17.4",
             "vue": "^2.5.22"
           }
