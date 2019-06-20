@@ -8,6 +8,7 @@
 
 $side-navigation-logo-width: 162px;
 $side-navigation-width: 234px;
+$side-navigation-width-sm: $side-navigation-logo-width + 24px;
 
 html,
 body {
@@ -24,6 +25,7 @@ body {
 .cdr-doc-page-shell__side-navigation {
   flex: 0 0 $side-navigation-width;
   width: $side-navigation-width;
+  z-index: 120;
 }
 
 .cdr-doc-side-navigation {
@@ -36,7 +38,20 @@ body {
   width: $side-navigation-width;
 }
 
+
+@media only screen and (max-width: $cdr-breakpoint-sm) {
+  .cdr-doc-page-shell__side-navigation {
+    flex: 0 0 $side-navigation-width-sm;
+    width: $side-navigation-width-sm;
+  }
+  
+  .cdr-doc-side-navigation {
+    width: $side-navigation-width-sm;
+  }
+}
+
 .cdr-doc-side-navigation__logo-wrap {
+  background: $cdr-doc-background-color-main-body;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -51,7 +66,6 @@ body {
 .cdr-doc-page-shell__body {
   background: $cdr-doc-background-color-main-body;
   flex: 1 1 100%;
-  overflow-x: scroll;
 }
 
 .header-anchor {
