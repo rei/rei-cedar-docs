@@ -2,3 +2,5 @@ node_modules
 .DS_Store
 
 docs/.vuepress/dist/
+
+docs/.vuepress/public/cedar.css

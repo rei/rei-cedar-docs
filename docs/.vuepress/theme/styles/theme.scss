@@ -4,7 +4,6 @@
 @import 'examples.scss';
 
 @import '../../../../node_modules/@rei/cedar/dist/cdr-fonts.css';
-@import '../../../../node_modules/@rei/cedar/dist/cedar.css';
 
 $side-navigation-logo-width: 162px;
 $side-navigation-width: 234px;
@@ -36,6 +35,7 @@ body {
   height: 100vh;
   overflow-y: scroll;
   width: $side-navigation-width;
+  background-color: $cdr-doc-background-color-main-body;
 }
 
 

@@ -4,8 +4,9 @@
   "description": "This is the API documentation site for REI Cedar 2 Framework components",
   "private": false,
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "cross-env NODE_ENV=production vuepress build docs"
+    "dev": "npm run copy-cedar && vuepress dev docs",
+    "build": "npm run copy-cedar && cross-env NODE_ENV=production vuepress build docs",
+    "copy-cedar": "cp ./node_modules/@rei/cedar/dist/cedar.css ./docs/.vuepress/public/cedar.css"
   },
   "author": "REI Software Engineering",
   "license": "ISC",
