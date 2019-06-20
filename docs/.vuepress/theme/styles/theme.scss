@@ -7,7 +7,7 @@
 @import '../../../../node_modules/@rei/cedar/dist/cedar.css';
 
 $side-navigation-logo-width: 162px;
-$side-navigation-width: 262px;
+$side-navigation-width: 234px;
 
 html,
 body {
@@ -51,6 +51,7 @@ body {
 .cdr-doc-page-shell__body {
   background: $cdr-doc-background-color-main-body;
   flex: 1 1 100%;
+  overflow-x: scroll;
 }
 
 .header-anchor {
