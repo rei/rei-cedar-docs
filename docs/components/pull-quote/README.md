@@ -144,7 +144,7 @@ Default pull quote can be used with the following HTML tags: `<p>`, `<div>`, `<a
   <cdr-quote
         tag="aside"
         modifier="pull"
-        summary="Stewardship is a choice and a mindset. It means that we look at our business differently, and we take individual responsibility for making a positive, lasting impact."
+        summary="Never doubt that a small group of thoughtful, committed citizens can change the world; indeed, it's the only thing that ever has."
       />
 </div>
 ```
