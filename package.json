@@ -31,7 +31,7 @@
     "vuepress": "^1.0.1"
   },
   "dependencies": {
-    "@rei/cedar": "2.0.0-alpha.0",
+    "@rei/cedar": "^2.0.0",
     "scrollmonitor": "^1.2.4",
     "smoothscroll-polyfill": "^0.4.3",
     "stickyfilljs": "^2.0.5"
