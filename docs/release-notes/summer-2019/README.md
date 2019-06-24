@@ -24,13 +24,13 @@ This release also comes with some breaking updates to our "assets", such as the 
 
 We acknowledge that dealing with [breaking changes](#breaking-changes) in widely-used dependencies like Cedar can be problematic for your team, but we believe that this new architecture will allow us to better limit and control these kinds of breaking changes in the future. 
 
-### Update your Cedar Dependencies and Imports
+### Update Your Cedar Dependencies and Imports
 
 Assuming you are already consuming the multi-package form of the Cedar Vue components (i.e, `@rei/cdr-assets`, `@rei/cdr-button`, `@rei/cdr-link`, etc.), you will need to update your Cedar dependencies in your `package.json` file, as well as update any Cedar imports in your code. If you are not yet using the Cedar Vue components, please see our [Getting Started as a Developer Guide](https://rei.github.io/rei-cedar-docs/getting-started/as-a-developer/) for more information.
 
 Note that these steps will differ slightly depending on whether you are updating a micro-site or a component. Please reach out to the Cedar team if you have any questions, concerns, or need assistance with upgrading.
 
-#### For A Micro-Site
+#### For a Micro-Site
 
 1. Install the new Cedar single-package module: `npm install --save @rei/cedar`
 
@@ -86,13 +86,13 @@ Generally speaking you should only install Cedar as a direct dependency once at 
 6. Delete old Cedar dependencies following the [same process as for a micro-site](#for-a-micro-site)
 7. Release a new major version of this component
 
-### Breaking changes
+### Breaking Changes
 
-#### Dependencies that use Cedar components needs to be updated 
+#### Dependencies That Use Cedar Components Needs to Be Updated 
 
 If your project is using the new single-package version of Cedar but is also depending on FED components that load the old multi-package versions, you will end up loading those Cedar dependencies twice. Before updating your project, you should first verify that any dependencies you have that begin with `@rei/` have already been updated.
 
-#### Deprecated Cedar components/compositions are no longer usable  
+#### Deprecated Cedar Components/Compositions Are No Longer Usable  
 
 One consequence of the multi-package architecture is that it makes deprecating packages difficult. Unless we release a new major version of every one of our components, there would be nothing to stop someone from continuing to use a deprecated component. 
 
@@ -103,20 +103,20 @@ We also had some deprecated "compositions" like `cdr-media-object` and `cdr-acti
 - If you are depending on a component like `cdr-a` which was re-named or refactored, you should update your code to use the new component
 - If you are depending on a component that is no longer in Cedar like `cdr-media-object`, you should talk to the Cedar team for help creating a FED component fork of that component
 
-#### Tokens are no longer packaged in Cedar 
+#### Tokens Are No Longer Packaged in Cedar 
 
 In April 2019, we released v1.0.0 of the [Cedar design tokens](https://github.com/rei/rei-cedar-tokens) and deprecated the old tokens that were distributed via `cdr-assets`. You can read more about why we made this change in our [Tokens foundation article](https://rei.github.io/rei-cedar-docs/foundation/tokens/). 
 
 - If your project is still importing tokens from `cdr-assets` (i.e, `@import '~@rei/cdr-assets/dist/cdr-tokens.scss';`), you will need to migrate to the `@rei/cdr-tokens` package 
 - You can also find [migration notes](https://confluence.rei.com/display/TP/v1+Token+Migration) on confluence
 
-#### Cedar core CSS and component CSS is now in one file
+#### Cedar Core CSS and Component CSS Is Now in One File
 
 In the past, Cedar distributed a core CSS file, a fonts file, a tokens file, and CSS files for each individual component. Cedar now packages the core CSS and component CSS into one file. This makes things much easier for consumers to get started with Cedar, and makes it easier for the Cedar team to ensure that the correct CSS is being loaded. 
 
 This means that consuming teams have less options when it comes to bundling the Cedar CSS. However, as the total gzipped size of the `cedar.css` file is 16.397kb, this change should have a negligible impact on performance. Additionally, as a single file the Cedar CSS could easily be versioned and served via Satchel, so that teams can get the benefit of the client-side caching across micro-sites. 
 
-#### New CSS reset 
+#### New CSS Reset 
 
 The old Cedar CSS reset was heavyweight and opinionated, which made it likely to cause conflicts with other libraries that depend on global CSS. This was a frequent issue for teams that were trying to incrementally migrate from Cedar 1 to Cedar 2. Our new CSS reset is much more lightweight, and only sets the most critical properties needed for Cedar to work across browsers. 
 
@@ -124,11 +124,11 @@ The old Cedar CSS reset was heavyweight and opinionated, which made it likely to
 - If your app pulls banners/content from the CMS/hippo/etc., you will need to verify that the content is also working as before
 - You can examine the differences between the 2 CSS resets here: https://gist.github.com/cowills/a868cd959f57be1b70a313b57a8dbe2b (0.3.0 is the old reset, 1.0.0 is the new reset)
 
-#### JSDOM must be loaded in your test environment
+#### JSDOM Must Be Loaded in Your Test Environment
 
 In order to unit test code that loads Cedar, you will need to run JSDOM or an equivalent browser shim in your test environment. A testing error such as `document is not defined` is an indication that JSDOM is not being loaded.
 
-#### New spacing utility classes are available; old spacing utility classes are deprecated
+#### New Spacing Utility Classes Are Available; Old Spacing Utility Classes Are Deprecated
 
 The spacing utility classes have been deprecated and re-named to be consistent with our naming structure for tokens. This includes `cdr-stack`, `cdr-inline`, and `cdr-inset`, as well as their modifiers like `cdr-stack--lg`, or `cdr-inset--squish`.
 
@@ -138,13 +138,13 @@ The spacing utility classes have been deprecated and re-named to be consistent w
 - For each of the deprecated classes that you are using, look it up in the [utility class migration map](#spacing-utility-class-mapping ) to find which of the new classes is equivalent, and execute a find and replace on your codebase to update it 
 
 
-#### All spacing utility classes now set to `!important` 
+#### All Spacing Utility Classes Now Set to `!important` 
 
 This change was necessary to support the changes to the CSS reset mentioned above. The utility classes need enough precedence to override the base Cedar styling, while the base Cedar styling needs enough specificity to not target Cedar 1 or non-Cedar elements.
 
 Our utility classes always target a single CSS property. That means, if they are present on an element, then they should not be overridden by other styling. However this behavior may be undesirable if you are using utility classes for an initial layout and then applying custom classes as modifiers on top of that. If that is the case, then you will need to update your code to remove that utility class and instead apply that style in another way. All of the [deprecated utility classes and their property/value can be found here](https://github.com/rei/rei-cedar/blob/next/src/css/utility/_legacy.scss).
 
-### Spacing utility detector 
+### Spacing Utility Detector 
 
 To check whether or not any of the deprecated spacing utilities are present on a page, you can open the javascript console in the dev tools of your web browser and copy paste this script into it:
 
@@ -155,7 +155,7 @@ head=document.head,style=document.createElement("style");head.appendChild(style)
 
 This will add a dashed pink border to any element that is using one of the deprecated spacing classes, and will also append the class name to the end of that element. Note that you may have classes that are only added in certain states or after user input, so just running this script on page load may not catch every instance of the utility classes. 
 
-### Spacing utility class mapping 
+### Spacing Utility Class Mapping 
 
 Almost all of the deprecated spacing classes have direct equivalents in the new utility classes. The XXL sizes are absent, as that spacing value is no longer present in the design system, as well as the `--remove` classes which set values to 0. If you were depending on one of those classes that has no equivalent, we recommend that you either add this styling to an existing class in your app, or create a new class semantically for your project. If you do create a new class, do not use `cdr-` in the namespace.
 
