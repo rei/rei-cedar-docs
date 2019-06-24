@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <div class="hero cdr-stack--xl">
+    <div class="hero cdr-mb-space-four-x">
       <cdr-img
         v-if="data.heroImage"
         class="hero__image"
@@ -13,7 +13,7 @@
         <cdr-text
           tag="h1"
           modifier="display"
-          class="cdr-stack"
+          class="cdr-mb-space-one-x"
         >{{ data.heroTitle }}</cdr-text>
         <p class="hero__description">{{ data.heroDescription }}</p>
       </div>
@@ -21,7 +21,7 @@
 
 
     <div class="cdr-container">
-      <cdr-row cols="1 2@md" align="middle" class="cdr-stack--xl">
+      <cdr-row cols="1 2@md" align="middle" class="cdr-mb-space-four-x">
         <cdr-col>
           <cdr-img
             class="getting-started-image"
@@ -53,9 +53,9 @@
         </cdr-col>
       </cdr-row>
 
-      <div class="home-hr cdr-stack--xl" role="presentation"></div>
+      <div class="home-hr cdr-mb-space-four-x" role="presentation"></div>
 
-      <cdr-row cols="1 2@md" class="cdr-stack--xl">
+      <cdr-row cols="1 2@md" class="cdr-mb-space-four-x">
         <cdr-col>
           <div class="cdr-text-center">
             <cdr-img
@@ -66,7 +66,7 @@
               cover
             />
             <h2 class="home-heading">Foundation</h2>
-            <cdr-text class="cdr-stack">Build cohesive digital experiences with the basic design elements that comprise the Cedar visual language.</cdr-text>
+            <cdr-text class="cdr-mb-space-one-x">Build cohesive digital experiences with the basic design elements that comprise the Cedar visual language.</cdr-text>
             <cdr-link
               :href="$withBase('/foundation/color/')"
               modifier="standalone"
@@ -83,7 +83,7 @@
               cover
             />
             <h2 class="home-heading">Components</h2>
-            <cdr-text class="cdr-stack">Use components as building blocks to create new digital products - usage, visual guidelines, and code included.</cdr-text>
+            <cdr-text class="cdr-mb-space-one-x">Use components as building blocks to create new digital products - usage, visual guidelines, and code included.</cdr-text>
             <cdr-link
               :href="$withBase('/components/buttons/')"
               modifier="standalone"
@@ -92,7 +92,7 @@
         </cdr-col>
       </cdr-row>
 
-      <div class="home-hr-tree cdr-stack--xl">
+      <div class="home-hr-tree cdr-mb-space-four-x">
         <cdr-img
           class="home-hr-tree__image"
           :src="$withBase('home/hr_tree.png')"
@@ -100,18 +100,18 @@
       </div>
 
 
-      <h2 class="home-heading cdr-text-center cdr-stack--xl">Resources</h2>
+      <h2 class="home-heading cdr-text-center cdr-mb-space-four-x">Resources</h2>
 
-      <cdr-row cols="1 2@md" class="cdr-stack--xl">
+      <cdr-row cols="1 2@md" class="cdr-mb-space-four-x">
         <cdr-col>
-          <div class="home-card cdr-inset">
+          <div class="home-card cdr-space-inset-one-x">
             <cdr-row align="middle">
               <cdr-col span="9">
                 <div>
                   <cdr-text
                     tag="h3"
                     modifier="heading-small-static"
-                    class="cdr-stack"
+                    class="cdr-mb-space-one-x"
                   >Cedar Sketch UI toolkit</cdr-text>
                   <cdr-link :href="$withBase('/getting-started/as-a-designer/')" modifier="standalone">Download the Sketch library</cdr-link>
                 </div>
@@ -125,14 +125,14 @@
           </div>
         </cdr-col>
         <cdr-col>
-          <div class="home-card cdr-inset">
+          <div class="home-card cdr-space-inset-one-x">
             <cdr-row align="middle">
               <cdr-col span="9">
                 <div>
                   <cdr-text
                     tag="h3"
                     modifier="heading-small-static"
-                    class="cdr-stack"
+                    class="cdr-mb-space-one-x"
                   >Vue.js components</cdr-text>
                   <cdr-link href="https://www.npmjs.com/org/rei" target="_blank" modifier="standalone">View the NPM repository</cdr-link>
                 </div>
@@ -146,24 +146,24 @@
           </div>
         </cdr-col>
         <cdr-col>
-          <div class="home-card cdr-inset">
+          <div class="home-card cdr-space-inset-one-x">
             <cdr-text
               tag="h3"
               modifier="heading-small-static"
-              class="cdr-stack"
+              class="cdr-mb-space-one-x"
             >Contribute to Cedar</cdr-text>
-            <cdr-text class="cdr-stack">The Cedar team welcomes contributions from the community. Learn how to become a pilot contributor.  </cdr-text>
+            <cdr-text class="cdr-mb-space-one-x">The Cedar team welcomes contributions from the community. Learn how to become a pilot contributor.  </cdr-text>
             <cdr-link :href="$withBase('/getting-started/as-an-adopter/?active-link=contributions')" modifier="standalone">Help build Cedar</cdr-link>
           </div>
         </cdr-col>
         <cdr-col>
-          <div class="home-card cdr-inset">
+          <div class="home-card cdr-space-inset-one-x">
             <cdr-text
               tag="h3"
               modifier="heading-small-static"
-              class="cdr-stack"
+              class="cdr-mb-space-one-x"
             >Feedback & support</cdr-text>
-            <cdr-text class="cdr-stack">Questions, ideas, or comments? Your feedback can help improve Cedar. </cdr-text>
+            <cdr-text class="cdr-mb-space-one-x">Questions, ideas, or comments? Your feedback can help improve Cedar. </cdr-text>
             <cdr-link href="mailto:cedar@rei.com" modifier="standalone">Get in touch</cdr-link>
           </div>
         </cdr-col>
@@ -311,6 +311,7 @@ export default {
   background-color: $cdr-color-background-lightest;
   border: 1px solid $partly-cloudy;
   border-radius: $cdr-radius-softer;
+  display: block;
 }
 
 .home-resource-icon {

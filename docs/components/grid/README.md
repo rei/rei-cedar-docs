@@ -1,7 +1,7 @@
 ---
 {
   "title": "Grid",
-  "layout": "LayoutComponent",
+  "layout_type": "LayoutComponent",
   "summary": "A responsive, mobile first, fluid system that appropriately scales 12 columns as the device or viewport size increases",
   "title_metadata": "Layout, CdrGrid",
   #DO-DON'T
@@ -47,6 +47,9 @@
       "caption": "make gutters too large."
     },
   ],
+  "sandboxData": {
+    "components": "CdrRow, CdrCol"
+  },
   #API
   "versions": [
     {
@@ -170,7 +173,7 @@
 
 Use rows and columns to lay out content by specifying equal-widths for all columns
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/grid" sandbox-href="https://codesandbox.io/s/18r9z588l" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -223,7 +226,7 @@ Define x-axis alignment and distribute space for all columns per row. Containers
 
 ### Left
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/grid" sandbox-href="https://codesandbox.io/s/9z3nqnp2lw" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -245,7 +248,7 @@ Define x-axis alignment and distribute space for all columns per row. Containers
 
 ### Center
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/grid" sandbox-href="https://codesandbox.io/s/9z3nqnp2lw" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -267,7 +270,7 @@ Define x-axis alignment and distribute space for all columns per row. Containers
 
 ### Right
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/grid" sandbox-href="https://codesandbox.io/s/9z3nqnp2lw" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -289,7 +292,7 @@ Define x-axis alignment and distribute space for all columns per row. Containers
 
 ### Around
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/grid" sandbox-href="https://codesandbox.io/s/9z3nqnp2lw" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -311,7 +314,7 @@ Define x-axis alignment and distribute space for all columns per row. Containers
 
 ### Between
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/grid" sandbox-href="https://codesandbox.io/s/9z3nqnp2lw" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -337,7 +340,7 @@ Define y-axis alignment per row and distribute space across all columns per row.
 
 ### Top
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/grid" sandbox-href="https://codesandbox.io/s/18j2kwqy8j" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -359,7 +362,7 @@ Define y-axis alignment per row and distribute space across all columns per row.
 
 ### Bottom
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/grid" sandbox-href="https://codesandbox.io/s/18j2kwqy8j" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -381,7 +384,7 @@ Define y-axis alignment per row and distribute space across all columns per row.
 
 ### Middle
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/grid" sandbox-href="https://codesandbox.io/s/18j2kwqy8j" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -403,7 +406,7 @@ Define y-axis alignment per row and distribute space across all columns per row.
 
 ### Stretch
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/grid" sandbox-href="https://codesandbox.io/s/18j2kwqy8j" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -429,7 +432,7 @@ Defines gutter size for all columns on a row and maintains gutter size by breakp
 
 ### Default
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/grid" sandbox-href="https://codesandbox.io/s/l72jz831mq" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -460,7 +463,7 @@ Defines gutter size for all columns on a row and maintains gutter size by breakp
 
 ### xxs
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/grid" sandbox-href="https://codesandbox.io/s/l72jz831mq" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -491,7 +494,8 @@ Defines gutter size for all columns on a row and maintains gutter size by breakp
 
 ### None
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/grid" sandbox-href="https://codesandbox.io/s/l72jz831mq" >
+
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -526,7 +530,7 @@ Defines direction for items in a container for all columns of a row. This applie
 
 ### Default
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/grid" sandbox-href="https://codesandbox.io/s/nn29799pyj" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -557,7 +561,7 @@ Defines direction for items in a container for all columns of a row. This applie
 
 ### Vertical
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/grid" sandbox-href="https://codesandbox.io/s/nn29799pyj" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -592,7 +596,7 @@ Wrapping columns is the default; however, it is possible to disable or enable co
 
 ### Wrap (Default)
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/grid" sandbox-href="https://codesandbox.io/s/r48j2yw7kq" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -620,7 +624,7 @@ Wrapping columns is the default; however, it is possible to disable or enable co
 
 ### Nowrap (Scroll)
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/grid" sandbox-href="https://codesandbox.io/s/r48j2yw7kq" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -652,7 +656,7 @@ Controls column width by overriding columns value for a specific column or colum
 
 ### 12 Cols
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/grid" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" >
 
 ```html
 <div class="grid-example-wrap">
@@ -701,7 +705,7 @@ Controls column width by overriding columns value for a specific column or colum
 
 ### Span 2
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/grid" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" >
 
 ```html
 <div class="grid-example-wrap">
@@ -747,7 +751,7 @@ Controls column width by overriding columns value for a specific column or colum
 
 ### Span 4
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/grid" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" >
 
 ```html
 <div class="grid-example-wrap">
@@ -791,7 +795,7 @@ Adds empty space (or columns) to left or right of a column, either to the left (
 
 ### Offset Left
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/grid" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" >
 
 ```html
 <div class="grid-example-wrap">
@@ -822,7 +826,7 @@ Adds empty space (or columns) to left or right of a column, either to the left (
 
 ### Offset Right
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/grid" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" >
 
 ```html
 <div class="grid-example-wrap">
@@ -855,7 +859,7 @@ Adds empty space (or columns) to left or right of a column, either to the left (
 
 Overrides row-level alignment for a column. This can be applied to an individual column.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/grid" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" >
 
 ```html
 <div class="grid-example-wrap">
@@ -887,7 +891,7 @@ Defines nested columns (also known as `isRow`).
 
 ### Simple
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/grid" sandbox-href="https://codesandbox.io/s/x931y6r7q" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -914,7 +918,7 @@ Defines nested columns (also known as `isRow`).
 
 ### Complex
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/grid" sandbox-href="https://codesandbox.io/s/x931y6r7q" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -1169,66 +1173,6 @@ Grids are built from two components, **CdrRow** and **CdrCol**.
 ### CdrCol
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[1].api.slots" :slots-getting-started-link="false" />
 
-## Installation
-
-Resources are available within the [CdrGrid package](https://www.npmjs.com/package/@rei/cdr-grid):
-
-<cdr-doc-api type="installation" />
-
-- Component: `@rei/cdr-grid`
-- Component styles: `cdr-grid.css`
-
-<br/>
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrGrid** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -s @rei/cdr-grid
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS.
-import "@rei/cdr-grid/dist/cdr-grid.css";
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  <cdr-row>
-    <cdr-col>
-      ...
-    </cdr-col>
-    <cdr-col>
-      ...
-    </cdr-col>
-  </cdr-row>
-</template>
-
-<script>
-import { CdrRow, CdrCol } from '@rei/cdr-grid';
-export default {
-  ...
-  components: {
-     CdrRow,
-     CdrCol  
-  }
-}
-</script>
-```
-
 ## Usage
 
 **CdrRow** functions as a flexbox container, and **CdrCol** functions as a flexbox item.
@@ -1280,17 +1224,4 @@ Nested grids are made by nesting `cdr-col` and adding the `is-row` prop to the `
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.0.2
-
-- Add missing style property to package.json
-
-## 1.0.0
-
-- Consolidate responsive props to single prop that accepts responsive values. See full dev [changelog](https://github.com/rei/rei-cedar/blob/master/src/components/grid/CHANGELOG.md)
-- Replaces `@rei/cdr-row` and `@rei/cdr-col` packages (both components are available from this package)
-- The Grid CSS is contained in this package and not in `@rei/cdr-assets core.css`
-
-</template>
 </cdr-doc-tabs>

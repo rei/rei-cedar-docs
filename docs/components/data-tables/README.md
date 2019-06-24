@@ -1,7 +1,7 @@
 ---
 {
   "title": "Data Tables",
-  "layout": "LayoutComponent",
+  "layout_type": "LayoutComponent",
   "summary": "Organizes structured content so that it is easy to scan, make comparisons, and analyze the data",
   "title_metadata": "CdrDataTable",
   "tablelayout": [
@@ -139,7 +139,10 @@
     {
       "text": "Components/"
     }
-  ],
+  ],  
+  "sandboxData": {
+    "components": "CdrDataTable"
+  },
   "versions": [
     {
       "version": "1.0.0",
@@ -201,18 +204,6 @@
                 "description": "Sets the innerHTML for the <tbody> element. Includes default slot content."
               }
             ],
-            "installation": [
-              {
-                "name": "@rei/cdr-data-table",
-                "type": "Node module package",
-                "description": "Import the component into your project"
-              },
-              {
-                "name": "cdr-data-table.css",
-                "type": "Style sheet",
-                "description": "Component specific styles"
-              }
-            ]
           }
         }
       ]
@@ -229,13 +220,14 @@
 
 Basic layout with a column of row headers.  Rows alternate background colors.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/rj8l4k58p4" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" :model="{rowHeaders: $page.frontmatter.exampleTableData.rowHeaders, rowData: $page.frontmatter.exampleTableData.rowData, keyOrder: ['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']}">
+
 
 ```html
   <cdr-data-table
-    :row-headers="$page.frontmatter.exampleTableData.rowHeaders"
-    :row-data="$page.frontmatter.exampleTableData.rowData"
-    :key-order="['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']"
+    :row-headers="rowHeaders"
+    :row-data="rowData"
+    :key-order="keyOrder"
     id="default-example"
   />
 ```
@@ -246,14 +238,14 @@ Basic layout with a column of row headers.  Rows alternate background colors.
 
 Layout for making comparisons such as between size/sleeve length. Column headers and row headers are displayed. When columns scroll, row header column is locked in place.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/rj8l4k58p4">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" :model="{colHeaders: $page.frontmatter.exampleTableData.colHeaders, rowHeaders: $page.frontmatter.exampleTableData.rowHeaders, rowData: $page.frontmatter.exampleTableData.rowData, keyOrder: ['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']}">
 
 ```html
   <cdr-data-table
-    :col-headers="$page.frontmatter.exampleTableData.colHeaders"
-    :row-headers="$page.frontmatter.exampleTableData.rowHeaders"
-    :row-data="$page.frontmatter.exampleTableData.rowData"
-    :key-order="['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']"
+    :col-headers="colHeaders"
+    :row-headers="rowHeaders"
+    :row-data="rowData"
+    :key-order="keyOrder"
     id="col-headers-example"
   />
 ```
@@ -264,7 +256,7 @@ Layout for making comparisons such as between size/sleeve length. Column headers
 
 Layout with reduced spacing within each cell. All cells are borderless. Defines a column of row headers. 
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/rj8l4k58p4">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <cdr-data-table modifier="compact borderless" id="manual-example">
@@ -433,66 +425,6 @@ Data Table must have row headers and more than two columns of content, then the 
 ## Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
-
-## Installation
-
-Resources are available within the [CdrDataTable package:](https://www.npmjs.com/search?q=cdr-data-table)
-
-<cdr-doc-api type="installation" />
-
-- Component: `@rei/cdr-data-table`
-- Component styles: `cdr-data-table.css`
-
-<br />
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrDataTable** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -S @rei/cdr-data-table
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS.
-import "@rei/cdr-data-table/dist/cdr-data-table.css";
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  <cdr-data-table
-    :col-headers="colHeaders"
-    :row-headers="rowHeaders"
-    :row-data="rowData"
-    :key-order="keyOrder"
-  />
-</template>
-
-<script>
-import { CdrDataTable } from '@rei/cdr-data-table';
-export default {
-  ...
-  components: {
-     CdrDataTable  
-  }, 
-  data() {
-    ...
-  },
-}
-</script>
-```
 
 ## Usage
 
@@ -681,20 +613,4 @@ Following variants are available to the `cdr-data-table` modifier attribute:
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.1.0
-
-- Increased content resilience when using component API to render tablular data
-- Added `constrainWidth` prop
-- Changed `id` prop to be optional
-
-## 1.0.0
-
-- Supports size chart and technical specs table designs
-- Responsive scroll behavior by default
-- Supports accessible table captions
-- Git commit reference [(3169234)](https://github.com/rei/rei-cedar/commit/3169234cb99b8fc750efd2e3d5813e19c10f8e71)
-
-</template>
 </cdr-doc-tabs>

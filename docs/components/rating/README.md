@@ -1,7 +1,7 @@
 ---
 {
     "title": "Rating",
-    "layout": "LayoutComponent",
+    "layout_type": "LayoutComponent",
     "title_metadata": "Rating, Stars, Reviews, CdrRating",
     "summary": "Provide insight of others’ opinions for products, experiences and expert information",
     # "see_also": [
@@ -62,6 +62,9 @@
             "text": "Components/"
         }
     ],
+    "sandboxData": {
+      "components": "CdrRating"
+    },
     "versions": [{
       "components": [
           {
@@ -121,11 +124,11 @@
 
 Shows review rating with up to 5 stars highlighted. If rating is zero, star icons are displayed using the grey outline star icon. 
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.11.1/src/components/rating" sandbox-href="https://codesandbox.io/s/30r682534m">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/rating" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 <div>
-  <cdr-rating rating="3.33333" count="100" class="cdr-stack" />
+  <cdr-rating rating="3.33333" count="100" class="cdr-mb-space-one-x" />
   <cdr-rating rating="0" count="0" />
 </div>
 ```
@@ -136,7 +139,7 @@ Shows review rating with up to 5 stars highlighted. If rating is zero, star icon
 
 Creates a link to the corresponding review content if on the same page.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.11.1/src/components/rating" sandbox-href="https://codesandbox.io/s/30r682534m">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/rating" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 <div>
@@ -155,11 +158,11 @@ Creates a link to the corresponding review content if on the same page.
 
 Removes the word "Reviews" from the label for limited space layout.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.11.1/src/components/rating" sandbox-href="https://codesandbox.io/s/30r682534m">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/rating" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 <div>
-  <cdr-rating rating="3.33333" count="100" compact class="cdr-stack" />
+  <cdr-rating rating="3.33333" count="100" compact class="cdr-mb-space-one-x" />
   <cdr-rating rating="0" count="0" compact />
 </div>
 ```
@@ -170,16 +173,16 @@ Removes the word "Reviews" from the label for limited space layout.
 
 Change size for the star icon and text. Default size is medium.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.11.1/src/components/rating" sandbox-href="https://codesandbox.io/s/30r682534m">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/rating" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 <div>
-  <cdr-rating size="small" rating="3.33333" count="100" compact class="cdr-stack" />
-  <cdr-rating size="medium" rating="3.33333" count="100" compact class="cdr-stack" />
-  <cdr-rating size="large" rating="3.33333" count="100" compact class="cdr-stack" />
-  <cdr-rating size="small" rating="0" count="0" compact class="cdr-stack" />
-  <cdr-rating size="medium" rating="0" count="0" compact class="cdr-stack" />
-  <cdr-rating size="large" rating="0" count="0" compact class="cdr-stack" />
+  <cdr-rating size="small" rating="3.33333" count="100" compact class="cdr-mb-space-one-x" />
+  <cdr-rating size="medium" rating="3.33333" count="100" compact class="cdr-mb-space-one-x" />
+  <cdr-rating size="large" rating="3.33333" count="100" compact class="cdr-mb-space-one-x" />
+  <cdr-rating size="small" rating="0" count="0" compact class="cdr-mb-space-one-x" />
+  <cdr-rating size="medium" rating="0" count="0" compact class="cdr-mb-space-one-x" />
+  <cdr-rating size="large" rating="0" count="0" compact class="cdr-mb-space-one-x" />
 </div>
 ```
 
@@ -252,61 +255,8 @@ This component has compliance with WCAG guidelines by:
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-## Installation
-
-Resources are available within the [CdrRating package:](https://www.npmjs.com/package/@rei/cdr-rating)
-
-<cdr-doc-api type="installation" />
-
-- Component: `@rei/cdr-rating`
-- Component styles: `cdr-rating.css`
-
-<br/>
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrRating** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i @rei/cdr-rating
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS.
-import "@rei/cdr-rating/dist/cdr-rating.css";
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  ...
-     <cdr-rating rating="4.2" count="77" />
-  ...
-</template>
-
-<script>
-import { CdrRating } from '@rei/cdr-rating;
-export default {
-  ...
-  components: {
-     CdrRating  
-  }
-}
-</script>
-```
-
 ## Usage
+
 By default the **CdrRating** component renders the icons in medium size (24px) with the total number of reviews. 
 
 ### Rating Values
@@ -318,16 +268,4 @@ By default the **CdrRating** component renders the icons in medium size (24px) w
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.0.0
-
-- New star icons
-- Updated colors
-- `href` prop to make rating act as a link
-- Icon size updates (small: 16px, medium: 24px, large: 32px)
-- Add `size` prop to replace the `modifier` prop
-- Link to full dev [changelog](https://github.com/rei/rei-cedar/blob/master/src/components/rating/CHANGELOG.md)
-
-</template>
 </cdr-doc-tabs>

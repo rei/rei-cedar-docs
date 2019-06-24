@@ -45,10 +45,6 @@
 <script>
   import Vue from '$vue';
   // Note the '$vue', which is the full build of Vue, not the default runtime 'vue'. We need to import the full build to have access to the compiler
-  
-  // Import components that will be shown as examples
-  // import { CdrButton } from '@rei/cdr-button';
-  import { IconInformationStroke } from '@rei/cdr-icon';
 
   export default {
     name: 'CdrDocHtmlExampleList',

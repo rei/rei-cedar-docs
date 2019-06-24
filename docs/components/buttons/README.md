@@ -1,7 +1,7 @@
 ---
 {
   "title": "Buttons",
-  "layout": "LayoutComponent",
+  "layout_type": "LayoutComponent",
   "summary": "Invoke and communicate an action that will occur",
   "title_metadata": "CdrButton",
   "vertical": [
@@ -89,6 +89,9 @@
       "text": "Components/"
     }
   ],
+  "sandboxData": {
+    "components": "CdrButton"
+  },
   "versions": [
     {
       "components": [
@@ -169,18 +172,6 @@
             "description": "Sets the innerHTML for CdrButton. This is for the icon."
           }
         ],
-        "installation": [
-          {
-            "name": "@rei/cdr-button",
-            "type": "Node module package",
-            "description": "Import the component into your project"
-          },
-          {
-            "name": "cdr-button.css",
-            "type": "Style sheet",
-            "description": "Component specific styles"
-          }
-        ]
         }
       }
     ],
@@ -207,7 +198,7 @@
 
 Use primary buttons for actions to complete a task or move forward in a process such as &quot;Add to cart.&quot; There is only 1 primary action per major page section.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
+<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-button>Add to cart</cdr-button>
@@ -222,7 +213,7 @@ Use primary buttons for actions to complete a task or move forward in a process 
 
 Use secondary buttons for all actions that do not move the user to the next step or are additional user actions such as &quot;Add to wish list&quot; or &quot;Find a campout near you.&quot;
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
+<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-button modifier="secondary">Add to wish list</cdr-button>
@@ -235,7 +226,7 @@ Use secondary buttons for all actions that do not move the user to the next step
 
 Pair an icon with text to improve recognition about an object or action.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
+<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrButton, CdrIcon, CdrIconSprite'})" >
 
 ```html
   <div>
@@ -272,7 +263,7 @@ Pair an icon with text to improve recognition about an object or action.
 
 Use to visually communicate an object or action in limited space. Include alternative text to describe what button does.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/button" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrButton, CdrIcon, CdrIconSprite'})" >
 
 ```html
   <div>
@@ -297,7 +288,7 @@ Use to visually communicate an object or action in limited space. Include altern
 
 Change the button size based on where button is used. Default size is medium. Small is used for supplemental user actions such as product comparison or filter. Large is used for &quot;Add to cart&quot; on product pages or Call to Action.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/button" sandbox-href="https://codesandbox.io/s/wk2o3k9qwk" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
     <div>
@@ -442,64 +433,6 @@ Apply the following use cases when deciding when to use links as anchors or butt
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Installation
-
-Resources are available within the [CdrButton package:](https://www.npmjs.com/search?q=cdr-button)
-
-<cdr-doc-api type="installation" />
-
-- Component: `@rei/cdr-button`
-- Component styles: `cdr-button.css`
-
-<br />
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrButton** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -S @rei/cdr-button
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS.
-import "@rei/cdr-button/dist/cdr-button.css";
-```
-
-### 3. Add Component to a Template
-
-In this example we’ll create a medium-sized primary button, which is the default.
-
-_local.vue_
-
-```vue
-<template>
-  <cdr-button
-    type="button"
-  >
-    Add to cart
-  </cdr-button>
-</template>
-
-<script>
-import { CdrButton } from '@rei/cdr-button';
-export default {
-  ...
-  components: {
-     CdrButton  
-  }
-}
-</script>
-```
-
 ## Usage
 
 ### Size Prop
@@ -573,8 +506,7 @@ In the below example, a "Download" button is rendered as a button with icon and 
 </template>
 
 <script>
-import { CdrButton } from '@rei/cdr-button';
-import { CdrIcon } from '@rei/cdr-icon';
+import { CdrButton, CdrIcon } from '@rei/cedar';
 export default {
   ...
   components: {
@@ -622,7 +554,7 @@ The **CdrButton** package includes two specific icon-only variants. **CdrCloseBu
 </template>
 
 <script>
-import { CdrCloseButton } from '@rei/cdr-button';
+import { CdrCloseButton } from '@rei/cedar';
 
 export default {
   ...
@@ -636,30 +568,4 @@ export default {
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 2.0.0
-- Deprecated `responsive-size` prop
-- `size` prop accepts responsive values
-
-## 1.0.3
-- Fix CSS import for SSR
-
-## 1.0.2
-- Fix CSS outline bug
-
-## 1.0.1
-- Update **CdrIcon** dependency to peer/dev
-- Add **CdrIcon** CSS import
-
-## 1.0.0
-
-- Renders using an anchor or button element
-- Includes secondary button style
-- Supports small, medium, large, responsive, and full-width sizes
-- Works with `cdr-icon` for icons in buttons and icon-only buttons
-- **CdrButton** package includes **CdrCloseButton** and **CdrPlayButton** components
-- Git commit reference [(1531860)](https://github.com/rei/rei-cedar/pull/436/commits/15318606570811a6d53549a5335e0943a3463971)
-
-</template>
 </cdr-doc-tabs>

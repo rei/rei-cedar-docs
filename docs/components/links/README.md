@@ -1,7 +1,7 @@
 ---
 {
    "title": "Links",
-   "layout": "LayoutComponent",
+   "layout_type": "LayoutComponent",
    "summary": "Clickable text element to navigate to page section, another page or open an overlaid window such as modal dialog or popover",
    "title_metadata": "Hyperlink, Anchor, CdrButton, CdrLink",
    "see_also": [
@@ -17,38 +17,41 @@
         "href": '../cta/'
       }
     ],
-	  "standalone": [
-      {
-        "type": "do",
-        "image": "links/links_descriptivetext_do__16-9.png",
-        "ratio": "16-9",
-        "alt": "Image showing proper link usage",
-        "caption": "use clear, concise, and descriptive text."
-      },
-      {
-        "type": "dont",
-        "image": "links/links_descriptivetext_dont__16-9.png",
-        "ratio": "16-9",
-        "alt": "Image showing click here link",
-        "caption": "use “click here” or “start here” for link text."
-      }
-    ],
-    "link": [
-      {
-        "type": "do",
-        "image": "links/links_underlinestyle_text_do__16-9.png",
-        "ratio": "16-9",
-        "alt": "The link in this copy uses the cdr-link component, and, so correctly uses an underline",
-        "caption": "underline every link."
-      },
-      {
-        "type": "dont",
-        "image": "links/links_underlinestyle_text_dont__16-9.png",
-        "ratio": "16-9",
-        "alt": "The default link in body copy incorrectly does not use an underline",
-        "caption": "apply different visual treatments for hyperlinks."
-      }
-    ],
+  "standalone": [
+    {
+      "type": "do",
+      "image": "links/links_descriptivetext_do__16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing proper link usage",
+      "caption": "use clear, concise, and descriptive text."
+    },
+    {
+      "type": "dont",
+      "image": "links/links_descriptivetext_dont__16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing click here link",
+      "caption": "use “click here” or “start here” for link text."
+    }
+  ],
+  "link": [
+    {
+      "type": "do",
+      "image": "links/links_underlinestyle_text_do__16-9.png",
+      "ratio": "16-9",
+      "alt": "The link in this copy uses the cdr-link component, and, so correctly uses an underline",
+      "caption": "underline every link."
+    },
+    {
+      "type": "dont",
+      "image": "links/links_underlinestyle_text_dont__16-9.png",
+      "ratio": "16-9",
+      "alt": "The default link in body copy incorrectly does not use an underline",
+      "caption": "apply different visual treatments for hyperlinks."
+    }
+  ],
+  "sandboxData": {
+    "components": "CdrLink"
+  },
   "versions": [
     {
       "components": [
@@ -81,18 +84,6 @@
                 "description": "Sets the innerHTML for CdrLink. This includes text and html markup for icons."
               }
             ],
-            "installation": [
-              {
-                "name": "@rei/cdr-link",
-                "type": "Node module package",
-                "description": "Import the component into your project"
-              },
-              { 
-                "name": "cdr-link.css", 
-                "type": "css", 
-                "description": "Component specific styles" 
-              }
-            ]
           }
         }
       ],
@@ -110,7 +101,7 @@
 
 Display within body copy for articles, hub cards, footer, or recommendations.
 
-<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9" >
+<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/link" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <cdr-text>
@@ -132,7 +123,7 @@ Display within body copy for articles, hub cards, footer, or recommendations.
 
 Display independently with a call to action. Some examples are for finding a store, or viewing related products.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
+<cdr-doc-example-code-pair repository-href="/src/components/link" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <cdr-link href="https://www.rei.com" modifier="standalone">
@@ -146,7 +137,7 @@ Display independently with a call to action. Some examples are for finding a sto
 
 Display standalone link with icon on left.
 
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
+<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrLink, CdrIconSprite'})">
 
 ```html
   <div>
@@ -156,7 +147,7 @@ Display standalone link with icon on left.
       <cdr-icon
           use="#shipping"
           inherit-color
-          class="cdr-inline-left--sm"
+          class="cdr-mr-space-half-x"
       />
       This item ships for FREE!
     </cdr-link>
@@ -169,7 +160,7 @@ Display standalone link with icon on left.
 
 Display standalone link with icon on right.
 
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/link" sandbox-href="https://codesandbox.io/s/jnv1rko1z9">
+<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrLink, CdrIconSprite'})">
 
 ```html
   <div>
@@ -180,7 +171,7 @@ Display standalone link with icon on right.
         <cdr-icon
             use="#external-link"
             inherit-color
-            class="cdr-inline-right--sm"/>
+            class="cdr-ml-space-half-x"/>
       </cdr-link>
   </div>
 ```
@@ -298,61 +289,6 @@ WebAIM: Links and Hypertext [Introduction to Links and Hypertext](https://webaim
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Installation
-
-Resources are available within the [CdrLink package](https://www.npmjs.com/package/@rei/cdr-link):
-
-- Component: `@rei/cdr-link`
-- Component styles: `cdr-link.css`
-
-<br/>
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrLink** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -S @rei/cdr-link
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS.
-import "@rei/cdr-link/dist/cdr-link.css";
-
-// If your link will display an icon ensure you also include the icon’s CSS file.
-import "@rei/cdr-link/dist/cdr-icon.css";
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-...
-    <cdr-link href="rei.com">Ten Essentials.</cdr-link>
-...
-</template>
-
-<script>
-import { CdrLink } from '@rei/cdr-link';
-export default {
-  ...
-  components: {
-     CdrLink  
-  }
-}
-</script>
-```
-
 ## Usage
 
 By default, the component renders using an anchor element and requires an `href` attribute to render a valid accessible link.
@@ -383,21 +319,4 @@ Following variants are available to the `cdr-link` modifier attribute:
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.0.3
-- **CdrIcon** dependency update
-
-## 1.0.2
-- **CdrIcon** dependency update
-
-## 1.0.0
-
-- Displays as an inline or standalone variant
-- Renders using an anchor or button element
-- Includes a property to allow the `cdr-icon` fill color to inherit the link color value
-- Supports `cdr-icon` to display on left, on right, or, both. 
-- Git commit reference [9d404f4](https://github.com/rei/rei-cedar/commit/9d404f4)
-
-</template>
 </cdr-doc-tabs>

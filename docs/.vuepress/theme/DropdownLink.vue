@@ -31,7 +31,7 @@
 import { isExternal, ensureExt } from './util'
 import NavLink from './NavLink.vue'
 import DropdownTransition from './DropdownTransition.vue'
-import { IconCaretUp, IconCaretDown } from '@rei/cdr-icon';
+import { IconCaretUp, IconCaretDown } from '@rei/cedar';
 
 export default {
   components: { NavLink, DropdownTransition, IconCaretDown, IconCaretUp },

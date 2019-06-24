@@ -1,7 +1,7 @@
 ---
 {
   "title": "Call to Action",
-  "layout": "LayoutComponent",
+  "layout_type": "LayoutComponent",
   "summary": "Stylized link used in campaigns and promotions to encourage users to further explore featured products, services or offers",
   "title_metadata": "CTA, CTA Button, CdrCta",
   "placement": [
@@ -89,6 +89,9 @@
       "text": "Components/"
     }
   ],
+  "sandboxData": {
+    "components": "CdrCta"
+  },
   "versions": [
     {
       "components": [
@@ -157,7 +160,7 @@
 
 Use dark Call to Action over a light background image or color to provide proper contrast. This is the default Call to Action style.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/cta" sandbox-href="https://codesandbox.io/s/9ojj43x1op">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/cta" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <cdr-cta 
@@ -174,7 +177,7 @@ Use dark Call to Action over a light background image or color to provide proper
 
 Use light Call to Action over a dark background image or color to provide proper contrast.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/cta" sandbox-href="https://codesandbox.io/s/9ojj43x1op">
+<cdr-doc-example-code-pair repository-href="/src/components/cta" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <cdr-cta 
@@ -191,7 +194,7 @@ Use light Call to Action over a dark background image or color to provide proper
 
 Use sale Call to Action for off-price placements.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/cta" sandbox-href="https://codesandbox.io/s/9ojj43x1op">
+<cdr-doc-example-code-pair repository-href="/src/components/cta" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <cdr-cta 
@@ -208,7 +211,7 @@ Use sale Call to Action for off-price placements.
 
 Use brand Call to Action as an alternative.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/cta" sandbox-href="https://codesandbox.io/s/9ojj43x1op">
+<cdr-doc-example-code-pair repository-href="/src/components/cta" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <cdr-cta
@@ -225,7 +228,7 @@ Use brand Call to Action as an alternative.
 
 Adds drop shadow to increase contrast and visibility of Call to Action when placed over an image.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/cta" sandbox-href="https://codesandbox.io/s/9ojj43x1op">
+<cdr-doc-example-code-pair repository-href="/src/components/cta" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <cdr-cta 
@@ -338,60 +341,6 @@ To construct consistent and universal Call to Actions across the site:
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Installation
-
-Resources are available with the [CdrCta package](https://www.npmjs.com/package/@rei/cdr-cta):
-
-<cdr-doc-api type="installation" />
-
-- Component: `@rei/cdr-cta`
-- Component styles: `cdr-cta.css`
-
-<br />
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrCta** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -s @rei/cdr-cta
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS
-import "@rei/cdr-cta/dist/cdr-cta.css";
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-...
-  <cdr-cta href="rei.com"></cdr-cta>
-...
-</template>
-
-<script>
-import { CdrCta } from '@rei/cdr-cta';
-export default {
-  ...
-  components: {
-    CdrCta
-  }
-}
-</script>
-```
-
 ## Usage
 
 This example code renders a full width `cdr-cta`, with the `elevated` modifier and the `sale` theme.
@@ -425,25 +374,4 @@ The following variants are available to the `cdr-cta` modifier attribute:
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.1.0
-- Remove **CdrIcon** dependency
-
-## 1.0.3
-- Fix CSS import for SSR
-
-## 1.0.2
-- Update **CdrIcon** dependency
-
-## 1.0.1
-- Update **CdrAssets** dependency
-
-## 1.0.0
-
-- Includes suppoort for various themes
-- Renders default and full-width sizes
-- Git commit reference [(b944d3a)](https://github.com/rei/rei-cedar/commit/b944d3a91b45dd1778d71674eaf26073f4521caa)
-
-</template>
 </cdr-doc-tabs>

@@ -4,8 +4,9 @@
   "description": "This is the API documentation site for REI Cedar 2 Framework components",
   "private": false,
   "scripts": {
-    "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "dev": "npm run copy-cedar && vuepress dev docs",
+    "build": "npm run copy-cedar && cross-env NODE_ENV=production vuepress build docs",
+    "copy-cedar": "cp ./node_modules/@rei/cedar/dist/cedar.css ./docs/.vuepress/public/cedar.css"
   },
   "author": "REI Software Engineering",
   "license": "ISC",
@@ -17,35 +18,20 @@
     "type": "git",
     "url": "git+https://github.com/rei/rei-cedar-docs.git"
   },
+  "engines": {
+    "npm": "^6.9.0"
+  },
   "devDependencies": {
     "@rei/cdr-tokens": "^1.0.0",
+    "@vuepress/plugin-google-analytics": "^1.0.0-rc.1",
+    "codesandbox": "^2.1.6",
+    "cross-env": "^5.2.0",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
-    "vuepress": "^0.14.10"
+    "vuepress": "^1.0.1"
   },
   "dependencies": {
-    "@rei/cdr-accordion": "^1.0.4",
-    "@rei/cdr-assets": "^0.3.0",
-    "@rei/cdr-breadcrumb": "^1.0.2",
-    "@rei/cdr-button": "^2.0.0",
-    "@rei/cdr-caption": "^1.0.1",
-    "@rei/cdr-checkbox": "^1.0.2",
-    "@rei/cdr-cta": "^1.1.1",
-    "@rei/cdr-data-table": "^1.1.1",
-    "@rei/cdr-grid": "^1.0.3",
-    "@rei/cdr-icon": "^2.0.1",
-    "@rei/cdr-img": "^1.0.2",
-    "@rei/cdr-input": "^1.0.1",
-    "@rei/cdr-link": "^1.0.4",
-    "@rei/cdr-list": "^1.0.2",
-    "@rei/cdr-pagination": "^1.0.1",
-    "@rei/cdr-quote": "^1.0.1",
-    "@rei/cdr-radio": "^1.0.2",
-    "@rei/cdr-rating": "^1.0.1",
-    "@rei/cdr-select": "^0.1.4",
-    "@rei/cdr-tabs": "^1.0.1",
-    "@rei/cdr-text": "^1.0.2",
-    "npm": "^6.9.0",
+    "@rei/cedar": "^2.0.0",
     "scrollmonitor": "^1.2.4",
     "smoothscroll-polyfill": "^0.4.3",
     "stickyfilljs": "^2.0.5"

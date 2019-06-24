@@ -1,7 +1,7 @@
 ---
 {
   "title": "Icons",
-  "layout": "LayoutComponent",
+  "layout_type": "LayoutComponent",
   "summary": "Communicates meaning through the use of graphics",
   "title_metadata": "CdrIcon",
   "breadcrumbs": [
@@ -75,6 +75,9 @@
       "caption": "create new color tokens for icons or use secondary color tokens."
     }
   ],
+  "sandboxData": {
+    "components": "CdrIcon"
+  },
   "versions": [
     {
       "components": [
@@ -134,7 +137,7 @@
 
 A collection of SVG icon files composed into a single file. This method provides a single server download request and caches icons for display. This is the most efficient way of displaying large numbers of icons.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.09.1/src/components/icon" sandbox-href="https://codesandbox.io/s/wq7x673mol" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/icon" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrIcon, CdrIconSprite'})" >
 
 ```html
   <cdr-icon-sprite />
@@ -149,7 +152,7 @@ A collection of SVG icon files composed into a single file. This method provides
 
 Display any icon separately. This may be the easiest way to use an icon on a page however it is not recommended for every circumstance. When using a large number of icons, it will generate multiple server requests and slow down performance.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.09.1/src/components/icon" sandbox-href="https://codesandbox.io/s/wq7x673mol" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/icon" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'IconCaretUp, IconCaretDown'})" >
 
 ```html
   <icon-caret-up />
@@ -162,7 +165,7 @@ Display any icon separately. This may be the easiest way to use an icon on a pag
 
 Create a new SVG icon using any valid internal SVG markup. This method creates an outer SVG wrapper for accessibility and styles. This is not recommended if using a large number of icons.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.09.1/src/components/icon" sandbox-href="https://codesandbox.io/s/wq7x673mol" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/icon" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-icon>
@@ -258,15 +261,15 @@ List of icons with names and descriptions about when or how to use each icon. Ic
 ## Behavior
 When using icons with links or buttons, make sure that the icon communicates intended meaning.
 
-<do-dont :examples="$page.frontmatter.meaning" class="cdr-stack--lg"/>
+<do-dont :examples="$page.frontmatter.meaning" class="cdr-mb-space-two-x"/>
 
 Ensure that icons are sized to provide a minimum click or touch target.
 
-<do-dont :examples="$page.frontmatter.clearance" class="cdr-stack--lg"/>
+<do-dont :examples="$page.frontmatter.clearance" class="cdr-mb-space-two-x"/>
 
 Ensure that icons use contrast ratio of 4.5:1 between icon color and background color.
 
-<do-dont :examples="$page.frontmatter.color" class="cdr-stack--lg"/>
+<do-dont :examples="$page.frontmatter.color" class="cdr-mb-space-two-x"/>
 
 
 </cdr-doc-table-of-contents-shell>
@@ -285,64 +288,15 @@ Ensure that icons use contrast ratio of 4.5:1 between icon color and background 
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Installation
-
-Resources are available within the [CdrIcon package](https://www.npmjs.com/package/@rei/cdr-icon):
-
-- Component: `@rei/cdr-icon`
-- Component styles: `cdr-icon.css`
-
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrIcon** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -S @rei/cdr-icon
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```bash
-// import your required CSS.
-import '@rei/cdr-icon/dist/cdr-icon.css';
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  ...
-    <icon-arrow-down />
-  ...
-</template>
-
-<script>
-import { IconArrowDown } from '@rei/cdr-icon';
-export default {
-  ...
-  components: {
-     IconArrowDown
-  }
-}
-</script>
-```
-
 ## Usage
+
+For a list of all available icons and their names, see the [Icon Library](?active-tab=design-guidelines&active-link=icon-library)
 
 The **CdrIcon** package contains many different components:
 
 1. **CdrIcon**: This is a basic SVG wrapper. This component allows for using Non-Cedar SVGs. Use this component in conjunction with the CdrIconSprite package
 2. **CdrIconSprite**: A symbol definition sprite with all Cedar icons
-3. **Individual icons**: For available icons, view [Cedar Icon Library](?active-tab=design-guidelines&active-link=icon-library) on Design Guidelines tab
+3. **Individual icons components**: A component with the icon's svg inlined
 
 
 There are 3 different options to display SVG icons on your page using the **CdrIcon** package.
@@ -369,7 +323,7 @@ _App.vue (base template)_
 </template>
 
 <script>
-import { CdrIconSprite } from '@rei/cdr-icon';
+import { CdrIconSprite } from '@rei/cedar';
 
 ...
 components: {
@@ -389,7 +343,7 @@ _Child.vue (any descendant component of App.vue above)_
 </template>
 
 <script>
-import { CdrIcon } from '@rei/cdr-icon';
+import { CdrIcon } from '@rei/cedar';
 
 ...
 components: {
@@ -418,7 +372,7 @@ Within an individual component (there may be a better way to scale this if the c
 
 <script>
 // import the sprite so file-loader will do its magic
-@import iconUrl from '@rei/cdr-assets/dist/cdr-icons.svg`;
+import iconUrl from '@rei/cdr-assets/dist/cdr-icons.svg`;
 
 export default {
   ...
@@ -436,10 +390,6 @@ export default {
 
 This may be the easiest way to use an icon on a page however use this method carefully. This method will increase HTML file size and slow down performance if using a lot of icons.
 
-Requires:
-- Install  `@rei/cdr-icon`
-
-
 ```vue
 <template>
   ...
@@ -449,7 +399,7 @@ Requires:
 </template>
 
 <script>
-import { IconCaretRight, IconClock } from '@rei/cdr-icon';
+import { IconCaretRight, IconClock } from '@rei/cedar';
 
 ...
   components: {
@@ -487,7 +437,7 @@ Use any valid SVG markup in the **CdrIcon** slot.
 </template>
 
 <script>
-@import { CdrIcon } from '@rei/cdr-icon';
+import { CdrIcon } from '@rei/cedar';
 
 ...
   components: {
@@ -501,20 +451,4 @@ Use any valid SVG markup in the **CdrIcon** slot.
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 2.0.0
- 
-- Deprecated `modifier` prop
-- Added `size` and `inherit-color` prop
-
-## 1.0.0
-
-- Add grid-view, list-view, and scan-barcode icons
-- All icon components have a slot that accepts any SVG xml
-- Individual icon components for all icons (use only what you need)
-- **CdrIcon** is lower-level component that acts as an SVG wrapper
-- Link to full dev [changelog](https://github.com/rei/rei-cedar/blob/18.09.1/src/components/icon/CHANGELOG.md)
-
-</template>
 </cdr-doc-tabs>

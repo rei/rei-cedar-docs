@@ -14,7 +14,7 @@
         </li>
       </ul>
     </div>
-    <div class="cdr-doc-tabs__panels">
+    <div class="cdr-doc-tabs__panels" ref="tabPanel">
       <div class="cdr-doc-tabs__panels-inner">
         <div v-for="tab in tabLabelData" class="cdr-doc-tab-panel" :class="{'cdr-doc-tab-panel--active': tab.active }" :aria-hidden="!tab.active" :aria-labelledby="tab.linkId">
           <slot :name="tab.label"/>
@@ -37,7 +37,7 @@ export default {
   props: {
     labels: {
       default: function() {
-        return ['Overview', 'Design Guidelines', 'API', 'History']
+        return ['Overview', 'Design Guidelines', 'API']
       },
       type: Array
     },
@@ -73,6 +73,7 @@ export default {
       if (event) event.preventDefault();
       this.activeTab = activeTabLabel;
       this.$root.$emit('cdrDocTabsActiveTabSwitched', this.activeTab);
+      this.$refs['tabPanel'].scrollIntoView(true);
     }
   }
 }
@@ -87,6 +88,11 @@ export default {
     padding: $cdr-space-inset-one-x;
     padding-bottom: 0;
     padding-top: 0;
+    background-color: $cdr-color-background-lightest;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-top: $cdr-doc-border-separator;
   }
 
   .cdr-doc-tabs-list {
@@ -101,7 +107,7 @@ export default {
   .cdr-doc-tabs__panels {
     padding: $cdr-space-inset-one-x;
     padding-bottom: 0;
-    padding-top: 0;
+    padding-top: $cdr-space-inset-two-x;
   }
 
   .cdr-doc-tabs__panels-inner {

@@ -1,7 +1,7 @@
 ---
 {
   "title": "Radio Buttons",
-  "layout": "LayoutComponent",
+  "layout_type": "LayoutComponent",
   "summary": "Permits user to select only one option from a list of two or more",
   "title_metadata": "Radios, CdrRadio",
   "see_also": [
@@ -61,6 +61,9 @@
       "caption": "add terminal punctuation at the end of a label."
     }
   ],
+  "sandboxData": {
+    "components": "CdrRadio"
+  },
   "versions": [
     {
       "components": [
@@ -134,7 +137,7 @@
 ## Default
 Default and standard spacing for radio buttons.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/radio" sandbox-href="https://codesandbox.io/s/4rx86n66l9" :backgroundToggle="false" :codeMaxHeight="false" :model="{ex: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/radio" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{ex: ''}">
 
 ```html
 <div>
@@ -164,7 +167,7 @@ Default and standard spacing for radio buttons.
 
 Compact spacing for radio buttons.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/radio" sandbox-href="https://codesandbox.io/s/4rx86n66l9" :backgroundToggle="false" :codeMaxHeight="false" :model="{ex: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/radio" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{ex: ''}">
 
 ```html
 <div>
@@ -197,7 +200,7 @@ Compact spacing for radio buttons.
 
 Custom styles for radio buttons.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/radio" sandbox-href="https://codesandbox.io/s/4rx86n66l9" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example" :model="{ex: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/radio" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {styleTag: '.no-box:checked ~ .no-box__content {color: green;}'})" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example" :model="{ex: ''}">
 
 ```html
 <div>
@@ -323,69 +326,6 @@ Radio button labels should:
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events"/>
 
-## Installation
-
-Resources are available within the [CdrRadio package](https://www.npmjs.com/package/@rei/cdr-radio):
-
-- Component: `@rei/cdr-radio`
-- Component styles: `cdr-radio.css`
-
-<br/>
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrRadio** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -s @rei/cdr-radio
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS.
-import "@rei/cdr-radio/dist/cdr-radio.css";
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  <cdr-radio
-    v-model="model"
-    name="ship-pref"
-    value="ship"
-  >
-    Ship to address
-  </cdr-radio>
-  <cdr-radio
-    v-model="model"
-    name="ship-pref"
-    value="pickup"
-  >
-    Pick up in store
-  </cdr-radio>
-</template>
-
-<script>
-import { CdrRadio} from '@rei/cdr-radio';
-export default {
-  ...
-  components: {
-     CdrRadio
-  }
-}
-</script>
-```
-
 ## Usage
 
 The **CdrRadio** component requires `v-model` to track the value of selected radios.
@@ -429,14 +369,4 @@ Use the `hide-figure` modifier to hide the radio button itself, which leaves tex
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.0.0
-
-- Sets radio value to String, Number, Boolean, Object, Array, Symbol or Function
-- Hides radio buttons with `hide-figure` modifier
-- Includes default and compact styling
-- Git commit reference [5fe44c8](https://github.com/rei/rei-cedar/commit/5fe44c8d3f53a50e0d21e77a4c9beb23486f6a53)
-
-</template>
 </cdr-doc-tabs>

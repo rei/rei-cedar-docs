@@ -1,7 +1,7 @@
 ---
 {
   "title": "Tabs",
-  "layout": "LayoutComponent",
+  "layout_type": "LayoutComponent",
   "summary": "Organize and group related content into smaller sections navigable within a single container",
   "title_metadata": "Tab Panels, CdrTabs",
   "select": [
@@ -68,6 +68,9 @@
       "caption": "truncate tab labels. If a label overruns the container, find a shorter alternative."
     }
   ],
+  "sandboxData": {
+    "components": "CdrTabs, CdrTabPanel"
+  },
   "versions": [
     {
       "components": [
@@ -130,7 +133,7 @@
 ## Default
 Tab buttons align left and bottom border expands to full width of container.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" sandbox-href="https://codesandbox.io/s/6w37mxwozn" :backgroundToggle="false" :codeMaxHeight="false" >
+<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" >
 
 ```html
 
@@ -147,9 +150,9 @@ Tab buttons align left and bottom border expands to full width of container.
 
 ## Compact
 
-Reduced spacing around the tab buttons create a denser visual design.
+Reduced spacing around the tab buttons to create a denser visual design.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.11.1/src/components/tabs" sandbox-href="https://codesandbox.io/s/6w37mxwozn" :backgroundToggle="false" :codeMaxHeight="false">
+<cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false">
 
 ```html
 <cdr-tabs modifier="compact" height="100px">
@@ -166,7 +169,7 @@ Reduced spacing around the tab buttons create a denser visual design.
 
 Tab buttons space evenly across the container.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.11.1/src/components/tabs" sandbox-href="https://codesandbox.io/s/6w37mxwozn" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
+<cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
 
 ```html
 <cdr-tabs modifier="full-width" height="100px">
@@ -183,7 +186,7 @@ Tab buttons space evenly across the container.
 
 Bottom border of tab header list is removed.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.11.1/src/components/tabs" sandbox-href="https://codesandbox.io/s/6w37mxwozn" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
+<cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
 
 ```html
 <cdr-tabs modifier="no-border" height="100px">
@@ -243,6 +246,7 @@ This component has compliance with WCAG guidelines by:
 
 - Order the tab buttons by priority or importance from left to right
 - Keep tab labels short and meaningful. Between 1-2 words is best and written in plain language
+- Ensure that each tab label is unique
 - Never truncate tab labels
 - Use title caps for tab labels
 
@@ -298,63 +302,6 @@ Tabs are built from two components, **CdrTabs** and **CdrTabPanel**, which are m
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
 
-## Installation
-
-Resources are available within the [CdrTabs package](https://www.npmjs.com/package/@rei/cdr-tabs):
-
-- Component: `@rei/cdr-tabs`
-- Component styles: `cdr-tabs.css`
-
-<br/>
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrTabs** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -s @rei/cdr-tabs
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS.
-import "@rei/cdr-tabs/dist/cdr-tabs.css";
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  ...
-     <cdr-tabs>
-       <cdr-tab-panel name=”tab1”>TAB1 CONTENT GOES HERE</cdr-tab-panel>
-       <cdr-tab-panel name=”tab2”>TAB2 CONTENT GOES HERE</cdr-tab-panel>
-       <cdr-tab-panel name=”tab3”>TAB3 CONTENT GOES HERE</cdr-tab-panel>
-     </cdr-tabs>
-  ...
-</template>
-
-<script>
-import { CdrTabs, CdrTabPanel } from '@rei/cdr-tabs’;
-export default {
-  ...
-  components: {
-     CdrTabs,
-     CdrTabPanel
-  },
-}
-</script>
-```
-
 ## Usage
 
 The `cdr-tab-panel name` property sets the tab display value and is used for reference.
@@ -377,15 +324,4 @@ Following variants are available to the `cdr-tabs` modifier attribute:
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.0.0
-
-- Organizes content across different screens
-- Enables navigation between content with Tab Header List
-- Tabs Header List supports overflow by allowing horizontal scrolling of header
-- Incorporates accessibility and SEO compliant features
-- Git commit reference [(cc6b3fb)](https://github.com/rei/rei-cedar/blob/next/src/components/tabs/CHANGELOG.md)
-
-</template>
 </cdr-doc-tabs>

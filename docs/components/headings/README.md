@@ -1,7 +1,7 @@
 ---
 {
   "title": "Headings",
-  "layout": "LayoutComponent",
+  "layout_type": "LayoutComponent",
   "summary": "Used as titles to create hierarchical information structure within a page layout",
   "title_metadata": "CdrText",
   "see_also": [
@@ -33,6 +33,9 @@
       "caption": "use heading tag for visual results. Instead use heading modifiers."
     }
   ],
+  "sandboxData": {
+    "components": "CdrText"
+  },
   "versions": [
     {
       "components": [
@@ -76,7 +79,8 @@
 
 Use for responsive display heading.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4" >
+
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-text
@@ -92,7 +96,8 @@ Use for responsive display heading.
 
 Use for non-responsive display heading that maintains font size across all viewport sizes.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4">
+
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <cdr-text modifier="display-static">
@@ -106,7 +111,8 @@ Use for non-responsive display heading that maintains font size across all viewp
 
 Use for a responsive large heading.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4">
+
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <cdr-text modifier="heading-large">
@@ -120,7 +126,8 @@ Use for a responsive large heading.
 
 Use for non-responsive large heading that maintains font size across all viewport sizes.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4">
+
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <cdr-text modifier="heading-large-static">
@@ -134,7 +141,8 @@ Use for non-responsive large heading that maintains font size across all viewpor
 
 Use for a responsive medium heading.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4">
+
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <cdr-text modifier="heading-medium">
@@ -148,7 +156,8 @@ Use for a responsive medium heading.
 
 Use for non-responsive medium heading that maintains font size across all viewport sizes.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4">
+
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <cdr-text modifier="heading-medium-static">
@@ -162,7 +171,8 @@ Use for non-responsive medium heading that maintains font size across all viewpo
 
 Use for a responsive small heading.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4">
+
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <cdr-text modifier="heading-small">
@@ -176,7 +186,8 @@ Use for a responsive small heading.
 
 Use for non-responsive small heading that maintains font size across all viewport sizes.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4">
+
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <cdr-text modifier="heading-small-static">
@@ -190,7 +201,8 @@ Use for non-responsive small heading that maintains font size across all viewpor
 
 Use for subheadings that are positioned beneath small headings.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4">
+
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <cdr-text modifier="subheading">
@@ -288,58 +300,6 @@ Responsive heading font sizes are the default for heading levels except subheadi
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Installation
-
-Resources are available within the [CdrText package](https://www.npmjs.com/package/@rei/cdr-text)
-
-- Component: `@rei/cdr-text`
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrText** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -S @rei/cdr-text
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS.
-import '@rei/cdr-assets/dist/cdr-core.css';
-import '@rei/cdr-assets/dist/cdr-fonts.css';
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  <cdr-text
-    modifier="body"
-  >
-    For long-form content like expert advice articles or co-op journal entries.
-  </cdr-text>
-</template>
-
-<script>
-import { CdrText } from '@rei/cdr-text';
-export default {
-  ...
-  components: {
-     CdrText  
-  }
-}
-</script>
-```
-
 ## Usage
 
 The **CdrText** component allows for styling any html element with available text styles. Visual style and semantic meaning are managed independently by providing: 
@@ -428,22 +388,4 @@ In fixed sections of the page (e.g. sidebars), heading levels **should not** cha
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.0.0
-
-- Enables the visual style of many heading levels and subheading to be applied flexibly to HTML headings (`<h1>` to `<h6>`) and other HTML elements
-- Enables responsive heading font sizes that are applied by default with following modifiers:
-  - Display
-  - Heading-large
-  - Heading-medium
-  - Heading-small
-- Disables responsive heading font sizes as an alternative with following modifiers:
-  - Display-static
-  - Heading-large-static
-  - Heading-medium-static
-  - Heading-small-static
-  - Subheading
-
-</template>
 </cdr-doc-tabs>

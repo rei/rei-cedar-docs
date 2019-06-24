@@ -1,7 +1,7 @@
 <template>
   <cdr-row
       cols="3 6@md 10@lg"
-      class="cdr-stack--lg icon-demo-grid"
+      class="cdr-mb-space-two-x icon-demo-grid"
       gutter="xxs"
     >
       <cdr-col
@@ -19,7 +19,10 @@
 </template>
 
 <script>
-import * as Icons from '@rei/cdr-icon';
+import * as Components from '@rei/cedar';
+import getIcons from '../../../utils/getIcons.js';
+
+const Icons = getIcons(Components);
 
 export default {
   name: "IconTable",

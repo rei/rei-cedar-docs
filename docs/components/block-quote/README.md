@@ -1,7 +1,7 @@
 ---
 {
     "title": "Block Quote",
-    "layout": "LayoutComponent",
+    "layout_type": "LayoutComponent",
     "title_metadata": "Quote, CdrQuote",
     "summary": "Short excerpt with an external citation and citation URL that is set off from the main body of text",
     "see_also": [
@@ -86,6 +86,9 @@
         {
         "text": "Components/"
     }],
+    "sandboxData": {
+      "components": "CdrQuote"
+    },
     "versions": [{
         "components": [
             {
@@ -121,18 +124,6 @@
                         "description": "Sets the quote attribution text."
                     }
                 ],
-                "installation": [
-                    {
-                        "name": "@rei/cdr-quote",
-                        "type": "Node module package",
-                        "description": "Import the component into your project"
-                    },
-                    {
-                        "name": "cdr-quote.css",
-                        "type": "Style sheet",
-                        "description": "Component specific styles"
-                    }
-                ]
             }
         }],
         "version": "1.0.0"
@@ -148,14 +139,14 @@
 
 Default block quote can be used with the following HTML tags: `<p>`, `<div>`, `<aside>`. This is responsive with styles for XS breakpoint
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.09.2/src/components/quote" sandbox-href="https://codesandbox.io/s/q722z00mk4">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/quote" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 <div>
   <cdr-quote
         modifier="block"
-        summary="Stewardship is a choice and a mindset. It means that we look at our business differently, and we take individual responsibility for making a positive, lasting impact."
-        citation="Jerry Stritzke, REI President and CEO"
+        summary="Never doubt that a small group of thoughtful, committed citizens can change the world; indeed, it's the only thing that ever has."
+        citation="Margaret Mead"
       />
 </div>
 ```
@@ -239,76 +230,7 @@ When block quotes are displayed in at XS breakpoints, the text will use a smalle
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-## Installation
-
-Resources are available within the [CdrQuote package:](https://www.npmjs.com/package/@rei/cdr-quote)
-
-<cdr-doc-api type="installation" />
-
-- Component: `@rei/cdr-quote`
-- Component styles: `cdr-quote.css`
-
-<br/>
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrQuote** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-import "@rei/cdr-quote/dist/cdr-quote.css";
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS.
-import "@rei/cdr-link/dist/cdr-quote.css";
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  <cdr-quote
-     cite="https://www.rei.com/stewardship"
-     summary="As a co-op, we’re a different kind of company.
-     We put purpose before profits and act with the long-term
-     interests of our members in mind. Being a co-op also means
-     we engage with our community and believe in collective
-     accountability."
-    citation="REI Stewardship"
- />
-</template>
-
-<script>
-import { CdrQuote } from '@rei/cdr-quote';
-export default {
-  ...
-  components: {
-     CdrQuote
-  }
-}
-</script>
-```
-
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.0.0
-
-- Includes support for Block Quote component
-- Includes support for Pull Quote component
-- Link to full dev [changelog](https://github.com/rei/rei-cedar/blob/18.09.2/src/components/quote/CHANGELOG.md)
-
-</template>
 </cdr-doc-tabs>

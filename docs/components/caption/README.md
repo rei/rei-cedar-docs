@@ -1,7 +1,7 @@
 ---
 {
    "title": "Caption",
-   "layout": "LayoutComponent",
+   "layout_type": "LayoutComponent",
    "summary": "Provides further context and attribution for a figure or media asset such as an image, video, or chart",
    "title_metadata": "CdrCaption",
    "see_also": [
@@ -13,70 +13,73 @@
         "href": "../image/"
       }
     ],
-	  "align": [
-      {
-        "type": "do",
-        "image": "caption/caption_align_do_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing proper alignment use.",
-        "caption": "left align the caption to the body copy."
-      },
-      {
-        "type": "dont",
-        "image": "caption/caption_align_dont_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing improper alignment use.",
-        "caption": "center the caption beneath the media."
-      }
-    ],
-    "media": [
-      {
-        "type": "do",
-        "image": "caption/caption_media_do_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing proper media use.",
-        "caption": "provide a caption for images when attribution information is available."
-      },
-      {
-        "type": "dont",
-        "image": "caption/caption_media_dont_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing improper media use.",
-        "caption": "use captions without associated media content (image, video, chart, etc.)."
-      }
-    ],
-    "separate": [
-      {
-        "type": "do",
-        "image": "caption/caption_separate_do_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing proper use of summary and credit separation.",
-        "caption": "provide further explanation of media in the Summary field and attribution in the Credit field."
-      },
-      {
-        "type": "dont",
-        "image": "caption/caption_separate_dont_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing improper use of summary and credit separation.",
-        "caption": "combine attribution within the Summary field."
-      }
-    ],
-    "summaries": [
-      {
-        "type": "do",
-        "image": "caption/caption_summary_do_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing proper summary use.",
-        "caption": "write succinct, informative summaries."
-      },
-      {
-        "type": "dont",
-        "image": "caption/caption_summary_dont_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing improper summary use.",
-        "caption": "write long summaries that wrap to more than 3 lines on desktop breakpoints."
-      }
-    ],
+  "align": [
+    {
+      "type": "do",
+      "image": "caption/caption_align_do_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing proper alignment use.",
+      "caption": "left align the caption to the body copy."
+    },
+    {
+      "type": "dont",
+      "image": "caption/caption_align_dont_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing improper alignment use.",
+      "caption": "center the caption beneath the media."
+    }
+  ],
+  "media": [
+    {
+      "type": "do",
+      "image": "caption/caption_media_do_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing proper media use.",
+      "caption": "provide a caption for images when attribution information is available."
+    },
+    {
+      "type": "dont",
+      "image": "caption/caption_media_dont_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing improper media use.",
+      "caption": "use captions without associated media content (image, video, chart, etc.)."
+    }
+  ],
+  "separate": [
+    {
+      "type": "do",
+      "image": "caption/caption_separate_do_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing proper use of summary and credit separation.",
+      "caption": "provide further explanation of media in the Summary field and attribution in the Credit field."
+    },
+    {
+      "type": "dont",
+      "image": "caption/caption_separate_dont_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing improper use of summary and credit separation.",
+      "caption": "combine attribution within the Summary field."
+    }
+  ],
+  "summaries": [
+    {
+      "type": "do",
+      "image": "caption/caption_summary_do_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing proper summary use.",
+      "caption": "write succinct, informative summaries."
+    },
+    {
+      "type": "dont",
+      "image": "caption/caption_summary_dont_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing improper summary use.",
+      "caption": "write long summaries that wrap to more than 3 lines on desktop breakpoints."
+    }
+  ],
+  "sandboxData": {
+    "components": "CdrCaption"
+  },
   "versions": [
     {
       "components": [
@@ -114,7 +117,7 @@
 
 Caption aligns to the left alongside the body copy with inset padding. Default caption includes summary and credit.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.09.2/src/components/caption" sandbox-href="https://codesandbox.io/s/889z57925l" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/caption" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-caption 
@@ -128,7 +131,7 @@ Caption aligns to the left alongside the body copy with inset padding. Default c
 
 Summary has same CSS styles as the default; however, only the summary element is displayed.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.09.2/src/components/caption" sandbox-href="https://codesandbox.io/s/889z57925l">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/caption" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <cdr-caption 
@@ -142,7 +145,7 @@ Summary has same CSS styles as the default; however, only the summary element is
 
 Credit has same CSS styles as the default; however, only the credit element is displayed.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.09.2/src/components/caption" sandbox-href="https://codesandbox.io/s/889z57925l">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/caption" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <cdr-caption 
@@ -156,7 +159,7 @@ Credit has same CSS styles as the default; however, only the credit element is d
 
 The captions component is text-only; however, it is meant to be displayed in the context of a media object.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.09.2/src/components/caption" sandbox-href="https://codesandbox.io/s/889z57925l" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/caption" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, { components: 'CdrCaption, CdrImg' })" >
 
 ```html
 <figure>
@@ -292,61 +295,6 @@ Caption stays left aligned with body copy regardless of the width of the media.
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-
-## Installation
-
-Resources are available within the [CdrCaption package](https://www.npmjs.com/package/@rei/cdr-caption)
-
-- Component: `@rei/cdr-caption`
-- Component styles: `cdr-caption.css`
-
-<br />
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM 
-
-Install the **CdrCaption** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -S @rei/cdr-text
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required css.
-import "@rei/cdr-caption/dist/cdr-caption.css";
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  <cdr-caption
-     summary="Lorem ipsum dolor sit amet elit."
-     credit="Lorem ipsum dolor sit"
-   />
-
-</template>
-
-<script>
-import { CdrCaption } from '@rei/cdr-caption';
-export default {
-  ...
-  components: {
-     CdrCaption  
-  }
-}
-</script>
-```
-
 ## Usage
 
 The **CdrCaption** component is developed to work within a composition with other components; however composition-type components have not been developed yet.
@@ -370,12 +318,4 @@ The below example demonstrates how to extend this component for use within a fig
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.0.0
-
-- Supports summary and credit
-- Link to full dev [changelog](https://github.com/rei/rei-cedar/blob/18.09.2/src/compositions/caption/CHANGELOG.md)
-
-</template>
 </cdr-doc-tabs>

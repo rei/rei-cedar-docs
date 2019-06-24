@@ -1,7 +1,7 @@
 ---
 {
    "title": "Lists",
-   "layout": "LayoutComponent",
+   "layout_type": "LayoutComponent",
    "summary": "Group related content items together either vertically or horizontally",
    "title_metadata": "CdrList",
    "see_also": [
@@ -17,39 +17,42 @@
         "href": '../breadcrumb/'
       }
     ],
-	  "list1": [
-      {
-        "type": "do",
-        "image": "lists/lists_grammar_do__4-3.png",
-        "ratio": "4-3",
-        "alt": "",
-        "caption": "link independent clauses and product details."
-      },
-      {
-        "type": "dont",
-        "image": "lists/lists_grammar_dont__4-3.png",
-        "ratio": "4-3",
-        "alt": "",
-        "caption": "link unrelated items together."
-      }
-    ],
-    "list2": [
-      {
-        "type": "do",
-        "image": "lists/lists_punctuation_do_3-4.png",
-        "ratio": "3-4",
-        "alt": "",
-        "caption": "end each sentence with a period except last sentence."
-      },
-      {
-        "type": "dont",
-        "image": "lists/lists_punctuation_dont_3-4.png",
-        "ratio": "3-4",
-        "alt": "",
-        "caption": "add terminal punctuation."
-      }
-    ],
+  "list1": [
+    {
+      "type": "do",
+      "image": "lists/lists_grammar_do__4-3.png",
+      "ratio": "4-3",
+      "alt": "",
+      "caption": "link independent clauses and product details."
+    },
+    {
+      "type": "dont",
+      "image": "lists/lists_grammar_dont__4-3.png",
+      "ratio": "4-3",
+      "alt": "",
+      "caption": "link unrelated items together."
+    }
+  ],
+  "list2": [
+    {
+      "type": "do",
+      "image": "lists/lists_punctuation_do_3-4.png",
+      "ratio": "3-4",
+      "alt": "",
+      "caption": "end each sentence with a period except last sentence."
+    },
+    {
+      "type": "dont",
+      "image": "lists/lists_punctuation_dont_3-4.png",
+      "ratio": "3-4",
+      "alt": "",
+      "caption": "add terminal punctuation."
+    }
+  ],
   "name": "CdrList",
+  "sandboxData": {
+    "components": "CdrList"
+  },
   "versions": [
     {
       "components": [
@@ -93,7 +96,8 @@
 
 Collect items to be displayed in a list when items are not marked with bullets.  This is the default and is also known as unordered and undecorated “bare” list.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/list" sandbox-href="https://codesandbox.io/s/1q95wpz4rq" :codeMaxHeight= false >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight= false >
+
 <template slot="Default">
 
 ```html
@@ -131,7 +135,7 @@ Collect items to be displayed in a list when items are not marked with bullets. 
 
 Collect related items that don’t need to be in a specific order or sequence. List items are typically marked with bullets.
 
-<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/list" sandbox-href="https://codesandbox.io/s/1q95wpz4rq" >
+<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
 <template slot="Default">
 
 ```html
@@ -170,7 +174,8 @@ Collect related items that don’t need to be in a specific order or sequence. L
 
 Collect related items with numeric order or sequence. Numbering starts at 1 with the first list item and increases by increments of 1 for each successive ordered list item.
 
-<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/list" sandbox-href="https://codesandbox.io/s/1q95wpz4rq" >
+<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
+
 <template slot="Default">
 
 ```html
@@ -208,7 +213,8 @@ Collect related items with numeric order or sequence. Numbering starts at 1 with
 
 Display items horizontally with no divider.
 
-<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/list" sandbox-href="https://codesandbox.io/s/1q95wpz4rq" >
+<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
+
 <template slot="Default">
 
 ```html
@@ -238,7 +244,8 @@ Display items horizontally with no divider.
 
 Display items horizontally, separated by a bullet character.
 
-<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/list" sandbox-href="https://codesandbox.io/s/1q95wpz4rq" >
+<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
+
 <template slot="Default">
 
 ```html
@@ -365,65 +372,6 @@ WebAIM: [Semantic Structure: Using Lists Correctly](https://webaim.org/technique
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Installation
-
-Resources are available within the [CdrList package](https://www.npmjs.com/package/@rei/cdr-list):
-
-- Component: `@rei/cdr-list`
-- Component styles: `cdr-list.css`
-
-<br/>
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrList** package using `npm` in your terminal:
-
-_Terminal_
-
-<cdr-doc-code-snippet :line-numbers="false" :copy-button="false">
-
-```bash
-npm i -S @rei/cdr-list
-```
-
-</cdr-doc-code-snippet>
-
-### 2. Import Dependencies
-
-_main.js_
-
-<cdr-doc-code-snippet :line-numbers="false" :copy-button="false">
-
-```javascript
-// import your required CSS.
-import '@rei/cdr-list/dist/cdr-list.css';
-```
-</cdr-doc-code-snippet>
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  <cdr-list>
-    <li> item one </li>
-    <li> item two </li>
-  </cdr-list>
-</template>
-
-<script>
-import { CdrList } from '@rei/cdr-list';
-export default {
-  components: {
-     CdrList  
-  }
-}
-</script>
-```
-
 ## Usage
 
 Visual style and semantic meaning are managed independently by providing: 
@@ -490,18 +438,4 @@ Note that the tag itself does not determine display, a modifier must be added fo
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.0.0
-
-- Displays with following variants:
-  - Bare (default)
-  - Ordered
-  - Unordered
-  - Compact
-  - Inline
-- Can be an ordered `<ol>` or unordered `<ul>` list, the tag itself does not determine styling
-- [Complete component history](https://github.com/rei/rei-cedar/blob/master/src/components/list/CHANGELOG.md)
-
-</template>
 </cdr-doc-tabs>

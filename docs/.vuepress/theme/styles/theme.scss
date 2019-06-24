@@ -2,11 +2,12 @@
 @import 'cdr-doc-tokens';
 @import 'cdr-doc-mixins';
 @import 'examples.scss';
-@import '../../../../node_modules/@rei/cdr-assets/dist/cdr-fonts.css';
-@import '../../../../node_modules/@rei/cdr-assets/dist/cdr-core.css';
+
+@import '../../../../node_modules/@rei/cedar/dist/cdr-fonts.css';
 
 $side-navigation-logo-width: 162px;
-$side-navigation-width: 262px;
+$side-navigation-width: 234px;
+$side-navigation-width-sm: $side-navigation-logo-width + 24px;
 
 html,
 body {
@@ -23,6 +24,7 @@ body {
 .cdr-doc-page-shell__side-navigation {
   flex: 0 0 $side-navigation-width;
   width: $side-navigation-width;
+  z-index: 120;
 }
 
 .cdr-doc-side-navigation {
@@ -33,9 +35,23 @@ body {
   height: 100vh;
   overflow-y: scroll;
   width: $side-navigation-width;
+  background-color: $cdr-doc-background-color-main-body;
+}
+
+
+@media only screen and (max-width: $cdr-breakpoint-sm) {
+  .cdr-doc-page-shell__side-navigation {
+    flex: 0 0 $side-navigation-width-sm;
+    width: $side-navigation-width-sm;
+  }
+  
+  .cdr-doc-side-navigation {
+    width: $side-navigation-width-sm;
+  }
 }
 
 .cdr-doc-side-navigation__logo-wrap {
+  background: $cdr-doc-background-color-main-body;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -53,7 +69,9 @@ body {
 }
 
 .header-anchor {
-  display: none;
+  @include cdr-text-header-5;
+  color: 	$cdr-color-text-link-lightmode;
+  text-decoration: none;
 }
 
 .cdr-doc-proving-ground {

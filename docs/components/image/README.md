@@ -1,9 +1,12 @@
 ---
 {
   "title": "Images",
-  "layout": "LayoutComponent",
+  "layout_type": "LayoutComponent",
   "summary": "Capture the user’s attention and communicate your message",
   "title_metadata": "CdrImg",
+  "sandboxData": {
+    "components": "CdrImg"
+  },
   "versions": [
     {
       "components": [
@@ -116,7 +119,8 @@
 
 Use for images with no responsive qualities.
 
-<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/image" sandbox-href="https://codesandbox.io/s/wwnr4jzwr7" >
+
+<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/image" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 
@@ -132,7 +136,8 @@ Use for images with no responsive qualities.
 
 Apply rules to an image using ratio and crop properties. The below example is cropped using top alignment with the aspect ratio set as 9-16
 
-<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/image" sandbox-href="https://codesandbox.io/s/wwnr4jzwr7" >
+
+<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/image" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <cdr-img
@@ -148,7 +153,8 @@ Apply rules to an image using ratio and crop properties. The below example is cr
 
 Use the cover property to resize the background image to fill the entire container.
 
-<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/image" sandbox-href="https://codesandbox.io/s/wwnr4jzwr7" >
+
+<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/image" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <cdr-img
@@ -170,7 +176,8 @@ Apply a radius to an image.
 ### Rounded
 The below example is cropped using center alignment with the aspect ratio set as square and the radius set as rounded.
 
-<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/image" sandbox-href="https://codesandbox.io/s/wwnr4jzwr7" >
+
+<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/image" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-img
@@ -187,7 +194,8 @@ The below example is cropped using center alignment with the aspect ratio set as
 ### Circle
 The below example is cropped using center alignment with the aspect ratio set as square and the radius set as circle.
 
-<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/image" sandbox-href="https://codesandbox.io/s/wwnr4jzwr7" >
+
+<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/image" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-img
@@ -364,56 +372,6 @@ Any other properties supplied will be assigned to the root element (native eleme
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Installation
-
-Resources are available within the [CdrImg package](https://www.npmjs.com/package/@rei/cdr-img):
-
-- Component: `@rei/cdr-img`
-- Component styles: `cdr-img.css`
-
-<br/>
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrImg** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -S @rei/cdr-img
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS.
-import '@rei/cdr-img/dist/cdr-img.css';
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  <cdr-img />
-</template>
-
-<script>
-import { CdrImg } from '@rei/cdr-img';
-export default {
-  ...
-  components: {
-     CdrImg  
-  }
-}
-</script>
-```
-
 ## Usage
 
 ### Ratio
@@ -468,19 +426,4 @@ For internal applications with large images or images that would benefit from ch
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.0.0
-
-- Enforces WCAG A 1.1.1 criteria for decorative images by adding an empty alt attribute to all **CdrImg** source files
-- Provides integration support for image best practices available using [rei-lazy-image-loader](https://git.rei.com/projects/FEDPACK/repos/rei-lazy-image-loader/browse)
-- Enables the following aspect ratios at breakpoints with following variants: Auto, Square, 1-2, 2-3, 3-4, 9-16, 2-1, 3-2, 4-3, 16-9
-- Enables user defined cropping and covering
-- Provides image shapes using the radius property with the following variants: Circle, Rounded
-- Enables users to set the image to be 100% width with a responsive modifier
-- [Complete component history](https://github.com/rei/rei-cedar/blob/master/src/components/image/CHANGELOG.md)
-
-
-
-</template>
 </cdr-doc-tabs>

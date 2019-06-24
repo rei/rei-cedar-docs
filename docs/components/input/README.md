@@ -1,7 +1,7 @@
 ---
 {
   "title": "Inputs",
-  "layout": "LayoutComponent",
+  "layout_type": "LayoutComponent",
   "summary": "Allows a user to enter and edit data. Also used for search",
   "title_metadata": "Text field, CdrInput, cdr-input",
   "length": [
@@ -116,6 +116,9 @@
       "caption": "mix sizes for components on a single form."
     }
   ],
+  "sandboxData": {
+    "components": "CdrInput"
+  },
   "versions": [
     {
       "components": [
@@ -192,9 +195,29 @@
             ],
             "events": [
               {
-                "name": "change",
-                "arguments": "newValue, event",
-                "description": "Event is emitted on input losing focus(onBlur) if the value has changed."
+                "name": "input",
+                "arguments": "value, event",
+                "description": "Input event is emitted while typing with the current input value.",
+              },
+              {
+                "name": "blur",
+                "arguments": "event",
+                "description": "Blur event is emitted when input loses focus.",
+              },
+              {
+                "name": "focus",
+                "arguments": "event",
+                "description": "Focus event is emitted when input gains focus.",
+              },
+              {
+                "name": "paste",
+                "arguments": "event",
+                "description": "Paste event is emitted when text is pasted into input.",
+              },
+              {
+                "name": "keydown",
+                "arguments": "event",
+                "description": "Keydown event is emitted when a key is pressed.",
               }
             ]
           }
@@ -213,7 +236,8 @@
 ## Default
 Basic input field with label.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.12.2/src/components/input" sandbox-href="https://codesandbox.io/s/7wkl26oyoj" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
@@ -236,7 +260,8 @@ Basic input field with label.
 
 Basic input field with label and required tag.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.12.2/src/components/input" sandbox-href="https://codesandbox.io/s/7wkl26oyoj" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
@@ -253,7 +278,8 @@ Basic input field with label and required tag.
 
 Change size for the input field. Default size is medium.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.12.2/src/components/input" sandbox-href="https://codesandbox.io/s/7wkl26oyoj" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
@@ -276,7 +302,8 @@ Change size for the input field. Default size is medium.
 
 Input field with no label.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.12.2/src/components/input" sandbox-href="https://codesandbox.io/s/7wkl26oyoj" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
@@ -293,7 +320,8 @@ Input field with no label.
 
 Multiple line input field with expander control in lower right.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.12.2/src/components/input" sandbox-href="https://codesandbox.io/s/7wkl26oyoj" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
@@ -310,7 +338,8 @@ Multiple line input field with expander control in lower right.
 
 Input field with link text on right.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.12.2/src/components/input" sandbox-href="https://codesandbox.io/s/7wkl26oyoj" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
@@ -330,7 +359,7 @@ Input field with link text on right.
 
 Input field with icon above input field on right.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.12.2/src/components/input" sandbox-href="https://codesandbox.io/s/7wkl26oyoj" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrIcon, CdrIconSprite'})" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-icon-sprite />
@@ -354,7 +383,7 @@ Input field with icon above input field on right.
 
 Input field with helper or hint text below input field.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.12.2/src/components/input" sandbox-href="https://codesandbox.io/s/7wkl26oyoj" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
@@ -374,7 +403,7 @@ Input field with helper or hint text below input field.
 
 Input field with icon inserted into input field on left. Icon is decorative and not intended for any action.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.12.2/src/components/input" sandbox-href="https://codesandbox.io/s/7wkl26oyoj" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrIcon, CdrIconSprite'})" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
 
 ```html
 <cdr-icon-sprite />
@@ -398,7 +427,7 @@ Input field with icon inserted into input field on left. Icon is decorative and 
 
 Input field with icon inserted into input field on right. Icon is decorative and not intended for any action.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.12.2/src/components/input" sandbox-href="https://codesandbox.io/s/7wkl26oyoj" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrIcon, CdrIconSprite'})" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
 
 ```html
 <cdr-icon-sprite />
@@ -533,65 +562,6 @@ This component has compliance with WCAG guidelines by:
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
 
-## Installation
-
-Resources are available within the [CdrInput package](https://www.npmjs.com/package/@rei/cdr-input):
-
-- Component: `@rei/cdr-input`
-- Component styles: `cdr-input.css`
-
-<br/>
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrInput** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -s @rei/cdr-input
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS.
-import "@rei/cdr-input/dist/cdr-input.css";
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  ...
-     <cdr-input
-       v-model="inputModel"
-       label="Input Label Text"
-       placeholder="Input Placeholder Text"
-     />
-  ...
-</template>
-
-<script>
-import { CdrInput } from '@rei/cdr-input';
-export default {
-  ...
-  components: {
-    CdrInput,
-  },
-  data() {
-    inputModel: ‘Default Value’
-  }
-}
-</script>
-```
-
 ## Usage
 
 The **CdrInput** component requires `v-model` to bind the input value to your data model.  You can also use   `helper-text` to display additional information below the input.
@@ -649,12 +619,4 @@ Input inherits the `placeholder` attribute for the placeholder text. You can als
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.0.0
-
-- Enables users to set the type of input field: text, email, number, password, search, url
-- [Complete component history](https://github.com/rei/rei-cedar/blob/master/src/components/input/CHANGELOG.md)
-
-</template>
 </cdr-doc-tabs>

@@ -1,7 +1,7 @@
 ---
 {
    "title": "Paragraphs",
-   "layout": "LayoutComponent",
+   "layout_type": "LayoutComponent",
    "summary": "Text container used for any text element such as paragraphs, headings, and lists. Establishes vertical spacing and optimizes the reading experience",
    "title_metadata": "CdrText",
    "see_also": [
@@ -25,38 +25,41 @@
         "href": '../headings/'
       }
     ],
-	  "width": [
-      {
-        "type": "do",
-        "image": "paragraphs/paragraphs_characterlength_text_do.png",
-        "ratio": "4-3",
-        "alt": "Image showing proper link usage",
-        "caption": "set max-width for paragraphs."
-      },
-      {
-        "type": "dont",
-        "image": "paragraphs/paragraphs_characterlength_text_dont.png",
-        "ratio": "4-3",
-        "alt": "Image showing mixed button sizes",
-        "caption": "allow text to span beyond max-width for paragraphs."
-      }
-    ],
-    "backgrounds": [
-      {
-        "type": "do",
-        "image": "paragraphs/paragraphs_standardfont_text_do.png",
-        "ratio": "4-3",
-        "alt": "The link in this copy uses the cdr-link component, and, so correctly uses an underline",
-        "caption": "use standard font color."
-      },
-      {
-        "type": "dont",
-        "image": "paragraphs/paragraphs_reversedfont_text_dont.png",
-        "ratio": "4-3",
-        "alt": "The default link in body copy incorrectly does not use an underline",
-        "caption": "display long passages of text  on dark backgrounds. "
-      }
-    ],
+  "width": [
+    {
+      "type": "do",
+      "image": "paragraphs/paragraphs_characterlength_text_do.png",
+      "ratio": "4-3",
+      "alt": "Image showing proper link usage",
+      "caption": "set max-width for paragraphs."
+    },
+    {
+      "type": "dont",
+      "image": "paragraphs/paragraphs_characterlength_text_dont.png",
+      "ratio": "4-3",
+      "alt": "Image showing mixed button sizes",
+      "caption": "allow text to span beyond max-width for paragraphs."
+    }
+  ],
+  "backgrounds": [
+    {
+      "type": "do",
+      "image": "paragraphs/paragraphs_standardfont_text_do.png",
+      "ratio": "4-3",
+      "alt": "The link in this copy uses the cdr-link component, and, so correctly uses an underline",
+      "caption": "use standard font color."
+    },
+    {
+      "type": "dont",
+      "image": "paragraphs/paragraphs_reversedfont_text_dont.png",
+      "ratio": "4-3",
+      "alt": "The default link in body copy incorrectly does not use an underline",
+      "caption": "display long passages of text  on dark backgrounds. "
+    }
+  ],
+  "sandboxData": {
+    "components": "CdrText"
+  },
   "versions": [
     {
       "components": [
@@ -100,7 +103,8 @@
 
 Used as default font style for all text information. Also known as body-default in UI ToolKit.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4" >
+
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-text>Pack everything you need with this handy checklist! We include the 10 essentials and more for comfort in the backcountry.</cdr-text>
@@ -112,7 +116,8 @@ Used as default font style for all text information. Also known as body-default 
 
 Used for editorial content such as long-form articles like Expert Advice pages or editorial content on PDP pages.  Also known as body-editorial in UI ToolKit.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.07.1/src/components/text" sandbox-href="https://codesandbox.io/s/10lx8v0qm4">
+
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <div>
@@ -217,60 +222,6 @@ Sentinel carries a stronger brand impression with other brand material, and is p
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Installation
-
-Resources are available within the [CdrText package](https://www.npmjs.com/package/@rei/cdr-text)
-
-- Component: `@rei/cdr-text`
-
-<br />
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM 
-
-Install the **CdrText** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -S @rei/cdr-text
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS.
-import "@rei/cdr-assets/dist/cdr-core.css";
-import "@rei/cdr-assets/dist/cdr-fonts.css";
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  <cdr-text
-    modifier="body"
-  >
-    For long-form content like expert advice articles or co-op journal entries.
-  </cdr-text>
-</template>
-
-<script>
-import { CdrText } from '@rei/cdr-text';
-export default {
-  ...
-  components: {
-     CdrText  
-  }
-}
-</script>
-```
-
 ## Usage
 
 The **CdrText** component allows for styling any html element with available text styles. Visual style and semantic meaning are managed independently by providing: 
@@ -309,15 +260,4 @@ Define custom tags by applying a specific `cdr-text` style with modifiers to it.
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.0.0
-
-- Enables a consistent visual paragraph style applied to any HTML element using the `tag` property
-- By default, results in a generic `<p>` tag
-- Visual style is applied with the `modifier` property and supports:
-  - **Default**:  Used as default font style. It may be used for paragraphs, lists, or any basic information
-  - **Body**: Intended for long-form articles like Expert Advice pages or editorial content on PDP pages
-
-</template>
 </cdr-doc-tabs>

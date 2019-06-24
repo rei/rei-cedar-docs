@@ -1,73 +1,76 @@
 ---
 {
   "title": "Breadcrumb",
-  "layout": "LayoutComponent",
+  "layout_type": "LayoutComponent",
   "summary": "Navigation to reveal a page’s location within the site hierarchy",
   "title_metadata": "CdrBreadcrumb",
-	  "path": [
-      {
-        "type": "do",
-        "image": "breadcrumb/breadcrumbs_path_do_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing proper breadcrumb paths",
-        "caption": "show the full path for breadcrumb items whenever possible."
-      },
-      {
-        "type": "dont",
-        "image": "breadcrumb/breadcrumbs_path_dont_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing mixed breadcrumb paths",
-        "caption": "show the path that the user takes to arrive at a page."
-      }
-    ],
-    "path_symbol": [
-      {
-        "type": "do",
-        "image": "breadcrumb/breadcrumbs_path_symbol_do_4-3.png",
-        "ratio": "4-3",
-        "alt": "breadcrumbs separated with a forward slash",
-        "caption": "separate breadcrumb items with the \"/\" symbol, automatically added in CSS."
-      },
-      {
-        "type": "dont",
-        "image": "breadcrumb/breadcrumbs_path_symbol_dont_4-3.png",
-        "ratio": "4-3",
-        "alt": "breadcrumbs separated with a right arrow",
-        "caption": "create a custom symbol to separate breadcrumb items."
-      }
-    ],
-    "truncation": [
-      {
-        "type": "do",
-        "image": "breadcrumb/breadcrumbs_truncate_do_4-3.png",
-        "ratio": "4-3",
-        "alt": "truncated breadcrumbs",
-        "caption": "use truncation for breadcrumb path."
-      },
-      {
-        "type": "dont",
-        "image": "breadcrumb/breadcrumbs_truncate_dont_4-3.png",
-        "ratio": "4-3",
-        "alt": "breadcrumbs forcing a linebreak",
-        "caption": "break the page title when long breadcrumb path is expanded."
-      }
-    ],
-    "link": [
-      {
-        "type": "do",
-        "image": "breadcrumb/breadcrumbs_link_do_4-3.png",
-        "ratio": "4-3",
-        "alt": "breadcrumbs links in gray",
-        "caption": "use gray color tints for breadcrumb items."
-      },
-      {
-        "type": "dont",
-        "image": "breadcrumb/breadcrumbs_link_dont_4-3.png",
-        "ratio": "4-3",
-        "alt": "breadcrumbs links in blue",
-        "caption": "color breadcrumb items blue."
-      }
-    ],
+  "path": [
+    {
+      "type": "do",
+      "image": "breadcrumb/breadcrumbs_path_do_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing proper breadcrumb paths",
+      "caption": "show the full path for breadcrumb items whenever possible."
+    },
+    {
+      "type": "dont",
+      "image": "breadcrumb/breadcrumbs_path_dont_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing mixed breadcrumb paths",
+      "caption": "show the path that the user takes to arrive at a page."
+    }
+  ],
+  "path_symbol": [
+    {
+      "type": "do",
+      "image": "breadcrumb/breadcrumbs_path_symbol_do_4-3.png",
+      "ratio": "4-3",
+      "alt": "breadcrumbs separated with a forward slash",
+      "caption": "separate breadcrumb items with the \"/\" symbol, automatically added in CSS."
+    },
+    {
+      "type": "dont",
+      "image": "breadcrumb/breadcrumbs_path_symbol_dont_4-3.png",
+      "ratio": "4-3",
+      "alt": "breadcrumbs separated with a right arrow",
+      "caption": "create a custom symbol to separate breadcrumb items."
+    }
+  ],
+  "truncation": [
+    {
+      "type": "do",
+      "image": "breadcrumb/breadcrumbs_truncate_do_4-3.png",
+      "ratio": "4-3",
+      "alt": "truncated breadcrumbs",
+      "caption": "use truncation for breadcrumb path."
+    },
+    {
+      "type": "dont",
+      "image": "breadcrumb/breadcrumbs_truncate_dont_4-3.png",
+      "ratio": "4-3",
+      "alt": "breadcrumbs forcing a linebreak",
+      "caption": "break the page title when long breadcrumb path is expanded."
+    }
+  ],
+  "link": [
+    {
+      "type": "do",
+      "image": "breadcrumb/breadcrumbs_link_do_4-3.png",
+      "ratio": "4-3",
+      "alt": "breadcrumbs links in gray",
+      "caption": "use gray color tints for breadcrumb items."
+    },
+    {
+      "type": "dont",
+      "image": "breadcrumb/breadcrumbs_link_dont_4-3.png",
+      "ratio": "4-3",
+      "alt": "breadcrumbs links in blue",
+      "caption": "color breadcrumb items blue."
+    }
+  ],
+  "sandboxData": {
+    "components": "CdrBreadcrumb"
+  },
   "versions": [
     {
       "components": [
@@ -100,18 +103,6 @@
                 "description": "Sets the ratio between breadcrumb path width and container width when truncation will occur at the XS breakpoint."
               }
             ],
-            "installation": [
-              {
-                "name": "@rei/cdr-breadcrumb",
-                "type": "Node module package",
-                "description": "Import the component into your project"
-              },
-              {
-                "name": "cdr-breadcrumb.css",
-                "type": "css",
-                "description": "Component specific styles"
-              }
-            ]
           }
         }
       ],
@@ -129,8 +120,7 @@
 
 Complete breadcrumb string with all items visible.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/breadcrumb" sandbox-href="https://codesandbox.io/s/mm9qpyjojp" :backgroundToggle="false" :codeMaxHeight= false >
-
+<cdr-doc-example-code-pair repository-href="/src/components/breadcrumb" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight= false >
 ```html
   <cdr-breadcrumb
     :truncation-enabled="false"
@@ -148,7 +138,7 @@ Complete breadcrumb string with all items visible.
 
 Long breadcrumb path shortened to display the last 2 items with hidden links indicated by ellipsis.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.07.2/src/components/breadcrumb" sandbox-href="https://codesandbox.io/s/mm9qpyjojp" :backgroundToggle="false" :codeMaxHeight= false>
+<cdr-doc-example-code-pair repository-href="/src/components/breadcrumb" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight= false>
 
 ```html
     <cdr-breadcrumb
@@ -265,80 +255,6 @@ Truncate breadcrumbs left to right to show the final two links in the trail, so 
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props"/>
 
-## Installation
-
-Resources are available within the [CdrBreadcrumb package](https://www.npmjs.com/package/@rei/cdr-breadcrumb):
-
-<cdr-doc-api type="installation" />
-
-  - Component: `@rei/cdr-breadcrumb`
-  - Component styles: `cdr-breadcrumb.css`
-
-<br>
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrBreadcrumb** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -S @rei/cdr-breadcrumb
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS.
-import "@rei/cdr-breadcrumb/dist/cdr-breadcrumb.css";
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  <cdr-breadcrumb :items="breadcrumbItems"/>
-</template>
-
-<script>
-import { CdrBreadcrumb } from '@rei/cdr-breadcrumb';
-export default {
-
-  components: {
-     CdrBreadcrumb
-  },
-  data () {
-    breadcrumbItems: [
-      {
-        item: {
-          name: ‘Great GrandParent Page’,
-          url: “<UrlBreadcrumb1>”
-        }
-      },
-      {
-        item: {
-          name: “Grandparent Page”,
-          url: “<UrlBreadcrumb2>”
-        }
-      }
-      {
-        item: {
-          name: “Parent Page”,
-          url: “<UrlBreadcrumb3>”
-        }
-      }
-    ]
-  }
-}
-</script>
-```
-
 ## Usage
 
 The ```items``` property requires an array of objects, in the format shown above. Notable values include:
@@ -408,18 +324,4 @@ The below image and example code shows using ```truncationXSThreshold``` to set 
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.0.1
-- Update **CdrAssets** dependency
-
-## 1.0.0
-
-- Displays as an inline list with links to previous sections
-- Truncates when entire breadcrumb string gets too long
-- Enables customization of whitespace threshold to the right, by default and in narrow viewports
-- Incorporates accessibility and SEO compliant features
-- Git commit reference [(08b883c)](https://github.com/rei/rei-cedar/commit/08b883c)
-
-</template>
 </cdr-doc-tabs>

@@ -18,19 +18,33 @@ module.exports = {
         rel: "icon",
         href: "/favicon.ico"
       }
-    ]
+    ],
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href: "/cedar.css"
+      }
+    ],
   ],
-  ga: 'UA-129829250-1',
+  ga: '',
+  plugins: [
+    ['@vuepress/google-analytics', { ga: 'UA-129829250-1' }]
+  ],
   markdown: {
-    lineNumbers: true
+    lineNumbers: true,
+    anchor: { permalink: true, permalinkBefore: true, permalinkSymbol: '#' } // generate links to headings
   },
   themeConfig: {
     logo: "/doc-site-logo.svg",
     search: false,
     nav: [
       {
-        text: "Release History",
-        link: "/release-history/"
+        text: "Release Notes",
+        items: [
+          { text: "Summer 2019", link: "/release-notes/summer-2019/" },
+          { text: "Archive", link: "/release-notes/archive/" },
+        ]
       },
       {
         text: "Getting Started",
@@ -94,7 +108,9 @@ module.exports = {
       }
     ]
   },
-  chainWebpack(config) {
+  chainWebpack(config, isServer) {
     config.resolve.alias.set("$vue", "vue/dist/vue.esm.js");
+    const cjs = isServer ? 'cjs.ssr' : 'cjs';
+    config.resolve.alias.set("@rei/cedar$", `@rei/cedar/dist/cedar.${cjs}.js`);
   }
 };

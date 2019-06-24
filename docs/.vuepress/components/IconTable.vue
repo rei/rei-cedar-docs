@@ -15,8 +15,11 @@
 </template>
 
 <script>
-import * as Icons from '@rei/cdr-icon';
+import * as Components from '@rei/cedar';
 import iconData from '../public/icon/iconData.json';
+import getIcons from '../../../utils/getIcons.js';
+
+const Icons = getIcons(Components);
 
 export default {
   name: "IconTable",

@@ -1,7 +1,7 @@
 ---
 {
     "title": "Checkboxes",
-    "layout": "LayoutComponent",
+    "layout_type": "LayoutComponent",
     "title_metadata": "CdrCheckbox",
     "summary": "Permits user to make one or more selections from a list",
     "see_also": [
@@ -102,6 +102,9 @@
         {
         "text": "Components/"
     }],
+    "sandboxData": {
+      "components": "CdrCheckbox"
+    },
     "versions": [{
         "components": [
             {
@@ -170,18 +173,6 @@
                         "description": "$emit event fired on check/uncheck."
                     }
                 ],
-                "installation": [
-                    {
-                        "name": "@rei/cdr-checkbox",
-                        "type": "Node module package",
-                        "description": "Import the component into your project"
-                    },
-                    {
-                        "name": "cdr-checkbox.css",
-                        "type": "Style sheet",
-                        "description": "Component specific styles"
-                    }
-                ]
             }
         }],
         "version": "1.0.0"
@@ -197,7 +188,7 @@
 
 Default and standard spacing for checkboxes.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/checkbox" sandbox-href="https://codesandbox.io/s/z30opplw43" :model="{ex1: true, ex2: false, ex3: false}" >
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/checkbox" :sandbox-data="$page.frontmatter.sandboxData" :model="{ex1: true, ex2: false, ex3: false}" >
 
 ```html
 <div>
@@ -213,7 +204,7 @@ Default and standard spacing for checkboxes.
 
 Compact spacing for checkboxes.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/checkbox" sandbox-href="https://codesandbox.io/s/z30opplw43" :model="{ex1: true, ex2: false, ex3: false}">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/checkbox" :sandbox-data="$page.frontmatter.sandboxData" :model="{ex1: true, ex2: false, ex3: false}">
 
 ```html
 <div>
@@ -229,7 +220,7 @@ Compact spacing for checkboxes.
 
 Displays status for checkbox group by indicating that some of the sub-selections in a list are selected. Provides user with ability to select or unselect all items in the list’s sub-group.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/checkbox" sandbox-href="https://codesandbox.io/s/z30opplw43" :model="{ex1: false}">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/checkbox" :sandbox-data="$page.frontmatter.sandboxData" :model="{ex1: false}">
 
 ```html
 <div>
@@ -243,7 +234,7 @@ Displays status for checkbox group by indicating that some of the sub-selections
 
 Custom styles for checkboxes.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/checkbox" sandbox-href="https://codesandbox.io/s/z30opplw43" class="custom-checkbox-example" :model="{ex1: true, ex2: false, ex3: false}">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/checkbox" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {styleTag: '.no-box:checked ~ .no-box__content {color: green;}'})" class="custom-checkbox-example" :model="{ex1: true, ex2: false, ex3: false}">
 
 ```html
 <div>
@@ -381,60 +372,6 @@ Checkboxes work independently from each other:
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
 
-## Installation
-
-Resources are available within the [CdrCheckbox package:](https://www.npmjs.com/search?q=cdr-checkbox)
-
-- Component: `@rei/cdr-checkbox`
-- Component styles: `cdr-checkbox.css`
-
-<br/>
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrCheckbox** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -s @rei/cdr-checkbox
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS.
-import "@rei/cdr-link/dist/cdr-checkbox.css";
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  <cdr-checkbox
-    v-model="model"
-  >
-    True
-  </cdr-checkbox>
-</template>
-
-<script>
-import { CdrCheckbox } from '@rei/cdr-checkbox;
-export default {
-  ...
-  components: {
-     CdrCheckbox,
-  }
-}
-</script>
-```
-
 ## Usage
 
 The **CdrCheckbox** component requires  `v-model`  to track  `:checked`  values.
@@ -551,15 +488,4 @@ Use the `hide-figure` modifier to hide the checkbox itself, which leaves the tex
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="History">
-
-## 1.0.0
-
-- Supports custom checkbox values
-- Hides checkboxes with  `hide-figure`  modifier
-- Includes default and compact styling
-- Includes indeterminate state visual style
-- Git commit reference [(1531860)](https://github.com/rei/rei-cedar/pull/436/commits/15318606570811a6d53549a5335e0943a3463971)
-
-</template>
 </cdr-doc-tabs>

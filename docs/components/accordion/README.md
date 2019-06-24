@@ -1,7 +1,7 @@
 ---
 {
   "title": "Accordion",
-  "layout": "LayoutComponent",
+  "layout_type": "LayoutComponent",
   "summary": "Vertically-stacked list that allows users to expand and collapse additional content",
   "title_metadata": "CdrAccordion",
   "breadcrumbs": [
@@ -42,6 +42,9 @@
       "caption": "create labels so lengthy that they wrap to a second line."
     }
   ],
+  "sandboxData": {
+    "components": "CdrAccordion, CdrAccordionItem"
+  },
   "versions": [
     {
       "components": [
@@ -139,7 +142,7 @@
 
 Section borders expand to full width of container.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/accordion" sandbox-href="https://codesandbox.io/s/m9jm5rw1zx">
+<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <cdr-accordion>
@@ -177,7 +180,7 @@ Section borders expand to full width of container.
 
 Reduced spacing around title and content body. Also, smaller font sizes resulting in an overall denser display of content.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/accordion" sandbox-href="https://codesandbox.io/s/m9jm5rw1zx">
+<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <cdr-accordion :compact="true">
@@ -217,7 +220,7 @@ Reduced spacing around title and content body. Also, smaller font sizes resultin
 
 Border aligns to the title text and expand/collapse icon.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="https://github.com/rei/rei-cedar/tree/18.08.1/src/components/accordion" sandbox-href="https://codesandbox.io/s/m9jm5rw1zx">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <cdr-accordion :border-aligned="true">
@@ -359,67 +362,6 @@ Accordions are built from two components, **CdrAccordion** and **CdrAccordionIte
 ### CdrAccordionItem
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[1].api.events" />
 
-## Installation
-
-Resources are available within the [CdrAccordion package](https://www.npmjs.com/package/@rei/cdr-accordion):
-
-<cdr-doc-api type="installation" />
-
-- Component: `@rei/cdr-accordion`
-- Component styles: `cdr-accordion.css`
-
-<br />
-
-To incorporate the required assets for a component, use the following steps:
-
-### 1. Install using NPM
-
-Install the **CdrAccordion** package using `npm` in your terminal:
-
-_Terminal_
-
-```bash
-npm i -s @rei/cdr-accordion
-```
-
-### 2. Import Dependencies
-
-_main.js_
-
-```javascript
-// import your required CSS
-import "@rei/cdr-accordion/dist/cdr-accordion.css";
-```
-
-### 3. Add Component to a Template
-
-_local.vue_
-
-```vue
-<template>
-  <cdr-accordion>
-    <cdr-accordion-item
-      id="default-example"
-      label="This is the label text"
-    >
-      This is the accordion content.
-    </cdr-accordion-item>
-  </cdr-accordion>
-</template>
-
-<script>
-  import { CdrAccordion, CdrAccordionItem } from "@rei/cdr-accordion";
-
-  export default {
-    ...
-    components: {
-      CdrAccordion,
-      CdrAccordionItem
-    }
-  }
-</script>
-```
-
 ## Usage
 
 ### Style
@@ -501,26 +443,6 @@ Any options set at the **CdrAccordion** level can be set on any parent component
 ```
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-<template slot="History">
-  
-## 1.0.3
-- **CdrIcon** dependency update
-
-## 1.0.2
-- Fix CSS import for SSR
-
-## 1.0.1 
-- **CdrAssets** dependency update
-
-## 1.0.0
-
-- Includes **CdrAccordion** and **CdrAccordionItem** components
-- Toggles initial open state at group and individual level
-- Supports compact and border-aligned styles
-- Git commit reference ([cc998a4](https://github.com/rei/rei-cedar/commit/cc998a4f7a4a0278a86c35063ba6615196a46ba2))
-
 </template>
 
 </cdr-doc-tabs>

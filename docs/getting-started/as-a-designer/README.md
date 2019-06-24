@@ -2,7 +2,7 @@
 {
   "title": "As a Designer",
   "title_metadata": false,
-  "layout": "LayoutArticle",
+  "layout_type": "LayoutArticle",
   "breadcrumbs": [
     {
       "text": "Getting Started/"
