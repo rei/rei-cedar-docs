@@ -264,49 +264,6 @@ export default {
 </script>
 ```
 
-### Usage with Vue Router
-
-Page URLs still need to be provided for SEO purposes, but the events emitted by the component can be used for routing using Vue Router by modifying `$route` in a method.
-
-```vue
-<template>
-  ...
-     <cdr-pagination
-       :pages="pageData"
-       :total-pages="pageData.length"
-       v-model="ex1Page"
-       @change="vueNavigate"      
-     />
-  ...
-</template>
-
-<script>
-import { CdrPagination } from '@rei/cedar';
-export default {
-  ...
-  components: {
-     CdrPagination  
-  },
-  data() {
-    Return {
-      ex1Page: 1,
-      pageData: [
-        { page: 1, url: 'https://www.rei.com/search?page=1' },
-        { page: 2, url: 'https://www.rei.com/search?page=2' },
-        { page: 3, url: 'https://www.rei.com/search?page=3' }
-      ]
-    };
-  },
-  methods: {
-    vueNavigate(num, e) {
-           e.preventDefault();
-           this.$router.replace({ query: Object.assign({}, this.$route.query, { 'router-query’: num }) });
-       },
-  },
-}
-</script>
-```
-
 ### SEO
 
 For best SEO support, use of pagination requires additional markup and logic in the `<head>` of the page.
