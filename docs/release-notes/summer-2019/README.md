@@ -16,7 +16,7 @@
 
 ## Single Package Cedar Re-Architecture
 
-For our Summer 2019 release, the Cedar Vue components are moving from a multi-package component architecture to a single-package one. This means that `@rei/cdr-assets` as well as all of the existing Vue component packages under the `@rei/cdr-` namespace will now be distributed as one package named `@rei/cedar`. The `@rei/cdr-tokens` is unaffected by this change. 
+For our Summer 2019 release, the Cedar Vue components are moving from a multi-package component architecture to a single-package architecture. This means that `@rei/cdr-assets` as well as all of the existing Vue component packages under the `@rei/cdr-` namespace will now be distributed as one package named `@rei/cedar`. The `@rei/cdr-tokens` are unaffected by this change. 
 
 Cedar is also migrating our build process from Webpack to Rollup, which gives us the ability to export multiple builds of the components. For this release, we are exporting a CJS and ESM build of Cedar, as well as `ssr` variations of each build that are optimized for use in server-side rendering.
 
