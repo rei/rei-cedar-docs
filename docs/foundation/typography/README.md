@@ -422,7 +422,7 @@ Suggested Usage: Default for editorial long-form content. Uses a more open line 
 <hr>
 
 
-## Mobile
+## Mobile Apps
 
 ### Headings 
 
