@@ -110,7 +110,7 @@ In April 2019, we released v1.0.0 of the [Cedar design tokens](https://github.co
 - If your project is still importing tokens from `cdr-assets` (i.e, `@import '~@rei/cdr-assets/dist/cdr-tokens.scss';`), you will need to migrate to the `@rei/cdr-tokens` package 
 - You can also find [migration notes](https://confluence.rei.com/display/TP/v1+Token+Migration) on confluence
 
-#### Cedar Core CSS and Component CSS Is Now in One File
+#### Cedar Core CSS and Component CSS Are Now in One File
 
 In the past, Cedar distributed a core CSS file, a fonts file, a tokens file, and CSS files for each individual component. Cedar now packages the core CSS and component CSS into one file. This makes things much easier for consumers to get started with Cedar, and makes it easier for the Cedar team to ensure that the correct CSS is being loaded. 
 
