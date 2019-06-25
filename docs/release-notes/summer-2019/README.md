@@ -18,7 +18,7 @@
 
 For our Summer 2019 release, the Cedar Vue components are moving from a multi-package component architecture to a single-package architecture. This means that `@rei/cdr-assets` as well as all of the existing Vue component packages under the `@rei/cdr-` namespace will now be distributed as one package named `@rei/cedar`. The `@rei/cdr-tokens` are unaffected by this change. 
 
-Cedar is also migrating our build process from Webpack to Rollup, which gives us the ability to export multiple builds of the components. For this release, we are exporting a CJS and ESM build of Cedar, as well as `SSR` variations of each build that are optimized for use in server-side rendering.
+Cedar is also migrating our build process from Webpack to Rollup, which gives us the ability to export multiple builds of the components. For this release, we are exporting a CJS and ESM build of Cedar.
 
 This release also comes with some breaking updates to our assets, such as the Cedar CSS reset, utility classes, and CSS bundling. 
 
@@ -81,7 +81,7 @@ Generally speaking, you should only install Cedar as a direct dependency once at
 1. Install Cedar as a `devDependency` by running: `npm install --save-dev @rei/cedar`
 2. After your `package.json` file updates, copy the generated `@rei/cedar` entry into `peerDependencies`
 3. Update JS imports following the [same process as for a micro-site](#for-a-micro-site)
-4. If you were loading the Cedar component CSS as part of your component's product build, you should remove that import and instead let the consuming application load the Cedar CSS
+4. If you were loading the Cedar component CSS as part of your component's production build, you should remove that import and instead let the consuming application load the Cedar CSS
 5. If your component has a local development server, you will need to update it's CSS imports following the [same process as for a micro-site](#for-a-micro-site)
 6. Delete old Cedar dependencies following the [same process as for a micro-site](#for-a-micro-site)
 7. Release a new major version of this component
@@ -110,7 +110,7 @@ In April 2019, we released v1.0.0 of the [Cedar design tokens](https://github.co
 - If your project is still importing tokens from `cdr-assets` (i.e, `@import '~@rei/cdr-assets/dist/cdr-tokens.scss';`), you will need to migrate to the `@rei/cdr-tokens` package 
 - You can also find [migration notes](https://confluence.rei.com/display/TP/v1+Token+Migration) on Confluence
 
-### Single File Is Available for Cedar Core CSS and Component CSS
+### CSS is Distributed as a Single File
 
 In the past, Cedar distributed a core CSS file, a fonts file, a tokens file, and CSS files for each individual component. Cedar now packages the core CSS and component CSS into one file. This makes things much easier for consumers to get started with Cedar, and makes it easier for the Cedar team to ensure that the correct CSS is being loaded. 
 
@@ -121,7 +121,7 @@ This means that consuming teams have less options when it comes to bundling the 
 The old Cedar CSS reset was heavyweight and opinionated, which made it likely to cause conflicts with other libraries that depend on global CSS. This was a frequent issue for teams that were trying to incrementally migrate from Cedar 1 to Cedar 2. Our new CSS reset is much more lightweight, and only sets the most critical properties needed for Cedar to work across browsers. 
 
 - This will likely result in minor UI differences in your app, particularly if your app's CSS was depending on the reset for certain elements to be styled
-- If your app pulls banners or content from Hippo, CMS, or another source, you will need to verify that the content is also working as before
+- If your app pulls banners or content from an external source (for example, Hippo), you will need to verify that the content is also working as before
 - You can examine the differences between the 2 CSS resets here: https://gist.github.com/cowills/a868cd959f57be1b70a313b57a8dbe2b (0.3.0 is the old reset, 1.0.0 is the new reset)
 
 ### JSDOM Must Be Loaded in Your Test Environment
