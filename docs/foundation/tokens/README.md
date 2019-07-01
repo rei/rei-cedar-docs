@@ -342,10 +342,11 @@ LESS example:
 
 JS example:
 ```
-const CdrTokens = require('@rei/cdr-tokens/'); /* import the tokens file */
+const CdrTokens = require('@rei/cdr-tokens/dist/js/cdr-tokens.common.js'); /* import the tokens file */
 let textEl = document.getElementById("app-text");
-let otherTextElements = document.getElementByClassName("other-app-text");
+let otherTextElement = document.getElementByClassName("other-app-text")[0];
 
+/* JS does not support mixins, so text style must be applied individually */
 textEl.style.fontFamily = CedarTokens.cdrTextDefaultFamily;
 textEl.style.fontStyle = CedarTokens.cdrTextDefaultStyle;
 textEl.style.fontWeight = CedarTokens.cdrTextDefaultWeight;
@@ -353,14 +354,9 @@ textEl.style.fontSpacing = CedarTokens.cdrTextDefaultSpacing;
 textEl.style.fontSize = CedarTokens.cdrTextDefaultSize;
 textEl.style.lineHeight = CedarTokens.cdrTextDefaultHeight;
 
-for(let i = 0; i < otherTextElements.length; i++ ){
-  otherTextElements[i].style.fontFamily = CedarTokens.cdrTextEditorialFamily;
-  otherTextElements[i].style.fontStyle = CedarTokens.cdrTextEditorialStyle;
-  otherTextElements[i].style.fontWeight = CedarTokens.cdrTextEditorialWeight;
-  otherTextElements[i].style.fontSpacing = CedarTokens.cdrTextEditorialSpacing;
-  otherTextElements[i].style.fontSize = CedarTokens.cdrTextEditorialSize;
-  otherTextElements[i].style.lineHeight = CedarTokens.cdrTextEditorialHeight;
-}
+/* apply specific color property */
+otherTextElement.style.color = CedarTokens.cdrColorTextErrorLightmode;
+
 ```
 
 This repository follows SEMVER practices and will notify users of changes and updates on the #cedar-user-support Slack channel.
