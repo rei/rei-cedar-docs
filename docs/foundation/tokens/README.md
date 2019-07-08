@@ -342,20 +342,12 @@ LESS example:
 
 JS example:
 ```
-const CdrTokens = require('@rei/cdr-tokens/dist/js/cdr-tokens.common.js'); /* import the tokens file */
-let textEl = document.getElementById("app-text");
-let otherTextElement = document.getElementByClassName("other-app-text")[0];
+import { CdrBreakpointLg } from '@rei/cdr-tokens/dist/js/cdr-tokens.esm.js'; /* import the tokens file */
 
-/* JS does not support mixins, so text style must be applied individually */
-textEl.style.fontFamily = CedarTokens.cdrTextDefaultFamily;
-textEl.style.fontStyle = CedarTokens.cdrTextDefaultStyle;
-textEl.style.fontWeight = CedarTokens.cdrTextDefaultWeight;
-textEl.style.fontSpacing = CedarTokens.cdrTextDefaultSpacing;
-textEl.style.fontSize = CedarTokens.cdrTextDefaultSize;
-textEl.style.lineHeight = CedarTokens.cdrTextDefaultHeight;
-
-/* apply specific color property */
-otherTextElement.style.color = CedarTokens.cdrColorTextErrorLightmode;
+/* Detect Large Breakpoint
+if(window.innerWidth > CdrBreakpointLg) {
+  // Do Something
+}
 
 ```
 
