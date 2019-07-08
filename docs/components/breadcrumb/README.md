@@ -281,9 +281,9 @@ Use ```truncationEnabled``` to disable the truncation functionality.  Below show
 <cdr-breadcrumb
   :truncation-enabled="false"
   :items="[
-    {url:'', name: 1},
-    {url:'', name: 2},
-    {url:'', name: 3}
+    {item:{url:'', name: 1}},
+    {item:{url:'', name: 2}},
+    {item:{url:'', name: 3}}
   ]"
 />
 ```
