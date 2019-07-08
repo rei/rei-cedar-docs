@@ -296,19 +296,19 @@ A base requirement for using Cedar tokens is that you are able to consume and ma
 - Native iOS consumers using CocoaPods
 - Android consumers using Android package manager
 
-#### install
+#### Install
 
-To install the token package:
+To install the CdrToken package:
 
 `npm install --save-dev @rei/cdr-tokens@DESIRED_VERSION`
 
 Your project must be able to compile SCSS or LESS in order to make use of the SCSS and LESS modules.
 
-The token package contains `/dist/less` and `/dist/scss` folders, each of which contains `cdr-tokens.{less|scss}` files containing all the tokens in the corresponding format.
+The CdrToken package contains `/dist/less` and `/dist/scss` folders, each of which contains `cdr-tokens.{less|scss}` files with all the tokens in the corresponding format.
 
 Alternatively you could use `/dist/js` and/or `/dist/json` if your project cannot build SCSS and LESS.
 
-#### usage
+#### Usage
 
 SCSS example:
 ```
@@ -340,7 +340,7 @@ LESS example:
 }
 ```
 
-JS example:
+JavaScript example:
 ```
 import { CdrBreakpointLg } from '@rei/cdr-tokens/dist/js/cdr-tokens.esm.js'; /* import the tokens file */
 
