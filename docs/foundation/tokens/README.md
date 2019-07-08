@@ -344,11 +344,12 @@ JavaScript example:
 ```
 import { CdrBreakpointLg } from '@rei/cdr-tokens/dist/js/cdr-tokens.esm.js'; /* import the tokens file */
 
+let screenWidth = window.outerWidth || 0;
+
 /* Detect Large Breakpoint
-if(window.innerWidth > CdrBreakpointLg) {
+if(screenWidth >= CdrBreakpointLg) {
   // Do Something
 }
-
 ```
 
 This repository follows SEMVER practices and will notify users of changes and updates on the #cedar-user-support Slack channel.
