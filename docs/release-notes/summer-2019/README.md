@@ -220,7 +220,7 @@ The following changes were released as `@rei/cedar@2.1.x` and `@rei/cdr-tokens@1
 
 ### Breadcrumb Truncation/SSR 
 
-In order to fix an issue with server-side rendering, as well as to simplify the API of CdrBreadcrumb, we have removed the `truncationThreshold` and `truncationXSThreshold` attributes. Instead, the `truncationEnabled` attr can be used to control whether or not the breadcrumb should be truncated. This change will not break any existing consumers of breadcrumb even if they are using those attributes.
+In order to fix an issue with server-side rendering, as well as to simplify the API of [CdrBreadcrumb](https://rei.github.io/rei-cedar-docs/components/breadcrumb/), we have removed the `truncationThreshold` and `truncationXSThreshold` attributes. Instead, the `truncationEnabled` attr can be used to control whether or not the breadcrumb should be truncated. This change will not break any existing consumers of breadcrumb even if they are using those attributes.
 
 ### Large Breakpoint Value Corrected 
 
@@ -228,6 +228,6 @@ The token value for the large breakpoint was updated to the correct value of `12
 
 ### Letter Spacing Values Corrected 
 
-The letter spacing values for our typography have been corrected to add the `px` suffix.
+The letter spacing values for our text tokens have been corrected to add the `px` suffix.
 
 </cdr-doc-table-of-contents-shell>
