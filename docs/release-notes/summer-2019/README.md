@@ -6,7 +6,7 @@
   "summary": false,
   "breadcrumbs": [
     {
-      "text": "Release Notes"
+      "text": "Cedar 2.x.x Release Notes"
     }
   ],
 }
@@ -212,5 +212,22 @@ Almost all of the deprecated spacing classes have direct equivalents in the new 
 | `cdr-stack--xxl` | n/a | `margin-bottom: 12.8rem` |
 | `cdr-stack--xxs` | `cdr-mb-space-eighth-x` | `margin-bottom: .2rem` |
 | `cdr-stack` | `cdr-mb-space-one-x` | `margin-bottom: 1.6rem` |
+
+
+## Post-Summer Release 
+
+The following changes were released as `@rei/cedar@2.1.x` and `@rei/cdr-tokens@1.1.x`.
+
+### Breadcrumb Truncation/SSR 
+
+In order to fix an issue with server-side rendering, as well as to simplify the API of CdrBreadcrumb, we have removed the `truncationThreshold` and `truncationXSThreshold` attributes. Instead, the `truncationEnabled` attr can be used to control whether or not the breadcrumb should be truncated. This change will not break any existing consumers of breadcrumb even if they are using those attributes.
+
+### Large Breakpoint Value Corrected 
+
+The token value for the large breakpoint was updated to the correct value of `1232px` (it had previously been incorrectly set to `1200px`). If you are hard-coding any breakpoint values in your project you will need to update those to use the breakpoint values from cdr-tokens instead. If you have been using the breakpoint tokens then you just need to update your version of cedar and cdr-tokens. 
+
+### Letter Spacing Values Corrected 
+
+The letter spacing values for our typography have been corrected to add the `px` suffix.
 
 </cdr-doc-table-of-contents-shell>
