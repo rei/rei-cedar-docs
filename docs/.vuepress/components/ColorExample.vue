@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import tokens from '@rei/cdr-tokens';
+import tokens from '@rei/cdr-tokens/dist/js/cdr-tokens.common';
 import camelCase from 'lodash/camelCase';
 
 export default {

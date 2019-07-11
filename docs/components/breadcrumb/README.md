@@ -222,10 +222,6 @@ Breadcrumbs provide context and a sense of place. This is especially important o
 
 ### Truncation
 
-Truncate breadcrumbs at 80% width of the screen’s content container except for mobile (that truncates at 100%) as shown below
-
-<cdr-img class="cdr-doc-article-img" alt="breadcrumbs truncated to 80 percent of the container" :src="$withBase(`/breadcrumb/Spec__Breadcrumb_Truncated_with_Grid_16-4.png`)" />
-
 Indicate hidden links using an ellipsis
 
 <cdr-img class="cdr-doc-article-img" alt="breadcrumbs truncated with ellipsis" :src="$withBase(`/breadcrumb/Spec__Breadcrumb_Truncated_16-2.png`)" />
