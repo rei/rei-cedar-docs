@@ -18,7 +18,7 @@ At REI we believe that the outdoors is for all. Delivering valuable, inspiration
 
 The Cedar Design System is committed to designing and developing components, tokens, utilities, and styles that will help ensure that REI’s digital products meet or exceed the World Wide Web Consortium’s Web Content Accessibility Guidelines (WCAG) 2.1 Level AA. 
 
-The design and development of Cedar is a starting point to incorporate required accessibility standards into our website.  REI's aim is to make our digital products accessible and usable for all our customers, including those with disabilities. For more information about REI's position on accessibility, view the [Accessibility Statement](https://confluence.rei.com/pages/viewpage.action?spaceKey=EQA&title=Drafting+an+Accessibility+Statement). 
+The design and development of Cedar is a starting point to incorporate required accessibility standards into our website.  REI's aim is to make our digital products accessible and usable for all our customers, including those with disabilities. For more information about REI's position on accessibility, view the [Accessibility Statement](https://www.rei.com/accessibility). 
 
 However, how you use Cedar also affects the accessibility of a product. Read this page to learn about accessibility in general. Then, while you're working, use the accessibility guidelines for each Cedar component to help you make products that anyone can use.
 
