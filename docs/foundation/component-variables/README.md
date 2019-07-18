@@ -30,7 +30,7 @@ Component variables include:
 - Variables for specific properties such as `$cdr-button-base-border-radius`. This is the border-radius value for all Cedar button components
 - Mixins such as `@include cdr-button-base-mixin` which sets many properties on an element. Each component has a `base` mixin which sets properties that apply to all components of that type, as well as `modifier` mixins which only apply to a specific variant of that component
 
-For example, you can import the styling for a Cedar primary button component with a few lines of SCSS:
+For example, you can import the styling for a Cedar primary button component via a mixin:
 
 ```scss
 .your-button-component {
@@ -39,24 +39,32 @@ For example, you can import the styling for a Cedar primary button component wit
 }
 ```
 
-Teams that are replicating specific Cedar components will want to use the mixins because they are easier to maintain. For example, if a future version of Cedar adds additional properties to an existing mixin, your application will inherit those changes when you update to that version of component-variables. 
+Or if you only need to apply some styles and not others, you can instead use individual variables:
 
-TODO: example of why you would use individual variables 
+```scss
+.your-custom-button-component {
+  border-radius: $cdr-button-base-border-radius;
+  background-color: $cdr-button-primary-background-color;
+}
+```
+
+Teams that are replicating specific Cedar components will want to use the mixins because they are easier to maintain. For example, if a future version of Cedar adds additional properties to an existing mixin, your application will inherit those changes when you update to that version of component-variables.
+
+There are some cases where using individual component variables is preferable to using the mixins. For example, if you are using a 3rd party library or component and need to override some values but not others.
 
 
 ### Contract of Intent
 
-TODO: 
 Versioning
   - A versioned export of the exact styles being used in Cedar vue components
-  - Depends on a specific version of the Cedar design tokens
+  - Whenever a major version of Cedar is released a corresponding major version of component variables will also be published
+  - For minor or patch versions of Cedar, component variables will only be published if there were changes made to the distributed files
+  - Outside of the Cedar release schedule, patch versions of component variables will only be issued if a bug is found in the distribution
   
 Semantic naming
+  - Component variables and mixins are semantically named based on the component being styled, how the style is intended to be used, and the CSS property being targeted
+  - Teams must only use component variables and mixins when semantically appropriate
   
-  - Semantically named intended to be used to match the styling of the component/element that they correspond to
-  
-  For example, `$cdr-button-base-border-radius` should only be used to style the border-radius of a "button-like" element. If you use that variable to set the border-radius on something that is not a button, then that element would be affected any time the Cedar button border radius is changed.
-
 ### Benefits
 
 #### Brand Consistency on More Platforms
@@ -69,27 +77,17 @@ Semantic naming
   - Updates to the design system could not be pushed out to those projects unless they were implemented manually
   - With component variables and mixins, teams that are not using Vue can still stay in sync with the design system
 
-#### Flexibility
-
-TODO: 
-  
-  In those cases where extending the Cedar vue component is not an option, the component variables can be used to create a new component that implements the desired functionality.
-  
-    - Some teams may have strict requirements around performance and bundle size, in which case component variables provide the most lightweight and lowest impact method of consuming Cedar. However this does come at an additional maintenance and development cost.
-
 <hr />
 
 ### Use When  
-  - Your project does not use Vue, but you want to use Cedar components
-  - Your project requires a small bundle size, and is willing to take on additional maintenance overhead
-  - Your project must strictly control the behavior of it's components in a way that is not possible through the public Cedar API
+  - Your project does not use Vue.js, but you want to use Cedar
   - Your component must visually match an existing Cedar component, but not it's functionality. For example, a `vue-router` link component that looks like a CdrLink component
+  - Your project requires the smallest possible bundle size, and your team is willing to take on the additional maintenance cost of using component variables instead of the Vue.js Cedar components
 
 ### Don’t Use When
-  - Do not use the component variables in a non-semantic way. For example, `cdr-button-base-border-radius` should only ever be used to style the border radius of a button element.
-  - Do not publish copies of Cedar components using the variables, as that creates duplication and confusion.
-  - TODO: do not use variables to simply extend components, DIY or ask us before. 
-
+  - Do not use the component variables in a non-semantic way. For example, `cdr-button-base-border-radius` should only ever be used to style the border radius of a button element
+  - Do not use component variables to publish clones or forks of existing Cedar components. Instead, work with the Cedar team to find a long term solution to support your use case
+  
 Questions about when to use component variables? Ask the Cedar team in [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4)
 
 <hr/>
