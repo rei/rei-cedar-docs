@@ -69,6 +69,7 @@ module.exports = {
           { text: "Iconography", link: "/foundation/iconography/" },
           { text: "Motion", link: "/foundation/motion/" },
           { text: "Tokens", link: "/foundation/tokens/" },
+          { text: "Component Variables", link: "/foundation/component-variables/" },
           { text: "Typography", link: "/foundation/typography/" },
           { text: "Spacing", link: "/foundation/spacing/" }
         ]
