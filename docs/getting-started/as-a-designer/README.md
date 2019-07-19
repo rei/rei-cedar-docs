@@ -130,7 +130,7 @@ If you unlinked asymbol from Cedar’s UI Toolkit or if you previously installed
 1. Select an unlinked symbol.
 2. Open the **Insert** menu. 
 3. From the **Symbols** section, select the corresponding symbol from **CDS - Web Toolkit** (or **CDS - Native Toolkit**) to replace the selected symbol.
-4.Replace all unlinked symbols one-by-one until they’ve all been updated.
+4. Replace all unlinked symbols one-by-one until they’ve all been updated.
 
 <br/>
 <hr>
