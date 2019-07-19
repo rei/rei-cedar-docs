@@ -102,8 +102,8 @@ The naming structure for component variables and mixins is as follows:
     - Base modifier (`base-`) indicates variables that apply to all instances of that Cedar component
     - Additional modifiers can be stacked on top of that
     - For example, to make a primary large button you would use the variables that have `base`, `primary`, and `large` modifiers
-  - **Sub-Element:** Indicates a sub-element of a component. For example, `cdr-input-base-label-color` indicates the color of the label element used inside the input component.
-  - **CSS Property:** Describes the CSS property that this variable is applied to. If the property is listed as `mixin` then this is a mixin that should be included in this component.
+  - **Sub-Element:** Indicates a sub-element of a component. For example, `cdr-input-base-label-color` indicates the color of the label element used inside the input component
+  - **CSS Property:** Describes the CSS property that this variable is applied to. If the property is listed as `mixin` then this is a mixin that should be included in this component
   - **State:** Describes the interactive state that this variable is applied to. These correspond to CSS selectors such as `:focus`, `:active`, `:hover`, `:disabled`, etc.
 
 ### Examples
