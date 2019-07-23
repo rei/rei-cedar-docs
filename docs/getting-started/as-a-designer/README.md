@@ -34,6 +34,7 @@ Abstract is used to distribute the Cedar UI toolkit, which allows for:
 - Collaboration and project history
 - Secure backup to REI servers
 
+<br/>
 
 Download the latest version of Abstract from [#www.abstract.com/download](http://www.abstract.com/download). Install the software to your local user application folder:   
 - From your desktop use the shortcut, **Shift-Command-C**, to access your Mac disks
@@ -44,6 +45,9 @@ Download the latest version of Abstract from [#www.abstract.com/download](http:/
 
 #### Sketch (latest version)
 If you are a new designer, download the latest version of Sketch using REI’s Self Service application installed on your Mac. If Sketch isn’t available there, talk to your manager.
+
+<br/>
+
 Sketch libraries for teams using Cedar are:
 - **CDS - Web Toolkit:** For web application design, including mobile web, and contains:
     - **CDS - Icons:** All Cedar icons  
@@ -53,10 +57,13 @@ Sketch libraries for teams using Cedar are:
 
 ### Required Fonts
 **Sentinel**
+
 Install the font using REI’s Self Service application installed on your Mac.
 
+
 **Roboto and Roboto Condensed**
-Install these fonts from [#Google Fonts](https://fonts.google.com/specimen/Roboto). This link will automatically download a zip file containing Roboto and Roboto Condensed. After downloading the zip file, install the fonts using Font Book. 
+
+Install these fonts from [#Google Fonts](https://fonts.google.com/download?family=Roboto|Roboto+Condensed). This link will automatically download a zip file containing Roboto and Roboto Condensed. After downloading the zip file, install the fonts using Font Book. 
 
 
 ### Cedar UI Toolkit 
@@ -69,14 +76,17 @@ The UI Toolkit provides reusable patterns and styles across the team using Sketc
 From within your new or current project, navigate to <strong>Master > Files</strong> and click on the <strong>Add File</strong> button. From the drop down, select **Link Sketch Library</strong>.
 <cdr-img class="cdr-doc-article-img" alt="screenshot of Abstract interface with Link Sketch Library button highlighted"  :src="$withBase(`/getting-started-for-designers/abstract_scr_01.png`)"/>
 </li>
+<br/>
 <li>
 From the list of projects on the left, select the <strong>CDS - Web Toolkit</strong> or <strong>CDS - Native Toolkit</strong> (depends on the platform you’re designing for). After selecting a file on the right, click on the <strong>Link Library</strong> button to add it to your project.
 <cdr-img class="cdr-doc-article-img" alt="screenshot of Abstract interface with CDS - Web Toolkit menu highlighted" :src="$withBase(`/getting-started-for-designers/abstract_scr_02.png`)"/>
 </li>
+<br/>
 <li>
 The linked libraries will appear at the bottom of your page list for the project file.
 <cdr-img class="cdr-doc-article-img" alt="screenshot of Abstract interface with Linked Libraries section highlighted" :src="$withBase(`/getting-started-for-designers/abstract_scr_03.png`)"/>
 </li>
+<br/>
 <li>
 That’s it! You can now add Cedar components to the Artboards in your project’s Sketch files.
 <cdr-img class="cdr-doc-article-img" alt="screenshot of Sketch interface with Insert menu item for CDS -Web Toolkit highlighted" :src="$withBase(`/getting-started-for-designers/sketch_scr_01.png`)"/>
@@ -110,7 +120,7 @@ Change your large (shift+arrow) nudge from 10 to 8 to easily align with spacing 
 ## Updating the UI Toolkit in Your Project 
 ### Sketch Update Notification
 
-System releases are communicated through both [#cedar-user-support]((https://rei.slack.com/messages/CA58YCGN4) and [#cedar-news](https://rei.slack.com/messages/C5W0VMKGU). 
+System releases are communicated through both [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) and [#cedar-news](https://rei.slack.com/messages/C5W0VMKGU). 
 
 If the UI Toolkit is linked to your project files, updates will automatically be available.
 
@@ -126,7 +136,7 @@ If you see a change to a Symbol that you definitely do not want to make, then do
 
 ### Manually Updating Your Symbols 
 
-If you unlinked asymbol from Cedar’s UI Toolkit or if you previously installed the UI Toolkit from the Google drive, you will need to manually update your symbols. Follow these steps in your Sketch file:  
+If you unlinked a symbol from Cedar’s UI Toolkit or if you previously installed the UI Toolkit from the Google drive, you will need to manually update your symbols. Follow these steps in your Sketch file:  
 1. Select an unlinked symbol.
 2. Open the **Insert** menu. 
 3. From the **Symbols** section, select the corresponding symbol from **CDS - Web Toolkit** (or **CDS - Native Toolkit**) to replace the selected symbol.
@@ -156,7 +166,8 @@ One of the best ways to influence the visual language of the Co-op’s digital p
 
 #### How can I transition from the Google Drive version?
 Previously, the UI Toolkit was available using Abstract or Google Drive. Now, the UI Toolkit is only available using Abstract. 
-Contact the Cedar team using the Slack channel ([#cedar-user-support]((https://rei.slack.com/messages/CA58YCGN4)) or visit Cedar’s office hours. 
+
+Contact the Cedar team using the [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) Slack channel or visit Cedar’s office hours. 
 
 Follow the above steps for updating the UI Toolkit in your project. 
 
