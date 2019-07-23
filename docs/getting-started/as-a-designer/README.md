@@ -7,7 +7,7 @@
     {
       "text": "Getting Started/"
     }
-  ],
+  ]
 }
 ---
 
@@ -204,3 +204,5 @@ Great! Your feedback is appreciated. If your addition is unique, you can [submit
 
 <br/>
 <hr>
+
+</cdr-doc-table-of-contents-shell>
