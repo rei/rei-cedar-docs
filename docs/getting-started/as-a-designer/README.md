@@ -36,7 +36,7 @@ Abstract is used to distribute the Cedar UI toolkit, which allows for:
 
 <br/>
 
-Download the latest version of Abstract from [#www.abstract.com/download](http://www.abstract.com/download). Install the software to your local user application folder:   
+Download the latest version of Abstract from [www.abstract.com/download](http://www.abstract.com/download). Install the software to your local user application folder:   
 - From your desktop use the shortcut, **Shift-Command-C**, to access your Mac disks
 - Navigate to your local application folder, **Macintosh HD > Users > “yourUserName” > Applications**
 - Drop the downloaded Abstract file into this application folder
@@ -56,13 +56,11 @@ Sketch libraries for teams using Cedar are:
 
 
 ### Required Fonts
-**Sentinel**
-
+**Sentinel**<br/>
 Install the font using REI’s Self Service application installed on your Mac.
 
 
-**Roboto and Roboto Condensed**
-
+**Roboto and Roboto Condensed**<br/>
 Install these fonts from [Google Fonts](https://fonts.google.com/download?family=Roboto|Roboto+Condensed). This link will automatically download a zip file containing Roboto and Roboto Condensed. After downloading the zip file, install the fonts using Font Book. 
 
 
@@ -73,7 +71,7 @@ The UI Toolkit provides reusable patterns and styles across the team using Sketc
 
 <ol>
 <li>
-From within your new or current project, navigate to <strong>Master > Files</strong> and click on the <strong>Add File</strong> button. From the drop down, select **Link Sketch Library</strong>.
+From within your new or current project, navigate to <strong>Master > Files</strong> and click on the <strong>Add File</strong> button. From the drop down, select <strong>Link Sketch Library</strong>.
 <cdr-img class="cdr-doc-article-img" alt="screenshot of Abstract interface with Link Sketch Library button highlighted"  :src="$withBase(`/getting-started-for-designers/abstract_scr_01.png`)"/>
 </li>
 <br/>
@@ -98,22 +96,19 @@ That’s it! You can now add Cedar components to the Artboards in your project�
 
 ### Recommended Tools and Plugins
 
-**Sketch Measure**
+**Sketch Measure**<br/>
 Make it a fun process to create specs for developers and teammates.
-[#Download from GitHub](https://github.com/utom/sketch-measure)
- 
+[Download from GitHub](https://github.com/utom/sketch-measure)
 <br/>
 
-**Sketchpacks**
+**Sketchpacks**<br/>
 Manage and sync your Sketch plugins across machines and teams.
-[#Download from Skethpacks](https://sketchpacks.com/)
- 
+[Download from Sketchpacks](https://sketchpacks.com/)
 <br/>
 
-**Nudg.it**
+**Nudg.it**<br/>
 Change your large (shift+arrow) nudge from 10 to 8 to easily align with spacing system.
-[#Download from Nudg.it](http://nudg.it/)
-
+[Download from Nudg.it](http://nudg.it/)
 <br/>
 <hr>
 
