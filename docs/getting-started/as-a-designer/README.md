@@ -63,7 +63,7 @@ Install the font using REI’s Self Service application installed on your Mac.
 
 **Roboto and Roboto Condensed**
 
-Install these fonts from [#Google Fonts](https://fonts.google.com/download?family=Roboto|Roboto+Condensed). This link will automatically download a zip file containing Roboto and Roboto Condensed. After downloading the zip file, install the fonts using Font Book. 
+Install these fonts from [Google Fonts](https://fonts.google.com/download?family=Roboto|Roboto+Condensed). This link will automatically download a zip file containing Roboto and Roboto Condensed. After downloading the zip file, install the fonts using Font Book. 
 
 
 ### Cedar UI Toolkit 
@@ -211,7 +211,7 @@ Thanks for catching that for us. Please fill out and submit a [Bug Report Form](
 <hr>
 
 #### I have an idea for an enhancement to the UI Toolkit. Who do I talk to?
-Great! Your feedback is appreciated. If your addition is unique, you can [submit a request](https://airtable.com/shrcbq9CHthuMO7AC) to the Cedar team backlog.
+Great! Your feedback is appreciated. If your addition is unique, you can submit a request using [Cedar Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC).
 
 <br/>
 <hr>
