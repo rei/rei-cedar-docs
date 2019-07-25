@@ -94,25 +94,25 @@ That’s it! You can now add Cedar components to the Artboards in your project�
 <br/>
 <hr>
 
-### Recommended Tools and Plugins
+### Recommended Plugins
 
 **Sketch Measure**<br/>
-Make it a fun process to create specs for developers and teammates.
+Make it a fun process to create specs for developers and teammates.<br/>
 [Download from GitHub](https://github.com/utom/sketch-measure)
 <br/>
 
 **Sketchpacks**<br/>
-Manage and sync your Sketch plugins across machines and teams.
+Manage and sync your Sketch plugins across machines and teams.<br/>
 [Download from Sketchpacks](https://sketchpacks.com/)
 <br/>
 
 **Nudg.it**<br/>
-Change your large (shift+arrow) nudge from 10 to 8 to easily align with spacing system.
+Change your large (shift+arrow) nudge from 10 to 8 to easily align with spacing system.<br/>
 [Download from Nudg.it](http://nudg.it/)
 <br/>
 <hr>
 
-## Updating the UI Toolkit in Your Project 
+## Updating the UI Toolkit 
 ### Sketch Update Notification
 
 System releases are communicated through both [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) and [#cedar-news](https://rei.slack.com/messages/C5W0VMKGU). 
@@ -129,7 +129,7 @@ If you see a change to a Symbol that you definitely do not want to make, then do
 
 <br>
 
-### Manually Updating Your Symbols 
+### Manual Updates 
 
 If you unlinked a symbol from Cedar’s UI Toolkit or if you previously installed the UI Toolkit from the Google drive, you will need to manually update your symbols. Follow these steps in your Sketch file:  
 1. Select an unlinked symbol.
@@ -140,7 +140,7 @@ If you unlinked a symbol from Cedar’s UI Toolkit or if you previously installe
 <br/>
 <hr>
 
-## Annotating Cedar-based Designs
+## Annotating Designs
 The Cedar team suggests using Sketch Measure to label Cedar components when redlining final designs. An advantage of working with the UI Toolkit is that the name of the component symbols closely align to the names used in development. This provides a common language among the two teams and allows for smoother, more efficient handoffs.
 
 Example of annotated redlines to show Cedar components as well as spacing variables:
@@ -150,14 +150,14 @@ Example of annotated redlines to show Cedar components as well as spacing variab
 <br/>
 <hr>
 
-## Contributing Design to Cedar
+## Contributing to Cedar
 One of the best ways to influence the visual language of the Co-op’s digital products is by contributing to the design system. There are many ways to contribute: UX research, UI design, authoring, and editing, to name a few. If you’re interested in contributing, talk to your manager or reach out to the Cedar team.
 
 <br/>
 <hr>
 
 ## FAQ
-### Transition from Google Drive
+### Google Drive
 
 #### How can I transition from the Google Drive version?
 Previously, the UI Toolkit was available using Abstract or Google Drive. Now, the UI Toolkit is only available using Abstract. 
