@@ -122,7 +122,6 @@ If the UI Toolkit is linked to your project files, updates will automatically be
 If a symbol within the UI Toolkit has been updated or changed, you will receive a notification of the change in the upper right corner of the Sketch application. You will then be prompted to upgrade the symbol if it is being used within your project. You can decline updates at any time, but will have to manually re-add the symbol back if you choose to update later.
 
 <cdr-img class="cdr-doc-article-img" alt="screenshot of Sketch interface with Library Updates Available notification" :src="$withBase(`/getting-started-for-designers/sketch_scr_02.png`)"/>
-
 <br>
 
 If you see a change to a Symbol that you definitely do not want to make, then double-click an instance of it on the Sketch Canvas, and click **Unlink from Library**. This will turn the Library Symbol into a ‘local’ Symbol visible on your **Symbols** page.
