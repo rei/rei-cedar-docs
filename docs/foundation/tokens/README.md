@@ -75,7 +75,7 @@ Questions about when to use tokens? Ask the Cedar team in [#cedar-user-support](
 
 
 ## Token Criteria
-### Is **“cdr-color-text-primary-lightmode”** a token?
+#### Is **“cdr-color-text-primary-lightmode”** a token?
 <table>
   <tbody>
     <tr>
@@ -100,7 +100,7 @@ Questions about when to use tokens? Ask the Cedar team in [#cedar-user-support](
 
 <br>
 
-### Is **“cdr-color-background-button-secondary-disabled”** a token?
+#### Is **“cdr-color-background-button-secondary-disabled”** a token?
 <table>
   <tbody>
     <tr>
@@ -126,7 +126,7 @@ Questions about when to use tokens? Ask the Cedar team in [#cedar-user-support](
 
 <br>
 
-### Is **“easily-excited”** a token?
+#### Is **“easily-excited”** a token?
 <table>
   <tbody>
     <tr>
