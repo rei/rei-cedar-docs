@@ -166,7 +166,7 @@ The naming structure for tokens follows:
 - **Size:** Describes size for a token, if applicable
 - **Mode:** Defines tokens based on themes, such as a dark or light background
 
-### Examples
+
 The below tables for the naming structure show that levels will be skipped when not used.
 
 #### cdr-color-text-form-label-lightmode
