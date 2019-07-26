@@ -86,18 +86,18 @@
             "slots": [
               {
                 "name": "label",
-                "description": ""
+                "description": "Use this slot instead of label prop. Sets the readable text on the CdrAccordion button."
               },
               {
                 "name": "default",
-                "description": "Sets the innerHTML for CdrAccordionItem content."
+                "description": "Sets the innerHTML for CdrAccordion content."
               }
             ],
             "events": [
               {
-                  "name": "accordion-item-toggle",
-                  "arguments": "isOpen, event",
-                  "description": "$emit event fired on 'cdr-accordion-item' toggle."
+                  "name": "accordion-toggle",
+                  "arguments": "event",
+                  "description": "$emit event fired on 'cdr-accordion' toggle."
               }
             ]
           }
@@ -330,13 +330,11 @@ This component has compliance with WCAG guidelines by:
 
 <api-slot :slots-getting-started-link="true" />
 
-### CdrAccordion
-<!-- <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" :slots-getting-started-link="false" /> -->
+<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" :slots-getting-started-link="false" />
 
 ## Events
 
-### CdrAccordionItem
-<!-- <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" /> -->
+<cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
 
 ## Usage
 
