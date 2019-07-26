@@ -53,37 +53,6 @@
           "api": {
             "props": [
               {
-                "name": "compact",
-                "type": "boolean",
-                "default": "false",
-                "description": "Sets the compact style of CdrAccordionItem child components."
-              },
-              {
-                "name": "borderAligned",
-                "type": "boolean",
-                "default": "false",
-                "description": "Sets the border-aligned style of CdrAccordionItem child components."
-              },
-              {
-                "name": "showAll",
-                "type": "boolean",
-                "default": "false",
-                "description": "Sets all child CdrAccordionItem components to display open by default."
-              }
-            ],
-            "slots": [
-              {
-                "name": "default",
-                "description": "Sets the innerHTML for CdrAccordionItem(s)."
-              }
-            ],
-          },
-        },
-        {
-          "name": "CdrAccordionItem",
-          "api": {
-            "props": [
-              {
                 "name": "id",
                 "type": "string",
                 "default": "N/A",
@@ -93,16 +62,32 @@
                 "name": "label",
                 "type": "string",
                 "default": "N/A",
-                "description": "Sets the readable text on the CdrAccordionItem button or trigger. Required."
+                "description": "Sets the readable text on the CdrAccordion button. Deprecated. Use label slot."
               },
               {
-                "name": "show",
+                "name": "opened",
                 "type": "boolean",
                 "default": "false",
-                "description": "Sets a single CdrAccordionItem to display open by default. The 'showAll' prop takes precedence, when true."
+                "description": "Toggle this value to open/close the accordion."
+              },
+              {
+                "name": "compact",
+                "type": "boolean",
+                "default": "false",
+                "description": "Sets compact variant."
+              },
+              {
+                "name": "borderAligned",
+                "type": "boolean",
+                "default": "false",
+                "description": "Sets border-aligned variant."
               }
             ],
             "slots": [
+              {
+                "name": "label",
+                "description": ""
+              },
               {
                 "name": "default",
                 "description": "Sets the innerHTML for CdrAccordionItem content."
@@ -337,30 +322,21 @@ This component has compliance with WCAG guidelines by:
 <template slot="API">
 <cdr-doc-table-of-contents-shell>
 
-Accordions are built from two components, **CdrAccordion** and **CdrAccordionItem**, which are meant to be used together.
-
 ## Props
 
-### CdrAccordion
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
-
-### CdrAccordionItem
-<cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[1].api.props" />
 
 ## Slots
 
 <api-slot :slots-getting-started-link="true" />
 
 ### CdrAccordion
-<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" :slots-getting-started-link="false" />
-
-### CdrAccordionItem
-<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[1].api.slots" :slots-getting-started-link="false" />
+<!-- <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" :slots-getting-started-link="false" /> -->
 
 ## Events
 
 ### CdrAccordionItem
-<cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[1].api.events" />
+<!-- <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" /> -->
 
 ## Usage
 

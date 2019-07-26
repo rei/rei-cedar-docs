@@ -33,4 +33,5 @@ The token value for the large breakpoint was updated to the correct value of `12
 ### Letter Spacing Values Corrected 
 
 The letter spacing values for our text tokens have been corrected to add the `px` suffix.
+
 </cdr-doc-table-of-contents-shell>
