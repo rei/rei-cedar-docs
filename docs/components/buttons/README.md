@@ -335,7 +335,7 @@ This component has no specific WCAG compliance attributes built into the control
 - Navigating to another page on a site. Instead use [Call to Action](../cta/)
 - Taking users to a different part within the same page. Instead, use [Links](../links/)
 
-## Foundations
+## The Basics
 
 Buttons sizes are used:
   - **Small:** Supplemental user actions such as product comparison or filter on product pages
