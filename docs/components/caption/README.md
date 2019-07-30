@@ -204,16 +204,6 @@ This component has compliance with WCAG guidelines by:
 - Displaying body copy. Instead, use [Paragraphs](../paragraphs/)
 - Breaking up the text styles in a layout for aesthetic purposes
 
-## Foundations
-
-- Captions align to the left border based on the paragraph container and not centered under the media object
-- Max width is 498 pixels, even if the media (image, video, or chart) extends beyond the paragraph max width
-- Left padding is added to the caption container
-<br />
-<br />
-<cdr-img :src="$withBase(`/caption/spec_caption_layout-4-3.png`)"/>
-<br />
-
 ## Content
 
 The Captions component has two separate fields: Summary and Credit.
@@ -229,6 +219,15 @@ Text fields within a caption:
       - Helps users gauge the strength and validity of the material the author has used
       - Begin credit text with “Video Credit” or “Image Credit” 
 
+## Anatomy
+
+- Captions align to the left border based on the paragraph container and not centered under the media object
+- Max width is 498 pixels, even if the media (image, video, or chart) extends beyond the paragraph max width
+- Left padding is added to the caption container
+<br />
+<br />
+<cdr-img :src="$withBase(`/caption/spec_caption_layout-4-3.png`)"/>
+<br />
 
 ### Types of Accreditations
 
