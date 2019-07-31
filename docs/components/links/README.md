@@ -223,7 +223,7 @@ This component has compliance with following WebAIM’s accessibility guidelines
 
 - Navigating a user from promotional or campaign content. Instead, use [Call to Action](../cta/)
 
-## Foundations
+## The Basics
 
 - Link styles are adapted based on context, such as for links included in the [Breadcrumb](../breadcrumb/), Menus and Navigation
 - There are 2 basic link styles, default and standalone: 
