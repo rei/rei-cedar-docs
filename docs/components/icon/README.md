@@ -230,7 +230,7 @@ W3C recommends using `<title>` and `<desc>` elements in SVG for assistive techno
 - Notifying users about status, such as the number of items in a shopping cart or a warning message
 - Conserving space for concepts that are difficult to depict, such as the progress icon or the 3-line “hamburger” menu
 
-## Foundations
+## The Basics
 ### Sizes
 Icons are available in three sizes: small (16px), medium (24px), and large (32px).  Default size is 24px; however designers can choose a different size.
 
