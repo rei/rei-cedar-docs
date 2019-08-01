@@ -86,8 +86,6 @@
             ],
             "events": [
               {
-                "name": "",
-                "arguments": "",
                 "description": "All event listeners are passed through to/from the component."
               }
             ]
