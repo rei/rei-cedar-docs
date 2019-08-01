@@ -84,6 +84,13 @@
                 "description": "Sets the innerHTML for CdrLink. This includes text and html markup for icons."
               }
             ],
+            "events": [
+              {
+                "name": "",
+                "arguments": "",
+                "description": "All event listeners are passed through to/from the component."
+              }
+            ]
           }
         }
       ],
@@ -288,6 +295,10 @@ WebAIM: Links and Hypertext [Introduction to Links and Hypertext](https://webaim
 ## Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
+
+## Events
+
+<cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events"/>
 
 ## Usage
 
