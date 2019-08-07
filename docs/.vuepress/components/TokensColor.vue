@@ -15,7 +15,7 @@
 
 <script>
 import tokenData from '@rei/cdr-tokens/dist/json/platform-tokens.json';
-import descriptionData from './TokenColorData';
+import descriptionData from './TokensColorData';
 import groupBy from 'lodash/groupBy';
 import filter from 'lodash/filter';
 import endsWith from 'lodash/endsWith';
