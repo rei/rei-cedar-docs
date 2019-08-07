@@ -265,7 +265,7 @@ For more information, review techniques and failures for:
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Design Guidelines">
+<template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
 
 ## Use When

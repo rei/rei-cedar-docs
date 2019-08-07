@@ -172,8 +172,8 @@ This component has compliance with WCAG guidelines by:
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Design Guidelines">
-  <cdr-doc-table-of-contents-shell tab-name="Design Guidelines">
+<template slot="Guidelines">
+  <cdr-doc-table-of-contents-shell tab-name="Guidelines">
 
 ## Use When
 

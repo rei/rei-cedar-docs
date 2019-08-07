@@ -319,7 +319,7 @@ This component has no specific WCAG compliance attributes built into the control
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Design Guidelines">
+<template slot="Guidelines">
   <cdr-doc-table-of-contents-shell>
 
 ## Use When

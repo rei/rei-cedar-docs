@@ -220,7 +220,7 @@ W3C recommends using `<title>` and `<desc>` elements in SVG for assistive techno
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Design Guidelines">
+<template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
 
 ## Use When
