@@ -1,6 +1,7 @@
 <template>
   <div>
-    <!-- TODO: Native? -->
+    <!-- Web Tokens -->
+    <template v-if="platform === 'web'">
     <div
       v-for="(v, k) in webMixinsByType"
       class="cdr-mb-space-two-x"
@@ -20,6 +21,33 @@
         </tbody>
       </table>
     </div>
+    </template>
+
+    <!-- Native Tokens -->
+    <template v-if="platform === 'native'">
+    <div
+      v-for="(v, k) in nativeTokensByType"
+      class="cdr-mb-space-two-x"
+    >
+      <!-- Native tokens don't contain enough info for web display -->
+      <!-- <p class="typography-example" :style="makeNativeStyleObj(v)">A different kind of company</p> -->
+      <cdr-text><b>Android:</b> {{ v[0].docs.android }}</cdr-text>
+      <cdr-text><b>iOS:</b> {{ v[0].docs.ios }}</cdr-text>
+      <cdr-text class="cdr-mb-space-one-x">{{v[0].docs.description}}</cdr-text>
+
+      <table>
+        <tbody>
+          <tr v-for="token in v">
+            <td>
+              <cdr-text>{{ token.property }}</cdr-text>
+            </td>
+            <td>{{ token.value }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    </template>
+    
   </div>
 </template>
 
@@ -29,6 +57,7 @@ import descriptionData from './TokensTypographyData';
 import groupBy from 'lodash/groupBy';
 import kebabCase from 'lodash/kebabCase';
 import filter from 'lodash/filter';
+import uniqBy from 'lodash/uniqBy';
 
 export default {
   name: 'TokensTypography',
@@ -64,6 +93,26 @@ export default {
       })
 
       return obj;
+    },
+    nativeTokensByType() {
+      const obj = {}
+      const textTokens = [...new Set([...tokenData.android.text, ...tokenData.ios.text])];
+      const grouped = groupBy(textTokens, 'docs.type');
+      const groupedByName = groupBy(grouped[this.type], (v) => {
+        if ( Object.prototype.hasOwnProperty.call(v.docs, 'android')
+          && v.docs.android !== 'N/A' ) return v.docs.android;
+        else if ( Object.prototype.hasOwnProperty.call(v.docs, 'ios')
+          && v.docs.ios !== 'N/A' ) return v.docs.ios;
+          
+          return 'undefined';
+      });
+
+      const nameKeys = Object.keys(groupedByName);
+      nameKeys.forEach((name) => {
+        groupedByName[name] = uniqBy(groupedByName[name], 'original.value')
+      });
+
+      return groupedByName;
     }
   },
   methods: {
@@ -73,7 +122,14 @@ export default {
         final[o.property]= o.value;
       })
       return final;
-    }
+    },
+    // makeNativeStyleObj(s) {
+    //   let final = {};
+    //   s.forEach(o => {
+    //     final[o.property]= o.original.value;
+    //   })
+    //   return final;
+    // },
   }
 };
 </script>
