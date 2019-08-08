@@ -56,7 +56,7 @@
                 "name": "id",
                 "type": "string",
                 "default": "N/A",
-                "description": "Requires unique ID for each component reference."
+                "description": "Unique id required."
               },
               {
                 "name": "label",
@@ -68,19 +68,19 @@
                 "name": "opened",
                 "type": "boolean",
                 "default": "false",
-                "description": "Toggle this value to open/close the accordion."
+                "description": "Toggle to open/close the accordion."
               },
               {
                 "name": "compact",
                 "type": "boolean",
                 "default": "false",
-                "description": "Sets compact variant."
+                "description": "Sets the compact style."
               },
               {
                 "name": "borderAligned",
                 "type": "boolean",
                 "default": "false",
-                "description": "Sets border-aligned variant."
+                "description": "Sets the border-aligned style."
               }
             ],
             "slots": [
@@ -90,14 +90,14 @@
               },
               {
                 "name": "default",
-                "description": "Slot for the content inside of CdrAccordion."
+                "description": "Slot for the CdrAccordion content."
               }
             ],
             "events": [
               {
                   "name": "accordion-toggle",
                   "arguments": "event",
-                  "description": "$emit event fired on 'cdr-accordion' toggle."
+                  "description": "$emit event fired on CdrAccordion toggle."
               }
             ]
           }
@@ -338,17 +338,95 @@ This component has compliance with WCAG guidelines by:
 
 ## Usage
 
+CdrAccordion emits an event when its button is clicked. Use an event listener to toggle the value of the opened prop to open/close the accordion.
+
 ```vue
 <template>
   <cdr-accordion
-    :show-all="true"
+    id="item"
+    :compact="true"
+    :opened="opened"
+    @accordion-toggle="opened = !opened"
   >
-    <cdr-accordion-item
-      id="item-1"
-      label="Label text"
-    >
-      Accordion content here
-    ...
+    <template name="label">
+      Click me to show content!
+    </template>
+      This content is revealed when the accordion is opened. 
+  </cdr-accordion>
+</template>
+
+<script>
+export default {
+  ...
+  data() {
+    return {
+      opened: false
+    }
+  }
+}
+</script>
+```
+
+CdrAccordion can also be wired up into groups if, for instance, you wanted to close the other accordions when one is opened.
+
+```vue
+<cdr-accordion
+  v-for="(item, index) in grouped"
+  :id="item.id"
+  :border-aligned="true"
+  :opened="item.opened"
+  :key="item.id"
+  @accordion-toggle="updateGroup(index)"
+>
+  <template slot="label">
+    {{ item.label }}
+  </template>
+  {{ item.content }}
+</cdr-accordion>
+
+<script>
+export default {
+  ...
+  data() {
+    return {
+      grouped: [
+        {
+          label: 'These are border-aligned',
+          content: 'These accordions will only allow one open at a time.',
+          opened: false,
+          id: 'linked1',
+        },
+        {
+          label: 'And they are also linked',
+          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+          opened: false,
+          id: 'linked2',
+        },
+        {
+          label: 'To close others when one is opened',
+          content: 'These accordions will only allow one open at a time.',
+          opened: false,
+          id: 'linked3',
+        },
+      ],
+    }
+  },
+  methods: {
+    updateGroup(index) {
+      const { opened } = this.grouped[index];
+      if (opened) {
+        // closing opened accordion
+        this.grouped[index].opened = false;
+      } else {
+        // open closed accordion. close all others.
+        for (let i = 0; i < this.grouped.length; i += 1) {
+          this.grouped[i].opened = index === i;
+        }
+      }
+    },
+  }
+}
+</script>
 ```
 
 </cdr-doc-table-of-contents-shell>
