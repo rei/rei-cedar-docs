@@ -86,11 +86,11 @@
             "slots": [
               {
                 "name": "label",
-                "description": "Use this slot instead of label prop. Sets the readable text on the CdrAccordion button."
+                "description": "Sets the readable text on the CdrAccordion button. Use this slot instead of label prop."
               },
               {
                 "name": "default",
-                "description": "Sets the innerHTML for CdrAccordion content."
+                "description": "Slot for the content inside of CdrAccordion."
               }
             ],
             "events": [
@@ -338,29 +338,6 @@ This component has compliance with WCAG guidelines by:
 
 ## Usage
 
-### Style
-
-Use `cdr-accordion` to pass styling options to `cdr-accordion-item`.
-
-```vue
-<template>
-  <cdr-accordion
-    :compact="true"
-  >
-    <cdr-accordion-item
-      id="item-1"
-      label="Label text"
-    >
-      Accordion content here
-    </cdr-accordion-item>
-  </cdr-accordion>
-</template>
-```
-
-### Behavior
-
-Set `show-all` to `true` on `cdr-accordion`, and each `cdr-accordion-item` will display in an open state.
-
 ```vue
 <template>
   <cdr-accordion
@@ -372,48 +349,6 @@ Set `show-all` to `true` on `cdr-accordion`, and each `cdr-accordion-item` will 
     >
       Accordion content here
     ...
-```
-
-The **CdrAccordionItem** component can also be controlled individually. If `show-all` is `false` at the **CdrAccordion** level, set `show` to `true` to display an individual accordion item in an open state. Note that **CdrAccordion** settings will take precedence over **CdrAccordionItem** settings.
-
-```vue
-<template>
-  <cdr-accordion>
-    <cdr-accordion-item
-      id="item-1"
-      label="Label text"
-      :show="true"
-    >
-      Accordion content here
-    ...
-```
-
-Any options set at the **CdrAccordion** level can be set on any parent component of **CdrAccordion** by using Vue's provide/inject functionality. This is useful, for instance, if **CdrAccordionItem** ever needs to be used as a part of another group component.
-
-
-```vue
-<template>
-  ...
-  <cdr-accordion-item
-    id="item-1"
-    label="Label text"
-  >
-    Accordion content here
-  </cdr-accordion-item>
-  ...
-</template>
-
-<script>
-  export default {
-    ...
-    provide() {
-      return {
-        borderAligned: true,
-        showAll: true
-      };
-    }
-  }
-</script>
 ```
 
 </cdr-doc-table-of-contents-shell>
