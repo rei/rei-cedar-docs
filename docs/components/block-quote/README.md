@@ -1,133 +1,137 @@
 ---
 {
-    "title": "Block Quote",
-    "layout_type": "LayoutComponent",
-    "title_metadata": "Quote, CdrQuote",
-    "summary": "Short excerpt with an external citation and citation URL that is set off from the main body of text",
-    "see_also": [
-      {
-        "text": "See Also"
-      },
-      {
-         "text": "Pull Quote",
-         "href": "../pull-quote/"
-      },
-      {
-        "text": "Paragraphs",
-        "href": "../paragraphs/"
-      }
-    ],
-    "position": [
-        {
-            "type": "do",
-            "image": "block-quote/quotes_block__do__9-16.png",
-            "ratio": "9-16",
-            "alt": "Image showing proper block quote use.",
-            "caption": "position the quote near the surrounding text."
-        },
-        {
-            "type": "dont",
-            "image": "block-quote/quotes_block__random__dont_9-16.png",
-            "ratio": "9-16",
-            "alt": "Image showing random block quotes in an article",
-            "caption": "position quotes in a random location on the page."
-        }
-    ],
-    "indenting": [
-        {
-            "type": "do",
-            "image": "block-quote/quotes_block__do__9-16.png",
-            "ratio": "9-16",
-            "alt": "Image showing proper block quote use.",
-            "caption": "use for emphasizing content or additional content."
-        },
-        {
-            "type": "dont",
-            "image": "block-quote/quotes_block__indent_text__dont_9-16.png",
-            "ratio": "9-16",
-            "alt": "Image showing random block quotes in an article",
-            "caption": "use for indenting text content."
-        }
-    ],
-    "too_many": [
-        {
-            "type": "do",
-            "image": "block-quote/quotes_block__do__9-16.png",
-            "ratio": "9-16",
-            "alt": "Image showing proper block quote position.",
-            "caption": "position quotes so users can visually scan the page."
-        },
-        {
-            "type": "dont",
-            "image": "block-quote/quotes_block__too_many__dont_9-16.png",
-            "ratio": "9-16",
-            "alt": "Image showing too many block quotes in an article",
-            "caption": "use too many block quotes."
-        }
-    ],
-    "citation": [
-        {
-            "type": "do",
-            "image": "block-quote/quotes_block__citation__do_3-2.png",
-            "ratio": "3-2",
-            "alt": "Image showing proper block citation.",
-            "caption": "provide a citation."
-        },
-        {
-            "type": "dont",
-            "image": "block-quote/quotes_block__citation__dont_3-2.png",
-            "ratio": "3-2",
-            "alt": "Image showing too improper citation style",
-            "caption": "emphasize the citation."
-        }
-    ],
-
-    "breadcrumbs": [
-        {
-        "text": "Components/"
-    }],
-    "sandboxData": {
-      "components": "CdrQuote"
+  "title": "Block Quote",
+  "layout_type": "LayoutComponent",
+  "title_metadata": "Quote, CdrQuote",
+  "summary": "Short excerpt with an external citation and citation URL that is set off from the main body of text",
+  "see_also": [
+    {
+      "text": "See Also"
     },
-    "versions": [{
-        "components": [
-            {
-            "name": "CdrQuote",
-            "api": {
-                "props": [
-                    {
-                        "name": "tag",
-                        "type": "string",
-                        "default": "`blockquote`",
-                        "required": "false",
-                        "description": "Sets the ‘tag’ attribute for cdr-quote to define the root HTML element. Possible values: {  ‘blockquote’  |  ‘aside’  |  ‘q’  |  ‘div’  }"
-                    },
-                    {
-                        "name": "summary",
-                        "type": "string",
-                        "default": "",
-                        "required": "false",
-                        "description": "Sets the quote body text."
-                    },
-                    {
-                        "name": "cite",
-                        "type": "string",
-                        "default": "",
-                        "required": "false",
-                        "description": "When the ‘tag’ prop is set to ‘blockquote’ provide a URL to the quote’s source. This does not render but is available to screen readers and search engines."
-                    },
-                    {
-                        "name": "citation",
-                        "type": "string",
-                        "default": "",
-                        "required": "false",
-                        "description": "Sets the quote attribution text."
-                    }
-                ],
-            }
-        }],
-        "version": "1.0.0"
-    }]
+    {
+      "text": "Pull Quote",
+      "href": "../pull-quote/"
+    },
+    {
+      "text": "Paragraphs",
+      "href": "../paragraphs/"
+    }
+  ],
+  "position": [
+    {
+      "type": "do",
+      "image": "block-quote/quotes_block__do__9-16.png",
+      "ratio": "9-16",
+      "alt": "Image showing proper block quote use.",
+      "caption": "position the quote near the surrounding text."
+    },
+    {
+      "type": "dont",
+      "image": "block-quote/quotes_block__random__dont_9-16.png",
+      "ratio": "9-16",
+      "alt": "Image showing random block quotes in an article",
+      "caption": "position quotes in a random location on the page."
+    }
+  ],
+  "indenting": [
+    {
+      "type": "do",
+      "image": "block-quote/quotes_block__do__9-16.png",
+      "ratio": "9-16",
+      "alt": "Image showing proper block quote use.",
+      "caption": "use for emphasizing content or additional content."
+    },
+    {
+      "type": "dont",
+      "image": "block-quote/quotes_block__indent_text__dont_9-16.png",
+      "ratio": "9-16",
+      "alt": "Image showing random block quotes in an article",
+      "caption": "use for indenting text content."
+    }
+  ],
+  "too_many": [
+    {
+      "type": "do",
+      "image": "block-quote/quotes_block__do__9-16.png",
+      "ratio": "9-16",
+      "alt": "Image showing proper block quote position.",
+      "caption": "position quotes so users can visually scan the page."
+    },
+    {
+      "type": "dont",
+      "image": "block-quote/quotes_block__too_many__dont_9-16.png",
+      "ratio": "9-16",
+      "alt": "Image showing too many block quotes in an article",
+      "caption": "use too many block quotes."
+    }
+  ],
+  "citation": [
+    {
+      "type": "do",
+      "image": "block-quote/quotes_block__citation__do_3-2.png",
+      "ratio": "3-2",
+      "alt": "Image showing proper block citation.",
+      "caption": "provide a citation."
+    },
+    {
+      "type": "dont",
+      "image": "block-quote/quotes_block__citation__dont_3-2.png",
+      "ratio": "3-2",
+      "alt": "Image showing too improper citation style",
+      "caption": "emphasize the citation."
+    }
+  ],
+
+  "breadcrumbs": [
+    {
+      "text": "Components/"
+    }
+  ],
+  "sandboxData": {
+    "components": "CdrQuote"
+  },
+  "versions": [
+    {
+      "components": [
+        {
+          "name": "CdrQuote",
+          "api": {
+            "props": [
+              {
+                "name": "tag",
+                "type": "string",
+                "default": "`blockquote`",
+                "required": "false",
+                "description": "Sets the ‘tag’ attribute for cdr-quote to define the root HTML element. Possible values: {  ‘blockquote’  |  ‘aside’  |  ‘q’  |  ‘div’  }"
+              },
+              {
+                "name": "summary",
+                "type": "string",
+                "default": "",
+                "required": "false",
+                "description": "Sets the quote body text."
+              },
+              {
+                "name": "cite",
+                "type": "string",
+                "default": "",
+                "required": "false",
+                "description": "When the ‘tag’ prop is set to ‘blockquote’ provide a URL to the quote’s source. This does not render but is available to screen readers and search engines."
+              },
+              {
+                "name": "citation",
+                "type": "string",
+                "default": "",
+                "required": "false",
+                "description": "Sets the quote attribution text."
+              }
+            ],
+          }
+        }
+      ],
+      "version": "1.0.0"
+    }
+  ]
 }
 ---
 

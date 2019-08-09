@@ -1,18 +1,18 @@
 ---
 {
-   "title": "Caption",
-   "layout_type": "LayoutComponent",
-   "summary": "Provides further context and attribution for a figure or media asset such as an image, video, or chart",
-   "title_metadata": "CdrCaption",
-   "see_also": [
-      {
-        "text": "See Also"
-      },
-      {
-        "text": "Images",
-        "href": "../image/"
-      }
-    ],
+  "title": "Caption",
+  "layout_type": "LayoutComponent",
+  "summary": "Provides further context and attribution for a figure or media asset such as an image, video, or chart",
+  "title_metadata": "CdrCaption",
+  "see_also": [
+    {
+      "text": "See Also"
+    },
+    {
+      "text": "Images",
+      "href": "../image/"
+    }
+  ],
   "align": [
     {
       "type": "do",
@@ -120,7 +120,7 @@ Caption aligns to the left alongside the body copy with inset padding. Default c
 <cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/caption" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
-  <cdr-caption 
+  <cdr-caption
     summary="Testing and validating the final fit of the 2018/2019 Tecnica ski boot collection during the September 2017 focus group in Park City, Utah."
     credit="Image Credit: Blizzard Tecnica"/>
 ```
@@ -134,7 +134,7 @@ Summary has same CSS styles as the default; however, only the summary element is
 <cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/caption" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-caption 
+  <cdr-caption
     summary="Testing and validating the final fit of the 2018/2019 Tecnica ski boot collection during the September 2017 focus group in Park City, Utah."/>
 ```
 
@@ -148,7 +148,7 @@ Credit has same CSS styles as the default; however, only the credit element is d
 <cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/caption" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-caption 
+  <cdr-caption
     credit="Image Credit: Blizzard Tecnica"/>
 ```
 
@@ -165,7 +165,7 @@ The captions component is text-only; however, it is meant to be displayed in the
 <figure>
   <cdr-img src="http://via.placeholder.com/350x150"/>
   <figcaption>
-    <cdr-caption 
+    <cdr-caption
     summary="Testing and validating the final fit of the 2018/2019 Tecnica ski boot collection during the September 2017 focus group in Park City, Utah."
     credit="Image Credit: Blizzard Tecnica"/>
   </figcaption>
@@ -227,20 +227,20 @@ Text fields within a caption:
       - Use sentence case
   - Credit provides attribution to the correct sources:
       - Helps users gauge the strength and validity of the material the author has used
-      - Begin credit text with “Video Credit” or “Image Credit” 
+      - Begin credit text with “Video Credit” or “Image Credit”
 
 
 ### Types of Accreditations
 
 For photos submitted by customers or members:
   - Provide first name, initial of last name (not full last name)
-  - If available, social site handle from where the asset was provided 
-  - For example, Madeline G. @maddyluv 
+  - If available, social site handle from where the asset was provided
+  - For example, Madeline G. @maddyluv
 
 \
 For multiple photo accreditations:
   - List in clockwise order from top
-  - Separated by commas and semicolons 
+  - Separated by commas and semicolons
   - No breaking spaces
   - For example, “Image credits: top left, Madeline G. @maddyluv; top right, Kevin C.; bottom right, George M. @gmonkey”
 
@@ -257,7 +257,7 @@ For copyrighted media (photos or video):
 
 - For more information about photo accreditation recommendations:
   - Noble Blogger Guidelines: [How to Cite Pictures](https://writtent.com/blog/the-honor-code-of-a-noble-blogger-how-to-cite-pictures)
-  - NPR Training, Storytelling tips and best practices: [These are NPR's photo caption guidelines](http://training.npr.org/visual/these-are-nprs-photo-caption-guidelines) 
+  - NPR Training, Storytelling tips and best practices: [These are NPR's photo caption guidelines](http://training.npr.org/visual/these-are-nprs-photo-caption-guidelines)
 
 
 ## Behavior
