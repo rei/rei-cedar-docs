@@ -165,6 +165,11 @@
                 "name": "icon",
                 "description": "Sets the innerHTML for CdrButton. This is for the icon."
               }
+            ],
+            "events": [
+              {
+                "description": "All event listeners are passed through to/from the component."
+              }
             ]
           }
         }
