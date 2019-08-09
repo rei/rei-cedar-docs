@@ -26,6 +26,48 @@
 
 CdrAccordion has been refactored to remove internal state tracking for toggling open and closed. For simplicity, the CdrAccordionItem component has been removed and its functionality merged with CdrAccordion. The `show` prop has been renamed to `opened` for clarity. Please review the [updated API and usage examples](https://rei.github.io/rei-cedar-docs/components/accordion/) for more information.
 
+```vue
+<cdr-accordion>
+  <cdr-accordion-item
+    id="accordion-1"
+    label="How do I find my member number?">
+    <cdr-text tag="p">
+        Find your member number online. You can also call 
+        Customer Support at 1-800-426-4840 (U.S. and Canada)
+        or 1-253-891-2500 (International).
+    </cdr-text>
+  </cdr-accordion-item>
+</cdr-accordion>
+```
+
+```vue
+<cdr-accordion
+  id="accordion-1"
+  :opened="opened"
+  @accordion-toggle="opened = !opened"
+>
+  <template slot="label">
+    How do I find my member number?
+  </template>
+  <cdr-text tag="p">
+    Find your member number online. You can also call 
+    Customer Support at 1-800-426-4840 (U.S. and Canada)
+    or 1-253-891-2500 (International).
+  </cdr-text>
+</cdr-accordion>
+
+<script>
+export default {
+  ...
+  data() {
+    return {
+      opened: false
+    }
+  }
+}
+</script>
+```
+
 ### Breadcrumb Truncation/SSR 
 
 In order to fix an issue with server-side rendering, as well as to simplify the API of [CdrBreadcrumb](https://rei.github.io/rei-cedar-docs/components/breadcrumb/), we have removed the `truncationThreshold` and `truncationXSThreshold` attributes. Instead, the `truncationEnabled` attr can be used to control whether or not the breadcrumb should be truncated. This change will not break any existing consumers of breadcrumb even if they are using those attributes.
