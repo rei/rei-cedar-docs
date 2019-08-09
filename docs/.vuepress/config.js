@@ -90,6 +90,7 @@ module.exports = {
           { text: "Icons", link: "/components/icon/" },
           { text: "Images", link: "/components/image/" },
           { text: "Inputs", link: "/components/input/" },
+          { text: "Selects", link: "/components/selects/" },
           { text: "Links", link: "/components/links/" },
           { text: "Lists", link: "/components/lists/" },
           { text: "Pagination", link: "/components/pagination/" },
