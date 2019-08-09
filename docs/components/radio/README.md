@@ -148,17 +148,17 @@ Default and standard spacing for radio buttons.
 <div>
 <cdr-radio
   name="default-example"
-  value="ex1"
+  custom-value="ex1"
   v-model="ex"
 >Default radio 1</cdr-radio>
 <cdr-radio
   name="default-example"
-  value="ex2"
+  custom-value="ex2"
   v-model="ex"
 >Default radio 2</cdr-radio>
 <cdr-radio
   name="default-example"
-  :value="{val:'ex3'}"
+  :custom-value="{val:'ex3'}"
   v-model="ex"
   disabled
 >Default radio 3</cdr-radio>
@@ -179,19 +179,19 @@ Compact spacing for radio buttons.
 <cdr-radio
   modifier="compact"
   name="compact-example"
-  value="ex1"
+  custom-value="ex1"
   v-model="ex"
 >Compact radio 1</cdr-radio>
 <cdr-radio
   modifier="compact"
   name="compact-example"
-  value="ex2"
+  custom-value="ex2"
   v-model="ex"
 >Compact radio 2</cdr-radio>
 <cdr-radio
   modifier="compact"
   name="compact-example"
-  :value="{val:'ex3'}"
+  :custom-value="{val:'ex3'}"
   v-model="ex"
   disabled
 >Compact radio 3</cdr-radio>
@@ -212,7 +212,7 @@ Custom styles for radio buttons.
 
 <cdr-radio
   name="custom-example"
-  value="ex1"
+  custom-value="ex1"
   v-model="ex"
   modifier="hide-figure"
   input-class="no-box"
@@ -220,7 +220,7 @@ Custom styles for radio buttons.
 >Custom radio 1</cdr-radio>
 <cdr-radio
   name="custom-example"
-  value="ex2"
+  custom-value="ex2"
   v-model="ex"
   modifier="hide-figure"
   input-class="no-box"
@@ -228,7 +228,7 @@ Custom styles for radio buttons.
 >Custom radio 2</cdr-radio>
 <cdr-radio
   name="custom-example"
-  :value="{val:'ex3'}"
+  :custom-value="{val:'ex3'}"
   v-model="ex"
   modifier="hide-figure"
   input-class="no-box"

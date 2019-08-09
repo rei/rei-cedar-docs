@@ -459,12 +459,12 @@ Following variants are available to the `cdr-button` modifier attribute:
 
 ### Click Actions
 
-Use the `on-click` prop to attach custom actions and event handling.
+Use an `@click` event handler to attach custom actions and event handling.
 
 ```vue{3}
 <template>
   <cdr-button
-    :on-click="greet"
+    @click="greet"
   >
     Greet
   </cdr-button>
@@ -542,27 +542,6 @@ Use the following props to modify `cdr-button`:
 </template>
 ```
 
-
-### CdrCloseButton and CdrPlayButton
-
-The **CdrButton** package includes two specific icon-only variants. **CdrCloseButton** and **CdrPlayButton** include their respective icons and `aria-label` text for accessibility.
-
-```vue
-<template>
-  <cdr-close-button />
-</template>
-
-<script>
-import { CdrCloseButton } from '@rei/cedar';
-
-export default {
-  ...
-  components: {
-     CdrCloseButton  
-  }
-}
-</script>
-```
 
 </cdr-doc-table-of-contents-shell>
 </template>
