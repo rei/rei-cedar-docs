@@ -90,7 +90,6 @@ module.exports = {
           { text: "Icons", link: "/components/icon/" },
           { text: "Images", link: "/components/image/" },
           { text: "Inputs", link: "/components/input/" },
-          { text: "Selects", link: "/components/selects/" },
           { text: "Links", link: "/components/links/" },
           { text: "Lists", link: "/components/lists/" },
           { text: "Pagination", link: "/components/pagination/" },
@@ -98,6 +97,7 @@ module.exports = {
           { text: "Pull Quote", link: "/components/pull-quote/" },
           { text: "Radio Buttons", link: "/components/radio/" },
           { text: "Ratings", link: "/components/rating/" },
+          { text: "Selects", link: "/components/selects/" },
           { text: "Tabs", link: "/components/tabs/" }
         ]
       },
