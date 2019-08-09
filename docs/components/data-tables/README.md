@@ -254,7 +254,7 @@ Layout for making comparisons such as between size/sleeve length. Column headers
 
 ## Compact and Borderless
 
-Layout with reduced spacing within each cell. All cells are borderless. Defines a column of row headers. 
+Layout with reduced spacing within each cell. All cells are borderless. Defines a column of row headers.
 
 <cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData">
 
@@ -395,7 +395,7 @@ Alignment impacts the table's readability. Make the data easy to read and simple
 
 <do-dont :examples="$page.frontmatter.alternatestripe" />
 
-## Responsiveness 
+## Responsiveness
 
 Data Tables are responsive by default. Whenever the number of columns overflows the container, the entire table will scroll.
 
@@ -484,7 +484,7 @@ The locked-column behavior described in the [design guidelines](../data-tables/?
 
 The same information can be rendered using **CdrDataTable's** named slots, however the locked column behavior is not available.
 
-The below example shows: 
+The below example shows:
 
 - How to use the `thead` and `tbody` slots to define table markup
 - `colHeaders` prop set to true because the `thead` slot is being used

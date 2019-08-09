@@ -57,12 +57,6 @@
       "text": "Components/"
     }
   ],
-  # TODO: update these examples to use sandbox
-  #"sandboxData": {
-#    "name": "CdrPagination",
-#    "dependencies": { "@rei/cdr-pagination": "^1.0.0" },
-#    "loadComponentCss": true
-  #},
   "versions": [
     {
       "components": [
@@ -141,9 +135,9 @@ To ensure that usage of this component complies with accessibility guidelines:
 <br />
 
 This component has compliance WCAG guidelines by:
-- [WCAG 2.4.8](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0&showtechniques=248#location): Information about the user's location within a set of Web pages is available 
-- [WCAG 3.2.3](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-consistent-locations.html): Navigation patterns follow a consistent pattern. Only position pagination component at the bottom of the page 
-- [WCAG 2.4.3](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#qr-navigation-mechanisms-focus-order): Focus state receives focus in an order that preserves meaning 
+- [WCAG 2.4.8](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0&showtechniques=248#location): Information about the user's location within a set of Web pages is available
+- [WCAG 3.2.3](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-consistent-locations.html): Navigation patterns follow a consistent pattern. Only position pagination component at the bottom of the page
+- [WCAG 2.4.3](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#qr-navigation-mechanisms-focus-order): Focus state receives focus in an order that preserves meaning
 - [WCAG 2.4.7](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#qr-navigation-mechanisms-focus-visible): Focus is visible
 - [WCAG 2.5.5](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html): Target size for pagination links are large enough for users to easily activate them
 
@@ -204,7 +198,7 @@ Pagination adapts to a Select component with a native UI dropdown menu on XS bre
 
 <template slot="API">
 <cdr-doc-table-of-contents-shell>
-  
+
 ## Props
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 

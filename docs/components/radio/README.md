@@ -5,7 +5,7 @@
   "summary": "Permits user to select only one option from a list of two or more",
   "title_metadata": "Radios, CdrRadio",
   "see_also": [
-      {
+    {
       "text": 'See Also'
     },
     {
@@ -242,12 +242,12 @@ To ensure that usage of this component complies with accessibility guidelines:
 
 - Each radio button must be focusable and keyboard accessible:
   - When radio button has focus, the **Space** key changes the selection
-  - **Tab** key moves to next element in list 
-- Fieldsets should be: 
+  - **Tab** key moves to next element in list
+- Fieldsets should be:
   - Used when associating group of radio buttons
   - Identified or described as a group using a `<legend>` tag
 - Avoid nested fieldsets
-- Custom radio buttons maintain accessibility requirements. The radio button icon is only visually hidden and replaced with custom style 
+- Custom radio buttons maintain accessibility requirements. The radio button icon is only visually hidden and replaced with custom style
 
 <br/>
 
@@ -332,7 +332,7 @@ The **CdrRadio** component requires `v-model` to track the value of selected rad
 
 ### Modifiers
 
-Following variants are available to the `cdr-radio` modifier attribute: 
+Following variants are available to the `cdr-radio` modifier attribute:
 | Value | Description            |
 |:------|:-----------------------|
 | 'compact'  | Sets the spacing for smaller screen sizes |
