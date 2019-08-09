@@ -110,6 +110,12 @@ module.exports = {
       }
     ]
   },
+  configureWebpack(config) {
+    // make npm link work
+    if (process.env.NODE_ENV !== "production") {
+      config.resolve.symlinks = false;
+    }
+ },
   chainWebpack(config, isServer) {
     config.resolve.alias.set("$vue", "vue/dist/vue.esm.js");
     const cjs = isServer ? 'cjs.ssr' : 'cjs';
