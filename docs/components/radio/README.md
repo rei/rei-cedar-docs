@@ -96,7 +96,7 @@
                 "description": "Sets the name of the radio button. Required."
               },
               {
-                "name": "value",
+                "name": "customValue",
                 "type": "string, number, boolean, object, array, symbol, function",
                 "default": "N/A",
                 "description": "Sets the value of the radio button. Required."
@@ -117,6 +117,11 @@
             "events": [
               {
                 "name": "change",
+                "arguments": "value",
+                "description": "$emit event fired on radio selection."
+              },
+              {
+                "name": "input",
                 "arguments": "value",
                 "description": "$emit event fired on radio selection."
               }
