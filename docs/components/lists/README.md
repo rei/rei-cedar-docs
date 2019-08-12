@@ -1,22 +1,22 @@
 ---
 {
-   "title": "Lists",
-   "layout_type": "LayoutComponent",
-   "summary": "Group related content items together either vertically or horizontally",
-   "title_metadata": "CdrList",
-   "see_also": [
-      {
-        "text": 'See Also'
-      },
-      {
-        "text": 'Accordion',
-        "href": '../accordion/'
-      },
-      {
-        "text": 'Breadcrumb',
-        "href": '../breadcrumb/'
-      }
-    ],
+  "title": "Lists",
+  "layout_type": "LayoutComponent",
+  "summary": "Group related content items together either vertically or horizontally",
+  "title_metadata": "CdrList",
+  "see_also": [
+    {
+      "text": 'See Also'
+    },
+    {
+      "text": 'Accordion',
+      "href": '../accordion/'
+    },
+    {
+      "text": 'Breadcrumb',
+      "href": '../breadcrumb/'
+    }
+  ],
   "list1": [
     {
       "type": "do",
@@ -56,31 +56,31 @@
   "versions": [
     {
       "components": [
-      {
-        "name": "CdrList",
-        "api": {
-          "props": [
-            {
-              "name": "tag",
-              "type": "string",
-              "default": "'ul'",
-              "description": "Sets valid HTML element tag. Possible values: {  ‘ul’ | ‘ol’  }"
-            },
-            {
-              "name": "modifier",
-              "type": "string",
-              "default": "N/A",
-              "description": "Modifies the style variant for this component. Possible values: {  ‘ordered’  |  ‘unordered’  |  ‘compact’  |  ‘inline’  }"
-            }
-          ],
-          "slots": [
-            {
-              "name": "default",
-              "description": "Sets the innerHTML for CdrList. This includes text and html markup."
-            }
-          ],
+        {
+          "name": "CdrList",
+          "api": {
+            "props": [
+              {
+                "name": "tag",
+                "type": "string",
+                "default": "'ul'",
+                "description": "Sets valid HTML element tag. Possible values: {  ‘ul’ | ‘ol’  }"
+              },
+              {
+                "name": "modifier",
+                "type": "string",
+                "default": "N/A",
+                "description": "Modifies the style variant for this component. Possible values: {  ‘ordered’  |  ‘unordered’  |  ‘compact’  |  ‘inline’  }"
+              }
+            ],
+            "slots": [
+              {
+                "name": "default",
+                "description": "Sets the innerHTML for CdrList. This includes text and html markup."
+              }
+            ],
+          },
         },
-      },
       ],
       "version": "0.1.0"
     }
@@ -126,7 +126,7 @@ Collect items to be displayed in a list when items are not marked with bullets. 
     <li>Compact list item 3</li>
   </cdr-list>
 ```
-  
+
 </template>
 
 </cdr-doc-example-code-pair>
@@ -164,7 +164,7 @@ Collect related items that don’t need to be in a specific order or sequence. L
     <li>Compact list item 3</li>
   </cdr-list>
 ```
-  
+
 </template>
 
 
@@ -204,7 +204,7 @@ Collect related items with numeric order or sequence. Numbering starts at 1 with
     <li>Compact list item 3</li>
   </cdr-list>
 ```
-  
+
 </template>
 
 </cdr-doc-example-code-pair>
@@ -235,7 +235,7 @@ Display items horizontally with no divider.
     <li>Compact list item 3</li>
   </cdr-list>
 ```
-  
+
 </template>
 
 </cdr-doc-example-code-pair>
@@ -266,7 +266,7 @@ Display items horizontally, separated by a bullet character.
     <li>Compact list item 3</li>
   </cdr-list>
 ```
-  
+
 </template>
 
 </cdr-doc-example-code-pair>
@@ -374,7 +374,7 @@ WebAIM: [Semantic Structure: Using Lists Correctly](https://webaim.org/technique
 
 ## Usage
 
-Visual style and semantic meaning are managed independently by providing: 
+Visual style and semantic meaning are managed independently by providing:
 
 - Element to the `tag` prop
 - Style to the `modifier` prop
@@ -390,7 +390,7 @@ By default the **CdrList** component renders as an unordered and undecorated "ba
 </cdr-list>
 ```
 
-The **CdrList** component has decoupled the semantic tags `<ul>` and `<ol>` from visual presentation. 
+The **CdrList** component has decoupled the semantic tags `<ul>` and `<ol>` from visual presentation.
 
 <br/>
 

@@ -52,7 +52,7 @@
       "caption": "use all caps for tab labels."
     }
   ],
-    "label": [
+  "label": [
     {
       "type": "do",
       "image": "tabs/tab_label_do_16-9.png",

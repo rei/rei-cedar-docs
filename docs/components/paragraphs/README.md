@@ -1,30 +1,30 @@
 ---
 {
-   "title": "Paragraphs",
-   "layout_type": "LayoutComponent",
-   "summary": "Text container used for any text element such as paragraphs, headings, and lists. Establishes vertical spacing and optimizes the reading experience",
-   "title_metadata": "CdrText",
-   "see_also": [
-      {
-        "text": 'See Also'
-      },
-      {
-        "text": 'Typography',
-        "href": '../../foundation/typography/'
-      },
-      {
-        "text": 'Caption',
-        "href": '../caption/'
-      },
-      {
-        "text": 'Block Quote',
-        "href": '../block-quote/'
-      },
-      {
-        "text": 'Headings',
-        "href": '../headings/'
-      }
-    ],
+  "title": "Paragraphs",
+  "layout_type": "LayoutComponent",
+  "summary": "Text container used for any text element such as paragraphs, headings, and lists. Establishes vertical spacing and optimizes the reading experience",
+  "title_metadata": "CdrText",
+  "see_also": [
+    {
+      "text": 'See Also'
+    },
+    {
+      "text": 'Typography',
+      "href": '../../foundation/typography/'
+    },
+    {
+      "text": 'Caption',
+      "href": '../caption/'
+    },
+    {
+      "text": 'Block Quote',
+      "href": '../block-quote/'
+    },
+    {
+      "text": 'Headings',
+      "href": '../headings/'
+    }
+  ],
   "width": [
     {
       "type": "do",
@@ -137,14 +137,14 @@ Used for editorial content such as long-form articles like Expert Advice pages o
 To ensure that usage of this component complies with accessibility guidelines:
 
 - Text container does not exceed 634px or line length does not exceed more than 75 characters
-- Minimize use of reversed-out body copy because it’s harder to read 
-- When possible, use the first sentence as an introduction to the paragraph. With screen readers, users can listen to the first sentence and then jump to the next paragraph 
+- Minimize use of reversed-out body copy because it’s harder to read
+- When possible, use the first sentence as an introduction to the paragraph. With screen readers, users can listen to the first sentence and then jump to the next paragraph
 - Break long pages into shorter sections by organizing content into well-defined groups or chunks
 
 <br/>
 
 This component has compliance with following WebAIM’s accessibility guidelines:
-- [WCAG SC 1.4.8: Visual presentation](https://www.w3.org/TR/WCAG20/#visual-audio-contrast-visual-presentation): Cedar Design System text component provides for spacing for: 
+- [WCAG SC 1.4.8: Visual presentation](https://www.w3.org/TR/WCAG20/#visual-audio-contrast-visual-presentation): Cedar Design System text component provides for spacing for:
   - Within paragraphs, line spacing is at least 1.5 times font height
   - Between paragraphs, at least 1.5 times larger than the line spacing
 
@@ -224,9 +224,9 @@ Sentinel carries a stronger brand impression with other brand material, and is p
 
 ## Usage
 
-The **CdrText** component allows for styling any html element with available text styles. Visual style and semantic meaning are managed independently by providing: 
+The **CdrText** component allows for styling any html element with available text styles. Visual style and semantic meaning are managed independently by providing:
 
-* Element to the `tag` prop 
+* Element to the `tag` prop
 * Style to the `modifier` prop
 
 <br />

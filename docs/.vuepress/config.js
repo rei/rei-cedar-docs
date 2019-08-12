@@ -42,6 +42,7 @@ module.exports = {
       {
         text: "Release Notes",
         items: [
+          { text: "Fall 2019", link: "/release-notes/fall-2019/" },
           { text: "Summer 2019", link: "/release-notes/summer-2019/" },
           { text: "Archive", link: "/release-notes/archive/" },
         ]
@@ -97,6 +98,7 @@ module.exports = {
           { text: "Pull Quote", link: "/components/pull-quote/" },
           { text: "Radio Buttons", link: "/components/radio/" },
           { text: "Ratings", link: "/components/rating/" },
+          { text: "Selects", link: "/components/selects/" },
           { text: "Tabs", link: "/components/tabs/" }
         ]
       },
@@ -109,6 +111,12 @@ module.exports = {
       }
     ]
   },
+  configureWebpack(config) {
+    // make npm link work
+    if (process.env.NODE_ENV !== "production") {
+      config.resolve.symlinks = false;
+    }
+ },
   chainWebpack(config, isServer) {
     config.resolve.alias.set("$vue", "vue/dist/vue.esm.js");
     const cjs = isServer ? 'cjs.ssr' : 'cjs';

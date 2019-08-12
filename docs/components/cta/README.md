@@ -163,7 +163,7 @@ Use dark Call to Action over a light background image or color to provide proper
 <cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/cta" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-cta 
+  <cdr-cta
     href="https://rei.com"
     cta-style="dark"
   >
@@ -180,7 +180,7 @@ Use light Call to Action over a dark background image or color to provide proper
 <cdr-doc-example-code-pair repository-href="/src/components/cta" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-cta 
+  <cdr-cta
     href="https://rei.com"
     cta-style="light"
   >
@@ -197,7 +197,7 @@ Use sale Call to Action for off-price placements.
 <cdr-doc-example-code-pair repository-href="/src/components/cta" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-cta 
+  <cdr-cta
     href="https://rei.com"
     cta-style="sale"
   >
@@ -231,7 +231,7 @@ Adds drop shadow to increase contrast and visibility of Call to Action when plac
 <cdr-doc-example-code-pair repository-href="/src/components/cta" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-cta 
+  <cdr-cta
     href="https://rei.com"
     cta-style="brand"
     modifier="elevated"
@@ -290,7 +290,7 @@ This component has compliance with [WCAG SC 1.4.3: Contrast (Minimum)](https://w
 Call to Action exists as a means to navigate users to a new location or additional information:
 
 - Use clear and concise text
-- Make it clear what happens when this link is clicked or tapped 
+- Make it clear what happens when this link is clicked or tapped
 - For example, “Shop Backpacking” Call to Action on a homepage would navigate the user to an assortment of backpacking-related products available for purchase
 - Use all caps for CTAs, not sentence case, title caps or all lowercase
 
@@ -333,7 +333,7 @@ To construct consistent and universal Call to Actions across the site:
 
 <template slot="API">
 <cdr-doc-table-of-contents-shell>
-  
+
 ## Props
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
@@ -347,10 +347,10 @@ This example code renders a full width `cdr-cta`, with the `elevated` modifier a
 
 ```vue
 <template>
-  <cdr-cta 
-    href="https://rei.com" 
-    :full-width="true" 
-    cta-style="sale" 
+  <cdr-cta
+    href="https://rei.com"
+    :full-width="true"
+    cta-style="sale"
     modifier="elevated"
   >
     See our new gear!

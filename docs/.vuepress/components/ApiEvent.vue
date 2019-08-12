@@ -7,7 +7,7 @@
         <cdr-col
           span="12 6@sm"
         >
-          <div>
+          <div v-if="apiEvent.name">
             <p :aria-labelledby="'eventName' + index" class="event-name">{{ apiEvent.name }}</p>
             <p :id="'eventName' + index" class="event-label">name</p>
           </div>
@@ -15,7 +15,7 @@
         <cdr-col
           span="12 6@sm"
         >
-          <div>
+          <div v-if="apiEvent.arguments">
             <p :aria-labelledby="'eventType' + index" class="event-type">{{ apiEvent.arguments }}</p>
             <p :id="'eventType' + index" class="event-label">arguments</p>
           </div>

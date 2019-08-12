@@ -1,22 +1,22 @@
 ---
 {
-   "title": "Links",
-   "layout_type": "LayoutComponent",
-   "summary": "Clickable text element to navigate to page section, another page or open an overlaid window such as modal dialog or popover",
-   "title_metadata": "Hyperlink, Anchor, CdrButton, CdrLink",
-   "see_also": [
-      {
-        "text": 'See Also'
-      },
-      {
-        "text": 'Buttons',
-        "href": '../buttons/'
-      },
-      {
-        "text": 'Call to Action',
-        "href": '../cta/'
-      }
-    ],
+  "title": "Links",
+  "layout_type": "LayoutComponent",
+  "summary": "Clickable text element to navigate to page section, another page or open an overlaid window such as modal dialog or popover",
+  "title_metadata": "Hyperlink, Anchor, CdrButton, CdrLink",
+  "see_also": [
+    {
+      "text": 'See Also'
+    },
+    {
+      "text": 'Buttons',
+      "href": '../buttons/'
+    },
+    {
+      "text": 'Call to Action',
+      "href": '../cta/'
+    }
+  ],
   "standalone": [
     {
       "type": "do",
@@ -84,6 +84,11 @@
                 "description": "Sets the innerHTML for CdrLink. This includes text and html markup for icons."
               }
             ],
+            "events": [
+              {
+                "description": "All event listeners are passed through to/from the component."
+              }
+            ]
           }
         }
       ],
@@ -112,7 +117,7 @@ Display within body copy for articles, hub cards, footer, or recommendations.
     href="https://www.rei.com/learn/expert-advice/ten-essentials.html">
       the Ten Essentials
   </cdr-link>".
-  What does it mean? Simply put, it’s the best practices 
+  What does it mean? Simply put, it’s the best practices
   we should follow to enjoy and protect our natural spaces.
 </cdr-text>
 ```
@@ -226,7 +231,7 @@ This component has compliance with following WebAIM’s accessibility guidelines
 ## Foundations
 
 - Link styles are adapted based on context, such as for links included in the [Breadcrumb](../breadcrumb/), Menus and Navigation
-- There are 2 basic link styles, default and standalone: 
+- There are 2 basic link styles, default and standalone:
   - Use the default link when the link is near a body of text or in appears in a body of text.
   - Use the standalone link when there is separation from a body of text.
 
@@ -289,6 +294,10 @@ WebAIM: Links and Hypertext [Introduction to Links and Hypertext](https://webaim
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
+## Events
+
+<cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events"/>
+
 ## Usage
 
 By default, the component renders using an anchor element and requires an `href` attribute to render a valid accessible link.
@@ -309,7 +318,7 @@ Use the `tag` prop to render the link as a `<button>` element that presents a li
 
 ### Style Modifier
 
-Following variants are available to the `cdr-link` modifier attribute: 
+Following variants are available to the `cdr-link` modifier attribute:
 
 | Value | Description            |
 |:------|:--------------------------------------------------------------|
