@@ -84,6 +84,11 @@
                 "description": "$emit event fired when page changes based on user interaction by clicking a link or selecting an option from the select on mobile."
               },
               {
+                "name": "input",
+                "arguments": "pageNumber, event",
+                "description": "$emit event fired when page changes based on user interaction by clicking a link or selecting an option from the select on mobile."
+              },
+              {
                 "name": "select-change",
                 "arguments": "pageUrl, event",
                 "description": "$emit event fired on select change with the URL value of the selected option. Also triggers the 'change' event (above) with the selected page number."
