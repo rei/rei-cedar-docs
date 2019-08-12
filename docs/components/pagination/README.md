@@ -85,7 +85,7 @@
               },
               {
                 "name": "input",
-                "arguments": "value",
+                "arguments": "pageNumber, event",
                 "description": "$emit event fired when page changes based on user interaction by clicking a link or selecting an option from the select on mobile."
               },
               {
