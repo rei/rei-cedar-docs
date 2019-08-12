@@ -195,7 +195,7 @@
             ],
             "events": [
               {
-                "description": "All event listeners are passed through to/from the component."
+                "description": "All event listeners are passed through to the <input> element."
               }
             ]
           }
