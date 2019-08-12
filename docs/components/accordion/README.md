@@ -129,34 +129,60 @@ Section borders expand to full width of container.
 
 <cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData">
 
-```html
-  <cdr-accordion>
-    <cdr-accordion-item
-      id="default-1"
-      label="How do I find my member number?">
-      <cdr-text tag="p">
-          Find your member number online. You can also call 
-          Customer Support at 1-800-426-4840 (U.S. and Canada) or 1-253-891-2500 (International).
-      </cdr-text>
-    </cdr-accordion-item>
-    <cdr-accordion-item
-      id="default-2"
-      label="Does every member get an Annual Dividend?">
-      <cdr-text tag="p">
-          Only active REI Co-op members receive an Annual Dividend notice. To be an active 
-          member, you need to make net merchandise or shipping purchases (purchases minus credits and returns) 
-          of at least $10 per year, unless you joined during that calendar year.
-      </cdr-text>
-    </cdr-accordion-item>
-    <cdr-accordion-item
-      id="default-3"
-      label="When does my dividend expire?">
-      <cdr-text tag="p">
-          Your dividend expires on Jan. 3, just under two years after it has been issued. 
-          or example, your 2018 dividend earned on 2017 purchases will expire in January 2020.
-      </cdr-text>
-    </cdr-accordion-item>
+```vue
+  <cdr-accordion
+    id="default-1"
+    :opened="default1"
+    @accordion-toggle="default1 = !default1"
+  >
+    <template slot="label">
+      How do I find my member number?
+    </template>
+    <cdr-text tag="p">
+        Find your member number online. You can also call 
+        Customer Support at 1-800-426-4840 (U.S. and Canada) or 1-253-891-2500 (International).
+    </cdr-text>
   </cdr-accordion>
+  <cdr-accordion
+    id="default-2"
+    :opened="default2"
+    @accordion-toggle="default2 = !default2"  
+  >
+    <template slot="label">
+      Does every member get an Annual Dividend?
+    </template>
+    <cdr-text tag="p">
+        Only active REI Co-op members receive an Annual Dividend notice. To be an active 
+        member, you need to make net merchandise or shipping purchases (purchases minus credits and returns) 
+        of at least $10 per year, unless you joined during that calendar year.
+    </cdr-text>
+  </cdr-accordion>
+  <cdr-accordion
+    id="default-3"
+    :opened="default3"
+    @accordion-toggle="default3 = !default3"
+  >
+    <template slot="label">
+      When does my dividend expire?
+    </template>
+    <cdr-text tag="p">
+        Your dividend expires on Jan. 3, just under two years after it has been issued. 
+        or example, your 2018 dividend earned on 2017 purchases will expire in January 2020.
+    </cdr-text>
+  </cdr-accordion>
+
+  <script>
+    export default {
+      ...
+      data() {
+        return {
+          default1: false,
+          default2: false,
+          default3: false
+        }
+      }
+    }
+  </script>
 ```
 
 </cdr-doc-example-code-pair>
@@ -167,36 +193,62 @@ Reduced spacing around title and content body. Also, smaller font sizes resultin
 
 <cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData">
 
-```html
-  <cdr-accordion :compact="true">
-    <cdr-accordion-item
-      id="compact-1"
-      label="Why buy used gear?"
-    >
-      <cdr-text tag="p">
-        Used Gear Beta is one way we are experimenting expanding opportunities 
-        to enjoy life outdoors and bringing value to our members.
-      </cdr-text>
-    </cdr-accordion-item>
-    <cdr-accordion-item
-      id="compact-2"
-      label="What's your cancellation policy?"
-    >
-      <cdr-text tag="p">
-        Orders may be cancelled within 30 minutes of placing your order online. 
-        After 30 minutes, your order will begin processing through our fulfillment center and cannot be cancelled.
-      </cdr-text>
-    </cdr-accordion-item>
-    <cdr-accordion-item
-      id="compact-3"
-      label="When will my order arrive?"
-    >
-      <cdr-text tag="p">
-        REI Co-op Used Gear Beta orders can take up to 3-4 business days to ship out. When your order ships, 
-        we'll send you a shipping confirmation email that contains your tracking information. Shipping time is generally 3-5 business days.
-      </cdr-text>
-    </cdr-accordion-item>
+```vue
+  <cdr-acccordion
+    id="compact-1"
+    :compact="true"
+    :opened="compact1"
+    @accordion-toggle="compact1 = !compact1"
+  >
+    <template slot="label">
+      Why buy used gear?
+    </template>
+    <cdr-text tag="p">
+      Used Gear Beta is one way we are experimenting expanding opportunities 
+      to enjoy life outdoors and bringing value to our members.
+    </cdr-text>
   </cdr-accordion>
+  <cdr-acccordion
+    id="compact-2"
+    :compact="true"
+    :opened="compact2"
+    @accordion-toggle="compact2 = !compact2"
+  >
+    <template slot="label">
+      What's your cancellation policy?
+    </template>
+    <cdr-text tag="p">
+      Orders may be cancelled within 30 minutes of placing your order online. 
+      After 30 minutes, your order will begin processing through our fulfillment center and cannot be cancelled.
+    </cdr-text>
+  </cdr-accordion>
+  <cdr-acccordion
+    id="compact-3"
+    :compact="true"
+    :opened="compact3"
+    @accordion-toggle="compact3 = !compact3"
+  >
+    <template slot="label">
+      When will my order arrive?
+    </template>
+    <cdr-text tag="p">
+      REI Co-op Used Gear Beta orders can take up to 3-4 business days to ship out. When your order ships, 
+      we'll send you a shipping confirmation email that contains your tracking information. Shipping time is generally 3-5 business days.
+    </cdr-text>
+  </cdr-accordion>
+
+  <script>
+    export default {
+      ...
+      data() {
+        return {
+          compact1: false,
+          compact2: false,
+          compact3: false
+        }
+      }
+    }
+  </script>
 ```
 
 </cdr-doc-example-code-pair>
@@ -207,39 +259,65 @@ Border aligns to the title text and expand/collapse icon.
 
 <cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData">
 
-```html
-  <cdr-accordion :border-aligned="true">
-    <cdr-accordion-item
-      id="border-aligned-1"
-      label="How long have you been in business?"
-    >
-      <cdr-text tag="p">
-        REI has offered the finest in outdoor gear since 1938. In that same spirit, 
-        REI Adventures has led the way down wilderness paths and cultural back roads 
-        to the most intriguing destinations in the world since 1987.
-      </cdr-text>
-    </cdr-accordion-item>
-    <cdr-accordion-item
-      id="border-aligned-2"
-      label="What kinds of trips are offered?"
-    >
-      <cdr-text tag="p">
-        We have adventures that range from weekend getaways to three-week treks. We 
-        explore the world on foot, by kayak, canoe or raft, bicycle, safari, 4-wheel 
-        drive, cruise ship or a combination of these vehicles! Novices are welcome. 
-        We can teach you to kayak or to safely summit a mountain.
-      </cdr-text>
-    </cdr-accordion-item>
-    <cdr-accordion-item
-      id="border-aligned-3"
-      label="How do I know what each trip is like?"
-    >
-      <cdr-text tag="p">
-        This website provides full details of each trip. If you still have questions, 
-        please call us at 1-800-622-2236 or e-mail us at travel@rei.com.
-      </cdr-text>
-    </cdr-accordion-item>
+```vue
+  <cdr-acccordion
+    id="border-aligned-1"
+    :border-aligned="true"
+    :opened="borderAligned1"
+    @accordion-toggle="borderAligned1 = !borderAligned1"
+  >
+    <template slot="label">
+      How long have you been in business?
+    </template>
+    <cdr-text tag="p">
+      REI has offered the finest in outdoor gear since 1938. In that same spirit, 
+      REI Adventures has led the way down wilderness paths and cultural back roads 
+      to the most intriguing destinations in the world since 1987.
+    </cdr-text>
   </cdr-accordion>
+  <cdr-acccordion
+    id="border-aligned-2"
+    :border-aligned="true"
+    :opened="borderAligned2"
+    @accordion-toggle="borderAligned = !borderAligned2"
+  >
+    <template slot="label">
+      What kinds of trips are offered?
+    </template>
+    <cdr-text tag="p">
+      We have adventures that range from weekend getaways to three-week treks. We 
+      explore the world on foot, by kayak, canoe or raft, bicycle, safari, 4-wheel 
+      drive, cruise ship or a combination of these vehicles! Novices are welcome. 
+      We can teach you to kayak or to safely summit a mountain.
+    </cdr-text>
+  </cdr-accordion>
+  <cdr-acccordion
+    id="border-aligned-3"
+    :border-aligned="true"
+    :opened="borderAligned3"
+    @accordion-toggle="borderAligned3 = !borderAligned3"
+  >
+    <template slot="label">
+      How do I know what each trip is like?
+    </template>
+    <cdr-text tag="p">
+      This website provides full details of each trip. If you still have questions, 
+      please call us at 1-800-622-2236 or e-mail us at travel@rei.com.
+    </cdr-text>
+  </cdr-accordion>
+
+  <script>
+    export default {
+      ...
+      data() {
+        return {
+          borderAligned1: false,
+          borderAligned2: false,
+          borderAligned3: false
+        }
+      }
+    }
+  </script>
 ```
 
 </cdr-doc-example-code-pair>
