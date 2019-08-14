@@ -1034,7 +1034,7 @@ This component has compliance with following WCAG guidelines:
 
 - Presenting a multi-row columnar data display, such as features or specs of a product. Instead, use [Data Tables](../data-tables/)
 
-## Foundations
+## The Basics
 
 Columns, gutters, and margins scales as a fluid system as the device and viewport increases from a small devices to a large device:
 

@@ -312,7 +312,7 @@ This component has compliance with WCAG guidelines by:
 - Displaying content that is not primarily text
 - Displaying content with two or more well-defined dimensions. Instead, use [Data Tables](../data-tables/)
 
-## Foundations
+## The Basics
 
 - Vary list item font size
 - Follow spacing requirements found on [Typography](../../foundation/typography/) and [Spacing](../../foundation/spacing/) pages

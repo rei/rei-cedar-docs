@@ -291,10 +291,8 @@ This component has compliance with WCAG guidelines by:
 - Designing with sparse content. Instead, use [Lists](../lists/) or [Paragraphs](../paragraphs/)
 - Content is lengthy. Instead, use [Tabs](../tabs/)
 
-## Foundations
+## The Basics
 
-- Always include a title, icon and subsequent content for each section. All are required
-- Position interactive elements (i.e. Select, Button, Link) within the container far enough from the title area to avoid accidental collapsing
 - Use on either light or dark backgrounds, background color is provided for both
 
 ## Content
@@ -302,6 +300,11 @@ This component has compliance with WCAG guidelines by:
 - Order the accordion titles by priority and importance
 - Keep titles short to avoid wrapping at smaller viewports
 - Use sentence case for titles
+- Always include a title, icon and subsequent content for each section. All are required
+
+## Anatomy
+
+- Position interactive elements (i.e. Select, Button, Link) within the container far enough from the title area to avoid accidental collapsing
 
 ## Behavior
 

@@ -281,9 +281,6 @@ This component has compliance with [WCAG SC 1.4.3: Contrast (Minimum)](https://w
 
 - Triggering interface interactions. Instead, use [Buttons](../buttons/)
 
-## Foundation
-
-- Use uppercase for all words within a Call to Action
 
 ## Content
 
