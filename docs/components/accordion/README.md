@@ -129,7 +129,7 @@ Section borders expand to full width of container.
 
 <cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData">
 
-```vue
+```html
   <cdr-accordion
     id="default-1"
     :opened="default1"
@@ -171,18 +171,17 @@ Section borders expand to full width of container.
     </cdr-text>
   </cdr-accordion>
 
-  <script>
-    export default {
-      ...
-      data() {
-        return {
-          default1: false,
-          default2: false,
-          default3: false
-        }
+  ...
+  export default {
+    ...
+    data() {
+      return {
+        default1: false,
+        default2: false,
+        default3: false
       }
     }
-  </script>
+  }
 ```
 
 </cdr-doc-example-code-pair>
