@@ -37,7 +37,7 @@ export default {
   props: {
     labels: {
       default: function() {
-        return ['Overview', 'Design Guidelines', 'API']
+        return ['Overview', 'Guidelines', 'API']
       },
       type: Array
     },
