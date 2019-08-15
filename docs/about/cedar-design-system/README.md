@@ -15,11 +15,11 @@
 <cdr-doc-table-of-contents-shell>
 
 ## About Cedar
-Cedar is REI’s open-source design system for digital products and experiences. Cedar includes the resources to create user interfaces consistent with REI’s [experience principles](https://rei.github.io/rei-cedar-docs/foundation/experience-principles/), brand styles, and best practices.
+Cedar is REI’s open-source Design System for digital products and experiences. Cedar includes the resources to create user interfaces consistent with REI’s [experience principles](https://rei.github.io/rei-cedar-docs/foundation/experience-principles/), brand styles, and best practices.
 
 As a foundation for digital product development, the Cedar Design System provides a set of reusable components, style variables, design assets, and guidance for teams to efficiently build high-quality and accessible user interfaces. 
 
-Cedar is maintained by a core team of designers, developers and writers that are dedicated to developing and supporting the system, and welcomes collaboration with the REI digital community to help evolve the system to suit changing product needs.
+Cedar is maintained by a core team of designers, developers, and writers that are dedicated to developing and supporting the system. Cedar welcomes collaboration with the REI digital community to help evolve the system to suit changing product needs.
 
 
 #### Open Source
@@ -37,19 +37,19 @@ For more information or questions regarding Cedar’s support for external consu
 Cedar welcomes and encourages contributions from the digital community at REI. If you are interested in contributing design or code, please visit the [Contributing to Cedar](link TBD) page for more information. 
 
 ###  Request a Component
-All new requests for components will be evaluated, beginning with a discovery process that includes an audit of visual patterns and weighs factors such as reusability across the product ecosystem (ideally can be used by 3-5 teams), investment and maturity of the product, and team bandwidth.
+All new requests for components will be evaluated, beginning with a discovery process that includes an audit of visual patterns. Factors such as reusability across the product ecosystem (ideally can be used by 3-5 teams), investment and maturity of the product, and team bandwidth are also taken into account.
 
 New feature and enhancement requests can be submitted using the [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC). 
 
 ###  Report an Issue
-The Cedar team is committed to maintaining consistent, quality components. If you encounter any defects in the Sketch UI Toolkit, Vue code, or on the documentation site, please submit a [Bug Report Form](https://airtable.com/shr3wSPCYQbycVx7i) and it will be added to the backlog.
+The Cedar team is committed to maintaining consistent, high-quality components. If you encounter any defects in the Sketch UI Toolkit, Vue code, or on the documentation site, please submit a [Bug Report Form](https://airtable.com/shr3wSPCYQbycVx7i) and it will be added to the backlog.
 
-The team will address the bug as soon as possible, depending on the severity of the issue and sprint capacity. Please include as much relevant information as possible when submitting a bug report to help prioritize, including steps to reproduce, urgency, and impact.
+The team will address the bug as soon as possible, depending on the severity of the issue and the sprint capacity. Please include as much relevant information as possible when submitting a bug report, including steps to reproduce, urgency, and impact to help prioritize the task.
 
-If you have a fix for the bug and would like to submit a PR for it, please reach out at in Slack at #cedar-user-support or visit the [Contributing to Cedar](link TBD) page learn more about contribution opportunities.
+If you have a fix for the bug and would like to submit a PR for it, please reach out in Slack at #cedar-user-support or visit the [Contributing to Cedar](link TBD) page to learn more about contribution opportunities.
 
 ## Communications
-The Cedar team is in Slack, which is the best way to learn about new releases and find support. 
+The Cedar team is in Slack, which is the best way to learn about new releases and find support. Some relevant Slack channels are:
 - #cedar-news: Stay up-to-date on Cedar releases and events
 - #cedar-user-support: If you have a question about using Cedar, reach out here
 
