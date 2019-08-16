@@ -174,8 +174,8 @@ This component has compliance with WCAG guidelines by:
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Design Guidelines">
-  <cdr-doc-table-of-contents-shell tab-name="Design Guidelines">
+<template slot="Guidelines">
+  <cdr-doc-table-of-contents-shell tab-name="Guidelines">
 
 ## Use When
 
@@ -189,7 +189,7 @@ This component has compliance with WCAG guidelines by:
 - Displaying a citation reference. Instead, use [Block Quote](../block-quote/)
 - Displaying for a decorative treatment only
 
-## Behavior
+## The Basics
 
 Use a pull quote for emphasizing content that has a close and significant relationship with the surrounding text and will help users to visually scan the page
 

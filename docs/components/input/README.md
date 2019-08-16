@@ -434,7 +434,7 @@ This component has compliance with WCAG guidelines by:
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Design Guidelines">
+<template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
 
 ## Use When
@@ -446,7 +446,7 @@ This component has compliance with WCAG guidelines by:
 
 - Selecting from a specific set of options. Instead, use Selects
 
-## Foundations
+## The Basics
 
 - **Identifiable** - Input fields should indicate that users can enter information
 - **Findable** - It should be easy to find an input field among other elements

@@ -270,7 +270,7 @@ This component has compliance with [WCAG SC 1.4.3: Contrast (Minimum)](https://w
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Design Guidelines">
+<template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
 
 ## Use When
@@ -281,9 +281,6 @@ This component has compliance with [WCAG SC 1.4.3: Contrast (Minimum)](https://w
 
 - Triggering interface interactions. Instead, use [Buttons](../buttons/)
 
-## Foundation
-
-- Use uppercase for all words within a Call to Action
 
 ## Content
 

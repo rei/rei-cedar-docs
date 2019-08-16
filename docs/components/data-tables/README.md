@@ -319,7 +319,7 @@ This component has compliance with WCAG guidelines by:
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Design Guidelines">
+<template slot="Guidelines">
   <cdr-doc-table-of-contents-shell>
 
 ## Use When
@@ -331,19 +331,6 @@ This component has compliance with WCAG guidelines by:
 
 - Positioning contents on page. Instead, use [Grid](../grid/)
 - Laying out a page design. Instead, use [Grid](../grid/)
-
-## Foundations
-
-Default styles for tables are:
-- All cells have a 1px border
-- Column headers have a 2px bottom border
-- Row headers have a 2px right border. When columns can scroll, the border is 4px
-- Rows alternate background colors to improve readability
-- Scrollbars will be native and dictated by the browser
-- Options available:
-  - Compact only
-  - Borderless only. If using borderless, ensure readability by using the alternating background colors for rows
-  - Compact and borderless
 
 ## Content
 
@@ -360,6 +347,19 @@ Data cells:
   - Copy should be short and concise
   - Use sentence case for cell data
   - Text, numerical data, links, buttons, or icons are acceptable
+  
+## Anatomy
+
+Default styles for tables:
+- All cells have a 1px border
+- Column headers have a 2px bottom border
+- Row headers have a 2px right border. When columns can scroll, the border is 4px
+- Rows alternate background colors to improve readability
+- Scrollbars will be native and dictated by the browser
+- Options available:
+  - Compact only
+  - Borderless only. If using borderless, ensure readability by using the alternating background colors for rows
+  - Compact and borderless
 
 ## Behavior
 

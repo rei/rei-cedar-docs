@@ -153,7 +153,7 @@ This component has compliance with following WebAIM’s accessibility guidelines
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Design Guidelines">
+<template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
 
 ## Use When
@@ -169,7 +169,7 @@ This component has compliance with following WebAIM’s accessibility guidelines
 - Displaying alert messages. Instead, use Alerts
 - Listing product features. Instead, use [Lists](../lists/)
 
-## Foundations
+## The Basics
 
 Roboto is used for paragraph text because it is easy to scan. It is primarily used for:
 - Legal messages on PDP pages

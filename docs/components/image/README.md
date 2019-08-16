@@ -234,7 +234,7 @@ This component has compliance with WCAG guidelines by:
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Design Guidelines">
+<template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
 
 ## Use When
@@ -246,7 +246,7 @@ This component has compliance with WCAG guidelines by:
 - Communicating the REI brand message
 - Explaining a complex procedure or how to perform an action
 
-## Foundations
+## The Basics
 
 REI image requirements are described on the Consumer Mobile Applications/Design page for [Launch and Default Shop Image Sizes](https://confluence.rei.com/display/CMA/Launch-and-DefaultShop-Image-Sizes).
 

@@ -149,7 +149,7 @@ This component has compliance WCAG guidelines by:
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Design Guidelines">
+<template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
 
 ## Use When
@@ -162,18 +162,17 @@ This component has compliance WCAG guidelines by:
 - Switching between slides or content in a carousel
 - Displaying editorial content. Instead, show entire article on one page
 
-## Foundation
+## Behavior
+
+- Page number links are truncated as follows: [first] ... [current-1] [current] [current+1] ... [last]
+- If there are 7 pages or fewer, all page number links will be shown
+- Prev or Next text links are removed when the first or last page are active
 
 Within pagination, link styles are adapted
 
 - Text links are displayed as $text-color-primary-on-dark
 - Prev and Next links use the small size for the caret-left and caret-right icons
 
-## Behavior
-
-- Page number links are truncated as follows: [first] ... [current-1] [current] [current+1] ... [last]
-- If there are 7 pages or fewer, all page number links will be shown
-- Prev or Next text links are removed when the first or last page are active
 
 ### Do / Don't
 

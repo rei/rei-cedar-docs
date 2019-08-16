@@ -235,7 +235,7 @@ This component has compliance with WCAG guidelines by:
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Design Guidelines">
+<template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
 
 ## Use When
@@ -247,7 +247,7 @@ This component has compliance with WCAG guidelines by:
 
 - Tagging as a semantic heading when an element only needs to be highlighted or emphasized within your content. Instead, use sizing modifier for this component
 
-## Foundations
+## The Basics
 
 - When using this component with semantic headings  from `<h1>` to `<h6>`, typographic styles set up a visual hierarchy created within CSS that helps to establish the order of importance
 - Identify headings at the beginning of a section
