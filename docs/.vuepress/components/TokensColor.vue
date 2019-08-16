@@ -5,7 +5,7 @@
         <td width="64"> <div class="color-example" :style="{backgroundColor: token.value}"/> </td>
         <td>
           <cdr-text><b>{{ token.name }}</b></cdr-text>
-          <cdr-text>{{descriptionData[token.name]}}</cdr-text>
+          <cdr-text v-if="token.docs.description">{{ token.docs.description }}</cdr-text>
         </td>
         <td width="160">{{ token.value }}</td>
       </tr>
@@ -15,7 +15,6 @@
 
 <script>
 import tokenData from '@rei/cdr-tokens/dist/json/platform-tokens.json';
-import descriptionData from './TokensColorData';
 import groupBy from 'lodash/groupBy';
 import filter from 'lodash/filter';
 import endsWith from 'lodash/endsWith';
@@ -28,11 +27,6 @@ export default {
       type: String,
       default: '',
     }
-  },
-  data() {
-    return {
-      descriptionData,
-    };
   },
   computed: {
     colorTokensByType() {
