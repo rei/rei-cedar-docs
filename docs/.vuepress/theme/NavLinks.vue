@@ -8,8 +8,8 @@
       :key="item.text"
       :id="item.text.replace(' ', '-').toLowerCase()"
       class="nav-item cdr-accordion-nav"
-      :opened="opened[index]"
-      @accordion-toggle="test(index)"
+      :opened="navGroup[index]"
+      @accordion-toggle="navToggle(index)"
     >
       <template slot="label">
         {{ item.text }}
@@ -51,7 +51,7 @@ export default {
       Initialize as closed accordions.
     */
     return {
-      opened: [
+      navGroup: [
         false,
         false,
         false,
@@ -67,7 +67,7 @@ export default {
     */
     this.$site.themeConfig.nav.forEach((item, index) => {
       if (this.showNavGroup(item.text)) {
-        this.$set(this.opened, index, true);
+        this.$set(this.navGroup, index, true);
       }
     }); 
   },
@@ -141,6 +141,19 @@ export default {
   methods: {
     showNavGroup(text) {
       return text.toLowerCase().replace(' ', '-') === this.$page.path.split('/')[1];
+    },
+    navToggle(index) {
+      const opened = this.navGroup[index];
+
+      if (opened) {
+        this.$set(this.navGroup, index, false);
+      } else {
+        for (let i = 0; i < this.navGroup.length; i += 1) {
+          if (index === i || this.navGroup[i]) {
+            this.$set(this.navGroup, i, index === i);
+          }
+        }
+      }
     }
   }
 }
