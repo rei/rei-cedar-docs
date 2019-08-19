@@ -124,8 +124,8 @@ Use for images with no responsive qualities.
 
 ```html
 
-<cdr-img 
-  src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg" 
+<cdr-img
+  src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg"
   alt="REI employees building trails during a stewardship event"
 />
 
@@ -141,7 +141,7 @@ Apply rules to an image using ratio and crop properties. The below example is cr
 
 ```html
 <cdr-img
-  src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg" 
+  src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg"
   alt="REI employees building trails during a stewardship event"
   ratio="9-16"
   crop="top"
@@ -158,7 +158,7 @@ Use the cover property to resize the background image to fill the entire contain
 
 ```html
 <cdr-img
-  src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg" 
+  src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg"
   alt="REI employees building trails during a stewardship event"
   ratio="16-9"
   cover
@@ -181,14 +181,14 @@ The below example is cropped using center alignment with the aspect ratio set as
 
 ```html
   <cdr-img
-  src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg" 
+  src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg"
   alt="REI employees building trails during a stewardship event"
   ratio="square"
   radius="rounded"
   crop="y-center x-center"
 />
 ```
-  
+
 </cdr-doc-example-code-pair>
 
 ### Circle
@@ -199,27 +199,27 @@ The below example is cropped using center alignment with the aspect ratio set as
 
 ```html
   <cdr-img
-  src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg" 
+  src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg"
   alt="REI employees building trails during a stewardship event"
   ratio="square"
   radius="circle"
   crop="y-center x-center"
 />
 ```
-  
+
 </cdr-doc-example-code-pair>
 
 ## Accessibility
 
 To ensure that usage of this component complies with accessibility guidelines, provide descriptive text for `alt` attribute for:
-- Informative images: 
+- Informative images:
   - Convey a simple concept or information
   - For more information, [Web Accessibility Tutorials: Informative Images](https://www.w3.org/WAI/tutorials/images/informative/)
-- Functional images: 
+- Functional images:
   - Initiate an action, rather than to convey information (such as a printer icon)
   - Describe functionality of the link or button, rather than the visual image
-  - For more information, [Web Accessibility Tutorials: Functional Images](https://www.w3.org/WAI/tutorials/images/functional/) 
-- Images of Text: 
+  - For more information, [Web Accessibility Tutorials: Functional Images](https://www.w3.org/WAI/tutorials/images/functional/)
+- Images of Text:
   - Displays text that is intended to be read
   - Avoid text in images, unless the image is a logo
   - Text alternative should contain the same words that appear in the image
@@ -227,26 +227,26 @@ To ensure that usage of this component complies with accessibility guidelines, p
 
 <br/>
 
-This component has compliance with WCAG guidelines by: 
-- Adding an empty `alt` attribute into the image element by default 
+This component has compliance with WCAG guidelines by:
+- Adding an empty `alt` attribute into the image element by default
 - An empty `alt` attribute is needed to meet accessibility requirements for decorative images
 
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Design Guidelines">
+<template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
 
 ## Use When
 
 - Illustrating a product feature
 - Allowing comparisons between similar items
-- Capturing the user’s attention 
+- Capturing the user’s attention
 - Telling a story
 - Communicating the REI brand message
 - Explaining a complex procedure or how to perform an action
 
-## Foundations
+## The Basics
 
 REI image requirements are described on the Consumer Mobile Applications/Design page for [Launch and Default Shop Image Sizes](https://confluence.rei.com/display/CMA/Launch-and-DefaultShop-Image-Sizes).
 
@@ -254,7 +254,7 @@ REI image requirements are described on the Consumer Mobile Applications/Design 
 
 Use conventional aspect ratios:
 
-- Square 
+- Square
 - Portrait: 1:2, 2:3, 3:4, 9:16
 - Landscape: 2:1, 3:2, 4:3, 16:9
 
@@ -274,22 +274,22 @@ Use conventional aspect ratios:
 
 ### Color and Contrast
 
-- Test images for high contrast displays 
+- Test images for high contrast displays
 - Ensure that no meaning is lost when colors are removed
-- Include text only with sufficient contrast 
+- Include text only with sufficient contrast
 
 ### Cropping Images
 
 - Specify the ratio of all cropped images
-- Enable background image to use the entire container: 
-  - Without stretching the image 
-  - Cropped either vertically or horizontally without empty space 
+- Enable background image to use the entire container:
+  - Without stretching the image
+  - Cropped either vertically or horizontally without empty space
 - Crop images by specifying the starting point:
   - Adjust the starting background-position on the x-axis of the image:
     - Left: Orients the image to its horizontal left
     - Right: Orients the image to its horizontal right
     - X-center: Orients the image to its horizontal center
-  - Adjust the starting background-position on the y-axis of the image: 
+  - Adjust the starting background-position on the y-axis of the image:
     - Top: Orients the image to its top
     - Bottom: Orients the image to its bottom
     - Y-center: Orients the image to its vertical center
@@ -322,7 +322,7 @@ Images are cropped on y-axis with bottom value and on x-axis with left, x-center
   - Never allow overlaid text to wrap. Longer strings of text can be harder to navigate when the background varies
   - Consider adding a semi-transparent black gradient over the image in the CSS
 - Apply only vertical gradient backgrounds. Avoid horizontal, diagonal, and radial gradients
-- Always include a backup background color so that when the background image is disabled, text is still legible and passes contrast requirements 
+- Always include a backup background color so that when the background image is disabled, text is still legible and passes contrast requirements
 - For help in determining whether your text and image combination conforms to the required contrast ratio, use this Chrome plugin: [Color Contrast Analyzer](https://chrome.google.com/webstore/detail/color-contrast-analyzer/dagdlcijhfbmgkjokkjicnnfimlebcll)
 
 ### Decorative Images
@@ -335,9 +335,9 @@ Images are cropped on y-axis with bottom value and on x-axis with left, x-center
 
 - Use [this decision tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) to determine how to use the `alt` attribute
 - Be succinct. Ideally, one sentence or less
-- Be informative and accurate 
+- Be informative and accurate
 - If images of text are used, the `alt` attribute should contain the same words that appear in the image
-- Avoid repetitive labels. For example: “image of” or “picture of” 
+- Avoid repetitive labels. For example: “image of” or “picture of”
 - Descriptions:
   - Use short description that conveys the essential information presented by the image without burdening users with superfluous details
   - Use long descriptions for complex images such as graphs, charts, or diagrams to provide equivalent access to the information the image
@@ -351,7 +351,7 @@ Images are cropped on y-axis with bottom value and on x-axis with left, x-center
 - Ability to control image display at small, medium and large breakpoints
 - Lazy loading of images is provided
 
-## Resources 
+## Resources
 
 - Chrome plugin, [Color Contrast Analyzer](https://chrome.google.com/webstore/detail/color-contrast-analyzer/dagdlcijhfbmgkjokkjicnnfimlebcll)
 - Image compression service, [TinyPNG](https://tinypng.com/)
@@ -394,8 +394,8 @@ Any other properties supplied will be assigned to the root element (native eleme
 ### Crop
 
 - Background image is displayed in its original size
-- Requires the `ratio` property 
-- Defines the starting point of the overflow position 
+- Requires the `ratio` property
+- Defines the starting point of the overflow position
 - Accepts a single x-axis and y-axis value (e.g. ` crop=”top left” `):
   - Adjust the starting background-position on the x-axis of the image:
     - `left`: Orients the image to its horizontal left

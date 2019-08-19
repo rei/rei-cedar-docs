@@ -1,183 +1,184 @@
 ---
 {
-    "title": "Checkboxes",
-    "layout_type": "LayoutComponent",
-    "title_metadata": "CdrCheckbox",
-    "summary": "Permits user to make one or more selections from a list",
-    "see_also": [
-      {
-        "text": 'See Also'
-      },
-      # {
-      #   "text": 'List Group',
-      #   "href": '../list/'
-      # },
-      {
-        "text": 'Radio Buttons',
-        "href": '../radio/'
-      }
-    ],
-    "case": [
-        {
-            "type": "do",
-            "image": "checkbox/checkbox_case_do_16-9.png",
-            "ratio": "16-9",
-            "alt": "Image showing proper checkbox sentence case.",
-            "caption": "use sentence case, with only proper nouns capitalized."
-        },
-        {
-            "type": "dont",
-            "image": "checkbox/checkbox_case_dont_16-9.png",
-            "ratio": "16-9",
-            "alt": "Image showing improper title caps use.",
-            "caption": "use title caps for labels."
-        }
-    ],
-    "fragment": [
-        {
-            "type": "do",
-            "image": "checkbox/checkbox_fragment_do_16-9.png",
-            "ratio": "16-9",
-            "alt": "Image showing proper checkbox label with no ending punctuation",
-            "caption": "write labels as sentence fragments with no ending punctuation."
-        },
-        {
-            "type": "dont",
-            "image": "checkbox/checkbox_fragment_dont_16-9.png",
-            "ratio": "16-9",
-            "alt": "Image showing improper terminal punctuation.",
-            "caption": "add terminal punctuation at the end of a label."
-        }
-    ],
-    "label": [
-        {
-            "type": "do",
-            "image": "checkbox/checkbox_label_do_16-9.png",
-            "ratio": "16-9",
-            "alt": "Image showing proper checkbox label with brief copy",
-            "caption": "make labels brief."
-        },
-        {
-            "type": "dont",
-            "image": "checkbox/checkbox_label_dont_16-9.png",
-            "ratio": "16-9",
-            "alt": "Image showing a label with too much text",
-            "caption": "put too much text in the label."
-        }
-    ],
-    "positivecopy": [
-        {
-            "type": "do",
-            "image": "checkbox/checkbox_positivecopy_do_16-9.png",
-            "ratio": "16-9",
-            "alt": "Image showing proper checkbox positive phrasing",
-            "caption": "use positive phrasing for labels."
-        },
-        {
-            "type": "dont",
-            "image": "checkbox/checkbox_positivecopy_dont_16-9.png",
-            "ratio": "16-9",
-            "alt": "Image showing a label with negative phrasing",
-            "caption": "use negative phrasing for labels."
-        }
-    ],
-    "simplify": [
-        {
-            "type": "do",
-            "image": "checkbox/checkbox_simplify_do_16-9.png",
-            "ratio": "16-9",
-            "alt": "Image showing proper simple checkbox usage",
-            "caption": "use a single checkbox."
-        },
-        {
-            "type": "dont",
-            "image": "checkbox/checkbox_simplify_dont_16-9.png",
-            "ratio": "16-9",
-            "alt": "Image showing a radio button used when a checkbox is preferred",
-            "caption": "use radio buttons or toggles for a simple toggle selection."
-        }
-    ],
-
-    "breadcrumbs": [
-        {
-        "text": "Components/"
-    }],
-    "sandboxData": {
-      "components": "CdrCheckbox"
+  "title": "Checkboxes",
+  "layout_type": "LayoutComponent",
+  "title_metadata": "CdrCheckbox",
+  "summary": "Permits user to make one or more selections from a list",
+  "see_also": [
+    {
+      "text": "See Also"
     },
-    "versions": [{
-        "components": [
-            {
-            "name": "CdrCheckbox",
-            "api": {
-                "props": [
-                    {
-                        "name": "labelClass",
-                        "type": "string",
-                        "default": "N/A",
-                        "description": "Adds CSS class to the label for custom styles."
-                    },
-                    {
-                        "name": "inputClass",
-                        "type": "string",
-                        "default": "N/A",
-                        "description": "Adds CSS class to the input for custom styles."
-                    },
-                    {
-                        "name": "contentClass",
-                        "type": "string",
-                        "default": "N/A",
-                        "description": "Adds CSS class to the slot wrapper for custom styles."
-                    },
-                    {
-                        "name": "indeterminate",
-                        "type": "boolean",
-                        "default": "false",
-                        "description": "Shows checkbox in indeterminate state. This is a visual-only state with no logic for when to show it."
-                    },
-                    {
-                        "name": "trueValue",
-                        "type": "string, number, boolean, object, array, symbol, function",
-                        "default": "true",
-                        "description": "The value when checked."
-                    },
-                    {
-                        "name": "falseValue",
-                        "type": "string, number, boolean, object, array, symbol, function",
-                        "default": "false",
-                        "description": "The value when unchecked."
-                    },
-                    {
-                        "name": "customValue",
-                        "type": "string, number, boolean, object, array, symbol, function",
-                        "default": "false",
-                        "description": "The value when used in a checkbox group. Replaces `trueValue` and `falseValue`."
-                    },
-                    {
-                      "name": "modifier",
-                      "type": "string",
-                      "default": "N/A",
-                      "description": "Modifies the style variant for this component.  Possible values: { ‘compact’  |  ‘hide-figure’ }"
-                    }
-                ],
-                "slots": [
-                    {
-                        "name": "default",
-                        "description": "Sets the innerHTML for CdrCheckbox. This is the readable text for the <label> element."
-                    }
-                ],
-                "events": [
-                    {
-                        "name": "change",
-                        "arguments": "newValue, event",
-                        "description": "$emit event fired on check/uncheck."
-                    }
-                ],
-            }
-        }],
-        "version": "1.0.0"
-    }]
+    {
+      "text": "Radio Buttons",
+      "href": "../radio/"
+    }
+  ],
+  "case": [
+    {
+      "type": "do",
+      "image": "checkbox/checkbox_case_do_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing proper checkbox sentence case.",
+      "caption": "use sentence case, with only proper nouns capitalized."
+    },
+    {
+      "type": "dont",
+      "image": "checkbox/checkbox_case_dont_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing improper title caps use.",
+      "caption": "use title caps for labels."
+    }
+  ],
+  "fragment": [
+    {
+      "type": "do",
+      "image": "checkbox/checkbox_fragment_do_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing proper checkbox label with no ending punctuation",
+      "caption": "write labels as sentence fragments with no ending punctuation."
+    },
+    {
+      "type": "dont",
+      "image": "checkbox/checkbox_fragment_dont_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing improper terminal punctuation.",
+      "caption": "add terminal punctuation at the end of a label."
+    }
+  ],
+  "label": [
+    {
+      "type": "do",
+      "image": "checkbox/checkbox_label_do_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing proper checkbox label with brief copy",
+      "caption": "make labels brief."
+    },
+    {
+      "type": "dont",
+      "image": "checkbox/checkbox_label_dont_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing a label with too much text",
+      "caption": "put too much text in the label."
+    }
+  ],
+  "positivecopy": [
+    {
+      "type": "do",
+      "image": "checkbox/checkbox_positivecopy_do_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing proper checkbox positive phrasing",
+      "caption": "use positive phrasing for labels."
+    },
+    {
+      "type": "dont",
+      "image": "checkbox/checkbox_positivecopy_dont_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing a label with negative phrasing",
+      "caption": "use negative phrasing for labels."
+    }
+  ],
+  "simplify": [
+    {
+      "type": "do",
+      "image": "checkbox/checkbox_simplify_do_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing proper simple checkbox usage",
+      "caption": "use a single checkbox."
+    },
+    {
+      "type": "dont",
+      "image": "checkbox/checkbox_simplify_dont_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing a radio button used when a checkbox is preferred",
+      "caption": "use radio buttons or toggles for a simple toggle selection."
+    }
+  ],
+
+  "breadcrumbs": [
+    {
+      "text": "Components/"
+    }
+  ],
+  "sandboxData": {
+    "components": "CdrCheckbox"
+  },
+  "versions": [
+    {
+      "components": [
+        {
+          "name": "CdrCheckbox",
+          "api": {
+            "props": [
+              {
+                "name": "labelClass",
+                "type": "string",
+                "default": "N/A",
+                "description": "Adds CSS class to the label for custom styles."
+              },
+              {
+                "name": "inputClass",
+                "type": "string",
+                "default": "N/A",
+                "description": "Adds CSS class to the input for custom styles."
+              },
+              {
+                "name": "contentClass",
+                "type": "string",
+                "default": "N/A",
+                "description": "Adds CSS class to the slot wrapper for custom styles."
+              },
+              {
+                "name": "indeterminate",
+                "type": "boolean",
+                "default": "false",
+                "description": "Shows checkbox in indeterminate state. This is a visual-only state with no logic for when to show it."
+              },
+              {
+                "name": "trueValue",
+                "type": "string, number, boolean, object, array, symbol, function",
+                "default": "true",
+                "description": "The value when checked."
+              },
+              {
+                "name": "falseValue",
+                "type": "string, number, boolean, object, array, symbol, function",
+                "default": "false",
+                "description": "The value when unchecked."
+              },
+              {
+                "name": "customValue",
+                "type": "string, number, boolean, object, array, symbol, function",
+                "default": "false",
+                "description": "The value when used in a checkbox group. Replaces `trueValue` and `falseValue`."
+              },
+              {
+                "name": "modifier",
+                "type": "string",
+                "default": "N/A",
+                "description": "Modifies the style variant for this component.  Possible values: { ‘compact’  |  ‘hide-figure’ }"
+              }
+            ],
+            "slots": [
+              {
+                "name": "default",
+                "description": "Sets the innerHTML for CdrCheckbox. This is the readable text for the <label> element."
+              }
+            ],
+            "events": [
+              {
+                "name": "change",
+                "arguments": "newValue, event",
+                "description": "$emit event fired on check/uncheck."
+              }
+            ],
+          }
+        }
+      ],
+      "version": "1.0.0"
+    }
+  ]
 }
+
 ---
 
 <cdr-doc-tabs>
@@ -248,7 +249,7 @@ Custom styles for checkboxes.
     modifier="hide-figure"
     input-class="no-box"
     content-class="no-box__content">Custom checkbox 2</cdr-checkbox>
-  <cdr-checkbox 
+  <cdr-checkbox
     v-model="ex3"
     modifier="hide-figure"
     input-class="no-box"
@@ -264,19 +265,19 @@ Custom styles for checkboxes.
 To ensure that usage of this component complies with accessibility guidelines:
 - Each checkbox must be focusable and keyboard accessible:
   - When the checkbox has focus, the **Space** key changes the selection
-  - **Tab** key moves to next element in list 
-- Fieldsets (or grouped checkboxes) should be: 
+  - **Tab** key moves to next element in list
+- Fieldsets (or grouped checkboxes) should be:
   - Used when associating group of checkboxes
-  - Identified or described as a group using a `<legend>` tag 
+  - Identified or described as a group using a `<legend>` tag
 - Avoid nested fieldsets
 - Single checkboxes:
-  - May be interchangeable with a toggle 
+  - May be interchangeable with a toggle
   - Write labels to be self-explanatory
-- Custom checkboxes maintain accessibility requirements. The checkbox icon is only visually hidden and replaced with custom style 
+- Custom checkboxes maintain accessibility requirements. The checkbox icon is only visually hidden and replaced with custom style
 
 <br/>
 
-This component has compliance with WCAG guidelines by: 
+This component has compliance with WCAG guidelines by:
 
 - Wrapping the input in a label element and label is automatically associated with it
 
@@ -290,7 +291,7 @@ For more information, review techniques and failures for:
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Design Guidelines">
+<template slot="Guidelines">
   <cdr-doc-table-of-contents-shell tab-name="Design Guidelines">
 
 ## Use When
@@ -450,7 +451,7 @@ Set the `indeterminate` prop to `true` to generate an indeterminate checkbox, wh
 
 ### Modifiers
 
-Following variants are available to the `cdr-checkbox` modifier attribute: 
+Following variants are available to the `cdr-checkbox` modifier attribute:
 | Value | Description            |
 |:------|:-----------------------|
 | 'compact'  | Sets the spacing for smaller screen sizes |

@@ -195,29 +195,7 @@
             ],
             "events": [
               {
-                "name": "input",
-                "arguments": "value, event",
-                "description": "Input event is emitted while typing with the current input value.",
-              },
-              {
-                "name": "blur",
-                "arguments": "event",
-                "description": "Blur event is emitted when input loses focus.",
-              },
-              {
-                "name": "focus",
-                "arguments": "event",
-                "description": "Focus event is emitted when input gains focus.",
-              },
-              {
-                "name": "paste",
-                "arguments": "event",
-                "description": "Paste event is emitted when text is pasted into input.",
-              },
-              {
-                "name": "keydown",
-                "arguments": "event",
-                "description": "Keydown event is emitted when a key is pressed.",
+                "description": "All event listeners are passed through to the <input> element."
               }
             ]
           }
@@ -456,7 +434,7 @@ This component has compliance with WCAG guidelines by:
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Design Guidelines">
+<template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
 
 ## Use When
@@ -468,7 +446,7 @@ This component has compliance with WCAG guidelines by:
 
 - Selecting from a specific set of options. Instead, use Selects
 
-## Foundations
+## The Basics
 
 - **Identifiable** - Input fields should indicate that users can enter information
 - **Findable** - It should be easy to find an input field among other elements

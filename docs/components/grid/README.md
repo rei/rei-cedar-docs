@@ -4,20 +4,19 @@
   "layout_type": "LayoutComponent",
   "summary": "A responsive, mobile first, fluid system that appropriately scales 12 columns as the device or viewport size increases",
   "title_metadata": "Layout, CdrGrid",
-  #DO-DON'T
   "consistent": [
     {
-        "type": "do",
-        "image": "grid/grid_consistent_do_16-9.png",
-        "alt": "Image showing proper grid usage",
-        "caption": "maintain a consistent grid system."
-      },
+      "type": "do",
+      "image": "grid/grid_consistent_do_16-9.png",
+      "alt": "Image showing proper grid usage",
+      "caption": "maintain a consistent grid system."
+    },
     {
-        "type": "dont",
-        "image": "grid/grid_consistent_dont_16-9.png",
-        "alt": "Image showing mixed grid usage",
-        "caption": "mix this grid and other grid systems."
-      },
+      "type": "dont",
+      "image": "grid/grid_consistent_dont_16-9.png",
+      "alt": "Image showing mixed grid usage",
+      "caption": "mix this grid and other grid systems."
+    },
   ],
   "margins": [
     {
@@ -50,7 +49,6 @@
   "sandboxData": {
     "components": "CdrRow, CdrCol"
   },
-  #API
   "versions": [
     {
       "components": [
@@ -887,7 +885,7 @@ Overrides row-level alignment for a column. This can be applied to an individual
 
 ## Nested Grids
 
-Defines nested columns (also known as `isRow`). 
+Defines nested columns (also known as `isRow`).
 
 ### Simple
 
@@ -1017,12 +1015,12 @@ To ensure that usage of this component complies with accessibility guidelines:
 <br/>
 
 This component has compliance with following WCAG guidelines:
-- [WCAG SC 1.3.2: Meaningful Sequence](https://www.w3.org/TR/WCAG20/#content-structure-separation-sequence): Cedar Design System does not provide for Flexbox’s `order` property.  Reverse order or reordering of items is not allowed. Content must be presented in a correct reading sequence to comply with accessibility standards 
+- [WCAG SC 1.3.2: Meaningful Sequence](https://www.w3.org/TR/WCAG20/#content-structure-separation-sequence): Cedar Design System does not provide for Flexbox’s `order` property.  Reverse order or reordering of items is not allowed. Content must be presented in a correct reading sequence to comply with accessibility standards
 
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Design Guidelines">
+<template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
 
 ## Use When
@@ -1036,9 +1034,9 @@ This component has compliance with following WCAG guidelines:
 
 - Presenting a multi-row columnar data display, such as features or specs of a product. Instead, use [Data Tables](../data-tables/)
 
-## Foundations
+## The Basics
 
-Columns, gutters, and margins scales as a fluid system as the device and viewport increases from a small devices to a large device: 
+Columns, gutters, and margins scales as a fluid system as the device and viewport increases from a small devices to a large device:
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase('/grid/Spec_Grid_Desktop_and_Mobile_4-3.png')" alt="grid concept at desktop and mobile sizes"/>
 <br/>
@@ -1085,7 +1083,7 @@ Columns, gutters, and margins scales as a fluid system as the device and viewpor
 
 <br/>
 
-- Limit to 12 columns per row: 
+- Limit to 12 columns per row:
   - If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line
   - If a layout does not need 12 columns, specify that number to the engineering team
 
@@ -1188,7 +1186,7 @@ New to or unfamiliar with flexbox? Read this [CSS Tricks flexbox guide](https://
 
 ### CdrCol Content Width
 
-Immediate children of `cdr-col` are flexed due to a flex height display bug in some versions of Safari. This causes immediate children to be full-width and display stacked horizontally. Wrapping child elements in a single `<div>` element will fix these problems (if undesired). 
+Immediate children of `cdr-col` are flexed due to a flex height display bug in some versions of Safari. This causes immediate children to be full-width and display stacked horizontally. Wrapping child elements in a single `<div>` element will fix these problems (if undesired).
 
 <cdr-doc-code-snippet :copy-button="false" :max-height="false">
   ```html{3,6}

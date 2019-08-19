@@ -1,116 +1,114 @@
 ---
 {
-    "title": "Rating",
-    "layout_type": "LayoutComponent",
-    "title_metadata": "Rating, Stars, Reviews, CdrRating",
-    "summary": "Provide insight of others’ opinions for products, experiences and expert information",
-    # "see_also": [
-    #   {
-    #     "text": "See Also"
-    #   },
-    # ],
-    "stars": [
-        {
-            "type": "do",
-            "image": "rating/rating_stars_do_16-9.png",
-            "ratio": "16-9",
-            "alt": "Image showing rating with 5 stars",
-            "caption": "show all 5 stars."
-        },
-        {
-          "type": "dont",
-            "image": "rating/rating_stars_dont_16-9.png",
-            "ratio": "16-9",
-            "alt": "Image showing rating with fewer than 5 stars",
-            "caption": "adjust the number of stars."
-        }
-    ],
-    "number": [
-        {
-            "type": "do",
-            "image": "rating/rating_number_do_16-9.png",
-            "ratio": "16-9",
-            "alt": "Image showing rating with number of reviews text",
-            "caption": "display the number of reviews next to the star rating."
-        },
-        {
-          "type": "dont",
-            "image": "rating/rating_number_dont_16-9.png",
-            "ratio": "16-9",
-            "alt": "Image showing rating without number of reviews text",
-            "caption": "only show the stars."
-        }
-    ],
-    "none": [
-        {
-            "type": "do",
-            "image": "rating/rating_none_do_16-9.png",
-            "ratio": "16-9",
-            "alt": "Image showing rating with empty stars",
-            "caption": "show an empty rating when no reviews are available."
-        },
-        {
-          "type": "dont",
-            "image": "rating/rating_none_dont_16-9.png",
-            "ratio": "16-9",
-            "alt": "Image showing the text 'no ratings available'",
-            "caption": "hide rating in lieu of ‘No Ratings Available’ or blank space."
-        }
-    ],
-    "breadcrumbs": [
-        {
-            "text": "Components/"
-        }
-    ],
-    "sandboxData": {
-      "components": "CdrRating"
+  "title": "Rating",
+  "layout_type": "LayoutComponent",
+  "title_metadata": "Rating, Stars, Reviews, CdrRating",
+  "summary": "Provide insight of others’ opinions for products, experiences and expert information",
+  "stars": [
+    {
+      "type": "do",
+      "image": "rating/rating_stars_do_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing rating with 5 stars",
+      "caption": "show all 5 stars."
     },
-    "versions": [{
+    {
+      "type": "dont",
+      "image": "rating/rating_stars_dont_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing rating with fewer than 5 stars",
+      "caption": "adjust the number of stars."
+    }
+  ],
+  "number": [
+    {
+      "type": "do",
+      "image": "rating/rating_number_do_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing rating with number of reviews text",
+      "caption": "display the number of reviews next to the star rating."
+    },
+    {
+      "type": "dont",
+      "image": "rating/rating_number_dont_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing rating without number of reviews text",
+      "caption": "only show the stars."
+    }
+  ],
+  "none": [
+    {
+      "type": "do",
+      "image": "rating/rating_none_do_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing rating with empty stars",
+      "caption": "show an empty rating when no reviews are available."
+    },
+    {
+      "type": "dont",
+      "image": "rating/rating_none_dont_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing the text 'no ratings available'",
+      "caption": "hide rating in lieu of ‘No Ratings Available’ or blank space."
+    }
+  ],
+  "breadcrumbs": [
+    {
+      "text": "Components/"
+    }
+  ],
+  "sandboxData": {
+    "components": "CdrRating"
+  },
+  "versions": [
+    {
       "components": [
-          {
-            "name": "CdrRating",
-            "api": {
-              "props": [
-                {
-                  "name": "rating",
-                  "type": "number",
-                  "default": "0",
-                  "required": "true",
-                  "description": "Sets the rating values between 0 and 5. Required."
-                },
-                {
-                  "name": "count",
-                  "type": "number",
-                  "default": "0",
-                  "required": "false",
-                  "description": "Displays the total number of reviews."
-                },
-                {
-                  "name": "compact",
-                  "type": "boolean",
-                  "default": "false",
-                  "required": "false",
-                  "description": "Hides the word 'Reviews' if true."
-                },
-                {
-                  "name": "href",
-                  "type": "string",
-                  "default": "N/A",
-                  "required": "false",
-                  "description": "Sets the rating component (icons and text) to display inline and wraps them in an anchor tag."
-                },
-                {
-                  "name": "size",
-                  "type": "string",
-                  "default": "medium",
-                  "required": "false",
-                  "description": "Sets the rating component size; Breakpoint values are: xs, sm, md, and lg. Examples: { 'small' | 'medium' | 'large' | 'large@sm' }"
-                },
-              ]
-            }
-        }],
-        "version": "1.0.0"
-    }]
+        {
+          "name": "CdrRating",
+          "api": {
+            "props": [
+              {
+                "name": "rating",
+                "type": "number",
+                "default": "0",
+                "required": "true",
+                "description": "Sets the rating values between 0 and 5. Required."
+              },
+              {
+                "name": "count",
+                "type": "number",
+                "default": "0",
+                "required": "false",
+                "description": "Displays the total number of reviews."
+              },
+              {
+                "name": "compact",
+                "type": "boolean",
+                "default": "false",
+                "required": "false",
+                "description": "Hides the word 'Reviews' if true."
+              },
+              {
+                "name": "href",
+                "type": "string",
+                "default": "N/A",
+                "required": "false",
+                "description": "Sets the rating component (icons and text) to display inline and wraps them in an anchor tag."
+              },
+              {
+                "name": "size",
+                "type": "string",
+                "default": "medium",
+                "required": "false",
+                "description": "Sets the rating component size; Breakpoint values are: xs, sm, md, and lg. Examples: { 'small' | 'medium' | 'large' | 'large@sm' }"
+              },
+            ]
+          }
+        }
+      ],
+      "version": "1.0.0"
+    }
+  ]
 }
 ---
 
@@ -122,7 +120,7 @@
 
 ## Default
 
-Shows review rating with up to 5 stars highlighted. If rating is zero, star icons are displayed using the grey outline star icon. 
+Shows review rating with up to 5 stars highlighted. If rating is zero, star icons are displayed using the grey outline star icon.
 
 <cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/rating" :sandbox-data="$page.frontmatter.sandboxData">
 
@@ -200,15 +198,15 @@ This component has compliance with WCAG guidelines by:
 
 - Providing screen reader text that reads “Rated { rounded } out of 5 with { count }”
 - Using text color with a Level AA contrast ratio of 4.5:1 contrast between the text color and the background (only when displayed on light backgrounds)
-- Text links displays:	
-  - Underline text style for mouse usage 
+- Text links displays:
+  - Underline text style for mouse usage
   - Focus state for keyboard usage
 
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Design Guidelines">
-  <cdr-doc-table-of-contents-shell tab-name="Design Guidelines">
+<template slot="Guidelines">
+  <cdr-doc-table-of-contents-shell tab-name="Guidelines">
 
 ## Use When
 
@@ -239,7 +237,7 @@ This component has compliance with WCAG guidelines by:
 
 <do-dont :examples="$page.frontmatter.none" />
 
-## Resources 
+## Resources
 
 - [Icons](../icon/)
 - [Iconography](../../foundation/iconography/)
@@ -257,7 +255,7 @@ This component has compliance with WCAG guidelines by:
 
 ## Usage
 
-By default the **CdrRating** component renders the icons in medium size (24px) with the total number of reviews. 
+By default the **CdrRating** component renders the icons in medium size (24px) with the total number of reviews.
 
 ### Rating Values
 - The count for reviews will always be visible

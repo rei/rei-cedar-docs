@@ -171,7 +171,7 @@ This component has compliance with WCAG guidelines by:
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Design Guidelines">
+<template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
 
 ## Use When
@@ -184,15 +184,9 @@ This component has compliance with WCAG guidelines by:
 - Displaying a top-level page, such as a home or high level category page
 - Linking to previous steps of a sequential process
 
-## Foundations
+## The Basics
 
 - Avoid displaying breadcrumbs on non-white backgrounds
-- Within a breadcrumb, link styles are adapted:
-  - Ancestor links are displayed as $sys-color-taken-for-granite
-  - Last child link is emphasized as $sys-color-heart-of-darkness
-- Emphasize breadcrumb hover states with the  $sys-color-heart-of-darkness color and an underline
-
-<cdr-img class="cdr-doc-article-img" alt="Breadcrumb hover state is emphasized using link color and underline" :src="$withBase(`/breadcrumb/Spec__Breadcrumb_Long_16-2.png`)" />
 
 ## Content
 - Always align breadcrumb labels with page names that are the destination of that breadcrumb
@@ -213,7 +207,12 @@ Breadcrumbs provide context and a sense of place. This is especially important o
 - Always retain the full location path in page markup, even if shortened due to responsive styling
 - Display the complete breadcrumb path—not just the previous item—when an ellipsis is clicked or tapped
 - When full breadcrumbs path is displayed, it may wrap to 2 or more lines
-- Refer to API documentation for how to customize breadcrumb truncation width
+- Refer to API documentation for how to customize breadcrumb truncation width- Within a breadcrumb, link styles are adapted:
+  - Ancestor links are displayed as $sys-color-taken-for-granite
+  - Last child link is emphasized as $sys-color-heart-of-darkness
+- Emphasize breadcrumb hover states with the  $sys-color-heart-of-darkness color and an underline
+
+<cdr-img class="cdr-doc-article-img" alt="Breadcrumb hover state is emphasized using link color and underline" :src="$withBase(`/breadcrumb/Spec__Breadcrumb_Long_16-2.png`)" />
 
 
 ### Do / Don't

@@ -57,12 +57,6 @@
       "text": "Components/"
     }
   ],
-  # TODO: update these examples to use sandbox
-  #"sandboxData": {
-#    "name": "CdrPagination",
-#    "dependencies": { "@rei/cdr-pagination": "^1.0.0" },
-#    "loadComponentCss": true
-  #},
   "versions": [
     {
       "components": [
@@ -86,6 +80,11 @@
             "events": [
               {
                 "name": "change",
+                "arguments": "pageNumber, event",
+                "description": "$emit event fired when page changes based on user interaction by clicking a link or selecting an option from the select on mobile."
+              },
+              {
+                "name": "input",
                 "arguments": "pageNumber, event",
                 "description": "$emit event fired when page changes based on user interaction by clicking a link or selecting an option from the select on mobile."
               },
@@ -141,16 +140,16 @@ To ensure that usage of this component complies with accessibility guidelines:
 <br />
 
 This component has compliance WCAG guidelines by:
-- [WCAG 2.4.8](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0&showtechniques=248#location): Information about the user's location within a set of Web pages is available 
-- [WCAG 3.2.3](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-consistent-locations.html): Navigation patterns follow a consistent pattern. Only position pagination component at the bottom of the page 
-- [WCAG 2.4.3](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#qr-navigation-mechanisms-focus-order): Focus state receives focus in an order that preserves meaning 
+- [WCAG 2.4.8](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0&showtechniques=248#location): Information about the user's location within a set of Web pages is available
+- [WCAG 3.2.3](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-consistent-locations.html): Navigation patterns follow a consistent pattern. Only position pagination component at the bottom of the page
+- [WCAG 2.4.3](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#qr-navigation-mechanisms-focus-order): Focus state receives focus in an order that preserves meaning
 - [WCAG 2.4.7](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#qr-navigation-mechanisms-focus-visible): Focus is visible
 - [WCAG 2.5.5](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html): Target size for pagination links are large enough for users to easily activate them
 
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Design Guidelines">
+<template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
 
 ## Use When
@@ -163,18 +162,17 @@ This component has compliance WCAG guidelines by:
 - Switching between slides or content in a carousel
 - Displaying editorial content. Instead, show entire article on one page
 
-## Foundation
+## Behavior
+
+- Page number links are truncated as follows: [first] ... [current-1] [current] [current+1] ... [last]
+- If there are 7 pages or fewer, all page number links will be shown
+- Prev or Next text links are removed when the first or last page are active
 
 Within pagination, link styles are adapted
 
 - Text links are displayed as $text-color-primary-on-dark
 - Prev and Next links use the small size for the caret-left and caret-right icons
 
-## Behavior
-
-- Page number links are truncated as follows: [first] ... [current-1] [current] [current+1] ... [last]
-- If there are 7 pages or fewer, all page number links will be shown
-- Prev or Next text links are removed when the first or last page are active
 
 ### Do / Don't
 
@@ -204,7 +202,7 @@ Pagination adapts to a Select component with a native UI dropdown menu on XS bre
 
 <template slot="API">
 <cdr-doc-table-of-contents-shell>
-  
+
 ## Props
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 

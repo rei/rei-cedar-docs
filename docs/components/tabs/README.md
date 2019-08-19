@@ -52,7 +52,7 @@
       "caption": "use all caps for tab labels."
     }
   ],
-    "label": [
+  "label": [
     {
       "type": "do",
       "image": "tabs/tab_label_do_16-9.png",
@@ -219,7 +219,7 @@ This component has compliance with WCAG guidelines by:
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Design Guidelines">
+<template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
 
 ## Use When
@@ -235,7 +235,7 @@ This component has compliance with WCAG guidelines by:
 - Creating primary navigation that links to other pages
 - Comparing related content. Instead, use [Data Tables](../data-tables/)
 
-## Foundations
+## The Basics
 
 - Never display disabled tab labels
 - Remove tab button if there is no content
