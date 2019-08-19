@@ -142,7 +142,7 @@ The spacing utility classes have been deprecated and re-named to be consistent w
 
 This change was necessary to support the changes to the CSS reset mentioned above. The utility classes need enough precedence to override the base Cedar styling, while the base Cedar styling needs enough specificity to not target Cedar 1 or non-Cedar elements.
 
-Our utility classes always target a single CSS property. That means, if they are present on an element, then they should not be overridden by other styling. However this behavior may be undesirable if you are using utility classes for an initial layout and then applying custom classes as modifiers on top of that. If that is the case, then you will need to update your code to remove that utility class and instead apply that style in another way. All of the [deprecated utility classes and their property or value can be found here](https://github.com/rei/rei-cedar/blob/next/src/css/utility/_legacy.scss).
+Our utility classes always target a single CSS property. That means, if they are present on an element, then they should not be overridden by other styling. However this behavior may be undesirable if you are using utility classes for an initial layout and then applying custom classes as modifiers on top of that. If that is the case, then you will need to update your code to remove that utility class and instead apply that style in another way.
 
 ### Spacing Utility Detector 
 
