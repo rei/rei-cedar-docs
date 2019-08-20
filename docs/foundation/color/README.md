@@ -30,46 +30,50 @@ Below is a list of color tokens with descriptions and values. Web and mobile col
   - **For iOS:** CdrColorTextPrimaryLightmode  
   
 
+<tokens-color type="background">
 ## Background Colors
-
-<tokens-color type="background" />
+</tokens-color>
 
 <br>
 
 ## Typography Colors
-### For Light Backgrounds
 
-<tokens-color type="text" mode="light" />
+<tokens-color type="text" mode="light">
+### For Light Backgrounds
+</tokens-color>
 
 <br>
 
-### For Dark Backgrounds
 
-<tokens-color type="text" mode="dark" />
+<tokens-color type="text" mode="dark">
+### For Dark Backgrounds
+</tokens-color>
 
 <br>
 
 ## Icon Colors
+
+<tokens-color type="icon" mode="light">
 ### For Light Backgrounds
+</tokens-color>
 
-<tokens-color type="icon" mode="light" />
-
+<tokens-color type="icon" mode="dark">
 ### For Dark Backgrounds
-
-<tokens-color type="icon" mode="dark" />
+</tokens-color>
 
 <br>
 
 ## Border Colors
-### For Light Backgrounds
 
-<tokens-color type="border" mode="light" />
+<tokens-color type="border" mode="light">
+### For Light Backgrounds
+</tokens-color>
 
 <br>
 
+<tokens-color type="border" mode="dark">
 ### For Dark Backgrounds
-
-<tokens-color type="border" mode="dark" />
+</tokens-color>
 
 <br>
 

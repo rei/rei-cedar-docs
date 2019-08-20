@@ -1,5 +1,6 @@
 <template>
-<div>
+<div v-if="hasContent">
+  <slot />
   <div
     v-for="token in spaceTokensByType"
     class="cdr-mb-space-two-x"
@@ -29,8 +30,6 @@
 
 <script>
 import tokenData from '@rei/cdr-tokens/dist/json/platform-tokens.json';
-// import descriptionData from './TokensColorData';
-// import groupBy from 'lodash/groupBy';
 import filter from 'lodash/filter';
 import endsWith from 'lodash/endsWith';
 
@@ -44,17 +43,21 @@ export default {
   },
   data() {
     return {
-      descriptionData,
       isInset: false,
     };
   },
   computed: {
+    hasContent() {
+      return Object.keys(this.spaceTokensByType).length !== 0;
+    },
     allSpaceTokens() {
       const allSpace = [];
       Object.keys(tokenData).forEach((key) => {
         allSpace.push(...tokenData[key].spacing)
       });
-      return allSpace;
+      // filter out deprecated tokens
+      const filtered = filter(allSpace, ['attributes.deprecated', false]);
+      return filtered;
     },
     spaceTokensByType() {
 

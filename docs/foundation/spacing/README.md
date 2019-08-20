@@ -33,14 +33,19 @@ Web and mobile spacing tokens have identical values but the naming pattern diffe
 
 <br>
 
+<tokens-space>
+
 ## Default Spacing 
 These spacing values are in use throughout Cedar components and design recommendations. Use these tokens to keep consistent spatial concepts.
-<br>
-
-<tokens-space />
 
 <br>
+
+</tokens-space>
+
 <hr>
+<br>
+
+<tokens-space type="inset">
 
 ## Base Inset
 
@@ -51,14 +56,15 @@ Use to create a consistent space **within** the content container:
 - Default spacing model
 - Examples: <cdr-link :href="$withBase('/components/buttons/')">Buttons</cdr-link>, <cdr-link :href="$withBase('/components/data-tables/')">Data Tables</cdr-link>, and <cdr-link :href="$withBase('/components/tabs/')">Tabs</cdr-link> 
 
-<hr>
-  
 <br>
 
-<tokens-space type="inset" />
+</tokens-space>
 
-<br>
 <hr>
+<br>
+
+
+<tokens-space type="inset-squish">
 
 ## Inset - Squish
 Use to create a compact vertical space **within** the content container:
@@ -71,11 +77,15 @@ Use to create a compact vertical space **within** the content container:
 
 <br>
 
-<tokens-space type="inset-squish" />
+</tokens-space>
 
-<br>
 <hr>
+<br>
 
+
+
+
+<tokens-space type="inset-stretch">
 
 ## Inset - Stretch
 Use to create an expanded vertical space **within** the content container:
@@ -88,7 +98,7 @@ Use to create an expanded vertical space **within** the content container:
 
 <br>
 
-<tokens-space type="inset-stretch" />
+</tokens-space>
 
 <br>
 <hr>

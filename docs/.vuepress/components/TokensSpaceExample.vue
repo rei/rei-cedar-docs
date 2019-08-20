@@ -24,9 +24,6 @@ export default {
     };
   },
   computed: {
-    isInset() {
-      return this.name.includes('inset');
-    },
     spaceValue() {
       return this.tokens[camelCase(this.name)];
     },

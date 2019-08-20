@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div v-if="hasContent">
+    <slot />
     <!-- Web Tokens -->
     <template v-if="platform === 'web'">
     <div
@@ -8,7 +9,7 @@
     >
       <p class="typography-example" :style="makeStyleObj(v)">A different kind of company</p>
       <cdr-text><b>{{ k }}</b> (mixin)</cdr-text>
-      <cdr-text class="cdr-mb-space-one-x">{{descriptionData[k]}}</cdr-text>
+      <!-- <cdr-text class="cdr-mb-space-one-x">{{descriptionData[k]}}</cdr-text> -->
 
       <table>
         <tbody>
@@ -53,7 +54,6 @@
 
 <script>
 import tokenData from '@rei/cdr-tokens/dist/json/platform-tokens.json';
-import descriptionData from './TokensTypographyData';
 import groupBy from 'lodash/groupBy';
 import kebabCase from 'lodash/kebabCase';
 import filter from 'lodash/filter';
@@ -65,21 +65,23 @@ export default {
     platform: String,
     type: String,
   },
-  data() {
-    return {
-      descriptionData,
-    };
-  },
   computed: {
+    hasContent() {
+      return Object.keys(this.webMixinsByType).length !== 0 
+       || Object.keys(this.nativeTokensByType).length !== 0;
+    },
     webTokensByMixin() {
       const textTokens = tokenData.web.text;
-      const byMixin = groupBy(textTokens, 'mixin')
+      // filter out deprecated tokens
+      const filtered = filter(textTokens, ['attributes.deprecated', false]);
+      const byMixin = groupBy(filtered, 'mixin');
 
       Object.keys(byMixin).map(name => {
         const kebab = kebabCase(name);
         byMixin[kebab] = byMixin[name];
         delete byMixin[name];
       });
+
 
       return byMixin;
     },
@@ -97,7 +99,9 @@ export default {
     nativeTokensByType() {
       const obj = {}
       const textTokens = [...new Set([...tokenData.android.text, ...tokenData.ios.text])];
-      const grouped = groupBy(textTokens, 'docs.type');
+      // filter out deprecated tokens
+      const filtered = filter(textTokens, ['attributes.deprecated', false]);
+      const grouped = groupBy(filtered, 'docs.type');
       const groupedByName = groupBy(grouped[this.type], (v) => {
         if ( Object.prototype.hasOwnProperty.call(v.docs, 'android')
           && v.docs.android !== 'N/A' ) return v.docs.android;
