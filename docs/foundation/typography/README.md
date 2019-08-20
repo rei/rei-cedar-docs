@@ -25,43 +25,36 @@ Typography design tokens represent the fundamental decisions of Cedar’s visual
 
 ## Web
 
+
+<tokens-typography platform="web" type="default">
 ### Default
+</tokens-typography>
 
-<tokens-typography platform="web" type="default" />
-
-<br>
-
+<tokens-typography platform="web" type="editorial">
 ### Editorial
+</tokens-typography>
 
-<tokens-typography platform="web" type="editorial" />
-
-<br/>
-
+<tokens-typography platform="web" type="heading">
 ### Headings
-
+</tokens-typography>
 <tokens-typography platform="web" type="header" />
 
-<br/>
 <hr>
-
 
 ## Mobile Apps
 
+<tokens-typography platform="native" type="header">
 ### Headings 
+</tokens-typography>
 
-<tokens-typography platform="native" type="header" />
-
-<br>
-
+<tokens-typography platform="native" type="body">
 ### Body
+</tokens-typography>
 
-<tokens-typography platform="native" type="body" />
-
+<tokens-typography platform="native" type="button">
 ### Buttons
+</tokens-typography>
 
-<tokens-typography platform="native" type="button" />
-
-<br>
 <hr/>
 
 
