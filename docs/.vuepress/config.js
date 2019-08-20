@@ -4,12 +4,29 @@ module.exports = {
   description:
     "The Cedar Design System provides digital teams with reusable UI components based on REI’s visual language.",
   head: [
+    // TODO: remove
     [
       "link",
       {
         rel: "stylesheet",
         href:
           "https://fonts.googleapis.com/css?family=Roboto+Condensed:400|Roboto:400|Roboto+Mono:400"
+      }
+    ],
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href:
+          "https://satchel.rei.com/media/font/REI_Stuart/fonts.css"
+      }
+    ],
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href:
+          "https://satchel.rei.com/media/font/Graphik/Graphik/fonts.css"
       }
     ],
     [
