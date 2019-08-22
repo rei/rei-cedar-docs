@@ -56,4 +56,11 @@ Rather than pass in an `onClick` event handler as a prop, CdrButton will now bin
 - Before: `<cdr-button onClick="yourClickHandlerFunction" />`
 - After: `<cdr-button @click="yourClickHandlerFunction" />`
 
+### CdrTabs emits `tab-change` instead of `tabChange`
+
+Vue expects event names to use kebab case and not camel case, so the `tabChange` event on CdrTabs could cause issues for some users. CdrTabs now emits a `tab-change` event instead. 
+
+- Before: `<CdrTabs @tabChange="handler" />`
+- After: `<CdrTabs @tab-change="handler" />`
+
 </cdr-doc-table-of-contents-shell>
