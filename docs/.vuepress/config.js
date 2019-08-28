@@ -95,6 +95,7 @@ module.exports = {
       {
         text: "Components",
         items: [
+          { text: "CSS Utilities", link: "/styles/utilities/" },
           { text: "Accordion", link: "/components/accordion/" },
           { text: "Block Quote", link: "/components/block-quote/" },
           { text: "Breadcrumb", link: "/components/breadcrumb/" },
