@@ -9,6 +9,17 @@
       "text": "Foundation/"
     }
   ],
+  "tokenDescriptions": {
+    "cdr-duration-1-x": "Usage: Perceived as instant or very fast. Often used for selection controls such as radio buttons, checkboxes, or toggle buttons.",
+    "cdr-duration-2-x": "Usage: Perceived as fast. Often used for hover or fading effects or icons that change shape, such as switching between a play button to a pause button.",
+    "cdr-duration-3-x": "Usage: Perceived as normal. Often used for revealing content, such as the opening of a panel for the accordion component.",
+    "cdr-duration-4-x": "Usage: Perceived as slow. Often used for revealing content on a tablet device because the screen is bigger than a phone or wearable device.",
+    "cdr-duration-5-x": "Usage: Perceived as slower. Often used for icons with detailed animation, such as a ringing alarm clock or opening and closing a lock icon.",
+    "cdr-duration-6-x": "Usage: Perceived as very slow. Often used for larger movement, such as revealing page content when switching tabs for the tabs component.",
+    "cdr-timing-function-ease-out": "Specifies a transition effect that will feel responsive. This timing effect moves quickly at the beginning with a slow end. Use this animation when users expect an immediate response to their action such as clicking on an accordion or button.",
+    "cdr-timing-function-ease": "Specifies a transition effect that is known as ease-in-out. This timing function can be quite satisfying for users because it has a slow start, fast middle, and slow end. Use this effect when users do not expect motion to occur. A suitable duration is 300-500ms for this timing function.",
+    "cdr-timing-function-linear": "Specifies a transition effect that will feel responsive. This timing effect moves quickly at the beginning with a slow end. Use this animation when users expect an immediate response to their action such as clicking on an accordion or button."
+  }
 
 }
 ---
@@ -201,25 +212,6 @@ List of motion tokens with descriptions and values. Motion tokens are primarily 
 ### Comparison of Duration Tokens 
 
 <tokens-motion motion-type="duration" :comparison-view="true" />
-   
-<!-- <table>
-  <tbody>
-    <tr>
-      <td colspan=2>
-        <div style="overflow: hidden; white-space: nowrap; margin: 8px 8px; padding: 16px 16px; background-color: rgb(255, 255, 255);"> <icon-play-fill /> Play all <icon-pause-fill /> Pause all  </div> 
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div style="overflow: hidden; white-space: nowrap; margin: 8px 8px; padding: 16px 16px; background-color: rgb(255, 255, 255);">
-        </div> 
-      </td>
-      <td>
-        <strong>cdr-duration-1-x</strong>
-      </td>
-    </tr>
-  </tbody>
-</table> -->
 
 <br/>
 <hr>
@@ -310,45 +302,7 @@ Cedar’s collection of easings are based on physics found in the natural world.
 
 ### Comparison of Timing Tokens 
 
-<table>
-  <tbody>
-    <tr>
-      <td colspan=2>
-        <div style="overflow: hidden; white-space: nowrap; margin: 8px 8px; padding: 16px 16px; background-color: rgb(255, 255, 255);"> <icon-play-fill /> Play all <icon-pause-fill /> Pause all  </div> 
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div style="overflow: hidden; white-space: nowrap; margin: 8px 8px; padding: 16px 16px; background-color: rgb(255, 255, 255);">
-          <!-- <token: cdr-timing-function-ease-out  /> -->
-        </div> 
-      </td>
-      <td>
-        <strong>cdr-timing-function-ease-out</strong>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div style="overflow: hidden; white-space: nowrap; margin: 8px 8px; padding: 16px 16px; background-color: rgb(255, 255, 255);">
-          <!-- <token: cdr-timing-function-ease  /> -->
-        </div> 
-      </td>
-      <td>
-        <strong>cdr-timing-function-ease</strong>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div style="overflow: hidden; white-space: nowrap; margin: 8px 8px; padding: 16px 16px; background-color: rgb(255, 255, 255);">
-          <!-- <token: cdr-timing-function-linear  /> -->
-        </div> 
-      </td>
-      <td>
-        <strong>cdr-timing-function-linear</strong>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<tokens-motion motion-type="timing" :comparison-view="true" />
 
 <br/>
 <hr>
