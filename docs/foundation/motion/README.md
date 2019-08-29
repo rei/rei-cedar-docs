@@ -9,9 +9,11 @@
       "text": "Foundation/"
     }
   ],
+
 }
 ---
-<cdr-doc-tabs :labels="['Overview', 'Guidelines', 'Brand Palette']">
+<!-- <cdr-doc-tabs labels="['Overview', 'Guidelines', 'Brand Palette']"> -->
+<cdr-doc-tabs>
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
 
@@ -36,7 +38,9 @@ List of motion tokens with descriptions and values. Motion tokens are primarily 
   - Delays between 100ms and 1 second gives users the impression that the website is working and causing the result to appear 
 
  <br/>
- 
+
+<!-- <tokens-motion motion-type="duration" /> -->
+
 <table>
   <tbody>
     <tr>
@@ -47,7 +51,8 @@ List of motion tokens with descriptions and values. Motion tokens are primarily 
     <tr>
       <td>
         <div style="overflow: hidden; white-space: nowrap; margin: 8px 8px; padding: 16px 16px; background-color: rgb(255, 255, 255);">
-          <icon-play-fill />  <icon-pause-fill />   <token: cdr-duration-1-x  />
+          <icon-play-fill />  <icon-pause-fill />   `cdr-duration-1-x`
+          <!-- <token: cdr-duration-1-x  /> -->
         </div>  
       </td>
     </tr>
@@ -72,7 +77,8 @@ List of motion tokens with descriptions and values. Motion tokens are primarily 
     <tr>
       <td>
         <div style="overflow: hidden; white-space: nowrap; margin: 8px 8px; padding: 16px 16px; background-color: rgb(255, 255, 255);">
-          <icon-play-fill />  <icon-pause-fill />   <token: cdr-duration-2-x  />
+          <icon-play-fill />  <icon-pause-fill />   
+          <!-- <token: cdr-duration-2-x  /> -->
         </div>  
       </td>
     </tr>
@@ -97,7 +103,8 @@ List of motion tokens with descriptions and values. Motion tokens are primarily 
     <tr>
       <td>
         <div style="overflow: hidden; white-space: nowrap; margin: 8px 8px; padding: 16px 16px; background-color: rgb(255, 255, 255);">
-          <icon-play-fill />  <icon-pause-fill />   <token: cdr-duration-3-x  />
+          <icon-play-fill />  <icon-pause-fill />   
+          <!-- <token: cdr-duration-3-x  /> -->
         </div>  
       </td>
     </tr>
@@ -122,7 +129,8 @@ List of motion tokens with descriptions and values. Motion tokens are primarily 
     <tr>
       <td>
         <div style="overflow: hidden; white-space: nowrap; margin: 8px 8px; padding: 16px 16px; background-color: rgb(255, 255, 255);">
-          <icon-play-fill />  <icon-pause-fill />   <token: cdr-duration-4-x  />
+          <icon-play-fill />  <icon-pause-fill />   
+          <!-- <token: cdr-duration-4-x  /> -->
         </div>  
       </td>
     </tr>
@@ -147,7 +155,8 @@ List of motion tokens with descriptions and values. Motion tokens are primarily 
     <tr>
       <td>
         <div style="overflow: hidden; white-space: nowrap; margin: 8px 8px; padding: 16px 16px; background-color: rgb(255, 255, 255);">
-          <icon-play-fill />  <icon-pause-fill />   <token: cdr-duration-5-x  />
+          <icon-play-fill />  <icon-pause-fill />   
+          <!-- <token: cdr-duration-5-x  /> -->
         </div>  
       </td>
     </tr>
@@ -172,7 +181,8 @@ List of motion tokens with descriptions and values. Motion tokens are primarily 
     <tr>
       <td>
         <div style="overflow: hidden; white-space: nowrap; margin: 8px 8px; padding: 16px 16px; background-color: rgb(255, 255, 255);">
-          <icon-play-fill />  <icon-pause-fill />   <token: cdr-duration-6-x  />
+          <icon-play-fill />  <icon-pause-fill />   
+          <!-- <token: cdr-duration-6-x  /> -->
         </div>  
       </td>
     </tr>
@@ -189,8 +199,10 @@ List of motion tokens with descriptions and values. Motion tokens are primarily 
 <hr>
 
 ### Comparison of Duration Tokens 
+
+<tokens-motion motion-type="duration" :comparison-view="true" />
    
-<table>
+<!-- <table>
   <tbody>
     <tr>
       <td colspan=2>
@@ -200,65 +212,14 @@ List of motion tokens with descriptions and values. Motion tokens are primarily 
     <tr>
       <td>
         <div style="overflow: hidden; white-space: nowrap; margin: 8px 8px; padding: 16px 16px; background-color: rgb(255, 255, 255);">
-          <token: cdr-duration-1-x  />
         </div> 
       </td>
       <td>
         <strong>cdr-duration-1-x</strong>
       </td>
     </tr>
-    <tr>
-      <td>
-        <div style="overflow: hidden; white-space: nowrap; margin: 8px 8px; padding: 16px 16px; background-color: rgb(255, 255, 255);">
-          <token: cdr-duration-2-x  />
-        </div>
-      </td>
-      <td> 
-        <strong>cdr-duration-2-x</strong>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div style="overflow: hidden; white-space: nowrap; margin: 8px 8px; padding: 16px 16px; background-color: rgb(255, 255, 255);">
-          <token: cdr-duration-3-x  />
-        </div>
-      </td>
-      <td> 
-        <strong>cdr-duration-3-x</strong>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div style="overflow: hidden; white-space: nowrap; margin: 8px 8px; padding: 16px 16px; background-color: rgb(255, 255, 255);">
-          <token: cdr-duration-4-x  />
-        </div>
-      </td>
-      <td> 
-        <strong>cdr-duration-4-x</strong>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div style="overflow: hidden; white-space: nowrap; margin: 8px 8px; padding: 16px 16px; background-color: rgb(255, 255, 255);">
-          <token: cdr-duration-5-x  />
-        </div> 
-      </td>
-      <td>
-        <strong>cdr-duration-5-x</strong>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div style="overflow: hidden; white-space: nowrap; margin: 8px 8px; padding: 16px 16px; background-color: rgb(255, 255, 255);">
-          <token: cdr-duration-6-x  />
-        </div> 
-      </td>
-      <td>
-        <strong>cdr-duration-6-x</strong>
-      </td>
-    </tr>
   </tbody>
-</table>
+</table> -->
 
 <br/>
 <hr>
@@ -278,7 +239,8 @@ Cedar’s collection of easings are based on physics found in the natural world.
     <tr>
       <td>
         <div style="overflow: hidden; white-space: nowrap; margin: 8px 8px; padding: 16px 16px; background-color: rgb(255, 255, 255);">
-          <icon-play-fill />  <icon-pause-fill />   <token: cdr-timing-function-ease-out  />
+          <icon-play-fill />  <icon-pause-fill />   
+          <!-- <token: cdr-timing-function-ease-out  /> -->
         </div>  
       </td>
     </tr>
@@ -303,7 +265,8 @@ Cedar’s collection of easings are based on physics found in the natural world.
     <tr>
       <td>
         <div style="overflow: hidden; white-space: nowrap; margin: 8px 8px; padding: 16px 16px; background-color: rgb(255, 255, 255);">
-          <icon-play-fill />  <icon-pause-fill />   <token: cdr-timing-function-ease  />
+          <icon-play-fill />  <icon-pause-fill />   
+          <!-- <token: cdr-timing-function-ease  /> -->
         </div>  
       </td>
     </tr>
@@ -328,7 +291,8 @@ Cedar’s collection of easings are based on physics found in the natural world.
     <tr>
       <td>
         <div style="overflow: hidden; white-space: nowrap; margin: 8px 8px; padding: 16px 16px; background-color: rgb(255, 255, 255);">
-          <icon-play-fill />  <icon-pause-fill />   <token: cdr-timing-function-linear  />
+          <icon-play-fill />  <icon-pause-fill />   
+          <!-- <token: cdr-timing-function-linear  /> -->
         </div>  
       </td>
     </tr>
@@ -356,7 +320,7 @@ Cedar’s collection of easings are based on physics found in the natural world.
     <tr>
       <td>
         <div style="overflow: hidden; white-space: nowrap; margin: 8px 8px; padding: 16px 16px; background-color: rgb(255, 255, 255);">
-          <token: cdr-timing-function-ease-out  />
+          <!-- <token: cdr-timing-function-ease-out  /> -->
         </div> 
       </td>
       <td>
@@ -366,7 +330,7 @@ Cedar’s collection of easings are based on physics found in the natural world.
     <tr>
       <td>
         <div style="overflow: hidden; white-space: nowrap; margin: 8px 8px; padding: 16px 16px; background-color: rgb(255, 255, 255);">
-          <token: cdr-timing-function-ease  />
+          <!-- <token: cdr-timing-function-ease  /> -->
         </div> 
       </td>
       <td>
@@ -376,14 +340,15 @@ Cedar’s collection of easings are based on physics found in the natural world.
     <tr>
       <td>
         <div style="overflow: hidden; white-space: nowrap; margin: 8px 8px; padding: 16px 16px; background-color: rgb(255, 255, 255);">
-          <token: cdr-timing-function-linear  />
+          <!-- <token: cdr-timing-function-linear  /> -->
         </div> 
       </td>
       <td>
         <strong>cdr-timing-function-linear</strong>
       </td>
     </tr>
-
+  </tbody>
+</table>
 
 <br/>
 <hr>
@@ -589,3 +554,4 @@ For more information, view Adding Tokens to the Repository in the Tokens article
 </cdr-doc-table-of-contents-shell>
 </template>
 
+</cdr-doc-tabs>
