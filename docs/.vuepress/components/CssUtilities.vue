@@ -1,5 +1,5 @@
 <template>
-  <div :class="`utility-class-wrapper-${level}`">
+  <div class="utility-wrapper">
     <template v-for="(v,k) in utilityData">
       <template v-if="nextIsCategory(v)">
         <!-- Title -->
@@ -7,7 +7,6 @@
           :is="`h${level}`"
           class="utility-class-title"
         >{{ k }}</component>
-        <hr>
         <!-- Recurse -->
         <css-utilities
           :level="level + 1"
@@ -75,9 +74,17 @@ export default {
 </script>
 
 <style lang="scss">
-.utility-class-wrapper {
-  & + & {
-    border-top: 32px solid red;
+@import '../theme/styles/cdr-tokens.scss';
+
+.utility-wrapper {
+  h2 {
+    @include cdr-text-display-1000();
+  }
+  h3 {
+    @include cdr-text-display-800();
+  }
+  h4 {
+    @include cdr-text-display-600();
   }
 }
 
