@@ -114,7 +114,7 @@ Use the transition pattern when:
 
 <table class="table-first-col-align-top">
   <tr>
-    <td><strong>Accordion</strong></td>
+    <td style="width: 160px;"><strong>Accordion</strong></td>
     <td></td>
   </tr>
   <tr>
@@ -123,11 +123,11 @@ Use the transition pattern when:
   </tr>
 </table>
 
-<br>
+<br />
 
 <table class="table-first-col-align-top">
   <tr>
-    <td><strong>Tabs</strong></td>
+    <td style="width: 160px"><strong>Tabs</strong></td>
     <td></td>
   </tr>
   <tr>
@@ -159,27 +159,27 @@ Use the feedback pattern when:
 <br>
 
 <table class="table-first-col-align-top">
-  <tr>
-    <td><strong>Buttons</strong></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td><cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Symbol for Buttons component" :src="$withBase(`/motion/pattern_symbol_buttons_16-9.png`)"/></td>
-    <td>When users hovers on or off, color changes instantaneously.  <br/><br/> View <a href="../../components/buttons/">Button</a> component.</td>
-  </tr>
+    <tr>
+      <td style="width: 160px;"><strong>Buttons</strong></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Symbol for Buttons component" :src="$withBase(`/motion/pattern_symbol_buttons_16-9.png`)"/></td>
+      <td>When users hovers on or off, color changes instantaneously.  <br/><br/> View <a href="../../components/buttons/">Button</a> component.</td>
+    </tr>
 </table>
 
 <br />
 
 <table class="table-first-col-align-top">
-  <tr>
-    <td><strong>Breadcrumb</strong></td>
-    <td></td>
-  </tr>
-  <tr>
-    <td><cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Symbol for Breadcrumb component" :src="$withBase(`/motion/pattern_symbol_breadcrumb_16-9.png`)"/></td>
-    <td>When users hovers on or off, an underline style is applied to the link text.  <br/><br/> View <a href="../../components/breadcrumb/">Breadcrumb</a> component.</td>
-  </tr>
+    <tr>
+      <td style="width: 160px;"><strong>Breadcrumb</strong></td>
+      <td></td>
+    </tr>
+    <tr>
+      <td><cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Symbol for Breadcrumb component" :src="$withBase(`/motion/pattern_symbol_breadcrumb_16-9.png`)"/></td>
+      <td>When users hovers on or off, an underline style is applied to the link text.  <br/><br/> View <a href="../../components/breadcrumb/">Breadcrumb</a> component.</td>
+    </tr>
 </table>
 
 <br/>
@@ -234,10 +234,12 @@ For more information, view [Adding Tokens to the Repository](../tokens/?active-l
 <cdr-doc-table-of-contents-shell>
 
 <table class="table-first-col-align-top">
-  <tr>
-    <th>Glossary Term</th>
-    <th><strong>Description</strong></th>
-  </tr>
+  <thead>
+    <tr>
+      <th>Glossary Term</th>
+      <th><strong>Description</strong></th>
+    </tr>
+  </thead>
   <tbody>
     <tr>
       <td>animation</td>
@@ -305,29 +307,6 @@ For more information, view [Adding Tokens to the Repository](../tokens/?active-l
     </tr>
   </tbody>
 </table>
-
-<!-- <br /><br />
-  
-| **Glossary Term**       |  **Description**        |
-| :---------------------- | :---------------------- |  
-| **animation**           | An illusion of movement created by displaying a series of pictures or frames. |  
-| **aspect ratio**        | <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Graph to compare 16 to 9 with 4 to 3 aspect ratios" :src="$withBase(`/motion/glossary_aspect_ratio_16-9.png`)"/>  <br/><br/> The relationship between the width of an image to its height. Standard ratios are 16:9 for widescreen and 4:3 for television.  |  
-| **Bézier curve**        | A method of defining curved lines invented by French mathematician Pierre Bézier. For animation, a Bézier curve can be used to specify the velocity over time of an object such as an icon moving from A to B. Bézier curves are often used to replicate the physics found in the natural world. For the animation function, cubic-bezier (p1, p2, p3, p4), the p1 and p3 values must be in the range of 0 to 1. |  
-| **cross dissolve**      | A transition effect used to fade one image into a different image simultaneously: one fades in while the other fades out. | 
-| **ease-in**             | <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Graph to show ease-in animation timing" :src="$withBase(`/motion/glossary_ease_in_16-9.png`)"/>  <br/><br/> Specifies a gradual acceleration in the action with a slow start and quick ending. Ease-in is not recommended because it may negatively impact the user's perception of your site's responsiveness by feeling sluggish at the start. Things in the real world tend to decelerate rather than simply stopping. A common value for the cubic-bezier is (0.25, 0.1, 0.25, 1.0). Also known as slow-in. | 
-| **ease-in-out**         | <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Graph to show ease-in-out animation timing" :src="$withBase(`/motion/glossary_ease_in_out_16-9.png`)"/>  <br/><br/> Specifies a gradual acceleration at the start until the middle of the action. Then, a gradual deceleration in the action at the end. This timing function can be quite satisfying for users because it has a slow start, fast middle, and slow end. Do not use this timing function for a long animation duration because of the sluggishness of the ease-in start. A suitable duration is 300-500ms for this timing function. Cedar’s token `cdr-timing-function-ease` uses this function. | 
-| **ease-out**            | <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Graph to show ease-out animation timing" :src="$withBase(`/motion/glossary_ease_out_16-9.png`)"/>  <br/><br/> Specifies a gradual deceleration in the action with a fast start and slow ending. Ease-out is recommended because it gives the animation a feeling of responsiveness. It also allows a natural slowdown at the end. A common value for the cubic-bezier is (0, 0, 0.58, 1.0). Also known as slow-out. Cedar’s token `cdr-timing-function-ease-out` uses this function. | 
-| **fade in**             | Specifies a transition effect used to open a sequence. The first image gradually appears from complete transparency to its complete opacity. | 
-| **fade out**            | Specifies a transition effect used to close a sequence. The last image gradually disappears, going from complete opacity to complete transparency. | 
-| **frame rate**          | The frame rate is measured by the number of frames recorded or played back each second. It is denoted as fps (frames per second). For example, an animation could be played back at 12, 15, 24, 25, 30 or 60 frames per second or any other number. | 
-| **linear**              | <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Graph to show linear animation timing" :src="$withBase(`/motion/glossary_linear_16-9.png`)"/>  <br/><br/> Specifies an even speed in the action. A common value for the cubic-bezier is (0.0, 0.0, 1.0, 1.0). This is commonly used for opacity transitions. Cedar’s token `cdr-timing-function-linear` uses this function.   | 
-| **path of action**      | Specifies direction that the action will follow. | 
-| **slow-in**             | Specifies a gradual acceleration in the action with a slow start and quick ending. Also known as ease-in. |  
-| **slow-out**            | Specifies a gradual deceleration in the action with a fast start and slow ending. Also known as ease-out. |  
-| **timeline**            | A horizontal representation of a scene's elements, timing and keyframes. | 
-| **transition**          | An effect that happens between two images or scenes. Common transition effects are cross-dissolve and wipe. |  -->
-
-
 
 <br>
 <hr/>

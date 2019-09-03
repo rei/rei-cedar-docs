@@ -3,19 +3,6 @@
     <div
       v-if="comparisonView"
     >
-      <!-- <cdr-button 
-        @click="animate = true" 
-        v-show="!animate"
-      >
-        <icon-play-fill class="cdr-button__icon" />
-        Play All
-      </cdr-button>
-      <cdr-button 
-        @click="animate = false" 
-        v-show="animate">
-          <icon-pause-fill class="cdr-button__icon" />
-          Pause All
-      </cdr-button> -->
       <cdr-button 
         :icon-only="true"
         @click="animate = true" 
@@ -26,8 +13,9 @@
       <cdr-button 
         :icon-only="true"
         @click="animate = false" 
-        v-show="animate">
-          <icon-pause-fill />
+        v-show="animate"
+      >
+        <icon-pause-fill />
       </cdr-button>
       <table>
         <tr v-for="token in motionTokensByType[motionType]">
