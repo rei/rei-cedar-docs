@@ -31,13 +31,11 @@ Cedar provides easy-to-use, preset values to apply consistent motion for compone
 - Stores motion attributes for duration or timing using variable names, not hard coded values such as cubic-bezier (0.15, 0, 0.15, 0)
 - Specifies a hierarchical and semantically defined system
   
-<br/>
 <hr>  
 
 List of motion tokens with descriptions and values. Motion tokens are primarily used with web applications. Motion tokens for mobile devices are not currently available.
 
 <br/>
-<hr> 
   
 ## Duration
 - Animated components use short time durations so interactions feel responsive and succinct
@@ -82,7 +80,6 @@ Cedar’s collection of easings are based on physics found in the natural world.
 
 Cedar motion is purposefully designed to enhance the customer's understanding of REI’s digital products. Components use animated interface patterns to reduce cognitive load and imbue a natural interactivity. It’s an important part of building customer trust and affinity for our products.
 
-<br/>
 <hr>
 
 ## Use When 
@@ -99,14 +96,12 @@ Cedar motion is purposefully designed to enhance the customer's understanding of
 - Adding the animation could waste the user’s time
 - Entertaining the user, rather than helping them to accomplish their goals
 
-<br/>
 <hr>
 
 ## Accessibility
 - Do not cause the screen to flash more than three times a second
 - For any animation that starts automatically and plays for more than 5 seconds, provide pause controls. For example, auto-updating content and ambient videos
 
-<br/>
 <hr>
 
 ## Interface Patterns
@@ -129,7 +124,6 @@ Cedar motion is purposefully designed to enhance the customer's understanding of
 | <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Symbol for Tabs component":src="$withBase(`/motion/pattern_symbol_tabs_1-1.png`)"/>  | Ease out timing is used for updating the tab bar and revealing new content. <br/><br/> Duration was initially set at 600ms. During the development phase, the duration was updated to 500ms. <br/><br/> View [Tabs](../tabs/) component <icon-external-link />  | 
 
 <br/>
-<hr>
 
 ### Supplements 
 Use the supplements pattern when:
@@ -142,7 +136,6 @@ There are currently no components in the Cedar Design System that use supplement
 - Tooltips
 
 <br/>
-<hr>
 
 ### Feedback
 Use the feedback pattern when:
@@ -163,7 +156,6 @@ Use the feedback pattern when:
 | <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Symbol for Breadcrumb component":src="$withBase(`/motion/pattern_symbol_breadcrumb_16-9.png`)"/>  |  When users hovers on or off, an underline style is applied to the link text.  <br/><br/> View [Breadcrumb](../breadcrumb/) component <icon-external-link />  | 
 
 <br/>
-<hr>
 
 ### Demonstrations
 Use the demonstrations pattern when:
@@ -174,7 +166,6 @@ There are currently no animations on the REI site that are demonstrations. An ex
 
 
 <br/>
-<hr>
 
 ### Decorations
 Use the decorations pattern when:
@@ -214,55 +205,25 @@ For more information, view Adding Tokens to the Repository in the Tokens article
 
 <template slot="Glossary">
 <cdr-doc-table-of-contents-shell>
-
-| **animation**            |
-| :----------------------- | 
-|  <br/><br/>              | An illusion of movement created by displaying a series of pictures or frames.     |  
-| **aspect ratio**         |
-| :----------------------- | 
-|  <br/><br/>              | <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Graph to compare 16 to 9 with 4 to 3 aspect ratios":src="$withBase(`/motion/glossary_aspect_ratio_16-9.png`)"/>  <br/><br/> The relationship between the width of an image to its height. Standard ratios are 16:9 for widescreen and 4:3 for television.     |  
-| **Bézier curve**         |
-| :----------------------- | 
-|  <br/><br/>              | A method of defining curved lines invented by French mathematician Pierre Bézier. <br/><br/> For animation, a Bézier curve can be used to specify the velocity over time of an object such as an icon moving from A to B.  <br/><br/> Bézier curves are often used to replicate the physics found in the natural world.  <br/><br/> For the animation function, cubic-bezier (p1, p2, p3, p4), the p1 and p3 values must be in the range of 0 to 1.     |  
-| **cross dissolve**       |
-| :----------------------- | 
-|  <br/><br/>              | A transition effect used to fade one image into a different image simultaneously: one fades in while the other fades out.   | 
-| **ease-in**              |
-| :----------------------- | 
-|  <br/><br/>              | <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Graph to show ease-in animation timing":src="$withBase(`/motion/glossary_ease_in_16-9.png`)"/>  <br/><br/> Specifies a gradual acceleration in the action with a slow start and quick ending. <br/><br/> Ease-in is not recommended because it may negatively impact the user's perception of your site's responsiveness by feeling sluggish at the start. Things in the real world tend to decelerate rather than simply stopping. <br/><br/> A common value for the cubic-bezier is (0.25, 0.1, 0.25, 1.0). <br/><br/> Also known as slow-in.  | 
-| **ease-in-out**          |
-| :----------------------- | 
-|  <br/><br/>              | <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Graph to show ease-in-out animation timing":src="$withBase(`/motion/glossary_ease_in_out_16-9.png`)"/>  <br/><br/> Specifies a gradual acceleration at the start until the middle of the action. Then,  a gradual deceleration in the action at the end.  <br/><br/> This timing function can be quite satisfying for users because it has a slow start, fast middle, and slow end.  <br/><br/> Do not use this timing function for a long animation duration because of the sluggishness of the ease-in start. A suitable duration is 300-500ms for this timing function.  <br/><br/> Cedar’s token `cdr-timing-function-ease` uses this function.     | 
-| **ease-out**             | 
-| :----------------------- | 
-|  <br/><br/>              | <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Graph to show ease-out animation timing":src="$withBase(`/motion/glossary_ease_out_16-9.png`)"/>  <br/><br/> Specifies a gradual deceleration in the action with a fast start and slow ending.  <br/><br/> Ease-out is recommended because it gives the animation a feeling of responsiveness. It also allows a natural slowdown at the end.  <br/><br/> A common value for the cubic-bezier is (0, 0, 0.58, 1.0).  <br/><br/> Also known as slow-out.  <br/><br/> Cedar’s token `cdr-timing-function-ease-out` uses this function.     | 
-| **fade in**              |
-| :----------------------- | 
-|  <br/><br/>              | Specifies a transition effect used to open a sequence. The first image gradually appears from complete transparency to its complete opacity.     | 
-| **fade out**             |
-| :----------------------- | 
-|  <br/><br/>              | Specifies a transition effect used to close a sequence.  The last image gradually disappears, going from complete opacity to complete transparency.     | 
-| **frame rate**           |
-| :----------------------- | 
-|  <br/><br/>              | The frame rate is measured by the number of frames recorded or played back each second. It is denoted as fps (frames per second). For example, an animation could be played back at 12, 15, 24, 25, 30 or 60 frames per second or any other number.     | 
-| **linear**               |
-| :----------------------- | 
-|  <br/><br/>              | <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Graph to show linear animation timing":src="$withBase(`/motion/glossary_linear_16-9.png`)"/>  <br/><br/> Specifies an even speed in the action. A common value for the cubic-bezier is (0.0, 0.0, 1.0, 1.0). This is commonly used for opacity transitions.  <br/><br/> Cedar’s token `cdr-timing-function-linear` uses this function.     | 
-| **path of action**       |
-| :----------------------- | 
-|  <br/><br/>              | Specifies direction that the action will follow.     | 
-| **slow-in**              | 
-| :----------------------- | 
-|  <br/><br/>              | Specifies a gradual acceleration in the action with a slow start and quick ending.  <br/><br/> Also known as ease-in.     |  
-| **slow-out**             |                                           
-| :----------------------- | 
-|  <br/><br/>              | Specifies a gradual deceleration in the action with a fast start and slow ending.  <br/><br/> Also known as ease-out.     |  
-| **timeline**             |
-| :----------------------- | 
-|  <br/><br/>              | A horizontal representation of a scene's elements, timing and keyframes.     | 
-| **transition**           |
-| :----------------------- | 
-|  <br/><br/>              | An effect that happens between two images or scenes. Common transition effects are cross-dissolve and wipe.     | 
+  
+| **Glossary Term**       |  **Description**        |
+| :---------------------- | :---------------------- |  
+| **animation**           | An illusion of movement created by displaying a series of pictures or frames. |  
+| **aspect ratio**        | <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Graph to compare 16 to 9 with 4 to 3 aspect ratios":src="$withBase(`/motion/glossary_aspect_ratio_16-9.png`)"/>  <br/><br/> The relationship between the width of an image to its height. Standard ratios are 16:9 for widescreen and 4:3 for television.  |  
+| **Bézier curve**        | A method of defining curved lines invented by French mathematician Pierre Bézier. <br/><br/> For animation, a Bézier curve can be used to specify the velocity over time of an object such as an icon moving from A to B.  <br/><br/> Bézier curves are often used to replicate the physics found in the natural world.  <br/><br/> For the animation function, cubic-bezier (p1, p2, p3, p4), the p1 and p3 values must be in the range of 0 to 1. |  
+| **cross dissolve**      | A transition effect used to fade one image into a different image simultaneously: one fades in while the other fades out. | 
+| **ease-in**             | <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Graph to show ease-in animation timing":src="$withBase(`/motion/glossary_ease_in_16-9.png`)"/>  <br/><br/> Specifies a gradual acceleration in the action with a slow start and quick ending. <br/><br/> Ease-in is not recommended because it may negatively impact the user's perception of your site's responsiveness by feeling sluggish at the start. Things in the real world tend to decelerate rather than simply stopping. <br/><br/> A common value for the cubic-bezier is (0.25, 0.1, 0.25, 1.0). <br/><br/> Also known as slow-in. | 
+| **ease-in-out**         | <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Graph to show ease-in-out animation timing":src="$withBase(`/motion/glossary_ease_in_out_16-9.png`)"/>  <br/><br/> Specifies a gradual acceleration at the start until the middle of the action. Then,  a gradual deceleration in the action at the end.  <br/><br/> This timing function can be quite satisfying for users because it has a slow start, fast middle, and slow end.  <br/><br/> Do not use this timing function for a long animation duration because of the sluggishness of the ease-in start. A suitable duration is 300-500ms for this timing function.  <br/><br/> Cedar’s token `cdr-timing-function-ease` uses this function. | 
+| **ease-out**            | <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Graph to show ease-out animation timing":src="$withBase(`/motion/glossary_ease_out_16-9.png`)"/>  <br/><br/> Specifies a gradual deceleration in the action with a fast start and slow ending.  <br/><br/> Ease-out is recommended because it gives the animation a feeling of responsiveness. It also allows a natural slowdown at the end.  <br/><br/> A common value for the cubic-bezier is (0, 0, 0.58, 1.0).  <br/><br/> Also known as slow-out.  <br/><br/> Cedar’s token `cdr-timing-function-ease-out` uses this function. | 
+| **fade in**             | Specifies a transition effect used to open a sequence. The first image gradually appears from complete transparency to its complete opacity. | 
+| **fade out**            | Specifies a transition effect used to close a sequence.  The last image gradually disappears, going from complete opacity to complete transparency. | 
+| **frame rate**          | The frame rate is measured by the number of frames recorded or played back each second. It is denoted as fps (frames per second). For example, an animation could be played back at 12, 15, 24, 25, 30 or 60 frames per second or any other number. | 
+| **linear**              | <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Graph to show linear animation timing":src="$withBase(`/motion/glossary_linear_16-9.png`)"/>  <br/><br/> Specifies an even speed in the action. A common value for the cubic-bezier is (0.0, 0.0, 1.0, 1.0). This is commonly used for opacity transitions.  <br/><br/> Cedar’s token `cdr-timing-function-linear` uses this function.   | 
+| **path of action**      | Specifies direction that the action will follow. | 
+| **slow-in**             | Specifies a gradual acceleration in the action with a slow start and quick ending.  <br/><br/> Also known as ease-in. |  
+| **slow-out**            | Specifies a gradual deceleration in the action with a fast start and slow ending.  <br/><br/> Also known as ease-out. |  
+| **timeline**            | A horizontal representation of a scene's elements, timing and keyframes. | 
+| **transition**          | An effect that happens between two images or scenes. Common transition effects are cross-dissolve and wipe. | 
 
 
 
