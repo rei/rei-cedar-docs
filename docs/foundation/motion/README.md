@@ -2,7 +2,7 @@
 {
   "title": "Motion",
   "title_metadata": false,
-  "layout_type": "LayoutArticle",
+  "layout_type": "LayoutComponent",
   "summary": false,
   "breadcrumbs": [
     {
@@ -22,8 +22,7 @@
   }
 }
 ---
-<!-- <cdr-doc-tabs labels="['Overview', 'Guidelines', 'Brand Palette']"> -->
-<cdr-doc-tabs>
+<cdr-doc-tabs :labels="['Overview', 'Guidelines', 'Glossary']">
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
 
