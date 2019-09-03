@@ -19,13 +19,11 @@ Cedar provides easy-to-use, preset values to apply consistent motion for compone
 - Stores motion attributes for duration or timing using variable names, not hard coded values such as cubic-bezier (0.15, 0, 0.15, 0)
 - Specifies a hierarchical and semantically defined system
   
-<br/>
 <hr>  
 
 List of motion tokens with descriptions and values. Motion tokens are primarily used with web applications. Motion tokens for mobile devices are not currently available.
 
 <br/>
-<hr> 
   
 ## Duration
 - Animated components use short time durations so interactions feel responsive and succinct
@@ -399,7 +397,6 @@ Cedar’s collection of easings are based on physics found in the natural world.
 
 Cedar motion is purposefully designed to enhance the customer's understanding of REI’s digital products. Components use animated interface patterns to reduce cognitive load and imbue a natural interactivity. It’s an important part of building customer trust and affinity for our products.
 
-<br/>
 <hr>
 
 ## Use When 
@@ -416,14 +413,12 @@ Cedar motion is purposefully designed to enhance the customer's understanding of
 - Adding the animation could waste the user’s time
 - Entertaining the user, rather than helping them to accomplish their goals
 
-<br/>
 <hr>
 
 ## Accessibility
 - Do not cause the screen to flash more than three times a second
 - For any animation that starts automatically and plays for more than 5 seconds, provide pause controls. For example, auto-updating content and ambient videos
 
-<br/>
 <hr>
 
 ## Interface Patterns
@@ -446,7 +441,6 @@ Cedar motion is purposefully designed to enhance the customer's understanding of
 | <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Symbol for Tabs component":src="$withBase(`/motion/pattern_symbol_tabs_1-1.png`)"/>  | Ease out timing is used for updating the tab bar and revealing new content. <br/><br/> Duration was initially set at 600ms. During the development phase, the duration was updated to 500ms. <br/><br/> View [Tabs](../tabs/) component <icon-external-link />  | 
 
 <br/>
-<hr>
 
 ### Supplements 
 Use the supplements pattern when:
@@ -459,7 +453,6 @@ There are currently no components in the Cedar Design System that use supplement
 - Tooltips
 
 <br/>
-<hr>
 
 ### Feedback
 Use the feedback pattern when:
@@ -480,7 +473,6 @@ Use the feedback pattern when:
 | <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Symbol for Breadcrumb component":src="$withBase(`/motion/pattern_symbol_breadcrumb_16-9.png`)"/>  |  When users hovers on or off, an underline style is applied to the link text.  <br/><br/> View [Breadcrumb](../breadcrumb/) component <icon-external-link />  | 
 
 <br/>
-<hr>
 
 ### Demonstrations
 Use the demonstrations pattern when:
@@ -491,7 +483,6 @@ There are currently no animations on the REI site that are demonstrations. An ex
 
 
 <br/>
-<hr>
 
 ### Decorations
 Use the decorations pattern when:
