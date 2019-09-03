@@ -86,7 +86,7 @@ module.exports = {
           { text: "Color", link: "/foundation/color/" },
           { text: "Iconography", link: "/foundation/iconography/" },
           { text: "Motion", link: "/foundation/motion/" },
-          { text: "Tokens", link: "/foundation/tokens/" },
+          { text: "Design Tokens", link: "/foundation/design-tokens/" },
           { text: "Component Variables", link: "/foundation/component-variables/" },
           { text: "Typography", link: "/foundation/typography/" },
           { text: "Spacing", link: "/foundation/spacing/" }

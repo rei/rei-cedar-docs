@@ -1,6 +1,6 @@
 ---
 {
-  "title": "Tokens",
+  "title": "Design Tokens",
   "title_metadata": false,
   "layout_type": "LayoutArticle",
   "summary": false,
@@ -44,7 +44,7 @@ cdr-text-primary-lightmode: #292929;
   - Consumers can stay in sync with any changes to the visual language with minimal impact to the code
 
 #### Ease of Maintainability
-Tokens can streamline redesign processes when:
+Design Tokens can streamline redesign processes when:
   - The Cedar team updates a **value** (such as with a new typeface or color hex value), the **tokens** do not need to be changed in code by consumers
   - Teams can consume these changes from SEMVER releases to our supported packages
 
@@ -53,11 +53,11 @@ Tokens can streamline redesign processes when:
   - Ensures brand consistency across all digital channels
 
 #### Extensibility
-  - Designers and developers have access to tokens when creating custom components for their applications (within brand standards)
+  - Designers and developers have access to design tokens when creating custom components for their applications (within brand standards)
 
 
 ### Use When
-Tokens can be used by teams:
+Design Tokens can be used by teams:
 - To supplement components when designing page layouts
 - To create custom components that are visually aligned to the REI brand styles
 - To create new components that can be contributed back to the system
@@ -65,17 +65,17 @@ Tokens can be used by teams:
 
 
 #### Don’t Use When
-- Don’t use tokens to make modifications to an existing component. **Instead,** submit a request using the [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC) for an existing component
-- Don’t use tokens to only access a value or values. **Instead,** create a new token in the [shared-tokens repo](https://git.rei.com/projects/FEDPACK/repos/shared-tokens/browse) that meets your specific semantic use case
+- Don’t use design tokens to make modifications to an existing component. **Instead,** submit a request using the [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC) for an existing component
+- Don’t use design tokens to only access a value or values. **Instead,** create a new token in the [shared-tokens repo](https://git.rei.com/projects/FEDPACK/repos/shared-tokens/browse) that meets your specific semantic use case
 
 
-Questions about when to use tokens? Ask the Cedar team in [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4)
+Questions about when to use design tokens? Ask the Cedar team in [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4)
 
 <hr/>
 
 
 ## Token Criteria
-#### Is **“cdr-color-text-primary-lightmode”** a token?
+#### Is **“cdr-color-text-primary-lightmode”** a design token?
 <table>
   <tbody>
     <tr>
@@ -86,21 +86,21 @@ Questions about when to use tokens? Ask the Cedar team in [#cedar-user-support](
       <td>Is it clear where this is to be used based on its name? </td>
       <td>Yes </td>
     <tr>
-      <td>If I apply this token in my component and use it to specify the color for primary text will it still be used for the primary text color in a future design update? </td>
+      <td>If I apply this design token in my component and use it to specify the color for primary text will it still be used for the primary text color in a future design update? </td>
       <td>Yes </td>
     </tr>
     <tr>
-      <td>Is this token used for multiple elements and NOT specific to one element? </td>
+      <td>Is this design token used for multiple elements and NOT specific to one element? </td>
       <td>Yes </td>
     </tr>
   </tbody>
 </table>
 
-**Result:** All of the criteria are met and so **“cdr-color-text-primary-lightmode”** qualifies as a token.
+**Result:** All of the criteria are met and so **“cdr-color-text-primary-lightmode”** qualifies as a design token.
 
 <br>
 
-#### Is **“cdr-color-background-button-secondary-disabled”** a token?
+#### Is **“cdr-color-background-button-secondary-disabled”** a design token?
 <table>
   <tbody>
     <tr>
@@ -112,21 +112,21 @@ Questions about when to use tokens? Ask the Cedar team in [#cedar-user-support](
       <td>Yes </td>
     </tr>
     <tr>
-      <td>If I apply this token in my component and use it to specify the background color for a secondary button when disabled will it still be used for the secondary button in a future design update? </td>
+      <td>If I apply this design token in my component and use it to specify the background color for a secondary button when disabled will it still be used for the secondary button in a future design update? </td>
       <td>Yes </td>
     </tr>
     <tr>
-       <td>Is this token used for multiple elements and NOT specific to one element? </td>
+       <td>Is this design token used for multiple elements and NOT specific to one element? </td>
       <td><b>No</b></td>
     </tr>
   </tbody>
 </table>
 
-**Result:** The fourth criteria is false so **“cdr-color-background-button-secondary-disabled”** does not qualify as a token. Instead it is considered an UI Element variable that is specific to buttons.
+**Result:** The fourth criteria is false so **“cdr-color-background-button-secondary-disabled”** does not qualify as a design token. Instead it is considered an UI Element variable that is specific to buttons.
 
 <br>
 
-#### Is **“easily-excited”** a token?
+#### Is **“easily-excited”** a design token?
 <table>
   <tbody>
     <tr>
@@ -138,26 +138,26 @@ Questions about when to use tokens? Ask the Cedar team in [#cedar-user-support](
       <td><b>No</b></td>
     </tr>
     <tr>
-      <td>If I apply this token in my component and use it to specify a color will it still be used for that color in a future design update? </td>
+      <td>If I apply this design token in my component and use it to specify a color will it still be used for that color in a future design update? </td>
       <td>Yes </td>
     </tr>
     <tr>
-      <td>Is this token used for multiple elements and NOT specific to one element? </td>
+      <td>Is this design token used for multiple elements and NOT specific to one element? </td>
       <td><b>Perhaps but it is not used consistently</b></td>
     </tr>
   </tbody>
 </table>
 
-**Result:** Only two criteria are met and so **“easily-excited”** does not qualify as a token.
+**Result:** Only two criteria are met and so **“easily-excited”** does not qualify as a design token.
 
 <br>
 
 <hr/>
 
 
-## Naming Structure for Tokens
+## Naming Structure for Design Tokens
 
-The naming structure for tokens follows:
+The naming structure for design tokens follows:
 - **Category:** Top level that contains foundational elements such as text, color, spacing
 - **Sub-Category:** Describes and narrows category for token.  For instance, "color-text' will define a color for text and can be used for icons
 - **Item:** Continues to narrows usage for token. For example, if text is a property, the item could be "-form-" to indicate text used in a form control
@@ -281,20 +281,20 @@ The below tables for the naming structure show that levels will be skipped when 
 ## How to Use Tokens
 
 ### For Designers
-- A base requirement for accessing Cedar tokens and using them in designs and wireframes is that you are able to use Sketch version 53.2
+- A base requirement for accessing Cedar design tokens and using them in designs and wireframes is that you are able to use Sketch version 53.2
 - Toolkits are platform specific. If designing for the web, use the UI Web Toolkit
-- Tokens are available in Cedar’s UI Toolkit and found on the Tokens page
-- When using tokens, it’s your responsibility to pass the entire token name to the developer during the design hand-off process—this can be through automated or manual methods
+- Design Tokens are available in Cedar’s UI Toolkit and found on the Design Tokens page
+- When using design tokens, it’s your responsibility to pass the entire design token name to the developer during the design hand-off process—this can be through automated or manual methods
 
 <br>
 
 ### For Developers
-A base requirement for using Cedar tokens is that you are able to consume and maintain packages through the following development processes:
+A base requirement for using Cedar design tokens is that you are able to consume and maintain packages through the following development processes:
 - Web consumers:
   - Your project can compile CSS variables
   - You can import NPM packages
-- Native iOS consumers using CocoaPods
-- Android consumers using Android package manager
+- Native iOS:
+  - You can import CocoaPods
 
 #### Install
 
@@ -304,7 +304,7 @@ To install the CdrToken package:
 
 Your project must be able to compile SCSS or LESS in order to make use of the SCSS and LESS modules.
 
-The CdrToken package contains `/dist/less` and `/dist/scss` folders, each of which contains `cdr-tokens.{less|scss}` files with all the tokens in the corresponding format.
+The CdrToken package contains `/dist/less` and `/dist/scss` folders, each of which contains `cdr-tokens.{less|scss}` files with all the design tokens in the corresponding format.
 
 Alternatively you could use `/dist/js` and/or `/dist/json` if your project cannot build SCSS and LESS.
 
@@ -312,7 +312,7 @@ Alternatively you could use `/dist/js` and/or `/dist/json` if your project canno
 
 SCSS example:
 ```
-@import '@rei/cdr-tokens/dist/scss/cdr-tokens.scss'; /* import the tokens file */
+@import '@rei/cdr-tokens/dist/scss/cdr-tokens.scss'; /* import the design tokens file */
 
 .your-default-text-class {
   /* use mixins to apply many properties at once */
@@ -327,7 +327,7 @@ SCSS example:
 
 LESS example:
 ```
-@import '@rei/cdr-tokens/dist/less/cdr-tokens.less'; /* import the tokens file */
+@import '@rei/cdr-tokens/dist/less/cdr-tokens.less'; /* import the desogn tokens file */
 
 .your-default-text-class {
   /* use mixins to apply many properties at once */
@@ -342,7 +342,7 @@ LESS example:
 
 JavaScript example:
 ```
-import { CdrBreakpointLg } from '@rei/cdr-tokens/dist/js/cdr-tokens.esm.js'; /* import the tokens file */
+import { CdrBreakpointLg } from '@rei/cdr-tokens/dist/js/cdr-tokens.esm.js'; /* import the design tokens file */
 
 let screenWidth = window.outerWidth || 0;
 
@@ -358,17 +358,17 @@ This repository follows SEMVER practices and will notify users of changes and up
 <hr/>
 
 
-## Adding Tokens to the Repository
-The number of tokens Cedar provides is kept small intentionally as it is critical for a token to meet all requirements based on the above criterium prior to being added to Cedar’s Token list.
+## Adding Design Tokens to the Repository
+The number of design tokens Cedar provides is kept small intentionally as it is critical for a design token to meet all requirements based on the above criterium prior to being added to Cedar’s Design Token list.
 
-If you have a request for a token that is missing, you can submit a request using the [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC) or create a token in the [shared-tokens repo](https://git.rei.com/projects/FEDPACK/repos/shared-tokens/browse) for future integration in Cedar.
+If you have a request for a design token that is missing, you can submit a request using the [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC) or create a design token in the [shared-tokens repo](https://git.rei.com/projects/FEDPACK/repos/shared-tokens/browse) for future integration in Cedar.
 
 
-Ensure that the token meets the following requirements:
-- Token is used in several components or layouts
-- Token is used for multiple elements and NOT specific to one element
-- Token name will continue to have the same semantic meaning in future releases
-- Token name follows platform requirements:
+Ensure that the design token meets the following requirements:
+- Design Token is used in several components or layouts
+- Design Token is used for multiple elements and NOT specific to one element
+- Design Token name will continue to have the same semantic meaning in future releases
+- Design Token name follows platform requirements:
   - **Web:** Uses Kebab case. For example, cdr-color-background-dark
   - **iOS:** Uses Pascal case. For example, CdrColorBackgroundColor
   - **Android:** Uses Snake case. For example, cdr_color_background_dark
