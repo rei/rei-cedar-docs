@@ -3,9 +3,32 @@
     <div
       v-if="comparisonView"
     >
-      <button @click="animate = true"><icon-play-fill /> Play All</button>
-      <button @click="animate = false"><icon-pause-fill /> Pause All</button>
-
+      <!-- <cdr-button 
+        @click="animate = true" 
+        v-show="!animate"
+      >
+        <icon-play-fill class="cdr-button__icon" />
+        Play All
+      </cdr-button>
+      <cdr-button 
+        @click="animate = false" 
+        v-show="animate">
+          <icon-pause-fill class="cdr-button__icon" />
+          Pause All
+      </cdr-button> -->
+      <cdr-button 
+        :icon-only="true"
+        @click="animate = true" 
+        v-show="!animate"
+      >
+        <icon-play-fill />
+      </cdr-button>
+      <cdr-button 
+        :icon-only="true"
+        @click="animate = false" 
+        v-show="animate">
+          <icon-pause-fill />
+      </cdr-button>
       <table>
         <tr v-for="token in motionTokensByType[motionType]">
           <td>
@@ -21,12 +44,22 @@
         </tr>
       </table>
     </div>
-    
+
     <div
       v-else
       v-for="token in motionTokensByType[motionType]"
+      class="something"
     >
-      <token-motion-example :prop="token" />
+      <table class="motion-token-definition">
+        <tr><td><strong>{{ token.name }}</strong></td></tr>
+        <tr><td><token-motion-example :prop="token" /></td></tr>
+        <tr>
+          <td>
+            Value: {{ token.value }}<br />
+            {{ description(token.name) }}
+          </td>
+        </tr>
+      </table>
     </div>
   </div>
 </template>
@@ -50,13 +83,28 @@ export default {
     motionType: {
       type: String,
       default: ''
-    }
+    },
+    descriptions: {
+      type: Object,
+    },
   },
   computed: {
     motionTokensByType() {
       const { motion } = tokenData;
       return _.groupBy(motion, 'docs.type');
     },
+  },
+  methods: {
+    description(name) {
+      if (!this.descriptions) return false;
+      return this.descriptions[name];
+    }
   }
 }
 </script>
+
+<style>
+  .motion-token-definition {
+    margin-bottom: 40px;
+  }
+</style>
