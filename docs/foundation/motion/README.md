@@ -112,6 +112,7 @@ Use the transition pattern when:
 
 <br>
 
+<<<<<<< HEAD
 <table class="table-first-col-align-top">
   <tr>
     <td><strong>Accordion</strong></td>
@@ -135,6 +136,14 @@ Use the transition pattern when:
     <td>Ease out timing is used for updating the tab bar and revealing new content. <br/><br/> Duration was initially set at 600ms. During the development phase, the duration was updated to 500ms. <br/><br/> View <a href="../../components/tabs/">Tabs</a> component.</td>
   </tr>
 </table>
+=======
+| **Component**      |  **Description**      | 
+| :----------------- | :-------------------- |  
+| **Accordion**      |                       | 
+| <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Symbol for Accordion component" :src="$withBase(`/motion/pattern_symbol_accordion_1-1.png`)"/>  | The arrow icon rotates using ease out timing with 300ms duration. <br/><br/> When opening, the Accordion content is revealed using the ease timing with 300ms duration. When closing, the duration changes to 200ms to hide content. When opening or closing, the panel content fades on and off using linear timing at 100ms. <br/><br/> View [Accordion](../accordion/) component <icon-external-link />  | 
+| **Tabs**           |                       | 
+| <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Symbol for Tabs component" :src="$withBase(`/motion/pattern_symbol_tabs_1-1.png`)"/>  | Ease out timing is used for updating the tab bar and revealing new content. Duration was initially set at 600ms. During the development phase, the duration was updated to 500ms. <br/><br/> View [Tabs](../tabs/) component  | 
+>>>>>>> f345db2d6c825934d8af3906a1b73f27f7fa9bdb
 
 <br/>
 
@@ -158,6 +167,7 @@ Use the feedback pattern when:
 
 <br>
 
+<<<<<<< HEAD
 <table class="table-first-col-align-top">
   <tr>
     <td><strong>Buttons</strong></td>
@@ -181,6 +191,14 @@ Use the feedback pattern when:
     <td>When users hovers on or off, an underline style is applied to the link text.  <br/><br/> View <a href="../../components/breadcrumb/">Breadcrumb</a> component.</td>
   </tr>
 </table>
+=======
+| **Component**      |  **Description**      | 
+| :----------------- | :-------------------- | 
+| **Buttons**        |                       |  
+| <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Symbol for Buttons component" :src="$withBase(`/motion/pattern_symbol_buttons_16-19.png`)"/>  |  When users hovers on or off, color changes instantaneously.  <br/><br/> View [Buttons](../buttons/) component <icon-external-link />  | 
+| **Breadcrumb**     |                       | 
+| <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Symbol for Breadcrumb component" :src="$withBase(`/motion/pattern_symbol_breadcrumb_16-9.png`)"/>  |  When users hovers on or off, an underline style is applied to the link text.  <br/><br/> View [Breadcrumb](../breadcrumb/) component <icon-external-link />  | 
+>>>>>>> f345db2d6c825934d8af3906a1b73f27f7fa9bdb
 
 <br/>
 
