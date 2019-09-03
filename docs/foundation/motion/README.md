@@ -111,16 +111,12 @@ Use the transition pattern when:
 - Replacing large portions of information
 
 <br>
-
-| **Accordion**      |              | 
-| :----------------- | :----------- |  
-| <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Symbol for Accordion component" :src="$withBase(`/motion/pattern_symbol_accordion_1-1.png`)"/>  | The arrow icon rotates using ease out timing with 300ms duration. <br/><br/> When opening, the Accordion content is revealed using the ease timing with 300ms duration. <br/><br/> When closing, the duration changes to 200ms to hide content. <br/><br/> When opening or closing, the panel content fades on and off using linear timing at 100ms. <br/><br/> View [Accordion](../../components/accordion/) component | 
-
-<br>
-
-| **Tabs**      |              | 
-| :------------ | :----------- |  
-| <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Symbol for Tabs component" :src="$withBase(`/motion/pattern_symbol_tabs_1-1.png`)"/>  | Ease out timing is used for updating the tab bar and revealing new content. <br/><br/> Duration was initially set at 600ms. During the development phase, the duration was updated to 500ms. <br/><br/> View [Tabs](../../components/tabs/) component  | 
+| **Component**      |  **Description**      | 
+| :----------------- | :-------------------- |  
+| **Accordion**      |                       | 
+| <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Symbol for Accordion component" :src="$withBase(`/motion/pattern_symbol_accordion_1-1.png`)"/>  | The arrow icon rotates using ease out timing with 300ms duration. <br/><br/> When opening, the Accordion content is revealed using the ease timing with 300ms duration. When closing, the duration changes to 200ms to hide content. When opening or closing, the panel content fades on and off using linear timing at 100ms. <br/><br/> View [Accordion](../accordion/) component <icon-external-link />  | 
+| **Tabs**           |                       | 
+| <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Symbol for Tabs component" :src="$withBase(`/motion/pattern_symbol_tabs_1-1.png`)"/>  | Ease out timing is used for updating the tab bar and revealing new content. Duration was initially set at 600ms. During the development phase, the duration was updated to 500ms. <br/><br/> View [Tabs](../tabs/) component  | 
 
 <br/>
 
@@ -144,15 +140,12 @@ Use the feedback pattern when:
 
 <br>
 
-| **Buttons**      |              | 
-| :--------------- | :----------- |  
-| <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Symbol for Buttons component" :src="$withBase(`/motion/pattern_symbol_buttons_16-9.png`)"/>  |  When users hovers on or off, color changes instantaneously.  <br/><br/> View [Buttons](../../components/buttons/) component  | 
-
-<br>
-
-| **Breadcrumb**      |              | 
-| :------------------ | :----------- |  
-| <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Symbol for Breadcrumb component" :src="$withBase(`/motion/pattern_symbol_breadcrumb_16-9.png`)"/>  |  When users hovers on or off, an underline style is applied to the link text.  <br/><br/> View [Breadcrumb](../../components/breadcrumb/) component | 
+| **Component**      |  **Description**      | 
+| :----------------- | :-------------------- | 
+| **Buttons**        |                       |  
+| <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Symbol for Buttons component" :src="$withBase(`/motion/pattern_symbol_buttons_16-19.png`)"/>  |  When users hovers on or off, color changes instantaneously.  <br/><br/> View [Buttons](../buttons/) component <icon-external-link />  | 
+| **Breadcrumb**     |                       | 
+| <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Symbol for Breadcrumb component" :src="$withBase(`/motion/pattern_symbol_breadcrumb_16-9.png`)"/>  |  When users hovers on or off, an underline style is applied to the link text.  <br/><br/> View [Breadcrumb](../breadcrumb/) component <icon-external-link />  | 
 
 <br/>
 
@@ -191,7 +184,7 @@ For smooth and responsive animation, use CSS attributes for:
 - **Skew:** Using transform property for skew(), to distort an element on the 2D plane
 - **Opacity:** Specifies the opacity or transparency of an element with values from 0.0 - 1.0. Lower values cause the element to be more transparent
 
-For more information, view Adding Tokens to the Repository in the [Tokens article](../tokens).
+For more information, view Adding Tokens to the Repository in the Tokens article.
 
 
 <br>
