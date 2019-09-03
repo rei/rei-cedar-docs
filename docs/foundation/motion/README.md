@@ -111,6 +111,7 @@ Use the transition pattern when:
 - Replacing large portions of information
 
 <br>
+
 | **Component**      |  **Description**      | 
 | :----------------- | :-------------------- |  
 | **Accordion**      |                       | 
