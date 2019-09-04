@@ -273,3 +273,10 @@ th {
   border: 1px solid #ccc;
   text-align: left;
 }
+
+.table-first-col-align-top {
+  tr td:first-child {
+    vertical-align: top;
+    font-weight: bold;
+  }
+}
