@@ -62,7 +62,11 @@
                 "name": "label",
                 "type": "string",
                 "default": "N/A",
-                "description": "Sets the readable text on the CdrAccordion button. Deprecated. Use label slot."
+                "description": "Sets the readable text on the CdrAccordion button. Deprecated. Use label slot.",
+                "alert": {
+                  "type": "deprecated",
+                  "description": "Deprecated in v2.0.0. Instead, use 'size' prop."
+                }
               },
               {
                 "name": "opened",
@@ -127,9 +131,9 @@
 
 Section borders expand to full width of container.
 
-<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ default1: false, default2: false, default3: false }">
 
-```html
+```vue
   <cdr-accordion
     id="default-1"
     :opened="default1"
@@ -170,18 +174,6 @@ Section borders expand to full width of container.
         or example, your 2018 dividend earned on 2017 purchases will expire in January 2020.
     </cdr-text>
   </cdr-accordion>
-
-  ...
-  export default {
-    ...
-    data() {
-      return {
-        default1: false,
-        default2: false,
-        default3: false
-      }
-    }
-  }
 ```
 
 </cdr-doc-example-code-pair>
@@ -190,10 +182,10 @@ Section borders expand to full width of container.
 
 Reduced spacing around title and content body. Also, smaller font sizes resulting in an overall denser display of content.
 
-<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ compact1: false, compact2: false, compact3: false }">
 
 ```vue
-  <cdr-acccordion
+  <cdr-accordion
     id="compact-1"
     :compact="true"
     :opened="compact1"
@@ -207,7 +199,7 @@ Reduced spacing around title and content body. Also, smaller font sizes resultin
       to enjoy life outdoors and bringing value to our members.
     </cdr-text>
   </cdr-accordion>
-  <cdr-acccordion
+  <cdr-accordion
     id="compact-2"
     :compact="true"
     :opened="compact2"
@@ -221,7 +213,7 @@ Reduced spacing around title and content body. Also, smaller font sizes resultin
       After 30 minutes, your order will begin processing through our fulfillment center and cannot be cancelled.
     </cdr-text>
   </cdr-accordion>
-  <cdr-acccordion
+  <cdr-accordion
     id="compact-3"
     :compact="true"
     :opened="compact3"
@@ -235,19 +227,6 @@ Reduced spacing around title and content body. Also, smaller font sizes resultin
       we'll send you a shipping confirmation email that contains your tracking information. Shipping time is generally 3-5 business days.
     </cdr-text>
   </cdr-accordion>
-
-  <script>
-    export default {
-      ...
-      data() {
-        return {
-          compact1: false,
-          compact2: false,
-          compact3: false
-        }
-      }
-    }
-  </script>
 ```
 
 </cdr-doc-example-code-pair>
@@ -256,10 +235,10 @@ Reduced spacing around title and content body. Also, smaller font sizes resultin
 
 Border aligns to the title text and expand/collapse icon.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ borderAligned1: false, borderAligned2: false, borderAligned3: false }">
 
 ```vue
-  <cdr-acccordion
+  <cdr-accordion
     id="border-aligned-1"
     :border-aligned="true"
     :opened="borderAligned1"
@@ -274,11 +253,11 @@ Border aligns to the title text and expand/collapse icon.
       to the most intriguing destinations in the world since 1987.
     </cdr-text>
   </cdr-accordion>
-  <cdr-acccordion
+  <cdr-accordion
     id="border-aligned-2"
     :border-aligned="true"
     :opened="borderAligned2"
-    @accordion-toggle="borderAligned = !borderAligned2"
+    @accordion-toggle="borderAligned2 = !borderAligned2"
   >
     <template slot="label">
       What kinds of trips are offered?
@@ -290,7 +269,7 @@ Border aligns to the title text and expand/collapse icon.
       We can teach you to kayak or to safely summit a mountain.
     </cdr-text>
   </cdr-accordion>
-  <cdr-acccordion
+  <cdr-accordion
     id="border-aligned-3"
     :border-aligned="true"
     :opened="borderAligned3"
@@ -304,19 +283,6 @@ Border aligns to the title text and expand/collapse icon.
       please call us at 1-800-622-2236 or e-mail us at travel@rei.com.
     </cdr-text>
   </cdr-accordion>
-
-  <script>
-    export default {
-      ...
-      data() {
-        return {
-          borderAligned1: false,
-          borderAligned2: false,
-          borderAligned3: false
-        }
-      }
-    }
-  </script>
 ```
 
 </cdr-doc-example-code-pair>
