@@ -43,7 +43,7 @@
     }
   ],
   "sandboxData": {
-    "components": "CdrAccordion, CdrAccordionItem"
+    "components": "CdrAccordion, CdrText"
   },
   "versions": [
     {

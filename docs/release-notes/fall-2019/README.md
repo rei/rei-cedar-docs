@@ -26,6 +26,8 @@
 
 CdrAccordion has been refactored to remove internal state tracking for toggling open and closed. For simplicity, the CdrAccordionItem component has been removed and its functionality merged with CdrAccordion. The `show` prop has been renamed to `opened` for clarity. Please review the [updated API and usage examples](https://rei.github.io/rei-cedar-docs/components/accordion/) for more information.
 
+Before:
+
 ```vue
 <cdr-accordion>
   <cdr-accordion-item
@@ -39,6 +41,8 @@ CdrAccordion has been refactored to remove internal state tracking for toggling 
   </cdr-accordion-item>
 </cdr-accordion>
 ```
+
+After:
 
 ```vue
 <cdr-accordion
