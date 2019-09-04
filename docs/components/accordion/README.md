@@ -65,7 +65,7 @@
                 "description": "Sets the readable text on the CdrAccordion button. Deprecated. Use label slot.",
                 "alert": {
                   "type": "deprecated",
-                  "description": "Deprecated in v2.0.0. Instead, use 'size' prop."
+                  "description": "Deprecated in v3.0.0. Instead, use 'label' slot."
                 }
               },
               {
