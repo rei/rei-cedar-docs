@@ -323,8 +323,8 @@ import { CdrBreakpointLg } from '@rei/cdr-tokens/dist/js/cdr-tokens.esm.js'; /* 
 
 let screenWidth = window.outerWidth || 0;
 
-/* Detect Large Breakpoint
-if(screenWidth >= CdrBreakpointLg) {
+// Detect Large Breakpoint
+if (screenWidth >= CdrBreakpointLg) {
   // Do Something
 }
 ```
