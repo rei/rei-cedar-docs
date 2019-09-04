@@ -1,7 +1,6 @@
 <template>
   <nav class="nav-links cdr-doc-nav-links" v-if="userLinks.length || repoLink">
     <!-- user links -->
-    <!-- {{ userLinks }} -->
     <cdr-accordion
       v-if="item.type === 'links'"
       v-for="(item, index) in userLinks"
