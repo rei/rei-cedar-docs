@@ -136,7 +136,5 @@ module.exports = {
  },
   chainWebpack(config, isServer) {
     config.resolve.alias.set("$vue", "vue/dist/vue.esm.js");
-    // const cjs = isServer ? 'cjs.ssr' : 'cjs';
-    // config.resolve.alias.set("@rei/cedar$", `@rei/cedar/dist/cedar.${cjs}.js`);
   }
 };
