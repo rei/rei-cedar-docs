@@ -144,7 +144,6 @@ export default {
     },
     navToggle(index) {
       const opened = this.navGroup[index];
-
       if (opened) {
         this.$set(this.navGroup, index, false);
       } else {

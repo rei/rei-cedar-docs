@@ -93,7 +93,7 @@
             ],
             "events": [
               {
-                "name": "tabChange",
+                "name": "tab-change",
                 "arguments": "state, tabId",
                 "description": "$emit event fired when the active tab has been changed."
               }
