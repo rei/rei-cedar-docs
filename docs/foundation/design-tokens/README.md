@@ -21,7 +21,7 @@ Design tokens are special variables used to maintain a scalable visual system fo
 
 Design tokens are key-value pairs. For example:
 
-```bash
+```
 Key: value;
 cdr-text-primary-lightmode: #292929;
 ```
