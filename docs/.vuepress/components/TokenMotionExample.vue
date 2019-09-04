@@ -91,23 +91,15 @@ export default {
 .motion-background {
   position: relative;
   padding: 10px;
-  // height: 70px;
   height: 61px;
   width: 180px;
   background-color: lightgray;
   border-radius: 4px;
   border: 1px solid #ccc;
-  // height: 40px;
-  // width: 160px;
-  // background-color: #f7f7f7; // cdr-color-background-light
-  // border-color: #b8b8b8; // cdr-color-border-secondary-lightmode
-  // border-radius: 0.4rem; // cdr-radius-softer
 }
 
 
 .motion-example {
-  // width: 33%;
-  // padding-bottom: 33%;
   width: 25%;
   padding-bottom: 25%;
   border-radius: 50%;
