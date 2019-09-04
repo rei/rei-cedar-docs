@@ -2,7 +2,7 @@
 {
   "title": "Motion",
   "title_metadata": false,
-  "layout_type": "LayoutComponent",
+  "layout_type": "LayoutArticle",
   "summary": false,
   "breadcrumbs": [
     {
@@ -22,9 +22,9 @@
   }
 }
 ---
-<cdr-doc-tabs :labels="['Overview', 'Guidelines', 'Glossary']">
-<template slot="Overview">
 <cdr-doc-table-of-contents-shell>
+
+## Overview
 
 Cedar provides easy-to-use, preset values to apply consistent motion for components. Motion tokens help maintain a cohesive experience across all REI properties by:
 - Stores motion attributes for duration or timing using variable names, not hard coded values such as cubic-bezier (0.15, 0, 0.15, 0)
@@ -34,9 +34,8 @@ Cedar provides easy-to-use, preset values to apply consistent motion for compone
 
 List of motion tokens with descriptions and values. Motion tokens are primarily used with web applications. Motion tokens for mobile devices are not currently available.
 
-<br/>
   
-## Duration
+### Duration
 - Animated components use short time durations so interactions feel responsive and succinct
 - Recommended range for animated durations is from 100ms to 600ms
 - Striking a balance is key: slow enough to comprehend – fast enough to respect the customer’s time
@@ -51,7 +50,7 @@ List of motion tokens with descriptions and values. Motion tokens are primarily 
 <br/>
 <hr>
 
-## Easing
+### Easing
 Cedar’s collection of easings are based on physics found in the natural world. They respond quickly when invoked and slow down over time to ease into their final position. This communicates a sense of physicality and reflects the customer's expectation of objects moving in the real world. Best used with any UI element that opens or closes, such as the accordion or modal components.
 
 <br />
@@ -61,27 +60,20 @@ Cedar’s collection of easings are based on physics found in the natural world.
 <br />
 <hr>
 
-### Comparison of Timing Tokens 
+#### Comparison of Timing Tokens 
 
 <tokens-motion motion-type="timing" :comparison-view="true" />
 
 <br/>
 <hr>
 
-
-</cdr-doc-table-of-contents-shell>
-</template>
-
-
-
-<template slot="Guidelines">
-<cdr-doc-table-of-contents-shell>
+## Guidelines
 
 Cedar motion is purposefully designed to enhance the customer's understanding of REI’s digital products. Components use animated interface patterns to reduce cognitive load and imbue a natural interactivity. It’s an important part of building customer trust and affinity for our products.
 
 <hr>
 
-## Use When 
+### Use When 
 
 - Reducing cognitive load. For example, when a product image slides to reveal the next or previous product image after a user clicks on a directional arrow
 - Attracting the user’s attention. For example, when a toast message moves down from the top browser bar for region-specific warning messages 
@@ -91,20 +83,20 @@ Cedar motion is purposefully designed to enhance the customer's understanding of
 
 <br>
 
-### Don’t Use When
+#### Don’t Use When
 - Adding the animation could waste the user’s time
 - Entertaining the user, rather than helping them to accomplish their goals
 
 <hr>
 
-## Accessibility
+### Accessibility
 - Do not cause the screen to flash more than three times a second
 - For any animation that starts automatically and plays for more than 5 seconds, provide pause controls. For example, auto-updating content and ambient videos
 
 <hr>
 
-## Interface Patterns
-### Transitions
+### Interface Patterns
+#### Transitions
 Use the transition pattern when:
 - Moving users from one page to another page 
 - Transition out of one task to another
@@ -138,7 +130,7 @@ Use the transition pattern when:
 
 <br/>
 
-### Supplements 
+#### Supplements 
 Use the supplements pattern when:
 - Bringing information on or off of the page without changing the user's location
 - Adding or updating bits of additional content on the page
@@ -150,7 +142,7 @@ There are currently no components in the Cedar Design System that use supplement
 
 <br/>
 
-### Feedback
+#### Feedback
 Use the feedback pattern when:
 - Giving users direct feedback about their interactions
 - Linking a human action to an interface's reaction
@@ -184,7 +176,7 @@ Use the feedback pattern when:
 
 <br/>
 
-### Demonstrations
+#### Demonstrations
 Use the demonstrations pattern when:
 - Explaining how something works
 - Showing a process through action, instead of telling what's happening
@@ -194,7 +186,7 @@ There are currently no animations on the REI site that are demonstrations. An ex
 
 <br/>
 
-### Decorations
+#### Decorations
 Use the decorations pattern when:
 - Creating an emotional connection between the interface and user 
 - Sparking visual interest by keeping the user engaged
@@ -206,7 +198,7 @@ There are no animations on the REI site that are decorative. For examples of dec
 <br/>
 <hr>
 
-## Creating New Motion Tokens
+### Creating New Motion Tokens
 CSS animation frame rate for interface elements is dependent on the speed of the browser and computer:
 
 - For animations running at less than 15fps, users will not be able to see continuous motion
@@ -225,13 +217,7 @@ For more information, view [Adding Tokens to the Repository](../tokens/?active-l
 <br>
 <hr/>
 
-</cdr-doc-table-of-contents-shell>
-</template>
-
-
-
-<template slot="Glossary">
-<cdr-doc-table-of-contents-shell>
+## Glossary
 
 <table class="table-first-col-align-top">
   <thead>
@@ -308,10 +294,4 @@ For more information, view [Adding Tokens to the Repository](../tokens/?active-l
   </tbody>
 </table>
 
-<br>
-<hr/>
-
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>
