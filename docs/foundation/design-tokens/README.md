@@ -262,7 +262,8 @@ Place the _Stickersheet_ Symbol in your project for a visual overview.
 
 When using design tokens, it’s your responsibility to pass the entire design token name to the developer during the design hand-off process—this can be through automated or manual methods. 
 
-For more information, see [Getting Started As A Designer](#), [Cedar UI Toolkit](#) and [Designer-Developer Handoff](#).
+For more information, see [Getting Started As A Designer](../../getting-started/as-a-designer/). 
+<!--  add these in once we have links, [Cedar UI Toolkit](#) and [Designer-Developer Handoff](#). -->
 
 
 ### For Developers
