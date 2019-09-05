@@ -65,6 +65,13 @@ module.exports = {
         ]
       },
       {
+        text: "About",
+        items: [
+          { text: "Cedar Design System", link: "/about/cedar-design-system/" },
+          { text: "Browser Support", link: "/about/browser-support/" }
+        ]
+      },
+      {
         text: "Getting Started",
         items: [
           { text: "As a Designer", link: "/getting-started/as-a-designer/" },
@@ -117,13 +124,6 @@ module.exports = {
           { text: "Ratings", link: "/components/rating/" },
           { text: "Selects", link: "/components/selects/" },
           { text: "Tabs", link: "/components/tabs/" }
-        ]
-      },
-      {
-        text: "About",
-        items: [
-          { text: "Cedar Design System", link: "/about/cedar-design-system/" },
-          { text: "Browser Support", link: "/about/browser-support/" }
         ]
       }
     ]
