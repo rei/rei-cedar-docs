@@ -27,25 +27,25 @@
 ## Overview
 
 Cedar provides easy-to-use, preset values to apply consistent motion for components. Motion tokens help maintain a cohesive experience across all REI properties by:
-- Stores motion attributes for duration or timing using variable names, not hard coded values such as cubic-bezier (0.15, 0, 0.15, 0)
-- Specifies a hierarchical and semantically defined system
+- Stores motion attributes for duration or timing using variable names, not hard-coded values such as cubic-bezier (0.15, 0, 0.15, 0)
+- Specifies a hierarchical and semantically-defined system
   
 <hr>  
 
-List of motion tokens with descriptions and values. Motion tokens are primarily used with web applications. Motion tokens for mobile devices are not currently available.
+List of motion tokens with descriptions and values <Comment - Where is the list? Are we going to insert a link or list here? If not, delete.>. Motion tokens are primarily used with web applications. Motion tokens for mobile devices are not currently available.
 
   
 ### Duration
 - Animated components use short time durations so interactions feel responsive and succinct
 - Recommended range for animated durations is from 100ms to 600ms
-- Striking a balance is key: slow enough to comprehend – fast enough to respect the customer’s time
+- Striking a balance is key - slow enough to comprehend and fast enough to respect the customer’s time
 - From Nielsen Norman Group research:
   - 100ms is perceived as instant. Users feel that they are directly causing something to happen on the screen
   - Delays between 100ms and 1 second gives users the impression that the website is working and causing the result to appear 
 
  <br/>
 
-<tokens-motion motion-type="duration" :descriptions="$page.frontmatter.tokenDescriptions" />
+<tokens-motion motion-type="duration" :descriptions="$page.frontmatter.tokenDescriptions" /> <Comment - The last sentence of the description for cdr-duration-2-x should be changed to "...switching between a play button and a pause button.>
 
 <br/>
 <hr>
@@ -55,7 +55,7 @@ Cedar’s collection of easings are based on physics found in the natural world.
 
 <br />
 
-<tokens-motion motion-type="timing" :descriptions="$page.frontmatter.tokenDescriptions" />
+<tokens-motion motion-type="timing" :descriptions="$page.frontmatter.tokenDescriptions" /> <Comment - The second sentence of the description for cdr-timing-function-ease should be changed to "This timing function can be quite satisfying for users because it has a slow start, a fast middle, and a slow end.">
 
 <br />
 <hr>
@@ -146,7 +146,7 @@ There are currently no components in the Cedar Design System that use supplement
 Use the feedback pattern when:
 - Giving users direct feedback about their interactions
 - Linking a human action to an interface's reaction
-- Keeping the user interested during slow page loading times
+- Keeping the user interested during slow page-loading times
 
 <br>
 
@@ -157,7 +157,7 @@ Use the feedback pattern when:
     </tr>
     <tr>
       <td><cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Symbol for Buttons component" :src="$withBase(`/motion/pattern_symbol_buttons_16-9.png`)"/></td>
-      <td>When users hovers on or off, color changes instantaneously.  <br/><br/> View <a href="../../components/buttons/">Button</a> component.</td>
+      <td>When user hovers on or off, color changes instantaneously.  <br/><br/> View <a href="../../components/buttons/">Button</a> component.</td>
     </tr>
 </table>
 
@@ -188,7 +188,7 @@ There are currently no animations on the REI site that are demonstrations. An ex
 
 #### Decorations
 Use the decorations pattern when:
-- Creating an emotional connection between the interface and user 
+- Creating an emotional connection between the interface and the user 
 - Sparking visual interest by keeping the user engaged
 - Delighting a user's experience without conveying new information
 
@@ -208,7 +208,7 @@ For smooth and responsive animation, use CSS attributes for:
 - **Position:** Using transform property for translate(), to reposition an element in the horizontal or vertical directions
 - **Scale:** Using transform property for scale(), to resize an element on 2D plane
 - **Rotation:** Using transform property for rotate(), to rotate an element on x, y, or z axis 
-- **Skew:** Using transform property for skew(), to distort an element on the 2D plane
+- **Skew:** Using transform property for skew(), to distort an element on the 2D plane <Comment - What are these brackets () for?>
 - **Opacity:** Specifies the opacity or transparency of an element with values from 0.0 - 1.0. Lower values cause the element to be more transparent
 
 For more information, view [Adding Tokens to the Repository](../tokens/?active-link=adding-tokens-to-the-repository).
@@ -245,15 +245,15 @@ For more information, view [Adding Tokens to the Repository](../tokens/?active-l
     </tr>
     <tr>
       <td>ease-in</td>
-      <td><cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Graph to show ease-in animation timing" :src="$withBase(`/motion/glossary_ease_in_16-9.png`)"/>  <br/><br/> Specifies a gradual acceleration in the action with a slow start and quick ending. Ease-in is not recommended because it may negatively impact the user's perception of your site's responsiveness by feeling sluggish at the start. Things in the real world tend to decelerate rather than simply stopping. A common value for the cubic-bezier is (0.25, 0.1, 0.25, 1.0). Also known as slow-in.</td>
+      <td><cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Graph to show ease-in animation timing" :src="$withBase(`/motion/glossary_ease_in_16-9.png`)"/>  <br/><br/> Specifies a gradual acceleration in the action with a slow start and quick ending. Ease-in is not recommended because it may negatively impact the user's perception of your site's responsiveness by feeling sluggish at the start. A common value for the cubic-bezier is (0.25, 0.1, 0.25, 1.0). Also known as slow-in.</td>
     </tr>
     <tr>
       <td>ease-in-out</td>
-      <td><cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Graph to show ease-in-out animation timing" :src="$withBase(`/motion/glossary_ease_in_out_16-9.png`)"/>  <br/><br/> Specifies a gradual acceleration at the start until the middle of the action. Then, a gradual deceleration in the action at the end. This timing function can be quite satisfying for users because it has a slow start, fast middle, and slow end. Do not use this timing function for a long animation duration because of the sluggishness of the ease-in start. A suitable duration is 300-500ms for this timing function. Cedar’s token <code>cdr-timing-function-ease</code> uses this function.</td>
+      <td><cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Graph to show ease-in-out animation timing" :src="$withBase(`/motion/glossary_ease_in_out_16-9.png`)"/>  <br/><br/> Specifies a gradual acceleration at the start until the middle of the action. Then, a gradual deceleration in the action at the end. This timing function can be quite satisfying for users because it has a slow start, a fast middle, and a slow end. Do not use this timing function for a long animation duration because of the sluggishness of the ease-in start. A suitable duration is 300-500ms for this timing function. Cedar’s token <code>cdr-timing-function-ease</code> uses this function.</td>
     </tr>
     <tr>
       <td>ease-out</td>
-      <td><cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Graph to show ease-out animation timing" :src="$withBase(`/motion/glossary_ease_out_16-9.png`)"/>  <br/><br/> Specifies a gradual deceleration in the action with a fast start and slow ending. Ease-out is recommended because it gives the animation a feeling of responsiveness. It also allows a natural slowdown at the end. A common value for the cubic-bezier is (0, 0, 0.58, 1.0). Also known as slow-out. Cedar’s token `cdr-timing-function-ease-out` uses this function.</td>
+      <td><cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Graph to show ease-out animation timing" :src="$withBase(`/motion/glossary_ease_out_16-9.png`)"/>  <br/><br/> Specifies a gradual deceleration in the action with a fast start and slow ending. Ease-out is recommended because it gives the animation a feeling of responsiveness. It also allows a natural slowdown at the end. A common value for the cubic-bezier is (0, 0, 0.58, 1.0). Also known as slow-out. Cedar’s token `cdr-timing-function-ease-out` <Comment - Can we use the code here instead of the ''? uses this function.</td>
     </tr>
     <tr>
       <td>fade in</td>
@@ -269,7 +269,7 @@ For more information, view [Adding Tokens to the Repository](../tokens/?active-l
     </tr>
     <tr>
       <td>linear</td>
-      <td><cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Graph to show linear animation timing" :src="$withBase(`/motion/glossary_linear_16-9.png`)"/>  <br/><br/> Specifies an even speed in the action. A common value for the cubic-bezier is (0.0, 0.0, 1.0, 1.0). This is commonly used for opacity transitions. Cedar’s token `cdr-timing-function-linear` uses this function.</td>
+      <td><cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Graph to show linear animation timing" :src="$withBase(`/motion/glossary_linear_16-9.png`)"/>  <br/><br/> Specifies an even speed in the action. A common value for the cubic-bezier is (0.0, 0.0, 1.0, 1.0). This is commonly used for opacity transitions. Cedar’s token `cdr-timing-function-linear` <Comment - Please use the code for consistency> uses this function.</td>
     </tr>
     <tr>
       <td>path of action</td>
@@ -277,15 +277,15 @@ For more information, view [Adding Tokens to the Repository](../tokens/?active-l
     </tr>
     <tr>
       <td>slow-in</td>
-      <td>Specifies a gradual acceleration in the action with a slow start and quick ending. Also known as ease-in.</td>
+      <td>Specifies a gradual acceleration in the action with a slow start and a quick ending. Also known as ease-in.</td>
     </tr>
     <tr>
       <td>slow-out</td>
-      <td>Specifies a gradual deceleration in the action with a fast start and slow ending. Also known as ease-out.</td>
+      <td>Specifies a gradual deceleration in the action with a fast start and a slow ending. Also known as ease-out.</td>
     </tr>
     <tr>
       <td>timeline</td>
-      <td>A horizontal representation of a scene's elements, timing and keyframes.</td>
+      <td>A horizontal representation of a scene's elements, timing, and keyframes.</td>
     </tr>
     <tr>
       <td>transition</td>
