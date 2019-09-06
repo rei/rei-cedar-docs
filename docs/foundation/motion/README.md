@@ -11,13 +11,13 @@
   ],
   "tokenDescriptions": {
     "cdr-duration-1-x": "Usage: Perceived as instant or very fast. Often used for selection controls such as radio buttons, checkboxes, or toggle buttons.",
-    "cdr-duration-2-x": "Usage: Perceived as fast. Often used for hover or fading effects or icons that change shape, such as switching between a play button to a pause button.",
+    "cdr-duration-2-x": "Usage: Perceived as fast. Often used for hover or fading effects or icons that change shape, such as switching between a play button and a pause button.",
     "cdr-duration-3-x": "Usage: Perceived as normal. Often used for revealing content, such as the opening of a panel for the accordion component.",
     "cdr-duration-4-x": "Usage: Perceived as slow. Often used for revealing content on a tablet device because the screen is bigger than a phone or wearable device.",
     "cdr-duration-5-x": "Usage: Perceived as slower. Often used for icons with detailed animation, such as a ringing alarm clock or opening and closing a lock icon.",
     "cdr-duration-6-x": "Usage: Perceived as very slow. Often used for larger movement, such as revealing page content when switching tabs for the tabs component.",
     "cdr-timing-function-ease-out": "Specifies a transition effect that will feel responsive. This timing effect moves quickly at the beginning with a slow end. Use this animation when users expect an immediate response to their action such as clicking on an accordion or button.",
-    "cdr-timing-function-ease": "Specifies a transition effect that is known as ease-in-out. This timing function can be quite satisfying for users because it has a slow start, fast middle, and slow end. Use this effect when users do not expect motion to occur. A suitable duration is 300-500ms for this timing function.",
+    "cdr-timing-function-ease": "Specifies a transition effect that is known as ease-in-out. This timing function can be quite satisfying for users because it has a slow start, a fast middle, and a slow end. Use this effect when users do not expect motion to occur. A suitable duration is 300-500ms for this timing function.",
     "cdr-timing-function-linear": "Specifies a transition effect with the same speed from start to end. Be cautious using this effect because objects in the real world don’t usually move with a linear motion. Best for things like opacity fades."
   }
 }
@@ -32,7 +32,7 @@ Cedar provides easy-to-use, preset values to apply consistent motion for compone
   
 <hr>  
 
-List of motion tokens with descriptions and values <Comment - Where is the list? Are we going to insert a link or list here? If not, delete.>. Motion tokens are primarily used with web applications. Motion tokens for mobile devices are not currently available.
+Motion tokens are primarily used with web applications. Motion tokens for mobile devices are not currently available.
 
   
 ### Duration
@@ -45,7 +45,7 @@ List of motion tokens with descriptions and values <Comment - Where is the list?
 
  <br/>
 
-<tokens-motion motion-type="duration" :descriptions="$page.frontmatter.tokenDescriptions" /> <Comment - The last sentence of the description for cdr-duration-2-x should be changed to "...switching between a play button and a pause button.>
+<tokens-motion motion-type="duration" :descriptions="$page.frontmatter.tokenDescriptions" />
 
 <br/>
 <hr>
@@ -55,7 +55,7 @@ Cedar’s collection of easings are based on physics found in the natural world.
 
 <br />
 
-<tokens-motion motion-type="timing" :descriptions="$page.frontmatter.tokenDescriptions" /> <Comment - The second sentence of the description for cdr-timing-function-ease should be changed to "This timing function can be quite satisfying for users because it has a slow start, a fast middle, and a slow end.">
+<tokens-motion motion-type="timing" :descriptions="$page.frontmatter.tokenDescriptions" />
 
 <br />
 <hr>
@@ -205,13 +205,13 @@ CSS animation frame rate for interface elements is dependent on the speed of the
 - Most devices refresh their screen at 60 times a second 
 
 For smooth and responsive animation, use CSS attributes for:
-- **Position:** Using transform property for translate(), to reposition an element in the horizontal or vertical directions
-- **Scale:** Using transform property for scale(), to resize an element on 2D plane
-- **Rotation:** Using transform property for rotate(), to rotate an element on x, y, or z axis 
-- **Skew:** Using transform property for skew(), to distort an element on the 2D plane <Comment - What are these brackets () for?>
+- **Position:** Using transform property for `translate()`, to reposition an element in the horizontal or vertical directions
+- **Scale:** Using transform property for `scale()`, to resize an element on 2D plane
+- **Rotation:** Using transform property for `rotate()`, to rotate an element on x, y, or z axis 
+- **Skew:** Using transform property for `skew()`, to distort an element on the 2D plane
 - **Opacity:** Specifies the opacity or transparency of an element with values from 0.0 - 1.0. Lower values cause the element to be more transparent
 
-For more information, view [Adding Tokens to the Repository](../tokens/?active-link=adding-tokens-to-the-repository).
+For more information, view [Adding Tokens to the Repository](../components/tokens/?active-link=adding-tokens-to-the-repository).
 
 
 <br>
@@ -253,7 +253,7 @@ For more information, view [Adding Tokens to the Repository](../tokens/?active-l
     </tr>
     <tr>
       <td>ease-out</td>
-      <td><cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Graph to show ease-out animation timing" :src="$withBase(`/motion/glossary_ease_out_16-9.png`)"/>  <br/><br/> Specifies a gradual deceleration in the action with a fast start and slow ending. Ease-out is recommended because it gives the animation a feeling of responsiveness. It also allows a natural slowdown at the end. A common value for the cubic-bezier is (0, 0, 0.58, 1.0). Also known as slow-out. Cedar’s token `cdr-timing-function-ease-out` <Comment - Can we use the code here instead of the ''? uses this function.</td>
+      <td><cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Graph to show ease-out animation timing" :src="$withBase(`/motion/glossary_ease_out_16-9.png`)"/>  <br/><br/> Specifies a gradual deceleration in the action with a fast start and slow ending. Ease-out is recommended because it gives the animation a feeling of responsiveness. It also allows a natural slowdown at the end. A common value for the cubic-bezier is (0, 0, 0.58, 1.0). Also known as slow-out. Cedar’s token <code>cdr-timing-function-ease-out</code></td>
     </tr>
     <tr>
       <td>fade in</td>
@@ -269,8 +269,7 @@ For more information, view [Adding Tokens to the Repository](../tokens/?active-l
     </tr>
     <tr>
       <td>linear</td>
-      <td><cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Graph to show linear animation timing" :src="$withBase(`/motion/glossary_linear_16-9.png`)"/>  <br/><br/> Specifies an even speed in the action. A common value for the cubic-bezier is (0.0, 0.0, 1.0, 1.0). This is commonly used for opacity transitions. Cedar’s token `cdr-timing-function-linear` <Comment - Please use the code for consistency> uses this function.</td>
-    </tr>
+      <td><cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Graph to show linear animation timing" :src="$withBase(`/motion/glossary_linear_16-9.png`)"/>  <br/><br/> Specifies an even speed in the action. A common value for the cubic-bezier is (0.0, 0.0, 1.0, 1.0). This is commonly used for opacity transitions. Cedar’s token <code>cdr-timing-function-linear</code></td>
     <tr>
       <td>path of action</td>
       <td>Specifies direction that the action will follow.</td>
