@@ -65,6 +65,13 @@ module.exports = {
         ]
       },
       {
+        text: "About",
+        items: [
+          { text: "Cedar Design System", link: "/about/cedar-design-system/" },
+          { text: "Browser Support", link: "/about/browser-support/" }
+        ]
+      },
+      {
         text: "Getting Started",
         items: [
           { text: "As a Designer", link: "/getting-started/as-a-designer/" },
@@ -84,10 +91,7 @@ module.exports = {
           },
           { text: "Accessibility", link: "/foundation/accessibility/" },
           { text: "Color", link: "/foundation/color/" },
-          { text: "Iconography", link: "/foundation/iconography/" },
           { text: "Motion", link: "/foundation/motion/" },
-          { text: "Tokens", link: "/foundation/tokens/" },
-          { text: "Component Variables", link: "/foundation/component-variables/" },
           { text: "Typography", link: "/foundation/typography/" },
           { text: "Spacing", link: "/foundation/spacing/" }
         ]
@@ -95,6 +99,9 @@ module.exports = {
       {
         text: "Components",
         items: [
+          { text: "Design Tokens", link: "/components/design-tokens/" },
+          { text: "Component Variables", link: "/components/component-variables/" },
+          { text: "Utilities", link: "/components/utilities/"},
           { text: "Accordion", link: "/components/accordion/" },
           { text: "Block Quote", link: "/components/block-quote/" },
           { text: "Breadcrumb", link: "/components/breadcrumb/" },
@@ -120,10 +127,9 @@ module.exports = {
         ]
       },
       {
-        text: "About",
+        text: "Icons",
         items: [
-          { text: "Cedar Design System", link: "/about/cedar-design-system/" },
-          { text: "Browser Support", link: "/about/browser-support/" }
+          { text: "Iconography", link: "/icons/iconography/" }
         ]
       }
     ]
