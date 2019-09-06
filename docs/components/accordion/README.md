@@ -43,7 +43,7 @@
     }
   ],
   "sandboxData": {
-    "components": "CdrAccordion, CdrAccordionItem"
+    "components": "CdrAccordion, CdrText"
   },
   "versions": [
     {
@@ -53,66 +53,55 @@
           "api": {
             "props": [
               {
-                "name": "compact",
-                "type": "boolean",
-                "default": "false",
-                "description": "Sets the compact style of CdrAccordionItem child components."
-              },
-              {
-                "name": "borderAligned",
-                "type": "boolean",
-                "default": "false",
-                "description": "Sets the border-aligned style of CdrAccordionItem child components."
-              },
-              {
-                "name": "showAll",
-                "type": "boolean",
-                "default": "false",
-                "description": "Sets all child CdrAccordionItem components to display open by default."
-              }
-            ],
-            "slots": [
-              {
-                "name": "default",
-                "description": "Sets the innerHTML for CdrAccordionItem(s)."
-              }
-            ],
-          },
-        },
-        {
-          "name": "CdrAccordionItem",
-          "api": {
-            "props": [
-              {
                 "name": "id",
                 "type": "string",
                 "default": "N/A",
-                "description": "Requires unique ID for each component reference."
+                "description": "Unique id required."
               },
               {
                 "name": "label",
                 "type": "string",
                 "default": "N/A",
-                "description": "Sets the readable text on the CdrAccordionItem button or trigger. Required."
+                "description": "Sets the readable text on the CdrAccordion button. Deprecated. Use label slot.",
+                "alert": {
+                  "type": "deprecated",
+                  "description": "Deprecated in v3.0.0. Instead, use 'label' slot."
+                }
               },
               {
-                "name": "show",
+                "name": "opened",
                 "type": "boolean",
                 "default": "false",
-                "description": "Sets a single CdrAccordionItem to display open by default. The 'showAll' prop takes precedence, when true."
+                "description": "Toggle to open/close the accordion."
+              },
+              {
+                "name": "compact",
+                "type": "boolean",
+                "default": "false",
+                "description": "Sets the compact style."
+              },
+              {
+                "name": "borderAligned",
+                "type": "boolean",
+                "default": "false",
+                "description": "Sets the border-aligned style."
               }
             ],
             "slots": [
               {
+                "name": "label",
+                "description": "Sets the readable text on the CdrAccordion button. Use this slot instead of label prop."
+              },
+              {
                 "name": "default",
-                "description": "Sets the innerHTML for CdrAccordionItem content."
+                "description": "Slot for the CdrAccordion content."
               }
             ],
             "events": [
               {
-                "name": "accordion-item-toggle",
-                "arguments": "isOpen, event",
-                "description": "$emit event fired on 'cdr-accordion-item' toggle."
+                  "name": "accordion-toggle",
+                  "arguments": "event",
+                  "description": "$emit event fired on CdrAccordion toggle."
               }
             ]
           }
@@ -142,35 +131,48 @@
 
 Section borders expand to full width of container.
 
-<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ default1: false, default2: false, default3: false }">
 
-```html
-  <cdr-accordion>
-    <cdr-accordion-item
-      id="default-1"
-      label="How do I find my member number?">
-      <cdr-text tag="p">
-          Find your member number online. You can also call
-          Customer Support at 1-800-426-4840 (U.S. and Canada) or 1-253-891-2500 (International).
-      </cdr-text>
-    </cdr-accordion-item>
-    <cdr-accordion-item
-      id="default-2"
-      label="Does every member get an Annual Dividend?">
-      <cdr-text tag="p">
-          Only active REI Co-op members receive an Annual Dividend notice. To be an active
-          member, you need to make net merchandise or shipping purchases (purchases minus credits and returns)
-          of at least $10 per year, unless you joined during that calendar year.
-      </cdr-text>
-    </cdr-accordion-item>
-    <cdr-accordion-item
-      id="default-3"
-      label="When does my dividend expire?">
-      <cdr-text tag="p">
-          Your dividend expires on Jan. 3, just under two years after it has been issued.
-          or example, your 2018 dividend earned on 2017 purchases will expire in January 2020.
-      </cdr-text>
-    </cdr-accordion-item>
+```vue
+  <cdr-accordion
+    id="default-1"
+    :opened="default1"
+    @accordion-toggle="default1 = !default1"
+  >
+    <template slot="label">
+      How do I find my member number?
+    </template>
+    <cdr-text tag="p">
+        Find your member number online. You can also call 
+        Customer Support at 1-800-426-4840 (U.S. and Canada) or 1-253-891-2500 (International).
+    </cdr-text>
+  </cdr-accordion>
+  <cdr-accordion
+    id="default-2"
+    :opened="default2"
+    @accordion-toggle="default2 = !default2"  
+  >
+    <template slot="label">
+      Does every member get an Annual Dividend?
+    </template>
+    <cdr-text tag="p">
+        Only active REI Co-op members receive an Annual Dividend notice. To be an active 
+        member, you need to make net merchandise or shipping purchases (purchases minus credits and returns) 
+        of at least $10 per year, unless you joined during that calendar year.
+    </cdr-text>
+  </cdr-accordion>
+  <cdr-accordion
+    id="default-3"
+    :opened="default3"
+    @accordion-toggle="default3 = !default3"
+  >
+    <template slot="label">
+      When does my dividend expire?
+    </template>
+    <cdr-text tag="p">
+        Your dividend expires on Jan. 3, just under two years after it has been issued. 
+        or example, your 2018 dividend earned on 2017 purchases will expire in January 2020.
+    </cdr-text>
   </cdr-accordion>
 ```
 
@@ -180,37 +182,50 @@ Section borders expand to full width of container.
 
 Reduced spacing around title and content body. Also, smaller font sizes resulting in an overall denser display of content.
 
-<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ compact1: false, compact2: false, compact3: false }">
 
-```html
-  <cdr-accordion :compact="true">
-    <cdr-accordion-item
-      id="compact-1"
-      label="Why buy used gear?"
-    >
-      <cdr-text tag="p">
-        Used Gear Beta is one way we are experimenting expanding opportunities
-        to enjoy life outdoors and bringing value to our members.
-      </cdr-text>
-    </cdr-accordion-item>
-    <cdr-accordion-item
-      id="compact-2"
-      label="What's your cancellation policy?"
-    >
-      <cdr-text tag="p">
-        Orders may be cancelled within 30 minutes of placing your order online.
-        After 30 minutes, your order will begin processing through our fulfillment center and cannot be cancelled.
-      </cdr-text>
-    </cdr-accordion-item>
-    <cdr-accordion-item
-      id="compact-3"
-      label="When will my order arrive?"
-    >
-      <cdr-text tag="p">
-        REI Co-op Used Gear Beta orders can take up to 3-4 business days to ship out. When your order ships,
-        we'll send you a shipping confirmation email that contains your tracking information. Shipping time is generally 3-5 business days.
-      </cdr-text>
-    </cdr-accordion-item>
+```vue
+  <cdr-accordion
+    id="compact-1"
+    :compact="true"
+    :opened="compact1"
+    @accordion-toggle="compact1 = !compact1"
+  >
+    <template slot="label">
+      Why buy used gear?
+    </template>
+    <cdr-text tag="p">
+      Used Gear Beta is one way we are experimenting expanding opportunities 
+      to enjoy life outdoors and bringing value to our members.
+    </cdr-text>
+  </cdr-accordion>
+  <cdr-accordion
+    id="compact-2"
+    :compact="true"
+    :opened="compact2"
+    @accordion-toggle="compact2 = !compact2"
+  >
+    <template slot="label">
+      What's your cancellation policy?
+    </template>
+    <cdr-text tag="p">
+      Orders may be cancelled within 30 minutes of placing your order online. 
+      After 30 minutes, your order will begin processing through our fulfillment center and cannot be cancelled.
+    </cdr-text>
+  </cdr-accordion>
+  <cdr-accordion
+    id="compact-3"
+    :compact="true"
+    :opened="compact3"
+    @accordion-toggle="compact3 = !compact3"
+  >
+    <template slot="label">
+      When will my order arrive?
+    </template>
+    <cdr-text tag="p">
+      REI Co-op Used Gear Beta orders can take up to 3-4 business days to ship out. When your order ships, 
+      we'll send you a shipping confirmation email that contains your tracking information. Shipping time is generally 3-5 business days.
+    </cdr-text>
   </cdr-accordion>
 ```
 
@@ -220,40 +235,53 @@ Reduced spacing around title and content body. Also, smaller font sizes resultin
 
 Border aligns to the title text and expand/collapse icon.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ borderAligned1: false, borderAligned2: false, borderAligned3: false }">
 
-```html
-  <cdr-accordion :border-aligned="true">
-    <cdr-accordion-item
-      id="border-aligned-1"
-      label="How long have you been in business?"
-    >
-      <cdr-text tag="p">
-        REI has offered the finest in outdoor gear since 1938. In that same spirit,
-        REI Adventures has led the way down wilderness paths and cultural back roads
-        to the most intriguing destinations in the world since 1987.
-      </cdr-text>
-    </cdr-accordion-item>
-    <cdr-accordion-item
-      id="border-aligned-2"
-      label="What kinds of trips are offered?"
-    >
-      <cdr-text tag="p">
-        We have adventures that range from weekend getaways to three-week treks. We
-        explore the world on foot, by kayak, canoe or raft, bicycle, safari, 4-wheel
-        drive, cruise ship or a combination of these vehicles! Novices are welcome.
-        We can teach you to kayak or to safely summit a mountain.
-      </cdr-text>
-    </cdr-accordion-item>
-    <cdr-accordion-item
-      id="border-aligned-3"
-      label="How do I know what each trip is like?"
-    >
-      <cdr-text tag="p">
-        This website provides full details of each trip. If you still have questions,
-        please call us at 1-800-622-2236 or e-mail us at travel@rei.com.
-      </cdr-text>
-    </cdr-accordion-item>
+```vue
+  <cdr-accordion
+    id="border-aligned-1"
+    :border-aligned="true"
+    :opened="borderAligned1"
+    @accordion-toggle="borderAligned1 = !borderAligned1"
+  >
+    <template slot="label">
+      How long have you been in business?
+    </template>
+    <cdr-text tag="p">
+      REI has offered the finest in outdoor gear since 1938. In that same spirit, 
+      REI Adventures has led the way down wilderness paths and cultural back roads 
+      to the most intriguing destinations in the world since 1987.
+    </cdr-text>
+  </cdr-accordion>
+  <cdr-accordion
+    id="border-aligned-2"
+    :border-aligned="true"
+    :opened="borderAligned2"
+    @accordion-toggle="borderAligned2 = !borderAligned2"
+  >
+    <template slot="label">
+      What kinds of trips are offered?
+    </template>
+    <cdr-text tag="p">
+      We have adventures that range from weekend getaways to three-week treks. We 
+      explore the world on foot, by kayak, canoe or raft, bicycle, safari, 4-wheel 
+      drive, cruise ship or a combination of these vehicles! Novices are welcome. 
+      We can teach you to kayak or to safely summit a mountain.
+    </cdr-text>
+  </cdr-accordion>
+  <cdr-accordion
+    id="border-aligned-3"
+    :border-aligned="true"
+    :opened="borderAligned3"
+    @accordion-toggle="borderAligned3 = !borderAligned3"
+  >
+    <template slot="label">
+      How do I know what each trip is like?
+    </template>
+    <cdr-text tag="p">
+      This website provides full details of each trip. If you still have questions, 
+      please call us at 1-800-622-2236 or e-mail us at travel@rei.com.
+    </cdr-text>
   </cdr-accordion>
 ```
 
@@ -340,108 +368,110 @@ This component has compliance with WCAG guidelines by:
 <template slot="API">
 <cdr-doc-table-of-contents-shell>
 
-Accordions are built from two components, **CdrAccordion** and **CdrAccordionItem**, which are meant to be used together.
-
 ## Props
 
-### CdrAccordion
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
-
-### CdrAccordionItem
-<cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[1].api.props" />
 
 ## Slots
 
 <api-slot :slots-getting-started-link="true" />
 
-### CdrAccordion
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" :slots-getting-started-link="false" />
-
-### CdrAccordionItem
-<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[1].api.slots" :slots-getting-started-link="false" />
 
 ## Events
 
-### CdrAccordionItem
-<cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[1].api.events" />
+<cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
 
 ## Usage
 
-### Style
-
-Use `cdr-accordion` to pass styling options to `cdr-accordion-item`.
+CdrAccordion emits an event when its button is clicked. Use an event listener to toggle the value of the opened prop to open/close the accordion.
 
 ```vue
 <template>
   <cdr-accordion
+    id="item"
     :compact="true"
+    :opened="opened"
+    @accordion-toggle="opened = !opened"
   >
-    <cdr-accordion-item
-      id="item-1"
-      label="Label text"
-    >
-      Accordion content here
-    </cdr-accordion-item>
+    <template name="label">
+      Click me to show content!
+    </template>
+      This content is revealed when the accordion is opened. 
   </cdr-accordion>
-</template>
-```
-
-### Behavior
-
-Set `show-all` to `true` on `cdr-accordion`, and each `cdr-accordion-item` will display in an open state.
-
-```vue
-<template>
-  <cdr-accordion
-    :show-all="true"
-  >
-    <cdr-accordion-item
-      id="item-1"
-      label="Label text"
-    >
-      Accordion content here
-    ...
-```
-
-The **CdrAccordionItem** component can also be controlled individually. If `show-all` is `false` at the **CdrAccordion** level, set `show` to `true` to display an individual accordion item in an open state. Note that **CdrAccordion** settings will take precedence over **CdrAccordionItem** settings.
-
-```vue
-<template>
-  <cdr-accordion>
-    <cdr-accordion-item
-      id="item-1"
-      label="Label text"
-      :show="true"
-    >
-      Accordion content here
-    ...
-```
-
-Any options set at the **CdrAccordion** level can be set on any parent component of **CdrAccordion** by using Vue's provide/inject functionality. This is useful, for instance, if **CdrAccordionItem** ever needs to be used as a part of another group component.
-
-
-```vue
-<template>
-  ...
-  <cdr-accordion-item
-    id="item-1"
-    label="Label text"
-  >
-    Accordion content here
-  </cdr-accordion-item>
-  ...
 </template>
 
 <script>
-  export default {
-    ...
-    provide() {
-      return {
-        borderAligned: true,
-        showAll: true
-      };
+export default {
+  ...
+  data() {
+    return {
+      opened: false
     }
   }
+}
+</script>
+```
+
+CdrAccordion can also be wired up into groups if, for instance, you wanted to close the other accordions when one is opened.
+
+```vue
+<cdr-accordion
+  v-for="(item, index) in grouped"
+  :id="item.id"
+  :border-aligned="true"
+  :opened="item.opened"
+  :key="item.id"
+  @accordion-toggle="updateGroup(index)"
+>
+  <template slot="label">
+    {{ item.label }}
+  </template>
+  {{ item.content }}
+</cdr-accordion>
+
+<script>
+export default {
+  ...
+  data() {
+    return {
+      grouped: [
+        {
+          label: 'These are border-aligned',
+          content: 'These accordions will only allow one open at a time.',
+          opened: false,
+          id: 'linked1',
+        },
+        {
+          label: 'And they are also linked',
+          content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. ',
+          opened: false,
+          id: 'linked2',
+        },
+        {
+          label: 'To close others when one is opened',
+          content: 'These accordions will only allow one open at a time.',
+          opened: false,
+          id: 'linked3',
+        },
+      ],
+    }
+  },
+  methods: {
+    updateGroup(index) {
+      const { opened } = this.grouped[index];
+      if (opened) {
+        // closing opened accordion
+        this.grouped[index].opened = false;
+      } else {
+        // open closed accordion. close all others.
+        for (let i = 0; i < this.grouped.length; i += 1) {
+          this.grouped[i].opened = index === i;
+        }
+      }
+    },
+  }
+}
 </script>
 ```
 

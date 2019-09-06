@@ -99,7 +99,7 @@ module.exports = {
       {
         text: "Components",
         items: [
-          { text: "Tokens", link: "/components/tokens/" },
+          { text: "Design Tokens", link: "/components/design-tokens/" },
           { text: "Component Variables", link: "/components/component-variables/" },
           { text: "Utilities", link: "/components/utilities/"},
           { text: "Accordion", link: "/components/accordion/" },
@@ -142,7 +142,5 @@ module.exports = {
  },
   chainWebpack(config, isServer) {
     config.resolve.alias.set("$vue", "vue/dist/vue.esm.js");
-    const cjs = isServer ? 'cjs.ssr' : 'cjs';
-    config.resolve.alias.set("@rei/cedar$", `@rei/cedar/dist/cedar.${cjs}.js`);
   }
 };
