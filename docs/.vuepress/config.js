@@ -129,7 +129,7 @@ module.exports = {
       {
         text: "Icons",
         items: [
-          { text: "Iconography", link: "/components/iconography/" }
+          { text: "Iconography", link: "/icons/iconography/" }
         ]
       }
     ]
