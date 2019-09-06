@@ -17,7 +17,9 @@
 
 ## Overview
 
-Design tokens are special variables used to maintain a scalable visual system for UI development and brand consistency. Cedar design tokens store the visual design attributes that define the foundation of REI’s visual language, including color, typography and spacing.
+Design tokens are special variables used to maintain a scalable visual system for UI development and brand consistency. Cedar design tokens store the visual design attributes that define the foundation of REI’s visual language, including color, typography, and spacing.
+
+For a complete list of Cedar design tokens, visit the [Cedar Tokens](https://rei.github.io/rei-cedar-tokens) page. 
 
 Design tokens are key-value pairs. For example:
 
@@ -29,12 +31,12 @@ cdr-text-primary-lightmode: #292929;
   - The key name defines the usage or how to apply the value to a specific context, such as using text on a light background
   - The key stores visual design attributes
   - The key replaces hard-coded values, such as hex values for color or pixel values for spacing
-  - Contract of intent will not change when a variable value is updated over time
 
 
 ### Contract of Intent
   - Tokens are versioned and maintained by the design systems team
   - Consumers are required to stay within one major version of the current release
+  - Contract of intent will not change when a variable value is updated over time
 
 ### Benefits
 
@@ -112,7 +114,7 @@ Questions about when to use design tokens? Ask the Cedar team in [#cedar-user-su
       <td>Yes </td>
     </tr>
     <tr>
-      <td>If I apply this design token in my component and use it to specify the background color for a secondary button when disabled will it still be used for the secondary button in a future design update? </td>
+      <td>If I apply this design token in my component and use it to specify the background color for a secondary button when disabled, will it still be used for the secondary button in a future design update? </td>
       <td>Yes </td>
     </tr>
     <tr>
@@ -122,7 +124,7 @@ Questions about when to use design tokens? Ask the Cedar team in [#cedar-user-su
   </tbody>
 </table>
 
-**Result:** The fourth criteria is false so **“cdr-color-background-button-secondary-disabled”** does not qualify as a design token. Instead it is considered an UI Element variable that is specific to buttons.
+**Result:** The fourth criteria is false, so **“cdr-color-background-button-secondary-disabled”** does not qualify as a design token. Instead, it is considered an UI element variable that is specific to buttons.
 
 <br>
 
@@ -159,7 +161,7 @@ Questions about when to use design tokens? Ask the Cedar team in [#cedar-user-su
 
 The naming structure for design tokens follows:
 - **Category:** Top level that contains foundational elements such as `text`, `color`, `spacing`
-- **Sub-Category:** Describes and narrows category for token.  For instance, `color-text` will define a color for text and can be used for icons
+- **Sub-Category:** Describes and narrows category for token. For instance, `color-text` will define a color for text and can be used for icons
 - **Item:** Continues to narrows usage for token. For example, if text is a property, the item could be `form` to indicate text used in a form control
 - **Sub-Item:** Describes and narrows category for token. For instance, `form` could be modified by `input`
 - **Variant:** Describes prominence or state for a token
@@ -256,8 +258,8 @@ Would be nice to use table markdown but alternating row styling is inverted. Hea
 ## How to Use Tokens
 
 ### For Designers
-Design Tokens are available in Sketch via Abstract by linking the [CDR Tokens library](#) into your project. 
-Within this library are Symbols, Text Styles, and Layer Styles that correspond to Ceder tokens. 
+Designt tokens are available in Sketch using Abstract by linking the [CDR Tokens library](#) into your project. 
+This library contains Symbols, Text Styles, and Layer Styles that correspond to Ceder tokens. 
 Place the _Stickersheet_ Symbol in your project for a visual overview. 
 
 When using design tokens, it’s your responsibility to pass the entire design token name to the developer during the design hand-off process—this can be through automated or manual methods. 
@@ -332,24 +334,23 @@ if (screenWidth >= CdrBreakpointLg) {
 
 This repository follows SEMVER practices and will notify users of changes and updates on the #cedar-user-support Slack channel.
 
-
 <hr/>
 
 
 ## Adding Design Tokens to the Repository
-The number of design tokens Cedar provides is kept small intentionally as it is critical for a design token to meet all requirements based on the above criterium prior to being added to Cedar’s Design Token list.
 
-If you have a request for a design token that is missing, you can submit a request using the [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC) or create a design token in the [shared-tokens repo](https://git.rei.com/projects/FEDPACK/repos/shared-tokens/browse) for future integration in Cedar.
+If you have a request for a design token that is missing from the [Cedar Tokens](https://rei.github.io/rei-cedar-tokens) list, you can submit a request using the [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC) or create a design token in the [shared-tokens repo](https://git.rei.com/projects/FEDPACK/repos/shared-tokens/browse) for future integration in Cedar.
 
 
 Ensure that the design token meets the following requirements:
-- Design Token is used in several components or layouts
-- Design Token is used for multiple elements and NOT specific to one element
-- Design Token name will continue to have the same semantic meaning in future releases
-- Design Token name follows platform requirements:
+- Design token is used in several components or layouts
+- Design token is used for multiple elements and NOT specific to one element
+- Design token name will continue to have the same semantic meaning in future releases
+- Design token name follows platform requirements:
   - **Web:** Uses Kebab case. For example, cdr-color-background-dark
   - **iOS:** Uses Pascal case. For example, CdrColorBackgroundColor
   - **Android:** Uses Snake case. For example, cdr_color_background_dark
+    
 
 <hr/>
 
