@@ -19,6 +19,8 @@
 
 Design tokens are special variables used to maintain a scalable visual system for UI development and brand consistency. Cedar design tokens store the visual design attributes that define the foundation of REI’s visual language, including color, typography and spacing.
 
+For a complete list of Cedar tokens, visit the [Cedar Tokens](https://rei.github.io/rei-cedar-tokens)
+
 Design tokens are key-value pairs. For example:
 
 ```
