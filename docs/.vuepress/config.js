@@ -91,10 +91,7 @@ module.exports = {
           },
           { text: "Accessibility", link: "/foundation/accessibility/" },
           { text: "Color", link: "/foundation/color/" },
-          { text: "Iconography", link: "/foundation/iconography/" },
           { text: "Motion", link: "/foundation/motion/" },
-          { text: "Tokens", link: "/foundation/tokens/" },
-          { text: "Component Variables", link: "/foundation/component-variables/" },
           { text: "Typography", link: "/foundation/typography/" },
           { text: "Spacing", link: "/foundation/spacing/" }
         ]
@@ -102,6 +99,9 @@ module.exports = {
       {
         text: "Components",
         items: [
+          { text: "Tokens", link: "/components/tokens/" },
+          { text: "Component Variables", link: "/components/component-variables/" },
+          { text: "Utilities", link: "/components/utilities/"},
           { text: "Accordion", link: "/components/accordion/" },
           { text: "Block Quote", link: "/components/block-quote/" },
           { text: "Breadcrumb", link: "/components/breadcrumb/" },
@@ -124,6 +124,12 @@ module.exports = {
           { text: "Ratings", link: "/components/rating/" },
           { text: "Selects", link: "/components/selects/" },
           { text: "Tabs", link: "/components/tabs/" }
+        ]
+      },
+      {
+        text: "Icons",
+        items: [
+          { text: "Iconography", link: "/components/iconography/" }
         ]
       }
     ]
