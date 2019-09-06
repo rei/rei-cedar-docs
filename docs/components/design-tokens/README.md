@@ -19,7 +19,7 @@
 
 Design tokens are special variables used to maintain a scalable visual system for UI development and brand consistency. Cedar design tokens store the visual design attributes that define the foundation of REI’s visual language, including color, typography, and spacing.
 
-For a complete list of Cedar design tokens, visit the [Cedar Tokens](https://rei.github.io/rei-cedar-tokens)page. 
+For a complete list of Cedar design tokens, visit the [Cedar Tokens](https://rei.github.io/rei-cedar-tokens) page. 
 
 Design tokens are key-value pairs. For example:
 
@@ -339,7 +339,7 @@ This repository follows SEMVER practices and will notify users of changes and up
 
 ## Adding Design Tokens to the Repository
 
-If you have a request for a design token that is missing from the [Cedar Tokens](https://rei.github.io/rei-cedar-tokens)list, you can submit a request using the [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC) or create a design token in the [shared-tokens repo](https://git.rei.com/projects/FEDPACK/repos/shared-tokens/browse) for future integration in Cedar.
+If you have a request for a design token that is missing from the [Cedar Tokens](https://rei.github.io/rei-cedar-tokens) list, you can submit a request using the [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC) or create a design token in the [shared-tokens repo](https://git.rei.com/projects/FEDPACK/repos/shared-tokens/browse) for future integration in Cedar.
 
 
 Ensure that the design token meets the following requirements:
