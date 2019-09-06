@@ -6,7 +6,7 @@
   "summary": false,
   "breadcrumbs": [
     {
-      "text": "Foundation/"
+      "text": "Components/"
     }
   ],
 }
