@@ -14,13 +14,85 @@
 
 <cdr-doc-table-of-contents-shell>
 
+## Cedar Fall 2019 Release
+
+TODO: quick blurbs on the high level themes
+
+- tree shaking support
+- typography, headings
+- new icons repo
+- new utility classes
+- component normalization/consistency/bug fixes
+
 ## Update Steps
 
 ### For a Micro-Site
 
+- update cedar
+- update febs
+- (probably) get on babel 7/webpack as well.
+- compile MJS. make sure lib/index.mjs is loaded, not cedar.js.
+
 ### For a Component Package
 
+- update cedar
+- make it a peerDep
+- make sure yr compiling it in tests/dev.
+TODO: update steps might be more or less the same here?
+TODO: how should components vs. micro-sites handle icons with the new repo?
+
+## New Features
+
+### New Font/Typography
+
+TODO: ????
+
+### New Icons Package
+
+[@rei/icons]()
+
+### Button/CTA full-width@bp
+
+The [Button](https://rei.github.io/rei-cedar-docs/components/buttons/?active-tab=api) and [CTA](https://rei.github.io/rei-cedar-docs/components/cta/?active-tab=api) components now support setting `full-width` as either a boolean value or a list of responsive breakpoints. For example, `full-width: "@xs @lg"` would make that component be full-width at the extra small and large breakpoints. We have also resolved a bug where the full-width attribute could be overridden by a responsive size breakpoint.
+
+### Link Scoped Slots for Pagination and Breadcrumb
+
+TODO: update breadcrumb/pagination docs.
+
+support for vue-router. these components render links, need to control them in order to handle routing.
+
+[breaadcrumb](https://rei.github.io/rei-cedar-docs/components/breadcrumb/?active-tab=api#props)
+[pagination](https://rei.github.io/rei-cedar-docs/components/pagination/?active-tab=api#props)
+
+### Input and Button Bind All Listeners
+
+Rather than only binding specific listeners (like `on-click`), the [input](https://rei.github.io/rei-cedar-docs/components/input/?active-tab=api#events) and
+[button](https://rei.github.io/rei-cedar-docs/components/button/?active-tab=api#events) components will now bind any event listeners attached to them to their root component. i.e, `@click`, `@focus`, `@input`
+
 ## Breaking Changes
+
+### Tree Shaking / ES Module Build Changes
+
+(TODO: link to FEBS version once its available)
+
+Version 2.x.x of Cedar contained both CommonJS (`@rei/cedar/dist/cedar.cjs.js`, `@rei/cedar/dist/cedar.cjs.ssr.js`) and ES Module (`@rei/cedar/dist/cedar.esm.js`, `@rei/cedar/dist/cedar.esm.ssr.js`) single file builds. The ES Module build was supposed to allow consumers to "tree shake" out any un-used Cedar code from their bundles. However due to a variety of issues involving Vue and Webpack our ES Module build was not actually tree shakeable for our consumers. To work around this, we are now exporting a multi-file build inside `@rei/cedar/dist/lib` which is also the `module` entry point for Cedar.
+
+If you are on the latest version of FEBS (> 5.2.0) then you will get this change automatically when you update your cedar version. Any bundle that is loading @rei/cedar should see a significant reduction in bundle size after this update.
+
+If you are not using febs, you will need to ensure that
+- your project is loading the `module` entry for Cedar
+-- should happen automatically if using imports/exports
+-- if not, use a resolve alias to point to dist/lib/index.mjs
+- your build system is set up to process `mjs` files in node_modules.
+
+Single file CJS is now `dist/cedar.js`. This is appropriate to use for test/dev environments but should not be used in production as it is not tree-shakeable.
+Single file ESM is now `dist/cedar.mjs` (however this file cannot be tree shaken by webpack 4)
+
+### SSR Optimized Builds Are No Longer Being Exported
+
+TODO: fill this out
+
+no more SSR builds. only a .vue/sfc thing. you can still do this on yr code if you want?
 
 ### Stateless Accordion
 
@@ -34,7 +106,7 @@ Before:
     id="accordion-1"
     label="How do I find my member number?">
     <cdr-text tag="p">
-        Find your member number online. You can also call 
+        Find your member number online. You can also call
         Customer Support at 1-800-426-4840 (U.S. and Canada)
         or 1-253-891-2500 (International).
     </cdr-text>
@@ -54,7 +126,7 @@ After:
     How do I find my member number?
   </template>
   <cdr-text tag="p">
-    Find your member number online. You can also call 
+    Find your member number online. You can also call
     Customer Support at 1-800-426-4840 (U.S. and Canada)
     or 1-253-891-2500 (International).
   </cdr-text>
@@ -72,7 +144,7 @@ export default {
 </script>
 ```
 
-### Breadcrumb Truncation/SSR 
+### Breadcrumb Truncation/SSR
 
 In order to fix an issue with server-side rendering, as well as to simplify the API of [CdrBreadcrumb](https://rei.github.io/rei-cedar-docs/components/breadcrumb/), we have removed the `truncationThreshold` and `truncationXSThreshold` attributes. Instead, the `truncationEnabled` attr can be used to control whether or not the breadcrumb should be truncated. This change will not break any existing consumers of breadcrumb even if they are using those attributes.
 
@@ -108,9 +180,28 @@ Rather than pass in an `onClick` event handler as a prop, CdrButton will now bin
 
 ### CdrTabs emits `tab-change` instead of `tabChange`
 
-Vue expects event names to use kebab case and not camel case, so the `tabChange` event on CdrTabs could cause issues for some users. CdrTabs now emits a `tab-change` event instead. 
+Vue expects event names to use kebab case and not camel case, so the `tabChange` event on CdrTabs could cause issues for some users. CdrTabs now emits a `tab-change` event instead.
 
 - Before: `<CdrTabs @tabChange="handler" />`
 - After: `<CdrTabs @tab-change="handler" />`
+
+### Deprecated Typography/Headings
+
+TODO: cdr-text modifiers changed?
+
+### Deprecated Tokens/Warnings
+
+TODO: describe which heading tokens are deprecated, what they map to
+
+### Deprecated Utility Classes
+
+TODO: describe which classes are deprecated, what they are replaced with, where to see the full list
+
+### Deprecated Icon Components
+
+TODO: update links/package name:
+
+With the release of the [@rei/icons]() package, we are deprecating the "single icon" components (i.e, IconArrowDown, IconCart) as well as the CdrIconSprite. These components will be removed in a future release. Instead, consumers should use the CdrIcon component in conjunction with the @rei/icons package to manage their icons.
+
 
 </cdr-doc-table-of-contents-shell>
