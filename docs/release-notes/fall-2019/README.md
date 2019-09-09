@@ -34,7 +34,11 @@ If you are not already on Cedar 2.x.x, you will first need to [upgrade your proj
 
 ### New Font/Typography
 
-TODO: ????
+Sentinel and Roboto have been deprecated as global REI brand fonts. cdr-fonts.css has removed the base64 encoded versions of sentinel fonts as a result and has greatly reducing the overall size of this file. 
+
+the variant fonts for "REI Stuart App" and "Graphik App" have been added.
+
+[more information on typography](../../foundation/typography/?active-tab=guidelines) 
 
 ### New Icons Package
 
@@ -210,6 +214,9 @@ The following diagram provides a rough guideline of legacy modifier names to the
 | subheading               | subheading-300                             |
 
 In addition to the heading changes listed above, the paragraph modifier `body` is now also deprecated without a replacement. Moving forward we only support the generic non modified styling for paragraphs.
+#### more infomation
+-  [Headings](../../components/headings) 
+-  [Paragraphs](../../components/paragraphs)
 
 ### Deprecated Tokens/Warnings
 
