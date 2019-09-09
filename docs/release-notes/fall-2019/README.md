@@ -45,11 +45,11 @@ TODO: how should components vs. micro-sites handle icons with the new repo?
 
 ### New Font/Typography
 
-Sentinal and Roboto have been deprecated as global REI brand fonts. cdr-fonts.css has removed the base64 encoded versions of sentinal fonts as a result and has greatly reducing the overall size of this file. 
+Sentinel and Roboto have been deprecated as global REI brand fonts. cdr-fonts.css has removed the base64 encoded versions of sentinel fonts as a result and has greatly reducing the overall size of this file. 
 
 the variant fonts for "REI Stuart App" and "Graphik App" have been added.
 
-[more infomation on typeography](../../foundation/typography/?active-tab=guidelines) 
+[more information on typography](../../foundation/typography/?active-tab=guidelines) 
 
 ### New Icons Package
 
