@@ -45,7 +45,11 @@ TODO: how should components vs. micro-sites handle icons with the new repo?
 
 ### New Font/Typography
 
-TODO: ????
+Sentinal and Roboto have been deprecated as global REI brand fonts. cdr-fonts.css has removed the base64 encoded versions of sentinal fonts as a result and has greatly reducing the overall size of this file. 
+
+the variant fonts for "REI Stuart App" and "Graphik App" have been added.
+
+[more infomation on typeography](../../foundation/typography/?active-tab=guidelines) 
 
 ### New Icons Package
 
@@ -207,7 +211,9 @@ The following diagram provides a rough guideline of legacy modifier names to the
 | subheading               | subheading-300                             |
 
 In addition to the heading changes listed above, the paragraph modifier `body` is now also deprecated without a replacement. Moving forward we only support the generic non modified styling for paragraphs.
-
+#### more infomation
+-  [Headings](../../components/headings) 
+-  [Paragraphs](../../components/paragraphs) 
 ### Deprecated Tokens/Warnings
 
 TODO: describe which heading tokens are deprecated, what they map to
