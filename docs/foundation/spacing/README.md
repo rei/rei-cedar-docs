@@ -21,7 +21,7 @@ The Cedar spacing system is based on 16px units. The scaling system uses fractio
 
 <br>
 
-| System Scale        | Pixel Values        | Rem Values        |
+| System scale        | Pixel values        | Rem values        |
 | :------------------ | :------------------ | :---------------- |
 | 1/8 space           | 2px                 | 0.2rem            | 
 | 1/4 space           | 4px                 | 0.4rem            | 
@@ -31,5 +31,7 @@ The Cedar spacing system is based on 16px units. The scaling system uses fractio
 | 1  1/2  spaces      | 24px                | 2.4rem            | 
 | 2 spaces            | 32px                | 3.2rem            | 
 | 4 spaces            | 64px                | 6.4rem            | 
+
+For more information about using Cedar's spacing system, visit the Spacing <link to: https://rei.github.io/rei-cedar-docs/layout/spacing/> article. 
 
 </cdr-doc-table-of-contents-shell>
