@@ -2,7 +2,7 @@
 {
   "title": "Spacing",
   "title_metadata": false,
-  "layout_type": "LayoutComponent",
+  "layout_type": "LayoutArticle",
   "summary": false,
   "breadcrumbs": [
     {
@@ -12,10 +12,9 @@
 }
 ---
 
-<cdr-doc-tabs :labels="['Overview', 'Guidelines']">
-<template slot="Overview">
 <cdr-doc-table-of-contents-shell>
 
+## Overview
 
 Cedar provides easy-to-use, preset values to apply consistent spacing within and between components. Spacing tokens help maintain a cohesive visual style across all REI properties by:
 - Stores pixel values that are converted to the proper spacing unit for web and native platforms 
@@ -47,7 +46,7 @@ These spacing values are in use throughout Cedar components and design recommend
 
 <tokens-space type="inset">
 
-## Base Inset
+### Base Inset
 
 Use to create a consistent space **within** the content container:
 - All four sides have equal values
@@ -66,7 +65,7 @@ Use to create a consistent space **within** the content container:
 
 <tokens-space type="inset-squish">
 
-## Inset - Squish
+### Inset - Squish
 Use to create a compact vertical space **within** the content container:
 - Reduces top and bottom padding by 50% relative to left and right padding
 - Options range from:
@@ -87,7 +86,7 @@ Use to create a compact vertical space **within** the content container:
 
 <tokens-space type="inset-stretch">
 
-## Inset - Stretch
+### Inset - Stretch
 Use to create an expanded vertical space **within** the content container:
 - Increases top and bottom padding by 50% relative to left and right padding
 - Options range from:
@@ -103,14 +102,7 @@ Use to create an expanded vertical space **within** the content container:
 <br>
 <hr>
 
-
-</cdr-doc-table-of-contents-shell>
-</template>
-
-
-
-<template slot="Guidelines">
-<cdr-doc-table-of-contents-shell>
+## Guidelines
 
 
 The Cedar spacing system is based on 16px units. The scaling system uses fractions and multiples of the base size (16px). The result is easy to understand. Please note that 1 rem equals 10 pixels. 
@@ -160,8 +152,4 @@ An `inset-stretch` increases top and bottom spacing by 50% relative to the defau
 <br>
 <hr>
 
-
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>
