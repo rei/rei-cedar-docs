@@ -187,7 +187,26 @@ Vue expects event names to use kebab case and not camel case, so the `tabChange`
 
 ### Deprecated Typography/Headings
 
-TODO: cdr-text modifiers changed?
+The cdr-text modifiers specific to headings have been deprecated. This update normalizes cdr-text modifiers with our other cedar component modifiers. Moving forward users will be expected and able to define a unique heading value for each breakpoint.
+
+New modifiers have been added supporting the update to typography and the names have been extended to account for the size options now available to each heading family.
+
+The following diagram provides a rough guideline of legacy modifier names to the general equivalent.
+
+
+| Deprecated modifier name | Equivalent modifier names and breakpoints  |
+|--------------------------|--------------------------------------------|
+| display                  | heading-700 display-900@md display-1100@lg |
+| display-static           | display-900                                |
+| heading-large            | display-600 display-700@md display-900@lg  |
+| heading-large-static     | display-700                                |
+| heading-medium           | heading-600 heading-700@md heading-700@lg  |
+| heading-medium-static    | heading-600                                |
+| heading-small            | heading-400 heading-500@md heading-500@lg  |
+| heading-small-static     | heading-400                                |
+| subheading               | subheading-300                             |
+
+In addition to the heading changes listed above, the paragraph modifier `body` is now also deprecated without a replacement. Moving forward we only support the generic non modified styling for paragraphs.
 
 ### Deprecated Tokens/Warnings
 
