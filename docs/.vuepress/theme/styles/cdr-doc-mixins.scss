@@ -189,13 +189,16 @@
     margin-top: 16px;
     margin-bottom: 16px;
 
-    tr:nth-child(even) {
-        background-color: white
+    & > thead > tr {
+      background-color: white
     }
 
-    tr:nth-child(odd) {
-        background-color: #f2f2f2
+    & > tbody > tr:nth-child(even) {
+      background-color: white
     }
-
+    
+    & > tbody > tr:nth-child(odd) {
+      background-color: #f2f2f2
+    }
   }
 }
