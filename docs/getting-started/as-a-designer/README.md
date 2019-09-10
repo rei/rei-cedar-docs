@@ -17,7 +17,7 @@
 
 
 
-## Learn About Cedar Cuz its great
+## Learn About Cedar
 
 - Browse the Cedar Design System documentation and the [UI Toolkit Library]() to familiarize yourself with our [foundation styles](), [components](), and [naming conventions]().
 - Run the Cedar UI Toolkit installation process outlined below for Abstract and Sketch.
