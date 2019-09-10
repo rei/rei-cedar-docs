@@ -89,7 +89,7 @@
                 "name": "use",
                 "type": "string",
                 "default": "none",
-                "description": "Only on CdrIcon. Sets the href attribute for use with SVG symbol sprite (CdrIconSprite)."
+                "description": "Only on CdrIcon. Sets the href attribute for use with SVG symbol sprite (see @rei/cedar-icons)."
               },
               {
                 "name": "size",
@@ -137,26 +137,13 @@
 
 A collection of SVG icon files composed into a single file. This method provides a single server download request and caches icons for display. This is the most efficient way of displaying large numbers of icons.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/icon" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrIcon, CdrIconSprite'})" >
+See the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) to generate a sprite sheet for your project. You will need to ensure that your sprite contains all the Cedar icons used in your application, including those used in shared components. The generated sprite sheet should be rendered inline at the root of your HTML. You should avoid rendering the sprite sheet in JavaScript/Vue, as that will cause it to be included twice (once in the server rendered HTML, and once in the client side bundle).
+
+<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/icon" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrIcon'})" :load-sprite="true">
 
 ```html
-  <cdr-icon-sprite />
-
   <cdr-icon use="#arrow-up" />
   <cdr-icon use="#arrow-down" />
-```
-
-</cdr-doc-example-code-pair>
-
-## Individual Icon Components
-
-Display any icon separately. This may be the easiest way to use an icon on a page however it is not recommended for every circumstance. When using a large number of icons, it will generate multiple server requests and slow down performance.
-
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/icon" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'IconCaretUp, IconCaretDown'})" >
-
-```html
-  <icon-caret-up />
-  <icon-caret-down />
 ```
 
 </cdr-doc-example-code-pair>
@@ -279,30 +266,20 @@ Ensure that icons use contrast ratio of 4.5:1 between icon color and background 
 
 ## Slots
 
-**CdrIcon** and all Icon* (IconArrowUp, IconCalendar, etc.) components have a default slot.
-
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
 ## Usage
 
 For a list of all available icons and their names, see the [Icon Library](https://rei.github.io/cedar-icons/#/)
 
-The **CdrIcon** package contains many different components:
-
-1. **CdrIcon**: This is a basic SVG wrapper. This component allows for using Non-Cedar SVGs. Use this component in conjunction with the CdrIconSprite package
-2. **CdrIconSprite**: A symbol definition sprite with all Cedar icons
-3. **Individual icons components**: A component with the icon's svg inlined
-
-
-There are 3 different options to display SVG icons on your page using the **CdrIcon** package.
+There are 2 different options to display SVG icons on your page using the **CdrIcon** package.
 
 ### 1. SVG Sprite
-
-#### Option A: Inline Symbol Sprite
 
 Requires:
 - Icon sprite inline on page
 
+Icon sprites can be generated using the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/).
 
 The sprite needs to be available on any page where the icons are being used, so add the sprite component at the base layout or index:
 
@@ -311,18 +288,21 @@ _App.vue (base template)_
 ```vue
 <template>
   <div id="main">
-    <cdr-icon-sprite />
+    <div v-html="iconSprite" style="display: none;" />
 
     <router-view></router-view> // rest of app
   </div>
 </template>
 
 <script>
-import { CdrIconSprite } from '@rei/cedar';
+/* NOTE: you should create your own optimized sprite file for your project, `all-icons.svg` is only used here for convenience */
+import { iconSprite } from '@rei/cedar-icons/dist/all-icons.svg';
 
 ...
-components: {
-  CdrIconSprite
+data() {
+  return {
+    iconSprite
+  }
 }
 ...
 </script>
@@ -348,65 +328,7 @@ components: {
 </script>
 ```
 
-#### Option B: External Symbol Defs
-
-Requires:
-- `@rei/cdr-icon/sprite/cdr-icon-sprite.svg`
-- A webpack loader to handle the asset. This example assumes the file-loader package
-- A polyfill for external SVG resource. Possible packages are: **svgxuse** or **svg4everybody**
-
-
-Within an individual component (there may be a better way to scale this if the code calls it in many places):
-
-```vue
-<template>
-  ...
-  <cdr-icon :use="`${iconUrl}#caret-right`" />
-  ...
-</template>
-
-<script>
-// import the sprite so file-loader will do its magic
-import iconUrl from '@rei/cdr-assets/dist/cdr-icons.svg`;
-
-export default {
-  ...
-  data() {
-    return {
-      iconUrl
-    };
-  }
-}
-
-</script>
-```
-
-### 2. Individual Icon Components
-
-This may be the easiest way to use an icon on a page however use this method carefully. This method will increase HTML file size and slow down performance if using a lot of icons.
-
-```vue
-<template>
-  ...
-    <icon-caret-right />
-    <icon-clock />
-  ...
-</template>
-
-<script>
-import { IconCaretRight, IconClock } from '@rei/cedar';
-
-...
-  components: {
-    IconCaretRight,
-    IconClock
-  }
-...
-
-</script>
-```
-
-### 3. Non-Cedar SVG
+### 2. Non-Cedar SVG
 
 The **CdrIcon** package is simply an SVG with default attributes set for accessibility and styling.
 

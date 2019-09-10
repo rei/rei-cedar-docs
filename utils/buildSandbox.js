@@ -30,7 +30,6 @@ export default function makeMeASandbox(data, model) {
         content: {
           "name": name,
             // TODO: can we grab the preceding text to use for description?
-            // TODO: pull cedar version from package.json
           "description": "https://rei.github.io/rei-cedar-docs/",
           "dependencies": {
             "@rei/cedar": packageJson.dependencies['@rei/cedar'],
@@ -45,6 +44,10 @@ export default function makeMeASandbox(data, model) {
     },
   };
 
+  if (data.loadSprite) {
+    parameters.files['package.json'].content.dependencies['@rei/cedar-icons'] = packageJson.devDependencies['@rei/cedar-icons']
+  }
+
   return `https://codesandbox.io/api/v1/sandboxes/define?parameters=${getParameters(parameters)}`;
 }
 
@@ -58,11 +61,11 @@ function buildIndexHtml(title) {
   	<title>${title}</title>
   	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
   </head>
-  
+
   <body>
   	<div id="app"></div>
   </body>
-  
+
   </html>`;
 }
 
@@ -70,6 +73,7 @@ function buildContent(data, model, fontImport) {
   return `
 <template>
   <div style="margin: 32px;">
+    ${data.loadSprite ? '<div v-html="svgSprite" style="display: none;"/>' : ''}
     ${data.code}
   </div>
 </template>
@@ -86,6 +90,7 @@ function buildContent(data, model, fontImport) {
 function buildScriptTag(data, model) {
   return `
 import { ${data.components} } from "@rei/cedar";
+${data.loadSprite ? 'import svgSprite from "@rei/cedar-icons/dist/all-icons.svg";' : ''}
 
 export default {
   name: "App",
@@ -94,6 +99,7 @@ export default {
   },
   data() {
     return ${model ? JSON.stringify(model) : "{}"}
-  }
+  },
+  ${data.loadSprite ? 'computed: { svgSprite() { return svgSprite; } }' : ''}
 };`
 }
