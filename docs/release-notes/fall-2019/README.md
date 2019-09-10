@@ -225,7 +225,7 @@ TODO: describe which heading tokens are deprecated, what they map to
 ### Deprecated Utility Classes
 #### Alignment classes
 
-The utility alignment classes have been deprecated and updated to bring them inline with the latest token names. In addition they have been extended to support each of the breakpoint only options. 
+The utility alignment classes have been deprecated and updated to bring them in line with the latest token names. In addition they have been extended to support each of the breakpoint only options. 
 
 Below find a map to migrate to the new names
 
@@ -260,7 +260,7 @@ Below find a map to migrate to the new names
 
 #### Display classes
 
-The utility visibility and accessibility classes have been deprecated and updated to bring them inline with the latest token names. Below find a map to migrate to the new names
+The utility visibility and accessibility classes have been deprecated and updated to bring them in line with the latest token names. Below find a map to migrate to the new names
 
 | Deprecated class name         | Equivalent class name       |
 |-------------------------------|-----------------------------|
