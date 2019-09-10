@@ -34,15 +34,21 @@ If you are not already on Cedar 2.x.x, you will first need to [upgrade your proj
 
 ### New Font/Typography
 
-Sentinel and Roboto have been deprecated as global REI brand fonts. cdr-fonts.css has removed the base64 encoded versions of sentinel fonts as a result and has greatly reducing the overall size of this file. 
+Sentinel and Roboto have been deprecated as global REI brand fonts. cdr-fonts.css has removed the base64 encoded versions of sentinel fonts as a result and has greatly reducing the overall size of this file.
 
-the variant fonts for "REI Stuart App" and "Graphik App" have been added.
+The variant fonts for "REI Stuart App" and "Graphik App" have been added.
 
-[more information on typography](../../foundation/typography/?active-tab=guidelines) 
+[more information on typography](../../foundation/typography/?active-tab=guidelines)
 
 ### New Icons Package
 
-[@rei/icons]()
+We have created a new [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) which will be used to host and distribute Cedar SVG icons going forward.
+
+- Allows consumers to pick and choose which icons to include in their sprite sheet rather than being forced to load all of them.
+- Cedar no longer has to distribute SVG assets, which simplifies our build process.
+- Decreases bundle size as sprite sheets are now loaded inline in the HTML rather than being included in the JavaScript bundle.
+
+See the [deprecated icon components](#deprecated-icon-components) section for more information on updating your icon usage.
 
 ### Deprecated Token Warnings
 
@@ -215,7 +221,7 @@ The following diagram provides a rough guideline of legacy modifier names to the
 
 In addition to the heading changes listed above, the paragraph modifier `body` is now also deprecated without a replacement. Moving forward we only support the generic non modified styling for paragraphs.
 #### more infomation
--  [Headings](../../components/headings) 
+-  [Headings](../../components/headings)
 -  [Paragraphs](../../components/paragraphs)
 
 ### Deprecated Tokens/Warnings
@@ -225,7 +231,7 @@ TODO: describe which heading tokens are deprecated, what they map to
 ### Deprecated Utility Classes
 #### Alignment classes
 
-The utility alignment classes have been deprecated and updated to bring them in line with the latest token names. In addition they have been extended to support each of the breakpoint only options. 
+The utility alignment classes have been deprecated and updated to bring them in line with the latest token names. In addition they have been extended to support each of the breakpoint only options.
 
 | Deprecated class name        | Equivalent class name        |
 |------------------------------|------------------------------|
@@ -318,9 +324,29 @@ The utility visibility and accessibility classes have been deprecated and update
 
 ### Deprecated Icon Components
 
-TODO: update links/package name:
+With the release of the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/), we are deprecating the "single icon" components (i.e, `IconArrowDown`, `IconCart`, etc.) as well as  `CdrIconSprite`. These components will be removed in a future release.  
 
-With the release of the [@rei/icons]() package, we are deprecating the "single icon" components (i.e, IconArrowDown, IconCart) as well as the CdrIconSprite. These components will be removed in a future release.  TODO: link to `New Icons Package` section of this page.
+- If you were using the single icon components, you should update them to use `CdrIcon` and the `use` attribute instead, and follow the instructions below to create and load a sprite sheet.
 
+- If you were using CdrIconSprite, you should use the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) to create an SVG file containing all the icons required for your application. You will then need to render that SVG file somewhere in your application. The best place to do this is inline in your root HTML template rather than in the JavaScript. This ensures that when your app is server-side rendered that the sprite sheet is only rendered one time, rather than being included in both the HTML and the JavaScript files. There are various ways to do this depending on how your application is built, but if you are using the standard REI micro-site architecture built on spring-boot/thymeleaf you can load the sprite sheet as follows:
+
+1. Create a new template named `resources/templates/icon-sprite.html` and copy paste your generated SVG file into it:
+
+```
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <body>
+    <div th:remove="true" th:fragment="icon-sprite">
+      <!-- copy paste your generated SVG file here -->
+    </div>
+  </body>
+</html>
+```
+
+3. Render the sprite sheet somewhere in your app (note this needs to be rendered on every page that contains icons):
+
+```
+<div th:remove="true" th:insert="~{icon-sprite :: icon-sprite}"></div>
+```
 
 </cdr-doc-table-of-contents-shell>
