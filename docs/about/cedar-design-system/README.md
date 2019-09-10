@@ -15,7 +15,7 @@
 <cdr-doc-table-of-contents-shell>
 
 ## About Cedar
-Cedar is REI’s open-source Design System for digital products and experiences. Cedar includes the resources to create user interfaces consistent with REI’s [experience principles](https://rei.github.io/rei-cedar-docs/foundation/experience-principles/), brand styles, and best practices.
+Cedar is REI’s open-source Design System for digital products and experiences. Cedar includes the resources to create user interfaces consistent with REI’s [experience principles](../../foundation/experience-principles/), brand styles, and best practices.
 
 As a foundation for digital product development, the Cedar Design System provides a set of reusable components, style variables, design assets, and guidance for teams to efficiently build high-quality and accessible user interfaces. 
 
