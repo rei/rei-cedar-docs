@@ -224,7 +224,66 @@ TODO: describe which heading tokens are deprecated, what they map to
 
 ### Deprecated Utility Classes
 
-TODO: describe which classes are deprecated, what they are replaced with, where to see the full list
+#### Display classes
+
+The utility visibility classes have been deprecated and updated to bring them inline with the latest token names
+
+| Deprecated class name         | Equivalent class name       |
+|-------------------------------|-----------------------------|
+| cdr-hide                      | cdr-display-none            |
+| cdr-hide@xs-only              | cdr-display-none@xs         |
+| cdr-hide@xs                   |                             |
+| cdr-hide@sm-only              | cdr-display-none@sm         |
+| cdr-hide@sm                   |                             |
+| cdr-hide@md-only              | cdr-display-none@md         |
+| cdr-hide@md                   |                             |
+| cdr-hide@lg-only              | cdr-display-none@lg         |
+| cdr-hide@lg                   |                             |
+|                               | cdr-display-hidden          |
+|                               | cdr-display-hidden@xs       |
+|                               | cdr-display-hidden@sm       |
+|                               | cdr-display-hidden@md       |
+|                               | cdr-display-hidden@lg       |
+| cdr-show                      | cdr-display-block           |
+| cdr-show@xs-only              | cdr-display-block@xs        |
+| cdr-show@xs                   |                             |
+| cdr-show@sm-only              | cdr-display-block@sm        |
+| cdr-show@sm                   |                             |
+| cdr-show@md-only              | cdr-display-block@md        |
+| cdr-show@md                   |                             |
+| cdr-show@lg-only              | cdr-display-block@lg        |
+| cdr-show@lg                   |                             |
+| cdr-show-inline               | cdr-display-inline          |
+| cdr-show-inline@xs-only       | cdr-display-inline@xs       |
+| cdr-show-inline@xs            |                             |
+| cdr-show-inline@sm-only       | cdr-display-inline@sm       |
+| cdr-show-inline@sm            |                             |
+| cdr-show-inline@md-only       | cdr-display-inline@md       |
+| cdr-show-inline@md            |                             |
+| cdr-show-inline@lg-only       | cdr-display-inline@lg       |
+| cdr-show-inline@lg            |                             |
+| cdr-show-inline-block         | cdr-display-inline-block    |
+| cdr-show-inline-block@xs-only | cdr-display-inline-block@xs |
+| cdr-show-inline-block@xs      |                             |
+| cdr-show-inline-block@sm-only | cdr-display-inline-block@sm |
+| cdr-show-inline-block@sm      |                             |
+| cdr-show-inline-block@md-only | cdr-display-inline-block@md |
+| cdr-show-inline-block@md      |                             |
+| cdr-show-inline-block@lg-only | cdr-display-inline-block@lg |
+| cdr-show-inline-block@lg      |                             |
+|                               | cdr-display-flex            |
+|                               | cdr-display-flex@xs         |
+|                               | cdr-display-flex@sm         |
+|                               | cdr-display-flex@md         |
+|                               | cdr-display-flex@lg         |
+|                               | cdr-display-inline-flex     |
+|                               | cdr-display-inline-flex@xs  |
+|                               | cdr-display-inline-flex@sm  |
+|                               | cdr-display-inline-flex@md  |
+|                               | cdr-display-inline-flex@lg  |
+| cdr-sr-only                   | cdr-display-sr-only         |
+| cdr-sr-only-focusable         | cdr-display-sr-focusable    |
+
 
 ### Deprecated Icon Components
 
