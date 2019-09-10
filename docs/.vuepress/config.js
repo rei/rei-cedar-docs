@@ -68,6 +68,7 @@ module.exports = {
         text: "About",
         items: [
           { text: "Cedar Design System", link: "/about/cedar-design-system/" },
+          { text: "Contributing to Cedar", link: "/about/contributing-to-cedar/" },
           { text: "Browser Support", link: "/about/browser-support/" }
         ]
       },
@@ -76,10 +77,8 @@ module.exports = {
         items: [
           { text: "As a Designer", link: "/getting-started/as-a-designer/" },
           { text: "As a Developer", link: "/getting-started/as-a-developer/" },
-          {
-            text: "As an Adopting Team",
-            link: "/getting-started/as-an-adopter/"
-          }
+          { text: "As an Adopting Team", link: "/getting-started/as-an-adopter/"},
+          { text: "Using Cedar", link: "/getting-started/using-cedar/"},
         ]
       },
       {
@@ -142,5 +141,12 @@ module.exports = {
  },
   chainWebpack(config, isServer) {
     config.resolve.alias.set("$vue", "vue/dist/vue.esm.js");
+    config.module.rules.delete('svg')
+    config.module
+      .rule('svg')
+        .test(/\.svg$/)
+        .use('svg-inline-loader')
+          .loader('svg-inline-loader')
+          .end()
   }
 };

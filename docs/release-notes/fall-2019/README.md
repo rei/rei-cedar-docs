@@ -34,21 +34,25 @@ If you are not already on Cedar 2.x.x, you will first need to [upgrade your proj
 
 ### New Font/Typography
 
-Sentinel and Roboto have been deprecated as global REI brand fonts. cdr-fonts.css has removed the base64 encoded versions of sentinel fonts as a result and has greatly reducing the overall size of this file. 
+Sentinel and Roboto have been deprecated as global REI brand fonts. cdr-fonts.css has removed the base64 encoded versions of sentinel fonts as a result and has greatly reducing the overall size of this file.
 
-the variant fonts for "REI Stuart App" and "Graphik App" have been added.
+The variant fonts for "REI Stuart App" and "Graphik App" have been added.
 
-[more information on typography](../../foundation/typography/?active-tab=guidelines) 
+[more information on typography](../../foundation/typography/?active-tab=guidelines)
 
 ### New Icons Package
 
-[@rei/icons]()
+We have created a new [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) which will be used to host and distribute Cedar SVG icons going forward.
+
+- Allows consumers to pick and choose which icons to include in their sprite sheet rather than being forced to load all of them.
+- Cedar no longer has to distribute SVG assets, which simplifies our build process.
+- Decreases bundle size as sprite sheets are now loaded inline in the HTML rather than being included in the JavaScript bundle.
+
+See the [deprecated icon components](#deprecated-icon-components) section for more information on updating your icon usage.
 
 ### Deprecated Token Warnings
 
-TODO:
-
-Put `$cdr-warn: false;` before any tokens import to silence the warnings.
+The `cdr-tokens` package now emits warnings if it detects that you are using deprecated tokens in your SCSS. You can disable this by setting a SCSS variable `$cdr-warn: false;` in any scope that you are using `cdr-tokens` in. Note that these warnings are only emitted by the SCSS build and will not trigger if you are using LESS.
 
 ### Button/CTA full-width@bp
 
@@ -215,22 +219,199 @@ The following diagram provides a rough guideline of legacy modifier names to the
 
 In addition to the heading changes listed above, the paragraph modifier `body` is now also deprecated without a replacement. Moving forward we only support the generic non modified styling for paragraphs.
 #### more infomation
--  [Headings](../../components/headings) 
+-  [Headings](../../components/headings)
 -  [Paragraphs](../../components/paragraphs)
 
-### Deprecated Tokens/Warnings
+### Deprecated Tokens and Mixins
 
-TODO: describe which heading tokens are deprecated, what they map to
+In order to support the updates to typography, we have re-named some Cedar tokens related to headings. Please see the chart below for guidance on how to re-map the deprecated tokens and mixins
+
+| Deprecated token/mixin  | Equivalent token/mixin |
+|-------------------------|-------------------------|
+| cdr-text-header-1 | cdr-text-display-1100 |
+| cdr-text-header-1-family | cdr-text-display-1100-family |
+| cdr-text-header-1-style | cdr-text-display-1100-style |
+| cdr-text-header-1-weight | cdr-text-display-1100-weight |
+| cdr-text-header-1-spacing | cdr-text-display-1100-spacing |
+| cdr-text-header-1-size | cdr-text-display-1100-size |
+| cdr-text-header-1-height | cdr-text-display-1100-height |
+| cdr-text-header-2 | cdr-text-display-900 |
+| cdr-text-header-2-family | cdr-text-display-900-family |
+| cdr-text-header-2-style | cdr-text-display-900-style |
+| cdr-text-header-2-weight | cdr-text-display-900-weight |
+| cdr-text-header-2-spacing | cdr-text-display-900-spacing |
+| cdr-text-header-2-size | cdr-text-display-900-size |
+| cdr-text-header-2-height | cdr-text-display-900-height |
+| cdr-text-header-3 | cdr-text-display-700 |
+| cdr-text-header-3-family | cdr-text-display-700-family |
+| cdr-text-header-3-style | cdr-text-display-700-style |
+| cdr-text-header-3-weight | cdr-text-display-700-weight |
+| cdr-text-header-3-spacing | cdr-text-display-700-spacing |
+| cdr-text-header-3-size | cdr-text-display-700-size |
+| cdr-text-header-3-height | cdr-text-display-700-height |
+| cdr-text-header-4 | cdr-text-display-600 |
+| cdr-text-header-4-family | cdr-text-display-600-family |
+| cdr-text-header-4-style | cdr-text-display-600-style |
+| cdr-text-header-4-weight | cdr-text-display-600-weight |
+| cdr-text-header-4-spacing | cdr-text-display-600-spacing |
+| cdr-text-header-4-size | cdr-text-display-600-size |
+| cdr-text-header-4-height | cdr-text-display-600-height |
+| cdr-text-header-5 | cdr-text-display-500 |
+| cdr-text-header-5-family | cdr-text-display-500-family |
+| cdr-text-header-5-style | cdr-text-display-500-style |
+| cdr-text-header-5-weight | cdr-text-display-500-weight |
+| cdr-text-header-5-spacing | cdr-text-display-500-spacing |
+| cdr-text-header-5-size | cdr-text-display-500-size |
+| cdr-text-header-5-height | cdr-text-display-500-height |
+| cdr-text-header-6 | cdr-text-display-400 |
+| cdr-text-header-6-family | cdr-text-display-400-family |
+| cdr-text-header-6-style | cdr-text-display-400-style |
+| cdr-text-header-6-weight | cdr-text-display-400-weight |
+| cdr-text-header-6-spacing | cdr-text-display-400-spacing |
+| cdr-text-header-6-size | cdr-text-display-400-size |
+| cdr-text-header-6-height | cdr-text-display-400-height |
+| cdr-text-header-7 | cdr-text-display-300 |
+| cdr-text-header-7-family | cdr-text-display-300-family |
+| cdr-text-header-7-style | cdr-text-display-300-style |
+| cdr-text-header-7-weight | cdr-text-display-300-weight |
+| cdr-text-header-7-spacing | cdr-text-display-300-spacing |
+| cdr-text-header-7-size | cdr-text-display-300-size |
+| cdr-text-header-7-height | cdr-text-display-300-height |
+| cdr-text-editorial | cdr-text-default |
+| cdr-text-editorial-family | cdr-text-default-family |
+| cdr-text-editorial-style | cdr-text-default-style |
+| cdr-text-editorial-weight | cdr-text-default-weight |
+| cdr-text-editorial-spacing | cdr-text-default-spacing |
+| cdr-text-editorial-size | cdr-text-default-size |
+| cdr-text-editorial-height | cdr-text-default-height |
+| cdr-text-editorial-compact | cdr-text-default-compact |
+| cdr-text-editorial-compact-family | cdr-text-default-compact-family |
+| cdr-text-editorial-compact-style | cdr-text-default-compact-style |
+| cdr-text-editorial-compact-weight | cdr-text-default-compact-weight |
+| cdr-text-editorial-compact-spacing | cdr-text-default-compact-spacing |
+| cdr-text-editorial-compact-size | cdr-text-default-compact-size |
+| cdr-text-editorial-compact-height | cdr-text-default-compact-height |
+
 
 ### Deprecated Utility Classes
+#### Alignment classes
 
-TODO: describe which classes are deprecated, what they are replaced with, where to see the full list
+The utility alignment classes have been deprecated and updated to bring them in line with the latest token names. In addition they have been extended to support each of the breakpoint only options.
+
+| Deprecated class name        | Equivalent class name        |
+|------------------------------|------------------------------|
+| cdr-text-left                | cdr-align-text-left          |
+|                              | cdr-align-text-left@xs       |
+|                              | cdr-align-text-left@sm       |
+|                              | cdr-align-text-left@md       |
+|                              | cdr-align-text-left@lg       |
+| cdr-text-center              | cdr-align-text-center        |
+|                              | cdr-align-text-center@xs     |
+|                              | cdr-align-text-center@sm     |
+|                              | cdr-align-text-center@md     |
+|                              | cdr-align-text-center@lg     |
+| cdr-text-right               | cdr-align-text-right         |
+|                              | cdr-align-text-right@xs      |
+|                              | cdr-align-text-right@sm      |
+|                              | cdr-align-text-right@md      |
+|                              | cdr-align-text-right@lg      |
+|                              | cdr-align-text-justify       |
+|                              | cdr-align-text-justify@xs    |
+|                              | cdr-align-text-justify@sm    |
+|                              | cdr-align-text-justify@md    |
+|                              | cdr-align-text-justify@lg    |
+| cdr-center-block             | cdr-align-center-block       |
+|                              | cdr-align-center-block@xs    |
+|                              | cdr-align-center-block@sm    |
+|                              | cdr-align-center-block@md    |
+|                              | cdr-align-center-block@lg    |
+
+#### Display classes
+
+The utility visibility and accessibility classes have been deprecated and updated to bring them in line with the latest token names. Below find a map to migrate to the new names
+
+| Deprecated class name         | Equivalent class name       |
+|-------------------------------|-----------------------------|
+| cdr-hide                      | cdr-display-none            |
+| cdr-hide@xs-only              | cdr-display-none@xs         |
+| cdr-hide@xs                   |                             |
+| cdr-hide@sm-only              | cdr-display-none@sm         |
+| cdr-hide@sm                   |                             |
+| cdr-hide@md-only              | cdr-display-none@md         |
+| cdr-hide@md                   |                             |
+| cdr-hide@lg-only              | cdr-display-none@lg         |
+| cdr-hide@lg                   |                             |
+|                               | cdr-display-hidden          |
+|                               | cdr-display-hidden@xs       |
+|                               | cdr-display-hidden@sm       |
+|                               | cdr-display-hidden@md       |
+|                               | cdr-display-hidden@lg       |
+| cdr-show                      | cdr-display-block           |
+| cdr-show@xs-only              | cdr-display-block@xs        |
+| cdr-show@xs                   |                             |
+| cdr-show@sm-only              | cdr-display-block@sm        |
+| cdr-show@sm                   |                             |
+| cdr-show@md-only              | cdr-display-block@md        |
+| cdr-show@md                   |                             |
+| cdr-show@lg-only              | cdr-display-block@lg        |
+| cdr-show@lg                   |                             |
+| cdr-show-inline               | cdr-display-inline          |
+| cdr-show-inline@xs-only       | cdr-display-inline@xs       |
+| cdr-show-inline@xs            |                             |
+| cdr-show-inline@sm-only       | cdr-display-inline@sm       |
+| cdr-show-inline@sm            |                             |
+| cdr-show-inline@md-only       | cdr-display-inline@md       |
+| cdr-show-inline@md            |                             |
+| cdr-show-inline@lg-only       | cdr-display-inline@lg       |
+| cdr-show-inline@lg            |                             |
+| cdr-show-inline-block         | cdr-display-inline-block    |
+| cdr-show-inline-block@xs-only | cdr-display-inline-block@xs |
+| cdr-show-inline-block@xs      |                             |
+| cdr-show-inline-block@sm-only | cdr-display-inline-block@sm |
+| cdr-show-inline-block@sm      |                             |
+| cdr-show-inline-block@md-only | cdr-display-inline-block@md |
+| cdr-show-inline-block@md      |                             |
+| cdr-show-inline-block@lg-only | cdr-display-inline-block@lg |
+| cdr-show-inline-block@lg      |                             |
+|                               | cdr-display-flex            |
+|                               | cdr-display-flex@xs         |
+|                               | cdr-display-flex@sm         |
+|                               | cdr-display-flex@md         |
+|                               | cdr-display-flex@lg         |
+|                               | cdr-display-inline-flex     |
+|                               | cdr-display-inline-flex@xs  |
+|                               | cdr-display-inline-flex@sm  |
+|                               | cdr-display-inline-flex@md  |
+|                               | cdr-display-inline-flex@lg  |
+| cdr-sr-only                   | cdr-display-sr-only         |
+| cdr-sr-only-focusable         | cdr-display-sr-focusable    |
+
 
 ### Deprecated Icon Components
 
-TODO: update links/package name:
+With the release of the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/), we are deprecating the "single icon" components (i.e, `IconArrowDown`, `IconCart`, etc.) as well as  `CdrIconSprite`. These components will be removed in a future release.  
 
-With the release of the [@rei/icons]() package, we are deprecating the "single icon" components (i.e, IconArrowDown, IconCart) as well as the CdrIconSprite. These components will be removed in a future release.  TODO: link to `New Icons Package` section of this page.
+- If you were using the single icon components, you should update them to use `CdrIcon` and the `use` attribute instead, and follow the instructions below to create and load a sprite sheet.
 
+- If you were using CdrIconSprite, you should use the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) to create an SVG file containing all the icons required for your application. You will then need to render that SVG file somewhere in your application. The best place to do this is inline in your root HTML template rather than in the JavaScript. This ensures that when your app is server-side rendered that the sprite sheet is only rendered one time, rather than being included in both the HTML and the JavaScript files. There are various ways to do this depending on how your application is built, but if you are using the standard REI micro-site architecture built on spring-boot/thymeleaf you can load the sprite sheet as follows:
+
+1. Create a new template named `resources/templates/icon-sprite.html` and copy paste your generated SVG file into it:
+
+```
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <body>
+    <div th:remove="true" th:fragment="icon-sprite">
+      <!-- copy paste your generated SVG file here -->
+    </div>
+  </body>
+</html>
+```
+
+3. Render the sprite sheet somewhere in your app (note this needs to be rendered on every page that contains icons):
+
+```
+<div th:remove="true" th:insert="~{icon-sprite :: icon-sprite}"></div>
+```
 
 </cdr-doc-table-of-contents-shell>
