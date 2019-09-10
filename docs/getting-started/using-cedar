@@ -1,0 +1,62 @@
+---
+{
+  "title": "Using Cedar",
+  "title_metadata": false,
+  "layout_type": "LayoutArticle",
+  "breadcrumbs": [
+    {
+      "text": "Getting Started/"
+    }
+  ]
+}
+---
+
+<cdr-doc-table-of-contents-shell>#
+
+Cedar supports multiple tools and consumption methods. Reference the information below for an overview of the system parts and determine how to use Cedar in your project.
+
+## Cedar Tools and Resources
+
+### UI Toolkit
+The Sketch UI Toolkit maintained by Cedar includes all published components and foundational styles.
+
+For more information about using the UI Toolkit, visit the [Getting Started for Designers](https://rei.github.io/rei-cedar-docs/getting-started/as-a-designer/) article.
+
+### Design Tokens
+Design tokens are special variables used to maintain a scalable visual system for UI development and brand consistency. Cedar design tokens store the visual design attributes that define the foundation of REI’s visual language, including color, typography, and spacing. 
+
+For example:
+`cdr-color-text-primary-lightmode` would be used to set the primary text color on a light background.
+
+For more information about design tokens, read the [Design Tokens](https://rei.github.io/rei-cedar-docs/foundation/tokens/) article.
+
+### Components
+Components use Cedar’s tokens and design foundations to distribute code templates that extend basic HTML elements and encapsulate reusable code.
+These custom markup elements represent specific portions of the user interface. When used in your application, they will help ensure the UI remains consistent with REI’s digital display standards.
+
+For example:
+`<cdr-link href=”rei.com”>CdrLink Component</cdr-link>` 
+
+### Component Variables
+Component variables are available for a subset of Cedar components. These SCSS or LESS mixins extend design tokens and define additional specific variables that are used to display Cedar components.  
+
+For example:
+`cdr-link-base-mixin` would be used to style an element like a CdrLink component.
+
+For more information on  Component variables, visit the [Component Variables](https://rei.github.io/rei-cedar-docs/components/component-variables) article.
+
+### Utilities
+Utility CSS classes allow users to extend Cedar components by providing options for layout, such as spacing, text alignment, or element display.
+
+For example:
+`cdr-align-text-center` would be used to align text to the center.
+
+Find the list of Utility classes in the [Utilities](https://rei.github.io/rei-cedar-docs/components/utilties) article.
+
+
+### Documentation Site
+The documentation for each component and foundational style includes design guidelines, do’s and don’ts, considerations for accessibility, and API instructions for developers. 
+
+## Dev Tools Comparison Chart 
+
+</cdr-doc-table-of-contents-shell>
