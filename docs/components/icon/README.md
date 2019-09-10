@@ -250,15 +250,10 @@ When the mouse and keyboard are the primary input methods or when icons are pair
 
 ## Icon Library
 
-<icon-grid />
-
-List of icons with names and descriptions about when or how to use each icon. Icons are referred to as:
-- `<name-of-icon>` when using with the method for SVG sprite. For example, account-profile
-- `Icon<NameOfIcon>` when using with the method for Individual icon component. For example, the icon, ‘account-profile’ becomes IconAccountProfile
-
-<icon-table />
+For a list of all available icons and their names, see the [Icon Library](https://rei.github.io/cedar-icons/#/)
 
 ## Behavior
+
 When using icons with links or buttons, make sure that the icon communicates intended meaning.
 
 <do-dont :examples="$page.frontmatter.meaning" class="cdr-mb-space-two-x"/>
@@ -290,7 +285,7 @@ Ensure that icons use contrast ratio of 4.5:1 between icon color and background 
 
 ## Usage
 
-For a list of all available icons and their names, see the [Icon Library](?active-tab=design-guidelines&active-link=icon-library)
+For a list of all available icons and their names, see the [Icon Library](https://rei.github.io/cedar-icons/#/)
 
 The **CdrIcon** package contains many different components:
 
