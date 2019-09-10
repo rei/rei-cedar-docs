@@ -142,5 +142,12 @@ module.exports = {
  },
   chainWebpack(config, isServer) {
     config.resolve.alias.set("$vue", "vue/dist/vue.esm.js");
+    config.module.rules.delete('svg')
+    config.module
+      .rule('svg')
+        .test(/\.svg$/)
+        .use('svg-inline-loader')
+          .loader('svg-inline-loader')
+          .end()
   }
 };
