@@ -132,7 +132,7 @@ In order to unit test code that loads Cedar, you will need to run JSDOM or an eq
 
 The spacing utility classes have been deprecated and re-named to be consistent with our naming structure for tokens. This includes `cdr-stack`, `cdr-inline`, and `cdr-inset`, as well as their modifiers like `cdr-stack--lg`, or `cdr-inset--squish`.
 
-- All of the [deprecated classes can be found here](https://github.com/rei/rei-cedar/blob/next/src/css/utility/_legacy.scss), and you can read more about the new utility classes in our [spacing foundation article](https://rei.github.io/rei-cedar-docs/foundation/spacing/)
+- All of the [deprecated classes can be found here](https://github.com/rei/rei-cedar/blob/45f3242d3e52c26ec48157b7290529dbf951440a/src/css/utility/_legacy.scss), and you can read more about the new utility classes in our [spacing foundation article](https://rei.github.io/rei-cedar-docs/foundation/spacing/)
 - You can check if your project is affected by searching your codebase for the following CSS classes: `cdr-stack`, `cdr-inset`, and `cdr-inline`. Note which of the utility classes appear. They may show up either in their base form (i.e, `cdr-stack`), or with a size modifier (i.e, `cdr-stack--lg`)
 - We have also create a [spacing utility detector script](#spacing-utility-detector) that will highlight any use of the deprecated spacing classes on a page 
 - For each of the deprecated classes that you are using, look it up in the [utility class migration map](#spacing-utility-class-mapping ) to find which of the new classes is equivalent, and execute a find and replace on your codebase to update it 
@@ -142,7 +142,7 @@ The spacing utility classes have been deprecated and re-named to be consistent w
 
 This change was necessary to support the changes to the CSS reset mentioned above. The utility classes need enough precedence to override the base Cedar styling, while the base Cedar styling needs enough specificity to not target Cedar 1 or non-Cedar elements.
 
-Our utility classes always target a single CSS property. That means, if they are present on an element, then they should not be overridden by other styling. However this behavior may be undesirable if you are using utility classes for an initial layout and then applying custom classes as modifiers on top of that. If that is the case, then you will need to update your code to remove that utility class and instead apply that style in another way. All of the [deprecated utility classes and their property or value can be found here](https://github.com/rei/rei-cedar/blob/next/src/css/utility/_legacy.scss).
+Our utility classes always target a single CSS property. That means, if they are present on an element, then they should not be overridden by other styling. However this behavior may be undesirable if you are using utility classes for an initial layout and then applying custom classes as modifiers on top of that. If that is the case, then you will need to update your code to remove that utility class and instead apply that style in another way.
 
 ### Spacing Utility Detector 
 
