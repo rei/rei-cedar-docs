@@ -1,4 +1,5 @@
 import { getParameters } from 'codesandbox/lib/api/define';
+import packageJson from '../package.json';
 
 const INDEX_JS = `import Vue from "vue";
 import App from "./App";
@@ -32,7 +33,7 @@ export default function makeMeASandbox(data, model) {
             // TODO: pull cedar version from package.json
           "description": "https://rei.github.io/rei-cedar-docs/",
           "dependencies": {
-            "@rei/cedar": "^2.0.0-alpha.0",
+            "@rei/cedar": packageJson.dependencies['@rei/cedar'],
             "lodash": "^4.17.4",
             "vue": "^2.5.22"
           }

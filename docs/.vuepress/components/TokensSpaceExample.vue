@@ -1,5 +1,5 @@
 <template>
-  <div :class="[!isInset ? 'space-wrapper' : '']">
+  <div :class="[!isInset ? 'space-wrapper' : '', 'cdr-mb-space-one-x']">
     <div v-if="isInset" class="inset-example" :style="{boxShadow: inset, padding: pad}">content</div>
     <div v-else class="space-example" :style="{width: spaceValue, height: spaceValue}"/>
   </div>
@@ -10,9 +10,13 @@ import tokens from '@rei/cdr-tokens/dist/js/cdr-tokens.common';
 import camelCase from 'lodash/camelCase';
 
 export default {
-  name: 'SpaceExample',
+  name: 'TokensSpaceExample',
   props: {
     name: String,
+    isInset: {
+      type: Boolean,
+      default: false
+    }
   },
   data() {
     return {
@@ -20,9 +24,6 @@ export default {
     };
   },
   computed: {
-    isInset() {
-      return this.name.includes('inset');
-    },
     spaceValue() {
       return this.tokens[camelCase(this.name)];
     },

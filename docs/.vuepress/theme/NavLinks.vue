@@ -1,21 +1,24 @@
 <template>
   <nav class="nav-links cdr-doc-nav-links" v-if="userLinks.length || repoLink">
     <!-- user links -->
-    <cdr-accordion-item
+    <cdr-accordion
       v-if="item.type === 'links'"
-      v-for="item in userLinks"
+      v-for="(item, index) in userLinks"
       :key="item.text"
       :id="item.text.replace(' ', '-').toLowerCase()"
-      :label="item.text"
       class="nav-item cdr-accordion-nav"
-      :show="showNavGroup(item.text)"
+      :opened="navGroup[index]"
+      @accordion-toggle="navToggle(index)"
     >
+      <template slot="label">
+        {{ item.text }}
+      </template>
       <ul class="nav-dropdown cdr-doc-side-navigation__child-links">
         <li v-for="navItem in item.items" class="dropdown-item">
           <nav-link :item="navItem" class="cdr-doc-side-navigation__child-link" />
         </li>
       </ul> 
-    </cdr-accordion-item>
+    </cdr-accordion>
     <NavLink v-else :item="item"/>
     <!-- </div> -->
     <!-- repo link -->
@@ -33,7 +36,7 @@
 <script>
 import OutboundLink from './OutboundLink.vue'
 import DropdownLink from './DropdownLink.vue'
-import { CdrAccordionItem, CdrList } from '@rei/cedar';
+import { CdrAccordion, CdrList } from '@rei/cedar';
 
 // TODO: all cedar css should get glovally loaded
 // import '@rei/cdr-accordion/dist/cdr-accordion.css';
@@ -41,7 +44,33 @@ import { resolveNavLinkItem } from './util'
 import NavLink from './NavLink.vue'
 
 export default {
-  components: { OutboundLink, NavLink, DropdownLink, CdrAccordionItem },
+  components: { OutboundLink, NavLink, DropdownLink, CdrAccordion },
+  data() {
+    /*
+      Initialize as closed accordions.
+    */
+    return {
+      navGroup: [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ]
+    };
+  },
+  created() {
+    /*
+      Determine if an accordion should be open on load.
+      Doing this here because ssr-approved hook.
+    */
+    this.$site.themeConfig.nav.forEach((item, index) => {
+      if (this.showNavGroup(item.text)) {
+        this.$set(this.navGroup, index, true);
+      }
+    }); 
+  },
   computed: {
     userNav () {
       return this.$themeLocaleConfig.nav || this.$site.themeConfig.nav || []
@@ -112,13 +141,18 @@ export default {
   methods: {
     showNavGroup(text) {
       return text.toLowerCase().replace(' ', '-') === this.$page.path.split('/')[1];
-    }
-  },
-  provide() {
-    return {
-      compact: false,
-      borderAligned: false,
-      showAll: false
+    },
+    navToggle(index) {
+      const opened = this.navGroup[index];
+      if (opened) {
+        this.$set(this.navGroup, index, false);
+      } else {
+        for (let i = 0; i < this.navGroup.length; i += 1) {
+          if (index === i || this.navGroup[i]) {
+            this.$set(this.navGroup, i, index === i);
+          }
+        }
+      }
     }
   }
 }

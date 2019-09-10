@@ -1,12 +1,12 @@
 <template>
   <div :class="['rei-doc-alert', colorClass]">
     <icon-information-stroke 
-      size="sm" 
+      size="small" 
       class="rei-doc-alert__icon"
       v-if="icon === 'info'"
     />
     <icon-warning-tri
-      size="sm"
+      size="small"
       class="rei-doc-alert__icon"
       v-if="icon === 'warning'"
     />

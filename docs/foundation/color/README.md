@@ -30,268 +30,50 @@ Below is a list of color tokens with descriptions and values. Web and mobile col
   - **For iOS:** CdrColorTextPrimaryLightmode  
   
 
+<tokens-color type="background">
 ## Background Colors
-
-<table>
-  <tbody>
-    <tr>
-      <td width=64> <color-example color="cdr-color-background-lightest" /> </td>
-      <td><b>cdr-color-background-lightest </b> <br>Only use for light background color - lightest value </td>
-      <td width=160>#ffffff <br>r255  g255  b255 </td>
-    </tr>
-    <tr>
-      <td width=64> <color-example color="cdr-color-background-lighter" /> </td>
-      <td><b>cdr-color-background-lighter </b> <br>Only use for light background color - value is between light and lightest  </td>
-      <td width=160>#fafafa <br>r250  g250  b250 </td>
-    </tr>
-    <tr>
-      <td width=64> <color-example color="cdr-color-background-light" /> </td>
-      <td><b>cdr-color-background-light</b> <br>Only use for light background color </td>
-      <td width=160>#f7f7f7 <br>r247  g247  b247 </td>
-    </tr>
-    <tr>
-      <td width=64> <color-example color="cdr-color-background-dark" /> </td>
-      <td><b>cdr-color-background-dark</b> <br>Only use for dark background color  </td>
-      <td width=160>#292929 <br>r41  g41  b41 </td>
-    </tr>
-    <tr>
-      <td width=64> <color-example color="cdr-color-background-darker" /> </td>
-      <td><b>cdr-color-background-darker</b> <br>Only use for dark background color - darkest value  </td>
-      <td width=160>#1a1a1a <br>r26  g26  b26 </td>
-    </tr>
-  </tbody>
-</table>
-
+</tokens-color>
 
 <br>
 
 ## Typography Colors
+
+<tokens-color type="text" mode="light">
 ### For Light Backgrounds
-
-<table>
-  <tbody>
-    <tr>
-      <td width=64> <color-example color="cdr-color-text-primary-lightmode" /> </td>
-      <td><b>cdr-color-text-primary-lightmode</b> <br>Primary body text color on a light background</td>
-      <td width=160>#292929 <br> r41  g41  b41 </td>
-    </tr>
-    <tr>
-      <td width=64> <color-example color="cdr-color-text-secondary-lightmode" /> </td>
-      <td><b>cdr-color-text-secondary-lightmode</b> <br>Secondary or supplemental text color on a light background  </td>
-      <td width=160>#616161 <br>r97  g97  b97 </td>
-    </tr>
-    <tr>
-      <td width=64> <color-example color="cdr-color-text-link-lightmode" />  </td>
-      <td><b>cdr-color-text-link-lightmode</b> <br>Link text color on a light background  </td>
-      <td width=160>#3278ae <br>r50  g120  b174 </td>
-    </tr>
-    <tr>
-      <td width=64> <color-example color="cdr-color-text-error-lightmode" /> </td>
-      <td><b>cdr-color-text-error-lightmode</b> <br>Error text color on a light background  </td>
-      <td width=160>#b5292b <br>r181  g41  b43 </td>
-    </tr>
-    <tr>
-      <td width=64> <color-example color="cdr-color-text-disabled-lightmode" />  </td>
-      <td><b>cdr-color-text-disabled-lightmode</b> <br>Disabled text color for interactive UI elements on a light background  </td>
-      <td width=160>#b8b8b8 <br>r184  g184  b184 </td>
-    </tr>
-  </tbody>
-</table>
-
+</tokens-color>
 
 <br>
 
-### For Dark Backgrounds
 
-<table>
-  <tbody>
-    <tr>
-      <td width=64> <color-example color="cdr-color-text-primary-darkmode" />  </td>
-      <td><b>cdr-color-text-primary-darkmode </b> <br>Primary body text color on a dark background  </td>
-      <td width=160>#fafafa <br>r250  g250  b250 </td>
-    </tr>
-    <tr>
-      <td width=64> <color-example color="cdr-color-text-secondary-darkmode" />  </td>
-      <td><b>cdr-color-text-secondary-darkmode </b> <br>Secondary or supplemental text color on a dark background </td>
-      <td width=160>#999999 <br>r153  g153  b153 </td>
-    </tr>
-    <tr>
-      <td width=64> <color-example color="cdr-color-text-link-darkmode" />  </td>
-      <td><b>cdr-color-text-link-darkmode </b> <br>Link text color on a dark background  </td>
-      <td width=160>#5197cd <br>r81  g151  b205 </td>
-    </tr>
-    <tr>
-      <td width=64> <color-example color="cdr-color-text-error-darkmode" /> </td>
-      <td><b>cdr-color-text-error-darkmode </b> <br>Error text color on a dark background   </td>
-      <td width=160>#e86868 <br>r232  g104  b104 </td>
-    </tr>
-    <tr>
-      <td width=64> <color-example color="cdr-color-text-disabled-darkmode" />  </td>
-      <td><b>cdr-color-text-disabled-darkmode </b> <br>Disabled text color for interactive UI elements on a dark background </td>
-      <td width=160>#616161 <br>r97  g97  b97 </td>
-    </tr>
-  </tbody>
-</table>
+<tokens-color type="text" mode="dark">
+### For Dark Backgrounds
+</tokens-color>
 
 <br>
 
 ## Icon Colors
+
+<tokens-color type="icon" mode="light">
 ### For Light Backgrounds
+</tokens-color>
 
-<table>
-  <tbody>
-    <tr>
-      <td width=64> <color-example color="cdr-color-icon-emphasis-lightmode" />  </td>
-      <td><b>cdr-color-icon-emphasis-lightmode </b> <br>Emphasis or darkest icon color on a light background  </td>
-      <td width=160>#292929 <br>r41  g41  b41 </td>
-    </tr>
-    <tr>
-      <td width=64> <color-example color="cdr-color-icon-primary-lightmode" />  </td>
-      <td><b>cdr-color-icon-primary-lightmode </b> <br>Primary icon color on a light background </td>
-      <td width=160>#616161 <br>r97  g97  b97 </td>
-    </tr>
-  </tbody>
-</table>
-
+<tokens-color type="icon" mode="dark">
 ### For Dark Backgrounds
-<table>
-  <tbody>
-    <tr>
-      <td width=64> <color-example color="cdr-color-icon-emphasis-darkmode" />  </td>
-      <td><b>cdr-color-icon-emphasis-darkmode </b> <br>Emphasis or lightest icon color on a dark background  </td>
-      <td width=160>#fafafa <br>r250  g250  b250 </td>
-    </tr>
-    <tr>
-      <td width=64> <color-example color="cdr-color-icon-primary-darkmode" />  </td>
-      <td><b>cdr-color-icon-primary-darkmode  </b> <br>Primary icon color on a dark background </td>
-      <td width=160>#999999 <br>r153  g153  b153 </td>
-    </tr>
-  </tbody>
-</table>
-
-<br>
-
-## Form Colors
-### For Light Backgrounds
-
-<table>
-  <tbody>
-    <tr>
-      <td width=64> <color-example color="cdr-color-text-form-label-lightmode" /> </td>
-      <td><b>cdr-color-text-form-label-lightmode </b> <br>Label text color for forms on a light background. Can also be used for input entry text  </td>
-      <td width=160>#292929 <br>r41  g41  b41 </td>
-    </tr>
-    <tr>
-      <td width=64> <color-example color="cdr-color-text-form-placeholder-lightmode" />  </td>
-      <td><b>cdr-color-text-form-placeholder-lightmode </b> <br>Placeholder text color for forms on a light background </td>
-      <td width=160>#616161 <br>r97  g97  b97 </td>
-    </tr>
-    <tr>
-      <td width=64> <color-example color="cdr-color-text-form-disabled-lightmode" />  </td>
-      <td><b>cdr-color-text-form-disabled-lightmode </b> <br>Disabled text color for forms on a light background </td>
-      <td width=160>#b8b8b8 <br>r184  g184  b184 </td>
-    </tr>
-    <tr>
-      <td width=64> <color-example color="cdr-color-background-form-lightmode" />  </td>
-      <td><b>cdr-color-background-form-lightmode </b> <br>Light background color for forms </td>
-      <td width=160>#ffffff <br>r255  g255  b255 </td>
-    </tr>
-    <tr>
-      <td width=64> <color-example color="cdr-color-background-form-input-lightmode" />  </td>
-      <td><b>cdr-color-background-form-input-lightmode </b> <br>Light background color for input control </td>
-      <td width=160>#ffffff <br>r255  g255  b255 </td>
-    </tr>
-  </tbody>
-</table>
-
-
-<br>
-
-### For Dark Backgrounds
-
-<table>
-  <tbody>
-    <tr>
-      <td width=64> <color-example color="cdr-color-text-form-label-darkmode" />  </td>
-      <td><b>cdr-color-text-form-label-darkmode </b> <br>Label text color for forms on a dark background. Can also be used for input entry text </td>
-      <td width=160>#fafafa <br>r250  g250  b250 </td>
-    </tr>
-    <tr>
-      <td width=64> <color-example color="cdr-color-text-form-placeholder-darkmode" />  </td>
-      <td><b>cdr-color-text-form-placeholder-darkmode </b> <br>Placeholder text color for forms on a dark background </td>
-      <td width=160>#999999 <br>r153  g153  b153 </td>
-    </tr>
-    <tr>
-      <td width=64> <color-example color="cdr-color-text-form-disabled-darkmode" /> </td>
-      <td><b>cdr-color-text-form-disabled-darkmode </b> <br>Disabled text color for forms on a dark background </td>
-      <td width=160>#616161 <br>r97  g97  b97 </td>
-    </tr>
-    <tr>
-      <td width=64> <color-example color="cdr-color-background-form-darkmode" />  </td>
-      <td><b>cdr-color-background-form-darkmode </b> <br>Dark background color for forms </td>
-      <td width=160>#292929 <br>r41  g41  b41 </td>
-    </tr>
-    <tr>
-      <td width=64> <color-example color="cdr-color-background-form-input-darkmode" /> </td>
-      <td><b>cdr-color-background-form-input-darkmode </b> <br>Dark background color for input control </td>
-      <td width=160>#292929 <br>r41  g41  b41 </td>
-    </tr>
-  </tbody>
-</table>
-
+</tokens-color>
 
 <br>
 
 ## Border Colors
+
+<tokens-color type="border" mode="light">
 ### For Light Backgrounds
-
-<table>
-  <tbody>
-    <tr>
-      <td width=64> <color-example color="cdr-color-border-primary-lightmode" />  </td>
-      <td><b>cdr-color-border-primary-lightmode </b> <br>Primary border color for light background </td>
-      <td width=160>#616161 <br>r97  g97  b97 </td>
-    </tr>
-    <tr>
-      <td width=64> <color-example color="cdr-color-border-secondary-lightmode" /> </td>
-      <td><b>cdr-color-border-secondary-lightmode </b> <br>Secondary border color for light background </td>
-      <td width=160>#b8b8b8 <br>r184  g184  b184 </td>
-    </tr>
-    <tr>
-      <td width=64> <color-example color="cdr-color-border-disabled-lightmode" />  </td>
-      <td><b>cdr-color-border-disabled-lightmode </b> <br>Border color for disabled state for light background </td>
-      <td width=160>#dadada <br>r218  g218  b218 </td>
-    </tr>
-    <tr>
-      <td width=64> <color-example color="cdr-color-border-error-lightmode" /> </td>
-      <td><b>cdr-color-border-error-lightmode </b> <br>Border color for error validation state for light background </td>
-      <td width=160>#e86868 <br>r232  g104  b104  </td>
-    </tr>
-    <tr>
-      <td width=64> <color-example color="cdr-color-border-selected-lightmode" /> </td>
-      <td><b>cdr-color-border-selected-lightmode </b>  </td>
-      <td width=160>#2b6692 <br>r43  g102  b146  </td>
-    </tr>
-  </tbody>
-</table>
-
-
+</tokens-color>
 
 <br>
 
+<tokens-color type="border" mode="dark">
 ### For Dark Backgrounds
-
-<table>
-  <tbody>
-    <tr>
-      <td width=64> <color-example color="cdr-color-border-secondary-darkmode" />  </td>
-      <td> <b>cdr-color-border-secondary-darkmode </b> <br>Secondary border color for dark background </td>
-      <td width=160>#999999  <br>r153  g153  b153  </td>
-    </tr>
-  </tbody>
-</table>
-
-
+</tokens-color>
 
 <br>
 
