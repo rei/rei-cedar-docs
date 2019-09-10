@@ -223,10 +223,41 @@ In addition to the heading changes listed above, the paragraph modifier `body` i
 TODO: describe which heading tokens are deprecated, what they map to
 
 ### Deprecated Utility Classes
+#### Alignment classes
+
+The utility alignment classes have been deprecated and updated to bring them in line with the latest token names. In addition they have been extended to support each of the breakpoint only options. 
+
+| Deprecated class name        | Equivalent class name        |
+|------------------------------|------------------------------|
+| cdr-text-left                | cdr-align-text-left          |
+|                              | cdr-align-text-left@xs       |
+|                              | cdr-align-text-left@sm       |
+|                              | cdr-align-text-left@md       |
+|                              | cdr-align-text-left@lg       |
+| cdr-text-center              | cdr-align-text-center        |
+|                              | cdr-align-text-center@xs     |
+|                              | cdr-align-text-center@sm     |
+|                              | cdr-align-text-center@md     |
+|                              | cdr-align-text-center@lg     |
+| cdr-text-right               | cdr-align-text-right         |
+|                              | cdr-align-text-right@xs      |
+|                              | cdr-align-text-right@sm      |
+|                              | cdr-align-text-right@md      |
+|                              | cdr-align-text-right@lg      |
+|                              | cdr-align-text-justify       |
+|                              | cdr-align-text-justify@xs    |
+|                              | cdr-align-text-justify@sm    |
+|                              | cdr-align-text-justify@md    |
+|                              | cdr-align-text-justify@lg    |
+| cdr-center-block             | cdr-align-center-block       |
+|                              | cdr-align-center-block@xs    |
+|                              | cdr-align-center-block@sm    |
+|                              | cdr-align-center-block@md    |
+|                              | cdr-align-center-block@lg    |
 
 #### Display classes
 
-The utility visibility classes have been deprecated and updated to bring them inline with the latest token names
+The utility visibility and accessibility classes have been deprecated and updated to bring them in line with the latest token names. Below find a map to migrate to the new names
 
 | Deprecated class name         | Equivalent class name       |
 |-------------------------------|-----------------------------|
