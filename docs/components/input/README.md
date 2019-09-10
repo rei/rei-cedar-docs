@@ -337,10 +337,9 @@ Input field with link text on right.
 
 Input field with icon above input field on right.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrIcon, CdrIconSprite'})" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrIcon'})" :load-sprite="true" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
-<cdr-icon-sprite />
 <cdr-input
   v-model="defaultModel"
   label="Input label"
@@ -381,10 +380,9 @@ Input field with helper or hint text below input field.
 
 Input field with icon inserted into input field on left. Icon is decorative and not intended for any action.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrIcon, CdrIconSprite'})" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrIcon'})" :load-sprite="true" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
 
 ```html
-<cdr-icon-sprite />
 <cdr-input
   v-model="defaultModel"
   label="Input label"
@@ -405,10 +403,9 @@ Input field with icon inserted into input field on left. Icon is decorative and 
 
 Input field with icon inserted into input field on right. Icon is decorative and not intended for any action.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrIcon, CdrIconSprite'})" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrIcon'})" :load-sprite="true" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
 
 ```html
-<cdr-icon-sprite />
 <cdr-input
   v-model="defaultModel"
   label="Input label"

@@ -23,6 +23,7 @@
   },
   "devDependencies": {
     "@rei/cdr-tokens": "^1.2.0-alpha.7",
+    "@rei/cedar-icons": "^1.0.0-beta.0",
     "@vuepress/plugin-google-analytics": "^1.0.2",
     "codesandbox": "^2.1.6",
     "cross-env": "^5.2.0",

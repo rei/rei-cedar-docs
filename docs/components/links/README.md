@@ -142,11 +142,10 @@ Display independently with a call to action. Some examples are for finding a sto
 
 Display standalone link with icon on left.
 
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrLink, CdrIconSprite'})">
+<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" :load-sprite="true" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrLink'})">
 
 ```html
   <div>
-    <cdr-icon-sprite />
     <cdr-link tag="button" modifier="standalone">
       <!-- Using the sprite -->
       <cdr-icon
@@ -165,11 +164,10 @@ Display standalone link with icon on left.
 
 Display standalone link with icon on right.
 
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrLink, CdrIconSprite'})">
+<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" :load-sprite="true" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrLink'})">
 
 ```html
   <div>
-    <cdr-icon-sprite />
       <cdr-link modifier="standalone">
         Visit site
         <!-- Using the sprite -->
