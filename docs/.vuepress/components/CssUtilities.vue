@@ -29,6 +29,7 @@
               </td>
               <td>
                 <p>{{ data.description }}</p>
+                <p><b>Value:</b> {{ data.context.value }}</p>
               </td>
             </tr>
           </tbody>

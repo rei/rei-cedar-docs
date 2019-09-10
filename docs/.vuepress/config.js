@@ -99,7 +99,6 @@ module.exports = {
       {
         text: "Components",
         items: [
-          { text: "CSS Utilities", link: "/styles/utilities/" },
           { text: "Design Tokens", link: "/components/design-tokens/" },
           { text: "Component Variables", link: "/components/component-variables/" },
           { text: "Utilities", link: "/components/utilities/"},
