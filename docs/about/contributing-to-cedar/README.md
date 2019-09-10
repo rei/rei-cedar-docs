@@ -26,14 +26,18 @@ When creating a new component, first reach out to the Cedar team to see if the c
 If you have a request for the Cedar team, submit a [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC) with all relevant information. 
 
 ### Code
-Contribution candidates should be built using Cedar [Design Tokens](https://rei.github.io/rei-cedar-docs/components/design-tokens) and [Utilities](https://rei.github.io/rei-cedar-docs/components/utilities), so that it can easily be pulled into the system. Include relevant information in the readme file, which will be used for future documentation. Once added to Cedar, the design system team will take over all future maintenance and updates.
+Contribution candidates should be built using Cedar 
+[Design Tokens](https://rei.github.io/rei-cedar-docs/components/design-tokens) and 
+[Utilities](https://rei.github.io/rei-cedar-docs/components/utilities), so that it can easily be pulled into the system. 
+Include relevant information in the readme file, which will be used for future documentation. Once added to Cedar, 
+the design system team will take over all future maintenance and updates.
 
 If you are working on a component or feature that can be shared with other projects, utilize design tokens to build it and add it to the [fed-components repository](https://git.rei.com/projects/FEDCOMP). The design system team will be looking at the fed-components repository for candidates to add to the system. 
 
 Reference the diagram below to determine how to build a component and where to build it:
 
-<Image: Component-development-contributions.png>
- 
+<cdr-img :src="$withBase('/about/Component-development-contributions.png')" alt="a reference tree for when to use cedar" />
+
 ### Design
 For components added to the fed-components repository, designers should also include the design in Abstract within the CDS Web Sandbox. 
 This provides other designers insight into what is available in fed-components, and allows them to re-use the component in their work. Provide relevant design guidelines, usage examples, and do's/don'ts for using the component. 
@@ -57,9 +61,9 @@ Ensure that the token meets the following requirements:
 - Token is used for multiple elements and NOT specific to one element
 - Token name will continue to have the same semantic meaning in future releases
 - Token name uses the following platform requirements:
--- Web: Uses Kebab case. For example, cdr-color-background-dark
--- iOS: Uses Pascal case. For example, CdrColorBackgroundColor
--- Android: Uses Snake case. For example, cdr_color_background_dark
+  - Web: Uses Kebab case. For example, cdr-color-background-dark
+  - iOS: Uses Pascal case. For example, CdrColorBackgroundColor
+  - Android: Uses Snake case. For example, cdr_color_background_dark
 Learn more in the [Design Tokens](https://rei.github.io/rei-cedar-docs/components/design-tokens) article.
 
 ## Icon Contributions
@@ -67,5 +71,5 @@ Cedar welcomes and encourages contributions to the icon library that are consist
 
 Learn more about contributing icons in the [Icon Resources](https://rei.github.io/rei-cedar-docs/icons/resources) article.
 
-
 </cdr-doc-table-of-contents-shell>
+
