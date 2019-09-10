@@ -64,6 +64,7 @@ Ensure that the token meets the following requirements:
   - Web: Uses Kebab case. For example, cdr-color-background-dark
   - iOS: Uses Pascal case. For example, CdrColorBackgroundColor
   - Android: Uses Snake case. For example, cdr_color_background_dark
+  
 Learn more in the [Design Tokens](https://rei.github.io/rei-cedar-docs/components/design-tokens) article.
 
 ## Icon Contributions
