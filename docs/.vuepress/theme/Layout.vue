@@ -3,6 +3,7 @@
     :class="pageClasses"
     @touchstart="onTouchStart"
     @touchend="onTouchEnd">
+    <div v-html="iconSprite" style="display: none"/>
     <div class="cdr-doc-page-shell">
       <div class="cdr-doc-page-shell__side-navigation">
         <div class="cdr-doc-side-navigation">
@@ -31,18 +32,19 @@
 <script>
 import Vue from 'vue'
 import nprogress from 'nprogress'
+import iconSprite from '@rei/cedar-icons/dist/all-icons.svg';
 import Home from './Home.vue'
 import Navbar from './Navbar.vue'
 import Page from './Page.vue'
 import Sidebar from './Sidebar.vue'
 import { pathToComponentName } from '@app/util'
 import { resolveSidebarItems } from './util'
-
 export default {
   components: { Home, Page, Sidebar, Navbar },
   data () {
     return {
-      isSidebarOpen: false
+      isSidebarOpen: false,
+      iconSprite
     }
   },
 
