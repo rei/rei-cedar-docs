@@ -34,13 +34,14 @@ the design system team will take over all future maintenance and updates.
 
 If you are working on a component or feature that can be shared with other projects, utilize design tokens to build it and add it to the [fed-components repository](https://git.rei.com/projects/FEDCOMP). The design system team will be looking at the fed-components repository for candidates to add to the system. 
 
-Reference the diagram below to determine how to build a component and where to build it:
+Reference the diagram below to determine how and where to build a new component:
 
 <cdr-img :src="$withBase('/about/Component-development-contributions.png')" alt="a reference tree for when to use cedar" />
 
 ### Design
 For components added to the fed-components repository, designers should also include the design in Abstract within the CDS Web Sandbox. 
 This provides other designers insight into what is available in fed-components, and allows them to re-use the component in their work. Provide relevant design guidelines, usage examples, and do's/don'ts for using the component. 
+
 To get set up in Abstract, or to learn more about adding to the CDS Web Sandbox, visit the [Getting Started for Designers](https://rei.github.io/rei-cedar-docs/getting-started/as-a-designer/) article. 
  
 ### Bug Fixes
@@ -64,7 +65,7 @@ Ensure that the token meets the following requirements:
   - Web: Uses Kebab case. For example, cdr-color-background-dark
   - iOS: Uses Pascal case. For example, CdrColorBackgroundColor
   - Android: Uses Snake case. For example, cdr_color_background_dark
-  
+
 Learn more in the [Design Tokens](https://rei.github.io/rei-cedar-docs/components/design-tokens) article.
 
 ## Icon Contributions
