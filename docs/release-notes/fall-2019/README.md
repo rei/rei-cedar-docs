@@ -52,9 +52,7 @@ See the [deprecated icon components](#deprecated-icon-components) section for mo
 
 ### Deprecated Token Warnings
 
-TODO:
-
-Put `$cdr-warn: false;` before any tokens import to silence the warnings.
+The `cdr-tokens` package now emits warnings if it detects that you are using deprecated tokens in your SCSS. You can disable this by setting a SCSS variable `$cdr-warn: false;` in any scope that you are using `cdr-tokens` in. Note that these warnings are only emitted by the SCSS build and will not trigger if you are using LESS.
 
 ### Button/CTA full-width@bp
 
@@ -224,9 +222,76 @@ In addition to the heading changes listed above, the paragraph modifier `body` i
 -  [Headings](../../components/headings)
 -  [Paragraphs](../../components/paragraphs)
 
-### Deprecated Tokens/Warnings
+### Deprecated Tokens and Mixins
 
-TODO: describe which heading tokens are deprecated, what they map to
+In order to support the updates to typography, we have re-named some Cedar tokens related to headings. Please see the chart below for guidance on how to re-map the deprecated tokens and mixins
+
+| Deprecated token/mixin  | Equivalent token/mixin |
+|-------------------------|-------------------------|
+| cdr-text-header-1 | cdr-text-display-1100 |
+| cdr-text-header-1-family | cdr-text-display-1100-family |
+| cdr-text-header-1-style | cdr-text-display-1100-style |
+| cdr-text-header-1-weight | cdr-text-display-1100-weight |
+| cdr-text-header-1-spacing | cdr-text-display-1100-spacing |
+| cdr-text-header-1-size | cdr-text-display-1100-size |
+| cdr-text-header-1-height | cdr-text-display-1100-height |
+| cdr-text-header-2 | cdr-text-display-900 |
+| cdr-text-header-2-family | cdr-text-display-900-family |
+| cdr-text-header-2-style | cdr-text-display-900-style |
+| cdr-text-header-2-weight | cdr-text-display-900-weight |
+| cdr-text-header-2-spacing | cdr-text-display-900-spacing |
+| cdr-text-header-2-size | cdr-text-display-900-size |
+| cdr-text-header-2-height | cdr-text-display-900-height |
+| cdr-text-header-3 | cdr-text-display-700 |
+| cdr-text-header-3-family | cdr-text-display-700-family |
+| cdr-text-header-3-style | cdr-text-display-700-style |
+| cdr-text-header-3-weight | cdr-text-display-700-weight |
+| cdr-text-header-3-spacing | cdr-text-display-700-spacing |
+| cdr-text-header-3-size | cdr-text-display-700-size |
+| cdr-text-header-3-height | cdr-text-display-700-height |
+| cdr-text-header-4 | cdr-text-display-600 |
+| cdr-text-header-4-family | cdr-text-display-600-family |
+| cdr-text-header-4-style | cdr-text-display-600-style |
+| cdr-text-header-4-weight | cdr-text-display-600-weight |
+| cdr-text-header-4-spacing | cdr-text-display-600-spacing |
+| cdr-text-header-4-size | cdr-text-display-600-size |
+| cdr-text-header-4-height | cdr-text-display-600-height |
+| cdr-text-header-5 | cdr-text-display-500 |
+| cdr-text-header-5-family | cdr-text-display-500-family |
+| cdr-text-header-5-style | cdr-text-display-500-style |
+| cdr-text-header-5-weight | cdr-text-display-500-weight |
+| cdr-text-header-5-spacing | cdr-text-display-500-spacing |
+| cdr-text-header-5-size | cdr-text-display-500-size |
+| cdr-text-header-5-height | cdr-text-display-500-height |
+| cdr-text-header-6 | cdr-text-display-400 |
+| cdr-text-header-6-family | cdr-text-display-400-family |
+| cdr-text-header-6-style | cdr-text-display-400-style |
+| cdr-text-header-6-weight | cdr-text-display-400-weight |
+| cdr-text-header-6-spacing | cdr-text-display-400-spacing |
+| cdr-text-header-6-size | cdr-text-display-400-size |
+| cdr-text-header-6-height | cdr-text-display-400-height |
+| cdr-text-header-7 | cdr-text-display-300 |
+| cdr-text-header-7-family | cdr-text-display-300-family |
+| cdr-text-header-7-style | cdr-text-display-300-style |
+| cdr-text-header-7-weight | cdr-text-display-300-weight |
+| cdr-text-header-7-spacing | cdr-text-display-300-spacing |
+| cdr-text-header-7-size | cdr-text-display-300-size |
+| cdr-text-header-7-height | cdr-text-display-300-height |
+| cdr-text-editorial | cdr-text-default |
+| cdr-text-editorial-family | cdr-text-default-family |
+| cdr-text-editorial-style | cdr-text-default-style |
+| cdr-text-editorial-weight | cdr-text-default-weight |
+| cdr-text-editorial-spacing | cdr-text-default-spacing |
+| cdr-text-editorial-size | cdr-text-default-size |
+| cdr-text-editorial-height | cdr-text-default-height |
+| cdr-text-editorial-compact | cdr-text-default-compact |
+| cdr-text-editorial-compact-family | cdr-text-default-compact-family |
+| cdr-text-editorial-compact-style | cdr-text-default-compact-style |
+| cdr-text-editorial-compact-weight | cdr-text-default-compact-weight |
+| cdr-text-editorial-compact-spacing | cdr-text-default-compact-spacing |
+| cdr-text-editorial-compact-size | cdr-text-default-compact-size |
+| cdr-text-editorial-compact-height | cdr-text-default-compact-height |
+
 
 ### Deprecated Utility Classes
 #### Alignment classes
