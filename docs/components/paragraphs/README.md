@@ -73,12 +73,6 @@
                 "default": "'p'",
                 "description": "Sets valid HTML element tag."
               },
-              {
-                "name": "modifier",
-                "type": "string",
-                "default": "N/A",
-                "description": "Modifies the style variant for this component. Possible values: {  body  }"
-              }
             ],
             "slots": [
               {
@@ -112,26 +106,6 @@ Used as default font style for all text information. Also known as body-default 
 
 </cdr-doc-example-code-pair>
 
-## Body
-
-Used for editorial content such as long-form articles like Expert Advice pages or editorial content on PDP pages.  Also known as body-editorial in UI ToolKit.
-
-
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
-
-```html
-  <div>
-    <cdr-text modifier="body">
-      You don’t want to have to cut your day of skiing or snowboarding short because of tired legs. So before you gather your friends and family and purchase your lift tickets, it’s important to follow a workout plan that will get you fit for the slopes.
-    </cdr-text>
-    <cdr-text modifier="body">
-      The following workout guide is designed to help you focus on the most essential aspects of fitness for completing a ski or snowboard trip: cardiovascular fitness, strength and balance. Remember, you should always start your ski day with a few easy warm-up runs, no matter how skilled you are.
-    </cdr-text>
-  </div>
-```
-
-</cdr-doc-example-code-pair>
-
 ## Accessibility
 
 To ensure that usage of this component complies with accessibility guidelines:
@@ -146,9 +120,10 @@ To ensure that usage of this component complies with accessibility guidelines:
 This component has compliance with following WebAIM’s accessibility guidelines:
 - [WCAG SC 1.4.8: Visual presentation](https://www.w3.org/TR/WCAG20/#visual-audio-contrast-visual-presentation): Cedar Design System text component provides for spacing for:
   - Within paragraphs, line spacing is at least 1.5 times font height
-  - Between paragraphs, at least 1.5 times larger than the line spacing
 
-<cdr-img class="cdr-doc-article-img" alt="paragraphs_spacing_graphic_example" :src="$withBase(`/paragraphs/paragraphs_spacing_graphic_example.png`)" />
+ <!--  - Between paragraphs, at least 1.5 times larger than the line spacing -->
+
+<!-- <cdr-img class="cdr-doc-article-img" alt="paragraphs_spacing_graphic_example" :src="$withBase(`/paragraphs/paragraphs_spacing_graphic_example.png`)" /> -->
 
 </cdr-doc-table-of-contents-shell>
 </template>
@@ -177,8 +152,6 @@ Roboto is used for paragraph text because it is easy to scan. It is primarily us
 - Customer reviews on PDP pages
 - Class or event descriptions
 - REI Adventure descriptions
-
-Sentinel carries a stronger brand impression with other brand material, and is primarily used for:
 - Editorial copy on PDP pages
 - Long articles on Expert Advice or Co-op Journal pages
 
@@ -239,21 +212,18 @@ By default the **CdrText** component renders as a paragraph, this default paragr
   </cdr-text>
 ```
 
-When rendering long form copy add the `body` modifier.
-
-```vue
-  <cdr-text modifier="body">
-    This paragraph is intended for long form copy usage.  
-  </cdr-text>
-```
-
-Define custom tags by applying a specific `cdr-text` style with modifiers to it.
+### Paragraph spacing
+By default there is no spacing between paragraphs. The space utility classes are 
+provided to increase legibility
 
 ```vue
   <cdr-text
-    tag="span"
-    modifier="body">
-    This span now renders as a long form copy paragraph that displays inline.
+    class="cdr-mb-space-one-x"
+  >
+   This paragraph is adding a bottom marging to provide space between it and the paragraph below
+  </cdr-text>
+  <cdr-text>
+   This paragraph is last and does not need the additional utility class
   </cdr-text>
 ```
 
