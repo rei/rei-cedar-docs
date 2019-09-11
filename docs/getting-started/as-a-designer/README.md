@@ -244,6 +244,8 @@ This is how the cedar team keeps multiple versions of the same project in sync. 
 
 This is quite complex, but it might help you.
 
+![screenshot](../../.vuepress/public/getting-started-for-designers/swap-1-add-new-lib.png)
+
 <cdr-img class="cdr-doc-article-img" alt="screenshot"  :src="$withBase(`/getting-started-for-designers/screenshotName.png`)"/>
 
 
