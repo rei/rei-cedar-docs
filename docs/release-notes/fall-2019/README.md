@@ -217,6 +217,16 @@ The following diagram provides a rough guideline of legacy modifier names to the
 | heading-small-static     | heading-400                                |
 | subheading               | subheading-300                             |
 
+### Deprecated Typography/Paragraph
+
+The cdr-text modifier specific editorial copy has been deprecated
+
+| Deprecated modifier name | Equivalent modifier names and breakpoints  |
+|--------------------------|--------------------------------------------|
+| body                     |                                            |
+
+
+
 In addition to the heading changes listed above, the paragraph modifier `body` is now also deprecated without a replacement. Moving forward we only support the generic non modified styling for paragraphs.
 #### more infomation
 -  [Headings](../../components/headings)
