@@ -26,7 +26,8 @@
 
   & > h2,
   & > div > h2 {
-    @include cdr-text-header-4;
+    // @include cdr-text-header-4;
+    @include cdr-text-heading-600;
     margin-bottom: $cdr-space-one-x;
     margin-top: $cdr-space-two-x;
     max-width: $cdr-doc-long-form-text-max-line-length;
@@ -38,7 +39,8 @@
 
   & > h3,
   & > div > h3 {
-    @include cdr-text-header-5;
+    // @include cdr-text-header-5;
+    @include cdr-text-heading-500;
     margin-bottom: $cdr-space-one-x;
     margin-top: $cdr-space-two-x;
     max-width: $cdr-doc-long-form-text-max-line-length;
@@ -49,7 +51,8 @@
   }
 
   & > h4 {
-    @include cdr-text-header-6;
+    // @include cdr-text-header-6;
+    @include cdr-text-heading-400;
     margin-bottom: $cdr-space-one-x;
     margin-top: $cdr-space-two-x;
     max-width: $cdr-doc-long-form-text-max-line-length;
@@ -60,7 +63,8 @@
   }
 
   & > h5 {
-    @include cdr-text-header-7;
+    // @include cdr-text-header-7;
+    @include cdr-text-heading-300;
     margin-bottom: $cdr-space-one-x;
     margin-top: $cdr-space-two-x;
     max-width: $cdr-doc-long-form-text-max-line-length;
