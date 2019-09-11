@@ -16,12 +16,12 @@
 
 ## Update Steps
 
-If you are not already on Cedar 2.x.x, you will first need to [upgrade your project](https://rei.github.io/rei-cedar-docs/release-notes/summer-2019/) to the single-package version of Cedar.
+If you are not already on Cedar 2.x.x, you will first need to [upgrade your project](/release-notes/summer-2019/) to the single-package version of Cedar.
 
 ### For a Micro-Site
 
 - Update to `@rei/cedar` 3.x.x
-- Update to `@rei/febs` >= 5.3.0
+- Update to `@rei/febs` >= 5.4.0
 - Ensure that you are on a recent version of Babel (>= 7.x.x) and Webpack (>= 4.x.x)
 
 ### For a Component Package
@@ -56,31 +56,24 @@ The `cdr-tokens` package now emits warnings if it detects that you are using dep
 
 ### Button/CTA full-width@bp
 
-The [Button](https://rei.github.io/rei-cedar-docs/components/buttons/?active-tab=api) and [CTA](https://rei.github.io/rei-cedar-docs/components/cta/?active-tab=api) components now support setting `full-width` as either a boolean value or a list of responsive breakpoints. For example, `full-width: "@xs @lg"` would make that component be full-width at the extra small and large breakpoints. We have also resolved a bug where the full-width attribute could be overridden by a responsive size breakpoint.
+The [Button](/components/buttons/?active-tab=api) and [CTA](/components/cta/?active-tab=api) components now support setting `full-width` as either a boolean value or a list of responsive breakpoints. For example, `full-width: "@xs @lg"` would make that component be full-width at the extra small and large breakpoints. We have also resolved a bug where the full-width attribute could be overridden by a responsive size breakpoint.
 
 ### Link Scoped Slots for Pagination and Breadcrumb
 
-TODO: update breadcrumb/pagination docs.
-
-support for vue-router. these components render links, need to control them in order to handle routing.
-
-[breaadcrumb](https://rei.github.io/rei-cedar-docs/components/breadcrumb/?active-tab=api#props)
-[pagination](https://rei.github.io/rei-cedar-docs/components/pagination/?active-tab=api#props)
+In order to support client side routing we have updated [breadcrumb](/components/pagination/#link-scoped-slots) and [pagination](/components/breadcrumb/#link-scoped-slot) to expose  [scopedSlots](https://vuejs.org/v2/guide/components-slots.html#Scoped-Slots-with-the-slot-scope-Attribute) that allow consumers to override the default anchor links that are normally rendered by these components.
 
 ### Input and Button Bind All Listeners
 
-Rather than only binding specific listeners (like `on-click`), the [input](https://rei.github.io/rei-cedar-docs/components/input/?active-tab=api#events) and
-[button](https://rei.github.io/rei-cedar-docs/components/button/?active-tab=api#events) components will now bind any event listeners attached to them to their root component. i.e, `@click`, `@focus`, `@input`
+Rather than only binding specific listeners (like `on-click`), the [input](/components/input/?active-tab=api#events) and
+[button](/components/button/?active-tab=api#events) components will now bind any event listeners attached to them to their root component. i.e, `@click`, `@focus`, `@input`
 
 ## Breaking Changes
 
 ### Tree Shaking / ES Module Build Changes
 
-(TODO: link to FEBS version once its available)
-
 Version 2.x.x of Cedar contained both CommonJS (`@rei/cedar/dist/cedar.cjs.js`) and ES Module (`@rei/cedar/dist/cedar.esm.js`) single file builds. The ES Module build was supposed to allow consumers to "tree shake" out any un-used Cedar code from their bundles. However due to a variety of issues involving Vue and Webpack our ES Module build was not actually tree shakeable for our consumers. To work around this, we are now exporting a multi-file build inside `@rei/cedar/dist/lib` which is also the `module` entry point for Cedar.
 
-If you are on the latest version of FEBS (> 5.3.0) then you will get this change automatically when you update your Cedar version. Any app that is loading `@rei/cedar` should see a significant reduction in bundle size after this update.
+If you are on the latest version of FEBS (> 5.4.0) then you will get this change automatically when you update your Cedar version. Any app that is loading `@rei/cedar` should see a significant reduction in bundle size after this update.
 
 If you are not using FEBS, you will need to ensure that:
 
@@ -103,7 +96,7 @@ Teams can still create SSR optimized builds themselves using either `vue-loader`
 
 ### Stateless Accordion
 
-CdrAccordion has been refactored to remove internal state tracking for toggling open and closed. For simplicity, the CdrAccordionItem component has been removed and its functionality merged with CdrAccordion. The `show` prop has been renamed to `opened` for clarity. Please review the [updated API and usage examples](https://rei.github.io/rei-cedar-docs/components/accordion/) for more information.
+CdrAccordion has been refactored to remove internal state tracking for toggling open and closed. For simplicity, the CdrAccordionItem component has been removed and its functionality merged with CdrAccordion. The `show` prop has been renamed to `opened` for clarity. Please review the [updated API and usage examples](/components/accordion/) for more information.
 
 Before:
 
@@ -153,7 +146,7 @@ export default {
 
 ### Breadcrumb Truncation/SSR
 
-In order to fix an issue with server-side rendering, as well as to simplify the API of [CdrBreadcrumb](https://rei.github.io/rei-cedar-docs/components/breadcrumb/), we have removed the `truncationThreshold` and `truncationXSThreshold` attributes. Instead, the `truncationEnabled` attr can be used to control whether or not the breadcrumb should be truncated. This change will not break any existing consumers of breadcrumb even if they are using those attributes.
+In order to fix an issue with server-side rendering, as well as to simplify the API of [CdrBreadcrumb](/components/breadcrumb/), we have removed the `truncationThreshold` and `truncationXSThreshold` attributes. Instead, the `truncationEnabled` attr can be used to control whether or not the breadcrumb should be truncated. This change will not break any existing consumers of breadcrumb even if they are using those attributes.
 
 ### Large Breakpoint Value Corrected
 

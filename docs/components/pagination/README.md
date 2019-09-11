@@ -57,6 +57,9 @@
       "text": "Components/"
     }
   ],
+  "sandboxData": {
+    "components": "CdrPagination, CdrIcon"
+  },
   "versions": [
     {
       "components": [
@@ -93,7 +96,21 @@
                 "arguments": "pageUrl, event",
                 "description": "$emit event fired on select change with the URL value of the selected option. Also triggers the 'change' event (above) with the selected page number."
               }
-            ]
+            ],
+            "scopedSlots": [
+              {
+                "name": "link",
+                "description": "Scoped slot used to override the default page links used. Useful for integrating with client-side routing. The slot scope exposes the following attributes: class, href, aria-label, aria-current, page, and content."
+              },
+              {
+                "name": "prevLink",
+                "description": "Scoped slot used to override the default previous page link. Useful for integrating with client-side routing. The slot scope exposes the following attributes: class, href, aria-label, iconClass, iconComponent, page, and content. iconComponent corresponds to a sprite name in @rei/cedar-icons."
+              },
+              {
+                "name": "nextLink",
+                "description": "Scoped slot used to override the default next page link. Useful for integrating with client-side routing. The slot scope exposes the following attributes: class, href, aria-label, iconClass, iconComponent, page, and content. iconComponent corresponds to a sprite name in @rei/cedar-icons."
+              }
+            ],
           }
         }
       ],
@@ -113,7 +130,75 @@ Live code examples for **CdrPagination** can be found on [CodeSandbox](https://c
 
 At the SM, MD, and LG breakpoints, pagination displays as a list of number text links with Prev and Next links when applicable.
 
-<img :src="$withBase('/pagination/pagination_breakpoint_2x.png')" alt="Image showing full-sized pagination component" />
+<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ page: 3, pages: [{page: 1, url: '1'}, {page: 2, url: '2'}, {page: 3, url: '3'}, {page: 4, url: '4'}, {page: 5, url: '5'}] }">
+
+```html
+<cdr-pagination
+  :pages="pages"
+  :total-pages="5"
+  v-model="page"
+/>
+```
+</cdr-doc-example-code-pair>
+
+## Link Scoped Slots
+
+Can be used to override the default links rendered in the pagination. Useful for integrating with client side routing, as a `router-link` can be rendered instead of a plain `a` tag. Pagination exposes 3 link scopedSlots: `link`, `prevLink`, and `nextLink`.
+
+The `link` slot scope contains the following attributes:
+- `class`: a class to be applied to the link in order to match pagination styling
+- `href`: href that the link points to by default
+- `aria-label`: default aria-label for this link
+- `aria-current`: is `true` if this link is the current page
+- `page`: the page number that corresponds to this link. NOTE: that you must manually update your v-model attribute to be the value of `page` whenever this link is clicked
+- `content`: the default content for that link
+
+The `prevLink` and `nextLink` slot scopes contain the following attributes:
+- `class`: a class to be applied to the link in order to match pagination styling
+- `href`: href that the link points to by default
+- `aria-label`: default aria-label for this link
+- `iconClass`: a class to be applied to the prev/next arrow icon in order to match pagination styling
+- `iconPath`: the path to the icon in the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) used for this link
+- `page`: the page number that corresponds to this link. NOTE: that you must manually update your v-model attribute to be the value of `page` whenever this link is clicked
+- `content`: the default content for that link
+
+<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ page: 2, pages: [{page: 1, url: '1'}, {page: 2, url: '2'}, {page: 3, url: '3'}] }">
+
+```html
+<cdr-pagination
+  :pages="pages"
+  :total-pages="3"
+  v-model="page"
+>
+  <template
+    slot="link"
+    slot-scope="link"
+  >
+    <div :class="link.class" :aria-label="link['aria-label']" :aria-current="link['aria-current']" @click="e => page = link.page">
+      {{ link.href }}
+    </div>
+  </template>
+  <template
+    slot="prevLink"
+    slot-scope="link"
+  >
+    <div @click="e => page = link.page" :aria-label="link['aria-label']">
+      <cdr-icon :use="link.iconPath" :class="link.iconClass" />
+      <span>{{ link.content }}</span>
+    </div>
+  </template>
+  <template
+    slot="nextLink"
+    slot-scope="link"
+  >
+    <div @click="e => page = link.page" :aria-label="link['aria-label']">
+      <span>{{ link.content }}</span>
+      <cdr-icon :use="link.iconPath" :class="link.iconClass" />
+    </div>
+  </template>
+</cdr-pagination>
+```
+</cdr-doc-example-code-pair>
 
 ## Pagination @ XS
 
@@ -121,20 +206,13 @@ At the XS breakpoint, pagination adapts to a Select component using the native U
 
 <img :src="$withBase('/pagination/pagination_breakpoint_xs_2x.png')" alt="Image showing responsive pagination component using Select element" />
 
-## Degraded Pagination
-
-For use when only prev and next data is available.
-
-<img :src="$withBase('/pagination/pagination_degradation_2x.png')" alt="Image showing pagination with only previous and next data available" />
-
 ## Accessibility
 
-To ensure that usage of this component complies with accessibility guidelines:
+This component complies with accessibility guidelines by doing the following:
 
-- Wrap the pagination links in a `<nav>` element to let screen readers recognize the pagination controls
-- Inlcude `role=navigation` if the pagination component is not wrapped in a `<nav>`
-- Add `aria-label="pagination"` to describe the type of navigation
-- Indicate the active page by adding `aria-current="page"` to the link that points to the current page
+- Wraps the pagination links in a `<nav>` element to let screen readers recognize the pagination controls
+- Sets `aria-label="pagination"` to describe the type of navigation
+- Indicates the active page by adding `aria-current="page"` to the link that points to the current page
 - View these videos at [a11ymattters, Accessible Pagination](http://www.a11ymatters.com/pattern/pagination/). They demonstrate before and after pagination tests using a screen reader voiceover
 
 <br />
@@ -209,6 +287,10 @@ Pagination adapts to a Select component with a native UI dropdown menu on XS bre
 ## Events
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
+
+## Scoped Slots
+
+<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.scopedSlots" />
 
 ## Usage
 
