@@ -39,7 +39,7 @@ Abstract is used to distribute the Cedar UI toolkit and allows for:
 - Collaboration and the ability to view project history
 - Secure backup to REI servers
 
-Download the latest version of Abstract through REI’s Self Service application. Install the software to your local user application folder: 
+Download the latest version of Abstract through REI's Self Service application. Install the software to your local user application folder: 
 1. From your desktop use the shortcut __Shift+Command+C__ to access your Mac disks.
 2. Navigate to your local application folder, __Macintosh HD > Users > 'yourUserName' > Applications__.
 3. Move the downloaded Abstract app into this application folder.
@@ -48,19 +48,32 @@ If you have any issues with installation, visit the [Abstract help center](https
 
 
 #### Sketch (latest version)
-If you are a new designer, download the latest version of Sketch using REI’s Self Service application installed on your Mac. If Sketch isn’t available there, talk to your manager.
+If you are a new designer, download the latest version of Sketch using REI's Self Service application installed on your Mac. If Sketch isn't available there, talk to your manager.
 
 ---
 
 
 
 ### Required Fonts
-Open REI’s Self Service application, search for, and install the following fonts:
-- Sentinel
-- Roboto
-- Plak
 
-__Note:__ Plak is a legacy, but you’ll still want to install it until it is completely phased out.
+To Install, open REI's Self Service application, search for _'Cedar'_, and install the following fonts:
+- Stuart TTF · Digital
+- Graphik TTF · Digital
+
+<cdr-img alt="screenshot"  :src="$withBase(`/getting-started-for-designers/download-fonts.png`)"/>
+
+__A few things to remember:__
+- The Stuart and Graphik _"OTF · Print"_ font variants available on Self Service are __not__ compatible with the Cedar Sketch Toolkit.
+- The TTF font variants have _"App"_ after their name in applications like Sketch or FontBook. For example, _"REI Stuart App" _and _"Graphik App"_. Please only use these TTF versions in any digital design.
+
+
+#### Legacy Fonts
+Legacy fonts are no longer part of Cedar so __don't use them in new designs__, but you'll still need to install them until so that old design files will render properly. Roboto is also still used in many Cedar components and is required for the Cedar Sketch Toolkits to work properly. 
+
+To Install, open REI’s Self Service application, search for, and install the following fonts:
+- Roboto
+- Sentinel
+- Plak
 
 ---
 
@@ -95,13 +108,13 @@ Simulates color blindness and easily checks contrast.
 
 ## Cedar UI Toolkit 
 
-Note: Cedar’s UI Toolkit is only available for REI employees and approved third-party vendors. If you are an external vendor that needs access, please email cedar@rei.com.
+Note: Cedar's UI Toolkit is only available for REI employees and approved third-party vendors. If you are an external vendor that needs access, please email cedar@rei.com.
 
 
 ### Toolkit Versions
 
 The Cedar Sketch UI Toolkit provides reusable patterns and styles using Sketch symbols, Text Styles, and Layer Styles. There are 3 Toolkit versions of Cedar:
-- __[CDR Toolkits · vCurrent](https://share.goabstract.com/ab520e30-0db8-4e5d-8310-cea8739da61c):__ Present; this is the current stable release of Cedar and will be updated on our regular release schedule. This is the version you’d use in most cases.
+- __[CDR Toolkits · vCurrent](https://share.goabstract.com/ab520e30-0db8-4e5d-8310-cea8739da61c):__ Present; this is the current stable release of Cedar and will be updated on our regular release schedule. This is the version you'd use in most cases.
 - __[CDR Toolkits · vNext](https://share.goabstract.com/b776d364-237a-4885-8849-610ac7afdfe5):__ Future; the next version under development and constantly changing.
 - __[CDR Toolkits · vLegacy](https://share.goabstract.com/d6622675-42d4-40ab-a31a-64669e0d0000):__ Past; if you need an older version of the Toolkit, it is archived here. Use this only if you cannot use _vCurrent_ or _vNext_.
 
@@ -125,11 +138,11 @@ To link the UI Toolkit to your Abstract project:
   <cdr-img alt="screenshot"  :src="$withBase(`/getting-started-for-designers/use-1-sync-toolkits.png`)"/>
 2. From your new or current project, navigate to __Branches > Your-Branch > Files__ and click on the __Add File__ button. From the drop down, select __Link Sketch Library__.  
   <cdr-img alt="screenshot"  :src="$withBase(`/getting-started-for-designers/use-2-link-libraries.png`)"/>
-3. From the list of projects on the left, select the libraries you’ll need. After selecting a file on the right, click on the __Link Library__ button to add it to your project.  
+3. From the list of projects on the left, select the libraries you'll need. After selecting a file on the right, click on the __Link Library__ button to add it to your project.  
   <cdr-img alt="screenshot"  :src="$withBase(`/getting-started-for-designers/use-3-link-libraries.png`)"/>
 4. The linked libraries will appear at the bottom of your page list for the project file.  
   <cdr-img alt="screenshot"  :src="$withBase(`/getting-started-for-designers/use-4-validate-linked-libraries.png`)"/>
-5. That’s it! You can now add Cedar components, icons, text styles, or layer styles to the artboards in your project’s Sketch files.  
+5. That's it! You can now add Cedar components, icons, text styles, or layer styles to the artboards in your project's Sketch files.  
   <cdr-img alt="screenshot"  :src="$withBase(`/getting-started-for-designers/use-5-use-linked-libraries.png`)"/>
 
 ---
@@ -176,7 +189,7 @@ If you need to replace one version of a linked library with another in a differe
 
 
 ## Contributing to Cedar
-One of the best ways to influence the visual language of the Co-op’s digital products is by contributing to the design system. There are many ways to contribute: UX research, UI design, authoring, and editing, to name a few. If you’re interested in contributing, talk to your manager or contact the Cedar team using the [#cedar-user-support][cedar-user-support-link] Slack channel or visit Cedar’s office hours.
+One of the best ways to influence the visual language of the Co-op's digital products is by contributing to the design system. There are many ways to contribute: UX research, UI design, authoring, and editing, to name a few. If you're interested in contributing, talk to your manager or contact the Cedar team using the [#cedar-user-support][cedar-user-support-link] Slack channel or visit Cedar's office hours.
 
 ---
 
@@ -189,7 +202,7 @@ One of the best ways to influence the visual language of the Co-op’s digital p
 
 #### How can I transition from the Google Drive version?
 Previously, the UI Toolkit was available using Abstract or Google Drive. Now, the UI Toolkit is only available using Abstract. If you need to relink symbols from the old Google Drive distributed version, use the [Symbol Swapper Plugin](https://sketchpacks.com/sonburn/symbol-swapper).
-If you need extra support, contact the Cedar team using the [#cedar-user-support][cedar-user-support-link] Slack channel or visit Cedar’s office hours. 
+If you need extra support, contact the Cedar team using the [#cedar-user-support][cedar-user-support-link] Slack channel or visit Cedar's office hours. 
 
 
 ### Abstract
@@ -201,10 +214,10 @@ You will need to add the UI Toolkit for every new project you create in Abstract
 ### Sketch
 
 #### Should I always update Sketch versions when it tells me to?
-Yes! You should update Sketch when a new version is available. Note that a major Sketch release may prevent the UI Toolkit from loading. You can update Sketch using REI’s Self Service application.
+Yes! You should update Sketch when a new version is available. Note that a major Sketch release may prevent the UI Toolkit from loading. You can update Sketch using REI's Self Service application.
 
 #### Can I break the Library?
-You cannot break or change the library when viewing the library in your project files or having the UI Toolkit opened “Untracked”
+You cannot break or change the library when viewing the library in your project files or having the UI Toolkit opened "Untracked"
 
 #### How can I fix a bug or make an improvement to the toolkit?
 You can create a branch of the Cedar library to make the changes yourself, or reach out to the Cedar team using the [#cedar-user-support][cedar-user-support-link] Slack channel to report a bug. 
