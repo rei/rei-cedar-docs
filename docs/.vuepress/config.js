@@ -96,6 +96,12 @@ module.exports = {
         ]
       },
       {
+        text: "Layout",
+        items: [
+          { text: "Responsive", link: "/layout/responsive/" }
+        ]
+      },
+      {
         text: "Components",
         items: [
           { text: "Design Tokens", link: "/components/design-tokens/" },
