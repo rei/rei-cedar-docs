@@ -73,6 +73,16 @@
                 "default": "'p'",
                 "description": "Sets valid HTML element tag."
               },
+               {
+                "name": "modifier",
+                "type": "string",
+                "default": "N/A",
+                "description": "Modifies the style variant for this component. Possible values: {  body  }",
+                "alert": {
+                  "type": "deprecated",
+                  "description": "the body variant has been deprecated in v3.0.0."
+                },
+              }
             ],
             "slots": [
               {
