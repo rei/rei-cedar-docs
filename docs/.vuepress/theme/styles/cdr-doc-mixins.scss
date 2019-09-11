@@ -24,7 +24,8 @@
     margin-right: auto;
   }
 
-  & > h2 {
+  & > h2,
+  & > div > h2 {
     @include cdr-text-header-4;
     margin-bottom: $cdr-space-one-x;
     margin-top: $cdr-space-two-x;
@@ -35,7 +36,8 @@
     }
   }
 
-  & > h3 {
+  & > h3,
+  & > div > h3 {
     @include cdr-text-header-5;
     margin-bottom: $cdr-space-one-x;
     margin-top: $cdr-space-two-x;
