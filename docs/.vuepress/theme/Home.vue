@@ -11,8 +11,7 @@
         alt="hero"/>
       <div class="hero__container cdr-text-center">
         <cdr-text
-          tag="h1"
-          modifier="display"
+          modifier="display-1100"
           class="cdr-mb-space-one-x"
         >{{ data.heroTitle }}</cdr-text>
         <p class="hero__description">{{ data.heroDescription }}</p>
