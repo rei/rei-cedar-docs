@@ -246,6 +246,8 @@ This component has compliance with WCAG guidelines by:
 ### Don’t Use When
 
 - Tagging as a semantic heading when an element only needs to be highlighted or emphasized within your content. Instead, use sizing modifier for this component
+- Showcasing long form content. Instead use [Paragraphs] (https://rei.github.io/rei-cedar-docs/components/paragraphs/)
+
 
 ## The Basics
 
@@ -267,6 +269,9 @@ This component has compliance with WCAG guidelines by:
   - Capitalize proper nouns
   - Use sentence case
   - Left-align multi-line headings
+  
+### Do / Don’t
+
 
 ## Behavior
 
