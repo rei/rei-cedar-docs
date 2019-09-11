@@ -179,11 +179,40 @@ One of the best ways to influence the visual language of the Co-op’s digital p
 <hr/>
 
 
-<!-- TODO: 
+
+## FAQ
+
+
+### Google Drive
+
+#### How can I transition from the Google Drive version?
+Previously, the UI Toolkit was available using Abstract or Google Drive. Now, the UI Toolkit is only available using Abstract. If you need to relink symbols from the old Google Drive distributed version, use the [Symbol Swapper Plugin](https://sketchpacks.com/sonburn/symbol-swapper).
+If you need extra support, contact the Cedar team using the [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) Slack channel or visit Cedar’s office hours. 
+
+
+### Abstract
+
+#### Do I need to install the Library for every new Abstract project file?
+You will need to add the UI Toolkit for every new project you create in Abstract. Once the library is linked within a project, you will be able to access it through any Sketch file within your project.
+
+
+### Sketch
+
+#### Should I always update Sketch versions when it tells me to?
+Yes! You should update Sketch when a new version is available. Note that a major Sketch release may prevent the UI Toolkit from loading. You can update Sketch using REI’s Self Service application.
+
+#### Can I break the Library?
+You cannot break or change the library when viewing the library in your project files or having the UI Toolkit opened “Untracked”
+
+#### How can I fix a bug or make an improvement to the toolkit?
+You can create a branch of the Cedar library to make the changes yourself, or reach out to the Cedar team using the [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) Slack channel to report a bug. 
+
+<hr/>
+
+
+
 ## Advanced Abstract Methods
 
-### Linked Library Swapping
-goes here when this section is filled out later
 
 ### Cross-Project Merge
 
@@ -216,37 +245,6 @@ This is how the cedar team keeps multiple versions of the same project in sync. 
 This is quite complex, but it might help you.
 
 <cdr-img class="cdr-doc-article-img" alt="screenshot"  :src="$withBase(`/getting-started-for-designers/screenshotName.png`)"/>
-
-<hr/>
- -->
-
-
-## FAQ
-
-
-### Google Drive
-
-#### How can I transition from the Google Drive version?
-Previously, the UI Toolkit was available using Abstract or Google Drive. Now, the UI Toolkit is only available using Abstract. If you need to relink symbols from the old Google Drive distributed version, use the [Symbol Swapper Plugin](https://sketchpacks.com/sonburn/symbol-swapper).
-If you need extra support, contact the Cedar team using the [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) Slack channel or visit Cedar’s office hours. 
-
-
-### Abstract
-
-#### Do I need to install the Library for every new Abstract project file?
-You will need to add the UI Toolkit for every new project you create in Abstract. Once the library is linked within a project, you will be able to access it through any Sketch file within your project.
-
-
-### Sketch
-
-#### Should I always update Sketch versions when it tells me to?
-Yes! You should update Sketch when a new version is available. Note that a major Sketch release may prevent the UI Toolkit from loading. You can update Sketch using REI’s Self Service application.
-
-#### Can I break the Library?
-You cannot break or change the library when viewing the library in your project files or having the UI Toolkit opened “Untracked”
-
-#### I found a bug with the UI Toolkit or I want to make an improvement. How do I do that?
-You can create a branch of the Cedar library to make the changes yourself, or reach out to the Cedar team using the [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) Slack channel to report a bug. 
 
 
 
