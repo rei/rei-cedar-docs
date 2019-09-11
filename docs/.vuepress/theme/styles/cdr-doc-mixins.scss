@@ -57,6 +57,13 @@
     }
   }
 
+  & > h5 {
+    @include cdr-text-header-7;
+    margin-bottom: $cdr-space-one-x;
+    margin-top: $cdr-space-two-x;
+    max-width: $cdr-doc-long-form-text-max-line-length;
+  }
+
   & > p {
     @include redwood-display-30;
     margin-bottom: $cdr-space-half-x;
