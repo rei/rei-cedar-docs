@@ -74,7 +74,7 @@ For more information on design tokens and how to use them, visit the [Design Tok
 
 To avoid confusion between an element’s size variant and its breakpoint name, Cedar has the following naming conventions:
 
--  Element sizes are treated as ***modifiers** and follow the BEM naming convention of `block__element--modifier`
+-  Element sizes are treated as **modifiers** and follow the BEM naming convention of `block__element--modifier`
 -  Breakpoints are denoted with the @(xs, sm, md, lg) and are appended to a class name. This convention is outside of the BEM naming convention 
 
 For example, `cdr-button size="small@lg"`  will only apply the small button variant at the large breakpoint.
