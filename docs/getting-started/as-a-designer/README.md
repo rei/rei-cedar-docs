@@ -19,7 +19,7 @@
 
 ## Learn About Cedar
 
-- Browse the Cedar Design System documentation and the [UI Toolkit Library]() to familiarize yourself with our [foundation styles](), [components](), and [naming conventions]().
+- Browse the Cedar Design System documentation and the [UI Toolkit Library](https://share.goabstract.com/ab520e30-0db8-4e5d-8310-cea8739da61c) to familiarize yourself with our foundation styles, components, and naming conventions.
 - Run the Cedar UI Toolkit installation process outlined below for Abstract and Sketch.
 - Review project files in Abstract to understand how designers are using components.
 
