@@ -103,6 +103,12 @@
                 "description": "Sets the ratio between breadcrumb path width and container width when truncation will occur at the XS breakpoint."
               }
             ],
+            "scopedSlots": [
+              {
+                "name": "link",
+                "description": "Scoped slot used to override the default links used in the breadcrumb. Useful for integrating with client-side routing. The slot scope exposes the following attributes: class, href, and content."
+              }
+            ],
           }
         }
       ],
@@ -150,6 +156,33 @@ Long breadcrumb path shortened to display the last 2 items with hidden links ind
         {item:{url:'', name: 'Kids\' Insulated Gloves'}},
       ]"
     />
+```
+</cdr-doc-example-code-pair>
+
+## Link Scoped Slot
+
+Can be used to override the default links rendered in the breadcrumb. Useful for integrating with client side routing, as a `router-link` can be rendered instead of a plain `a` tag.  The `slot-scope` exposed includes:
+
+- `class`: CSS class to be applied to your override element to match the breadcrumb styling
+- `href`: the path that the link points to
+- `content`: the text content of that link
+
+<cdr-doc-example-code-pair repository-href="/src/components/breadcrumb" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight= false>
+
+```html
+<cdr-breadcrumb :items="[
+  {item:{url:'/snowboarding', name: 'Snowboarding'}},
+  {item:{url:'/snowboarding/clothing', name: ' Clothing'}}
+]">
+  <template
+    slot="link"
+    slot-scope="link"
+  >
+    <div :class="link.class" @click="console.log(link.href)">
+      {{ link.content }}
+    </div>
+  </template>
+</cdr-breadcrumb>
 ```
 </cdr-doc-example-code-pair>
 
@@ -249,6 +282,10 @@ Truncate breadcrumbs left to right to show the final two links in the trail, so 
 ## Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props"/>
+
+## Scoped Slots
+
+<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.scopedSlots" />
 
 ## Usage
 
