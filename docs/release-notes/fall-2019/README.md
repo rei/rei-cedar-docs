@@ -394,7 +394,7 @@ With the release of the [Cedar Icon Library](https://rei.github.io/cedar-icons/#
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
   <body>
-    <div th:remove="true" th:fragment="icon-sprite">
+    <div th:remove="tag" th:fragment="icon-sprite">
       <!-- copy paste your generated SVG file here -->
     </div>
   </body>
@@ -404,7 +404,7 @@ With the release of the [Cedar Icon Library](https://rei.github.io/cedar-icons/#
 3. Render the sprite sheet somewhere in your app (note this needs to be rendered on every page that contains icons):
 
 ```
-<div th:remove="true" th:insert="~{icon-sprite :: icon-sprite}"></div>
+<div th:remove="tag" th:insert="~{icon-sprite :: icon-sprite}"></div>
 ```
 
 </cdr-doc-table-of-contents-shell>
