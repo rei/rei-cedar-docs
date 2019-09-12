@@ -27,7 +27,7 @@
   & > h2,
   & > div > h2 {
     // @include cdr-text-header-4;
-    @include cdr-text-heading-600; // Section heading
+    @include cdr-text-heading-700; // Section heading
     margin-bottom: $cdr-space-one-x;
     margin-top: $cdr-space-two-x;
     max-width: $cdr-doc-long-form-text-max-line-length;
@@ -40,7 +40,7 @@
   & > h3,
   & > div > h3 {
     // @include cdr-text-header-5;
-    @include cdr-text-heading-500; // subSection heading
+    @include cdr-text-heading-500; // SubSection heading
     margin-bottom: $cdr-space-one-x;
     margin-top: $cdr-space-two-x;
     max-width: $cdr-doc-long-form-text-max-line-length;
@@ -52,7 +52,7 @@
 
   & > h4 {
     // @include cdr-text-header-6;
-    @include cdr-text-heading-400; // subsubSection heading
+    @include cdr-text-heading-400; // Sub-SubSection heading
     margin-bottom: $cdr-space-one-x;
     margin-top: $cdr-space-two-x;
     max-width: $cdr-doc-long-form-text-max-line-length;
@@ -64,14 +64,15 @@
 
   & > h5 {
     // @include cdr-text-header-7;
-    @include cdr-text-heading-300; // custom sub-subsubSection heading // one increment down
+    @include cdr-text-heading-300; // custom SubX3 Section heading
     margin-bottom: $cdr-space-one-x;
     margin-top: $cdr-space-two-x;
     max-width: $cdr-doc-long-form-text-max-line-length;
   }
 
   & > p {
-    @include redwood-display-30; // default
+    // @include redwood-display-30;
+    @include cdr-text-default; // right?
     margin-bottom: $cdr-space-half-x;
     max-width: $cdr-doc-long-form-text-max-line-length;
 
