@@ -16,24 +16,15 @@ module.exports = {
     [
       "link",
       {
-        rel: "stylesheet",
-        href:
-          "https://satchel.rei.com/media/font/REI_Stuart/fonts.css"
-      }
-    ],
-    [
-      "link",
-      {
-        rel: "stylesheet",
-        href:
-          "https://satchel.rei.com/media/font/Graphik/Graphik/fonts.css"
-      }
-    ],
-    [
-      "link",
-      {
         rel: "icon",
         href: "/favicon.ico"
+      }
+    ],
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href: "/cdr-fonts.css"
       }
     ],
     [
