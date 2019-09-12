@@ -50,8 +50,7 @@ export default {
   @import '../theme/styles/cdr-tokens.scss';
   @import '../theme/styles/cdr-doc-tokens.scss';
   
-  // $background-color-intro: #46522c; // Copied from InVision comp //
-  $background-color-intro: #225c4e; // Blue Spruce - new 2020 brand color //
+  $background-color-intro: #225c4e; // Blue Spruce - new 2020 brand color
   $text-color-intro: $cdr-color-text-primary-darkmode;
 
   .cdr-doc-intro {
@@ -70,7 +69,6 @@ export default {
   }
 
   .cdr-doc-intro__title {
-    // @include cdr-text-header-1;
     @include cdr-text-display-1200; // Headline but larger
     margin: 0;
     padding-bottom: $cdr-space-one-x;
@@ -86,7 +84,6 @@ export default {
   }
 
   .cdr-doc-intro__breadcrumb-link {
-    // @include spruce-display-00;
     @include cdr-text-default;
     color: $text-color-intro;
     margin-right: $cdr-space-half-x;
@@ -98,7 +95,6 @@ export default {
   }
 
   .cdr-doc-intro__title-metadata {
-    // @include redwood-display-20; 
     @include cdr-text-default-compact;
     margin: 0;
     margin-bottom: $cdr-space-half-x;
@@ -111,7 +107,6 @@ export default {
   }
 
   .cdr-doc-intro__summary {
-    // @include redwood-display-60;
     @include cdr-text-subheading-500; // Subheadline
     margin: 0;
     
