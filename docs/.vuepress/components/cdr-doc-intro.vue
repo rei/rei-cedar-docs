@@ -71,8 +71,8 @@ export default {
   }
 
   .cdr-doc-intro__title {
-    @include cdr-text-header-1;
-    // @include cdr-text-display-900; // Headline
+    // @include cdr-text-header-1;
+    @include cdr-text-display-900; // Headline
     margin: 0;
     // padding-bottom: $cdr-space-one-x;
   }
@@ -87,8 +87,8 @@ export default {
   }
 
   .cdr-doc-intro__breadcrumb-link {
-    @include spruce-display-00;
-    // @include cdr-text-default-condensed;
+    // @include spruce-display-00;
+    @include cdr-text-default-compact;
     color: $text-color-intro;
     margin-right: $cdr-space-half-x;
     margin-bottom: 0;
@@ -99,8 +99,8 @@ export default {
   }
 
   .cdr-doc-intro__title-metadata {
-    @include redwood-display-20; 
-    // @include cdr-text-default;
+    // @include redwood-display-20; 
+    @include cdr-text-default;
     margin: 0;
     margin-bottom: $cdr-space-half-x;
 
@@ -112,8 +112,8 @@ export default {
   }
 
   .cdr-doc-intro__summary {
-    @include redwood-display-60;
-    // @include cdr-text-subheading-500; // Subheadline
+    // @include redwood-display-60;
+    @include cdr-text-subheading-500; // Subheadline
     margin: 0;
     
     .cdr-doc-intro__title + & {
