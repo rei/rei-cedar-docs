@@ -9,7 +9,7 @@
     <div class="cdr-doc-code-snippet__actions" v-if="copyButton">
       <div class="cdr-doc-code-snippet__copy-action cdr-doc-code-snippet__action" v-on:click="copyToClipBoard">
         <button class="cdr-doc-code-snippet__copy-button">
-          <img class="cdr-doc-code-snippet__action-icon" :src="$withBase(`/Copy@2x.png`)" alt="Copy to clipboard"/>
+          <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#clipboard" alt="Copy to clipboard"/> <!-- ...or use="#copy" -->
         </button>
         <span class="cdr-doc-code-snippet__tooltip cdr-doc-code-snippet__tooltip--show-on-hover">
           Copy to clipboard
@@ -28,7 +28,7 @@
       </div>
       <div class="cdr-doc-code-snippet__action-wrapper">
         <a class="cdr-doc-code-snippet__action" :href="repositoryRoot + repositoryHref" target="_blank" rel="noopener noreferrer" v-if="repositoryHref">
-          <img class="cdr-doc-code-snippet__action-icon" :src="$withBase(`/GitHub@2x.png`)" alt="View source in repository"/>
+          <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github" alt="View source in repository"/>
         </a>
         <span class="cdr-doc-code-snippet__tooltip cdr-doc-code-snippet__tooltip--show-on-hover">
           View in repository
@@ -36,7 +36,7 @@
       </div>
       <div class="cdr-doc-code-snippet__action-wrapper" v-if="sandboxHrefComputed">
         <a class="cdr-doc-code-snippet__action" :href="sandboxHrefComputed" target="_blank" rel="noopener noreferrer">
-          <img class="cdr-doc-code-snippet__action-icon" :src="$withBase(`/CodeSandbox@2x.png`)" alt="View in code sandbox"/>
+          <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-code-sandbox" alt="View in code sandbox"/>
         </a>
         <span class="cdr-doc-code-snippet__tooltip cdr-doc-code-snippet__tooltip--show-on-hover">
           View in sandbox
@@ -304,7 +304,6 @@ export default {
   .cdr-doc-code-snippet__action-icon {
     cursor: pointer;
     display: block;
-    height: 22px;
   }
 
   .cdr-doc-code-snippet--no-line-numbers {
