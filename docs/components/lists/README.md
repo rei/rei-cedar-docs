@@ -98,7 +98,6 @@ Collect items to be displayed in a list when items are not marked with bullets. 
 
 <cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight= false >
 
-<template slot="Default">
 
 ```html
   <cdr-list>
@@ -111,23 +110,6 @@ Collect items to be displayed in a list when items are not marked with bullets. 
     <li>Default list item 3</li>
   </cdr-list>
 ```
-</template>
-
-<template slot="compact">
-
-```html
-  <cdr-list modifier="compact">
-    <li>Compact list item 1</li>
-    <li>Compact list item 2
-      <cdr-list>
-        <li>Compact list item</li>
-      </cdr-list>
-    </li>
-    <li>Compact list item 3</li>
-  </cdr-list>
-```
-
-</template>
 
 </cdr-doc-example-code-pair>
 
@@ -136,7 +118,6 @@ Collect items to be displayed in a list when items are not marked with bullets. 
 Collect related items that don’t need to be in a specific order or sequence. List items are typically marked with bullets.
 
 <cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
-<template slot="Default">
 
 ```html
   <cdr-list modifier="unordered">
@@ -149,24 +130,6 @@ Collect related items that don’t need to be in a specific order or sequence. L
     <li>Default list item 3</li>
   </cdr-list>
 ```
-</template>
-
-<template slot="compact">
-
-```html
-  <cdr-list modifier="unordered compact">
-    <li>Compact list item 1</li>
-    <li>Compact list item 2
-      <cdr-list>
-        <li>Compact list item</li>
-      </cdr-list>
-    </li>
-    <li>Compact list item 3</li>
-  </cdr-list>
-```
-
-</template>
-
 
 </cdr-doc-example-code-pair>
 
@@ -176,7 +139,6 @@ Collect related items with numeric order or sequence. Numbering starts at 1 with
 
 <cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
 
-<template slot="Default">
 
 ```html
   <cdr-list tag="ol" modifier="ordered">
@@ -189,23 +151,6 @@ Collect related items with numeric order or sequence. Numbering starts at 1 with
     <li>Default list item 3</li>
   </cdr-list>
 ```
-</template>
-
-<template slot="compact">
-
-```html
-  <cdr-list tag="ol" modifier="ordered compact">
-    <li>Compact list item 1</li>
-    <li>Compact list item 2
-      <cdr-list>
-        <li>Compact list item</li>
-      </cdr-list>
-    </li>
-    <li>Compact list item 3</li>
-  </cdr-list>
-```
-
-</template>
 
 </cdr-doc-example-code-pair>
 
