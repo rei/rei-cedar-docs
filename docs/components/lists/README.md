@@ -96,7 +96,7 @@
 
 Collect items to be displayed in a list when items are not marked with bullets.  This is the default and is also known as unordered and undecorated “bare” list.
 
-<cdr-doc-example-code-pair repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight= false >
+<cdr-doc-example-code-pair repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" >
 
 
 ```html
@@ -117,7 +117,7 @@ Collect items to be displayed in a list when items are not marked with bullets. 
 
 Collect related items that don’t need to be in a specific order or sequence. List items are typically marked with bullets.
 
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :codeMaxHeight="false" repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-list modifier="unordered">
@@ -137,7 +137,7 @@ Collect related items that don’t need to be in a specific order or sequence. L
 
 Collect related items with numeric order or sequence. Numbering starts at 1 with the first list item and increases by increments of 1 for each successive ordered list item.
 
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :codeMaxHeight="false" repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
 
 
 ```html
@@ -154,11 +154,32 @@ Collect related items with numeric order or sequence. Numbering starts at 1 with
 
 </cdr-doc-example-code-pair>
 
+## Compact
+
+Compact modifier can be added to any cdr-list in order to reduce the margin between list items
+
+<cdr-doc-example-code-pair repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" >
+
+
+```html
+  <cdr-list modifier="compact unordered">
+    <li>Compact unordered list item 1</li>
+    <li>Compact unordered list item 2
+      <cdr-list>
+        <li>Compact unordered list item</li>
+      </cdr-list>
+    </li>
+    <li>Compact unordered list item 3</li>
+  </cdr-list>
+```
+
+</cdr-doc-example-code-pair>
+
 ## Inline
 
 Display items horizontally with no divider.
 
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :codeMaxHeight="false" repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
 
 <template slot="Default">
 
@@ -189,7 +210,7 @@ Display items horizontally with no divider.
 
 Display items horizontally, separated by a bullet character.
 
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :codeMaxHeight="false" repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
 
 <template slot="Default">
 
