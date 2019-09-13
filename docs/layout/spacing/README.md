@@ -24,11 +24,11 @@ By design, Cedar elements are self contained and provide no spacing outside of t
 
 The Cedar spacing system is built around HTML’s foundational layout principle known as the **box model**. Every webpage is made of boxes and includes the ‘box within a box’ structure. The graphic below shows how the box model defines the structure and layout for all elements on a page.
 
-<cdr-img :src="$withBase('/layout/')" alt="Box model structure of a webpage" />
+<cdr-img :src="$withBase('/layout/spacing-box-model.png')" alt="Box model structure of a webpage" />
 
 **Content:** In most cases, any content inside a box, text, or other boxes will wrap to its parent container’s width and push down to increase its parent container’s height dynamically.
 
-**Padding:** Padding is the space around the content inside a container. This spacing does not affect the total dimension of an element, but rather shrinks the working space within it. For example, a 300px wide container with cdr-space-inset-one-x padding will allow its content to grow to 268px wide.
+**Padding:** Padding is the space around the content inside a container. This spacing does not affect the total dimension of an element, but rather shrinks the working space within it. For example, a 300px wide container with _cdr-space-inset-one-x_ padding will allow its content to grow to 268px wide.
 
 **Borders:** Borders function like padding but with color. Cedar uses borders that are only 1px thick.
 
@@ -41,15 +41,15 @@ Spacing is a unit of white space that pushes visual elements away from each othe
 
 The Cedar spacing system is based on 1.6rem or 16px units. There are 8 spacing values derived from a 16px base.
 
-<cdr-img :src="$withBase('/layout/')" alt="Horizontal spacing" />
+<cdr-img class="cdr-doc-article-img" :src="$withBase('/layout/spacing-margin-horizontal.png')" alt="Horizontal spacing" />
 
-<cdr-img :src="$withBase('/layout/')" alt="Vertical spacing" />
+<cdr-img class="cdr-doc-article-img" :src="$withBase('/layout/spacing-margin-vertical.png')" alt="Vertical spacing" />
 
 ### Inset Padding
 
 An Inset padding is intended to provide consistent space within the content container. It defines how the typography, images, icons, and any content is spaced from the edge.
 
-<cdr-img :src="$withBase('/layout/')" alt="Inset padding" />
+<cdr-img :src="$withBase('/layout/spacing-inset-padding-sizes.png')" alt="Inset padding" />
 
 Cedar provides three different variants for each inset token size:
 
@@ -57,8 +57,8 @@ Cedar provides three different variants for each inset token size:
 -  **Squish:** Reduces top and bottom spacing by 50%, resulting in a vertically condensed visual display
 -  **Stretch:** Increases top and bottom spacing by 50%, resulting in a vertically expanded visual display
 
-<cdr-img :src="$withBase('/layout/')" alt="The three different types of inset padding" />
 
+<cdr-img :src="$withBase('/layout/spacing-inset-padding-variations.png')" alt="The three different types of inset padding" />
 
 ### Breakpoints
 
@@ -68,7 +68,7 @@ Like text size and other dimensions, Spacing and Inset can change based on scree
 
 Spacing and Insets should be combined to create compositions.
 
-<cdr-img :src="$withBase('/layout/')" alt="An example of combined Spacing and Insets" />
+<cdr-img :src="$withBase('/layout/spacing-redline-example.png')" alt="An example of combined Spacing and Insets" />
 
 ## Usage Overview
 
@@ -76,12 +76,78 @@ There are 3 ways to consume and implement Cedar’s spacing convention: tokens, 
 
 ### Tokens
 
-Use space tokens if you want to apply the Cedar spacing convention within your stylesheets and if your stylesheets are SCSS or LESS. For more information on how to 
-
-use tokens, visit the [Tokens Foundation](../../components/design-tokens) article.
+Use space tokens if you want to apply the Cedar spacing convention within your stylesheets and if your stylesheets are SCSS or LESS.  For a full list of available tokens and information on how to use them in your projects, visit the [Design Tokens](../../components/design-tokens) article.
 
 ### Utility Classes
 
-Use the space utility classes if you want to apply the Cedar spacing convention within your markup instead of in stylesheets. For more information on how to use utility classes, see the [utilty class's](components/utilities/)
+Use the space utility classes if you want to apply the Cedar spacing convention within your markup instead of in stylesheets. For more information on how to use utility classes, see the [utilty class's](../../components/utilities/)
+
+### Space Prop
+Some of the Cedar components will allow the application of Cedar space through a prop. Details on how to use the space prop can be found within that particular component API. Note that if the space prop is not documented, then that means it is not available for that component. In that case, you should use either the space utility classes or the space tokens.  
+
+## Space Utility Class Usage
+
+The Cedar space utility classes enable you to add padding to a custom container,
+and / or provide margin to push one piece of content away from another.  
+
+Cedar space utility classes can be applied using the following format:
+
+`Cdr-{property}{direction}-space-{token}@{breakpoint}`
+
+### Property
+
+The property applies the type of spacing:
+
+-  `m` - applies `margin`
+-  `p` - applies `padding`
+
+### Direction
+
+The direction designates the side the property applies to:
+
+-  `t` - applies the spacing for `*-top`
+-  `r` - applies the spacing for `*-right`
+-  `b` - applies the spacing for `*-bottom`
+-  `l` - applies the spacing for `*-left`
+-  `x` - applies the spacing for `*-right` and `*-left`
+-  `t` - applies the spacing for `*-top` and `*-bottom`
+
+### Token
+
+The following are the available spacing token values:
+
+| Space token                | Pixel values | Rem values |
+|----------------------------|--------------|------------|
+| cdr-space-eighth-x         | 2px          | 0.2rem     |
+| cdr-space-quarter-x        | 4px          | 0.4rem     |
+| cdr-space-half-x           | 8px          | 0.8rem     |
+| cdr-space-three-quarter-x  | 12px         | 1.2rem     |
+| cdr-space-one-x            | 16px         | 1.6rem     |
+| cdr-space-one-and-a-half-x | 24px         | 2.4rem     |
+| cdr-space-two-x            | 32px         | 3.2rem     |
+| cdr-space-four-x           | 64px         | 6.4rem     |
+
+
+### Spacing Example
+
+An example of setting the generic space classes:
+
+| Modifier      | CSS property                 | Space utility class           |
+|---------------|------------------------------|-------------------------------|
+| pt            | padding-top                  | cdr-pt-space-one-x            |
+| pr            | padding-right                | cdr-pr-space-one-x            |
+| pb            | padding-bottom               | cdr-pb-space-one-x            |
+| pl            | padding-left                 | cdr-pl-space-one-x            |
+| px            | padding-left & padding-right | cdr-px-space-one-x            |
+| py            | padding-top & padding-bottom | cdr-py-space-one-x            |
+| mt            | margin-top                   | cdr-mt-space-one-x            |
+| mr            | margin-right                 | cdr-mr-space-one-x            |
+| mb            | margin-bottom                | cdr-mb-space-one-x            |
+| ml            | margin-left                  | cdr-ml-space-one-x            |
+| mx            | margin-left & margin-right   | cdr-mx-space-one-x            |
+| my            | margin-top & margin-bottom   | cdr-my-space-one-x            |
+| inset         | padding                      | cdr-space-inset-one-x         |
+| inset-squish  | padding                      | cdr-space-inset-squish-one-x  |
+| inset-stretch | padding                      | cdr-space-inset-stretch-one-x |
 
 </cdr-doc-table-of-contents-shell>
