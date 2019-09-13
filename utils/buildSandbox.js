@@ -14,7 +14,6 @@ template: "<App/>"
 });`;
 
 export default function makeMeASandbox(data, model) {
-  if(!data.components) return false
   // TODO: can we grab the preceding heading to use for name/title?
   const name = "Cedar Example Sandbox";
 
@@ -33,7 +32,6 @@ export default function makeMeASandbox(data, model) {
           "description": "https://rei.github.io/rei-cedar-docs/",
           "dependencies": {
             "@rei/cedar": packageJson.dependencies['@rei/cedar'],
-            "lodash": "^4.17.4",
             "vue": "^2.5.22"
           }
         },
@@ -59,7 +57,6 @@ function buildIndexHtml(title) {
   	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width,initial-scale=1.0">
   	<title>${title}</title>
-  	<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed" rel="stylesheet">
   </head>
 
   <body>
@@ -88,14 +85,16 @@ function buildContent(data, model, fontImport) {
 }
 
 function buildScriptTag(data, model) {
+  const componentsImport = `import { ${data.components} } from "@rei/cedar";`;
+
   return `
-import { ${data.components} } from "@rei/cedar";
-${data.loadSprite ? 'import svgSprite from "@rei/cedar-icons/dist/all-icons.svg";' : ''}
+${data.components ? componentsImport : ''}
+${data.loadSprite ? 'import svgSprite from "@rei/cedar-icons/dist/all-icons.svg"; // note: sprite should be loaded via HTML, not JS' : ''}
 
 export default {
   name: "App",
   components: {
-    ${data.components}
+    ${data.components ? data.components : ''}
   },
   data() {
     return ${model ? JSON.stringify(model) : "{}"}
