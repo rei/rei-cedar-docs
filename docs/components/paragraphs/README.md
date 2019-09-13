@@ -108,7 +108,7 @@
 Used as default font style for all text information. Also known as body-default in UI ToolKit.
 
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-text>Pack everything you need with this handy checklist! We include the 10 essentials and more for comfort in the backcountry.</cdr-text>

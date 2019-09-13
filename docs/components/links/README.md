@@ -106,7 +106,7 @@
 
 Display within body copy for articles, hub cards, footer, or recommendations.
 
-<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/link" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <cdr-text>

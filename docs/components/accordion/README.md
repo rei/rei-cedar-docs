@@ -235,7 +235,7 @@ Reduced spacing around title and content body. Also, smaller font sizes resultin
 
 Border aligns to the title text and expand/collapse icon.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ borderAligned1: false, borderAligned2: false, borderAligned3: false }">
+<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ borderAligned1: false, borderAligned2: false, borderAligned3: false }">
 
 ```vue
   <cdr-accordion

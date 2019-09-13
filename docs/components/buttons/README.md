@@ -261,7 +261,7 @@ Pair an icon with text to improve recognition about an object or action.
 
 Use to visually communicate an object or action in limited space. Include alternative text to describe what button does.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/button" :load-sprite="true" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrButton, CdrIcon'})" >
+<cdr-doc-example-code-pair repository-href="/src/components/button" :load-sprite="true" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrButton, CdrIcon'})" >
 
 ```html
   <div>
@@ -285,7 +285,7 @@ Use to visually communicate an object or action in limited space. Include altern
 
 Change the button size based on where button is used. Default size is medium. Small is used for supplemental user actions such as product comparison or filter. Large is used for &quot;Add to cart&quot; on product pages or Call to Action.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
     <div>

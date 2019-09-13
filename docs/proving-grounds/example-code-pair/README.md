@@ -19,7 +19,7 @@ pageClass: cdr-doc-proving-ground
 
 ## Hide Background Toggle, Code Toggle, add repository and sandbox links
 
-<cdr-doc-example-code-pair :background-toggle="false" :code-toggle="false" repository-href="http://github.com/rei" sandbox-href="http://codesandbox.io">
+<cdr-doc-example-code-pair :code-toggle="false" repository-href="http://github.com/rei" sandbox-href="http://codesandbox.io">
 
 ```html
   <div>
