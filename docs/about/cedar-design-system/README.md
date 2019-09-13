@@ -34,7 +34,7 @@ For more information or questions regarding Cedar’s support for external consu
 ## Intake
 
 ### Contributions
-Cedar welcomes and encourages contributions from the digital community at REI. If you are interested in contributing design or code, please visit the [Contributing to Cedar](link TBD) page for more information. 
+Cedar welcomes and encourages contributions from the digital community at REI. If you are interested in contributing design or code, please visit the [Contributing to Cedar](../../about/contributing-to-cedar/) page for more information. 
 
 ###  Request a Component
 All new requests for components will be evaluated, beginning with a discovery process that includes an audit of visual patterns. Factors such as reusability across the product ecosystem (ideally can be used by 3-5 teams), investment and maturity of the product, and team bandwidth are also taken into account.
@@ -46,7 +46,7 @@ The Cedar team is committed to maintaining consistent, high-quality components. 
 
 The team will address the bug as soon as possible, depending on the severity of the issue and the sprint capacity. Please include as much relevant information as possible when submitting a bug report, including steps to reproduce, urgency, and impact to help prioritize the task.
 
-If you have a fix for the bug and would like to submit a PR for it, please reach out in Slack at #cedar-user-support or visit the [Contributing to Cedar](link TBD) page to learn more about contribution opportunities.
+If you have a fix for the bug and would like to submit a PR for it, please reach out in Slack at #cedar-user-support or visit the [Contributing to Cedar](../../about/contributing-to-cedar/) page to learn more about contribution opportunities.
 
 ## Communications
 The Cedar team is in Slack, which is the best way to learn about new releases and find support. Some relevant Slack channels are:
