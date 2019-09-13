@@ -21,6 +21,7 @@ Cedar uses Design Tokens to store typographic attributes that represent the fund
 
 
 For more information on what Design Tokens are and how to use them, visit the [Design Tokens] (http://cedar-docs.rei-cloud.com/rei-cedar-docs/components/design-tokens/) page.
+
 For a complete list of Cedar Design Tokens, visit the [Cedar Tokens] (https://rei.github.io/rei-cedar-tokens/) page.
 
 
@@ -79,47 +80,50 @@ Cedar supports two primary brand typefaces: Stuart and Graphik. Each play a spec
 
 Designed exclusively for the co-op, Stuart was influenced by the U.S. National Park Service signage. Modeled after Plantin, Stuart embraces the same softness in both structure and finish and its warm character balances well with the clean simplicity of Graphik.
 
+<cdr-img class="cdr-doc-article-img" alt="A mosaic showing the Stuart font in various sizes and colors" :src="$withBase(`/typography/typography_stuart.png`)" />
 
-*insert image: typography_stuart.png https://drive.google.com/file/d/1LjY12GIK_ykZjG-kaaaLLYQAQS568jCE/view 
+
+https://drive.google.com/file/d/1LjY12GIK_ykZjG-kaaaLLYQAQS568jCE/view 
 
 
 #### Features
 
 Accessibility was front-of-mind during the development of Stuart. Accessible typefaces are inherently optimized for mobile usage.
 
+<cdr-img class="cdr-doc-article-img" alt="An graphic highlighting the Stuart font's open terminals, optimal x-height, optimal stroke width, ligatures, and co-op diamond" :src="$withBase(`/typography/typography_stuart_features.png`)" />
 
-*insert image: typography_stuart_features.png https://drive.google.com/file/d/1k932SM5sY0We4MdDo61M0QUSqcmZdfDd/view?usp=sharing 
+https://drive.google.com/file/d/1k932SM5sY0We4MdDo61M0QUSqcmZdfDd/view?usp=sharing 
 
 
 ### Graphik
 
 Graphik is a sans-serif typeface designed by Christian Schwartz and released through Commercial Type in 2009. Inspired by the lesser known grotesques and geometric sans-serifs, Graphik’s lower stroke contrast and a generous x-height lend it great versatility. Graphik is used for high-function or less-expressive moments.
 
+<cdr-img class="cdr-doc-article-img" alt="A mosaic showing the Graphik font in various sizes and colors" :src="$withBase(`/typography/typography_graphik.png`)" />
 
-*insert image: typography_graphik.png https://drive.google.com/file/d/1a3UNbFPou6bymUwvEBex9morhuw-VtBh/view?usp=sharing
+https://drive.google.com/file/d/1a3UNbFPou6bymUwvEBex9morhuw-VtBh/view?usp=sharing
 
 
 ## Type Scale 
 
 The typographic scale manages the font sizes used within Cedar. All type styles are derived from this scale.
 
+<cdr-img class="cdr-doc-article-img" alt="A graphic displaying the range of sizes available for headings" :src="$withBase(`/typography/typography_type-scale.png`)" />
 
-*insert image: typography_type-scale.png https://drive.google.com/file/d/1YM_bQPmrJDWgECZupEYGqz9QXS5BGxwc/view?usp=sharing
+https://drive.google.com/file/d/1YM_bQPmrJDWgECZupEYGqz9QXS5BGxwc/view?usp=sharing
 
 
 ### Font Families
 
 Cedar typography references two distinct font stacks: a serif and a sans-serif. Our default display preference always prioritizes Stuart and Graphik. Local fonts act as fallbacks should a brand font fail to load.
 
+**Serif**
 
 *insert code example to show font-family: 'REI Stuart app', 'Georgia', Times, serif
 
-Serif
-
+**Sans-serif**
 
 *insert code example to show font-family: 'Graphik app', 'Helvetica Neue', Helvetica, Arial, sans-serif
-
-Sans-serif
 
 
 ### Supported Languages
@@ -143,17 +147,20 @@ The distribution of brand fonts are managed through REI’s Self Service applica
 
 Font size selection directly impacts both readability and comprehension. Type styles are pre-optimized.
 
+<cdr-img class="cdr-doc-article-img" alt="A mosaic of various examples of typographic hierarchy" :src="$withBase(`/typography/typography_type_guidelines_size.png`)" />
 
-*insert image: typography_type_guidelines_size.png https://drive.google.com/file/d/1etkF3HpMUJRFt8BiWgYndcYJbQjW8izt/view?usp=sharing
-*insert image: typography_type_guidelines_size.gif https://drive.google.com/file/d/17HoK0g76yq8Xis5RhhdqQih8SZuTwxoM/view?usp=sharing
+https://drive.google.com/file/d/1etkF3HpMUJRFt8BiWgYndcYJbQjW8izt/view?usp=sharing
+
+*insert animation: typography_type_guidelines_size.gif https://drive.google.com/file/d/17HoK0g76yq8Xis5RhhdqQih8SZuTwxoM/view?usp=sharing
 
 
 ### Type Pairing
 
 To create the appropriate contrast and hierarchy, use a mix of Stuart and Graphik—the latter typically plays a supporting role.
 
+<cdr-img class="cdr-doc-article-img" alt="A graphic showing an example of a heading, subheading, and some body copy" :src="$withBase(`/typography/typography_type_guidelines_type-pairing.png`)" />
 
-*insert image: typography_type_guidelines_type-pairing.png https://drive.google.com/file/d/1smSXpiPW44CQeJz5dUlSq5eSyzvvQbvs/view?usp=sharing
+https://drive.google.com/file/d/1smSXpiPW44CQeJz5dUlSq5eSyzvvQbvs/view?usp=sharing
 
 
 ### Font Style
@@ -174,20 +181,24 @@ typography_italics_dont.png https://drive.google.com/file/d/1gHmyWWnXZaNO9jSF8lg
 
 From refined to playful, Stuart’s personality becomes increasingly casual as it gets heavier. While six weights are included in the Stuart family, medium is preferred for most situations.
 
-*insert image: typography_type_guidelines_font-weight_graphik.png https://drive.google.com/file/d/17diO4whCSNakFy8-gRC-iIr8r6gIQ4iB/view?usp=sharing
+<cdr-img class="cdr-doc-article-img" alt="A graphic showing various Stuart font weights, highlighting Medium" :src="$withBase(`/typography/typography_type_guidelines_font-weight_graphik.png`)" />
+
+https://drive.google.com/file/d/17diO4whCSNakFy8-gRC-iIr8r6gIQ4iB/view?usp=sharing
 
 
 The Graphik family includes nine weights. Preferred choices are: regular, medium, and semibold. Regular is appropriate for most applications.
 
-*insert image: typography_type_guidelines_font-weight_stuart.png https://drive.google.com/file/d/1enqvSuD2A2JLJxwFxd-iMb530gfRORZg/view?usp=sharing
+<cdr-img class="cdr-doc-article-img" alt="A graphic showing various Graphik font weights, highlighting Semibold, Medium, and Regular" :src="$withBase(`/typography/typography_type_guidelines_font-weight_stuart.png`)" />
+
+https://drive.google.com/file/d/1enqvSuD2A2JLJxwFxd-iMb530gfRORZg/view?usp=sharing
 
 
 ### Letter Spacing
 
 Stuart and Graphik were both designed with looser tracking to improve readability at smaller sizes. In code-driven environments, tracking is known as letter spacing. To best support the widest range of sizes, the letter spacing of text styles have been pre-optimized.
 
-
-*insert image: typography_type_guidelines_letter-spacing.png https://drive.google.com/file/d/1uG1ftgIXqGZmQEJiTm2uzC4gSxRsRj1Y/view?usp=sharing
+<cdr-img class="cdr-doc-article-img" alt="A graphic showing the difference between default and pre-optimized letter spacing" :src="$withBase(`/typography/typography_type_guidelines_letter-spacing.png`)" />
+https://drive.google.com/file/d/1uG1ftgIXqGZmQEJiTm2uzC4gSxRsRj1Y/view?usp=sharing
 
 
 ### Alignment
@@ -212,7 +223,8 @@ typography_alignment_caution.png https://drive.google.com/file/d/163tz6h1JPPeY6_
 
 An optimal length, or measure, of a line of copy is 50 to 60 characters. Line lengths more than 80 characters are discouraged.
 
-*insert image: typography_type_guidelines_line-length.png https://drive.google.com/file/d/1Sm-2HwhgmWdZpl0JKRXeTiJHPnvaC5aO/view?usp=sharing
+<cdr-img class="cdr-doc-article-img" alt="A graphic showing how long a line of copy should be on mobile and desktop" :src="$withBase(`/typography/typography_type_guidelines_line-length.png`)" />
+https://drive.google.com/file/d/1Sm-2HwhgmWdZpl0JKRXeTiJHPnvaC5aO/view?usp=sharing
 
 *insert do/do not component here with this:
 typography_line_length_mobile_do.png https://drive.google.com/file/d/1h_f3dNGn55DBJyTK-mOQB43dcQ0j8Fzi/view?usp=sharing
