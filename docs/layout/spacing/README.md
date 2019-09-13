@@ -170,8 +170,13 @@ For more information on breakpoints and responsive design, see the [Responsive L
 
 To add right margin to the Cedar button component at the medium breakpoint and up, but bottom margin to at the small breakpoint and below:
 
+| Breakpoint | Margin       | Space utility class breakpoints |
+|------------|--------------|---------------------------------|
+| @xs        | margin-right | cdr-mb-space-one-x@xs           |
+| @sm        | margin-right | cdr-mb-space-one-x@sm           |
+| @md        | margin-right | cdr-mr-space-one-x@md           |
+| @lg        | margin-right | cdr-mr-space-one-x@lg           |
 
-For a full list of space utility classes, see the [CSS Utility Class](../../components/utilities/) document.
 
 <cdr-doc-example-code-pair :background-toggle="false" :sandbox-data="$page.frontmatter.sandboxData" >
 
