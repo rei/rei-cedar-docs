@@ -9,6 +9,9 @@
       "text": "Layout/"
     }
   ],
+  "sandboxData": {
+    "components": "CdrButton"
+  },
 }
 ---
 
@@ -80,7 +83,7 @@ Use space tokens if you want to apply the Cedar spacing convention within your s
 
 ### Utility Classes
 
-Use the space utility classes if you want to apply the Cedar spacing convention within your markup instead of in stylesheets. For more information on how to use utility classes, see the [utilty class's](../../components/utilities/)
+Use the space utility classes if you want to apply the Cedar spacing convention within your markup instead of in stylesheets. For more information on how to use utility classes, see the [CSS Utility Class](../../components/utilities/) document.
 
 ### Space Prop
 Some of the Cedar components will allow the application of Cedar space through a prop. Details on how to use the space prop can be found within that particular component API. Note that if the space prop is not documented, then that means it is not available for that component. In that case, you should use either the space utility classes or the space tokens.  
@@ -112,7 +115,7 @@ The direction designates the side the property applies to:
 -  `x` - applies the spacing for `*-right` and `*-left`
 -  `t` - applies the spacing for `*-top` and `*-bottom`
 
-### Token
+### Spacing Tokens for Generic Utility Class
 
 The following are the available spacing token values:
 
@@ -149,5 +152,54 @@ An example of setting the generic space classes:
 | inset         | padding                      | cdr-space-inset-one-x         |
 | inset-squish  | padding                      | cdr-space-inset-squish-one-x  |
 | inset-stretch | padding                      | cdr-space-inset-stretch-one-x |
+
+For a full list of space utility classes, see the [CSS Utility Class](../../components/utilities/) document.
+
+### Breakpoint (Optional)
+
+Sometimes your content may need to be spaced differently at specific breakpoints. To accommodate such different spacing needs, spacing utilities are available at each of our defined breakpoints by concatenating the ‘@’ symbol with the desired breakpoint to the end of the class name.
+
+-  `xs` - applies the spacing **for the extra small breakpoint ( < 768px)**
+-  `sm` - applies the spacing **for the small breakpoint (768px <= X < 992px)** 
+-  `md` - applies the spacing **for the medium breakpoint (992px <= X < 1232px)**
+-  `lg `- applies the spacing **for the large breakpoint ( > 1232px)**
+
+For example, `.cdr-space-inset-eighth-x@md` will apply if the user’s screen is currently at the medium breakpoint (within 992px and 1232px wide).
+
+For more information on breakpoints and responsive design, see the [Responsive Layout](../responsive) article.
+
+To add right margin to the Cedar button component at the medium breakpoint and up, but bottom margin to at the small breakpoint and below:
+
+
+For a full list of space utility classes, see the [CSS Utility Class](../../components/utilities/) document.
+
+<cdr-doc-example-code-pair :background-toggle="false" :sandbox-data="$page.frontmatter.sandboxData" >
+
+```vue
+  <div>
+    <cdr-button 
+     full-width="@xs"
+      space="
+        cdr-mb-space-one-x@xs
+        cdr-mb-space-one-x@sm
+        cdr-mr-space-one-x@sm
+        cdr-mr-space-one-x@md
+        cdr-mr-space-one-x@lg
+      "
+    > 
+    A sample Cedar button
+    </cdr-button>
+    <cdr-button 
+    modifier="secondary"
+    full-width="@xs"
+    > 
+    Another sample Cedar button
+    </cdr-button>
+  </div>
+
+```
+</cdr-doc-example-code-pair>
+
+Note that space utility classes with the `@<breakpoint>` apply within the specified breakpoint range only. 
 
 </cdr-doc-table-of-contents-shell>
