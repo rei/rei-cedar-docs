@@ -92,6 +92,7 @@ module.exports = {
           { text: "Responsive", link: "/layout/responsive/" },
           { text: "Spacing", link: "/layout/spacing/" },
           { text: "Display", link: "/layout/display/" },
+          { text: "Alignment", link: "/layout/alignment/" },
         ]
       },
       {
