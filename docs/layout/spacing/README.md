@@ -57,11 +57,31 @@ Cedar provides three different variants for each inset token size:
 -  **Squish:** Reduces top and bottom spacing by 50%, resulting in a vertically condensed visual display
 -  **Stretch:** Increases top and bottom spacing by 50%, resulting in a vertically expanded visual display
 
-<cdr-img :src="$withBase('/layout/')" alt="The three different types of inset paddin" />
+<cdr-img :src="$withBase('/layout/')" alt="The three different types of inset padding" />
 
 
 ### Breakpoints
 
 Like text size and other dimensions, Spacing and Inset can change based on screen width breakpoints. For more information on breakpoints, visit the [Responsive Layout](../responsive) article.
+
+#### An Example
+
+Spacing and Insets should be combined to create compositions.
+
+<cdr-img :src="$withBase('/layout/')" alt="An example of combined Spacing and Insets" />
+
+## Usage Overview
+
+There are 3 ways to consume and implement Cedar’s spacing convention: tokens, utility classes, and the space prop.  
+
+### Tokens
+
+Use space tokens if you want to apply the Cedar spacing convention within your stylesheets and if your stylesheets are SCSS or LESS. For more information on how to 
+
+use tokens, visit the [Tokens Foundation](../../components/design-tokens) article.
+
+### Utility Classes
+
+Use the space utility classes if you want to apply the Cedar spacing convention within your markup instead of in stylesheets. For more information on how to use utility classes, see the [utilty class's](components/utilities/)
 
 </cdr-doc-table-of-contents-shell>
