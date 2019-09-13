@@ -34,7 +34,7 @@ If you are not already on Cedar 2.x.x, you will first need to [upgrade your proj
 
 ### New Font/Typography
 
-Sentinel and Roboto have been deprecated as global REI brand fonts. cdr-fonts.css has removed the base64 encoded versions of sentinel fonts as a result and has greatly reducing the overall size of this file.
+Sentinel and Roboto have been deprecated as global REI brand fonts. `cdr-fonts.css` has removed the base64 encoded versions of sentinel fonts as a result and has greatly reduced the overall size of this file.
 
 The variant fonts for "REI Stuart App" and "Graphik App" have been added.
 
@@ -50,9 +50,9 @@ We have created a new [Cedar Icon Library](https://rei.github.io/cedar-icons/#/)
 
 See the [deprecated icon components](#deprecated-icon-components) section for more information on updating your icon usage.
 
-### Deprecated Token Warnings
+### Deprecated Mixin Warnings
 
-The `cdr-tokens` package now emits warnings if it detects that you are using deprecated tokens in your SCSS. You can disable this by setting a SCSS variable `$cdr-warn: false;` in any scope that you are using `cdr-tokens` in. Note that these warnings are only emitted by the SCSS build and will not trigger if you are using LESS.
+The `cdr-tokens` package now emits warnings if it detects that you are using deprecated mixins in your SCSS. You can disable this by setting a SCSS variable `$cdr-warn: false;` in any scope that you are using `cdr-tokens` in. Note that these warnings are only emitted by mixins in the SCSS build and will not trigger for tokens or if you are using LESS.
 
 ### Button/CTA full-width@bp
 
@@ -285,6 +285,21 @@ In order to support the updates to typography, we have re-named some Cedar token
 | cdr-text-editorial-compact-size | cdr-text-default-compact-size |
 | cdr-text-editorial-compact-height | cdr-text-default-compact-height |
 
+Additionally, we have new mixins available to replace the previously deprecated `spruce-display` typography mixins. Replacements for the `redwood` and `maple` mixins will be coming in a future cedar release, see the  [v1 token migration docs](https://confluence.rei.com/display/TP/v1+Token+Migration) for more info on how to handle the deprecated pre-release tokens if you haven't already.
+
+| Deprecated mixin   | Equivalent mixin      |
+|--------------------|-----------------------|
+| spruce-display-100 | cdr-text-display-1200 |
+| spruce-display-90  | cdr-text-display-1200 |
+| spruce-display-80  | cdr-text-display-1200 |
+| spruce-display-70  | cdr-text-display-1100 |
+| spruce-display-60  | cdr-text-display-800  |
+| spruce-display-50  | cdr-text-display-700  |
+| spruce-display-40  | cdr-text-display-600  |
+| spruce-display-30  | cdr-text-heading-500  |
+| spruce-display-20  | cdr-text-heading-400  |
+| spruce-display-10  | cdr-text-heading-300  |
+| spruce-display-00  | cdr-text-heading-300  |
 
 ### Deprecated Utility Classes
 #### Alignment classes
