@@ -4,7 +4,7 @@
     <cdr-accordion
       v-if="item.type === 'links'"
       v-for="(item, index) in userLinks"
-      :key="item.text"
+      :key="`${item.text}-${index}`"
       :id="item.text.replace(' ', '-').toLowerCase()"
       class="nav-item cdr-accordion-nav"
       :opened="navGroup[index]"
@@ -46,21 +46,17 @@ import NavLink from './NavLink.vue'
 export default {
   components: { OutboundLink, NavLink, DropdownLink, CdrAccordion },
   data() {
-    /*
-      Initialize as closed accordions.
-    */
     return {
-      navGroup: [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ]
+      navGroup: [],
     };
   },
   created() {
+    /*
+      Initialize as closed accordions.
+    */
+    for (let i = 0, j = this.userLinks.length; i < j; i++) {
+      this.$set(this.navGroup, i, false);
+    }
     /*
       Determine if an accordion should be open on load.
       Doing this here because ssr-approved hook.
@@ -143,6 +139,8 @@ export default {
       return text.toLowerCase().replace(' ', '-') === this.$page.path.split('/')[1];
     },
     navToggle(index) {
+      console.log(this.navGroup);
+      console.log(this.navGroup[index]);
       const opened = this.navGroup[index];
       if (opened) {
         this.$set(this.navGroup, index, false);
