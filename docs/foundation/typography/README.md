@@ -15,9 +15,14 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
   
-Typography design tokens represent the fundamental decisions of Cedar’s visual language: 
-- Stores font specifications using variable names, not hard-coded values such as font family name or pixel values for font size
-- Specifies a hierarchical and semantically defined system
+Cedar uses Design Tokens to store typographic attributes that represent the fundamental decisions of Cedar’s visual language. Design tokens: 
+- Store font specifications using variable names, not hard-coded values such as font family name or pixel values for font size
+- Specify a hierarchical and semantically defined system
+
+
+For more information on what Design Tokens are and how to use them, visit the [Design Tokens] (http://cedar-docs.rei-cloud.com/rei-cedar-docs/components/design-tokens/) page.
+For a complete list of Cedar Design Tokens, visit the [Cedar Tokens] (https://rei.github.io/rei-cedar-tokens/) page.
+
 
 <br/>
 <hr>
@@ -65,43 +70,166 @@ Typography design tokens represent the fundamental decisions of Cedar’s visual
 <template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
 
-## Type Families
+## Typefaces
 
-Cedar design system uses a limited number of tokens for typography to define core styles. By using tokens, Cedar can respond to changes in the brand identity with minimal impact to the code.
-
-<br/>
-
-Cedar has defined typography specifications and values based on REI's brand guidelines:
-- Use these values with caution; type specifications could change
-- The design systems team is tracking how options are used in components
-- List of typography values are available on the [Brand Typography tab](?active-tab=brand-typography)
+Cedar supports two primary brand typefaces: Stuart and Graphik. Each play a specific role in our typographic system. While Graphik is available to consumers outside the co-op, Stuart is licensed and proprietary to REI.
 
 
-### Sentinel
+### Stuart
 
-<b>Sentinel</b> is REI’s first choice for headlines and body copy, as well as anywhere you need an editorial voice.
+Designed exclusively for the co-op, Stuart was influenced by the U.S. National Park Service signage. Modeled after Plantin, Stuart embraces the same softness in both structure and finish and its warm character balances well with the clean simplicity of Graphik.
 
-<br>
 
-### Roboto
+*insert image: typography_stuart.png https://drive.google.com/file/d/1LjY12GIK_ykZjG-kaaaLLYQAQS568jCE/view 
 
-<b>Roboto</b> shines when you want a simple, straightforward typeface that doesn’t get in the way. It’s used liberally in the digital space as REI’s chosen font for informational or supplemental-level copy.
 
-<br>
+#### Features
 
-### Roboto Condensed 
+Accessibility was front-of-mind during the development of Stuart. Accessible typefaces are inherently optimized for mobile usage.
 
-<b>Roboto Condensed</b> is used in special circumstances where size constraints exist or visual differentiation is needed. Examples of its use can be found in form labels and the Call to Action text.
 
-<br>
+*insert image: typography_stuart_features.png https://drive.google.com/file/d/1k932SM5sY0We4MdDo61M0QUSqcmZdfDd/view?usp=sharing 
 
-## Type Scale
 
-- **Body:** Uses a more open line height to font size ratio and is best suited for long-form content 
+### Graphik
 
-- **Display:** Line height to font size ratio is more condensed than body type specifications and caters to an overall shorter line length. It is best used for big moments, headings, titles, or subheadings. Avoid using display sizes for long-form content
+Graphik is a sans-serif typeface designed by Christian Schwartz and released through Commercial Type in 2009. Inspired by the lesser known grotesques and geometric sans-serifs, Graphik’s lower stroke contrast and a generous x-height lend it great versatility. Graphik is used for high-function or less-expressive moments.
 
-- **Utility:** Use sparingly within UI elements for Cedar components such as form labels and Call-to-Action text
+
+*insert image: typography_graphik.png https://drive.google.com/file/d/1a3UNbFPou6bymUwvEBex9morhuw-VtBh/view?usp=sharing
+
+
+## Type Scale 
+
+The typographic scale manages the font sizes used within Cedar. All type styles are derived from this scale.
+
+
+*insert image: typography_type-scale.png https://drive.google.com/file/d/1YM_bQPmrJDWgECZupEYGqz9QXS5BGxwc/view?usp=sharing
+
+
+### Font Families
+
+Cedar typography references two distinct font stacks: a serif and a sans-serif. Our default display preference always prioritizes Stuart and Graphik. Local fonts act as fallbacks should a brand font fail to load.
+
+
+*insert code example to show font-family: 'REI Stuart app', 'Georgia', Times, serif
+
+Serif
+
+
+*insert code example to show font-family: 'Graphik app', 'Helvetica Neue', Helvetica, Arial, sans-serif
+
+Sans-serif
+
+
+### Supported Languages
+
+Both Stuart and Graphik support the standard Western European languages.
+
+**Coverage:**
+
++ Italian, Spanish, Portuguese, French, German, Dutch, English, Danish, Swedish, Norwegian, and Icelandic
+
+
+### Resources
+
+The distribution of brand fonts are managed through REI’s Self Service application.
+
+
+## Type Guidelines
+
+
+### Size
+
+Font size selection directly impacts both readability and comprehension. Type styles are pre-optimized.
+
+
+*insert image: typography_type_guidelines_size.png https://drive.google.com/file/d/1etkF3HpMUJRFt8BiWgYndcYJbQjW8izt/view?usp=sharing
+*insert image: typography_type_guidelines_size.gif https://drive.google.com/file/d/17HoK0g76yq8Xis5RhhdqQih8SZuTwxoM/view?usp=sharing
+
+
+### Type Pairing
+
+To create the appropriate contrast and hierarchy, use a mix of Stuart and Graphik—the latter typically plays a supporting role.
+
+
+*insert image: typography_type_guidelines_type-pairing.png https://drive.google.com/file/d/1smSXpiPW44CQeJz5dUlSq5eSyzvvQbvs/view?usp=sharing
+
+
+### Font Style
+
+
+#### Italics
+
+Users with certain disabilities like dyslexia might have difficulty making out italicized words. Only use italics if necessary and never for critical user flows.
+
+*insert do/do not component here with this:
+typography_italics_do.png https://drive.google.com/file/d/1hvuw6wVAaD2bN0FKebex2_H1nkrUmXba/view?usp=sharing
+"Do use italics if necessary."
+typography_italics_dont.png https://drive.google.com/file/d/1gHmyWWnXZaNO9jSF8lgyRsP7TV6qoITj/view?usp=sharing
+"Don't use italics if the copy is part of important user flows."
+
+
+### Font Weight
+
+From refined to playful, Stuart’s personality becomes increasingly casual as it gets heavier. While six weights are included in the Stuart family, medium is preferred for most situations.
+
+*insert image: typography_type_guidelines_font-weight_graphik.png https://drive.google.com/file/d/17diO4whCSNakFy8-gRC-iIr8r6gIQ4iB/view?usp=sharing
+
+
+The Graphik family includes nine weights. Preferred choices are: regular, medium, and semibold. Regular is appropriate for most applications.
+
+*insert image: typography_type_guidelines_font-weight_stuart.png https://drive.google.com/file/d/1enqvSuD2A2JLJxwFxd-iMb530gfRORZg/view?usp=sharing
+
+
+### Letter Spacing
+
+Stuart and Graphik were both designed with looser tracking to improve readability at smaller sizes. In code-driven environments, tracking is known as letter spacing. To best support the widest range of sizes, the letter spacing of text styles have been pre-optimized.
+
+
+*insert image: typography_type_guidelines_letter-spacing.png https://drive.google.com/file/d/1uG1ftgIXqGZmQEJiTm2uzC4gSxRsRj1Y/view?usp=sharing
+
+
+### Alignment
+
+For optimum legibility, it’s important to establish a strong vertical alignment. All text should be left-aligned whenever possible. Some exceptions include single words and short headlines. Never left and right justify text. 
+
+
+*insert do/do not component here with this:
+typography_alignment_do.png https://drive.google.com/file/d/1cqJmnZMfz6lgpJuiY5b6Rz6RrUOTyTRs/view?usp=sharing
+"Do left align text."
+typography_alignment_dont.png https://drive.google.com/file/d/163tz6h1JPPeY6_UsP-KD2zafZjn9gbb8/view?usp=sharing
+"Don't center align long headlines."
+
+*insert do/do not component here with this:
+typography_alignment_do_image.png https://drive.google.com/file/d/1xfiZJHwmQyndHDan6s7KEzoz9GtA1hLL/view?usp=sharing
+"Do left align text to other elements on the page."
+typography_alignment_caution.png https://drive.google.com/file/d/163tz6h1JPPeY6_UsP-KD2zafZjn9gbb8/view?usp=sharing
+"Use caution when center aligning short headlines."
+
+
+### Line Length
+
+An optimal length, or measure, of a line of copy is 50 to 60 characters. Line lengths more than 80 characters are discouraged.
+
+*insert image: typography_type_guidelines_line-length.png https://drive.google.com/file/d/1Sm-2HwhgmWdZpl0JKRXeTiJHPnvaC5aO/view?usp=sharing
+
+*insert do/do not component here with this:
+typography_line_length_mobile_do.png https://drive.google.com/file/d/1h_f3dNGn55DBJyTK-mOQB43dcQ0j8Fzi/view?usp=sharing
+"Do reduce font sizes for mobile so that they are the optimal line length."
+typography_line_length_mobile_dont.png https://drive.google.com/file/d/1DP58c6ElsozCAad97al0jAMpz4Y7bfkv/view?usp=sharing
+"Don't use the same font size across all device sizes. This will create incorrect line lengths on certain devices."
+
+*insert do/do not component here with this:
+typography_line_length_desktop_do.png https://drive.google.com/file/d/13CJt07ysv3k9aQqpygDukDCtdP8QI7_W/view?usp=sharing
+"Do use line lengths of 50–60 characters."
+typography_line_length_desktop_dont.png https://drive.google.com/file/d/1oZBG0ffGFgjLkJnlaAqha7072vsv4jtT/view?usp=sharing
+"Don't create line lengths of 80 characters or more."
+
+#### 1.4.8 Visual Presentation (AAA)
+
+For people with certain reading of vision disabilities, long lines of text can become a significant barrier. They have trouble keeping their place and following the flow of text. Having a narrow block of text makes it easier for them to continue on to the next line in a block. Lines of copy should not exceed 80 characters or glyphs. This accessibility guideline is applied when using Cedar’s [Paragraph] (https://rei.github.io/rei-cedar-docs/components/paragraphs/) component.
+
 
 
 <hr/>
