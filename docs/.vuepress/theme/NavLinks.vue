@@ -139,8 +139,6 @@ export default {
       return text.toLowerCase().replace(' ', '-') === this.$page.path.split('/')[1];
     },
     navToggle(index) {
-      console.log(this.navGroup);
-      console.log(this.navGroup[index]);
       const opened = this.navGroup[index];
       if (opened) {
         this.$set(this.navGroup, index, false);
