@@ -4,3 +4,5 @@ node_modules
 docs/.vuepress/dist/
 
 docs/.vuepress/public/cedar.css
+
+docs/.vuepress/public/cdr-fonts.css 
