@@ -9,6 +9,9 @@
       "text": "Layout/"
     }
   ],
+  "sandboxData": {
+    "components": "CdrText"
+  },
 }
 ---
 
@@ -33,6 +36,24 @@ Unlike other deliverables from Cedar, our container brakes in its display settin
 The Cedar container allows flexible content width, up to a max width of 1232px. The fluid variant of the container does not have a max width. As shown below, pages can contain both fluid and standard containers. 
 
 <cdr-img :src="$withBase('/layout/StandardvFluid.gif')" alt="Standard vs. Fluid container " />
+
+To explore how the containers work, check out this Cedar sandbox:
+
+<cdr-doc-example-code-pair :background-toggle="false" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {styleTag: 'body { background-color: rgba(130, 234, 255, 0.35);} .content {background-color: #fff;} .cdr-container, .cdr-container-fluid { background-color: lightcoral; color: purple;}'})" >
+
+```vue
+  <div>
+    <div class="cdr-container">
+      <div class="content">A cdr-container class</div>
+
+    </div>
+    <div class="cdr-container-fluid">
+      <div class="content">A cdr-container-fluid class</div>
+    </div>
+  </div>
+
+```
+</cdr-doc-example-code-pair>
 
 ## Display Breakpoints
 Cedar provides support for four layout screen widths: extra small, small, medium, and large.
