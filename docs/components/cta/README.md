@@ -160,7 +160,7 @@
 
 Use dark Call to Action over a light background image or color to provide proper contrast. This is the default Call to Action style.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/cta" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair repository-href="/src/components/cta" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <cdr-cta
