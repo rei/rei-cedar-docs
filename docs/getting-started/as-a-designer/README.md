@@ -22,8 +22,8 @@
 ## Learn About Cedar
 
 - Browse the Cedar Design System documentation and the [UI Toolkit Library]() to familiarize yourself with our [foundation styles](), [components](), and [naming conventions]().
-- Run the Cedar UI Toolkit installation process outlined below for Abstract and Sketch.
-- Review project files in Abstract to understand how designers are using components.
+- Run the Cedar UI Toolkit installation process outlined below for Abstract and Sketch
+- Review project files in Abstract to understand how designers are using components
 
 ---
 
@@ -108,24 +108,24 @@ Simulates color blindness and easily checks contrast.
 
 ## Cedar UI Toolkit 
 
-Note: Cedar's UI Toolkit is only available for REI employees and approved third-party vendors. If you are an external vendor that needs access, please email cedar@rei.com.
+__Note:__ Cedar's UI Toolkit is only available for REI employees and approved third-party vendors. If you are an external vendor that needs access, please email cedar@rei.com.
 
 
 ### Toolkit Versions
 
 The Cedar Sketch UI Toolkit provides reusable patterns and styles using Sketch symbols, Text Styles, and Layer Styles. There are 3 Toolkit versions of Cedar:
-- __[CDR Toolkits · vCurrent](https://share.goabstract.com/ab520e30-0db8-4e5d-8310-cea8739da61c):__ Present; this is the current stable release of Cedar and will be updated on our regular release schedule. This is the version you'd use in most cases.
-- __[CDR Toolkits · vNext](https://share.goabstract.com/b776d364-237a-4885-8849-610ac7afdfe5):__ Future; the next version under development and constantly changing.
-- __[CDR Toolkits · vLegacy](https://share.goabstract.com/d6622675-42d4-40ab-a31a-64669e0d0000):__ Past; if you need an older version of the Toolkit, it is archived here. Use this only if you cannot use _vCurrent_ or _vNext_.
+- __[CDR Toolkits · vCurrent](https://share.goabstract.com/ab520e30-0db8-4e5d-8310-cea8739da61c):__ Present; this is the current stable release of Cedar and will be updated on our regular release schedule. This is the version you'd use in most cases
+- __[CDR Toolkits · vNext](https://share.goabstract.com/b776d364-237a-4885-8849-610ac7afdfe5):__ Future; the next version under development and constantly changing
+- __[CDR Toolkits · vLegacy](https://share.goabstract.com/d6622675-42d4-40ab-a31a-64669e0d0000):__ Past; if you need an older version of the Toolkit, it is archived here. Use this only if you cannot use _vCurrent_ or _vNext_
 
 
 ### Toolkit Libraries
 
 Each Toolkit project version contains different editions of the same 4 libraries:
-- __[CDR Icons](https://share.goabstract.com/e9186773-0cc3-43a6-b7ff-54b163d95e00?sha=a814b05c391c93f5a7d39ce9508cd5238ae8fe0e):__ All Cedar icons.
+- __[CDR Icons](https://share.goabstract.com/e9186773-0cc3-43a6-b7ff-54b163d95e00?sha=a814b05c391c93f5a7d39ce9508cd5238ae8fe0e):__ All Cedar icons
 - __[CDR Tokens](https://share.goabstract.com/ab846e4a-5927-40e5-bbe0-a48eb6baf732?sha=a814b05c391c93f5a7d39ce9508cd5238ae8fe0e):__ Text, color, and redlining/spacing tools; these are platform-agnostic.
-- __[CDR Web Components](https://share.goabstract.com/29cd0f23-fb23-42e4-976d-57f93ff3aa5c?sha=a814b05c391c93f5a7d39ce9508cd5238ae8fe0e):__ For web design, including mobile web.
-- __[CDR Native UI Components](https://share.goabstract.com/65b5f352-8903-4664-b250-1d1842da8b54?sha=a814b05c391c93f5a7d39ce9508cd5238ae8fe0e):__ For native apps (iOS and Android). 
+- __[CDR Web Components](https://share.goabstract.com/29cd0f23-fb23-42e4-976d-57f93ff3aa5c?sha=a814b05c391c93f5a7d39ce9508cd5238ae8fe0e):__ For web design, including mobile web
+- __[CDR Native UI Components](https://share.goabstract.com/65b5f352-8903-4664-b250-1d1842da8b54?sha=a814b05c391c93f5a7d39ce9508cd5238ae8fe0e):__ For native apps (iOS and Android)
 
 If you need to switch between Toolkit versions (for example, from _CDR Tokens · vCurrent_ to _CDR Tokens · vNext_), use the [Linked Library Swapping](#linked-library-swapping) process detailed below.
 
@@ -172,7 +172,7 @@ If you need to replace one version of a linked library with another in a differe
 2. For each file in the project referencing the old library, update the reference to the new library:  
   __Your-Project > Branches > Your-Branch > Files > Your File > Right-Click > Manage Libraries__  
   <cdr-img alt="screenshot"  :src="$withBase(`/getting-started-for-designers/swap-2-manage-libs.png`)"/>  
-  Match the old version of the library to the new version and click __Apply Changes__.  
+3. Match the old version of the library to the new version and click __Apply Changes__.  
   <cdr-img alt="screenshot"  :src="$withBase(`/getting-started-for-designers/swap-3-replace-libs.png`)"/>
 3. Validate that the file is referencing the new library.  
   <cdr-img alt="screenshot"  :src="$withBase(`/getting-started-for-designers/swap-4-validate-new-lib.png`)"/>
