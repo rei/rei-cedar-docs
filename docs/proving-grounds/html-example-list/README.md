@@ -28,7 +28,7 @@ pageClass: cdr-doc-proving-ground
 </cdr-doc-html-example-list>
 
 ## No Background Toggle
-<cdr-doc-html-example-list :background-toggle="false">
+<cdr-doc-html-example-list >
 ```html
   <cdr-list
     modifier="unordered"
@@ -52,7 +52,7 @@ pageClass: cdr-doc-proving-ground
 </cdr-doc-html-example-list>
 
 ## No Background Toggle, background color set to dark
-<cdr-doc-html-example-list :background-toggle="false" background-color="dark">
+<cdr-doc-html-example-list background-color="dark">
 ```html
   <cdr-button>Testing</cdr-button>
 ```
@@ -125,7 +125,7 @@ pageClass: cdr-doc-proving-ground
 
 ## Multiple Examples, hide background toggles and manually set individual item backgrounds
 
-<cdr-doc-html-example-list :background-colors="{'Default':'dark', 'Focused':'dark'}" :background-toggle="false">
+<cdr-doc-html-example-list :background-colors="{'Default':'dark', 'Focused':'dark'}" >
   <template slot="Default">
 
 ```html

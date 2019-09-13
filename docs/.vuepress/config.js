@@ -83,13 +83,14 @@ module.exports = {
           { text: "Color", link: "/foundation/color/" },
           { text: "Motion", link: "/foundation/motion/" },
           { text: "Typography", link: "/foundation/typography/" },
-          { text: "Spacing", link: "/foundation/spacing/" }
+          { text: "Spacing", link: "/foundation/spacing/" },
         ]
       },
       {
         text: "Layout",
         items: [
-          { text: "Responsive", link: "/layout/responsive/" }
+          { text: "Responsive", link: "/layout/responsive/" },
+          { text: "Display", link: "/layout/display/" },
         ]
       },
       {

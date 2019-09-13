@@ -10,7 +10,6 @@
     }
   ],
   "sandboxData": {
-    "components": "CdrText"
   },
 }
 ---
@@ -31,15 +30,15 @@ Unlike other deliverables from Cedar, our container brakes in its display settin
 
 <cdr-img :src="$withBase('/layout/Spec_Grids_Breakpoints_16-9.png')" alt="Breakpoints for REI’s responsive layout" />
 
-### Standard vs. Fixed Container 
+### Standard vs. Fixed Container
 
-The Cedar container allows flexible content width, up to a max width of 1232px. The fluid variant of the container does not have a max width. As shown below, pages can contain both fluid and standard containers. 
+The Cedar container allows flexible content width, up to a max width of 1232px. The fluid variant of the container does not have a max width. As shown below, pages can contain both fluid and standard containers.
 
 <cdr-img :src="$withBase('/layout/StandardvFluid.gif')" alt="Standard vs. Fluid container " />
 
 To explore how the containers work, check out this Cedar sandbox:
 
-<cdr-doc-example-code-pair :background-toggle="false" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {styleTag: 'body { background-color: rgba(130, 234, 255, 0.35);} .content {background-color: #fff;} .cdr-container, .cdr-container-fluid { background-color: lightcoral; color: purple;}'})" >
+<cdr-doc-example-code-pair :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {styleTag: 'body { background-color: rgba(130, 234, 255, 0.35);} .content {background-color: #fff;} .cdr-container, .cdr-container-fluid { background-color: lightcoral; color: purple;}'})" >
 
 ```vue
   <div>
@@ -96,12 +95,12 @@ For more information on design tokens and how to use them, visit the [Design Tok
 To avoid confusion between an element’s size variant and its breakpoint name, Cedar has the following naming conventions:
 
 -  Element sizes are treated as **modifiers** and follow the BEM naming convention of `block__element--modifier`
--  Breakpoints are denoted with the @(xs, sm, md, lg) and are appended to a class name. This convention is outside of the BEM naming convention 
+-  Breakpoints are denoted with the @(xs, sm, md, lg) and are appended to a class name. This convention is outside of the BEM naming convention
 
 For example, `cdr-button size="small@lg"`  will only apply the small button variant at the large breakpoint.
 
 ### Greater Than vs. Range Values
-The `cdr-media queries` provide both “greater than” values and “ranges” for each breakpoint. 
+The `cdr-media queries` provide both “greater than” values and “ranges” for each breakpoint.
 
 For example, a selector may target a small variant within the small breakpoint range like this:
 
@@ -116,7 +115,7 @@ For example, a selector may target a small variant within the small breakpoint r
 ```
 * Exploding the name `--sm-mq-only` would read “small-media-query-only
 
-Using the range ensures that the specified key:value pairs only applies to the `.cdr-example--small@sm` class name when it is displayed within the range of 768px-991px. 
+Using the range ensures that the specified key:value pairs only applies to the `.cdr-example--small@sm` class name when it is displayed within the range of 768px-991px.
 
 However, if you want to apply a value to the example that only needed to know when it was greater than the small breakpoint, you must use the root value query. This example allows you to update the display of the button when the display is at least  768px wide.
 

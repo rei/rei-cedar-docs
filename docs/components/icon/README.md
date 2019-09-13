@@ -139,7 +139,7 @@ A collection of SVG icon files composed into a single file. This method provides
 
 See the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) to generate a sprite sheet for your project. You will need to ensure that your sprite contains all the Cedar icons used in your application, including those used in shared components. The generated sprite sheet should be rendered inline at the root of your HTML. You should avoid rendering the sprite sheet in JavaScript/Vue, as that will cause it to be included twice (once in the server rendered HTML, and once in the client side bundle).
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/icon" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrIcon'})" :load-sprite="true">
+<cdr-doc-example-code-pair repository-href="/src/components/icon" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrIcon'})" :load-sprite="true">
 
 ```html
   <cdr-icon use="#arrow-up" />
@@ -152,7 +152,7 @@ See the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) to generate a
 
 Create a new SVG icon using any valid internal SVG markup. This method creates an outer SVG wrapper for accessibility and styles. This is not recommended if using a large number of icons.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/icon" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair repository-href="/src/components/icon" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-icon>

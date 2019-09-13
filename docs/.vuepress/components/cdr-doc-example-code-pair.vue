@@ -57,7 +57,7 @@
     props: {
       backgroundToggle: {
         type: Boolean,
-        default: true
+        default: false
       },
       backgroundColors: {
         type: Object,
