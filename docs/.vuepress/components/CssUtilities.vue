@@ -59,6 +59,9 @@ export default {
       cssData,
     };
   },
+  mounted() {
+    this.$parent.$emit('update-toc');
+  },
   computed: {
     utilityData() {
       return this.dataPath.reduce((prev, curr) => prev && prev[curr], this.cssData);

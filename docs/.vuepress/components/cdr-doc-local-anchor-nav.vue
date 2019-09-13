@@ -64,6 +64,9 @@ export default {
     tabName: {
       type: [String, Boolean],
       default: false
+    },
+    links: {
+      type: Array
     }
   },
   computed: {
@@ -73,12 +76,6 @@ export default {
   },
   data: function() {
     return {
-      links: [
-        {
-          href: '#',
-          text: 'Click Me'
-        }
-      ],
       activeLinkHref: null,
       scrollMonitoringEnabled: false,
       elementWatchers: [],
@@ -89,8 +86,6 @@ export default {
     import('smoothscroll-polyfill').then(smoothscroll => {
       smoothscroll.polyfill();
     });
-
-    this.createAnchorsFromContent();
 
     import('stickyfilljs').then(s => {
       this.setStickyPositioning(s);
@@ -221,55 +216,6 @@ export default {
       localNav.style.cssText = `top: ${this.stickyTopOffset}px; max-height: calc(100vh - ${this.stickyTopOffset}px);`;
       Stickyfill.add(localNav); // Polyfill for browsers without native position: sticky; support 
     },
-    createAnchorsFromContent () {
-      // Polyfill matches() for IE11
-      if (!Element.prototype.matches) {
-          Element.prototype.matches = Element.prototype.msMatchesSelector;
-      }
-
-      const selectors = `${this.parentSelectors}, ${this.childSelectors}`;
-      const anchorElements = document.querySelectorAll(selectors);
-      const links = [];
-      const anchorIds = [];
-
-      for (let i=0; i < anchorElements.length; i++) { // Traditional for loop to support IE 11
-        const anchorElement = anchorElements[i];
-        let anchorId = anchorElement.getAttribute('id');
-        const text = anchorElement.textContent.replace(/^# /, '');
-        // Markdown in VuePress automatically creates anchor links within headings with a '#' symbol as the text, strip this out of the textContent
-        // Vuepress header markup: <h1 id="automatically-created-by-vuepress"><a href="#automatically-created-by-vuepress">#</a>Automatically Created By Vuepress</h1>
-        if (anchorId === null) {
-          // If the Dom element doesn't already have an id, create one from its textContent and set it
-          anchorId = slugify(text);
-        }
-
-        // If an anchor starts with a number, prefix it with an underscore (_) to make it more compatible with CSS
-        if (anchorId.match(/^[0-9]+/)) {
-          anchorId = `_${anchorId}`;
-        }
-
-        // If an ID is repeated on the page, append a numeric index to it, so two anchor elements of "Guidelines" will result in #guidelines, and #guidelines-2 ids/anchors being created
-        if (anchorIds.indexOf(anchorId) !== -1) {
-          const existingIdCount = anchorIds.filter(idString => idString.replace(/-[0-9]*$/, '') === anchorId).length;
-          anchorId = `${anchorId}-${(existingIdCount + 1)}`;
-        }
-
-
-        anchorElement.setAttribute('id', anchorId);
-        const linkData = {
-          href: `#${anchorId}`,
-          text: text
-        };
-
-        if (anchorElement.matches(this.childSelectors)) {
-          linkData.isChild = true;
-        }
-
-        anchorIds.push(anchorId);
-        links.push(linkData)
-      }
-      this.links = links;
-    },
     handleAnchorLinkClick(id, event) {
       event.preventDefault(); // Intercept click event
       this.activeLinkHref = id;
@@ -330,6 +276,7 @@ export default {
     @include redwood-display-20;
     display: block;
     position: relative;
+    text-transform: capitalize;
 
     &:focus,
     &:active {
