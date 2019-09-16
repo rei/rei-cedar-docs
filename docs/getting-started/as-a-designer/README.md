@@ -63,12 +63,12 @@ To Install, open REI's Self Service application, search for _'Cedar'_, and insta
 <cdr-img alt="screenshot"  :src="$withBase(`/getting-started-for-designers/download-fonts.png`)"/>
 
 __A few things to remember:__
-- The Stuart and Graphik _"OTF · Print"_ font variants available on Self Service are __not__ compatible with the Cedar Sketch Toolkit.
-- The TTF font variants have _"App"_ after their name in applications like Sketch or FontBook. For example, _"REI Stuart App" _and _"Graphik App"_. Please only use these TTF versions in any digital design.
+- The Stuart and Graphik _"OTF · Print"_ font variants available on Self Service are not compatible with the Cedar Sketch Toolkit
+- The TTF font variants have _"App"_ after their name in applications like Sketch or FontBook. For example, _"REI Stuart App" _and _"Graphik App"_. Please only use these TTF versions in any digital design
 
 
 #### Legacy Fonts
-Legacy fonts are no longer part of Cedar so __don't use them in new designs__, but you'll still need to install them until so that old design files will render properly. Roboto is also still used in many Cedar components and is required for the Cedar Sketch Toolkits to work properly. 
+Do not use the Legacy fonts in new designs as they are no longer part of Cedar. You'll still need to install them so that the old design files render properly. Similarly, Roboto is still used in many Cedar components and is required for the Cedar Sketch Toolkits to work properly. 
 
 To Install, open REI’s Self Service application, search for, and install the following fonts:
 - Roboto
@@ -227,14 +227,14 @@ You can create a branch of the Cedar library to make the changes yourself, or re
 
 
 ## Advanced Abstract Methods
-Advanced techniques the Cedar team uses internally. They may help you too.
+Below are some advanced techniques that the Cedar team uses internally. They may help you too!
 
 
 ### Cross-Project Merge
 
 If you need to merge a file from a project into a duplicate file in a different project, follow these steps. Note that the files must originate from the same file. This is useful for keeping multiple versions of the same files in different projects.
 1. Download the *new-version.sketch* file to your computer:  
-  Navigate to the __*new-version.sketch* > Right-Click > Export > Save to your computer__  
+  Navigate to the __*new-version.sketch* > Right-Click > Export > Save to your computer__.  
   <cdr-img alt="screenshot"  :src="$withBase(`/getting-started-for-designers/cross-proj-merge-1.png`)"/>
 2. Create a new branch containing the *old-version.sketch*.
 3. Replace the *old-version.sketch* file with the *new-version.sketch* file:  
@@ -244,27 +244,27 @@ If you need to merge a file from a project into a duplicate file in a different 
 
 ### Multi-Project Syncing Strategy
 
-This is how the Cedar team keeps multiple versions of the same project in sync. This strategy requires the synced projects set to have originated from the same project.
+Note that to keep multiple versions of the same project in sync, all synced projects must originate from the same project.
 
-Doing these steps in this order will alter the order of changes between the _vNext_ and _vCurrent_ branches so that all _vNext_ changes take place __*after*__ all _vCurrent_ changes in their commit order, regardless of their actual timestamped chronology.
+All _vNext_ changes take place after all _vCurrent_ changes in their commit order, which alters the order of the changes between the _vNext_ and _vCurrent_ branches.
 
 <cdr-img alt="screenshot"  :src="$withBase(`/getting-started-for-designers/multi-proj-sync-diagram.png`)"/>
 
-After each project has been updated independently, to sync the projects again and make a new major release from a beta branch:
-1. Restore the youngest _vNext_ ancestor that had _vCurrent_ merged into it:  
+After each project has been updated independently, sync the projects again and make a new major release from a beta branch.
+1. Restore the youngest _vNext_ ancestor branch that had _vCurrent_ merged into it:  
   __vNext > Branches > Archived > (Youngest common ancestor __*branch*__ with _vCurrent_) > … > New Branch__  
   <cdr-img alt="screenshot"  :src="$withBase(`/getting-started-for-designers/multi-proj-sync-1.png`)"/>
   <cdr-img alt="screenshot"  :src="$withBase(`/getting-started-for-designers/multi-proj-sync-2.png`)"/>
   <cdr-img alt="screenshot"  :src="$withBase(`/getting-started-for-designers/multi-proj-sync-3.png`)"/>
   __Restored Branch > Commits > (Youngest common ancestor __*commit*__ with _vCurrent_) > Restore Commit__  
   <cdr-img alt="screenshot"  :src="$withBase(`/getting-started-for-designers/multi-proj-sync-4.png`)"/>
-2. [Cross-Project Merge](#cross-project-merge) all _vCurrent_ project files into the _vNext_ ancestor branch project files
-3. Update from Master: Pull changes from _vNext_ master into the _vNext_ branch, deal with merge conflicts, and commit.
+2. [Cross-Project Merge](#cross-project-merge) all _vCurrent_ project files into the _vNext_ ancestor branch project files.
+3. Pull changes from _vNext_ master into the _vNext_ branch and commit.
   <cdr-img alt="screenshot"  :src="$withBase(`/getting-started-for-designers/multi-proj-sync-5.png`)"/>
-4. Merge Branch back into vNext Master
-5. [Cross-Project Merge](#cross-project-merge) all _vNext_ project files into _vCurrent_
+4. Merge Branch back into _vNext_ master.
+5. [Cross-Project Merge](#cross-project-merge) all _vNext_ project files into _vCurrent_.
 
-__*Good Luck!*__
+
 
 <br/><br/>  
 
