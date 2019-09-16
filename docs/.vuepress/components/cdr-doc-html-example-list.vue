@@ -1,35 +1,35 @@
 <template>
   <div class="cdr-doc-html-example-list" :class="{'cdr-doc-html-example-list--not-interactive': !interactive }">
-    <div class="cdr-doc-html-example-list__item" 
+    <div class="cdr-doc-html-example-list__item"
           :class="'cdr-doc-html-example-list__item-background--' + backgroundToggleStates[slotLabel]"
           v-for="slotContent, slotLabel in $slots">
       <div class="cdr-doc-html-example-list__item-background-toggle" v-if="backgroundToggle">
-        <label class="cdr-doc-item-background-toggle__button" 
-                :class="{'cdr-doc-item-background-toggle__button--active': backgroundToggleStates[slotLabel] === 'light'}" 
+        <label class="cdr-doc-item-background-toggle__button"
+                :class="{'cdr-doc-item-background-toggle__button--active': backgroundToggleStates[slotLabel] === 'light'}"
                 :for="'cdr-doc-html-example-list__toggle-light-' + slotLabel + instanceId">
-          <input 
+          <input
             class="cdr-doc-item-background-toggle__input"
-            type="radio" 
+            type="radio"
             :id="'cdr-doc-html-example-list__toggle-light-' + slotLabel + instanceId"
             value="light"
             v-model="backgroundToggleStates[slotLabel]">
             Light
         </label>
         <label class="cdr-doc-item-background-toggle__button"
-                :class="{'cdr-doc-item-background-toggle__button--active': backgroundToggleStates[slotLabel] === 'dark'}" 
+                :class="{'cdr-doc-item-background-toggle__button--active': backgroundToggleStates[slotLabel] === 'dark'}"
                 :for="'cdr-doc-html-example-list__toggle-dark-' + slotLabel + instanceId">
-        <input 
+        <input
           class="cdr-doc-item-background-toggle__input"
-          type="radio" 
+          type="radio"
           :id="'cdr-doc-html-example-list__toggle-dark-' + slotLabel + instanceId"
           value="dark"
           v-model="backgroundToggleStates[slotLabel]">
           Dark
         </label>
       </div>
-      <span 
-        class="cdr-doc-html-example-list__item-label" 
-        v-if="(exampleCount > 1 && showExampleLabels) || 
+      <span
+        class="cdr-doc-html-example-list__item-label"
+        v-if="(exampleCount > 1 && showExampleLabels) ||
               label">
         {{ label || slotLabel }}
       </span>
@@ -51,7 +51,7 @@
     props: {
       backgroundToggle: {
         type: Boolean,
-        default: true
+        default: false
       },
       backgroundColors: {
         type: Object,
@@ -226,20 +226,20 @@
     &:first-child {
       border-radius: $cdr-doc-border-radius-default 0 0 $cdr-doc-border-radius-default;
     }
-    
+
     &:last-child {
       border-radius: 0 $cdr-doc-border-radius-default $cdr-doc-border-radius-default 0;
       border-right-width: 1px;
     }
   }
-  
+
   .cdr-doc-item-background-toggle__button--active {
     background: $partly-cloudy;
   }
 
   .cdr-doc-item-background-toggle__input {
     position: absolute !important;
-    height: 1px; width: 1px; 
+    height: 1px; width: 1px;
     overflow: hidden;
     clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
     clip: rect(1px, 1px, 1px, 1px);

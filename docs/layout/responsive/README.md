@@ -38,7 +38,7 @@ The Cedar container allows flexible content width, up to a max width of 1232px. 
 
 To explore how the containers work, check out this Cedar sandbox:
 
-<cdr-doc-example-code-pair :background-toggle="false" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {styleTag: 'body { background-color: rgba(130, 234, 255, 0.35);} .content {background-color: #fff;} .cdr-container, .cdr-container-fluid { background-color: lightcoral; color: purple;}'})" >
+<cdr-doc-example-code-pair :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {styleTag: 'body { background-color: rgba(130, 234, 255, 0.35);} .content {background-color: #fff;} .cdr-container, .cdr-container-fluid { background-color: lightcoral; color: purple;}'})" >
 
 ```vue
   <div>

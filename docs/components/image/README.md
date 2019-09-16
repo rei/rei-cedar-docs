@@ -120,7 +120,7 @@
 Use for images with no responsive qualities.
 
 
-<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/image" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/image" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 
@@ -137,7 +137,7 @@ Use for images with no responsive qualities.
 Apply rules to an image using ratio and crop properties. The below example is cropped using top alignment with the aspect ratio set as 9-16
 
 
-<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/image" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/image" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <cdr-img
@@ -154,7 +154,7 @@ Apply rules to an image using ratio and crop properties. The below example is cr
 Use the cover property to resize the background image to fill the entire container.
 
 
-<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/image" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/image" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <cdr-img
@@ -177,7 +177,7 @@ Apply a radius to an image.
 The below example is cropped using center alignment with the aspect ratio set as square and the radius set as rounded.
 
 
-<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/image" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/image" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-img
@@ -195,7 +195,7 @@ The below example is cropped using center alignment with the aspect ratio set as
 The below example is cropped using center alignment with the aspect ratio set as square and the radius set as circle.
 
 
-<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/image" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/image" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-img
