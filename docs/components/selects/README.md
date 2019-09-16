@@ -47,43 +47,37 @@
                 "name": "options",
                 "type": "array",
                 "default": "null",
-                "description": "Build options programatically with data. Array of objects [{ text: String, value: String}] to give greater control. Array of strings ['String'] for simpler setup (value and text will be the same)."
+                "description": "Build options programatically with data. Provide an array of objects [{ text: String, value: String}] for greater control or provide an array of strings ['String'] for simpler setup (value and text will be the same)."
               },
               {
                 "name": "required",
                 "type": "boolean",
                 "default": "false",
-                "description": "Sets the field to required and displays an asterisk next to the input label."
-              },
-              {
-                "name": "multiple",
-                "type": "boolean",
-                "default": "false",
-                "description": "Creates a multi-select element. Expects an array to be passed as a v-model."
+                "description": "Sets the field to required and displays the text “Required” next to the input label"
               },
               {
                 "name": "size",
                 "type": "number",
-                "default": "1",
-                "description": "Sets the number of visible options in the select dropdown"
-              },
+                "default": "medium",
+                "description": "Sets the select field size. Possible sizes are: {  ‘medium’  |  ‘large’  }. Also works with responsive breakpoints. Breakpoint values are: xs, sm, md, and lg. Examples: { 'small' | 'medium' | 'large' | 'large@sm' }"
+              }
             ],
             "events": [
               {
-                "name": "change",
-                "arguments": "selectedValue, event",
-                "description": "$emit event fired on select change. Emits an array as selectedValue if `multiple` prop is true."
-              },
-              {
-                "name": "input",
-                "arguments": "selectedValue, event",
-                "description": "$emit event fired on select change. Emits an array as selectedValue if `multiple` prop is true."
+                "description": "All event listeners are passed through to the <input> element."
               }
             ],
             "slots": [
               {
                 "name": "default",
                 "description": "Sets the innerHTML for CdrSelect, used to pass in `<option>` tags. Leave empty if using the `options` prop."
+              },{
+                "name": "info",
+                "description": "Location for information link or icon markup to the right above the select field."
+              },
+              {
+                "name": "helper-text",
+                "description": "Location for helper or information text to the left below the input field."
               }
             ]
           }
@@ -137,7 +131,7 @@ The **CdrSelect** component requires `v-model` to bind the input value to your d
 
 ```vue
 <cdr-select
-  label="Prompt"
+  label="Label Text"
   v-model="selected"
 >
   <option value="1">
