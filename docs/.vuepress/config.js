@@ -89,6 +89,7 @@ module.exports = {
         text: "Layout",
         items: [
           { text: "Responsive", link: "/layout/responsive/" },
+          { text: "Spacing", link: "/layout/spacing/" },
           { text: "Display", link: "/layout/display/" },
         ]
       },
