@@ -77,7 +77,7 @@
               },
               {
                 "name": "helper-text",
-                "description": "Location for helper or information text to the left below the input field."
+                "description": "Location for helper or information text to the left below the select field."
               }
             ]
           }
