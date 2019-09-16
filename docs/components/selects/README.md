@@ -127,7 +127,7 @@
 
 ## Usage
 
-The **CdrSelect** component requires `v-model` to bind the input value to your data model, as well as a `label` for accessibility.
+The **CdrSelect** component requires `v-model` to bind the selected value to your data model, as well as a `label` for accessibility.
 
 ```vue
 <cdr-select
