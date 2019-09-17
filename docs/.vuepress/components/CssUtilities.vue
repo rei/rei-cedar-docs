@@ -40,8 +40,7 @@
 </template>
 
 <script>
-// TODO: get this from @rei/cedar package when available -- hardcoded here for now
-import cssData from './cssData.json';
+import cssData from '@rei/cedar/dist/cssdocdata.json';
 
 export default {
   name: 'css-utilities',
@@ -59,6 +58,9 @@ export default {
     return {
       cssData,
     };
+  },
+  mounted() {
+    this.$parent.$emit('update-toc');
   },
   computed: {
     utilityData() {

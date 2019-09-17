@@ -124,8 +124,6 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
 
-Live code examples for **CdrPagination** can be found on [CodeSandbox](https://codesandbox.io/s/4jnw2l193x).
-
 ## Pagination @ SM, MD, LG
 
 At the SM, MD, and LG breakpoints, pagination displays as a list of number text links with Prev and Next links when applicable.

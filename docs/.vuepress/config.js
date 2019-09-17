@@ -16,24 +16,15 @@ module.exports = {
     [
       "link",
       {
-        rel: "stylesheet",
-        href:
-          "https://satchel.rei.com/media/font/REI_Stuart/fonts.css"
-      }
-    ],
-    [
-      "link",
-      {
-        rel: "stylesheet",
-        href:
-          "https://satchel.rei.com/media/font/Graphik/Graphik/fonts.css"
-      }
-    ],
-    [
-      "link",
-      {
         rel: "icon",
         href: "/favicon.ico"
+      }
+    ],
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href: "/cdr-fonts.css"
       }
     ],
     [
@@ -77,7 +68,6 @@ module.exports = {
         items: [
           { text: "As a Designer", link: "/getting-started/as-a-designer/" },
           { text: "As a Developer", link: "/getting-started/as-a-developer/" },
-          { text: "As an Adopting Team", link: "/getting-started/as-an-adopter/"},
           { text: "Using Cedar", link: "/getting-started/using-cedar/"},
         ]
       },
@@ -92,7 +82,15 @@ module.exports = {
           { text: "Color", link: "/foundation/color/" },
           { text: "Motion", link: "/foundation/motion/" },
           { text: "Typography", link: "/foundation/typography/" },
-          { text: "Spacing", link: "/foundation/spacing/" }
+          { text: "Spacing", link: "/foundation/spacing/" },
+        ]
+      },
+      {
+        text: "Layout",
+        items: [
+          { text: "Responsive", link: "/layout/responsive/" },
+          { text: "Spacing", link: "/layout/spacing/" },
+          { text: "Display", link: "/layout/display/" },
         ]
       },
       {

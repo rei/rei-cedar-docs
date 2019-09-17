@@ -220,7 +220,7 @@
 
 Basic layout with a column of row headers.  Rows alternate background colors.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" :model="{rowHeaders: $page.frontmatter.exampleTableData.rowHeaders, rowData: $page.frontmatter.exampleTableData.rowData, keyOrder: ['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']}">
+<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" :model="{rowHeaders: $page.frontmatter.exampleTableData.rowHeaders, rowData: $page.frontmatter.exampleTableData.rowData, keyOrder: ['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']}">
 
 
 ```html
@@ -238,7 +238,7 @@ Basic layout with a column of row headers.  Rows alternate background colors.
 
 Layout for making comparisons such as between size/sleeve length. Column headers and row headers are displayed. When columns scroll, row header column is locked in place.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" :model="{colHeaders: $page.frontmatter.exampleTableData.colHeaders, rowHeaders: $page.frontmatter.exampleTableData.rowHeaders, rowData: $page.frontmatter.exampleTableData.rowData, keyOrder: ['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']}">
+<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" :model="{colHeaders: $page.frontmatter.exampleTableData.colHeaders, rowHeaders: $page.frontmatter.exampleTableData.rowHeaders, rowData: $page.frontmatter.exampleTableData.rowData, keyOrder: ['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']}">
 
 ```html
   <cdr-data-table
@@ -256,7 +256,7 @@ Layout for making comparisons such as between size/sleeve length. Column headers
 
 Layout with reduced spacing within each cell. All cells are borderless. Defines a column of row headers.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <cdr-data-table modifier="compact borderless" id="manual-example">
@@ -347,7 +347,7 @@ Data cells:
   - Copy should be short and concise
   - Use sentence case for cell data
   - Text, numerical data, links, buttons, or icons are acceptable
-  
+
 ## Anatomy
 
 Default styles for tables:
