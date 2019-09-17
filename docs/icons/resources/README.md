@@ -123,6 +123,6 @@ Alternately, the icon library API also provides [sprite generation](https://gith
 
 ## Questions or Issues?
 
-Contact the Cedar team using the [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) Slack channel with your questions or issues.
+Contact the Cedar team using the [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) Slack channel.
 
 </cdr-doc-table-of-contents-shell>
