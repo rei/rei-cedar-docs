@@ -33,6 +33,38 @@
       "caption": "use heading tag for visual results. Instead use heading modifiers."
     }
   ],
+  "subtitle": [
+    {
+      "type": "do",
+      "image": "headings/headings_subtitle_do.png",
+      "ratio": "4-3",
+      "alt": "Image showing proper subtitle usage",
+      "caption": "pair subtitles with titles and subheadlines with headlines"
+    },
+    {
+      "type": "dont",
+      "image": "headings/headings_subtitle_dont.png",
+      "ratio": "4-3",
+      "alt": "Image showing subtitle used without a page title",
+      "caption": "use a subtitle or subheadline as a primary heading or section heading."
+    }
+  ],
+  "semantic": [
+    {
+      "type": "do",
+      "image": "headings/headings_minimize_do.png",
+      "ratio": "4-3",
+      "alt": "Image showing semantic heading usage",
+      "caption": "use heading levels to define hierarchical information."
+    },
+    {
+      "type": "dont",
+      "image": "headings_minimize_dont.png",
+      "ratio": "4-3",
+      "alt": "Image showing and h1 followed by an h5",
+      "caption": "use heading tag for visual results. Instead use heading modifiers."
+    }
+  ],
   "sandboxData": {
     "components": "CdrText"
   },
@@ -255,6 +287,8 @@ This component has compliance with WCAG guidelines by:
 - Identify headings at the beginning of a section
 - Position headings at or near the top of a section
 
+<cdr-img class="cdr-doc-article-img" :src="$withBase('/headings/heading_proper-page-construction.png')" alt="image of page layout with headings"/>
+
 ## Content
 
 - Be specific. Provide facts or information that pique user interest. Avoid broad and generic headings
@@ -272,6 +306,7 @@ This component has compliance with WCAG guidelines by:
   
 ### Do / Don’t
 
+<do-dont :examples="$page.frontmatter.subtitle" />
 
 ## Behavior
 
