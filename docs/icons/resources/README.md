@@ -86,7 +86,7 @@ These rules are subjective, and can be bent or broken.
 - 1px radius rounded edges and terminals
 - Pixel aligned for proper anti-aliasing and rasterizing
 
-For more style guidelines, review the [Iconography article](/icons/iconography/) article.
+For more style guidelines, review the [Iconography article](/icons/iconography/).
 
 **Dimensions**
 
@@ -108,7 +108,7 @@ Alternately, the icon library API also provides [sprite generation](https://gith
 1. In Abstract, create a new branch of the [CDR - Icon Contribution](https://share.goabstract.com/99335c38-51ee-41c8-8454-38c2a70c4c7f) project.
 2. Open the **Icon Contribution Area** file.
 3. Duplicate the **Template (Right-Click > Duplicate Page)** for each new icon or set of icons. (It is ok to leave alternate versions on the page, but please indicate the final version.)
-4. Follow the Iconography Foundation guidelines to ensure that your icon follows Cedar’s requirements.
+4. Follow the [Iconography article](/icons/iconography/) guidelines to ensure that your icon follows Cedar’s requirements.
 5. Make a final version of your icon and add it as a page. Each new icon or set should have its own page.
 6. Add a member of the Cedar team as a reviewer. 
 7. Your icon will be merged into the **CDR Icons • vNext** library and released in the next version of Cedar. 
