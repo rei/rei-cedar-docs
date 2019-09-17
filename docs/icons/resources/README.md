@@ -86,7 +86,7 @@ These rules are subjective, and can be bent or broken.
 - 1px radius rounded edges and terminals
 - Pixel aligned for proper anti-aliasing and rasterizing
 
-For more style guidelines, review the [Iconography Foundation](/icons/iconography/) article.
+For more style guidelines, review the [Iconography article](/icons/iconography/) article.
 
 **Dimensions**
 
