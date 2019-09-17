@@ -64,7 +64,7 @@ To Install, open REI's Self Service application, search for _'Cedar'_, and insta
 
 __A few things to remember:__
 - The Stuart and Graphik _"OTF · Print"_ font variants available on Self Service are not compatible with the Cedar Sketch Toolkit
-- The TTF font variants have _"App"_ after their name in applications like Sketch or FontBook. For example, _"REI Stuart App" _and _"Graphik App"_. Please only use these TTF versions in any digital design
+- The TTF font variants have _"App"_ after their name in applications like Sketch or FontBook. For example, _"REI Stuart App"_ and _"Graphik App"_. Please only use these TTF versions in any digital design
 
 
 #### Legacy Fonts
@@ -234,11 +234,11 @@ Below are some advanced techniques that the Cedar team uses internally. They may
 
 If you need to merge a file from a project into a duplicate file in a different project, follow these steps. Note that the files must originate from the same file. This is useful for keeping multiple versions of the same files in different projects.
 1. Download the *new-version.sketch* file to your computer:  
-  Navigate to the __*new-version.sketch* > Right-Click > Export > Save to your computer__.  
+  Navigate to the __*new-version.sketch* > Right-click > Export > Save to your computer__.  
   <cdr-img alt="screenshot"  :src="$withBase(`/getting-started-for-designers/cross-proj-merge-1.png`)"/>
 2. Create a new branch containing the *old-version.sketch*.
 3. Replace the *old-version.sketch* file with the *new-version.sketch* file:  
-  Navigate to the __*old-version.sketch* > Right-Click > Replace > Select the *new-version.sketch*__ that you saved in step 1.  
+  Navigate to the __*old-version.sketch* > Right-click > Replace > Select the *new-version.sketch*__ that you saved in step 1.  
   <cdr-img alt="screenshot"  :src="$withBase(`/getting-started-for-designers/cross-proj-merge-2.png`)"/>
 
 
@@ -252,17 +252,17 @@ All _vNext_ changes take place after all _vCurrent_ changes in their commit orde
 
 After each project has been updated independently, sync the projects again and make a new major release from a beta branch.
 1. Restore the youngest _vNext_ ancestor branch that had _vCurrent_ merged into it:  
-  __vNext > Branches > Archived > (Youngest common ancestor __*branch*__ with _vCurrent_) > … > New Branch__  
+  __vNext > Branches > Archived > (Youngest common ancestor __*branch*__ with _vCurrent_) > … > New Branch__.  
   <cdr-img alt="screenshot"  :src="$withBase(`/getting-started-for-designers/multi-proj-sync-1.png`)"/>
   <cdr-img alt="screenshot"  :src="$withBase(`/getting-started-for-designers/multi-proj-sync-2.png`)"/>
   <cdr-img alt="screenshot"  :src="$withBase(`/getting-started-for-designers/multi-proj-sync-3.png`)"/>
-  __Restored Branch > Commits > (Youngest common ancestor __*commit*__ with _vCurrent_) > Restore Commit__  
+2. __Restored Branch > Commits > (Youngest common ancestor __*commit*__ with _vCurrent_) > Restore Commit__. 
   <cdr-img alt="screenshot"  :src="$withBase(`/getting-started-for-designers/multi-proj-sync-4.png`)"/>
-2. [Cross-Project Merge](#cross-project-merge) all _vCurrent_ project files into the _vNext_ ancestor branch project files.
-3. Pull changes from _vNext_ master into the _vNext_ branch and commit.
+3. [Cross-Project Merge](#cross-project-merge) all _vCurrent_ project files into the _vNext_ ancestor branch project files.
+4. Pull changes from _vNext_ master into the _vNext_ branch and commit.
   <cdr-img alt="screenshot"  :src="$withBase(`/getting-started-for-designers/multi-proj-sync-5.png`)"/>
-4. Merge Branch back into _vNext_ master.
-5. [Cross-Project Merge](#cross-project-merge) all _vNext_ project files into _vCurrent_.
+5. Merge Branch back into _vNext_ master.
+6. [Cross-Project Merge](#cross-project-merge) all _vNext_ project files into _vCurrent_.
 
 
 
