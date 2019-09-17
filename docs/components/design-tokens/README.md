@@ -258,14 +258,13 @@ Would be nice to use table markdown but alternating row styling is inverted. Hea
 ## How to Use Tokens
 
 ### For Designers
-Designt tokens are available in Sketch using Abstract by linking the [CDR Tokens library](#) into your project. 
-This library contains Symbols, Text Styles, and Layer Styles that correspond to Ceder tokens. 
+Design tokens are available in Sketch using Abstract by linking the [CDR Tokens Library](../../getting-started/as-a-designer/#using-the-toolkit) into your project. 
+This library contains Symbols, Text Styles, and Layer Styles that correspond to Cedar tokens. 
 Place the _Stickersheet_ Symbol in your project for a visual overview. 
 
 When using design tokens, it’s your responsibility to pass the entire design token name to the developer during the design hand-off process—this can be through automated or manual methods. 
 
 For more information, see [Getting Started As A Designer](../../getting-started/as-a-designer/). 
-<!--  add these in once we have links, [Cedar UI Toolkit](#) and [Designer-Developer Handoff](#). -->
 
 
 ### For Developers
