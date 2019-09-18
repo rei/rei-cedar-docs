@@ -9,6 +9,76 @@
       "text": "Foundation/"
     }
   ],
+  "italics": [
+    {
+      "type": "do",
+      "image": "typography/typography_italics_do.png",
+      "alt": "Image showing italics used within a sentence",
+      "caption": "use italics if necessary."
+    },
+    {
+      "type": "dont",
+      "image": "typography/typography_italics_dont.png",
+      "alt": "Image showing an entire sentence italicized",
+      "caption": "use italics if the copy is part of important user flows."
+    },
+  ],
+  "alignment1": [
+    {
+      "type": "do",
+      "image": "typography/typography_alignment_do.png",
+      "alt": "Image showing left aligned headline and subhead",
+      "caption": "left align text."
+    },
+    {
+      "type": "dont",
+      "image": "typography/typography_alignment_dont.png",
+      "alt": "Image showing center aligned long headline",
+      "caption": "center align long headlines."
+    },
+  ],
+  "alignment2": [
+    {
+      "type": "do",
+      "image": "typography/typography_alignment_do_image.png",
+      "alt": "Image showing left aligned text above images",
+      "caption": "left align text to other elements on the page."
+    },
+    {
+      "type": "dont",
+      "image": "typography/typography_alignment_caution.png",
+      "alt": "Image showing a center aligned headline above icons",
+      "caption": "center align short headlines."
+    },
+  ],
+  "lineLengthMobile": [
+    {
+      "type": "do",
+      "image": "typography/typography_line_length_mobile_do.png",
+      "alt": "Image showing appropriate line length on mobile",
+      "caption": "reduce font sizes for mobile so that they are the optimal line length."
+    },
+    {
+      "type": "dont",
+      "image": "typography/typography_line_length_mobile_dont.png",
+      "alt": "Image showing a short line length because font size is too big",
+      "caption": "use the same font size across all device sizes. This will create incorrect line lengths on certain devices."
+    },
+  ],
+  "lineLengthDesktop": [
+    {
+      "type": "do",
+      "image": "typography/typography_line_length_desktop_do.png",
+      "alt": "Image showing proper line length on desktop",
+      "caption": "use line lengths of 50-60 characters."
+    },
+    {
+      "type": "dont",
+      "image": "typography/typography_line_length_desktop_dont.png",
+      "alt": "Image showing and incorrect line length over 80 characters",
+      "caption": "create line lengths of 80 characters or more."
+    },
+  ],
 }
 ---
 <cdr-doc-tabs :labels="['Overview', 'Guidelines', 'Brand Typography']">
@@ -82,18 +152,11 @@ Designed exclusively for the co-op, Stuart was influenced by the U.S. National P
 
 <cdr-img class="cdr-doc-article-img" alt="A mosaic showing the Stuart font in various sizes and colors" :src="$withBase(`/typography/typography_stuart.png`)" />
 
-
-https://drive.google.com/file/d/1LjY12GIK_ykZjG-kaaaLLYQAQS568jCE/view 
-
-
 #### Features
 
 Accessibility was front-of-mind during the development of Stuart. Accessible typefaces are inherently optimized for mobile usage.
 
 <cdr-img class="cdr-doc-article-img" alt="An graphic highlighting the Stuart font's open terminals, optimal x-height, optimal stroke width, ligatures, and co-op diamond" :src="$withBase(`/typography/typography_stuart_features.png`)" />
-
-https://drive.google.com/file/d/1k932SM5sY0We4MdDo61M0QUSqcmZdfDd/view?usp=sharing 
-
 
 ### Graphik
 
@@ -101,17 +164,11 @@ Graphik is a sans-serif typeface designed by Christian Schwartz and released thr
 
 <cdr-img class="cdr-doc-article-img" alt="A mosaic showing the Graphik font in various sizes and colors" :src="$withBase(`/typography/typography_graphik.png`)" />
 
-https://drive.google.com/file/d/1a3UNbFPou6bymUwvEBex9morhuw-VtBh/view?usp=sharing
-
-
 ## Type Scale 
 
 The typographic scale manages the font sizes used within Cedar. All type styles are derived from this scale.
 
 <cdr-img class="cdr-doc-article-img" alt="A graphic displaying the range of sizes available for headings" :src="$withBase(`/typography/typography_type-scale.png`)" />
-
-https://drive.google.com/file/d/1YM_bQPmrJDWgECZupEYGqz9QXS5BGxwc/view?usp=sharing
-
 
 ### Font Families
 
@@ -149,18 +206,15 @@ Font size selection directly impacts both readability and comprehension. Type st
 
 <cdr-img class="cdr-doc-article-img" alt="A mosaic of various examples of typographic hierarchy" :src="$withBase(`/typography/typography_type_guidelines_size.png`)" />
 
-https://drive.google.com/file/d/1etkF3HpMUJRFt8BiWgYndcYJbQjW8izt/view?usp=sharing
 
-*insert animation: typography_type_guidelines_size.gif https://drive.google.com/file/d/17HoK0g76yq8Xis5RhhdqQih8SZuTwxoM/view?usp=sharing
+<cdr-img class="cdr-doc-article-img" alt="A gif showing scaling text sizes at different breakpoints" :src="$withBase(`/typography/typography_type_guidelines_size.gif`)" />
 
 
 ### Type Pairing
 
 To create the appropriate contrast and hierarchy, use a mix of Stuart and Graphik—the latter typically plays a supporting role.
 
-<cdr-img class="cdr-doc-article-img" alt="A graphic showing an example of a heading, subheading, and some body copy" :src="$withBase(`/typography/typography_type_guidelines_type-pairing.png`)" />
-
-https://drive.google.com/file/d/1smSXpiPW44CQeJz5dUlSq5eSyzvvQbvs/view?usp=sharing
+<cdr-img class="cdr-doc-article-img" alt="A graphic showing mixed usage of Stuart and Graphik typefaces" :src="$withBase(`/typography/typography_type_guidelines_type-pairing.png`)" />
 
 
 ### Font Style
@@ -170,12 +224,7 @@ https://drive.google.com/file/d/1smSXpiPW44CQeJz5dUlSq5eSyzvvQbvs/view?usp=shari
 
 Users with certain disabilities like dyslexia might have difficulty making out italicized words. Only use italics if necessary and never for critical user flows.
 
-*insert do/do not component here with this:
-typography_italics_do.png https://drive.google.com/file/d/1hvuw6wVAaD2bN0FKebex2_H1nkrUmXba/view?usp=sharing
-"Do use italics if necessary."
-typography_italics_dont.png https://drive.google.com/file/d/1gHmyWWnXZaNO9jSF8lgyRsP7TV6qoITj/view?usp=sharing
-"Don't use italics if the copy is part of important user flows."
-
+<do-dont :examples="$page.frontmatter.italics" />
 
 ### Font Weight
 
@@ -183,14 +232,9 @@ From refined to playful, Stuart’s personality becomes increasingly casual as i
 
 <cdr-img class="cdr-doc-article-img" alt="A graphic showing various Stuart font weights, highlighting Medium" :src="$withBase(`/typography/typography_type_guidelines_font-weight_graphik.png`)" />
 
-https://drive.google.com/file/d/17diO4whCSNakFy8-gRC-iIr8r6gIQ4iB/view?usp=sharing
-
-
 The Graphik family includes nine weights. Preferred choices are: regular, medium, and semibold. Regular is appropriate for most applications.
 
 <cdr-img class="cdr-doc-article-img" alt="A graphic showing various Graphik font weights, highlighting Semibold, Medium, and Regular" :src="$withBase(`/typography/typography_type_guidelines_font-weight_stuart.png`)" />
-
-https://drive.google.com/file/d/1enqvSuD2A2JLJxwFxd-iMb530gfRORZg/view?usp=sharing
 
 
 ### Letter Spacing
@@ -198,7 +242,6 @@ https://drive.google.com/file/d/1enqvSuD2A2JLJxwFxd-iMb530gfRORZg/view?usp=shari
 Stuart and Graphik were both designed with looser tracking to improve readability at smaller sizes. In code-driven environments, tracking is known as letter spacing. To best support the widest range of sizes, the letter spacing of text styles have been pre-optimized.
 
 <cdr-img class="cdr-doc-article-img" alt="A graphic showing the difference between default and pre-optimized letter spacing" :src="$withBase(`/typography/typography_type_guidelines_letter-spacing.png`)" />
-https://drive.google.com/file/d/1uG1ftgIXqGZmQEJiTm2uzC4gSxRsRj1Y/view?usp=sharing
 
 
 ### Alignment
@@ -206,17 +249,9 @@ https://drive.google.com/file/d/1uG1ftgIXqGZmQEJiTm2uzC4gSxRsRj1Y/view?usp=shari
 For optimum legibility, it’s important to establish a strong vertical alignment. All text should be left-aligned whenever possible. Some exceptions include single words and short headlines. Never left and right justify text. 
 
 
-*insert do/do not component here with this:
-typography_alignment_do.png https://drive.google.com/file/d/1cqJmnZMfz6lgpJuiY5b6Rz6RrUOTyTRs/view?usp=sharing
-"Do left align text."
-typography_alignment_dont.png https://drive.google.com/file/d/163tz6h1JPPeY6_UsP-KD2zafZjn9gbb8/view?usp=sharing
-"Don't center align long headlines."
+<do-dont :examples="$page.frontmatter.alignment1" />
 
-*insert do/do not component here with this:
-typography_alignment_do_image.png https://drive.google.com/file/d/1xfiZJHwmQyndHDan6s7KEzoz9GtA1hLL/view?usp=sharing
-"Do left align text to other elements on the page."
-typography_alignment_caution.png https://drive.google.com/file/d/163tz6h1JPPeY6_UsP-KD2zafZjn9gbb8/view?usp=sharing
-"Use caution when center aligning short headlines."
+<do-dont :examples="$page.frontmatter.alignment2" />
 
 
 ### Line Length
@@ -224,19 +259,10 @@ typography_alignment_caution.png https://drive.google.com/file/d/163tz6h1JPPeY6_
 An optimal length, or measure, of a line of copy is 50 to 60 characters. Line lengths more than 80 characters are discouraged.
 
 <cdr-img class="cdr-doc-article-img" alt="A graphic showing how long a line of copy should be on mobile and desktop" :src="$withBase(`/typography/typography_type_guidelines_line-length.png`)" />
-https://drive.google.com/file/d/1Sm-2HwhgmWdZpl0JKRXeTiJHPnvaC5aO/view?usp=sharing
 
-*insert do/do not component here with this:
-typography_line_length_mobile_do.png https://drive.google.com/file/d/1h_f3dNGn55DBJyTK-mOQB43dcQ0j8Fzi/view?usp=sharing
-"Do reduce font sizes for mobile so that they are the optimal line length."
-typography_line_length_mobile_dont.png https://drive.google.com/file/d/1DP58c6ElsozCAad97al0jAMpz4Y7bfkv/view?usp=sharing
-"Don't use the same font size across all device sizes. This will create incorrect line lengths on certain devices."
+<do-dont :examples="$page.frontmatter.lineLengthMobile" />
 
-*insert do/do not component here with this:
-typography_line_length_desktop_do.png https://drive.google.com/file/d/13CJt07ysv3k9aQqpygDukDCtdP8QI7_W/view?usp=sharing
-"Do use line lengths of 50–60 characters."
-typography_line_length_desktop_dont.png https://drive.google.com/file/d/1oZBG0ffGFgjLkJnlaAqha7072vsv4jtT/view?usp=sharing
-"Don't create line lengths of 80 characters or more."
+<do-dont :examples="$page.frontmatter.lineLengthDesktop" />
 
 #### 1.4.8 Visual Presentation (AAA)
 
