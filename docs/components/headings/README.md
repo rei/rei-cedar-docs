@@ -33,6 +33,38 @@
       "caption": "use heading tag for visual results. Instead use heading modifiers."
     }
   ],
+  "subtitle": [
+    {
+      "type": "do",
+      "image": "headings/headings_subtitle_do.png",
+      "ratio": "4-3",
+      "alt": "Image showing proper subtitle usage",
+      "caption": "pair subtitles with titles and subheadlines with headlines"
+    },
+    {
+      "type": "dont",
+      "image": "headings/headings_subtitle_dont.png",
+      "ratio": "4-3",
+      "alt": "Image showing subtitle used without a page title",
+      "caption": "use a subtitle or subheadline as a primary heading or section heading."
+    }
+  ],
+  "semantic": [
+    {
+      "type": "do",
+      "image": "headings/headings_minimize_do.png",
+      "ratio": "4-3",
+      "alt": "Image showing semantic heading usage",
+      "caption": "use heading levels to define hierarchical information."
+    },
+    {
+      "type": "dont",
+      "image": "headings_minimize_dont.png",
+      "ratio": "4-3",
+      "alt": "Image showing and h1 followed by an h5",
+      "caption": "use heading tag for visual results. Instead use heading modifiers."
+    }
+  ],
   "sandboxData": {
     "components": "CdrText"
   },
@@ -246,12 +278,16 @@ This component has compliance with WCAG guidelines by:
 ### Don’t Use When
 
 - Tagging as a semantic heading when an element only needs to be highlighted or emphasized within your content. Instead, use sizing modifier for this component
+- Showcasing long form content. Instead use [Paragraphs](https://rei.github.io/rei-cedar-docs/components/paragraphs/)
+
 
 ## The Basics
 
 - When using this component with semantic headings  from `<h1>` to `<h6>`, typographic styles set up a visual hierarchy created within CSS that helps to establish the order of importance
 - Identify headings at the beginning of a section
 - Position headings at or near the top of a section
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase('/headings/heading_proper-page-construction.png')" alt="image of page layout with headings"/>
 
 ## Content
 
@@ -267,6 +303,10 @@ This component has compliance with WCAG guidelines by:
   - Capitalize proper nouns
   - Use sentence case
   - Left-align multi-line headings
+  
+### Do / Don’t
+
+<do-dont :examples="$page.frontmatter.subtitle" />
 
 ## Behavior
 
