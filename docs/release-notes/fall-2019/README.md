@@ -34,11 +34,11 @@ If you are not already on Cedar 2.x.x, you will first need to [upgrade your proj
 
 ### New Font/Typography
 
-Sentinel and Roboto have been deprecated as global REI brand fonts. `cdr-fonts.css` has removed the base64 encoded versions of sentinel fonts as a result and has greatly reduced the overall size of this file.
+Sentinel and Roboto have been deprecated as a global REI brand fonts. `cdr-fonts.css` has removed the base64 encoded versions of Sentinel fonts as a result and has greatly reduced the overall size of this file.
 
 The variant fonts for "REI Stuart App" and "Graphik App" have been added.
 
-[more information on typography](../../foundation/typography/?active-tab=guidelines)
+For more information, see [Typography](../../foundation/typography/?active-tab=guidelines)
 
 ### New Icons Package
 
@@ -191,6 +191,8 @@ Whenever possible and practical the Cedar team will deprecate features rather th
 
 ### Deprecated Typography/Headings
 
+"REI Stuart App" and "Graphik App" have replaced Sentinel heading styles. Designers with linked UI toolkit libraries in Abstract will receive an automatic update of web component styles, but will need to link two new libraries (if they haven't already): icons and tokens. For more information on linking libraries in Abstract, see [Designers Getting Started.](https://rei.github.io/rei-cedar-docs/getting-started/as-a-designer/)  
+
 The cdr-text modifiers specific to headings have been deprecated. This update normalizes cdr-text modifiers with our other cedar component modifiers. Moving forward users will be expected and able to define a unique heading value for each breakpoint.
 
 New modifiers have been added supporting the update to typography and the names have been extended to account for the size options now available to each heading family.
@@ -211,9 +213,8 @@ The following diagram provides a rough guideline of legacy modifier names to the
 | subheading               | subheading-300                             |
 
 In addition to the heading changes listed above, the paragraph modifier `body` is now also deprecated without a replacement. Moving forward we only support the generic non modified styling for paragraphs.
-#### more infomation
--  [Headings](../../components/headings)
--  [Paragraphs](../../components/paragraphs)
+
+For more infomation, see [Headings](../../components/headings) and [Paragraphs](../../components/paragraphs)
 
 ### Deprecated Tokens and Mixins
 
