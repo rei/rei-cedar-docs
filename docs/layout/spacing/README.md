@@ -83,7 +83,7 @@ Use space tokens if you want to apply the Cedar spacing convention within your s
 
 ### Utility Classes
 
-Use the space utility classes if you want to apply the Cedar spacing convention within your markup instead of in stylesheets. For more information on how to use utility classes, see the [CSS Utility Class](../../components/utilities/) document.
+Use the space utility classes if you want to apply the Cedar spacing convention within your markup instead of in stylesheets. For a list of utility classes, visit [CSS Utility Class](../../components/utilities/).
 
 ### Space Prop
 Some of the Cedar components will allow the application of Cedar space through a prop. Details on how to use the space prop can be found within that particular component API. Note that if the space prop is not documented, then that means it is not available for that component. In that case, you should use either the space utility classes or the space tokens.  
