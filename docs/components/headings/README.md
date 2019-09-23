@@ -554,6 +554,31 @@ This will result in the following HTML:
 
 Heading modifiers accept any of the supported cedar breakpoints. Review how breakpoints work on components [here](../../layout/responsive/?active-link=components-and-breakpoints)
 
+### Modifiers
+
+The following variants are available for heading construction within the `cdr-text` modifier attribute:
+
+| Value | Description  |
+|:------|:-------------|
+| 'display-1200'    |  |
+| 'display-1100'    |  |
+| 'display-1000'    |  |
+| 'display-900'     |  |
+| 'display-800'     |  |
+| 'display-700'     |  |
+| 'display-600'     |  |
+| 'heading-800'     |  |
+| 'heading-700'     |  |
+| 'heading-600'     |  |
+| 'heading-500'     |  |
+| 'heading-400'     |  |
+| 'heading-300'     |  |
+| 'subheading-600'  |  |
+| 'subheading-500'  |  |
+| 'subheading-400'  |  |
+| 'subheading-300'  |  |
+
+
 ## Heading Levels
 
 When using actual heading elements via the tag property, nest headings by their level:

@@ -12,6 +12,7 @@
         </cdr-col>
         <cdr-col
           span="12 4@sm"
+          v-if="apiProp.name"
         >
           <div class="prop-wrap">
             <p :aria-labelledby="'propName' + index" class="prop-name">{{ apiProp.name }}</p>
@@ -20,6 +21,7 @@
         </cdr-col>
         <cdr-col
           span="12 4@sm"
+          v-if="apiProp.name"
         >
           <div class="prop-wrap">
             <p :aria-labelledby="'propType' + index" class="prop-type">{{ apiProp.type }}</p>
@@ -28,6 +30,7 @@
         </cdr-col>
         <cdr-col
           span="12 4@sm"
+          v-if="apiProp.name"
         >
           <div class="prop-wrap">
             <p :aria-labelledby="'propDefault' + index" class="prop-default">{{ apiProp.default }}</p>
