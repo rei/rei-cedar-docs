@@ -50,6 +50,12 @@ We have created a new [Cedar Icon Library](https://rei.github.io/cedar-icons/#/)
 
 See the [deprecated icon components](#deprecated-icon-components) section for more information on updating your icon usage.
 
+### Icon Contribution
+
+- We have updated the [guidelines for contributing icons](/icons/resources/#contribution-process) to the [CDR · Icon Contribution](https://share.goabstract.com/99335c38-51ee-41c8-8454-38c2a70c4c7f) Project
+- We have also made minor updates to the [CDR Icons • vCurrent](https://share.goabstract.com/e9186773-0cc3-43a6-b7ff-54b163d95e00?sha=a814b05c391c93f5a7d39ce9508cd5238ae8fe0e) libray to make icon symbols more consistent. For linking instructions, see the guide to using the [Cedar UI Toolkit](/getting-started/as-a-designer/#cedar-ui-toolkit).
+- We have also written a new sketch plugin to help you [export Cedar compliant icons that are not in the icon repo](/icons/resources/#exporting-icons-that-aren’t-in-the-library).
+
 ### Deprecated Mixin Warnings
 
 The `cdr-tokens` package now emits warnings if it detects that you are using deprecated mixins in your SCSS. You can disable this by setting a SCSS variable `$cdr-warn: false;` in any scope that you are using `cdr-tokens` in. Note that these warnings are only emitted by mixins in the SCSS build and will not trigger for tokens or if you are using LESS.
