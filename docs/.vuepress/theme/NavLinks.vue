@@ -51,21 +51,7 @@ export default {
     };
   },
   created() {
-    /*
-      Initialize as closed accordions.
-    */
-    for (let i = 0, j = this.userLinks.length; i < j; i++) {
-      this.$set(this.navGroup, i, false);
-    }
-    /*
-      Determine if an accordion should be open on load.
-      Doing this here because ssr-approved hook.
-    */
-    this.$site.themeConfig.nav.forEach((item, index) => {
-      if (this.showNavGroup(item.text)) {
-        this.$set(this.navGroup, index, true);
-      }
-    }); 
+    this.navSyncByPath();
   },
   computed: {
     userNav () {
@@ -148,6 +134,23 @@ export default {
             this.$set(this.navGroup, i, index === i);
           }
         }
+      }
+    },
+    navSyncByPath() {
+      this.userLinks.forEach((item, index) => {
+        let opened = false;
+        if (this.showNavGroup(item.text)) {
+          opened = true;
+        } 
+        
+        this.$set(this.navGroup, index, opened);
+      });
+    }
+  },
+  watch: {
+    $route(to, from) {
+      if (to.path !== '/' && from.path.split('/')[1] !== to.path.split('/')[1]) {
+        this.navSyncByPath();
       }
     }
   }
