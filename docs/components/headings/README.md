@@ -95,7 +95,7 @@ The following are recommended type styles for use at varying breakpoint sizes.
 
 ### Headline 
 
-Use for the most prominent type style on the page in place of titles; use rarely to emphasize important information moments to attention.
+Use for the most prominent type style on the page in place of titles. Also, use headings rarely to emphasize important information.
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData" >
 
@@ -130,7 +130,7 @@ Use when pairing with subheadlines with headline-like styles.
 
 ### Page Title
 
-Use for one of the most prominent type styles on the page, only once per page, applied to level 1 headings only.
+Use for one of the most prominent type styles on the page and only once per page. Applied to level 1 headings only.
 
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
@@ -164,7 +164,7 @@ Use only when pairing subtitles with title-type styles.
 
 ### Section Heading
 
-Use for a section headings.
+Use for headings of a section on the page.
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
@@ -206,7 +206,7 @@ Use for headings nested within a sub-section of your page.
 
 ## Headings Styles
 
-The following type styles should be used when contextual styles (above) are not being used or when needing supplement contextual headings.
+The following type styles should be used when contextual styles (above) are not being used or when supplement contextual headings are needed.
 
 ### Display 1200
 
