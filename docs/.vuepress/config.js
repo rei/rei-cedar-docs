@@ -91,6 +91,7 @@ module.exports = {
           { text: "Responsive", link: "/layout/responsive/" },
           { text: "Spacing", link: "/layout/spacing/" },
           { text: "Display", link: "/layout/display/" },
+          { text: "Alignment", link: "/layout/alignment/" },
         ]
       },
       {
@@ -126,6 +127,7 @@ module.exports = {
       {
         text: "Icons",
         items: [
+          { text: "Resources", link: "/icons/resources/" },
           { text: "Iconography", link: "/icons/iconography/" }
         ]
       }
