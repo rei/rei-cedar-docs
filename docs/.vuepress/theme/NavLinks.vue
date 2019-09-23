@@ -35,7 +35,6 @@
 
 <script>
 import OutboundLink from './OutboundLink.vue'
-import DropdownLink from './DropdownLink.vue'
 import { CdrAccordion, CdrList } from '@rei/cedar';
 
 // TODO: all cedar css should get glovally loaded
@@ -44,7 +43,7 @@ import { resolveNavLinkItem } from './util'
 import NavLink from './NavLink.vue'
 
 export default {
-  components: { OutboundLink, NavLink, DropdownLink, CdrAccordion },
+  components: { OutboundLink, NavLink, CdrAccordion },
   data() {
     return {
       navGroup: [],
@@ -166,5 +165,11 @@ export default {
   }
   .cdr-accordion-nav > button > span {
     font-weight: 400;
+  }
+
+  .cdr-doc-side-navigation__child-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 </style>

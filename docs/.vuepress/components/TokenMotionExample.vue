@@ -6,14 +6,20 @@
         :icon-only="true"
         v-show="animationPlayState === 'paused'"
       >
-        <icon-play-fill />
+        <cdr-icon 
+          use="#play-fill" 
+          alt="Play animation" 
+        />
       </cdr-button>
       <cdr-button 
         @click="animate = false" 
         :icon-only="true"
         v-show="animationPlayState === 'running'"
       >
-        <icon-pause-fill />
+        <cdr-icon 
+          use="#pause-fill" 
+          alt="Pause animation"
+        />
       </cdr-button>
     </div>
     <div class="motion-background">
