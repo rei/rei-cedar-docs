@@ -53,7 +53,14 @@
                 "name": "modifier",
                 "type": "string",
                 "default": "N/A",
-                "description": "Modifies the style variant for this component. Possible values: { ‘display’  |  ‘display-static’  |  ‘heading-large’  |  ‘heading-large-static’  |  ‘heading-medium’  |  ‘heading-medium-static’  |  ‘heading-small’  |  ‘heading-small-static’  |  ‘subheading' }"
+                "description": "Modifies the style variant for this component. Possible values: { ‘display-600’  | ‘display-700 | ‘display-800 | ‘display-900 | ‘display-1000 | ‘display-1100 | ‘display-1200 | ‘heading-300' | ‘heading-400 | ‘heading-500 | ‘heading-600 | ‘heading-700 | ‘heading-800 | ‘subheading-300 | ‘subheading-400 | ‘subheading-500 | ‘subheading-600 | }",
+              },
+              {
+                "description": "Deprecated values: { ‘display’  |  ‘display-static’  |  ‘heading-large’  |  ‘heading-large-static’  |  ‘heading-medium’  |  ‘heading-medium-static’  |  ‘heading-small’  |  ‘heading-small-static’  |  ‘subheading' }",
+                "alert": {
+                  "type": "deprecated",
+                  "description": "The below options of the modifier property have been deprecated in v3.0.0. refer to the Fall2019 headings release notes for updated mappings."
+                },
               }
             ],
             "slots": [
@@ -75,141 +82,318 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
 
-## Display Responsive
+Stuart is our first choice for larger, more expressive moments. Graphik rounds out the heading schema with smaller sizes and its simplicity allows it to play a supporting role across a wide range of projects.
 
-Use for responsive display heading.
+**Usage Considerations**
+-  Heading styles should never end with a period
+-  Sentence case should be used whenever possible
+-  Consider the white space around headings
 
+## Contextual Headings
+
+The following are recommended type styles for use at varying breakpoint sizes.
+
+### Headline 
+
+Use for the most prominent type style on the page in place of titles; use rarely to emphasize important information moments to attention.
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-text
-    tag="h4"
-    modifier="display">
+    tag="p"
+    modifier="display-800 display-900@sm display-900@md display-900@lg">
       When you gear up, we give back
   </cdr-text>
 ```
 
 </cdr-doc-example-code-pair>
 
-## Display Static
+### Headline/Subheadline Combination
 
-Use for non-responsive display heading that maintains font size across all viewport sizes.
+Use when pairing with subheadlines with headline-like styles.
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-text tag="h1" modifier="display-800 display-900@sm display-900@md display-900@lg">
+    When you gear up, we give back
+    <cdr-text
+      class="cdr-pt-space-one-x cdr-pt-space-one-and-a-half-x@sm cdr-pt-space-one-and-a-half-x@md cdr-pt-space-one-and-a-half-x@lg" 
+      modifier="subheading-400 subheading-500@sm subheading-5000@md subheading-500@lg">
+      Treat yourself to sweet gear
+    </cdr-text>
+  </cdr-text>
+```
+
+</cdr-doc-example-code-pair>
+
+### Page Title
+
+Use for one of the most prominent type styles on the page, only once per page, applied to level 1 headings only.
 
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-text modifier="display-static">
+  <cdr-text modifier="heading-700 heading-800@sm heading-800@md heading-800@lg">
     When you gear up, we give back
   </cdr-text>
 ```
 
 </cdr-doc-example-code-pair>
 
-## Heading Large
+### Title/Subtitle Combination
 
-Use for a responsive large heading.
-
+Use only when pairing subtitles with title-type styles.
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-text modifier="heading-large">
+  <cdr-text modifier="heading-700 heading-800@sm heading-800@md heading-800@lg">
+    When you gear up, we give back
+    <cdr-text 
+      class="cdr-pt-space-one-x cdr-pt-space-one-and-a-half-x@sm cdr-pt-space-one-and-a-half-x@md cdr-pt-space-one-and-a-half-x@lg" 
+      modifier="subheading-300 subheading-400@sm subheading-4000@md subheading-400@lg">
+      Treat yourself to sweet gear
+    </cdr-text>
+  </cdr-text>
+```
+
+</cdr-doc-example-code-pair>
+
+### Section Heading
+
+Use for a section headings.
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-text modifier="heading-600 heading-700@sm heading-700@md heading-700@lg">
     When you gear up, we give back
   </cdr-text>
 ```
 
 </cdr-doc-example-code-pair>
 
-## Heading Large Static
+### Subsection Heading
 
-Use for non-responsive large heading that maintains font size across all viewport sizes.
-
+Use for headings nested within a section of your page.
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-text modifier="heading-large-static">
+  <cdr-text modifier="heading-400 heading-500@sm heading-500@md heading-500@lg">
     When you gear up, we give back
   </cdr-text>
 ```
 
 </cdr-doc-example-code-pair>
 
-## Heading Medium
+### Sub-subsection Heading
 
-Use for a responsive medium heading.
-
+Use for headings nested within a sub-section of your page.
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-text modifier="heading-medium">
+  <cdr-text modifier="heading-300 heading-400@sm heading-400@md heading-400@lg">
     When you gear up, we give back
   </cdr-text>
 ```
 
 </cdr-doc-example-code-pair>
 
-## Heading Medium Static
+## Headings Styles
 
-Use for non-responsive medium heading that maintains font size across all viewport sizes.
+The following type styles should be used when contextual styles (above) are not being used or when needing supplement contextual headings.
 
+### Display 1200
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-text modifier="heading-medium-static">
+  <cdr-text modifier="display-1200">
     When you gear up, we give back
   </cdr-text>
 ```
-
 </cdr-doc-example-code-pair>
 
-## Heading Small
-
-Use for a responsive small heading.
-
+### Display 1100
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-text modifier="heading-small">
+  <cdr-text modifier="display-1100">
     When you gear up, we give back
   </cdr-text>
 ```
-
 </cdr-doc-example-code-pair>
 
-## Heading Small Static
-
-Use for non-responsive small heading that maintains font size across all viewport sizes.
-
+### Display 1000
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-text modifier="heading-small-static">
+  <cdr-text modifier="display-1000">
     When you gear up, we give back
   </cdr-text>
 ```
-
 </cdr-doc-example-code-pair>
 
-## Subheading
-
-Use for subheadings that are positioned beneath small headings.
-
+### Display 900
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-text modifier="subheading">
+  <cdr-text modifier="display-900">
     When you gear up, we give back
   </cdr-text>
 ```
+</cdr-doc-example-code-pair>
 
+### Display 800
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-text modifier="display-800">
+    When you gear up, we give back
+  </cdr-text>
+```
+</cdr-doc-example-code-pair>
+
+### Display 700
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-text modifier="display-700">
+    When you gear up, we give back
+  </cdr-text>
+```
+</cdr-doc-example-code-pair>
+
+### Display 600
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-text modifier="display-600">
+    When you gear up, we give back
+  </cdr-text>
+```
+</cdr-doc-example-code-pair>
+
+### Heading 800
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-text modifier="heading-800">
+    When you gear up, we give back
+  </cdr-text>
+```
+</cdr-doc-example-code-pair>
+
+### Heading 700
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-text modifier="heading-700">
+    When you gear up, we give back
+  </cdr-text>
+```
+</cdr-doc-example-code-pair>
+
+### Heading 600
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-text modifier="heading-600">
+    When you gear up, we give back
+  </cdr-text>
+```
+</cdr-doc-example-code-pair>
+
+### Heading 500
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-text modifier="heading-500">
+    When you gear up, we give back
+  </cdr-text>
+```
+</cdr-doc-example-code-pair>
+
+### Heading 400
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-text modifier="heading-400">
+    When you gear up, we give back
+  </cdr-text>
+```
+</cdr-doc-example-code-pair>
+
+### Heading 300
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-text modifier="heading-300">
+    When you gear up, we give back
+  </cdr-text>
+```
+</cdr-doc-example-code-pair>
+
+
+### Subheading 600
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-text modifier="heading-600">
+    When you gear up, we give back
+  </cdr-text>
+```
+</cdr-doc-example-code-pair>
+
+### Subheading 500
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-text modifier="heading-500">
+    When you gear up, we give back
+  </cdr-text>
+```
+</cdr-doc-example-code-pair>
+
+### Subheading 400
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-text modifier="heading-400">
+    When you gear up, we give back
+  </cdr-text>
+```
+</cdr-doc-example-code-pair>
+
+### Subheading 300
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-text modifier="heading-300">
+    When you gear up, we give back
+  </cdr-text>
+```
 </cdr-doc-example-code-pair>
 
 ## Accessibility
@@ -313,33 +497,32 @@ With this decoupling, you can style other markup to look like a heading that sem
 
 ```vue
   <cdr-text
-    tag="a"
-    modifier="heading-small"
-    href="http://www.rei.com">
-      Heading-large linked
+    tag="strong"
+    modifier="heading-700 heading-800@sm heading-800@md heading-800@lg"
+   >
+      Styled as a heading
   </cdr-text>
 ```
 
 This will result in the following HTML:
 
 ```html
-  <cdr-text modifier="body">
-   <a class=”heading-small” href=”http://www.rei.com”>Heading-small linked</a>
-  </cdr-text>
+  <strong 
+    class="cdr-text cdr-text-heading-700 cdr-text-heading-800@sm cdr-text-heading-800@md cdr-text-heading-800@lg” 
+  >
+    Styled as a heading
+  </strong>
 ```
 
-**CdrText** modifiers can be nested within semantic headings. The below modifier for subheading is nested in the `<h2>` tag.
+**CdrText** components can be nested within a parent. The below example shows a subheading properly nested within the `<h2>` tag.
 
 ```vue
-  <cdr-text
-    tag="h2"
-    modifier="heading-large">
-    I'm a heading
-    <cdr-text
-      tag="span"
-      modifier="subheading"
-    >
-      And I'm a visual subheading
+  <cdr-text tag="h2" modifier="heading-700 heading-800@sm heading-800@md heading-800@lg">
+    When you gear up, we give back
+    <cdr-text 
+      class="cdr-pt-space-one-x cdr-pt-space-one-and-a-half-x@sm cdr-pt-space-one-and-a-half-x@md cdr-pt-space-one-and-a-half-x@lg" 
+      modifier="subheading-300 subheading-400@sm subheading-4000@md subheading-400@lg">
+      Treat yourself to sweet gear
     </cdr-text>
   </cdr-text>
 ```
@@ -347,9 +530,21 @@ This will result in the following HTML:
 This will result in the following HTML:
 
 ```html
-  <h2>
+  <h2 class="
+  cdr-text 
+  cdr-text-heading-700 
+  cdr-text-heading-800@sm 
+  cdr-text-heading-800@md 
+  cdr-text-heading-800@l">
     I’m a heading
-      <span class=”subheading”>
+      <span class="
+      cdr-pt-space-one-x 
+      cdr-pt-space-one-and-a-half-x@sm cdr-pt-space-one-and-a-half-x@md cdr-pt-space-one-and-a-half-x@lg
+      cdr-text 
+      cdr-text-subheading-300 
+      cdr-text-subheading-400@sm 
+      cdr-text-subheading-4000@md 
+      cdr-text-subheading-400@lg">
           And I’m a visual subheading
       </span>
   </h2>
@@ -357,16 +552,7 @@ This will result in the following HTML:
 
 ### Responsive Headings
 
-- Heading modifiers (without the “-static” ending) are responsive
-- To disable resizing at breakpoints use static variants (ending with “-static”)
-
-```vue
-  <cdr-text
-    tag="em"
-    modifier="heading-medium-static">
-    I should not change size at breakpoint
-  </cdr-text>
-```
+Heading modifiers accept any of the supported cedar breakpoints. Review how breakpoints work on components [here](../../layout/responsive/?active-link=components-and-breakpoints)
 
 ## Heading Levels
 
