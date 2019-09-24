@@ -150,7 +150,7 @@ See the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) to generate a
 
 ## Non-Cedar SVG
 
-Create a new SVG icon using any valid internal SVG markup. This method creates an outer SVG wrapper for accessibility and styles. This is not recommended if using a large number of icons.
+Create a new SVG icon using any valid SVG markup. The wrapping SVG element can be stripped (below) or maintained. Note that if it is not stripped `viewBox`, `role`, and `xmlns` attributes will not be preserved, all others will. This method creates an outer SVG wrapper for accessibility and styles. This is not recommended if using a large number of icons. 
 
 <cdr-doc-example-code-pair repository-href="/src/components/icon" :sandbox-data="$page.frontmatter.sandboxData" >
 
@@ -333,7 +333,7 @@ components: {
 The **CdrIcon** package is simply an SVG with default attributes set for accessibility and styling.
 
 - Any SVG markup can be used
-- Any attributes added will override the defaults
+- All attributes, event listeners, classes, etc. will be carried over with the exception of `viewBox`, `role`, and `xmlns`
 - This method will increase HTML file size and slow down performance if using a lot of icons.
 
 
@@ -343,10 +343,38 @@ Requires:
 
 Use any valid SVG markup in the **CdrIcon** slot.
 
+The svg element in this example will be stripped but the class and data- atrribute will be preserved (and could be moved to cdr-icon also)
+
 ```vue
 <template>
   ...
-  <cdr-icon viewBox="0 0 30 30">
+  <cdr-icon>
+    <svg class="my-class" data-example="this stays">
+      <title>My icon</title>
+      <path d="M12 12c1.9329966 0 3.5-1.5670034 3.5-3.5C15.5 6.56700338 13.9329966 5 12 5S8.5 6.56700338 8.5 8.5c0 1.9329966 1.5670034 3.5 3.5 3.5zm6.7621385 7c-.8850139-2.8946791-3.5777143-5-6.7621387-5-3.1844245 0-5.87712493 2.1053209-6.76213876 5H18.7621385zM4 21c-.55228475 0-1-.4477153-1-1h-.00754862a9.07963802 9.07963802 0 0 1 .01314502-.1064258c.00185549-.0175393.0041644-.0349433.00691478-.0522001.43595408-3.2192393 2.56090871-5.9021068 5.45328094-7.1270196C7.26398091 11.7054407 6.5 10.191939 6.5 8.5 6.5 5.46243388 8.96243388 3 12 3c3.0375661 0 5.5 2.46243388 5.5 5.5 0 1.6919391-.763981 3.2054409-1.9657923 4.2143547 2.8923661 1.2249103 5.0173178 3.9077692 5.4532779 7.1269995.0027529.0172699.0050636.0346873.0069201.0522401A9.07834213 9.07834213 0 0 1 21.0075481 20H21c0 .5522847-.4477153 1-1 1H4z"/>
+    </svg>
+  </cdr-icon>
+  ...
+</template>
+
+<script>
+import { CdrIcon } from '@rei/cedar';
+
+...
+  components: {
+    CdrIcon
+  }
+...
+
+</script>
+```
+
+You can also omit the wrapping svg element.
+
+```vue
+<template>
+  ...
+  <cdr-icon>
     <title>My icon</title>
     <path d="M12 12c1.9329966 0 3.5-1.5670034 3.5-3.5C15.5 6.56700338 13.9329966 5 12 5S8.5 6.56700338 8.5 8.5c0 1.9329966 1.5670034 3.5 3.5 3.5zm6.7621385 7c-.8850139-2.8946791-3.5777143-5-6.7621387-5-3.1844245 0-5.87712493 2.1053209-6.76213876 5H18.7621385zM4 21c-.55228475 0-1-.4477153-1-1h-.00754862a9.07963802 9.07963802 0 0 1 .01314502-.1064258c.00185549-.0175393.0041644-.0349433.00691478-.0522001.43595408-3.2192393 2.56090871-5.9021068 5.45328094-7.1270196C7.26398091 11.7054407 6.5 10.191939 6.5 8.5 6.5 5.46243388 8.96243388 3 12 3c3.0375661 0 5.5 2.46243388 5.5 5.5 0 1.6919391-.763981 3.2054409-1.9657923 4.2143547 2.8923661 1.2249103 5.0173178 3.9077692 5.4532779 7.1269995.0027529.0172699.0050636.0346873.0069201.0522401A9.07834213 9.07834213 0 0 1 21.0075481 20H21c0 .5522847-.4477153 1-1 1H4z"/>
   </cdr-icon>
