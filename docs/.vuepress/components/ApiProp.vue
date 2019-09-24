@@ -11,31 +11,33 @@
           <api-prop-alert :alert="apiProp.alert" />
         </cdr-col>
         <cdr-col
-          span="12 4@sm"
+          span="12"
           v-if="apiProp.name"
-        >
-          <div class="prop-wrap">
-            <p :aria-labelledby="'propName' + index" class="prop-name">{{ apiProp.name }}</p>
-            <p :id="'propName' + index" class="prop-label">name</p>
-          </div>
-        </cdr-col>
-        <cdr-col
-          span="12 4@sm"
-          v-if="apiProp.name"
-        >
-          <div class="prop-wrap">
-            <p :aria-labelledby="'propType' + index" class="prop-type">{{ apiProp.type }}</p>
-            <p :id="'propType' + 1" class="prop-label">type</p>
-          </div>
-        </cdr-col>
-        <cdr-col
-          span="12 4@sm"
-          v-if="apiProp.name"
-        >
-          <div class="prop-wrap">
-            <p :aria-labelledby="'propDefault' + index" class="prop-default">{{ apiProp.default }}</p>
-            <p :id="'propDefault' + index" class="prop-label">default</p>
-          </div>
+`   
+            <cdr-col
+              span="12 4@sm"
+            >
+              <div class="prop-wrap">
+                <p :aria-labelledby="'propName' + index" class="prop-name">{{ apiProp.name }}</p>
+                <p :id="'propName' + index" class="prop-label">name</p>
+              </div>
+            </cdr-col>
+            <cdr-col
+              span="12 4@sm"
+            >
+              <div class="prop-wrap">
+                <p :aria-labelledby="'propType' + index" class="prop-type">{{ apiProp.type }}</p>
+                <p :id="'propType' + 1" class="prop-label">type</p>
+              </div>
+            </cdr-col>
+            <cdr-col
+              span="12 4@sm"
+            >
+              <div class="prop-wrap">
+                <p :aria-labelledby="'propDefault' + index" class="prop-default">{{ apiProp.default }}</p>
+                <p :id="'propDefault' + index" class="prop-label">default</p>
+              </div>
+            </cdr-col>
         </cdr-col>
         <cdr-col
           span="12"
