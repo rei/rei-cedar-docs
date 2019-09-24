@@ -102,7 +102,7 @@ Use for the most prominent type style on the page in place of titles. Also, use 
 ```html
   <cdr-text
     tag="p"
-    modifier="display-800 display-900@sm display-900@md display-900@lg">
+    modifier="display-800@xs display-900">
       When you gear up, we give back
   </cdr-text>
 ```
@@ -116,11 +116,11 @@ Use when pairing with subheadlines with headline-like styles.
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-text tag="h1" modifier="display-800 display-900@sm display-900@md display-900@lg">
+  <cdr-text tag="h1" modifier="display-800@xs display-900">
     When you gear up, we give back
     <cdr-text
-      class="cdr-pt-space-one-x cdr-pt-space-one-and-a-half-x@sm cdr-pt-space-one-and-a-half-x@md cdr-pt-space-one-and-a-half-x@lg" 
-      modifier="subheading-400 subheading-500@sm subheading-5000@md subheading-500@lg">
+      class="cdr-pt-space-one-x@xs cdr-pt-space-one-and-a-half-x" 
+      modifier="subheading-400@xs subheading-500">
       Treat yourself to sweet gear
     </cdr-text>
   </cdr-text>
@@ -136,7 +136,7 @@ Use for one of the most prominent type styles on the page and only once per page
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-text modifier="heading-700 heading-800@sm heading-800@md heading-800@lg">
+  <cdr-text modifier="heading-700@xs heading-800">
     When you gear up, we give back
   </cdr-text>
 ```
@@ -150,11 +150,11 @@ Use only when pairing subtitles with title-type styles.
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-text modifier="heading-700 heading-800@sm heading-800@md heading-800@lg">
+  <cdr-text modifier="heading-700@xs heading-800">
     When you gear up, we give back
     <cdr-text 
-      class="cdr-pt-space-one-x cdr-pt-space-one-and-a-half-x@sm cdr-pt-space-one-and-a-half-x@md cdr-pt-space-one-and-a-half-x@lg" 
-      modifier="subheading-300 subheading-400@sm subheading-4000@md subheading-400@lg">
+      class="cdr-pt-space-one-x@xs cdr-pt-space-one-and-a-half-x" 
+      modifier="subheading-300@xs subheading-400">
       Treat yourself to sweet gear
     </cdr-text>
   </cdr-text>
@@ -169,7 +169,7 @@ Use for headings of a section on the page.
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-text modifier="heading-600 heading-700@sm heading-700@md heading-700@lg">
+  <cdr-text modifier="heading-600@xs heading-700">
     When you gear up, we give back
   </cdr-text>
 ```
@@ -183,7 +183,7 @@ Use for headings nested within a section of your page.
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-text modifier="heading-400 heading-500@sm heading-500@md heading-500@lg">
+  <cdr-text modifier="heading-400@xs heading-500">
     When you gear up, we give back
   </cdr-text>
 ```
@@ -197,7 +197,7 @@ Use for headings nested within a sub-section of your page.
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-text modifier="heading-300 heading-400@sm heading-400@md heading-400@lg">
+  <cdr-text modifier="heading-300@xs heading-400">
     When you gear up, we give back
   </cdr-text>
 ```
@@ -508,7 +508,9 @@ This will result in the following HTML:
 
 ```html
   <strong 
-    class="cdr-text cdr-text-heading-700 cdr-text-heading-800@sm cdr-text-heading-800@md cdr-text-heading-800@lg” 
+    class="
+    cdr-text cdr-text-heading-700@xs
+    cdr-text-heading-800” 
   >
     Styled as a heading
   </strong>
@@ -517,11 +519,20 @@ This will result in the following HTML:
 **CdrText** components can be nested within a parent. The below example shows a subheading properly nested within the `<h2>` tag.
 
 ```vue
-  <cdr-text tag="h2" modifier="heading-700 heading-800@sm heading-800@md heading-800@lg">
+  <cdr-text 
+    tag="h2" 
+    modifier="
+      heading-700@xs 
+      heading-800"
+  >
     When you gear up, we give back
     <cdr-text 
-      class="cdr-pt-space-one-x cdr-pt-space-one-and-a-half-x@sm cdr-pt-space-one-and-a-half-x@md cdr-pt-space-one-and-a-half-x@lg" 
-      modifier="subheading-300 subheading-400@sm subheading-4000@md subheading-400@lg">
+      class="
+        cdr-pt-space-one-x@xs
+        cdr-pt-space-one-and-a-half-x" 
+      modifier="
+        subheading-300@xs 
+        subheading-400">
       Treat yourself to sweet gear
     </cdr-text>
   </cdr-text>
@@ -530,22 +541,19 @@ This will result in the following HTML:
 This will result in the following HTML:
 
 ```html
-  <h2 class="
-  cdr-text 
-  cdr-text-heading-700 
-  cdr-text-heading-800@sm 
-  cdr-text-heading-800@md 
-  cdr-text-heading-800@l">
+  <h2 
+  class="
+    cdr-text 
+    cdr-text-heading-700@xs 
+    cdr-text-heading-800">
     I’m a heading
       <span class="
-      cdr-pt-space-one-x 
-      cdr-pt-space-one-and-a-half-x@sm cdr-pt-space-one-and-a-half-x@md cdr-pt-space-one-and-a-half-x@lg
-      cdr-text 
-      cdr-text-subheading-300 
-      cdr-text-subheading-400@sm 
-      cdr-text-subheading-4000@md 
-      cdr-text-subheading-400@lg">
-          And I’m a visual subheading
+        cdr-pt-space-one-x@xs 
+        cdr-pt-space-one-and-a-half-x
+        cdr-text 
+        cdr-text-subheading-300@xs 
+        cdr-text-subheading-400">
+        And I’m a visual subheading
       </span>
   </h2>
 ```
