@@ -56,6 +56,12 @@ See the [deprecated icon components](#deprecated-icon-components) section for mo
 - We have also made minor updates to the [CDR Icons • vCurrent](https://share.goabstract.com/e9186773-0cc3-43a6-b7ff-54b163d95e00?sha=a814b05c391c93f5a7d39ce9508cd5238ae8fe0e) libray to make icon symbols more consistent. For linking instructions, see the guide to using the [Cedar UI Toolkit](/getting-started/as-a-designer/#cedar-ui-toolkit).
 - We have also written a new sketch plugin to help you [export Cedar compliant icons that are not in the icon repo](/icons/resources/#exporting-icons-that-aren’t-in-the-library).
 
+### SVG in Icon Slot
+
+- `CdrIcon` now accepts full svg markup in the slot.
+- All attributes, classes, listeners, etc. will be preserved with the exception of `viewBox`, `role`, and `xmlns`.
+- See the [Icon component documenation](/components/icon/?active-tab=api#_2-non-cedar-svg) for an example.
+
 ### Deprecated Mixin Warnings
 
 The `cdr-tokens` package now emits warnings if it detects that you are using deprecated mixins in your SCSS. You can disable this by setting a SCSS variable `$cdr-warn: false;` in any scope that you are using `cdr-tokens` in. Note that these warnings are only emitted by mixins in the SCSS build and will not trigger for tokens or if you are using LESS.
