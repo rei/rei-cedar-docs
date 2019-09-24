@@ -401,9 +401,9 @@ The following type styles should be used when contextual styles (above) are not 
 To ensure that usage of this component complies with accessibility guidelines:
 
 - Use h1-h6 to identify headings (`<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, and `<h6>`)
-  - If additional headings are needed (`<h7>` and so on), follow the technique described on this page: [ARIA12: Using role=heading to identify headings](https://www.w3.org/TR/WCAG20-TECHS/ARIA12)
+  - If additional headings are needed (`<h7>` and so on), follow the technique described on the [ARIA12: Using role=heading to identify headings](https://www.w3.org/TR/WCAG20-TECHS/ARIA12) page
 - Headings are used to label page regions
-  - Use the `aria-label` attribute to associate headings with their page region, as described in the [label page regions](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby) section of this tutorial
+  - Use the `aria-label` attribute to associate headings with their page region, as described in the [label page regions](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby) tutorial 
 - Subheadings are not semantic headings. Subheadings may be visually styled as a heading but will not be navigable using a screen reader
 - For PDF documents, follow the technique on this page: [Providing headings by marking content with heading tags in PDF documents](https://www.w3.org/TR/WCAG20-TECHS/PDF9)
 - Assistive technologies skim the structure of a page:
@@ -414,7 +414,7 @@ To ensure that usage of this component complies with accessibility guidelines:
 
 This component has compliance with WCAG guidelines by:
 
-- Defining semantic heading levels with ability to assign predefined visual heading styles to each level
+- Defining semantic heading levels with the ability to assign predefined visual heading styles to each level
 
 </cdr-doc-table-of-contents-shell>
 </template>
@@ -552,7 +552,7 @@ This will result in the following HTML:
 
 ### Responsive Headings
 
-Heading modifiers accept any of the supported cedar breakpoints. Review how breakpoints work on components [here](../../layout/responsive/?active-link=components-and-breakpoints)
+Heading modifiers accept any of the supported Cedar breakpoints. For more information on how breakpoints work on components, visit the [Responsive Layout](../../layout/responsive/?active-link=components-and-breakpoints) article. 
 
 ### Modifiers
 
@@ -581,7 +581,7 @@ The following variants are available for heading construction within the `cdr-te
 
 ## Heading Levels
 
-When using actual heading elements via the tag property, nest headings by their level:
+When using actual heading elements with the tag property, nest headings by their level:
 
 - Most important heading has the level 1 (`<h1>`) and the least important heading level 6 (`<h6>`)
 - Headings with an equal or higher level start a new section
@@ -594,7 +594,7 @@ Skipping heading levels can be confusing and should be avoided where possible:
 
 ### Exception for Fixed Page Sections
 
-In fixed sections of the page (e.g. sidebars), heading levels **should not** change depending on the heading levels in other areas of the page. Consistency across pages is required throughout the REI digital properties as explained on the [Navigation Design Principles Confluence page](https://confluence.rei.com/display/NAV/Navigation+Design+Principles).
+In fixed sections of the page (e.g. sidebars), heading levels **should not** change depending on the heading levels in other areas of the page. Consistency across pages is required throughout the REI digital properties as explained on the [Navigation Design Principles Confluence](https://confluence.rei.com/display/NAV/Navigation+Design+Principles) page.
 
 </cdr-doc-table-of-contents-shell>
 </template>
