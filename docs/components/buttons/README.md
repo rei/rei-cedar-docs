@@ -327,7 +327,7 @@ This component has no specific WCAG compliance attributes built into the control
 - Submitting requested information
 - Confirming the completion of a flow or cancelling out of it
 
-### Don't Use When
+## Don't't Use When
 
 - Navigating to another page on a site. Instead use [Call to Action](../cta/)
 - Taking users to a different part within the same page. Instead, use [Links](../links/)
