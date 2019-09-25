@@ -21,7 +21,7 @@ If you are not already on Cedar 2.x.x, you will first need to [upgrade your proj
 ### For a Micro-Site
 
 - Update to `@rei/cedar` 3.x.x
-- Update to `@rei/febs` >= 5.4.0
+- Update to `@rei/febs` >= 5.4.1
 - Ensure that you are on a recent version of Babel (>= 7.x.x) and Webpack (>= 4.x.x)
 
 ### For a Component Package
