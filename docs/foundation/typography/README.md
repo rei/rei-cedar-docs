@@ -176,11 +176,11 @@ Cedar typography references two distinct font stacks: a serif and a sans-serif. 
 
 **Serif**
 
-`font-family: 'REI Stuart app', 'Georgia', Times, serif`
+`font-family: 'Stuart', 'Georgia', Times, serif`
 
 **Sans-serif**
 
-`font-family: 'Graphik app', 'Helvetica Neue', Helvetica, Arial, sans-serif`
+`font-family: 'Graphik', 'Helvetica Neue', Helvetica, Arial, sans-serif`
 
 
 ### Supported Languages

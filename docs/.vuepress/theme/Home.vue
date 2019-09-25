@@ -229,7 +229,7 @@ export default {
 }
 
 .home-heading {
-  @include cdr-text-header-3;
+  @include cdr-text-heading-700;
   margin-bottom: $cdr-space-one-x;
 
   @media (max-width: $cdr-breakpoint-md) {
