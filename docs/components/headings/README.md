@@ -53,15 +53,15 @@
                 "name": "modifier",
                 "type": "string",
                 "default": "N/A",
-                "description": "Modifies the style variant for this component. Possible values: { ‘display-600’  | ‘display-700 | ‘display-800 | ‘display-900 | ‘display-1000 | ‘display-1100 | ‘display-1200 | ‘heading-300' | ‘heading-400 | ‘heading-500 | ‘heading-600 | ‘heading-700 | ‘heading-800 | ‘subheading-300 | ‘subheading-400 | ‘subheading-500 | ‘subheading-600 | }",
-              },
-              {
-                "description": "Deprecated values: { ‘display’  |  ‘display-static’  |  ‘heading-large’  |  ‘heading-large-static’  |  ‘heading-medium’  |  ‘heading-medium-static’  |  ‘heading-small’  |  ‘heading-small-static’  |  ‘subheading' }",
-                "alert": {
+                "description": "The following are variants of the Modifiers property. They can be used to Modifie the style variant for this component. Possible values:",
+                "variants":[display-600, display-700, display-800, display-900, display-1000, display-1100, display-1200, heading-300, heading-400, heading-500, heading-600, heading-700, heading-800, subheading-300, subheading-400, subheading-500, subheading-600],
+                "description2": "Deprecated values:",
+                "variant": {
                   "type": "deprecated",
                   "description": "The below options of the modifier property have been deprecated in v3.0.0. refer to the Fall2019 headings release notes for updated mappings."
                 },
-              }
+                "changed":[display, display-static, heading-large, heading-large-static, heading-medium, heading-medium-static, heading-small, heading-small-static, subheading,]
+              },
             ],
             "slots": [
               {
@@ -101,7 +101,6 @@ Use for the most prominent type style on the page in place of titles. Also, use 
 
 ```html
   <cdr-text
-    tag="p"
     modifier="display-800@xs display-900">
       When you gear up, we give back
   </cdr-text>
@@ -525,7 +524,7 @@ This will result in the following HTML:
       heading-700@xs 
       heading-800"
   >
-    When you gear up, we give back
+    I’m a heading
     <cdr-text 
       class="
         cdr-pt-space-one-x@xs
@@ -533,7 +532,7 @@ This will result in the following HTML:
       modifier="
         subheading-300@xs 
         subheading-400">
-      Treat yourself to sweet gear
+      And I’m a visual subheading
     </cdr-text>
   </cdr-text>
 ```

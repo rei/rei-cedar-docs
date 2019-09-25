@@ -11,40 +11,44 @@
           <api-prop-alert :alert="apiProp.alert" />
         </cdr-col>
         <cdr-col
-          span="12"
-          v-if="apiProp.name"
-`   
-            <cdr-col
-              span="12 4@sm"
-            >
-              <div class="prop-wrap">
-                <p :aria-labelledby="'propName' + index" class="prop-name">{{ apiProp.name }}</p>
-                <p :id="'propName' + index" class="prop-label">name</p>
-              </div>
-            </cdr-col>
-            <cdr-col
-              span="12 4@sm"
-            >
-              <div class="prop-wrap">
-                <p :aria-labelledby="'propType' + index" class="prop-type">{{ apiProp.type }}</p>
-                <p :id="'propType' + 1" class="prop-label">type</p>
-              </div>
-            </cdr-col>
-            <cdr-col
-              span="12 4@sm"
-            >
-              <div class="prop-wrap">
-                <p :aria-labelledby="'propDefault' + index" class="prop-default">{{ apiProp.default }}</p>
-                <p :id="'propDefault' + index" class="prop-label">default</p>
-              </div>
-            </cdr-col>
+          span="12 4@sm"
+        >
+          <div class="prop-wrap">
+            <p :aria-labelledby="'propName' + index" class="prop-name">{{ apiProp.name }}</p>
+            <p :id="'propName' + index" class="prop-label">name</p>
+          </div>
+        </cdr-col>
+        <cdr-col
+          span="12 4@sm"
+        >
+          <div class="prop-wrap">
+            <p :aria-labelledby="'propType' + index" class="prop-type">{{ apiProp.type }}</p>
+            <p :id="'propType' + 1" class="prop-label">type</p>
+          </div>
+        </cdr-col>
+        <cdr-col
+          span="12 4@sm"
+        >
+          <div class="prop-wrap">
+            <p :aria-labelledby="'propDefault' + index" class="prop-default">{{ apiProp.default }}</p>
+            <p :id="'propDefault' + index" class="prop-label">default</p>
+          </div>
         </cdr-col>
         <cdr-col
           span="12"
         >
-          <p aria-lable="prop description" class="prop-description">
-            {{ apiProp.description }}
-          </p>
+          <div>
+            <p aria-lable="prop description" class="prop-description">
+              {{ apiProp.description }}
+               <api-prop-list :items="apiProp.variants" />
+            </p>
+
+            <api-prop-alert :alert="apiProp.variant" />
+            <p aria-lable="prop description 2" class="prop-description">
+              {{ apiProp.description2 }}
+               <api-prop-list :items="apiProp.changed" />
+            </p>
+          </div>
         </cdr-col>
       </cdr-row>
     </div>
@@ -53,6 +57,7 @@
 
 <script>
   import ApiPropAlert from './ApiPropAlert.vue';
+  import ApiPropList from './ApiPropList.vue';
 
   export default {
     name: 'ApiProp',
