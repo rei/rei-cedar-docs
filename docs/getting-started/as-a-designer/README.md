@@ -21,7 +21,7 @@
 
 ## Learn About Cedar
 
-- Browse the Cedar Design System documentation and the [UI Toolkit Library](https://share.goabstract.com/ab520e30-0db8-4e5d-8310-cea8739da61c) to familiarize yourself with our foundation styles, components, and naming conventions
+- Browse the Cedar Design System documentation and the [UI Toolkit Library](https://share.goabstract.com/ab520e30-0db8-4e5d-8310-cea8739da61c) to familiarize yourself with our foundational styles, components, and naming conventions
 - Run the Cedar UI Toolkit installation process outlined below for Abstract and Sketch
 - Review project files in Abstract to understand how designers are using components
 
@@ -165,7 +165,7 @@ If a symbol within the Cedar UI Toolkit has been updated or changed, you will re
 
 ### Linked Library Swapping
 
-If you need to replace one version of a linked library with another in a different project, follow the instructions below. Note that these libraries must be different versions of the same library and contain the same symbols. For Example, replacing _CDR Icons • vCurrent_ with _CDR Icons • vNext_.
+If you need to replace one version of a linked library with another in a different project, follow the instructions below. Note that these libraries must be different versions of the same library and contain the same symbols. For example, replacing _CDR Icons • vCurrent_ with _CDR Icons • vNext_.
 1. Add the new version of the linked library:  
   __Your-Project > Branches > Your-Branch > Files > Add File > Link Sketch Library > ReplacementLibrary.sketch > Link Library__  
   <cdr-img alt="screenshot" :src="$withBase(`/getting-started-for-designers/swap-1-add-new-lib.png`)"/>
@@ -185,15 +185,6 @@ If you need to replace one version of a linked library with another in a differe
   <cdr-img alt="screenshot" :src="$withBase(`/getting-started-for-designers/swap-6-use-new-lib.png`)"/>
 
 ---
-
-
-
-## Contributing to Cedar
-One of the best ways to influence the visual language of the Co-op's digital products is by contributing to the design system. There are many ways to contribute: UX research, UI design, authoring, and editing, to name a few. If you're interested in contributing, talk to your manager or contact the Cedar team using the [#cedar-user-support][cedar-user-support-link] Slack channel or visit Cedar's office hours.
-
----
-
-
 
 ## FAQ
 

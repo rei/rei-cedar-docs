@@ -8,14 +8,20 @@
         @click="animate = true" 
         v-show="!animate"
       >
-        <icon-play-fill />
+        <cdr-icon 
+          use="#play-fill" 
+          alt="Play animation" 
+        />
       </cdr-button>
       <cdr-button 
         :icon-only="true"
         @click="animate = false" 
         v-show="animate"
       >
-        <icon-pause-fill />
+        <cdr-icon 
+          use="#pause-fill" 
+          alt="Pause animation"
+        />
       </cdr-button>
       <table>
         <tr v-for="token in motionTokensByType[motionType]">

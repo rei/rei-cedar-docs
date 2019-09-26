@@ -34,7 +34,7 @@
       <!-- <p class="typography-example" :style="makeNativeStyleObj(v)">A different kind of company</p> -->
       <cdr-text><b>Android:</b> {{ v[0].docs.android }}</cdr-text>
       <cdr-text><b>iOS:</b> {{ v[0].docs.ios }}</cdr-text>
-      <cdr-text class="cdr-mb-space-one-x">{{v[0].docs.description}}</cdr-text>
+      <cdr-text class="cdr-mb-space-one-x">{{v[0].docs.description}}.</cdr-text>
 
       <table>
         <tbody>

@@ -3,7 +3,7 @@
   "title": "Grid",
   "layout_type": "LayoutComponent",
   "summary": "A responsive, mobile first, fluid system that appropriately scales 12 columns as the device or viewport size increases",
-  "title_metadata": "Layout, CdrGrid",
+  "title_metadata": "Layout, CdrGrid, CdrRow, CdrCol",
   "consistent": [
     {
       "type": "do",

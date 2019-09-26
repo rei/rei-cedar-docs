@@ -1,30 +1,27 @@
 <template>
   <div :class="['rei-doc-alert', colorClass]">
-    <icon-information-stroke 
-      size="small" 
+    <cdr-icon 
       class="rei-doc-alert__icon"
+      use="#information-stroke" 
+      alt="Information icon" 
       v-if="icon === 'info'"
     />
-    <icon-warning-tri
-      size="small"
+    <cdr-icon 
       class="rei-doc-alert__icon"
+      use="#warning-tri" 
+      alt="Warning icon" 
       v-if="icon === 'warning'"
     />
     <div>
-      <slot>Last updated on July 2, 2018. Consistent with v 1.0.0</slot>
+      <slot>Last updated on September 23, 2019. Consistent with `@rei/cedar-icons` 1.0.0.</slot>
     </div>
   </div>
 </template>
 
 <script>
-import { IconInformationStroke, IconWarningTri } from '@rei/cedar';
 
 export default {
   name: 'CdrDocAlert',
-  components: {
-    IconInformationStroke,
-    IconWarningTri
-  },
   props: {
     icon: {
       type: String,

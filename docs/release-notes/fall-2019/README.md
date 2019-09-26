@@ -36,7 +36,7 @@ If you are not already on Cedar 2.x.x, you will first need to [upgrade your proj
 
 Sentinel and Roboto have been deprecated as global REI brand fonts. `cdr-fonts.css` has removed the base64 encoded versions of sentinel fonts as a result and has greatly reduced the overall size of this file.
 
-The variant fonts for "REI Stuart App" and "Graphik App" have been added.
+The variant fonts for "Stuart" and "Graphik" have been added.
 
 [more information on typography](../../foundation/typography/?active-tab=guidelines)
 
@@ -49,6 +49,18 @@ We have created a new [Cedar Icon Library](https://rei.github.io/cedar-icons/#/)
 - Decreases bundle size as sprite sheets are now loaded inline in the HTML rather than being included in the JavaScript bundle.
 
 See the [deprecated icon components](#deprecated-icon-components) section for more information on updating your icon usage.
+
+### Icon Contribution
+
+- We have updated the [guidelines for contributing icons](/icons/resources/#contribution-process) to the [CDR · Icon Contribution](https://share.goabstract.com/99335c38-51ee-41c8-8454-38c2a70c4c7f) Project
+- We have also made minor updates to the [CDR Icons • vCurrent](https://share.goabstract.com/e9186773-0cc3-43a6-b7ff-54b163d95e00?sha=a814b05c391c93f5a7d39ce9508cd5238ae8fe0e) libray to make icon symbols more consistent. For linking instructions, see the guide to using the [Cedar UI Toolkit](/getting-started/as-a-designer/#cedar-ui-toolkit).
+- We have also written a new sketch plugin to help you [export Cedar compliant icons that are not in the icon repo](/icons/resources/#exporting-icons-that-aren’t-in-the-library).
+
+### SVG in Icon Slot
+
+- `CdrIcon` now accepts full svg markup in the slot.
+- All attributes, classes, listeners, etc. will be preserved with the exception of `viewBox`, `role`, and `xmlns`.
+- See the [Icon component documenation](/components/icon/?active-tab=api#_2-non-cedar-svg) for an example.
 
 ### Deprecated Mixin Warnings
 
@@ -235,41 +247,41 @@ In order to support the updates to typography, we have re-named some Cedar token
 | cdr-text-header-2-spacing | cdr-text-display-900-spacing |
 | cdr-text-header-2-size | cdr-text-display-900-size |
 | cdr-text-header-2-height | cdr-text-display-900-height |
-| cdr-text-header-3 | cdr-text-display-700 |
-| cdr-text-header-3-family | cdr-text-display-700-family |
-| cdr-text-header-3-style | cdr-text-display-700-style |
-| cdr-text-header-3-weight | cdr-text-display-700-weight |
-| cdr-text-header-3-spacing | cdr-text-display-700-spacing |
-| cdr-text-header-3-size | cdr-text-display-700-size |
-| cdr-text-header-3-height | cdr-text-display-700-height |
-| cdr-text-header-4 | cdr-text-display-600 |
-| cdr-text-header-4-family | cdr-text-display-600-family |
-| cdr-text-header-4-style | cdr-text-display-600-style |
-| cdr-text-header-4-weight | cdr-text-display-600-weight |
-| cdr-text-header-4-spacing | cdr-text-display-600-spacing |
-| cdr-text-header-4-size | cdr-text-display-600-size |
-| cdr-text-header-4-height | cdr-text-display-600-height |
-| cdr-text-header-5 | cdr-text-display-500 |
-| cdr-text-header-5-family | cdr-text-display-500-family |
-| cdr-text-header-5-style | cdr-text-display-500-style |
-| cdr-text-header-5-weight | cdr-text-display-500-weight |
-| cdr-text-header-5-spacing | cdr-text-display-500-spacing |
-| cdr-text-header-5-size | cdr-text-display-500-size |
-| cdr-text-header-5-height | cdr-text-display-500-height |
-| cdr-text-header-6 | cdr-text-display-400 |
-| cdr-text-header-6-family | cdr-text-display-400-family |
-| cdr-text-header-6-style | cdr-text-display-400-style |
-| cdr-text-header-6-weight | cdr-text-display-400-weight |
-| cdr-text-header-6-spacing | cdr-text-display-400-spacing |
-| cdr-text-header-6-size | cdr-text-display-400-size |
-| cdr-text-header-6-height | cdr-text-display-400-height |
-| cdr-text-header-7 | cdr-text-display-300 |
-| cdr-text-header-7-family | cdr-text-display-300-family |
-| cdr-text-header-7-style | cdr-text-display-300-style |
-| cdr-text-header-7-weight | cdr-text-display-300-weight |
-| cdr-text-header-7-spacing | cdr-text-display-300-spacing |
-| cdr-text-header-7-size | cdr-text-display-300-size |
-| cdr-text-header-7-height | cdr-text-display-300-height |
+| cdr-text-header-3 | cdr-text-heading-700 |
+| cdr-text-header-3-family | cdr-text-heading-700-family |
+| cdr-text-header-3-style | cdr-text-heading-700-style |
+| cdr-text-header-3-weight | cdr-text-heading-700-weight |
+| cdr-text-header-3-spacing | cdr-text-heading-700-spacing |
+| cdr-text-header-3-size | cdr-text-heading-700-size |
+| cdr-text-header-3-height | cdr-text-heading-700-height |
+| cdr-text-header-4 | cdr-text-heading-600 |
+| cdr-text-header-4-family | cdr-text-heading-600-family |
+| cdr-text-header-4-style | cdr-text-heading-600-style |
+| cdr-text-header-4-weight | cdr-text-heading-600-weight |
+| cdr-text-header-4-spacing | cdr-text-heading-600-spacing |
+| cdr-text-header-4-size | cdr-text-heading-600-size |
+| cdr-text-header-4-height | cdr-text-heading-600-height |
+| cdr-text-header-5 | cdr-text-heading-500 |
+| cdr-text-header-5-family | cdr-text-heading-500-family |
+| cdr-text-header-5-style | cdr-text-heading-500-style |
+| cdr-text-header-5-weight | cdr-text-heading-500-weight |
+| cdr-text-header-5-spacing | cdr-text-heading-500-spacing |
+| cdr-text-header-5-size | cdr-text-heading-500-size |
+| cdr-text-header-5-height | cdr-text-heading-500-height |
+| cdr-text-header-6 | cdr-text-heading-400 |
+| cdr-text-header-6-family | cdr-text-heading-400-family |
+| cdr-text-header-6-style | cdr-text-heading-400-style |
+| cdr-text-header-6-weight | cdr-text-heading-400-weight |
+| cdr-text-header-6-spacing | cdr-text-heading-400-spacing |
+| cdr-text-header-6-size | cdr-text-heading-400-size |
+| cdr-text-header-6-height | cdr-text-heading-400-height |
+| cdr-text-header-7 | cdr-text-heading-300 |
+| cdr-text-header-7-family | cdr-text-heading-300-family |
+| cdr-text-header-7-style | cdr-text-heading-300-style |
+| cdr-text-header-7-weight | cdr-text-heading-300-weight |
+| cdr-text-header-7-spacing | cdr-text-heading-300-spacing |
+| cdr-text-header-7-size | cdr-text-heading-300-size |
+| cdr-text-header-7-height | cdr-text-heading-300-height |
 | cdr-text-editorial | cdr-text-default |
 | cdr-text-editorial-family | cdr-text-default-family |
 | cdr-text-editorial-style | cdr-text-default-style |
@@ -277,13 +289,13 @@ In order to support the updates to typography, we have re-named some Cedar token
 | cdr-text-editorial-spacing | cdr-text-default-spacing |
 | cdr-text-editorial-size | cdr-text-default-size |
 | cdr-text-editorial-height | cdr-text-default-height |
-| cdr-text-editorial-compact | cdr-text-default-compact |
-| cdr-text-editorial-compact-family | cdr-text-default-compact-family |
-| cdr-text-editorial-compact-style | cdr-text-default-compact-style |
-| cdr-text-editorial-compact-weight | cdr-text-default-compact-weight |
-| cdr-text-editorial-compact-spacing | cdr-text-default-compact-spacing |
-| cdr-text-editorial-compact-size | cdr-text-default-compact-size |
-| cdr-text-editorial-compact-height | cdr-text-default-compact-height |
+| cdr-text-editorial-compact | cdr-text-default |
+| cdr-text-editorial-compact-family | cdr-text-default-family |
+| cdr-text-editorial-compact-style | cdr-text-default-style |
+| cdr-text-editorial-compact-weight | cdr-text-default-weight |
+| cdr-text-editorial-compact-spacing | cdr-text-default-spacing |
+| cdr-text-editorial-compact-size | cdr-text-default-size |
+| cdr-text-editorial-compact-height | cdr-text-default-height |
 
 Additionally, we have new mixins available to replace the previously deprecated `spruce-display` typography mixins. Replacements for the `redwood` and `maple` mixins will be coming in a future cedar release, see the  [v1 token migration docs](https://confluence.rei.com/display/TP/v1+Token+Migration) for more info on how to handle the deprecated pre-release tokens if you haven't already.
 

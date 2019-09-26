@@ -184,7 +184,7 @@ This component has compliance with WCAG guidelines by:
 - Providing the reader with visual markers
 - Maintaining a sense of sequence and place
 
-### Don't Use When
+## Don't Use When
 
 - Displaying a citation reference. Instead, use [Block Quote](../block-quote/)
 - Displaying for a decorative treatment only

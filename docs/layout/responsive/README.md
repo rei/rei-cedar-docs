@@ -26,17 +26,17 @@ represent a visual structure rather than a content structure.
 ## The Cedar Container
 The Cedar container `cdr-container` is the foundational layout mechanism on your page. It centers your content and provides the page with a left and right gutter helping you to separate your content and the edge of the browser window. The container should be added to the root wrapping element of your template.
 
-Unlike other deliverables from Cedar, our container brakes in its display settings for each of the breakpoints into one class. This allows all pages to begin from the same layout context as each other. The container has two variants: standard container and fluid container.
+Unlike other deliverables from Cedar, our container breaks in its display settings for each of the breakpoints into one class. This allows all pages to begin from the same layout context as each other. The container has two variants: standard container and fluid container.
 
 <cdr-img :src="$withBase('/layout/Spec_Grids_Breakpoints_16-9.png')" alt="Breakpoints for REI’s responsive layout" />
 
-### Standard vs. Fixed Container
+### Standard vs. Fluid Container
 
 The Cedar container allows flexible content width, up to a max width of 1232px. The fluid variant of the container does not have a max width. As shown below, pages can contain both fluid and standard containers.
 
 <cdr-img :src="$withBase('/layout/StandardvFluid.gif')" alt="Standard vs. Fluid container " />
 
-To explore how the containers work, check out this Cedar sandbox:
+To explore how the containers work, check out this co sandbox:
 
 <cdr-doc-example-code-pair :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {styleTag: 'body { background-color: rgba(130, 234, 255, 0.35);} .content {background-color: #fff;} .cdr-container, .cdr-container-fluid { background-color: lightcoral; color: purple;}'})" >
 
@@ -72,7 +72,7 @@ The following design tokens are provided using the `@rei/cdr-tokens` package for
 | Medium       | `cdr-breakpoint-md` | 992px  |
 | Large        | `cdr-breakpoint-lg` | 1232px |
 
-For more information on design tokens and how to use them, visit the [Design Tokens](../../components/design-tokens/) page.
+For more information about design tokens and how to use them, visit the [Design Tokens](../../components/design-tokens/) article.
 
 ### CSS Utilities
 
