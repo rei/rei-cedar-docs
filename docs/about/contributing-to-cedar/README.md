@@ -36,7 +36,7 @@ If you are working on a component or feature that can be shared with other proje
 
 Reference the diagram below to determine how and where to build a new component:
 
-<cdr-img :src="$withBase('/about/Component-development-contributions.png')" alt="a reference tree for when to use cedar" />
+<cdr-img :src="$withBase('/about/Component-development-contributions.png')" alt="a reference tree for when to use Cedar" />
 
 ### Design
 For components added to the fed-components repository, designers should also include the design in Abstract within the CDS Web Sandbox. 
