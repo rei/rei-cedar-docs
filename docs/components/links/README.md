@@ -222,7 +222,7 @@ This component has compliance with following WebAIM’s accessibility guidelines
 
 - Navigating to another page or a different portion of the same page
 
-### Don’t Use When
+## Don't’t Use When
 
 - Navigating a user from promotional or campaign content. Instead, use [Call to Action](../cta/)
 

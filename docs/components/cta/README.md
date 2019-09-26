@@ -277,7 +277,7 @@ This component has compliance with [WCAG SC 1.4.3: Contrast (Minimum)](https://w
 - Encouraging a user to navigate to a new location
 - Promoting a campaign, promotional advertisements, or email offers
 
-### Don't Use When
+## Don't Use When
 
 - Triggering interface interactions. Instead, use [Buttons](../buttons/)
 

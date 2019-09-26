@@ -327,7 +327,7 @@ This component has compliance with WCAG guidelines by:
 - Presenting multiple metrics and categories together
 - Displaying tabular data for users to compare
 
-### Don't Use When
+## Don't Use When
 
 - Positioning contents on page. Instead, use [Grid](../grid/)
 - Laying out a page design. Instead, use [Grid](../grid/)
