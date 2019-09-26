@@ -302,7 +302,7 @@ For more information, review techniques and failures for:
 - Viewing all available options is needed
 - Comparing between a list of selections is desired
 
-## Don't't Use When
+## Don't Use When
 
 - Selecting from a list when only one choice is allowed. Instead, use [Radio Buttons](../radio/)
 

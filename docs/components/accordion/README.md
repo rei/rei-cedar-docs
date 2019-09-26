@@ -313,7 +313,7 @@ This component has compliance with WCAG guidelines by:
 - Displaying content that's directly related, or supplemental, to the main subject of the page
 - Designing with limited vertical space and there is enough content to condense
 
-## Don't't Use When
+## Don't Use When
 
 - Linking a title to another page. Instead, use [Links](../links/)
 - Designing with sparse content. Instead, use [Lists](../lists/) or [Paragraphs](../paragraphs/)

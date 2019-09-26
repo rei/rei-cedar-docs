@@ -270,7 +270,7 @@ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, autem delectus, 
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, autem delectus, voluptate incidunt voluptatum aut architecto iusto quos expedita, illum nisi ipsum dolorem nihil fugit laudantium dicta amet harum modi?
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, autem delectus, voluptate incidunt voluptatum aut architecto iusto quos expedita, illum nisi ipsum dolorem nihil fugit laudantium dicta amet harum modi?
 
-## Don't't use when
+## Don't use when
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt doloremque cumque ad officiis repudiandae natus, culpa obcaecati, expedita, porro distinctio assumenda explicabo nisi. Molestiae praesentium quo, repudiandae nobis eos voluptatum.
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt doloremque cumque ad officiis repudiandae natus, culpa obcaecati, expedita, porro distinctio assumenda explicabo nisi. Molestiae praesentium quo, repudiandae nobis eos voluptatum.
 

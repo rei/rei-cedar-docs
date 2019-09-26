@@ -212,7 +212,7 @@ This component has compliance with WCAG guidelines by:
 
 - Providing a tool for comparing others’ opinions
 
-## Don't't Use When
+## Don't Use When
 
 - Displaying a range of data
 

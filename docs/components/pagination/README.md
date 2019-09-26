@@ -232,7 +232,7 @@ This component has compliance WCAG guidelines by:
 - Providing navigation to break apart large quantities of content
 - Breaking up search result pages into manageable sections
 
-## Don't't Use When
+## Don't Use When
 
 - Using lazy load or infinite scroll within an experience
 - Switching between slides or content in a carousel
