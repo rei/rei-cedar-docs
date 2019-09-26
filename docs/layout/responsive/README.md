@@ -113,7 +113,7 @@ For example, a selector may target a small variant within the small breakpoint r
   }
 }
 ```
-* Exploding the name `--sm-mq-only` would read “small-media-query-only
+Exploding the name `sm-mq-only` would read “small-media-query-only
 
 Using the range ensures that the specified key:value pairs only applies to the `.cdr-example--small@sm` class name when it is displayed within the range of 768px-991px.
 
@@ -137,11 +137,16 @@ When accepted, a breakpoint variant property will append the `@(xs, sm, md, lg)`
 
 For example, to display the `cdr-button-small` variant at the small breakpoint:
 
-Note that the Cedar components will always use the range breakpoints. If you intend a component to continue to use the breakpoint variant within a different breakpoint range, you will also need to account for it within the same property definition.
+```vue
+<cdr-button size="small@sm">
+  A primary button
+</cdr-button>
 ```
-<cdr-button
-  size="small@xs small@sm small@md"
->
+
+Note that the Cedar components will always use the range breakpoints. If you intend a component to continue to use the breakpoint variant within a different breakpoint range, you will also need to account for it within the same property definition.
+
+```vue
+<cdr-button size="small@xs small@sm small@md">
   A primary button
 </cdr-button>
 ```
