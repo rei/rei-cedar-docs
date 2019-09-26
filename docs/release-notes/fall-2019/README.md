@@ -21,7 +21,7 @@ If you are not already on Cedar 2.x.x, you will first need to [upgrade your proj
 ### For a Micro-Site
 
 - Update to `@rei/cedar` 3.x.x
-- Update to `@rei/febs` >= 5.4.0
+- Update to `@rei/febs` >= 5.4.1
 - Ensure that you are on a recent version of Babel (>= 7.x.x) and Webpack (>= 4.x.x)
 
 ### For a Component Package
@@ -85,7 +85,7 @@ Rather than only binding specific listeners (like `on-click`), the [input](/comp
 
 Version 2.x.x of Cedar contained both CommonJS (`@rei/cedar/dist/cedar.cjs.js`) and ES Module (`@rei/cedar/dist/cedar.esm.js`) single file builds. The ES Module build was supposed to allow consumers to "tree shake" out any un-used Cedar code from their bundles. However due to a variety of issues involving Vue and Webpack our ES Module build was not actually tree shakeable for our consumers. To work around this, we are now exporting a multi-file build inside `@rei/cedar/dist/lib` which is also the `module` entry point for Cedar.
 
-If you are on the latest version of FEBS (> 5.4.0) then you will get this change automatically when you update your Cedar version. Any app that is loading `@rei/cedar` should see a significant reduction in bundle size after this update.
+If you are on the latest version of FEBS (> 5.4.1) then you will get this change automatically when you update your Cedar version. Any app that is loading `@rei/cedar` should see a significant reduction in bundle size after this update.
 
 If you are not using FEBS, you will need to ensure that:
 
@@ -117,7 +117,7 @@ Before:
   <cdr-accordion-item
     id="accordion-1"
     label="How do I find my member number?">
-    <cdr-text tag="p">
+    <cdr-text>
         Find your member number online. You can also call
         Customer Support at 1-800-426-4840 (U.S. and Canada)
         or 1-253-891-2500 (International).
@@ -137,7 +137,7 @@ After:
   <template slot="label">
     How do I find my member number?
   </template>
-  <cdr-text tag="p">
+  <cdr-text>
     Find your member number online. You can also call
     Customer Support at 1-800-426-4840 (U.S. and Canada)
     or 1-253-891-2500 (International).
@@ -156,10 +156,6 @@ export default {
 </script>
 ```
 
-### Breadcrumb Truncation/SSR
-
-In order to fix an issue with server-side rendering, as well as to simplify the API of [CdrBreadcrumb](/components/breadcrumb/), we have removed the `truncationThreshold` and `truncationXSThreshold` attributes. Instead, the `truncationEnabled` attr can be used to control whether or not the breadcrumb should be truncated. This change will not break any existing consumers of breadcrumb even if they are using those attributes.
-
 ### Large Breakpoint Value Corrected
 
 The token value for the large breakpoint was updated to the correct value of `1232px` (it had previously been incorrectly set to `1200px`). If you are hard-coding any breakpoint values in your project you will need to update those to use the breakpoint values from cdr-tokens instead. If you have been using the breakpoint tokens then you just need to update your version of cedar and cdr-tokens.
@@ -170,7 +166,7 @@ The letter spacing values for our text tokens have been corrected to add the `px
 
 ### CdrRadio Value Prop Is Now CustomValue
 
-In an effort to make our form components more consistent, we have changed CdrRadio to use the `customValue` prop instead of `value`. This is the same pattern that CdrCheckbox uses.
+In an effort to make our form components more consistent, we have changed [CdrRadio](/components/radio/?active-tab=api) to use the `customValue` prop instead of `value`. This is the same pattern that CdrCheckbox uses.
 
 - Before: `<cdr-radio v-model="x" value="foo"/>`
 - After: `<cdr-radio v-model="x" customValue="foo"/>`
@@ -185,21 +181,21 @@ In an effort to make our components that use `v-model` more consistent we have c
 
 ### CdrButton now uses @ bindings for events
 
-Rather than pass in an `onClick` event handler as a prop, CdrButton will now bind any listened attached to it. Update `onClick` to be `@click` anywhere you are binding an event to a CdrButton.
+Rather than pass in an `onClick` event handler as a prop, [CdrButton](/components/buttons/?active-tab=api) will now bind any listened attached to it. Update `onClick` to be `@click` anywhere you are binding an event to a CdrButton.
 
 - Before: `<cdr-button onClick="yourClickHandlerFunction" />`
 - After: `<cdr-button @click="yourClickHandlerFunction" />`
 
 ### CdrTabs emits `tab-change` instead of `tabChange`
 
-Vue expects event names to use kebab case and not camel case, so the `tabChange` event on CdrTabs could cause issues for some users. CdrTabs now emits a `tab-change` event instead.
+Vue expects event names to use kebab case and not camel case, so the `tabChange` event on [CdrTabs](/components/tabs/?active-tab=api) could cause issues for some users. CdrTabs now emits a `tab-change` event instead.
 
 - Before: `<CdrTabs @tabChange="handler" />`
 - After: `<CdrTabs @tab-change="handler" />`
 
 ## Deprecations
 
-Whenever possible and practical the Cedar team will deprecate features rather than issue outright breaking changes in order to allow teams some time to update their codebases. Features will be removed from the doc site when they are deprecated to ensure that they are no longer use in new code.
+Whenever possible and practical the Cedar team will deprecate features rather than issue outright breaking changes in order to allow teams some time to update their codebases. Features will be removed from the doc site when they are deprecated to ensure that they are no longer used in new code.
 
 ### Deprecated Typography/Headings
 
@@ -224,8 +220,8 @@ The following diagram provides a rough guideline of legacy modifier names to the
 
 In addition to the heading changes listed above, the paragraph modifier `body` is now also deprecated without a replacement. Moving forward we only support the generic non modified styling for paragraphs.
 #### more infomation
--  [Headings](../../components/headings)
--  [Paragraphs](../../components/paragraphs)
+-  [Headings](/components/headings)
+-  [Paragraphs](/components/paragraphs)
 
 ### Deprecated Tokens and Mixins
 
@@ -433,5 +429,8 @@ With the release of the [Cedar Icon Library](https://rei.github.io/cedar-icons/#
 ```
 <div th:remove="tag" th:insert="~{icon-sprite :: icon-sprite}"></div>
 ```
+### Breadcrumb Truncation/SSR
+
+In order to fix an issue with server-side rendering, as well as to simplify the API of [CdrBreadcrumb](/components/breadcrumb/), we have removed the `truncationThreshold` and `truncationXSThreshold` attributes. Instead, the `truncationEnabled` attr can be used to control whether or not the breadcrumb should be truncated. This change will not break any existing consumers of breadcrumb even if they are using those attributes.
 
 </cdr-doc-table-of-contents-shell>
