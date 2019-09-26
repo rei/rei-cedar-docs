@@ -36,7 +36,7 @@ The Cedar container allows flexible content width, up to a max width of 1232px. 
 
 <cdr-img :src="$withBase('/layout/StandardvFluid.gif')" alt="Standard vs. Fluid container " />
 
-To explore how the containers work, check out this co sandbox:
+To explore how the containers work, check out this code sandbox:
 
 <cdr-doc-example-code-pair :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {styleTag: 'body { background-color: rgba(130, 234, 255, 0.35);} .content {background-color: #fff;} .cdr-container, .cdr-container-fluid { background-color: lightcoral; color: purple;}'})" >
 
