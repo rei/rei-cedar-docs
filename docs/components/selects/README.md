@@ -7,6 +7,86 @@
   "sandboxData": {
     "components": "CdrSelect"
   },
+  "labels": [
+    {
+      "type": "do",
+      "image": "select/select_label_do_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing a State/Province label ",
+      "caption": "use concise and meaningful labels."
+    },
+    {
+      "type": "dont",
+      "image": "select/select_label_dont_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing STATE/PROVINCE label",
+      "caption": "use instructional or help text for the label."
+    }
+  ],
+  "case": [
+    {
+      "type": "do",
+      "image": "select/select_case_do_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing a State/Province label ",
+      "caption": "use sentence case for labels."
+    },
+    {
+      "type": "dont",
+      "image": "select/select_case_dont_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing STATE/PROVINCE label",
+      "caption": "use all caps for labels."
+    }
+  ],
+  "punctuation": [
+    {
+      "type": "do",
+      "image": "select/select_punctuation_do_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing a State/Province label ",
+      "caption": "remove all terminal punctuation."
+    },
+    {
+      "type": "dont",
+      "image": "select/select_punctuation_dont_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing State/Province: label",
+      "caption": "use colons after labels."
+    }
+  ],
+  "required": [
+    {
+      "type": "do",
+      "image": "select/select_sizes_do_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing an input element above a select element of the same size",
+      "caption": "use consistent sizes for components on a single form."
+    },
+    {
+      "type": "dont",
+      "image": "select/select_sizes_dont_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing an input element above a select element of a different size",
+      "caption": "mix sizes for components on a single form."
+    }
+  ],
+  "sizes": [
+    {
+      "type": "do",
+      "image": "select/select_required_do_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing the text required to the right of the label above the select element",
+      "caption": "position the required label next to the select field label."
+    },
+    {
+      "type": "dont",
+      "image": "select/select_required_dont_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing an asterisk to the right of the label above the select element",
+      "caption": "use an asterisk for a required select."
+    }
+  ],
   "breadcrumbs": [
     {
       "text": "Components/"
@@ -127,29 +207,29 @@ Input field with helper or hint text below the input field.
 
 ```code markup for select with helper text```
 
-  
+
 ## Accessibility
- 
+
 To ensure that the usage of Select component complies with the accessibility guidelines:
-+ Always provide a label for each select control 
++ Always provide a label for each select control
 + If hiding a label, use the [ aria-label ] attribute for the label contents
 
-When using the [ aria-describedby ]: 
+When using the [ aria-describedby ]:
 + [ aria-describedby ] attribute does not override the select label
 + Use this attribute in addition to a label
 + Can be used to reference descriptions that appear as 'tooltips'
 
 This component has compliance with WCAG guidelines by:
-+ Requiring a value for the [ label ] field 
-+ When hiding a label, the [ aria-label ] attribute is set to the [ label ] value 
++ Requiring a value for the [ label ] field
++ When hiding a label, the [ aria-label ] attribute is set to the [ label ] value
 
 
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Design Guidelines">
+<template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
-  
+
 ## Use When
 
 + Choosing an option from a predefined set of values
@@ -158,7 +238,7 @@ This component has compliance with WCAG guidelines by:
 
 ### Don't Use When
 
-+ Viewing or comparing all options is needed. Instead, use [Radio Buttons](https://rei.github.io/rei-cedar-docs/components/radio/) 
++ Viewing or comparing all options is needed. Instead, use [Radio Buttons](https://rei.github.io/rei-cedar-docs/components/radio/)
 + Displaying a limited number of options. Instead, use [Radio Buttons](https://rei.github.io/rei-cedar-docs/components/radio/)
 + Displaying a yes or no selection. Instead, use [Radio Buttons](https://rei.github.io/rei-cedar-docs/components/radio/)
 + Turning an option on or off. Instead, use [Checkboxes](https://rei.github.io/rei-cedar-docs/components/checkboxes/)
@@ -185,44 +265,42 @@ Select components should be:
 
 ### Labels
 
-+ Use concise and consistent labels that describes the meaning of the select field 
++ Use concise and consistent labels that describes the meaning of the select field
 + Limit labels to 1–3 words and fewer than 20 characters, including spaces
-+ Use sentence case only. Do not use all caps, title case, or lowercase. 
++ Use sentence case only. Do not use all caps, title case, or lowercase.
 + Don’t use colons after labels
 
 ### Prompt Text
 
 + Limit prompt text to 1–3 words
-+ Use descriptive prompt text for accessibility users who use screen readers to fill out forms 
++ Use descriptive prompt text for accessibility users who use screen readers to fill out forms
 
-### Menu or List Text 
+### Menu or List Text
 
 + Use sentence case
 + Simplify the list. If an option is rarely selected, consider removing it from the list
 + Use common sort order for menu items. Options include:
   + Frequency of use (recommended): For example, commonly-used credit cards would be listed first
-  + Alpha: For example, state or city locations 
+  + Alpha: For example, state or city locations
   + Numeric: For example, distances or sizes
 
 ### Helper Text
 
-+ Use helper text for hints or suggestions 
-+ If help text is long or complex, use a tooltip or popover that is opened from the support link on the right above the select field. Note that too much helper text can make a form look and feel difficult to use. 
++ Use helper text for hints or suggestions
++ If help text is long or complex, use a tooltip or popover that is opened from the support link on the right above the select field. Note that too much helper text can make a form look and feel difficult to use.
+
+### Do / Don’t
+
+<br/>
+
+<do-dont :examples="$page.frontmatter.labels" />
+
+<do-dont :examples="$page.frontmatter.case" />
+
+<do-dont :examples="$page.frontmatter.punctuation" />
 
 
-### Do/Don't
-
-* Do use concise and meaningful labels. https://drive.google.com/file/d/1I9aP9cvWnvHE-VVqJCVW6BnVmFkbyMse/view?usp=sharing
-* Don’t use instructional or help text for the label. https://drive.google.com/file/d/1JMK7U5ED0xYwE7_x5QVrYry4XrA2tx37/view?usp=sharing
-
-* Do use sentence case for labels. https://drive.google.com/file/d/151XY_YB-P_OWOWjUuIpelLHUMQPjaeAe/view?usp=sharing
-* Don't use all caps for labels. https://drive.google.com/file/d/1OpxjTlUT0GDLgCkbPGklAlNGVkVYOU0t/view?usp=sharing
-
-* Do remove all terminal punctuation. https://drive.google.com/file/d/128lsaDor9TzXb0fjlEPbLibQ6Fb7BdVe/view?usp=sharing
-* Don't use colons after labels. https://drive.google.com/file/d/1o8xBGQnAJjBvmp2HZs7MuEBmtxIG91fJ/view?usp=sharing
-
-
-## Behavior 
+## Behavior
 
 + Avoid changing options in a dropdown menu based on the input from a different select field
 + Use a prompt in the format of “Select a…” or “Select category…”
@@ -237,11 +315,10 @@ Select components should be:
 
 ### Do/Don't
 
-* Do position the required label next to the select field label. https://drive.google.com/file/d/1uSLyidgKAK7khDs7d_z3ylwwNb5iJCaq/view?usp=sharing
-* Don’t use an asterisk for a required select. https://drive.google.com/file/d/1QUJWa26KvSQKbnJbtjPm-Rn102WMT53S/view?usp=sharing
+<do-dont :examples="$page.frontmatter.required" />
 
-* Do use consistent sizes for components on a single form. https://drive.google.com/file/d/1tw54MgHJsFWdHE7yOdt7qBigyh2RoP6Q/view?usp=sharing
-* Don't mix sizes for components on a single form. https://drive.google.com/file/d/10LUkpAma8EW2idqNF-Wxlq69XwdfGbSu/view?usp=sharing
+<do-dont :examples="$page.frontmatter.sizes" />
+
 
 </cdr-doc-table-of-contents-shell>
 </template>
