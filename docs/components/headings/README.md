@@ -605,25 +605,37 @@ Heading modifiers accept any of the supported Cedar breakpoints. For more inform
 
 The following variants are available for heading construction within the `cdr-text` modifier attribute:
 
-| Value | Description  |
-|:------|:-------------|
-| 'display-1200'    |  |
-| 'display-1100'    |  |
-| 'display-1000'    |  |
-| 'display-900'     |  |
-| 'display-800'     |  |
-| 'display-700'     |  |
-| 'display-600'     |  |
-| 'heading-800'     |  |
-| 'heading-700'     |  |
-| 'heading-600'     |  |
-| 'heading-500'     |  |
-| 'heading-400'     |  |
-| 'heading-300'     |  |
-| 'subheading-600'  |  |
-| 'subheading-500'  |  |
-| 'subheading-400'  |  |
-| 'subheading-300'  |  |
+#### Display
+
+Display styles are intended to be used for titles and other larger text. Display styles are a larger weight, and therefore more bold, than headers.
+
+*  `display-1200`
+*  `display-1100`
+*  `display-1000`
+*  `display-900`
+*  `display-800`
+*  `display-700`
+*  `display-600`
+
+#### Heading
+
+Heading styles are used to provide context and create hierarchy on a page. Whereas one display style per page is suggested, many heading styles can be used on a page for titles, articles, or topics.
+
+*  `heading-800`
+*  `heading-700`
+*  `heading-600`
+*  `heading-500`
+*  `heading-400`
+*  `heading-300`
+
+#### Subheading
+
+Subheading styles are intended to be paired with display and heading styles as a secondary piece of copy.
+
+*  `subheading-600`
+*  `subheading-500`
+*  `subheading-400`
+*  `subheading-300`
 
 
 ## Heading Levels
