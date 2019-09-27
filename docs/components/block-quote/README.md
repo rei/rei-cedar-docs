@@ -184,7 +184,7 @@ This component has compliance with WCAG guidelines by:
 - Highlighting valuable customer feedback
 - Encouraging a customer to try out an experience or product
 
-### Don't Use When
+## Don't Use When
 
 - Pulling a direct quote from an article. Instead, use [Pull Quote](../pull-quote/)
 - Displaying for a decorative treatment only

@@ -70,16 +70,14 @@ Cedar welcomes and encourages contributions to the icon library that are consist
 
 ### Cedar Icon Guidelines
 
-**Sketch Icon Path Geometry**
-
+**Sketch Icon Path Geometry**  
 A Sketch icon artboard must contain a single combined-shape object in order to export correctly.
 
 1. Click **Layer > Convert to Outlines** to convert any layers or shapes that have a stroke.
 2. Using Combine’s Subtract and Union functions, create a single-shape group using positive and negative space shapes to compose your final form.
 3. Once in a combined shape, flatten the object to further simplify paths.
 
-**Style**
-
+**Style**  
 These rules are subjective, and can be bent or broken.
 
 - 2px stroke weight
@@ -88,8 +86,7 @@ These rules are subjective, and can be bent or broken.
 
 For more style guidelines, see the [Iconography](/icons/iconography/) article.
 
-**Dimensions**
-
+**Dimensions**  
 Icons must be created at 24x24px size format. However, they can be displayed in any one of three sizes:
 
 - sm: 16x16px
@@ -107,7 +104,7 @@ Alternately, the icon library API also provides [sprite generation](https://gith
 
 1. In Abstract, create a new branch of the [CDR - Icon Contribution](https://share.goabstract.com/99335c38-51ee-41c8-8454-38c2a70c4c7f) project.
 2. Open the **Icon Contribution Area** file.
-3. Duplicate the **Template (Right-Click > Duplicate Page)** for each new icon or set of icons. (It is ok to leave alternate versions on the page, but please indicate the final version.)
+3. Duplicate the **Template (Right-click > Duplicate Page)** for each new icon or set of icons. (It is ok to leave alternate versions on the page, but please indicate the final version.)
 4. Follow the [Iconography](/icons/iconography/) guidelines to ensure that your icon follows Cedar’s requirements.
 5. Make a final version of your icon and add it as a page. Each new icon or set should have its own page.
 6. Add a member of the Cedar team as a reviewer. 
@@ -115,11 +112,11 @@ Alternately, the icon library API also provides [sprite generation](https://gith
 
 ### Exporting Icons That Aren’t in the Library
 
-1. Download and install the Cedar SVGO Compressor Sketch plugin. **Click Assets > To Install**.
-2. Follow the usage directions for proper icon export in the plugin readme.
-3. Send your SVG file to your developer for use with the `<cdr-icon/>` component.
+1. Download and install the latest release of the [Cedar SVGO Compressor Sketch plugin](https://github.com/rei/rei-cedar-sketch-svgo-compressor/releases/latest). Click **Assets > To Install**.
+2. Follow the usage directions for proper icon export in the plugin [readme](https://github.com/rei/rei-cedar-sketch-svgo-compressor#cedar-svgo-compressor).
+3. Send your SVG file to your developer for use with the [CdrIcon component](/components/icon/).
 
-**Note:** Icons in the vNext repository may not be in the library yet.
+**Note:** Icons in the _CDR Icons • vNext_ library may not be in the library yet.
 
 ## Questions or Issues?
 

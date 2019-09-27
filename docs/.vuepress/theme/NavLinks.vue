@@ -35,7 +35,6 @@
 
 <script>
 import OutboundLink from './OutboundLink.vue'
-import DropdownLink from './DropdownLink.vue'
 import { CdrAccordion, CdrList } from '@rei/cedar';
 
 // TODO: all cedar css should get glovally loaded
@@ -44,28 +43,14 @@ import { resolveNavLinkItem } from './util'
 import NavLink from './NavLink.vue'
 
 export default {
-  components: { OutboundLink, NavLink, DropdownLink, CdrAccordion },
+  components: { OutboundLink, NavLink, CdrAccordion },
   data() {
     return {
       navGroup: [],
     };
   },
   created() {
-    /*
-      Initialize as closed accordions.
-    */
-    for (let i = 0, j = this.userLinks.length; i < j; i++) {
-      this.$set(this.navGroup, i, false);
-    }
-    /*
-      Determine if an accordion should be open on load.
-      Doing this here because ssr-approved hook.
-    */
-    this.$site.themeConfig.nav.forEach((item, index) => {
-      if (this.showNavGroup(item.text)) {
-        this.$set(this.navGroup, index, true);
-      }
-    }); 
+    this.navSyncByPath();
   },
   computed: {
     userNav () {
@@ -149,6 +134,23 @@ export default {
           }
         }
       }
+    },
+    navSyncByPath() {
+      this.userLinks.forEach((item, index) => {
+        let opened = false;
+        if (this.showNavGroup(item.text)) {
+          opened = true;
+        } 
+        
+        this.$set(this.navGroup, index, opened);
+      });
+    }
+  },
+  watch: {
+    $route(to, from) {
+      if (to.path !== '/' && from.path.split('/')[1] !== to.path.split('/')[1]) {
+        this.navSyncByPath();
+      }
     }
   }
 }
@@ -163,5 +165,11 @@ export default {
   }
   .cdr-accordion-nav > button > span {
     font-weight: 400;
+  }
+
+  .cdr-doc-side-navigation__child-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 </style>

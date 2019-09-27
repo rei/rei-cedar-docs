@@ -176,11 +176,11 @@ Cedar typography references two distinct font stacks: a serif and a sans-serif. 
 
 **Serif**
 
-`font-family: 'REI Stuart app', 'Georgia', Times, serif`
+`font-family: Stuart, Georgia, serif`
 
 **Sans-serif**
 
-`font-family: 'Graphik app', 'Helvetica Neue', Helvetica, Arial, sans-serif`
+`font-family: Graphik, 'Helvetica Neue', sans-serif`
 
 
 ### Supported Languages
@@ -227,11 +227,11 @@ Users with certain disabilities like dyslexia might have difficulty making out i
 
 From refined to playful, Stuart’s personality becomes increasingly casual as it gets heavier. While six weights are included in the Stuart family, medium is preferred for most situations.
 
-<cdr-img class="cdr-doc-article-img" alt="A graphic showing various Stuart font weights, highlighting Medium" :src="$withBase(`/typography/typography_type_guidelines_font-weight_graphik.png`)" />
+<cdr-img class="cdr-doc-article-img" alt="A graphic showing various Stuart font weights, highlighting Medium" :src="$withBase(`/typography/typography_type_guidelines_font-weight_stuart.png`)" />
 
-The Graphik family includes nine weights. Preferred choices are: regular, medium, and semibold. Regular is appropriate for most applications.
+The Graphik family includes five weights. Preferred choices are: regular, medium, and semibold. Regular is appropriate for most applications.
 
-<cdr-img class="cdr-doc-article-img" alt="A graphic showing various Graphik font weights, highlighting Semibold, Medium, and Regular" :src="$withBase(`/typography/typography_type_guidelines_font-weight_stuart.png`)" />
+<cdr-img class="cdr-doc-article-img" alt="A graphic showing various Graphik font weights, highlighting Semibold, Medium, and Regular" :src="$withBase(`/typography/typography_type_guidelines_font-weight_graphik.png`)" />
 
 
 ### Letter Spacing

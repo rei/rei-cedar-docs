@@ -1,26 +1,27 @@
 <template>
   <div class="api-prop-alert" :class="'alert-' + alert.type">
     <div class="api-prop-alert__message prop-description">
-      <icon-information-fill 
+      <cdr-icon 
         class="api-prop-alert-icon"
-        v-if="alert.type === 'updated'" />
-      <icon-warning-tri
+        use="#information-fill" 
+        alt="Prop updated information icon" 
+        v-if="alert.type === 'updated'"
+      />
+      <cdr-icon 
         class="api-prop-alert-icon"
-        v-if="alert.type === 'deprecated'" />
+        use="#warning-tri" 
+        alt="Prop deprecated warning icon" 
+        v-if="alert.type === 'deprecated'"
+      />
       {{ alert.description }}
     </div>
   </div>
 </template>
 
 <script>
-  import { IconInformationFill, IconWarningTri } from "@rei/cedar";
 
   export default {
     name: 'ApiPropAlert',
-    components: {
-      IconInformationFill,
-      IconWarningTri
-    },
     props: {
       alert: {
         type: Object

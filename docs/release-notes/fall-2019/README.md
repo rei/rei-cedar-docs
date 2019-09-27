@@ -21,7 +21,7 @@ If you are not already on Cedar 2.x.x, you will first need to [upgrade your proj
 ### For a Micro-Site
 
 - Update to `@rei/cedar` 3.x.x
-- Update to `@rei/febs` >= 5.4.0
+- Update to `@rei/febs` >= 5.4.1
 - Ensure that you are on a recent version of Babel (>= 7.x.x) and Webpack (>= 4.x.x)
 
 ### For a Component Package
@@ -36,7 +36,7 @@ If you are not already on Cedar 2.x.x, you will first need to [upgrade your proj
 
 Sentinel and Roboto have been deprecated as global REI brand fonts. `cdr-fonts.css` has removed the base64 encoded versions of sentinel fonts as a result and has greatly reduced the overall size of this file.
 
-The variant fonts for "REI Stuart App" and "Graphik App" have been added.
+The variant fonts for "Stuart" and "Graphik" have been added.
 
 [more information on typography](../../foundation/typography/?active-tab=guidelines)
 
@@ -49,6 +49,18 @@ We have created a new [Cedar Icon Library](https://rei.github.io/cedar-icons/#/)
 - Decreases bundle size as sprite sheets are now loaded inline in the HTML rather than being included in the JavaScript bundle.
 
 See the [deprecated icon components](#deprecated-icon-components) section for more information on updating your icon usage.
+
+### Icon Contribution
+
+- We have updated the [guidelines for contributing icons](/icons/resources/#contribution-process) to the [CDR · Icon Contribution](https://share.goabstract.com/99335c38-51ee-41c8-8454-38c2a70c4c7f) Project
+- We have also made minor updates to the [CDR Icons • vCurrent](https://share.goabstract.com/e9186773-0cc3-43a6-b7ff-54b163d95e00?sha=a814b05c391c93f5a7d39ce9508cd5238ae8fe0e) libray to make icon symbols more consistent. For linking instructions, see the guide to using the [Cedar UI Toolkit](/getting-started/as-a-designer/#cedar-ui-toolkit).
+- We have also written a new sketch plugin to help you [export Cedar compliant icons that are not in the icon repo](/icons/resources/#exporting-icons-that-aren’t-in-the-library).
+
+### SVG in Icon Slot
+
+- `CdrIcon` now accepts full svg markup in the slot.
+- All attributes, classes, listeners, etc. will be preserved with the exception of `viewBox`, `role`, and `xmlns`.
+- See the [Icon component documenation](/components/icon/?active-tab=api#_2-non-cedar-svg) for an example.
 
 ### Deprecated Mixin Warnings
 
@@ -73,7 +85,7 @@ Rather than only binding specific listeners (like `on-click`), the [input](/comp
 
 Version 2.x.x of Cedar contained both CommonJS (`@rei/cedar/dist/cedar.cjs.js`) and ES Module (`@rei/cedar/dist/cedar.esm.js`) single file builds. The ES Module build was supposed to allow consumers to "tree shake" out any un-used Cedar code from their bundles. However due to a variety of issues involving Vue and Webpack our ES Module build was not actually tree shakeable for our consumers. To work around this, we are now exporting a multi-file build inside `@rei/cedar/dist/lib` which is also the `module` entry point for Cedar.
 
-If you are on the latest version of FEBS (> 5.4.0) then you will get this change automatically when you update your Cedar version. Any app that is loading `@rei/cedar` should see a significant reduction in bundle size after this update.
+If you are on the latest version of FEBS (> 5.4.1) then you will get this change automatically when you update your Cedar version. Any app that is loading `@rei/cedar` should see a significant reduction in bundle size after this update.
 
 If you are not using FEBS, you will need to ensure that:
 
@@ -105,7 +117,7 @@ Before:
   <cdr-accordion-item
     id="accordion-1"
     label="How do I find my member number?">
-    <cdr-text tag="p">
+    <cdr-text>
         Find your member number online. You can also call
         Customer Support at 1-800-426-4840 (U.S. and Canada)
         or 1-253-891-2500 (International).
@@ -125,7 +137,7 @@ After:
   <template slot="label">
     How do I find my member number?
   </template>
-  <cdr-text tag="p">
+  <cdr-text>
     Find your member number online. You can also call
     Customer Support at 1-800-426-4840 (U.S. and Canada)
     or 1-253-891-2500 (International).
@@ -144,10 +156,6 @@ export default {
 </script>
 ```
 
-### Breadcrumb Truncation/SSR
-
-In order to fix an issue with server-side rendering, as well as to simplify the API of [CdrBreadcrumb](/components/breadcrumb/), we have removed the `truncationThreshold` and `truncationXSThreshold` attributes. Instead, the `truncationEnabled` attr can be used to control whether or not the breadcrumb should be truncated. This change will not break any existing consumers of breadcrumb even if they are using those attributes.
-
 ### Large Breakpoint Value Corrected
 
 The token value for the large breakpoint was updated to the correct value of `1232px` (it had previously been incorrectly set to `1200px`). If you are hard-coding any breakpoint values in your project you will need to update those to use the breakpoint values from cdr-tokens instead. If you have been using the breakpoint tokens then you just need to update your version of cedar and cdr-tokens.
@@ -158,7 +166,7 @@ The letter spacing values for our text tokens have been corrected to add the `px
 
 ### CdrRadio Value Prop Is Now CustomValue
 
-In an effort to make our form components more consistent, we have changed CdrRadio to use the `customValue` prop instead of `value`. This is the same pattern that CdrCheckbox uses.
+In an effort to make our form components more consistent, we have changed [CdrRadio](/components/radio/?active-tab=api) to use the `customValue` prop instead of `value`. This is the same pattern that CdrCheckbox uses.
 
 - Before: `<cdr-radio v-model="x" value="foo"/>`
 - After: `<cdr-radio v-model="x" customValue="foo"/>`
@@ -173,21 +181,21 @@ In an effort to make our components that use `v-model` more consistent we have c
 
 ### CdrButton now uses @ bindings for events
 
-Rather than pass in an `onClick` event handler as a prop, CdrButton will now bind any listened attached to it. Update `onClick` to be `@click` anywhere you are binding an event to a CdrButton.
+Rather than pass in an `onClick` event handler as a prop, [CdrButton](/components/buttons/?active-tab=api) will now bind any listened attached to it. Update `onClick` to be `@click` anywhere you are binding an event to a CdrButton.
 
 - Before: `<cdr-button onClick="yourClickHandlerFunction" />`
 - After: `<cdr-button @click="yourClickHandlerFunction" />`
 
 ### CdrTabs emits `tab-change` instead of `tabChange`
 
-Vue expects event names to use kebab case and not camel case, so the `tabChange` event on CdrTabs could cause issues for some users. CdrTabs now emits a `tab-change` event instead.
+Vue expects event names to use kebab case and not camel case, so the `tabChange` event on [CdrTabs](/components/tabs/?active-tab=api) could cause issues for some users. CdrTabs now emits a `tab-change` event instead.
 
 - Before: `<CdrTabs @tabChange="handler" />`
 - After: `<CdrTabs @tab-change="handler" />`
 
 ## Deprecations
 
-Whenever possible and practical the Cedar team will deprecate features rather than issue outright breaking changes in order to allow teams some time to update their codebases. Features will be removed from the doc site when they are deprecated to ensure that they are no longer use in new code.
+Whenever possible and practical the Cedar team will deprecate features rather than issue outright breaking changes in order to allow teams some time to update their codebases. Features will be removed from the doc site when they are deprecated to ensure that they are no longer used in new code.
 
 ### Deprecated Typography/Headings
 
@@ -212,8 +220,8 @@ The following diagram provides a rough guideline of legacy modifier names to the
 
 In addition to the heading changes listed above, the paragraph modifier `body` is now also deprecated without a replacement. Moving forward we only support the generic non modified styling for paragraphs.
 #### more infomation
--  [Headings](../../components/headings)
--  [Paragraphs](../../components/paragraphs)
+-  [Headings](/components/headings)
+-  [Paragraphs](/components/paragraphs)
 
 ### Deprecated Tokens and Mixins
 
@@ -235,41 +243,41 @@ In order to support the updates to typography, we have re-named some Cedar token
 | cdr-text-header-2-spacing | cdr-text-display-900-spacing |
 | cdr-text-header-2-size | cdr-text-display-900-size |
 | cdr-text-header-2-height | cdr-text-display-900-height |
-| cdr-text-header-3 | cdr-text-display-700 |
-| cdr-text-header-3-family | cdr-text-display-700-family |
-| cdr-text-header-3-style | cdr-text-display-700-style |
-| cdr-text-header-3-weight | cdr-text-display-700-weight |
-| cdr-text-header-3-spacing | cdr-text-display-700-spacing |
-| cdr-text-header-3-size | cdr-text-display-700-size |
-| cdr-text-header-3-height | cdr-text-display-700-height |
-| cdr-text-header-4 | cdr-text-display-600 |
-| cdr-text-header-4-family | cdr-text-display-600-family |
-| cdr-text-header-4-style | cdr-text-display-600-style |
-| cdr-text-header-4-weight | cdr-text-display-600-weight |
-| cdr-text-header-4-spacing | cdr-text-display-600-spacing |
-| cdr-text-header-4-size | cdr-text-display-600-size |
-| cdr-text-header-4-height | cdr-text-display-600-height |
-| cdr-text-header-5 | cdr-text-display-500 |
-| cdr-text-header-5-family | cdr-text-display-500-family |
-| cdr-text-header-5-style | cdr-text-display-500-style |
-| cdr-text-header-5-weight | cdr-text-display-500-weight |
-| cdr-text-header-5-spacing | cdr-text-display-500-spacing |
-| cdr-text-header-5-size | cdr-text-display-500-size |
-| cdr-text-header-5-height | cdr-text-display-500-height |
-| cdr-text-header-6 | cdr-text-display-400 |
-| cdr-text-header-6-family | cdr-text-display-400-family |
-| cdr-text-header-6-style | cdr-text-display-400-style |
-| cdr-text-header-6-weight | cdr-text-display-400-weight |
-| cdr-text-header-6-spacing | cdr-text-display-400-spacing |
-| cdr-text-header-6-size | cdr-text-display-400-size |
-| cdr-text-header-6-height | cdr-text-display-400-height |
-| cdr-text-header-7 | cdr-text-display-300 |
-| cdr-text-header-7-family | cdr-text-display-300-family |
-| cdr-text-header-7-style | cdr-text-display-300-style |
-| cdr-text-header-7-weight | cdr-text-display-300-weight |
-| cdr-text-header-7-spacing | cdr-text-display-300-spacing |
-| cdr-text-header-7-size | cdr-text-display-300-size |
-| cdr-text-header-7-height | cdr-text-display-300-height |
+| cdr-text-header-3 | cdr-text-heading-700 |
+| cdr-text-header-3-family | cdr-text-heading-700-family |
+| cdr-text-header-3-style | cdr-text-heading-700-style |
+| cdr-text-header-3-weight | cdr-text-heading-700-weight |
+| cdr-text-header-3-spacing | cdr-text-heading-700-spacing |
+| cdr-text-header-3-size | cdr-text-heading-700-size |
+| cdr-text-header-3-height | cdr-text-heading-700-height |
+| cdr-text-header-4 | cdr-text-heading-600 |
+| cdr-text-header-4-family | cdr-text-heading-600-family |
+| cdr-text-header-4-style | cdr-text-heading-600-style |
+| cdr-text-header-4-weight | cdr-text-heading-600-weight |
+| cdr-text-header-4-spacing | cdr-text-heading-600-spacing |
+| cdr-text-header-4-size | cdr-text-heading-600-size |
+| cdr-text-header-4-height | cdr-text-heading-600-height |
+| cdr-text-header-5 | cdr-text-heading-500 |
+| cdr-text-header-5-family | cdr-text-heading-500-family |
+| cdr-text-header-5-style | cdr-text-heading-500-style |
+| cdr-text-header-5-weight | cdr-text-heading-500-weight |
+| cdr-text-header-5-spacing | cdr-text-heading-500-spacing |
+| cdr-text-header-5-size | cdr-text-heading-500-size |
+| cdr-text-header-5-height | cdr-text-heading-500-height |
+| cdr-text-header-6 | cdr-text-heading-400 |
+| cdr-text-header-6-family | cdr-text-heading-400-family |
+| cdr-text-header-6-style | cdr-text-heading-400-style |
+| cdr-text-header-6-weight | cdr-text-heading-400-weight |
+| cdr-text-header-6-spacing | cdr-text-heading-400-spacing |
+| cdr-text-header-6-size | cdr-text-heading-400-size |
+| cdr-text-header-6-height | cdr-text-heading-400-height |
+| cdr-text-header-7 | cdr-text-heading-300 |
+| cdr-text-header-7-family | cdr-text-heading-300-family |
+| cdr-text-header-7-style | cdr-text-heading-300-style |
+| cdr-text-header-7-weight | cdr-text-heading-300-weight |
+| cdr-text-header-7-spacing | cdr-text-heading-300-spacing |
+| cdr-text-header-7-size | cdr-text-heading-300-size |
+| cdr-text-header-7-height | cdr-text-heading-300-height |
 | cdr-text-editorial | cdr-text-default |
 | cdr-text-editorial-family | cdr-text-default-family |
 | cdr-text-editorial-style | cdr-text-default-style |
@@ -277,13 +285,13 @@ In order to support the updates to typography, we have re-named some Cedar token
 | cdr-text-editorial-spacing | cdr-text-default-spacing |
 | cdr-text-editorial-size | cdr-text-default-size |
 | cdr-text-editorial-height | cdr-text-default-height |
-| cdr-text-editorial-compact | cdr-text-default-compact |
-| cdr-text-editorial-compact-family | cdr-text-default-compact-family |
-| cdr-text-editorial-compact-style | cdr-text-default-compact-style |
-| cdr-text-editorial-compact-weight | cdr-text-default-compact-weight |
-| cdr-text-editorial-compact-spacing | cdr-text-default-compact-spacing |
-| cdr-text-editorial-compact-size | cdr-text-default-compact-size |
-| cdr-text-editorial-compact-height | cdr-text-default-compact-height |
+| cdr-text-editorial-compact | cdr-text-default |
+| cdr-text-editorial-compact-family | cdr-text-default-family |
+| cdr-text-editorial-compact-style | cdr-text-default-style |
+| cdr-text-editorial-compact-weight | cdr-text-default-weight |
+| cdr-text-editorial-compact-spacing | cdr-text-default-spacing |
+| cdr-text-editorial-compact-size | cdr-text-default-size |
+| cdr-text-editorial-compact-height | cdr-text-default-height |
 
 Additionally, we have new mixins available to replace the previously deprecated `spruce-display` typography mixins. Replacements for the `redwood` and `maple` mixins will be coming in a future cedar release, see the  [v1 token migration docs](https://confluence.rei.com/display/TP/v1+Token+Migration) for more info on how to handle the deprecated pre-release tokens if you haven't already.
 
@@ -421,5 +429,8 @@ With the release of the [Cedar Icon Library](https://rei.github.io/cedar-icons/#
 ```
 <div th:remove="tag" th:insert="~{icon-sprite :: icon-sprite}"></div>
 ```
+### Breadcrumb Truncation/SSR
+
+In order to fix an issue with server-side rendering, as well as to simplify the API of [CdrBreadcrumb](/components/breadcrumb/), we have removed the `truncationThreshold` and `truncationXSThreshold` attributes. Instead, the `truncationEnabled` attr can be used to control whether or not the breadcrumb should be truncated. This change will not break any existing consumers of breadcrumb even if they are using those attributes.
 
 </cdr-doc-table-of-contents-shell>
