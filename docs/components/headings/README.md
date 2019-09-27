@@ -85,15 +85,7 @@
                 "name": "modifier",
                 "type": "string",
                 "default": "N/A",
-                "description": "The following are variants of the Modifiers property. They can be used to Modifie the style variant for this component. Possible values:",
-                "variants":[display-600, display-700, display-800, display-900, display-1000, display-1100, display-1200, heading-300, heading-400, heading-500, heading-600, heading-700, heading-800, subheading-300, subheading-400, subheading-500, subheading-600],
-                "description2": "Deprecated values:",
-                "variant": {
-                  "type": "deprecated",
-                  "description": "The below options of the modifier property have been deprecated in v3.0.0. refer to the Fall2019 headings release notes for updated mappings."
-                },
-                "changed":[display, display-static, heading-large, heading-large-static, heading-medium, heading-medium-static, heading-small, heading-small-static, subheading,]
-              },
+                "description": "The following are variants of the Modifiers property. They can be used to Modifie the style variant for this component. Possible values: { display-600, display-700, display-800, display-900, display-1000, display-1100, display-1200, heading-300, heading-400, heading-500, heading-600, heading-700, heading-800, subheading-300, subheading-400, subheading-500, subheading-600},
             ],
             "slots": [
               {
