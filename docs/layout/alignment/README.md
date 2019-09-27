@@ -16,7 +16,7 @@
 
 # Alignment
 
-Cedar Design System provides many text and container alignment and utility classes that allows you to shift your content or custom content container&#39;s horizontal alignment.
+Text and container alignment and utility classes allow you to shift your content or custom content container&#39;s horizontal alignment.
 
 | **Class** | **Notes** |
 | --- | --- |
