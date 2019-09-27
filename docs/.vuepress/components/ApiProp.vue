@@ -37,18 +37,9 @@
         <cdr-col
           span="12"
         >
-          <div>
-            <p aria-lable="prop description" class="prop-description">
-              {{ apiProp.description }}
-               <api-prop-list :items="apiProp.variants" />
-            </p>
-
-            <api-prop-alert :alert="apiProp.variant" />
-            <p aria-lable="prop description 2" class="prop-description">
-              {{ apiProp.description2 }}
-               <api-prop-list :items="apiProp.changed" />
-            </p>
-          </div>
+          <p aria-lable="prop description" class="prop-description">
+            {{ apiProp.description }}
+          </p>
         </cdr-col>
       </cdr-row>
     </div>
@@ -57,7 +48,6 @@
 
 <script>
   import ApiPropAlert from './ApiPropAlert.vue';
-  import ApiPropList from './ApiPropList.vue';
 
   export default {
     name: 'ApiProp',
