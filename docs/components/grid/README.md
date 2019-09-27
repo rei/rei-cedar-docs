@@ -1030,7 +1030,7 @@ This component has compliance with following WCAG guidelines:
 - Applying responsive rules to columns of a row and/or regions of a page layout or a container of many components
 - Arranging elements within a single component with two or more zones, including those aligned to the left or right edge
 
-### Don’t Use When
+## Don't’t Use When
 
 - Presenting a multi-row columnar data display, such as features or specs of a product. Instead, use [Data Tables](../data-tables/)
 

@@ -450,7 +450,7 @@ This component has compliance with WCAG guidelines by:
 - Creating hierarchical structure of information in a page layout
 - Improving quick scanning of page content for sighted users and screen readers
 
-### Don’t Use When
+## Don't’t Use When
 
 - Tagging as a semantic heading when an element only needs to be highlighted or emphasized within your content. Instead, use sizing modifier for this component
 - Showcasing long form content. Instead use [Paragraphs](https://rei.github.io/rei-cedar-docs/components/paragraphs/)

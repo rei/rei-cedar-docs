@@ -148,7 +148,7 @@ This component has compliance with following WebAIM’s accessibility guidelines
 - Displaying product descriptions
 - Displaying customer reviews, such as on PDP pages
 
-### Don’t Use When
+## Don't’t Use When
 
 - Displaying form inputs. Instead, use [Inputs](../input/)
 - Displaying alert messages. Instead, use Alerts

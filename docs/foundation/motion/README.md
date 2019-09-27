@@ -83,7 +83,7 @@ Cedar motion is purposefully designed to enhance the customer's understanding of
 
 <br>
 
-#### Don’t Use When
+### Don't’t Use When
 - Adding the animation could waste the user’s time
 - Entertaining the user, rather than helping them to accomplish their goals
 
