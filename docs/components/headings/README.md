@@ -85,7 +85,8 @@
                 "name": "modifier",
                 "type": "string",
                 "default": "N/A",
-                "description": "The following are variants of the Modifiers property. They can be used to Modifie the style variant for this component. Possible values: { display-600, display-700, display-800, display-900, display-1000, display-1100, display-1200, heading-300, heading-400, heading-500, heading-600, heading-700, heading-800, subheading-300, subheading-400, subheading-500, subheading-600},
+                "description": "Modifies the style variant for this component. Possible values: { ‘display-600’  | ‘display-700 | ‘display-800 | ‘display-900 | ‘display-1000 | ‘display-1100 | ‘display-1200 | ‘heading-300' | ‘heading-400 | ‘heading-500 | ‘heading-600 | ‘heading-700 | ‘heading-800 | ‘subheading-300 | ‘subheading-400 | ‘subheading-500 | ‘subheading-600 | }",
+              },
             ],
             "slots": [
               {
