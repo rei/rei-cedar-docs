@@ -50,6 +50,20 @@ We have created a new [Cedar Icon Library](https://rei.github.io/cedar-icons/#/)
 
 See the [deprecated icon components](#deprecated-icon-components) section for more information on updating your icon usage.
 
+### UI Toolkit Update
+
+#### File Structure
+
++ The toolkit is now broken out into three versions—vCurrent, vLegacy, and vNext. vCurrent will include the Fall 2019 UI toolkit changes. vLegacy includes the previous release. vNext will include future releases and will not be supported.
++ The file structures have changed. Web, Native, Tokens, and Icons are now seperate master files and libraries. 
+
+#### Sticker sheet
+
+Sticker sheets have been included in Web, Native, Token, and Icon libraries. To use the sticker sheet, [link the library](https://rei.github.io/rei-cedar-docs/getting-started/as-a-designer/#using-the-toolkit) you need, select the sticker sheet from symbols, right click on the sticker sheet, select "Detach from Symbol," ungroup, and copy/paste as needed. 
+
+#### Select component
+A new Select component is available for use in the web components toolkit and the stickersheet. See [Select](need a link to Select) for more info.
+
 ### Icon Contribution
 
 - We have updated the [guidelines for contributing icons](/icons/resources/#contribution-process) to the [CDR · Icon Contribution](https://share.goabstract.com/99335c38-51ee-41c8-8454-38c2a70c4c7f) Project
