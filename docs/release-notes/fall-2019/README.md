@@ -62,7 +62,7 @@ See the [deprecated icon components](#deprecated-icon-components) section for mo
 Sticker sheets have been included in Web, Native, Token, and Icon libraries. To use the sticker sheet, [link the library](https://rei.github.io/rei-cedar-docs/getting-started/as-a-designer/#using-the-toolkit) you need, select the sticker sheet from symbols, right click on the sticker sheet, select "Detach from Symbol," ungroup, and copy/paste as needed. 
 
 #### Select component
-A new Select component is available for use in the web components toolkit and the stickersheet. See [Select](need a link to Select) for more info.
+A new Select component is available for use in the web components toolkit and the stickersheet. See [Select](/components/selects/) for more info.
 
 ### Icon Contribution
 
