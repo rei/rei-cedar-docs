@@ -32,7 +32,7 @@ If you are not already on Cedar 2.x.x, you will first need to [upgrade your proj
 
 ## New Features
 
-### New Font/Typography
+### Introducing New Fonts
 
 Sentinel and Roboto have been deprecated as a global REI brand fonts. `cdr-fonts.css` has removed the base64 encoded versions of Sentinel fonts as a result and has greatly reduced the overall size of this file.
 
@@ -50,11 +50,25 @@ We have created a new [Cedar Icon Library](https://rei.github.io/cedar-icons/#/)
 
 See the [deprecated icon components](#deprecated-icon-components) section for more information on updating your icon usage.
 
+### UI Toolkit Update
+
+#### File Structure
+
++ The toolkit is now broken out into three versions—vCurrent, vLegacy, and vNext. vCurrent will include the Fall 2019 UI toolkit changes. vLegacy includes the previous release. vNext is a preview into future releases and is not officially supported.
++ The file structures have changed. Web, Native, Tokens, and Icons are now seperate master files and libraries. 
+
+#### Sticker sheet
+
+Sticker sheets have been included in Web, Native, Token, and Icon libraries. To use the sticker sheet, [link the library](https://rei.github.io/rei-cedar-docs/getting-started/as-a-designer/#using-the-toolkit) you need, select the sticker sheet from symbols, right click on the sticker sheet, select "Detach from Symbol," ungroup, and copy/paste as needed. 
+
+#### Select component
+A new Select component is available for use in the web components toolkit and the stickersheet. See [Select](/components/selects/) for more info.
+
 ### Icon Contribution
 
 - We have updated the [guidelines for contributing icons](/icons/resources/#contribution-process) to the [CDR · Icon Contribution](https://share.goabstract.com/99335c38-51ee-41c8-8454-38c2a70c4c7f) Project
 - We have also made minor updates to the [CDR Icons • vCurrent](https://share.goabstract.com/e9186773-0cc3-43a6-b7ff-54b163d95e00?sha=a814b05c391c93f5a7d39ce9508cd5238ae8fe0e) libray to make icon symbols more consistent. For linking instructions, see the guide to using the [Cedar UI Toolkit](/getting-started/as-a-designer/#cedar-ui-toolkit).
-- We have also written a new sketch plugin to help you [export Cedar compliant icons that are not in the icon repo](/icons/resources/#exporting-icons-that-aren’t-in-the-library).
+- We have also written a new Sketch plugin to help you [export Cedar compliant icons that are not in the icon repo](/icons/resources/#exporting-icons-that-aren’t-in-the-library).
 
 ### SVG in Icon Slot
 
