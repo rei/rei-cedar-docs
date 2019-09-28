@@ -130,7 +130,7 @@ However, if you want to apply a value to the example that only needed to know wh
 }
 ```
 
-## Components
+## Components and breakpoints
 
 Components allow breakpoints to be passed as unique property variants.
 When accepted, a breakpoint variant property will append the `@(xs, sm, md, lg)` to its name.
