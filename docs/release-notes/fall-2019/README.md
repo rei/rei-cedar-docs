@@ -16,7 +16,7 @@
 
 ## Update Steps
 
-If you are not already on Cedar 2.x.x, you will first need to [upgrade your project](release-notes/summer-2019/) to the single-package version of Cedar.
+If you are not already on Cedar 2.x.x, you will first need to [upgrade your project](../summer-2019/)) to the single-package version of Cedar.
 
 ### For a Micro-Site
 
@@ -59,16 +59,16 @@ For more information on updating your icon usage, see the [deprecated icon compo
 
 #### Sticker Sheet
 
-Sticker sheets have been included in Web, Native, Token, and Icon libraries. To use the sticker sheet, [link the library](https://rei.github.io/rei-cedar-docs/getting-started/as-a-designer/#using-the-toolkit) you need, select the sticker sheet from symbols, right-click on the sticker sheet, select "Detach from Symbol", ungroup, and copy or paste as needed. 
+Sticker sheets have been included in Web, Native, Token, and Icon libraries. To use the sticker sheet, [link the library](../../getting-started/as-a-designer/#using-the-toolkit) you need, select the sticker sheet from symbols, right-click on the sticker sheet, select "Detach from Symbol", ungroup, and copy or paste as needed. 
 
 #### Select Component
-A new Select component is available for use in the web components toolkit and the sticker sheet. For more information, see the [Select](/components/selects/) page.
+A new Select component is available for use in the web components toolkit and the sticker sheet. For more information, see the [Select](../../components/selects/) page.
 
 ### Icon Contribution
 
 - The [guidelines for contributing icons](/icons/resources/#contribution-process) to the [CDR · Icon Contribution](https://share.goabstract.com/99335c38-51ee-41c8-8454-38c2a70c4c7f) project has been updated
-- Minor updates to the [CDR Icons • vCurrent](https://share.goabstract.com/e9186773-0cc3-43a6-b7ff-54b163d95e00?sha=a814b05c391c93f5a7d39ce9508cd5238ae8fe0e) libray to make icon symbols more consistent. For linking instructions, see the [Cedar UI Toolkit](/getting-started/as-a-designer/#cedar-ui-toolkit) page
-- A new Sketch plugin has been added to help you [export Cedar-compliant icons that are not in the icon repo](/icons/resources/#exporting-icons-that-aren’t-in-the-library)
+- Minor updates to the [CDR Icons • vCurrent](https://share.goabstract.com/e9186773-0cc3-43a6-b7ff-54b163d95e00?sha=a814b05c391c93f5a7d39ce9508cd5238ae8fe0e) libray to make icon symbols more consistent. For linking instructions, see the [Cedar UI Toolkit](../../getting-started/as-a-designer/#cedar-ui-toolkit) page
+- A new Sketch plugin has been added to help you [export Cedar-compliant icons that are not in the icon repo](../../icons/resources/#exporting-icons-that-aren’t-in-the-library)
 
 ### SVG in Icon Slot
 
@@ -82,16 +82,16 @@ The `cdr-tokens` package now emits warnings if it detects that you are still usi
 
 ### Button/CTA full-width@bp
 
-The [Button](/components/buttons/?active-tab=api) and [CTA](/components/cta/?active-tab=api) components now support setting `full-width` as either a boolean value or as a list of responsive breakpoints. For example, `full-width: "@xs @lg"` would make that component be full-width at the extra small and large breakpoints. A bug where the full-width attribute could be overridden by a responsive size breakpoint has also been resolved.
+The [Button](../../components/buttons/?active-tab=api) and [CTA](../../components/cta/?active-tab=api) components now support setting `full-width` as either a boolean value or as a list of responsive breakpoints. For example, `full-width: "@xs @lg"` would make that component be full-width at the extra small and large breakpoints. A bug where the full-width attribute could be overridden by a responsive size breakpoint has also been resolved.
 
 ### Link Scoped Slots for Pagination and Breadcrumb
 
-In order to support client-side routing, [breadcrumb](/components/pagination/#link-scoped-slots) and [pagination](/components/breadcrumb/#link-scoped-slot) componenets have been updated to expose [scopedSlots](https://vuejs.org/v2/guide/components-slots.html#Scoped-Slots-with-the-slot-scope-Attribute) that allow consumers to override the default anchor links that are normally rendered by these components.
+In order to support client-side routing, [breadcrumb](../../components/pagination/#link-scoped-slots) and [pagination](../../components/breadcrumb/#link-scoped-slot) componenets have been updated to expose [scopedSlots](https://vuejs.org/v2/guide/components-slots.html#Scoped-Slots-with-the-slot-scope-Attribute) that allow consumers to override the default anchor links that are normally rendered by these components.
 
 ### Input and Button Bind All Listeners
 
-Rather than only binding specific listeners (like `on-click`), the [input](/components/input/?active-tab=api#events) and
-[button](/components/button/?active-tab=api#events) components will now bind any event listeners attached to their root component. i.e, `@click`, `@focus`, `@input`.
+Rather than only binding specific listeners (like `on-click`), the [input](../../components/input/?active-tab=api#events) and
+[button](../../components/button/?active-tab=api#events) components will now bind any event listeners attached to their root component. i.e, `@click`, `@focus`, `@input`.
 
 ## Breaking Changes
 
@@ -122,7 +122,7 @@ Teams can still create SSR optimized builds themselves using either `vue-loader`
 
 ### Stateless Accordion
 
-CdrAccordion has been refactored to remove internal state tracking for toggling open and closed. For simplicity, the CdrAccordionItem component has been removed and its functionality merged with CdrAccordion. The `show` prop has been renamed to `opened` for clarity. For more inforamtion, please review the [updated API and usage examples](/components/accordion/).
+CdrAccordion has been refactored to remove internal state tracking for toggling open and closed. For simplicity, the CdrAccordionItem component has been removed and its functionality merged with CdrAccordion. The `show` prop has been renamed to `opened` for clarity. For more inforamtion, please review the [updated API and usage examples](../../components/accordion/).
 
 Before:
 
@@ -180,7 +180,7 @@ The letter spacing values for our text tokens have been corrected to add the `px
 
 ### CdrRadio Value Prop Is Now CustomValue
 
-In an effort to make our form components more consistent, we have changed [CdrRadio](components/radio/?active-tab=api) to use the `customValue` prop instead of `value`. This is the same pattern that CdrCheckbox uses.
+In an effort to make our form components more consistent, we have changed [CdrRadio](../../components/radio/?active-tab=api) to use the `customValue` prop instead of `value`. This is the same pattern that CdrCheckbox uses.
 
 - Before: `<cdr-radio v-model="x" value="foo"/>`
 - After: `<cdr-radio v-model="x" customValue="foo"/>`
@@ -195,14 +195,14 @@ In an effort to make our components that use `v-model` more consistent, we have 
 
 ### CdrButton Now Uses @ bindings for Events
 
-Rather than pass in an `onClick` event handler as a prop, [CdrButton](/components/buttons/?active-tab=api) will now bind any listened attached to it. Update `onClick` to be `@click` wherever you are binding an event to a CdrButton.
+Rather than pass in an `onClick` event handler as a prop, [CdrButton](../../components/buttons/?active-tab=api) will now bind any listened attached to it. Update `onClick` to be `@click` wherever you are binding an event to a CdrButton.
 
 - Before: `<cdr-button onClick="yourClickHandlerFunction" />`
 - After: `<cdr-button @click="yourClickHandlerFunction" />`
 
 ### CdrTabs Emits `tab-change` Instead of `tabChange`
 
-Vue expects event names to use kebab case and not camel case, so the `tabChange` event on [CdrTabs](components/tabs/?active-tab=api) could cause issues for some users. CdrTabs now emits a `tab-change` event instead.
+Vue expects event names to use kebab case and not camel case, so the `tabChange` event on [CdrTabs](../../components/tabs/?active-tab=api) could cause issues for some users. CdrTabs now emits a `tab-change` event instead.
 
 - Before: `<CdrTabs @tabChange="handler" />`
 - After: `<CdrTabs @tab-change="handler" />`
@@ -236,7 +236,7 @@ The following diagram provides a rough guideline of legacy modifier names to the
 
 In addition to the heading changes listed above, the paragraph modifier `body` is now also deprecated without a replacement. Moving forward, we will only support the generic non-modified styling for paragraphs.
 
-For more infomation, see [Headings](/components/headings) and [Paragraphs](/components/paragraphs).
+For more infomation, see [Headings](../../components/headings) and [Paragraphs](../../components/paragraphs).
 
 ### Deprecated Tokens and Mixins
 
@@ -448,6 +448,6 @@ This ensures that when your app is server-side rendered, the sprite sheet is onl
 ```
 ### Breadcrumb Truncation/SSR
 
-In order to fix an issue with server-side rendering, as well as to simplify the API of [CdrBreadcrumb](components/breadcrumb/), we have removed the `truncationThreshold` and `truncationXSThreshold` attributes. Instead, the `truncationEnabled` attr can be used to control whether or not the breadcrumb should be truncated. This change will not break any existing consumers of breadcrumb even if they are using those attributes.
+In order to fix an issue with server-side rendering, as well as to simplify the API of [CdrBreadcrumb](../../components/breadcrumb/), we have removed the `truncationThreshold` and `truncationXSThreshold` attributes. Instead, the `truncationEnabled` attr can be used to control whether or not the breadcrumb should be truncated. This change will not break any existing consumers of breadcrumb even if they are using those attributes.
 
 </cdr-doc-table-of-contents-shell>
