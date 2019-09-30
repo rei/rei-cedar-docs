@@ -175,37 +175,165 @@
 
 ## Default
 
-Select control with no label.
+Basic select control with label.
 
-```code markup for default select```
+
+<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
+
+```html
+<cdr-select
+  v-model="defaultModel"
+  label="Select label"
+  prompt="Prompt text"
+  :options="defaultOptions"
+/>
+<br>
+<cdr-select
+  v-model="defaultModel"
+  label="Select label"
+  prompt="Prompt text"
+  :options="defaultOptions"
+  disabled
+/>
+```
+
+</cdr-doc-example-code-pair>
 
 
 ## Bare
 
-Basic select control with label.
+Basic select control with no label.
 
-```code markup for bare select```
+<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
+
+```html
+<cdr-select
+  v-model="defaultModel"
+  label="Select label"
+  prompt="Prompt text"
+  :options="defaultOptions"
+  hideLabel
+/>
+<br>
+<cdr-select
+  v-model="defaultModel"
+  label="Select label"
+  prompt="Prompt text"
+  :options="defaultOptions"
+  disabled
+  hideLabel
+/>
+```
+
+</cdr-doc-example-code-pair>
 
 
 ## Select with Link Text
 
 Select control with link text on right.
 
-```code markup for select with link text```
+<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
+
+```html
+<cdr-select
+  v-model="defaultModel"
+  label="Select label"
+  prompt="Prompt text"
+  :options="defaultOptions"
+>
+  <template slot="info">
+    <cdr-link href="#/">
+      Info Link/Icon
+    </cdr-link>
+  </template>
+</cdr-select>
+<br>
+<cdr-select
+  v-model="defaultModel"
+  label="Select label"
+  prompt="Prompt text"
+  :options="defaultOptions"
+  disabled
+>
+  <template slot="info">
+    <cdr-link href="#/">
+      Info Link/Icon
+    </cdr-link>
+  </template>
+</cdr-select>
+```
+
+</cdr-doc-example-code-pair>
 
 
 ## Select with Icon Above
 
 Select control with icon above input field on right.
 
-```code markup for select with icon above```
+
+
+<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
+
+```html
+<cdr-select
+  v-model="defaultModel"
+  label="Select label"
+  prompt="Prompt text"
+  :options="defaultOptions"
+>
+  <template slot="info">
+    <icon-information-fill />
+  </template>
+</cdr-select>
+<br>
+<cdr-select
+  v-model="defaultModel"
+  label="Select label"
+  prompt="Prompt text"
+  :options="defaultOptions"
+  disabled
+>
+  <template slot="info">
+    <icon-information-fill />
+  </template>
+</cdr-select>
+```
+
+</cdr-doc-example-code-pair>
 
 
 ## Select with Helper Text
 
 Input field with helper or hint text below the input field.
 
-```code markup for select with helper text```
+<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
+
+```html
+<cdr-select
+  v-model="defaultModel"
+  label="Select label"
+  prompt="Prompt text"
+  :options="defaultOptions"
+>
+  <template slot="helper-text">
+    This is helper text.
+  </template>
+</cdr-select>
+<br>
+<cdr-select
+  v-model="defaultModel"
+  label="Select label"
+  prompt="Prompt text"
+  :options="defaultOptions"
+  disabled
+>
+  <template slot="helper-text">
+    This is helper text.
+  </template>
+</cdr-select>
+```
+
+</cdr-doc-example-code-pair>
 
 
 ## Accessibility
