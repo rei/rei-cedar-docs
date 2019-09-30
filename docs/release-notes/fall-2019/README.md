@@ -54,12 +54,12 @@ For more information on updating your icon usage, see the [deprecated icon compo
 
 #### File Structure
 
-+ The toolkit is now broken out into three versions—vCurrent, vLegacy, and vNext. vCurrent will include the Fall 2019 UI toolkit changes. vLegacy includes the previous release. vNext is a preview into future releases and is not officially supported.
-+ The file structures have changed. Web, Native, Tokens, and Icons are now seperate master files and libraries. 
++ The toolkit is now broken out into three versions—vCurrent, vLegacy, and vNext. vCurrent will include the Fall 2019 UI toolkit changes. vLegacy includes the previous release. vNext is a preview into future releases and is not officially supported
++ The file structures have changed. Web, Native, Tokens, and Icons are now seperate master files and libraries 
 
 #### Sticker Sheet
 
-Sticker sheets have been included in Web, Native, Token, and Icon libraries. To use the sticker sheet, [link the library](../../getting-started/as-a-designer/#using-the-toolkit) you need, select the sticker sheet from symbols, right-click on the sticker sheet, select "Detach from Symbol", ungroup, and copy or paste as needed. 
+Sticker sheets have been included in Web, Native, Token, and Icon libraries. To use the sticker sheet, [link the library](../../getting-started/as-a-designer/#using-the-toolkit) you need, select the sticker sheet from Symbols, right-click the sticker sheet, select "Detach from Symbol", ungroup, and copy or paste as needed. 
 
 #### Select Component
 A new Select component is available for use in the web components toolkit and the sticker sheet. For more information, see the [Select](../../components/selects/) page.
@@ -72,26 +72,26 @@ A new Select component is available for use in the web components toolkit and th
 
 ### SVG in Icon Slot
 
-- `CdrIcon` now accepts full svg markup in the slot
+- `CdrIcon` now accepts full SVG markup in the slot
 - All attributes, classes, listeners, etc. will be preserved with the exception of `viewBox`, `role`, and `xmlns`
-- For more information and examples, see the [Icon component documenation](../../components/icon/?active-tab=api#_2-non-cedar-svg) page
+- For more information and examples, see the [Icon Component](../../components/icon/?active-tab=api#_2-non-cedar-svg) page
 
 ### Deprecated Mixin Warnings
 
 The `cdr-tokens` package now emits warnings if it detects that you are still using deprecated mixins in your SCSS. You can disable these warnings by setting a SCSS variable `$cdr-warn: false;` in any scope where you are using `cdr-tokens`. Note that these warnings are only emitted by mixins in the SCSS build and will not trigger for tokens or if you are using LESS.
 
-### Button/CTA full-width@bp
+### Button / CTA Full-Width at Breakpoint
 
 The [Button](../../components/buttons/?active-tab=api) and [CTA](../../components/cta/?active-tab=api) components now support setting `full-width` as either a boolean value or as a list of responsive breakpoints. For example, `full-width: "@xs @lg"` would make that component be full-width at the extra small and large breakpoints. A bug where the full-width attribute could be overridden by a responsive size breakpoint has also been resolved.
 
 ### Link Scoped Slots for Pagination and Breadcrumb
 
-In order to support client-side routing, [breadcrumb](../../components/pagination/#link-scoped-slots) and [pagination](../../components/breadcrumb/#link-scoped-slot) componenets have been updated to expose [scopedSlots](https://vuejs.org/v2/guide/components-slots.html#Scoped-Slots-with-the-slot-scope-Attribute) that allow consumers to override the default anchor links that are normally rendered by these components.
+In order to support client-side routing, [breadcrumb](../../components/pagination/#link-scoped-slots) and [pagination](../../components/breadcrumb/#link-scoped-slot) components have been updated to expose [scopedSlots](https://vuejs.org/v2/guide/components-slots.html#Scoped-Slots-with-the-slot-scope-Attribute) that allow consumers to override the default anchor links that are normally rendered by these components.
 
 ### Input and Button Bind All Listeners
 
 Rather than only binding specific listeners (like `on-click`), the [input](../../components/input/?active-tab=api#events) and
-[button](../../components/button/?active-tab=api#events) components will now bind any event listeners attached to their root component. i.e, `@click`, `@focus`, `@input`.
+[button](../../components/button/?active-tab=api#events) components will now bind any event listeners attached to their root component, i.e, `@click`, `@focus`, `@input`.
 
 ## Breaking Changes
 
@@ -103,12 +103,8 @@ If you are on the latest version of FEBS (> 5.4.1), then you will get this chang
 
 If you are not using FEBS, you will need to ensure that:
 
-- Your project is loading the `module` entry for Cedar
--- This should happen automatically if you are using ES6 style `import`/`export` syntax
--- If not, you will need to configure your build to resolve `@rei/cedar` to `node_modules/@rei/cedar/dist/lib/index.mjs`
-- Your build system is set up to process `mjs` files in node_modules
--- In Webpack 4 this can be done with the `javascript/auto` loader: `{ test: /\.mjs$/, include: /node_modules/, type: "javascript/auto" }`
--- This can also be achieved by running `node_modules/@rei/cedar` through Babel using `@babel/preset-env` and setting the `modules: false` (for an example on this strategy, see [FEBS](https://github.com/rei/front-end-build-configs/blob/master/application/webpack.base.conf.js#L94-L126))
+- Your project is loading the `module` entry for Cedar: This should happen automatically if you are using ES6 style `import`/`export` syntax. If not, you will need to configure your build to resolve `@rei/cedar` to `node_modules/@rei/cedar/dist/lib/index.mjs`
+- Your build system is set up to process `mjs` files in node_modules: In Webpack 4 this can be done with the `javascript/auto` loader `{ test: /\.mjs$/, include: /node_modules/, type: "javascript/auto" }`. This can also be achieved by running `node_modules/@rei/cedar` through Babel using `@babel/preset-env` and setting the `modules: false` (for an example on this strategy, see [FEBS](https://github.com/rei/front-end-build-configs/blob/master/application/webpack.base.conf.js#L94-L126))
 
 Cedar is still exporting a single-file CommonJS build (`dist/cedar.js`). This is appropriate to use in development or test environments, but should be avoided in production as it cannot be tree-shaken.
 
@@ -122,7 +118,7 @@ Teams can still create SSR optimized builds themselves using either `vue-loader`
 
 ### Stateless Accordion
 
-CdrAccordion has been refactored to remove internal state tracking for toggling open and closed. For simplicity, the CdrAccordionItem component has been removed and its functionality merged with CdrAccordion. The `show` prop has been renamed to `opened` for clarity. For more inforamtion, please review the [updated API and usage examples](../../components/accordion/).
+CdrAccordion has been refactored to remove internal state tracking for toggling open and closed. For simplicity, the CdrAccordionItem component has been removed and its functionality merged with CdrAccordion. The `show` prop has been renamed to `opened` for clarity. For more inforamtion, please review the [API and usage examples](../../components/accordion/).
 
 Before:
 
@@ -172,7 +168,7 @@ export default {
 
 ### Large Breakpoint Value Corrected
 
-The token value for the large breakpoint was updated to the correct value of `1232px`. If you are hard-coding any breakpoint values in your project, you will need to update those to use the breakpoint values from cdr-tokens instead. If you were using the breakpoint tokens, then you just need to update your version of Cedar and cdr-tokens.
+The token value for the large breakpoint was updated to the correct value of `1232px`. If you are hard-coding any breakpoint values in your project, you will need to update those to use the breakpoint values from cdr-tokens instead. If you were already using the breakpoint tokens, then you just need to update your version of Cedar and cdr-tokens.
 
 ### Letter Spacing Values Corrected
 
@@ -193,9 +189,9 @@ In an effort to make our components that use `v-model` more consistent, we have 
 - CdrSelect: `extVal` is now `value`
 - CdrRadio: `modelValue` is now `value` [See note about value/customValue](#cdrradio-value-prop-is-now-customvalue)
 
-### CdrButton Now Uses @ bindings for Events
+### CdrButton Now Uses Bindings for Events
 
-Rather than pass in an `onClick` event handler as a prop, [CdrButton](../../components/buttons/?active-tab=api) will now bind any listened attached to it. Update `onClick` to be `@click` wherever you are binding an event to a CdrButton.
+Rather than pass in an `onClick` event handler as a prop, [CdrButton](../../components/buttons/?active-tab=api) will now bind any listener attached to it. Update `onClick` to be `@click` wherever you are binding an event to a CdrButton.
 
 - Before: `<cdr-button onClick="yourClickHandlerFunction" />`
 - After: `<cdr-button @click="yourClickHandlerFunction" />`
@@ -213,7 +209,7 @@ Whenever possible and practical, the Cedar team will deprecate features rather t
 
 ### Deprecated Typography/Headings
 
-"REI Stuart App" and "Graphik App" have replaced Sentinel heading styles. Designers with linked UI toolkit libraries in Abstract will receive an automatic update of web component styles, but will need to link two new libraries (if they haven't already): icons and tokens. For more information on linking libraries in Abstract, see the [Designers Getting Started](../..getting-started/as-a-designer/) guide.  
+"REI Stuart App" and "Graphik App" have replaced Sentinel heading styles. Designers with linked UI Toolkit libraries in Abstract will receive an automatic update of web component styles, but will need to link two new libraries (if they haven't already): icons and tokens. For more information on linking libraries in Abstract, see the [Designers Getting Started](../..getting-started/as-a-designer/) guidelines.  
 
 The cdr-text modifiers specific to headings have been deprecated. This update normalizes cdr-text modifiers with our other Cedar component modifiers. Going forward, users will be able to define a unique heading value for each breakpoint.
 
@@ -308,7 +304,7 @@ In order to support the updates to typography, we have re-named some Cedar token
 | cdr-text-editorial-compact-size | cdr-text-default-size |
 | cdr-text-editorial-compact-height | cdr-text-default-height |
 
-Additionally, we have new mixins available to replace the previously deprecated `spruce-display` typography mixins. Replacements for the `redwood` and `maple` mixins will be coming in a future Cedar release. See the  [v1 token migration docs](https://confluence.rei.com/display/TP/v1+Token+Migration) for more information on how to handle the deprecated pre-release tokens (if you haven't already).
+Additionally, we have new mixins available to replace the previously deprecated `spruce-display` typography mixins. Replacements for the `redwood` and `maple` mixins will be coming in a future Cedar release. See the  [v1 token migration](https://confluence.rei.com/display/TP/v1+Token+Migration) documents for more information on how to handle the deprecated pre-release tokens (if you haven't already).
 
 | Deprecated mixin   | Equivalent mixin      |
 |--------------------|-----------------------|
@@ -424,11 +420,11 @@ With the release of the [Cedar Icon Library](https://rei.github.io/cedar-icons/#
 
 If you were using the single icon components, you should update them to use `CdrIcon` and the `use` attribute instead, and follow the instructions below to create and load a sprite sheet.
 
-If you were using CdrIconSprite, you should use the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) to create an SVG file containing all the icons required for your application. You will then need to render that SVG file somewhere in your application. The best place to do this is inline in your root HTML template rather than in the JavaScript. 
+If you were using CdrIconSprite, you should use the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) to create an SVG file containing all the icons required for your application. You will then need to render that SVG file somewhere in your application. The best place to do this is inline with your root HTML template rather than in the JavaScript. 
 
-This ensures that when your app is server-side rendered, the sprite sheet is only rendered one time, rather than being included in both the HTML and the JavaScript files. There are various ways to do this depending on how your application is built, but if you are using the standard REI micro-site architecture built on spring-boot/thymeleaf, you can load the sprite sheet as follows:
+This ensures that when your app is server-side rendered, the sprite sheet is only rendered one time, rather than being included in both the HTML and the JavaScript files. There are various ways to do this depending on how your application is built, but if you are using the standard REI micro-site architecture built on spring-boot or thymeleaf, you can load the sprite sheet as follows:
 
-1. Create a new template named `resources/templates/icon-sprite.html` and copy paste your generated SVG file into it:
+1. Create a new template named `resources/templates/icon-sprite.html` and copy your generated SVG file into it:
 
 ```
 <!DOCTYPE html>
