@@ -66,7 +66,7 @@ A new Select component is available for use in the web components toolkit and th
 
 ### Icon Contribution
 
-- The [guidelines for contributing icons](/icons/resources/#contribution-process) to the [CDR · Icon Contribution](https://share.goabstract.com/99335c38-51ee-41c8-8454-38c2a70c4c7f) project has been updated
+- The [guidelines for contributing icons](../../icons/resources/#contribution-process) to the [CDR · Icon Contribution](https://share.goabstract.com/99335c38-51ee-41c8-8454-38c2a70c4c7f) project has been updated
 - Minor updates to the [CDR Icons • vCurrent](https://share.goabstract.com/e9186773-0cc3-43a6-b7ff-54b163d95e00?sha=a814b05c391c93f5a7d39ce9508cd5238ae8fe0e) libray to make icon symbols more consistent. For linking instructions, see the [Cedar UI Toolkit](../../getting-started/as-a-designer/#cedar-ui-toolkit) page
 - A new Sketch plugin has been added to help you [export Cedar-compliant icons that are not in the icon repo](../../icons/resources/#exporting-icons-that-aren’t-in-the-library)
 
@@ -74,7 +74,7 @@ A new Select component is available for use in the web components toolkit and th
 
 - `CdrIcon` now accepts full svg markup in the slot
 - All attributes, classes, listeners, etc. will be preserved with the exception of `viewBox`, `role`, and `xmlns`
-- For more information and examples, see the [Icon component documenation](/components/icon/?active-tab=api#_2-non-cedar-svg) page
+- For more information and examples, see the [Icon component documenation](../../components/icon/?active-tab=api#_2-non-cedar-svg) page
 
 ### Deprecated Mixin Warnings
 
@@ -213,7 +213,7 @@ Whenever possible and practical, the Cedar team will deprecate features rather t
 
 ### Deprecated Typography/Headings
 
-"REI Stuart App" and "Graphik App" have replaced Sentinel heading styles. Designers with linked UI toolkit libraries in Abstract will receive an automatic update of web component styles, but will need to link two new libraries (if they haven't already): icons and tokens. For more information on linking libraries in Abstract, see the [Designers Getting Started](https://rei.github.io/rei-cedar-docs/getting-started/as-a-designer/) guide.  
+"REI Stuart App" and "Graphik App" have replaced Sentinel heading styles. Designers with linked UI toolkit libraries in Abstract will receive an automatic update of web component styles, but will need to link two new libraries (if they haven't already): icons and tokens. For more information on linking libraries in Abstract, see the [Designers Getting Started](../..getting-started/as-a-designer/) guide.  
 
 The cdr-text modifiers specific to headings have been deprecated. This update normalizes cdr-text modifiers with our other Cedar component modifiers. Going forward, users will be able to define a unique heading value for each breakpoint.
 
