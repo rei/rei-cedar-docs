@@ -85,8 +85,8 @@
                 "name": "modifier",
                 "type": "string",
                 "default": "N/A",
-                "description": "Modifies the style variant for this component. Possible values: { ‘display’  |  ‘display-static’  |  ‘heading-large’  |  ‘heading-large-static’  |  ‘heading-medium’  |  ‘heading-medium-static’  |  ‘heading-small’  |  ‘heading-small-static’  |  ‘subheading' }"
-              }
+                "description": "Modifies the style variant for this component. Possible values: { ‘display-600’  | ‘display-700 | ‘display-800 | ‘display-900 | ‘display-1000 | ‘display-1100 | ‘display-1200 | ‘heading-300' | ‘heading-400 | ‘heading-500 | ‘heading-600 | ‘heading-700 | ‘heading-800 | ‘subheading-300 | ‘subheading-400 | ‘subheading-500 | ‘subheading-600 | }",
+              },
             ],
             "slots": [
               {
@@ -107,141 +107,317 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
 
-## Display Responsive
+Stuart is our first choice for larger, more expressive moments. Graphik rounds out the heading schema with smaller sizes and its simplicity allows it to play a supporting role across a wide range of projects.
 
-Use for responsive display heading.
+**Usage Considerations**
+-  Heading styles should never end with a period
+-  Sentence case should be used whenever possible
+-  Consider the white space around headings
 
+## Contextual Headings
+
+The following are recommended type styles for use at varying breakpoint sizes.
+
+### Headline 
+
+Use for the most prominent type style on the page in place of titles. Also, use headings rarely to emphasize important information.
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-text
-    tag="h4"
-    modifier="display">
+    modifier="display-800@xs display-900">
       When you gear up, we give back
   </cdr-text>
 ```
 
 </cdr-doc-example-code-pair>
 
-## Display Static
+### Headline/Subheadline Combination
 
-Use for non-responsive display heading that maintains font size across all viewport sizes.
+Use when pairing with subheadlines with headline-like styles.
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-text tag="h1" modifier="display-800@xs display-900">
+    When you gear up, we give back
+    <cdr-text
+      class="cdr-pt-space-one-x@xs cdr-pt-space-one-and-a-half-x" 
+      modifier="subheading-400@xs subheading-500">
+      Treat yourself to sweet gear
+    </cdr-text>
+  </cdr-text>
+```
+
+</cdr-doc-example-code-pair>
+
+### Page Title
+
+Use for one of the most prominent type styles on the page and only once per page. Applied to level 1 headings only.
 
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-text modifier="display-static">
+  <cdr-text modifier="heading-700@xs heading-800">
     When you gear up, we give back
   </cdr-text>
 ```
 
 </cdr-doc-example-code-pair>
 
-## Heading Large
+### Title/Subtitle Combination
 
-Use for a responsive large heading.
-
+Use only when pairing subtitles with title-type styles.
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-text modifier="heading-large">
+  <cdr-text modifier="heading-700@xs heading-800">
+    When you gear up, we give back
+    <cdr-text 
+      class="cdr-pt-space-one-x@xs cdr-pt-space-one-and-a-half-x" 
+      modifier="subheading-300@xs subheading-400">
+      Treat yourself to sweet gear
+    </cdr-text>
+  </cdr-text>
+```
+
+</cdr-doc-example-code-pair>
+
+### Section Heading
+
+Use for headings of a section on the page.
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-text modifier="heading-600@xs heading-700">
     When you gear up, we give back
   </cdr-text>
 ```
 
 </cdr-doc-example-code-pair>
 
-## Heading Large Static
+### Subsection Heading
 
-Use for non-responsive large heading that maintains font size across all viewport sizes.
-
+Use for headings nested within a section of your page.
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-text modifier="heading-large-static">
+  <cdr-text modifier="heading-400@xs heading-500">
     When you gear up, we give back
   </cdr-text>
 ```
 
 </cdr-doc-example-code-pair>
 
-## Heading Medium
+### Sub-subsection Heading
 
-Use for a responsive medium heading.
-
+Use for headings nested within a sub-section of your page.
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-text modifier="heading-medium">
+  <cdr-text modifier="heading-300@xs heading-400">
     When you gear up, we give back
   </cdr-text>
 ```
 
 </cdr-doc-example-code-pair>
 
-## Heading Medium Static
+## Headings Styles
 
-Use for non-responsive medium heading that maintains font size across all viewport sizes.
+The following type styles should be used when contextual styles (above) are not being used or when supplement contextual headings are needed.
 
+### Display 1200
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-text modifier="heading-medium-static">
+  <cdr-text modifier="display-1200">
     When you gear up, we give back
   </cdr-text>
 ```
-
 </cdr-doc-example-code-pair>
 
-## Heading Small
-
-Use for a responsive small heading.
-
+### Display 1100
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-text modifier="heading-small">
+  <cdr-text modifier="display-1100">
     When you gear up, we give back
   </cdr-text>
 ```
-
 </cdr-doc-example-code-pair>
 
-## Heading Small Static
-
-Use for non-responsive small heading that maintains font size across all viewport sizes.
-
+### Display 1000
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-text modifier="heading-small-static">
+  <cdr-text modifier="display-1000">
     When you gear up, we give back
   </cdr-text>
 ```
-
 </cdr-doc-example-code-pair>
 
-## Subheading
-
-Use for subheadings that are positioned beneath small headings.
-
+### Display 900
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-text modifier="subheading">
+  <cdr-text modifier="display-900">
     When you gear up, we give back
   </cdr-text>
 ```
+</cdr-doc-example-code-pair>
 
+### Display 800
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-text modifier="display-800">
+    When you gear up, we give back
+  </cdr-text>
+```
+</cdr-doc-example-code-pair>
+
+### Display 700
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-text modifier="display-700">
+    When you gear up, we give back
+  </cdr-text>
+```
+</cdr-doc-example-code-pair>
+
+### Display 600
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-text modifier="display-600">
+    When you gear up, we give back
+  </cdr-text>
+```
+</cdr-doc-example-code-pair>
+
+### Heading 800
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-text modifier="heading-800">
+    When you gear up, we give back
+  </cdr-text>
+```
+</cdr-doc-example-code-pair>
+
+### Heading 700
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-text modifier="heading-700">
+    When you gear up, we give back
+  </cdr-text>
+```
+</cdr-doc-example-code-pair>
+
+### Heading 600
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-text modifier="heading-600">
+    When you gear up, we give back
+  </cdr-text>
+```
+</cdr-doc-example-code-pair>
+
+### Heading 500
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-text modifier="heading-500">
+    When you gear up, we give back
+  </cdr-text>
+```
+</cdr-doc-example-code-pair>
+
+### Heading 400
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-text modifier="heading-400">
+    When you gear up, we give back
+  </cdr-text>
+```
+</cdr-doc-example-code-pair>
+
+### Heading 300
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-text modifier="heading-300">
+    When you gear up, we give back
+  </cdr-text>
+```
+</cdr-doc-example-code-pair>
+
+
+### Subheading 600
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-text modifier="heading-600">
+    When you gear up, we give back
+  </cdr-text>
+```
+</cdr-doc-example-code-pair>
+
+### Subheading 500
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-text modifier="heading-500">
+    When you gear up, we give back
+  </cdr-text>
+```
+</cdr-doc-example-code-pair>
+
+### Subheading 400
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-text modifier="heading-400">
+    When you gear up, we give back
+  </cdr-text>
+```
+</cdr-doc-example-code-pair>
+
+### Subheading 300
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-text modifier="heading-300">
+    When you gear up, we give back
+  </cdr-text>
+```
 </cdr-doc-example-code-pair>
 
 ## Accessibility
@@ -249,9 +425,9 @@ Use for subheadings that are positioned beneath small headings.
 To ensure that usage of this component complies with accessibility guidelines:
 
 - Use h1-h6 to identify headings (`<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, and `<h6>`)
-  - If additional headings are needed (`<h7>` and so on), follow the technique described on this page: [ARIA12: Using role=heading to identify headings](https://www.w3.org/TR/WCAG20-TECHS/ARIA12)
+  - If additional headings are needed (`<h7>` and so on), follow the technique described on the [ARIA12: Using role=heading to identify headings](https://www.w3.org/TR/WCAG20-TECHS/ARIA12) page
 - Headings are used to label page regions
-  - Use the `aria-label` attribute to associate headings with their page region, as described in the [label page regions](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby) section of this tutorial
+  - Use the `aria-label` attribute to associate headings with their page region, as described in the [label page regions](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby) tutorial 
 - Subheadings are not semantic headings. Subheadings may be visually styled as a heading but will not be navigable using a screen reader
 - For PDF documents, follow the technique on this page: [Providing headings by marking content with heading tags in PDF documents](https://www.w3.org/TR/WCAG20-TECHS/PDF9)
 - Assistive technologies skim the structure of a page:
@@ -262,7 +438,7 @@ To ensure that usage of this component complies with accessibility guidelines:
 
 This component has compliance with WCAG guidelines by:
 
-- Defining semantic heading levels with ability to assign predefined visual heading styles to each level
+- Defining semantic heading levels with the ability to assign predefined visual heading styles to each level
 
 </cdr-doc-table-of-contents-shell>
 </template>
@@ -353,33 +529,43 @@ With this decoupling, you can style other markup to look like a heading that sem
 
 ```vue
   <cdr-text
-    tag="a"
-    modifier="heading-small"
-    href="http://www.rei.com">
-      Heading-large linked
+    tag="strong"
+    modifier="heading-700 heading-800@sm heading-800@md heading-800@lg"
+   >
+      Styled as a heading
   </cdr-text>
 ```
 
 This will result in the following HTML:
 
 ```html
-  <cdr-text modifier="body">
-   <a class=”heading-small” href=”http://www.rei.com”>Heading-small linked</a>
-  </cdr-text>
+  <strong 
+    class="
+    cdr-text cdr-text-heading-700@xs
+    cdr-text-heading-800” 
+  >
+    Styled as a heading
+  </strong>
 ```
 
-**CdrText** modifiers can be nested within semantic headings. The below modifier for subheading is nested in the `<h2>` tag.
+**CdrText** components can be nested within a parent. The below example shows a subheading properly nested within the `<h2>` tag.
 
 ```vue
-  <cdr-text
-    tag="h2"
-    modifier="heading-large">
-    I'm a heading
-    <cdr-text
-      tag="span"
-      modifier="subheading"
-    >
-      And I'm a visual subheading
+  <cdr-text 
+    tag="h2" 
+    modifier="
+      heading-700@xs 
+      heading-800"
+  >
+    I’m a heading
+    <cdr-text 
+      class="
+        cdr-pt-space-one-x@xs
+        cdr-pt-space-one-and-a-half-x" 
+      modifier="
+        subheading-300@xs 
+        subheading-400">
+      And I’m a visual subheading
     </cdr-text>
   </cdr-text>
 ```
@@ -387,30 +573,67 @@ This will result in the following HTML:
 This will result in the following HTML:
 
 ```html
-  <h2>
+  <h2 
+  class="
+    cdr-text 
+    cdr-text-heading-700@xs 
+    cdr-text-heading-800">
     I’m a heading
-      <span class=”subheading”>
-          And I’m a visual subheading
+      <span class="
+        cdr-pt-space-one-x@xs 
+        cdr-pt-space-one-and-a-half-x
+        cdr-text 
+        cdr-text-subheading-300@xs 
+        cdr-text-subheading-400">
+        And I’m a visual subheading
       </span>
   </h2>
 ```
 
 ### Responsive Headings
 
-- Heading modifiers (without the “-static” ending) are responsive
-- To disable resizing at breakpoints use static variants (ending with “-static”)
+Heading modifiers accept any of the supported Cedar breakpoints. For more information on how breakpoints work on components, visit the [Responsive Layout](../../layout/responsive/?active-link=components-and-breakpoints) article. 
 
-```vue
-  <cdr-text
-    tag="em"
-    modifier="heading-medium-static">
-    I should not change size at breakpoint
-  </cdr-text>
-```
+### Modifiers
+
+The following variants are available for heading construction within the `cdr-text` modifier attribute:
+
+#### Display
+
+Display styles are intended to be used for titles and other larger text. Display styles are a larger weight, and therefore more bold, than headers.
+
+*  `display-1200`
+*  `display-1100`
+*  `display-1000`
+*  `display-900`
+*  `display-800`
+*  `display-700`
+*  `display-600`
+
+#### Heading
+
+Heading styles are used to provide context and create hierarchy on a page. Whereas one display style per page is suggested, many heading styles can be used on a page for titles, articles, or topics.
+
+*  `heading-800`
+*  `heading-700`
+*  `heading-600`
+*  `heading-500`
+*  `heading-400`
+*  `heading-300`
+
+#### Subheading
+
+Subheading styles are intended to be paired with display and heading styles as a secondary piece of copy.
+
+*  `subheading-600`
+*  `subheading-500`
+*  `subheading-400`
+*  `subheading-300`
+
 
 ## Heading Levels
 
-When using actual heading elements via the tag property, nest headings by their level:
+When using actual heading elements with the tag property, nest headings by their level:
 
 - Most important heading has the level 1 (`<h1>`) and the least important heading level 6 (`<h6>`)
 - Headings with an equal or higher level start a new section
@@ -423,7 +646,7 @@ Skipping heading levels can be confusing and should be avoided where possible:
 
 ### Exception for Fixed Page Sections
 
-In fixed sections of the page (e.g. sidebars), heading levels **should not** change depending on the heading levels in other areas of the page. Consistency across pages is required throughout the REI digital properties as explained on the [Navigation Design Principles Confluence page](https://confluence.rei.com/display/NAV/Navigation+Design+Principles).
+In fixed sections of the page (e.g. sidebars), heading levels **should not** change depending on the heading levels in other areas of the page. Consistency across pages is required throughout the REI digital properties as explained on the [Navigation Design Principles Confluence](https://confluence.rei.com/display/NAV/Navigation+Design+Principles) page.
 
 </cdr-doc-table-of-contents-shell>
 </template>

@@ -16,7 +16,7 @@
 
 ## Update Steps
 
-If you are not already on Cedar 2.x.x, you will first need to [upgrade your project](/release-notes/summer-2019/) to the single-package version of Cedar.
+If you are not already on Cedar 2.x.x, you will first need to [upgrade your project](../summer-2019/)) to the single-package version of Cedar.
 
 ### For a Micro-Site
 
@@ -27,76 +27,86 @@ If you are not already on Cedar 2.x.x, you will first need to [upgrade your proj
 ### For a Component Package
 
 - Update to `@rei/cedar` 3.x.x
-- Ensure that your component is treating `@rei/cedar` as a `peerDependency`/`devDependency`. This aligns with the REI micro-site architecture, and ensures that only 1 version of the design system is loaded on each page.
-- You may need to configure you dev and test environments to handle loading the ESM build of Cedar
+- Ensure that your component is treating `@rei/cedar` as a `peerDependency`/`devDependency`. This aligns with the REI micro-site architecture, and ensures that only 1 version of the design system is loaded on each page
+- You may need to configure you development and test environments to handle loading the ESM build of Cedar
 
 ## New Features
 
-### New Font/Typography
+### Introducing New Fonts
 
-Sentinel and Roboto have been deprecated as global REI brand fonts. `cdr-fonts.css` has removed the base64 encoded versions of sentinel fonts as a result and has greatly reduced the overall size of this file.
+Sentinel and Roboto have been deprecated as a global REI brand fonts. `cdr-fonts.css` has removed the base64 encoded versions of Sentinel fonts and has greatly reduced the overall size of this file.
 
 The variant fonts for "Stuart" and "Graphik" have been added.
 
-[more information on typography](../../foundation/typography/?active-tab=guidelines)
+For more information, see the [Typography](../../foundation/typography/?active-tab=guidelines) article.
 
 ### New Icons Package
 
-We have created a new [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) which will be used to host and distribute Cedar SVG icons going forward.
+A new [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) has been cfreated which will be used to host and distribute Cedar SVG icons.
 
-- Allows consumers to pick and choose which icons to include in their sprite sheet rather than being forced to load all of them.
-- Cedar no longer has to distribute SVG assets, which simplifies our build process.
-- Decreases bundle size as sprite sheets are now loaded inline in the HTML rather than being included in the JavaScript bundle.
+- Allows consumers to pick and choose which icons to include in their sprite sheet rather than being forced to load all of them
+- Cedar no longer has to distribute SVG assets, which simplifies our build process
+- Decreases bundle size as sprite sheets are now loaded inline in the HTML rather than being included in the JavaScript bundle
 
-See the [deprecated icon components](#deprecated-icon-components) section for more information on updating your icon usage.
+For more information on updating your icon usage, see the [deprecated icon components](#deprecated-icon-components) section.
+
+### UI Toolkit Update
+
+#### File Structure
+
++ The toolkit is now broken out into three versions—vCurrent, vLegacy, and vNext. vCurrent will include the Fall 2019 UI toolkit changes. vLegacy includes the previous release. vNext is a preview into future releases and is not officially supported
++ The file structures have changed. Web, Native, Tokens, and Icons are now seperate master files and libraries 
+
+#### Sticker Sheet
+
+Sticker sheets have been included in Web, Native, Token, and Icon libraries. To use the sticker sheet, [link the library](../../getting-started/as-a-designer/#using-the-toolkit) you need, select the sticker sheet from Symbols, right-click the sticker sheet, select "Detach from Symbol", ungroup, and copy or paste as needed. 
+
+#### Select Component
+A new Select component is available for use in the web components toolkit and the sticker sheet. For more information, see the [Select](../../components/selects/) page.
 
 ### Icon Contribution
 
-- We have updated the [guidelines for contributing icons](/icons/resources/#contribution-process) to the [CDR · Icon Contribution](https://share.goabstract.com/99335c38-51ee-41c8-8454-38c2a70c4c7f) Project
-- We have also made minor updates to the [CDR Icons • vCurrent](https://share.goabstract.com/e9186773-0cc3-43a6-b7ff-54b163d95e00?sha=a814b05c391c93f5a7d39ce9508cd5238ae8fe0e) libray to make icon symbols more consistent. For linking instructions, see the guide to using the [Cedar UI Toolkit](/getting-started/as-a-designer/#cedar-ui-toolkit).
-- We have also written a new sketch plugin to help you [export Cedar compliant icons that are not in the icon repo](/icons/resources/#exporting-icons-that-aren’t-in-the-library).
+- The [guidelines for contributing icons](../../icons/resources/#contribution-process) to the [CDR · Icon Contribution](https://share.goabstract.com/99335c38-51ee-41c8-8454-38c2a70c4c7f) project has been updated
+- Minor updates to the [CDR Icons • vCurrent](https://share.goabstract.com/e9186773-0cc3-43a6-b7ff-54b163d95e00?sha=a814b05c391c93f5a7d39ce9508cd5238ae8fe0e) libray to make icon symbols more consistent. For linking instructions, see the [Cedar UI Toolkit](../../getting-started/as-a-designer/#cedar-ui-toolkit) page
+- A new Sketch plugin has been added to help you [export Cedar-compliant icons that are not in the icon repo](../../icons/resources/#exporting-icons-that-aren’t-in-the-library)
 
 ### SVG in Icon Slot
 
-- `CdrIcon` now accepts full svg markup in the slot.
-- All attributes, classes, listeners, etc. will be preserved with the exception of `viewBox`, `role`, and `xmlns`.
-- See the [Icon component documenation](/components/icon/?active-tab=api#_2-non-cedar-svg) for an example.
+- `CdrIcon` now accepts full SVG markup in the slot
+- All attributes, classes, listeners, etc. will be preserved with the exception of `viewBox`, `role`, and `xmlns`
+- For more information and examples, see the [Icon Component](../../components/icon/?active-tab=api#_2-non-cedar-svg) page
 
 ### Deprecated Mixin Warnings
 
-The `cdr-tokens` package now emits warnings if it detects that you are using deprecated mixins in your SCSS. You can disable this by setting a SCSS variable `$cdr-warn: false;` in any scope that you are using `cdr-tokens` in. Note that these warnings are only emitted by mixins in the SCSS build and will not trigger for tokens or if you are using LESS.
+The `cdr-tokens` package now emits warnings if it detects that you are still using deprecated mixins in your SCSS. You can disable these warnings by setting a SCSS variable `$cdr-warn: false;` in any scope where you are using `cdr-tokens`. Note that these warnings are only emitted by mixins in the SCSS build and will not trigger for tokens or if you are using LESS.
 
-### Button/CTA full-width@bp
+### Button / CTA Full-Width at Breakpoint
 
-The [Button](/components/buttons/?active-tab=api) and [CTA](/components/cta/?active-tab=api) components now support setting `full-width` as either a boolean value or a list of responsive breakpoints. For example, `full-width: "@xs @lg"` would make that component be full-width at the extra small and large breakpoints. We have also resolved a bug where the full-width attribute could be overridden by a responsive size breakpoint.
+The [Button](../../components/buttons/?active-tab=api) and [CTA](../../components/cta/?active-tab=api) components now support setting `full-width` as either a boolean value or as a list of responsive breakpoints. For example, `full-width: "@xs @lg"` would make that component be full-width at the extra small and large breakpoints. A bug where the full-width attribute could be overridden by a responsive size breakpoint has also been resolved.
 
 ### Link Scoped Slots for Pagination and Breadcrumb
 
-In order to support client side routing we have updated [breadcrumb](/components/pagination/#link-scoped-slots) and [pagination](/components/breadcrumb/#link-scoped-slot) to expose  [scopedSlots](https://vuejs.org/v2/guide/components-slots.html#Scoped-Slots-with-the-slot-scope-Attribute) that allow consumers to override the default anchor links that are normally rendered by these components.
+In order to support client-side routing, [breadcrumb](../../components/pagination/#link-scoped-slots) and [pagination](../../components/breadcrumb/#link-scoped-slot) components have been updated to expose [scopedSlots](https://vuejs.org/v2/guide/components-slots.html#Scoped-Slots-with-the-slot-scope-Attribute) that allow consumers to override the default anchor links that are normally rendered by these components.
 
 ### Input and Button Bind All Listeners
 
-Rather than only binding specific listeners (like `on-click`), the [input](/components/input/?active-tab=api#events) and
-[button](/components/button/?active-tab=api#events) components will now bind any event listeners attached to them to their root component. i.e, `@click`, `@focus`, `@input`
+Rather than only binding specific listeners (like `on-click`), the [input](../../components/input/?active-tab=api#events) and
+[button](../../components/button/?active-tab=api#events) components will now bind any event listeners attached to their root component, i.e, `@click`, `@focus`, `@input`.
 
 ## Breaking Changes
 
 ### Tree Shaking / ES Module Build Changes
 
-Version 2.x.x of Cedar contained both CommonJS (`@rei/cedar/dist/cedar.cjs.js`) and ES Module (`@rei/cedar/dist/cedar.esm.js`) single file builds. The ES Module build was supposed to allow consumers to "tree shake" out any un-used Cedar code from their bundles. However due to a variety of issues involving Vue and Webpack our ES Module build was not actually tree shakeable for our consumers. To work around this, we are now exporting a multi-file build inside `@rei/cedar/dist/lib` which is also the `module` entry point for Cedar.
+Version 2.x.x of Cedar contained both CommonJS (`@rei/cedar/dist/cedar.cjs.js`) and ES Module (`@rei/cedar/dist/cedar.esm.js`) single-file builds. The ES Module build was supposed to allow consumers to "tree shake" out any un-used Cedar code from their bundles. However due to a variety of issues involving Vue and Webpack, our ES Module build was not actually tree-shakeable for our consumers. To work around this, we are now exporting a multi-file build inside `@rei/cedar/dist/lib` which is also the `module` entry point for Cedar.
 
-If you are on the latest version of FEBS (> 5.4.1) then you will get this change automatically when you update your Cedar version. Any app that is loading `@rei/cedar` should see a significant reduction in bundle size after this update.
+If you are on the latest version of FEBS (> 5.4.1), then you will get this change automatically when you update your Cedar version. Any app that is loading `@rei/cedar` should see a significant reduction in bundle size after this update.
 
 If you are not using FEBS, you will need to ensure that:
 
-- Your project is loading the `module` entry for Cedar
--- This should happen automatically if you are using ES6 style `import`/`export` syntax
--- If not, you will need to configure your build to resolve `@rei/cedar` to `node_modules/@rei/cedar/dist/lib/index.mjs`
-- Your build system is set up to process `mjs` files in node_modules.
--- In Webpack 4 this can be done with the `javascript/auto` loader: `{ test: /\.mjs$/, include: /node_modules/, type: "javascript/auto" }`.
--- This can also be achieved by running `node_modules/@rei/cedar` through Babel using `@babel/preset-env` and setting the `modules: false` (see [FEBS](https://github.com/rei/front-end-build-configs/blob/master/application/webpack.base.conf.js#L94-L126) for an example of this strategy)
+- Your project is loading the `module` entry for Cedar: This should happen automatically if you are using ES6 style `import`/`export` syntax. If not, you will need to configure your build to resolve `@rei/cedar` to `node_modules/@rei/cedar/dist/lib/index.mjs`
+- Your build system is set up to process `mjs` files in node_modules: In Webpack 4 this can be done with the `javascript/auto` loader `{ test: /\.mjs$/, include: /node_modules/, type: "javascript/auto" }`. This can also be achieved by running `node_modules/@rei/cedar` through Babel using `@babel/preset-env` and setting the `modules: false` (for an example on this strategy, see [FEBS](https://github.com/rei/front-end-build-configs/blob/master/application/webpack.base.conf.js#L94-L126))
 
-Cedar is still exporting a single file CommonJS build (`dist/cedar.js`). This is appropriate to use in development or test environments but should be avoided in production as it cannot be tree-shaken.
+Cedar is still exporting a single-file CommonJS build (`dist/cedar.js`). This is appropriate to use in development or test environments, but should be avoided in production as it cannot be tree-shaken.
 
 ### SSR Optimized Builds Are No Longer Being Exported
 
@@ -108,7 +118,7 @@ Teams can still create SSR optimized builds themselves using either `vue-loader`
 
 ### Stateless Accordion
 
-CdrAccordion has been refactored to remove internal state tracking for toggling open and closed. For simplicity, the CdrAccordionItem component has been removed and its functionality merged with CdrAccordion. The `show` prop has been renamed to `opened` for clarity. Please review the [updated API and usage examples](/components/accordion/) for more information.
+CdrAccordion has been refactored to remove internal state tracking for toggling open and closed. For simplicity, the CdrAccordionItem component has been removed and its functionality merged with CdrAccordion. The `show` prop has been renamed to `opened` for clarity. For more inforamtion, please review the [API and usage examples](../../components/accordion/).
 
 Before:
 
@@ -158,7 +168,7 @@ export default {
 
 ### Large Breakpoint Value Corrected
 
-The token value for the large breakpoint was updated to the correct value of `1232px` (it had previously been incorrectly set to `1200px`). If you are hard-coding any breakpoint values in your project you will need to update those to use the breakpoint values from cdr-tokens instead. If you have been using the breakpoint tokens then you just need to update your version of cedar and cdr-tokens.
+The token value for the large breakpoint was updated to the correct value of `1232px`. If you are hard-coding any breakpoint values in your project, you will need to update those to use the breakpoint values from cdr-tokens instead. If you were already using the breakpoint tokens, then you just need to update your version of Cedar and cdr-tokens.
 
 ### Letter Spacing Values Corrected
 
@@ -166,42 +176,44 @@ The letter spacing values for our text tokens have been corrected to add the `px
 
 ### CdrRadio Value Prop Is Now CustomValue
 
-In an effort to make our form components more consistent, we have changed [CdrRadio](/components/radio/?active-tab=api) to use the `customValue` prop instead of `value`. This is the same pattern that CdrCheckbox uses.
+In an effort to make our form components more consistent, we have changed [CdrRadio](../../components/radio/?active-tab=api) to use the `customValue` prop instead of `value`. This is the same pattern that CdrCheckbox uses.
 
 - Before: `<cdr-radio v-model="x" value="foo"/>`
 - After: `<cdr-radio v-model="x" customValue="foo"/>`
 
 ### CdrPagination, CdrSelect, and CdrRadio v-model Binding
 
-In an effort to make our components that use `v-model` more consistent we have changed the property bindings for CdrPagination, CdrSelect, and CdrRadio to use the same `value` prop and `@input` event pattern that [v-model sets up by default](https://vuejs.org/v2/guide/components.html#Using-v-model-on-Components). This change will only affect consumers using JSX or other templating languages which do not have access to Vue directives like v-model. If you were already using v-model with these components then you do not need to change anything.
+In an effort to make our components that use `v-model` more consistent, we have changed the property bindings for CdrPagination, CdrSelect, and CdrRadio to use the same `value` prop and `@input` event pattern that [v-model sets up by default](https://vuejs.org/v2/guide/components.html#Using-v-model-on-Components). This change will only affect consumers using JSX or other templating languages which do not have access to Vue directives like v-model. If you were already using v-model with these components, then you do not need to change anything.
 
 - CdrPagination: `currentPage` is now `value`
 - CdrSelect: `extVal` is now `value`
-- CdrRadio: `modelValue` is now `value` [also see note about value/customValue](#cdrradio-value-prop-is-now-customvalue)
+- CdrRadio: `modelValue` is now `value` [See note about value/customValue](#cdrradio-value-prop-is-now-customvalue)
 
-### CdrButton now uses @ bindings for events
+### CdrButton Now Uses Bindings for Events
 
-Rather than pass in an `onClick` event handler as a prop, [CdrButton](/components/buttons/?active-tab=api) will now bind any listened attached to it. Update `onClick` to be `@click` anywhere you are binding an event to a CdrButton.
+Rather than pass in an `onClick` event handler as a prop, [CdrButton](../../components/buttons/?active-tab=api) will now bind any listener attached to it. Update `onClick` to be `@click` wherever you are binding an event to a CdrButton.
 
 - Before: `<cdr-button onClick="yourClickHandlerFunction" />`
 - After: `<cdr-button @click="yourClickHandlerFunction" />`
 
-### CdrTabs emits `tab-change` instead of `tabChange`
+### CdrTabs Emits `tab-change` Instead of `tabChange`
 
-Vue expects event names to use kebab case and not camel case, so the `tabChange` event on [CdrTabs](/components/tabs/?active-tab=api) could cause issues for some users. CdrTabs now emits a `tab-change` event instead.
+Vue expects event names to use kebab case and not camel case, so the `tabChange` event on [CdrTabs](../../components/tabs/?active-tab=api) could cause issues for some users. CdrTabs now emits a `tab-change` event instead.
 
 - Before: `<CdrTabs @tabChange="handler" />`
 - After: `<CdrTabs @tab-change="handler" />`
 
 ## Deprecations
 
-Whenever possible and practical the Cedar team will deprecate features rather than issue outright breaking changes in order to allow teams some time to update their codebases. Features will be removed from the doc site when they are deprecated to ensure that they are no longer used in new code.
+Whenever possible and practical, the Cedar team will deprecate features rather than issue outright breaking changes in order to allow teams some time to update their codebases. Features will be removed from the doc site when they are deprecated to ensure that they are no longer used in new code.
 
 ### Deprecated Typography/Headings
 
-The cdr-text modifiers specific to headings have been deprecated. This update normalizes cdr-text modifiers with our other cedar component modifiers. Moving forward users will be expected and able to define a unique heading value for each breakpoint.
+"REI Stuart App" and "Graphik App" have replaced Sentinel heading styles. Designers with linked UI Toolkit libraries in Abstract will receive an automatic update of web component styles, but will need to link two new libraries (if they haven't already): icons and tokens. For more information on linking libraries in Abstract, see the [Designers Getting Started](../..getting-started/as-a-designer/) guidelines.  
 
-New modifiers have been added supporting the update to typography and the names have been extended to account for the size options now available to each heading family.
+The cdr-text modifiers specific to headings have been deprecated. This update normalizes cdr-text modifiers with our other Cedar component modifiers. Going forward, users will be able to define a unique heading value for each breakpoint.
+
+New modifiers have been added supporting the update to typography. The names have been extended to account for the size options now available to each heading family.
 
 The following diagram provides a rough guideline of legacy modifier names to the general equivalent.
 
@@ -218,14 +230,13 @@ The following diagram provides a rough guideline of legacy modifier names to the
 | heading-small-static     | heading-400                                |
 | subheading               | subheading-300                             |
 
-In addition to the heading changes listed above, the paragraph modifier `body` is now also deprecated without a replacement. Moving forward we only support the generic non modified styling for paragraphs.
-#### more infomation
--  [Headings](/components/headings)
--  [Paragraphs](/components/paragraphs)
+In addition to the heading changes listed above, the paragraph modifier `body` is now also deprecated without a replacement. Moving forward, we will only support the generic non-modified styling for paragraphs.
+
+For more infomation, see [Headings](../../components/headings) and [Paragraphs](../../components/paragraphs).
 
 ### Deprecated Tokens and Mixins
 
-In order to support the updates to typography, we have re-named some Cedar tokens related to headings. Please see the chart below for guidance on how to re-map the deprecated tokens and mixins
+In order to support the updates to typography, we have re-named some Cedar tokens related to headings. Please see the chart below for guidance on how to re-map the deprecated tokens and mixins.
 
 | Deprecated token/mixin  | Equivalent token/mixin |
 |-------------------------|-------------------------|
@@ -293,7 +304,7 @@ In order to support the updates to typography, we have re-named some Cedar token
 | cdr-text-editorial-compact-size | cdr-text-default-size |
 | cdr-text-editorial-compact-height | cdr-text-default-height |
 
-Additionally, we have new mixins available to replace the previously deprecated `spruce-display` typography mixins. Replacements for the `redwood` and `maple` mixins will be coming in a future cedar release, see the  [v1 token migration docs](https://confluence.rei.com/display/TP/v1+Token+Migration) for more info on how to handle the deprecated pre-release tokens if you haven't already.
+Additionally, we have new mixins available to replace the previously deprecated `spruce-display` typography mixins. Replacements for the `redwood` and `maple` mixins will be coming in a future Cedar release. See the  [v1 token migration](https://confluence.rei.com/display/TP/v1+Token+Migration) documents for more information on how to handle the deprecated pre-release tokens (if you haven't already).
 
 | Deprecated mixin   | Equivalent mixin      |
 |--------------------|-----------------------|
@@ -310,9 +321,9 @@ Additionally, we have new mixins available to replace the previously deprecated 
 | spruce-display-00  | cdr-text-heading-300  |
 
 ### Deprecated Utility Classes
-#### Alignment classes
+#### Alignment Classes
 
-The utility alignment classes have been deprecated and updated to bring them in line with the latest token names. In addition they have been extended to support each of the breakpoint only options.
+The utility alignment classes have been deprecated and updated to bring them inline with the latest token names. In addition, they have been extended to support each of the breakpoint-only options.
 
 | Deprecated class name        | Equivalent class name        |
 |------------------------------|------------------------------|
@@ -342,9 +353,9 @@ The utility alignment classes have been deprecated and updated to bring them in 
 |                              | cdr-align-center-block@md    |
 |                              | cdr-align-center-block@lg    |
 
-#### Display classes
+#### Display Classes
 
-The utility visibility and accessibility classes have been deprecated and updated to bring them in line with the latest token names. Below find a map to migrate to the new names
+The utility visibility and accessibility classes have been deprecated and updated to bring them inline with the latest token names. Please see the map below to review the new names. 
 
 | Deprecated class name         | Equivalent class name       |
 |-------------------------------|-----------------------------|
@@ -407,11 +418,13 @@ The utility visibility and accessibility classes have been deprecated and update
 
 With the release of the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/), we are deprecating the "single icon" components (i.e, `IconArrowDown`, `IconCart`, etc.) as well as  `CdrIconSprite`. These components will be removed in a future release.  
 
-- If you were using the single icon components, you should update them to use `CdrIcon` and the `use` attribute instead, and follow the instructions below to create and load a sprite sheet.
+If you were using the single icon components, you should update them to use `CdrIcon` and the `use` attribute instead, and follow the instructions below to create and load a sprite sheet.
 
-- If you were using CdrIconSprite, you should use the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) to create an SVG file containing all the icons required for your application. You will then need to render that SVG file somewhere in your application. The best place to do this is inline in your root HTML template rather than in the JavaScript. This ensures that when your app is server-side rendered that the sprite sheet is only rendered one time, rather than being included in both the HTML and the JavaScript files. There are various ways to do this depending on how your application is built, but if you are using the standard REI micro-site architecture built on spring-boot/thymeleaf you can load the sprite sheet as follows:
+If you were using CdrIconSprite, you should use the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) to create an SVG file containing all the icons required for your application. You will then need to render that SVG file somewhere in your application. The best place to do this is inline with your root HTML template rather than in the JavaScript. 
 
-1. Create a new template named `resources/templates/icon-sprite.html` and copy paste your generated SVG file into it:
+This ensures that when your app is server-side rendered, the sprite sheet is only rendered one time, rather than being included in both the HTML and the JavaScript files. There are various ways to do this depending on how your application is built, but if you are using the standard REI micro-site architecture built on spring-boot or thymeleaf, you can load the sprite sheet as follows:
+
+1. Create a new template named `resources/templates/icon-sprite.html` and copy your generated SVG file into it:
 
 ```
 <!DOCTYPE html>
@@ -431,6 +444,6 @@ With the release of the [Cedar Icon Library](https://rei.github.io/cedar-icons/#
 ```
 ### Breadcrumb Truncation/SSR
 
-In order to fix an issue with server-side rendering, as well as to simplify the API of [CdrBreadcrumb](/components/breadcrumb/), we have removed the `truncationThreshold` and `truncationXSThreshold` attributes. Instead, the `truncationEnabled` attr can be used to control whether or not the breadcrumb should be truncated. This change will not break any existing consumers of breadcrumb even if they are using those attributes.
+In order to fix an issue with server-side rendering, as well as to simplify the API of [CdrBreadcrumb](../../components/breadcrumb/), we have removed the `truncationThreshold` and `truncationXSThreshold` attributes. Instead, the `truncationEnabled` attr can be used to control whether or not the breadcrumb should be truncated. This change will not break any existing consumers of breadcrumb even if they are using those attributes.
 
 </cdr-doc-table-of-contents-shell>
