@@ -70,7 +70,7 @@ Semantic naming
   - Your component must visually match an existing Cedar component, but not it's functionality. For example, a `vue-router` link component that looks like a `CdrLink` component
   - Your project requires the smallest possible bundle size, and your team is willing to take on the additional maintenance cost of using component variables instead of the Vue.js Cedar components
 
-## Don't’t Use When
+## Don't Use When
   - Do not use the component variables in a non-semantic way. For example, `cdr-button-base-border-radius` should only ever be used to style the border radius of a button element
   - Do not use component variables to publish clones or forks of existing Cedar components. Instead, work with the Cedar team to find a long term solution to support your use case
   
