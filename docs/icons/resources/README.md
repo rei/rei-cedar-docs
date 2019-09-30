@@ -26,7 +26,7 @@ Icons are available in SVG format at 24px, and can be displayed using the Icon C
 
 The Cedar Icon component (cdr-icon) is intended to consume icons hosted in the Cedar Icon Library.
 
-For information about using the Cedar Icon API, design guidelines, and accessibility considerations, visit the [Icon component](/components/icon/) article.
+For information about using the Cedar Icon API, design guidelines, and accessibility considerations, visit the [Icon component](components/icon/) article.
 
 ## Icon Library and Naming
 Cedar has a library of reusable icons with names and descriptive tags.
@@ -84,7 +84,7 @@ These rules are subjective, and can be bent or broken.
 - 1px radius rounded edges and terminals
 - Pixel aligned for proper anti-aliasing and rasterizing
 
-For more style guidelines, see the [Iconography](/icons/iconography/) article.
+For more style guidelines, see the [Iconography](icons/iconography/) article.
 
 **Dimensions**  
 Icons must be created at 24x24px size format. However, they can be displayed in any one of three sizes:
@@ -105,7 +105,7 @@ Alternately, the icon library API also provides [sprite generation](https://gith
 1. In Abstract, create a new branch of the [CDR - Icon Contribution](https://share.goabstract.com/99335c38-51ee-41c8-8454-38c2a70c4c7f) project.
 2. Open the **Icon Contribution Area** file.
 3. Duplicate the **Template (Right-click > Duplicate Page)** for each new icon or set of icons. (It is ok to leave alternate versions on the page, but please indicate the final version.)
-4. Follow the [Iconography](/icons/iconography/) guidelines to ensure that your icon follows Cedar’s requirements.
+4. Follow the [Iconography](icons/iconography/) guidelines to ensure that your icon follows Cedar’s requirements.
 5. Make a final version of your icon and add it as a page. Each new icon or set should have its own page.
 6. Add a member of the Cedar team as a reviewer. 
 7. Your icon will be merged into the **CDR Icons • vNext** library and released in the next version of Cedar. 
@@ -114,7 +114,7 @@ Alternately, the icon library API also provides [sprite generation](https://gith
 
 1. Download and install the latest release of the [Cedar SVGO Compressor Sketch plugin](https://github.com/rei/rei-cedar-sketch-svgo-compressor/releases/latest). Click **Assets > To Install**.
 2. Follow the usage directions for proper icon export in the plugin [readme](https://github.com/rei/rei-cedar-sketch-svgo-compressor#cedar-svgo-compressor).
-3. Send your SVG file to your developer for use with the [CdrIcon component](/components/icon/).
+3. Send your SVG file to your developer for use with the [CdrIcon component](components/icon/).
 
 **Note:** Icons in the _CDR Icons • vNext_ library may not be in the library yet.
 

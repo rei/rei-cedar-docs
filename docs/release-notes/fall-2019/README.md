@@ -16,7 +16,7 @@
 
 ## Update Steps
 
-If you are not already on Cedar 2.x.x, you will first need to [upgrade your project](/release-notes/summer-2019/) to the single-package version of Cedar.
+If you are not already on Cedar 2.x.x, you will first need to [upgrade your project](release-notes/summer-2019/) to the single-package version of Cedar.
 
 ### For a Micro-Site
 
@@ -180,7 +180,7 @@ The letter spacing values for our text tokens have been corrected to add the `px
 
 ### CdrRadio Value Prop Is Now CustomValue
 
-In an effort to make our form components more consistent, we have changed [CdrRadio](/components/radio/?active-tab=api) to use the `customValue` prop instead of `value`. This is the same pattern that CdrCheckbox uses.
+In an effort to make our form components more consistent, we have changed [CdrRadio](components/radio/?active-tab=api) to use the `customValue` prop instead of `value`. This is the same pattern that CdrCheckbox uses.
 
 - Before: `<cdr-radio v-model="x" value="foo"/>`
 - After: `<cdr-radio v-model="x" customValue="foo"/>`
@@ -202,7 +202,7 @@ Rather than pass in an `onClick` event handler as a prop, [CdrButton](/component
 
 ### CdrTabs Emits `tab-change` Instead of `tabChange`
 
-Vue expects event names to use kebab case and not camel case, so the `tabChange` event on [CdrTabs](/components/tabs/?active-tab=api) could cause issues for some users. CdrTabs now emits a `tab-change` event instead.
+Vue expects event names to use kebab case and not camel case, so the `tabChange` event on [CdrTabs](components/tabs/?active-tab=api) could cause issues for some users. CdrTabs now emits a `tab-change` event instead.
 
 - Before: `<CdrTabs @tabChange="handler" />`
 - After: `<CdrTabs @tab-change="handler" />`
@@ -448,6 +448,6 @@ This ensures that when your app is server-side rendered, the sprite sheet is onl
 ```
 ### Breadcrumb Truncation/SSR
 
-In order to fix an issue with server-side rendering, as well as to simplify the API of [CdrBreadcrumb](/components/breadcrumb/), we have removed the `truncationThreshold` and `truncationXSThreshold` attributes. Instead, the `truncationEnabled` attr can be used to control whether or not the breadcrumb should be truncated. This change will not break any existing consumers of breadcrumb even if they are using those attributes.
+In order to fix an issue with server-side rendering, as well as to simplify the API of [CdrBreadcrumb](components/breadcrumb/), we have removed the `truncationThreshold` and `truncationXSThreshold` attributes. Instead, the `truncationEnabled` attr can be used to control whether or not the breadcrumb should be truncated. This change will not break any existing consumers of breadcrumb even if they are using those attributes.
 
 </cdr-doc-table-of-contents-shell>
