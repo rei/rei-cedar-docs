@@ -20,7 +20,7 @@ Cedar supports multiple tools and consumption methods. Reference the information
 ### UI Toolkit
 The Sketch UI Toolkit maintained by Cedar includes all published components and foundational styles.
 
-For more information about using the UI Toolkit, visit the [Getting Started for Designers](getting-started/as-a-designer/) article.
+For more information about using the UI Toolkit, visit the [Getting Started for Designers](../as-a-designer/) article.
 
 ### Design Tokens
 Design tokens are special variables used to maintain a scalable visual system for UI development and brand consistency. Cedar design tokens store the visual design attributes that define the foundation of REI’s visual language, including color, typography, and spacing. 
@@ -28,7 +28,7 @@ Design tokens are special variables used to maintain a scalable visual system fo
 For example:
 `cdr-color-text-primary-lightmode` would be used to set the primary text color on a light background.
 
-For more information about design tokens, read the [Design Tokens](components/design-tokens/) article.
+For more information about design tokens, read the [Design Tokens](../../components/design-tokens/) article.
 
 ### Components
 Components use Cedar’s tokens and design foundations to distribute code templates that extend basic HTML elements and encapsulate reusable code.
@@ -43,7 +43,7 @@ Component variables are available for a subset of Cedar components. These SCSS o
 For example:
 `cdr-link-base-mixin` would be used to style an element like a CdrLink component.
 
-For more information on  Component variables, visit the [Component Variables](components/component-variables/) article.
+For more information on  Component variables, visit the [Component Variables](../../components/component-variables/) article.
 
 ### Utilities
 Utility CSS classes allow users to extend Cedar components by providing options for layout, such as spacing, text alignment, or element display.
@@ -51,7 +51,7 @@ Utility CSS classes allow users to extend Cedar components by providing options 
 For example:
 `cdr-align-text-center` would be used to align text to the center.
 
-Find the list of Utility classes in the [Utilities](components/utilities/) article.
+Find the list of Utility classes in the [Utilities](../../components/utilities/) article.
 
 
 ### Documentation Site
