@@ -1,6 +1,6 @@
 ---
 {
-  "title": "Selects",
+  "title": "Select",
   "layout_type": "LayoutComponent",
   "summary": "Select dropdown component",
   "title_metadata": "Dropdown, CdrSelect, cdr-select",
@@ -70,14 +70,7 @@
             ],
             "events": [
               {
-                "name": "change",
-                "arguments": "selectedValue, event",
-                "description": "$emit event fired on select change. Emits an array as selectedValue if `multiple` prop is true."
-              },
-              {
-                "name": "input",
-                "arguments": "selectedValue, event",
-                "description": "$emit event fired on select change. Emits an array as selectedValue if `multiple` prop is true."
+                "description": "All event listeners are passed through to the <select> element."
               }
             ],
             "slots": [
