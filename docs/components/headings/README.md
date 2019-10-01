@@ -381,7 +381,7 @@ The following type styles should be used when contextual styles (above) are not 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-text modifier="heading-600">
+  <cdr-text modifier="subheading-600">
     When you gear up, we give back
   </cdr-text>
 ```
@@ -392,7 +392,7 @@ The following type styles should be used when contextual styles (above) are not 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-text modifier="heading-500">
+  <cdr-text modifier="subheading-500">
     When you gear up, we give back
   </cdr-text>
 ```
@@ -403,7 +403,7 @@ The following type styles should be used when contextual styles (above) are not 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-text modifier="heading-400">
+  <cdr-text modifier="subheading-400">
     When you gear up, we give back
   </cdr-text>
 ```
@@ -414,7 +414,7 @@ The following type styles should be used when contextual styles (above) are not 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-text modifier="heading-300">
+  <cdr-text modifier="subheading-300">
     When you gear up, we give back
   </cdr-text>
 ```
