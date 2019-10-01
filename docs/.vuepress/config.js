@@ -120,7 +120,7 @@ module.exports = {
           { text: "Pull Quote", link: "/components/pull-quote/" },
           { text: "Radio Buttons", link: "/components/radio/" },
           { text: "Ratings", link: "/components/rating/" },
-          { text: "Selects", link: "/components/selects/" },
+          { text: "Select", link: "/components/selects/" },
           { text: "Tabs", link: "/components/tabs/" }
         ]
       },

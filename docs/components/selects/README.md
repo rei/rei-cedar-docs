@@ -1,6 +1,6 @@
 ---
 {
-  "title": "Selects",
+  "title": "Select",
   "layout_type": "LayoutComponent",
   "summary": "Select dropdown component",
   "title_metadata": "Dropdown, CdrSelect, cdr-select",
@@ -144,7 +144,7 @@
             ],
             "events": [
               {
-                "description": "All event listeners are passed through to the <input> element."
+                "description": "All event listeners are passed through to the <select> element."
               }
             ],
             "slots": [
