@@ -103,6 +103,12 @@
                 "description": "Sets the ratio between breadcrumb path width and container width when truncation will occur at the XS breakpoint."
               }
             ],
+            "scopedSlots": [
+              {
+                "name": "link",
+                "description": "Scoped slot used to override the default links used in the breadcrumb. Useful for integrating with client-side routing. The slot scope exposes the following attributes: class, href, and content."
+              }
+            ],
           }
         }
       ],
@@ -153,6 +159,33 @@ Long breadcrumb path shortened to display the last 2 items with hidden links ind
 ```
 </cdr-doc-example-code-pair>
 
+## Link Scoped Slot
+
+Can be used to override the default links rendered in the breadcrumb. Useful for integrating with client side routing, as a `router-link` can be rendered instead of a plain `a` tag.  The `slot-scope` exposed includes:
+
+- `class`: CSS class to be applied to your override element to match the breadcrumb styling
+- `href`: the path that the link points to
+- `content`: the text content of that link
+
+<cdr-doc-example-code-pair repository-href="/src/components/breadcrumb" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight= false>
+
+```html
+<cdr-breadcrumb :items="[
+  {item:{url:'/snowboarding', name: 'Snowboarding'}},
+  {item:{url:'/snowboarding/clothing', name: ' Clothing'}}
+]">
+  <template
+    slot="link"
+    slot-scope="link"
+  >
+    <div :class="link.class" @click="console.log(link.href)">
+      {{ link.content }}
+    </div>
+  </template>
+</cdr-breadcrumb>
+```
+</cdr-doc-example-code-pair>
+
 ## Accessibility
 
 
@@ -171,7 +204,7 @@ This component has compliance with WCAG guidelines by:
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Design Guidelines">
+<template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
 
 ## Use When
@@ -179,20 +212,14 @@ This component has compliance with WCAG guidelines by:
 - Helping users understand where they are within the site hierarchy
 - Providing a shortcut to explore similar products within common parent categories
 
-### Don’t Use When
+## Don't’t Use When
 
 - Displaying a top-level page, such as a home or high level category page
 - Linking to previous steps of a sequential process
 
-## Foundations
+## The Basics
 
 - Avoid displaying breadcrumbs on non-white backgrounds
-- Within a breadcrumb, link styles are adapted:
-  - Ancestor links are displayed as $sys-color-taken-for-granite
-  - Last child link is emphasized as $sys-color-heart-of-darkness
-- Emphasize breadcrumb hover states with the  $sys-color-heart-of-darkness color and an underline
-
-<cdr-img class="cdr-doc-article-img" alt="Breadcrumb hover state is emphasized using link color and underline" :src="$withBase(`/breadcrumb/Spec__Breadcrumb_Long_16-2.png`)" />
 
 ## Content
 - Always align breadcrumb labels with page names that are the destination of that breadcrumb
@@ -213,7 +240,12 @@ Breadcrumbs provide context and a sense of place. This is especially important o
 - Always retain the full location path in page markup, even if shortened due to responsive styling
 - Display the complete breadcrumb path—not just the previous item—when an ellipsis is clicked or tapped
 - When full breadcrumbs path is displayed, it may wrap to 2 or more lines
-- Refer to API documentation for how to customize breadcrumb truncation width
+- Refer to API documentation for how to customize breadcrumb truncation width- Within a breadcrumb, link styles are adapted:
+  - Ancestor links are displayed as $sys-color-taken-for-granite
+  - Last child link is emphasized as $sys-color-heart-of-darkness
+- Emphasize breadcrumb hover states with the  $sys-color-heart-of-darkness color and an underline
+
+<cdr-img class="cdr-doc-article-img" alt="Breadcrumb hover state is emphasized using link color and underline" :src="$withBase(`/breadcrumb/Spec__Breadcrumb_Long_16-2.png`)" />
 
 
 ### Do / Don't
@@ -221,10 +253,6 @@ Breadcrumbs provide context and a sense of place. This is especially important o
 
 
 ### Truncation
-
-Truncate breadcrumbs at 80% width of the screen’s content container except for mobile (that truncates at 100%) as shown below
-
-<cdr-img class="cdr-doc-article-img" alt="breadcrumbs truncated to 80 percent of the container" :src="$withBase(`/breadcrumb/Spec__Breadcrumb_Truncated_with_Grid_16-4.png`)" />
 
 Indicate hidden links using an ellipsis
 
@@ -254,6 +282,10 @@ Truncate breadcrumbs left to right to show the final two links in the trail, so 
 ## Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props"/>
+
+## Scoped Slots
+
+<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.scopedSlots" />
 
 ## Usage
 

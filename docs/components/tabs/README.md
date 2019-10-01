@@ -52,7 +52,7 @@
       "caption": "use all caps for tab labels."
     }
   ],
-    "label": [
+  "label": [
     {
       "type": "do",
       "image": "tabs/tab_label_do_16-9.png",
@@ -93,7 +93,7 @@
             ],
             "events": [
               {
-                "name": "tabChange",
+                "name": "tab-change",
                 "arguments": "state, tabId",
                 "description": "$emit event fired when the active tab has been changed."
               }
@@ -219,7 +219,7 @@ This component has compliance with WCAG guidelines by:
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Design Guidelines">
+<template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
 
 ## Use When
@@ -229,13 +229,13 @@ This component has compliance with WCAG guidelines by:
 - Grouping content to display horizontally
 - Content is lengthy and can be broken into discrete parts
 
-### Don’t Use When
+## Don't’t Use When
 
 - Grouping content to display vertically. Instead, use [Accordion](../accordion/)
 - Creating primary navigation that links to other pages
 - Comparing related content. Instead, use [Data Tables](../data-tables/)
 
-## Foundations
+## The Basics
 
 - Never display disabled tab labels
 - Remove tab button if there is no content

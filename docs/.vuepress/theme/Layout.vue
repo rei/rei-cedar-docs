@@ -3,6 +3,7 @@
     :class="pageClasses"
     @touchstart="onTouchStart"
     @touchend="onTouchEnd">
+    <div v-html="iconSprite" style="display: none"/>
     <div class="cdr-doc-page-shell">
       <div class="cdr-doc-page-shell__side-navigation">
         <div class="cdr-doc-side-navigation">
@@ -31,18 +32,19 @@
 <script>
 import Vue from 'vue'
 import nprogress from 'nprogress'
+import iconSprite from '@rei/cedar-icons/dist/all-icons.svg';
 import Home from './Home.vue'
 import Navbar from './Navbar.vue'
 import Page from './Page.vue'
 import Sidebar from './Sidebar.vue'
 import { pathToComponentName } from '@app/util'
 import { resolveSidebarItems } from './util'
-
 export default {
   components: { Home, Page, Sidebar, Navbar },
   data () {
     return {
-      isSidebarOpen: false
+      isSidebarOpen: false,
+      iconSprite
     }
   },
 
@@ -102,20 +104,7 @@ export default {
   mounted () {
     // update title / meta tags
     this.currentMetaTags = []
-    const updateMeta = () => {
-      document.title = this.$title
-      document.documentElement.lang = this.$lang
-      const meta = [
-        {
-          name: 'description',
-          content: this.$description
-        },
-        ...(this.$page.frontmatter.meta || [])
-      ]
-      this.currentMetaTags = updateMetaTags(meta, this.currentMetaTags)
-    }
-    this.$watch('$page', updateMeta)
-    updateMeta()
+    this.updateMeta()
 
     // configure progress bar
     nprogress.configure({ showSpinner: false })
@@ -132,12 +121,45 @@ export default {
       this.isSidebarOpen = false
     })
   },
+  // Causing errors on route change -- just updating meta tags so I think we're ok
+  // watch: {
+  //   '$page': 'updateMeta',
+  // },
 
   beforeDestroy () {
-    updateMetaTags(null, this.currentMetaTags)
+    this.updateMetaTags(null, this.currentMetaTags)
   },
 
   methods: {
+    updateMeta() {
+      document.title = this.$title
+      document.documentElement.lang = this.$lang
+      const meta = [
+        {
+          name: 'description',
+          content: this.$description
+        },
+        ...(this.$page.frontmatter.meta || [])
+      ]
+      this.currentMetaTags = this.updateMetaTags(meta, this.currentMetaTags)
+    },
+    updateMetaTags (meta, current) {
+      if (current) {
+        current.forEach(c => {
+          document.head.removeChild(c)
+        })
+      }
+      if (meta) {
+        return meta.map(m => {
+          const tag = document.createElement('meta')
+          Object.keys(m).forEach(key => {
+            tag.setAttribute(key, m[key])
+          })
+          document.head.appendChild(tag)
+          return tag
+        })
+      }
+    },
     toggleSidebar (to) {
       this.isSidebarOpen = typeof to === 'boolean' ? to : !this.isSidebarOpen
     },
@@ -162,23 +184,6 @@ export default {
   }
 }
 
-function updateMetaTags (meta, current) {
-  if (current) {
-    current.forEach(c => {
-      document.head.removeChild(c)
-    })
-  }
-  if (meta) {
-    return meta.map(m => {
-      const tag = document.createElement('meta')
-      Object.keys(m).forEach(key => {
-        tag.setAttribute(key, m[key])
-      })
-      document.head.appendChild(tag)
-      return tag
-    })
-  }
-}
 </script>
 
 <!-- <style src="prismjs/themes/prism-coy.css"></style> -->

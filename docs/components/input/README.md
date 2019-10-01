@@ -195,29 +195,7 @@
             ],
             "events": [
               {
-                "name": "input",
-                "arguments": "value, event",
-                "description": "Input event is emitted while typing with the current input value.",
-              },
-              {
-                "name": "blur",
-                "arguments": "event",
-                "description": "Blur event is emitted when input loses focus.",
-              },
-              {
-                "name": "focus",
-                "arguments": "event",
-                "description": "Focus event is emitted when input gains focus.",
-              },
-              {
-                "name": "paste",
-                "arguments": "event",
-                "description": "Paste event is emitted when text is pasted into input.",
-              },
-              {
-                "name": "keydown",
-                "arguments": "event",
-                "description": "Keydown event is emitted when a key is pressed.",
+                "description": "All event listeners are passed through to the <input> element."
               }
             ]
           }
@@ -359,10 +337,9 @@ Input field with link text on right.
 
 Input field with icon above input field on right.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrIcon, CdrIconSprite'})" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrIcon'})" :load-sprite="true" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
-<cdr-icon-sprite />
 <cdr-input
   v-model="defaultModel"
   label="Input label"
@@ -403,10 +380,9 @@ Input field with helper or hint text below input field.
 
 Input field with icon inserted into input field on left. Icon is decorative and not intended for any action.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrIcon, CdrIconSprite'})" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrIcon'})" :load-sprite="true" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
 
 ```html
-<cdr-icon-sprite />
 <cdr-input
   v-model="defaultModel"
   label="Input label"
@@ -427,10 +403,9 @@ Input field with icon inserted into input field on left. Icon is decorative and 
 
 Input field with icon inserted into input field on right. Icon is decorative and not intended for any action.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrIcon, CdrIconSprite'})" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrIcon'})" :load-sprite="true" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
 
 ```html
-<cdr-icon-sprite />
 <cdr-input
   v-model="defaultModel"
   label="Input label"
@@ -456,7 +431,7 @@ This component has compliance with WCAG guidelines by:
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Design Guidelines">
+<template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
 
 ## Use When
@@ -464,11 +439,11 @@ This component has compliance with WCAG guidelines by:
 - Entering data with a wide variety of responses
 - Searching for content
 
-### Don’t Use When
+## Don't’t Use When
 
 - Selecting from a specific set of options. Instead, use Selects
 
-## Foundations
+## The Basics
 
 - **Identifiable** - Input fields should indicate that users can enter information
 - **Findable** - It should be easy to find an input field among other elements

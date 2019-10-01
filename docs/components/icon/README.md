@@ -89,7 +89,7 @@
                 "name": "use",
                 "type": "string",
                 "default": "none",
-                "description": "Only on CdrIcon. Sets the href attribute for use with SVG symbol sprite (CdrIconSprite)."
+                "description": "Only on CdrIcon. Sets the href attribute for use with SVG symbol sprite (see @rei/cedar-icons)."
               },
               {
                 "name": "size",
@@ -137,35 +137,22 @@
 
 A collection of SVG icon files composed into a single file. This method provides a single server download request and caches icons for display. This is the most efficient way of displaying large numbers of icons.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/icon" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrIcon, CdrIconSprite'})" >
+See the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) to generate a sprite sheet for your project. You will need to ensure that your sprite contains all the Cedar icons used in your application, including those used in shared components. The generated sprite sheet should be rendered inline at the root of your HTML. You should avoid rendering the sprite sheet in JavaScript/Vue, as that will cause it to be included twice (once in the server rendered HTML, and once in the client side bundle).
+
+<cdr-doc-example-code-pair repository-href="/src/components/icon" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrIcon'})" :load-sprite="true">
 
 ```html
-  <cdr-icon-sprite />
-
   <cdr-icon use="#arrow-up" />
   <cdr-icon use="#arrow-down" />
 ```
 
 </cdr-doc-example-code-pair>
 
-## Individual Icon Components
-
-Display any icon separately. This may be the easiest way to use an icon on a page however it is not recommended for every circumstance. When using a large number of icons, it will generate multiple server requests and slow down performance.
-
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/icon" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'IconCaretUp, IconCaretDown'})" >
-
-```html
-  <icon-caret-up />
-  <icon-caret-down />
-```
-
-</cdr-doc-example-code-pair>
-
 ## Non-Cedar SVG
 
-Create a new SVG icon using any valid internal SVG markup. This method creates an outer SVG wrapper for accessibility and styles. This is not recommended if using a large number of icons.
+Create a new SVG icon using any valid SVG markup. The wrapping SVG element can be stripped (below) or maintained. Note that if it is not stripped `viewBox`, `role`, and `xmlns` attributes will not be preserved, all others will. This method creates an outer SVG wrapper for accessibility and styles. This is not recommended if using a large number of icons. 
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/icon" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair repository-href="/src/components/icon" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-icon>
@@ -220,7 +207,7 @@ W3C recommends using `<title>` and `<desc>` elements in SVG for assistive techno
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Design Guidelines">
+<template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
 
 ## Use When
@@ -230,7 +217,7 @@ W3C recommends using `<title>` and `<desc>` elements in SVG for assistive techno
 - Notifying users about status, such as the number of items in a shopping cart or a warning message
 - Conserving space for concepts that are difficult to depict, such as the progress icon or the 3-line “hamburger” menu
 
-## Foundations
+## The Basics
 ### Sizes
 Icons are available in three sizes: small (16px), medium (24px), and large (32px).  Default size is 24px; however designers can choose a different size.
 
@@ -250,15 +237,10 @@ When the mouse and keyboard are the primary input methods or when icons are pair
 
 ## Icon Library
 
-<icon-grid />
-
-List of icons with names and descriptions about when or how to use each icon. Icons are referred to as:
-- `<name-of-icon>` when using with the method for SVG sprite. For example, account-profile
-- `Icon<NameOfIcon>` when using with the method for Individual icon component. For example, the icon, ‘account-profile’ becomes IconAccountProfile
-
-<icon-table />
+For a list of all available icons and their names, see the [Icon Library](https://rei.github.io/cedar-icons/#/)
 
 ## Behavior
+
 When using icons with links or buttons, make sure that the icon communicates intended meaning.
 
 <do-dont :examples="$page.frontmatter.meaning" class="cdr-mb-space-two-x"/>
@@ -284,30 +266,20 @@ Ensure that icons use contrast ratio of 4.5:1 between icon color and background 
 
 ## Slots
 
-**CdrIcon** and all Icon* (IconArrowUp, IconCalendar, etc.) components have a default slot.
-
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
 ## Usage
 
-For a list of all available icons and their names, see the [Icon Library](?active-tab=design-guidelines&active-link=icon-library)
+For a list of all available icons and their names, see the [Icon Library](https://rei.github.io/cedar-icons/#/)
 
-The **CdrIcon** package contains many different components:
-
-1. **CdrIcon**: This is a basic SVG wrapper. This component allows for using Non-Cedar SVGs. Use this component in conjunction with the CdrIconSprite package
-2. **CdrIconSprite**: A symbol definition sprite with all Cedar icons
-3. **Individual icons components**: A component with the icon's svg inlined
-
-
-There are 3 different options to display SVG icons on your page using the **CdrIcon** package.
+There are 2 different options to display SVG icons on your page using the **CdrIcon** package.
 
 ### 1. SVG Sprite
-
-#### Option A: Inline Symbol Sprite
 
 Requires:
 - Icon sprite inline on page
 
+Icon sprites can be generated using the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/).
 
 The sprite needs to be available on any page where the icons are being used, so add the sprite component at the base layout or index:
 
@@ -316,18 +288,21 @@ _App.vue (base template)_
 ```vue
 <template>
   <div id="main">
-    <cdr-icon-sprite />
+    <div v-html="iconSprite" style="display: none;" />
 
     <router-view></router-view> // rest of app
   </div>
 </template>
 
 <script>
-import { CdrIconSprite } from '@rei/cedar';
+/* NOTE: you should create your own optimized sprite file for your project, `all-icons.svg` is only used here for convenience */
+import { iconSprite } from '@rei/cedar-icons/dist/all-icons.svg';
 
 ...
-components: {
-  CdrIconSprite
+data() {
+  return {
+    iconSprite
+  }
 }
 ...
 </script>
@@ -353,70 +328,12 @@ components: {
 </script>
 ```
 
-#### Option B: External Symbol Defs
-
-Requires:
-- `@rei/cdr-icon/sprite/cdr-icon-sprite.svg`
-- A webpack loader to handle the asset. This example assumes the file-loader package
-- A polyfill for external SVG resource. Possible packages are: **svgxuse** or **svg4everybody**
-
-
-Within an individual component (there may be a better way to scale this if the code calls it in many places):
-
-```vue
-<template>
-  ...
-  <cdr-icon :use="`${iconUrl}#caret-right`" />
-  ...
-</template>
-
-<script>
-// import the sprite so file-loader will do its magic
-import iconUrl from '@rei/cdr-assets/dist/cdr-icons.svg`;
-
-export default {
-  ...
-  data() {
-    return {
-      iconUrl
-    };
-  }
-}
-
-</script>
-```
-
-### 2. Individual Icon Components
-
-This may be the easiest way to use an icon on a page however use this method carefully. This method will increase HTML file size and slow down performance if using a lot of icons.
-
-```vue
-<template>
-  ...
-    <icon-caret-right />
-    <icon-clock />
-  ...
-</template>
-
-<script>
-import { IconCaretRight, IconClock } from '@rei/cedar';
-
-...
-  components: {
-    IconCaretRight,
-    IconClock
-  }
-...
-
-</script>
-```
-
-### 3. Non-Cedar SVG
+### 2. Non-Cedar SVG
 
 The **CdrIcon** package is simply an SVG with default attributes set for accessibility and styling.
 
 - Any SVG markup can be used
-- Any attributes added will override the defaults
+- All attributes, event listeners, classes, etc. will be carried over with the exception of `viewBox`, `role`, and `xmlns`
 - This method will increase HTML file size and slow down performance if using a lot of icons.
 
 
@@ -426,10 +343,38 @@ Requires:
 
 Use any valid SVG markup in the **CdrIcon** slot.
 
+The svg element in this example will be stripped but the class and data- atrribute will be preserved (and could be moved to cdr-icon also)
+
 ```vue
 <template>
   ...
-  <cdr-icon viewBox="0 0 30 30">
+  <cdr-icon>
+    <svg class="my-class" data-example="this stays">
+      <title>My icon</title>
+      <path d="M12 12c1.9329966 0 3.5-1.5670034 3.5-3.5C15.5 6.56700338 13.9329966 5 12 5S8.5 6.56700338 8.5 8.5c0 1.9329966 1.5670034 3.5 3.5 3.5zm6.7621385 7c-.8850139-2.8946791-3.5777143-5-6.7621387-5-3.1844245 0-5.87712493 2.1053209-6.76213876 5H18.7621385zM4 21c-.55228475 0-1-.4477153-1-1h-.00754862a9.07963802 9.07963802 0 0 1 .01314502-.1064258c.00185549-.0175393.0041644-.0349433.00691478-.0522001.43595408-3.2192393 2.56090871-5.9021068 5.45328094-7.1270196C7.26398091 11.7054407 6.5 10.191939 6.5 8.5 6.5 5.46243388 8.96243388 3 12 3c3.0375661 0 5.5 2.46243388 5.5 5.5 0 1.6919391-.763981 3.2054409-1.9657923 4.2143547 2.8923661 1.2249103 5.0173178 3.9077692 5.4532779 7.1269995.0027529.0172699.0050636.0346873.0069201.0522401A9.07834213 9.07834213 0 0 1 21.0075481 20H21c0 .5522847-.4477153 1-1 1H4z"/>
+    </svg>
+  </cdr-icon>
+  ...
+</template>
+
+<script>
+import { CdrIcon } from '@rei/cedar';
+
+...
+  components: {
+    CdrIcon
+  }
+...
+
+</script>
+```
+
+You can also omit the wrapping svg element.
+
+```vue
+<template>
+  ...
+  <cdr-icon>
     <title>My icon</title>
     <path d="M12 12c1.9329966 0 3.5-1.5670034 3.5-3.5C15.5 6.56700338 13.9329966 5 12 5S8.5 6.56700338 8.5 8.5c0 1.9329966 1.5670034 3.5 3.5 3.5zm6.7621385 7c-.8850139-2.8946791-3.5777143-5-6.7621387-5-3.1844245 0-5.87712493 2.1053209-6.76213876 5H18.7621385zM4 21c-.55228475 0-1-.4477153-1-1h-.00754862a9.07963802 9.07963802 0 0 1 .01314502-.1064258c.00185549-.0175393.0041644-.0349433.00691478-.0522001.43595408-3.2192393 2.56090871-5.9021068 5.45328094-7.1270196C7.26398091 11.7054407 6.5 10.191939 6.5 8.5 6.5 5.46243388 8.96243388 3 12 3c3.0375661 0 5.5 2.46243388 5.5 5.5 0 1.6919391-.763981 3.2054409-1.9657923 4.2143547 2.8923661 1.2249103 5.0173178 3.9077692 5.4532779 7.1269995.0027529.0172699.0050636.0346873.0069201.0522401A9.07834213 9.07834213 0 0 1 21.0075481 20H21c0 .5522847-.4477153 1-1 1H4z"/>
   </cdr-icon>

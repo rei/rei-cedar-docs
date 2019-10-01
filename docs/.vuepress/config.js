@@ -4,6 +4,7 @@ module.exports = {
   description:
     "The Cedar Design System provides digital teams with reusable UI components based on REI’s visual language.",
   head: [
+    // TODO: remove
     [
       "link",
       {
@@ -17,6 +18,13 @@ module.exports = {
       {
         rel: "icon",
         href: "/favicon.ico"
+      }
+    ],
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href: "/cdr-fonts.css"
       }
     ],
     [
@@ -42,8 +50,17 @@ module.exports = {
       {
         text: "Release Notes",
         items: [
+          { text: "Fall 2019", link: "/release-notes/fall-2019/" },
           { text: "Summer 2019", link: "/release-notes/summer-2019/" },
           { text: "Archive", link: "/release-notes/archive/" },
+        ]
+      },
+      {
+        text: "About",
+        items: [
+          { text: "Cedar Design System", link: "/about/cedar-design-system/" },
+          { text: "Contributing to Cedar", link: "/about/contributing-to-cedar/" },
+          { text: "Browser Support", link: "/about/browser-support/" }
         ]
       },
       {
@@ -51,10 +68,7 @@ module.exports = {
         items: [
           { text: "As a Designer", link: "/getting-started/as-a-designer/" },
           { text: "As a Developer", link: "/getting-started/as-a-developer/" },
-          {
-            text: "As an Adopting Team",
-            link: "/getting-started/as-an-adopter/"
-          }
+          { text: "Using Cedar", link: "/getting-started/using-cedar/"},
         ]
       },
       {
@@ -66,16 +80,26 @@ module.exports = {
           },
           { text: "Accessibility", link: "/foundation/accessibility/" },
           { text: "Color", link: "/foundation/color/" },
-          { text: "Iconography", link: "/foundation/iconography/" },
           { text: "Motion", link: "/foundation/motion/" },
-          { text: "Tokens", link: "/foundation/tokens/" },
           { text: "Typography", link: "/foundation/typography/" },
-          { text: "Spacing", link: "/foundation/spacing/" }
+          { text: "Spacing", link: "/foundation/spacing/" },
+        ]
+      },
+      {
+        text: "Layout",
+        items: [
+          { text: "Responsive", link: "/layout/responsive/" },
+          { text: "Spacing", link: "/layout/spacing/" },
+          { text: "Display", link: "/layout/display/" },
+          { text: "Alignment", link: "/layout/alignment/" },
         ]
       },
       {
         text: "Components",
         items: [
+          { text: "Design Tokens", link: "/components/design-tokens/" },
+          { text: "Component Variables", link: "/components/component-variables/" },
+          { text: "Utilities", link: "/components/utilities/"},
           { text: "Accordion", link: "/components/accordion/" },
           { text: "Block Quote", link: "/components/block-quote/" },
           { text: "Breadcrumb", link: "/components/breadcrumb/" },
@@ -96,21 +120,33 @@ module.exports = {
           { text: "Pull Quote", link: "/components/pull-quote/" },
           { text: "Radio Buttons", link: "/components/radio/" },
           { text: "Ratings", link: "/components/rating/" },
+          { text: "Select", link: "/components/selects/" },
           { text: "Tabs", link: "/components/tabs/" }
         ]
       },
       {
-        text: "About",
+        text: "Icons",
         items: [
-          { text: "Cedar Design System", link: "/about/cedar-design-system/" },
-          { text: "Browser Support", link: "/about/browser-support/" }
+          { text: "Resources", link: "/icons/resources/" },
+          { text: "Iconography", link: "/icons/iconography/" }
         ]
       }
     ]
   },
+  configureWebpack(config) {
+    // make npm link work
+    if (process.env.NODE_ENV !== "production") {
+      config.resolve.symlinks = false;
+    }
+ },
   chainWebpack(config, isServer) {
     config.resolve.alias.set("$vue", "vue/dist/vue.esm.js");
-    const cjs = isServer ? 'cjs.ssr' : 'cjs';
-    config.resolve.alias.set("@rei/cedar$", `@rei/cedar/dist/cedar.${cjs}.js`);
+    config.module.rules.delete('svg')
+    config.module
+      .rule('svg')
+        .test(/\.svg$/)
+        .use('svg-inline-loader')
+          .loader('svg-inline-loader')
+          .end()
   }
 };

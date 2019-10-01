@@ -220,7 +220,7 @@
 
 Basic layout with a column of row headers.  Rows alternate background colors.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" :model="{rowHeaders: $page.frontmatter.exampleTableData.rowHeaders, rowData: $page.frontmatter.exampleTableData.rowData, keyOrder: ['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']}">
+<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" :model="{rowHeaders: $page.frontmatter.exampleTableData.rowHeaders, rowData: $page.frontmatter.exampleTableData.rowData, keyOrder: ['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']}">
 
 
 ```html
@@ -238,7 +238,7 @@ Basic layout with a column of row headers.  Rows alternate background colors.
 
 Layout for making comparisons such as between size/sleeve length. Column headers and row headers are displayed. When columns scroll, row header column is locked in place.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" :model="{colHeaders: $page.frontmatter.exampleTableData.colHeaders, rowHeaders: $page.frontmatter.exampleTableData.rowHeaders, rowData: $page.frontmatter.exampleTableData.rowData, keyOrder: ['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']}">
+<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" :model="{colHeaders: $page.frontmatter.exampleTableData.colHeaders, rowHeaders: $page.frontmatter.exampleTableData.rowHeaders, rowData: $page.frontmatter.exampleTableData.rowData, keyOrder: ['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']}">
 
 ```html
   <cdr-data-table
@@ -254,9 +254,9 @@ Layout for making comparisons such as between size/sleeve length. Column headers
 
 ## Compact and Borderless
 
-Layout with reduced spacing within each cell. All cells are borderless. Defines a column of row headers. 
+Layout with reduced spacing within each cell. All cells are borderless. Defines a column of row headers.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <cdr-data-table modifier="compact borderless" id="manual-example">
@@ -319,7 +319,7 @@ This component has compliance with WCAG guidelines by:
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Design Guidelines">
+<template slot="Guidelines">
   <cdr-doc-table-of-contents-shell>
 
 ## Use When
@@ -327,23 +327,10 @@ This component has compliance with WCAG guidelines by:
 - Presenting multiple metrics and categories together
 - Displaying tabular data for users to compare
 
-### Don't Use When
+## Don't Use When
 
 - Positioning contents on page. Instead, use [Grid](../grid/)
 - Laying out a page design. Instead, use [Grid](../grid/)
-
-## Foundations
-
-Default styles for tables are:
-- All cells have a 1px border
-- Column headers have a 2px bottom border
-- Row headers have a 2px right border. When columns can scroll, the border is 4px
-- Rows alternate background colors to improve readability
-- Scrollbars will be native and dictated by the browser
-- Options available:
-  - Compact only
-  - Borderless only. If using borderless, ensure readability by using the alternating background colors for rows
-  - Compact and borderless
 
 ## Content
 
@@ -360,6 +347,19 @@ Data cells:
   - Copy should be short and concise
   - Use sentence case for cell data
   - Text, numerical data, links, buttons, or icons are acceptable
+
+## Anatomy
+
+Default styles for tables:
+- All cells have a 1px border
+- Column headers have a 2px bottom border
+- Row headers have a 2px right border. When columns can scroll, the border is 4px
+- Rows alternate background colors to improve readability
+- Scrollbars will be native and dictated by the browser
+- Options available:
+  - Compact only
+  - Borderless only. If using borderless, ensure readability by using the alternating background colors for rows
+  - Compact and borderless
 
 ## Behavior
 
@@ -395,7 +395,7 @@ Alignment impacts the table's readability. Make the data easy to read and simple
 
 <do-dont :examples="$page.frontmatter.alternatestripe" />
 
-## Responsiveness 
+## Responsiveness
 
 Data Tables are responsive by default. Whenever the number of columns overflows the container, the entire table will scroll.
 
@@ -484,7 +484,7 @@ The locked-column behavior described in the [design guidelines](../data-tables/?
 
 The same information can be rendered using **CdrDataTable's** named slots, however the locked column behavior is not available.
 
-The below example shows: 
+The below example shows:
 
 - How to use the `thead` and `tbody` slots to define table markup
 - `colHeaders` prop set to true because the `thead` slot is being used

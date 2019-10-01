@@ -49,7 +49,7 @@ export default {
 </template>
 
 <style>
-  // no need to import any Cedar related CSS here 
+  // no need to import any Cedar related CSS here
 </style>
 ```
 
@@ -69,7 +69,7 @@ import '@rei/cedar/dist/cedar.css';
 ```
 
 ### Install Required Fonts
-Cedar uses specific fonts – Roboto, Roboto Condensed, and Sentinel – that are required for your project. 
+Cedar uses specific fonts – Roboto, Roboto Condensed, and Sentinel – that are required for your project.
 
 Roboto and Roboto Condensed are available from [Google Fonts](https://fonts.google.com/selection?selection.family=Roboto%7CRoboto+Condensed&query=robo) (preselected for quick use).
 
@@ -99,7 +99,7 @@ npm install --save @rei/cedar
 ```
 
 #### Include  CSS
-How you include CSS depends on your tech stack and varies from project to project. 
+How you include CSS depends on your tech stack and varies from project to project.
 
 Here are a few common methods:
 
@@ -226,12 +226,25 @@ Adding content to a named slot
 </my-component>
 ```
 
+Adding content to a scoped slot
+
+```html
+<my-component>
+  <template
+    slot="name-of-the-slot"
+    slot-scope="scopeObject"
+  >
+    {{scopeObject.content}} {{scopeObject.someAttribute}}
+  </template>
+</my-component>
+```
+
 <hr>
 
 ### CSS Modules and Custom Class Names
-Component CSS class names are [CSS Modules](https://github.com/css-modules/css-modules) that reflect the package version. For example, `CdrButton@0.2.0` will have classes that end in ‘_0-2-0’. This allows the possibility of components at different versions to live together without having CSS class name collisions. 
+Component CSS class names are [CSS Modules](https://github.com/css-modules/css-modules) that reflect the package version. For example, `CdrButton@0.2.0` will have classes that end in ‘_0-2-0’. This allows the possibility of components at different versions to live together without having CSS class name collisions.
 
-Never use Cedar class names within your own CSS or target them in JavaScript; they will change as you upgrade the package and break any functionality or styling you attach to them. 
+Never use Cedar class names within your own CSS or target them in JavaScript; they will change as you upgrade the package and break any functionality or styling you attach to them.
 
 To target CSS, create custom selectors such as `my-wrapper` and `my-selector` in the following example…
 
@@ -251,9 +264,9 @@ To target CSS, create custom selectors such as `my-wrapper` and `my-selector` in
 </style>
 ```
 
-Some components are more complex and have templates with multiple areas where you may wish to add your own selectors. We try to be mindful of this and add props that will allow you to target your own classes to various elements. 
+Some components are more complex and have templates with multiple areas where you may wish to add your own selectors. We try to be mindful of this and add props that will allow you to target your own classes to various elements.
 
-For example with checkbox you may want to target both the label and the content areas. 
+For example with checkbox you may want to target both the label and the content areas.
 
 ```html
 <template>
@@ -350,28 +363,28 @@ To find out if Cocoapods is already installed, open the terminal and run:
 
 _Terminal_
 ```bash
-pod --version 
+pod --version
 ```
 
 If “command not found” is returned then Cocoapods in not installed.
 
-To install Cocoapods: 
+To install Cocoapods:
 
 _Terminal_
 ```bash
-sudo gem install cocoapods 
+sudo gem install cocoapods
 ```
 
 To set up Cocoapods from the project/workspace directory, run:
 
 _Terminal_
 ```bash
-pod init 
+pod init
 ```
 
 The above command will create a Podfile in your current directory.
- 
- 
+
+
 The Podfile must be modified with the following to include Cedar as a dependency:
 
 **1. Prior to the Targets Section of the Podfile:**
@@ -438,7 +451,7 @@ _Terminal_
 
 ##### Icons
 
-Cedar provides icons  in vector PDF format for iOS scaling.  According to initial investigation, only one file per icon is needed in this format. There is no need for @1x, @2x, and @3x variants. 
+Cedar provides icons  in vector PDF format for iOS scaling.  According to initial investigation, only one file per icon is needed in this format. There is no need for @1x, @2x, and @3x variants.
 
 
 <hr/>
@@ -455,7 +468,7 @@ Implementation mvnrepos.rei.com:cedar-android.aar:0.2.0
 ```
 
 #### Manual Consumption
-If you don’t use Maven, you can import the Cedar Tokens into your Android project/workspace manually by dragging the resources into your project within Android Studio.  The resources are located at the [cedar-android repository on Bitbucket]( https://git.rei.com/projects/CDR/repos/cedar-android) 
+If you don’t use Maven, you can import the Cedar Tokens into your Android project/workspace manually by dragging the resources into your project within Android Studio.  The resources are located at the [cedar-android repository on Bitbucket]( https://git.rei.com/projects/CDR/repos/cedar-android)
 
 
 <hr/>

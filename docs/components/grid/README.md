@@ -3,21 +3,20 @@
   "title": "Grid",
   "layout_type": "LayoutComponent",
   "summary": "A responsive, mobile first, fluid system that appropriately scales 12 columns as the device or viewport size increases",
-  "title_metadata": "Layout, CdrGrid",
-  #DO-DON'T
+  "title_metadata": "Layout, CdrGrid, CdrRow, CdrCol",
   "consistent": [
     {
-        "type": "do",
-        "image": "grid/grid_consistent_do_16-9.png",
-        "alt": "Image showing proper grid usage",
-        "caption": "maintain a consistent grid system."
-      },
+      "type": "do",
+      "image": "grid/grid_consistent_do_16-9.png",
+      "alt": "Image showing proper grid usage",
+      "caption": "maintain a consistent grid system."
+    },
     {
-        "type": "dont",
-        "image": "grid/grid_consistent_dont_16-9.png",
-        "alt": "Image showing mixed grid usage",
-        "caption": "mix this grid and other grid systems."
-      },
+      "type": "dont",
+      "image": "grid/grid_consistent_dont_16-9.png",
+      "alt": "Image showing mixed grid usage",
+      "caption": "mix this grid and other grid systems."
+    },
   ],
   "margins": [
     {
@@ -50,7 +49,6 @@
   "sandboxData": {
     "components": "CdrRow, CdrCol"
   },
-  #API
   "versions": [
     {
       "components": [
@@ -173,7 +171,7 @@
 
 Use rows and columns to lay out content by specifying equal-widths for all columns
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -226,7 +224,7 @@ Define x-axis alignment and distribute space for all columns per row. Containers
 
 ### Left
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -248,7 +246,7 @@ Define x-axis alignment and distribute space for all columns per row. Containers
 
 ### Center
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -270,7 +268,7 @@ Define x-axis alignment and distribute space for all columns per row. Containers
 
 ### Right
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -292,7 +290,7 @@ Define x-axis alignment and distribute space for all columns per row. Containers
 
 ### Around
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -314,7 +312,7 @@ Define x-axis alignment and distribute space for all columns per row. Containers
 
 ### Between
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -340,7 +338,7 @@ Define y-axis alignment per row and distribute space across all columns per row.
 
 ### Top
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -362,7 +360,7 @@ Define y-axis alignment per row and distribute space across all columns per row.
 
 ### Bottom
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -384,7 +382,7 @@ Define y-axis alignment per row and distribute space across all columns per row.
 
 ### Middle
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -406,7 +404,7 @@ Define y-axis alignment per row and distribute space across all columns per row.
 
 ### Stretch
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -432,7 +430,7 @@ Defines gutter size for all columns on a row and maintains gutter size by breakp
 
 ### Default
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -463,7 +461,7 @@ Defines gutter size for all columns on a row and maintains gutter size by breakp
 
 ### xxs
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -495,7 +493,7 @@ Defines gutter size for all columns on a row and maintains gutter size by breakp
 ### None
 
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -530,7 +528,7 @@ Defines direction for items in a container for all columns of a row. This applie
 
 ### Default
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -561,7 +559,7 @@ Defines direction for items in a container for all columns of a row. This applie
 
 ### Vertical
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -596,7 +594,7 @@ Wrapping columns is the default; however, it is possible to disable or enable co
 
 ### Wrap (Default)
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -624,7 +622,7 @@ Wrapping columns is the default; however, it is possible to disable or enable co
 
 ### Nowrap (Scroll)
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -656,7 +654,7 @@ Controls column width by overriding columns value for a specific column or colum
 
 ### 12 Cols
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" >
+<cdr-doc-example-code-pair repository-href="/src/components/grid" >
 
 ```html
 <div class="grid-example-wrap">
@@ -705,7 +703,7 @@ Controls column width by overriding columns value for a specific column or colum
 
 ### Span 2
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" >
+<cdr-doc-example-code-pair repository-href="/src/components/grid" >
 
 ```html
 <div class="grid-example-wrap">
@@ -751,7 +749,7 @@ Controls column width by overriding columns value for a specific column or colum
 
 ### Span 4
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" >
+<cdr-doc-example-code-pair repository-href="/src/components/grid" >
 
 ```html
 <div class="grid-example-wrap">
@@ -795,7 +793,7 @@ Adds empty space (or columns) to left or right of a column, either to the left (
 
 ### Offset Left
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" >
+<cdr-doc-example-code-pair repository-href="/src/components/grid" >
 
 ```html
 <div class="grid-example-wrap">
@@ -826,7 +824,7 @@ Adds empty space (or columns) to left or right of a column, either to the left (
 
 ### Offset Right
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" >
+<cdr-doc-example-code-pair repository-href="/src/components/grid" >
 
 ```html
 <div class="grid-example-wrap">
@@ -859,7 +857,7 @@ Adds empty space (or columns) to left or right of a column, either to the left (
 
 Overrides row-level alignment for a column. This can be applied to an individual column.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" >
+<cdr-doc-example-code-pair repository-href="/src/components/grid" >
 
 ```html
 <div class="grid-example-wrap">
@@ -887,11 +885,11 @@ Overrides row-level alignment for a column. This can be applied to an individual
 
 ## Nested Grids
 
-Defines nested columns (also known as `isRow`). 
+Defines nested columns (also known as `isRow`).
 
 ### Simple
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -918,7 +916,7 @@ Defines nested columns (also known as `isRow`).
 
 ### Complex
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div class="grid-example-wrap">
@@ -1017,12 +1015,12 @@ To ensure that usage of this component complies with accessibility guidelines:
 <br/>
 
 This component has compliance with following WCAG guidelines:
-- [WCAG SC 1.3.2: Meaningful Sequence](https://www.w3.org/TR/WCAG20/#content-structure-separation-sequence): Cedar Design System does not provide for Flexbox’s `order` property.  Reverse order or reordering of items is not allowed. Content must be presented in a correct reading sequence to comply with accessibility standards 
+- [WCAG SC 1.3.2: Meaningful Sequence](https://www.w3.org/TR/WCAG20/#content-structure-separation-sequence): Cedar Design System does not provide for Flexbox’s `order` property.  Reverse order or reordering of items is not allowed. Content must be presented in a correct reading sequence to comply with accessibility standards
 
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Design Guidelines">
+<template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
 
 ## Use When
@@ -1032,13 +1030,13 @@ This component has compliance with following WCAG guidelines:
 - Applying responsive rules to columns of a row and/or regions of a page layout or a container of many components
 - Arranging elements within a single component with two or more zones, including those aligned to the left or right edge
 
-### Don’t Use When
+## Don't’t Use When
 
 - Presenting a multi-row columnar data display, such as features or specs of a product. Instead, use [Data Tables](../data-tables/)
 
-## Foundations
+## The Basics
 
-Columns, gutters, and margins scales as a fluid system as the device and viewport increases from a small devices to a large device: 
+Columns, gutters, and margins scales as a fluid system as the device and viewport increases from a small devices to a large device:
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase('/grid/Spec_Grid_Desktop_and_Mobile_4-3.png')" alt="grid concept at desktop and mobile sizes"/>
 <br/>
@@ -1085,7 +1083,7 @@ Columns, gutters, and margins scales as a fluid system as the device and viewpor
 
 <br/>
 
-- Limit to 12 columns per row: 
+- Limit to 12 columns per row:
   - If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line
   - If a layout does not need 12 columns, specify that number to the engineering team
 
@@ -1188,7 +1186,7 @@ New to or unfamiliar with flexbox? Read this [CSS Tricks flexbox guide](https://
 
 ### CdrCol Content Width
 
-Immediate children of `cdr-col` are flexed due to a flex height display bug in some versions of Safari. This causes immediate children to be full-width and display stacked horizontally. Wrapping child elements in a single `<div>` element will fix these problems (if undesired). 
+Immediate children of `cdr-col` are flexed due to a flex height display bug in some versions of Safari. This causes immediate children to be full-width and display stacked horizontally. Wrapping child elements in a single `<div>` element will fix these problems (if undesired).
 
 <cdr-doc-code-snippet :copy-button="false" :max-height="false">
   ```html{3,6}

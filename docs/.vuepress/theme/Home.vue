@@ -11,8 +11,7 @@
         alt="hero"/>
       <div class="hero__container cdr-text-center">
         <cdr-text
-          tag="h1"
-          modifier="display"
+          modifier="heading-700 display-900@md display-1100@lg"
           class="cdr-mb-space-one-x"
         >{{ data.heroTitle }}</cdr-text>
         <p class="hero__description">{{ data.heroDescription }}</p>
@@ -25,7 +24,7 @@
         <cdr-col>
           <cdr-img
             class="getting-started-image"
-            :src="$withBase('home/gettingstarted_icon.png')" 
+            :src="$withBase('home/gettingstarted_icon.png')"
             ratio="16-9"
             cover
             radius="rounded"
@@ -134,7 +133,7 @@
                     modifier="heading-small-static"
                     class="cdr-mb-space-one-x"
                   >Vue.js components</cdr-text>
-                  <cdr-link href="https://www.npmjs.com/org/rei" target="_blank" modifier="standalone">View the NPM repository</cdr-link>
+                  <cdr-link href="https://www.npmjs.com/package/@rei/cedar" target="_blank" modifier="standalone">View the NPM repository</cdr-link>
                 </div>
               </cdr-col>
               <cdr-col span="3">
@@ -153,7 +152,7 @@
               class="cdr-mb-space-one-x"
             >Contribute to Cedar</cdr-text>
             <cdr-text class="cdr-mb-space-one-x">The Cedar team welcomes contributions from the community. Learn how to become a pilot contributor.  </cdr-text>
-            <cdr-link :href="$withBase('/getting-started/as-an-adopter/?active-link=contributions')" modifier="standalone">Help build Cedar</cdr-link>
+            <cdr-link :href="$withBase('/about/contributing-to-cedar/')" modifier="standalone">Help build Cedar</cdr-link>
           </div>
         </cdr-col>
         <cdr-col>
@@ -170,14 +169,6 @@
       </cdr-row>
 
     </div>
-
-    <div class="home-adopt">
-      <h2 class="home-heading cdr-text-center">Looking to Adopt Cedar?</h2>
-      <p class="adopt-text">Cedar will grow and evolve as more teams adopt and reuse components. Check out our step-by-step guide to adopting Cedar and other helpful resources for teams to get started.</p>
-      <cdr-button tag="a" :href="$withBase('/getting-started/as-an-adopter/')" modifier="secondary">Get Cedar for your team</cdr-button>
-    </div>
-
-
 
     <!-- <Content custom/> -->
   </div>
@@ -238,7 +229,7 @@ export default {
 }
 
 .home-heading {
-  @include cdr-text-header-3;
+  @include cdr-text-heading-700;
   margin-bottom: $cdr-space-one-x;
 
   @media (max-width: $cdr-breakpoint-md) {

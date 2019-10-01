@@ -1,21 +1,24 @@
 <template>
   <nav class="nav-links cdr-doc-nav-links" v-if="userLinks.length || repoLink">
     <!-- user links -->
-    <cdr-accordion-item
+    <cdr-accordion
       v-if="item.type === 'links'"
-      v-for="item in userLinks"
-      :key="item.text"
+      v-for="(item, index) in userLinks"
+      :key="`${item.text}-${index}`"
       :id="item.text.replace(' ', '-').toLowerCase()"
-      :label="item.text"
       class="nav-item cdr-accordion-nav"
-      :show="showNavGroup(item.text)"
+      :opened="navGroup[index]"
+      @accordion-toggle="navToggle(index)"
     >
+      <template slot="label">
+        {{ item.text }}
+      </template>
       <ul class="nav-dropdown cdr-doc-side-navigation__child-links">
         <li v-for="navItem in item.items" class="dropdown-item">
           <nav-link :item="navItem" class="cdr-doc-side-navigation__child-link" />
         </li>
       </ul> 
-    </cdr-accordion-item>
+    </cdr-accordion>
     <NavLink v-else :item="item"/>
     <!-- </div> -->
     <!-- repo link -->
@@ -32,8 +35,7 @@
 
 <script>
 import OutboundLink from './OutboundLink.vue'
-import DropdownLink from './DropdownLink.vue'
-import { CdrAccordionItem, CdrList } from '@rei/cedar';
+import { CdrAccordion, CdrList } from '@rei/cedar';
 
 // TODO: all cedar css should get glovally loaded
 // import '@rei/cdr-accordion/dist/cdr-accordion.css';
@@ -41,7 +43,15 @@ import { resolveNavLinkItem } from './util'
 import NavLink from './NavLink.vue'
 
 export default {
-  components: { OutboundLink, NavLink, DropdownLink, CdrAccordionItem },
+  components: { OutboundLink, NavLink, CdrAccordion },
+  data() {
+    return {
+      navGroup: [],
+    };
+  },
+  created() {
+    this.navSyncByPath();
+  },
   computed: {
     userNav () {
       return this.$themeLocaleConfig.nav || this.$site.themeConfig.nav || []
@@ -112,13 +122,35 @@ export default {
   methods: {
     showNavGroup(text) {
       return text.toLowerCase().replace(' ', '-') === this.$page.path.split('/')[1];
+    },
+    navToggle(index) {
+      const opened = this.navGroup[index];
+      if (opened) {
+        this.$set(this.navGroup, index, false);
+      } else {
+        for (let i = 0; i < this.navGroup.length; i += 1) {
+          if (index === i || this.navGroup[i]) {
+            this.$set(this.navGroup, i, index === i);
+          }
+        }
+      }
+    },
+    navSyncByPath() {
+      this.userLinks.forEach((item, index) => {
+        let opened = false;
+        if (this.showNavGroup(item.text)) {
+          opened = true;
+        } 
+        
+        this.$set(this.navGroup, index, opened);
+      });
     }
   },
-  provide() {
-    return {
-      compact: false,
-      borderAligned: false,
-      showAll: false
+  watch: {
+    $route(to, from) {
+      if (to.path !== '/' && from.path.split('/')[1] !== to.path.split('/')[1]) {
+        this.navSyncByPath();
+      }
     }
   }
 }
@@ -133,5 +165,11 @@ export default {
   }
   .cdr-accordion-nav > button > span {
     font-weight: 400;
+  }
+
+  .cdr-doc-side-navigation__child-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
 </style>

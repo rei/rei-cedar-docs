@@ -49,6 +49,8 @@ export default {
   .cdr-doc-article-layout__body-inner {
     margin: 0 auto;
     width: $cdr-doc-content-max-width;
+
+    @include cdr-doc-long-form-text;
   }
 
   .cdr-doc-article-layout__body-inner .content {

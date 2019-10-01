@@ -1,16 +1,16 @@
 <template>
   <div class="cdr-doc-example-code-pair" :class="{'cdr-doc-example-code-pair--not-interactive': !interactive }">
-    <div class="cdr-doc-example-code-pair__item" 
+    <div class="cdr-doc-example-code-pair__item"
           :class="'cdr-doc-example-code-pair__item-background--' + backgroundToggleStates[slotLabel]"
           v-for="slotContent, slotLabel in $slots">
       <div class="cdr-doc-example-code-pair__item-background-toggle" v-if="backgroundToggle">
         <label
-          class="cdr-doc-item-background-toggle__button" 
-          :class="{'cdr-doc-item-background-toggle__button--active': backgroundToggleStates[slotLabel] === 'light'}" 
+          class="cdr-doc-item-background-toggle__button"
+          :class="{'cdr-doc-item-background-toggle__button--active': backgroundToggleStates[slotLabel] === 'light'}"
         >
-          <input 
+          <input
             class="cdr-doc-item-background-toggle__input"
-            type="radio" 
+            type="radio"
             value="light"
             v-model="backgroundToggleStates[slotLabel]">
             Light
@@ -21,15 +21,15 @@
         >
           <input
             class="cdr-doc-item-background-toggle__input"
-            type="radio" 
+            type="radio"
             value="dark"
             v-model="backgroundToggleStates[slotLabel]">
           Dark
         </label>
       </div>
-      <span 
-        class="cdr-doc-example-code-pair__item-label" 
-        v-if="(exampleCount > 1 && showExampleLabels) || 
+      <span
+        class="cdr-doc-example-code-pair__item-label"
+        v-if="(exampleCount > 1 && showExampleLabels) ||
               label">
         {{ label || slotLabel }}
       </span>
@@ -39,7 +39,7 @@
       </div>
     </div>
 
-    <cdr-doc-code-snippet :copy-button="copyButton" :line-numbers="lineNumbers" :max-height="codeMaxHeight" :repository-href="repositoryHref" :sandbox-href="sandboxHref" :sandbox-data="Object.assign({}, sandboxData, {code: sandboxCode})" :model="model" :code-toggle="codeToggle" :hide-code="hideCode">
+    <cdr-doc-code-snippet :copy-button="copyButton" :line-numbers="lineNumbers" :max-height="codeMaxHeight" :repository-href="repositoryHref" :sandbox-href="sandboxHref" :sandbox-data="Object.assign({}, sandboxData, {code: sandboxCode, loadSprite})" :model="model" :code-toggle="codeToggle" :hide-code="hideCode">
       <slot :name="slotNames[0]"/> <!-- Only display the code snippet for the first (or only) slot content -->
     </cdr-doc-code-snippet>
   </div>
@@ -48,7 +48,7 @@
 <script>
   import Vue from '$vue';
   // Note the '$vue', which is the full build of Vue, not the default runtime 'vue'. We need to import the full build to have access to the compiler
-  
+
   // Import components that will be shown as examples
   import { IconInformationStroke } from '@rei/cedar';
 
@@ -57,7 +57,7 @@
     props: {
       backgroundToggle: {
         type: Boolean,
-        default: true
+        default: false
       },
       backgroundColors: {
         type: Object,
@@ -109,6 +109,10 @@
         default: false,
         type: [String, Boolean]
       },
+      loadSprite: {
+        default: false,
+        type: Boolean
+      },
       codeToggle: {
         default: true,
         type: Boolean
@@ -149,7 +153,7 @@
       }
       this.slotNames = Object.keys(this.$slots);
       this.exampleCount = Object.keys(this.$slots).length; // If more than one example is present, labels will be turned on by default
-      // Loop over all the slots and extract the source HTML/Custom Element code from the escaped markdown code snippet. This code is saved as a Vue template string that is then rendered into a dynamically created empty div in the template 
+      // Loop over all the slots and extract the source HTML/Custom Element code from the escaped markdown code snippet. This code is saved as a Vue template string that is then rendered into a dynamically created empty div in the template
       for (const label in this.$slots) {
         const codeNode = this.extractCodeNodeFromVnodeTree(this.$slots[label][0]);
         const templateSource = this.getStoredTemplateSourceForExample(label, codeNode);
@@ -225,7 +229,7 @@
       border-left: 0;
       border-right: 0;
     }
-    
+
     &__item-example {
       width: 100%;
       margin-top: 15px; // prevents full-width components from displaying on top of light/dark toggle
@@ -306,20 +310,20 @@
     &:first-child {
       border-radius: $cdr-doc-border-radius-default 0 0 $cdr-doc-border-radius-default;
     }
-    
+
     &:last-child {
       border-radius: 0 $cdr-doc-border-radius-default $cdr-doc-border-radius-default 0;
       border-right-width: 1px;
     }
   }
-  
+
   .cdr-doc-item-background-toggle__button--active {
     background: $partly-cloudy;
   }
 
   .cdr-doc-item-background-toggle__input {
     position: absolute !important;
-    height: 1px; width: 1px; 
+    height: 1px; width: 1px;
     overflow: hidden;
     clip: rect(1px, 1px, 1px, 1px);
   }

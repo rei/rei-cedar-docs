@@ -24,8 +24,9 @@
     margin-right: auto;
   }
 
-  & > h2 {
-    @include cdr-text-header-4;
+  & > h2,
+  & > div > h2 {
+    @include cdr-text-heading-700; // Section heading
     margin-bottom: $cdr-space-one-x;
     margin-top: $cdr-space-two-x;
     max-width: $cdr-doc-long-form-text-max-line-length;
@@ -35,8 +36,9 @@
     }
   }
 
-  & > h3 {
-    @include cdr-text-header-5;
+  & > h3,
+  & > div > h3 {
+    @include cdr-text-heading-500; // SubSection heading
     margin-bottom: $cdr-space-one-x;
     margin-top: $cdr-space-two-x;
     max-width: $cdr-doc-long-form-text-max-line-length;
@@ -47,7 +49,7 @@
   }
 
   & > h4 {
-    @include cdr-text-header-6;
+    @include cdr-text-heading-400; // Sub-SubSection heading
     margin-bottom: $cdr-space-one-x;
     margin-top: $cdr-space-two-x;
     max-width: $cdr-doc-long-form-text-max-line-length;
@@ -57,8 +59,15 @@
     }
   }
 
+  & > h5 {
+    @include cdr-text-heading-300; // custom SubX3 Section heading
+    margin-bottom: $cdr-space-one-x;
+    margin-top: $cdr-space-two-x;
+    max-width: $cdr-doc-long-form-text-max-line-length;
+  }
+
   & > p {
-    @include redwood-display-30;
+    @include cdr-text-default;
     margin-bottom: $cdr-space-half-x;
     max-width: $cdr-doc-long-form-text-max-line-length;
 
@@ -189,13 +198,16 @@
     margin-top: 16px;
     margin-bottom: 16px;
 
-    tr:nth-child(even) {
-        background-color: white
+    & > thead > tr {
+      background-color: white
     }
 
-    tr:nth-child(odd) {
-        background-color: #f2f2f2
+    & > tbody > tr:nth-child(even) {
+      background-color: white
     }
-
+    
+    & > tbody > tr:nth-child(odd) {
+      background-color: #f2f2f2
+    }
   }
 }

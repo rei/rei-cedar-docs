@@ -5,85 +5,85 @@
   "summary": "Invoke and communicate an action that will occur",
   "title_metadata": "CdrButton",
   "vertical": [
-      {
-        "type": "do",
-        "image": "buttons/button_vert_do_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing proper vertical button grouping",
-        "caption": "match button widths."
-      },
-      {
-        "type": "dont",
-        "image": "buttons/button_vert_dont_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing mixed button sizing",
-        "caption": "mix button sizes."
-      }
-    ],
-    "horizontal": [
-      {
-        "type": "do",
-        "image": "buttons/button_horiz_do_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing proper button height grouping",
-        "caption": "match button heights."
-      },
-      {
-        "type": "dont",
-        "image": "buttons/button_horiz_dont_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing mixed button sizing",
-        "caption": "mix button sizes."
-      }
-    ],
-    "label": [
-      {
-        "type": "do",
-        "image": "buttons/button_label_do_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing buttons with proper text length",
-        "caption": "minimize label length."
-      },
-      {
-        "type": "dont",
-        "image": "buttons/button_label_dont_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing buttons with too much text",
-        "caption": "put too much text in a button."
-      }
-    ],
-    "case": [
-      {
-        "type": "do",
-        "image": "buttons/button_case_do_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing buttons with proper text sentence case",
-        "caption": "use sentence case."
-      },
-      {
-        "type": "dont",
-        "image": "buttons/button_case_dont_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing buttons with title case",
-        "caption": "use title case."
-      }
-    ],
-    "noun": [
-      {
-        "type": "do",
-        "image": "buttons/button_noun_do_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing buttons with proper noun capitalization",
-        "caption": "capitalize any proper nouns."
-      },
-      {
-        "type": "dont",
-        "image": "buttons/button_noun_dont_4-3.png",
-        "ratio": "4-3",
-        "alt": "Image showing buttons with all uppercase text",
-        "caption": "use all caps."
-      }
-    ],
+    {
+      "type": "do",
+      "image": "buttons/button_vert_do_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing proper vertical button grouping",
+      "caption": "match button widths."
+    },
+    {
+      "type": "dont",
+      "image": "buttons/button_vert_dont_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing mixed button sizing",
+      "caption": "mix button sizes."
+    }
+  ],
+  "horizontal": [
+    {
+      "type": "do",
+      "image": "buttons/button_horiz_do_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing proper button height grouping",
+      "caption": "match button heights."
+    },
+    {
+      "type": "dont",
+      "image": "buttons/button_horiz_dont_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing mixed button sizing",
+      "caption": "mix button sizes."
+    }
+  ],
+  "label": [
+    {
+      "type": "do",
+      "image": "buttons/button_label_do_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing buttons with proper text length",
+      "caption": "minimize label length."
+    },
+    {
+      "type": "dont",
+      "image": "buttons/button_label_dont_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing buttons with too much text",
+      "caption": "put too much text in a button."
+    }
+  ],
+  "case": [
+    {
+      "type": "do",
+      "image": "buttons/button_case_do_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing buttons with proper text sentence case",
+      "caption": "use sentence case."
+    },
+    {
+      "type": "dont",
+      "image": "buttons/button_case_dont_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing buttons with title case",
+      "caption": "use title case."
+    }
+  ],
+  "noun": [
+    {
+      "type": "do",
+      "image": "buttons/button_noun_do_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing buttons with proper noun capitalization",
+      "caption": "capitalize any proper nouns."
+    },
+    {
+      "type": "dont",
+      "image": "buttons/button_noun_dont_4-3.png",
+      "ratio": "4-3",
+      "alt": "Image showing buttons with all uppercase text",
+      "caption": "use all caps."
+    }
+  ],
   "breadcrumbs": [
     {
       "text": "Components/"
@@ -96,85 +96,84 @@
     {
       "components": [
         {
-        "name": "CdrButton",
-        "api": {
-        "props": [
-          {
-            "name": "tag",
-            "type": "string",
-            "default": "'button'",
-            "description": "Renders CdrButton as a <button> or <a> element. When using the value of <a>, this element renders as an anchor link. Possible values: { 'button' | 'a' }"
-          },
-          {
-            "name": "type",
-            "type": "string",
-            "default": "'button'",
-            "description": "Sets the button type. Possible values: { 'button' | 'submit' | 'reset' }"
-          },
-          {
-            "name": "onClick",
-            "type": "function",
-            "default": "return null",
-            "description": "Adds custom click actions."
-          },
-          {
-            "name": "fullWidth",
-            "type": "boolean",
-            "default": "false",
-            "description": "Sets button width to 100%. Setting this value to true will set the button width to 100% of the parent container. Use the 'fullWidth' prop with the 'size' prop to control top and bottom padding."
-          },
-          {
-            "name": "size",
-            "type": "string",
-            "default": "'medium'",
-            "description": "Sets the button size; values can target responsive breakpoints. Breakpoint values are: xs, sm, md, and lg. Examples: { 'small' | 'medium' | 'large' | 'large@sm' }",
-            "alert": {
-              "type": "updated", 
-              "description": "Updated in v.2.0.0. See usage examples below."
-            }
-          },
-          {
-            "name": "responsiveSize",
-            "type": "array",
-            "default": "N/A",
-            "description": "Sets the button size at different responsive breakpoints. Breakpoints values are: xs, sm, md, and lg. Examples: { ‘large@xs’ | ‘small@lg’ }",
-            "alert": {
-              "type": "deprecated",
-              "description": "Deprecated in v2.0.0. Instead, use 'size' prop."
-            }
-          },
-          {
-            "name": "iconOnly",
-            "type": "boolean",
-            "default": "false",
-            "description": "Renders an 'icon-only' button. When this value is true, it will override the size and 'responsiveSize' props."
-          },
-          {
-            "name": "onDark",
-            "type": "boolean",
-            "default": "false",
-            "description": "Renders an 'icon-only' button with a light fill color for use on dark backgrounds. The 'iconOnly' prop must be true."
-          },
-          {
-            "name": "modifier",
-            "type": "string",
-            "default": "N/A",
-            "description": "Modifies the style variant for this component. Possible values: { 'secondary' }"
-          }                          
-        ],
-        "slots": [
-          {
-            "name": "default",
-            "description": "Sets the innerHTML for CdrButton'. This is the readable text of the button. Leave empty if icon-only."
-          },
-          {
-            "name": "icon",
-            "description": "Sets the innerHTML for CdrButton. This is for the icon."
+          "name": "CdrButton",
+          "api": {
+            "props": [
+              {
+                "name": "tag",
+                "type": "string",
+                "default": "'button'",
+                "description": "Renders CdrButton as a <button> or <a> element. When using the value of <a>, this element renders as an anchor link. Possible values: { 'button' | 'a' }"
+              },
+              {
+                "name": "type",
+                "type": "string",
+                "default": "'button'",
+                "description": "Sets the button type. Possible values: { 'button' | 'submit' | 'reset' }"
+              },
+              {
+                "name": "fullWidth",
+                "type": "boolean",
+                "default": "false",
+                "description": "Sets button width to 100%. Setting this value to true will set the button width to 100% of the parent container. Use the 'fullWidth' prop with the 'size' prop to control top and bottom padding."
+              },
+              {
+                "name": "size",
+                "type": "string",
+                "default": "'medium'",
+                "description": "Sets the button size; values can target responsive breakpoints. Breakpoint values are: xs, sm, md, and lg. Examples: { 'small' | 'medium' | 'large' | 'large@sm' }",
+                "alert": {
+                  "type": "updated",
+                  "description": "Updated in v.2.0.0. See usage examples below."
+                }
+              },
+              {
+                "name": "responsiveSize",
+                "type": "array",
+                "default": "N/A",
+                "description": "Sets the button size at different responsive breakpoints. Breakpoints values are: xs, sm, md, and lg. Examples: { ‘large@xs’ | ‘small@lg’ }",
+                "alert": {
+                  "type": "deprecated",
+                  "description": "Deprecated in v2.0.0. Instead, use 'size' prop."
+                }
+              },
+              {
+                "name": "iconOnly",
+                "type": "boolean",
+                "default": "false",
+                "description": "Renders an 'icon-only' button. When this value is true, it will override the size and 'responsiveSize' props."
+              },
+              {
+                "name": "onDark",
+                "type": "boolean",
+                "default": "false",
+                "description": "Renders an 'icon-only' button with a light fill color for use on dark backgrounds. The 'iconOnly' prop must be true."
+              },
+              {
+                "name": "modifier",
+                "type": "string",
+                "default": "N/A",
+                "description": "Modifies the style variant for this component. Possible values: { 'secondary' }"
+              }                          
+            ],
+            "slots": [
+              {
+                "name": "default",
+                "description": "Sets the innerHTML for CdrButton'. This is the readable text of the button. Leave empty if icon-only."
+              },
+              {
+                "name": "icon",
+                "description": "Sets the innerHTML for CdrButton. This is for the icon."
+              }
+            ],
+            "events": [
+              {
+                "description": "All event listeners are passed through to/from the component."
+              }
+            ]
           }
-        ],
         }
-      }
-    ],
+      ],
       "version": "2.0.0"
     }
   ],
@@ -226,11 +225,10 @@ Use secondary buttons for all actions that do not move the user to the next step
 
 Pair an icon with text to improve recognition about an object or action.
 
-<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrButton, CdrIcon, CdrIconSprite'})" >
+<cdr-doc-example-code-pair repository-href="/src/components/button" :load-sprite="true" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrButton, CdrIcon'})" >
 
 ```html
   <div>
-    <cdr-icon-sprite />
     <cdr-button
       modifier="secondary"
     >
@@ -263,11 +261,10 @@ Pair an icon with text to improve recognition about an object or action.
 
 Use to visually communicate an object or action in limited space. Include alternative text to describe what button does.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/button" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrButton, CdrIcon, CdrIconSprite'})" >
+<cdr-doc-example-code-pair repository-href="/src/components/button" :load-sprite="true" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrButton, CdrIcon'})" >
 
 ```html
   <div>
-    <cdr-icon-sprite />
     <cdr-button
       :icon-only="true"
       aria-label="More information about icon"
@@ -288,7 +285,7 @@ Use to visually communicate an object or action in limited space. Include altern
 
 Change the button size based on where button is used. Default size is medium. Small is used for supplemental user actions such as product comparison or filter. Large is used for &quot;Add to cart&quot; on product pages or Call to Action.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
     <div>
@@ -319,7 +316,7 @@ This component has no specific WCAG compliance attributes built into the control
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Design Guidelines">
+<template slot="Guidelines">
   <cdr-doc-table-of-contents-shell>
 
 ## Use When
@@ -330,12 +327,12 @@ This component has no specific WCAG compliance attributes built into the control
 - Submitting requested information
 - Confirming the completion of a flow or cancelling out of it
 
-### Don't Use When
+## Don't Use When
 
 - Navigating to another page on a site. Instead use [Call to Action](../cta/)
 - Taking users to a different part within the same page. Instead, use [Links](../links/)
 
-## Foundations
+## The Basics
 
 Buttons sizes are used:
   - **Small:** Supplemental user actions such as product comparison or filter on product pages
@@ -460,12 +457,12 @@ Following variants are available to the `cdr-button` modifier attribute:
 
 ### Click Actions
 
-Use the `on-click` prop to attach custom actions and event handling.
+Use an `@click` event handler to attach custom actions and event handling.
 
 ```vue{3}
 <template>
   <cdr-button
-    :on-click="greet"
+    @click="greet"
   >
     Greet
   </cdr-button>
@@ -543,27 +540,6 @@ Use the following props to modify `cdr-button`:
 </template>
 ```
 
-
-### CdrCloseButton and CdrPlayButton
-
-The **CdrButton** package includes two specific icon-only variants. **CdrCloseButton** and **CdrPlayButton** include their respective icons and `aria-label` text for accessibility.
-
-```vue
-<template>
-  <cdr-close-button />
-</template>
-
-<script>
-import { CdrCloseButton } from '@rei/cedar';
-
-export default {
-  ...
-  components: {
-     CdrCloseButton  
-  }
-}
-</script>
-```
 
 </cdr-doc-table-of-contents-shell>
 </template>

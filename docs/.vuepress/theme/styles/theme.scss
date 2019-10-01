@@ -3,8 +3,6 @@
 @import 'cdr-doc-mixins';
 @import 'examples.scss';
 
-@import '../../../../node_modules/@rei/cedar/dist/cdr-fonts.css';
-
 $side-navigation-logo-width: 162px;
 $side-navigation-width: 234px;
 $side-navigation-width-sm: $side-navigation-logo-width + 24px;
@@ -69,7 +67,7 @@ body {
 }
 
 .header-anchor {
-  @include cdr-text-header-5;
+  @include cdr-text-heading-500;
   color: 	$cdr-color-text-link-lightmode;
   text-decoration: none;
 }
@@ -272,4 +270,17 @@ th {
   padding: 6px;
   border: 1px solid #ccc;
   text-align: left;
+}
+
+.table-first-col-align-top {
+  tr td:first-child {
+    vertical-align: top;
+    font-weight: bold;
+  }
+}
+
+.table-vertical-align {
+  td {
+    vertical-align: top;
+  }
 }

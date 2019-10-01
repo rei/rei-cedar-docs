@@ -1,22 +1,22 @@
 ---
 {
-   "title": "Lists",
-   "layout_type": "LayoutComponent",
-   "summary": "Group related content items together either vertically or horizontally",
-   "title_metadata": "CdrList",
-   "see_also": [
-      {
-        "text": 'See Also'
-      },
-      {
-        "text": 'Accordion',
-        "href": '../accordion/'
-      },
-      {
-        "text": 'Breadcrumb',
-        "href": '../breadcrumb/'
-      }
-    ],
+  "title": "Lists",
+  "layout_type": "LayoutComponent",
+  "summary": "Group related content items together either vertically or horizontally",
+  "title_metadata": "CdrList",
+  "see_also": [
+    {
+      "text": 'See Also'
+    },
+    {
+      "text": 'Accordion',
+      "href": '../accordion/'
+    },
+    {
+      "text": 'Breadcrumb',
+      "href": '../breadcrumb/'
+    }
+  ],
   "list1": [
     {
       "type": "do",
@@ -56,31 +56,31 @@
   "versions": [
     {
       "components": [
-      {
-        "name": "CdrList",
-        "api": {
-          "props": [
-            {
-              "name": "tag",
-              "type": "string",
-              "default": "'ul'",
-              "description": "Sets valid HTML element tag. Possible values: {  ‘ul’ | ‘ol’  }"
-            },
-            {
-              "name": "modifier",
-              "type": "string",
-              "default": "N/A",
-              "description": "Modifies the style variant for this component. Possible values: {  ‘ordered’  |  ‘unordered’  |  ‘compact’  |  ‘inline’  }"
-            }
-          ],
-          "slots": [
-            {
-              "name": "default",
-              "description": "Sets the innerHTML for CdrList. This includes text and html markup."
-            }
-          ],
+        {
+          "name": "CdrList",
+          "api": {
+            "props": [
+              {
+                "name": "tag",
+                "type": "string",
+                "default": "'ul'",
+                "description": "Sets valid HTML element tag. Possible values: {  ‘ul’ | ‘ol’  }"
+              },
+              {
+                "name": "modifier",
+                "type": "string",
+                "default": "N/A",
+                "description": "Modifies the style variant for this component. Possible values: {  ‘ordered’  |  ‘unordered’  |  ‘compact’  |  ‘inline’  }"
+              }
+            ],
+            "slots": [
+              {
+                "name": "default",
+                "description": "Sets the innerHTML for CdrList. This includes text and html markup."
+              }
+            ],
+          },
         },
-      },
       ],
       "version": "0.1.0"
     }
@@ -96,9 +96,8 @@
 
 Collect items to be displayed in a list when items are not marked with bullets.  This is the default and is also known as unordered and undecorated “bare” list.
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight= false >
+<cdr-doc-example-code-pair repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" >
 
-<template slot="Default">
 
 ```html
   <cdr-list>
@@ -111,23 +110,6 @@ Collect items to be displayed in a list when items are not marked with bullets. 
     <li>Default list item 3</li>
   </cdr-list>
 ```
-</template>
-
-<template slot="compact">
-
-```html
-  <cdr-list modifier="compact">
-    <li>Compact list item 1</li>
-    <li>Compact list item 2
-      <cdr-list>
-        <li>Compact list item</li>
-      </cdr-list>
-    </li>
-    <li>Compact list item 3</li>
-  </cdr-list>
-```
-  
-</template>
 
 </cdr-doc-example-code-pair>
 
@@ -135,8 +117,7 @@ Collect items to be displayed in a list when items are not marked with bullets. 
 
 Collect related items that don’t need to be in a specific order or sequence. List items are typically marked with bullets.
 
-<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
-<template slot="Default">
+<cdr-doc-example-code-pair :codeMaxHeight="false" repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-list modifier="unordered">
@@ -149,24 +130,6 @@ Collect related items that don’t need to be in a specific order or sequence. L
     <li>Default list item 3</li>
   </cdr-list>
 ```
-</template>
-
-<template slot="compact">
-
-```html
-  <cdr-list modifier="unordered compact">
-    <li>Compact list item 1</li>
-    <li>Compact list item 2
-      <cdr-list>
-        <li>Compact list item</li>
-      </cdr-list>
-    </li>
-    <li>Compact list item 3</li>
-  </cdr-list>
-```
-  
-</template>
-
 
 </cdr-doc-example-code-pair>
 
@@ -174,9 +137,8 @@ Collect related items that don’t need to be in a specific order or sequence. L
 
 Collect related items with numeric order or sequence. Numbering starts at 1 with the first list item and increases by increments of 1 for each successive ordered list item.
 
-<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :codeMaxHeight="false" repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
 
-<template slot="Default">
 
 ```html
   <cdr-list tag="ol" modifier="ordered">
@@ -189,23 +151,27 @@ Collect related items with numeric order or sequence. Numbering starts at 1 with
     <li>Default list item 3</li>
   </cdr-list>
 ```
-</template>
 
-<template slot="compact">
+</cdr-doc-example-code-pair>
+
+## Compact
+
+Compact modifier can be added to any cdr-list in order to reduce the margin between list items
+
+<cdr-doc-example-code-pair repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" >
+
 
 ```html
-  <cdr-list tag="ol" modifier="ordered compact">
-    <li>Compact list item 1</li>
-    <li>Compact list item 2
+  <cdr-list modifier="compact unordered">
+    <li>Compact unordered list item 1</li>
+    <li>Compact unordered list item 2
       <cdr-list>
-        <li>Compact list item</li>
+        <li>Compact unordered list item</li>
       </cdr-list>
     </li>
-    <li>Compact list item 3</li>
+    <li>Compact unordered list item 3</li>
   </cdr-list>
 ```
-  
-</template>
 
 </cdr-doc-example-code-pair>
 
@@ -213,7 +179,7 @@ Collect related items with numeric order or sequence. Numbering starts at 1 with
 
 Display items horizontally with no divider.
 
-<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :codeMaxHeight="false" repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
 
 <template slot="Default">
 
@@ -235,7 +201,7 @@ Display items horizontally with no divider.
     <li>Compact list item 3</li>
   </cdr-list>
 ```
-  
+
 </template>
 
 </cdr-doc-example-code-pair>
@@ -244,7 +210,7 @@ Display items horizontally with no divider.
 
 Display items horizontally, separated by a bullet character.
 
-<cdr-doc-example-code-pair :background-toggle="false" :codeMaxHeight= false repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :codeMaxHeight="false" repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
 
 <template slot="Default">
 
@@ -266,7 +232,7 @@ Display items horizontally, separated by a bullet character.
     <li>Compact list item 3</li>
   </cdr-list>
 ```
-  
+
 </template>
 
 </cdr-doc-example-code-pair>
@@ -300,19 +266,19 @@ This component has compliance with WCAG guidelines by:
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Design Guidelines">
+<template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
 
 ## Use When
 
 - Displaying groups of related items represented by text
 
-### Don’t Use When
+## Don't’t Use When
 
 - Displaying content that is not primarily text
 - Displaying content with two or more well-defined dimensions. Instead, use [Data Tables](../data-tables/)
 
-## Foundations
+## The Basics
 
 - Vary list item font size
 - Follow spacing requirements found on [Typography](../../foundation/typography/) and [Spacing](../../foundation/spacing/) pages
@@ -374,7 +340,7 @@ WebAIM: [Semantic Structure: Using Lists Correctly](https://webaim.org/technique
 
 ## Usage
 
-Visual style and semantic meaning are managed independently by providing: 
+Visual style and semantic meaning are managed independently by providing:
 
 - Element to the `tag` prop
 - Style to the `modifier` prop
@@ -390,7 +356,7 @@ By default the **CdrList** component renders as an unordered and undecorated "ba
 </cdr-list>
 ```
 
-The **CdrList** component has decoupled the semantic tags `<ul>` and `<ol>` from visual presentation. 
+The **CdrList** component has decoupled the semantic tags `<ul>` and `<ol>` from visual presentation.
 
 <br/>
 

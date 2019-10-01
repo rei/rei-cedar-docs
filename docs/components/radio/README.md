@@ -5,7 +5,7 @@
   "summary": "Permits user to select only one option from a list of two or more",
   "title_metadata": "Radios, CdrRadio",
   "see_also": [
-      {
+    {
       "text": 'See Also'
     },
     {
@@ -96,7 +96,7 @@
                 "description": "Sets the name of the radio button. Required."
               },
               {
-                "name": "value",
+                "name": "customValue",
                 "type": "string, number, boolean, object, array, symbol, function",
                 "default": "N/A",
                 "description": "Sets the value of the radio button. Required."
@@ -117,6 +117,11 @@
             "events": [
               {
                 "name": "change",
+                "arguments": "value",
+                "description": "$emit event fired on radio selection."
+              },
+              {
+                "name": "input",
                 "arguments": "value",
                 "description": "$emit event fired on radio selection."
               }
@@ -143,17 +148,17 @@ Default and standard spacing for radio buttons.
 <div>
 <cdr-radio
   name="default-example"
-  value="ex1"
+  custom-value="ex1"
   v-model="ex"
 >Default radio 1</cdr-radio>
 <cdr-radio
   name="default-example"
-  value="ex2"
+  custom-value="ex2"
   v-model="ex"
 >Default radio 2</cdr-radio>
 <cdr-radio
   name="default-example"
-  :value="{val:'ex3'}"
+  :custom-value="{val:'ex3'}"
   v-model="ex"
   disabled
 >Default radio 3</cdr-radio>
@@ -174,19 +179,19 @@ Compact spacing for radio buttons.
 <cdr-radio
   modifier="compact"
   name="compact-example"
-  value="ex1"
+  custom-value="ex1"
   v-model="ex"
 >Compact radio 1</cdr-radio>
 <cdr-radio
   modifier="compact"
   name="compact-example"
-  value="ex2"
+  custom-value="ex2"
   v-model="ex"
 >Compact radio 2</cdr-radio>
 <cdr-radio
   modifier="compact"
   name="compact-example"
-  :value="{val:'ex3'}"
+  :custom-value="{val:'ex3'}"
   v-model="ex"
   disabled
 >Compact radio 3</cdr-radio>
@@ -207,7 +212,7 @@ Custom styles for radio buttons.
 
 <cdr-radio
   name="custom-example"
-  value="ex1"
+  custom-value="ex1"
   v-model="ex"
   modifier="hide-figure"
   input-class="no-box"
@@ -215,7 +220,7 @@ Custom styles for radio buttons.
 >Custom radio 1</cdr-radio>
 <cdr-radio
   name="custom-example"
-  value="ex2"
+  custom-value="ex2"
   v-model="ex"
   modifier="hide-figure"
   input-class="no-box"
@@ -223,7 +228,7 @@ Custom styles for radio buttons.
 >Custom radio 2</cdr-radio>
 <cdr-radio
   name="custom-example"
-  :value="{val:'ex3'}"
+  :custom-value="{val:'ex3'}"
   v-model="ex"
   modifier="hide-figure"
   input-class="no-box"
@@ -242,12 +247,12 @@ To ensure that usage of this component complies with accessibility guidelines:
 
 - Each radio button must be focusable and keyboard accessible:
   - When radio button has focus, the **Space** key changes the selection
-  - **Tab** key moves to next element in list 
-- Fieldsets should be: 
+  - **Tab** key moves to next element in list
+- Fieldsets should be:
   - Used when associating group of radio buttons
   - Identified or described as a group using a `<legend>` tag
 - Avoid nested fieldsets
-- Custom radio buttons maintain accessibility requirements. The radio button icon is only visually hidden and replaced with custom style 
+- Custom radio buttons maintain accessibility requirements. The radio button icon is only visually hidden and replaced with custom style
 
 <br/>
 
@@ -265,7 +270,7 @@ For more information, review techniques and failures for:
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Design Guidelines">
+<template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
 
 ## Use When
@@ -275,7 +280,7 @@ For more information, review techniques and failures for:
 - Comparing between list of selections is desired
 
 
-### Don’t Use When
+## Don't’t Use When
 
 - Selecting from a list when multiple choices are allowed. Instead, use [Checkboxes](../checkboxes/)
 - Providing a single selectable option. Instead, use [Checkboxes](../checkboxes/) (stand-alone checkbox)
@@ -332,7 +337,7 @@ The **CdrRadio** component requires `v-model` to track the value of selected rad
 
 ### Modifiers
 
-Following variants are available to the `cdr-radio` modifier attribute: 
+Following variants are available to the `cdr-radio` modifier attribute:
 | Value | Description            |
 |:------|:-----------------------|
 | 'compact'  | Sets the spacing for smaller screen sizes |

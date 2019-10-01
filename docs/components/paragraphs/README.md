@@ -1,30 +1,30 @@
 ---
 {
-   "title": "Paragraphs",
-   "layout_type": "LayoutComponent",
-   "summary": "Text container used for any text element such as paragraphs, headings, and lists. Establishes vertical spacing and optimizes the reading experience",
-   "title_metadata": "CdrText",
-   "see_also": [
-      {
-        "text": 'See Also'
-      },
-      {
-        "text": 'Typography',
-        "href": '../../foundation/typography/'
-      },
-      {
-        "text": 'Caption',
-        "href": '../caption/'
-      },
-      {
-        "text": 'Block Quote',
-        "href": '../block-quote/'
-      },
-      {
-        "text": 'Headings',
-        "href": '../headings/'
-      }
-    ],
+  "title": "Paragraphs",
+  "layout_type": "LayoutComponent",
+  "summary": "Text container used for any text element such as paragraphs, headings, and lists. Establishes vertical spacing and optimizes the reading experience",
+  "title_metadata": "CdrText",
+  "see_also": [
+    {
+      "text": 'See Also'
+    },
+    {
+      "text": 'Typography',
+      "href": '../../foundation/typography/'
+    },
+    {
+      "text": 'Caption',
+      "href": '../caption/'
+    },
+    {
+      "text": 'Block Quote',
+      "href": '../block-quote/'
+    },
+    {
+      "text": 'Headings',
+      "href": '../headings/'
+    }
+  ],
   "width": [
     {
       "type": "do",
@@ -73,11 +73,15 @@
                 "default": "'p'",
                 "description": "Sets valid HTML element tag."
               },
-              {
+               {
                 "name": "modifier",
                 "type": "string",
                 "default": "N/A",
-                "description": "Modifies the style variant for this component. Possible values: {  body  }"
+                "description": "Modifies the style variant for this component. Possible values: {  body  }",
+                "alert": {
+                  "type": "deprecated",
+                  "description": "the body variant has been deprecated in v3.0.0."
+                },
               }
             ],
             "slots": [
@@ -104,30 +108,10 @@
 Used as default font style for all text information. Also known as body-default in UI ToolKit.
 
 
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-text>Pack everything you need with this handy checklist! We include the 10 essentials and more for comfort in the backcountry.</cdr-text>
-```
-
-</cdr-doc-example-code-pair>
-
-## Body
-
-Used for editorial content such as long-form articles like Expert Advice pages or editorial content on PDP pages.  Also known as body-editorial in UI ToolKit.
-
-
-<cdr-doc-example-code-pair :background-toggle="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
-
-```html
-  <div>
-    <cdr-text modifier="body">
-      You don’t want to have to cut your day of skiing or snowboarding short because of tired legs. So before you gather your friends and family and purchase your lift tickets, it’s important to follow a workout plan that will get you fit for the slopes.
-    </cdr-text>
-    <cdr-text modifier="body">
-      The following workout guide is designed to help you focus on the most essential aspects of fitness for completing a ski or snowboard trip: cardiovascular fitness, strength and balance. Remember, you should always start your ski day with a few easy warm-up runs, no matter how skilled you are.
-    </cdr-text>
-  </div>
 ```
 
 </cdr-doc-example-code-pair>
@@ -137,23 +121,24 @@ Used for editorial content such as long-form articles like Expert Advice pages o
 To ensure that usage of this component complies with accessibility guidelines:
 
 - Text container does not exceed 634px or line length does not exceed more than 75 characters
-- Minimize use of reversed-out body copy because it’s harder to read 
-- When possible, use the first sentence as an introduction to the paragraph. With screen readers, users can listen to the first sentence and then jump to the next paragraph 
+- Minimize use of reversed-out body copy because it’s harder to read
+- When possible, use the first sentence as an introduction to the paragraph. With screen readers, users can listen to the first sentence and then jump to the next paragraph
 - Break long pages into shorter sections by organizing content into well-defined groups or chunks
 
 <br/>
 
 This component has compliance with following WebAIM’s accessibility guidelines:
-- [WCAG SC 1.4.8: Visual presentation](https://www.w3.org/TR/WCAG20/#visual-audio-contrast-visual-presentation): Cedar Design System text component provides for spacing for: 
+- [WCAG SC 1.4.8: Visual presentation](https://www.w3.org/TR/WCAG20/#visual-audio-contrast-visual-presentation): Cedar Design System text component provides for spacing for:
   - Within paragraphs, line spacing is at least 1.5 times font height
-  - Between paragraphs, at least 1.5 times larger than the line spacing
 
-<cdr-img class="cdr-doc-article-img" alt="paragraphs_spacing_graphic_example" :src="$withBase(`/paragraphs/paragraphs_spacing_graphic_example.png`)" />
+ <!--  - Between paragraphs, at least 1.5 times larger than the line spacing -->
+
+<!-- <cdr-img class="cdr-doc-article-img" alt="paragraphs_spacing_graphic_example" :src="$withBase(`/paragraphs/paragraphs_spacing_graphic_example.png`)" /> -->
 
 </cdr-doc-table-of-contents-shell>
 </template>
 
-<template slot="Design Guidelines">
+<template slot="Guidelines">
 <cdr-doc-table-of-contents-shell>
 
 ## Use When
@@ -163,13 +148,13 @@ This component has compliance with following WebAIM’s accessibility guidelines
 - Displaying product descriptions
 - Displaying customer reviews, such as on PDP pages
 
-### Don’t Use When
+## Don't’t Use When
 
 - Displaying form inputs. Instead, use [Inputs](../input/)
 - Displaying alert messages. Instead, use Alerts
 - Listing product features. Instead, use [Lists](../lists/)
 
-## Foundations
+## The Basics
 
 Roboto is used for paragraph text because it is easy to scan. It is primarily used for:
 - Legal messages on PDP pages
@@ -177,8 +162,6 @@ Roboto is used for paragraph text because it is easy to scan. It is primarily us
 - Customer reviews on PDP pages
 - Class or event descriptions
 - REI Adventure descriptions
-
-Sentinel carries a stronger brand impression with other brand material, and is primarily used for:
 - Editorial copy on PDP pages
 - Long articles on Expert Advice or Co-op Journal pages
 
@@ -224,9 +207,9 @@ Sentinel carries a stronger brand impression with other brand material, and is p
 
 ## Usage
 
-The **CdrText** component allows for styling any html element with available text styles. Visual style and semantic meaning are managed independently by providing: 
+The **CdrText** component allows for styling any html element with available text styles. Visual style and semantic meaning are managed independently by providing:
 
-* Element to the `tag` prop 
+* Element to the `tag` prop
 * Style to the `modifier` prop
 
 <br />
@@ -239,21 +222,18 @@ By default the **CdrText** component renders as a paragraph, this default paragr
   </cdr-text>
 ```
 
-When rendering long form copy add the `body` modifier.
-
-```vue
-  <cdr-text modifier="body">
-    This paragraph is intended for long form copy usage.  
-  </cdr-text>
-```
-
-Define custom tags by applying a specific `cdr-text` style with modifiers to it.
+### Paragraph spacing
+By default there is no spacing between paragraphs. The space utility classes are 
+provided to increase legibility
 
 ```vue
   <cdr-text
-    tag="span"
-    modifier="body">
-    This span now renders as a long form copy paragraph that displays inline.
+    class="cdr-mb-space-one-x"
+  >
+   This paragraph is adding a bottom marging to provide space between it and the paragraph below
+  </cdr-text>
+  <cdr-text>
+   This paragraph is last and does not need the additional utility class
   </cdr-text>
 ```
 
