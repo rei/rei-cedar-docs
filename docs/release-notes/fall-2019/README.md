@@ -189,7 +189,7 @@ In an effort to make our form components more consistent, we have changed [CdrRa
 - Before: `<cdr-radio v-model="x" value="foo"/>`
 - After: `<cdr-radio v-model="x" customValue="foo"/>`
 
-### CdrPagination, CdrSelect, and CdrRadio V-model Binding
+### CdrPagination, CdrSelect, and CdrRadio Model Binding
 
 In an effort to make our components that use `v-model` more consistent, we have changed the property bindings for CdrPagination, CdrSelect, and CdrRadio to use the same `value` prop and `@input` event pattern that [v-model sets up by default](https://vuejs.org/v2/guide/components.html#Using-v-model-on-Components). This change will only affect consumers using JSX or other templating languages which do not have access to Vue directives like v-model. If you were already using v-model with these components, then you do not need to change anything.
 
