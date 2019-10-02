@@ -42,7 +42,7 @@ For more information, see the [Typography](../../foundation/typography/?active-t
 
 ### New Icons Package
 
-A new [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) has been cfreated which will be used to host and distribute Cedar SVG icons.
+A new [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) has been created which will be used to host and distribute Cedar SVG icons.
 
 - Allows consumers to pick and choose which icons to include in their sprite sheet rather than being forced to load all of them
 - Cedar no longer has to distribute SVG assets, which simplifies our build process
@@ -50,16 +50,24 @@ A new [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) has been cfreat
 
 For more information on updating your icon usage, see the [deprecated icon components](#deprecated-icon-components) section.
 
+### Cedar Component Variables 1.0.0
+
+We have released the 1.0.0 version of [Cedar Component Variables](https://rei.github.io/rei-cedar-component-variables/#/) which provide a method for using Cedar component styles in environments where the Vue components themselves cannot be used.
+
+Component variables are currently exported for a subset of Cedar components (button, link, input, select, checkbox, radio, cta, and list), and are intended to be used alongside the [Design Tokens](https://rei.github.io/rei-cedar-docs/components/design-tokens/). 
+
+For more information, please see the [Component Variables page](https://rei.github.io/rei-cedar-docs/components/component-variables/).
+
 ### UI Toolkit Update
 
 #### File Structure
 
 + The toolkit is now broken out into three versions—vCurrent, vLegacy, and vNext. vCurrent will include the Fall 2019 UI toolkit changes. vLegacy includes the previous release. vNext is a preview into future releases and is not officially supported
-+ The file structures have changed. Web, Native, Tokens, and Icons are now seperate master files and libraries 
++ The file structures have changed. Web, Native, Tokens, and Icons are now seperate master files and libraries
 
 #### Sticker Sheet
 
-Sticker sheets have been included in Web, Native, Token, and Icon libraries. To use the sticker sheet, [link the library](../../getting-started/as-a-designer/#using-the-toolkit) you need, select the sticker sheet from Symbols, right-click the sticker sheet, select "Detach from Symbol", ungroup, and copy or paste as needed. 
+Sticker sheets have been included in Web, Native, Token, and Icon libraries. To use the sticker sheet, [link the library](../../getting-started/as-a-designer/#using-the-toolkit) you need, select the sticker sheet from Symbols, right-click the sticker sheet, select "Detach from Symbol", ungroup, and copy or paste as needed.
 
 #### Select Component
 A new Select component is available for use in the web components toolkit and the sticker sheet. For more information, see the [Select](../../components/selects/) page.
@@ -355,7 +363,7 @@ The utility alignment classes have been deprecated and updated to bring them inl
 
 #### Display Classes
 
-The utility visibility and accessibility classes have been deprecated and updated to bring them inline with the latest token names. Please see the map below to review the new names. 
+The utility visibility and accessibility classes have been deprecated and updated to bring them inline with the latest token names. Please see the map below to review the new names.
 
 | Deprecated class name         | Equivalent class name       |
 |-------------------------------|-----------------------------|
@@ -420,7 +428,7 @@ With the release of the [Cedar Icon Library](https://rei.github.io/cedar-icons/#
 
 If you were using the single icon components, you should update them to use `CdrIcon` and the `use` attribute instead, and follow the instructions below to create and load a sprite sheet.
 
-If you were using CdrIconSprite, you should use the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) to create an SVG file containing all the icons required for your application. You will then need to render that SVG file somewhere in your application. The best place to do this is inline with your root HTML template rather than in the JavaScript. 
+If you were using CdrIconSprite, you should use the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) to create an SVG file containing all the icons required for your application. You will then need to render that SVG file somewhere in your application. The best place to do this is inline with your root HTML template rather than in the JavaScript.
 
 This ensures that when your app is server-side rendered, the sprite sheet is only rendered one time, rather than being included in both the HTML and the JavaScript files. There are various ways to do this depending on how your application is built, but if you are using the standard REI micro-site architecture built on spring-boot or thymeleaf, you can load the sprite sheet as follows:
 
@@ -437,7 +445,7 @@ This ensures that when your app is server-side rendered, the sprite sheet is onl
 </html>
 ```
 
-3. Render the sprite sheet somewhere in your app (note this needs to be rendered on every page that contains icons):
+2. Render the sprite sheet somewhere in your app (note this needs to be rendered on every page that contains icons):
 
 ```
 <div th:remove="tag" th:insert="~{icon-sprite :: icon-sprite}"></div>
