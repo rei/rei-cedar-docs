@@ -52,11 +52,11 @@ For more information on updating your icon usage, see the [deprecated icon compo
 
 ### Cedar Component Variables 1.0.0
 
-We have released the 1.0.0 version of [Cedar Component Variables](https://rei.github.io/rei-cedar-component-variables/#/) which provide a method for using Cedar component styles in environments where the Vue components themselves cannot be used.
+The 1.0.0 version of [Cedar Component Variables](https://rei.github.io/rei-cedar-component-variables/#/) has been released which provide a method for using Cedar component styles in environments where the Vue components themselves cannot be used.
 
-Component variables are currently exported for a subset of Cedar components (button, link, input, select, checkbox, radio, cta, and list), and are intended to be used alongside the [Design Tokens](https://rei.github.io/rei-cedar-docs/components/design-tokens/). 
+Component variables are currently exported for a subset of Cedar components (button, link, input, select, checkbox, radio, CTA, and list), and are intended to be used alongside the [Design Tokens](https://rei.github.io/rei-cedar-docs/components/design-tokens/). 
 
-For more information, please see the [Component Variables page](https://rei.github.io/rei-cedar-docs/components/component-variables/).
+For more information, please see the [Component Variables](https://rei.github.io/rei-cedar-docs/components/component-variables/) page.
 
 ### UI Toolkit Update
 
@@ -75,7 +75,7 @@ A new Select component is available for use in the web components toolkit and th
 ### Icon Contribution
 
 - The [guidelines for contributing icons](../../icons/resources/#contribution-process) to the [CDR · Icon Contribution](https://share.goabstract.com/99335c38-51ee-41c8-8454-38c2a70c4c7f) project has been updated
-- Minor updates to the [CDR Icons • vCurrent](https://share.goabstract.com/e9186773-0cc3-43a6-b7ff-54b163d95e00?sha=a814b05c391c93f5a7d39ce9508cd5238ae8fe0e) libray to make icon symbols more consistent. For linking instructions, see the [Cedar UI Toolkit](../../getting-started/as-a-designer/#cedar-ui-toolkit) page
+- Minor updates to the [CDR Icons • vCurrent](https://share.goabstract.com/e9186773-0cc3-43a6-b7ff-54b163d95e00?sha=a814b05c391c93f5a7d39ce9508cd5238ae8fe0e) library to make icon symbols more consistent. For linking instructions, see the [Cedar UI Toolkit](../../getting-started/as-a-designer/#cedar-ui-toolkit) page
 - A new Sketch plugin has been added to help you [export Cedar-compliant icons that are not in the icon repo](../../icons/resources/#exporting-icons-that-aren’t-in-the-library)
 
 ### SVG in Icon Slot
@@ -189,7 +189,7 @@ In an effort to make our form components more consistent, we have changed [CdrRa
 - Before: `<cdr-radio v-model="x" value="foo"/>`
 - After: `<cdr-radio v-model="x" customValue="foo"/>`
 
-### CdrPagination, CdrSelect, and CdrRadio v-model Binding
+### CdrPagination, CdrSelect, and CdrRadio Model Binding
 
 In an effort to make our components that use `v-model` more consistent, we have changed the property bindings for CdrPagination, CdrSelect, and CdrRadio to use the same `value` prop and `@input` event pattern that [v-model sets up by default](https://vuejs.org/v2/guide/components.html#Using-v-model-on-Components). This change will only affect consumers using JSX or other templating languages which do not have access to Vue directives like v-model. If you were already using v-model with these components, then you do not need to change anything.
 
