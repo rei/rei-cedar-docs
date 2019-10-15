@@ -180,7 +180,7 @@ Section borders expand to full width of container.
 
 ## Compact
 
-Reduced spacing around title and content body. Also, smaller font sizes resulting in an overall denser display of content.
+Reduced spacing around title and content body. Also, smaller font sizes resulting in overall denser display of content.
 
 <cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ compact1: false, compact2: false, compact3: false }">
 
@@ -310,7 +310,7 @@ This component has compliance with WCAG guidelines by:
 ## Use When
 
 - Providing users more content within the same layout
-- Displaying content that's directly related, or supplemental, to the main subject of the page
+- Displaying content that is directly related, or supplemental, to the main subject of the page
 - Designing with limited vertical space and there is enough content to condense
 
 ## Don't Use When
@@ -321,14 +321,14 @@ This component has compliance with WCAG guidelines by:
 
 ## The Basics
 
-- Use on either light or dark backgrounds, background color is provided for both
+- Use on either light or dark backgrounds. Background color is provided for both
 
 ## Content
 
 - Order the accordion titles by priority and importance
 - Keep titles short to avoid wrapping at smaller viewports
 - Use sentence case for titles
-- Always include a title, icon and subsequent content for each section. All are required
+- Always include a title, icon, and subsequent content for each section. All are required
 
 ## Anatomy
 
@@ -342,10 +342,10 @@ This component has compliance with WCAG guidelines by:
 
 ### Show and Hide
 
-- Revealing the frist accordion section is recommended
-- Other accordion sections are all hidden by default, however it is possible to:
-  - Specify that all accordion sections are revealed when page is displayed
-  - Specify that a specific accordion section is revealed with remaining accordion section closed
+- Revealing the first accordion section is recommended
+- Other accordion sections are all hidden by default, however it is possible to specify that:
+  - All accordion sections are revealed when page is displayed
+  - A specific accordion section is revealed with remaining accordion section closed
 - Sections do not automatically collapse when another is expanded
 
 ### Do / Don't
@@ -384,7 +384,7 @@ This component has compliance with WCAG guidelines by:
 
 ## Usage
 
-CdrAccordion emits an event when its button is clicked. Use an event listener to toggle the value of the opened prop to open/close the accordion.
+CdrAccordion emits an event when its button is clicked. Use an event listener to toggle the value of the opened prop to open or close the accordion.
 
 ```vue
 <template>
