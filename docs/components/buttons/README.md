@@ -448,7 +448,7 @@ The below example uses the `size` prop to set a default and responsive size. Thi
 
 ### Modifiers
 
-Following variants are available to the `cdr-button` modifier attribute:
+The following variants are available to the `cdr-button` modifier attribute:
 
 | Value | Description            |
 |:------|:-----------------------|
@@ -486,9 +486,9 @@ export default {
 
 ### Text and Icon
 
-To scale Cedar icons appropriately, include the `cdr-button__icon` class with any icon component. The `size` prop scales both the icon and button.
+To scale Cedar icons appropriately, include the `cdr-button__icon` class with any icon component. The `size` prop scales both the icon and the button.
 
-In the below example, a "Download" button is rendered as a button with icon and text using `cdr-icon` and the icon sprite.
+In the example below, the "Download" button is rendered as a button with icon and text using `cdr-icon` and the icon sprite.
 
 ```vue{5}
 <template>
