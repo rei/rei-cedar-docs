@@ -226,7 +226,7 @@ Use brand Call to Action as an alternative.
 
 ## Elevated
 
-Adds drop shadow to increase contrast and visibility of Call to Action when placed over an image.
+Use elevated Call to Action to add drop shadow to increase contrast and visibility when placed over an image.
 
 <cdr-doc-example-code-pair repository-href="/src/components/cta" :sandbox-data="$page.frontmatter.sandboxData">
 
@@ -247,8 +247,8 @@ Adds drop shadow to increase contrast and visibility of Call to Action when plac
 To ensure that usage of this component complies with accessibility guidelines:
 
 - Clearly and concisely describe the link’s destination when the button is clicked or tapped:
-  - For example, if the button text is "Shop Now", the `aria-label` might read: "Shop our &lt;specific advertising category&gt; now"
-- Avoid using "click here" or "start here" but if screen space for text is minimal:
+  - For example, if the button text is "Shop now", the `aria-label` might read: "Shop our &lt;specific advertising category&gt; now"
+- Avoid using "click here" or "start here". If screen space for text is minimal:
   - Provide text that can be read by screen readers
   - Use an inline element for hidden text with the `cdr-sr-only` class
   ```vue
@@ -258,7 +258,7 @@ To ensure that usage of this component complies with accessibility guidelines:
   ```
 - Ensure screen readers can find all **Call to Action** buttons on a page by:
   - Always providing an `href` attribute. Empty `href` attributes are not considered true links
-  - Ensuring that it can be accessed via the keyboard. Don't manipulate the default tab index
+  - Ensuring that it can be accessed using the keyboard. Don't manipulate the default tab index
 
 <br />
 
@@ -288,15 +288,15 @@ Call to Action exists as a means to navigate users to a new location or addition
 
 - Use clear and concise text
 - Make it clear what happens when this link is clicked or tapped
-- For example, “Shop Backpacking” Call to Action on a homepage would navigate the user to an assortment of backpacking-related products available for purchase
-- Use all caps for CTAs, not sentence case, title caps or all lowercase
+- For example, “Shop backpacking” Call to Action on a homepage would navigate the user to an assortment of backpacking-related products available for purchase
+- Use sentence case. Do not use all caps, title caps, or all lowercase
 
 <br />
 
 To construct consistent and universal Call to Actions across the site:
 
 - If leading to a Brand/Category/Activity Landing page, UI text for Call to Action should be **[Explore Brand/Category/Activity Name]**
-- If leading to a Product Detail page, UI text for Call to Action should be **[Shop Product Name]**
+- If leading to a Product Detail page, UI text for Call to Action should be **[Shop product name]**
 - If leading to a Collection/Search Result, UI text for Call to Action should be **[Shop all Brand/Category/Activity Name]**
 
 ## Behavior
