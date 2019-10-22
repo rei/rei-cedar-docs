@@ -124,9 +124,9 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
 
-## Pagination @ SM, MD, LG
+## Pagination @ sm, md, lg
 
-At the SM, MD, and LG breakpoints, pagination displays as a list of number text links with Prev and Next links when applicable.
+At the sm, md, and lg breakpoints, pagination displays as a list of number text links. Prev and Next links are also added when applicable.
 
 <cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ page: 3, pages: [{page: 1, url: '1'}, {page: 2, url: '2'}, {page: 3, url: '3'}, {page: 4, url: '4'}, {page: 5, url: '5'}] }">
 
@@ -141,24 +141,26 @@ At the SM, MD, and LG breakpoints, pagination displays as a list of number text 
 
 ## Link Scoped Slots
 
-Can be used to override the default links rendered in the pagination. Useful for integrating with client side routing, as a `router-link` can be rendered instead of a plain `a` tag. Pagination exposes 3 link scopedSlots: `link`, `prevLink`, and `nextLink`.
+The scoped slots can be used to override the default links rendered in the pagination. Useful for integrating with client-side routing, as a `router-link` can be rendered instead of a plain `a` tag. Pagination exposes 3 link scopedSlots: `link`, `prevLink`, and `nextLink`.
 
 The `link` slot scope contains the following attributes:
-- `class`: a class to be applied to the link in order to match pagination styling
-- `href`: href that the link points to by default
-- `aria-label`: default aria-label for this link
-- `aria-current`: is `true` if this link is the current page
-- `page`: the page number that corresponds to this link. NOTE: that you must manually update your v-model attribute to be the value of `page` whenever this link is clicked
-- `content`: the default content for that link
+- `class`: A class to be applied to the link in order to match pagination styling
+- `href`: Href that the link points to by default
+- `aria-label`: Default aria-label for this link
+- `aria-current`: Is `true` if this link is the current page
+- `page`: The page number that corresponds to this link
+   **Note:** You must manually update your v-model attribute to be the value of `page` whenever this link is clicked.
+- `content`: The default content for that link
 
 The `prevLink` and `nextLink` slot scopes contain the following attributes:
-- `class`: a class to be applied to the link in order to match pagination styling
-- `href`: href that the link points to by default
-- `aria-label`: default aria-label for this link
-- `iconClass`: a class to be applied to the prev/next arrow icon in order to match pagination styling
-- `iconPath`: the path to the icon in the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) used for this link
-- `page`: the page number that corresponds to this link. NOTE: that you must manually update your v-model attribute to be the value of `page` whenever this link is clicked
-- `content`: the default content for that link
+- `class`: A class to be applied to the link in order to match pagination styling
+- `href`: Href that the link points to by default
+- `aria-label`: Default aria-label for this link
+- `iconClass`: A class to be applied to the prev/next arrow icon in order to match pagination styling
+- `iconPath`: The path to the icon in the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) used for this link
+- `page`: The page number that corresponds to this link
+   **Note:** You must manually update your v-model attribute to be the value of `page` whenever this link is clicked.
+- `content`: The default content for that link
 
 <cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ page: 2, pages: [{page: 1, url: '1'}, {page: 2, url: '2'}, {page: 3, url: '3'}] }">
 
@@ -198,9 +200,9 @@ The `prevLink` and `nextLink` slot scopes contain the following attributes:
 ```
 </cdr-doc-example-code-pair>
 
-## Pagination @ XS
+## Pagination @ xs
 
-At the XS breakpoint, pagination adapts to a Select component using the native UI dropdown menu.
+At the xs breakpoint, pagination adapts to a Select component using the native UI dropdown menu.
 
 <img :src="$withBase('/pagination/pagination_breakpoint_xs_2x.png')" alt="Image showing responsive pagination component using Select element" />
 
@@ -294,15 +296,15 @@ Pagination adapts to a Select component with a native UI dropdown menu on XS bre
 
 The **CdrPagination** component provides a current page number control and renders a list of links. The current page value should be bound using `v-model` in your app.
 
-You will need to enable navigation manually for pagination to work at mobile widths (see below).
+You will need to enable navigation manually for pagination to work at mobile widths.
 
-The **CdrPagination** component does not make data calls, render or track paginated data, or handle routing beyond simple anchor links. However, it does emit events if you need to customize routing or need to add additional application logic. See section below, "Usage with Vue Router".
+The **CdrPagination** component does not make data calls, render or track paginated data, or handle routing beyond simple anchor links. However, it does emit events if you need to customize routing or need to add additional application logic. 
 
 ### Responsive Behavior and Navigation
 
 The responsive behavior for the **CdrPagination** component automatically converts to **CdrSelect** component rather than a list of links. Values for the **CdrSelect** component are the provided page URL.
 
-If not using Vue Router (see "Usage with Vue Router" below) you will need to manually update window location by using the `select-change` event.
+If not using Vue Router, you will need to manually update window location by using the `select-change` event.
 
 ```vue
 <template>
@@ -350,7 +352,7 @@ See REI's SEO Confluence page on [pagination](https://confluence.rei.com/display
 
 Note that REI has chosen HTML `<link>` elements instead of HTTP headers. Make sure to use fully qualified absolute URLs in the `<link>` elements instead of relative URLs.
 
-For general recommendations view Google's Search Console page, [Indicating paginated content to Google](https://support.google.com/webmasters/answer/1663744?hl=en).
+For general recommendations, view Google's Search Console page, [Indicating paginated content to Google](https://support.google.com/webmasters/answer/1663744?hl=en).
 
 
 </cdr-doc-table-of-contents-shell>
