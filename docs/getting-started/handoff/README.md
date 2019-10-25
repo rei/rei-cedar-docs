@@ -1,6 +1,6 @@
 ---
 {
-  "title": "Design to Development Handoff Process",
+  "title": "Design to Dev Handoff Process",
   "title_metadata": false,
   "layout_type": "LayoutArticle",
   "breadcrumbs": [
@@ -13,113 +13,92 @@
 
 <cdr-doc-table-of-contents-shell>
 
+<style> img{max-width:100%} </style>
+
 The Cedar UI Sketch Toolkit provides tools and processes to communicate Cedar component and token usage in sketch design assets. Designers using the Cedar toolkit to build mockups and redlines will be creating annotated, inspectable, web-sharble assets to facilitate the developer handoff process.
 
 ## Developers
-If you’re a developer, you can skip to the review handoff section of this article.
+If you’re a developer, you can skip to the [review handoff section]() of this article.
 
 ## Designers – Design with These Goals in Mind:
-Setup: A set of up to 4 artboards for each screen, one for each responsive breakpoint. See recommended artboard widths. Follow the Cedar 12-column grid layout.
-Design: Construct your designs mostly from symbols, layer styles, and text styles available through Cedar UI Toolkit.
-Redline: Add spacing and inset or padding grid token overlays to visualize whitespace. Also see Redlining Tips for additional info.
-Handoff: Group sections from top to bottom as layers for parsability. Make collections of relevant artboard. Commit both the VISUAL and the REDLINE examples for the developers.
+[Setup](): A set of up to 4 artboards for each screen, one for each responsive breakpoint. See recommended artboard widths. Follow the Cedar 12-column grid layout.
+[Design](): Construct your designs mostly from symbols, layer styles, and text styles available through Cedar UI Toolkit.
+[Redline](): Add spacing and inset or padding grid token overlays to visualize whitespace. Also see Redlining Tips for additional info.
+[Handoff](): Group sections from top to bottom as layers for parsability. Make collections of relevant artboard. Commit both the VISUAL and the REDLINE examples for the developers.
 
 ## Artboard Setup 
-Each screen should have (up to) 4 versions, each at different breakpoint widths corresponding to Cedar’s breakpoints: @Xs @Sm @Md @Lg. The goal is to showcase how content will resize and reflow for responsive web layouts, and communicate those states to a developer.
-We recommend making your designs at the following 4 screen widths: 400px, 784px, 992px, and 1400px. These widths align to an 8px grid and will also have consistent column and gutter spacing for the Cedar grid.
-Grid and Layout Artboard Template
-Download or open the template file and copy the artboards into your project.
-Manual Artboard Setup
-You can also setup your artboards manually using the following settings. To access the artboard settings, click View > Canvas > Layout Settings. 
+Each screen should have (up to) 4 versions, each at different breakpoint widths corresponding to [Cedar’s breakpoints](): `@Xs` `@Sm` `@Md` `@Lg`. The goal is to showcase how content will resize and reflow for responsive web layouts, and communicate those states to a developer.
 
-Use the table below to create 4 artboards with the correct layout properties. You can toggle an arboard’s column overlay with View > Canvas > Show Layout. 
+We recommend making your designs at the following 4 screen widths: `400px`, `784px`, `992px`, and `1400px`. These widths align to an 8px grid and will also have consistent column and gutter spacing for the Cedar grid.
 
+### Grid and Layout Artboard Template
+Download or open the [template file]() and copy the artboards into your project.
 
+![screenshot](../../.vuepress/public/getting-started-handoff/100-Grid.png)
 
+### Manual Artboard Setup
+You can also setup your artboards manually using the following settings. To access the artboard settings, click __View > Canvas > Layout Settings__. 
 
+![screenshot](../../.vuepress/public/getting-started-handoff/200-Grid-Settings.png)
 
-Name Suffix
-Width
-Total width
-Offset
-Number of columns
-Gutter on outside
-Gutter
-width
-Column
-width
-Mobile @Xs: 
-w < 768px
-400
-384
-8
-12
-✔
+Use the table below to create 4 artboards with the correct layout properties. You can toggle an arboard’s column overlay with __View > Canvas > Show Layout__. 
 
+| Name Suffix | Width | Total width | Offset | Number of columns | Gutter on outside | Gutter width | Column width
+| ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| Mobile @Xs:<br/>w < 768px | 400px | 384px | 8px | 12 | ✔ | 16px | 16px |
+| Tablet @Sm:<br/>768px < w < 992px | 784px | 768px | 8px | 12 | ✔ | 16px | 48px |
+| Laptop @Md:<br/>992px < w < 1232px | 992px | 960px | 16px | 12 | ✔ | 32px | 48px |
+| Desktop @Md:<br/>1232px < w | 1400px | 1200px | 100px | 12 | ✔ | 32px | 68px | 
 
-16
-16
-Tablet @Sm:
-768px < w < 992px
-784
-768
-8
-12
-✔
-16
-48
-Laptop @Md:
-992px < w < 1232px
-992
-960
-16
-12
-✔
-32
-48
-Desktop @Md:
-1232px < w 
-1400
-1200
-100
-12
-✔
-32
-68
+We also recommend setting an 8px grid by clicking __View > Canvas > Grid Settings__.  You can toggle an arboard’s grid overlay with __View > Canvas > Show Grid (Ctrl+G)__ and column overlay with __View > Canvas > Show Layout (Ctrl+L)__.
 
-We also recommend setting an 8px grid by clicking View > Canvas > Grid Settings.  You can toggle an arboard’s grid overlay with View > Canvas > Show Grid (Ctrl+G) and column overlay with View > Canvas > Show Layout (Ctrl+L).
-Create Your Design
-Use the Cedar toolkit components symbols, layer styles, and text styles to make your designs. For more information about how to link and use these libraries, visit the Getting Started as a Designer article.
-To align to the Cedar grid where appropriate, see the Grid article.
+## Create Your Design
+Use the Cedar toolkit components symbols, layer styles, and text styles to make your designs. For more information about how to link and use these libraries, visit the [Getting Started as a Designer]() article.
+
+To align to the Cedar grid where appropriate, see the [Grid]() article.
+
 A Global Header & Footer library is also available in the Cedar toolkit to help put your designs in context.
-Redlining
-Redlining effectively communicates the intended construction of a webpage to the front-end developer. Cedar toolkit symbols and styles have vue- component and token names embedded within them so that developers can view them in the Abstract Inspection web view.
-Use the redlining symbols found in the CDR tokens toolkit library to communicate whitespace in your designs. For more information on how spacing works within html and Cedar, see the Spacing article.
-You can view an example of the Responsive Layout Handoff Collection in the Cedar Example Project.
-Handoff
-After redling is complete, make an Abstract Collection of artboards to handoff to the front-end developers.
-We also recommend you make two commits of the final design: a REDLINED version and a VISUAL version. This will allow developers to toggle the redlines on and off. Use the process below for best results:
+
+## Redlining
+
+![screenshot](../../.vuepress/public/getting-started-handoff/200-Grid-Settings.png)
+
+Redlining effectively communicates the intended construction of a webpage to the front-end developer. Cedar toolkit symbols and styles have vue- component and token names embedded within them so that developers can view them in the _Abstract Inspection web view_.
+
+Use the redlining symbols found in the CDR tokens toolkit library to communicate whitespace in your designs. For more information on how spacing works within html and Cedar, see the [Spacing]() article.
+
+You can view an example of the [Responsive Layout Handoff Collection]() in the Cedar [Example Project]().
+
+## Handoff
+After redlining is complete, make an [Abstract Collection]() of artboards to handoff to the front-end developers.
+
+![screenshot](../../.vuepress/public/getting-started-handoff/200-Grid-Settings.png)
+
+We also recommend you make two commits of the final design: a `REDLINE` version and a `VISUAL` version. This will allow developers to toggle the redlines on and off. Use the process below for best results:
+
 First, make a commit showing the file without redline spacing symbols visible:
-In the lower left corner of the Layers panel (Cmd+F), type “redlines” into the filter bar. This will show only the redline symbols from the CDR token library. Select the first object in the list, then Shift+Select the last object in the list to select all your redline symbols.
 
-Hide the results using Cmd+Shift+H. 
+1. In the lower left corner of the Layers panel (Cmd+F), type “redlines” into the filter bar. This will show only the redline symbols from the CDR token library. Select the first object in the list, then Shift+Select the last object in the list to select all your redline symbols.
 
-Commit the file to Abstract. When naming, use the name VISUAL. See a VISUAL example here. 
+1. Hide the results using Cmd+Shift+H.
+![screenshot](../../.vuepress/public/getting-started-handoff/200-Grid-Settings.png)
 
-Next, make a commit showing the file to show redline spacing symbols visible.
+1. Commit the file to Abstract. When naming, use the name VISUAL. See a VISUAL example here. 
 
-Press Cmd+Z to undo the “hide all” command. Now, you can see all the redlines.
+1. Next, make a commit showing the file to show redline spacing symbols visible.
 
-Make another commit to Abstract. When naming, use the name REDLINE. See a REDLINE example here. 
+1. Press Cmd+Z to undo the “hide all” command. Now, you can see all the redlines.
 
-Note: If your design is split onto multiple pages, you may need to repeat steps 4 and 6 for each Sketch page.
-Redlining Tips for Designers
-Align all text to the object-bounding box, not to the text baseline or cap height
+1. Make another commit to Abstract. When naming, use the name REDLINE. See a REDLINE example here. 
 
-Add vertical spacing symbols in between elements you want spaced, select all the element you want to stack vertically, click Tidy, and change the vertical space to 0
+__Note:__ If your design is split onto multiple pages, you may need to repeat steps _4_ and _6_ for each Sketch page.
 
+## Redlining Tips for Designers
+- Align all text to the object-bounding box, not to the text baseline or cap height
 
-Elements that are locked in Sketch will not be selectable in the Abstract Inspection Web-View Canvas. This means elements that are layered underneath the locked elements will be selectable. Place a redline grid symbol over your entire page to communicate grid alignment. Lock this element in Sketch so that it is not selectable in Abstract Inspection Web-View Canvas. 
+- Add vertical spacing symbols in between elements you want spaced, select all the element you want to stack vertically, click Tidy, and change the vertical space to 0
+
+- Elements that are locked in Sketch will not be selectable in the Abstract Inspection Web-View Canvas. This means elements that are layered underneath the locked elements will be selectable. Place a redline grid symbol over your entire page to communicate grid alignment. Lock this element in Sketch so that it is not selectable in Abstract Inspection Web-View Canvas. 
 
 Elements that are hidden in Sketch will not exist in the Abstract Inspection Web-View 
  
