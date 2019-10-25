@@ -116,7 +116,7 @@ import '@rei/cedar/dist/cedar.css';
 You can also import CSS from the node_modules folder such as SCSS or another pre-processor.
 
 _cedar.scss_
-```js
+```scss
 @import '~@rei/cedar/dist/cdr-fonts.css';
 @import '~@rei/cedar/dist/cedar.css';
 ```
