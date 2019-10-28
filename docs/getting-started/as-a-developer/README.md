@@ -112,25 +112,22 @@ import '@rei/cedar/dist/cdr-fonts.css';
 import '@rei/cedar/dist/cedar.css';
 ```
 
-##### PostCSS
-Cedar packages include the [unofficial style field](https://jaketrent.com/post/package-json-style-attribute/) supported by `postcss-import`.
-
-_cedar.postcss_
-```css
-import '@rei/cedar/dist/cdr-fonts.css';
-import '@rei/cedar’;
-```
-
 ##### SCSS
 You can also import CSS from the node_modules folder such as SCSS or another pre-processor.
 
 _cedar.scss_
-```js
-import '~@rei/cedar/dist/cdr-fonts.css';
-import '~@rei/cedar/dist/cedar.css';
+```scss
+@import '~@rei/cedar/dist/cdr-fonts.css';
+@import '~@rei/cedar/dist/cedar.css';
 ```
+##### PostCSS
+Cedar packages include the [unofficial style field](https://jaketrent.com/post/package-json-style-attribute/) supported by `postcss-import`.
 
-**Note**: Code snippets provided throughout this documentation will demonstrate the `webpack` and `css-loader` method.
+_cedar.postcss_
+```pcss
+import '@rei/cedar/dist/cdr-fonts.css';
+import '@rei/cedar’;
+```
 
 <hr/>
 
