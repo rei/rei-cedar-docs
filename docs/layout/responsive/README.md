@@ -86,7 +86,7 @@ For more information about design tokens and how to use them, visit the [Design 
 | Small        | `@include sm-mq-only {}` | 768px-991px  |
 | Medium       | `@include md-mq {}`      | >= 992px     |
 | Medium       | `@include md-mq-only {}` | 992px-1199px |
-| Large        | `@include lg-mq {}`      | >= 1200px    |
+| Large        | `@include lg-mq {}`      | >= 1232px    |
 | Large        | `@include lg-mq-only {}` | >= 1232px    |
 
 
