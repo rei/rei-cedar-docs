@@ -26,7 +26,7 @@ If you’re a developer, you can skip to the [review handoff section]() of this 
 - [Setup](): A set of up to 4 artboards for each screen, one for each responsive breakpoint. See recommended artboard widths. Follow the Cedar 12-column grid layout.
 - [Design](): Construct your designs mostly from symbols, layer styles, and text styles available through Cedar UI Toolkit.
 - [Redline](): Add spacing and inset or padding grid token overlays to visualize whitespace. Also see Redlining Tips for additional info.
-- [Handoff](): Group sections from top to bottom as layers for parsability. Make collections of relevant artboard. Commit both the VISUAL and the REDLINE examples for the developers.
+- [Handoff](): Group sections from top to bottom as layers for parsability. Make collections of relevant artboard. Commit both the __VISUAL__ and the __REDLINE__ examples for the developers.
 
 
 
@@ -34,6 +34,7 @@ If you’re a developer, you can skip to the [review handoff section]() of this 
 Each screen should have (up to) 4 versions, each at different breakpoint widths corresponding to [Cedar’s breakpoints](): `@Xs` `@Sm` `@Md` `@Lg`. The goal is to showcase how content will resize and reflow for responsive web layouts, and communicate those states to a developer.
 
 We recommend making your designs at the following 4 screen widths: `400px`, `784px`, `992px`, and `1400px`. These widths align to an 8px grid and will also have consistent column and gutter spacing for the Cedar grid.
+
 
 ### Grid and Layout Artboard Template
 Download or open the [template file]() and copy the artboards into your project.
@@ -133,6 +134,7 @@ __Note:__ If your design is split onto multiple pages, you may need to repeat st
 ## Review of Design Handoff
 Each Artboard committed to Abstract is viewable in a browser using a public link. For more information about the _Abstract Inspection Web-View_, visit the [Abstract website](). We recommend the following uses:
 
+
 ### Collections
 Use __Collections__ to view a curated set of artboards in a list. When viewing a specific artboard, use the bottom bar to navigate and toggle to 100% zoom. For more information, read the [Abstract Collection]() documentation.  
 <!-- <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/.png`)"/> -->
@@ -152,13 +154,18 @@ You can also use the __Comment__ tab to create and reply to comments on specific
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/1520-code-comments.png`)"/>
 To learn more, read the [Abstract Comments]() documentation.
 
+
+
+
 ## Inspect Tab
 Developers use the Inspect tab to navigate the objects and layers from the Sketch file. Cedar token names are embedded in the Layer Style and Text Style names. You can view them in the selection column on the right.
+
 
 ### Spacing Token Symbols
 Note that spacing tokens are orange and inset (padding) tokens are green. Developers can learn more about how these should be applied in the [Spacing]() article.  
 
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/1600-finding-space-tokens.png`)"/>
+
 
 ### Token Layer Styles
 Token Layer Style may be applied to a standalone element.  
