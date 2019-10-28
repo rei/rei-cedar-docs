@@ -18,26 +18,26 @@ The Cedar UI Sketch Toolkit provides tools and processes to communicate Cedar co
 
 
 ## Developers
-If you’re a developer, you can skip to the [review handoff section]() of this article.
+If you’re a developer, you can skip to the [review handoff section](#review-of-design-handoff) of this article.
 
 
 
 ## Designers – Design with These Goals in Mind:
-- [Setup](): A set of up to 4 artboards for each screen, one for each responsive breakpoint. See recommended artboard widths. Follow the Cedar 12-column grid layout.
-- [Design](): Construct your designs mostly from symbols, layer styles, and text styles available through Cedar UI Toolkit.
-- [Redline](): Add spacing and inset or padding grid token overlays to visualize whitespace. Also see Redlining Tips for additional info.
-- [Handoff](): Group sections from top to bottom as layers for parsability. Make collections of relevant artboard. Commit both the __VISUAL__ and the __REDLINE__ examples for the developers.
+- [Setup](#artboard-setup): A set of up to 4 artboards for each screen, one for each responsive breakpoint. See recommended artboard widths. Follow the Cedar 12-column grid layout.
+- [Design](#create-your-design): Construct your designs mostly from symbols, layer styles, and text styles available through Cedar UI Toolkit.
+- [Redline](#redlining): Add spacing and inset or padding grid token overlays to visualize whitespace. Also see Redlining Tips for additional info.
+- [Handoff](#handoff): Group sections from top to bottom as layers for parsability. Make collections of relevant artboard. Commit both the __VISUAL__ and the __REDLINE__ examples for the developers.
 
 
 
 ## Artboard Setup 
-Each screen should have (up to) 4 versions, each at different breakpoint widths corresponding to [Cedar’s breakpoints](): `@Xs` `@Sm` `@Md` `@Lg`. The goal is to showcase how content will resize and reflow for responsive web layouts, and communicate those states to a developer.
+Each screen should have (up to) 4 versions, each at different breakpoint widths corresponding to [Cedar’s breakpoints](../../layout/responsive/#display-breakpoints): `@Xs` `@Sm` `@Md` `@Lg`. The goal is to showcase how content will resize and reflow for responsive web layouts, and communicate those states to a developer.
 
 We recommend making your designs at the following 4 screen widths: `400px`, `784px`, `992px`, and `1400px`. These widths align to an 8px grid and will also have consistent column and gutter spacing for the Cedar grid.
 
 
 ### Grid and Layout Artboard Template
-Download or open the [template file]() and copy the artboards into your project.
+Download or open the [template file](https://share.goabstract.com/536e25be-14f0-4f36-bd63-42da65a4df4b?sha=8e941fa501231a9a763808191af9c21c82832f29) and copy the artboards into your project.
 
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/100-Grid.png`)"/>
 
@@ -60,9 +60,9 @@ We also recommend setting an 8px grid by clicking __View > Canvas > Grid Setting
 
 
 ## Create Your Design
-Use the Cedar toolkit components symbols, layer styles, and text styles to make your designs. For more information about how to link and use these libraries, visit the [Getting Started as a Designer]() article.
+Use the Cedar toolkit components symbols, layer styles, and text styles to make your designs. For more information about how to link and use these libraries, visit the [Getting Started as a Designer](../../getting-started/as-a-designer/) article.
 
-To align to the Cedar grid where appropriate, see the [Grid]() article.
+To align to the Cedar grid where appropriate, see the [Grid](../../components/grid/) article.
 
 A Global Header & Footer library is also available in the Cedar toolkit to help put your designs in context.
 
@@ -74,14 +74,14 @@ A Global Header & Footer library is also available in the Cedar toolkit to help 
 
 Redlining effectively communicates the intended construction of a webpage to the front-end developer. Cedar toolkit symbols and styles have vue- component and token names embedded within them so that developers can view them in the _Abstract Inspection Web-View_.
 
-Use the redlining symbols found in the CDR tokens toolkit library to communicate whitespace in your designs. For more information on how spacing works within html and Cedar, see the [Spacing]() article.
+Use the redlining symbols found in the CDR tokens toolkit library to communicate whitespace in your designs. For more information on how spacing works within html and Cedar, see the [Spacing](../../layout/spacing/) article.
 
-You can view an example of the [Responsive Layout Handoff Collection]() in the Cedar [Example Project]().
+You can view an example of the [Responsive Layout Handoff Collection](https://share.goabstract.com/3d47f5ff-7a77-4830-a9ec-ec6a258a44e1) in the Cedar [Example Project](https://share.goabstract.com/6e65c7af-36b9-4689-b48c-d72308fcc4cb).
 
 
 
 ## Handoff
-After redlining is complete, make an [Abstract Collection]() of artboards to handoff to the front-end developers.
+After redlining is complete, make an [Abstract Collection](https://www.abstract.com/help/collaboration/collections/) of artboards to handoff to the front-end developers.
 
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/400-Sharing.png`)"/>
 
@@ -92,13 +92,13 @@ We also recommend you make two commits of the final design: a __REDLINE__ versio
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/500-filter-redlines.png`)"/>
 1. Hide the results using __Cmd+Shift+H__.  
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/510-hide-redlines.png`)"/>
-1. Commit the file to Abstract. When naming, use the name __VISUAL__. See a [VISUAL example]() here.  
+1. Commit the file to Abstract. When naming, use the name __VISUAL__. See a [VISUAL example](https://app.goabstract.com/share/3d47f5ff-7a77-4830-a9ec-ec6a258a44e1?collectionLayerId=5a172c4b-7474-4cef-9db7-5a474ad0b7ef&mode=design&sha=8785cb458c49c22b607d729a37a00fe4bc87308f) here.  
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/520-commit-REDLINE.png`)"/>
 
 <!-- Next, make a commit showing the file to show redline spacing symbols visible. -->
 1. Press __Cmd+Z__ to undo the _“hide all”_ command. Now, you can see all the redlines.  
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/530-undo-hide.png`)"/>
-1. Make another commit to Abstract. When naming, use the name __REDLINE__. See a [REDLINE example]() here.  
+1. Make another commit to Abstract. When naming, use the name __REDLINE__. See a [REDLINE example](https://share.goabstract.com/3d47f5ff-7a77-4830-a9ec-ec6a258a44e1?collectionLayerId=5a172c4b-7474-4cef-9db7-5a474ad0b7ef) here.  
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/540-commit-VISUAL.png`)"/>
 
 __Note:__ If your design is split onto multiple pages, you may need to repeat steps _4_ and _6_ for each Sketch page.
@@ -132,11 +132,11 @@ __Note:__ If your design is split onto multiple pages, you may need to repeat st
 
 
 ## Review of Design Handoff
-Each Artboard committed to Abstract is viewable in a browser using a public link. For more information about the _Abstract Inspection Web-View_, visit the [Abstract website](). We recommend the following uses:
+Each Artboard committed to Abstract is viewable in a browser using a public link. For more information about the _Abstract Inspection Web-View_, visit the [Abstract website](https://www.abstract.com/help/collaboration/). We recommend the following uses:
 
 
 ### Collections
-Use __Collections__ to view a curated set of artboards in a list. When viewing a specific artboard, use the bottom bar to navigate and toggle to 100% zoom. For more information, read the [Abstract Collection]() documentation.  
+Use __Collections__ to view a curated set of artboards in a list. When viewing a specific artboard, use the bottom bar to navigate and toggle to 100% zoom. For more information, read the [Abstract Collection](https://www.abstract.com/help/collaboration/collections/) documentation.  
 <!-- <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/.png`)"/> -->
 
 
@@ -152,7 +152,7 @@ You can also use the __Comment__ tab to create and reply to comments on specific
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/1510-subtle-comments.png`)"/>
 - Resolve Issues with CSS layout  
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/1520-code-comments.png`)"/>
-To learn more, read the [Abstract Comments]() documentation.
+To learn more, read the [Abstract Comments](https://www.abstract.com/help/collaboration/comments-annotations/) documentation.
 
 
 
@@ -162,7 +162,7 @@ Developers use the Inspect tab to navigate the objects and layers from the Sketc
 
 
 ### Spacing Token Symbols
-Note that spacing tokens are orange and inset (padding) tokens are green. Developers can learn more about how these should be applied in the [Spacing]() article.  
+Note that spacing tokens are orange and inset (padding) tokens are green. Developers can learn more about how these should be applied in the [Spacing](../../layout/spacing/) article.  
 
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/1600-finding-space-tokens.png`)"/>
 
@@ -176,29 +176,29 @@ Or, multiple token Layer Styles can be combined using a __Rectangle__ symbol.
 
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/1620-finding-rectangle-symbols.png`)"/>
 
-To learn more about using Cedar color tokens, read the [Tokens]() article and the [Color Foundation]() article.  
+To learn more about using Cedar color tokens, read the [Tokens](../../components/design-tokens/) article and the [Color Foundation](../../foundation/color/) article.  
 
 
 ### Text Tokens
-Text Styles contain both the Text Style mixin and the text color to be applied. For a list of text token values and usage, see the [Typography]() article.  
+Text Styles contain both the Text Style mixin and the text color to be applied. For a list of text token values and usage, see the [Typography](../../foundation/typography/) article.  
 
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/1630-finding-text-tokens.png`)"/>
 
 
 ### Icons
-Icon names will appear in the Layers list. Go to the [icon library]() to see if this icon is publicly available. If the icon is custom, please export it from Sketch using [CDR icon export guide](). For more information about icon usage, see the [Iconography]() article and the [cdr-icon component]().  
+Icon names will appear in the Layers list. Go to the [icon library](https://rei.github.io/cedar-icons) to see if this icon is publicly available. If the icon is custom, please export it from Sketch using [CDR icon export guide](../../icons/resources/?active-link=exporting-icons-that-aren%E2%80%99t-in-the-library). For more information about icon usage, see the [Iconography](../../icons/iconography/) article and the [cdr-icon component](../../components/icon/).  
 
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/1700-icons.png`)"/>
 
 
 
-## Prototype
-Cedar doesn’t have a process for prototyping yet. Most REI teams use InVision. Abstract might support prototyping in the future. To read more, see this [Abstract]() forum.
+## Prototypes
+Cedar doesn’t have a process for prototyping yet. Most REI teams use InVision. Abstract might support prototyping in the future. To read more, see this [Abstract](https://spectrum.chat/abstract/feature-requests/sketch-prototype-support~3e9594cf-edde-422b-a3e2-58c4019aae87?m=MTU2NzQ2OTI3NjI0Ng==) forum.
 
 
 
 ## Suggestions?
-Does this process work for you? Do you have any suggestions for improvement? Please let us know using the [#cedar-user-support]() slack channel.
+Does this process work for you? Do you have any suggestions for improvement? Please let us know using the [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) slack channel.
 
 __Now Go Be Awesome!__
 
