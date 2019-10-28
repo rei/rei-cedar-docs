@@ -15,16 +15,22 @@
 
 <style> img{max-width:100%} </style>
 
-The Cedar UI Sketch Toolkit provides tools and processes to communicate Cedar component and token usage in sketch design assets. Designers using the Cedar toolkit to build mockups and redlines will be creating annotated, inspectable, web-sharble assets to facilitate the developer handoff process.
+The Cedar UI Sketch Toolkit provides tools and processes to communicate Cedar component and token usage in sketch design assets. Designers using the Cedar toolkit to build mockups and redlines will be creating annotated, inspectable, web-sharable assets to facilitate the developer handoff process.
+
+
 
 ## Developers
 If you’re a developer, you can skip to the [review handoff section]() of this article.
 
+
+
 ## Designers – Design with These Goals in Mind:
-[Setup](): A set of up to 4 artboards for each screen, one for each responsive breakpoint. See recommended artboard widths. Follow the Cedar 12-column grid layout.
-[Design](): Construct your designs mostly from symbols, layer styles, and text styles available through Cedar UI Toolkit.
-[Redline](): Add spacing and inset or padding grid token overlays to visualize whitespace. Also see Redlining Tips for additional info.
-[Handoff](): Group sections from top to bottom as layers for parsability. Make collections of relevant artboard. Commit both the VISUAL and the REDLINE examples for the developers.
+- [Setup](): A set of up to 4 artboards for each screen, one for each responsive breakpoint. See recommended artboard widths. Follow the Cedar 12-column grid layout.
+- [Design](): Construct your designs mostly from symbols, layer styles, and text styles available through Cedar UI Toolkit.
+- [Redline](): Add spacing and inset or padding grid token overlays to visualize whitespace. Also see Redlining Tips for additional info.
+- [Handoff](): Group sections from top to bottom as layers for parsability. Make collections of relevant artboard. Commit both the VISUAL and the REDLINE examples for the developers.
+
+
 
 ## Artboard Setup 
 Each screen should have (up to) 4 versions, each at different breakpoint widths corresponding to [Cedar’s breakpoints](): `@Xs` `@Sm` `@Md` `@Lg`. The goal is to showcase how content will resize and reflow for responsive web layouts, and communicate those states to a developer.
@@ -52,12 +58,16 @@ Use the table below to create 4 artboards with the correct layout properties. Yo
 
 We also recommend setting an 8px grid by clicking __View > Canvas > Grid Settings__.  You can toggle an arboard’s grid overlay with __View > Canvas > Show Grid (Ctrl+G)__ and column overlay with __View > Canvas > Show Layout (Ctrl+L)__.
 
+
+
 ## Create Your Design
 Use the Cedar toolkit components symbols, layer styles, and text styles to make your designs. For more information about how to link and use these libraries, visit the [Getting Started as a Designer]() article.
 
 To align to the Cedar grid where appropriate, see the [Grid]() article.
 
 A Global Header & Footer library is also available in the Cedar toolkit to help put your designs in context.
+
+
 
 ## Redlining
 
@@ -69,6 +79,8 @@ Use the redlining symbols found in the CDR tokens toolkit library to communicate
 
 You can view an example of the [Responsive Layout Handoff Collection]() in the Cedar [Example Project]().
 
+
+
 ## Handoff
 After redlining is complete, make an [Abstract Collection]() of artboards to handoff to the front-end developers.
 
@@ -76,74 +88,102 @@ After redlining is complete, make an [Abstract Collection]() of artboards to han
 
 We also recommend you make two commits of the final design: a `REDLINE` version and a `VISUAL` version. This will allow developers to toggle the redlines on and off. Use the process below for best results:
 
-First, make a commit showing the file without redline spacing symbols visible:
-
-1. In the lower left corner of the Layers panel (Cmd+F), type “redlines” into the filter bar. This will show only the redline symbols from the CDR token library. Select the first object in the list, then Shift+Select the last object in the list to select all your redline symbols.
-
-1. Hide the results using Cmd+Shift+H.
+<!-- First, make a commit showing the file without redline spacing symbols visible: -->
+1. In the lower left corner of the Layers panel (__Cmd+F__), type _“redlines”_ into the filter bar. This will show only the redline symbols from the CDR token library. Select the first object in the list, then Shift+Select the last object in the list to select all your redline symbols.  
+![screenshot](../../.vuepress/public/getting-started-handoff/100-Grid.png)
+1. Hide the results using __Cmd+Shift+H__.  
+![screenshot](../../.vuepress/public/getting-started-handoff/200-Grid-Settings.png)
+1. Commit the file to Abstract. When naming, use the name `VISUAL`. See a [VISUAL example]() here.  
 ![screenshot](../../.vuepress/public/getting-started-handoff/200-Grid-Settings.png)
 
-1. Commit the file to Abstract. When naming, use the name VISUAL. See a VISUAL example here. 
-
-1. Next, make a commit showing the file to show redline spacing symbols visible.
-
-1. Press Cmd+Z to undo the “hide all” command. Now, you can see all the redlines.
-
-1. Make another commit to Abstract. When naming, use the name REDLINE. See a REDLINE example here. 
+<!-- Next, make a commit showing the file to show redline spacing symbols visible. -->
+1. Press __Cmd+Z__ to undo the _“hide all”_ command. Now, you can see all the redlines.  
+![screenshot](../../.vuepress/public/getting-started-handoff/200-Grid-Settings.png)
+1. Make another commit to Abstract. When naming, use the name `REDLINE`. See a [REDLINE example]() here.  
+![screenshot](../../.vuepress/public/getting-started-handoff/200-Grid-Settings.png)
 
 __Note:__ If your design is split onto multiple pages, you may need to repeat steps _4_ and _6_ for each Sketch page.
 
+
+
 ## Redlining Tips for Designers
-- Align all text to the object-bounding box, not to the text baseline or cap height
+- Align all text to the object-bounding box, not to the text baseline or cap height  
+![screenshot](../../.vuepress/public/getting-started-handoff/200-Grid-Settings.png)
+- Add vertical spacing symbols in between elements you want spaced, select all the elements you want to stack vertically, click __Tidy__, and change the vertical space to 0  
+![screenshot](../../.vuepress/public/getting-started-handoff/200-Grid-Settings.png)
+- Elements that are locked in Sketch will not be selectable in the `Abstract Inspection Web-View` canvas. This means elements that are layered underneath the locked elements will be selectable. Place a redline grid symbol over your entire page to communicate grid alignment. Lock this element in Sketch so that it is not selectable in `Abstract Inspection Web-View` canvas.  
+![screenshot](../../.vuepress/public/getting-started-handoff/200-Grid-Settings.png)
+- Elements that are hidden in Sketch will not exist in the `Abstract Inspection Web-View`  
+![screenshot](../../.vuepress/public/getting-started-handoff/200-Grid-Settings.png)
+- Group your document in sections in a top to bottom vertical stacking order. This makes the file more digestible in `Abstract Inspection Web-View` layer list  
+![screenshot](../../.vuepress/public/getting-started-handoff/200-Grid-Settings.png)
+- To unhide all redline symbols:
+  - In the lower-left corner of the layers panel (__Cmd+F__) type _“redlines”_ into the filter bar.
+  - Shift-select all the results in the layers list 
+  - Manually __Cmd+Click__ to deselect all artboards in the layers list.
+  - Press __Cmd+Shift+H__ to hide and unhide.
+- Use color token Layer Styles to help your developers find the right token values  
+![screenshot](../../.vuepress/public/getting-started-handoff/200-Grid-Settings.png)
+- Use the rectangle symbol to mix __border__, __background__, __prominence__, and __radius__ token values  
+![screenshot](../../.vuepress/public/getting-started-handoff/200-Grid-Settings.png)
+- Use __Text Styles__ to communicate Cedar text token values  
+![screenshot](../../.vuepress/public/getting-started-handoff/200-Grid-Settings.png)
+- To center text, just click __Center__ in Sketch. The Cedar toolkit does not provide the left, right, and centered variants of each text block
 
-- Add vertical spacing symbols in between elements you want spaced, select all the element you want to stack vertically, click Tidy, and change the vertical space to 0
 
-- Elements that are locked in Sketch will not be selectable in the Abstract Inspection Web-View Canvas. This means elements that are layered underneath the locked elements will be selectable. Place a redline grid symbol over your entire page to communicate grid alignment. Lock this element in Sketch so that it is not selectable in Abstract Inspection Web-View Canvas. 
 
-Elements that are hidden in Sketch will not exist in the Abstract Inspection Web-View 
- 
-Group your document in sections in a top to bottom vertical stacking order. This makes the file more digestible in Abstract Inspection Web-View layer list
-To unhide all redline symbols:
-In the lower-left corner of the layers panel (Cmd-F) type “redlines” into the filter bar.
-Shift-select all the results in the layers list 
-Manually Cmd-Click to deselect all artboards in the layers list. (tedious…)
-Press Cmd-Shift-H to hide and unhide.
-Use color token Layer Styles to help your developers find the right token values 
+## Review of Design Handoff
+Each Artboard committed to Abstract is viewable in a browser using a public link. For more information about the `Abstract Inspection Web-View`, visit the [Abstract website](). We recommend the following uses:
 
-Use the rectangle symbol to mix border, background, prominence, and radius token values
+### Collections
+Use __Collections__ to view a curated set of artboards in a list. When viewing a specific artboard, use the bottom bar to navigate and toggle to 100% zoom. For more information, read the [Abstract Collection]() documentation.  
+![screenshot](../../.vuepress/public/getting-started-handoff/200-Grid-Settings.png)
 
-Use Text Styles to communicate Cedar text token values
-To center text, just click Center in Sketch. The Cedar toolkit does not provide the left, right, and centered variants of each text block
-Review of Design Handoff
-Each Artboard committed to Abstract is viewable in a browser using a public link. For more information about the Abstract Inspection tool, visit the Abstract website. We recommend the following uses:
-Collections
-Use Collections to view a curated set of artboards in a list. When viewing a specific artboard, use the bottom bar to navigate and toggle to 100% zoom. For more information, read the Abstract Collection documentation.
-Comment Tab
-Use the Comment tab to navigate between different versions in the file’s commit history. This tab can also be used to toggle between the VISUAL and the REDLINE commits.You can also use the Comment tab to create and reply to comments on specific artboards. We recommend using comments to:
-Communicate Intended Interactions
 
-Annotate details, interaction, motion, or responsive details that might otherwise go overlooked
+### Comment Tab
+Use the __Comment__ tab to navigate between different versions in the file’s commit history. This tab can also be used to toggle between the `VISUAL` and the `REDLINE` commits.  
+![screenshot](../../.vuepress/public/getting-started-handoff/200-Grid-Settings.png)  
+You can also use the __Comment__ tab to create and reply to comments on specific artboards. We recommend using comments to:
+- Communicate Intended Interactions  
+![screenshot](../../.vuepress/public/getting-started-handoff/200-Grid-Settings.png)
+- Annotate details, interaction, motion, or responsive details that might otherwise go overlooked  
+![screenshot](../../.vuepress/public/getting-started-handoff/200-Grid-Settings.png)
+- Resolve Issues with CSS layout  
+![screenshot](../../.vuepress/public/getting-started-handoff/200-Grid-Settings.png)
+To learn more, read the [Abstract Comments]() documentation.
 
-Resolve Issues with CSS layout
-To learn more, read the Abstract Comments documentation.
-Inspect Tab
+## Inspect Tab
 Developers use the Inspect tab to navigate the objects and layers from the Sketch file. Cedar token names are embedded in the Layer Style and Text Style names. You can view them in the selection column on the right.
-Spacing Token Symbols
-Note that spacing tokens are orange and inset (padding) tokens are green. Developers can learn more about how these should be applied in the Spacing article.
-Token Layer Styles
-Token Layer Style may be applied to a standalone element.
-Or, multiple token Layer Styles can be combined using a Rectangle symbol.
-To learn more about using Cedar color tokens, read the Tokens article and the Color Foundation article.
-Text Tokens
-Text Styles contain both the Text Style mixin and the text color to be applied. For a list of text token values and usage, see the Typography article.
-Icons
-Icon names will appear in the Layers list. Go to the icon library to see if this icon is publicly available. If the icon is custom, please export it from Sketch using CDR icon export guide. For more information about icon usage, see the Iconography article and the cdr-icon component.
 
-Prototype
-Cedar doesn’t have a process for prototyping yet. Most REI teams use InVision. Abstract might support prototyping in the future. To read more, see this Abstract forum.
-Suggestions?
-Does this process work for you? Do you have any suggestions for improvement? Please let us know using the #cedar-user-support slack channel.
-Now Go Be Awesome!
+### Spacing Token Symbols
+Note that spacing tokens are orange and inset (padding) tokens are green. Developers can learn more about how these should be applied in the [Spacing]() article.  
+![screenshot](../../.vuepress/public/getting-started-handoff/200-Grid-Settings.png)
 
+### Token Layer Styles
+Token Layer Style may be applied to a standalone element.  
+![screenshot](../../.vuepress/public/getting-started-handoff/200-Grid-Settings.png)  
+Or, multiple token Layer Styles can be combined using a __Rectangle__ symbol.  
+![screenshot](../../.vuepress/public/getting-started-handoff/200-Grid-Settings.png)
+To learn more about using Cedar color tokens, read the [Tokens]() article and the [Color Foundation]() article.  
+
+### Text Tokens
+Text Styles contain both the Text Style mixin and the text color to be applied. For a list of text token values and usage, see the [Typography]() article.  
+![screenshot](../../.vuepress/public/getting-started-handoff/200-Grid-Settings.png)
+
+### Icons
+Icon names will appear in the Layers list. Go to the [icon library]() to see if this icon is publicly available. If the icon is custom, please export it from Sketch using [CDR icon export guide](). For more information about icon usage, see the [Iconography]() article and the [cdr-icon component]().  
+![screenshot](../../.vuepress/public/getting-started-handoff/200-Grid-Settings.png)
+
+
+
+## Prototype
+Cedar doesn’t have a process for prototyping yet. Most REI teams use InVision. Abstract might support prototyping in the future. To read more, see this [Abstract]() forum.
+
+
+
+## Suggestions?
+Does this process work for you? Do you have any suggestions for improvement? Please let us know using the [#cedar-user-support]() slack channel.
+
+__Now Go Be Awesome!__
 
 </cdr-doc-table-of-contents-shell>
