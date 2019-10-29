@@ -113,7 +113,10 @@ For a complete list of Cedar Design Tokens, visit the [Cedar Tokens](https://rei
 <tokens-typography platform="web" type="heading">
 ### Headings
 </tokens-typography>
-<tokens-typography platform="web" type="header" />
+
+<tokens-typography platform="web" type="display">
+### Display
+</tokens-typography>
 
 <hr>
 
