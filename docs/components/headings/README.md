@@ -107,7 +107,7 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
 
-Stuart is our first choice for larger, more expressive moments. Graphik rounds out the heading schema with smaller sizes and its simplicity allows it to play a supporting role across a wide range of projects.
+Stuart is our first choice for larger, more expressive moments. Graphik rounds out the heading schema with smaller sizes. The simplicity of Graphik allows it to play a supporting role across a wide range of projects.
 
 **Usage Considerations**
 -  Heading styles should never end with a period
@@ -216,7 +216,7 @@ Use for headings nested within a section of your page.
 
 ### Sub-subsection Heading
 
-Use for headings nested within a sub-section of your page.
+Use for headings nested within a subsection of your page.
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
@@ -451,7 +451,7 @@ This component has compliance with WCAG guidelines by:
 - Creating hierarchical structure of information in a page layout
 - Improving quick scanning of page content for sighted users and screen readers
 
-## Don't’t Use When
+## Don’t Use When
 
 - Tagging as a semantic heading when an element only needs to be highlighted or emphasized within your content. Instead, use sizing modifier for this component
 - Showcasing long form content. Instead use [Paragraphs](https://rei.github.io/rei-cedar-docs/components/paragraphs/)
@@ -496,7 +496,7 @@ This component has compliance with WCAG guidelines by:
 
 ## Responsiveness
 
-Responsive heading font sizes are the default for heading levels except subheading. Refer to Overview section for more information.
+Responsive heading font sizes are the default for heading levels except subheading. Refer to the Overview section for more information.
 
 ## Resources
 
@@ -518,7 +518,7 @@ Responsive heading font sizes are the default for heading levels except subheadi
 
 ## Usage
 
-The **CdrText** component allows for styling any html element with available text styles. Visual style and semantic meaning are managed independently by providing:
+The **CdrText** component allows for styling any HTML element with available text styles. Visual style and semantic meaning are managed independently by providing:
 
 - Element to the `tag` prop
 - Style to the `modifier` prop
