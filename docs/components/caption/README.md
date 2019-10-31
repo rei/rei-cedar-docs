@@ -178,10 +178,10 @@ The captions component is text-only; however, it is meant to be displayed in the
 
 ## Accessibility
 
-To ensure that usage of this component complies with accessibility guidelines, do the following:
+To ensure that usage of this component complies with the accessibility guidelines, do the following:
 
 - Use captions sparingly and only with accompanied media
-- Do not use caption text styles for body copy; it is smaller than the recommended size for text readability
+- Do not use caption text styles for body copy. It is smaller than the recommended size for text readability
 
 <br/>
 
@@ -197,9 +197,9 @@ This component has compliance with WCAG guidelines by:
 
 ## Use When
 
-- Providing further context and attribution to any figure or media asset such as an image, video or chart
+- Providing further context and attribution to any figure or media asset such as an image, video, or chart
 
-## Don't’t Use When
+## Don’t Use When
 
 - Displaying body copy. Instead, use [Paragraphs](../paragraphs/)
 - Breaking up the text styles in a layout for aesthetic purposes
@@ -241,11 +241,11 @@ For multiple photo accreditations:
   - List in clockwise order from top
   - Separated by commas and semicolons
   - No breaking spaces
-  - For example, “Image credits: top left, Madeline G. @maddyluv; top right, Kevin C.; bottom right, George M. @gmonkey”
+  - For example, “Image Credits: top left, Madeline G. @maddyluv; top right, Kevin C.; bottom right, George M. @gmonkey”
 
 \
 For purchased assets (photos or video):
-  - Use full name, provided there a signed release is on file
+  - Use full name, provided a signed release is on file
 
 \
 For copyrighted media (photos or video):
@@ -268,7 +268,7 @@ Keep summary content short to avoid excess text-wrapping.
 <br/>
 <do-dont :examples="$page.frontmatter.summaries" />
 
-Captions must be accompanied by media asset such as an image, video or chart.
+Captions must be accompanied by media asset such as an image, video, or chart.
 <br/>
 <br/>
 <do-dont :examples="$page.frontmatter.media" />
@@ -296,7 +296,7 @@ Caption stays left aligned with body copy regardless of the width of the media.
 
 ## Usage
 
-The **CdrCaption** component is developed to work within a composition with other components; however composition-type components have not been developed yet.
+The **CdrCaption** component is developed to work within a composition with other components; however, composition-type components have not been developed yet.
 
 <br />
 
