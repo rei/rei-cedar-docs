@@ -206,16 +206,16 @@ This component has compliance with WCAG guidelines by:
 
 ## Content
 
-The Captions component has two separate fields: Summary and Credit.
+The Caption component has two separate fields: Summary and Credit
   - While they often appear together, one is not dependent on the other
   - Both are, however, dependent on media content (image, video, etc)
 
-\
-Text fields within a caption:
-  - Summary text gives the media context:
+
+There are two text fields available within a caption:
+  - Summary text gives the media context
       - Keep summary text concise, 1-2 lines at LG breakpoint
       - Use sentence case
-  - Credit provides attribution to the correct sources:
+  - Credit provides attribution to the correct sources
       - Helps users gauge the strength and validity of the material the author has used
       - Begin credit text with “Video Credit” or “Image Credit”
 
@@ -223,10 +223,13 @@ Text fields within a caption:
 
 - Captions align to the left border based on the paragraph container and not centered under the media object
 - Max width is 498 pixels, even if the media (image, video, or chart) extends beyond the paragraph max width
-- Left padding is added to the caption container
 <br />
 <br />
 <cdr-img :src="$withBase(`/caption/spec_caption_layout-4-3.png`)"/>
+
+// image change:
+https://drive.google.com/file/d/1FwLQ6DQd5OwcyW86AjFQ-jkL3mCX8CVL/view?usp=sharing
+
 <br />
 
 ### Types of Accreditations
@@ -267,21 +270,33 @@ Keep summary content short to avoid excess text-wrapping.
 <br/>
 <br/>
 <do-dont :examples="$page.frontmatter.summaries" />
+// image change:
+do: https://drive.google.com/file/d/1FwLQ6DQd5OwcyW86AjFQ-jkL3mCX8CVL/view?usp=sharing
+don't: https://drive.google.com/file/d/1RRSdGZeSPD3yce63pnuz4rbU-2W6XhHi/view?usp=sharing
 
 Captions must be accompanied by media asset such as an image, video, or chart.
 <br/>
 <br/>
 <do-dont :examples="$page.frontmatter.media" />
+// image change
+do: https://drive.google.com/file/d/1cworowpoeZ3idrf-kTJnDsKVbhV6p_u8/view?usp=sharing
+don't: https://drive.google.com/file/d/1p3ixVmpTR09JV6yKxkqd7z84-qEbh5QW/view?usp=sharing
 
 Summary and Credit serve different purposes and should remain separate.
 <br/>
 <br/>
 <do-dont :examples="$page.frontmatter.separate" />
+// image change
+do: https://drive.google.com/file/d/1pfwZVannMAGiQVEO41FaUAuSt3jRQlCx/view?usp=sharing
+don't: https://drive.google.com/file/d/1xVji3IOq9tA65KvOYSrW5_qKY2SwWNZP/view?usp=sharing
 
 Caption stays left aligned with body copy regardless of the width of the media.
 <br/>
 <br/>
 <do-dont :examples="$page.frontmatter.align" />
+// image change
+do: https://drive.google.com/file/d/11uTEqjaw12RsZXEzt6HrwzRvnVmJUtRG/view?usp=sharing
+don't: https://drive.google.com/file/d/1j-U2egtcOOsmGjzdsAAMKhnuFst8_kuW/view?usp=sharing
 
 
 </cdr-doc-table-of-contents-shell>
