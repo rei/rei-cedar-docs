@@ -360,7 +360,7 @@ don't: https://drive.google.com/file/d/1AkoWHpdulPeBGlbjiC4DvgtGIUehGAqG/view?us
 
 <do-dont :examples="$page.frontmatter.titles" />
 // new images
-do: https://drive.google.com/file/d/1AkoWHpdulPeBGlbjiC4DvgtGIUehGAqG/view?usp=sharing
+do: https://drive.google.com/file/d/1Nyv6ZSyrTqAqKlWNKY7nArJwmkm7H2nO/view?usp=sharing
 don't: https://drive.google.com/file/d/1AkoWHpdulPeBGlbjiC4DvgtGIUehGAqG/view?usp=sharing
 
 ## Responsiveness
