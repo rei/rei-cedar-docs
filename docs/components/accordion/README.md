@@ -322,12 +322,14 @@ This component has compliance with WCAG guidelines by:
 ## The Basics
 
 - Use on either light or dark backgrounds. Background color is provided for both
+- Content within accordions can include text, photos, graphics, or other components (i.e. links, buttons, tables)
 
 ## Content
 
 - Order the accordion titles by priority and importance
 - Keep titles short to avoid wrapping at smaller viewports
 - Use sentence case for titles
+- Use short titles for accordion labels to avoid wrapping
 - Always include a title, icon, and subsequent content for each section. All are required
 
 ## Anatomy
@@ -338,7 +340,7 @@ This component has compliance with WCAG guidelines by:
 
 - Entire title area is clickable, including icon and background
 - Never nest accordions within themselves
-- Use short titles for accordion labels to avoid wrapping
+
 
 ### Show and Hide
 
@@ -351,14 +353,19 @@ This component has compliance with WCAG guidelines by:
 ### Do / Don't
 
 <do-dont :examples="$page.frontmatter.nesting" />
-
+// new images
+do: https://drive.google.com/file/d/1qOOxH1BZVfSfqW32QVlA38Jsfe_N6XYv/view?usp=sharing
+don't: https://drive.google.com/file/d/1AkoWHpdulPeBGlbjiC4DvgtGIUehGAqG/view?usp=sharing
 <br />
 
 <do-dont :examples="$page.frontmatter.titles" />
+// new images
+do: https://drive.google.com/file/d/1AkoWHpdulPeBGlbjiC4DvgtGIUehGAqG/view?usp=sharing
+don't: https://drive.google.com/file/d/1AkoWHpdulPeBGlbjiC4DvgtGIUehGAqG/view?usp=sharing
 
 ## Responsiveness
 
-- Accordion style can change variant based on breakpoint. Example: _Default_ at MD/LG, _Compact_ and _Border-Aligned_ at XS/SM
+- Accordion style can change variant based on breakpoint. Example: Default at MD/LG can change to Compact and Border-Aligned at XS/SM
 - Switching between the Tab component and the Accordion component is not supported in Cedar components library
 - Do not replace the Accordion component with the Tab component at different breakpoints
 
