@@ -346,6 +346,9 @@ When stacking buttons vertically:
   - Display all with the same width
   - Separate each by stack-1-x spacing
   <cdr-img class="cdr-doc-article-img" :src="$withBase(`/buttons/Spec__Button_Vertical_Spacing_16-4.png`)"/>
+  
+  // new image
+  https://drive.google.com/file/d/16CwLCDX2DKqDOC0T8SiwS_675kl_QeeS/view?usp=sharing
 
 <br />
 
@@ -354,6 +357,9 @@ When arranging buttons horizontally:
   - Display all with the same height
   - Separate each by standard inline-1-x spacing
   <cdr-img class="cdr-doc-article-img" :src="$withBase(`/buttons/Spec__Button_Horizontal_Spacing_16-9.png`)"/>
+  
+  // new image
+  https://drive.google.com/file/d/1oEYsQ0IGCBpFieaWjCc3uLN78T6c32Sr/view?usp=sharing
 
 <br />
 
@@ -363,9 +369,17 @@ When grouping buttons, match button sizes either horizontally or vertically.
 
 <do-dont :examples="$page.frontmatter.vertical" />
 
+// new images
+do: https://drive.google.com/file/d/16ubviDYiYo6_4NPEG0T_QZRq13P7gYV4/view?usp=sharing
+don't: https://drive.google.com/file/d/1lG5_KvuDPKwx1l9DBPHzN5pla7qolYd0/view?usp=sharing
+
 <br />
 
 <do-dont :examples="$page.frontmatter.horizontal" />
+
+// new images
+do: https://drive.google.com/file/d/1RVlnvcjmal3g8L2uFhI16d8bGhsnolTM/view?usp=sharing
+don't: https://drive.google.com/file/d/16PqOBVn2SyO4ZLREu_jpmIy1Va0hQuAA/view?usp=sharing
 
 <br />
 
@@ -382,10 +396,22 @@ When grouping buttons, match button sizes either horizontally or vertically.
 ### Do / Don't
 
   <do-dont :examples="$page.frontmatter.label" />
+  
+  // new images
+  do: https://drive.google.com/file/d/1oacudq_pV3nwpJHCnUSTDCrYwAGFEDFM/view?usp=sharing
+  don't: https://drive.google.com/file/d/1GP-X6XgsM_mkg9f9-r4BSBCGsxmItOX7/view?usp=sharing
 
   <do-dont :examples="$page.frontmatter.case" />
+  
+  // new images
+  do: https://drive.google.com/file/d/1vNS9cHA9cL7zzG_0NUoQbVMCdLvOqfNc/view?usp=sharing
+  don't: https://drive.google.com/file/d/15gNInt26FQufL6Zw624wWKE7POp6ieU7/view?usp=sharing
 
   <do-dont :examples="$page.frontmatter.noun" />
+  
+  // new images
+  do: https://drive.google.com/file/d/1p08smFLRb7YvVKeDJ_zIg1NxP7H4YZIT/view?usp=sharing
+  don't: https://drive.google.com/file/d/1iOd3WuHG8pJNzgEMVRgFoetLHt6ngg5f/view?usp=sharing
 
 ## Behavior
 
