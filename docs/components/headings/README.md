@@ -465,6 +465,16 @@ This component has compliance with WCAG guidelines by:
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase('/headings/heading_proper-page-construction.png')" alt="image of page layout with headings"/>
 
+// new image for above:
+https://drive.google.com/file/d/1qhXhVmkF2__iuVqymGcyNJ1gQ9T9IFIn/view?usp=sharing
+
+- One title per page is recommended
+- Use subtitles and subheadlines when paired with titles and headlines, respectively
+- Use section headings to separate content
+- Use subsection and sub-subsection headings to nest content
+- Repeat section, subsection, and sub-subsection headings as needed
+- Repeat nesting patterns as needed
+
 ## Content
 
 - Be specific. Provide facts or information that pique user interest. Avoid broad and generic headings
@@ -484,6 +494,10 @@ This component has compliance with WCAG guidelines by:
 
 <do-dont :examples="$page.frontmatter.subtitle" />
 
+// new images: 
+do:https://drive.google.com/file/d/1Gme0EkwxMzR01_0SRRCe-Ow5dAxHJ3DQ/view?usp=sharing
+don't: https://drive.google.com/file/d/1deXhjoYg4WpJL3xBlV61sXbcmVEQIlrB/view?usp=sharing
+
 ## Behavior
 
 - Minimize text overlaid on images and multicolored backgrounds, which can degrade legibility. If text is overlaid on an image:
@@ -493,6 +507,10 @@ This component has compliance with WCAG guidelines by:
 ### Do / Don’t
 
 <do-dont :examples="$page.frontmatter.minimize" />
+
+// new images
+do: https://drive.google.com/file/d/1NbnlHO30LqbmbMjULxYKOxIqMOwbPtHE/view?usp=sharing
+don't: https://drive.google.com/file/d/1hS4M0qfHagWcwyLrVTdcldlK2SfO_hSF/view?usp=sharing
 
 ## Responsiveness
 
