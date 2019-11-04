@@ -13,7 +13,7 @@
 
 <cdr-doc-table-of-contents-shell>
 
-The Cedar UI Sketch Toolkit provides tools and processes to communicate Cedar component and token usage in sketch design assets. Designers using the Cedar toolkit to build mockups and redlines will be creating annotated, inspectable, web-sharable assets to facilitate the developer handoff process.
+The Cedar UI Sketch Toolkit provides tools and processes to communicate Cedar component and token usage in Sketch design assets. Designers using the Cedar Toolkit to build mockups and redlines will be creating annotated, inspectable, web-sharable assets to facilitate the developer handoff process.
 
 
 
@@ -23,10 +23,10 @@ If you’re a developer, you can skip to the [review handoff section](#review-of
 
 
 ## Designers – Design with These Goals in Mind:
-- [Setup](#artboard-setup): A set of up to 4 artboards for each screen, one for each responsive breakpoint. See recommended artboard widths. Follow the Cedar 12-column grid layout.
-- [Design](#create-your-design): Construct your designs mostly from symbols, layer styles, and text styles available through Cedar UI Toolkit.
-- [Redline](#redlining): Add spacing and inset or padding grid token overlays to visualize whitespace. Also see Redlining Tips for additional info.
-- [Handoff](#handoff): Group sections from top to bottom as layers for parsability. Make collections of relevant artboard. Commit both the __VISUAL__ and the __REDLINE__ examples for the developers.
+- [Setup](#artboard-setup): A set of up to 4 artboards for each screen, one for each responsive breakpoint. See recommended artboard widths. Follow the Cedar 12-column grid layout
+- [Design](#create-your-design): Construct your designs mostly from symbols, layer styles, and text styles available through Cedar UI Toolkit
+- [Redline](#redlining): Add spacing and inset or padding grid token overlays to visualize whitespace. Also see Redlining Tips for additional info
+- [Handoff](#handoff): Group sections from top to bottom as layers for parsability. Make collections of relevant artboard. Commit both the __VISUAL__ and the __REDLINE__ examples for the developers
 
 
 
@@ -60,11 +60,11 @@ We also recommend setting an 8px grid by clicking __View > Canvas > Grid Setting
 
 
 ## Create Your Design
-Use the Cedar toolkit components symbols, layer styles, and text styles to make your designs. For more information about how to link and use these libraries, visit the [Getting Started as a Designer](../../getting-started/as-a-designer/) article.
+Use the Cedar toolkit components (symbols, layer styles, and text styles) to make your designs. For more information about how to link and use these libraries, visit the [Getting Started as a Designer](../../getting-started/as-a-designer/) article.
 
 To align to the Cedar grid where appropriate, see the [Grid](../../components/grid/) article.
 
-A Global Header & Footer library is also available in the Cedar toolkit to help put your designs in context.
+A Global Header & Footer library is also available in the Cedar Toolkit to help put your designs in context.
 
 
 
@@ -72,9 +72,9 @@ A Global Header & Footer library is also available in the Cedar toolkit to help 
 
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/300-Redlining.png`)"/>
 
-Redlining effectively communicates the intended construction of a webpage to the front-end developer. Cedar toolkit symbols and styles have vue- component and token names embedded within them so that developers can view them in the _Abstract Inspection Web-View_.
+Redlining effectively communicates the intended construction of a webpage to the front-end developer. Cedar Toolkit symbols and styles have vue- component and token names embedded within them so that developers can view them in the _Abstract Inspection Web-View_.
 
-Use the redlining symbols found in the CDR tokens toolkit library to communicate whitespace in your designs. For more information on how spacing works within html and Cedar, see the [Spacing](../../layout/spacing/) article.
+Use the redlining symbols found in the CDR tokens toolkit library to communicate whitespace in your designs. For more information on how spacing works within HTML and Cedar, see the [Spacing](../../layout/spacing/) article.
 
 You can view an example of the [Responsive Layout Handoff Collection](https://share.goabstract.com/3d47f5ff-7a77-4830-a9ec-ec6a258a44e1) in the Cedar [Example Project](https://share.goabstract.com/6e65c7af-36b9-4689-b48c-d72308fcc4cb).
 
@@ -90,15 +90,15 @@ We also recommend you make two commits of the final design: a __REDLINE__ versio
 <!-- First, make a commit showing the file without redline spacing symbols visible: -->
 1. In the lower left corner of the Layers panel (__Cmd+F__), type _“redlines”_ into the filter bar. This will show only the redline symbols from the CDR token library. Select the first object in the list, then Shift+Select the last object in the list to select all your redline symbols.  
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/500-filter-redlines.png`)"/>
-1. Hide the results using __Cmd+Shift+H__.  
+2. Hide the results using __Cmd+Shift+H__.  
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/510-hide-redlines.png`)"/>
-1. Commit the file to Abstract. When naming, use the name __VISUAL__. See a [VISUAL example](https://app.goabstract.com/share/3d47f5ff-7a77-4830-a9ec-ec6a258a44e1?collectionLayerId=5a172c4b-7474-4cef-9db7-5a474ad0b7ef&mode=design&sha=8785cb458c49c22b607d729a37a00fe4bc87308f) here.  
+3. Commit the file to Abstract. When naming, use the name __VISUAL__. See a [VISUAL example](https://app.goabstract.com/share/3d47f5ff-7a77-4830-a9ec-ec6a258a44e1?collectionLayerId=5a172c4b-7474-4cef-9db7-5a474ad0b7ef&mode=design&sha=8785cb458c49c22b607d729a37a00fe4bc87308f) here.  
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/520-commit-REDLINE.png`)"/>
 
 <!-- Next, make a commit showing the file to show redline spacing symbols visible. -->
-1. Press __Cmd+Z__ to undo the _“hide all”_ command. Now, you can see all the redlines.  
+4. Press __Cmd+Z__ to undo the _“hide all”_ command. Now, you can see all the redlines.  
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/530-undo-hide.png`)"/>
-1. Make another commit to Abstract. When naming, use the name __REDLINE__. See a [REDLINE example](https://share.goabstract.com/3d47f5ff-7a77-4830-a9ec-ec6a258a44e1?collectionLayerId=5a172c4b-7474-4cef-9db7-5a474ad0b7ef) here.  
+5. Make another commit to Abstract. When naming, use the name __REDLINE__. See a [REDLINE example](https://share.goabstract.com/3d47f5ff-7a77-4830-a9ec-ec6a258a44e1?collectionLayerId=5a172c4b-7474-4cef-9db7-5a474ad0b7ef) here.  
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/540-commit-VISUAL.png`)"/>
 
 __Note:__ If your design is split onto multiple pages, you may need to repeat steps _4_ and _6_ for each Sketch page.
@@ -110,24 +110,24 @@ __Note:__ If your design is split onto multiple pages, you may need to repeat st
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/600-type-object-alignment.png`)"/>
 - Add vertical spacing symbols in between elements you want spaced, select all the elements you want to stack vertically, click __Tidy__, and change the vertical space to 0  
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/700-tidy-spacing.png`)"/>
-- Elements that are locked in Sketch will not be selectable in the _Abstract Inspection Web-View_ canvas. This means elements that are layered underneath the locked elements will be selectable. Place a redline grid symbol over your entire page to communicate grid alignment. Lock this element in Sketch so that it is not selectable in _Abstract Inspection Web-View_ canvas.  
+- Elements that are locked in Sketch will not be selectable in the _Abstract Inspection Web-View_ canvas. This means elements that are layered underneath the locked elements will be selectable. Place a redline grid symbol over your entire page to communicate grid alignment. Lock this element in Sketch so that it is not selectable in _Abstract Inspection Web-View_ canvas  
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/800-lock-layers.png`)"/>
 - Elements that are hidden in Sketch will not exist in the _Abstract Inspection Web-View_  
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/900-layer-groups.png`)"/>
-- Group your document in sections in a top to bottom vertical stacking order. This makes the file more digestible in _Abstract Inspection Web-View_ layer list  
+- Group your document in sections in a top to bottom vertical stacking order. This makes the file more accessible in _Abstract Inspection Web-View_ layer list  
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/1000-invisible-object.png`)"/>
 - To unhide all redline symbols:
-  - In the lower-left corner of the layers panel (__Cmd+F__) type _“redlines”_ into the filter bar.
+  - In the lower-left corner of the layers panel (__Cmd+F__), type _“redlines”_ into the filter bar
   - Shift-select all the results in the layers list 
-  - Manually __Cmd+Click__ to deselect all artboards in the layers list.
-  - Press __Cmd+Shift+H__ to hide and unhide.
+  - Manually __Cmd+Click__ to deselect all artboards in the layers list
+  - Press __Cmd+Shift+H__ to hide and unhide
 - Use color token Layer Styles to help your developers find the right token values  
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/1100-using-colors.png`)"/>
 - Use the rectangle symbol to mix __border__, __background__, __prominence__, and __radius__ token values  
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/1200-rectangle-symbol.png`)"/>
 - Use __Text Styles__ to communicate Cedar text token values  
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/1300-use-text-styles.png`)"/>
-- To center text, just click __Center__ in Sketch. The Cedar toolkit does not provide the left, right, and centered variants of each text block
+- To center text, just click __Center__ in Sketch. The Cedar Toolkit does not provide the left, right, and centered variants of each text block
 
 
 
@@ -193,7 +193,7 @@ Icon names will appear in the Layers list. Go to the [icon library](https://rei.
 
 
 ## Prototypes
-Cedar doesn’t have a process for prototyping yet. Most REI teams use InVision. Abstract might support prototyping in the future. To read more, see this [Abstract](https://spectrum.chat/abstract/feature-requests/sketch-prototype-support~3e9594cf-edde-422b-a3e2-58c4019aae87?m=MTU2NzQ2OTI3NjI0Ng==) forum.
+Cedar doesn’t have a process for prototyping yet. Most teams in REI use InVision. Abstract might support prototyping in the future. To read more, see this [Abstract](https://spectrum.chat/abstract/feature-requests/sketch-prototype-support~3e9594cf-edde-422b-a3e2-58c4019aae87?m=MTU2NzQ2OTI3NjI0Ng==) forum.
 
 
 
