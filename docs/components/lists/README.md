@@ -273,17 +273,15 @@ This component has compliance with WCAG guidelines by:
 
 - Displaying groups of related items represented by text
 
-## Don't’t Use When
+## Don't Use When
 
 - Displaying content that is not primarily text
 - Displaying content with two or more well-defined dimensions. Instead, use [Data Tables](../data-tables/)
 
 ## The Basics
 
-- Vary list item font size
+- Lists can inherit cdr-text modifiers to make any text a list
 - Follow spacing requirements found on [Typography](../../foundation/typography/) and [Spacing](../../foundation/spacing/) pages
-
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/lists/Spec_List_Font_Size_Variations_16-9.png`)" ratio="16-9"/>
 
 ## Content
 
@@ -317,8 +315,17 @@ Every item in a list must:
 ### Do / Don’t
 
 <do-dont :examples="$page.frontmatter.list1" />
+
+// new images:
+do: https://drive.google.com/file/d/1I4GEhLono3yJ-EQfV3fxZdC-HTSdkdEx/view?usp=sharing
+don't: https://drive.google.com/file/d/1w2Io0VliFxbilxUjyK04TVgq-JLDkAf4/view?usp=sharing
+
 <br />
 <do-dont :examples="$page.frontmatter.list2" />
+
+// new images:
+do: https://drive.google.com/file/d/1kizRYqa8MpSbQpNFhlOXbXF95nwWy7yl/view?usp=sharing
+don't: https://drive.google.com/file/d/1pLaezccQsFaL16mkJcHgWlZqePmvgu26/view?usp=sharing
 
 ## Resources
 
