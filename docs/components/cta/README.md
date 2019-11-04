@@ -258,7 +258,7 @@ To ensure that usage of this component complies with accessibility guidelines:
   ```
 - Ensure screen readers can find all **Call to Action** buttons on a page by:
   - Always providing an `href` attribute. Empty `href` attributes are not considered true links
-  - Ensuring that it can be accessed using the keyboard. Don't manipulate the default tab index
+  - Ensuring that it can be accessed using the keyboard. Avoid manipulating the default tab index
 
 <br />
 
@@ -284,7 +284,7 @@ This component has compliance with [WCAG SC 1.4.3: Contrast (Minimum)](https://w
 
 ## Content
 
-Because Call to Action exists as a means to navigate users to a new location or additional information:
+Call to Action exists as a means to navigate users to a new location or additional information:
 
 - Use clear and concise text
 - Make it clear what happens when this link is clicked or tapped. For example, “Shop backpacking” Call to Action on a homepage would navigate the user to an assortment of backpacking-related products available for purchase
@@ -296,12 +296,12 @@ To construct consistent and universal Call to Actions across the site:
 
 - If leading to a Brand, Category, or Activity Landing page, UI text for Call to Action should be **Explore Brand/Category/Activity Name**
 - If leading to a Product Detail page, UI text for Call to Action should be **Shop product name**
-- If leading to a Collection or Search Result, UI text for Call to Action should be **Shop all Brand/Category/Activity Name**
+- If leading to a Collection or search result, UI text for Call to Action should be **Shop all Brand/Category/Activity Name**
 
 ## Behavior
 
 - Avoid combining a Call to Action with a basic button. Disabling Call to Actions is not semantically supported
-- Maintain button styling including typographic and sizing for a Call to Action. Do not style as a link
+- Maintain button styling including typographic and sizing for Call to Action. Do not style as a link
 
 ### Do / Don't
 
