@@ -206,10 +206,7 @@ This component has compliance with WCAG guidelines by:
 
 ## Content
 
-The Caption component has two separate fields: Summary and Credit
-  - While they often appear together, one is not dependent on the other
-  - Both are, however, dependent on media content (image, video, etc)
-
+The Caption component has two separate fields: Summary and Credit. While they often appear together, one is not dependent on the other. Both are, however, dependent on media content (image, video, etc).
 
 There are two text fields available within a caption:
   - Summary text gives the media context
@@ -255,7 +252,7 @@ For copyrighted media (photos or video):
   - Use © symbol and date separated by (non-breaking) spaces and photographer name. (e.g. © 2017 Norm Bellows)
   - If date is not available, use © symbol and photographer name separated by a (non-breaking) space. (e.g. © Norm Bellows)
 
-### For More Information
+### Resources
 
 - For more information about photo accreditation recommendations:
   - Noble Blogger Guidelines: [How to Cite Pictures](https://writtent.com/blog/the-honor-code-of-a-noble-blogger-how-to-cite-pictures)
