@@ -206,6 +206,9 @@ At the xs breakpoint, pagination adapts to a Select component using the native U
 
 <img :src="$withBase('/pagination/pagination_breakpoint_xs_2x.png')" alt="Image showing responsive pagination component using Select element" />
 
+// new image for above
+https://drive.google.com/file/d/12H_EpgZ8XMrdhx0iWM75IBqO2Jw3b1LB/view?usp=sharing
+
 ## Accessibility
 
 This component complies with accessibility guidelines by doing the following:
@@ -258,17 +261,29 @@ By default, pagination is center aligned under category or search results conten
 
 <do-dont :examples="$page.frontmatter.align" />
 
+// new images
+do: https://drive.google.com/file/d/1OKYIkHCw6szOS5UN2or-Egm9OUjJpoUq/view?usp=sharing
+don't: https://drive.google.com/file/d/1AlVDo9MsuArRE6kTOU0-1kHm_A0vxq4K/view?usp=sharing
+
 <br />
 
 The primary placement for pagination is at the bottom of a page that displays rows of content.
 
 <do-dont :examples="$page.frontmatter.placement" />
 
+// new images
+do: https://drive.google.com/file/d/1SdPRoZmzbASkalVFTJ_3N-XEoDT_B-dI/view?usp=sharing
+don't: https://drive.google.com/file/d/17anxn29DvfktkUFLu6Mw9ly5nESKAd0Z/view?usp=sharing
+
 <br />
 
 Use pagination logic to truncate link list, when possible.
 
 <do-dont :examples="$page.frontmatter.truncate" />
+
+// new images
+do: https://drive.google.com/file/d/1Eakw82Ezc366xJP8fhSHHjMk39srSTr0/view?usp=sharing
+don't: https://drive.google.com/file/d/1qEf9BW8c5h34K2g2Q-vj0FZfLAJGXb8f/view?usp=sharing
 
 ### Responsiveness
 
