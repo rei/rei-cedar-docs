@@ -222,7 +222,7 @@ This component has compliance with following WebAIM’s accessibility guidelines
 
 - Navigating to another page or a different portion of the same page
 
-## Don't’t Use When
+## Don't Use When
 
 - Navigating a user from promotional or campaign content. Instead, use [Call to Action](../cta/)
 
@@ -272,7 +272,15 @@ Apply the following use cases when deciding when to use links as anchors or butt
 
 <do-dont :examples="$page.frontmatter.standalone" />
 
+// new images
+do: https://drive.google.com/file/d/1YIuGCm-qv8n66KTHb-gdqaN_ll3Usagt/view?usp=sharing
+don't: https://drive.google.com/file/d/17whw8pQUxrtDJnSSiU5i8PobXSGQ1tjs/view?usp=sharing
+
 <do-dont :examples="$page.frontmatter.link" />
+
+// new images
+do: https://drive.google.com/file/d/1m8s0g_3n2ClYyeHrJzscOS6pymDcgyKr/view?usp=sharing
+don't: https://drive.google.com/file/d/1PQlgEtDJGFSHtn61JyNastd1YzXVW22r/view?usp=sharing
 
 ## Resources
 
