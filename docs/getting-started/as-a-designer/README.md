@@ -181,7 +181,7 @@ If you need to replace one version of a linked library with another in a differe
   <cdr-img alt="screenshot"  :src="$withBase(`/getting-started-for-designers/swap-5-unlink-old-lib.png`)"/>
 5. Lastly, open the file, click the __Library Updates Available__ notification in the top right of sketch, and accept the updates.
   <cdr-img alt="screenshot"  :src="$withBase(`/getting-started-for-designers/update-linked-libraries.png`)"/>
-6. Thats all! Now the new library version is available in palace of the old.
+6. That's all! Now the new library version is available in place of the old.
   <cdr-img alt="screenshot" :src="$withBase(`/getting-started-for-designers/swap-6-use-new-lib.png`)"/>
 
 ---

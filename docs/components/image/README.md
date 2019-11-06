@@ -145,6 +145,7 @@ Apply rules to an image using ratio and crop properties. The below example is cr
   alt="REI employees building trails during a stewardship event"
   ratio="9-16"
   crop="top"
+  cover
 />
 ```
 </cdr-doc-example-code-pair>
