@@ -350,9 +350,9 @@ Use the `hide-figure` modifier to hide the radio button itself, which leaves tex
 ```vue
 <template>
   <cdr-radio
+    name="example"
+    custom-value="model1"
     v-model="model"
-    name="model"
-    value="model"
     modifier="hide-figure"
     input-class="no-box"
     content-class="no-box__content"
