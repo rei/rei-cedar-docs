@@ -189,6 +189,42 @@ This component has compliance with WCAG guidelines by:
 - Pulling a direct quote from an article. Instead, use [Pull Quote](../pull-quote/)
 - Displaying for a decorative treatment only
 
+## The Basics
+
+Use a block quote for emphasizing content that has a close and significant relationship with the surrounding text and will help users to visually scan the page.
+
+<br/>
+
+<do-dont :examples="$page.frontmatter.position" />
+
+// new images
+do: https://drive.google.com/file/d/18hogES5wSu2DpYKLii1T-U6ogStZA974/view?usp=sharing
+don't: https://drive.google.com/file/d/1KTcpi1lCudYTP_gx_gWqqfmqaE2NY20a/view?usp=sharing
+
+<do-dont :examples="$page.frontmatter.indenting" />
+
+// new images
+do: https://drive.google.com/file/d/1GpFxdbBn_5_-79-YrRje5kX8Lhra6Bsb/view?usp=sharing
+don't: https://drive.google.com/file/d/1Nh0rQ7m4BvEKwnq3jSTiu_oX8eBzI6UW/view?usp=sharing
+
+<do-dont :examples="$page.frontmatter.too_many" />
+
+// new images
+do: https://drive.google.com/file/d/1sTT6qZsqSr6wQ4uzBhlVzICOZhd_LKTD/view?usp=sharing
+don't: https://drive.google.com/file/d/1dHmORkrWA5v1wyuEuY8fFTgOFUzm7OrB/view?usp=sharing
+
+<br>
+
+Provide a citation to the external source and if available, the URL address.
+
+<br>
+
+<do-dont :examples="$page.frontmatter.citation" />
+
+// new images
+do: https://drive.google.com/file/d/1fNBf7r3aapSy9R7TOFft5gQx86W-1xZB/view?usp=sharing
+don't: https://drive.google.com/file/d/1JpvhJyqks0QKUUinS0E3-1j5smikuV-1/view?usp=sharing
+
 ## Content
 
 To make the block quote content accessible, following these rules:
@@ -200,25 +236,6 @@ To make the block quote content accessible, following these rules:
   - Capitalize the cited source title the same as the author does
 - For more information, see [REI Confluence Accessible Patterns: Quotes](https://confluence.rei.com/display/accessibility/Quote)
 
-## Behavior
-
-Use a block quote for emphasizing content that has a close and significant relationship with the surrounding text and will help users to visually scan the page.
-
-<br/>
-
-<do-dont :examples="$page.frontmatter.position" />
-
-<do-dont :examples="$page.frontmatter.indenting" />
-
-<do-dont :examples="$page.frontmatter.too_many" />
-
-<br>
-
-Provide a citation to the external source and if available, the URL address.
-
-<br>
-
-<do-dont :examples="$page.frontmatter.citation" />
 
 ## Responsiveness
 
