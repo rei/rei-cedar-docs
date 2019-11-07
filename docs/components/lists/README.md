@@ -156,7 +156,7 @@ Collect related items with numeric order or sequence. Numbering starts at 1 with
 
 ## Compact
 
-Compact modifier can be added to any cdr-list in order to reduce the margin between list items
+Compact modifier can be added to any `cdr-list` in order to reduce the margin between list items.
 
 <cdr-doc-example-code-pair repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" >
 
@@ -354,7 +354,7 @@ Visual style and semantic meaning are managed independently by providing:
 
 <br/>
 
-By default the **CdrList** component renders as an unordered and undecorated "bare" list. To use an ordered list pass `<ol>` to the tag property.
+By default the **CdrList** component renders as an unordered and undecorated "bare" list. To use an ordered list, pass `<ol>` to the tag property.
 
 ```html
 <cdr-list tag="ol">
@@ -367,7 +367,7 @@ The **CdrList** component has decoupled the semantic tags `<ul>` and `<ol>` from
 
 <br/>
 
-It is possible to render a semantic ordered list `<ol>` as a visually non styled or bulleted list using the `cdr-list` modifiers. With this decoupling, individual list items can contain a variety of HTML elements, including paragraphs, headings, form elements, and other (nested) lists. Ensure that content is structured and follows design guidelines.
+It is possible to render a semantic ordered list `<ol>` as a visually non-styled or bulleted list using the `cdr-list` modifiers. With this decoupling, individual list items can contain a variety of HTML elements, including paragraphs, headings, form elements, and other (nested) lists. Ensure that content is structured and follows design guidelines.
 
 ### Tag Variants
 
@@ -394,7 +394,7 @@ Following are different types of lists:
 ```
 
 - Bare or unstyled lists:
-  - Can contain a variety of HTML elements, including paragraphs, headings, form elements, and other (nested) lists
+  - Contains a variety of HTML elements, including paragraphs, headings, form elements, and other (nested) lists
 
 ### Modifiers
 
