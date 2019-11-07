@@ -30,7 +30,7 @@ If you’re a developer, you can skip to the [review handoff section](#review-of
 
 
 
-## Artboard Setup 
+## Artboard Setup
 Each screen should have (up to) 4 versions, each at different breakpoint widths corresponding to [Cedar’s breakpoints](../../layout/responsive/#display-breakpoints): `@Xs` `@Sm` `@Md` `@Lg`. The goal is to showcase how content will resize and reflow for responsive web layouts, and communicate those states to a developer.
 
 We recommend making your designs at the following 4 screen widths: `400px`, `784px`, `992px`, and `1400px`. These widths align to an 8px grid and will also have consistent column and gutter spacing for the Cedar grid.
@@ -42,18 +42,18 @@ Download or open the [template file](https://share.goabstract.com/536e25be-14f0-
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/100-Grid.png`)"/>
 
 ### Manual Artboard Setup
-You can also setup your artboards manually using the following settings. To access the artboard settings, click __View > Canvas > Layout Settings__. 
+You can also setup your artboards manually using the following settings. To access the artboard settings, click __View > Canvas > Layout Settings__.
 
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/200-Grid-Settings.png`)"/>
 
-Use the table below to create 4 artboards with the correct layout properties. You can toggle an arboard’s column overlay with __View > Canvas > Show Layout__. 
+Use the table below to create 4 artboards with the correct layout properties. You can toggle an arboard’s column overlay with __View > Canvas > Show Layout__.
 
 | Name Suffix | Width | Total width | Offset | Number of columns | Gutter on outside | Gutter width | Column width
 | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 | Mobile @Xs:<br/>w < 768px | 400px | 384px | 8px | 12 | ✔ | 16px | 16px |
 | Tablet @Sm:<br/>768px < w < 992px | 784px | 768px | 8px | 12 | ✔ | 16px | 48px |
 | Laptop @Md:<br/>992px < w < 1232px | 992px | 960px | 16px | 12 | ✔ | 32px | 48px |
-| Desktop @Md:<br/>1232px < w | 1400px | 1200px | 100px | 12 | ✔ | 32px | 68px | 
+| Desktop @Lg:<br/>1232px < w | 1400px | 1200px | 100px | 12 | ✔ | 32px | 68px |
 
 We also recommend setting an 8px grid by clicking __View > Canvas > Grid Settings__.  You can toggle an arboard’s grid overlay with __View > Canvas > Show Grid (Ctrl+G)__ and column overlay with __View > Canvas > Show Layout (Ctrl+L)__.
 
@@ -88,17 +88,17 @@ After redlining is complete, make an [Abstract Collection](https://www.abstract.
 We also recommend you make two commits of the final design: a __REDLINE__ version and a __VISUAL__ version. This will allow developers to toggle the redlines on and off. Use the process below for best results:
 
 <!-- First, make a commit showing the file without redline spacing symbols visible: -->
-1. In the lower left corner of the Layers panel (__Cmd+F__), type _“redlines”_ into the filter bar. This will show only the redline symbols from the CDR token library. Select the first object in the list, then Shift+Select the last object in the list to select all your redline symbols.  
+1. In the lower left corner of the Layers panel (__Cmd+F__), type _“redlines”_ into the filter bar. This will show only the redline symbols from the CDR token library. Select the first object in the list, then Shift+Select the last object in the list to select all your redline symbols.
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/500-filter-redlines.png`)"/>
-2. Hide the results using __Cmd+Shift+H__.  
+2. Hide the results using __Cmd+Shift+H__.
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/510-hide-redlines.png`)"/>
-3. Commit the file to Abstract. When naming, use the name __VISUAL__. See a [VISUAL example](https://app.goabstract.com/share/3d47f5ff-7a77-4830-a9ec-ec6a258a44e1?collectionLayerId=5a172c4b-7474-4cef-9db7-5a474ad0b7ef&mode=design&sha=8785cb458c49c22b607d729a37a00fe4bc87308f) here.  
+3. Commit the file to Abstract. When naming, use the name __VISUAL__. See a [VISUAL example](https://app.goabstract.com/share/3d47f5ff-7a77-4830-a9ec-ec6a258a44e1?collectionLayerId=5a172c4b-7474-4cef-9db7-5a474ad0b7ef&mode=design&sha=8785cb458c49c22b607d729a37a00fe4bc87308f) here.
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/520-commit-REDLINE.png`)"/>
 
 <!-- Next, make a commit showing the file to show redline spacing symbols visible. -->
-4. Press __Cmd+Z__ to undo the _“hide all”_ command. Now, you can see all the redlines.  
+4. Press __Cmd+Z__ to undo the _“hide all”_ command. Now, you can see all the redlines.
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/530-undo-hide.png`)"/>
-5. Make another commit to Abstract. When naming, use the name __REDLINE__. See a [REDLINE example](https://share.goabstract.com/3d47f5ff-7a77-4830-a9ec-ec6a258a44e1?collectionLayerId=5a172c4b-7474-4cef-9db7-5a474ad0b7ef) here.  
+5. Make another commit to Abstract. When naming, use the name __REDLINE__. See a [REDLINE example](https://share.goabstract.com/3d47f5ff-7a77-4830-a9ec-ec6a258a44e1?collectionLayerId=5a172c4b-7474-4cef-9db7-5a474ad0b7ef) here.
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/540-commit-VISUAL.png`)"/>
 
 __Note:__ If your design is split onto multiple pages, you may need to repeat steps _4_ and _6_ for each Sketch page.
@@ -106,26 +106,26 @@ __Note:__ If your design is split onto multiple pages, you may need to repeat st
 
 
 ## Redlining Tips for Designers
-- Align all text to the object-bounding box, not to the text baseline or cap height  
+- Align all text to the object-bounding box, not to the text baseline or cap height
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/600-type-object-alignment.png`)"/>
-- Add vertical spacing symbols in between elements you want spaced, select all the elements you want to stack vertically, click __Tidy__, and change the vertical space to 0  
+- Add vertical spacing symbols in between elements you want spaced, select all the elements you want to stack vertically, click __Tidy__, and change the vertical space to 0
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/700-tidy-spacing.png`)"/>
-- Elements that are locked in Sketch will not be selectable in the _Abstract Inspection Web-View_ canvas. This means elements that are layered underneath the locked elements will be selectable. Place a redline grid symbol over your entire page to communicate grid alignment. Lock this element in Sketch so that it is not selectable in _Abstract Inspection Web-View_ canvas  
+- Elements that are locked in Sketch will not be selectable in the _Abstract Inspection Web-View_ canvas. This means elements that are layered underneath the locked elements will be selectable. Place a redline grid symbol over your entire page to communicate grid alignment. Lock this element in Sketch so that it is not selectable in _Abstract Inspection Web-View_ canvas
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/800-lock-layers.png`)"/>
-- Elements that are hidden in Sketch will not exist in the _Abstract Inspection Web-View_  
+- Elements that are hidden in Sketch will not exist in the _Abstract Inspection Web-View_
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/900-layer-groups.png`)"/>
-- Group your document in sections in a top to bottom vertical stacking order. This makes the file more accessible in _Abstract Inspection Web-View_ layer list  
+- Group your document in sections in a top to bottom vertical stacking order. This makes the file more accessible in _Abstract Inspection Web-View_ layer list
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/1000-invisible-object.png`)"/>
 - To unhide all redline symbols:
   - In the lower-left corner of the layers panel (__Cmd+F__), type _“redlines”_ into the filter bar
-  - Shift-select all the results in the layers list 
+  - Shift-select all the results in the layers list
   - Manually __Cmd+Click__ to deselect all artboards in the layers list
   - Press __Cmd+Shift+H__ to hide and unhide
-- Use color token Layer Styles to help your developers find the right token values  
+- Use color token Layer Styles to help your developers find the right token values
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/1100-using-colors.png`)"/>
-- Use the rectangle symbol to mix __border__, __background__, __prominence__, and __radius__ token values  
+- Use the rectangle symbol to mix __border__, __background__, __prominence__, and __radius__ token values
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/1200-rectangle-symbol.png`)"/>
-- Use __Text Styles__ to communicate Cedar text token values  
+- Use __Text Styles__ to communicate Cedar text token values
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/1300-use-text-styles.png`)"/>
 - To center text, just click __Center__ in Sketch. The Cedar Toolkit does not provide the left, right, and centered variants of each text block
 
@@ -136,21 +136,21 @@ Each Artboard committed to Abstract is viewable in a browser using a public link
 
 
 ### Collections
-Use __Collections__ to view a curated set of artboards in a list. When viewing a specific artboard, use the bottom bar to navigate and toggle to 100% zoom. For more information, read the [Abstract Collection](https://www.abstract.com/help/collaboration/collections/) documentation.  
+Use __Collections__ to view a curated set of artboards in a list. When viewing a specific artboard, use the bottom bar to navigate and toggle to 100% zoom. For more information, read the [Abstract Collection](https://www.abstract.com/help/collaboration/collections/) documentation.
 <!-- <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/.png`)"/> -->
 
 
 ### Comment Tab
-Use the __Comment__ tab to navigate between different versions in the file’s commit history. This tab can also be used to toggle between the __VISUAL__ and the __REDLINE__ commits.  
+Use the __Comment__ tab to navigate between different versions in the file’s commit history. This tab can also be used to toggle between the __VISUAL__ and the __REDLINE__ commits.
 
-<cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/1400-visual-vs-redline-comparison.png`)"/>  
+<cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/1400-visual-vs-redline-comparison.png`)"/>
 
 You can also use the __Comment__ tab to create and reply to comments on specific artboards. We recommend using comments to:
-- Communicate Intended Interactions  
+- Communicate Intended Interactions
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/1500-interaction-comments.png`)"/>
-- Annotate details, interaction, motion, or responsive details that might otherwise go overlooked  
+- Annotate details, interaction, motion, or responsive details that might otherwise go overlooked
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/1510-subtle-comments.png`)"/>
-- Resolve Issues with CSS layout  
+- Resolve Issues with CSS layout
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/1520-code-comments.png`)"/>
 To learn more, read the [Abstract Comments](https://www.abstract.com/help/collaboration/comments-annotations/) documentation.
 
@@ -162,31 +162,31 @@ Developers use the Inspect tab to navigate the objects and layers from the Sketc
 
 
 ### Spacing Token Symbols
-Note that spacing tokens are orange and inset (padding) tokens are green. Developers can learn more about how these should be applied in the [Spacing](../../layout/spacing/) article.  
+Note that spacing tokens are orange and inset (padding) tokens are green. Developers can learn more about how these should be applied in the [Spacing](../../layout/spacing/) article.
 
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/1600-finding-space-tokens.png`)"/>
 
 
 ### Token Layer Styles
-Token Layer Style may be applied to a standalone element.  
+Token Layer Style may be applied to a standalone element.
 
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/1610-finding-color-tokens.png`)"/>
 
-Or, multiple token Layer Styles can be combined using a __Rectangle__ symbol.  
+Or, multiple token Layer Styles can be combined using a __Rectangle__ symbol.
 
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/1620-finding-rectangle-symbols.png`)"/>
 
-To learn more about using Cedar color tokens, read the [Tokens](../../components/design-tokens/) article and the [Color Foundation](../../foundation/color/) article.  
+To learn more about using Cedar color tokens, read the [Tokens](../../components/design-tokens/) article and the [Color Foundation](../../foundation/color/) article.
 
 
 ### Text Tokens
-Text Styles contain both the Text Style mixin and the text color to be applied. For a list of text token values and usage, see the [Typography](../../foundation/typography/) article.  
+Text Styles contain both the Text Style mixin and the text color to be applied. For a list of text token values and usage, see the [Typography](../../foundation/typography/) article.
 
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/1630-finding-text-tokens.png`)"/>
 
 
 ### Icons
-Icon names will appear in the Layers list. Go to the [icon library](https://rei.github.io/cedar-icons) to see if this icon is publicly available. If the icon is custom, please export it from Sketch using [CDR icon export guide](../../icons/resources/?active-link=exporting-icons-that-aren%E2%80%99t-in-the-library). For more information about icon usage, see the [Iconography](../../icons/iconography/) article and the [cdr-icon component](../../components/icon/).  
+Icon names will appear in the Layers list. Go to the [icon library](https://rei.github.io/cedar-icons) to see if this icon is publicly available. If the icon is custom, please export it from Sketch using [CDR icon export guide](../../icons/resources/?active-link=exporting-icons-that-aren%E2%80%99t-in-the-library). For more information about icon usage, see the [Iconography](../../icons/iconography/) article and the [cdr-icon component](../../components/icon/).
 
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/1700-icons.png`)"/>
 
