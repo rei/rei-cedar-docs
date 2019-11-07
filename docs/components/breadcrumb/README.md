@@ -8,14 +8,14 @@
     {
       "type": "do",
       "image": "breadcrumb/breadcrumbs_path_do_4-3.png",
-      "ratio": "4-3",
+      "ratio": "16-9",
       "alt": "Image showing proper breadcrumb paths",
       "caption": "show the full path for breadcrumb items whenever possible."
     },
     {
       "type": "dont",
       "image": "breadcrumb/breadcrumbs_path_dont_4-3.png",
-      "ratio": "4-3",
+      "ratio": "16-9",
       "alt": "Image showing mixed breadcrumb paths",
       "caption": "show the path that the user takes to arrive at a page."
     }
@@ -24,14 +24,14 @@
     {
       "type": "do",
       "image": "breadcrumb/breadcrumbs_path_symbol_do_4-3.png",
-      "ratio": "4-3",
+      "ratio": "16-9",
       "alt": "breadcrumbs separated with a forward slash",
       "caption": "separate breadcrumb items with the \"/\" symbol, automatically added in CSS."
     },
     {
       "type": "dont",
       "image": "breadcrumb/breadcrumbs_path_symbol_dont_4-3.png",
-      "ratio": "4-3",
+      "ratio": "16-9",
       "alt": "breadcrumbs separated with a right arrow",
       "caption": "create a custom symbol to separate breadcrumb items."
     }
@@ -47,7 +47,7 @@
     {
       "type": "dont",
       "image": "breadcrumb/breadcrumbs_truncate_dont_4-3.png",
-      "ratio": "4-3",
+      "ratio": "16-9",
       "alt": "breadcrumbs forcing a linebreak",
       "caption": "break the page title when long breadcrumb path is expanded."
     }
@@ -56,14 +56,14 @@
     {
       "type": "do",
       "image": "breadcrumb/breadcrumbs_link_do_4-3.png",
-      "ratio": "4-3",
+      "ratio": "16-9",
       "alt": "breadcrumbs links in gray",
       "caption": "use gray color tints for breadcrumb items."
     },
     {
       "type": "dont",
       "image": "breadcrumb/breadcrumbs_link_dont_4-3.png",
-      "ratio": "4-3",
+      "ratio": "16-9",
       "alt": "breadcrumbs links in blue",
       "caption": "color breadcrumb items blue."
     }
@@ -212,14 +212,21 @@ This component has compliance with WCAG guidelines by:
 - Helping users understand where they are within the site hierarchy
 - Providing a shortcut to explore similar products within common parent categories
 
-## Don't’t Use When
+## Don't Use When
 
 - Displaying a top-level page, such as a home or high level category page
 - Linking to previous steps of a sequential process
 
 ## The Basics
 
+Breadcrumbs provide context and a sense of place. This is especially important on a small screen, where other orienting content isn’t visible.
+
+- Include the full location path data once and only once in the code
+- Always retain the full location path in page markup, even if shortened due to responsive styling
+- Display the complete breadcrumb path—not just the previous item—when an ellipsis is clicked or tapped
+- When full breadcrumbs path is displayed, it may wrap to 2 or more lines
 - Avoid displaying breadcrumbs on non-white backgrounds
+- Refer to API documentation for how to customize breadcrumb truncation width
 
 ## Content
 - Always align breadcrumb labels with page names that are the destination of that breadcrumb
@@ -234,22 +241,23 @@ This component has compliance with WCAG guidelines by:
 
 ## Behavior
 
-Breadcrumbs provide context and a sense of place. This is especially important on a small screen, where other orienting content isn’t visible.
-
-- Include the full location path data once and only once in the code
-- Always retain the full location path in page markup, even if shortened due to responsive styling
-- Display the complete breadcrumb path—not just the previous item—when an ellipsis is clicked or tapped
-- When full breadcrumbs path is displayed, it may wrap to 2 or more lines
-- Refer to API documentation for how to customize breadcrumb truncation width- Within a breadcrumb, link styles are adapted:
+- Within a breadcrumb, link styles are adapted:
   - Ancestor links are displayed as $sys-color-taken-for-granite
   - Last child link is emphasized as $sys-color-heart-of-darkness
 - Emphasize breadcrumb hover states with the  $sys-color-heart-of-darkness color and an underline
 
 <cdr-img class="cdr-doc-article-img" alt="Breadcrumb hover state is emphasized using link color and underline" :src="$withBase(`/breadcrumb/Spec__Breadcrumb_Long_16-2.png`)" />
 
+// new image:
+https://drive.google.com/file/d/1FQzjHo9U3od-uyGYERFuSWsKqVrvsreS/view?usp=sharing
+
 
 ### Do / Don't
 <do-dont :examples="$page.frontmatter.path" />
+
+// new images
+do: https://drive.google.com/file/d/1XbQeV6WbXxnedSV8SfP1sbdsF0uBUBTZ/view?usp=sharing
+don't: https://drive.google.com/file/d/1eTgIFKUWgklLIHOJNkFPDxkSsjB09mPU/view?usp=sharing
 
 
 ### Truncation
@@ -258,16 +266,31 @@ Indicate hidden links using an ellipsis
 
 <cdr-img class="cdr-doc-article-img" alt="breadcrumbs truncated with ellipsis" :src="$withBase(`/breadcrumb/Spec__Breadcrumb_Truncated_16-2.png`)" />
 
+// new image
+https://drive.google.com/file/d/13g-wlUn21ZyFCL5kCH3atBMm1bLUPhBh/view?usp=sharing
+
 Truncate breadcrumbs left to right to show the final two links in the trail, so that at least the parent and grandparent are always visible
 
 <do-dont :examples="$page.frontmatter.truncation" />
+
+// new images
+do: https://drive.google.com/file/d/1tA-AP2c_uleS6GhikQz1GFQ_0_nsBlqw/view?usp=sharing
+don't: https://drive.google.com/file/d/1FgjLrSbb3vcV2vo6fGyqiC46W3jhmBZ9/view?usp=sharing
 
 
 ### Avoid Customization
 
 <do-dont :examples="$page.frontmatter.path_symbol" />
 
+// new images
+do: https://drive.google.com/file/d/18DVmACk7crXJPQYbNhtzPHEmrFr-DLk_/view?usp=sharing
+don't: https://drive.google.com/file/d/16jQSEZ-ER9AP7XSQKvRElgJHxdu-4n7i/view?usp=sharing
+
 <do-dont :examples="$page.frontmatter.link" />
+
+// new images
+do: https://drive.google.com/file/d/1T4CAy3dG4B06xxvDEb5M8DWdHB8AWqtZ/view?usp=sharing
+don't: https://drive.google.com/file/d/1b17meNeuNW-Kv1yQ_8edToyuV6m4WouJ/view?usp=sharing
 
 ## Resources
 
@@ -330,6 +353,8 @@ The below image and example code shows using ```truncationThreshold``` to set tr
 
 <cdr-img class="cdr-doc-article-img" alt="Breadcrumb with truncation threshold at 50% and 80%" :src="$withBase(`/breadcrumb/Spec_API___Breadcrumb_Truncated_Threshold_50to80_16-4.png`)" />
 
+// new image: https://drive.google.com/file/d/1oTHhnHpv4_S9Etz_DIUnedwTbfQQkUFr/view?usp=sharing
+
 ```vue
 <cdr-breadcrumb
   :truncation-threshold="0.50"
@@ -345,6 +370,8 @@ Use the ```truncationXSThreshold``` prop to alter when truncation occurs:
 The below image and example code shows using ```truncationXSThreshold``` to set truncation to occur at 70%.
 
 <cdr-img class="cdr-doc-article-img" alt="Breadcrumb with truncation XS  threshold at 70%" :src="$withBase(`/breadcrumb/Spec_API___Breadcrumb_Truncated_XSThreshold_70to100_16-4.png`)" />
+
+// new image: https://drive.google.com/file/d/1LPUs8TLWILap7Yvf-illbZMhB94m84t3/view?usp=sharing
 
 ```vue
 <cdr-breadcrumb
