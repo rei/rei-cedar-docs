@@ -452,7 +452,7 @@ This component has compliance with WCAG guidelines by:
 ### Options
 
 - Define width using CSS styles
-- Height options are medium or large. For more information, view [Overview]https://rei.github.io/rei-cedar-docs/components/input/ tab
+- Height options are medium or large. For more information, view [Overview](https://rei.github.io/rei-cedar-docs/components/input/) tab
 - Ability to specify field type for text, email, number, password, search, and URL
 
 ### Multi-Line Input Fields
