@@ -332,11 +332,27 @@ Checkbox labels should:
 
 <do-dont :examples="$page.frontmatter.case" />
 
+// new images
+do: https://drive.google.com/file/d/1YN5lz8KUdP0WHhF_0yAKUa9mlSiMfrgd/view?usp=sharing
+don't: https://drive.google.com/file/d/1NE0Uz9i06RJOwmFhB-ySUFwEdAEGmoPE/view?usp=sharing
+
 <do-dont :examples="$page.frontmatter.label" />
+
+// new images
+do: https://drive.google.com/file/d/1TMIT5UzqsMu7pWjAOtKS2fQkHWYDbrpE/view?usp=sharing
+don't: https://drive.google.com/file/d/1vDGn7G6AI2Gsk-xZOExsuwr-n9lhNBXx/view?usp=sharing
 
 <do-dont :examples="$page.frontmatter.positivecopy" />
 
+// new images
+do: https://drive.google.com/file/d/12EytS7EqL3_RqK7Bgqt-vb6mjG1D2E0w/view?usp=sharing
+don't: https://drive.google.com/file/d/1ls16aZ6SC97dSLz0zvCcOf0wIVNgleJD/view?usp=sharing
+
 <do-dont :examples="$page.frontmatter.fragment" />
+
+// new images
+do: https://drive.google.com/file/d/1xPi33257Ykd3aX7Pi_IpanCAKlTS164x/view?usp=sharing
+don't: https://drive.google.com/file/d/1UxYFCKylPYzLrrW-pZoVDlmQtXRNZVwG/view?usp=sharing
 
 ## Behavior
 
@@ -349,6 +365,10 @@ Checkboxes work independently from each other:
 <br/>
 
 <do-dont :examples="$page.frontmatter.simplify" />
+
+// new images
+do: https://drive.google.com/file/d/12CgDTfgojyIL6cGh5MGtjjYd_X6iY0DV/view?usp=sharing
+don't: https://drive.google.com/file/d/1-qiD_F1aoVGlG1rdx7GKIUQxRcEzNpqV/view?usp=sharing
 
 ## Resources
 
