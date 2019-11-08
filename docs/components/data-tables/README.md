@@ -361,8 +361,6 @@ Default styles for tables:
   - Borderless only. If using borderless, ensure readability by using the alternating background colors for rows
   - Compact and borderless
 
-## Behavior
-
 ### Text Alignment
 
 Alignment impacts the table's readability. Make the data easy to read and simple to follow by:
@@ -379,21 +377,33 @@ Alignment impacts the table's readability. Make the data easy to read and simple
 
 <do-dont :examples="$page.frontmatter.tablelayout" />
 
-<br />
+// new images
+do: https://drive.google.com/file/d/1WoSzWXC32_nZFa7jKMU-ZC2onv-XmTMQ/view?usp=sharing
+don't: https://drive.google.com/file/d/1Poqc6ZWioD6guIW41nyDGxOatXlBtrCZ/view?usp=sharing
 
 <do-dont :examples="$page.frontmatter.sizechart" />
 
-<br />
+// new images
+do: https://drive.google.com/file/d/17u_sL1p0peQk6VCKy1hTqr6CRGX2eJEY/view?usp=sharing
+don't: https://drive.google.com/file/d/1JwABKfsfDEcw0uRi0Wgvs2d8puGcC-3P/view?usp=sharing
 
 <do-dont :examples="$page.frontmatter.techspecs" />
 
-<br />
+// new images
+do: https://drive.google.com/file/d/1SaCdu_1xnsEnIW3FYN2_j79sxiu1bhQ7/view?usp=sharing
+don't: https://drive.google.com/file/d/18Vxf94WZ--J5YdCdmbaaTXXXuf-27L7z/view?usp=sharing
 
 <do-dont :examples="$page.frontmatter.label" />
 
-<br />
+// new images
+do: https://drive.google.com/file/d/1O-D2h_SK17zF2y8gcMgc1wHY6QLarZrl/view?usp=sharing
+don't: https://drive.google.com/file/d/1eCnxwY-SRgsZ6b5NrySHsuXDRtqbLN-9/view?usp=sharing
 
 <do-dont :examples="$page.frontmatter.alternatestripe" />
+
+// new images
+do: https://drive.google.com/file/d/1qhrFrngfOkbLZoqxGkrRDrwes-12KAb8/view?usp=sharing
+don't: https://drive.google.com/file/d/1kqgtXJGlE9LpHCMZdN2fEN8b7FybBgPf/view?usp=sharing
 
 ## Responsiveness
 
