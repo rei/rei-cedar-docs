@@ -439,7 +439,7 @@ This component has compliance with WCAG guidelines by:
 - Entering data with a wide variety of responses
 - Searching for content
 
-## Don't’t Use When
+## Don't Use When
 
 - Selecting from a specific set of options. Instead, use Selects
 
@@ -452,7 +452,7 @@ This component has compliance with WCAG guidelines by:
 ### Options
 
 - Define width using CSS styles
-- Height options are medium or large. For more information, view Overview tab
+- Height options are medium or large. For more information, view [Overview]https://rei.github.io/rei-cedar-docs/components/input/ tab
 - Ability to specify field type for text, email, number, password, search, and URL
 
 ### Multi-Line Input Fields
@@ -465,9 +465,6 @@ This component has compliance with WCAG guidelines by:
 - Min and max limits are set by the product team for:
   - Max-height of textarea
   - Maximum and minimum number of characters
-
-<cdr-img class="cdr-doc-article-img" alt="Multi-line input field with resizing hande and scroll bar" :src="$withBase(`/input/Spec__Input_Multi_Line_Field__16-9.png`)" />
-
 
 ## Content
 
@@ -494,13 +491,33 @@ This component has compliance with WCAG guidelines by:
 
 <do-dont :examples="$page.frontmatter.length" />
 
+// new images
+do: https://drive.google.com/file/d/1XbAuCD1mvCM1ZkhSl-qIf524LMmIcZ_M/view?usp=sharing
+don't: https://drive.google.com/file/d/184_3Kq4cnhm9WTmyFzw4JK9cFvrdh_GP/view?usp=sharing
+
 <do-dont :examples="$page.frontmatter.label" />
+
+// new images
+do: https://drive.google.com/file/d/1q7UofFIqfZGUU-uqYo6-6yoivcQAp4Dr/view?usp=sharing
+don't: https://drive.google.com/file/d/1xScMdn4nc76WiHrJPgLGmI7-qz9PjTOB/view?usp=sharing
 
 <do-dont :examples="$page.frontmatter.case" />
 
+// new images
+do: https://drive.google.com/file/d/1WlReasJflXrnf6VMgSRiLwG3Kdp2gStr/view?usp=sharing
+don't: https://drive.google.com/file/d/1WlReasJflXrnf6VMgSRiLwG3Kdp2gStr/view?usp=sharing
+
 <do-dont :examples="$page.frontmatter.punctuation" />
 
+// new images
+do: https://drive.google.com/file/d/1izkWYQ6yug0EZThW52sz4-SLNpNhhnjw/view?usp=sharing
+don't: https://drive.google.com/file/d/1Ksygu9uRRNIqX3ujDG5dZOMTTxvLdb9t/view?usp=sharing
+
 <do-dont :examples="$page.frontmatter.placeholder" />
+
+// new images
+do: https://drive.google.com/file/d/1X4ULeblGzPxNvTQl9ZiLkvraEwHplgzu/view?usp=sharing
+don't: https://drive.google.com/file/d/1bFJURljG_9xaatz5HIjUWTGn4CEZZL6B/view?usp=sharing
 
 ## Behavior
 
@@ -517,7 +534,15 @@ This component has compliance with WCAG guidelines by:
 
 <do-dont :examples="$page.frontmatter.required" />
 
+// new images
+do: https://drive.google.com/file/d/116bcHcynrDiaaJLGQA4DaVC_nvfzdqZW/view?usp=sharing
+don't: https://drive.google.com/file/d/1vUD6-lMlwSrOp8iO0N0p8yz0IfGMs59Z/view?usp=sharing
+
 <do-dont :examples="$page.frontmatter.sizes" />
+
+// new images
+do: https://drive.google.com/file/d/1t80OFnpQpEWnSrhrahh9MQxBxCXP0_kx/view?usp=sharing
+don't: https://drive.google.com/file/d/1KLM8U9Y11_f9LIlOfpBSUrCvb3j-o-t_/view?usp=sharing
 
 </cdr-doc-table-of-contents-shell>
 </template>
