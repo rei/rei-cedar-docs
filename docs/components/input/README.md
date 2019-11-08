@@ -439,7 +439,7 @@ This component has compliance with WCAG guidelines by:
 - Entering data with a wide variety of responses
 - Searching for content
 
-## Don't’t Use When
+## Don't Use When
 
 - Selecting from a specific set of options. Instead, use Selects
 
