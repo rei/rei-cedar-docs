@@ -280,10 +280,10 @@ For more information, review techniques and failures for:
 - Comparing between list of selections is desired
 
 
-## Don't’t Use When
+## Don't Use When
 
 - Selecting from a list when multiple choices are allowed. Instead, use [Checkboxes](../checkboxes/)
-- Providing a single selectable option. Instead, use [Checkboxes](../checkboxes/) (stand-alone checkbox)
+- Providing a single selectable option. Instead, use [Checkboxes](../checkboxes/) as a stand-alone checkbox
 
 ## Content
 When using radio buttons in a list:
@@ -305,9 +305,21 @@ Radio button labels should:
 
 <do-dont :examples="$page.frontmatter.case" />
 
+// new images
+do: https://drive.google.com/file/d/1UtGSTjVANVVEqZroFupeL-ztd9H-YlSl/view?usp=sharing
+don't: https://drive.google.com/file/d/1_FtHsb_nIOB7g6pbgkGszYXwYO0AZc9P/view?usp=sharing
+
 <do-dont :examples="$page.frontmatter.label" />
 
+// new images
+do: https://drive.google.com/file/d/1QBJmiV2TcZSP750a3U7-ORVgL3ontJ_x/view?usp=sharing
+don't: https://drive.google.com/file/d/1MXeAPJlT8xqQT_5J3o8pEhjdI7v1jqeJ/view?usp=sharing
+
 <do-dont :examples="$page.frontmatter.fragment" />
+
+// new images
+do: https://drive.google.com/file/d/1bIpoPJZ8aWXowpNw2EaqHPLLj3SYwTDl/view?usp=sharing
+don't: https://drive.google.com/file/d/1xsBo5wx5JB9Swvmhwb7-S7pRSNkIrc27/view?usp=sharing
 
 ## Resources
 
