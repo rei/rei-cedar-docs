@@ -223,17 +223,23 @@ Icons are available in three sizes: small (16px), medium (24px), and large (32px
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/icon/Spec__Icon__Sizes_4-3.png`)" alt="Cedar icon sizes" />
 
+// new image: https://drive.google.com/file/d/1ednHpf4tg4g8BNSOKuo_5Di14OZaiOW8/view?usp=sharing
+
 ### Color
 Ensure that icons use contrast ratio of 4.5:1 contrast between icon color and background color. Follow recommendations in the [Color article](../../foundation/color/) for pairing light and dark color tokens.
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/icon/Spec__Icon__Colors_21-9.png`)" alt="Cedar icon sizes" />
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/icon/Spec__Icon__Colors_21-9.png`)" alt="Cedar icon color options" />
+
+// new image: https://drive.google.com/file/d/1sZn7NS0Yrl_tvXlBMdXDaoZr-9A08oTc/view?usp=sharing
 
 ### Clearance
 Adequate space around the icon allows for legibility and touch. A minimum touch target area of 40px is recommended for standalone iconography.
 
 When the mouse and keyboard are the primary input methods or when icons are paired inline with text, measurements may be condensed to accommodate denser layouts. Icon size should align to the line-height of the paired text element.
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/icon/Spec__Icon__Spacing_21-9.png`)" alt="Cedar icon sizes" />
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/icon/Spec__Icon__Spacing_21-9.png`)" alt="Cedar icon clearance" />
+
+// new image: https://drive.google.com/file/d/1uHdAaiRAHFn7Xg5Y8yAwRipNg9w0nTKt/view?usp=sharing
 
 ## Icon Library
 
@@ -245,14 +251,25 @@ When using icons with links or buttons, make sure that the icon communicates int
 
 <do-dont :examples="$page.frontmatter.meaning" class="cdr-mb-space-two-x"/>
 
+// new images
+do: https://drive.google.com/file/d/1YrSHG6OUdWNx6buQPpoilcpVcveTo_UL/view?usp=sharing
+don't: https://drive.google.com/file/d/1YMyMMiEBs2d-rBb6_jS0rBSiJiHjJvLp/view?usp=sharing
+
 Ensure that icons are sized to provide a minimum click or touch target.
 
 <do-dont :examples="$page.frontmatter.clearance" class="cdr-mb-space-two-x"/>
+
+// new images
+do: https://drive.google.com/file/d/1pl4aaynPgTSdQBWUJs1wlBIHBQJBVDR3/view?usp=sharing
+don't: https://drive.google.com/file/d/1cCTcAnEjinLsb-q_hQ79Z1I7237_eWyx/view?usp=sharing
 
 Ensure that icons use contrast ratio of 4.5:1 between icon color and background color.
 
 <do-dont :examples="$page.frontmatter.color" class="cdr-mb-space-two-x"/>
 
+// new images
+do: https://drive.google.com/file/d/1jo8XHX9u8OshoNDInTrObDfm9bfswqFG/view?usp=sharing
+don't: https://drive.google.com/file/d/1detm47osLp10R3RzwH2xXZlKw3oQU_3I/view?usp=sharing
 
 </cdr-doc-table-of-contents-shell>
 </template>
