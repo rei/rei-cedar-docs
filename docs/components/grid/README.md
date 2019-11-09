@@ -1030,7 +1030,7 @@ This component has compliance with following WCAG guidelines:
 - Applying responsive rules to columns of a row and/or regions of a page layout or a container of many components
 - Arranging elements within a single component with two or more zones, including those aligned to the left or right edge
 
-## Don't’t Use When
+## Don't Use When
 
 - Presenting a multi-row columnar data display, such as features or specs of a product. Instead, use [Data Tables](../data-tables/)
 
@@ -1039,13 +1039,18 @@ This component has compliance with following WCAG guidelines:
 Columns, gutters, and margins scales as a fluid system as the device and viewport increases from a small devices to a large device:
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase('/grid/Spec_Grid_Desktop_and_Mobile_4-3.png')" alt="grid concept at desktop and mobile sizes"/>
-<br/>
+
+// new image: https://drive.google.com/file/d/1tP1nvK0PbGZE6stSUt_STZScB41CJl2m/view?usp=sharing
+
 <cdr-img class="cdr-doc-article-img" :src="$withBase('/grid/Spec_Grids_Breakpoints_16-9.png')" alt="grid breakpoints"/>
-<br/>
+
+// new image: https://drive.google.com/file/d/1fsb7xjBu0gnBFIuyYt6GKdQtB8HrpXka/view?usp=sharing
 
 ## Anatomy
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase('/grid/Spec_Grids_Gutters_and_Margins_16-9.png')" alt="gutter margins and grids"/>
+
+// new image: https://drive.google.com/file/d/1RvBJtnotPBCkWxZ-h_GkyHjdetZJOtp-/view?usp=sharing
 
 - Maximum width of 1232px:
   - Allows for padding between grid and browser window
