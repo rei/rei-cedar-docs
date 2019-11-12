@@ -321,7 +321,7 @@ Checkbox labels should:
 
  - Start with a capital letter
  - Use sentence case
- - Use positive phrasing; so the label describes the selected state
+ - Use positive phrasing so that the label describes the selected state
  - Avoid long labels
  - Be written as sentence fragments
  - No terminal punctuation
@@ -430,7 +430,7 @@ Use  `custom-value`  with a shared model to create a checkbox group that will tr
 </template>
 ```
 
-If both values are checked the model would be `[  { value: ‘D’ }, [ 9, 10 ]  ]`. Unchecking either checkbox would remove its value from the model array.
+If both values are checked, the model would be `[  { value: ‘D’ }, [ 9, 10 ]  ]`. Unchecking either checkbox would remove its value from the model array.
 
 Default checkbox to checked/unchecked state by setting the model in Javascript.
 
