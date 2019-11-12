@@ -65,7 +65,7 @@ Semantic naming
   
 <hr />
 
-### Use When  
+## Use When  
   - Your project does not use Vue.js, but you want to use Cedar
   - Your component must visually match an existing Cedar component, but not it's functionality. For example, a `vue-router` link component that looks like a `CdrLink` component
   - Your project requires the smallest possible bundle size, and your team is willing to take on the additional maintenance cost of using component variables instead of the Vue.js Cedar components
