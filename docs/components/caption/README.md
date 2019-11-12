@@ -113,7 +113,7 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
 
-## Default
+## Default or Medium
 
 Caption aligns to the left alongside the body copy with inset padding. Default caption includes summary and credit.
 
