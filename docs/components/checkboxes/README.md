@@ -185,7 +185,7 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell tab-name="Overview">
 
-## Default
+## Default (Medium)
 
 Default and standard spacing for checkboxes.
 
@@ -201,7 +201,7 @@ Default and standard spacing for checkboxes.
 
 </cdr-doc-example-code-pair>
 
-## Compact
+## Compact (Small)
 
 Compact spacing for checkboxes.
 
