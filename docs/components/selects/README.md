@@ -415,7 +415,19 @@ Select components should be:
 ### Helper Text
 
 + Use helper text for hints or suggestions
-+ If help text is long or complex, use a tooltip or popover that is opened from the support link on the right above the select field. Note that too much helper text can make a form look and feel difficult to use.
++ Be succinct: too much helper text can make a form look and feel difficult to use
+
+### Icon
+
+- Use icons to trigger a popover for hints or suggestions
+- Read more about icon guidelines using Cedar [here](https://rei.github.io/rei-cedar-docs/components/icon/?active-tab=guidelines)
+
+### Link Text
+
+- Use a link when moving the navigating to another page or a different portion of the same page
+- Use if navigating user to long or complex information
+- Read more about links [here](https://rei.github.io/rei-cedar-docs/components/links/)
+
 
 ### Do / Don’t
 
