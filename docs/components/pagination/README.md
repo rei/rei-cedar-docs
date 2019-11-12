@@ -337,7 +337,7 @@ The **CdrPagination** component does not make data calls, render or track pagina
 
 ## Scoped Slots and vue-router
 
-Previous, next, and individual page links can have their template overridden via scoped slots. While this isn't advisable under normal circumstances, it is necessary to make the component work with vue-router. Follow the [scoped slot example](?active-tab=overview#link-scoped-slots) but use `router-link`:
+Previous, next, and individual page links can have their template overridden via scoped slots. While this isn't advisable under normal circumstances, it is necessary to make the component work with vue-router. It is similar to the [scoped slot example](?active-tab=overview#link-scoped-slots) but uses `router-link` with no click event (when paired with a computed prop v-model):
 
 ```vue
 <cdr-pagination
@@ -349,8 +349,7 @@ Previous, next, and individual page links can have their template overridden via
   <template v-slot:prevLink="prevLink">
     <router-link
       v-bind="prevLink.attrs"
-      @click.native="prevLink.click"
-      :to="{ query: { 'router-page': prevLink.page } }"
+      :to="{ query: { 'page': prevLink.page } }"
       replace
     >
       <component
@@ -364,8 +363,7 @@ Previous, next, and individual page links can have their template overridden via
   <template v-slot:link="link">
     <router-link
       v-bind="link.attrs"
-      @click.native="link.click"
-      :to="{ query: { 'router-page': link.page } }"
+      :to="{ query: { 'page': link.page } }"
       replace
     >
       {{ link.page }}
@@ -375,8 +373,7 @@ Previous, next, and individual page links can have their template overridden via
   <template v-slot:nextLink="nextLink">
     <router-link
       v-bind="nextLink.attrs"
-      @click.native="nextLink.click"
-      :to="{ query: { 'router-page': nextLink.page } }"
+      :to="{ query: { 'page': nextLink.page } }"
       replace
     >
       {{ nextLink.content }}
@@ -387,6 +384,22 @@ Previous, next, and individual page links can have their template overridden via
     </router-link>
   </template>
 </cdr-pagination>
+
+...
+
+<script>
+...
+computed: {
+  page: {
+    get() {
+      return parseInt(this.$route.query['page'], 10) || 1;
+    },
+    set() {
+      // No need to do anything for the component here
+    },
+  },
+},
+</script>
 ```
 
 ### SEO
