@@ -211,7 +211,7 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
 
-## Default
+## Default (Medium)
 Basic input field with label.
 
 
@@ -335,7 +335,7 @@ Input field with link text on right.
 
 ## Input with Icon Above
 
-Input field with icon above input field on right.
+Input field with icon above the input field on right.
 
 <cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrIcon'})" :load-sprite="true" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
@@ -358,7 +358,7 @@ Input field with icon above input field on right.
 
 ## Input with Helper Text
 
-Input field with helper or hint text below input field.
+Input field with helper or hint text below the input field.
 
 <cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
@@ -378,7 +378,7 @@ Input field with helper or hint text below input field.
 
 ## Input with Icon Inserted Left
 
-Input field with icon inserted into input field on left. Icon is decorative and not intended for any action.
+Input field with icon inserted into the input field on left. Icon is decorative and not intended for any action.
 
 <cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrIcon'})" :load-sprite="true" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
 
@@ -401,7 +401,7 @@ Input field with icon inserted into input field on left. Icon is decorative and 
 
 ## Input with Icon Inserted Right
 
-Input field with icon inserted into input field on right. Icon is decorative and not intended for any action.
+Input field with icon inserted into the input field on right. Icon is decorative and not intended for any action.
 
 <cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrIcon'})" :load-sprite="true" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
 
@@ -441,7 +441,7 @@ This component has compliance with WCAG guidelines by:
 
 ## Don't Use When
 
-- Selecting from a specific set of options. Instead, use Selects
+- Selecting from a specific set of options. Instead, use [Selects](https://rei.github.io/rei-cedar-docs/components/selects/) 
 
 ## The Basics
 
@@ -452,7 +452,7 @@ This component has compliance with WCAG guidelines by:
 ### Options
 
 - Define width using CSS styles
-- Height options are medium or large. For more information, view [Overview](https://rei.github.io/rei-cedar-docs/components/input/) tab
+- Height options are medium or large. For more information, visit the [Overview](https://rei.github.io/rei-cedar-docs/components/input/) tab
 - Ability to specify field type for text, email, number, password, search, and URL
 
 ### Multi-Line Input Fields
@@ -460,10 +460,10 @@ This component has compliance with WCAG guidelines by:
 - Use when long free-form text is the desired user input such as a comment on a review or feedback form
 - Overflow text wraps to a new line
 - Scroll bar appears on right border when cursor reaches the bottom of the field
-- This input field is defined by setting the number of rows for a recommended response length
+- Is defined by setting the number of rows for a recommended response length
 - Resizing handle allows user to change the height of the input area
 - Min and max limits are set by the product team for:
-  - Max-height of textarea
+  - Max-height of text area
   - Maximum and minimum number of characters
 
 ## Content
@@ -472,7 +472,7 @@ This component has compliance with WCAG guidelines by:
 
 - Use concise and consistent labels that describes the meaning of the input field
 - Limit labels to 1–3 words and fewer than 20 characters, including spaces
-- Use sentence case; not all caps, title caps or all lowercase
+- Use sentence case. Do not use all caps, title caps, or all lowercase
 - Don’t use colons after labels
 
 ### Placeholder Text
@@ -575,7 +575,7 @@ don't: https://drive.google.com/file/d/1KLM8U9Y11_f9LIlOfpBSUrCvb3j-o-t_/view?us
 
 ## Usage
 
-The **CdrInput** component requires `v-model` to bind the input value to your data model.  You can also use   `helper-text` to display additional information below the input.
+The **CdrInput** component requires `v-model` to bind the input value to your data model.  You can also use `helper-text` to display additional information below the input.
 
 ```vue {3,6,7,8}
 <cdr-input
@@ -589,7 +589,7 @@ The **CdrInput** component requires `v-model` to bind the input value to your da
 </cdr-input>
 ```
 
-The `aria-label` attribute will automatically be added on compilation based upon what is provided in the `label` prop.
+The `aria-label` attribute will be automatically added on compilation based upon what is provided in the `label` prop.
 
 ```vue
 <cdr-input
@@ -612,7 +612,7 @@ This will result in the following HTML:
 </div>
 ```
 
-Input inherits the `placeholder` attribute for the placeholder text. You can also use the `post-icon` slot for adding and icon.
+Input inherits the `placeholder` attribute for the placeholder text. You can also use the `post-icon` slot for adding an icon.
 
 ```vue {4,7,8,9}
 <cdr-input
