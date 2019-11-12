@@ -102,7 +102,7 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
 
-## Default
+## Default or Medium
 
 Display within body copy for articles, hub cards, footer, or recommendations.
 
