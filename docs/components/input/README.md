@@ -484,8 +484,19 @@ This component has compliance with WCAG guidelines by:
 ### Helper Text
 
 - Use helper text for hints or suggestions
-- If help text is long or complex, use a tooltip or popover that is opened from the support link above the input field
-- Too much help text can make a form look and feel difficult to use
+- If help text is long or complex, use an icon or link above the input box 
+- Too much helper help text can make a form look and feel difficult to use
+
+### Icon
+
+- Use icons to trigger a popover for hints or suggestions
+- Read more about icon guidelines using Cedar [here](https://rei.github.io/rei-cedar-docs/components/icon/?active-tab=guidelines)
+
+### Link Text
+
+- Use a link when moving the navigating to another page or a different portion of the same page
+- Use if navigating user to long or complex information
+- Read more about links [here](https://rei.github.io/rei-cedar-docs/components/links/)
 
 ### Do/Don't
 
