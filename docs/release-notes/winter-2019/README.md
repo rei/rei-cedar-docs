@@ -31,6 +31,10 @@ If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade
 
 ## Breaking Changes
 
+### CdrRating Count Bugfix
+
+We have resolved an issue with CdrRating where it treated the `count` property differently depending on whether it was passed as a string or a number. Now CdrRating will show the review text any time it receives a value for `count`, and will not show any review text if it does not receive a value. You should not need to make any changes to your application code to support this change.
+
 ## Deprecations
 
 </cdr-doc-table-of-contents-shell>
