@@ -139,7 +139,7 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
 
-## Default
+## Default or Medium
 Default and standard spacing for radio buttons.
 
 <cdr-doc-example-code-pair repository-href="/src/components/radio" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{ex: ''}">
@@ -168,7 +168,7 @@ Default and standard spacing for radio buttons.
 
 </cdr-doc-example-code-pair>
 
-## Compact
+## Compact or Small
 
 Compact spacing for radio buttons.
 
