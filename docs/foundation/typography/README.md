@@ -213,6 +213,9 @@ To create the appropriate contrast and hierarchy, use a mix of Stuart and Graphi
 
 <cdr-img class="cdr-doc-article-img" alt="A graphic showing mixed usage of Stuart and Graphik typefaces" :src="$withBase(`/typography/typography_type_guidelines_type-pairing.png`)" />
 
+// new image for above:
+https://drive.google.com/file/d/1smSXpiPW44CQeJz5dUlSq5eSyzvvQbvs/view?usp=sharing
+
 
 ### Font Style
 
@@ -260,6 +263,8 @@ An optimal length, or measure, of a line of copy is 50 to 60 characters. Line le
 <do-dont :examples="$page.frontmatter.lineLengthMobile" />
 
 <do-dont :examples="$page.frontmatter.lineLengthDesktop" />
+
+// the don't example above should be a caution //
 
 #### 1.4.8 Visual Presentation (AAA)
 
