@@ -127,7 +127,7 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
 
-## Default
+## Default or Medium
 
 Section borders expand to full width of container.
 
@@ -178,7 +178,7 @@ Section borders expand to full width of container.
 
 </cdr-doc-example-code-pair>
 
-## Compact
+## Compact or Small
 
 Reduced spacing around title and content body. Also, smaller font sizes resulting in overall denser display of content.
 
