@@ -103,7 +103,7 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
 
-## Default or Medium
+## Default (Medium)
 
 Used as default font style for all text information. Also known as body-default in UI ToolKit.
 
