@@ -66,7 +66,7 @@ Design Tokens can be used by teams:
 - When there are technical limitations to consuming components
 
 
-### Don't’t Use When
+### Don't Use When
 - Don’t use design tokens to make modifications to an existing component. **Instead,** submit a request using the [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC) for an existing component
 - Don’t use design tokens to only access a value or values. **Instead,** create a new token in the [shared-tokens repo](https://git.rei.com/projects/FEDPACK/repos/shared-tokens/browse) that meets your specific semantic use case
 

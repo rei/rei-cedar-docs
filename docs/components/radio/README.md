@@ -280,7 +280,7 @@ For more information, review techniques and failures for:
 - Comparing between list of selections is desired
 
 
-## Don't’t Use When
+## Don't Use When
 
 - Selecting from a list when multiple choices are allowed. Instead, use [Checkboxes](../checkboxes/)
 - Providing a single selectable option. Instead, use [Checkboxes](../checkboxes/) (stand-alone checkbox)
