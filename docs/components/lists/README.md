@@ -273,7 +273,7 @@ This component has compliance with WCAG guidelines by:
 
 - Displaying groups of related items represented by text
 
-## Don't’t Use When
+## Don’t Use When
 
 - Displaying content that is not primarily text
 - Displaying content with two or more well-defined dimensions. Instead, use [Data Tables](../data-tables/)
