@@ -212,7 +212,7 @@ This component has compliance with WCAG guidelines by:
 - Helping users understand where they are within the site hierarchy
 - Providing a shortcut to explore similar products within common parent categories
 
-## Don't’t Use When
+## Don’t Use When
 
 - Displaying a top-level page, such as a home or high level category page
 - Linking to previous steps of a sequential process
