@@ -130,7 +130,7 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
 
-## Default
+## Default (Medium)
 Tab buttons align left and bottom border expands to full width of container.
 
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" >
@@ -148,7 +148,7 @@ Tab buttons align left and bottom border expands to full width of container.
 
 </cdr-doc-example-code-pair>
 
-## Compact
+## Compact (Small)
 
 Reduced spacing around the tab buttons to create a denser visual design.
 
@@ -302,7 +302,7 @@ don't: https://drive.google.com/file/d/10xymHByqnBU15chfwHdwD2BQIrt37dnP/view?us
 <template slot="API">
 <cdr-doc-table-of-contents-shell>
 
-Tabs are built from two components, **CdrTabs** and **CdrTabPanel**, which are meant to be used together.
+Tabs are built from two components: **CdrTabs** and **CdrTabPanel**. These are meant to be used together.
 
 ## Props
 
