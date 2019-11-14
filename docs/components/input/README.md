@@ -494,7 +494,7 @@ This component has compliance with WCAG guidelines by:
 
 ### Link Text
 
-- Use a link when moving the navigating to another page or a different portion of the same page
+- Use a link when moving or navigating to another page or to a different portion of the same page
 - Use if navigating user to long or complex information
 - Read more about links [here](https://rei.github.io/rei-cedar-docs/components/links/)
 
