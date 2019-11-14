@@ -122,11 +122,12 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
 
-## Default
+## Default (Medium)
 
 Complete breadcrumb string with all items visible.
 
 <cdr-doc-example-code-pair repository-href="/src/components/breadcrumb" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight= false >
+  
 ```html
   <cdr-breadcrumb
     :truncation-enabled="false"
@@ -161,7 +162,7 @@ Long breadcrumb path shortened to display the last 2 items with hidden links ind
 
 ## Link Scoped Slot
 
-Can be used to override the default links rendered in the breadcrumb. Useful for integrating with client side routing, as a `router-link` can be rendered instead of a plain `a` tag.  The `slot-scope` exposed includes:
+Can be used to override the default links rendered in the breadcrumb. Useful for integrating with client-side routing, as a `router-link` can be rendered instead of a plain `a` tag.  The `slot-scope` exposed includes:
 
 - `class`: CSS class to be applied to your override element to match the breadcrumb styling
 - `href`: the path that the link points to
@@ -214,7 +215,7 @@ This component has compliance with WCAG guidelines by:
 
 ## Don't Use When
 
-- Displaying a top-level page, such as a home or high level category page
+- Displaying a top-level page, such as a home or high-level category page
 - Linking to previous steps of a sequential process
 
 ## The Basics
@@ -231,7 +232,7 @@ Breadcrumbs provide context and a sense of place. This is especially important o
 ## Content
 - Always align breadcrumb labels with page names that are the destination of that breadcrumb
 - Incorporate keywords into page names and breadcrumbs to improve SEO
-- Align breadcrumb labels with words customers use while searching for products, events, adventures or expert advice
+- Align breadcrumb labels with words customers use while searching for products, events, adventures, or expert advice
 - Never include the current page in a breadcrumb path. Instead, display that label only as a page title
 - Guidelines for applying breadcrumb category names are found in the [REI Navigation Standards: Breadcrumbs](https://confluence.rei.com/display/NAV/Breadcrumb+Guidance) article
 - For items in multiple categories and no primary path has been identified, display the most relevant path:
@@ -262,14 +263,14 @@ don't: https://drive.google.com/file/d/1eTgIFKUWgklLIHOJNkFPDxkSsjB09mPU/view?us
 
 ### Truncation
 
-Indicate hidden links using an ellipsis
+Indicate hidden links using an ellipsis.
 
 <cdr-img class="cdr-doc-article-img" alt="breadcrumbs truncated with ellipsis" :src="$withBase(`/breadcrumb/Spec__Breadcrumb_Truncated_16-2.png`)" />
 
 // new image
 https://drive.google.com/file/d/13g-wlUn21ZyFCL5kCH3atBMm1bLUPhBh/view?usp=sharing
 
-Truncate breadcrumbs left to right to show the final two links in the trail, so that at least the parent and grandparent are always visible
+Truncate breadcrumbs left to right to show the final two links in the trail, so that at least the parent and grandparent are always visible.
 
 <do-dont :examples="$page.frontmatter.truncation" />
 
@@ -330,7 +331,7 @@ The below example shows alternatively setting ```items``` using an array literal
 />
 ```
 
-Use ```truncationEnabled``` to disable the truncation functionality.  Below shows truncation being disabled.
+Use ```truncationEnabled``` to disable the truncation functionality. The example below shows truncation being disabled.
 
 ```vue
 <cdr-breadcrumb
