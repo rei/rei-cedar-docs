@@ -118,7 +118,7 @@
 
 <cdr-doc-alert icon="info"><strong>REI.com is currently using Bazaarvoice for ratings.</strong>Styles documented here may not reflect the current styles provided by the tool. Reach out in <cdr-link href="https://rei.slack.com/messages/CA58YCGN4" target="_blank">#cedar-user-support</cdr-link> for further guidance or questions.</cdr-doc-alert>
 
-## Default
+## Default (Medium)
 
 Shows review rating with up to 5 stars highlighted. If rating is zero, star icons are displayed using the grey outline star icon.
 
@@ -152,7 +152,7 @@ Creates a link to the corresponding review content if on the same page.
 
 </cdr-doc-example-code-pair>
 
-## Compact
+## Compact (Small)
 
 Removes the word "Reviews" from the label for limited space layout.
 
