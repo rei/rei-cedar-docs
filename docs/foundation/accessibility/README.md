@@ -111,7 +111,6 @@ When designing with color, use a color-blind simulator to review visibility of c
 - Test an image by uploading it to the Coblis, [Color Blindness Simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/) web page
  
 <cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Non-color blind user versus color-blind user":src="$withBase(`/accessibility/Accessibility__ColorBlindness__16-9.png`)"/>
-// Please update this image. New Image is https://drive.google.com/open?id=1LoqGf2IZgqTEYNYhsVrTo_gAgWdB65Pw 
 Non-color blind user versus color-blind user
 
  
