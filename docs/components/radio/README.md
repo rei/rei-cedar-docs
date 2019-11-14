@@ -117,7 +117,7 @@
             "events": [
               {
                 "name": "change",
-                "arguments": "value",
+                "arguments": "value, event",
                 "description": "$emit event fired on radio selection."
               },
               {
