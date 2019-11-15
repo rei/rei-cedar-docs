@@ -139,9 +139,9 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell tab-name="Overview">
 
-## Default
+## Default (Medium)
 
-Default block quote can be used with the following HTML tags: `<p>`, `<div>`, `<aside>`. This is responsive with styles for XS breakpoint
+Default block quote can be used with the following HTML tags: `<p>`, `<div>`, `<aside>`. This is responsive with styles for XS breakpoint.
 
 <cdr-doc-example-code-pair repository-href="/src/components/quote" :sandbox-data="$page.frontmatter.sandboxData">
 
@@ -164,7 +164,7 @@ To ensure that usage of this component complies with accessibility guidelines:
 - All recommendations listed for [Paragraphs](../paragraphs/?active-link=accessibility) component apply to this component
 - Do not use this component to indent text. Screen readers use the `<blockquote>` element to:
   - Provide semantic understanding of page content by announcing blockquote as quote
-  - Define a sectioning root in HTML5, which means that any  `<h1>` - `<h6>`  elements it contains don’t become part of the document’s outline
+  - Define a sectioning root in HTML5, which means that all  `<h1>` - `<h6>`  elements don’t become part of the document’s outline
 - To make the blockquote content accessible, use the `<cite>` attribute with a valid URL
 
 <br>
@@ -227,7 +227,7 @@ don't: https://drive.google.com/file/d/1JpvhJyqks0QKUUinS0E3-1j5smikuV-1/view?us
 
 ## Content
 
-To make the block quote content accessible, following these rules:
+To make the block quote content accessible, follow these rules:
 
 - Must be quoted from another source, whose address, if it has one, may be cited in the `<cite>` attribute
 - If the `<cite>` attribute is present:
