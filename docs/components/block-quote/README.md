@@ -164,7 +164,7 @@ To ensure that usage of this component complies with accessibility guidelines:
 - All recommendations listed for [Paragraphs](../paragraphs/?active-link=accessibility) component apply to this component
 - Do not use this component to indent text. Screen readers use the `<blockquote>` element to:
   - Provide semantic understanding of page content by announcing blockquote as quote
-  - Define a sectioning root in HTML5, which means that all  `<h1>` - `<h6>`  elements don’t become part of the document’s outline
+  - Define a sectioning root in HTML5, which means that any  `<h1>` - `<h6>`  element doesn't become part of the document’s outline
 - To make the blockquote content accessible, use the `<cite>` attribute with a valid URL
 
 <br>
@@ -239,7 +239,7 @@ To make the block quote content accessible, follow these rules:
 
 ## Responsiveness
 
-When block quotes are displayed in at XS breakpoints, the text will use a smaller font size.
+When block quotes are displayed at XS breakpoint, the text will use a smaller font size.
 
   </cdr-doc-table-of-contents-shell>
 </template>
