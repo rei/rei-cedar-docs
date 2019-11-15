@@ -137,9 +137,9 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell tab-name="Overview">
 
-## Default
+## Default (Medium)
 
-Default pull quote can be used with the following HTML tags: `<p>`, `<div>`, `<aside>`. For XS breakpoint, a border is below pull quote and font size is smaller.
+Default pull quote can be used with the following HTML tags: `<p>`, `<div>`, `<aside>`. For XS breakpoint, a border is added below the pull quote and the font size is smaller.
 
 <cdr-doc-example-code-pair repository-href="/src/components/quote" :sandbox-data="$page.frontmatter.sandboxData">
 
@@ -162,13 +162,13 @@ To ensure that usage of this component complies with accessibility guidelines:
 - All recommendations listed for [Paragraphs](../paragraphs/?active-link=accessibility) component apply to this component
 - Do not use this component to indent text. Screen readers use the `<blockquote>` element to:
   - Provide semantic understanding of page content by announcing blockquote as quote
-  - Define a sectioning root in HTML5, which means that any  `<h1>` - `<h6>`  elements it contains don’t become part of the document’s outline
+  - Define a sectioning root in HTML5, which means that any  `<h1>` - `<h6>`  element doesn't become part of the document’s outline
 
 <br>
 
 This component has compliance with WCAG guidelines by:
 
-- Setting the `aria-hidden="true"` so the pull quote will not be conveyed to a screen reader
+- Setting the `aria-hidden="true"` so that the pull quote cannot be read by a screen reader
 
 
 </cdr-doc-table-of-contents-shell>
@@ -191,7 +191,7 @@ This component has compliance with WCAG guidelines by:
 
 ## The Basics
 
-Use a pull quote for emphasizing content that has a close and significant relationship with the surrounding text and will help users to visually scan the page
+Use a pull quote for emphasizing content that has a close and significant relationship with the surrounding text and will help users to visually scan the page.
 
 <br/>
 
@@ -215,7 +215,7 @@ don't: https://drive.google.com/file/d/1HLKAXrz9nUO0QjUrWU1JXqZfloz-zVjU/view?us
 
 ## Responsiveness
 
-When a pull quote is displayed in at XS breakpoints, the left border will appear below the pull quote and will use a smaller font size.
+When a pull quote is displayed at XS breakpoint, the left border will appear below the pull quote and will use a smaller font size.
 
   </cdr-doc-table-of-contents-shell>
 </template>
