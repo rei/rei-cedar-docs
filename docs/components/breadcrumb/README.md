@@ -90,18 +90,6 @@
                 "default": "true",
                 "description": "Controls the ability to truncate the entire breadcrumb path. If this value is false, truncation will no longer occur."
               },
-              {
-                "name": "truncationThreshold",
-                "type": "number",
-                "default": 0.80,
-                "description": "Sets the ratio between breadcrumb path width and container width when truncation will occur."
-              },
-              {
-                "name": "truncationXSThreshold",
-                "type": "number",
-                "default": 1,
-                "description": "Sets the ratio between breadcrumb path width and container width when truncation will occur at the XS breakpoint."
-              }
             ],
             "scopedSlots": [
               {
