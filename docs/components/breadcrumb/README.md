@@ -90,18 +90,6 @@
                 "default": "true",
                 "description": "Controls the ability to truncate the entire breadcrumb path. If this value is false, truncation will no longer occur."
               },
-              {
-                "name": "truncationThreshold",
-                "type": "number",
-                "default": 0.80,
-                "description": "Sets the ratio between breadcrumb path width and container width when truncation will occur."
-              },
-              {
-                "name": "truncationXSThreshold",
-                "type": "number",
-                "default": 1,
-                "description": "Sets the ratio between breadcrumb path width and container width when truncation will occur at the XS breakpoint."
-              }
             ],
             "scopedSlots": [
               {
@@ -317,39 +305,6 @@ Use ```truncationEnabled``` to disable the truncation functionality.  Below show
     {item:{url:'', name: 2}},
     {item:{url:'', name: 3}}
   ]"
-/>
-```
-
-Use the ```truncationThreshold``` prop to alter when truncation occurs:
-
-- Value must be a number between 0 and 1
-- Truncation occurs when (breadcrumb width) / (container width) exceeds the ```truncationThreshold``` value
-- The default value is 0.80 ( 80% )
-
-The below image and example code shows using ```truncationThreshold``` to set truncation to occur at 50%.
-
-<cdr-img class="cdr-doc-article-img" alt="Breadcrumb with truncation threshold at 50% and 80%" :src="$withBase(`/breadcrumb/Spec_API___Breadcrumb_Truncated_Threshold_50to80_16-4.png`)" />
-
-```vue
-<cdr-breadcrumb
-  :truncation-threshold="0.50"
-  :items="breadcrumbItems"
-/>
-```
-Use the ```truncationXSThreshold``` prop to alter when truncation occurs:
-
-- Value must be a number between 0 and 1
-- Truncation occurs when (breadcrumb width) / (container width) exceeds the ```truncationXSThreshold``` value on XS screen sizes
-- The default value is 1 ( 100% )
-
-The below image and example code shows using ```truncationXSThreshold``` to set truncation to occur at 70%.
-
-<cdr-img class="cdr-doc-article-img" alt="Breadcrumb with truncation XS  threshold at 70%" :src="$withBase(`/breadcrumb/Spec_API___Breadcrumb_Truncated_XSThreshold_70to100_16-4.png`)" />
-
-```vue
-<cdr-breadcrumb
-  :truncation-x-s-threshold=“0.70”
-  :items="breadcrumbItems"
 />
 ```
 
