@@ -308,6 +308,8 @@ don't: https://drive.google.com/file/d/1b17meNeuNW-Kv1yQ_8edToyuV6m4WouJ/view?us
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props"/>
 
+**Note:** Truncation only occurs if the ```items``` collection contains more than 2 items and the value is set to ```truncationEnabled=true```.
+
 ## Scoped Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.scopedSlots" />
