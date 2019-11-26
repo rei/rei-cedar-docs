@@ -122,7 +122,26 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
 
-## Default (Medium)
+## Truncated (Default)
+
+Long breadcrumb path shortened to display the last 2 items with hidden links indicated by ellipsis.
+
+<cdr-doc-example-code-pair repository-href="/src/components/breadcrumb" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight= false>
+
+```html
+    <cdr-breadcrumb
+      :items="[
+        {item:{url:'', name: 'Kids\' Clothing'}},
+        {item:{url:'', name: 'Kids\' Clothing Accessories'}},
+        {item:{url:'', name: 'Kids\' Snowboard Gloves and Mittens'}},
+        {item:{url:'', name: 'Kids\' Gloves'}},
+        {item:{url:'', name: 'Kids\' Insulated Gloves'}},
+      ]"
+    />
+```
+</cdr-doc-example-code-pair>
+
+### Untruncated
 
 Complete breadcrumb string with all items visible.
 
@@ -141,24 +160,6 @@ Complete breadcrumb string with all items visible.
 
 </cdr-doc-example-code-pair>
 
-## Truncated
-
-Long breadcrumb path shortened to display the last 2 items with hidden links indicated by ellipsis.
-
-<cdr-doc-example-code-pair repository-href="/src/components/breadcrumb" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight= false>
-
-```html
-    <cdr-breadcrumb
-      :items="[
-        {item:{url:'', name: 'Kids\' Clothing'}},
-        {item:{url:'', name: 'Kids\' Clothing Accessories'}},
-        {item:{url:'', name: 'Kids\' Snowboard Gloves and Mittens'}},
-        {item:{url:'', name: 'Kids\' Gloves'}},
-        {item:{url:'', name: 'Kids\' Insulated Gloves'}},
-      ]"
-    />
-```
-</cdr-doc-example-code-pair>
 
 ## Link Scoped Slot
 
