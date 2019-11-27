@@ -154,6 +154,7 @@ Can be used to override the default links rendered in the breadcrumb. Useful for
 - `class`: CSS class to be applied to your override element to match the breadcrumb styling
 - `href`: the path that the link points to
 - `content`: the text content of that link
+- `ref`: a Vue `ref` to bind to your override element
 
 <cdr-doc-example-code-pair repository-href="/src/components/breadcrumb" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight= false>
 
@@ -185,8 +186,9 @@ To ensure that usage of this component complies with accessibility guidelines:
 
 This component has compliance with WCAG guidelines by:
   - Using text color with a Level AA contrast ratio of 4.5:1 contrast between the text color and the background but only when displayed on light backgrounds
-  - Defining the attribute ```aria-label=’Breadcrumb’```  in the  ```<nav>```  element to identify the structure of  ```cdr-breadcrumb```  as a breadcrumb path for assistive technologies
-  - Defining that the ellipsis button contains the  ```aria-expanded=’false’```  attribute when the user has the ability to expand the breadcrumb path
+  - Defining the attribute `aria-label="Breadcrumb"`  in the  `<nav>`  element to identify the structure of  `cdr-breadcrumb`  as a breadcrumb path for assistive technologies
+  - Defining that the ellipsis button contains the  `aria-expanded="false"`  attribute when the user has the ability to expand the breadcrumb path
+  - Applying focus to the first breadcrumb item when the ellipsis button is clicked
 
 
 </cdr-doc-table-of-contents-shell>
