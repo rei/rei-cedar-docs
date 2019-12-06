@@ -148,9 +148,25 @@ See the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) to generate a
 
 </cdr-doc-example-code-pair>
 
+
+## Inline Icon Components
+
+While using an icon sprite is the most optimal way of loading SVGs there may be use cases where you need to inline SVG content directly in your markup. For example, if you are building a component that may be rendered across multiple pages and you cannot guarantee that your icon sprite will always be present.
+
+For these cases, Cedar exports a component version of every SVG Icon in the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/). These components are named using capitalized camel casing, for example `account-profile` becomes `IconAccountProfile` or `camping` becomes `IconCamping`.
+
+<cdr-doc-example-code-pair repository-href="/src/components/icon" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'IconAccountProfile, IconCamera'})">
+
+```html
+  <IconAccountProfile />
+  <IconCamera />
+```
+
+</cdr-doc-example-code-pair>
+
 ## Non-Cedar SVG
 
-Create a new SVG icon using any valid SVG markup. The wrapping SVG element can be stripped (below) or maintained. Note that if it is not stripped `viewBox`, `role`, and `xmlns` attributes will not be preserved, all others will. This method creates an outer SVG wrapper for accessibility and styles. This is not recommended if using a large number of icons. 
+Create a new SVG icon using any valid SVG markup. The wrapping SVG element can be stripped (below) or maintained. Note that if it is not stripped `viewBox`, `role`, and `xmlns` attributes will not be preserved, all others will. This method creates an outer SVG wrapper for accessibility and styles. This is not recommended if using a large number of icons.
 
 <cdr-doc-example-code-pair repository-href="/src/components/icon" :sandbox-data="$page.frontmatter.sandboxData" >
 

@@ -229,7 +229,7 @@ This component has compliance with WCAG guidelines by:
 - Grouping content to display horizontally
 - Content is lengthy and can be broken into discrete parts
 
-## Don't’t Use When
+## Don't Use When
 
 - Grouping content to display vertically. Instead, use [Accordion](../accordion/)
 - Creating primary navigation that links to other pages

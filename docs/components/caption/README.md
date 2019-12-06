@@ -199,7 +199,7 @@ This component has compliance with WCAG guidelines by:
 
 - Providing further context and attribution to any figure or media asset such as an image, video or chart
 
-## Don't’t Use When
+## Don’t Use When
 
 - Displaying body copy. Instead, use [Paragraphs](../paragraphs/)
 - Breaking up the text styles in a layout for aesthetic purposes

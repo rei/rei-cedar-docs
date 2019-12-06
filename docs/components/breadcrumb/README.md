@@ -90,18 +90,6 @@
                 "default": "true",
                 "description": "Controls the ability to truncate the entire breadcrumb path. If this value is false, truncation will no longer occur."
               },
-              {
-                "name": "truncationThreshold",
-                "type": "number",
-                "default": 0.80,
-                "description": "Sets the ratio between breadcrumb path width and container width when truncation will occur."
-              },
-              {
-                "name": "truncationXSThreshold",
-                "type": "number",
-                "default": 1,
-                "description": "Sets the ratio between breadcrumb path width and container width when truncation will occur at the XS breakpoint."
-              }
             ],
             "scopedSlots": [
               {
@@ -166,6 +154,7 @@ Can be used to override the default links rendered in the breadcrumb. Useful for
 - `class`: CSS class to be applied to your override element to match the breadcrumb styling
 - `href`: the path that the link points to
 - `content`: the text content of that link
+- `ref`: a Vue `ref` to bind to your override element
 
 <cdr-doc-example-code-pair repository-href="/src/components/breadcrumb" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight= false>
 
@@ -197,8 +186,9 @@ To ensure that usage of this component complies with accessibility guidelines:
 
 This component has compliance with WCAG guidelines by:
   - Using text color with a Level AA contrast ratio of 4.5:1 contrast between the text color and the background but only when displayed on light backgrounds
-  - Defining the attribute ```aria-label=’Breadcrumb’```  in the  ```<nav>```  element to identify the structure of  ```cdr-breadcrumb```  as a breadcrumb path for assistive technologies
-  - Defining that the ellipsis button contains the  ```aria-expanded=’false’```  attribute when the user has the ability to expand the breadcrumb path
+  - Defining the attribute `aria-label="Breadcrumb"`  in the  `<nav>`  element to identify the structure of  `cdr-breadcrumb`  as a breadcrumb path for assistive technologies
+  - Defining that the ellipsis button contains the  `aria-expanded="false"`  attribute when the user has the ability to expand the breadcrumb path
+  - Applying focus to the first breadcrumb item when the ellipsis button is clicked
 
 
 </cdr-doc-table-of-contents-shell>
@@ -212,7 +202,7 @@ This component has compliance with WCAG guidelines by:
 - Helping users understand where they are within the site hierarchy
 - Providing a shortcut to explore similar products within common parent categories
 
-## Don't’t Use When
+## Don’t Use When
 
 - Displaying a top-level page, such as a home or high level category page
 - Linking to previous steps of a sequential process
@@ -317,39 +307,6 @@ Use ```truncationEnabled``` to disable the truncation functionality.  Below show
     {item:{url:'', name: 2}},
     {item:{url:'', name: 3}}
   ]"
-/>
-```
-
-Use the ```truncationThreshold``` prop to alter when truncation occurs:
-
-- Value must be a number between 0 and 1
-- Truncation occurs when (breadcrumb width) / (container width) exceeds the ```truncationThreshold``` value
-- The default value is 0.80 ( 80% )
-
-The below image and example code shows using ```truncationThreshold``` to set truncation to occur at 50%.
-
-<cdr-img class="cdr-doc-article-img" alt="Breadcrumb with truncation threshold at 50% and 80%" :src="$withBase(`/breadcrumb/Spec_API___Breadcrumb_Truncated_Threshold_50to80_16-4.png`)" />
-
-```vue
-<cdr-breadcrumb
-  :truncation-threshold="0.50"
-  :items="breadcrumbItems"
-/>
-```
-Use the ```truncationXSThreshold``` prop to alter when truncation occurs:
-
-- Value must be a number between 0 and 1
-- Truncation occurs when (breadcrumb width) / (container width) exceeds the ```truncationXSThreshold``` value on XS screen sizes
-- The default value is 1 ( 100% )
-
-The below image and example code shows using ```truncationXSThreshold``` to set truncation to occur at 70%.
-
-<cdr-img class="cdr-doc-article-img" alt="Breadcrumb with truncation XS  threshold at 70%" :src="$withBase(`/breadcrumb/Spec_API___Breadcrumb_Truncated_XSThreshold_70to100_16-4.png`)" />
-
-```vue
-<cdr-breadcrumb
-  :truncation-x-s-threshold=“0.70”
-  :items="breadcrumbItems"
 />
 ```
 
