@@ -46,4 +46,17 @@ Spacing is made up of margin and padding. Spacing in Cedar is a defined set of v
 
 For more information on spacing and space utility classes, visit the [Spacing Layout](../spacing/) page.
 
+## Display
+
+The display classes are used to either show or hide content. You can customize your display needs to fit your screen size by adding the appropriate breakpoint name.
+
+To learn about how to show or hide content, visit the [Display Layout](../display/) page.
+
+
+## Alignment
+
+Text and container alignment utility classes allow you to shift your content or customize content container's horizontal alignment.
+
+For more information on alignment utility classes, visit the [Alignment Layout](../alignment) page.
+
 </cdr-doc-table-of-contents-shell>
