@@ -57,6 +57,6 @@ To learn about how to show or hide content, visit the [Display Layout](../displa
 
 Text and container alignment utility classes allow you to shift your content or customize content container's horizontal alignment.
 
-For more information on alignment utility classes, visit the [Alignment Layout](../alignment) page.
+For more information on alignment utility classes, visit the [Alignment Layout](../alignment/) page.
 
 </cdr-doc-table-of-contents-shell>
