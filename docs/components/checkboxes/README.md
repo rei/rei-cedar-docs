@@ -156,7 +156,13 @@
                 "type": "string",
                 "default": "N/A",
                 "description": "Modifies the style variant for this component.  Possible values: { ‘compact’  |  ‘hide-figure’ }"
-              }
+              },
+              {
+                "name": "size",
+                "type": "string",
+                "default": "'medium'",
+                "description": "Sets the checkbox size; values can target responsive breakpoints. Breakpoint values are: xs, sm, md, and lg. Examples: { 'small' | 'medium' | 'large' | 'large@sm' }",
+              },
             ],
             "slots": [
               {
