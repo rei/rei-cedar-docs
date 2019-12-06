@@ -56,6 +56,8 @@ The CdrIconSprite has been removed from Cedar. Consumers should instead use the 
 
 Pagination functionality has been simplified and only emits a single `navigate` event. Responsive navigation behavior for the select no longer has to be manually attached. Vue-router example with router-link via scoped slots has been added. Previous and next links are always present (in a "disabled" state when appropriate). Minor style updates for hover and currently selected page.
 
+API for scoped slots now uses an `attrs` object for easier binding.
+
 ## Deprecations
 
 </cdr-doc-table-of-contents-shell>
