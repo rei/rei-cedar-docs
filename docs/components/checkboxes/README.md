@@ -155,7 +155,11 @@
                 "name": "modifier",
                 "type": "string",
                 "default": "N/A",
-                "description": "Modifies the style variant for this component.  Possible values: { ‘compact’  |  ‘hide-figure’ }"
+                "description": "Modifies the style variant for this component.  Possible values: { ‘hide-figure’ }",
+                "alert": {
+                  "type": "deprecated",
+                  "description": "The `compact` modifier is deprecated in the winter 2019 release and will be removed. Use size=\"small\" instead"
+                },
               },
               {
                 "name": "size",
@@ -207,17 +211,17 @@ Default and standard spacing for checkboxes.
 
 </cdr-doc-example-code-pair>
 
-## Compact
+## Size
 
-Compact spacing for checkboxes.
+Different sizing for checkboxes.
 
 <cdr-doc-example-code-pair repository-href="/src/components/checkbox" :sandbox-data="$page.frontmatter.sandboxData" :model="{ex1: true, ex2: false, ex3: false}">
 
 ```html
 <div>
-  <cdr-checkbox v-model="ex1" modifier="compact">Compact checkbox 1</cdr-checkbox>
-  <cdr-checkbox v-model="ex2" modifier="compact">Compact checkbox 2</cdr-checkbox>
-  <cdr-checkbox v-model="ex3" disabled modifier="compact">Compact checkbox 3</cdr-checkbox>
+  <cdr-checkbox v-model="ex1" size="small">Small checkbox</cdr-checkbox>
+  <cdr-checkbox v-model="ex2" size="medium">Medium checkbox</cdr-checkbox>
+  <cdr-checkbox v-model="ex3" disabled size="large">Large checkbox</cdr-checkbox>
 </div>
 ```
 
@@ -460,7 +464,6 @@ Set the `indeterminate` prop to `true` to generate an indeterminate checkbox, wh
 Following variants are available to the `cdr-checkbox` modifier attribute:
 | Value | Description            |
 |:------|:-----------------------|
-| 'compact'  | Sets the spacing for smaller screen sizes |
 | 'hide-figure'  | Hides the checkbox icon |
 
 <br/>

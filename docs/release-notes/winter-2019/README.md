@@ -35,6 +35,10 @@ As part of the 3.x.x Cedar release we moved the Icon SVG assets into their own r
 
 To resolve this issue we have chosen to leave the inline single icon components as part of @rei/cedar. These components have been updated to use the same SVG assets exported by [@rei/cedar-icons](https://github.com/rei/cedar-icons)
 
+### Radio and Checkbox sizes
+
+Radio and checkbox now have a `size` prop with small, medium (default), and large variants. As part of this feature, the modifier `compact` has been deprecated and will be removed in the future in favor of using the new size prop.
+
 ## Bug Fixes
 
 ### CdrBreadcrumb
