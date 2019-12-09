@@ -84,7 +84,7 @@ export default {
   }
 
   .cdr-doc-intro__breadcrumb-link {
-    @include cdr-text-default;
+    @include cdr-text-utility-300;
     color: $text-color-intro;
     margin-right: $cdr-space-half-x;
     margin-bottom: 0;
