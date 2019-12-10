@@ -242,6 +242,27 @@ Adds drop shadow to increase contrast and visibility of Call to Action when plac
 
 </cdr-doc-example-code-pair>
 
+## Full Width
+
+Displays at full width of its container.
+
+<cdr-doc-example-code-pair repository-href="/src/components/cta" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-cta
+    href="https://rei.com"
+    :full-width="true"
+    data-backstop="cdr-cta--full-width"
+  >Full width</cdr-cta>
+  <cdr-cta
+    cta-style="dark"
+    href="https://rei.com"
+    full-width="@md"
+  >Full width @md</cdr-cta>
+```
+
+</cdr-doc-example-code-pair>
+
 ## Accessibility
 
 To ensure that usage of this component complies with accessibility guidelines:
