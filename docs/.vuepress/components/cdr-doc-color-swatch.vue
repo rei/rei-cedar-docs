@@ -64,7 +64,7 @@ export default {
   @import '../theme/styles/cdr-doc-tokens.scss';
 
   .cdr-doc-color-swatch {
-    @include cdr-doc-utility-200;
+    @include cdr-text-utility-200;
     margin-bottom: $cdr-space-two-x;
   }
 
