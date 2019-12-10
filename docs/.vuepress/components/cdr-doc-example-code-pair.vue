@@ -280,7 +280,7 @@
   }
 
   .cdr-doc-example-code-pair__item-label {
-    @include redwood-display-10;
+    @include cdr-text-utility-100;
     bottom: $cdr-space-half-x;
     position: absolute;
     right: $cdr-space-half-x;
@@ -298,7 +298,7 @@
   }
 
   .cdr-doc-item-background-toggle__button {
-    @include redwood-display-20;
+    @include cdr-text-utility-200;
     background-color: $cdr-color-background-lightest;
     border: solid 1px $holy-smoke;
     border-right-width: 0;
