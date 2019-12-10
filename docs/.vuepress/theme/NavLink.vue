@@ -72,7 +72,7 @@ export default {
   }
 
   .cdr-doc-side-navigation__child-link {
-    @include cdr-text-default-compact;
+    font-size: 14px;
     color: $cdr-doc-text-color-secondary;
   }
 </style>
