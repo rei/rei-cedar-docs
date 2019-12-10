@@ -90,6 +90,7 @@ module.exports = {
       {
         text: "Layout",
         items: [
+          { text: "Getting Started", link: "/layout/getting-started/" },
           { text: "Responsive", link: "/layout/responsive/" },
           { text: "Spacing", link: "/layout/spacing/" },
           { text: "Display", link: "/layout/display/" },

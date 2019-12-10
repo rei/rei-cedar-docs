@@ -35,6 +35,10 @@ As part of the 3.x.x Cedar release we moved the Icon SVG assets into their own r
 
 To resolve this issue we have chosen to leave the inline single icon components as part of @rei/cedar. These components have been updated to use the same SVG assets exported by [@rei/cedar-icons](https://github.com/rei/cedar-icons)
 
+### Radio and Checkbox sizes
+
+Radio and checkbox now have a `size` prop with small, medium (default), and large variants. As part of this feature, the modifier `compact` has been deprecated and will be removed in the future in favor of using the new size prop.
+
 ## Bug Fixes
 
 ### CdrBreadcrumb
@@ -51,6 +55,12 @@ We have resolved an issue with CdrRating where it treated the `count` property d
 ### CdrIconSprite Removed
 
 The CdrIconSprite has been removed from Cedar. Consumers should instead use the [Cedar sprite creator](https://rei.github.io/cedar-icons/#/sprite) to generate an optimized sprite and load it in their HTML. The [@rei/cedar-icons package](https://github.com/rei/cedar-icons) also exports an `all-icons.svg` file which contains all of the icons and can be loaded for convenience.
+
+### Pagination events and vue-router support
+
+Pagination functionality has been simplified and only emits a single `navigate` event. Responsive navigation behavior for the select no longer has to be manually attached. Vue-router example with router-link via scoped slots has been added. Previous and next links are always present (in a "disabled" state when appropriate). Minor style updates for hover and currently selected page.
+
+API for scoped slots now uses an `attrs` object for easier binding.
 
 ## Deprecations
 
