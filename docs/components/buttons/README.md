@@ -281,6 +281,23 @@ Use to visually communicate an object or action in limited space. Include altern
 
 </cdr-doc-example-code-pair>
 
+## Full Width
+
+Displays at full width of its container.
+
+<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" >
+
+```html
+    <cdr-button
+      :full-width="true"
+    >Full width</cdr-button>
+    <cdr-button
+      full-width="@md"
+    >Full Width @md</cdr-button>
+```
+
+</cdr-doc-example-code-pair>
+
 ## Sizing
 
 Change the button size based on where button is used. Default size is medium. Small is used for supplemental user actions such as product comparison or filter. Large is used for &quot;Add to cart&quot; on product pages or Call to Action.
