@@ -44,9 +44,6 @@ export default {
   $icon-color: $holy-smoke;
 
   .rei-doc-alert {
-    // @include redwood-display-10;
-    // font-size: 14px;
-    // line-height: 18px;
     @include cdr-text-utility-200;
     align-items: center;
     border: solid 1px $border-color;
@@ -71,6 +68,7 @@ export default {
     }
 
     strong {
+      // this currently only applies to the rating component docs. Other uses of cdr-doc-alert are only one line of text.
       display: block;
       margin-bottom: $cdr-space-half-x;
     }
