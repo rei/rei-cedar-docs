@@ -52,6 +52,12 @@ We have resolved an issue with CdrRating where it treated the `count` property d
 
 The CdrIconSprite has been removed from Cedar. Consumers should instead use the [Cedar sprite creator](https://rei.github.io/cedar-icons/#/sprite) to generate an optimized sprite and load it in their HTML. The [@rei/cedar-icons package](https://github.com/rei/cedar-icons) also exports an `all-icons.svg` file which contains all of the icons and can be loaded for convenience.
 
+### Pagination events and vue-router support
+
+Pagination functionality has been simplified and only emits a single `navigate` event. Responsive navigation behavior for the select no longer has to be manually attached. Vue-router example with router-link via scoped slots has been added. Previous and next links are always present (in a "disabled" state when appropriate). Minor style updates for hover and currently selected page.
+
+API for scoped slots now uses an `attrs` object for easier binding.
+
 ## Deprecations
 
 </cdr-doc-table-of-contents-shell>
