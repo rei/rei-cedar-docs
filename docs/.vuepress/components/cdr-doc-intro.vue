@@ -95,7 +95,8 @@ export default {
   }
 
   .cdr-doc-intro__title-metadata {
-    @include cdr-text-default-compact;
+    // @include cdr-text-default-compact;
+    @include cdr-text-utility-200;
     margin: 0;
     margin-bottom: $cdr-space-half-x;
 
