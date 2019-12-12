@@ -273,7 +273,7 @@ export default {
   }
 
   .cdr-doc-local-anchor-nav__link {
-    @include redwood-display-20;
+    @include cdr-text-utility-200;
     display: block;
     position: relative;
     text-transform: capitalize;
@@ -317,11 +317,11 @@ export default {
   }
 
   .cdr-doc-local-anchor-nav__appended-item-link {
-    @include redwood-display-20;
+    @include cdr-text-utility-200;
   }
 
   .cdr-doc-local-anchor-nav__appended-item-header {
-    @include redwood-display-30;
+    @include cdr-text-utility-300;
     color: $cdr-doc-text-color-primary;
   }
 </style>

@@ -15,7 +15,7 @@
 
 <cdr-doc-table-of-contents-shell>
 
-<cdr-doc-alert icon="warning"><strong>Instructions on this page are for internal REI designers only.</strong></cdr-doc-alert>
+<cdr-doc-alert icon="warning">Instructions on this page are for internal REI designers only.</cdr-doc-alert>
 
 
 

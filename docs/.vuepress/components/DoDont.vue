@@ -85,7 +85,7 @@ $dont-color: $quick-fixe;
   }
 
   &__caption {
-    @include maple-utility-20();
+    @include cdr-text-utility-200;
 
     &::before {
       content: '';

@@ -322,7 +322,7 @@ export default {
   }
 
   .cdr-doc-snippet__hide-code-toggle {
-    @include redwood-display-20;
+    @include cdr-text-utility-200;
     border: 0;
     background: none;
     color: $cdr-doc-text-color-primary;

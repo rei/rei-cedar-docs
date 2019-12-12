@@ -221,7 +221,7 @@ export default {
   }
 
   &__description {
-    @include redwood-display-40();
+    @include cdr-text-subheading-400;
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
@@ -238,7 +238,9 @@ export default {
 }
 
 .home-subheading {
-  @include redwood-body-40();
+  @include cdr-text-body-400;
+  font-size: 20px;
+  line-height: 32px;
   margin-bottom: $cdr-space-one-x;
 
   @media (max-width: $cdr-breakpoint-md) {
