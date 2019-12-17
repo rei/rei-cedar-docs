@@ -31,7 +31,7 @@ module.exports = {
       "link",
       {
         rel: "stylesheet",
-        href: "/cedar.css"
+        href: "/cedar-compiled.css"
       }
     ],
   ],

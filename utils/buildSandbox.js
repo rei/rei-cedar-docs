@@ -5,7 +5,7 @@ const INDEX_JS = `import Vue from "vue";
 import App from "./App";
 
 import "@rei/cedar/dist/cdr-fonts.css";
-import "@rei/cedar/dist/cedar.css";
+import "@rei/cedar/dist/cedar-compiled.css";
 
 new Vue({
 el: "#app",

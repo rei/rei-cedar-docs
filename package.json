@@ -7,7 +7,7 @@
     "dev": "npm run copy-cedar && vuepress dev docs",
     "build": "npm run copy-cedar && cross-env NODE_ENV=production vuepress build docs",
     "copy-cedar": "npm-run-all copy-cedar:core copy-cedar:font",
-    "copy-cedar:core": "cp ./node_modules/@rei/cedar/dist/cedar.css ./docs/.vuepress/public/cedar.css",
+    "copy-cedar:core": "cp ./node_modules/@rei/cedar/dist/cedar-compiled.css ./docs/.vuepress/public/cedar-compiled.css",
     "copy-cedar:font": "cp ./node_modules/@rei/cedar/dist/cdr-fonts.css ./docs/.vuepress/public/cdr-fonts.css"
   },
   "author": "REI Software Engineering",
