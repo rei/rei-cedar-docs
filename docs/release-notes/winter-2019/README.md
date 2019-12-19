@@ -62,6 +62,60 @@ Pagination functionality has been simplified and only emits a single `navigate` 
 
 API for scoped slots now uses an `attrs` object for easier binding.
 
+## Typography
+ 
+ The root class `cdr-text` now has all attributes mapped to `inherit`. This change was neccessary and
+ allows for desendant selectors to inherit the font settings of the parent.
+
+ You will now need to pass the cdr-text component the modifier you would like to use.
+ - `body-300` -- for paragraphs
+ - `utility-300` -- for generic text
+
+ Perviously `cdr-text` defaulted to the paragraph styles. 
+ `cdr-container` and `cdr-container-fluid` will still provide the root font defenition.
+  Note that this has been altered from the paragraph style to the `cdr-text--utility-300`.
+
 ## Deprecations
+
+### Type Token mixins
+**Redwood Display**  
+| deprecated mixin name | equivalent mixin name | 
+|-----------------------|-----------------------|
+| redwood-display-70    | cdr-text-utility-700  |
+| redwood-display-60    | cdr-text-utility-600  |
+| redwood-display-50    | cdr-text-utility-500  |
+| redwood-display-40    | cdr-text-utility-400  |
+| redwood-display-30    | cdr-text-utility-300  |
+| redwood-display-20    | cdr-text-utility-200  |
+| redwood-display-10    | cdr-text-utility-100  |
+
+**Redwood Body**  
+| deprecated mixin name | equivalent mixin name | 
+|-----------------------|-----------------------|
+| redwood-body-40       | cdr-text-body-500     |
+| redwood-body-30       | cdr-text-body-400     |
+| redwood-body-20       | cdr-text-body-300     |
+| redwood-body-10       |                       |
+
+**Maple**  
+| deprecated mixin name | equivalent mixin name | 
+|-----------------------|-----------------------|
+| maple-utility-70      | cdr-text-utility-700  |
+| maple-utility-60      | cdr-text-utility-600  |
+| maple-utility-50      | cdr-text-utility-500  |
+| maple-utility-40      | cdr-text-utility-400  |
+| maple-utility-30      | cdr-text-utility-300  |
+| maple-utility-20      | cdr-text-utility-200  |
+| maple-utility-10      | cdr-text-utility-100  |
+
+### Type Utility classes
+| deprecated class name | equivalent class name | 
+|-----------------------|-----------------------|
+| cdr-text-body         | cdr-text-body-300     |
+
+## Removals
+
+Please note that Tokens or Mixins deprecated in the Summer 2019 release will no longer be available
+nor supported with the winter 2019 release.
 
 </cdr-doc-table-of-contents-shell>
