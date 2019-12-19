@@ -64,16 +64,17 @@ API for scoped slots now uses an `attrs` object for easier binding.
 
 ## Typography
  
- The root class `cdr-text` now has all attributes mapped to `inherit`. This change was neccessary and
- allows for desendant selectors to inherit the font settings of the parent.
+The root class `cdr-text` now has all attributes mapped to `inherit`. This change was necessary and
+allows for descendant selectors to inherit the font settings of the parent.
 
- You will now need to pass the cdr-text component the modifier you would like to use.
- - `body-300` -- for paragraphs
- - `utility-300` -- for generic text
+You will now need to pass the cdr-text component the modifier you would like to use.
+- `body-300` -- for paragraphs
+- `utility-300` -- for generic text
 
- Perviously `cdr-text` defaulted to the paragraph styles. 
- `cdr-container` and `cdr-container-fluid` will still provide the root font defenition.
-  Note that this has been altered from the paragraph style to the `cdr-text--utility-300`.
+Previously `cdr-text` defaulted to the paragraph styles. 
+`cdr-container` and `cdr-container-fluid` will still provide the root font definition.
+Note that this has been altered from the paragraph style to the `cdr-text--utility-300`.
+
 
 ## Deprecations
 
