@@ -69,7 +69,6 @@ function buildIndexHtml(title) {
 }
 
 function buildContent(data, model, fontImport) {
-  console.log(data);
   return `
 <template>
   <div style="margin: 32px;">
