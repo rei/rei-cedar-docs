@@ -32,6 +32,7 @@ export default function makeMeASandbox(data, model) {
             // TODO: can we grab the preceding text to use for description?
           "description": "https://rei.github.io/rei-cedar-docs/",
           "dependencies": {
+            "@rei/cdr-tokens": packageJson.devDependencies['@rei/cdr-tokens'],
             "@rei/cedar": packageJson.dependencies['@rei/cedar'],
             "vue": "^2.5.22"
           }
@@ -80,7 +81,8 @@ function buildContent(data, model, fontImport) {
   ${buildScriptTag(data, model)}
 </script>
 
-<style>
+<style lang="scss">
+  @import "~@rei/cdr-tokens/dist/scss/cdr-tokens.scss";
   ${data.styleTag || ''}
 </style>`;
 }
