@@ -21,19 +21,29 @@ If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade
 
 ### For a Micro-Site
 
-- Update to `@rei/cedar` 4.x.x
-- Update to `@rei/febs` >= 6.0.0
+- Update to `@rei/cedar` ^4.0.0
+- Update to `@rei/febs` ^6.0.0
+- If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar and febs before updating your micro-site.
+
 ### For a Component Package
 
-- Update to `@rei/cedar` 4.x.x
+- Update to `@rei/cedar` ^4.0.0
+- Update to `@rei/febs` ^6.0.0
+- Your package will need to have a build system set up to compile itself, as febs 6.0.0 no longer compiles packages in the `@rei` namespace. See the [@rei/component template](https://github.com/rei/component) for an example build system, as well as [climber-details-page](https://git.rei.com/projects/FEDPAGES/repos/climber-details-page/browse) and [climbers-site](https://git.rei.com/projects/CLIMB/repos/climbers-site/browse/climbers-site) for a full example micro-site integration.
 
 ## New Features
+
+### Decomposed CSS Output
+
+Previously Cedar only offered a single `cedar.css` file that included all of the styling for the Cedar reset, components, and utilities. This made it very easy to set up a Cedar project, but meant that CSS assets could not be optimized. We are now exporting a separate CSS file for each element of Cedar.
+
+These CSS files are intended to be compiled by postcss and postcss-import, which will de-dupe any Cedar assets that are required multiple times. If you are using febs^6 then this will already be set up for you. Note that postcss-import should only be run during the final micro-site build, and not as part of any component package build.
 
 ### Single Icon Components
 
 As part of the 3.x.x Cedar release we moved the Icon SVG assets into their own repository [@rei/cedar-icons](https://github.com/rei/cedar-icons), and deprecated the CdrIconSprite and inline single icon components in @rei/cedar. This was intended to allow teams to build their own SVG sprites containing only the Icons used in their application. However due to issues with Vue and SVG syntax this approach did not work well for teams that wanted to inline icons in their markup.
 
-To resolve this issue we have chosen to leave the inline single icon components as part of @rei/cedar. These components have been updated to use the same SVG assets exported by [@rei/cedar-icons](https://github.com/rei/cedar-icons)
+To resolve this issue we have chosen to leave the inline single icon components as part of @rei/cedar. These components have been updated to use the same SVG assets exported by [@rei/cedar-icons](https://github.com/rei/cedar-icons).
 
 ### Radio and Checkbox sizes
 
@@ -52,11 +62,63 @@ We have resolved an issue with CdrRating where it treated the `count` property d
 
 ## Breaking Changes
 
+### Cedar Is Now a Dependency Instead of a PeerDependency
+
+Previously we recommended listing `@rei/cedar` as a `peerDependency` and `devDependency` in the `package.json` of any shared components or pages, and treating it as a `dependency` in micro-sites. This was necessary to ensure that only 1 version of Cedar was loaded on a page at a time so that the single `cedar.css` file would work. Now that we have a decomposed CSS output consumers should [update their Cedar CSS imports accordingly](#decomposed-css-output) and edit their `package.json` file to instead list `@rei/cedar` as a dependency.
+
+### Updating Cedar CSS in a Component
+
+If you are updating a shared component:
+- In your main CSS file, use `@import url();` to load the CSS for each Cedar component and utility type being used in this component. See the [Getting Started as a Developer Guide](https://rei.github.io/rei-cedar-docs/getting-started/as-a-developer#Include-Component-and-Utility-CSS) guide for more information on loading Cedar CSS assets.
+- You do not need to load the `cdr-fonts` or `reset` files in your component CSS, as those files will already be imported by the micro-site that consumes this package.
+- If you run your build and inspect the compiled CSS file, you should see the `@import url();` statements left un-transformed. This will allow any micro-site that consumes this package to de-dupe and compile those assets.
+- If your component has a local development environment you will need to update the entry file (usually named `local-development.js`) to import the Cedar reset and your main CSS file instead of importing `cedar.css`.
+
+```
+import '@rei/cedar/dist/cdr-fonts.css';
+import '@rei/cedar/dist/style/reset.css';
+import './dist/index.css';
+```
+
+### Updating Cedar CSS in a Micro-Site
+
+If you are updating a micro-site:
+- In your main CSS file, instead of importing `cedar.css` you will now import the Cedar reset along with the built CSS for all of your shared packages.
+- If you use any other Cedar components or utilities directly in your micro-site you will also need to add imports for those. You should do this even if those assets are already loaded by shared components, as this ensures that the micro-site will still work even if one of those components was replaced in the future.
+```
+/* import the cedar fonts */
+@import url('@rei/cedar/dist/cdr-fonts.css');
+
+/* import the cedar reset */
+@import url('@rei/cedar/dist/style/reset.css');
+
+/* import compiled component CSS */
+@import url('@rei/your-shared-component-package.css');
+
+/* import any utilities or components used directly in the micro-site */
+@import url('@rei/cedar/dist/style/container.css');
+@import url('@rei/cedar/dist/style/cdr-text.css');
+```
+- Note that assets can only be de-duped if they are compiled in the same entry file. If you are currently compiling global assets separately you may want to update your build so that each page in your micro-site has a single JS and CSS entry file.
+- If you run your build and inspect the compiled CSS file, you should not see any `@import url();` statements, as those will all have been replaced with the actual contents of those CSS files.
+
+### CSS Asset Shuffle
+
+In order to support the new [decomposed CSS output](#decomposed-css-output) we have re-named some of the existing Cedar CSS assets in order to better identify what they are and how they should be used. If you were importing one of these files into your project you will need to update the path to the new location. Note that the `-compiled` CSS files should generally not be used for public facing production micro-sites, as these files will not be de-duped by postcss-import.
+
+| previous path | new path |
+|--------|------|
+| `@rei/cedar/dist/cedar.css` | `@rei/cedar/dist/cedar-compiled.css` |
+| `@rei/cedar/dist/utilities.css` | `@rei/cedar/dist/utilities-compiled.css` |
+| `@rei/cedar/dist/reset.css` | `@rei/cedar/dist/style/reset.css` |
+
 ### CdrIconSprite Removed
 
-The CdrIconSprite has been removed from Cedar. Consumers should instead use the [Cedar sprite creator](https://rei.github.io/cedar-icons/#/sprite) to generate an optimized sprite and load it in their HTML. The [@rei/cedar-icons package](https://github.com/rei/cedar-icons) also exports an `all-icons.svg` file which contains all of the icons and can be loaded for convenience.
+The CdrIconSprite has been removed from Cedar. We recommend that consumers instead use the [inline Cedar Icon components](), as they are easier to maintain and the performance benefit of using a sprite is usually minimal.
 
-### Pagination events and vue-router support
+Teams that do want to make use of an icon sprite for performance reasons can use the [Cedar sprite creator](https://rei.github.io/cedar-icons/#/sprite) to generate an optimized sprite and load it in their HTML.
+
+### Pagination Events and vue-router Support
 
 Pagination functionality has been simplified and only emits a single `navigate` event. Responsive navigation behavior for the select no longer has to be manually attached. Vue-router example with router-link via scoped slots has been added. Previous and next links are always present (in a "disabled" state when appropriate). Minor style updates for hover and currently selected page.
 

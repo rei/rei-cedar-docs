@@ -14,6 +14,10 @@
 
 <cdr-doc-table-of-contents-shell>
 
+## Loading Utility Classes
+
+Cedar utility classes are compiled into multiple files that must be loaded before they can be used. See [Getting Started as a Developer Guide](https://rei.github.io/rei-cedar-docs/getting-started/as-a-developer#Include-Component-and-Utility-CSS) for more information.
+
 <css-utilities />
 
 </cdr-doc-table-of-contents-shell>
