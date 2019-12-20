@@ -47,7 +47,45 @@
     },
   ],
   "sandboxData": {
-    "components": "CdrRow, CdrCol"
+    "components": "CdrRow, CdrCol",
+    "styleTag": ".grid-example-wrap {
+      width: 100%;
+
+      [class^=\"cdr-row\"] {
+        position: relative;
+        
+        &::before {
+          content: '';
+          position: absolute;
+          top: 1.6rem;
+          left: 1.6rem;
+          height: 100%;
+          width: 100%;
+          background-color: rgba(130, 234, 255, 0.1);
+          
+          @media (max-width: $cdr-breakpoint-md) {
+            top: 0.8rem;
+            left: 0.8rem;
+          }
+        }
+      }
+
+      [class*=\"cdr-row--gutter-xxs\"]::before {
+        top: .2rem;
+        left: .2rem;
+      }
+
+      [class*=\"cdr-row--gutter-none\"]::before {
+        top: 0;
+        left: 0;
+      }
+
+      [class^=\"cdr-col__content\"] {
+        background-color: rgba(130, 234, 255, 0.35);
+        color: rgba(60, 120, 174, 1.0);
+        text-align: center;
+      }
+    }",
   },
   "versions": [
     {
