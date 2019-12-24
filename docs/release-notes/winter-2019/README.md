@@ -47,7 +47,11 @@ To resolve this issue we have chosen to leave the inline single icon components 
 
 ### Radio and Checkbox sizes
 
-Radio and checkbox now have a `size` prop with small, medium (default), and large variants. As part of this feature, the modifier `compact` has been deprecated and will be removed in the future in favor of using the new size prop.
+CdrRadio and CdrCheckbox now have a `size` prop with small, medium (default), and large variants. As part of this feature, the modifier `compact` has been deprecated and will be removed in the future in favor of using the new size prop.
+
+### Tabs Centered Variant
+
+CdrTabs now accepts `centered` as a `modifier` for a center aligned tab header.
 
 ## Bug Fixes
 
@@ -59,6 +63,12 @@ Radio and checkbox now have a `size` prop with small, medium (default), and larg
 ### CdrRating
 
 We have resolved an issue with CdrRating where it treated the `count` property differently depending on whether it was passed as a string or a number. Now CdrRating will show the review text any time it receives a value for `count`, and will not show any review text if it does not receive a value. You should not need to make any changes to your application code to support this change.
+
+### CdrTabs
+
+We have resolved several issues involving the behavior of the active tab underline on certain browsers.
+CdrTabPanel content will now show a scrollbar on MacOS when that content overflows it's container.
+CdrTabs now uses hash links (`href="#hash-link"`) for navigation to improve SEO.  
 
 ## Breaking Changes
 
@@ -125,7 +135,7 @@ Pagination functionality has been simplified and only emits a single `navigate` 
 API for scoped slots now uses an `attrs` object for easier binding.
 
 ## Typography
- 
+
 The root class `cdr-text` now has all attributes mapped to `inherit`. This change was necessary and
 allows for descendant selectors to inherit the font settings of the parent.
 
@@ -133,7 +143,7 @@ You will now need to pass the cdr-text component the modifier you would like to 
 - `body-300` -- for paragraphs
 - `utility-300` -- for generic text
 
-Previously `cdr-text` defaulted to the paragraph styles. 
+Previously `cdr-text` defaulted to the paragraph styles.
 `cdr-container` and `cdr-container-fluid` will still provide the root font definition.
 Note that this has been altered from the paragraph style to the `cdr-text--utility-300`.
 
@@ -142,7 +152,7 @@ Note that this has been altered from the paragraph style to the `cdr-text--utili
 
 ### Type Token mixins
 **Redwood Display**  
-| deprecated mixin name | equivalent mixin name | 
+| deprecated mixin name | equivalent mixin name |
 |-----------------------|-----------------------|
 | redwood-display-70    | cdr-text-utility-700  |
 | redwood-display-60    | cdr-text-utility-600  |
@@ -153,7 +163,7 @@ Note that this has been altered from the paragraph style to the `cdr-text--utili
 | redwood-display-10    | cdr-text-utility-100  |
 
 **Redwood Body**  
-| deprecated mixin name | equivalent mixin name | 
+| deprecated mixin name | equivalent mixin name |
 |-----------------------|-----------------------|
 | redwood-body-40       | cdr-text-body-500     |
 | redwood-body-30       | cdr-text-body-400     |
@@ -161,7 +171,7 @@ Note that this has been altered from the paragraph style to the `cdr-text--utili
 | redwood-body-10       |                       |
 
 **Maple**  
-| deprecated mixin name | equivalent mixin name | 
+| deprecated mixin name | equivalent mixin name |
 |-----------------------|-----------------------|
 | maple-utility-70      | cdr-text-utility-700  |
 | maple-utility-60      | cdr-text-utility-600  |
@@ -172,7 +182,7 @@ Note that this has been altered from the paragraph style to the `cdr-text--utili
 | maple-utility-10      | cdr-text-utility-100  |
 
 ### Type Utility classes
-| deprecated class name | equivalent class name | 
+| deprecated class name | equivalent class name |
 |-----------------------|-----------------------|
 | cdr-text-body         | cdr-text-body-300     |
 
