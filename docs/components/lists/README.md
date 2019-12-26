@@ -139,7 +139,6 @@ Collect related items with numeric order or sequence. Numbering starts at 1 with
 
 <cdr-doc-example-code-pair :codeMaxHeight="false" repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
 
-
 ```html
   <cdr-list tag="ol" modifier="ordered">
     <li>Default list item 1</li>
@@ -159,7 +158,6 @@ Collect related items with numeric order or sequence. Numbering starts at 1 with
 Compact modifier can be added to any cdr-list in order to reduce the margin between list items
 
 <cdr-doc-example-code-pair repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" >
-
 
 ```html
   <cdr-list modifier="compact unordered">
@@ -181,8 +179,6 @@ Display items horizontally with no divider.
 
 <cdr-doc-example-code-pair :codeMaxHeight="false" repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
 
-<template slot="Default">
-
 ```html
   <cdr-list modifier="inline">
     <li>Default list item 1</li>
@@ -190,19 +186,6 @@ Display items horizontally with no divider.
     <li>Default list item 3</li>
   </cdr-list>
 ```
-</template>
-
-<template slot="compact">
-
-```html
-  <cdr-list modifier="inline compact">
-    <li>Compact list item 1</li>
-    <li>Compact list item 2</li>
-    <li>Compact list item 3</li>
-  </cdr-list>
-```
-
-</template>
 
 </cdr-doc-example-code-pair>
 
@@ -212,8 +195,6 @@ Display items horizontally, separated by a bullet character.
 
 <cdr-doc-example-code-pair :codeMaxHeight="false" repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
 
-<template slot="Default">
-
 ```html
   <cdr-list modifier="inline unordered">
     <li>Default list item 1</li>
@@ -221,19 +202,6 @@ Display items horizontally, separated by a bullet character.
     <li>Default list item 3</li>
   </cdr-list>
 ```
-</template>
-
-<template slot="compact">
-
-```html
-  <cdr-list modifier="inline compact unordered">
-    <li>Compact list item 1</li>
-    <li>Compact list item 2</li>
-    <li>Compact list item 3</li>
-  </cdr-list>
-```
-
-</template>
 
 </cdr-doc-example-code-pair>
 
