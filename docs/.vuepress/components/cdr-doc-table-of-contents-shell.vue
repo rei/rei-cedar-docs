@@ -1,15 +1,13 @@
 <template>
   <div class="cdr-doc-table-of-contents-shell" :class="'cdr-doc-table-of-contents-shell--' + instanceId">
     <div class="cdr-doc-table-of-contents-shell__content">
-      <slot/>
-    </div>
-    <div class="cdr-doc-table-of-contents-shell__navigation">
       <cdr-doc-local-anchor-nav
         :tab-name="tabName"
         :parent-selectors="parentSelectors"
         :child-selectors="childSelectors"
         :links="links"
         :appended-items="appendedNavItems"/>
+      <slot/>
     </div>
   </div>
 </template>
@@ -121,16 +119,13 @@ export default {
   @import '../theme/styles/cdr-tokens.scss';
   @import '../theme/styles/cdr-doc-tokens.scss';
   @import '../theme/styles/cdr-doc-mixins.scss';
-  
+
   .cdr-doc-table-of-contents-shell {
     display: flex;
   }
 
   .cdr-doc-table-of-contents-shell__content {
     @include cdr-doc-long-form-text;
-    border-right: $cdr-doc-border-separator;
-    padding-right: 24px; // Not a token?
-    margin-right: 24px; // Not a token?
     min-width: 0;
     flex: 1 1 100%;
   }
