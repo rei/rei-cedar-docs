@@ -6,7 +6,7 @@
             :class="[
               'cdr-doc-local-anchor-nav__link',
               {
-                'cdr-doc-local-anchor-nav__link--parent': !link.isChild, 
+                'cdr-doc-local-anchor-nav__link--parent': !link.isChild,
                 'cdr-doc-local-anchor-nav__link--child': link.isChild,
                 'cdr-doc-local-anchor-nav__link--active': link.href === activeLinkHref
               }
@@ -87,10 +87,6 @@ export default {
       smoothscroll.polyfill();
     });
 
-    import('stickyfilljs').then(s => {
-      this.setStickyPositioning(s);
-    });
-
     if (!this.activeTabName) {
       this.initialize();
     } else {
@@ -149,8 +145,8 @@ export default {
 
           // When a section spans the entire viewport
           elementWatcher.stateChange(() => {
-            if (this.scrollMonitoringEnabled && 
-                elementWatcher.isAboveViewport && 
+            if (this.scrollMonitoringEnabled &&
+                elementWatcher.isAboveViewport &&
                 elementWatcher.isBelowViewport) {
                   this.activeLinkHref = linkHref;
             }
@@ -211,11 +207,6 @@ export default {
       this.activeLinkHref = `#${activeLinkParam}`;
       this.softScrollToAnchoredSection(this.activeLinkHref);
     },
-    setStickyPositioning(Stickyfill) {
-      const localNav = this.$refs['localNav'];
-      localNav.style.cssText = `top: ${this.stickyTopOffset}px; max-height: calc(100vh - ${this.stickyTopOffset}px);`;
-      Stickyfill.add(localNav); // Polyfill for browsers without native position: sticky; support 
-    },
     handleAnchorLinkClick(id, event) {
       event.preventDefault(); // Intercept click event
       this.activeLinkHref = id;
@@ -262,8 +253,7 @@ export default {
 
   .cdr-doc-local-anchor-nav {
     overflow-y: auto;
-    position: sticky;
-    padding-top: $cdr-space-inset-two-x;
+    padding-top: $cdr-space-half-x;
   }
 
   .cdr-doc-local-anchor-nav__list {

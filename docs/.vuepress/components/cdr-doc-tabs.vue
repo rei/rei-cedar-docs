@@ -114,7 +114,6 @@ export default {
     margin: 0 auto;
     max-width: $cdr-doc-content-max-width;
     padding-bottom: $cdr-doc-long-form-text-top-and-bottom-inset-space;
-    padding-top: $cdr-doc-long-form-text-top-and-bottom-inset-space;
   }
 
   .cdr-doc-tabs__list-item {
@@ -140,7 +139,7 @@ export default {
 
   .cdr-doc-tabs__link--active {
     &:after {
-      background: $cdr-doc-link-color-primary; 
+      background: $cdr-doc-link-color-primary;
       bottom: 0;
       content: '';
       left: 0;
