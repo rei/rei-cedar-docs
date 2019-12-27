@@ -103,9 +103,9 @@
 }
 ---
 
-<cdr-doc-tabs>
-<template slot="Overview">
+
 <cdr-doc-table-of-contents-shell>
+# Overview
 
 Stuart is our first choice for larger, more expressive moments. Graphik rounds out the heading schema with smaller sizes and its simplicity allows it to play a supporting role across a wide range of projects.
 
@@ -440,11 +440,9 @@ This component has compliance with WCAG guidelines by:
 
 - Defining semantic heading levels with the ability to assign predefined visual heading styles to each level
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="Guidelines">
-<cdr-doc-table-of-contents-shell>
+# Guidelines
 
 ## Use When
 
@@ -502,11 +500,9 @@ Responsive heading font sizes are the default for heading levels except subheadi
 
 - WebAIM: [Semantic Structure](https://webaim.org/techniques/semanticstructure/)
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
+# API
 
 ## Props
 
@@ -541,11 +537,7 @@ With this decoupling, you can style other markup to look like a heading that sem
 This will result in the following HTML:
 
 ```html
-  <strong
-    class="
-    cdr-text cdr-text-heading-700@xs
-    cdr-text-heading-800”
-  >
+  <strong class="cdr-text cdr-text-heading-700@xs cdr-text-heading-800">
     Styled as a heading
   </strong>
 ```
@@ -594,7 +586,7 @@ This will result in the following HTML:
 
 ### Responsive Headings
 
-Heading modifiers accept any of the supported Cedar breakpoints. For more information on how breakpoints work on components, visit the [Responsive Layout](../../layout/responsive/?active-link=components-and-breakpoints) article.
+Heading modifiers accept any of the supported Cedar breakpoints. For more information on how breakpoints work on components, visit the [Responsive Layout](../../layout/responsive/#components-and-breakpoints) article.
 
 ### Modifiers
 
@@ -651,6 +643,3 @@ Skipping heading levels can be confusing and should be avoided where possible:
 In fixed sections of the page (e.g. sidebars), heading levels **should not** change depending on the heading levels in other areas of the page. Consistency across pages is required throughout the REI digital properties as explained on the [Navigation Design Principles Confluence](https://confluence.rei.com/display/NAV/Navigation+Design+Principles) page.
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>

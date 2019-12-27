@@ -191,9 +191,9 @@
 
 ---
 
-<cdr-doc-tabs>
-<template slot="Overview">
-<cdr-doc-table-of-contents-shell tab-name="Overview">
+<cdr-doc-table-of-contents-shell >
+
+# Overview
 
 ## Default
 
@@ -297,12 +297,9 @@ For more information, review techniques and failures for:
 - [WCAG 2.0,  1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 - [WCAG 2.0,  3.3.2 Labels and Instructions](https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html)
 
+<hr>
 
-</cdr-doc-table-of-contents-shell>
-</template>
-
-<template slot="Guidelines">
-  <cdr-doc-table-of-contents-shell tab-name="Design Guidelines">
+# Guidelines
 
 ## Use When
 
@@ -364,11 +361,9 @@ Checkboxes work independently from each other:
 
  - WebAIM: [Semantic Structure: Using Lists Correctly](https://webaim.org/techniques/semanticstructure/)
 
-  </cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
+# API
 
 ## Props
 
@@ -498,6 +493,3 @@ Use the `hide-figure` modifier to hide the checkbox itself, which leaves the tex
 ```
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>

@@ -38,7 +38,7 @@ Sentinel and Roboto have been deprecated as a global REI brand fonts. `cdr-fonts
 
 The variant fonts for "Stuart" and "Graphik" have been added.
 
-For more information, see the [Typography](../../foundation/typography/?active-tab=guidelines) article.
+For more information, see the [Typography](../../foundation/typography/#guidelines) article.
 
 ### New Icons Package
 
@@ -82,7 +82,7 @@ A new Select component is available for use in the web components toolkit and th
 
 - `CdrIcon` now accepts full SVG markup in the slot
 - All attributes, classes, listeners, etc. will be preserved with the exception of `viewBox`, `role`, and `xmlns`
-- For more information and examples, see the [Icon Component](../../components/icon/?active-tab=api#_2-non-cedar-svg) page
+- For more information and examples, see the [Icon Component](../../components/icon/#non-cedar-svg) page
 
 ### Deprecated Mixin Warnings
 
@@ -90,7 +90,7 @@ The `cdr-tokens` package now emits warnings if it detects that you are still usi
 
 ### Button / CTA Full-Width at Breakpoint
 
-The [Button](../../components/buttons/?active-tab=api) and [CTA](../../components/cta/?active-tab=api) components now support setting `full-width` as either a boolean value or as a list of responsive breakpoints. For example, `full-width: "@xs @lg"` would make that component be full-width at the extra small and large breakpoints. A bug where the full-width attribute could be overridden by a responsive size breakpoint has also been resolved.
+The [Button](../../components/buttons/#api) and [CTA](../../components/cta/#api) components now support setting `full-width` as either a boolean value or as a list of responsive breakpoints. For example, `full-width: "@xs @lg"` would make that component be full-width at the extra small and large breakpoints. A bug where the full-width attribute could be overridden by a responsive size breakpoint has also been resolved.
 
 ### Link Scoped Slots for Pagination and Breadcrumb
 
@@ -98,8 +98,8 @@ In order to support client-side routing, [breadcrumb](../../components/paginatio
 
 ### Input and Button Bind All Listeners
 
-Rather than only binding specific listeners (like `on-click`), the [input](../../components/input/?active-tab=api#events) and
-[button](../../components/button/?active-tab=api#events) components will now bind any event listeners attached to their root component, i.e, `@click`, `@focus`, `@input`.
+Rather than only binding specific listeners (like `on-click`), the [input](../../components/input/#events) and
+[button](../../components/button/#events) components will now bind any event listeners attached to their root component, i.e, `@click`, `@focus`, `@input`.
 
 ## Breaking Changes
 
@@ -184,7 +184,7 @@ The letter spacing values for our text tokens have been corrected to add the `px
 
 ### CdrRadio Value Prop Is Now CustomValue
 
-In an effort to make our form components more consistent, we have changed [CdrRadio](../../components/radio/?active-tab=api) to use the `customValue` prop instead of `value`. This is the same pattern that CdrCheckbox uses.
+In an effort to make our form components more consistent, we have changed [CdrRadio](../../components/radio/#api) to use the `customValue` prop instead of `value`. This is the same pattern that CdrCheckbox uses.
 
 - Before: `<cdr-radio v-model="x" value="foo"/>`
 - After: `<cdr-radio v-model="x" customValue="foo"/>`
@@ -199,14 +199,14 @@ In an effort to make our components that use `v-model` more consistent, we have 
 
 ### CdrButton Now Uses Bindings for Events
 
-Rather than pass in an `onClick` event handler as a prop, [CdrButton](../../components/buttons/?active-tab=api) will now bind any listener attached to it. Update `onClick` to be `@click` wherever you are binding an event to a CdrButton.
+Rather than pass in an `onClick` event handler as a prop, [CdrButton](../../components/buttons/#api) will now bind any listener attached to it. Update `onClick` to be `@click` wherever you are binding an event to a CdrButton.
 
 - Before: `<cdr-button onClick="yourClickHandlerFunction" />`
 - After: `<cdr-button @click="yourClickHandlerFunction" />`
 
 ### CdrTabs Emits `tab-change` Instead of `tabChange`
 
-Vue expects event names to use kebab case and not camel case, so the `tabChange` event on [CdrTabs](../../components/tabs/?active-tab=api) could cause issues for some users. CdrTabs now emits a `tab-change` event instead.
+Vue expects event names to use kebab case and not camel case, so the `tabChange` event on [CdrTabs](../../components/tabs/#api) could cause issues for some users. CdrTabs now emits a `tab-change` event instead.
 
 - Before: `<CdrTabs @tabChange="handler" />`
 - After: `<CdrTabs @tab-change="handler" />`
