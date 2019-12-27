@@ -12,7 +12,7 @@
 }
 ---
 
-<cdr-doc-table-of-contents-shell>
+<cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
 
 These principles are meant to give us a shared vocabulary for translating the brand into the digital experiences and products we create. Each principle can be used as a filter to make choices and inform the digital expression; from content and interface to micro-interactions and motion.  They will help us remain focused on the things that matter for our customers, are differentiating for REI, and result in experiences that help people do the things they love.
 

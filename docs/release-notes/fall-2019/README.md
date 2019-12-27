@@ -12,7 +12,7 @@
 }
 ---
 
-<cdr-doc-table-of-contents-shell>
+<cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
 
 ## Update Steps
 
@@ -54,7 +54,7 @@ For more information on updating your icon usage, see the [deprecated icon compo
 
 The 1.0.0 version of [Cedar Component Variables](https://rei.github.io/rei-cedar-component-variables/#/) has been released which provide a method for using Cedar component styles in environments where the Vue components themselves cannot be used.
 
-Component variables are currently exported for a subset of Cedar components (button, link, input, select, checkbox, radio, CTA, and list), and are intended to be used alongside the [Design Tokens](https://rei.github.io/rei-cedar-docs/components/design-tokens/). 
+Component variables are currently exported for a subset of Cedar components (button, link, input, select, checkbox, radio, CTA, and list), and are intended to be used alongside the [Design Tokens](https://rei.github.io/rei-cedar-docs/components/design-tokens/).
 
 For more information, please see the [Component Variables](https://rei.github.io/rei-cedar-docs/components/component-variables/) page.
 

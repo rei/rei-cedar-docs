@@ -12,7 +12,7 @@
 }
 ---
 
-<cdr-doc-table-of-contents-shell>
+<cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
 
 ## Icons in Cedar
 
@@ -107,8 +107,8 @@ Alternately, the icon library API also provides [sprite generation](https://gith
 3. Duplicate the **Template (Right-click > Duplicate Page)** for each new icon or set of icons. (It is ok to leave alternate versions on the page, but please indicate the final version.)
 4. Follow the [Iconography](../../icons/iconography/) guidelines to ensure that your icon follows Cedar’s requirements.
 5. Make a final version of your icon and add it as a page. Each new icon or set should have its own page.
-6. Add a member of the Cedar team as a reviewer. 
-7. Your icon will be merged into the **CDR Icons • vNext** library and released in the next version of Cedar. 
+6. Add a member of the Cedar team as a reviewer.
+7. Your icon will be merged into the **CDR Icons • vNext** library and released in the next version of Cedar.
 
 ### Exporting Icons That Aren’t in the Library
 

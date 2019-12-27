@@ -12,12 +12,12 @@
 }
 ---
 
-<cdr-doc-table-of-contents-shell>
+<cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
 
 ## About Cedar
 Cedar is REI’s open-source Design System for digital products and experiences. Cedar includes the resources to create user interfaces consistent with REI’s [experience principles](../../foundation/experience-principles/), brand styles, and best practices.
 
-As a foundation for digital product development, the Cedar Design System provides a set of reusable components, style variables, design assets, and guidance for teams to efficiently build high-quality and accessible user interfaces. 
+As a foundation for digital product development, the Cedar Design System provides a set of reusable components, style variables, design assets, and guidance for teams to efficiently build high-quality and accessible user interfaces.
 
 Cedar is maintained by a core team of designers, developers, and writers that are dedicated to developing and supporting the system. Cedar welcomes collaboration with the REI digital community to help evolve the system to suit changing product needs.
 
@@ -26,7 +26,7 @@ Cedar is maintained by a core team of designers, developers, and writers that ar
 
 While Cedar is primarily focused on serving teams building experiences for REI, the system is also available as an open source project in GitHub and NPM.
 
-Fonts used in the Cedar Design System are licensed and proprietary to REI, and are not for usage by unapproved parties. 
+Fonts used in the Cedar Design System are licensed and proprietary to REI, and are not for usage by unapproved parties.
 
 For more information or questions regarding Cedar’s support for external consumers using the open source project, please reach out to [cedar@rei.com](mailto:cedar@rei.com).  
 
@@ -34,12 +34,12 @@ For more information or questions regarding Cedar’s support for external consu
 ## Intake
 
 ### Contributions
-Cedar welcomes and encourages contributions from the digital community at REI. If you are interested in contributing design or code, please visit the [Contributing to Cedar](../../about/contributing-to-cedar/) page for more information. 
+Cedar welcomes and encourages contributions from the digital community at REI. If you are interested in contributing design or code, please visit the [Contributing to Cedar](../../about/contributing-to-cedar/) page for more information.
 
 ###  Request a Component
 All new requests for components will be evaluated, beginning with a discovery process that includes an audit of visual patterns. Factors such as reusability across the product ecosystem (ideally can be used by 3-5 teams), investment and maturity of the product, and team bandwidth are also taken into account.
 
-New feature and enhancement requests can be submitted using the [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC). 
+New feature and enhancement requests can be submitted using the [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC).
 
 ###  Report an Issue
 The Cedar team is committed to maintaining consistent, high-quality components. If you encounter any defects in the Sketch UI Toolkit, Vue code, or on the documentation site, please submit a [Bug Report Form](https://airtable.com/shr3wSPCYQbycVx7i) and it will be added to the backlog.

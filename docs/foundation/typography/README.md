@@ -81,11 +81,9 @@
   ],
 }
 ---
-<cdr-doc-tabs :labels="['Overview', 'Guidelines']">
-<template slot="Overview">
-<cdr-doc-table-of-contents-shell>
-  
-Cedar uses Design Tokens to store typographic attributes that represent the fundamental decisions of Cedar’s visual language. Design tokens: 
+<cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
+
+Cedar uses Design Tokens to store typographic attributes that represent the fundamental decisions of Cedar’s visual language. Design tokens:
 - Store font specifications using variable names, not hard-coded values such as font family name or pixel values for font size
 - Specify a hierarchical and semantically defined system
 
@@ -123,7 +121,7 @@ For a complete list of Cedar Design Tokens, visit the [Cedar Tokens](https://rei
 ## Mobile Apps
 
 <tokens-typography platform="native" type="header">
-### Headings 
+### Headings
 </tokens-typography>
 
 <tokens-typography platform="native" type="body">
@@ -136,13 +134,7 @@ For a complete list of Cedar Design Tokens, visit the [Cedar Tokens](https://rei
 
 <hr/>
 
-
-</cdr-doc-table-of-contents-shell>
-</template>
-
-
-<template slot="Guidelines">
-<cdr-doc-table-of-contents-shell>
+# Guidelines
 
 ## Typefaces
 
@@ -167,7 +159,7 @@ Graphik is a sans-serif typeface designed by Christian Schwartz and released thr
 
 <cdr-img class="cdr-doc-article-img" alt="A mosaic showing the Graphik font in various sizes and colors" :src="$withBase(`/typography/typography_graphik.png`)" />
 
-## Type Scale 
+## Type Scale
 
 The typographic scale manages the font sizes used within Cedar. All type styles are derived from this scale.
 
@@ -246,7 +238,7 @@ Stuart and Graphik were both designed with looser tracking to improve readabilit
 
 ### Alignment
 
-For optimum legibility, it’s important to establish a strong vertical alignment. All text should be left-aligned whenever possible. Some exceptions include single words and short headlines. Never left and right justify text. 
+For optimum legibility, it’s important to establish a strong vertical alignment. All text should be left-aligned whenever possible. Some exceptions include single words and short headlines. Never left and right justify text.
 
 
 <do-dont :examples="$page.frontmatter.alignment1" />
@@ -273,6 +265,3 @@ For people with certain reading of vision disabilities, long lines of text can b
 <hr/>
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>

@@ -12,7 +12,7 @@
 }
 ---
 
-<cdr-doc-table-of-contents-shell>
+<cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
 
 Layout is defined as the arrangement of predetermined elements, such as grid, spacing, display, and alignment on a page.
 
@@ -28,9 +28,9 @@ Articles included in the Layout section outlines the foundational tools availabl
 
 ## Grid
 
-The grid is the foundation for layout and requires being nested in a container. Grids enable a visual consistency and hierarchy that helps support your composition. In other words, grids help you to manage the proportions between UI elements, such as spacing and margins. 
+The grid is the foundation for layout and requires being nested in a container. Grids enable a visual consistency and hierarchy that helps support your composition. In other words, grids help you to manage the proportions between UI elements, such as spacing and margins.
 
-Grids bring order to a layout making it easier for visitors to find and navigate through content. Grids also provide separation between unique sets of content, like a product image and a product buy box. Grids should not be used for related content layout, like title and abstract. 
+Grids bring order to a layout making it easier for visitors to find and navigate through content. Grids also provide separation between unique sets of content, like a product image and a product buy box. Grids should not be used for related content layout, like title and abstract.
 
 A 12-column grid is standard in design and development because the number 12 is easily divisible in various ways and can help create even or uneven vertical columns.
 
