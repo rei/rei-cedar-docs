@@ -186,7 +186,7 @@ Text Styles contain both the Text Style mixin and the text color to be applied. 
 
 
 ### Icons
-Icon names will appear in the Layers list. Go to the [icon library](https://rei.github.io/cedar-icons) to see if this icon is publicly available. If the icon is custom, please export it from Sketch using [CDR icon export guide](../../icons/resources/?active-link=exporting-icons-that-aren%E2%80%99t-in-the-library). For more information about icon usage, see the [Iconography](../../icons/iconography/) article and the [cdr-icon component](../../components/icon/).
+Icon names will appear in the Layers list. Go to the [icon library](https://rei.github.io/cedar-icons) to see if this icon is publicly available. If the icon is custom, please export it from Sketch using [CDR icon export guide](../../icons/resources/#exporting-icons-that-aren%E2%80%99t-in-the-library). For more information about icon usage, see the [Iconography](../../icons/iconography/) article and the [cdr-icon component](../../components/icon/).
 
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/1700-icons.png`)"/>
 

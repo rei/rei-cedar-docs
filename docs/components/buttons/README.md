@@ -189,10 +189,10 @@
 }
 ---
 
-<cdr-doc-tabs>
-<template slot="Overview">
+
 <cdr-doc-table-of-contents-shell tab-name="Overview">
 
+# Overview
 ## Primary
 
 Use primary buttons for actions to complete a task or move forward in a process such as &quot;Add to cart.&quot; There is only 1 primary action per major page section.
@@ -330,11 +330,9 @@ This component has no specific WCAG compliance attributes built into the control
 - Do not use `div` or `input` elements
 - Do not add `role="button"` to the **CdrButton** component
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="Guidelines">
-  <cdr-doc-table-of-contents-shell>
+# Guidelines
 
 ## Use When
 
@@ -433,11 +431,9 @@ Apply the following use cases when deciding when to use links as anchors or butt
   - WebAIM: [Keyboard Accessibility](https://webaim.org/techniques/keyboard/)
   - WebAIM [WCAG 2.0 Checklist](https://webaim.org/standards/wcag/checklist)
 
-  </cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
+# API
 
 ## Props
 
@@ -559,6 +555,3 @@ Use the following props to modify `cdr-button`:
 
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>

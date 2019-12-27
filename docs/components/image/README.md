@@ -111,9 +111,9 @@
 }
 ---
 
-<cdr-doc-tabs>
-<template slot="Overview">
+
 <cdr-doc-table-of-contents-shell>
+# Overview
 
 ## Default
 
@@ -232,11 +232,9 @@ This component has compliance with WCAG guidelines by:
 - Adding an empty `alt` attribute into the image element by default
 - An empty `alt` attribute is needed to meet accessibility requirements for decorative images
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="Guidelines">
-<cdr-doc-table-of-contents-shell>
+# Guidelines
 
 ## Use When
 
@@ -357,11 +355,9 @@ Images are cropped on y-axis with bottom value and on x-axis with left, x-center
 - Chrome plugin, [Color Contrast Analyzer](https://chrome.google.com/webstore/detail/color-contrast-analyzer/dagdlcijhfbmgkjokkjicnnfimlebcll)
 - Image compression service, [TinyPNG](https://tinypng.com/)
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
+# API
 
 ## Props
 
@@ -425,6 +421,3 @@ Following variants are available to the `cdr-img` modifier attribute:
 For internal applications with large images or images that would benefit from changes due to platform or breakpoint, use lazy load properties to integrate with the [rei-lazy-image-loader project](https://git.rei.com/projects/FEDPACK/repos/rei-lazy-image-loader/browse).
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>

@@ -17,7 +17,7 @@
 Cedar Design System provides many generic, responsively-aware visibility utility classes. All classes defined below are also available as breakpoint-aware classes.
 
 By appending the appropriate breakpoint name @(xs, sm, md, lg) to your display class, you can create a chain of class names that allow you to customize your display needs to fit each of your screen sizes. For more information, visit the
-[Targeting the Utility Media Query with Class Names](../responsive/?active-link=targeting-the-utility-media-query-with-class-names) section of the Responsive Layout page.
+[Targeting the Utility Media Query with Class Names](../responsive/#targeting-the-utility-media-query-with-class-names) section of the Responsive Layout page.
 
 The display classes usually fall into two categories: showing or hiding content.
 

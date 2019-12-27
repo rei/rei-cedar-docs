@@ -103,9 +103,9 @@
 }
 ---
 
-<cdr-doc-tabs>
-<template slot="Overview">
+
 <cdr-doc-table-of-contents-shell>
+# Overview
 
 Stuart is our first choice for larger, more expressive moments. Graphik rounds out the heading schema with smaller sizes and its simplicity allows it to play a supporting role across a wide range of projects.
 
@@ -118,7 +118,7 @@ Stuart is our first choice for larger, more expressive moments. Graphik rounds o
 
 The following are recommended type styles for use at varying breakpoint sizes.
 
-### Headline 
+### Headline
 
 Use for the most prominent type style on the page in place of titles. Also, use headings rarely to emphasize important information.
 
@@ -143,7 +143,7 @@ Use when pairing with subheadlines with headline-like styles.
   <cdr-text tag="h1" modifier="display-800@xs display-900">
     When you gear up, we give back
     <cdr-text
-      class="cdr-pt-space-one-x@xs cdr-pt-space-one-and-a-half-x" 
+      class="cdr-pt-space-one-x@xs cdr-pt-space-one-and-a-half-x"
       modifier="subheading-400@xs subheading-500">
       Treat yourself to sweet gear
     </cdr-text>
@@ -176,8 +176,8 @@ Use only when pairing subtitles with title-type styles.
 ```html
   <cdr-text modifier="heading-700@xs heading-800">
     When you gear up, we give back
-    <cdr-text 
-      class="cdr-pt-space-one-x@xs cdr-pt-space-one-and-a-half-x" 
+    <cdr-text
+      class="cdr-pt-space-one-x@xs cdr-pt-space-one-and-a-half-x"
       modifier="subheading-300@xs subheading-400">
       Treat yourself to sweet gear
     </cdr-text>
@@ -427,7 +427,7 @@ To ensure that usage of this component complies with accessibility guidelines:
 - Use h1-h6 to identify headings (`<h1>`, `<h2>`, `<h3>`, `<h4>`, `<h5>`, and `<h6>`)
   - If additional headings are needed (`<h7>` and so on), follow the technique described on the [ARIA12: Using role=heading to identify headings](https://www.w3.org/TR/WCAG20-TECHS/ARIA12) page
 - Headings are used to label page regions
-  - Use the `aria-label` attribute to associate headings with their page region, as described in the [label page regions](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby) tutorial 
+  - Use the `aria-label` attribute to associate headings with their page region, as described in the [label page regions](https://www.w3.org/WAI/tutorials/page-structure/labels/#using-aria-labelledby) tutorial
 - Subheadings are not semantic headings. Subheadings may be visually styled as a heading but will not be navigable using a screen reader
 - For PDF documents, follow the technique on this page: [Providing headings by marking content with heading tags in PDF documents](https://www.w3.org/TR/WCAG20-TECHS/PDF9)
 - Assistive technologies skim the structure of a page:
@@ -440,11 +440,9 @@ This component has compliance with WCAG guidelines by:
 
 - Defining semantic heading levels with the ability to assign predefined visual heading styles to each level
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="Guidelines">
-<cdr-doc-table-of-contents-shell>
+# Guidelines
 
 ## Use When
 
@@ -479,7 +477,7 @@ This component has compliance with WCAG guidelines by:
   - Capitalize proper nouns
   - Use sentence case
   - Left-align multi-line headings
-  
+
 ### Do / Don’t
 
 <do-dont :examples="$page.frontmatter.subtitle" />
@@ -502,11 +500,9 @@ Responsive heading font sizes are the default for heading levels except subheadi
 
 - WebAIM: [Semantic Structure](https://webaim.org/techniques/semanticstructure/)
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
+# API
 
 ## Props
 
@@ -539,11 +535,7 @@ With this decoupling, you can style other markup to look like a heading that sem
 This will result in the following HTML:
 
 ```html
-  <strong 
-    class="
-    cdr-text cdr-text-heading-700@xs
-    cdr-text-heading-800” 
-  >
+  <strong class="cdr-text cdr-text-heading-700@xs cdr-text-heading-800">
     Styled as a heading
   </strong>
 ```
@@ -551,19 +543,19 @@ This will result in the following HTML:
 **CdrText** components can be nested within a parent. The below example shows a subheading properly nested within the `<h2>` tag.
 
 ```vue
-  <cdr-text 
-    tag="h2" 
+  <cdr-text
+    tag="h2"
     modifier="
-      heading-700@xs 
+      heading-700@xs
       heading-800"
   >
     I’m a heading
-    <cdr-text 
+    <cdr-text
       class="
         cdr-pt-space-one-x@xs
-        cdr-pt-space-one-and-a-half-x" 
+        cdr-pt-space-one-and-a-half-x"
       modifier="
-        subheading-300@xs 
+        subheading-300@xs
         subheading-400">
       And I’m a visual subheading
     </cdr-text>
@@ -573,17 +565,17 @@ This will result in the following HTML:
 This will result in the following HTML:
 
 ```html
-  <h2 
+  <h2
   class="
-    cdr-text 
-    cdr-text-heading-700@xs 
+    cdr-text
+    cdr-text-heading-700@xs
     cdr-text-heading-800">
     I’m a heading
       <span class="
-        cdr-pt-space-one-x@xs 
+        cdr-pt-space-one-x@xs
         cdr-pt-space-one-and-a-half-x
-        cdr-text 
-        cdr-text-subheading-300@xs 
+        cdr-text
+        cdr-text-subheading-300@xs
         cdr-text-subheading-400">
         And I’m a visual subheading
       </span>
@@ -592,7 +584,7 @@ This will result in the following HTML:
 
 ### Responsive Headings
 
-Heading modifiers accept any of the supported Cedar breakpoints. For more information on how breakpoints work on components, visit the [Responsive Layout](../../layout/responsive/?active-link=components-and-breakpoints) article. 
+Heading modifiers accept any of the supported Cedar breakpoints. For more information on how breakpoints work on components, visit the [Responsive Layout](../../layout/responsive/#components-and-breakpoints) article.
 
 ### Modifiers
 
@@ -649,6 +641,3 @@ Skipping heading levels can be confusing and should be avoided where possible:
 In fixed sections of the page (e.g. sidebars), heading levels **should not** change depending on the heading levels in other areas of the page. Consistency across pages is required throughout the REI digital properties as explained on the [Navigation Design Principles Confluence](https://confluence.rei.com/display/NAV/Navigation+Design+Principles) page.
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>

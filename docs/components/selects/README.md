@@ -169,9 +169,9 @@
 }
 ---
 
-<cdr-doc-tabs>
-<template slot="Overview">
+
 <cdr-doc-table-of-contents-shell tab-name="Overview">
+# Overview
 
 ## Default
 
@@ -351,12 +351,9 @@ This component has compliance with WCAG guidelines by:
 + Requiring a value for the [ label ] field
 + When hiding a label, the [ aria-label ] attribute is set to the [ label ] value
 
+<hr>
 
-</cdr-doc-table-of-contents-shell>
-</template>
-
-<template slot="Guidelines">
-<cdr-doc-table-of-contents-shell>
+# Guidelines
 
 ## Use When
 
@@ -386,7 +383,7 @@ Select components should be:
 
 ### Options
 + Define width using CSS styles
-+ Height options are medium and large. These variations can be used for creating media queries for responsive layouts, or to call more or less attention to the component. For an example of medium and large sizes, view [the Overview tab](https://rei.github.io/rei-cedar-docs/components/select/?active-tab=overview)
++ Height options are medium and large. These variations can be used for creating media queries for responsive layouts, or to call more or less attention to the component. For an example of medium and large sizes, view [the Overview tab](https://rei.github.io/rei-cedar-docs/components/select/#overview)
 
 
 ## Content
@@ -447,12 +444,9 @@ Select components should be:
 
 <do-dont :examples="$page.frontmatter.sizes" />
 
+<hr>
 
-</cdr-doc-table-of-contents-shell>
-</template>
-
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
+# API
 
 ## Props
 
@@ -491,6 +485,3 @@ The **CdrSelect** component requires `v-model` to bind the selected value to you
 ```
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>

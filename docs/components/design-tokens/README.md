@@ -13,13 +13,13 @@
 ---
 
 
-<cdr-doc-table-of-contents-shell>
+<cdr-doc-table-of-contents-shell parentSelector="h2" childSelector="h3">
 
 ## Overview
 
 Design tokens are special variables used to maintain a scalable visual system for UI development and brand consistency. Cedar design tokens store the visual design attributes that define the foundation of REI’s visual language, including color, typography, and spacing.
 
-For a complete list of Cedar design tokens, visit the [Cedar Tokens](https://rei.github.io/rei-cedar-tokens) page. 
+For a complete list of Cedar design tokens, visit the [Cedar Tokens](https://rei.github.io/rei-cedar-tokens) page.
 
 Design tokens are key-value pairs. For example:
 
@@ -171,11 +171,11 @@ The naming structure for design tokens follows:
 
 The below tables for the naming structure show that levels will be skipped when not used.
 
-<!-- 
-#### TODO: 
+<!--
+#### TODO:
 Would be nice to use table markdown but alternating row styling is inverted. Heading and first row are the same color. WRONG!
 
-| Category | Sub-Category | Item | Sub-Item | Variant | Size | Mode | 
+| Category | Sub-Category | Item | Sub-Item | Variant | Size | Mode |
 | -- | -- | -- | -- | -- | -- | -- |
 | `color` | `text-` | `form-` | `label-` | | | `lightmode-` |
  -->
@@ -258,13 +258,13 @@ Would be nice to use table markdown but alternating row styling is inverted. Hea
 ## How to Use Tokens
 
 ### For Designers
-Design tokens are available in Sketch using Abstract by linking the [CDR Tokens Library](../../getting-started/as-a-designer/#using-the-toolkit) into your project. 
-This library contains Symbols, Text Styles, and Layer Styles that correspond to Cedar tokens. 
-Place the _Stickersheet_ Symbol in your project for a visual overview. 
+Design tokens are available in Sketch using Abstract by linking the [CDR Tokens Library](../../getting-started/as-a-designer/#using-the-toolkit) into your project.
+This library contains Symbols, Text Styles, and Layer Styles that correspond to Cedar tokens.
+Place the _Stickersheet_ Symbol in your project for a visual overview.
 
-When using design tokens, it’s your responsibility to pass the entire design token name to the developer during the design hand-off process—this can be through automated or manual methods. 
+When using design tokens, it’s your responsibility to pass the entire design token name to the developer during the design hand-off process—this can be through automated or manual methods.
 
-For more information, see [Getting Started As A Designer](../../getting-started/as-a-designer/). 
+For more information, see [Getting Started As A Designer](../../getting-started/as-a-designer/).
 
 
 ### For Developers
@@ -349,10 +349,9 @@ Ensure that the design token meets the following requirements:
   - **Web:** Uses Kebab case. For example, cdr-color-background-dark
   - **iOS:** Uses Pascal case. For example, CdrColorBackgroundColor
   - **Android:** Uses Snake case. For example, cdr_color_background_dark
-    
+
 
 <hr/>
 
 
 </cdr-doc-table-of-contents-shell>
-

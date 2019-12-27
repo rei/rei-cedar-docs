@@ -207,9 +207,9 @@
 }
 ---
 
-<cdr-doc-tabs>
-<template slot="Overview">
+
 <cdr-doc-table-of-contents-shell>
+# Overview
 
 ## Default
 Basic input field with label.
@@ -428,11 +428,9 @@ This component has compliance with WCAG guidelines by:
 - Requiring a value for the `label` field
 - When hiding a label, the `aria-label` attribute is set to the `label` value
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="Guidelines">
-<cdr-doc-table-of-contents-shell>
+# Guidelines
 
 ## Use When
 
@@ -519,11 +517,9 @@ This component has compliance with WCAG guidelines by:
 
 <do-dont :examples="$page.frontmatter.sizes" />
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
+# API
 
 ## Props
 
@@ -592,6 +588,3 @@ Input inherits the `placeholder` attribute for the placeholder text. You can als
 ```
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>
