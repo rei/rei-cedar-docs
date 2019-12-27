@@ -17,9 +17,9 @@
         <li v-for="navItem in item.items" class="dropdown-item">
           <nav-link :item="navItem" class="cdr-doc-side-navigation__child-link" />
         </li>
-      </ul> 
+      </ul>
     </cdr-accordion>
-    <NavLink v-else :item="item"/>
+    <NavLink v-else :item="item" class="cdr-doc-side-navigation__parent-link"/>
     <!-- </div> -->
     <!-- repo link -->
     <a v-if="repoLink"
@@ -37,8 +37,6 @@
 import OutboundLink from './OutboundLink.vue'
 import { CdrAccordion, CdrList } from '@rei/cedar';
 
-// TODO: all cedar css should get glovally loaded
-// import '@rei/cdr-accordion/dist/cdr-accordion.css';
 import { resolveNavLinkItem } from './util'
 import NavLink from './NavLink.vue'
 
@@ -171,5 +169,9 @@ export default {
     list-style: none;
     margin: 0;
     padding: 0;
+  }
+
+  .cdr-doc-side-navigation__parent-link {
+    
   }
 </style>
