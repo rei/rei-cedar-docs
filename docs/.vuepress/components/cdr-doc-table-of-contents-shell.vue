@@ -26,7 +26,15 @@ export default {
     tabName: {
       type: [String, Boolean],
       default: false
-    }
+    },
+    parentSelector: {
+      type: String,
+      default: 'h1'
+    },
+    childSelector: {
+      type: String,
+      default: 'h2'
+    },
   },
   data() {
     return {
@@ -40,10 +48,10 @@ export default {
   },
   computed: {
     parentSelectors() {
-      return `.cdr-doc-table-of-contents-shell h1`
+      return `.cdr-doc-table-of-contents-shell ${this.parentSelector}`
     },
     childSelectors() {
-      return `.cdr-doc-table-of-contents-shell h2`
+      return `.cdr-doc-table-of-contents-shell ${this.childSelector}`
     },
   },
   mounted() {

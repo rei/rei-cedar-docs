@@ -12,9 +12,9 @@
 }
 ---
 
-<cdr-doc-table-of-contents-shell>
+<cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
 
-# Alignment
+## Alignment
 
 Text and container alignment and utility classes allow you to shift your content or custom content container&#39;s horizontal alignment.
 

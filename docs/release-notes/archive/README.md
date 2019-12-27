@@ -12,7 +12,7 @@
 }
 ---
 
-<cdr-doc-table-of-contents-shell>
+<cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
 
 
 ## 19.04.1 Release
@@ -83,13 +83,13 @@
 
 ### Design Assets
 
-- Sketch library 
-  - Published the Sketch library with design assets for the released components above 
+- Sketch library
+  - Published the Sketch library with design assets for the released components above
 
 ### Documentation Updates
 
 - Accessibility
-  - Article describing how Accessibility fits in as a foundation of the design system; including info on why it matters, how to make your products accessible and other related topics 
+  - Article describing how Accessibility fits in as a foundation of the design system; including info on why it matters, how to make your products accessible and other related topics
 
 
 ## 18.09.2 Release
@@ -192,13 +192,13 @@
 
 ### Design Assets
 
-- Sketch library 
+- Sketch library
   - Published the Sketch library with design assets for the released components above
 
 ### Documentation Updates
 
 - About Cedar
-  - Article providing a high level overview of Cedar and the benefits of adoption 
+  - Article providing a high level overview of Cedar and the benefits of adoption
 - Getting Started as an Adopting Team
   - Article providing instructions for how to get started as an adopting team
 - Typography page
@@ -237,9 +237,9 @@
 
 <hr />
 
-## Component Package History 
+## Component Package History
 
-### CdrAccordion 
+### CdrAccordion
 
 #### 1.0.3
 - **CdrIcon** dependency update
@@ -247,7 +247,7 @@
 #### 1.0.2
 - Fix CSS import for SSR
 
-#### 1.0.1 
+#### 1.0.1
 - **CdrAssets** dependency update
 
 #### 1.0.0
@@ -278,7 +278,7 @@
 - Incorporates accessibility and SEO compliant features
 - Git commit reference [(08b883c)](https://github.com/rei/rei-cedar/commit/08b883c)
 
-### CdrButton 
+### CdrButton
 
 #### 2.0.0
 - Deprecated `responsive-size` prop
@@ -303,7 +303,7 @@
 - **CdrButton** package includes **CdrCloseButton** and **CdrPlayButton** components
 - Git commit reference [(1531860)](https://github.com/rei/rei-cedar/pull/436/commits/15318606570811a6d53549a5335e0943a3463971)
 
-### CdrCaption 
+### CdrCaption
 
 #### 1.0.0
 
@@ -320,7 +320,7 @@
 - Includes indeterminate state visual style
 - Git commit reference [(1531860)](https://github.com/rei/rei-cedar/pull/436/commits/15318606570811a6d53549a5335e0943a3463971)
 
-### CdrCta 
+### CdrCta
 
 #### 1.1.0
 - Remove **CdrIcon** dependency
@@ -340,7 +340,7 @@
 - Renders default and full-width sizes
 - Git commit reference [(b944d3a)](https://github.com/rei/rei-cedar/commit/b944d3a91b45dd1778d71674eaf26073f4521caa)
 
-### CdrDataTable 
+### CdrDataTable
 
 #### 1.1.0
 
@@ -355,7 +355,7 @@
 - Supports accessible table captions
 - Git commit reference [(3169234)](https://github.com/rei/rei-cedar/commit/3169234cb99b8fc750efd2e3d5813e19c10f8e71)
 
-### CdrGrid 
+### CdrGrid
 
 #### 1.0.2
 
@@ -367,11 +367,11 @@
 - Replaces `@rei/cdr-row` and `@rei/cdr-col` packages (both components are available from this package)
 - The Grid CSS is contained in this package and not in `@rei/cdr-assets core.css`
 
-### CdrText 
+### CdrText
 
 #### 1.0.0
 
-- Headings 
+- Headings
   - Enables the visual style of many heading levels and subheading to be applied flexibly to HTML headings (`<h1>` to `<h6>`) and other HTML elements
   - Enables responsive heading font sizes that are applied by default with following modifiers:
     - Display
@@ -391,10 +391,10 @@
     - **Default**:  Used as default font style. It may be used for paragraphs, lists, or any basic information
     - **Body**: Intended for long-form articles like Expert Advice pages or editorial content on PDP pages
 
-### CdrIcon 
+### CdrIcon
 
 #### 2.0.0
- 
+
 - Deprecated `modifier` prop
 - Added `size` and `inherit-color` prop
 
@@ -406,7 +406,7 @@
 - **CdrIcon** is lower-level component that acts as an SVG wrapper
 - Link to full dev [changelog](https://github.com/rei/rei-cedar/blob/18.09.1/src/components/icon/CHANGELOG.md)
 
-### CdrImg 
+### CdrImg
 
 #### 1.0.0
 
@@ -418,14 +418,14 @@
 - Enables users to set the image to be 100% width with a responsive modifier
 - [Complete component history](https://github.com/rei/rei-cedar/blob/master/src/components/image/CHANGELOG.md)
 
-### CdrInput 
+### CdrInput
 
 #### 1.0.0
 
 - Enables users to set the type of input field: text, email, number, password, search, url
 - [Complete component history](https://github.com/rei/rei-cedar/blob/master/src/components/input/CHANGELOG.md)
 
-### CdrLink 
+### CdrLink
 
 #### 1.0.3
 - **CdrIcon** dependency update
@@ -438,10 +438,10 @@
 - Displays as an inline or standalone variant
 - Renders using an anchor or button element
 - Includes a property to allow the `cdr-icon` fill color to inherit the link color value
-- Supports `cdr-icon` to display on left, on right, or, both. 
+- Supports `cdr-icon` to display on left, on right, or, both.
 - Git commit reference [9d404f4](https://github.com/rei/rei-cedar/commit/9d404f4)
 
-### CdrList 
+### CdrList
 
 #### 1.0.0
 
@@ -464,7 +464,7 @@
 - Incorporates accessibility and SEO compliant features
 - Link to full dev [changelog](https://github.com/rei/rei-cedar/blob/18.12.2/src/components/cta/CHANGELOG.md)
 
-### CdrRadio 
+### CdrRadio
 
 #### 1.0.0
 
@@ -473,7 +473,7 @@
 - Includes default and compact styling
 - Git commit reference [5fe44c8](https://github.com/rei/rei-cedar/commit/5fe44c8d3f53a50e0d21e77a4c9beb23486f6a53)
 
-### CdrRating 
+### CdrRating
 
 #### 1.0.0
 
@@ -484,7 +484,7 @@
 - Add `size` prop to replace the `modifier` prop
 - Link to full dev [changelog](https://github.com/rei/rei-cedar/blob/master/src/components/rating/CHANGELOG.md)
 
-### CdrTabs 
+### CdrTabs
 
 #### 1.0.0
 

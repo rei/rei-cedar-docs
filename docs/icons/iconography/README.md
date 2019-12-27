@@ -11,7 +11,7 @@
   ],
 }
 ---
-<cdr-doc-table-of-contents-shell>
+<cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
 
 UI icons or glyphs symbolize commands, navigation, utility, or common actions and provide additional visual context and enhance usability. Icons offer a form of “visual shorthand”, lowering cognitive load and better utilizing space. Icons use familiar shapes and metaphors to communicate concepts in simple graphic forms.
 
