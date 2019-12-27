@@ -33,6 +33,10 @@ If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade
 
 ## New Features
 
+### New Typography
+
+TODO: what did we release
+
 ### Decomposed CSS Output
 
 Previously Cedar only offered a single `cedar.css` file that included all of the styling for the Cedar reset, components, and utilities. This made it very easy to set up a Cedar project, but meant that CSS assets could not be optimized. We are now exporting a separate CSS file for each element of Cedar.
@@ -45,20 +49,53 @@ As part of the 3.x.x Cedar release we moved the Icon SVG assets into their own r
 
 To resolve this issue we have chosen to leave the inline single icon components as part of @rei/cedar. These components have been updated to use the same SVG assets exported by [@rei/cedar-icons](https://github.com/rei/cedar-icons).
 
+### Modal Component
+
+TODO: ???
+
 ### Radio and Checkbox sizes
 
 Radio and checkbox now have a `size` prop with small, medium (default), and large variants. As part of this feature, the modifier `compact` has been deprecated and will be removed in the future in favor of using the new size prop.
 
 ## Bug Fixes
 
+### CdrButton
+
+- Icon fill is now updated for interactive and disabled states.
+
 ### CdrBreadcrumb
 
 - Applies focus to the first breadcrumb item when a truncated breadcrumb is expanded in order to support A11Y
 - Re-evaluates truncation logic when breadcrumb items are updated in order to support asynchronous loading
 
+### CdrDataTable
+
+- Updated styling logic so first row is always dark
+
+### CdrGrid, CdrRow, CdrCol
+
+- CdrRow and CdrCol have been updated so that clicks within the grid margin will no longer be blocked
+
+### CdrInput
+
+- Fixed padding of helper text
+
+
+### CdrPagination
+
+- Fixed issues involving data binding  (TODO ???)
+
 ### CdrRating
 
-We have resolved an issue with CdrRating where it treated the `count` property differently depending on whether it was passed as a string or a number. Now CdrRating will show the review text any time it receives a value for `count`, and will not show any review text if it does not receive a value. You should not need to make any changes to your application code to support this change.
+- We have resolved an issue with CdrRating where it treated the `count` property differently depending on whether it was passed as a string or a number. Now CdrRating will show the review text any time it receives a value for `count`, and will not show any review text if it does not receive a value. You should not need to make any changes to your application code to support this change.
+
+### CdrSelect
+
+- Fixed padding of helper text
+
+### Reset
+
+- Removed a section of the Cedar CSS reset that disabled focus styling on elements with a tabindex of `-1`
 
 ## Breaking Changes
 
@@ -118,14 +155,14 @@ The CdrIconSprite has been removed from Cedar. We recommend that consumers inste
 
 Teams that do want to make use of an icon sprite for performance reasons can use the [Cedar sprite creator](https://rei.github.io/cedar-icons/#/sprite) to generate an optimized sprite and load it in their HTML.
 
-### Pagination Events and vue-router Support
+### CdrPagination Events and vue-router Support
 
-Pagination functionality has been simplified and only emits a single `navigate` event. Responsive navigation behavior for the select no longer has to be manually attached. Vue-router example with router-link via scoped slots has been added. Previous and next links are always present (in a "disabled" state when appropriate). Minor style updates for hover and currently selected page.
+CdrPagination functionality has been simplified and only emits a single `navigate` event. Responsive navigation behavior for the select no longer has to be manually attached. Vue-router example with router-link via scoped slots has been added. Previous and next links are always present (in a "disabled" state when appropriate). Minor style updates for hover and currently selected page.
 
 API for scoped slots now uses an `attrs` object for easier binding.
 
 ## Typography
- 
+
 The root class `cdr-text` now has all attributes mapped to `inherit`. This change was necessary and
 allows for descendant selectors to inherit the font settings of the parent.
 
@@ -133,7 +170,7 @@ You will now need to pass the cdr-text component the modifier you would like to 
 - `body-300` -- for paragraphs
 - `utility-300` -- for generic text
 
-Previously `cdr-text` defaulted to the paragraph styles. 
+Previously `cdr-text` defaulted to the paragraph styles.
 `cdr-container` and `cdr-container-fluid` will still provide the root font definition.
 Note that this has been altered from the paragraph style to the `cdr-text--utility-300`.
 
@@ -142,7 +179,7 @@ Note that this has been altered from the paragraph style to the `cdr-text--utili
 
 ### Type Token mixins
 **Redwood Display**  
-| deprecated mixin name | equivalent mixin name | 
+| deprecated mixin name | equivalent mixin name |
 |-----------------------|-----------------------|
 | redwood-display-70    | cdr-text-utility-700  |
 | redwood-display-60    | cdr-text-utility-600  |
@@ -153,7 +190,7 @@ Note that this has been altered from the paragraph style to the `cdr-text--utili
 | redwood-display-10    | cdr-text-utility-100  |
 
 **Redwood Body**  
-| deprecated mixin name | equivalent mixin name | 
+| deprecated mixin name | equivalent mixin name |
 |-----------------------|-----------------------|
 | redwood-body-40       | cdr-text-body-500     |
 | redwood-body-30       | cdr-text-body-400     |
@@ -161,7 +198,7 @@ Note that this has been altered from the paragraph style to the `cdr-text--utili
 | redwood-body-10       |                       |
 
 **Maple**  
-| deprecated mixin name | equivalent mixin name | 
+| deprecated mixin name | equivalent mixin name |
 |-----------------------|-----------------------|
 | maple-utility-70      | cdr-text-utility-700  |
 | maple-utility-60      | cdr-text-utility-600  |
@@ -172,13 +209,14 @@ Note that this has been altered from the paragraph style to the `cdr-text--utili
 | maple-utility-10      | cdr-text-utility-100  |
 
 ### Type Utility classes
-| deprecated class name | equivalent class name | 
+| deprecated class name | equivalent class name |
 |-----------------------|-----------------------|
 | cdr-text-body         | cdr-text-body-300     |
 
 ## Removals
 
-Please note that Tokens or Mixins deprecated in the Summer 2019 release will no longer be available
-nor supported with the winter 2019 release.
+In accordance with our deprecation policy, features that were deprecated in the [Summer 2019 release](https://rei.github.io/rei-cedar-docs/release-notes/summer-2019/#revisions-for-spacing-utility-classes) have been removed from Cedar.
+
+- Deprecated spacing utilities (`cdr-stack`, `cdr-inset`, `cdr-inline`) should be replaced with the new [`cdr-space` utilities](https://rei.github.io/rei-cedar-docs/components/utilities/?active-link=spacing). See [Summer 2019 release notes](https://rei.github.io/rei-cedar-docs/release-notes/summer-2019/#revisions-for-spacing-utility-classes) for more info on updating.
 
 </cdr-doc-table-of-contents-shell>
