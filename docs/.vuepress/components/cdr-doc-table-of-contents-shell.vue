@@ -129,6 +129,16 @@ export default {
     max-width: $cdr-doc-content-max-width;
     padding-top: $cdr-space-two-x;
     padding-bottom: $cdr-doc-long-form-text-top-and-bottom-inset-space;
+
+    @media (max-width: $cdr-breakpoint-lg) {
+      margin: 0 $cdr-space-two-x;
+      max-width: 700px;
+    }
+
+    @media (max-width: $cdr-breakpoint-xs) {
+      margin: 0 $cdr-space-one-x;
+      max-width: 500px;
+    }
   }
 
 </style>
