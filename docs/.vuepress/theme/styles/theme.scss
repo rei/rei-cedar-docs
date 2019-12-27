@@ -9,6 +9,7 @@ $side-navigation-width-sm: $side-navigation-logo-width + 24px;
 
 html,
 body {
+  scroll-behavior: smooth;
   color: $cdr-doc-text-color-primary;
   font-family: $cdr-font-family-sans;
   margin: 0;

@@ -8,12 +8,10 @@
               {
                 'cdr-doc-local-anchor-nav__link--parent': !link.isChild,
                 'cdr-doc-local-anchor-nav__link--child': link.isChild,
-                'cdr-doc-local-anchor-nav__link--active': link.href === activeLinkHref
               }
             ]"
             modifier="standalone"
-            :href="link.href"
-            @click.native="handleAnchorLinkClick(link.href, $event)">
+            :href="link.href">
           {{ link.text }}
         </cdr-link>
       </li>
@@ -53,17 +51,13 @@ export default {
     },
     tabPanelOffset: {
       type: String,
-      default: '64'
+      default: '12'
     },
     appendedItems: {
       type: Array,
       default: function() {
         return [];
       }
-    },
-    tabName: {
-      type: [String, Boolean],
-      default: false
     },
     links: {
       type: Array
@@ -74,177 +68,6 @@ export default {
       return this.$page.frontmatter
     }
   },
-  data: function() {
-    return {
-      activeLinkHref: null,
-      scrollMonitoringEnabled: false,
-      elementWatchers: [],
-      activeTabName: this.tabName
-    }
-  },
-  mounted() {
-    import('smoothscroll-polyfill').then(smoothscroll => {
-      smoothscroll.polyfill();
-    });
-
-    if (!this.activeTabName) {
-      this.initialize();
-    } else {
-      this.initializeForActiveTabOnly();
-    }
-
-    this.$root.$on('cdrDocTabsActiveTabSwitched', (activeTab) => {
-      this.activeTabName = activeTab;
-      this.initializeForActiveTabOnly()
-    });
-  },
-  methods: {
-    unitialize() {
-      this.elementWatchers.forEach((watcher) => {
-        watcher.destroy();
-      });
-    },
-    initialize() {
-      const activeLinkParam = this.$route.query['active-link'];
-      if (activeLinkParam) {
-        this.setActiveLinkFromUrl(activeLinkParam);
-      } else {
-        setTimeout(() => {
-          this.monitorAnchoredSectionsForActiveLinkHighlighting();
-          this.scrollMonitoringEnabled = true;
-        }, 100); // Brittle, but gives everything on the page time to load
-      }
-    },
-    initializeForActiveTabOnly(activeTab) {
-      const activeTabQueryParam = this.$route.query['active-tab'];
-      if (this.activeTabName && slugify(this.activeTabName) === activeTabQueryParam) {
-        this.initialize();
-      } else if (this.activeTabName && slugify(this.activeTabName) !== activeTabQueryParam) {
-        this.unitialize();
-      }
-    },
-    monitorAnchoredSectionsForActiveLinkHighlighting(debug=false) {
-      const anchoredSections = document.querySelectorAll(`${this.parentSelectors}, ${this.childSelectors}`);
-      import('scrollmonitor').then(scrollMonitor => {
-        for (let i=0; i < anchoredSections.length; i++) {
-          const anchoredSection = anchoredSections[i];
-          const anchoredSectionId = anchoredSection.getAttribute('id');
-          const linkHref = `#${anchoredSectionId}`;
-          const link = document.querySelector(`a[href="${linkHref}"]`);
-          const nextSection = anchoredSections[i + 1] ? anchoredSections[i + 1] : false;
-          const sectionTop = anchoredSection.offsetTop;
-          const sectionBottom = nextSection ? nextSection.offsetTop - 1 : sectionTop + document.body.offsetHeight;
-          // const elementWatcher = this.getScrollMonitor().create({top: sectionTop, bottom: sectionBottom});
-          const elementWatcher = scrollMonitor.create({top: sectionTop, bottom: sectionBottom});
-          this.elementWatchers.push(elementWatcher);
-
-          if (debug) {
-            // Adds horizontal lines to the top and bottom of each section for debugging
-            this.generatePageSectionMarkers(sectionTop, sectionBottom);
-          }
-
-          // When a section spans the entire viewport
-          elementWatcher.stateChange(() => {
-            if (this.scrollMonitoringEnabled &&
-                elementWatcher.isAboveViewport &&
-                elementWatcher.isBelowViewport) {
-                  this.activeLinkHref = linkHref;
-            }
-          });
-
-          // Scroll Down Behavior
-          elementWatcher.partiallyExitViewport(() => {
-            if (this.scrollMonitoringEnabled &&
-                nextSection &&
-                elementWatcher.isAboveViewport) {
-                  // When one section exits the viewport at the top, set the next section's link to be active
-              this.activeLinkHref = linkHref;
-            }
-          });
-
-          // Scroll Up Behavior
-          elementWatcher.enterViewport(() => {
-            if (this.scrollMonitoringEnabled &&
-                !elementWatcher.isBelowViewport) {
-                  this.activeLinkHref = linkHref;
-            }
-          });
-
-          // Highlight the last item in the nav when the last section is fully scrolled into view
-          if (!nextSection) {
-            elementWatcher.fullyEnterViewport(() => {
-              if (this.scrollMonitoringEnabled) {
-                this.activeLinkHref = linkHref;
-              }
-            });
-          }
-        }
-      });
-    },
-    generatePageSectionMarkers(topPosition, bottomPosition) {
-        let topMarker = document.createElement('div'),
-            bottomMarker = document.createElement('div');
-
-        topMarker.style.width = "100%";
-        topMarker.style.height = "1px";
-        topMarker.style.backgroundColor = "red";
-        topMarker.style.position = "absolute";
-        topMarker.style.left = 0;
-        topMarker.style.top = `${topPosition}px`;
-
-        bottomMarker.style.width = "100%";
-        bottomMarker.style.height = "1px";
-        bottomMarker.style.backgroundColor = "blue";
-        bottomMarker.style.position = "absolute";
-        bottomMarker.style.left = 0;
-        bottomMarker.style.top = `${bottomPosition}px`;
-
-
-        document.body.appendChild(topMarker);
-        document.body.appendChild(bottomMarker);
-    },
-    setActiveLinkFromUrl(activeLinkParam) {
-      this.activeLinkHref = `#${activeLinkParam}`;
-      this.softScrollToAnchoredSection(this.activeLinkHref);
-    },
-    handleAnchorLinkClick(id, event) {
-      event.preventDefault(); // Intercept click event
-      this.activeLinkHref = id;
-      this.softScrollToAnchoredSection(id);
-    },
-    softScrollToAnchoredSection(id) {
-      this.scrollMonitoringEnabled = false; // disable scrollMonitoring while soft scrolling to a specific section
-
-      if (this.$route.query['active-link'] === id.replace('#', '' )) { // query param already set (like coming from a different page)
-        document.onreadystatechange = () => {
-          if (document.readyState == "complete") {
-            this.softScroll(id);
-          }
-        }
-      } else {
-        this.$router.replace(
-          { query: Object.assign({}, this.$route.query, { 'active-link': id.replace('#', '') }) },
-          () => {
-            this.softScroll(id);
-          }
-        );
-      }
-    },
-    softScroll(id) {
-      const anchoredSection = document.querySelector(id);
-      const scrollPosition = anchoredSection.offsetTop - this.tabPanelOffset;
-
-      window.scroll({
-        top: scrollPosition,
-        left: 0,
-        behavior: 'smooth'
-      });
-
-      setTimeout(() => {
-        this.scrollMonitoringEnabled = true;
-      }, 1500); // window.scroll smooth offers no callback, so re-enable scrollmonitoring hopefully after the soft scroll has occurred
-    }
-  }
 }
 </script>
 <style lang="scss">
@@ -272,10 +95,6 @@ export default {
     &:active {
       outline: none;
     }
-  }
-
-  .cdr-doc-local-anchor-nav__link--active {
-    text-decoration: underline;
   }
 
   .cdr-doc-local-anchor-nav__link--child {
