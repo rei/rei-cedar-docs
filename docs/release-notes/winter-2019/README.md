@@ -80,11 +80,6 @@ Radio and checkbox now have a `size` prop with small, medium (default), and larg
 
 - Fixed padding of helper text
 
-
-### CdrPagination
-
-- Fixed issues involving data binding  (TODO ???)
-
 ### CdrRating
 
 - We have resolved an issue with CdrRating where it treated the `count` property differently depending on whether it was passed as a string or a number. Now CdrRating will show the review text any time it receives a value for `count`, and will not show any review text if it does not receive a value. You should not need to make any changes to your application code to support this change.
