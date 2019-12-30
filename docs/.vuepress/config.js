@@ -118,6 +118,7 @@ module.exports = {
           { text: "Inputs", link: "/components/input/" },
           { text: "Links", link: "/components/links/" },
           { text: "Lists", link: "/components/lists/" },
+          { text: "Modal", link: "/components/modal/" },
           { text: "Pagination", link: "/components/pagination/" },
           { text: "Paragraphs", link: "/components/paragraphs/" },
           { text: "Pull Quote", link: "/components/pull-quote/" },

@@ -32,7 +32,7 @@
                 "description": "Text used to generate the `aria-label` attribute as well as the modal title text, if `labelSlot` is empty. Required."
               },
               {
-                "name": "showLabel",
+                "name": "showTitle",
                 "type": "boolean",
                 "default": "false",
                 "description": "Toggles the modal title text, which comes from `label` or `labelSlot`."
@@ -72,6 +72,12 @@
                 "type": "number",
                 "default": "300",
                 "description": "Sets animation duration for when the modal is closed."
+              },
+              {
+                "name": "size",
+                "type": "string",
+                "default": "'medium'",
+                "description": "Sets the max-width of the modal. Possible values: { 'medium' | 'large' }"
               }
             ],
             "slots": [
@@ -177,116 +183,54 @@ This component has compliance with WCAG guidelines by:
 
 ## Usage
 
-### Size Prop
+```vue
+<template>
+  <cdr-modal
+    label="Add to Cart"
+    :opened="opened"
+  >
+  </cdr-modal>
+</template>
+```
 
-The below example uses the `size` prop to set a default and responsive size. This button’s size is small, but it will become a large button at the `xs` and `sm` breakpoints.
+## Modal Title
 
-```vue{3}
+If the `title` slot is left empty, the `label` prop will be rendered as the title. The title can be hidden altogether, by setting `showTitle` to `false`.
+
+When using the `label` slot, pass in CdrText to use appropriate header styles.
+
+```vue{3,4}
+<template slot="title">
+  <cdr-text
+    tag="h1"
+    modifier="heading-600"
+  >Add to Cart
+  </cdr-text>
+</template>
+```
+
+## Size
+
+The modal `size` prop controls the max-width of the modal. `medium` maps to a max-width of 600px; `large` is 800px. 
+
+## Scroll Behavior
+
+The modal content area will scroll vertically if there's enough to force an overflow. The modal title does not scroll; it will stay affixed to the top of the modal.
+
+## Accessibility
+
+If your modal is launched by a button, be sure to add `aria-haspopup="dialog"` to the button element.
+
+```vue
 <template>
   <cdr-button
-    size="small large@xs large@sm"
-  >
-    Add to cart
-  </cdr-button>
+    aria-haspopup="dialog"
+  >Launch modal</cdr-button>
 </template>
 ```
-
-### Modifiers
-
-Following variants are available to the `cdr-button` modifier attribute:
-
-| Value | Description            |
-|:------|:-----------------------|
-| 'secondary' | Sets the secondary style for the button |
-
-
-### Click Actions
-
-Use an `@click` event handler to attach custom actions and event handling.
-
-```vue{3}
-<template>
-  <cdr-button
-    @click="greet"
-  >
-    Greet
-  </cdr-button>
-</template>
-
-<script>
-export default {
-  ...
-  methods: {
-    greet() {
-      console.log(‘Hello there’);
-    }
-  }
-}
-</script>
-```
-
-## Composing with Icons
-
-**CdrButton** component can be used with the icon component from the **CdrIcon** package.
-
-### Text and Icon
-
-To scale Cedar icons appropriately, include the `cdr-button__icon` class with any icon component. The `size` prop scales both the icon and button.
-
-In the below example, a "Download" button is rendered as a button with icon and text using `cdr-icon` and the icon sprite.
-
-```vue{5}
-<template>
-  <cdr-button>
-    <cdr-icon
-      slot="icon"
-      class="cdr-button__icon"
-      use="#download"
-    />
-    Download
-  </cdr-button>
-</template>
-
-<script>
-import { CdrButton, CdrIcon } from '@rei/cedar';
-export default {
-  ...
-  components: {
-     CdrButton,
-     CdrIcon,  
-  }
-}
-</script>
-```
-
-### Icon Only
-
-Use the following props to modify `cdr-button`:
-
-- Default slot must be empty. If text is present in default slot, the text will render  
-- `size` prop is disabled when `icon-only` prop is true
-- For the SVG files:
-  - If the `fill` color is dark, assign true to the `on-dark` prop
-  - `on-dark` prop only works if `icon-only` prop is also true
-- Add `aria-label` text to describe the button’s action when clicked or tapped
-
-```vue{3,4,5}
-<template>
-  <cdr-button
-    :icon-only="true"
-    :on-dark="true"
-    aria-label="Complete this step"
-  >
-    <icon-check-lg
-      slot="icon"
-      class="cdr-button__icon"
-    />
-  </cdr-button>
-</template>
-```
-
 
 </cdr-doc-table-of-contents-shell>
 </template>
 
 </cdr-doc-tabs>
+ 
