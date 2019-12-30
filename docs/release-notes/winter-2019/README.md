@@ -55,7 +55,11 @@ TODO: ???
 
 ### Radio and Checkbox sizes
 
-Radio and checkbox now have a `size` prop with small, medium (default), and large variants. As part of this feature, the modifier `compact` has been deprecated and will be removed in the future in favor of using the new size prop.
+CdrRadio and CdrCheckbox now have a `size` prop with small, medium (default), and large variants. As part of this feature, the modifier `compact` has been deprecated and will be removed in the future in favor of using the new size prop.
+
+### Tabs Centered Variant
+
+CdrTabs now accepts `centered` as a `modifier` for a center aligned tab header.
 
 ## Bug Fixes
 
@@ -91,6 +95,12 @@ Radio and checkbox now have a `size` prop with small, medium (default), and larg
 ### Reset
 
 - Removed a section of the Cedar CSS reset that disabled focus styling on elements with a tabindex of `-1`
+
+### CdrTabs
+
+We have resolved several issues involving the behavior of the active tab underline on certain browsers.
+CdrTabPanel content will now show a scrollbar on MacOS when that content overflows it's container.
+CdrTabs now uses hash links (`href="#hash-link"`) for navigation to improve SEO.  
 
 ## Breaking Changes
 
