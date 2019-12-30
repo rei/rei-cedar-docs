@@ -441,6 +441,8 @@ Apply the following use cases when deciding when to use links as anchors or butt
 
 ## Props
 
+This component will bind any attribute that a [native HTML button element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) accepts.
+
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
 ## Slots

@@ -286,6 +286,8 @@ WebAIM: Links and Hypertext [Introduction to Links and Hypertext](https://webaim
 
 ## Props
 
+This component will bind any attribute that a [native HTML anchor element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) accepts.
+
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
 ## Slots
