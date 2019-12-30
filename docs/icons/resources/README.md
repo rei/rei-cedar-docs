@@ -64,6 +64,16 @@ File name examples:
 `gear-boating-canoe.svg`<br>
 `gear-boating-paddleboard.svg`
 
+### Using Inline Cedar Icons
+
+The `@rei/cedar` component package exports an [inline Vue component](https://rei.github.io/rei-cedar-docs/components/icon/#inline-icon-components) for every icon in the Cedar library. The inline icon components are the easiest way to make use of the Cedar icon library if you are building an application using Vue. These components are prefixed with the word `Icon` and are named using PascalCase, for example: `IconCaretDown`, `IconExperiencesBackpacking`.
+
+### Creating a Cedar Icon Sprite
+
+Icon sprite sheets should be avoided in favor of using the [inline cedar icon components](#using-inline-cedar-icons), as maintaining sprite sheets is difficult and usually has minimal impact on performance. However we do offer a sprite option for teams that needd to optimize their icon usage.
+
+The Cedar Icon Library has an easy to-use [sprite creator](https://rei.github.io/cedar-icons/#/sprite). Alternately, the icon library API also provides [sprite generation](https://github.com/rei/cedar-icons#creating-a-custom-sprite). The sprite can then be referenced using the [CdrIcon component](https://rei.github.io/rei-cedar-docs/components/icon/#svg-sprite)
+
 ## Contribution Process
 
 Cedar welcomes and encourages contributions to the icon library that are consistent with the REI style.
@@ -93,13 +103,6 @@ Icons must be created at 24x24px size format. However, they can be displayed in 
 - md: 24x24px
 - lg: 32x32px
 
-
-### Creating a Cedar Icon Sprite
-
-The Cedar Icon Library has an easy to-use [sprite creator](https://rei.github.io/cedar-icons/#/sprite).
-
-Alternately, the icon library API also provides [sprite generation](https://github.com/rei/cedar-icons#creating-a-custom-sprite).
-
 ### Adding an Icon to the Cedar Icon Library
 
 1. In Abstract, create a new branch of the [CDR - Icon Contribution](https://share.goabstract.com/99335c38-51ee-41c8-8454-38c2a70c4c7f) project.
@@ -107,8 +110,8 @@ Alternately, the icon library API also provides [sprite generation](https://gith
 3. Duplicate the **Template (Right-click > Duplicate Page)** for each new icon or set of icons. (It is ok to leave alternate versions on the page, but please indicate the final version.)
 4. Follow the [Iconography](../../icons/iconography/) guidelines to ensure that your icon follows Cedar’s requirements.
 5. Make a final version of your icon and add it as a page. Each new icon or set should have its own page.
-6. Add a member of the Cedar team as a reviewer. 
-7. Your icon will be merged into the **CDR Icons • vNext** library and released in the next version of Cedar. 
+6. Add a member of the Cedar team as a reviewer.
+7. Your icon will be merged into the **CDR Icons • vNext** library and released in the next version of Cedar.
 
 ### Exporting Icons That Aren’t in the Library
 

@@ -142,16 +142,14 @@ Display independently with a call to action. Some examples are for finding a sto
 
 Display standalone link with icon on left.
 
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" :load-sprite="true" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrLink'})">
+<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrLink, IconShipping'})">
 
 ```html
   <div>
     <cdr-link tag="button" modifier="standalone">
-      <!-- Using the sprite -->
-      <cdr-icon
-          use="#shipping"
-          inherit-color
-          class="cdr-mr-space-half-x"
+      <IconShipping
+        inherit-color
+        class="cdr-mr-space-half-x"
       />
       This item ships for FREE!
     </cdr-link>
@@ -164,17 +162,15 @@ Display standalone link with icon on left.
 
 Display standalone link with icon on right.
 
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" :load-sprite="true" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrLink'})">
+<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrLink, IconExternalLink'})">
 
 ```html
   <div>
       <cdr-link modifier="standalone">
         Visit site
-        <!-- Using the sprite -->
-        <cdr-icon
-            use="#external-link"
-            inherit-color
-            class="cdr-ml-space-half-x"/>
+        <IconExternalLink
+          inherit-color
+          class="cdr-ml-space-half-x"/>
       </cdr-link>
   </div>
 ```
