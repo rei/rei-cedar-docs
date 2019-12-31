@@ -225,16 +225,15 @@ Use secondary buttons for all actions that do not move the user to the next step
 
 Pair an icon with text to improve recognition about an object or action.
 
-<cdr-doc-example-code-pair repository-href="/src/components/button" :load-sprite="true" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrButton, CdrIcon'})" >
+<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrButton, IconPlayStroke'})" >
 
 ```html
   <div>
     <cdr-button
       modifier="secondary"
     >
-      <cdr-icon
+      <IconPlayStroke
         slot="icon"
-        use="#play-stroke"
         class="cdr-button__icon"
         inherit-color
       />
@@ -244,9 +243,8 @@ Pair an icon with text to improve recognition about an object or action.
       modifier="secondary"
       disabled
     >
-      <cdr-icon
+      <IconPlayStroke
         slot="icon"
-        use="#play-stroke"
         class="cdr-button__icon"
         inherit-color
       />
@@ -261,7 +259,7 @@ Pair an icon with text to improve recognition about an object or action.
 
 Use to visually communicate an object or action in limited space. Include alternative text to describe what button does.
 
-<cdr-doc-example-code-pair repository-href="/src/components/button" :load-sprite="true" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrButton, CdrIcon'})" >
+<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrButton, IconQuestionFill'})" >
 
 ```html
   <div>
@@ -269,10 +267,9 @@ Use to visually communicate an object or action in limited space. Include altern
       :icon-only="true"
       aria-label="More information about icon"
     >
-      <cdr-icon
+      <IconQuestionFill
         slot="icon"
         class="cdr-button__icon"
-        use="#question-fill"
         inherit-color
       />
     </cdr-button>
@@ -441,6 +438,8 @@ Apply the following use cases when deciding when to use links as anchors or butt
 
 ## Props
 
+This component will bind any attribute that a [native HTML button element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) accepts.
+
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
 ## Slots
@@ -505,27 +504,26 @@ export default {
 
 To scale Cedar icons appropriately, include the `cdr-button__icon` class with any icon component. The `size` prop scales both the icon and button.
 
-In the below example, a "Download" button is rendered as a button with icon and text using `cdr-icon` and the icon sprite.
+In the below example, a "Download" button is rendered as a button with icon and text using and inline Cedar icon component.
 
 ```vue{5}
 <template>
   <cdr-button>
-    <cdr-icon
+    <IconDownload
       slot="icon"
       class="cdr-button__icon"
-      use="#download"
     />
     Download
   </cdr-button>
 </template>
 
 <script>
-import { CdrButton, CdrIcon } from '@rei/cedar';
+import { CdrButton, IconDownload } from '@rei/cedar';
 export default {
   ...
   components: {
      CdrButton,
-     CdrIcon,  
+     IconDownload,  
   }
 }
 </script>

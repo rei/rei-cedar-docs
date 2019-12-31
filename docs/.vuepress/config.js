@@ -31,7 +31,7 @@ module.exports = {
       "link",
       {
         rel: "stylesheet",
-        href: "/cedar-compiled.css"
+        href: "/cedar.css"
       }
     ],
   ],
@@ -134,7 +134,9 @@ module.exports = {
           { text: "Resources", link: "/icons/resources/" },
           { text: "Iconography", link: "/icons/iconography/" }
         ]
-      }
+      },
+      {text: "Report an Issue", link: 'https://airtable.com/shr3wSPCYQbycVx7i'},
+      {text: "Request a Feature", link: 'https://airtable.com/shrcbq9CHthuMO7AC'},
     ]
   },
   configureWebpack(config) {

@@ -372,6 +372,8 @@ Checkboxes work independently from each other:
 
 ## Props
 
+This component will bind any attribute that a [native HTML checkbox element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox) accepts.
+
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
 

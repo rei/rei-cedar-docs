@@ -187,7 +187,7 @@ click,
 - `content`: the default content for that link
 - `iconClass`: a class to be applied to the prev/next arrow icon in order to match pagination styling
 - `iconPath`: the path to the icon in the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) used for this link
-- `iconComponent`: name of the component used for this link (if not using sprite/`iconPath`)
+- `iconComponent`: name of the component used for this link 
 - `click`: function ran when element is clicked. Required for internal component behavior
 
 <cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ page: 2, pages: [{page: 1, url: '1'}, {page: 2, url: '2'}, {page: 3, url: '3'}] }">

@@ -456,6 +456,8 @@ Select components should be:
 
 ## Props
 
+This component will bind any attribute that a [native HTML select element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select) accepts.
+
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props"/>
 
 ## Slots
