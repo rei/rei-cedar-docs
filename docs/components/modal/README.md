@@ -34,7 +34,7 @@
               {
                 "name": "showTitle",
                 "type": "boolean",
-                "default": "false",
+                "default": "true",
                 "description": "Toggles the modal title text, which comes from `label` or `labelSlot`."
               },
               {
@@ -83,16 +83,18 @@
             "slots": [
               {
                 "name": "default",
-                "description": "Sets the innerHTML for CdrButton'. This is the readable text of the button. Leave empty if icon-only."
+                "description": "Slot for CdrModal content."
               },
               {
-                "name": "labelSlot",
-                "description": "Sets the innerHTML for CdrButton. This is for the icon."
+                "name": "title",
+                "description": "Slot for CdrModal title."
               }
             ],
             "events": [
               {
-                "description": "All event listeners are passed through to/from the component."
+                  "name": "closed",
+                  "arguments": "event",
+                  "description": "$emit event fired when closing the modal."
               }
             ]
           }
@@ -115,6 +117,33 @@
 <cdr-doc-tabs>
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell tab-name="Overview">
+
+<cdr-doc-example-code-pair repository-href="/src/components/modal"
+:sandbox-data="$page.frontmatter.sandboxData" :model="{ opened: false }">
+
+```html
+<cdr-button
+  @click="opened = true"
+>Show Modal
+</cdr-button>
+
+<cdr-modal
+  label="Add to Cart"
+  :opened="opened"
+  @closed="opened = false"
+  aria-describedby="text"
+>
+  <template slot="title">
+    <cdr-text
+      tag="h1"
+      modifier="heading-600"
+    >Add to Cart
+    </cdr-text>
+  </template>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet dictum ipsum.</p>
+</cdr-modal>
+```
+</cdr-doc-example-code-pair>
 
 ## Accessibility
 
