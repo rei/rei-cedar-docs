@@ -213,7 +213,7 @@ This component has compliance with WCAG guidelines by:
 
 ## Events
 
-<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
+<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.events" :slots-getting-started-link="false" />
 
 ## Usage
 
@@ -222,7 +222,7 @@ This component has compliance with WCAG guidelines by:
   label="Add to Cart"
   :opened="opened"
   @closed="closed"
-  aria-describedBy
+  aria-described-by="description"
 >
   <template slot="title">
     <cdr-text
