@@ -124,6 +124,7 @@
 ```html
 <cdr-button
   @click="opened = true"
+  aria-haspopup="dialog"
 >Show Modal
 </cdr-button>
 
@@ -131,7 +132,7 @@
   label="Add to Cart"
   :opened="opened"
   @closed="opened = false"
-  aria-describedby="text"
+  aria-described-by="description"
 >
   <template slot="title">
     <cdr-text
@@ -217,13 +218,21 @@ This component has compliance with WCAG guidelines by:
 ## Usage
 
 ```vue
-<template>
-  <cdr-modal
-    label="Add to Cart"
-    :opened="opened"
-  >
-  </cdr-modal>
-</template>
+<cdr-modal
+  label="Add to Cart"
+  :opened="opened"
+  @closed="closed"
+  aria-describedBy
+>
+  <template slot="title">
+    <cdr-text
+        tag="h1"
+        modifier="heading-600"
+      >Add to Cart
+    </cdr-text>
+  </template>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet dictum ipsum.</p>
+</cdr-modal>
 ```
 
 ## Modal Title
