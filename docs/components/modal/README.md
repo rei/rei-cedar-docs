@@ -210,6 +210,10 @@ This component has compliance with WCAG guidelines by:
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
+## Events
+
+<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
+
 ## Usage
 
 ```vue
