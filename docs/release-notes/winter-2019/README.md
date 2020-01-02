@@ -217,24 +217,24 @@ Note that this has been altered from the paragraph style to the `cdr-text--utili
 
 ### CdrText Heading Modifiers
 | deprecated modifier name | equivalent modifier name |
--------------------------------------
-| heading-300	| heading--sans-300 |
-| heading-400	| heading--sans-400 |
-| heading-500	| heading--sans-500 |
-| heading-600	| heading--serif-600 |
-| heading-700	| heading--serif-700 |
-| heading-800	| heading--serif-700 |
-| subheading-300 | subheading--sans-300 |
-| subheading-400 | subheading--sans-400 |
-| subheading-500 | subheading--sans-500 |
-| subheading-600 | subheading--sans-600 |
-| display-600	| heading--serif-600 |
-| display-700	| heading--serif-700 |
-| display-800	| heading--serif-800 |
-| display-900	| heading--serif-900 |
-| display-1000 | heading--serif-1000 |
-| display-1100 | heading--serif-1100 |
-| display-1200 | heading--serif-1200 |
+|--------------------------|--------------------------|
+| heading-300	             | heading--sans-300        |
+| heading-400	             | heading--sans-400        |
+| heading-500	             | heading--sans-500        |
+| heading-600	             | heading--serif-600       |
+| heading-700	             | heading--serif-700       |
+| heading-800	             | heading--serif-700       |
+| subheading-300           | subheading--sans-300     |
+| subheading-400           | subheading--sans-400     |
+| subheading-500           | subheading--sans-500     |
+| subheading-600           | subheading--sans-600     |
+| display-600	             | heading--serif-600       |
+| display-700	             | heading--serif-700       |
+| display-800	             | heading--serif-800       |
+| display-900	             | heading--serif-900       |
+| display-1000             | heading--serif-1000      |
+| display-1100             | heading--serif-1100      |
+| display-1200             | heading--serif-1200      |
 
 ### Type Utility classes
 | deprecated class name | equivalent class name |
