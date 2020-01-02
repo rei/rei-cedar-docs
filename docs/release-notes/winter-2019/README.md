@@ -51,7 +51,7 @@ To resolve this issue we have chosen to leave the inline single icon components 
 
 ### Modal Component
 
-TODO: ???
+The [CdrModal](../../components/modal) component has been released.
 
 ### Radio and Checkbox sizes
 
