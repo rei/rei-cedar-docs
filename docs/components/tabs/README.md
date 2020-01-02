@@ -197,6 +197,8 @@ Bottom border of tab header list is removed.
 </cdr-tabs>
 ```
 
+</cdr-doc-example-code-pair>
+
 ## Centered
 
 Centered tab header content
