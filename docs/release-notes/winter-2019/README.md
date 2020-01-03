@@ -292,8 +292,8 @@ We have updated the recommended mappings for some features that were deprecated 
 **Text Tokens**
 | Deprecated token/mixin  | Equivalent token/mixin |
 |-------------------------|-------------------------|
-| cdr-text-header-1 | cdr-text-heading-serif-display-1100 |
-| cdr-text-header-2 | cdr-text-heading-serif-display-900 |
+| cdr-text-header-1 | cdr-text-heading-serif-1100 |
+| cdr-text-header-2 | cdr-text-heading-serif-900 |
 | cdr-text-header-3 | cdr-text-heading-serif-700 |
 | cdr-text-header-4 | cdr-text-heading-serif-600 |
 | cdr-text-header-5 | cdr-text-heading-sans-500 |
