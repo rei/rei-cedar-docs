@@ -215,6 +215,42 @@ Note that this has been altered from the paragraph style to the `cdr-text--utili
 | maple-utility-20      | cdr-text-utility-200  |
 | maple-utility-10      | cdr-text-utility-100  |
 
+**Spruce**
+| Deprecated mixin   | Equivalent mixin      |
+|--------------------|-----------------------|
+| spruce-display-100 | cdr-text-heading-serif-1200 |
+| spruce-display-90  | cdr-text-heading-serif-1200 |
+| spruce-display-80  | cdr-text-heading-serif-1200 |
+| spruce-display-70  | cdr-text-heading-serif-1100 |
+| spruce-display-60  | cdr-text-heading-serif-800  |
+| spruce-display-50  | cdr-text-heading-serif-700  |
+| spruce-display-40  | cdr-text-heading-serif-600  |
+| spruce-display-30  | cdr-text-heading-sans-500  |
+| spruce-display-20  | cdr-text-heading-sans-400  |
+| spruce-display-10  | cdr-text-heading-sans-300  |
+| spruce-display-00  | cdr-text-heading-sans-300  |
+
+**Headings**
+| Deprecated mixin   | Equivalent mixin      |
+|--------------------|-----------------------|
+| cdr-text-heading-300	| cdr-text-heading-sans-300 |
+| cdr-text-heading-400	| cdr-text-heading-sans-400 |
+| cdr-text-heading-500	| cdr-text-heading-sans-500 |
+| cdr-text-heading-600	| cdr-text-heading-serif-600 |
+| cdr-text-heading-700	| cdr-text-heading-serif-700 |
+| cdr-text-heading-800	| cdr-text-heading-serif-700 |
+| cdr-text-subheading-300 | cdr-text-subheading-sans-300 |
+| cdr-text-subheading-400 | cdr-text-subheading-sans-400 |
+| cdr-text-subheading-500 | cdr-text-subheading-sans-500 |
+| cdr-text-subheading-600 | cdr-text-subheading-sans-600 |
+| cdr-text-display-600	| cdr-text-heading-serif-600 |
+| cdr-text-display-700	| cdr-text-heading-serif-700 |
+| cdr-text-display-800	| cdr-text-heading-serif-800 |
+| cdr-text-display-900	| cdr-text-heading-serif-900 |
+| cdr-text-display-1000 | cdr-text-heading-serif-1000 |
+| cdr-text-display-1100 | cdr-text-heading-serif-1100 |
+| cdr-text-display-1200 | cdr-text-heading-serif-1200 |
+
 ### CdrText Heading Modifiers
 | deprecated modifier name | equivalent modifier name |
 |--------------------------|--------------------------|
@@ -246,5 +282,34 @@ Note that this has been altered from the paragraph style to the `cdr-text--utili
 In accordance with our deprecation policy, features that were deprecated in the [Summer 2019 release](https://rei.github.io/rei-cedar-docs/release-notes/summer-2019/#revisions-for-spacing-utility-classes) have been removed from Cedar.
 
 - Deprecated spacing utilities (`cdr-stack`, `cdr-inset`, `cdr-inline`) should be replaced with the new [`cdr-space` utilities](https://rei.github.io/rei-cedar-docs/components/utilities/?active-link=spacing). See [Summer 2019 release notes](https://rei.github.io/rei-cedar-docs/release-notes/summer-2019/#revisions-for-spacing-utility-classes) for more info on updating.
+
+## Updated Deprecation Mappings
+
+We have updated the recommended mappings for some features that were deprecated in the [Fall 2019 release](https://rei.github.io/rei-cedar-docs/release-notes/fall-2019/#deprecations).
+
+**Text Tokens**
+| Deprecated token/mixin  | Equivalent token/mixin |
+|-------------------------|-------------------------|
+| cdr-text-header-1 | cdr-text-heading-serif-1100 |
+| cdr-text-header-2 | cdr-text-heading-serif-900 |
+| cdr-text-header-3 | cdr-text-heading-serif-700 |
+| cdr-text-header-4 | cdr-text-heading-serif-600 |
+| cdr-text-header-5 | cdr-text-heading-sans-500 |
+| cdr-text-header-6 | cdr-text-heading-sans-400 |
+| cdr-text-header-7 | cdr-text-heading-sans-300 |
+
+**CdrText Modifiers**
+| Deprecated modifier name | Equivalent modifier names and breakpoints  |
+|--------------------------|--------------------------------------------|
+| display                  | heading--serif-700 heading--serif-900@md heading--serif-1100@lg |
+| display-static           | heading--serif-900                                |
+| heading-large            | heading--serif-600 heading--serif-700@md heading--serif-900@lg  |
+| heading-large-static     | heading--serif-700                                |
+| heading-medium           | heading--serif-600 heading--serif-700@md heading--serif-700@lg  |
+| heading-medium-static    | heading--serif-600                                |
+| heading-small            | heading--sans-400 heading--sans-500@md heading--sans-500@lg  |
+| heading-small-static     | heading--sans-400                                |
+| subheading               | subheading--sans-300                             |
+
 
 </cdr-doc-table-of-contents-shell>
