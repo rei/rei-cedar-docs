@@ -218,17 +218,19 @@ Note that this has been altered from the paragraph style to the `cdr-text--utili
 **Spruce**
 | Deprecated mixin   | Equivalent mixin      |
 |--------------------|-----------------------|
-| spruce-display-100 | cdr-text-heading-serif-1200 |
-| spruce-display-90  | cdr-text-heading-serif-1200 |
-| spruce-display-80  | cdr-text-heading-serif-1200 |
-| spruce-display-70  | cdr-text-heading-serif-1100 |
-| spruce-display-60  | cdr-text-heading-serif-800  |
-| spruce-display-50  | cdr-text-heading-serif-700  |
-| spruce-display-40  | cdr-text-heading-serif-600  |
-| spruce-display-30  | cdr-text-heading-sans-500  |
-| spruce-display-20  | cdr-text-heading-sans-400  |
-| spruce-display-10  | cdr-text-heading-sans-300  |
-| spruce-display-00  | cdr-text-heading-sans-300  |
+| spruce-display-100 | cdr-text-heading-serif-strong-1200 |
+| spruce-display-90  | cdr-text-heading-serif-strong-1200 |
+| spruce-display-80  | cdr-text-heading-serif-strong-1200 |
+| spruce-display-70  | cdr-text-heading-serif-strong-1100 |
+| spruce-display-60  | cdr-text-heading-serif-strong-800  |
+| spruce-display-50  | cdr-text-heading-serif-strong-700  |
+| spruce-display-40  | cdr-text-heading-serif-strong-600  |
+| spruce-display-30  | cdr-text-heading-sans-strong-500  |
+| spruce-display-20  | cdr-text-heading-sans-strong-400  |
+| spruce-display-10  | cdr-text-heading-sans-strong-300  |
+| spruce-display-00  | cdr-text-heading-sans-strong-300  |
+| spruce-body-30	| cdr-text-body-300 |
+| spruce-body-20	| cdr-text-body-300 |
 
 **Headings**
 | Deprecated mixin   | Equivalent mixin      |
@@ -243,13 +245,13 @@ Note that this has been altered from the paragraph style to the `cdr-text--utili
 | cdr-text-subheading-400 | cdr-text-subheading-sans-400 |
 | cdr-text-subheading-500 | cdr-text-subheading-sans-500 |
 | cdr-text-subheading-600 | cdr-text-subheading-sans-600 |
-| cdr-text-display-600	| cdr-text-heading-serif-600 |
-| cdr-text-display-700	| cdr-text-heading-serif-700 |
-| cdr-text-display-800	| cdr-text-heading-serif-800 |
-| cdr-text-display-900	| cdr-text-heading-serif-900 |
-| cdr-text-display-1000 | cdr-text-heading-serif-1000 |
-| cdr-text-display-1100 | cdr-text-heading-serif-1100 |
-| cdr-text-display-1200 | cdr-text-heading-serif-1200 |
+| cdr-text-display-600	| cdr-text-heading-serif-strong-600 |
+| cdr-text-display-700	| cdr-text-heading-serif-strong-700 |
+| cdr-text-display-800	| cdr-text-heading-serif-strong-800 |
+| cdr-text-display-900	| cdr-text-heading-serif-strong-900 |
+| cdr-text-display-1000 | cdr-text-heading-serif-strong-1000 |
+| cdr-text-display-1100 | cdr-text-heading-serif-strong-1100 |
+| cdr-text-display-1200 | cdr-text-heading-serif-strong-1200 |
 
 ### CdrText Heading Modifiers
 | deprecated modifier name | equivalent modifier name |
@@ -264,13 +266,13 @@ Note that this has been altered from the paragraph style to the `cdr-text--utili
 | subheading-400           | subheading--sans-400     |
 | subheading-500           | subheading--sans-500     |
 | subheading-600           | subheading--sans-600     |
-| display-600	             | heading--serif-600       |
-| display-700	             | heading--serif-700       |
-| display-800	             | heading--serif-800       |
-| display-900	             | heading--serif-900       |
-| display-1000             | heading--serif-1000      |
-| display-1100             | heading--serif-1100      |
-| display-1200             | heading--serif-1200      |
+| display-600	             | heading--serif--strong-600       |
+| display-700	             | heading--serif--strong-700       |
+| display-800	             | heading--serif--strong-800       |
+| display-900	             | heading--serif--strong-900       |
+| display-1000             | heading--serif--strong-1000      |
+| display-1100             | heading--serif--strong-1100      |
+| display-1200             | heading--serif--strong-1200      |
 
 ### Type Utility classes
 | deprecated class name | equivalent class name |
@@ -290,8 +292,8 @@ We have updated the recommended mappings for some features that were deprecated 
 **Text Tokens**
 | Deprecated token/mixin  | Equivalent token/mixin |
 |-------------------------|-------------------------|
-| cdr-text-header-1 | cdr-text-heading-serif-1100 |
-| cdr-text-header-2 | cdr-text-heading-serif-900 |
+| cdr-text-header-1 | cdr-text-heading-serif-display-1100 |
+| cdr-text-header-2 | cdr-text-heading-serif-display-900 |
 | cdr-text-header-3 | cdr-text-heading-serif-700 |
 | cdr-text-header-4 | cdr-text-heading-serif-600 |
 | cdr-text-header-5 | cdr-text-heading-sans-500 |
@@ -301,8 +303,8 @@ We have updated the recommended mappings for some features that were deprecated 
 **CdrText Modifiers**
 | Deprecated modifier name | Equivalent modifier names and breakpoints  |
 |--------------------------|--------------------------------------------|
-| display                  | heading--serif-700 heading--serif-900@md heading--serif-1100@lg |
-| display-static           | heading--serif-900                                |
+| display                  | heading--serif--strong-700 heading--serif--strong-900@md heading--serif--strong-1100@lg |
+| display-static           | heading--serif--strong-900                                |
 | heading-large            | heading--serif-600 heading--serif-700@md heading--serif-900@lg  |
 | heading-large-static     | heading--serif-700                                |
 | heading-medium           | heading--serif-600 heading--serif-700@md heading--serif-700@lg  |
