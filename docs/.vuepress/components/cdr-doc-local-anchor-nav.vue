@@ -61,7 +61,10 @@ export default {
       }
     },
     links: {
-      type: Array
+      type: Array,
+      default: function() {
+        return [];
+      }
     }
   },
   computed: {
