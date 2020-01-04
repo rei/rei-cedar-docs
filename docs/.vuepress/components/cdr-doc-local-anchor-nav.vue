@@ -1,23 +1,20 @@
 <template>
   <nav class="cdr-doc-local-anchor-nav" ref="localNav">
-    <ul class="cdr-doc-local-anchor-nav__list">
-      <li v-for="link in links" class="cdr-doc-local-anchor-nav__list-item" :class="{'cdr-doc-local-anchor-nav__list-item--parent': !link.isChild, 'cdr-doc-local-anchor-nav__list-item--child': link.isChild }">
+    <cdr-list modifier="inline" v-for="groupedLinks in linksGroupedByHeading">
+      <li v-for="link in groupedLinks" class="cdr-doc-local-anchor-nav__list">
         <cdr-link
-            :class="[
-              'cdr-doc-local-anchor-nav__link',
-              {
+            :class="{
                 'cdr-doc-local-anchor-nav__link--parent': !link.isChild,
                 'cdr-doc-local-anchor-nav__link--child': link.isChild,
-              }
-            ]"
+            }"
             modifier="standalone"
             :href="link.href">
           {{ link.text }}
         </cdr-link>
       </li>
-    </ul>
-    <ul class="cdr-doc-local-anchor-nav__appended-items" v-if="pageData.see_also && pageData.see_also.length > 0">
-      <li v-for="item in pageData.see_also">
+    </cdr-list>
+    <cdr-list v-if="pageData.see_also && pageData.see_also.length > 0" modifier="inline">
+      <li v-for="item in pageData.see_also" class="cdr-doc-local-anchor-nav__list">
         <cdr-link
           v-if="item.href"
           modifier="standalone"
@@ -26,16 +23,20 @@
         >{{ item.text }}</cdr-link>
         <span class="cdr-doc-local-anchor-nav__appended-item-header" v-if="!item.href">{{ item.text }}</span>
       </li>
-    </ul>
+    </cdr-list>
   </nav>
 </template>
 
 <script>
 
+import { CdrList } from '@rei/cedar';
 import slugify from '../../../utils/slugify.js';
 
 export default {
   name: 'CdrDocLocalAnchorNav',
+  components: {
+    CdrList,
+  },
   props: {
     parentSelectors: {
       type: String,
@@ -66,6 +67,13 @@ export default {
   computed: {
     pageData () {
       return this.$page.frontmatter
+    },
+    linksGroupedByHeading() {
+      return this.links.reduce(function (arr, link) {
+        if (!link.isChild) arr.push([]);
+        arr[arr.length - 1].push(link);
+        return arr;
+      }, []);
     }
   },
 }
@@ -77,60 +85,26 @@ export default {
   .cdr-doc-local-anchor-nav {
     overflow-y: auto;
     padding-top: $cdr-space-half-x;
+    // margin: $cdr-space-two-x;
   }
-
   .cdr-doc-local-anchor-nav__list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+      margin-bottom: $cdr-space-one-x;
   }
-
-  .cdr-doc-local-anchor-nav__link {
-    @include cdr-text-utility-200;
-    display: block;
-    position: relative;
-    text-transform: capitalize;
-
-    &:focus,
-    &:active {
-      outline: none;
-    }
+  .cdr-doc-local-anchor-nav__link--parent {
+    @include cdr-text-utility-strong-300;
   }
 
   .cdr-doc-local-anchor-nav__link--child {
-    padding-left: $cdr-space-two-x;
-
-    &:before {
-      content: '\2014'; // &mdash;
-      position: absolute;
-      left: 16px;
-      top: 0;
-      display: block;
-    }
-  }
-
-  .cdr-doc-local-anchor-nav__list-item {
-    margin-bottom: $cdr-space-quarter-x;
-  }
-
-  .cdr-doc-local-anchor-nav__list-item--parent {
-    .cdr-doc-local-anchor-nav__list-item--child + & {
-      margin-top: $cdr-space-half-x;
-    }
-  }
-
-  .cdr-doc-local-anchor-nav__appended-items {
-    list-style: none;
-    padding: 0;
-    margin-top: $cdr-space-two-x;
+    @include cdr-text-utility-300;
   }
 
   .cdr-doc-local-anchor-nav__appended-item-link {
-    @include cdr-text-utility-200;
+    @include cdr-text-utility-300;
   }
 
   .cdr-doc-local-anchor-nav__appended-item-header {
-    @include cdr-text-utility-300;
+    @include cdr-text-utility-strong-300;
+    vertical-align: top;
     color: $cdr-doc-text-color-primary;
   }
 </style>
