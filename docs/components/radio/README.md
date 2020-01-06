@@ -105,8 +105,18 @@
                 "name": "modifier",
                 "type": "string",
                 "default": "N/A",
-                "description": "Modifies the style variants for this component. Possible values: {  ‘compact’  |  'hide-figure'  }"
-              }
+                "description": "Modifies the style variants for this component. Possible values: {  'hide-figure'  }",
+                "alert": {
+                  "type": "deprecated",
+                  "description": "The `compact` modifier is deprecated in the winter 2019 release and will be removed. Use size=\"small\" instead"
+                },
+              },
+              {
+                "name": "size",
+                "type": "string",
+                "default": "'medium'",
+                "description": "Sets the radio size; values can target responsive breakpoints. Breakpoint values are: xs, sm, md, and lg. Examples: { 'small' | 'medium' | 'large' | 'large@sm' }",
+              },
             ],
             "slots": [
               {
@@ -117,7 +127,7 @@
             "events": [
               {
                 "name": "change",
-                "arguments": "value",
+                "arguments": "value, event",
                 "description": "$emit event fired on radio selection."
               },
               {
@@ -168,33 +178,32 @@ Default and standard spacing for radio buttons.
 
 </cdr-doc-example-code-pair>
 
-## Compact (Small)
+## Size
 
-Compact spacing for radio buttons.
+Different sizing for radio buttons.
 
 <cdr-doc-example-code-pair repository-href="/src/components/radio" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{ex: ''}">
 
 ```html
 <div>
 <cdr-radio
-  modifier="compact"
-  name="compact-example"
+  size="small"
+  name="size-example"
   custom-value="ex1"
   v-model="ex"
->Compact radio 1</cdr-radio>
+>Small radio</cdr-radio>
 <cdr-radio
-  modifier="compact"
-  name="compact-example"
+  name="size-example"
   custom-value="ex2"
   v-model="ex"
->Compact radio 2</cdr-radio>
+>Medium radio</cdr-radio>
 <cdr-radio
-  modifier="compact"
-  name="compact-example"
+  size="large"
+  name="size-example"
   :custom-value="{val:'ex3'}"
   v-model="ex"
   disabled
->Compact radio 3</cdr-radio>
+>Large radio</cdr-radio>
 <p>selected: {{ex}}</p>
 </div>
 ```
@@ -333,6 +342,8 @@ don't: https://drive.google.com/file/d/1xsBo5wx5JB9Swvmhwb7-S7pRSNkIrc27/view?us
 
 ## Props
 
+This component will bind any attribute that a [native HTML radio element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio) accepts.
+
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props"/>
 
 ## Slots
@@ -352,7 +363,6 @@ The **CdrRadio** component requires `v-model` to track the value of selected rad
 Following variants are available to the `cdr-radio` modifier attribute:
 | Value | Description            |
 |:------|:-----------------------|
-| 'compact'  | Sets the spacing for smaller screen sizes |
 | 'hide-figure'  | Hides the radio button icon |
 
 <br/>
@@ -362,9 +372,9 @@ Use the `hide-figure` modifier to hide the radio button itself, which leaves tex
 ```vue
 <template>
   <cdr-radio
+    name="example"
+    custom-value="model1"
     v-model="model"
-    name="model"
-    value="model"
     modifier="hide-figure"
     input-class="no-box"
     content-class="no-box__content"

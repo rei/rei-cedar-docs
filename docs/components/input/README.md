@@ -337,7 +337,7 @@ Input field with link text on right.
 
 Input field with icon above the input field on right.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrIcon'})" :load-sprite="true" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, IconInformationFill'})" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
@@ -345,9 +345,8 @@ Input field with icon above the input field on right.
   label="Input label"
   placeholder="Placeholder input"
 >
-  <cdr-icon
+  <IconInformationFill
     slot="info"
-    use="#information-fill"
     class="cdr-button__icon"
     inherit-color
   />
@@ -380,7 +379,7 @@ Input field with helper or hint text below the input field.
 
 Input field with icon inserted into the input field on left. Icon is decorative and not intended for any action.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrIcon'})" :load-sprite="true" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, IconLocationPinStroke'})" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
@@ -388,9 +387,8 @@ Input field with icon inserted into the input field on left. Icon is decorative 
   label="Input label"
   placeholder="Placeholder input"
 >
-  <cdr-icon
+  <IconLocationPinStroke
     slot="pre-icon"
-    use="#location-pin-stroke"
     class="cdr-button__icon"
     inherit-color
   />
@@ -403,7 +401,7 @@ Input field with icon inserted into the input field on left. Icon is decorative 
 
 Input field with icon inserted into the input field on right. Icon is decorative and not intended for any action.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrIcon'})" :load-sprite="true" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, IconCreditCard'})" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
@@ -411,9 +409,8 @@ Input field with icon inserted into the input field on right. Icon is decorative
   label="Input label"
   placeholder="Placeholder input"
 >
-  <cdr-icon
+  <IconCreditCard
     slot="post-icon"
-    use="#credit-card"
     class="cdr-button__icon"
     inherit-color
   />
@@ -562,6 +559,8 @@ don't: https://drive.google.com/file/d/1KLM8U9Y11_f9LIlOfpBSUrCvb3j-o-t_/view?us
 <cdr-doc-table-of-contents-shell>
 
 ## Props
+
+This component will bind any attribute that a [native HTML input element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) accepts.
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props"/>
 

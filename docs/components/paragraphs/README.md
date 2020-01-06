@@ -205,6 +205,8 @@ don't: https://drive.google.com/file/d/1J_qVFAw64gQIli9dizpgZ9l9MIIE0Bp5/view?us
 
 ## Props
 
+This component will bind any attribute that a [native HTML paragraph element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p) accepts.
+
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
 ## Slots
@@ -229,7 +231,7 @@ By default the **CdrText** component renders as a paragraph, this default paragr
 ```
 
 ### Paragraph spacing
-By default there is no spacing between paragraphs. The space utility classes are 
+By default there is no spacing between paragraphs. The space utility classes are
 provided to increase legibility
 
 ```vue

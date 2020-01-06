@@ -38,21 +38,21 @@ The Cedar container allows flexible content width, up to a max width of 1232px. 
 
 To explore how the containers work, check out this code sandbox:
 
-<cdr-doc-example-code-pair :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {styleTag: 'body { background-color: rgba(130, 234, 255, 0.35);} .content {background-color: #fff;} .cdr-container, .cdr-container-fluid { background-color: lightcoral; color: purple;}'})" >
+<cdr-doc-code-snippet :max-height="false" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {styleTag: 'body { background-color: rgba(130, 234, 255, 0.35);} .content {background-color: #fff;} .cdr-container, .cdr-container-fluid { background-color: lightcoral; color: purple;}'})" >
 
 ```vue
   <div>
     <div class="cdr-container">
       <div class="content">A cdr-container class</div>
-
     </div>
+
     <div class="cdr-container-fluid">
       <div class="content">A cdr-container-fluid class</div>
     </div>
   </div>
 
 ```
-</cdr-doc-example-code-pair>
+</cdr-doc-code-snippet>
 
 ## Display Breakpoints
 Cedar provides support for four layout screen widths: extra small, small, medium, and large.
@@ -74,9 +74,11 @@ The following design tokens are provided using the `@rei/cdr-tokens` package for
 
 For more information about design tokens and how to use them, visit the [Design Tokens](../../components/design-tokens/) article.
 
-### CSS Utilities
+<!-- 
+TODO: update this once SCSS utilities are available to consumers
+### SCSS Utilities
 
-`cedar.css` provides the following responsive breakpoint media queries for our patterns, components, and layouts. These provide size ranges intended to help facilitate the changing of layout at various screen widths or orientations.
+`...` provides the following responsive breakpoint media queries for our patterns, components, and layouts. These provide size ranges intended to help facilitate the changing of layout at various screen widths or orientations.
 
 | Display size | Utility mixin            | Range        |
 |--------------|--------------------------|--------------|
@@ -86,10 +88,10 @@ For more information about design tokens and how to use them, visit the [Design 
 | Small        | `@include sm-mq-only {}` | 768px-991px  |
 | Medium       | `@include md-mq {}`      | >= 992px     |
 | Medium       | `@include md-mq-only {}` | 992px-1199px |
-| Large        | `@include lg-mq {}`      | >= 1200px    |
+| Large        | `@include lg-mq {}`      | >= 1232px    |
 | Large        | `@include lg-mq-only {}` | >= 1232px    |
-
-
+ -->
+ 
 ### Targeting the Utility Media Query with Class Names
 
 To avoid confusion between an element’s size variant and its breakpoint name, Cedar has the following naming conventions:

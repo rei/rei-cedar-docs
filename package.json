@@ -7,7 +7,7 @@
     "dev": "npm run copy-cedar && vuepress dev docs",
     "build": "npm run copy-cedar && cross-env NODE_ENV=production vuepress build docs",
     "copy-cedar": "npm-run-all copy-cedar:core copy-cedar:font",
-    "copy-cedar:core": "cp ./node_modules/@rei/cedar/dist/cedar.css ./docs/.vuepress/public/cedar.css",
+    "copy-cedar:core": "cp ./node_modules/@rei/cedar/dist/cedar-compiled.css ./docs/.vuepress/public/cedar.css",
     "copy-cedar:font": "cp ./node_modules/@rei/cedar/dist/cdr-fonts.css ./docs/.vuepress/public/cdr-fonts.css"
   },
   "author": "REI Software Engineering",
@@ -24,7 +24,7 @@
     "npm": "^6.9.0"
   },
   "devDependencies": {
-    "@rei/cdr-tokens": "^2.0.0",
+    "@rei/cdr-tokens": "^3.0.0-beta.2",
     "@rei/cedar-icons": "^1.0.0",
     "@vuepress/plugin-google-analytics": "^1.0.2",
     "codesandbox": "^2.1.10",
@@ -36,7 +36,7 @@
     "vuepress": "^1.0.3"
   },
   "dependencies": {
-    "@rei/cedar": "^3.0.0",
+    "@rei/cedar": "^4.0.0-beta.5",
     "scrollmonitor": "^1.2.4",
     "smoothscroll-polyfill": "^0.4.4",
     "stickyfilljs": "^2.0.5"

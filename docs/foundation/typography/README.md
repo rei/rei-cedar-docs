@@ -102,18 +102,25 @@ For a complete list of Cedar Design Tokens, visit the [Cedar Tokens](https://rei
 ## Web
 
 
+<tokens-typography platform="web" type="body">
+### Body
+</tokens-typography>
+
 <tokens-typography platform="web" type="default">
 ### Default
 </tokens-typography>
 
-<tokens-typography platform="web" type="editorial">
-### Editorial
+<tokens-typography platform="web" type="eyebrow">
+### Eyebrow
 </tokens-typography>
 
 <tokens-typography platform="web" type="heading">
 ### Headings
 </tokens-typography>
-<tokens-typography platform="web" type="header" />
+
+<tokens-typography platform="web" type="utility">
+### Utility
+</tokens-typography>
 
 <hr>
 

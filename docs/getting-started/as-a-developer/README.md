@@ -25,6 +25,7 @@ npm install --save @rei/cedar
 
 Once installed, you can import individual Cedar components from the main package into your project:
 
+_Main.vue_
 ```js
 <script>
 // import packages from Cedar
@@ -46,34 +47,50 @@ export default {
   <cdr-text>Foo</cdr-text>
   <cdr-button>Bar</cdr-button>
   <cdr-link>Baz</cdr-link>
+  // Cedar utility classes can be used as long as they are loaded in your main CSS file
+  <cdr-text class="cdr-display-sr-only">Fizz</cdr-text>
 </template>
 
 <style>
   // no need to import any Cedar related CSS here
 </style>
 ```
+_index.scss_
+```css
+/* import the Cedar CSS reset first*/
+@import url('@rei/cedar/dist/style/reset.css');
+/* import each component used in your project  */
+@import url('@rei/cedar/dist/style/cdr-text.css');
+@import url('@rei/cedar/dist/style/cdr-button.css');
+@import url('@rei/cedar/dist/style/cdr-link.css');
+/* import any Cedar utility classes used */
+@import url('@rei/cedar/dist/style/display.css');
+```
 
 <hr>
 
 ## Setting Up Projects
-All components depend upon core style and font assets. Without these assets included, components will not render correctly. These files are distributed as part of the Cedar NPM package.
+All components depend upon core reset and font assets. Without these assets included, components will not render correctly. These files are distributed as part of the Cedar NPM package.
+
+### Install Vue Components Package
+
+_Terminal_
+```bash
+npm install --save @rei/cedar
+```
 
 ### Install Required Core Styles
-Cedar requires a core stylesheet to render properly. This stylesheet contains a CSS reset, component CSS, as well as global utility classes.
+Cedar requires a core reset stylesheet to render properly. This file should be loaded once per micro-site, and it should be the first CSS file loaded.
 
-To include the stylesheet, import the `cedar.css` file:
+To include the stylesheet, import the `reset.css` file:
 
 _main.js_
 ```js
-import '@rei/cedar/dist/cedar.css';
+import '@rei/cedar/dist/style/reset.css';
 ```
 
 ### Install Required Fonts
-Cedar uses specific fonts – Roboto, Roboto Condensed, and Sentinel – that are required for your project.
-
-Roboto and Roboto Condensed are available from [Google Fonts](https://fonts.google.com/selection?selection.family=Roboto%7CRoboto+Condensed&query=robo) (preselected for quick use).
-
-Sentinel is available in the Cedar NPM package and mapped using the `cdr-fonts.css` file.
+Cedar uses specific fonts – Stuart and Graphik – that are required for your project. These fonts are available in the Cedar NPM package and mapped using the `cdr-fonts.css` file.
 
 To include these fonts, import `cdr-fonts.css`:
 
@@ -84,53 +101,52 @@ import '@rei/cedar/dist/cdr-fonts.css';
 
 <hr>
 
-## Accessibility
-REI requires 100% compliance with WCAG AA guidelines. Relevant guidelines are provided in each component's documentation.
+### Include Component and Utility CSS
 
-<hr>
+How you include CSS depends on your tech stack and varies from project to project. We recommend using `postcss` with the `postcss-import` plugin to allow Cedar CSS assets to be de-duped. If you are using FEBS^6 then this is set up for you by default.
 
-## Developing for Web
+1. Create an SCSS file that imports the CSS for any Cedar components or utility classes used in your project.
 
-### Install Vue Components Package
-
-_Terminal_
-```bash
-npm install --save @rei/cedar
-```
-
-#### Include  CSS
-How you include CSS depends on your tech stack and varies from project to project.
-
-Here are a few common methods:
-
-##### Webpack
-If using a bundler, import CSS into JavaScript and let loaders such as `css-loader` extract it.
-
-_main.js_
-```js
-import '@rei/cedar/dist/cdr-fonts.css';
-import '@rei/cedar/dist/cedar.css';
-```
-
-##### PostCSS
-Cedar packages include the [unofficial style field](https://jaketrent.com/post/package-json-style-attribute/) supported by `postcss-import`.
-
-_cedar.postcss_
+_index.scss_
 ```css
-import '@rei/cedar/dist/cdr-fonts.css';
-import '@rei/cedar’;
+/* import each component used in your project  */
+@import url('@rei/cedar/dist/style/cdr-text.css');
+@import url('@rei/cedar/dist/style/cdr-button.css');
+@import url('@rei/cedar/dist/style/cdr-link.css');
+/* import any Cedar utility classes used */
+@import url('@rei/cedar/dist/style/display.css');
 ```
 
-##### SCSS
-You can also import CSS from the node_modules folder such as SCSS or another pre-processor.
+2. Load that file in your main JavaScript entry:
 
-_cedar.scss_
+_index.js_
 ```js
-import '~@rei/cedar/dist/cdr-fonts.css';
-import '~@rei/cedar/dist/cedar.css';
+import './index.scss';
+/* rest of your component/app */
 ```
 
-**Note**: Code snippets provided throughout this documentation will demonstrate the `webpack` and `css-loader` method.
+Cedar CSS assets can all be found inside `node_modules/@rei/cedar/dist/style/`. Filenames for component CSS match the `kebab-case` name of the component. Filenames for utility classes match their prefix as follows:
+
+| Path | Prefix | Description |
+|--------|------|------|
+| @rei/cedar/dist/style/align.css | `cdr-align-` | CSS utility classes for alignment. |
+| @rei/cedar/dist/style/color.css | `cdr-bg-`, `cdr-fg-` | CSS utility classes for color. |
+| @rei/cedar/dist/style/container.css | `cdr-container-` | CSS utility classes for container. |
+| @rei/cedar/dist/style/display.css | `cdr-display-` | CSS utility classes for display logic. |
+| @rei/cedar/dist/style/space.css | `cdr-XX-space-` | CSS utility classes for spacing. |
+| @rei/cedar/dist/style/text.css | `cdr-text-` | CSS utility classes for typography. This is the same file as `cdr-text.css`. |
+
+#### Include Full CSS
+
+For public facing production micro-sites you should always optimize your Cedar CSS imports by only loading the assets you need. However, for some projects it may make sense to skip that process and just load all of the Cedar assets. To support this we provide both compiled and un-compiled versions of the full Cedar CSS and the full utility classes. If your project is loading shared components then you should use the un-compiled version along with `postcss` and `postcss-import` to ensure that duplicate Cedar assets are not loaded. If your project is not using any shared components or has no build system at all it may make more sense to use the compiled version.
+
+| path | description | compiled |
+|--------|------|------|
+| @rei/cedar/dist/style/cdr-full.css | Imports all of the Cedar component CSS and utility classes. | no |
+| @rei/cedar/dist/style/utilities.css | Imports all of the Cedar CSS utility classes.  | no |
+| @rei/cedar/dist/cedar.css | Full compiled Cedar component CSS and utilities. | yes |
+| @rei/cedar/dist/utilities.css | Full compiled Cedar CSS utility classes. | yes |
+
 
 <hr/>
 
@@ -161,7 +177,17 @@ components: {
 
 _local.vue_
 ```html
-<cdr-button>I'm a button</cdr-button>
+<cdr-button space="cdr-mb-space-one-x">I'm a button</cdr-button>
+```
+
+4. Load Cedar CSS assets in your main CSS file:
+
+_index.scss_
+```css
+/* import the space utility classes (i.e, cs-mb-space-one-x) */
+@import url('@rei/cedar/dist/style/space.css');
+/* import the button CSS file */
+@import url('@rei/cedar/dist/style/cdr-button.css');
 ```
 
 **Final file:**
@@ -169,7 +195,7 @@ _local.vue_
 _local.vue_
 ```html
 <template>
-    <cdr-button>I'm a button</cdr-button>
+    <cdr-button space="cdr-mb-space-one-x">I'm a button</cdr-button>
 </template>
 
 <script>
@@ -181,6 +207,12 @@ export default {
   }
 }
 </script>
+```
+
+_index.scss_
+```css
+@import url('@rei/cedar/dist/style/space.css');
+@import url('@rei/cedar/dist/style/cdr-button.css');
 ```
 
 #### Configure Component Props
@@ -200,15 +232,15 @@ Props can be [static or dynamic](https://vuejs.org/v2/guide/components-props.htm
 
 Prop names are also documented and referenced in JavaScript as camel case, but [used in the template as kebab-case](https://vuejs.org/v2/guide/components-props.html#Prop-Casing-camelCase-vs-kebab-case).
 
-In this example, the `responsiveSize` prop accepts an array of strings denoting size at different breakpoints. Note that `responsiveSize` is used as `responsive-size` in the template.
+In this example, the `size` prop accepts a string denoting size at different breakpoints.
 
 ```html
-<cdr-button :responsive-size="['small@xs', 'large@sm']">I'm a responsive button</cdr-button>
+<cdr-button size="small@xs large@sm">I'm a responsive button</cdr-button>
 ```
 
 #### Add Content Using Slots
 
-Some components use slots for content distribution. Most components will have a single default slot; others will have named slots. Slots are listed as part of the API for all components. For more information about slots, read [Vue's Slots documentation](https://vuejs.org/v2/guide/components-slots.html).
+Some components use slots for content distribution. Most components will have a single default slot; others will have named slots or scoped slots. Slots are listed as part of the API for all components. For more information about slots, read [Vue's Slots documentation](https://vuejs.org/v2/guide/components-slots.html).
 
 Adding content to a default slot
 
@@ -242,7 +274,7 @@ Adding content to a scoped slot
 <hr>
 
 ### CSS Modules and Custom Class Names
-Component CSS class names are [CSS Modules](https://github.com/css-modules/css-modules) that reflect the package version. For example, `CdrButton@0.2.0` will have classes that end in ‘_0-2-0’. This allows the possibility of components at different versions to live together without having CSS class name collisions.
+Component CSS class names use [CSS Modules](https://github.com/css-modules/css-modules) that reflect the package version. For example, `@rei/cedar@42.1.3` will have classes that end in `_42.1.3`. This allows for multiple versions of Cedar to be used together on the same page.
 
 Never use Cedar class names within your own CSS or target them in JavaScript; they will change as you upgrade the package and break any functionality or styling you attach to them.
 

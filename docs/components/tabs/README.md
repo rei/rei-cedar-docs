@@ -88,7 +88,7 @@
                 "name": "modifier",
                 "type": "string",
                 "default": "N/A",
-                "description": "Modifies the style variants for this component. Possible values: {  'compact'  |  'full-width'  |  'no-border'  }"
+                "description": "Modifies the style variants for this component. Possible values: {  'centered'  |  'compact'  |  'full-width'  |  'no-border'  }"
               }
             ],
             "events": [
@@ -169,7 +169,7 @@ Reduced spacing around the tab buttons to create a denser visual design.
 
 Tab buttons space evenly across the container.
 
-<cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
+<cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false">
 
 ```html
 <cdr-tabs modifier="full-width" height="100px">
@@ -186,10 +186,27 @@ Tab buttons space evenly across the container.
 
 Bottom border of tab header list is removed.
 
-<cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
+<cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false">
 
 ```html
 <cdr-tabs modifier="no-border" height="100px">
+  <cdr-tab-panel name="Product">Tab 1 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Articles">Tab 2 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Classes & Events">Tab 3 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Videos">Tab 4 Content</cdr-tab-panel>
+</cdr-tabs>
+```
+
+</cdr-doc-example-code-pair>
+
+## Centered
+
+Centered tab header content
+
+<cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false">
+
+```html
+<cdr-tabs modifier="centered" height="100px">
   <cdr-tab-panel name="Product">Tab 1 Content</cdr-tab-panel>
   <cdr-tab-panel name="Articles">Tab 2 Content</cdr-tab-panel>
   <cdr-tab-panel name="Classes & Events">Tab 3 Content</cdr-tab-panel>
@@ -333,6 +350,7 @@ The `cdr-tab-panel name` property sets the tab display value and is used for ref
 Following variants are available to the `cdr-tabs` modifier attribute:
 | Value        | Description            |
 |:-------------|:-----------------------|
+| 'centered'   | Centers the tab header content |
 | 'compact'    | Sets the tabs styling for smaller screen sizes |
 | 'full-width' | Sets the tab header to display evenly across the entire width instead of left justified |
 | 'no-border'  | Removes the bottom border of the tabs header |

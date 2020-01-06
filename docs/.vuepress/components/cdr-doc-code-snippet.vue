@@ -101,6 +101,7 @@ export default {
       copyNotSupported: false,
       codeHidden: false,
       hideCodeToggleText: 'Hide code',
+      sandboxCode: {},
       repositoryRoot: 'https://github.com/rei/rei-cedar/tree/19.02.1'
     }
   },
@@ -108,9 +109,14 @@ export default {
     this.codeHidden = this.hideCode;
     this.setCodeToggleText();
   },
+  mounted() {
+    this.sandboxCode = {
+      code: this.$refs.source.querySelector('code').textContent,
+    }
+  },
   computed: {
     sandboxHrefComputed() {
-      return this.sandboxHref || buildSandbox(this.sandboxData, this.model);
+      return this.sandboxHref || buildSandbox(Object.assign({}, this.sandboxCode, this.sandboxData), this.model);
     }
   },
   methods: {
@@ -322,7 +328,7 @@ export default {
   }
 
   .cdr-doc-snippet__hide-code-toggle {
-    @include redwood-display-20;
+    @include cdr-text-utility-200;
     border: 0;
     background: none;
     color: $cdr-doc-text-color-primary;

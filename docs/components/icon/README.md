@@ -102,16 +102,6 @@
                 "type": "boolean",
                 "default": "false",
                 "description": "Sets icon fill color to 'inherit'.",
-              },
-              {
-                "name": "modifier",
-                "type": "string",
-                "default": "N/A",
-                "description": "Modifies the style variant for this component.",
-                "alert": {
-                  "type": "deprecated",
-                  "description": "Deprecated in v2.0.0. Moved sized values to 'size' prop. Added 'inherit-color' prop."
-                }
               }
             ],
             "slots": [
@@ -133,9 +123,22 @@
 <template slot="Overview">
 <cdr-doc-table-of-contents-shell>
 
+## Inline Icon Components
+
+The inline icon components are the recommended method for using Cedar icons in a Vue application. Cedar exports a component version of every SVG Icon in the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/). These components are named using PascalCase, for example `account-profile` becomes `IconAccountProfile` or `camping` becomes `IconCamping`.
+
+<cdr-doc-example-code-pair repository-href="/src/components/icon" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'IconAccountProfile, IconCamera'})">
+
+```html
+  <IconAccountProfile />
+  <IconCamera />
+```
+
+</cdr-doc-example-code-pair>
+
 ## SVG Sprite
 
-A collection of SVG icon files composed into a single file. This method provides a single server download request and caches icons for display. This is the most efficient way of displaying large numbers of icons.
+A collection of SVG icon files composed into a single file. This method provides a single server download request and caches icons for display. This is the most efficient way of displaying large numbers of icons, but has an added maintenance cost in that every icon used in the application must be manually added to it's sprite sheet. We recommend using the [inline icon components](#inline-icon-components), and optimizing to use a sprite only if it would provide a measurable performance benefit.
 
 See the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) to generate a sprite sheet for your project. You will need to ensure that your sprite contains all the Cedar icons used in your application, including those used in shared components. The generated sprite sheet should be rendered inline at the root of your HTML. You should avoid rendering the sprite sheet in JavaScript/Vue, as that will cause it to be included twice (once in the server rendered HTML, and once in the client side bundle).
 
@@ -147,6 +150,8 @@ See the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) to generate a
 ```
 
 </cdr-doc-example-code-pair>
+
+
 
 ## Non-Cedar SVG
 

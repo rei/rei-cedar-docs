@@ -10,7 +10,7 @@ $side-navigation-width-sm: $side-navigation-logo-width + 24px;
 html,
 body {
   color: $cdr-doc-text-color-primary;
-  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $cdr-font-family-sans;
   margin: 0;
   padding: 0;
 }

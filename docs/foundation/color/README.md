@@ -325,7 +325,7 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
 <template slot="Brand Palette">
 <cdr-doc-table-of-contents-shell>
 
-<cdr-doc-alert icon="warning"><strong>These values should not be used standalone to create custom UI.</strong></cdr-doc-alert>
+<cdr-doc-alert icon="warning">These values should not be used standalone to create custom UI.</cdr-doc-alert>
 
 Colors from REI’s brand color palette are used throughout Cedar components and design recommendations. 
 

@@ -145,6 +145,7 @@ Apply rules to an image using ratio and crop properties. The below example is cr
   alt="REI employees building trails during a stewardship event"
   ratio="9-16"
   crop="top"
+  cover
 />
 ```
 </cdr-doc-example-code-pair>
@@ -367,9 +368,10 @@ Images are cropped on y-axis with bottom value and on x-axis with left, x-center
 
 ## Props
 
+This component will bind any attribute that a [native HTML img element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) accepts.
+
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-Any other properties supplied will be assigned to the root element (native element).
 
 ## Slots
 
