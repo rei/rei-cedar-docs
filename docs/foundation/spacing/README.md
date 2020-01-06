@@ -12,7 +12,6 @@
 }
 ---
 
-<cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
 
 ## Guidelines
 
@@ -33,5 +32,3 @@ The Cedar spacing system is based on 16px units. The scaling system uses fractio
 | 4 spaces            | 64px                | 6.4rem            |
 
 For more information about using Cedar's spacing system and layout usage guidance, visit the [Spacing](../../layout/spacing) article.
-
-</cdr-doc-table-of-contents-shell>

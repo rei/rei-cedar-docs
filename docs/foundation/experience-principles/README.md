@@ -12,7 +12,6 @@
 }
 ---
 
-<cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
 
 These principles are meant to give us a shared vocabulary for translating the brand into the digital experiences and products we create. Each principle can be used as a filter to make choices and inform the digital expression; from content and interface to micro-interactions and motion.  They will help us remain focused on the things that matter for our customers, are differentiating for REI, and result in experiences that help people do the things they love.
 
@@ -55,5 +54,3 @@ We make it easy for all customers. The experience is consistent, predictable, an
 For 80 years we’ve stood behind our gear. We’ve become famous not just for our quality but also our service and expertise. Our customers have come to trust the knowledge of a green vest just as they trust the ice axe in their hand.
 
 We work to earn the same trust in our digital experiences through our continual drive for quality and consistency and reliability across the digital ecosystem. Our expertise is expressed in an approachable way but backed by an unrelenting drive to nurture a love of the outdoors in every customer.
-
-</cdr-doc-table-of-contents-shell>
