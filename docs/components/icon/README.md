@@ -102,16 +102,6 @@
                 "type": "boolean",
                 "default": "false",
                 "description": "Sets icon fill color to 'inherit'.",
-              },
-              {
-                "name": "modifier",
-                "type": "string",
-                "default": "N/A",
-                "description": "Modifies the style variant for this component.",
-                "alert": {
-                  "type": "deprecated",
-                  "description": "Deprecated in v2.0.0. Moved sized values to 'size' prop. Added 'inherit-color' prop."
-                }
               }
             ],
             "slots": [
