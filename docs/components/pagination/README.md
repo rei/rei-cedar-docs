@@ -138,26 +138,6 @@ At the sm, md, and lg breakpoints, pagination displays as a list of number text 
 
 The scoped slots can be used to override the default links rendered in the pagination. Useful for integrating with client-side routing, as a `router-link` can be rendered instead of a plain `a` tag. Pagination exposes 3 link scopedSlots: `link`, `prevLink`, and `nextLink`.
 
-<<<<<<< HEAD
-The `link` slot scope contains the following attributes:
-- `class`: A class to be applied to the link in order to match pagination styling
-- `href`: Href that the link points to by default
-- `aria-label`: Default aria-label for this link
-- `aria-current`: Is `true` if this link is the current page
-- `page`: The page number that corresponds to this link
-   **Note:** You must manually update your v-model attribute to be the value of `page` whenever this link is clicked.
-- `content`: The default content for that link
-
-The `prevLink` and `nextLink` slot scopes contain the following attributes:
-- `class`: A class to be applied to the link in order to match pagination styling
-- `href`: Href that the link points to by default
-- `aria-label`: Default aria-label for this link
-- `iconClass`: A class to be applied to the prev/next arrow icon in order to match pagination styling
-- `iconPath`: The path to the icon in the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) used for this link
-- `page`: The page number that corresponds to this link
-   **Note:** You must manually update your v-model attribute to be the value of `page` whenever this link is clicked.
-- `content`: The default content for that link
-=======
 The 'link' slot scope exposes the following prop object:
 
 ```js
@@ -209,7 +189,6 @@ click,
 - `iconPath`: the path to the icon in the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) used for this link
 - `iconComponent`: name of the component used for this link 
 - `click`: function ran when element is clicked. Required for internal component behavior
->>>>>>> next
 
 <cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ page: 2, pages: [{page: 1, url: '1'}, {page: 2, url: '2'}, {page: 3, url: '3'}] }">
 
