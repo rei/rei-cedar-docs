@@ -1,16 +1,13 @@
 <template>
-  <div class="cdr-doc-table-of-contents-shell" :class="'cdr-doc-table-of-contents-shell--' + instanceId">
-    <div class="cdr-doc-table-of-contents-shell__content">
-      <slot/>
-    </div>
-    <div class="cdr-doc-table-of-contents-shell__navigation">
-      <cdr-doc-local-anchor-nav
-        :tab-name="tabName"
-        :parent-selectors="parentSelectors"
-        :child-selectors="childSelectors"
-        :links="links"
-        :appended-items="appendedNavItems"/>
-    </div>
+  <div class="cdr-doc-table-of-contents-shell">
+    <cdr-doc-local-anchor-nav
+      :tab-name="tabName"
+      :parent-selectors="parentSelectors"
+      :child-selectors="childSelectors"
+      :links="links"
+      :appended-items="appendedNavItems"/>
+
+    <slot/>
   </div>
 </template>
 
@@ -29,11 +26,18 @@ export default {
     tabName: {
       type: [String, Boolean],
       default: false
-    }
+    },
+    parentSelector: {
+      type: String,
+      default: 'h1'
+    },
+    childSelector: {
+      type: String,
+      default: 'h2'
+    },
   },
   data() {
     return {
-      instanceId: null,
       links: [
         {
           href: '#',
@@ -44,14 +48,11 @@ export default {
   },
   computed: {
     parentSelectors() {
-      return `.cdr-doc-table-of-contents-shell--${this.instanceId} .cdr-doc-table-of-contents-shell__content h2`
+      return `.cdr-doc-table-of-contents-shell ${this.parentSelector}`
     },
     childSelectors() {
-      return `.cdr-doc-table-of-contents-shell--${this.instanceId} .cdr-doc-table-of-contents-shell__content h3`
+      return `.cdr-doc-table-of-contents-shell ${this.childSelector}`
     },
-  },
-  beforeMount() {
-    this.instanceId = this.instanceId || this._uid;
   },
   mounted() {
     this.createAnchorsFromContent();
@@ -121,23 +122,23 @@ export default {
   @import '../theme/styles/cdr-tokens.scss';
   @import '../theme/styles/cdr-doc-tokens.scss';
   @import '../theme/styles/cdr-doc-mixins.scss';
-  
+
   .cdr-doc-table-of-contents-shell {
-    display: flex;
-  }
-
-  .cdr-doc-table-of-contents-shell__content {
     @include cdr-doc-long-form-text;
-    border-right: $cdr-doc-border-separator;
-    padding-right: 24px; // Not a token?
-    margin-right: 24px; // Not a token?
-    min-width: 0;
-    flex: 1 1 100%;
+    margin: 0 auto;
+    max-width: $cdr-doc-content-max-width;
+    padding-top: $cdr-space-two-x;
+    padding-bottom: $cdr-doc-long-form-text-top-and-bottom-inset-space;
+
+    @media (max-width: $cdr-breakpoint-lg) {
+      margin: 0 $cdr-space-two-x;
+      max-width: 700px;
+    }
+
+    @media (max-width: $cdr-breakpoint-xs) {
+      margin: 0 $cdr-space-one-x;
+      max-width: 500px;
+    }
   }
 
-  .cdr-doc-table-of-contents-shell__navigation {
-    flex-shrink: 0;
-    min-width: 0;
-    width: 131px;
-  }
 </style>

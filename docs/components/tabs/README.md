@@ -126,9 +126,9 @@
 }
 ---
 
-<cdr-doc-tabs>
-<template slot="Overview">
+
 <cdr-doc-table-of-contents-shell>
+# Overview
 
 ## Default
 Tab buttons align left and bottom border expands to full width of container.
@@ -233,11 +233,9 @@ This component has compliance with WCAG guidelines by:
 - Includes tab role in tab header element
 - Includes tabpanel role in tab content element
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="Guidelines">
-<cdr-doc-table-of-contents-shell>
+# Guidelines
 
 ## Use When
 
@@ -297,11 +295,9 @@ This component has compliance with WCAG guidelines by:
 - Maintain layout for tabs when switching to smaller viewports. Do not replace the tab component with the accordion component
 - Switching between tab component and accordion component is not supported in Cedar components library
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
+# API
 
 Tabs are built from two components, **CdrTabs** and **CdrTabPanel**, which are meant to be used together.
 
@@ -340,6 +336,3 @@ Following variants are available to the `cdr-tabs` modifier attribute:
 | 'no-border'  | Removes the bottom border of the tabs header |
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>

@@ -12,7 +12,7 @@
 }
 ---
 
-<cdr-doc-table-of-contents-shell>
+<cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
 
 
 ## Update Steps
@@ -38,6 +38,7 @@ If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade
 TODO: what did we release
 - Body typography
 - heading/subheading sans/serif (note that heading/subheading are deprecated)
+- install fonts via self service
 
 ### Decomposed CSS Output
 
@@ -168,7 +169,7 @@ CdrPagination functionality has been simplified and only emits a single `navigat
 
 API for scoped slots now uses an `attrs` object for easier binding.
 
-## Typography
+### Typography
 
 The root class `cdr-text` now has all attributes mapped to `inherit`. This change was necessary and
 allows for descendant selectors to inherit the font settings of the parent.
@@ -279,13 +280,7 @@ Note that this has been altered from the paragraph style to the `cdr-text--utili
 |-----------------------|-----------------------|
 | cdr-text-body         | cdr-text-body-300     |
 
-## Removals
-
-In accordance with our deprecation policy, features that were deprecated in the [Summer 2019 release](https://rei.github.io/rei-cedar-docs/release-notes/summer-2019/#revisions-for-spacing-utility-classes) have been removed from Cedar.
-
-- Deprecated spacing utilities (`cdr-stack`, `cdr-inset`, `cdr-inline`) should be replaced with the new [`cdr-space` utilities](https://rei.github.io/rei-cedar-docs/components/utilities/?active-link=spacing). See [Summer 2019 release notes](https://rei.github.io/rei-cedar-docs/release-notes/summer-2019/#revisions-for-spacing-utility-classes) for more info on updating.
-
-## Updated Deprecation Mappings
+### Updated Deprecation Mappings
 
 We have updated the recommended mappings for some features that were deprecated in the [Fall 2019 release](https://rei.github.io/rei-cedar-docs/release-notes/fall-2019/#deprecations).
 
@@ -313,5 +308,10 @@ We have updated the recommended mappings for some features that were deprecated 
 | heading-small-static     | heading--sans-400                                |
 | subheading               | subheading--sans-300                             |
 
+### Removals
+
+In accordance with our deprecation policy, features that were deprecated in the [Summer 2019 release](https://rei.github.io/rei-cedar-docs/release-notes/summer-2019/#revisions-for-spacing-utility-classes) have been removed from Cedar.
+
+- Deprecated spacing utilities (`cdr-stack`, `cdr-inset`, `cdr-inline`) should be replaced with the new [`cdr-space` utilities](https://rei.github.io/rei-cedar-docs/components/utilities/?active-link=spacing). See [Summer 2019 release notes](https://rei.github.io/rei-cedar-docs/release-notes/summer-2019/#revisions-for-spacing-utility-classes) for more info on updating.
 
 </cdr-doc-table-of-contents-shell>

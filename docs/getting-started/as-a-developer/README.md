@@ -11,7 +11,7 @@
 }
 ---
 
-<cdr-doc-table-of-contents-shell>
+<cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
 
 ## Cedar + Vue
 Cedar components are built using [Vue](https://vuejs.org) and can only be used in Vue projects.

@@ -212,9 +212,9 @@
 }
 ---
 
-<cdr-doc-tabs>
-<template slot="Overview">
-<cdr-doc-table-of-contents-shell tab-name="Overview">
+
+<cdr-doc-table-of-contents-shell>
+# Overview
 
 ## Default
 
@@ -316,11 +316,9 @@ This component has compliance with WCAG guidelines by:
   - Providing `<caption>` element for data tables
   - Providing `<th>` element for row or column headers
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="Guidelines">
-  <cdr-doc-table-of-contents-shell>
+# Guidelines
 
 ## Use When
 
@@ -410,13 +408,9 @@ Data Table must have row headers and more than two columns of content, then the 
 - Content will not scroll
 - Text within table cells will wrap to fit the smaller container (or viewport)
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-
-
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
+# API
 
 ## Props
 
@@ -435,7 +429,7 @@ The simplest way to use **CdrDataTable** is using the props API. The below examp
 - The data props (`colHeaders`, `rowHeaders`, `rowData`) are used
 - `keyOrder` determines values displayed in each cell. The array order must match the `colHeaders` or column order
 
-The locked-column behavior described in the [design guidelines](../data-tables/?active-tab=design-guidelines&active-link=responsiveness) is available only when using the props API.
+The locked-column behavior described in the [design guidelines](../data-tables/#responsiveness) is available only when using the props API.
 
 ```vue
 <template>
@@ -611,6 +605,3 @@ Following variants are available to the `cdr-data-table` modifier attribute:
 | 'borderless' | Removes cell borders |
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>

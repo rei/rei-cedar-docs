@@ -22,26 +22,26 @@
   }
 }
 ---
-<cdr-doc-table-of-contents-shell>
+<cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
 
 ## Overview
 
 Cedar provides easy-to-use, preset values to apply consistent motion for components. Motion tokens help maintain a cohesive experience across all REI properties by:
 - Stores motion attributes for duration or timing using variable names, not hard-coded values such as cubic-bezier (0.15, 0, 0.15, 0)
 - Specifies a hierarchical and semantically-defined system
-  
+
 <hr>  
 
 Motion tokens are primarily used with web applications. Motion tokens for mobile devices are not currently available.
 
-  
+
 ### Duration
 - Animated components use short time durations so interactions feel responsive and succinct
 - Recommended range for animated durations is from 100ms to 600ms
 - Striking a balance is key - slow enough to comprehend and fast enough to respect the customer’s time
 - From Nielsen Norman Group research:
   - 100ms is perceived as instant. Users feel that they are directly causing something to happen on the screen
-  - Delays between 100ms and 1 second gives users the impression that the website is working and causing the result to appear 
+  - Delays between 100ms and 1 second gives users the impression that the website is working and causing the result to appear
 
  <br/>
 
@@ -60,7 +60,7 @@ Cedar’s collection of easings are based on physics found in the natural world.
 <br />
 <hr>
 
-#### Comparison of Timing Tokens 
+#### Comparison of Timing Tokens
 
 <tokens-motion motion-type="timing" :comparison-view="true" />
 
@@ -73,13 +73,13 @@ Cedar motion is purposefully designed to enhance the customer's understanding of
 
 <hr>
 
-### Use When 
+### Use When
 
 - Reducing cognitive load. For example, when a product image slides to reveal the next or previous product image after a user clicks on a directional arrow
-- Attracting the user’s attention. For example, when a toast message moves down from the top browser bar for region-specific warning messages 
+- Attracting the user’s attention. For example, when a toast message moves down from the top browser bar for region-specific warning messages
 - Providing context with transitions of a single object. For example, rotating an arrow icon to show an accordion panel opening and closing
-- Showing continuity through the system with transitions between objects. For example, using animation to reveal a modal window 
-- Keeping users interested during loading or long processing times by providing delightful animations 
+- Showing continuity through the system with transitions between objects. For example, using animation to reveal a modal window
+- Keeping users interested during loading or long processing times by providing delightful animations
 
 <br>
 
@@ -98,7 +98,7 @@ Cedar motion is purposefully designed to enhance the customer's understanding of
 ### Interface Patterns
 #### Transitions
 Use the transition pattern when:
-- Moving users from one page to another page 
+- Moving users from one page to another page
 - Transition out of one task to another
 - Replacing large portions of information
 
@@ -130,7 +130,7 @@ Use the transition pattern when:
 
 <br/>
 
-#### Supplements 
+#### Supplements
 Use the supplements pattern when:
 - Bringing information on or off of the page without changing the user's location
 - Adding or updating bits of additional content on the page
@@ -188,7 +188,7 @@ There are currently no animations on the REI site that are demonstrations. An ex
 
 #### Decorations
 Use the decorations pattern when:
-- Creating an emotional connection between the interface and the user 
+- Creating an emotional connection between the interface and the user
 - Sparking visual interest by keeping the user engaged
 - Delighting a user's experience without conveying new information
 
@@ -202,16 +202,16 @@ There are no animations on the REI site that are decorative. For examples of dec
 CSS animation frame rate for interface elements is dependent on the speed of the browser and computer:
 
 - For animations running at less than 15fps, users will not be able to see continuous motion
-- Most devices refresh their screen at 60 times a second 
+- Most devices refresh their screen at 60 times a second
 
 For smooth and responsive animation, use CSS attributes for:
 - **Position:** Using transform property for `translate()`, to reposition an element in the horizontal or vertical directions
 - **Scale:** Using transform property for `scale()`, to resize an element on 2D plane
-- **Rotation:** Using transform property for `rotate()`, to rotate an element on x, y, or z axis 
+- **Rotation:** Using transform property for `rotate()`, to rotate an element on x, y, or z axis
 - **Skew:** Using transform property for `skew()`, to distort an element on the 2D plane
 - **Opacity:** Specifies the opacity or transparency of an element with values from 0.0 - 1.0. Lower values cause the element to be more transparent
 
-For more information, view [Adding Tokens to the Repository](../../components/design-tokens/?active-link=adding-tokens-to-the-repository).
+For more information, view [Adding Tokens to the Repository](../../components/design-tokens/#adding-tokens-to-the-repository).
 
 
 <br>

@@ -11,7 +11,7 @@
 }
 ---
 
-<cdr-doc-table-of-contents-shell>
+<cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
 
 Cedar supports multiple tools and consumption methods. Reference the information below for an overview of the system parts and determine how to use Cedar in your project.
 
@@ -23,7 +23,7 @@ The Sketch UI Toolkit maintained by Cedar includes all published components and 
 For more information about using the UI Toolkit, visit the [Getting Started for Designers](../as-a-designer/) article.
 
 ### Design Tokens
-Design tokens are special variables used to maintain a scalable visual system for UI development and brand consistency. Cedar design tokens store the visual design attributes that define the foundation of REI’s visual language, including color, typography, and spacing. 
+Design tokens are special variables used to maintain a scalable visual system for UI development and brand consistency. Cedar design tokens store the visual design attributes that define the foundation of REI’s visual language, including color, typography, and spacing.
 
 For example:
 `cdr-color-text-primary-lightmode` would be used to set the primary text color on a light background.
@@ -35,7 +35,7 @@ Components use Cedar’s tokens and design foundations to distribute code templa
 These custom markup elements represent specific portions of the user interface. When used in your application, they will help ensure the UI remains consistent with REI’s digital display standards.
 
 For example:
-`<cdr-link href=”rei.com”>CdrLink Component</cdr-link>` 
+`<cdr-link href=”rei.com”>CdrLink Component</cdr-link>`
 
 ### Component Variables
 Component variables are available for a subset of Cedar components. These SCSS or LESS mixins extend design tokens and define additional specific variables that are used to display Cedar components.  
@@ -55,9 +55,9 @@ Find the list of Utility classes in the [Utilities](../../components/utilities/)
 
 
 ### Documentation Site
-The documentation for each component and foundational style includes design guidelines, do’s and don’ts, considerations for accessibility, and API instructions for developers. 
+The documentation for each component and foundational style includes design guidelines, do’s and don’ts, considerations for accessibility, and API instructions for developers.
 
-## Dev Tools Comparison Chart 
+## Dev Tools Comparison Chart
 
 <table class="table-vertical-align">
   <thead>

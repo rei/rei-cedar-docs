@@ -11,7 +11,7 @@
 }
 ---
 
-<cdr-doc-table-of-contents-shell>
+<cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
 
 The Cedar UI Sketch Toolkit provides tools and processes to communicate Cedar component and token usage in Sketch design assets. Designers using the Cedar Toolkit to build mockups and redlines will be creating annotated, inspectable, web-sharable assets to facilitate the developer handoff process.
 
@@ -22,7 +22,8 @@ If you’re a developer, you can skip to the [review handoff section](#review-of
 
 
 
-## Designers – Design with These Goals in Mind:
+## Designers
+Design with These Goals in Mind:
 - [Setup](#artboard-setup): A set of up to 4 artboards for each screen, one for each responsive breakpoint. See recommended artboard widths. Follow the Cedar 12-column grid layout
 - [Design](#create-your-design): Construct your designs mostly from symbols, layer styles, and text styles available through Cedar UI Toolkit
 - [Redline](#redlining): Add spacing and inset or padding grid token overlays to visualize whitespace. Also see Redlining Tips for additional info
@@ -68,7 +69,7 @@ A Global Header & Footer library is also available in the Cedar Toolkit to help 
 
 
 
-## Redlining
+### Redlining
 
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/300-Redlining.png`)"/>
 
@@ -80,7 +81,7 @@ You can view an example of the [Responsive Layout Handoff Collection](https://sh
 
 
 
-## Handoff
+### Handoff
 After redlining is complete, make an [Abstract Collection](https://www.abstract.com/help/collaboration/collections/) of artboards to handoff to the front-end developers.
 
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/400-Sharing.png`)"/>
@@ -105,7 +106,7 @@ __Note:__ If your design is split onto multiple pages, you may need to repeat st
 
 
 
-## Redlining Tips for Designers
+### Redlining Tips for Designers
 - Align all text to the object-bounding box, not to the text baseline or cap height
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/600-type-object-alignment.png`)"/>
 - Add vertical spacing symbols in between elements you want spaced, select all the elements you want to stack vertically, click __Tidy__, and change the vertical space to 0
@@ -186,7 +187,7 @@ Text Styles contain both the Text Style mixin and the text color to be applied. 
 
 
 ### Icons
-Icon names will appear in the Layers list. Go to the [icon library](https://rei.github.io/cedar-icons) to see if this icon is publicly available. If the icon is custom, please export it from Sketch using [CDR icon export guide](../../icons/resources/?active-link=exporting-icons-that-aren%E2%80%99t-in-the-library). For more information about icon usage, see the [Iconography](../../icons/iconography/) article and the [cdr-icon component](../../components/icon/).
+Icon names will appear in the Layers list. Go to the [icon library](https://rei.github.io/cedar-icons) to see if this icon is publicly available. If the icon is custom, please export it from Sketch using [CDR icon export guide](../../icons/resources/#exporting-icons-that-aren%E2%80%99t-in-the-library). For more information about icon usage, see the [Iconography](../../icons/iconography/) article and the [cdr-icon component](../../components/icon/).
 
 <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/1700-icons.png`)"/>
 
