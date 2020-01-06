@@ -1,8 +1,10 @@
 <template>
   <nav class="cdr-doc-local-anchor-nav" ref="localNav">
-    <cdr-list modifier="inline" v-for="groupedLinks in linksGroupedByHeading">
-      <li v-for="link in groupedLinks" class="cdr-doc-local-anchor-nav__list">
+    <cdr-list v-for="groupedLinks in linksGroupedByHeading" class="cdr-doc-local-anchor-nav__list">
+      <li v-for="link in groupedLinks" class="cdr-doc-local-anchor-nav__list-item">
+        <span class="cdr-doc-local-anchor-nav__header" v-if="!link.href">{{ link.text }}</span>
         <cdr-link
+            v-else
             :class="{
                 'cdr-doc-local-anchor-nav__link--parent': !link.isChild,
                 'cdr-doc-local-anchor-nav__link--child': link.isChild,
@@ -11,17 +13,6 @@
             :href="link.href">
           {{ link.text }}
         </cdr-link>
-      </li>
-    </cdr-list>
-    <cdr-list v-if="pageData.see_also && pageData.see_also.length > 0" modifier="inline">
-      <li v-for="item in pageData.see_also" class="cdr-doc-local-anchor-nav__list">
-        <cdr-link
-          v-if="item.href"
-          modifier="standalone"
-          class="cdr-doc-local-anchor-nav__appended-item-link"
-          :href="item.href"
-        >{{ item.text }}</cdr-link>
-        <span class="cdr-doc-local-anchor-nav__appended-item-header" v-if="!item.href">{{ item.text }}</span>
       </li>
     </cdr-list>
   </nav>
@@ -71,9 +62,22 @@ export default {
     pageData () {
       return this.$page.frontmatter
     },
+    seeAlsoLinks() {
+      // convert "see_also" content to match link API
+      return (this.pageData.see_also || []).map(item => {
+        item.isChild = !!item.href;
+        return item;
+      });
+    },
     linksGroupedByHeading() {
-      return this.links.reduce(function (arr, link) {
-        if (!link.isChild) arr.push([]);
+      // combine all the links, grouped by header
+      // [[overview links], [guideline links], [api links], [see also links]]
+      return this.links.concat(this.seeAlsoLinks).reduce(function (arr, link) {
+        // link is a header, create a new bucket. add colon to header text
+        if (!link.isChild) {
+          arr.push([]);
+          link.text += ':';
+        }
         arr[arr.length - 1].push(link);
         return arr;
       }, []);
@@ -88,13 +92,16 @@ export default {
   .cdr-doc-local-anchor-nav {
     overflow-y: auto;
     padding-top: $cdr-space-half-x;
-    // margin: $cdr-space-two-x;
   }
   .cdr-doc-local-anchor-nav__list {
-      margin-bottom: $cdr-space-one-x;
+    margin-bottom: $cdr-space-one-x;
+  }
+  .cdr-doc-local-anchor-nav__list-item {
+    display: inline-block;
+    margin-right: $cdr-space-one-x;
   }
   .cdr-doc-local-anchor-nav__link--parent {
-    @include cdr-text-utility-strong-300;
+    @include cdr-text-subheading-300;
   }
 
   .cdr-doc-local-anchor-nav__link--child {
