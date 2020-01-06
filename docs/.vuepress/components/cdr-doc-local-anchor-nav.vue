@@ -2,7 +2,9 @@
   <nav class="cdr-doc-local-anchor-nav" ref="localNav">
     <cdr-list v-for="groupedLinks in linksGroupedByHeading" class="cdr-doc-local-anchor-nav__list">
       <li v-for="link in groupedLinks" class="cdr-doc-local-anchor-nav__list-item">
-        <span class="cdr-doc-local-anchor-nav__header" v-if="!link.href">{{ link.text }}</span>
+        <span class="cdr-doc-local-anchor-nav__header" v-if="!link.href">
+          {{ link.text }}{{ groupedLinks.length > 1 ? ':' : '' }}
+        </span>
         <cdr-link
             v-else
             :class="{
@@ -11,7 +13,7 @@
             }"
             modifier="standalone"
             :href="link.href">
-          {{ link.text }}
+          {{ link.text }}{{ !link.isChild && groupedLinks.length > 1 ? ':' : '' }}
         </cdr-link>
       </li>
     </cdr-list>
@@ -73,10 +75,9 @@ export default {
       // combine all the links, grouped by header
       // [[overview links], [guideline links], [api links], [see also links]]
       return this.links.concat(this.seeAlsoLinks).reduce(function (arr, link) {
-        // link is a header, create a new bucket. add colon to header text
+        // link is a header, create a new bucket.
         if (!link.isChild) {
           arr.push([]);
-          link.text += ':';
         }
         arr[arr.length - 1].push(link);
         return arr;
