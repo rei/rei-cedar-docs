@@ -121,21 +121,7 @@
                 "name": "size",
                 "type": "string",
                 "default": "'medium'",
-                "description": "Sets the button size; values can target responsive breakpoints. Breakpoint values are: xs, sm, md, and lg. Examples: { 'small' | 'medium' | 'large' | 'large@sm' }",
-                "alert": {
-                  "type": "updated",
-                  "description": "Updated in v.2.0.0. See usage examples below."
-                }
-              },
-              {
-                "name": "responsiveSize",
-                "type": "array",
-                "default": "N/A",
-                "description": "Sets the button size at different responsive breakpoints. Breakpoints values are: xs, sm, md, and lg. Examples: { ‘large@xs’ | ‘small@lg’ }",
-                "alert": {
-                  "type": "deprecated",
-                  "description": "Deprecated in v2.0.0. Instead, use 'size' prop."
-                }
+                "description": "Sets the button size; values can target responsive breakpoints. Breakpoint values are: xs, sm, md, and lg. Examples: { 'small' | 'medium' | 'large' | 'large@sm' }"
               },
               {
                 "name": "iconOnly",
