@@ -20,15 +20,15 @@
   "position": [
     {
       "type": "do",
-      "image": "block-quote/quotes_block__do__9-16.png",
-      "ratio": "9-16",
+      "image": "block-quote/quotes_block__do.png",
+      "ratio": "3-2",
       "alt": "Image showing proper block quote use.",
       "caption": "position the quote near the surrounding text."
     },
     {
       "type": "dont",
-      "image": "block-quote/quotes_block__random__dont_9-16.png",
-      "ratio": "9-16",
+      "image": "block-quote/quotes_block_position_dont.png",
+      "ratio": "3-2",
       "alt": "Image showing random block quotes in an article",
       "caption": "position quotes in a random location on the page."
     }
@@ -36,15 +36,15 @@
   "indenting": [
     {
       "type": "do",
-      "image": "block-quote/quotes_block__do__9-16.png",
-      "ratio": "9-16",
+      "image": "block-quote/quotes_block__do.png",
+      "ratio": "3-2",
       "alt": "Image showing proper block quote use.",
       "caption": "use for emphasizing content or additional content."
     },
     {
       "type": "dont",
-      "image": "block-quote/quotes_block__indent_text__dont_9-16.png",
-      "ratio": "9-16",
+      "image": "block-quote/quotes_block_indent_dont.png",
+      "ratio": "3-2",
       "alt": "Image showing random block quotes in an article",
       "caption": "use for indenting text content."
     }
@@ -52,15 +52,15 @@
   "too_many": [
     {
       "type": "do",
-      "image": "block-quote/quotes_block__do__9-16.png",
-      "ratio": "9-16",
+      "image": "block-quote/quotes_block__do.png",
+      "ratio": "3-2",
       "alt": "Image showing proper block quote position.",
       "caption": "position quotes so users can visually scan the page."
     },
     {
       "type": "dont",
-      "image": "block-quote/quotes_block__too_many__dont_9-16.png",
-      "ratio": "9-16",
+      "image": "block-quote/quotes_block_too_many_dont.png",
+      "ratio": "3-2",
       "alt": "Image showing too many block quotes in an article",
       "caption": "use too many block quotes."
     }
@@ -68,14 +68,14 @@
   "citation": [
     {
       "type": "do",
-      "image": "block-quote/quotes_block__citation__do_3-2.png",
+      "image": "block-quote/quotes_block_citation_do.png",
       "ratio": "3-2",
       "alt": "Image showing proper block citation.",
       "caption": "provide a citation."
     },
     {
       "type": "dont",
-      "image": "block-quote/quotes_block__citation__dont_3-2.png",
+      "image": "block-quote/quotes_block_citation_dont.png",
       "ratio": "3-2",
       "alt": "Image showing too improper citation style",
       "caption": "emphasize the citation."
@@ -197,21 +197,9 @@ Use a block quote for emphasizing content that has a close and significant relat
 
 <do-dont :examples="$page.frontmatter.position" />
 
-// new images
-do: https://drive.google.com/file/d/18hogES5wSu2DpYKLii1T-U6ogStZA974/view?usp=sharing
-don't: https://drive.google.com/file/d/1KTcpi1lCudYTP_gx_gWqqfmqaE2NY20a/view?usp=sharing
-
 <do-dont :examples="$page.frontmatter.indenting" />
 
-// new images
-do: https://drive.google.com/file/d/1GpFxdbBn_5_-79-YrRje5kX8Lhra6Bsb/view?usp=sharing
-don't: https://drive.google.com/file/d/1Nh0rQ7m4BvEKwnq3jSTiu_oX8eBzI6UW/view?usp=sharing
-
 <do-dont :examples="$page.frontmatter.too_many" />
-
-// new images
-do: https://drive.google.com/file/d/1sTT6qZsqSr6wQ4uzBhlVzICOZhd_LKTD/view?usp=sharing
-don't: https://drive.google.com/file/d/1dHmORkrWA5v1wyuEuY8fFTgOFUzm7OrB/view?usp=sharing
 
 <br>
 
@@ -220,10 +208,6 @@ Provide a citation to the external source and if available, the URL address.
 <br>
 
 <do-dont :examples="$page.frontmatter.citation" />
-
-// new images
-do: https://drive.google.com/file/d/1fNBf7r3aapSy9R7TOFft5gQx86W-1xZB/view?usp=sharing
-don't: https://drive.google.com/file/d/1JpvhJyqks0QKUUinS0E3-1j5smikuV-1/view?usp=sharing
 
 ## Content
 
