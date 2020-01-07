@@ -237,9 +237,9 @@ This component has compliance with WCAG guidelines by:
 
 ## Modal Title
 
-If the `title` slot is left empty, the `label` prop will be rendered as the title. The title can be hidden altogether, by setting `showTitle` to `false`.
+If the `title` slot is left empty, the `label` prop will be rendered as the title. The title can be hidden altogether by setting `showTitle` to `false`.
 
-When using the `label` slot, pass in CdrText to use appropriate header styles.
+When using the `label` slot, add CdrText to use the appropriate header styles.
 
 ```vue{3,4}
 <template slot="title">
@@ -253,15 +253,15 @@ When using the `label` slot, pass in CdrText to use appropriate header styles.
 
 ## Size
 
-The modal `size` prop controls the max-width of the modal. `medium` maps to a max-width of 600px; `large` is 800px. 
+The modal `size` prop controls the max-width of the modal. `medium` maps to a max-width of 600px; while `large` is 800px. 
 
 ## Scroll Behavior
 
-The modal content area will scroll vertically if there's enough to force an overflow. The modal title does not scroll; it will stay affixed to the top of the modal.
+The modal content area will scroll vertically if there's enough content. The modal title does not scroll; it stays affixed to the top of the modal.
 
 ## Accessibility
 
-If your modal is launched by a button, be sure to add `aria-haspopup="dialog"` to the button element.
+If your modal is launched by a button, addadd `aria-haspopup="dialog"` to the button element.
 
 ```vue
 <template>
