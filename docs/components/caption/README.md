@@ -262,8 +262,6 @@ Keep summary content short to avoid excess text-wrapping.
 <br/>
 <br/>
 <do-dont :examples="$page.frontmatter.summaries" />
-// image change: this is the wrong path for the image
-do: https://drive.google.com/file/d/1FwLQ6DQd5OwcyW86AjFQ-jkL3mCX8CVL/view?usp=sharing
 
 Captions must be accompanied by media asset such as an image, video, or chart.
 <br/>
