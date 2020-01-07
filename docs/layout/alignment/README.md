@@ -12,9 +12,8 @@
 }
 ---
 
-<cdr-doc-table-of-contents-shell>
 
-# Alignment
+## Alignment
 
 Text and container alignment and utility classes allow you to shift your content or custom content container&#39;s horizontal alignment.
 
@@ -50,5 +49,3 @@ Text and container alignment and utility classes allow you to shift your content
 | .cdr-align-center-block@sm | For the small breakpoint only |
 | .cdr-align-center-block@md | For the medium breakpoint only |
 | .cdr-align-center-block@lg | For the large breakpoint only |
-
-</cdr-doc-table-of-contents-shell>

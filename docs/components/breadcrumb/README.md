@@ -106,8 +106,6 @@
 }
 ---
 
-<cdr-doc-tabs>
-<template slot="Overview">
 <cdr-doc-table-of-contents-shell>
 
 ## Truncated (Default)
@@ -192,12 +190,9 @@ This component has compliance with WCAG guidelines by:
   - Defining that the ellipsis button contains the  `aria-expanded="false"`  attribute when the user has the ability to expand the breadcrumb path
   - Applying focus to the first breadcrumb item when the ellipsis button is clicked
 
+<hr>
 
-</cdr-doc-table-of-contents-shell>
-</template>
-
-<template slot="Guidelines">
-<cdr-doc-table-of-contents-shell>
+# Guidelines
 
 ## Use When
 
@@ -266,11 +261,9 @@ Truncate breadcrumbs left to right to show the final two links in the trail, so 
 
 - [REI Navigation Standards: Breadcrumbs](https://confluence.rei.com/display/NAV/Breadcrumb+Guidance)
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
+# API
 
 ## Props
 
@@ -353,6 +346,3 @@ The below image and example code shows using ```truncationXSThreshold``` to set 
 ```
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>

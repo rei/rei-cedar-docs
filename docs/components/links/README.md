@@ -98,9 +98,9 @@
 }
 ---
 
-<cdr-doc-tabs>
-<template slot="Overview">
+
 <cdr-doc-table-of-contents-shell>
+# Overview
 
 ## Default (Medium)
 
@@ -208,11 +208,9 @@ This component has compliance with following WebAIM’s accessibility guidelines
 
 - Using text color with a Level AA contrast ratio of 4.5:1 contrast between the text color and the background but only when displayed on light backgrounds
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="Guidelines">
-<cdr-doc-table-of-contents-shell>
+# Guidelines
 
 ## Use When
 
@@ -282,11 +280,9 @@ don't: https://drive.google.com/file/d/1PQlgEtDJGFSHtn61JyNastd1YzXVW22r/view?us
 
 WebAIM: Links and Hypertext [Introduction to Links and Hypertext](https://webaim.org/techniques/hypertext/)
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
+# API
 
 ## Props
 
@@ -330,6 +326,3 @@ Following variants are available to the `cdr-link` modifier attribute:
 
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>

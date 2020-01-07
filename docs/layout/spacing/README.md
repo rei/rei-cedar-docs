@@ -15,7 +15,7 @@
 }
 ---
 
-<cdr-doc-table-of-contents-shell>
+<cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
 
 Cedar Design System provides predefined spacing values that help reduce redundancy, declutter prototypes and style sheets, and utilize common terminology.
 
@@ -160,7 +160,7 @@ For a full list of space utility classes, see the [CSS Utility Class](../../comp
 Sometimes your content may need to be spaced differently at specific breakpoints. To accommodate such different spacing needs, spacing utilities are available at each of our defined breakpoints by concatenating the ‘@’ symbol with the desired breakpoint to the end of the class name.
 
 -  `xs` - applies the spacing **for the extra small breakpoint ( < 768px)**
--  `sm` - applies the spacing **for the small breakpoint (768px <= X < 992px)** 
+-  `sm` - applies the spacing **for the small breakpoint (768px <= X < 992px)**
 -  `md` - applies the spacing **for the medium breakpoint (992px <= X < 1232px)**
 -  `lg `- applies the spacing **for the large breakpoint ( > 1232px)**
 
@@ -182,7 +182,7 @@ To add right margin to the Cedar button component at the medium breakpoint and u
 
 ```vue
   <div>
-    <cdr-button 
+    <cdr-button
      full-width="@xs"
       space="
         cdr-mb-space-one-x@xs
@@ -191,13 +191,13 @@ To add right margin to the Cedar button component at the medium breakpoint and u
         cdr-mr-space-one-x@md
         cdr-mr-space-one-x@lg
       "
-    > 
+    >
     A sample Cedar button
     </cdr-button>
-    <cdr-button 
+    <cdr-button
     modifier="secondary"
     full-width="@xs"
-    > 
+    >
     Another sample Cedar button
     </cdr-button>
   </div>
@@ -205,6 +205,6 @@ To add right margin to the Cedar button component at the medium breakpoint and u
 ```
 </cdr-doc-example-code-pair>
 
-Note that space utility classes with the `@<breakpoint>` apply within the specified breakpoint range only. 
+Note that space utility classes with the `@<breakpoint>` apply within the specified breakpoint range only.
 
 </cdr-doc-table-of-contents-shell>

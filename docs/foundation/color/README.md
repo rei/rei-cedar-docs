@@ -11,12 +11,11 @@
   ],
 }
 ---
-<cdr-doc-tabs :labels="['Overview', 'Guidelines', 'Brand Palette']">
-<template slot="Overview">
 <cdr-doc-table-of-contents-shell>
-  
 
-Color design tokens represent the fundamental decisions of Cedar’s visual language: 
+# Overview
+
+Color design tokens represent the fundamental decisions of Cedar’s visual language:
   - Stores color specifications using variable names, not hard-coded values such as hex values for color
   - Specifies a hierarchical and semantically-defined system
 
@@ -25,10 +24,10 @@ Color design tokens represent the fundamental decisions of Cedar’s visual lang
 <hr>
 
 Below is a list of color tokens with descriptions and values. Web and mobile color tokens have identical hex values but the naming pattern differs. For example, color token names are:
-  - **For Web:** cdr-color-text-primary-lightmode 
+  - **For Web:** cdr-color-text-primary-lightmode
   - **For Android:** cdr_color_text_primary_lightmode
   - **For iOS:** CdrColorTextPrimaryLightmode  
-  
+
 
 <tokens-color type="background">
 
@@ -79,14 +78,8 @@ Below is a list of color tokens with descriptions and values. Web and mobile col
 
 <br>
 
-</cdr-doc-table-of-contents-shell>
-</template>
 
-
-
-
-<template slot="Guidelines">
-<cdr-doc-table-of-contents-shell>
+# Guidelines
 
 Cedar offers a range of colors designed to be accessed, understood, and used by all people regardless of their age, background, or ability. We meet or exceed color contrast [WCAG AA accessibility standards](https://www.w3.org/WAI/standards-guidelines/wcag/).
 
@@ -121,9 +114,9 @@ Cedar offers a range of colors designed to be accessed, understood, and used by 
 
 <br>
 
-## Accessibility 
+## Accessibility
 Text choices should be paired with their corresponding background color to ensure accessibility. Legend descriptions for WCAG contrast ratios requirements are:
-  - **AAA:** 7:1 for normal text and 4.5:1 for large text 
+  - **AAA:** 7:1 for normal text and 4.5:1 for large text
   - **AA:** 4.5:1 for normal text and 3:1 for large text
   - **AA-LG:** Only for large text, graphical objects and user interface components
 
@@ -164,7 +157,7 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
     <tr>
       <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_lightest_disabled_4-3.png`)"/> </td>
       <td>N/A* </td>
-      <td>cdr-color-text-disabled-lightmode <br>Values: #b8b8b8 &nbsp; / &nbsp; r184 g184 b184 <br>*When text is disabled </td>      
+      <td>cdr-color-text-disabled-lightmode <br>Values: #b8b8b8 &nbsp; / &nbsp; r184 g184 b184 <br> When text is disabled </td>      
     </tr>
   </tbody>
 </table>
@@ -200,7 +193,7 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
     <tr>
       <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_lighter_disabled_4-3.png`)"/> </td>
       <td>N/A* </td>
-      <td>cdr-color-text-disabled-lightmode <br>Values: #b8b8b8 &nbsp; / &nbsp; r184 g184 b184 <br>*When text is disabled </td>   
+      <td>cdr-color-text-disabled-lightmode <br>Values: #b8b8b8 &nbsp; / &nbsp; r184 g184 b184 <br> When text is disabled </td>   
     </tr>
   </tbody>
 </table>
@@ -235,10 +228,10 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
     <tr>
       <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_light_disabled_4-3.png`)"/> </td>
       <td>N/A* </td>
-      <td>cdr-color-text-disabled-lightmode <br>Values: #b8b8b8 &nbsp; / &nbsp; r184 g184 b184 <br>*When text is disabled </td>   
+      <td>cdr-color-text-disabled-lightmode <br>Values: #b8b8b8 &nbsp; / &nbsp; r184 g184 b184 <br> When text is disabled </td>   
     </tr>
   </tbody>
-</table> 
+</table>
 
 <br>
 
@@ -274,7 +267,7 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
     <tr>
       <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_dark_disabled_4-3.png`)"/> </td>
       <td>N/A* </td>
-      <td>cdr-color-text-disabled-darkmode <br>Values: #616161 &nbsp; / &nbsp; r97 g97 b97 <br>*When text is disabled </td>   
+      <td>cdr-color-text-disabled-darkmode <br>Values: #616161 &nbsp; / &nbsp; r97 g97 b97 <br> When text is disabled </td>   
     </tr>
   </tbody>
 </table>
@@ -309,40 +302,33 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
     <tr>
       <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_darker_disabled_4-3.png`)"/> </td>
       <td>N/A* </td>
-      <td>cdr-color-text-disabled-darkmode <br>Values: #616161 &nbsp; / &nbsp; r97 g97 b97 <br>*When text is disabled </td>   
+      <td>cdr-color-text-disabled-darkmode <br>Values: #616161 &nbsp; / &nbsp; r97 g97 b97 <br> When text is disabled </td>   
     </tr>
   </tbody>
 </table>
 
 <br>
 
-</cdr-doc-table-of-contents-shell>
-</template>
-
-
-
-
-<template slot="Brand Palette">
-<cdr-doc-table-of-contents-shell>
+# Brand Palette
 
 <cdr-doc-alert icon="warning">These values should not be used standalone to create custom UI.</cdr-doc-alert>
 
-Colors from REI’s brand color palette are used throughout Cedar components and design recommendations. 
+Colors from REI’s brand color palette are used throughout Cedar components and design recommendations.
 
 **Use these values when:**
   - Requesting an update to an existing Cedar component
-  - Requesting a new token 
+  - Requesting a new token
   - Developing a new component that will be adopted by Cedar Design System
-  - Creating a custom or product-specific solution that will not be reused 
+  - Creating a custom or product-specific solution that will not be reused
 
-<br> 
+<br>
 
 **Don't use these values when:**
   - Creating a broad solution that can be shared across teams. Instead, develop a new component or utility
   - Wanting the benefit of dynamically-updated styles when there are changes in the brand guidelines. Instead, use tokens
   - Color values are repeated throughout the page. Instead, request a new token
 
-<br> 
+<br>
 
 Note that the values on this page:
   - May not have a long lifespan
@@ -352,7 +338,7 @@ Note that the values on this page:
 <br>  
 
 **Requesting a Token**  <br>
-If you have a request for a token that is missing, you can submit a request using the [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC), or ask in the [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) Slack channel. View requirements in the <cdr-link :href="$withBase('/foundation/tokens/?active-link=adding-tokens-to-the-repository')">Adding Tokens to the Repository</cdr-link> section on the Tokens article. 
+If you have a request for a token that is missing, you can submit a request using the [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC), or ask in the [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) Slack channel. View requirements in the <cdr-link :href="$withBase('/foundation/tokens/#adding-tokens-to-the-repository')">Adding Tokens to the Repository</cdr-link> section on the Tokens article.
 
 **Developing or Updating Cedar Components**  <br>
 The Cedar team welcomes contributions from the digital community at REI. If you are interested in contributing design or code, please reach out at in Slack at [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4), email [cedar@rei.com](mailto:cedar@rei.com), or talk to your manager.
@@ -362,7 +348,7 @@ The Cedar team welcomes contributions from the digital community at REI. If you 
 <hr>
 
 ## Grey Colors
-Grey colors support the cohesive use of typography, backgrounds, and borders across the digital ecosystem. 
+Grey colors support the cohesive use of typography, backgrounds, and borders across the digital ecosystem.
 
 <table>
   <tbody>
@@ -470,7 +456,7 @@ Grey colors support the cohesive use of typography, backgrounds, and borders acr
         <b>Tokens:</b><br>
         cdr-color-text-disabled-lightmode <br>
         cdr-color-text-form-disabled-lightmode <br>
-        cdr-color-border-secondary-lightmode 
+        cdr-color-border-secondary-lightmode
       </td>
     </tr>
   </tbody>
@@ -825,9 +811,9 @@ Red colors are used in a variety of scenarios such as announcing sale items and 
         r232  g104  b104 <br>
       </td>
       <td width=360>
-        <b>Tokens:</b> <br> 
+        <b>Tokens:</b> <br>
         cdr-color-text-error-darkmode <br>
-        cdr-color-border-error-lightmode 
+        cdr-color-border-error-lightmode
       </td>
     </tr>
   </tbody>
@@ -959,8 +945,6 @@ Yellow colors are used in a variety of scenarios such as providing feedback for 
 
 <br>
 <hr>
- 
+
 
 </cdr-doc-table-of-contents-shell>
-</template>
-</cdr-doc-tabs>

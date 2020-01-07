@@ -152,10 +152,10 @@
 }
 ---
 
-<cdr-doc-tabs>
-<template slot="Overview">
+
 <cdr-doc-table-of-contents-shell>
 
+# Overview
 ## Dark
 
 Use dark Call to Action over a light background image or color to provide proper contrast. This is the default Call to Action style.
@@ -288,11 +288,9 @@ This component has compliance with [WCAG SC 1.4.3: Contrast (Minimum)](https://w
 - Choose the light button theme for a dark background or the dark button theme for a light background
 - Test color contrast for button themes against all backgrounds
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="Guidelines">
-<cdr-doc-table-of-contents-shell>
+# Guidelines
 
 ## Use When
 - Encouraging a user to navigate to a new location
@@ -365,11 +363,7 @@ do: https://drive.google.com/file/d/12UlQi6dFV2mNABjQQBozakUj0LUVBou8/view?usp=s
 don't: https://drive.google.com/file/d/1kWUyBudVig5lpSgBWW8ICAqjI4BNcK2_/view?usp=sharing
 
 
-</cdr-doc-table-of-contents-shell>
-</template>
-
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
+# API
 
 ## Props
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
@@ -409,6 +403,3 @@ The following variants are available to the `cdr-cta` modifier attribute:
 | 'elevated'  | Adds drop shadow to button |
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>

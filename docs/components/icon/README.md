@@ -119,9 +119,9 @@
 }
 ---
 
-<cdr-doc-tabs>
-<template slot="Overview">
+
 <cdr-doc-table-of-contents-shell>
+# Overview
 
 ## Inline Icon Components
 
@@ -208,12 +208,9 @@ W3C recommends using `<title>` and `<desc>` elements in SVG for assistive techno
 - Assigning the attribute `focusable=’false’` to the SVG element
 - Using `aria-label` for buttons or Cedar’s hidden text CSS style for links
 
+<hr>
 
-</cdr-doc-table-of-contents-shell>
-</template>
-
-<template slot="Guidelines">
-<cdr-doc-table-of-contents-shell>
+# Guidelines
 
 ## Use When
 - Communicating simple actions and concepts that are easily understood, such as printing a receipt or sending an email
@@ -276,11 +273,7 @@ Ensure that icons use contrast ratio of 4.5:1 between icon color and background 
 do: https://drive.google.com/file/d/1jo8XHX9u8OshoNDInTrObDfm9bfswqFG/view?usp=sharing
 don't: https://drive.google.com/file/d/1detm47osLp10R3RzwH2xXZlKw3oQU_3I/view?usp=sharing
 
-</cdr-doc-table-of-contents-shell>
-</template>
-
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
+# API
 
 ## Props
 
@@ -416,6 +409,3 @@ import { CdrIcon } from '@rei/cedar';
 ```
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>

@@ -53,7 +53,7 @@
 
       [class^=\"cdr-row\"] {
         position: relative;
-        
+
         &::before {
           content: '';
           position: absolute;
@@ -62,7 +62,7 @@
           height: 100%;
           width: 100%;
           background-color: rgba(130, 234, 255, 0.1);
-          
+
           @media (max-width: $cdr-breakpoint-md) {
             top: 0.8rem;
             left: 0.8rem;
@@ -201,9 +201,9 @@
 }
 ---
 
-<cdr-doc-tabs>
-<template slot="Overview">
+
 <cdr-doc-table-of-contents-shell>
+# Overview
 
 ## Column Layout
 
@@ -1055,11 +1055,9 @@ To ensure that usage of this component complies with accessibility guidelines:
 This component has compliance with following WCAG guidelines:
 - [WCAG SC 1.3.2: Meaningful Sequence](https://www.w3.org/TR/WCAG20/#content-structure-separation-sequence): Cedar Design System does not provide for Flexbox’s `order` property.  Reverse order or reordering of items is not allowed. Content must be presented in a correct reading sequence to comply with accessibility standards
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="Guidelines">
-<cdr-doc-table-of-contents-shell>
+# Guidelines
 
 ## Use When
 
@@ -1188,11 +1186,9 @@ To build an effective responsive grid:
 - Complete and optimize the layout for the widest LG (≥ 1232px) viewport width
 - Inspect responsive displays in between each breakpoint for how content responds across the fluid spectrum
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
+# API
 
 Grids are built from two components: **CdrRow** and **CdrCol**.
 
@@ -1263,6 +1259,3 @@ Nested grids are made by nesting `cdr-col` and adding the `is-row` prop to the `
 </cdr-doc-code-snippet>
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>

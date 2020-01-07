@@ -133,9 +133,6 @@
 
 ---
 
-<cdr-doc-tabs>
-<template slot="Overview">
-<cdr-doc-table-of-contents-shell tab-name="Overview">
 
 ## Default (Medium)
 
@@ -159,7 +156,7 @@ Default pull quote can be used with the following HTML tags: `<p>`, `<div>`, `<a
 
 To ensure that usage of this component complies with accessibility guidelines:
 
-- All recommendations listed for [Paragraphs](../paragraphs/?active-link=accessibility) component apply to this component
+- All recommendations listed for [Paragraphs](../paragraphs/#accessibility) component apply to this component
 - Do not use this component to indent text. Screen readers use the `<blockquote>` element to:
   - Provide semantic understanding of page content by announcing blockquote as quote
   - Define a sectioning root in HTML5, which means that any  `<h1>` - `<h6>`  element doesn't become part of the document’s outline
@@ -170,12 +167,9 @@ This component has compliance with WCAG guidelines by:
 
 - Setting the `aria-hidden="true"` so that the pull quote cannot be read by a screen reader
 
+<hr>
 
-</cdr-doc-table-of-contents-shell>
-</template>
-
-<template slot="Guidelines">
-  <cdr-doc-table-of-contents-shell tab-name="Guidelines">
+# Guidelines
 
 ## Use When
 
@@ -217,17 +211,12 @@ don't: https://drive.google.com/file/d/1HLKAXrz9nUO0QjUrWU1JXqZfloz-zVjU/view?us
 
 When a pull quote is displayed at XS breakpoint, the left border will appear below the pull quote and will use a smaller font size.
 
-  </cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
+# API
 
 ## Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>

@@ -109,9 +109,9 @@
 }
 ---
 
-<cdr-doc-tabs>
-<template slot="Overview">
+
 <cdr-doc-table-of-contents-shell>
+# Overview
 
 ## Default (Medium)
 
@@ -189,11 +189,9 @@ This component has compliance with WCAG guidelines by:
 
 - Using text color with a Level AA contrast ratio of 4.5:1 contrast between the text color and the background but only when displayed on light backgrounds
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="Guidelines">
-<cdr-doc-table-of-contents-shell>
+# Guidelines
 
 ## Use When
 
@@ -295,12 +293,9 @@ Caption stays left aligned with body copy regardless of the width of the media.
 do: https://drive.google.com/file/d/11uTEqjaw12RsZXEzt6HrwzRvnVmJUtRG/view?usp=sharing
 don't: https://drive.google.com/file/d/1j-U2egtcOOsmGjzdsAAMKhnuFst8_kuW/view?usp=sharing
 
+<hr>
 
-</cdr-doc-table-of-contents-shell>
-</template>
-
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
+# API
 
 ## Props
 
@@ -327,6 +322,3 @@ The below example demonstrates how to extend this component for use within a fig
 ```
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>

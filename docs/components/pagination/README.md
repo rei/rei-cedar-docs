@@ -115,8 +115,7 @@
 }
 ---
 
-<cdr-doc-tabs>
-<template slot="Overview">
+
 <cdr-doc-table-of-contents-shell>
 
 ## Pagination @ sm, md, lg
@@ -264,11 +263,9 @@ This component has compliance WCAG guidelines by:
 - [WCAG 2.4.7](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#qr-navigation-mechanisms-focus-visible): Focus is visible
 - [WCAG 2.5.5](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html): Target size for pagination links are large enough for users to easily activate them
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="Guidelines">
-<cdr-doc-table-of-contents-shell>
+# Guidelines
 
 ## Use When
 - Providing navigation to break apart large quantities of content
@@ -326,12 +323,9 @@ don't: https://drive.google.com/file/d/1qEf9BW8c5h34K2g2Q-vj0FZfLAJGXb8f/view?us
 
 Pagination adapts to a Select component with a native UI dropdown menu on XS breakpoints to provide a mobile-friendly experience.
 
+<hr>
 
-</cdr-doc-table-of-contents-shell>
-</template>
-
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
+# API
 
 ## Props
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
@@ -363,7 +357,11 @@ The **CdrPagination** component does not make data calls, render or track pagina
 
 ## Scoped Slots and vue-router
 
+<<<<<<< HEAD
 Previous, next, and individual page links can have their template overridden via scoped slots. While this isn't advisable under normal circumstances, it is necessary to make the component work with vue-router. It is similar to the [scoped slot example](?active-tab=overview#link-scoped-slots) but uses `router-link` with no click event (when paired with a computed prop v-model):
+>>>>>>> next
+=======
+Previous, next, and individual page links can have their template overridden via scoped slots. While this isn't advisable under normal circumstances, it is necessary to make the component work with vue-router. It is similar to the [scoped slot example](#link-scoped-slots) but uses `router-link` with no click event (when paired with a computed prop v-model):
 >>>>>>> next
 
 ```vue
@@ -441,6 +439,3 @@ For general recommendations, view Google's Search Console page, [Indicating pagi
 
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>

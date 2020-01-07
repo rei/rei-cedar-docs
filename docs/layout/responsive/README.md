@@ -14,7 +14,7 @@
 }
 ---
 
-<cdr-doc-table-of-contents-shell>
+<cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
 Cedar Design System’s layout tools are built with responsively-aware breakpoints. Cedar components
 and utility classes makes sure that your content remains consistent to the REI Digital brand expectations
 within each of our supported breakpoints.
@@ -74,7 +74,7 @@ The following design tokens are provided using the `@rei/cdr-tokens` package for
 
 For more information about design tokens and how to use them, visit the [Design Tokens](../../components/design-tokens/) article.
 
-<!-- 
+<!--
 TODO: update this once SCSS utilities are available to consumers
 ### SCSS Utilities
 
@@ -91,7 +91,7 @@ TODO: update this once SCSS utilities are available to consumers
 | Large        | `@include lg-mq {}`      | >= 1232px    |
 | Large        | `@include lg-mq-only {}` | >= 1232px    |
  -->
- 
+
 ### Targeting the Utility Media Query with Class Names
 
 To avoid confusion between an element’s size variant and its breakpoint name, Cedar has the following naming conventions:

@@ -135,9 +135,9 @@
 }
 ---
 
-<cdr-doc-tabs>
-<template slot="Overview">
-<cdr-doc-table-of-contents-shell tab-name="Overview">
+
+<cdr-doc-table-of-contents-shell>
+# Overview
 
 ## Default (Medium)
 
@@ -161,7 +161,7 @@ Default block quote can be used with the following HTML tags: `<p>`, `<div>`, `<
 
 To ensure that usage of this component complies with accessibility guidelines:
 
-- All recommendations listed for [Paragraphs](../paragraphs/?active-link=accessibility) component apply to this component
+- All recommendations listed for [Paragraphs](../paragraphs/#accessibility) component apply to this component
 - Do not use this component to indent text. Screen readers use the `<blockquote>` element to:
   - Provide semantic understanding of page content by announcing blockquote as quote
   - Define a sectioning root in HTML5, which means that any  `<h1>` - `<h6>`  element doesn't become part of the document’s outline
@@ -173,11 +173,9 @@ This component has compliance with WCAG guidelines by:
 
 - Adding a `<cite>` element to refer to the source of the quote
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="Guidelines">
-  <cdr-doc-table-of-contents-shell tab-name="Guidelines">
+# Guidelines
 
 ## Use When
 
@@ -225,17 +223,12 @@ To make the block quote content accessible, follow these rules:
 
 When block quotes are displayed at XS breakpoint, the text will use a smaller font size.
 
-  </cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
+# API
 
 ## Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>

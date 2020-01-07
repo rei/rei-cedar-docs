@@ -11,12 +11,12 @@
 }
 ---
 
-<cdr-doc-table-of-contents-shell>
+<cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
 
 ## Adopting Cedar, Step-by-Step
 
 The value of the design system is realized when products ship features using parts from the system.
-The more Cedar is used, the better it will become, and will continue to grow and evolve with best practices and community contributions. 
+The more Cedar is used, the better it will become, and will continue to grow and evolve with best practices and community contributions.
 
 Teams adopt Cedar by developing a dependency on the system’s visual style and UI components, while dropping dependencies on redundant product-specific or external code for overlapping features.
 
@@ -58,9 +58,9 @@ If you are interested in contributing design or code, please reach out at in Sla
 
 ### Request a Component
 
-The Cedar team will evaluate all new requests for components, beginning with a discovery process that includes an audit of visual patterns and weighs factors such as reusability across the product ecosystem (ideally can be used by 3-5 teams), investment and maturity of the product, and team bandwidth. 
+The Cedar team will evaluate all new requests for components, beginning with a discovery process that includes an audit of visual patterns and weighs factors such as reusability across the product ecosystem (ideally can be used by 3-5 teams), investment and maturity of the product, and team bandwidth.
 
-New feature and enhancement requests can be submitted using the [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC). 
+New feature and enhancement requests can be submitted using the [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC).
 
 ### Report an Issue
 
@@ -68,6 +68,6 @@ The Cedar team is committed to maintaining consistent, quality components. If yo
 
 The team will address the bug as soon as possible, depending on the severity of the issue and sprint capacity. Please include as much relevant information as possible when submitting a bug report to help prioritize, including steps to reproduce, urgency, and impact.
 
-If you have a fix for the bug and would like to submit a PR for it, please reach out at in Slack at [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) or email [cedar@rei.com](mailto:cedar@rei.com) to learn more about contribution opportunities. 
+If you have a fix for the bug and would like to submit a PR for it, please reach out at in Slack at [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) or email [cedar@rei.com](mailto:cedar@rei.com) to learn more about contribution opportunities.
 
 </cdr-doc-table-of-contents-shell>

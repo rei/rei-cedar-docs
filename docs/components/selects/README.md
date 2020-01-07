@@ -169,9 +169,9 @@
 }
 ---
 
-<cdr-doc-tabs>
-<template slot="Overview">
+
 <cdr-doc-table-of-contents-shell tab-name="Overview">
+# Overview
 
 ## Default (Medium)
 
@@ -351,12 +351,9 @@ This component has compliance with WCAG guidelines by:
 + Requiring a value for the [ label ] field
 + When hiding a label, the [ aria-label ] attribute is set to the [ label ] value
 
+<hr>
 
-</cdr-doc-table-of-contents-shell>
-</template>
-
-<template slot="Guidelines">
-<cdr-doc-table-of-contents-shell>
+# Guidelines
 
 ## Use When
 
@@ -480,11 +477,7 @@ do: https://drive.google.com/file/d/1pLPgRDzSWcEdRCZ1YjUDnT31TYiSADXD/view?usp=s
 don't: https://drive.google.com/file/d/1QNEOwkBFNGY7t04qY-ZKXAnhGiGyHRYu/view?usp=sharing
 
 
-</cdr-doc-table-of-contents-shell>
-</template>
-
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
+# API
 
 ## Props
 
@@ -525,6 +518,3 @@ The **CdrSelect** component requires `v-model` to bind the selected value to you
 ```
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>

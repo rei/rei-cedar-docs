@@ -112,10 +112,10 @@
 }
 ---
 
-<cdr-doc-tabs>
-<template slot="Overview">
-<cdr-doc-table-of-contents-shell tab-name="Overview">
 
+<cdr-doc-table-of-contents-shell>
+
+# Overview
 <cdr-doc-alert icon="info"><strong>REI.com is currently using Bazaarvoice for ratings.</strong>Styles documented here may not reflect the current styles provided by the tool. Reach out in <cdr-link href="https://rei.slack.com/messages/CA58YCGN4" target="_blank">#cedar-user-support</cdr-link> for further guidance or questions.</cdr-doc-alert>
 
 ## Default (Medium)
@@ -202,11 +202,9 @@ This component has compliance with WCAG guidelines by:
   - Underline text style for mouse usage
   - Focus state for keyboard usage
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="Guidelines">
-  <cdr-doc-table-of-contents-shell tab-name="Guidelines">
+# Guidelines
 
 ## Use When
 
@@ -254,12 +252,9 @@ don't: https://drive.google.com/file/d/1A27tFTlqoGcC-XWmZ5enS2BZ1VIkMXMn/view?us
 - [Icons](../icon/)
 - [Iconography](../../foundation/iconography/)
 
+<hr>
 
-</cdr-doc-table-of-contents-shell>
-</template>
-
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
+# API
 
 ## Props
 
@@ -276,6 +271,3 @@ By default the **CdrRating** component renders the icons in medium size (24px) w
 
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>

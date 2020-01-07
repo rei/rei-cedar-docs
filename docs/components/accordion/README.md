@@ -122,10 +122,8 @@
 }
 ---
 
-<cdr-doc-tabs>
-
-<template slot="Overview">
 <cdr-doc-table-of-contents-shell>
+# Overview
 
 ## Default (Medium)
 
@@ -143,7 +141,7 @@ Section borders expand to full width of container.
       How do I find my member number?
     </template>
     <cdr-text tag="p">
-        Find your member number online. You can also call 
+        Find your member number online. You can also call
         Customer Support at 1-800-426-4840 (U.S. and Canada) or 1-253-891-2500 (International).
     </cdr-text>
   </cdr-accordion>
@@ -156,8 +154,8 @@ Section borders expand to full width of container.
       Does every member get an Annual Dividend?
     </template>
     <cdr-text tag="p">
-        Only active REI Co-op members receive an Annual Dividend notice. To be an active 
-        member, you need to make net merchandise or shipping purchases (purchases minus credits and returns) 
+        Only active REI Co-op members receive an Annual Dividend notice. To be an active
+        member, you need to make net merchandise or shipping purchases (purchases minus credits and returns)
         of at least $10 per year, unless you joined during that calendar year.
     </cdr-text>
   </cdr-accordion>
@@ -170,7 +168,7 @@ Section borders expand to full width of container.
       When does my dividend expire?
     </template>
     <cdr-text tag="p">
-        Your dividend expires on Jan. 3, just under two years after it has been issued. 
+        Your dividend expires on Jan. 3, just under two years after it has been issued.
         or example, your 2018 dividend earned on 2017 purchases will expire in January 2020.
     </cdr-text>
   </cdr-accordion>
@@ -195,7 +193,7 @@ Reduced spacing around title and content body. Also, smaller font sizes resultin
       Why buy used gear?
     </template>
     <cdr-text tag="p">
-      Used Gear Beta is one way we are experimenting expanding opportunities 
+      Used Gear Beta is one way we are experimenting expanding opportunities
       to enjoy life outdoors and bringing value to our members.
     </cdr-text>
   </cdr-accordion>
@@ -209,7 +207,7 @@ Reduced spacing around title and content body. Also, smaller font sizes resultin
       What's your cancellation policy?
     </template>
     <cdr-text tag="p">
-      Orders may be cancelled within 30 minutes of placing your order online. 
+      Orders may be cancelled within 30 minutes of placing your order online.
       After 30 minutes, your order will begin processing through our fulfillment center and cannot be cancelled.
     </cdr-text>
   </cdr-accordion>
@@ -223,7 +221,7 @@ Reduced spacing around title and content body. Also, smaller font sizes resultin
       When will my order arrive?
     </template>
     <cdr-text tag="p">
-      REI Co-op Used Gear Beta orders can take up to 3-4 business days to ship out. When your order ships, 
+      REI Co-op Used Gear Beta orders can take up to 3-4 business days to ship out. When your order ships,
       we'll send you a shipping confirmation email that contains your tracking information. Shipping time is generally 3-5 business days.
     </cdr-text>
   </cdr-accordion>
@@ -248,8 +246,8 @@ Border aligns to the title text and expand/collapse icon.
       How long have you been in business?
     </template>
     <cdr-text tag="p">
-      REI has offered the finest in outdoor gear since 1938. In that same spirit, 
-      REI Adventures has led the way down wilderness paths and cultural back roads 
+      REI has offered the finest in outdoor gear since 1938. In that same spirit,
+      REI Adventures has led the way down wilderness paths and cultural back roads
       to the most intriguing destinations in the world since 1987.
     </cdr-text>
   </cdr-accordion>
@@ -263,9 +261,9 @@ Border aligns to the title text and expand/collapse icon.
       What kinds of trips are offered?
     </template>
     <cdr-text tag="p">
-      We have adventures that range from weekend getaways to three-week treks. We 
-      explore the world on foot, by kayak, canoe or raft, bicycle, safari, 4-wheel 
-      drive, cruise ship or a combination of these vehicles! Novices are welcome. 
+      We have adventures that range from weekend getaways to three-week treks. We
+      explore the world on foot, by kayak, canoe or raft, bicycle, safari, 4-wheel
+      drive, cruise ship or a combination of these vehicles! Novices are welcome.
       We can teach you to kayak or to safely summit a mountain.
     </cdr-text>
   </cdr-accordion>
@@ -279,7 +277,7 @@ Border aligns to the title text and expand/collapse icon.
       How do I know what each trip is like?
     </template>
     <cdr-text tag="p">
-      This website provides full details of each trip. If you still have questions, 
+      This website provides full details of each trip. If you still have questions,
       please call us at 1-800-622-2236 or e-mail us at travel@rei.com.
     </cdr-text>
   </cdr-accordion>
@@ -301,11 +299,9 @@ This component has compliance with WCAG guidelines by:
   - Navigate and reverse navigate through the accordion headers
 - Generating ARIA tags for accessibility, specifically `aria-controls`, `aria-expanded`, and `aria-hidden`
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="Guidelines">
-<cdr-doc-table-of-contents-shell>
+# Guidelines
 
 ## Use When
 
@@ -369,11 +365,9 @@ don't: https://drive.google.com/file/d/1AkoWHpdulPeBGlbjiC4DvgtGIUehGAqG/view?us
 - Switching between the Tab component and the Accordion component is not supported in Cedar components library
 - Do not replace the Accordion component with the Tab component at different breakpoints
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
+# API
 
 ## Props
 
@@ -404,7 +398,7 @@ CdrAccordion emits an event when its button is clicked. Use an event listener to
     <template name="label">
       Click me to show content!
     </template>
-      This content is revealed when the accordion is opened. 
+      This content is revealed when the accordion is opened.
   </cdr-accordion>
 </template>
 
@@ -483,6 +477,3 @@ export default {
 ```
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>
