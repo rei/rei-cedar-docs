@@ -16,15 +16,15 @@
   "case": [
     {
       "type": "do",
-      "image": "checkbox/checkbox_case_do_16-9.png",
-      "ratio": "16-9",
+      "image": "checkbox/checkbox_case_do_4-3.png",
+      "ratio": "4-3",
       "alt": "Image showing proper checkbox sentence case.",
       "caption": "use sentence case, with only proper nouns capitalized."
     },
     {
       "type": "dont",
-      "image": "checkbox/checkbox_case_dont_16-9.png",
-      "ratio": "16-9",
+      "image": "checkbox/checkbox_case_dont_4-3.png",
+      "ratio": "4-3",
       "alt": "Image showing improper title caps use.",
       "caption": "use title caps for labels."
     }
@@ -32,15 +32,15 @@
   "fragment": [
     {
       "type": "do",
-      "image": "checkbox/checkbox_fragment_do_16-9.png",
-      "ratio": "16-9",
+      "image": "checkbox/checkbox_fragment_do_4-3.png",
+      "ratio": "4-3",
       "alt": "Image showing proper checkbox label with no ending punctuation",
       "caption": "write labels as sentence fragments with no ending punctuation."
     },
     {
       "type": "dont",
-      "image": "checkbox/checkbox_fragment_dont_16-9.png",
-      "ratio": "16-9",
+      "image": "checkbox/checkbox_fragment_dont_4-3.png",
+      "ratio": "4-3",
       "alt": "Image showing improper terminal punctuation.",
       "caption": "add terminal punctuation at the end of a label."
     }
@@ -48,15 +48,15 @@
   "label": [
     {
       "type": "do",
-      "image": "checkbox/checkbox_label_do_16-9.png",
-      "ratio": "16-9",
+      "image": "checkbox/checkbox_label_do_4-3.png",
+      "ratio": "4-3",
       "alt": "Image showing proper checkbox label with brief copy",
       "caption": "make labels brief."
     },
     {
       "type": "dont",
-      "image": "checkbox/checkbox_label_dont_16-9.png",
-      "ratio": "16-9",
+      "image": "checkbox/checkbox_label_dont_4-3.png",
+      "ratio": "4-3",
       "alt": "Image showing a label with too much text",
       "caption": "put too much text in the label."
     }
@@ -64,15 +64,15 @@
   "positivecopy": [
     {
       "type": "do",
-      "image": "checkbox/checkbox_positivecopy_do_16-9.png",
-      "ratio": "16-9",
+      "image": "checkbox/checkbox_positivecopy_do_4-3.png",
+      "ratio": "4-3",
       "alt": "Image showing proper checkbox positive phrasing",
       "caption": "use positive phrasing for labels."
     },
     {
       "type": "dont",
-      "image": "checkbox/checkbox_positivecopy_dont_16-9.png",
-      "ratio": "16-9",
+      "image": "checkbox/checkbox_positivecopy_dont_4-3.png",
+      "ratio": "4-3",
       "alt": "Image showing a label with negative phrasing",
       "caption": "use negative phrasing for labels."
     }
@@ -80,15 +80,15 @@
   "simplify": [
     {
       "type": "do",
-      "image": "checkbox/checkbox_simplify_do_16-9.png",
-      "ratio": "16-9",
+      "image": "checkbox/checkbox_simplify_do_4-3.png",
+      "ratio": "4-3",
       "alt": "Image showing proper simple checkbox usage",
       "caption": "use a single checkbox."
     },
     {
       "type": "dont",
-      "image": "checkbox/checkbox_simplify_dont_16-9.png",
-      "ratio": "16-9",
+      "image": "checkbox/checkbox_simplify_dont_4-3.png",
+      "ratio": "4-3",
       "alt": "Image showing a radio button used when a checkbox is preferred",
       "caption": "use radio buttons or toggles for a simple toggle selection."
     }
@@ -339,27 +339,11 @@ Checkbox labels should:
 
 <do-dont :examples="$page.frontmatter.case" />
 
-// new images
-do: https://drive.google.com/file/d/1YN5lz8KUdP0WHhF_0yAKUa9mlSiMfrgd/view?usp=sharing
-don't: https://drive.google.com/file/d/1NE0Uz9i06RJOwmFhB-ySUFwEdAEGmoPE/view?usp=sharing
-
 <do-dont :examples="$page.frontmatter.label" />
-
-// new images
-do: https://drive.google.com/file/d/1TMIT5UzqsMu7pWjAOtKS2fQkHWYDbrpE/view?usp=sharing
-don't: https://drive.google.com/file/d/1vDGn7G6AI2Gsk-xZOExsuwr-n9lhNBXx/view?usp=sharing
 
 <do-dont :examples="$page.frontmatter.positivecopy" />
 
-// new images
-do: https://drive.google.com/file/d/12EytS7EqL3_RqK7Bgqt-vb6mjG1D2E0w/view?usp=sharing
-don't: https://drive.google.com/file/d/1ls16aZ6SC97dSLz0zvCcOf0wIVNgleJD/view?usp=sharing
-
 <do-dont :examples="$page.frontmatter.fragment" />
-
-// new images
-do: https://drive.google.com/file/d/1xPi33257Ykd3aX7Pi_IpanCAKlTS164x/view?usp=sharing
-don't: https://drive.google.com/file/d/1UxYFCKylPYzLrrW-pZoVDlmQtXRNZVwG/view?usp=sharing
 
 ## Behavior
 
@@ -372,10 +356,6 @@ Checkboxes work independently from each other:
 <br/>
 
 <do-dont :examples="$page.frontmatter.simplify" />
-
-// new images
-do: https://drive.google.com/file/d/12CgDTfgojyIL6cGh5MGtjjYd_X6iY0DV/view?usp=sharing
-don't: https://drive.google.com/file/d/1-qiD_F1aoVGlG1rdx7GKIUQxRcEzNpqV/view?usp=sharing
 
 ## Resources
 
