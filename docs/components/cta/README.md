@@ -326,41 +326,21 @@ To construct consistent and universal Call to Actions across the site:
 
 <do-dont :examples="$page.frontmatter.placement" />
 
-// image changes
-do: https://drive.google.com/file/d/1R4kCcGUrmEJ8IWPOnAUOE1fcqaI0JCAK/view?usp=sharing
-don't: https://drive.google.com/file/d/150XHqaoB4pBICVnwJounkJLa-NyDJfd_/view?usp=sharing
-
 <br />
 
 <do-dont :examples="$page.frontmatter.label" />
-
-// image changes
-do: https://drive.google.com/file/d/1d3tbLktmQDwRRH8umcxxBUkqu5pGTLC0/view?usp=sharing
-don't: https://drive.google.com/file/d/1KE-isVi4CHEpo46bRE8_Mj_QTR4Hgk5n/view?usp=sharing
 
 <br />
 
 <do-dont :examples="$page.frontmatter.size" />
 
-// image changes
-do: https://drive.google.com/file/d/1IZLn9bYvzIgmT9wJ1mGdZg6K0yq1veB4/view?usp=sharing
-don't: https://drive.google.com/file/d/1TzRwGKSd-hnEnl7HAr1mrGSn4cuO71O0/view?usp=sharing
-
 <br />
 
 <do-dont :examples="$page.frontmatter.typography" />
 
-// image changes
-do: https://drive.google.com/file/d/15xVWqQaNbh2qwNqLudKqp-EaKQMhSzvo/view?usp=sharing
-don't: https://drive.google.com/file/d/1w56SEyuwcBbuw8eAfcg8nR5pjxg8EMxz/view?usp=sharing
-
 <br />
 
 <do-dont :examples="$page.frontmatter.link" />
-
-// image changes
-do: https://drive.google.com/file/d/12UlQi6dFV2mNABjQQBozakUj0LUVBou8/view?usp=sharing
-don't: https://drive.google.com/file/d/1kWUyBudVig5lpSgBWW8ICAqjI4BNcK2_/view?usp=sharing
 
 
 # API
