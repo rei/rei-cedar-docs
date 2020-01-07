@@ -7,14 +7,14 @@
   "path": [
     {
       "type": "do",
-      "image": "breadcrumb/breadcrumbs_path_do_4-3.png",
+      "image": "breadcrumb/breadcrumbs_path_do_16-9.png",
       "ratio": "16-9",
       "alt": "Image showing proper breadcrumb paths",
       "caption": "show the full path for breadcrumb items whenever possible."
     },
     {
       "type": "dont",
-      "image": "breadcrumb/breadcrumbs_path_dont_4-3.png",
+      "image": "breadcrumb/breadcrumbs_path_outline_dont_16-9.png",
       "ratio": "16-9",
       "alt": "Image showing mixed breadcrumb paths",
       "caption": "show the path that the user takes to arrive at a page."
@@ -23,14 +23,14 @@
   "path_symbol": [
     {
       "type": "do",
-      "image": "breadcrumb/breadcrumbs_path_symbol_do_4-3.png",
+      "image": "breadcrumb/breadcrumbs_path_symbol_do_16-9.png",
       "ratio": "16-9",
       "alt": "breadcrumbs separated with a forward slash",
       "caption": "separate breadcrumb items with the \"/\" symbol, automatically added in CSS."
     },
     {
       "type": "dont",
-      "image": "breadcrumb/breadcrumbs_path_symbol_dont_4-3.png",
+      "image": "breadcrumb/breadcrumbs_path_symbol_outline_dont_16-9.png",
       "ratio": "16-9",
       "alt": "breadcrumbs separated with a right arrow",
       "caption": "create a custom symbol to separate breadcrumb items."
@@ -39,14 +39,14 @@
   "truncation": [
     {
       "type": "do",
-      "image": "breadcrumb/breadcrumbs_truncate_do_4-3.png",
-      "ratio": "4-3",
+      "image": "breadcrumb/breadcrumbs_truncate_do_16-9.png",
+      "ratio": "16-9",
       "alt": "truncated breadcrumbs",
       "caption": "use truncation for breadcrumb path."
     },
     {
       "type": "dont",
-      "image": "breadcrumb/breadcrumbs_truncate_dont_4-3.png",
+      "image": "breadcrumb/breadcrumbs_truncate_outline_dont_16-9.png",
       "ratio": "16-9",
       "alt": "breadcrumbs forcing a linebreak",
       "caption": "break the page title when long breadcrumb path is expanded."
@@ -55,14 +55,14 @@
   "link": [
     {
       "type": "do",
-      "image": "breadcrumb/breadcrumbs_link_do_4-3.png",
+      "image": "breadcrumb/breadcrumbs_link_do_16-9.png",
       "ratio": "16-9",
       "alt": "breadcrumbs links in gray",
       "caption": "use gray color tints for breadcrumb items."
     },
     {
       "type": "dont",
-      "image": "breadcrumb/breadcrumbs_link_dont_4-3.png",
+      "image": "breadcrumb/breadcrumbs_link_outline_dont_16-9.png",
       "ratio": "16-9",
       "alt": "breadcrumbs links in blue",
       "caption": "color breadcrumb items blue."
@@ -240,16 +240,8 @@ Breadcrumbs provide context and a sense of place. This is especially important o
 
 <cdr-img class="cdr-doc-article-img" alt="Breadcrumb hover state is emphasized using link color and underline" :src="$withBase(`/breadcrumb/Spec__Breadcrumb_Long_16-2.png`)" />
 
-// new image:
-https://drive.google.com/file/d/1FQzjHo9U3od-uyGYERFuSWsKqVrvsreS/view?usp=sharing
-
-
 ### Do / Don't
 <do-dont :examples="$page.frontmatter.path" />
-
-// new images
-do: https://drive.google.com/file/d/1XbQeV6WbXxnedSV8SfP1sbdsF0uBUBTZ/view?usp=sharing
-don't: https://drive.google.com/file/d/1eTgIFKUWgklLIHOJNkFPDxkSsjB09mPU/view?usp=sharing
 
 
 ### Truncation
@@ -258,31 +250,17 @@ Indicate hidden links using an ellipsis.
 
 <cdr-img class="cdr-doc-article-img" alt="breadcrumbs truncated with ellipsis" :src="$withBase(`/breadcrumb/Spec__Breadcrumb_Truncated_16-2.png`)" />
 
-// new image
-https://drive.google.com/file/d/13g-wlUn21ZyFCL5kCH3atBMm1bLUPhBh/view?usp=sharing
-
 Truncate breadcrumbs left to right to show the final two links in the trail, so that at least the parent and grandparent are always visible.
 
 <do-dont :examples="$page.frontmatter.truncation" />
-
-// new images
-do: https://drive.google.com/file/d/1tA-AP2c_uleS6GhikQz1GFQ_0_nsBlqw/view?usp=sharing
-don't: https://drive.google.com/file/d/1FgjLrSbb3vcV2vo6fGyqiC46W3jhmBZ9/view?usp=sharing
 
 
 ### Avoid Customization
 
 <do-dont :examples="$page.frontmatter.path_symbol" />
 
-// new images
-do: https://drive.google.com/file/d/18DVmACk7crXJPQYbNhtzPHEmrFr-DLk_/view?usp=sharing
-don't: https://drive.google.com/file/d/16jQSEZ-ER9AP7XSQKvRElgJHxdu-4n7i/view?usp=sharing
 
 <do-dont :examples="$page.frontmatter.link" />
-
-// new images
-do: https://drive.google.com/file/d/1T4CAy3dG4B06xxvDEb5M8DWdHB8AWqtZ/view?usp=sharing
-don't: https://drive.google.com/file/d/1b17meNeuNW-Kv1yQ_8edToyuV6m4WouJ/view?usp=sharing
 
 ## Resources
 
