@@ -550,9 +550,6 @@ don't: https://drive.google.com/file/d/1vUD6-lMlwSrOp8iO0N0p8yz0IfGMs59Z/view?us
 do: https://drive.google.com/file/d/1t80OFnpQpEWnSrhrahh9MQxBxCXP0_kx/view?usp=sharing
 don't: https://drive.google.com/file/d/1KLM8U9Y11_f9LIlOfpBSUrCvb3j-o-t_/view?usp=sharing
 
-</cdr-doc-table-of-contents-shell>
-</template>
-
 # API
 
 ## Props
