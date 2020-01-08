@@ -20,14 +20,14 @@
   "list1": [
     {
       "type": "do",
-      "image": "lists/lists_link_do__4-3.png",
+      "image": "lists/lists_link_do_4-3.png",
       "ratio": "4-3",
       "alt": "",
       "caption": "link independent clauses and product details."
     },
     {
       "type": "dont",
-      "image": "lists/lists_link_dont__4-3.png",
+      "image": "lists/lists_link_dont_4-3.png",
       "ratio": "4-3",
       "alt": "",
       "caption": "link unrelated items together."
