@@ -212,10 +212,6 @@ To create the appropriate contrast and hierarchy, use a mix of Stuart and Graphi
 
 <cdr-img class="cdr-doc-article-img" alt="A graphic showing mixed usage of Stuart and Graphik typefaces" :src="$withBase(`/typography/typography_type_guidelines_type-pairing.png`)" />
 
-// new image for above:
-https://drive.google.com/file/d/1smSXpiPW44CQeJz5dUlSq5eSyzvvQbvs/view?usp=sharing
-
-
 ### Font Style
 
 
