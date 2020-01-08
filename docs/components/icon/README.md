@@ -152,10 +152,9 @@ See the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) to generate a
 </cdr-doc-example-code-pair>
 
 
-
 ## Non-Cedar SVG
 
-Create a new SVG icon using any valid SVG markup. The wrapping SVG element can be stripped (below) or maintained. Note that if it is not stripped, then `viewBox`, `role`, and `xmlns` attributes will not be preserved. Whereas, all other attributes will be preserved. This method creates an outer SVG wrapper for accessibility and styles. This is not recommended if using a large number of icons. 
+Create a new SVG icon using any valid SVG markup. The wrapping SVG element can be stripped (below) or maintained. Note that if it is not stripped, then `viewBox`, `role`, and `xmlns` attributes will not be preserved. Whereas, all other attributes will be preserved. This method creates an outer SVG wrapper for accessibility and styles. This is not recommended if using a large number of icons.
 
 <cdr-doc-example-code-pair repository-href="/src/components/icon" :sandbox-data="$page.frontmatter.sandboxData" >
 
@@ -223,25 +222,25 @@ W3C recommends using `<title>` and `<desc>` elements in SVG for assistive techno
 ### Sizes
 Icons are available in three sizes: small (16px), medium (24px), and large (32px).  Default size is medium (24px); however, designers can choose a different size.
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/icon/Spec__Icon__Sizes_4-3.png`)" alt="Cedar icon sizes" />
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/icon/Spec__Icon__Sizes.png`)" alt="Cedar icon sizes" />
 
-// new image: https://drive.google.com/file/d/1ednHpf4tg4g8BNSOKuo_5Di14OZaiOW8/view?usp=sharing
+
 
 ### Color
 Ensure that icons use the ratio of 4.5:1 contrast between icon color and background color. Follow recommendations in the [Color article](../../foundation/color/) for pairing light and dark color tokens.
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/icon/Spec__Icon__Colors_21-9.png`)" alt="Cedar icon color options" />
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/icon/Spec__Icon__Colors.png`)" alt="Cedar icon color options" />
 
-// new image: https://drive.google.com/file/d/1sZn7NS0Yrl_tvXlBMdXDaoZr-9A08oTc/view?usp=sharing
+
 
 ### Clearance
 Adequate space around the icon allows for legibility and touch. A minimum touch target area of 40px is recommended for standalone iconography.
 
 When the mouse and keyboard are the primary input methods or when icons are paired inline with text, measurements may be condensed to accommodate denser layouts. Icon size should align to the line-height of the paired text element.
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/icon/Spec__Icon__Spacing_21-9.png`)" alt="Cedar icon clearance" />
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/icon/Spec__Icon__Spacing.png`)" alt="Cedar icon clearance" />
 
-// new image: https://drive.google.com/file/d/1uHdAaiRAHFn7Xg5Y8yAwRipNg9w0nTKt/view?usp=sharing
+
 
 ## Icon Library
 
