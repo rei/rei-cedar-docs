@@ -7,14 +7,14 @@
   "select": [
     {
       "type": "do",
-      "image": "tabs/tab_select_do_16-9.png",
+      "image": "tabs/tab_select_do.png",
       "ratio": "16-9",
       "alt": "tab with content displaying",
       "caption": "display a tab section on load."
     },
     {
       "type": "dont",
-      "image": "tabs/tab_select_dont_16-9.png",
+      "image": "tabs/tab_select_dont.png",
       "ratio": "16-9",
       "alt": "tab with empty content",
       "caption": "display tabs without a section visible."
@@ -23,14 +23,14 @@
   "number": [
     {
       "type": "do",
-      "image": "tabs/tab_number_do_16-9.png",
+      "image": "tabs/tab_number_do.png",
       "ratio": "16-9",
       "alt": "tabs with two buttons",
       "caption": "use tabs with at least 2 buttons."
     },
     {
       "type": "dont",
-      "image": "tabs/tab_number_dont_16-9.png",
+      "image": "tabs/tab_number_dont.png",
       "ratio": "16-9",
       "alt": "tab with one button",
       "caption": "use tabs with only 1 button."
@@ -39,14 +39,14 @@
   "capitalization": [
     {
       "type": "do",
-      "image": "tabs/tab_capitalization_do_16-9.png",
+      "image": "tabs/tab_capitalization_do.png",
       "ratio": "16-9",
       "alt": "tabs with title cased labels",
       "caption": "use title case for tab labels."
     },
     {
       "type": "dont",
-      "image": "tabs/tab_capitalization_dont_16-9.png",
+      "image": "tabs/tab_capitalization_dont.png",
       "ratio": "16-9",
       "alt": "tabs with all caps labels",
       "caption": "use all caps for tab labels."
@@ -55,14 +55,14 @@
   "label": [
     {
       "type": "do",
-      "image": "tabs/tab_label_do_16-9.png",
+      "image": "tabs/tab_label_do.png",
       "ratio": "16-9",
       "alt": "tabs with succint labels",
       "caption": "write short and meaningful tab labels. Between 1-2 words is best."
     },
     {
       "type": "dont",
-      "image": "tabs/tab_label_dont_16-9.png",
+      "image": "tabs/tab_label_dont.png",
       "ratio": "16-9",
       "alt": "tabs with truncated labels.",
       "caption": "truncate tab labels. If a label overruns the container, find a shorter alternative."
@@ -278,27 +278,11 @@ This component has compliance with WCAG guidelines by:
 
 <do-dont :examples="$page.frontmatter.select" />
 
-// new images
-do: https://drive.google.com/file/d/1B0vYOcJQopa7d0YYgOlspMTxqKFXDnmC/view?usp=sharing
-don't: https://drive.google.com/file/d/13xqdqSy3uruFasxCpFYGJbSG7B11hnTv/view?usp=sharing
-
 <do-dont :examples="$page.frontmatter.number" />
-
-// new images
-do: https://drive.google.com/file/d/1TQgYAuZnisfcl_tFNpRl-u7K8h1cvDo8/view?usp=sharing
-don't: https://drive.google.com/file/d/1HgvbmLWHmmVzBQrmnUKVGTtrv0KyyQes/view?usp=sharing
 
 <do-dont :examples="$page.frontmatter.capitalization" />
 
-// new images
-do: https://drive.google.com/file/d/1z8jpPRab625p1HuhGUn39j9jnAs8kKuo/view?usp=sharing
-don't: https://drive.google.com/file/d/1phzyOvXDk64gIGy48A9bkoJg40TuAuv8/view?usp=sharing
-
 <do-dont :examples="$page.frontmatter.label" />
-
-// new images
-do: https://drive.google.com/file/d/13qWkmDew1nn4CV_5Dus4_wwh52pBEiSD/view?usp=sharing
-don't: https://drive.google.com/file/d/10xymHByqnBU15chfwHdwD2BQIrt37dnP/view?usp=sharing
 
 ## Responsiveness
 
