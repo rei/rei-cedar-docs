@@ -45,10 +45,10 @@
       "caption": "left align text to other elements on the page."
     },
     {
-      "type": "dont",
+      "type": "caution",
       "image": "typography/typography_alignment_caution.png",
       "alt": "Image showing a center aligned headline above icons",
-      "caption": "center align short headlines."
+      "caption": "center aligning short headlines."
     },
   ],
   "lineLengthMobile": [
