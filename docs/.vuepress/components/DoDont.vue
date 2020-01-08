@@ -11,12 +11,12 @@
             class="do-dont__image"
             :src="$withBase(`/${example.image}`)"
             :ratio="getRatio(example.ratio) || '16-9'"
-            :alt="altText(example)" />
-          <figcaption :class="['do-dont__caption', typeClass(example.type)]">
+            :alt="example.alt || ''" />
+          <figcaption :class="['do-dont__caption', `do-dont__caption--${example.type}`]">
             <span v-if="example.type==='do'" class="do-dont__type">Do </span>
             <span v-if="example.type==='dont'" class="do-dont__type">Don't </span>
-            <component :is="`comp-${example.type}${idx}`" />
-            <!-- <component :is="compiled(`${example.type}${idx}`, example.caption)" /> -->
+            <span v-if="example.type==='caution'" class="do-dont__type">Take Caution </span>
+            <span>{{ example.caption }}</span>
             <slot/>
           </figcaption>
         </figure>
@@ -35,32 +35,11 @@ export default {
       type: Array,
     }
   },
-  beforeMount() {
-    this.examples.forEach((example, idx) => {
-      this.$options.components[`comp-${example.type}${idx}`] = { ...Vue.compile(`<span>${example.caption}</span>`) };
-    })
-  },
   methods: {
-    altText(ex) {
-      if (ex.alt) return ex.alt;
-      else if (!ex.alt && ex.type === 'do') return 'Do example image';
-      else return `Don't example image`;
-    },
-    typeClass(type) {
-      return {
-        'do-dont__caption--do': type === 'do',
-        'do-dont__caption--dont': type === 'dont',
-      }
-    },
-    compiled(id, template) {
-      this.$options.components[`comp-${id}`] = { ...Vue.compile(`<span>${template}</span>`) };
-
-      return `comp-${id}`;
-    },
     getRatio(ratio) {
       if (ratio) {
         return ratio.replace(':', '-');
-      } 
+      }
       return false;
     }
   }
@@ -72,6 +51,7 @@ export default {
 
 $do-color: $instant-winner;
 $dont-color: $quick-fixe;
+$caution-color: #C77523;
 
 .do-dont {
 
@@ -117,6 +97,16 @@ $dont-color: $quick-fixe;
 
       & > .do-dont__type {
         color: $dont-color;
+      }
+    }
+
+    &--caution {
+      &::before {
+        border-color: $caution-color;
+      }
+
+      & > .do-dont__type {
+        color: $caution-color;
       }
     }
   }
