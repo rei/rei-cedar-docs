@@ -228,7 +228,7 @@ Would be nice to use table markdown but alternating row styling is inverted. Hea
   </tbody>
 </table>
 
-#### cdr-text-heading-800
+#### cdr-text-heading-serif-800
 <table>
   <tbody>
     <tr>
@@ -245,7 +245,7 @@ Would be nice to use table markdown but alternating row styling is inverted. Hea
       <td></td>
       <td>heading-</td>
       <td></td>
-      <td></td>
+      <td>serif</td>
       <td>800</td>
       <td></td>
     </tr>

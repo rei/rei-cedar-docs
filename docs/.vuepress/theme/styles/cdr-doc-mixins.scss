@@ -26,7 +26,7 @@
 
   & > h2,
   & > div > h2 {
-    @include cdr-text-heading-700; // Section heading
+    @include cdr-text-heading-serif-700; // Section heading
     margin-bottom: $cdr-space-one-x;
     margin-top: $cdr-space-two-x;
     max-width: $cdr-doc-long-form-text-max-line-length;
@@ -38,7 +38,7 @@
 
   & > h3,
   & > div > h3 {
-    @include cdr-text-heading-500; // SubSection heading
+    @include cdr-text-heading-sans-500; // SubSection heading
     margin-bottom: $cdr-space-one-x;
     margin-top: $cdr-space-two-x;
     max-width: $cdr-doc-long-form-text-max-line-length;
@@ -49,7 +49,7 @@
   }
 
   & > h4 {
-    @include cdr-text-heading-400; // Sub-SubSection heading
+    @include cdr-text-heading-sans-400; // Sub-SubSection heading
     margin-bottom: $cdr-space-one-x;
     margin-top: $cdr-space-two-x;
     max-width: $cdr-doc-long-form-text-max-line-length;
@@ -60,7 +60,7 @@
   }
 
   & > h5 {
-    @include cdr-text-heading-300; // custom SubX3 Section heading
+    @include cdr-text-heading-sans-300; // custom SubX3 Section heading
     margin-bottom: $cdr-space-one-x;
     margin-top: $cdr-space-two-x;
     max-width: $cdr-doc-long-form-text-max-line-length;
