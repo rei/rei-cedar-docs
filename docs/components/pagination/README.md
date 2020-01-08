@@ -186,7 +186,7 @@ click,
 - `content`: the default content for that link
 - `iconClass`: a class to be applied to the prev/next arrow icon in order to match pagination styling
 - `iconPath`: the path to the icon in the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) used for this link
-- `iconComponent`: name of the component used for this link 
+- `iconComponent`: name of the component used for this link
 - `click`: function ran when element is clicked. Required for internal component behavior
 
 <cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ page: 2, pages: [{page: 1, url: '1'}, {page: 2, url: '2'}, {page: 3, url: '3'}] }">
@@ -342,27 +342,11 @@ Pagination adapts to a Select component with a native UI dropdown menu on XS bre
 
 The **CdrPagination** component provides a current page number control and renders a list of links. The current page value should be bound using `v-model` in your app.
 
-<<<<<<< HEAD
-You will need to enable navigation manually for pagination to work at mobile widths.
-
-The **CdrPagination** component does not make data calls, render or track paginated data, or handle routing beyond simple anchor links. However, it does emit events if you need to customize routing or need to add additional application logic. 
-
-### Responsive Behavior and Navigation
-
-The responsive behavior for the **CdrPagination** component automatically converts to **CdrSelect** component rather than a list of links. Values for the **CdrSelect** component are the provided page URL.
-
-If not using Vue Router, you will need to manually update window location by using the `select-change` event.
-=======
 The **CdrPagination** component does not make data calls, render or track paginated data, or handle routing beyond simple anchor links. However, it does emit events if you need to customize routing or need to add additional application logic.
 
 ## Scoped Slots and vue-router
 
-<<<<<<< HEAD
-Previous, next, and individual page links can have their template overridden via scoped slots. While this isn't advisable under normal circumstances, it is necessary to make the component work with vue-router. It is similar to the [scoped slot example](?active-tab=overview#link-scoped-slots) but uses `router-link` with no click event (when paired with a computed prop v-model):
->>>>>>> next
-=======
 Previous, next, and individual page links can have their template overridden via scoped slots. While this isn't advisable under normal circumstances, it is necessary to make the component work with vue-router. It is similar to the [scoped slot example](#link-scoped-slots) but uses `router-link` with no click event (when paired with a computed prop v-model):
->>>>>>> next
 
 ```vue
 <cdr-pagination
