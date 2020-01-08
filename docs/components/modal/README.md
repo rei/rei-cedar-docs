@@ -114,9 +114,9 @@
 }
 ---
 
-<cdr-doc-tabs>
-<template slot="Overview">
-<cdr-doc-table-of-contents-shell tab-name="Overview">
+<cdr-doc-table-of-contents-shell >
+
+# Overview
 
 <cdr-doc-example-code-pair repository-href="/src/components/modal"
 :sandbox-data="$page.frontmatter.sandboxData" :model="{ opened: false }">
@@ -136,7 +136,7 @@
 >
   <template slot="title">
     <cdr-text
-      tag="h1"
+      tag="h3"
       modifier="heading-600"
     >Add to Cart
     </cdr-text>
@@ -146,6 +146,7 @@
 ```
 </cdr-doc-example-code-pair>
 
+# Guidelines
 ## Accessibility
 
 To ensure that usage of this component complies with accessibility guidelines, do the following:
@@ -155,17 +156,11 @@ To ensure that usage of this component complies with accessibility guidelines, d
 - Modal can be closed using the keyboard (ESC key), Close button, or by clicking outside of modal
 
 This component has compliance with WCAG guidelines by:
-- Select the appropriate attributes and aria roles: 
+- Select the appropriate attributes and aria roles:
   - For modal without title: aria-label
   - For short modal: aria-describedby
   - For longer modal: assign role="document" to the modal content
 - Use the `aria-hidden` and `tabindex="-1"` on focusable items for all content outside of the modal
-
-</cdr-doc-table-of-contents-shell>
-</template>
-
-<template slot="Guidelines">
-  <cdr-doc-table-of-contents-shell>
 
 ## Use When
 
@@ -184,25 +179,20 @@ This component has compliance with WCAG guidelines by:
 - Two width options are available: 600px (default) and 800px (large)
 - Headlines should not exceed 68 characters
 - Modal centers within the page
-- Keep modal titles succinct and informative 
+- Keep modal titles succinct and informative
 
 ## Behavior
 
 - If two buttons are needed, place the primary button on the left and the secondary button on the right. Stack buttons at XS
 - Content behind modal does not scroll and cannot be interacted with in any way
 - Gradient is added at bottom to signify further scrollable content
-- Modal is dismissed by: 
-  - Clicking the Close button 
+- Modal is dismissed by:
+  - Clicking the Close button
   - Interacting with the overlay background
   - Pressing the escape key (ESC)
 - Modal opens one at a time and are never displayed in groups
 
-</cdr-doc-table-of-contents-shell>
-</template>
-
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
-
+# API
 ## Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
@@ -253,7 +243,7 @@ When using the `label` slot, add CdrText to use the appropriate header styles.
 
 ## Size
 
-The modal `size` prop controls the max-width of the modal. `medium` maps to a max-width of 600px; while `large` is 800px. 
+The modal `size` prop controls the max-width of the modal. `medium` maps to a max-width of 600px; while `large` is 800px.
 
 ## Scroll Behavior
 
@@ -261,7 +251,7 @@ The modal content area will scroll vertically if there's enough content. The mod
 
 ## Accessibility
 
-If your modal is launched by a button, addadd `aria-haspopup="dialog"` to the button element.
+If your modal is launched by a button, add `aria-haspopup="dialog"` to the button element.
 
 ```vue
 <template>
@@ -272,7 +262,3 @@ If your modal is launched by a button, addadd `aria-haspopup="dialog"` to the bu
 ```
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>
- 
