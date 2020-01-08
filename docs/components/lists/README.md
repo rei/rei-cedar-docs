@@ -20,14 +20,14 @@
   "list1": [
     {
       "type": "do",
-      "image": "lists/lists_grammar_do__4-3.png",
+      "image": "lists/lists_link_do__4-3.png",
       "ratio": "4-3",
       "alt": "",
       "caption": "link independent clauses and product details."
     },
     {
       "type": "dont",
-      "image": "lists/lists_grammar_dont__4-3.png",
+      "image": "lists/lists_link_dont__4-3.png",
       "ratio": "4-3",
       "alt": "",
       "caption": "link unrelated items together."
@@ -36,15 +36,15 @@
   "list2": [
     {
       "type": "do",
-      "image": "lists/lists_punctuation_do_3-4.png",
-      "ratio": "3-4",
+      "image": "lists/lists_punctuation_do_4-3.png",
+      "ratio": "4-3",
       "alt": "",
       "caption": "end each sentence with a period except last sentence."
     },
     {
       "type": "dont",
-      "image": "lists/lists_punctuation_dont_3-4.png",
-      "ratio": "3-4",
+      "image": "lists/lists_punctuation_dont_4-3.png",
+      "ratio": "4-3",
       "alt": "",
       "caption": "add terminal punctuation."
     }
@@ -282,16 +282,9 @@ Every item in a list must:
 
 <do-dont :examples="$page.frontmatter.list1" />
 
-// new images:
-do: https://drive.google.com/file/d/1I4GEhLono3yJ-EQfV3fxZdC-HTSdkdEx/view?usp=sharing
-don't: https://drive.google.com/file/d/1w2Io0VliFxbilxUjyK04TVgq-JLDkAf4/view?usp=sharing
-
 <br />
 <do-dont :examples="$page.frontmatter.list2" />
 
-// new images:
-do: https://drive.google.com/file/d/1kizRYqa8MpSbQpNFhlOXbXF95nwWy7yl/view?usp=sharing
-don't: https://drive.google.com/file/d/1pLaezccQsFaL16mkJcHgWlZqePmvgu26/view?usp=sharing
 
 ## Resources
 
