@@ -20,14 +20,14 @@
   "standalone": [
     {
       "type": "do",
-      "image": "links/links_descriptivetext_do__16-9.png",
+      "image": "links/links_descriptivetext_do.png",
       "ratio": "16-9",
       "alt": "Image showing proper link usage",
       "caption": "use clear, concise, and descriptive text."
     },
     {
       "type": "dont",
-      "image": "links/links_descriptivetext_dont__16-9.png",
+      "image": "links/links_descriptivetext_dont.png",
       "ratio": "16-9",
       "alt": "Image showing click here link",
       "caption": "use “click here” or “start here” for link text."
@@ -36,14 +36,14 @@
   "link": [
     {
       "type": "do",
-      "image": "links/links_underlinestyle_text_do__16-9.png",
+      "image": "links/links_underlinestyle_text_do.png",
       "ratio": "16-9",
       "alt": "The link in this copy uses the cdr-link component, and, so correctly uses an underline",
       "caption": "underline every link."
     },
     {
       "type": "dont",
-      "image": "links/links_underlinestyle_text_dont__16-9.png",
+      "image": "links/links_underlinestyle_text_dont.png",
       "ratio": "16-9",
       "alt": "The default link in body copy incorrectly does not use an underline",
       "caption": "apply different visual treatments for hyperlinks."
@@ -266,15 +266,7 @@ Apply the following use cases when deciding when to use links as anchors or butt
 
 <do-dont :examples="$page.frontmatter.standalone" />
 
-// new images
-do: https://drive.google.com/file/d/1YIuGCm-qv8n66KTHb-gdqaN_ll3Usagt/view?usp=sharing
-don't: https://drive.google.com/file/d/17whw8pQUxrtDJnSSiU5i8PobXSGQ1tjs/view?usp=sharing
-
 <do-dont :examples="$page.frontmatter.link" />
-
-// new images
-do: https://drive.google.com/file/d/1m8s0g_3n2ClYyeHrJzscOS6pymDcgyKr/view?usp=sharing
-don't: https://drive.google.com/file/d/1PQlgEtDJGFSHtn61JyNastd1YzXVW22r/view?usp=sharing
 
 ## Resources
 

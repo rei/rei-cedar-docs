@@ -297,17 +297,13 @@ Use conventional aspect ratios:
 <cdr-img class="cdr-doc-article-img captioned" :src="$withBase(`/image-component/Spec__Image_Crop_Top_16-4.png`)"/>
 Images are cropped on y-axis with top value and on x-axis with left, x-center, and right values
 
-// new image: https://drive.google.com/file/d/13NX30wZ1g-sgvsisduxgRDyMWtFmHmbg/view?usp=sharing
 
 <cdr-img class="cdr-doc-article-img captioned" :src="$withBase(`/image-component/Spec__Image_Crop_Center_16-4.png`)"/>
 Images are cropped on y-axis with y-center value and on x-axis with left, x-center, and right values
 
-// new image: https://drive.google.com/file/d/1RhvCKbghvbGVGIQnW9PYlmqv1Y_mHNdt/view?usp=sharing
-
 <cdr-img class="cdr-doc-article-img captioned" :src="$withBase(`/image-component/Spec__Image_Crop_Bottom_16-4.png`)"/>
 Images are cropped on y-axis with bottom value and on x-axis with left, x-center, and right values
 
-// new image: https://drive.google.com/file/d/1Ir1TOH1c8KeJctwCKUIHKIxsm6Zy270G/view?usp=sharing
 
 ## Content
 
@@ -324,7 +320,7 @@ Images are cropped on y-axis with bottom value and on x-axis with left, x-center
   - Consider adding a semi-transparent black gradient over the image in the CSS
 - Apply only vertical gradient backgrounds. Avoid horizontal, diagonal, and radial gradients
 - Always include a backup background color so that when the background image is disabled, text is still legible and passes contrast requirements
-- For help in determining whether your text and image combination conforms to the required contrast ratio, use the [Color Contrast Analyzer](https://chrome.google.com/webstore/detail/color-contrast-analyzer/dagdlcijhfbmgkjokkjicnnfimlebcll) Chrome plugin 
+- For help in determining whether your text and image combination conforms to the required contrast ratio, use the [Color Contrast Analyzer](https://chrome.google.com/webstore/detail/color-contrast-analyzer/dagdlcijhfbmgkjokkjicnnfimlebcll) Chrome plugin
 
 ### Decorative Images
 
@@ -342,7 +338,7 @@ Images are cropped on y-axis with bottom value and on x-axis with left, x-center
 - Avoid repetitive labels. For example: “image of” or “picture of”
 - Descriptions:
   - Use short description that conveys the essential information presented by the image without burdening users with unnecessary details
-  - Use long descriptions for complex images, such as graphs, charts, or diagrams, to provide enough information 
+  - Use long descriptions for complex images, such as graphs, charts, or diagrams, to provide enough information
 - For groups of images that convey a single piece of information, apply the `alt` attribute to only one image for the entire group
 - For image maps with multiple clickable areas:
   - Must provide an overall context for the set of links using `alt` attribute

@@ -116,7 +116,7 @@
 <cdr-doc-table-of-contents-shell>
 
 # Overview
-<cdr-doc-alert icon="info"><strong>REI.com is currently using Bazaarvoice for ratings.</strong>Styles documented here may not reflect the current styles provided by the tool. Reach out in <cdr-link href="https://rei.slack.com/messages/CA58YCGN4" target="_blank">#cedar-user-support</cdr-link> for further guidance or questions.</cdr-doc-alert>
+<cdr-doc-alert icon="info"><strong>REI.com is currently using Bazaarvoice for ratings.</strong>Styles documented here may not reflect the current styles provided by the tool. Reach out in <cdr-link href="https://rei.slack.com/messages/CA58YCGN4" target="\_blank">#cedar-user-support</cdr-link> for further guidance or questions.</cdr-doc-alert>
 
 ## Default (Medium)
 
@@ -231,21 +231,9 @@ This component has compliance with WCAG guidelines by:
 
 <do-dont :examples="$page.frontmatter.stars" />
 
-// new images
-do: https://drive.google.com/file/d/1SMX6n9KStBxoBvXWfbutFP9gOjiHml0q/view?usp=sharing
-don't: https://drive.google.com/file/d/1TmsuKKper3H9g6eg6nyqaKXVh5VFRutz/view?usp=sharing
-
 <do-dont :examples="$page.frontmatter.number" />
 
-// new images
-do: https://drive.google.com/file/d/1gS9RgajCZ9oTobEpjkC-MqeVCe6jYZW5/view?usp=sharing
-don't: https://drive.google.com/file/d/1umPFbaPMHgkzNiTps7HFEbS9HR1aGXPw/view?usp=sharing
-
 <do-dont :examples="$page.frontmatter.none" />
-
-// new images
-do: https://drive.google.com/file/d/1svLraib9DWn4UvIEgHnQXi-X3CR2o6DM/view?usp=sharing
-don't: https://drive.google.com/file/d/1A27tFTlqoGcC-XWmZ5enS2BZ1VIkMXMn/view?usp=sharing
 
 ## Resources
 

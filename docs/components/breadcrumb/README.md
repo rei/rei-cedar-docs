@@ -107,7 +107,7 @@
 ---
 
 <cdr-doc-table-of-contents-shell>
-
+# Overview
 ## Truncated (Default)
 
 Long breadcrumb path shortened to display the last 2 items with hidden links indicated by ellipsis.
@@ -132,7 +132,7 @@ Long breadcrumb path shortened to display the last 2 items with hidden links ind
 Complete breadcrumb string with all items visible.
 
 <cdr-doc-example-code-pair repository-href="/src/components/breadcrumb" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight= false >
-  
+
 ```html
   <cdr-breadcrumb
     :truncation-enabled="false"
@@ -318,8 +318,6 @@ The below image and example code shows using ```truncationThreshold``` to set tr
 
 <cdr-img class="cdr-doc-article-img" alt="Breadcrumb with truncation threshold at 50% and 80%" :src="$withBase(`/breadcrumb/Spec_API___Breadcrumb_Truncated_Threshold_50to80_16-4.png`)" />
 
-// new image: https://drive.google.com/file/d/1oTHhnHpv4_S9Etz_DIUnedwTbfQQkUFr/view?usp=sharing
-
 ```vue
 <cdr-breadcrumb
   :truncation-threshold="0.50"
@@ -335,8 +333,6 @@ Use the ```truncationXSThreshold``` prop to alter when truncation occurs:
 The below image and example code shows using ```truncationXSThreshold``` to set truncation to occur at 70%.
 
 <cdr-img class="cdr-doc-article-img" alt="Breadcrumb with truncation XS  threshold at 70%" :src="$withBase(`/breadcrumb/Spec_API___Breadcrumb_Truncated_XSThreshold_70to100_16-4.png`)" />
-
-// new image: https://drive.google.com/file/d/1LPUs8TLWILap7Yvf-illbZMhB94m84t3/view?usp=sharing
 
 ```vue
 <cdr-breadcrumb

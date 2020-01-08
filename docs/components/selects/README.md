@@ -432,21 +432,9 @@ Select components should be:
 
 <do-dont :examples="$page.frontmatter.labels" />
 
-// new images
-do: https://drive.google.com/file/d/1sbJ5Cn4G8MuS0FwZybimfiJyT6wz9Hdg/view?usp=sharing
-don't: https://drive.google.com/file/d/1PFBonE79BaUt7dVf-7VZSafEfG3ulQuC/view?usp=sharing
-
 <do-dont :examples="$page.frontmatter.case" />
 
-// new images
-do: https://drive.google.com/file/d/1ln9lflUn2KpvzXon3DjSU2D1MCd_Uw6g/view?usp=sharing
-don't: https://drive.google.com/file/d/104bUYbIhTIHfsSVhqY6cscvA6fhgE2Rq/view?usp=sharing
-
 <do-dont :examples="$page.frontmatter.punctuation" />
-
-// new images
-do: https://drive.google.com/file/d/1XeYv3o1uSpvjOjBRcChgPMrSFFWkzxLa/view?usp=sharing
-don't: https://drive.google.com/file/d/1417UyM2t6lNfcxiBPFcxbV6N8_jO1e53/view?usp=sharing
 
 
 ## Behavior
@@ -466,15 +454,7 @@ don't: https://drive.google.com/file/d/1417UyM2t6lNfcxiBPFcxbV6N8_jO1e53/view?us
 
 <do-dont :examples="$page.frontmatter.required" />
 
-// new images
-do: https://drive.google.com/file/d/1daIhuCAuqANCz-rQw69QqbqbVmiY9HhV/view?usp=sharing
-don't: https://drive.google.com/file/d/1DUVCy7wqLYOYQ39upIFVXUV7mhp_OINh/view?usp=sharing
-
 <do-dont :examples="$page.frontmatter.sizes" />
-
-// new images
-do: https://drive.google.com/file/d/1pLPgRDzSWcEdRCZ1YjUDnT31TYiSADXD/view?usp=sharing
-don't: https://drive.google.com/file/d/1QNEOwkBFNGY7t04qY-ZKXAnhGiGyHRYu/view?usp=sharing
 
 
 # API

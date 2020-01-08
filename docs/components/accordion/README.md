@@ -349,15 +349,11 @@ This component has compliance with WCAG guidelines by:
 ### Do / Don't
 
 <do-dont :examples="$page.frontmatter.nesting" />
-// new images
-do: https://drive.google.com/file/d/1qOOxH1BZVfSfqW32QVlA38Jsfe_N6XYv/view?usp=sharing
-don't: https://drive.google.com/file/d/1AkoWHpdulPeBGlbjiC4DvgtGIUehGAqG/view?usp=sharing
+
 <br />
 
 <do-dont :examples="$page.frontmatter.titles" />
-// new images
-do: https://drive.google.com/file/d/1Nyv6ZSyrTqAqKlWNKY7nArJwmkm7H2nO/view?usp=sharing
-don't: https://drive.google.com/file/d/1AkoWHpdulPeBGlbjiC4DvgtGIUehGAqG/view?usp=sharing
+
 
 ## Responsiveness
 
