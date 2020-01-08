@@ -125,7 +125,7 @@
 <cdr-doc-table-of-contents-shell>
 # Overview
 
-## Default
+## Default (Medium)
 
 Section borders expand to full width of container.
 
@@ -176,9 +176,9 @@ Section borders expand to full width of container.
 
 </cdr-doc-example-code-pair>
 
-## Compact
+## Compact (Small)
 
-Reduced spacing around title and content body. Also, smaller font sizes resulting in an overall denser display of content.
+Reduced spacing around title and content body. Also, smaller font sizes resulting in overall denser display of content.
 
 <cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ compact1: false, compact2: false, compact3: false }">
 
@@ -306,7 +306,7 @@ This component has compliance with WCAG guidelines by:
 ## Use When
 
 - Providing users more content within the same layout
-- Displaying content that's directly related, or supplemental, to the main subject of the page
+- Displaying content that is directly related, or supplemental, to the main subject of the page
 - Designing with limited vertical space and there is enough content to condense
 
 ## Don't Use When
@@ -317,14 +317,16 @@ This component has compliance with WCAG guidelines by:
 
 ## The Basics
 
-- Use on either light or dark backgrounds, background color is provided for both
+- Use on either light or dark backgrounds. Background color is provided for both
+- Content within accordions can include text, photos, graphics, or other components (i.e. links, buttons, tables)
 
 ## Content
 
 - Order the accordion titles by priority and importance
 - Keep titles short to avoid wrapping at smaller viewports
 - Use sentence case for titles
-- Always include a title, icon and subsequent content for each section. All are required
+- Use short titles for accordion labels to avoid wrapping
+- Always include a title, icon, and subsequent content for each section. All are required
 
 ## Anatomy
 
@@ -334,27 +336,32 @@ This component has compliance with WCAG guidelines by:
 
 - Entire title area is clickable, including icon and background
 - Never nest accordions within themselves
-- Use short titles for accordion labels to avoid wrapping
+
 
 ### Show and Hide
 
-- Revealing the frist accordion section is recommended
-- Other accordion sections are all hidden by default, however it is possible to:
-  - Specify that all accordion sections are revealed when page is displayed
-  - Specify that a specific accordion section is revealed with remaining accordion section closed
+- Revealing the first accordion section is recommended
+- Other accordion sections are all hidden by default, however it is possible to specify that:
+  - All accordion sections are revealed when page is displayed
+  - A specific accordion section is revealed with remaining accordion section closed
 - Sections do not automatically collapse when another is expanded
 
 ### Do / Don't
 
 <do-dont :examples="$page.frontmatter.nesting" />
-
+// new images
+do: https://drive.google.com/file/d/1qOOxH1BZVfSfqW32QVlA38Jsfe_N6XYv/view?usp=sharing
+don't: https://drive.google.com/file/d/1AkoWHpdulPeBGlbjiC4DvgtGIUehGAqG/view?usp=sharing
 <br />
 
 <do-dont :examples="$page.frontmatter.titles" />
+// new images
+do: https://drive.google.com/file/d/1Nyv6ZSyrTqAqKlWNKY7nArJwmkm7H2nO/view?usp=sharing
+don't: https://drive.google.com/file/d/1AkoWHpdulPeBGlbjiC4DvgtGIUehGAqG/view?usp=sharing
 
 ## Responsiveness
 
-- Accordion style can change variant based on breakpoint. Example: _Default_ at MD/LG, _Compact_ and _Border-Aligned_ at XS/SM
+- Accordion style can change variant based on breakpoint. Example: Default at MD/LG can change to Compact and Border-Aligned at XS/SM
 - Switching between the Tab component and the Accordion component is not supported in Cedar components library
 - Do not replace the Accordion component with the Tab component at different breakpoints
 
@@ -378,7 +385,7 @@ This component has compliance with WCAG guidelines by:
 
 ## Usage
 
-CdrAccordion emits an event when its button is clicked. Use an event listener to toggle the value of the opened prop to open/close the accordion.
+CdrAccordion emits an event when its button is clicked. Use an event listener to toggle the value of the opened prop to open or close the accordion.
 
 ```vue
 <template>

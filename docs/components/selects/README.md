@@ -173,7 +173,7 @@
 <cdr-doc-table-of-contents-shell tab-name="Overview">
 # Overview
 
-## Default
+## Default (Medium)
 
 Basic select control with label.
 
@@ -268,7 +268,7 @@ Select control with link text on right.
 
 ## Select with Icon Above
 
-Select control with icon above input field on right.
+Select control with icon above the input field on right.
 
 
 
@@ -361,11 +361,11 @@ This component has compliance with WCAG guidelines by:
 + Recommending a default option for most users
 
 
-### Don't Use When
+## Don't Use When
 
 + Viewing or comparing all options is needed. Instead, use [Radio Buttons](https://rei.github.io/rei-cedar-docs/components/radio/)
 + Displaying a limited number of options. Instead, use [Radio Buttons](https://rei.github.io/rei-cedar-docs/components/radio/)
-+ Displaying a yes or no selection. Instead, use [Radio Buttons](https://rei.github.io/rei-cedar-docs/components/radio/)
++ Displaying a "yes" or "no" selection. Instead, use [Radio Buttons](https://rei.github.io/rei-cedar-docs/components/radio/)
 + Turning an option on or off. Instead, use [Checkboxes](https://rei.github.io/rei-cedar-docs/components/checkboxes/)
 + Setting a value is required. Instead, use [Radio Buttons](https://rei.github.io/rei-cedar-docs/components/radio/)
 + Displaying more than 10 options. Instead, use [Inputs](https://rei.github.io/rei-cedar-docs/components/input/)
@@ -374,25 +374,25 @@ This component has compliance with WCAG guidelines by:
 
 ## The Basics
 
-Select and dropdown components tend to look similar, however have differing functionality. While select is used for selecting from a list of options and submitting that data, dropdowns contain links and take users elsewhere. Also, the select appearance is owned by the browser, whereas dropdowns can be styled.
+Select and dropdown components tend to look similar, but have different functionality. While select is used for selecting from a list of options and submitting that data, dropdowns contain links and take users elsewhere. Also, the select appearance is owned by the browser, whereas dropdowns can be styled.
 
 Select components should be:
-+ **Identifiable:** Select fields should indicate that users can change it’s value
++ **Identifiable:** Select fields should indicate that users can change its value
 + **Findable:** It should be easy to find a select field among other elements
 + **Legible:** Select fields indicate their state such as enabled, focused, or disabled
 
 ### Options
 + Define width using CSS styles
-+ Height options are medium and large. These variations can be used for creating media queries for responsive layouts, or to call more or less attention to the component. For an example of medium and large sizes, view [the Overview tab](https://rei.github.io/rei-cedar-docs/components/select/#overview)
++ Height options are medium and large. These variations can be used for creating media queries for responsive layouts, or to call more or less attention to the component. For an example of medium and large sizes, visit the [Overview](https://rei.github.io/rei-cedar-docs/components/select/?active-tab=overview) tab
 
 
 ## Content
 
 ### Labels
 
-+ Use concise and consistent labels that describes the meaning of the select field
++ Use concise and consistent labels that describe the meaning of the select field
 + Limit labels to 1–3 words and fewer than 20 characters, including spaces
-+ Use sentence case only. Do not use all caps, title case, or lowercase.
++ Use sentence case only. Do not use all caps, title case, or lowercase
 + Don’t use colons after labels
 
 ### Prompt Text
@@ -412,7 +412,19 @@ Select components should be:
 ### Helper Text
 
 + Use helper text for hints or suggestions
-+ If help text is long or complex, use a tooltip or popover that is opened from the support link on the right above the select field. Note that too much helper text can make a form look and feel difficult to use.
++ Be succinct. Too much helper text can make a form look and feel difficult to use
+
+### Icon
+
+- Use icons to trigger a popover for hints or suggestions
+- Read more about icon guidelines using Cedar [here](https://rei.github.io/rei-cedar-docs/components/icon/?active-tab=guidelines)
+
+### Link Text
+
+- Use a link when moving or navigating to another page or to a different portion of the same page
+- Use if navigating user to long or complex information
+- Read more about links [here](https://rei.github.io/rei-cedar-docs/components/links/)
+
 
 ### Do / Don’t
 
@@ -420,9 +432,21 @@ Select components should be:
 
 <do-dont :examples="$page.frontmatter.labels" />
 
+// new images
+do: https://drive.google.com/file/d/1sbJ5Cn4G8MuS0FwZybimfiJyT6wz9Hdg/view?usp=sharing
+don't: https://drive.google.com/file/d/1PFBonE79BaUt7dVf-7VZSafEfG3ulQuC/view?usp=sharing
+
 <do-dont :examples="$page.frontmatter.case" />
 
+// new images
+do: https://drive.google.com/file/d/1ln9lflUn2KpvzXon3DjSU2D1MCd_Uw6g/view?usp=sharing
+don't: https://drive.google.com/file/d/104bUYbIhTIHfsSVhqY6cscvA6fhgE2Rq/view?usp=sharing
+
 <do-dont :examples="$page.frontmatter.punctuation" />
+
+// new images
+do: https://drive.google.com/file/d/1XeYv3o1uSpvjOjBRcChgPMrSFFWkzxLa/view?usp=sharing
+don't: https://drive.google.com/file/d/1417UyM2t6lNfcxiBPFcxbV6N8_jO1e53/view?usp=sharing
 
 
 ## Behavior
@@ -432,7 +456,7 @@ Select components should be:
 
 ### Required Fields
 
-+ The text, “Required” will appear next to the input label if the status is required
++ The text “Required” will appear next to the input label if the status is required
 
 ### Validation
 
@@ -442,9 +466,16 @@ Select components should be:
 
 <do-dont :examples="$page.frontmatter.required" />
 
+// new images
+do: https://drive.google.com/file/d/1daIhuCAuqANCz-rQw69QqbqbVmiY9HhV/view?usp=sharing
+don't: https://drive.google.com/file/d/1DUVCy7wqLYOYQ39upIFVXUV7mhp_OINh/view?usp=sharing
+
 <do-dont :examples="$page.frontmatter.sizes" />
 
-<hr>
+// new images
+do: https://drive.google.com/file/d/1pLPgRDzSWcEdRCZ1YjUDnT31TYiSADXD/view?usp=sharing
+don't: https://drive.google.com/file/d/1QNEOwkBFNGY7t04qY-ZKXAnhGiGyHRYu/view?usp=sharing
+
 
 # API
 

@@ -118,10 +118,9 @@
 
 <cdr-doc-table-of-contents-shell>
 
-# Overview
-## Pagination @ SM, MD, LG
+## Pagination @ sm, md, lg
 
-At the SM, MD, and LG breakpoints, pagination displays as a list of number text links with Prev and Next links when applicable.
+At the sm, md, and lg breakpoints, pagination displays as a list of number text links. Prev and Next links are also added when applicable.
 
 <cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ page: 3, pages: [{page: 1, url: '#'}, {page: 2, url: '#'}, {page: 3, url: '#'}, {page: 4, url: '#'}, {page: 5, url: '#'}] }">
 
@@ -136,7 +135,7 @@ At the SM, MD, and LG breakpoints, pagination displays as a list of number text 
 
 ## Link Scoped Slots
 
-Can be used to override the default links rendered in the pagination. Useful for integrating with client side routing, as a `router-link` can be rendered instead of a plain `a` tag. Pagination exposes 3 link scopedSlots: `link`, `prevLink`, and `nextLink`.
+The scoped slots can be used to override the default links rendered in the pagination. Useful for integrating with client-side routing, as a `router-link` can be rendered instead of a plain `a` tag. Pagination exposes 3 link scopedSlots: `link`, `prevLink`, and `nextLink`.
 
 The 'link' slot scope exposes the following prop object:
 
@@ -187,7 +186,7 @@ click,
 - `content`: the default content for that link
 - `iconClass`: a class to be applied to the prev/next arrow icon in order to match pagination styling
 - `iconPath`: the path to the icon in the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) used for this link
-- `iconComponent`: name of the component used for this link 
+- `iconComponent`: name of the component used for this link
 - `click`: function ran when element is clicked. Required for internal component behavior
 
 <cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ page: 2, pages: [{page: 1, url: '1'}, {page: 2, url: '2'}, {page: 3, url: '3'}] }">
@@ -237,11 +236,14 @@ click,
 ```
 </cdr-doc-example-code-pair>
 
-## Pagination @ XS
+## Pagination @ xs
 
-At the XS breakpoint, pagination adapts to a Select component using the native UI dropdown menu.
+At the xs breakpoint, pagination adapts to a Select component using the native UI dropdown menu.
 
 <img :src="$withBase('/pagination/pagination_breakpoint_xs_2x.png')" alt="Image showing responsive pagination component using Select element" />
+
+// new image for above
+https://drive.google.com/file/d/12H_EpgZ8XMrdhx0iWM75IBqO2Jw3b1LB/view?usp=sharing
 
 ## Accessibility
 
@@ -293,17 +295,29 @@ By default, pagination is center aligned under category or search results conten
 
 <do-dont :examples="$page.frontmatter.align" />
 
+// new images
+do: https://drive.google.com/file/d/1OKYIkHCw6szOS5UN2or-Egm9OUjJpoUq/view?usp=sharing
+don't: https://drive.google.com/file/d/1AlVDo9MsuArRE6kTOU0-1kHm_A0vxq4K/view?usp=sharing
+
 <br />
 
 The primary placement for pagination is at the bottom of a page that displays rows of content.
 
 <do-dont :examples="$page.frontmatter.placement" />
 
+// new images
+do: https://drive.google.com/file/d/1SdPRoZmzbASkalVFTJ_3N-XEoDT_B-dI/view?usp=sharing
+don't: https://drive.google.com/file/d/17anxn29DvfktkUFLu6Mw9ly5nESKAd0Z/view?usp=sharing
+
 <br />
 
 Use pagination logic to truncate link list, when possible.
 
 <do-dont :examples="$page.frontmatter.truncate" />
+
+// new images
+do: https://drive.google.com/file/d/1Eakw82Ezc366xJP8fhSHHjMk39srSTr0/view?usp=sharing
+don't: https://drive.google.com/file/d/1qEf9BW8c5h34K2g2Q-vj0FZfLAJGXb8f/view?usp=sharing
 
 ### Responsiveness
 
@@ -405,7 +419,7 @@ See REI's SEO Confluence page on [pagination](https://confluence.rei.com/display
 
 Note that REI has chosen HTML `<link>` elements instead of HTTP headers. Make sure to use fully qualified absolute URLs in the `<link>` elements instead of relative URLs.
 
-For general recommendations view Google's Search Console page, [Indicating paginated content to Google](https://support.google.com/webmasters/answer/1663744?hl=en).
+For general recommendations, view Google's Search Console page, [Indicating paginated content to Google](https://support.google.com/webmasters/answer/1663744?hl=en).
 
 
 </cdr-doc-table-of-contents-shell>

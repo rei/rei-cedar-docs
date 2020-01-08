@@ -216,7 +216,7 @@
 <cdr-doc-table-of-contents-shell>
 # Overview
 
-## Default
+## Default (Medium)
 
 Basic layout with a column of row headers.  Rows alternate background colors.
 
@@ -236,7 +236,7 @@ Basic layout with a column of row headers.  Rows alternate background colors.
 
 ## Column Headers
 
-Layout for making comparisons such as between size/sleeve length. Column headers and row headers are displayed. When columns scroll, row header column is locked in place.
+Layout for making comparisons such as between size and sleeve length. Column headers and row headers are displayed. When columns scroll, row header column is locked in place.
 
 <cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" :model="{colHeaders: $page.frontmatter.exampleTableData.colHeaders, rowHeaders: $page.frontmatter.exampleTableData.rowHeaders, rowData: $page.frontmatter.exampleTableData.rowData, keyOrder: ['xs', 's', 'm', 'l', 'xl', 'xxl', 'xxxl']}">
 
@@ -305,9 +305,8 @@ To ensure that usage of this component complies with accessibility guidelines an
 
 - Table caption should be included
 - Row headers and column headers should be defined
-- Table headers should never be empty
-  - Including the top-left cell of the data table
-  - If needed, use `cdr-sr-only` to hide descriptive text that explains the content for the first column
+- Table headers should never be empty, including the top-left cell of the data table
+    - If needed, use `cdr-sr-only` to hide descriptive text that explains the content for the first column
 - Set the scope attribute to `row` or `col` to indicate that a header applies to the entire row or column
 
 <br />
@@ -351,15 +350,14 @@ Data cells:
 Default styles for tables:
 - All cells have a 1px border
 - Column headers have a 2px bottom border
-- Row headers have a 2px right border. When columns can scroll, the border is 4px
+- Row headers have a 2px right border
+  - When columns can scroll, the border is 4px
 - Rows alternate background colors to improve readability
 - Scrollbars will be native and dictated by the browser
 - Options available:
   - Compact only
   - Borderless only. If using borderless, ensure readability by using the alternating background colors for rows
   - Compact and borderless
-
-## Behavior
 
 ### Text Alignment
 
@@ -377,21 +375,33 @@ Alignment impacts the table's readability. Make the data easy to read and simple
 
 <do-dont :examples="$page.frontmatter.tablelayout" />
 
-<br />
+// new images
+do: https://drive.google.com/file/d/1WoSzWXC32_nZFa7jKMU-ZC2onv-XmTMQ/view?usp=sharing
+don't: https://drive.google.com/file/d/1Poqc6ZWioD6guIW41nyDGxOatXlBtrCZ/view?usp=sharing
 
 <do-dont :examples="$page.frontmatter.sizechart" />
 
-<br />
+// new images
+do: https://drive.google.com/file/d/17u_sL1p0peQk6VCKy1hTqr6CRGX2eJEY/view?usp=sharing
+don't: https://drive.google.com/file/d/1JwABKfsfDEcw0uRi0Wgvs2d8puGcC-3P/view?usp=sharing
 
 <do-dont :examples="$page.frontmatter.techspecs" />
 
-<br />
+// new images
+do: https://drive.google.com/file/d/1SaCdu_1xnsEnIW3FYN2_j79sxiu1bhQ7/view?usp=sharing
+don't: https://drive.google.com/file/d/18Vxf94WZ--J5YdCdmbaaTXXXuf-27L7z/view?usp=sharing
 
 <do-dont :examples="$page.frontmatter.label" />
 
-<br />
+// new images
+do: https://drive.google.com/file/d/1O-D2h_SK17zF2y8gcMgc1wHY6QLarZrl/view?usp=sharing
+don't: https://drive.google.com/file/d/1eCnxwY-SRgsZ6b5NrySHsuXDRtqbLN-9/view?usp=sharing
 
 <do-dont :examples="$page.frontmatter.alternatestripe" />
+
+// new images
+do: https://drive.google.com/file/d/1qhrFrngfOkbLZoqxGkrRDrwes-12KAb8/view?usp=sharing
+don't: https://drive.google.com/file/d/1kqgtXJGlE9LpHCMZdN2fEN8b7FybBgPf/view?usp=sharing
 
 ## Responsiveness
 
@@ -399,14 +409,14 @@ Data Tables are responsive by default. Whenever the number of columns overflows 
 
 ### Locked Column Scrolling
 
-Data Table must have row headers and more than two columns of content, then the responsive behavior will be:
+Data Table must have row headers and more than two columns of content. The responsive behavior should be:
 - Column of row headers will lock into place
 - Remaining columns will scroll
 
 ### Only Two Columns
 
 - Content will not scroll
-- Text within table cells will wrap to fit the smaller container (or viewport)
+- Text within table cells will wrap to fit in the smaller container (or viewport)
 
 <hr>
 

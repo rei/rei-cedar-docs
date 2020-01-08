@@ -107,7 +107,7 @@
 <cdr-doc-table-of-contents-shell>
 # Overview
 
-Stuart is our first choice for larger, more expressive moments. Graphik rounds out the heading schema with smaller sizes and its simplicity allows it to play a supporting role across a wide range of projects.
+Stuart is our first choice for larger, more expressive moments. Graphik rounds out the heading schema with smaller sizes. The simplicity of Graphik allows it to play a supporting role across a wide range of projects.
 
 **Usage Considerations**
 -  Heading styles should never end with a period
@@ -216,7 +216,7 @@ Use for headings nested within a section of your page.
 
 ### Sub-subsection Heading
 
-Use for headings nested within a sub-section of your page.
+Use for headings nested within a subsection of your page.
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
@@ -463,6 +463,16 @@ This component has compliance with WCAG guidelines by:
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase('/headings/heading_proper-page-construction.png')" alt="image of page layout with headings"/>
 
+// new image for above:
+https://drive.google.com/file/d/1qhXhVmkF2__iuVqymGcyNJ1gQ9T9IFIn/view?usp=sharing
+
+- One title per page is recommended
+- Use subtitles and subheadlines when paired with titles and headlines, respectively
+- Use section headings to separate content
+- Use subsection and sub-subsection headings to nest content
+- Repeat section, subsection, and sub-subsection headings as needed
+- Repeat nesting patterns as needed
+
 ## Content
 
 - Be specific. Provide facts or information that pique user interest. Avoid broad and generic headings
@@ -482,6 +492,10 @@ This component has compliance with WCAG guidelines by:
 
 <do-dont :examples="$page.frontmatter.subtitle" />
 
+// new images: 
+do:https://drive.google.com/file/d/1Gme0EkwxMzR01_0SRRCe-Ow5dAxHJ3DQ/view?usp=sharing
+don't: https://drive.google.com/file/d/1deXhjoYg4WpJL3xBlV61sXbcmVEQIlrB/view?usp=sharing
+
 ## Behavior
 
 - Minimize text overlaid on images and multicolored backgrounds, which can degrade legibility. If text is overlaid on an image:
@@ -492,9 +506,13 @@ This component has compliance with WCAG guidelines by:
 
 <do-dont :examples="$page.frontmatter.minimize" />
 
+// new images
+do: https://drive.google.com/file/d/1NbnlHO30LqbmbMjULxYKOxIqMOwbPtHE/view?usp=sharing
+don't: https://drive.google.com/file/d/1hS4M0qfHagWcwyLrVTdcldlK2SfO_hSF/view?usp=sharing
+
 ## Responsiveness
 
-Responsive heading font sizes are the default for heading levels except subheading. Refer to Overview section for more information.
+Responsive heading font sizes are the default for heading levels except subheading. Refer to the Overview section for more information.
 
 ## Resources
 
@@ -516,7 +534,7 @@ This component will bind any attribute that a [native HTML heading element](http
 
 ## Usage
 
-The **CdrText** component allows for styling any html element with available text styles. Visual style and semantic meaning are managed independently by providing:
+The **CdrText** component allows for styling any HTML element with available text styles. Visual style and semantic meaning are managed independently by providing:
 
 - Element to the `tag` prop
 - Style to the `modifier` prop

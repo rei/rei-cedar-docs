@@ -102,8 +102,7 @@
 
 <cdr-doc-table-of-contents-shell>
 
-# Overview
-## Default
+## Default (Medium)
 
 Used as default font style for all text information. Also known as body-default in UI ToolKit.
 
@@ -121,7 +120,7 @@ Used as default font style for all text information. Also known as body-default 
 To ensure that usage of this component complies with accessibility guidelines:
 
 - Text container does not exceed 634px or line length does not exceed more than 75 characters
-- Minimize use of reversed-out body copy because it’s harder to read
+- Minimize use of reversed-out body copy (light copy on a dark background) because it’s harder to read
 - When possible, use the first sentence as an introduction to the paragraph. With screen readers, users can listen to the first sentence and then jump to the next paragraph
 - Break long pages into shorter sections by organizing content into well-defined groups or chunks
 
@@ -154,14 +153,16 @@ This component has compliance with following WebAIM’s accessibility guidelines
 
 ## The Basics
 
-Roboto is used for paragraph text because it is easy to scan. It is primarily used for:
-- Legal messages on PDP pages
-- Shipping messages on PDP pages
-- Customer reviews on PDP pages
-- Class or event descriptions
-- REI Adventure descriptions
-- Editorial copy on PDP pages
-- Long articles on Expert Advice or Co-op Journal pages
+- Graphik is used for paragraph text because its generous x-height makes it easy to read and scan. It is primarily used for:
+  - Legal messages on PDP pages
+  - Shipping messages on PDP pages
+  - Customer reviews on PDP pages
+  - Class or event descriptions
+  - REI Adventure descriptions
+  - Editorial copy on PDP pages
+  - Long articles on Expert Advice or Co-op Journal pages
+
+- Max-width for paragraph containers is 634px or line length should not exceed 75 characters per line.
 
 ## Content
 
@@ -173,16 +174,20 @@ Roboto is used for paragraph text because it is easy to scan. It is primarily us
 - For ease of reading, readability level should be about Grade 7. To test the body text, use the [Hemingway Editor](http://www.hemingwayapp.com/). For more information, view the [Help information](http://www.hemingwayapp.com/help.html)
 - When possible, write the first sentence as an introduction to the paragraph. With screen readers, users can jump from paragraph to paragraph, listening to the first sentence or two before moving on to the next paragraph
 
-## Behavior
-
-- Max-width for paragraph containers is 634px or line length should not exceed 75 characters per line.
-- Use standard (dark) font color on light background for article text
 
 ### Do / Don’t
 
 <do-dont :examples="$page.frontmatter.width" />
 
+// new images
+do: https://drive.google.com/file/d/1hMR6SGfRiI5QJKoeDut0mcjhhtJbVQrU/view?usp=sharing
+don't: https://drive.google.com/file/d/1z0hpZtrKrjjhSzbBkedqjpB7WU_yHR6t/view?usp=sharing
+
 <do-dont :examples="$page.frontmatter.backgrounds" />
+
+// new images
+do: https://drive.google.com/file/d/1IvbngmxPYYpH6mqZqE8JalNmj7-mq6Dn/view?usp=sharing
+don't: https://drive.google.com/file/d/1J_qVFAw64gQIli9dizpgZ9l9MIIE0Bp5/view?usp=sharing
 
 ## Resources
 

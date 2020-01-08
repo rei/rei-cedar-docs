@@ -17,7 +17,7 @@
 
 Color design tokens represent the fundamental decisions of Cedar’s visual language:
   - Stores color specifications using variable names, not hard-coded values such as hex values for color
-  - Specifies a hierarchical and semantically defined system
+  - Specifies a hierarchical and semantically-defined system
 
 
 <br/>
@@ -30,7 +30,9 @@ Below is a list of color tokens with descriptions and values. Web and mobile col
 
 
 <tokens-color type="background">
+
 ## Background Colors
+
 </tokens-color>
 
 <br>
@@ -120,7 +122,7 @@ Text choices should be paired with their corresponding background color to ensur
 
 <br>
 
-Note: Large text is defined as 18 point (typically 24px) or larger or with bold style, 14 point (typically 18.66px) or larger
+**Note:** Large text is defined as 18 point (typically 24px) or larger, or with bold style, 14 point (typically 18.66px) or larger.
 
 <br>
 
@@ -330,7 +332,7 @@ Colors from REI’s brand color palette are used throughout Cedar components and
 
 Note that the values on this page:
   - May not have a long lifespan
-  - May alter the value more frequently
+  - May alter more frequently
   - May be used for a wide variety of purposes
 
 <br>  

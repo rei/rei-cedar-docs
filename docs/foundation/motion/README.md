@@ -27,9 +27,9 @@
 ## Overview
 
 Cedar provides easy-to-use, preset values to apply consistent motion for components. Motion tokens help maintain a cohesive experience across all REI properties by:
-- Stores motion attributes for duration or timing using variable names, not hard-coded values such as cubic-bezier (0.15, 0, 0.15, 0)
-- Specifies a hierarchical and semantically-defined system
-
+- Storing motion attributes for duration or timing using variable names, not hard-coded values such as cubic-bezier (0.15, 0, 0.15, 0)
+- Specifying a hierarchical and semantically-defined system
+  
 <hr>  
 
 Motion tokens are primarily used with web applications. Motion tokens for mobile devices are not currently available.
@@ -211,7 +211,7 @@ For smooth and responsive animation, use CSS attributes for:
 - **Skew:** Using transform property for `skew()`, to distort an element on the 2D plane
 - **Opacity:** Specifies the opacity or transparency of an element with values from 0.0 - 1.0. Lower values cause the element to be more transparent
 
-For more information, view [Adding Tokens to the Repository](../../components/design-tokens/#adding-tokens-to-the-repository).
+For more information, visit the [Adding Tokens to the Repository](../../components/design-tokens/?active-link=adding-tokens-to-the-repository) page.
 
 
 <br>

@@ -207,7 +207,7 @@
 
 ## Column Layout
 
-Use rows and columns to lay out content by specifying equal-widths for all columns
+Use rows and columns to lay out content by specifying equal widths for all columns.
 
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
@@ -258,7 +258,7 @@ Use rows and columns to lay out content by specifying equal-widths for all colum
 
 ## Justify
 
-Define x-axis alignment and distribute space for all columns per row. Containers may have set widths or may be flexible with max-widths defined. This applies to all columns with left as the default value.
+Define x-axis alignment and distribute space for all columns per row. Containers may have set widths or may be flexible with max widths defined. This applies to all columns with left as the default value.
 
 ### Left
 
@@ -690,7 +690,7 @@ Wrapping columns is the default; however, it is possible to disable or enable co
 
 Controls column width by overriding columns value for a specific column or columns. Span will override values from columns.
 
-### 12 Cols
+### 12 Columns
 
 <cdr-doc-example-code-pair repository-href="/src/components/grid" >
 
@@ -1063,7 +1063,7 @@ This component has compliance with following WCAG guidelines:
 
 - Arranging content and components into rows and columns
 - Laying out a page of 2+ rows of body content (apart from site navigation), some of which may or may not have columns
-- Applying responsive rules to columns of a row and/or regions of a page layout or a container of many components
+- Applying responsive rules to columns of a row and/or regions of a page layout, or a container of many components
 - Arranging elements within a single component with two or more zones, including those aligned to the left or right edge
 
 ## Don't Use When
@@ -1075,13 +1075,18 @@ This component has compliance with following WCAG guidelines:
 Columns, gutters, and margins scales as a fluid system as the device and viewport increases from a small devices to a large device:
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase('/grid/Spec_Grid_Desktop_and_Mobile_4-3.png')" alt="grid concept at desktop and mobile sizes"/>
-<br/>
+
+// new image: https://drive.google.com/file/d/1tP1nvK0PbGZE6stSUt_STZScB41CJl2m/view?usp=sharing
+
 <cdr-img class="cdr-doc-article-img" :src="$withBase('/grid/Spec_Grids_Breakpoints_16-9.png')" alt="grid breakpoints"/>
-<br/>
+
+// new image: https://drive.google.com/file/d/1fsb7xjBu0gnBFIuyYt6GKdQtB8HrpXka/view?usp=sharing
 
 ## Anatomy
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase('/grid/Spec_Grids_Gutters_and_Margins_16-9.png')" alt="gutter margins and grids"/>
+
+// new image: https://drive.google.com/file/d/1RvBJtnotPBCkWxZ-h_GkyHjdetZJOtp-/view?usp=sharing
 
 - Maximum width of 1232px:
   - Allows for padding between grid and browser window
@@ -1159,8 +1164,8 @@ Columns, gutters, and margins scales as a fluid system as the device and viewpor
 
 ## Behavior
 
-- Avoid breaking alignment or slightly oversizing a container to stick out for visual interest or to add emphasis.
-- Create relationships and hierarchy between content elements by using the margins and gutters in the grid shared by the page layout.
+- Avoid breaking alignment or slightly oversizing a container to stick out for visual interest or to add emphasis
+- Create relationships and hierarchy between content elements by using the margins and gutters in the grid shared by the page layout
 
 ## Do/Don't
 
@@ -1185,7 +1190,7 @@ To build an effective responsive grid:
 
 # API
 
-Grids are built from two components, **CdrRow** and **CdrCol**.
+Grids are built from two components: **CdrRow** and **CdrCol**.
 
 ## Props
 
@@ -1211,8 +1216,8 @@ Grids are built from two components, **CdrRow** and **CdrCol**.
 
 - Always use **CdrRow** and **CdrCol** together:
     - Attempting to use either without the other will not work
-    - Never include other elements as immediate children of **CdrRow** besides **CdrCol**
-- The grid system is mobile-first, flexbox based, and 12 columns wide. Many props mirror the flexbox API and work as you’d expect CSS flexbox to work.
+    - Never include other elements as immediate children of **CdrRow**, other than **CdrCol**
+- The grid system is mobile-first, flexbox based, and 12 columns wide. Many props mirror the flexbox API and work as you’d expect a CSS flexbox to work.
 
 <br/>
 
@@ -1240,7 +1245,7 @@ Immediate children of `cdr-col` are flexed due to a flex height display bug in s
 Nested grids are made by nesting `cdr-col` and adding the `is-row` prop to the `cdr-col` that acts as the row wrapper:
 
 - Add `is-row` prop to `cdr-col` that has other `cdr-col` as children
-- `is-row` will expose all props for both col and row
+- `is-row` will expose all props for both column and row
 
 
 <cdr-doc-code-snippet :copy-button="false" :max-height="false">

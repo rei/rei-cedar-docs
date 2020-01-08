@@ -115,7 +115,7 @@
 <cdr-doc-table-of-contents-shell>
 # Overview
 
-## Default
+## Default (Medium)
 
 Use for images with no responsive qualities.
 
@@ -134,7 +134,7 @@ Use for images with no responsive qualities.
 
 ## Managing Images
 
-Apply rules to an image using ratio and crop properties. The below example is cropped using top alignment with the aspect ratio set as 9-16
+Apply rules to an image using ratio and crop properties. The below example is cropped using top alignment with the aspect ratio set as 9:16.
 
 
 <cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/image" :sandbox-data="$page.frontmatter.sandboxData" >
@@ -247,7 +247,7 @@ This component has compliance with WCAG guidelines by:
 
 ## The Basics
 
-REI image requirements are described on the Consumer Mobile Applications/Design page for [Launch and Default Shop Image Sizes](https://confluence.rei.com/display/CMA/Launch-and-DefaultShop-Image-Sizes).
+REI image requirements are described on the [Launch and DefaultShop Image Sizes](https://confluence.rei.com/display/CMA/Launch-and-DefaultShop-Image-Sizes) page.
 
 ### Aspect Ratio
 
@@ -269,7 +269,7 @@ Use conventional aspect ratios:
 - Avoid small file sizes that pixelate the image
 - Avoid unnecessarily large file sizes. Export images at the lowest file size possible without compromising quality
 - Optimize high resolution images using [TinyPNG](https://tinypng.com/)
-- Must display images at a proper pixel size compared to Natural size
+- Must display images at a proper pixel size compared to natural size
 
 ### Color and Contrast
 
@@ -284,11 +284,11 @@ Use conventional aspect ratios:
   - Without stretching the image
   - Cropped either vertically or horizontally without empty space
 - Crop images by specifying the starting point:
-  - Adjust the starting background-position on the x-axis of the image:
+  - Adjust the starting background position on the x-axis of the image:
     - Left: Orients the image to its horizontal left
     - Right: Orients the image to its horizontal right
     - X-center: Orients the image to its horizontal center
-  - Adjust the starting background-position on the y-axis of the image:
+  - Adjust the starting background position on the y-axis of the image:
     - Top: Orients the image to its top
     - Bottom: Orients the image to its bottom
     - Y-center: Orients the image to its vertical center
@@ -297,22 +297,24 @@ Use conventional aspect ratios:
 <cdr-img class="cdr-doc-article-img captioned" :src="$withBase(`/image-component/Spec__Image_Crop_Top_16-4.png`)"/>
 Images are cropped on y-axis with top value and on x-axis with left, x-center, and right values
 
-<br/>
+// new image: https://drive.google.com/file/d/13NX30wZ1g-sgvsisduxgRDyMWtFmHmbg/view?usp=sharing
 
 <cdr-img class="cdr-doc-article-img captioned" :src="$withBase(`/image-component/Spec__Image_Crop_Center_16-4.png`)"/>
 Images are cropped on y-axis with y-center value and on x-axis with left, x-center, and right values
 
-<br/>
+// new image: https://drive.google.com/file/d/1RhvCKbghvbGVGIQnW9PYlmqv1Y_mHNdt/view?usp=sharing
 
 <cdr-img class="cdr-doc-article-img captioned" :src="$withBase(`/image-component/Spec__Image_Crop_Bottom_16-4.png`)"/>
 Images are cropped on y-axis with bottom value and on x-axis with left, x-center, and right values
+
+// new image: https://drive.google.com/file/d/1Ir1TOH1c8KeJctwCKUIHKIxsm6Zy270G/view?usp=sharing
 
 ## Content
 
 ### File Names
 - Image file name should include primary keyword or what the page is targeting
 - Showcase keyword targeting through file name and alt text
-- For more information, view SEO How-to articles: [Image Implementation](https://confluence.rei.com/display/SI/Image+Implementation)
+- For more information, view SEO How-to article [Image Implementation](https://confluence.rei.com/display/SI/Image+Implementation)
 
 ### Overlaid Text
 
@@ -322,13 +324,14 @@ Images are cropped on y-axis with bottom value and on x-axis with left, x-center
   - Consider adding a semi-transparent black gradient over the image in the CSS
 - Apply only vertical gradient backgrounds. Avoid horizontal, diagonal, and radial gradients
 - Always include a backup background color so that when the background image is disabled, text is still legible and passes contrast requirements
-- For help in determining whether your text and image combination conforms to the required contrast ratio, use this Chrome plugin: [Color Contrast Analyzer](https://chrome.google.com/webstore/detail/color-contrast-analyzer/dagdlcijhfbmgkjokkjicnnfimlebcll)
+- For help in determining whether your text and image combination conforms to the required contrast ratio, use the [Color Contrast Analyzer](https://chrome.google.com/webstore/detail/color-contrast-analyzer/dagdlcijhfbmgkjokkjicnnfimlebcll) Chrome plugin 
 
 ### Decorative Images
 
-- Avoid using decorative images; instead present the image as a background-image using cascading style sheets (CSS)
-- If using the HTML `<img>` element, add an empty `alt` attribute
-- If using the HTML `<img>` element, add the following attribute: ` role="presentation" `
+- Avoid using decorative images; instead present the image as a background image using CSS
+- If using the HTML `<img>` element, add:
+  - An empty `alt` attribute
+  - Attribute ` role="presentation" `
 
 ### Alternative Text
 
@@ -338,8 +341,8 @@ Images are cropped on y-axis with bottom value and on x-axis with left, x-center
 - If images of text are used, the `alt` attribute should contain the same words that appear in the image
 - Avoid repetitive labels. For example: “image of” or “picture of”
 - Descriptions:
-  - Use short description that conveys the essential information presented by the image without burdening users with superfluous details
-  - Use long descriptions for complex images such as graphs, charts, or diagrams to provide equivalent access to the information the image
+  - Use short description that conveys the essential information presented by the image without burdening users with unnecessary details
+  - Use long descriptions for complex images, such as graphs, charts, or diagrams, to provide enough information 
 - For groups of images that convey a single piece of information, apply the `alt` attribute to only one image for the entire group
 - For image maps with multiple clickable areas:
   - Must provide an overall context for the set of links using `alt` attribute
@@ -347,7 +350,7 @@ Images are cropped on y-axis with bottom value and on x-axis with left, x-center
 
 ## Responsiveness
 
-- Ability to control image display at small, medium and large breakpoints
+- Ability to control image display at small, medium, and large breakpoints
 - Lazy loading of images is provided
 
 ## Resources
@@ -380,7 +383,7 @@ This component will bind any attribute that a [native HTML img element](https://
 - To manipulate background property and remove excess padding:
   - Use `cover` property
   - Use `crop` property
-  - `cover` and `crop` properties can be used together
+  - Use both `cover` and `crop` properties together
 
 ### Cover
 
@@ -395,11 +398,11 @@ This component will bind any attribute that a [native HTML img element](https://
 - Requires the `ratio` property
 - Defines the starting point of the overflow position
 - Accepts a single x-axis and y-axis value (e.g. ` crop=”top left” `):
-  - Adjust the starting background-position on the x-axis of the image:
+  - Adjust the starting background position on the x-axis of the image:
     - `left`: Orients the image to its horizontal left
     - `right`: Orients the image to its horizontal right
     - `x-center`: Orients the image to its horizontal center
-  - Adjust the starting background-position on the y-axis of the image:
+  - Adjust the starting background position on the y-axis of the image:
     - `top`: Orients the image to its top
     - `bottom`: Orients the image to its bottom
     - `y-center`: Orients the image to its vertical center
