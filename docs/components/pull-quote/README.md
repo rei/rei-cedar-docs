@@ -20,14 +20,14 @@
   "indenting": [
     {
       "type": "do",
-      "image": "pull-quote/quotes_pull__do__9-16.png",
+      "image": "pull-quote/quotes_pull_indent_do.png",
       "ratio": "4-3",
       "alt": "Image showing proper pull quote use.",
       "caption": "position the quote near the surrounding text."
     },
     {
       "type": "dont",
-      "image": "pull-quote/quotes_pull__indent_text__dont_9-16.png",
+      "image": "pull-quote/quotes_pull_indent_dont.png",
       "ratio": "4-3",
       "alt": "Image showing improper pull quote use in an article",
       "caption": "use for indenting text content."
@@ -36,14 +36,14 @@
   "position": [
     {
       "type": "do",
-      "image": "pull-quote/quotes_pull__do__9-16.png",
+      "image": "pull-quote/quotes_pull_position_do.png",
       "ratio": "4-3",
       "alt": "Image showing proper pull quote use.",
       "caption": "relate the quote to the surrounding text."
     },
     {
       "type": "dont",
-      "image": "pull-quote/quotes_pull__random__dont_9-16.png",
+      "image": "pull-quote/quotes_pull_position_dont.png",
       "ratio": "4-3",
       "alt": "Image showing improper pull quote use in an article",
       "caption": "position quotes in a random location on the page."
@@ -52,14 +52,14 @@
   "too_many": [
     {
       "type": "do",
-      "image": "pull-quote/quotes_pull__do__9-16.png",
+      "image": "pull-quote/quotes_pull_too_many_do.png",
       "ratio": "4-3",
       "alt": "Image showing proper pull quote use.",
       "caption": "use for emphasizing content or additional content."
     },
     {
       "type": "dont",
-      "image": "pull-quote/quotes_pull__too_many__dont_9-16.png",
+      "image": "pull-quote/quotes_pull_too_many_dont.png",
       "ratio": "4-3",
       "alt": "Image showing too many pull quotes in an article",
       "caption": "use too many pull quotes."
@@ -133,7 +133,9 @@
 
 ---
 
+<cdr-doc-table-of-contents-shell>
 
+# Overview
 ## Default (Medium)
 
 Default pull quote can be used with the following HTML tags: `<p>`, `<div>`, `<aside>`. For XS breakpoint, a border is added below the pull quote and the font size is smaller.
@@ -191,21 +193,9 @@ Use a pull quote for emphasizing content that has a close and significant relati
 
 <do-dont :examples="$page.frontmatter.indenting" />
 
-// new images
-do: https://drive.google.com/file/d/1REwTcyHFzl_lz7RX7IoGcXhBM6KaNs8J/view?usp=sharing
-don't: https://drive.google.com/file/d/1Qp0PHHIJZknwBzJmUldfIMbnjm7pAdNM/view?usp=sharing
-
 <do-dont :examples="$page.frontmatter.too_many" />
 
-// new images
-do: https://drive.google.com/file/d/1A_e9LaRD2bvI7HADMWu8YP48g8XyTBFb/view?usp=sharing
-don't: https://drive.google.com/file/d/1fnjGH3ivw_S6rd0jCzW2HsnMMXS2xWrv/view?usp=sharing
-
 <do-dont :examples="$page.frontmatter.position" />
-
-// new images
-do: https://drive.google.com/file/d/11bq8coc_Or1mQQEjrOTfbohXXry6DFAj/view?usp=sharing
-don't: https://drive.google.com/file/d/1HLKAXrz9nUO0QjUrWU1JXqZfloz-zVjU/view?usp=sharing
 
 ## Responsiveness
 
