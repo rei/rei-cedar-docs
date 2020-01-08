@@ -252,25 +252,13 @@ When using icons with links or buttons, ensure that the icon communicates intend
 
 <do-dont :examples="$page.frontmatter.meaning" class="cdr-mb-space-two-x"/>
 
-// new images
-do: https://drive.google.com/file/d/1YrSHG6OUdWNx6buQPpoilcpVcveTo_UL/view?usp=sharing
-don't: https://drive.google.com/file/d/1YMyMMiEBs2d-rBb6_jS0rBSiJiHjJvLp/view?usp=sharing
-
 Ensure that icons are sized to provide a minimum click or touch target.
 
 <do-dont :examples="$page.frontmatter.clearance" class="cdr-mb-space-two-x"/>
 
-// new images
-do: https://drive.google.com/file/d/1pl4aaynPgTSdQBWUJs1wlBIHBQJBVDR3/view?usp=sharing
-don't: https://drive.google.com/file/d/1cCTcAnEjinLsb-q_hQ79Z1I7237_eWyx/view?usp=sharing
-
 Ensure that icons use contrast ratio of 4.5:1 between icon color and background color.
 
 <do-dont :examples="$page.frontmatter.color" class="cdr-mb-space-two-x"/>
-
-// new images
-do: https://drive.google.com/file/d/1jo8XHX9u8OshoNDInTrObDfm9bfswqFG/view?usp=sharing
-don't: https://drive.google.com/file/d/1detm47osLp10R3RzwH2xXZlKw3oQU_3I/view?usp=sharing
 
 # API
 
