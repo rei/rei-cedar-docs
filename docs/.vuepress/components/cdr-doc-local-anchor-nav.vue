@@ -102,7 +102,7 @@ export default {
     margin-right: $cdr-space-one-x;
   }
   .cdr-doc-local-anchor-nav__link--parent {
-    @include cdr-text-subheading-300;
+    @include cdr-text-subheading-sans-300;
   }
 
   .cdr-doc-local-anchor-nav__link--child {

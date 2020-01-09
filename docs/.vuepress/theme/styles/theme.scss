@@ -68,7 +68,7 @@ body {
 }
 
 .header-anchor {
-  @include cdr-text-heading-500;
+  @include cdr-text-heading-sans-500;
   color: 	$cdr-color-text-link-lightmode;
   text-decoration: none;
 }

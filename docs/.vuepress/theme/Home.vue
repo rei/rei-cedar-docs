@@ -221,7 +221,7 @@ export default {
   }
 
   &__description {
-    @include cdr-text-subheading-400;
+    @include cdr-text-subheading-sans-400;
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
@@ -229,7 +229,7 @@ export default {
 }
 
 .home-heading {
-  @include cdr-text-heading-700;
+  @include cdr-text-heading-serif-700;
   margin-bottom: $cdr-space-one-x;
 
   @media (max-width: $cdr-breakpoint-md) {
