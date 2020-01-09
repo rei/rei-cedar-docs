@@ -143,9 +143,9 @@ For public facing production micro-sites you should always optimize your Cedar C
 | path | description | compiled |
 |--------|------|------|
 | @rei/cedar/dist/style/cdr-full.css | Imports all of the Cedar component CSS and utility classes. | no |
-| @rei/cedar/dist/style/utilities.css | Imports all of the Cedar CSS utility classes.  | no |
-| @rei/cedar/dist/cedar.css | Full compiled Cedar component CSS and utilities. | yes |
-| @rei/cedar/dist/utilities.css | Full compiled Cedar CSS utility classes. | yes |
+| @rei/cedar/dist/style/utilities-full.css | Imports all of the Cedar CSS utility classes.  | no |
+| @rei/cedar/dist/cedar-compiled.css | Full compiled Cedar component CSS and utilities. | yes |
+| @rei/cedar/dist/utilities-compiled.css | Full compiled Cedar CSS utility classes. | yes |
 
 
 <hr/>
