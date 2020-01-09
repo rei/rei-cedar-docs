@@ -391,7 +391,7 @@ CdrAccordion emits an event when its button is clicked. Use an event listener to
     :opened="opened"
     @accordion-toggle="opened = !opened"
   >
-    <template name="label">
+    <template slot="label">
       Click me to show content!
     </template>
       This content is revealed when the accordion is opened.
