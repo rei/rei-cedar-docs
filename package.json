@@ -6,9 +6,10 @@
   "scripts": {
     "dev": "npm run copy-cedar && vuepress dev docs",
     "build": "npm run copy-cedar && cross-env NODE_ENV=production vuepress build docs",
-    "copy-cedar": "npm-run-all copy-cedar:core copy-cedar:font",
+    "copy-cedar": "npm-run-all copy-cedar:core copy-cedar:font copy-deps",
     "copy-cedar:core": "cp ./node_modules/@rei/cedar/dist/cedar-compiled.css ./docs/.vuepress/public/cedar.css",
-    "copy-cedar:font": "cp ./node_modules/@rei/cedar/dist/cdr-fonts.css ./docs/.vuepress/public/cdr-fonts.css"
+    "copy-cedar:font": "cp ./node_modules/@rei/cedar/dist/cdr-fonts.css ./docs/.vuepress/public/cdr-fonts.css",
+    "copy-deps": "cp ./node_modules/@rei/back-to-top-btn/dist/index.css ./docs/.vuepress/public/back-to-top-btn.css"
   },
   "author": "REI Software Engineering",
   "license": "ISC",
@@ -36,6 +37,7 @@
     "vuepress": "^1.0.3"
   },
   "dependencies": {
+    "@rei/back-to-top-btn": "^0.1.0",
     "@rei/cedar": "^4.0.0-beta.8"
   },
   "browserslist": [

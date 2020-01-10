@@ -22,6 +22,7 @@
         </Page>
       </div>
     </div>
+    <back-to-top-btn @click="scrollToTop" />
   </div>
 </template>
 
@@ -29,6 +30,7 @@
 import Vue from 'vue'
 import nprogress from 'nprogress'
 import iconSprite from '@rei/cedar-icons/dist/all-icons.svg';
+import BackToTopBtn from '@rei/back-to-top-btn';
 import Home from './Home.vue'
 import Navbar from './Navbar.vue'
 import Page from './Page.vue'
@@ -36,7 +38,7 @@ import Sidebar from './Sidebar.vue'
 import { pathToComponentName } from '@app/util'
 import { resolveSidebarItems } from './util'
 export default {
-  components: { Home, Page, Sidebar, Navbar },
+  components: { Home, Page, Sidebar, Navbar, BackToTopBtn },
   data () {
     return {
       isSidebarOpen: false,
@@ -127,6 +129,9 @@ export default {
   },
 
   methods: {
+    scrollToTop() {
+      window.scrollTo(0, 0);
+    },
     updateMeta() {
       document.title = this.$title
       document.documentElement.lang = this.$lang
