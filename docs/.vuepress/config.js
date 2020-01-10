@@ -34,6 +34,13 @@ module.exports = {
         href: "/cedar.css"
       }
     ],
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href: "/back-to-top-btn.css"
+      }
+    ]
   ],
   ga: '',
   plugins: [
