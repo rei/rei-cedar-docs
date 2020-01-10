@@ -33,12 +33,19 @@ If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade
 
 ## New Features
 
+### UI Toolkit Update
+
+- Sticker sheets for individual components has been implemented
+- Relevant components have been rebuilt using the Smart Layout feature in Sketch
+- New type styles
+
+
 ### New Typography
 
-TODO: what did we release
-- Body typography
-- heading/subheading sans/serif (note that heading/subheading are deprecated)
-- install fonts via self service
+- Graphik has been introduced to replace Roboto
+- All components have been revised to include Graphik
+- New type tokens have been introduced to support body and utility styles
+- For more information, visit the [Typography page](../../foundation/typography)
 
 ### Decomposed CSS Output
 
@@ -54,7 +61,9 @@ To resolve this issue we have chosen to leave the inline single icon components 
 
 ### Modal Component
 
-The [CdrModal](../../components/modal) component has been released.
+- The modal component has been introduced 
+- Available in two width options: default (600px) and large (800px)
+- For more information, visit the [Modal component](../../components/modal) page.
 
 ### Radio and Checkbox sizes
 
