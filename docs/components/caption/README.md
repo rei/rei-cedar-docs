@@ -261,21 +261,25 @@ For copyrighted media (photos or video):
 Keep summary content short to avoid excess text-wrapping.
 <br/>
 <br/>
+
 <do-dont :examples="$page.frontmatter.summaries" />
 
 Captions must be accompanied by media asset such as an image, video, or chart.
 <br/>
 <br/>
+
 <do-dont :examples="$page.frontmatter.media" />
 
 Summary and Credit serve different purposes and should remain separate.
 <br/>
 <br/>
+
 <do-dont :examples="$page.frontmatter.separate" />
 
 Caption stays left aligned with body copy regardless of the width of the media.
 <br/>
 <br/>
+
 <do-dont :examples="$page.frontmatter.align" />
 
 <hr>
