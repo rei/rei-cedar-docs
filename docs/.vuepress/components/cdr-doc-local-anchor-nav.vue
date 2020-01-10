@@ -102,6 +102,10 @@ export default {
   .cdr-doc-local-anchor-nav__list-item {
     line-height: 0;
 
+    &:nth-of-type(1)::before {
+      display: none !important;
+    }
+
     &:nth-of-type(n+2)::before {
       color: $cdr-color-text-secondary-darkmode;
       content: '|' !important;
