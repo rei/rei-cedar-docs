@@ -98,6 +98,7 @@ export default {
   }
   .cdr-doc-local-anchor-nav__list {
     line-height: 0;
+    flex-wrap: wrap;
 
     &+& {
       margin-top: $cdr-space-half-x;
