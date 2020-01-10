@@ -113,10 +113,6 @@ export default {
     @include cdr-text-utility-200;
   }
 
-  .cdr-doc-local-anchor-nav__link {
-    @include cdr-text-utility-200;
-  }
-
   .cdr-doc-local-anchor-nav__header {
     @include cdr-text-utility-strong-200;
     vertical-align: top;
