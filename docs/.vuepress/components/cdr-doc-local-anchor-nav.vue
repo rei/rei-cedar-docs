@@ -1,7 +1,7 @@
 <template>
   <nav class="cdr-doc-local-anchor-nav" ref="localNav">
     <cdr-list v-for="groupedLinks in linksGroupedByHeading" class="cdr-doc-local-anchor-nav__list">
-      <li v-for="link in groupedLinks" class="cdr-doc-local-anchor-nav__list-item">
+      <li v-for="(link, i) in groupedLinks" class="cdr-doc-local-anchor-nav__list-item">
         <span class="cdr-doc-local-anchor-nav__header" v-if="!link.href">
           {{ link.text }}{{ groupedLinks.length > 1 ? ':' : '' }}
         </span>
@@ -13,7 +13,9 @@
             }"
             modifier="standalone"
             :href="link.href">
-          {{ link.text }}{{ !link.isChild && groupedLinks.length > 1 ? ':' : '' }}
+          {{ link.text }}
+          {{ !link.isChild && groupedLinks.length > 1 ? ':' : '' }}
+          {{ link.isChild && i < groupedLinks.length - 1 ? ' | ' : '' }}
         </cdr-link>
       </li>
     </cdr-list>
@@ -92,29 +94,31 @@ export default {
 
   .cdr-doc-local-anchor-nav {
     overflow-y: auto;
-    padding-top: $cdr-space-half-x;
+    padding: $cdr-space-one-x;
+    background-color: $cdr-color-background-lightest;
+    box-shadow: $cdr-prominence-raised;
   }
   .cdr-doc-local-anchor-nav__list {
-    margin-bottom: $cdr-space-one-x;
+    margin-bottom: $cdr-space-half-x;
   }
   .cdr-doc-local-anchor-nav__list-item {
     display: inline-block;
-    margin-right: $cdr-space-one-x;
+    margin-right: $cdr-space-quarter-x;
   }
   .cdr-doc-local-anchor-nav__link--parent {
-    @include cdr-text-subheading-sans-300;
+    @include cdr-text-utility-strong-200;
   }
 
   .cdr-doc-local-anchor-nav__link--child {
-    @include cdr-text-utility-300;
+    @include cdr-text-utility-200;
   }
 
-  .cdr-doc-local-anchor-nav__appended-item-link {
-    @include cdr-text-utility-300;
+  .cdr-doc-local-anchor-nav__link {
+    @include cdr-text-utility-200;
   }
 
-  .cdr-doc-local-anchor-nav__appended-item-header {
-    @include cdr-text-utility-strong-300;
+  .cdr-doc-local-anchor-nav__header {
+    @include cdr-text-utility-strong-200;
     vertical-align: top;
     color: $cdr-doc-text-color-primary;
   }
