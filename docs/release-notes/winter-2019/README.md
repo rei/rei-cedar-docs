@@ -257,23 +257,23 @@ Note that this has been altered from the paragraph style to the `cdr-text--utili
 ### CdrText Heading Modifiers
 | deprecated modifier name | equivalent modifier name |
 |--------------------------|--------------------------|
-| heading-300	             | heading--sans-300        |
-| heading-400	             | heading--sans-400        |
-| heading-500	             | heading--sans-500        |
-| heading-600	             | heading--serif-600       |
-| heading-700	             | heading--serif-700       |
-| heading-800	             | heading--serif-700       |
-| subheading-300           | subheading--sans-300     |
-| subheading-400           | subheading--sans-400     |
-| subheading-500           | subheading--sans-500     |
-| subheading-600           | subheading--sans-600     |
-| display-600	             | heading--serif--strong-600       |
-| display-700	             | heading--serif--strong-700       |
-| display-800	             | heading--serif--strong-800       |
-| display-900	             | heading--serif--strong-900       |
-| display-1000             | heading--serif--strong-1000      |
-| display-1100             | heading--serif--strong-1100      |
-| display-1200             | heading--serif--strong-1200      |
+| heading-300	             | heading-sans-300        |
+| heading-400	             | heading-sans-400        |
+| heading-500	             | heading-sans-500        |
+| heading-600	             | heading-serif-600       |
+| heading-700	             | heading-serif-700       |
+| heading-800	             | heading-serif-700       |
+| subheading-300           | subheading-sans-300     |
+| subheading-400           | subheading-sans-400     |
+| subheading-500           | subheading-sans-500     |
+| subheading-600           | subheading-sans-600     |
+| display-600	             | heading-serif-strong-600       |
+| display-700	             | heading-serif-strong-700       |
+| display-800	             | heading-serif-strong-800       |
+| display-900	             | heading-serif-strong-900       |
+| display-1000             | heading-serif-strong-1000      |
+| display-1100             | heading-serif-strong-1100      |
+| display-1200             | heading-serif-strong-1200      |
 
 ### Type Utility classes
 | deprecated class name | equivalent class name |
@@ -298,15 +298,15 @@ We have updated the recommended mappings for some features that were deprecated 
 **CdrText Modifiers**
 | Deprecated modifier name | Equivalent modifier names and breakpoints  |
 |--------------------------|--------------------------------------------|
-| display                  | heading--serif--strong-700 heading--serif--strong-900@md heading--serif--strong-1100@lg |
-| display-static           | heading--serif--strong-900                                |
-| heading-large            | heading--serif-600 heading--serif-700@md heading--serif-900@lg  |
-| heading-large-static     | heading--serif-700                                |
-| heading-medium           | heading--serif-600 heading--serif-700@md heading--serif-700@lg  |
-| heading-medium-static    | heading--serif-600                                |
-| heading-small            | heading--sans-400 heading--sans-500@md heading--sans-500@lg  |
-| heading-small-static     | heading--sans-400                                |
-| subheading               | subheading--sans-300                             |
+| display                  | heading-serif-strong-700 heading-serif-strong-900@md heading-serif-strong-1100@lg |
+| display-static           | heading-serif-strong-900                                |
+| heading-large            | heading-serif-600 heading-serif-700@md heading-serif-900@lg  |
+| heading-large-static     | heading-serif-700                                |
+| heading-medium           | heading-serif-600 heading-serif-700@md heading-serif-700@lg  |
+| heading-medium-static    | heading-serif-600                                |
+| heading-small            | heading-sans-400 heading-sans-500@md heading-sans-500@lg  |
+| heading-small-static     | heading-sans-400                                |
+| subheading               | subheading-sans-300                             |
 
 ### Removals
 
