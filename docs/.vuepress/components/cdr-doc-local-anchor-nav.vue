@@ -23,9 +23,13 @@
 
 <script>
 import slugify from '../../../utils/slugify.js';
+import { CdrList } from '@rei/cedar';
 
 export default {
   name: 'CdrDocLocalAnchorNav',
+  components: {
+    CdrList
+  },
   props: {
     parentSelectors: {
       type: String,
