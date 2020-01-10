@@ -103,15 +103,15 @@
   "sizes": [
     {
       "type": "do",
-      "image": "input/Input__Sizes_Do__16-9.png",
-      "ratio": "16-9",
+      "image": "input/Input__Sizes_Do__4-3.png",
+      "ratio": "4-3",
       "alt": "Image showing two equally sized input fields as a part of a form",
       "caption": "use consistent sizes for components on a single form."
     },
     {
       "type": "dont",
-      "image": "input/Input__Sizes_Dont__16-9.png",
-      "ratio": "16-9",
+      "image": "input/Input__Sizes_Dont__4-3.png",
+      "ratio": "4-3",
       "alt": "Image showing missized input and button elements in a form",
       "caption": "mix sizes for components on a single form."
     }
