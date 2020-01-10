@@ -73,7 +73,7 @@
       "caption": "use line lengths of 50-60 characters."
     },
     {
-      "type": "dont",
+      "type": "caution",
       "image": "typography/typography_line_length_desktop_dont.png",
       "alt": "Image showing and incorrect line length over 80 characters",
       "caption": "create line lengths of 80 characters or more."
@@ -203,8 +203,6 @@ An optimal length, or measure, of a line of copy is 50 to 60 characters. Line le
 <do-dont :examples="$page.frontmatter.lineLengthMobile" />
 
 <do-dont :examples="$page.frontmatter.lineLengthDesktop" />
-
-// the don't example above should be a caution //
 
 #### 1.4.8 Visual Presentation (AAA)
 
