@@ -261,4 +261,20 @@ If your modal is launched by a button, add `aria-haspopup="dialog"` to the butto
 </template>
 ```
 
+Do not use `v-if` with **CdrModal** unless the component is wrapped with `keep-alive`. **CdrModal** handles showing and hiding itself when toggling, so `v-if` should be unneeded in most cases.
+
+```vue{1,3,11}
+<keep-alive>
+  <cdr-modal
+    v-if="opened"
+    :opened="opened"
+    label="Add to Cart"
+    @closed="closed"
+    aria-described-by="description"
+  >
+    ...
+  </cdr-modal>
+</keep-alive>
+```
+
 </cdr-doc-table-of-contents-shell>
