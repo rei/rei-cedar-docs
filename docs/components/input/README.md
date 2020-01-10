@@ -493,7 +493,7 @@ This component has compliance with WCAG guidelines by:
 - Use if navigating user to long or complex information
 - Read more about links [here](https://rei.github.io/rei-cedar-docs/components/links/)
 
-### Do/Don't
+### Do / Don't
 
 <do-dont :examples="$page.frontmatter.length" />
 
@@ -516,7 +516,7 @@ This component has compliance with WCAG guidelines by:
 - The default status of an input field is “optional”
 - If the status is set to “required”, the text, “Required” will appear next to the input label
 
-### Do/Don't
+### Do / Don't
 
 <do-dont :examples="$page.frontmatter.required" />
 
