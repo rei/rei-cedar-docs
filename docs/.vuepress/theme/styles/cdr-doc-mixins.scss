@@ -6,7 +6,7 @@
   & > a {
     color: $cdr-doc-link-color-primary;
     text-decoration: none;
-    
+
     &:hover,
     &:active,
     &:focus {
@@ -14,7 +14,7 @@
       text-decoration: underline;
     }
   }
-  
+
   & > img {
     display: block;
     max-width: 100%;
@@ -24,9 +24,22 @@
     margin-right: auto;
   }
 
+
+  & > h1,
+  & > div > h1 {
+    @include cdr-text-heading-serif-800;
+    margin-bottom: $cdr-space-one-x;
+    margin-top: $cdr-space-two-x;
+    max-width: $cdr-doc-long-form-text-max-line-length;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
   & > h2,
   & > div > h2 {
-    @include cdr-text-heading-serif-700; // Section heading
+    @include cdr-text-heading-sans-600;
     margin-bottom: $cdr-space-one-x;
     margin-top: $cdr-space-two-x;
     max-width: $cdr-doc-long-form-text-max-line-length;
@@ -136,7 +149,7 @@
   & > ol {
     list-style-type: decimal;
     padding-left: $ordered-list-indentation-space;
-    
+
     & li {
       padding-left: $cdr-space-quarter-x;
 
@@ -164,7 +177,7 @@
     border: 0;
     border-top: $cdr-doc-border-separator;
     margin-bottom: $cdr-space-two-x;
-    margin-top: $cdr-space-two-x;    
+    margin-top: $cdr-space-two-x;
   }
 
   & > a,
@@ -205,7 +218,7 @@
     & > tbody > tr:nth-child(even) {
       background-color: white
     }
-    
+
     & > tbody > tr:nth-child(odd) {
       background-color: #f2f2f2
     }
