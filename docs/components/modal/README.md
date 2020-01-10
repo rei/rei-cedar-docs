@@ -146,7 +146,6 @@
 ```
 </cdr-doc-example-code-pair>
 
-# Guidelines
 ## Accessibility
 
 To ensure that usage of this component complies with accessibility guidelines, do the following:
@@ -161,6 +160,8 @@ This component has compliance with WCAG guidelines by:
   - For short modal: aria-describedby
   - For longer modal: assign role="document" to the modal content
 - Use the `aria-hidden` and `tabindex="-1"` on focusable items for all content outside of the modal
+
+# Guidelines
 
 ## Use When
 
