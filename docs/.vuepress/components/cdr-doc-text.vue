@@ -3,44 +3,33 @@
     <slot />
     <!-- Web Tokens -->
     <template v-if="platform === 'web'">
-    <div
-      v-for="(v, k) in webMixinsByType"
-      class="cdr-mb-space-two-x"
-    >
-    <cdr-text modifier="heading--sans-700">a text </cdr-text>
-  <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData" >
+<div
+  v-for="(v, k) in webMixinsByType"
+>
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-text
-    :modifier="(k)">
+    :key="(k)">
       When you gear up, we give back
   </cdr-text>
 ```
-  </cdr-doc-example-code-pair>
-      
-      <p class="typography-example" :style="makeStyleObj(v)">A different kind of company</p>
-      <cdr-text><b>{{ k }}</b> (mixin)</cdr-text>
-      <!-- <cdr-text class="cdr-mb-space-one-x">{{descriptionData[k]}}</cdr-text> -->
 
-      <table>
-        <tbody>
-          <tr v-for="token in v">
-            <td>
-              <cdr-text modifier="utility-300"><b>{{ token.name }}</b></cdr-text>
-            </td>
-            <td>{{ token.value }}</td>
-          </tr>
-          <tr>
-            <th>
-              Utility class
-            </th>
-            <td>
-              <cdr-text modifier="utility-300"><b>{{ k }}</b></cdr-text>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+</cdr-doc-example-code-pair>
+
+  <table>
+    <tbody>
+      <tr>
+        <th>
+          Utility class
+        </th>
+        <td>
+          <cdr-text modifier="utility-300"><b>{{ k }}</b></cdr-text>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
     </template>
 
     <!-- Native Tokens -->
@@ -162,12 +151,4 @@ export default {
 
 <style lang="scss">
   @import '~@rei/cdr-tokens/dist/scss/cdr-tokens';
-
-  .typography-example {
-    background-color: $cdr-color-background-lightest;
-    overflow: hidden;
-    white-space: nowrap;
-    margin: 8px 0 8px 0; 
-    padding: 16px 0 16px 8px;
-  }
 </style>
