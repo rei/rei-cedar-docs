@@ -1,24 +1,23 @@
 <template>
   <nav class="cdr-doc-local-anchor-nav" ref="localNav">
-    <ul v-for="groupedLinks in linksGroupedByHeading" class="cdr-doc-local-anchor-nav__list">
+    <cdr-list v-for="groupedLinks in linksGroupedByHeading" modifier="inline unordered compact" class="cdr-doc-local-anchor-nav__list">
       <li v-for="(link, i) in groupedLinks" class="cdr-doc-local-anchor-nav__list-item">
         <span class="cdr-doc-local-anchor-nav__header" v-if="!link.href">
           {{ link.text }}{{ groupedLinks.length > 1 ? ':' : '' }}
         </span>
         <cdr-link
-            v-else
-            :class="{
-                'cdr-doc-local-anchor-nav__link--parent': !link.isChild,
-                'cdr-doc-local-anchor-nav__link--child': link.isChild,
-            }"
-            modifier="standalone"
-            :href="link.href">
-          {{ link.text }}
-          {{ !link.isChild && groupedLinks.length > 1 ? ':' : '' }}
-          {{ link.isChild && i < groupedLinks.length - 1 ? ' | ' : '' }}
+          v-else
+          :class="{
+              'cdr-doc-local-anchor-nav__link--parent': !link.isChild,
+              'cdr-doc-local-anchor-nav__link--child': link.isChild,
+          }"
+          modifier="standalone"
+          :href="link.href">
+            {{ link.text }}
+            {{ !link.isChild && groupedLinks.length > 1 ? ':' : '' }}
         </cdr-link>
       </li>
-    </ul>
+    </cdr-list>
   </nav>
 </template>
 
@@ -94,20 +93,26 @@ export default {
     box-shadow: $cdr-prominence-raised;
   }
   .cdr-doc-local-anchor-nav__list {
-    list-style: none;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    padding-inline-start: 0;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-  }
-  .cdr-doc-local-anchor-nav__list:not(:last-child) {
-    margin-bottom: $cdr-space-half-x;
+    line-height: 0;
+
+    &+& {
+      margin-top: $cdr-space-half-x;
+    }
   }
   .cdr-doc-local-anchor-nav__list-item {
-    list-style: none;
-    display: inline-block;
-    margin-right: $cdr-space-quarter-x;
+    line-height: 0;
+
+    &:nth-of-type(n+2)::before {
+      color: $cdr-color-text-secondary-darkmode;
+      content: '|' !important;
+    }
+
+    &:nth-of-type(2) {
+      padding-left: $cdr-space-quarter-x !important;
+      &::before {
+        display: none !important;
+      }
+    }
   }
   .cdr-doc-local-anchor-nav__link--parent {
     @include cdr-text-utility-strong-200;
