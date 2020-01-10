@@ -1,7 +1,7 @@
 <template>
   <nav class="cdr-doc-local-anchor-nav" ref="localNav">
-    <div v-for="groupedLinks in linksGroupedByHeading" class="cdr-doc-local-anchor-nav__list">
-      <span v-for="(link, i) in groupedLinks" class="cdr-doc-local-anchor-nav__list-item">
+    <ul v-for="groupedLinks in linksGroupedByHeading" class="cdr-doc-local-anchor-nav__list">
+      <li v-for="(link, i) in groupedLinks" class="cdr-doc-local-anchor-nav__list-item">
         <span class="cdr-doc-local-anchor-nav__header" v-if="!link.href">
           {{ link.text }}{{ groupedLinks.length > 1 ? ':' : '' }}
         </span>
@@ -17,21 +17,16 @@
           {{ !link.isChild && groupedLinks.length > 1 ? ':' : '' }}
           {{ link.isChild && i < groupedLinks.length - 1 ? ' | ' : '' }}
         </cdr-link>
-      </span>
-    </div>
+      </li>
+    </ul>
   </nav>
 </template>
 
 <script>
-
-import { CdrList } from '@rei/cedar';
 import slugify from '../../../utils/slugify.js';
 
 export default {
   name: 'CdrDocLocalAnchorNav',
-  components: {
-    CdrList,
-  },
   props: {
     parentSelectors: {
       type: String,
@@ -98,10 +93,19 @@ export default {
     background-color: $cdr-color-background-lightest;
     box-shadow: $cdr-prominence-raised;
   }
+  .cdr-doc-local-anchor-nav__list {
+    list-style: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
   .cdr-doc-local-anchor-nav__list:not(:last-child) {
     margin-bottom: $cdr-space-half-x;
   }
   .cdr-doc-local-anchor-nav__list-item {
+    list-style: none;
     display: inline-block;
     margin-right: $cdr-space-quarter-x;
   }
