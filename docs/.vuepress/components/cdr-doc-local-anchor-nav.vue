@@ -16,8 +16,8 @@
             {{ link.text }}
             {{ !link.isChild && groupedLinks.length > 1 ? ':' : '' }}
         </cdr-link>
-      </span>
-    </div>
+      </li>
+    </cdr-list>
   </nav>
 </template>
 
