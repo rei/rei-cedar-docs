@@ -199,7 +199,7 @@ Note that this has been altered from the paragraph style to the `cdr-text--utili
 ## Deprecations
 
 ### Type Token Mixins
-**Redwood Display**  
+#### Redwood Display  
 | Deprecated mixin name | Equivalent mixin name |
 |-----------------------|-----------------------|
 | redwood-display-70    | cdr-text-utility-700  |
@@ -210,15 +210,15 @@ Note that this has been altered from the paragraph style to the `cdr-text--utili
 | redwood-display-20    | cdr-text-utility-200  |
 | redwood-display-10    | cdr-text-utility-100  |
 
-**Redwood Body**  
+#### Redwood Body  
 | Deprecated mixin name | Equivalent mixin name |
 |-----------------------|-----------------------|
 | redwood-body-40       | cdr-text-body-500     |
 | redwood-body-30       | cdr-text-body-400     |
 | redwood-body-20       | cdr-text-body-300     |
-| redwood-body-10       |                       |
+| redwood-body-10       | cdr-text-body-300     |
 
-**Maple**  
+#### Maple  
 | Deprecated mixin name | Equivalent mixin name |
 |-----------------------|-----------------------|
 | maple-utility-70      | cdr-text-utility-700  |
@@ -229,7 +229,7 @@ Note that this has been altered from the paragraph style to the `cdr-text--utili
 | maple-utility-20      | cdr-text-utility-200  |
 | maple-utility-10      | cdr-text-utility-100  |
 
-**Spruce**
+#### Spruce
 | Deprecated mixin name  | Equivalent mixin name     |
 |--------------------|-----------------------|
 | spruce-display-100 | cdr-text-heading-serif-strong-1200 |
@@ -246,7 +246,7 @@ Note that this has been altered from the paragraph style to the `cdr-text--utili
 | spruce-body-30	| cdr-text-body-300 |
 | spruce-body-20	| cdr-text-body-300 |
 
-**Headings**
+#### Headings
 | Deprecated mixin name  | Equivalent mixin name     |
 |--------------------|-----------------------|
 | cdr-text-heading-300	| cdr-text-heading-sans-300 |
