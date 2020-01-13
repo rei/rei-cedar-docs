@@ -96,6 +96,10 @@ CdrTabs now accepts `centered` as a `modifier` for a center-aligned tab header.
 
 - Fixed padding of helper text
 
+### CdrList
+
+- Inline lists now wrap to a new line when appropriate
+
 ### CdrRating
 
 - Resolved issue with CdrRating where it treated the `count` property differently depending on whether it was passed as a string or a number. Now CdrRating will show the review text any time it receives a value for `count`, and will not show any review text if it does not receive a value. No need to make any changes to the application code to support this change.
