@@ -45,7 +45,7 @@ If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade
 - Graphik has been introduced to replace Roboto
 - All components have been revised to include Graphik
 - New type tokens have been introduced to support body and utility styles
-- For more information, visit the Text components [// Add link when that page is up] page 
+- For more information, visit the Text components [// Add link when that page is up] page
 
 ### Decomposed CSS Output
 
@@ -61,7 +61,7 @@ To resolve this issue, the inline single icon components were left as is as part
 
 ### Modal Component
 
-- The modal component has been introduced 
+- The modal component has been introduced
 - Available in two width options: default (600px) and large (800px)
 - For more information, visit the [Modal component](../../components/modal) page
 
@@ -188,7 +188,7 @@ The root class `cdr-text` now has all attributes mapped to `inherit`. This chang
 allows for descendant selectors to inherit the font settings of the parent.
 
 You will now need to pass the cdr-text component the modifier you would like to use.
-- For paragraphs, use `body-300` 
+- For paragraphs, use `body-300`
 - For generic text, use `utility-300`
 
 Previously `cdr-text` defaulted to the paragraph styles.
@@ -239,10 +239,10 @@ Note that this has been altered from the paragraph style to the `cdr-text--utili
 | spruce-display-60  | cdr-text-heading-serif-strong-800  |
 | spruce-display-50  | cdr-text-heading-serif-strong-700  |
 | spruce-display-40  | cdr-text-heading-serif-strong-600  |
-| spruce-display-30  | cdr-text-heading-sans-strong-500  |
-| spruce-display-20  | cdr-text-heading-sans-strong-400  |
-| spruce-display-10  | cdr-text-heading-sans-strong-300  |
-| spruce-display-00  | cdr-text-heading-sans-strong-300  |
+| spruce-display-30  | cdr-text-heading-sans-500  |
+| spruce-display-20  | cdr-text-heading-sans-400  |
+| spruce-display-10  | cdr-text-heading-sans-300  |
+| spruce-display-00  | cdr-text-heading-sans-300  |
 | spruce-body-30	| cdr-text-body-300 |
 | spruce-body-20	| cdr-text-body-300 |
 
