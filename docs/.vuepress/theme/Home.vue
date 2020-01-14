@@ -109,7 +109,7 @@
                 <div>
                   <cdr-text
                     tag="h3"
-                    modifier="heading-small-static"
+                    modifier="heading-sans-400"
                     class="cdr-mb-space-one-x"
                   >Cedar Sketch UI toolkit</cdr-text>
                   <cdr-link :href="$withBase('/getting-started/as-a-designer/')" modifier="standalone">Download the Sketch library</cdr-link>
@@ -130,7 +130,7 @@
                 <div>
                   <cdr-text
                     tag="h3"
-                    modifier="heading-small-static"
+                    modifier="heading-sans-400"
                     class="cdr-mb-space-one-x"
                   >Vue.js components</cdr-text>
                   <cdr-link href="https://www.npmjs.com/package/@rei/cedar" target="_blank" modifier="standalone">View the NPM repository</cdr-link>
@@ -148,7 +148,7 @@
           <div class="home-card cdr-space-inset-one-x">
             <cdr-text
               tag="h3"
-              modifier="heading-small-static"
+              modifier="heading-sans-400"
               class="cdr-mb-space-one-x"
             >Contribute to Cedar</cdr-text>
             <cdr-text class="cdr-mb-space-one-x">The Cedar team welcomes contributions from the community. Learn how to become a pilot contributor.  </cdr-text>
@@ -159,7 +159,7 @@
           <div class="home-card cdr-space-inset-one-x">
             <cdr-text
               tag="h3"
-              modifier="heading-small-static"
+              modifier="heading-sans-400"
               class="cdr-mb-space-one-x"
             >Feedback & support</cdr-text>
             <cdr-text class="cdr-mb-space-one-x">Questions, ideas, or comments? Your feedback can help improve Cedar. </cdr-text>

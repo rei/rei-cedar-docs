@@ -1,10 +1,12 @@
 <template>
   <div>
-    <div v-for="modifier in Object.keys(text)" class="cdr-mb-space-two-x">
+    <div v-for="modifier in Object.keys(text)" class="cdr-mb-space-one-x">
       <cdr-text
         tag="h3"
-        modifier="heading-500">
-          {{ modifier }}
+        modifier="heading-500"
+        class="cdr-mb-space-one-x"
+      >
+          {{ formatTitle(modifier) }}
       </cdr-text>
       <table>
         <thead>
@@ -34,7 +36,7 @@
       </table>
     </div>
 
-    <cdr-text tag="h3" modifier="heading-500">
+    <cdr-text tag="h3" modifier="heading-500" class="cdr-mb-space-one-x">
       Helpers
     </cdr-text>
 
@@ -85,6 +87,11 @@
 <script>
 export default {
   name: 'TextDocOverView',
+  methods: {
+    formatTitle(key) {
+      return key.split('-').map(x => x.charAt(0).toUpperCase() + x.substring(1)).join(' ');
+    }
+  },
   data() {
     return {
       text: {
