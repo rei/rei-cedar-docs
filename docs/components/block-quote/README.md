@@ -20,15 +20,15 @@
   "position": [
     {
       "type": "do",
-      "image": "block-quote/quotes_block__do__9-16.png",
-      "ratio": "9-16",
+      "image": "block-quote/quotes_block__do.png",
+      "ratio": "3-2",
       "alt": "Image showing proper block quote use.",
       "caption": "position the quote near the surrounding text."
     },
     {
       "type": "dont",
-      "image": "block-quote/quotes_block__random__dont_9-16.png",
-      "ratio": "9-16",
+      "image": "block-quote/quotes_block_position_dont.png",
+      "ratio": "3-2",
       "alt": "Image showing random block quotes in an article",
       "caption": "position quotes in a random location on the page."
     }
@@ -36,15 +36,15 @@
   "indenting": [
     {
       "type": "do",
-      "image": "block-quote/quotes_block__do__9-16.png",
-      "ratio": "9-16",
+      "image": "block-quote/quotes_block__do.png",
+      "ratio": "3-2",
       "alt": "Image showing proper block quote use.",
       "caption": "use for emphasizing content or additional content."
     },
     {
       "type": "dont",
-      "image": "block-quote/quotes_block__indent_text__dont_9-16.png",
-      "ratio": "9-16",
+      "image": "block-quote/quotes_block_indent_dont.png",
+      "ratio": "3-2",
       "alt": "Image showing random block quotes in an article",
       "caption": "use for indenting text content."
     }
@@ -52,15 +52,15 @@
   "too_many": [
     {
       "type": "do",
-      "image": "block-quote/quotes_block__do__9-16.png",
-      "ratio": "9-16",
+      "image": "block-quote/quotes_block__do.png",
+      "ratio": "3-2",
       "alt": "Image showing proper block quote position.",
       "caption": "position quotes so users can visually scan the page."
     },
     {
       "type": "dont",
-      "image": "block-quote/quotes_block__too_many__dont_9-16.png",
-      "ratio": "9-16",
+      "image": "block-quote/quotes_block_too_many_dont.png",
+      "ratio": "3-2",
       "alt": "Image showing too many block quotes in an article",
       "caption": "use too many block quotes."
     }
@@ -68,14 +68,14 @@
   "citation": [
     {
       "type": "do",
-      "image": "block-quote/quotes_block__citation__do_3-2.png",
+      "image": "block-quote/quotes_block_citation_do.png",
       "ratio": "3-2",
       "alt": "Image showing proper block citation.",
       "caption": "provide a citation."
     },
     {
       "type": "dont",
-      "image": "block-quote/quotes_block__citation__dont_3-2.png",
+      "image": "block-quote/quotes_block_citation_dont.png",
       "ratio": "3-2",
       "alt": "Image showing too improper citation style",
       "caption": "emphasize the citation."
@@ -139,9 +139,9 @@
 <cdr-doc-table-of-contents-shell>
 # Overview
 
-## Default
+## Default (Medium)
 
-Default block quote can be used with the following HTML tags: `<p>`, `<div>`, `<aside>`. This is responsive with styles for XS breakpoint
+Default block quote can be used with the following HTML tags: `<p>`, `<div>`, `<aside>`. This is responsive with styles for XS breakpoint.
 
 <cdr-doc-example-code-pair repository-href="/src/components/quote" :sandbox-data="$page.frontmatter.sandboxData">
 
@@ -164,7 +164,7 @@ To ensure that usage of this component complies with accessibility guidelines:
 - All recommendations listed for [Paragraphs](../paragraphs/#accessibility) component apply to this component
 - Do not use this component to indent text. Screen readers use the `<blockquote>` element to:
   - Provide semantic understanding of page content by announcing blockquote as quote
-  - Define a sectioning root in HTML5, which means that any  `<h1>` - `<h6>`  elements it contains don’t become part of the document’s outline
+  - Define a sectioning root in HTML5, which means that any  `<h1>` - `<h6>`  element doesn't become part of the document’s outline
 - To make the blockquote content accessible, use the `<cite>` attribute with a valid URL
 
 <br>
@@ -187,18 +187,7 @@ This component has compliance with WCAG guidelines by:
 - Pulling a direct quote from an article. Instead, use [Pull Quote](../pull-quote/)
 - Displaying for a decorative treatment only
 
-## Content
-
-To make the block quote content accessible, following these rules:
-
-- Must be quoted from another source, whose address, if it has one, may be cited in the `<cite>` attribute
-- If the `<cite>` attribute is present:
-  - Must be a valid URL
-  - Link only to canonical end-state URLs with no parameter appended
-  - Capitalize the cited source title the same as the author does
-- For more information, see [REI Confluence Accessible Patterns: Quotes](https://confluence.rei.com/display/accessibility/Quote)
-
-## Behavior
+## The Basics
 
 Use a block quote for emphasizing content that has a close and significant relationship with the surrounding text and will help users to visually scan the page.
 
@@ -218,9 +207,21 @@ Provide a citation to the external source and if available, the URL address.
 
 <do-dont :examples="$page.frontmatter.citation" />
 
+## Content
+
+To make the block quote content accessible, follow these rules:
+
+- Must be quoted from another source, whose address, if it has one, may be cited in the `<cite>` attribute
+- If the `<cite>` attribute is present:
+  - Must be a valid URL
+  - Link only to canonical end-state URLs with no parameter appended
+  - Capitalize the cited source title the same as the author does
+- For more information, see [REI Confluence Accessible Patterns: Quotes](https://confluence.rei.com/display/accessibility/Quote)
+
+
 ## Responsiveness
 
-When block quotes are displayed in at XS breakpoints, the text will use a smaller font size.
+When block quotes are displayed at XS breakpoint, the text will use a smaller font size.
 
 <hr>
 

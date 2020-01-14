@@ -7,14 +7,14 @@
   "select": [
     {
       "type": "do",
-      "image": "tabs/tab_select_do_16-9.png",
+      "image": "tabs/tab_select_do.png",
       "ratio": "16-9",
       "alt": "tab with content displaying",
       "caption": "display a tab section on load."
     },
     {
       "type": "dont",
-      "image": "tabs/tab_select_dont_16-9.png",
+      "image": "tabs/tab_select_dont.png",
       "ratio": "16-9",
       "alt": "tab with empty content",
       "caption": "display tabs without a section visible."
@@ -23,14 +23,14 @@
   "number": [
     {
       "type": "do",
-      "image": "tabs/tab_number_do_16-9.png",
+      "image": "tabs/tab_number_do.png",
       "ratio": "16-9",
       "alt": "tabs with two buttons",
       "caption": "use tabs with at least 2 buttons."
     },
     {
       "type": "dont",
-      "image": "tabs/tab_number_dont_16-9.png",
+      "image": "tabs/tab_number_dont.png",
       "ratio": "16-9",
       "alt": "tab with one button",
       "caption": "use tabs with only 1 button."
@@ -39,14 +39,14 @@
   "capitalization": [
     {
       "type": "do",
-      "image": "tabs/tab_capitalization_do_16-9.png",
+      "image": "tabs/tab_capitalization_do.png",
       "ratio": "16-9",
       "alt": "tabs with title cased labels",
       "caption": "use title case for tab labels."
     },
     {
       "type": "dont",
-      "image": "tabs/tab_capitalization_dont_16-9.png",
+      "image": "tabs/tab_capitalization_dont.png",
       "ratio": "16-9",
       "alt": "tabs with all caps labels",
       "caption": "use all caps for tab labels."
@@ -55,14 +55,14 @@
   "label": [
     {
       "type": "do",
-      "image": "tabs/tab_label_do_16-9.png",
+      "image": "tabs/tab_label_do.png",
       "ratio": "16-9",
       "alt": "tabs with succint labels",
       "caption": "write short and meaningful tab labels. Between 1-2 words is best."
     },
     {
       "type": "dont",
-      "image": "tabs/tab_label_dont_16-9.png",
+      "image": "tabs/tab_label_dont.png",
       "ratio": "16-9",
       "alt": "tabs with truncated labels.",
       "caption": "truncate tab labels. If a label overruns the container, find a shorter alternative."
@@ -130,7 +130,7 @@
 <cdr-doc-table-of-contents-shell>
 # Overview
 
-## Default
+## Default (Medium)
 Tab buttons align left and bottom border expands to full width of container.
 
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" >
@@ -148,7 +148,7 @@ Tab buttons align left and bottom border expands to full width of container.
 
 </cdr-doc-example-code-pair>
 
-## Compact
+## Compact (Small)
 
 Reduced spacing around the tab buttons to create a denser visual design.
 
@@ -299,7 +299,7 @@ This component has compliance with WCAG guidelines by:
 
 # API
 
-Tabs are built from two components, **CdrTabs** and **CdrTabPanel**, which are meant to be used together.
+Tabs are built from two components: **CdrTabs** and **CdrTabPanel**. These are meant to be used together.
 
 ## Props
 

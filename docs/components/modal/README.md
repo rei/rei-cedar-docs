@@ -3,7 +3,7 @@
   "title": "Modal",
   "layout_type": "LayoutComponent",
   "summary": "Display additional page content in an overlay",
-  "title_metadata": "CdrButton",
+  "title_metadata": "CdrModal",
   "breadcrumbs": [
     {
       "text": "Components/"
@@ -114,9 +114,9 @@
 }
 ---
 
-<cdr-doc-tabs>
-<template slot="Overview">
-<cdr-doc-table-of-contents-shell tab-name="Overview">
+<cdr-doc-table-of-contents-shell >
+
+# Overview
 
 <cdr-doc-example-code-pair repository-href="/src/components/modal"
 :sandbox-data="$page.frontmatter.sandboxData" :model="{ opened: false }">
@@ -136,7 +136,7 @@
 >
   <template slot="title">
     <cdr-text
-      tag="h1"
+      tag="h3"
       modifier="heading-600"
     >Add to Cart
     </cdr-text>
@@ -155,17 +155,13 @@ To ensure that usage of this component complies with accessibility guidelines, d
 - Modal can be closed using the keyboard (ESC key), Close button, or by clicking outside of modal
 
 This component has compliance with WCAG guidelines by:
-- Select the appropriate attributes and aria roles: 
+- Select the appropriate attributes and aria roles:
   - For modal without title: aria-label
   - For short modal: aria-describedby
   - For longer modal: assign role="document" to the modal content
 - Use the `aria-hidden` and `tabindex="-1"` on focusable items for all content outside of the modal
 
-</cdr-doc-table-of-contents-shell>
-</template>
-
-<template slot="Guidelines">
-  <cdr-doc-table-of-contents-shell>
+# Guidelines
 
 ## Use When
 
@@ -184,25 +180,20 @@ This component has compliance with WCAG guidelines by:
 - Two width options are available: 600px (default) and 800px (large)
 - Headlines should not exceed 68 characters
 - Modal centers within the page
-- Keep modal titles succinct and informative 
+- Keep modal titles succinct and informative
 
 ## Behavior
 
 - If two buttons are needed, place the primary button on the left and the secondary button on the right. Stack buttons at XS
 - Content behind modal does not scroll and cannot be interacted with in any way
 - Gradient is added at bottom to signify further scrollable content
-- Modal is dismissed by: 
-  - Clicking the Close button 
+- Modal is dismissed by:
+  - Clicking the Close button
   - Interacting with the overlay background
   - Pressing the escape key (ESC)
 - Modal opens one at a time and are never displayed in groups
 
-</cdr-doc-table-of-contents-shell>
-</template>
-
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
-
+# API
 ## Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
@@ -237,9 +228,9 @@ This component has compliance with WCAG guidelines by:
 
 ## Modal Title
 
-If the `title` slot is left empty, the `label` prop will be rendered as the title. The title can be hidden altogether, by setting `showTitle` to `false`.
+If the `title` slot is left empty, the `label` prop will be rendered as the title. The title can be hidden altogether by setting `showTitle` to `false`.
 
-When using the `label` slot, pass in CdrText to use appropriate header styles.
+When using the `label` slot, add CdrText to use the appropriate header styles.
 
 ```vue{3,4}
 <template slot="title">
@@ -253,15 +244,15 @@ When using the `label` slot, pass in CdrText to use appropriate header styles.
 
 ## Size
 
-The modal `size` prop controls the max-width of the modal. `medium` maps to a max-width of 600px; `large` is 800px. 
+The modal `size` prop controls the max-width of the modal. `medium` maps to a max-width of 600px; while `large` is 800px.
 
 ## Scroll Behavior
 
-The modal content area will scroll vertically if there's enough to force an overflow. The modal title does not scroll; it will stay affixed to the top of the modal.
+The modal content area will scroll vertically if there's enough content. The modal title does not scroll; it stays affixed to the top of the modal.
 
 ## Accessibility
 
-If your modal is launched by a button, be sure to add `aria-haspopup="dialog"` to the button element.
+If your modal is launched by a button, add `aria-haspopup="dialog"` to the button element.
 
 ```vue
 <template>
@@ -271,8 +262,20 @@ If your modal is launched by a button, be sure to add `aria-haspopup="dialog"` t
 </template>
 ```
 
-</cdr-doc-table-of-contents-shell>
-</template>
+Do not use `v-if` with **CdrModal** unless the component is wrapped with `keep-alive`. **CdrModal** handles showing and hiding itself when toggling, so `v-if` should be unneeded in most cases.
 
-</cdr-doc-tabs>
- 
+```vue{1,3,11}
+<keep-alive>
+  <cdr-modal
+    v-if="opened"
+    :opened="opened"
+    label="Add to Cart"
+    @closed="closed"
+    aria-described-by="description"
+  >
+    ...
+  </cdr-modal>
+</keep-alive>
+```
+
+</cdr-doc-table-of-contents-shell>

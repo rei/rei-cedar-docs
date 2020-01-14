@@ -24,8 +24,8 @@
     "npm": "^6.9.0"
   },
   "devDependencies": {
-    "@rei/cdr-tokens": "^3.0.0-beta.2",
-    "@rei/cedar-icons": "^1.0.0",
+    "@rei/cdr-tokens": "^3.0.0-beta.4",
+    "@rei/cedar-icons": "^1.1.0",
     "@vuepress/plugin-google-analytics": "^1.0.2",
     "codesandbox": "^2.1.10",
     "cross-env": "^5.2.0",
@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@rei/cedar": "^4.0.0-beta.8",
-    "smoothscroll-polyfill": "^0.4.4"
+    "throttle-debounce": "^2.1.0"
   },
   "browserslist": [
     "> 1%",

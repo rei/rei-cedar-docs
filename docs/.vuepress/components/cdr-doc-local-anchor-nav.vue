@@ -1,19 +1,20 @@
 <template>
   <nav class="cdr-doc-local-anchor-nav" ref="localNav">
-    <cdr-list v-for="groupedLinks in linksGroupedByHeading" class="cdr-doc-local-anchor-nav__list">
-      <li v-for="link in groupedLinks" class="cdr-doc-local-anchor-nav__list-item">
+    <cdr-list v-for="groupedLinks in linksGroupedByHeading" modifier="inline unordered compact" class="cdr-doc-local-anchor-nav__list">
+      <li v-for="(link, i) in groupedLinks" class="cdr-doc-local-anchor-nav__list-item">
         <span class="cdr-doc-local-anchor-nav__header" v-if="!link.href">
           {{ link.text }}{{ groupedLinks.length > 1 ? ':' : '' }}
         </span>
         <cdr-link
-            v-else
-            :class="{
-                'cdr-doc-local-anchor-nav__link--parent': !link.isChild,
-                'cdr-doc-local-anchor-nav__link--child': link.isChild,
-            }"
-            modifier="standalone"
-            :href="link.href">
-          {{ link.text }}{{ !link.isChild && groupedLinks.length > 1 ? ':' : '' }}
+          v-else
+          :class="{
+              'cdr-doc-local-anchor-nav__link--parent': !link.isChild,
+              'cdr-doc-local-anchor-nav__link--child': link.isChild,
+          }"
+          modifier="standalone"
+          :href="link.href">
+            {{ link.text }}
+            {{ !link.isChild && groupedLinks.length > 1 ? ':' : '' }}
         </cdr-link>
       </li>
     </cdr-list>
@@ -21,14 +22,13 @@
 </template>
 
 <script>
-
-import { CdrList } from '@rei/cedar';
 import slugify from '../../../utils/slugify.js';
+import { CdrList } from '@rei/cedar';
 
 export default {
   name: 'CdrDocLocalAnchorNav',
   components: {
-    CdrList,
+    CdrList
   },
   props: {
     parentSelectors: {
@@ -92,29 +92,47 @@ export default {
 
   .cdr-doc-local-anchor-nav {
     overflow-y: auto;
-    padding-top: $cdr-space-half-x;
+    padding: $cdr-space-one-x;
+    background-color: $cdr-color-background-lightest;
+    box-shadow: $cdr-prominence-raised;
   }
   .cdr-doc-local-anchor-nav__list {
-    margin-bottom: $cdr-space-one-x;
+    line-height: 0;
+    flex-wrap: wrap;
+
+    &+& {
+      margin-top: $cdr-space-half-x;
+    }
   }
   .cdr-doc-local-anchor-nav__list-item {
-    display: inline-block;
-    margin-right: $cdr-space-one-x;
+    line-height: 0;
+
+    &:nth-of-type(1)::before {
+      display: none !important;
+    }
+
+    &:nth-of-type(n+2)::before {
+      color: $cdr-color-text-secondary-darkmode;
+      content: '|' !important;
+    }
+
+    &:nth-of-type(2) {
+      padding-left: $cdr-space-quarter-x !important;
+      &::before {
+        display: none !important;
+      }
+    }
   }
   .cdr-doc-local-anchor-nav__link--parent {
-    @include cdr-text-subheading-300;
+    @include cdr-text-utility-strong-200;
   }
 
   .cdr-doc-local-anchor-nav__link--child {
-    @include cdr-text-utility-300;
+    @include cdr-text-utility-200;
   }
 
-  .cdr-doc-local-anchor-nav__appended-item-link {
-    @include cdr-text-utility-300;
-  }
-
-  .cdr-doc-local-anchor-nav__appended-item-header {
-    @include cdr-text-utility-strong-300;
+  .cdr-doc-local-anchor-nav__header {
+    @include cdr-text-utility-strong-200;
     vertical-align: top;
     color: $cdr-doc-text-color-primary;
   }

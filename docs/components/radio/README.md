@@ -147,9 +147,8 @@
 
 
 <cdr-doc-table-of-contents-shell>
-
 # Overview
-## Default
+## Default (Medium)
 Default and standard spacing for radio buttons.
 
 <cdr-doc-example-code-pair repository-href="/src/components/radio" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{ex: ''}">
@@ -289,7 +288,7 @@ For more information, review techniques and failures for:
 ## Don't Use When
 
 - Selecting from a list when multiple choices are allowed. Instead, use [Checkboxes](../checkboxes/)
-- Providing a single selectable option. Instead, use [Checkboxes](../checkboxes/) (stand-alone checkbox)
+- Providing a single selectable option. Instead, use [Checkboxes](../checkboxes/) as a stand-alone checkbox
 
 ## Content
 When using radio buttons in a list:

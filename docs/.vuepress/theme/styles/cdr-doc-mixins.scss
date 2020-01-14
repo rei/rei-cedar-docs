@@ -6,7 +6,7 @@
   & > a {
     color: $cdr-doc-link-color-primary;
     text-decoration: none;
-    
+
     &:hover,
     &:active,
     &:focus {
@@ -14,7 +14,7 @@
       text-decoration: underline;
     }
   }
-  
+
   & > img {
     display: block;
     max-width: 100%;
@@ -24,9 +24,22 @@
     margin-right: auto;
   }
 
+
+  & > h1,
+  & > div > h1 {
+    @include cdr-text-heading-serif-800;
+    margin-bottom: $cdr-space-one-x;
+    margin-top: $cdr-space-two-x;
+    max-width: $cdr-doc-long-form-text-max-line-length;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
   & > h2,
   & > div > h2 {
-    @include cdr-text-heading-700; // Section heading
+    @include cdr-text-heading-sans-600;
     margin-bottom: $cdr-space-one-x;
     margin-top: $cdr-space-two-x;
     max-width: $cdr-doc-long-form-text-max-line-length;
@@ -38,7 +51,7 @@
 
   & > h3,
   & > div > h3 {
-    @include cdr-text-heading-500; // SubSection heading
+    @include cdr-text-heading-sans-500; // SubSection heading
     margin-bottom: $cdr-space-one-x;
     margin-top: $cdr-space-two-x;
     max-width: $cdr-doc-long-form-text-max-line-length;
@@ -49,7 +62,7 @@
   }
 
   & > h4 {
-    @include cdr-text-heading-400; // Sub-SubSection heading
+    @include cdr-text-heading-sans-400; // Sub-SubSection heading
     margin-bottom: $cdr-space-one-x;
     margin-top: $cdr-space-two-x;
     max-width: $cdr-doc-long-form-text-max-line-length;
@@ -60,7 +73,7 @@
   }
 
   & > h5 {
-    @include cdr-text-heading-300; // custom SubX3 Section heading
+    @include cdr-text-heading-sans-300; // custom SubX3 Section heading
     margin-bottom: $cdr-space-one-x;
     margin-top: $cdr-space-two-x;
     max-width: $cdr-doc-long-form-text-max-line-length;
@@ -136,7 +149,7 @@
   & > ol {
     list-style-type: decimal;
     padding-left: $ordered-list-indentation-space;
-    
+
     & li {
       padding-left: $cdr-space-quarter-x;
 
@@ -164,7 +177,7 @@
     border: 0;
     border-top: $cdr-doc-border-separator;
     margin-bottom: $cdr-space-two-x;
-    margin-top: $cdr-space-two-x;    
+    margin-top: $cdr-space-two-x;
   }
 
   & > a,
@@ -205,7 +218,7 @@
     & > tbody > tr:nth-child(even) {
       background-color: white
     }
-    
+
     & > tbody > tr:nth-child(odd) {
       background-color: #f2f2f2
     }

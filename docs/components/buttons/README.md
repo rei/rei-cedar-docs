@@ -181,7 +181,7 @@
 # Overview
 ## Primary
 
-Use primary buttons for actions to complete a task or move forward in a process such as &quot;Add to cart.&quot; There is only 1 primary action per major page section.
+Use primary buttons for actions to complete a task or to move forward in a process such as &quot;Add to cart.&quot; There is only one primary action per major page section.
 
 <cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" >
 
@@ -196,7 +196,7 @@ Use primary buttons for actions to complete a task or move forward in a process 
 
 ## Secondary
 
-Use secondary buttons for all actions that do not move the user to the next step or are additional user actions such as &quot;Add to wish list&quot; or &quot;Find a campout near you.&quot;
+Use secondary buttons for all actions that do not move the user to the next step or require additional user actions such as &quot;Add to wish list&quot; or &quot;Find a campout near you.&quot;
 
 <cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" >
 
@@ -243,7 +243,7 @@ Pair an icon with text to improve recognition about an object or action.
 
 ## Icon Only
 
-Use to visually communicate an object or action in limited space. Include alternative text to describe what button does.
+Use icons to visually communicate an object or action in a limited space. Include alternative text to describe what the button does.
 
 <cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrButton, IconQuestionFill'})" >
 
@@ -283,7 +283,7 @@ Displays at full width of its container.
 
 ## Sizing
 
-Change the button size based on where button is used. Default size is medium. Small is used for supplemental user actions such as product comparison or filter. Large is used for &quot;Add to cart&quot; on product pages or Call to Action.
+Change the button size based on where the button is used. The default size is medium. Small is used for supplemental user actions such as product comparison or filter. Large is used for &quot;Add to cart&quot; on product pages or for [Call to Action](../cta/).
 
 <cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" >
 
@@ -308,7 +308,7 @@ To ensure that usage of this component complies with accessibility guidelines:
 
 This component has no specific WCAG compliance attributes built into the control. It is possibile to define this component as a link or button:
 
-- Select the semantically correct element, which will ensure that assistive technologies have correct instructions for how to interact with the component
+- Select the semantically-correct element, which will ensure that assistive technologies have correct instructions for how to interact with the component
 - Use the **CdrLink** component to make a button that looks like a link
 - Do not use `div` or `input` elements
 - Do not add `role="button"` to the **CdrButton** component
@@ -335,7 +335,7 @@ This component has no specific WCAG compliance attributes built into the control
 Buttons sizes are used:
   - **Small:** Supplemental user actions such as product comparison or filter on product pages
   - **Medium:** Default size
-  - **Large:** Mobile version for XS grid with full breakpoint width. Also, for &quot;Add to cart&quot; on product pages or [Call to Action](../cta/) on campaign pages
+  - **Large:** Mobile version for XS grid with full breakpoint width. Also, for &quot;Add to cart&quot; on product pages or for [Call to Action](../cta/) on campaign pages
 
 <br />
 
@@ -357,7 +357,7 @@ When arranging buttons horizontally:
 
 ### Do / Don't
 
-When grouping buttons, match button sizes either horizontally or vertically
+When grouping buttons, match button sizes either horizontally or vertically.
 
 <do-dont :examples="$page.frontmatter.vertical" />
 
@@ -375,7 +375,7 @@ When grouping buttons, match button sizes either horizontally or vertically
 
   - Never repeat the context of a label when the context is already clear. For example, for a &quot;Save&quot; button, do not expand to &quot;Save Account Information&quot;
 
-  - Use sentence case, not all caps, title caps or all lowercase
+  - Use sentence case. Do not use all caps, title caps, or all lowercase
 
 ### Do / Don't
 
@@ -387,9 +387,9 @@ When grouping buttons, match button sizes either horizontally or vertically
 
 ## Behavior
 
-### Choosing a Button or Link
+### Choosing a Button or a Link
 
-When making decisions about using this component styled as a link or a button, consider the following:
+When making decisions about whether to use a link or a button, consider the following:
 
 | **Links**                                                                                           | **Buttons**                                                                          |
 | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
@@ -406,7 +406,7 @@ Apply the following use cases when deciding when to use links as anchors or butt
 | --------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
 | Navigating user to a new page or view                                                               | Toggling a display to full screen                                                    |
 | Changing the URL                                                                                    | Opening a modal window                                                               |
-| Causing a browser redraw/refresh                                                                    | Triggering a popup menu                                                              |
+| Causing a browser redraw or refresh                                                                    | Triggering a popup menu                                                              |
 | Supporting internal page jumps                                                                      | Can be disabled with disabled attribute                                              |
 
 ## Resources
@@ -446,7 +446,7 @@ The below example uses the `size` prop to set a default and responsive size. Thi
 
 ### Modifiers
 
-Following variants are available to the `cdr-button` modifier attribute:
+The following variants are available to the `cdr-button` modifier attribute:
 
 | Value | Description            |
 |:------|:-----------------------|
@@ -484,7 +484,7 @@ export default {
 
 ### Text and Icon
 
-To scale Cedar icons appropriately, include the `cdr-button__icon` class with any icon component. The `size` prop scales both the icon and button.
+To scale Cedar icons appropriately, include the `cdr-button__icon` class with any icon component. The `size` prop scales both the icon and the button.
 
 In the below example, a "Download" button is rendered as a button with icon and text using and inline Cedar icon component.
 

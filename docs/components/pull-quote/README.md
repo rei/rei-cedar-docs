@@ -20,15 +20,15 @@
   "indenting": [
     {
       "type": "do",
-      "image": "pull-quote/quotes_pull__do__9-16.png",
-      "ratio": "9-16",
+      "image": "pull-quote/quotes_pull_indent_do.png",
+      "ratio": "4-3",
       "alt": "Image showing proper pull quote use.",
       "caption": "position the quote near the surrounding text."
     },
     {
       "type": "dont",
-      "image": "pull-quote/quotes_pull__indent_text__dont_9-16.png",
-      "ratio": "9-16",
+      "image": "pull-quote/quotes_pull_indent_dont.png",
+      "ratio": "4-3",
       "alt": "Image showing improper pull quote use in an article",
       "caption": "use for indenting text content."
     }
@@ -36,15 +36,15 @@
   "position": [
     {
       "type": "do",
-      "image": "pull-quote/quotes_pull__do__9-16.png",
-      "ratio": "9-16",
+      "image": "pull-quote/quotes_pull_position_do.png",
+      "ratio": "4-3",
       "alt": "Image showing proper pull quote use.",
       "caption": "relate the quote to the surrounding text."
     },
     {
       "type": "dont",
-      "image": "pull-quote/quotes_pull__random__dont_9-16.png",
-      "ratio": "9-16",
+      "image": "pull-quote/quotes_pull_position_dont.png",
+      "ratio": "4-3",
       "alt": "Image showing improper pull quote use in an article",
       "caption": "position quotes in a random location on the page."
     }
@@ -52,15 +52,15 @@
   "too_many": [
     {
       "type": "do",
-      "image": "pull-quote/quotes_pull__do__9-16.png",
-      "ratio": "9-16",
+      "image": "pull-quote/quotes_pull_too_many_do.png",
+      "ratio": "4-3",
       "alt": "Image showing proper pull quote use.",
       "caption": "use for emphasizing content or additional content."
     },
     {
       "type": "dont",
-      "image": "pull-quote/quotes_pull__too_many__dont_9-16.png",
-      "ratio": "9-16",
+      "image": "pull-quote/quotes_pull_too_many_dont.png",
+      "ratio": "4-3",
       "alt": "Image showing too many pull quotes in an article",
       "caption": "use too many pull quotes."
     }
@@ -133,13 +133,12 @@
 
 ---
 
-
 <cdr-doc-table-of-contents-shell>
 
 # Overview
-## Default
+## Default (Medium)
 
-Default pull quote can be used with the following HTML tags: `<p>`, `<div>`, `<aside>`. For XS breakpoint, a border is below pull quote and font size is smaller.
+Default pull quote can be used with the following HTML tags: `<p>`, `<div>`, `<aside>`. For XS breakpoint, a border is added below the pull quote and the font size is smaller.
 
 <cdr-doc-example-code-pair repository-href="/src/components/quote" :sandbox-data="$page.frontmatter.sandboxData">
 
@@ -162,13 +161,13 @@ To ensure that usage of this component complies with accessibility guidelines:
 - All recommendations listed for [Paragraphs](../paragraphs/#accessibility) component apply to this component
 - Do not use this component to indent text. Screen readers use the `<blockquote>` element to:
   - Provide semantic understanding of page content by announcing blockquote as quote
-  - Define a sectioning root in HTML5, which means that any  `<h1>` - `<h6>`  elements it contains don’t become part of the document’s outline
+  - Define a sectioning root in HTML5, which means that any  `<h1>` - `<h6>`  element doesn't become part of the document’s outline
 
 <br>
 
 This component has compliance with WCAG guidelines by:
 
-- Setting the `aria-hidden="true"` so the pull quote will not be conveyed to a screen reader
+- Setting the `aria-hidden="true"` so that the pull quote cannot be read by a screen reader
 
 <hr>
 
@@ -188,7 +187,7 @@ This component has compliance with WCAG guidelines by:
 
 ## The Basics
 
-Use a pull quote for emphasizing content that has a close and significant relationship with the surrounding text and will help users to visually scan the page
+Use a pull quote for emphasizing content that has a close and significant relationship with the surrounding text and will help users to visually scan the page.
 
 <br/>
 
@@ -200,7 +199,7 @@ Use a pull quote for emphasizing content that has a close and significant relati
 
 ## Responsiveness
 
-When a pull quote is displayed in at XS breakpoints, the left border will appear below the pull quote and will use a smaller font size.
+When a pull quote is displayed at XS breakpoint, the left border will appear below the pull quote and will use a smaller font size.
 
 <hr>
 

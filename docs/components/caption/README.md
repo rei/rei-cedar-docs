@@ -113,7 +113,7 @@
 <cdr-doc-table-of-contents-shell>
 # Overview
 
-## Default
+## Default (Medium)
 
 Caption aligns to the left alongside the body copy with inset padding. Default caption includes summary and credit.
 
@@ -178,10 +178,10 @@ The captions component is text-only; however, it is meant to be displayed in the
 
 ## Accessibility
 
-To ensure that usage of this component complies with accessibility guidelines, do the following:
+To ensure that usage of this component complies with the accessibility guidelines, do the following:
 
 - Use captions sparingly and only with accompanied media
-- Do not use caption text styles for body copy; it is smaller than the recommended size for text readability
+- Do not use caption text styles for body copy. It is smaller than the recommended size for text readability
 
 <br/>
 
@@ -195,7 +195,7 @@ This component has compliance with WCAG guidelines by:
 
 ## Use When
 
-- Providing further context and attribution to any figure or media asset such as an image, video or chart
+- Providing further context and attribution to any figure or media asset such as an image, video, or chart
 
 ## Don’t Use When
 
@@ -204,16 +204,13 @@ This component has compliance with WCAG guidelines by:
 
 ## Content
 
-The Captions component has two separate fields: Summary and Credit.
-  - While they often appear together, one is not dependent on the other
-  - Both are, however, dependent on media content (image, video, etc)
+The Caption component has two separate fields: Summary and Credit. While they often appear together, one is not dependent on the other. Both are, however, dependent on media content (image, video, etc).
 
-\
-Text fields within a caption:
-  - Summary text gives the media context:
+There are two text fields available within a caption:
+  - Summary text gives the media context
       - Keep summary text concise, 1-2 lines at LG breakpoint
       - Use sentence case
-  - Credit provides attribution to the correct sources:
+  - Credit provides attribution to the correct sources
       - Helps users gauge the strength and validity of the material the author has used
       - Begin credit text with “Video Credit” or “Image Credit”
 
@@ -221,10 +218,10 @@ Text fields within a caption:
 
 - Captions align to the left border based on the paragraph container and not centered under the media object
 - Max width is 498 pixels, even if the media (image, video, or chart) extends beyond the paragraph max width
-- Left padding is added to the caption container
 <br />
 <br />
 <cdr-img :src="$withBase(`/caption/spec_caption_layout-4-3.png`)"/>
+
 <br />
 
 ### Types of Accreditations
@@ -239,18 +236,18 @@ For multiple photo accreditations:
   - List in clockwise order from top
   - Separated by commas and semicolons
   - No breaking spaces
-  - For example, “Image credits: top left, Madeline G. @maddyluv; top right, Kevin C.; bottom right, George M. @gmonkey”
+  - For example, “Image Credits: top left, Madeline G. @maddyluv; top right, Kevin C.; bottom right, George M. @gmonkey”
 
 \
 For purchased assets (photos or video):
-  - Use full name, provided there a signed release is on file
+  - Use full name, provided a signed release is on file
 
 \
 For copyrighted media (photos or video):
   - Use © symbol and date separated by (non-breaking) spaces and photographer name. (e.g. © 2017 Norm Bellows)
   - If date is not available, use © symbol and photographer name separated by a (non-breaking) space. (e.g. © Norm Bellows)
 
-### For More Information
+### Resources
 
 - For more information about photo accreditation recommendations:
   - Noble Blogger Guidelines: [How to Cite Pictures](https://writtent.com/blog/the-honor-code-of-a-noble-blogger-how-to-cite-pictures)
@@ -264,21 +261,25 @@ For copyrighted media (photos or video):
 Keep summary content short to avoid excess text-wrapping.
 <br/>
 <br/>
+
 <do-dont :examples="$page.frontmatter.summaries" />
 
-Captions must be accompanied by media asset such as an image, video or chart.
+Captions must be accompanied by media asset such as an image, video, or chart.
 <br/>
 <br/>
+
 <do-dont :examples="$page.frontmatter.media" />
 
 Summary and Credit serve different purposes and should remain separate.
 <br/>
 <br/>
+
 <do-dont :examples="$page.frontmatter.separate" />
 
 Caption stays left aligned with body copy regardless of the width of the media.
 <br/>
 <br/>
+
 <do-dont :examples="$page.frontmatter.align" />
 
 <hr>
@@ -291,7 +292,7 @@ Caption stays left aligned with body copy regardless of the width of the media.
 
 ## Usage
 
-The **CdrCaption** component is developed to work within a composition with other components; however composition-type components have not been developed yet.
+The **CdrCaption** component is developed to work within a composition with other components; however, composition-type components have not been developed yet.
 
 <br />
 

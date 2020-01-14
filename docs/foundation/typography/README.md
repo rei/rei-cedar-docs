@@ -45,10 +45,10 @@
       "caption": "left align text to other elements on the page."
     },
     {
-      "type": "dont",
+      "type": "caution",
       "image": "typography/typography_alignment_caution.png",
       "alt": "Image showing a center aligned headline above icons",
-      "caption": "center align short headlines."
+      "caption": "center aligning short headlines."
     },
   ],
   "lineLengthMobile": [
@@ -73,7 +73,7 @@
       "caption": "use line lengths of 50-60 characters."
     },
     {
-      "type": "dont",
+      "type": "caution",
       "image": "typography/typography_line_length_desktop_dont.png",
       "alt": "Image showing and incorrect line length over 80 characters",
       "caption": "create line lengths of 80 characters or more."
@@ -82,61 +82,6 @@
 }
 ---
 <cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
-
-Cedar uses Design Tokens to store typographic attributes that represent the fundamental decisions of Cedar’s visual language. Design tokens:
-- Store font specifications using variable names, not hard-coded values such as font family name or pixel values for font size
-- Specify a hierarchical and semantically defined system
-
-
-For more information on what Design Tokens are and how to use them, visit the [Design Tokens](../../components/design-tokens/) page.
-
-For a complete list of Cedar Design Tokens, visit the [Cedar Tokens](https://rei.github.io/rei-cedar-tokens/) page.
-
-
-<br/>
-<hr>
-
-
-## Web
-
-
-<tokens-typography platform="web" type="body">
-### Body
-</tokens-typography>
-
-<tokens-typography platform="web" type="utility">
-### Utility
-</tokens-typography>
-
-<tokens-typography platform="web" type="heading">
-### Headings
-</tokens-typography>
-
-<tokens-typography platform="web" type="subheading">
-### Subheading
-</tokens-typography>
-
-<tokens-typography platform="web" type="eyebrow">
-### Eyebrow
-</tokens-typography>
-
-<hr>
-
-## Mobile Apps
-
-<tokens-typography platform="native" type="header">
-### Headings
-</tokens-typography>
-
-<tokens-typography platform="native" type="body">
-### Body
-</tokens-typography>
-
-<tokens-typography platform="native" type="button">
-### Buttons
-</tokens-typography>
-
-<hr/>
 
 # Guidelines
 
@@ -212,7 +157,6 @@ To create the appropriate contrast and hierarchy, use a mix of Stuart and Graphi
 
 <cdr-img class="cdr-doc-article-img" alt="A graphic showing mixed usage of Stuart and Graphik typefaces" :src="$withBase(`/typography/typography_type_guidelines_type-pairing.png`)" />
 
-
 ### Font Style
 
 
@@ -269,3 +213,11 @@ For people with certain reading of vision disabilities, long lines of text can b
 <hr/>
 
 </cdr-doc-table-of-contents-shell>
+
+## Resources
+
+For detailed information on the Cedar Text API, design guidelines, and accessibility considerations, visit the Text component [link needed] page. 
+
+If you want to know what Design Tokens are and how to use them, visit the [Design Tokens](../../components/design-tokens/) page.
+
+For a complete list of Cedar Design Tokens, visit the [Cedar Tokens](https://rei.github.io/rei-cedar-tokens/) page.
