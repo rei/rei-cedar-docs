@@ -737,8 +737,6 @@ Body styles include a set of strong options: `cdr-text-body-strong-500`, `cdr-te
 
 Utility styles are used to communicate  functionality or descriptive information. Shorter content is a good candidate for the more condensed and compact utility styling. Utility styles should not be replaced with headings. While headings help group and categorize content, utility styles help to label elements or give users information on how to take action. Cedar utility styles are available in both serif and sans serif options. Additionally, each utility style has a strong option.
 
-**By default text within a** `cdr-container` **will display as** `cdr-text-utility-300`
-
 ### Serif
 Utility serif styles should be used when additional brand emphasis is needed.
 
@@ -1177,9 +1175,9 @@ This component has compliance with following WebAIM’s accessibility guidelines
 
 # Implementation:
 
- To work as intended, Tokens, Utility classes and Component require both `cdr-reset.css` and access to the REI Brand fonts. for more information on how to access these resources visit the [developer getting started](https://rei.github.io/rei-cedar-docs/getting-started/as-a-developer#setting-up-projects) page.
+To work as intended, Tokens, Utility classes and Component require both `cdr-reset.css` and access to the REI Brand fonts. for more information on how to access these resources visit the [developer getting started](https://rei.github.io/rei-cedar-docs/getting-started/as-a-developer#setting-up-projects) page.
 
- The global text default `cdr-text-utility-300` is defined in each of the available cdr-container classes. Make sure that all content is contained in one of the [available container classes](http://localhost:8080/layout/responsive/#standard-vs-fluid-container)
+The global text default `cdr-text-default` is defined in each of the available cdr-container classes as well as the Cedar reset. Make sure that all content is contained in one of the [available container classes](http://localhost:8080/layout/responsive/#standard-vs-fluid-container)
 
 The cedar text css selectors provide no spacing values other than letter-spacing and line-height.
 
