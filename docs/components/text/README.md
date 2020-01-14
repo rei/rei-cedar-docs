@@ -74,14 +74,14 @@
       "image": "text/headings_h_tag_do.png",
       "ratio": "4-3",
       "alt": "",
-      "caption": "use <p> or <span> tags for subheadings. "
+      "caption": "use paragraph or span tags for subheadings. "
     },
     {
       "type": "dont",
       "image": "text/headings_h_tag_dont.png",
       "ratio": "4-3",
       "alt": "",
-      "caption": "use <h> tags for subheadings."
+      "caption": "use heading tags for subheadings."
     }
   ],
   "characterlength": [
@@ -210,6 +210,17 @@ A heading helps users to identify and create a hierarchical structure within a p
 ### Serif
 
 Serif headings, set in REI Stuart, work best in larger sizes (cdr-text-heading-serif-600 and above). However, it’s also available for areas where space is limited but an important distinction or callout needs to be made, such as a card title or aligning to marketing collateral.
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="heading-serif-1200">
+    When you gear up, we give back
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
 
 ### Serif Strong
 
