@@ -188,7 +188,7 @@ This component has compliance with WCAG guidelines by:
 - Content behind modal does not scroll and cannot be interacted with in any way
 - Gradient is added at bottom to signify further scrollable content
 - Modal is dismissed by:
-  - Clicking the Close button
+  - Clicking the **Close** button
   - Interacting with the overlay background
   - Pressing the escape key (ESC)
 - Modal opens one at a time and are never displayed in groups
@@ -244,7 +244,7 @@ When using the `label` slot, add CdrText to use the appropriate header styles.
 
 ## Size
 
-The modal `size` prop controls the max-width of the modal. `medium` maps to a max-width of 600px; while `large` is 800px.
+The modal `size` prop controls the max-width of the modal. `medium` maps to a max-width of 600px; while `large` maps to 800px.
 
 ## Scroll Behavior
 
@@ -262,7 +262,7 @@ If your modal is launched by a button, add `aria-haspopup="dialog"` to the butto
 </template>
 ```
 
-Do not use `v-if` with **CdrModal** unless the component is wrapped with `keep-alive`. **CdrModal** handles showing and hiding itself when toggling, so `v-if` should be unneeded in most cases.
+Do not use `v-if` with CdrModal unless the component is wrapped with `keep-alive`. CdrModal handles showing and hiding itself when toggling, so `v-if` should be unneeded in most cases.
 
 ```vue{1,3,11}
 <keep-alive>
