@@ -79,6 +79,23 @@
       "caption": "create line lengths of 80 characters or more."
     },
   ],
+  "see_also": [
+    {
+      "text": "See Also",
+    },
+    {
+      "text": "Text",
+      "href": "../../components/text"
+    },
+    {
+      "text": "Design Tokens",
+      "href": "../../components/design-tokens/"
+    },
+    {
+      "text": "Cedar Tokens",
+      "href": "https://rei.github.io/rei-cedar-tokens/"
+    }
+  ]
 }
 ---
 <cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
@@ -213,11 +230,3 @@ For people with certain reading of vision disabilities, long lines of text can b
 <hr/>
 
 </cdr-doc-table-of-contents-shell>
-
-## Resources
-
-For detailed information on the Cedar Text API, design guidelines, and accessibility considerations, visit the Text component [link needed] page. 
-
-If you want to know what Design Tokens are and how to use them, visit the [Design Tokens](../../components/design-tokens/) page.
-
-For a complete list of Cedar Design Tokens, visit the [Cedar Tokens](https://rei.github.io/rei-cedar-tokens/) page.
