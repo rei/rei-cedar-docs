@@ -2,7 +2,7 @@
 {
   "title": "Text",
   "layout_type": "LayoutComponent",
-  "summary": "Used as titles to create hierarchical information structure within a page layout",
+  "summary": "Text container used for any text element such as paragraphs, headings, and lists. Estalbishes vertical spacing and optimizes the reading experience.",
   "title_metadata": "CdrText",
   "see_also": [
     {
@@ -418,7 +418,7 @@ Body strong is also intended for long-form copy but should be used minimally. Us
     - Follow [REI Copy Guidelines](https://www.cloud-dam.rei.com/en-us/AssetGuidesandCreativeStandards/StyleGuidePage/MasterBrandCopyGuides) for dates, time, dimensions, measurements, electrical units, and geographic reference
     - Expand abbreviations by explaining the definition the first time it is used
     - Use the `<abbr>` element, or link to a definition or glossary
-  - For ease of reading, readability level should be about Grade 7. To test the body text, use the [Hemingway Editor](http://www.hemingwayapp.com/). 
+  - For ease of reading, readability level should be about Grade 7. To test the body text, use the [Hemingway Editor](http://www.hemingwayapp.com/).
   - When possible, write the first sentence as an introduction to the paragraph. With screen readers, users can jump from paragraph to paragraph, listening to the first sentence or two before moving on to the next paragraph
 
 ### Applying Strong to Body Styles
