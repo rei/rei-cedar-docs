@@ -11,10 +11,6 @@
     {
       "text": 'Typography',
       "href": '../../foundation/typography/'
-    },
-    {
-      "text": 'Paragraphs',
-      "href": '../paragraphs/'
     }
   ],
   "sandboxData": {
