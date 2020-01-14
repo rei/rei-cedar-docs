@@ -622,7 +622,7 @@ Heading and subheading combinations should have the appropriate contrast and hie
 <do-dont :examples="$page.frontmatter.subheading" />
 
 ## Body
-Body styles work best for long-form copy like articles, customer reviews, or legal messages. Body styles have a generous line height and wider letter spacing for optimal reading. For tighter, more compact styles, use [utility](#utility)styles. 
+Body styles work best for long-form copy like articles, customer reviews, or legal messages. Body styles have a generous line height and wider letter spacing for optimal reading. For tighter, more compact styles, use [utility](#utility) styles. 
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
@@ -1089,7 +1089,7 @@ Utility sans styles should be used when additional emphasis is needed.
 <do-dont :examples="$page.frontmatter.utilityTight" />
 
 ## Eyebrow
-Eyebrows introduce a topic or show how an item is categorized.—Content tags or certain label styles are two examples. Eyebrow text styles should not be used as headings or used for brand names. 
+Eyebrows introduce a topic or show how an item is categorized. Content tags or certain label styles are two examples. Eyebrow text styles should not be used as headings or used for brand names. 
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
