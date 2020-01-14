@@ -485,7 +485,7 @@ This component has compliance with WCAG guidelines by:
 ### Icon
 
 - Use icons to trigger a popover for hints or suggestions
-- Read more about icon guidelines using Cedar [here](https://rei.github.io/rei-cedar-docs/components/icon/?active-tab=guidelines)
+- Read more about icon guidelines using Cedar [here](https://rei.github.io/rei-cedar-docs/components/icon#guidelines)
 
 ### Link Text
 

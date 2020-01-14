@@ -1177,7 +1177,7 @@ This component has compliance with following WebAIM’s accessibility guidelines
 
 # Implementation:
 
- To work as intended, Tokens, Utility classes and Component require both `cdr-reset.css` and access to the REI Brand fonts. for more information on how to access these resources visit the [developer getting started](https://rei.github.io/rei-cedar-docs/getting-started/as-a-developer/?active-link=setting-up-projects) page.
+ To work as intended, Tokens, Utility classes and Component require both `cdr-reset.css` and access to the REI Brand fonts. for more information on how to access these resources visit the [developer getting started](https://rei.github.io/rei-cedar-docs/getting-started/as-a-developer#setting-up-projects) page.
 
  The global text default `cdr-text-utility-300` is defined in each of the available cdr-container classes. Make sure that all content is contained in one of the [available container classes](http://localhost:8080/layout/responsive/#standard-vs-fluid-container)
 
