@@ -478,7 +478,7 @@ Sans headings, set in Graphik, should play a supporting role to serif headings. 
 
 ### Don’t Use When
   - Tagging as a semantic heading when an element only needs to be highlighted or emphasized within your content. Instead, use a sizing modifier for this component
-  - Showcasing long form content. Instead, use body 
+  - Showcasing long form content. Instead, use body
 
 ### The Basics
   - When using this component with semantic headings from `<h1>` to `<h6>`, typographic styles set up a visual hierarchy created within CSS that helps to establish the order of importance
@@ -510,7 +510,7 @@ Sans headings, set in Graphik, should play a supporting role to serif headings. 
     - Left-align multi-line headings
 
 ### Responsive Headings
-Cedar does not offer pre-styled responsive headings. Instead, construct responsive headings by defining a heading style for specific [breakpoints](../../layout/responsive/#the-cedar-container). For instance, if the heading style is cdr-text-heading-serif-900 @lg, @md, and @sm sizes, set the heading style to cdr-text-heading-serif-800 at the @xs size. This helps to create optimal readability, spacing, and proportions for various breakpoint sizes. An examples in practice: 
+Cedar does not offer pre-styled responsive headings. Instead, construct responsive headings by defining a heading style for specific [breakpoints](../../layout/responsive/#the-cedar-container). For instance, if the heading style is cdr-text-heading-serif-900 @lg, @md, and @sm sizes, set the heading style to cdr-text-heading-serif-800 at the @xs size. This helps to create optimal readability, spacing, and proportions for various breakpoint sizes. An examples in practice:
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData" >
 
@@ -531,7 +531,7 @@ Cedar does not offer pre-styled responsive headings. Instead, construct responsi
 
 ## Subheadings
 
-Subheadings give support or add meaning to a heading, and are intended to be paired with [headings](#headings). Never position a subheading on a page without pairing it with a heading style. Because subheadings are supportive, they should always be smaller in size than the heading they reinforce. 
+Subheadings give support or add meaning to a heading, and are intended to be paired with [headings](#headings). Never position a subheading on a page without pairing it with a heading style. Because subheadings are supportive, they should always be smaller in size than the heading they reinforce.
 
 ### Sans
 Sans-serif subheadings are set in Graphik. They are intended to be paired with serif or serif strong headings. Pairing a sans subheading with a sans heading is also acceptable.
@@ -622,7 +622,7 @@ Heading and subheading combinations should have the appropriate contrast and hie
 <do-dont :examples="$page.frontmatter.subheading" />
 
 ## Body
-Body styles work best for long-form copy like articles, customer reviews, or legal messages. Body styles have a generous line height and wider letter spacing for optimal reading. For tighter, more compact styles, use [utility](#utility) styles. 
+Body styles work best for long-form copy like articles, customer reviews, or legal messages. Body styles have a generous line height and wider letter spacing for optimal reading. For tighter, more compact styles, use [utility](#utility) styles.
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
@@ -658,7 +658,7 @@ Body styles work best for long-form copy like articles, customer reviews, or leg
 </cdr-doc-example-code-pair>
 
 ### Strong
-Body strong is also intended for long-form copy but should be used minimally. Use body strong styles when emphasizing a subset of copy—never for the entire length of copy. 
+Body strong is also intended for long-form copy but should be used minimally. Use body strong styles when emphasizing a subset of copy—never for the entire length of copy.
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
@@ -710,7 +710,7 @@ Body strong is also intended for long-form copy but should be used minimally. Us
 
   - Max-width for paragraph containers is 634px or line length should not exceed 75 characters per line
   - Use standard (dark) text color on light backgrounds for article text
-  
+
 ### Content
   - Use adjacent text, a definition list, a glossary, or other method to supplement words that are ambiguous
   - Abbreviations:
@@ -735,7 +735,7 @@ Body styles include a set of strong options: `cdr-text-body-strong-500`, `cdr-te
 
 ## Utility
 
-Utility styles are used to communicate  functionality or descriptive information. Shorter content is a good candidate for the more condensed and compact utility styling. Utility styles should not be replaced with headings. While headings help group and categorize content, utility styles help to label elements or give users information on how to take action. Cedar utility styles are available in both serif and sans serif options. Additionally, each utility style has a strong option. 
+Utility styles are used to communicate  functionality or descriptive information. Shorter content is a good candidate for the more condensed and compact utility styling. Utility styles should not be replaced with headings. While headings help group and categorize content, utility styles help to label elements or give users information on how to take action. Cedar utility styles are available in both serif and sans serif options. Additionally, each utility style has a strong option.
 
 **By default text within a** `cdr-container` **will display as** `cdr-text-utility-300`
 
@@ -1089,7 +1089,7 @@ Utility sans styles should be used when additional emphasis is needed.
 <do-dont :examples="$page.frontmatter.utilityTight" />
 
 ## Eyebrow
-Eyebrows introduce a topic or show how an item is categorized. Content tags or certain label styles are two examples. Eyebrow text styles should not be used as headings or used for brand names. 
+Eyebrows introduce a topic or show how an item is categorized. Content tags or certain label styles are two examples. Eyebrow text styles should not be used as headings or used for brand names.
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
@@ -1121,9 +1121,9 @@ In addition to the specific type options listed above, we have provided two gene
     <cdr-text
     tag="em"
     modifier="italic">
-    Field & Stream’s 
-    </cdr-text> 
-    “10 Best Pants for Working Outside” 
+    Field & Stream’s
+    </cdr-text>
+    “10 Best Pants for Working Outside”
   </cdr-text>
 
 ```
@@ -1175,13 +1175,13 @@ This component has compliance with following WebAIM’s accessibility guidelines
   - [WCAG SC 1.4.8: Visual presentation](https://www.w3.org/TR/WCAG20/#visual-audio-contrast-visual-presentation): Cedar Design System text component provides for spacing for:
     - Within paragraphs, line spacing is at least 1.5 times font height
 
-# Implementation: 
+# Implementation:
 
  To work as intended, Tokens, Utility classes and Component require both `cdr-reset.css` and access to the REI Brand fonts. for more information on how to access these resources visit the [developer getting started](https://rei.github.io/rei-cedar-docs/getting-started/as-a-developer/?active-link=setting-up-projects) page.
 
  The global text default `cdr-text-utility-300` is defined in each of the available cdr-container classes. Make sure that all content is contained in one of the [available container classes](http://localhost:8080/layout/responsive/#standard-vs-fluid-container)
 
-The cedar text css selectors provide no spacing values other than letter-spacing and line-height. 
+The cedar text css selectors provide no spacing values other than letter-spacing and line-height.
 
 For proper spacing between blocks of text, use the [cedar spacing options](../..//layout/spacing/)
 
@@ -1204,14 +1204,14 @@ For more information on importing these styles and how to use them, visit the [D
 
 The `cdr-text` root class sets all value pairs to `inherit`. When using these classes,  ensure at least the parent class assigns the `cdr-text` root style.
 
-The utility classes follow [BEM](http://getbem.com/)conventions and have two dashes between `cdr-text` and its modifier `body-300`
+The utility classes have two dashes between `cdr-text` and its modifier `body-300`
 
 <cdr-doc-code-snippet :copy-button="false" :line-numbers="false">
 
   ```html
   <p class=”cdr-text cdr-text--body-300”>
-    My body 300 text 
-      <em class=”cdr-text--italic”>is</em> 
+    My body 300 text
+      <em class=”cdr-text--italic”>is</em>
     amazing
   </p>
   ```
@@ -1278,10 +1278,10 @@ When creating page headers be sure to apply the correct semantic tag.
 ```
 </cdr-doc-code-snippet>
 
-#### Text Responsiveness 
+#### Text Responsiveness
 Text modifiers accept any of the supported Cedar breakpoints. For more information on how breakpoints work on components, visit the [Responsive Layout article](../../layout/responsive/#the-cedar-container).
 
-## Text options 
+## Text options
 
 <text-doc-overview />
 
