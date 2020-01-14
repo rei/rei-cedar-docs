@@ -334,7 +334,7 @@ Serif headings, set in REI Stuart, work best in larger sizes (cdr-text-heading-s
 
 ### Serif Strong
 
-Serif strong headings, set in REI Stuart with a greater font weight than serif, work best in larger sizes (cdr-text-heading-serif-strong-600 and above). It’s recommended to use serif-strong headings very minimally throughout the page and should generally be reserved for important page titles, in cases where type overlays an image, or in situations where additional emphasis is needed.
+Serif strong headings, set in REI Stuart with a greater font weight than serif, work best in larger sizes (cdr-text-heading-serif-strong-600 and above). It’s recommended to use serif strong headings very minimally throughout the page and should generally be reserved for important page titles, in cases where type overlays an image, or in situations where additional emphasis is needed.
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
@@ -499,7 +499,7 @@ Sans headings, set in Graphik, should play a supporting role to serif headings. 
   - Be specific. Provide facts or information that pique user interest. Avoid broad and generic headings
   - Start heading titles with strong and familiar keywords to increase scannability
   - Ensure the heading works out of page context, such as search results, social media streams, blog posts, and news feeds
-    - Start with most descriptive word. For example, in a section labeled “Disaster    - Relief” instead of “Preparation for floods”, use “Flood preparation”
+    - Start with most descriptive word. For example, instead of “Preparation for floods”, use “Flood preparation”
     - Avoid duplicating headings (e.g. "More Details")
   - Omit needless words. Be clear and concise
   - Limit heading length for improved scale across variable container widths
@@ -527,7 +527,6 @@ Cedar does not offer pre-styled responsive headings. Instead, construct responsi
 
 - WebAIM: [Semantic Structure](https://webaim.org/techniques/semanticstructure/)
 
-### Using a heading style without a heading tag
 
 ## Subheadings
 
@@ -658,7 +657,7 @@ Body styles work best for long-form copy like articles, customer reviews, or leg
 </cdr-doc-example-code-pair>
 
 ### Strong
-Body strong is also intended for long-form copy but should be used minimally. Use body strong styles when emphasizing a subset of copy—never for the entire length of copy.
+Body strong is also intended for long-form copy but should be used minimally. Use body strong styles when emphasizing a subset of copy and never for the entire length of copy.
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
@@ -717,7 +716,7 @@ Body strong is also intended for long-form copy but should be used minimally. Us
     - Follow [REI Copy Guidelines](https://www.cloud-dam.rei.com/en-us/AssetGuidesandCreativeStandards/StyleGuidePage/MasterBrandCopyGuides) for dates, time, dimensions, measurements, electrical units, and geographic reference
     - Expand abbreviations by explaining the definition the first time it is used
     - Use the `<abbr>` element, or link to a definition or glossary
-  - For ease of reading, readability level should be about Grade 7. To test the body text, use the [Hemingway Editor](http://www.hemingwayapp.com/). For more information, view the Help information
+  - For ease of reading, readability level should be about Grade 7. To test the body text, use the [Hemingway Editor](http://www.hemingwayapp.com/). 
   - When possible, write the first sentence as an introduction to the paragraph. With screen readers, users can jump from paragraph to paragraph, listening to the first sentence or two before moving on to the next paragraph
 
 ### Applying Strong to Body Styles
@@ -1173,25 +1172,25 @@ This component has compliance with following WebAIM’s accessibility guidelines
   - [WCAG SC 1.4.8: Visual presentation](https://www.w3.org/TR/WCAG20/#visual-audio-contrast-visual-presentation): Cedar Design System text component provides for spacing for:
     - Within paragraphs, line spacing is at least 1.5 times font height
 
-# Implementation:
+# Implementation
 
-To work as intended, Tokens, Utility classes and Component require both `cdr-reset.css` and access to the REI Brand fonts. for more information on how to access these resources visit the [developer getting started](https://rei.github.io/rei-cedar-docs/getting-started/as-a-developer#setting-up-projects) page.
+To work as intended, tokens, utility classes, and component require both `cdr-reset.css` and access to the REI brand fonts. For more information on how to access these resources, visit the [developer getting started](https://rei.github.io/rei-cedar-docs/getting-started/as-a-developer#setting-up-projects) page.
 
-The global text default `cdr-text-default` is defined in each of the available cdr-container classes as well as the Cedar reset. Make sure that all content is contained in one of the [available container classes](https://rei.github.io/rei-cedar-docs/layout/responsive/#standard-vs-fluid-container)
+The global text default `cdr-text-default` is defined in each of the available cdr-container classes as well as the Cedar reset. Ensure that all content is contained in one of the [available container classes](https://rei.github.io/rei-cedar-docs/layout/responsive/#standard-vs-fluid-container).
 
-The cedar text css selectors provide no spacing values other than letter-spacing and line-height.
+The Cedar text css selectors provide no spacing values other than letter-spacing and line-height.
 
-For proper spacing between blocks of text, use the [cedar spacing options](../..//layout/spacing/)
+For proper spacing between blocks of text, use the [cedar spacing options](../..//layout/spacing/).
 
-The cedar text options can be utilized by your application via [token mixins](https://www.npmjs.com/package/@rei/cdr-tokens), [utility classes](https://www.npmjs.com/package/@rei/cedar) or through the [cdr-text component](https://www.npmjs.com/package/@rei/cedar).
+The Cedar text options can be utilized by your application using the [token mixins](https://www.npmjs.com/package/@rei/cdr-tokens), [utility classes](https://www.npmjs.com/package/@rei/cedar) or through the [cdr-text component](https://www.npmjs.com/package/@rei/cedar).
 
-## Text Token mixins
+## Text Token Mixins
 
 Cedar uses design tokens to store typographic attributes that represent the fundamental decisions of Cedar’s visual language.
 
 For a complete list of Cedar design tokens, visit the [Cedar Tokens](https://rei.github.io/rei-cedar-tokens/) page.
 
-## Utility classes
+## Utility Classes
 
 `cdr-text` styles are available as a standalone css classes for users unable or preferring not to add custom styles to their applications, and who are unable to use the `cdr-text` vue.js component.
 
@@ -1200,9 +1199,9 @@ For more information on importing these styles and how to use them, visit the [D
 
 ### Usage
 
-The `cdr-text` root class sets all value pairs to `inherit`. When using these classes,  ensure at least the parent class assigns the `cdr-text` root style.
+The `cdr-text` root class sets all value pairs to `inherit`. When using these classes, ensure at least the parent class assigns the `cdr-text` root style.
 
-The utility classes have two dashes between `cdr-text` and its modifier `body-300`
+The utility classes have two dashes between `cdr-text` and its modifier `body-300`.
 
 <cdr-doc-code-snippet :copy-button="false" :line-numbers="false">
 
@@ -1235,7 +1234,7 @@ This method decouples the semantic meaning of a heading level from the visual re
 
 With this decoupling, you can style other markup to look like a heading that semantically isn’t a heading.
 
-When creating page headers be sure to apply the correct semantic tag.
+When creating page headers, apply the correct semantic tag.
 
 <cdr-doc-code-snippet :copy-button="false" :line-numbers="false">
 
@@ -1260,7 +1259,7 @@ When creating page headers be sure to apply the correct semantic tag.
 ```
 </cdr-doc-code-snippet>
 
-**CdrText** components can be extended with other cedar or custom classes.
+**CdrText** components can be extended with other Cedar or custom classes.
 
 <cdr-doc-code-snippet :copy-button="false" :line-numbers="false">
 
@@ -1279,7 +1278,7 @@ When creating page headers be sure to apply the correct semantic tag.
 #### Text Responsiveness
 Text modifiers accept any of the supported Cedar breakpoints. For more information on how breakpoints work on components, visit the [Responsive Layout article](../../layout/responsive/#the-cedar-container).
 
-## Text options
+## Text Options
 
 <text-doc-overview />
 
