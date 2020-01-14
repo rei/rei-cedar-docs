@@ -383,7 +383,7 @@ Select components should be:
 
 ### Options
 + Define width using CSS styles
-+ Height options are medium and large. These variations can be used for creating media queries for responsive layouts, or to call more or less attention to the component. For an example of medium and large sizes, visit the [Overview](https://rei.github.io/rei-cedar-docs/components/select/?active-tab=overview) tab
++ Height options are medium and large. These variations can be used for creating media queries for responsive layouts, or to call more or less attention to the component. For an example of medium and large sizes, visit the [Overview](https://rei.github.io/rei-cedar-docs/components/select#overview) tab
 
 
 ## Content
@@ -417,7 +417,7 @@ Select components should be:
 ### Icon
 
 - Use icons to trigger a popover for hints or suggestions
-- Read more about icon guidelines using Cedar [here](https://rei.github.io/rei-cedar-docs/components/icon/?active-tab=guidelines)
+- Read more about icon guidelines using Cedar [here](https://rei.github.io/rei-cedar-docs/components/icon#guidelines)
 
 ### Link Text
 

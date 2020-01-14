@@ -45,7 +45,7 @@ If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade
 - Graphik has been introduced to replace Roboto
 - All components have been revised to include Graphik
 - New type tokens have been introduced to support body and utility styles
-- For more information, visit the Text components [// Add link when that page is up] page
+- For more information, visit the [Text component](../../components/text) page
 
 ### Decomposed CSS Output
 
@@ -325,6 +325,6 @@ We have updated the recommended mappings for some features that were deprecated 
 
 In accordance with our deprecation policy, features that were deprecated in the [Summer 2019 release](https://rei.github.io/rei-cedar-docs/release-notes/summer-2019/#revisions-for-spacing-utility-classes) have been removed from Cedar.
 
-- Deprecated spacing utilities (`cdr-stack`, `cdr-inset`, `cdr-inline`) should be replaced with the new [`cdr-space` utilities](https://rei.github.io/rei-cedar-docs/components/utilities/?active-link=spacing). For more information on updating, see the [Summer 2019 release notes](https://rei.github.io/rei-cedar-docs/release-notes/summer-2019/#revisions-for-spacing-utility-classes).
+- Deprecated spacing utilities (`cdr-stack`, `cdr-inset`, `cdr-inline`) should be replaced with the new [`cdr-space` utilities](https://rei.github.io/rei-cedar-docs/components/utilities#spacing). For more information on updating, see the [Summer 2019 release notes](https://rei.github.io/rei-cedar-docs/release-notes/summer-2019/#revisions-for-spacing-utility-classes).
 
 </cdr-doc-table-of-contents-shell>
