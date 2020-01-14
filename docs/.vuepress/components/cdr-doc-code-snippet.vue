@@ -1,46 +1,20 @@
-
-<!-- TODO: Add tooltips on hover for copy to clipboard, github, and code sandbox links -->
 <template>
-  <div class="cdr-doc-code-snippet" :class="{ 
-    'cdr-doc-code-snippet--show-copied-notification': copied, 
+  <div class="cdr-doc-code-snippet" :class="{
     'cdr-doc-code-snippet--no-line-numbers': !lineNumbers,
     'cdr-doc-code-snippet--code-hidden': codeHidden,
     'cdr-doc-code-snippet--no-max-height': !maxHeight }">
     <div class="cdr-doc-code-snippet__actions" v-if="copyButton">
-      <div class="cdr-doc-code-snippet__copy-action cdr-doc-code-snippet__action" v-on:click="copyToClipBoard">
-        <button class="cdr-doc-code-snippet__copy-button">
-          <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#clipboard" alt="Copy to clipboard"/> <!-- ...or use="#copy" -->
-        </button>
-        <span class="cdr-doc-code-snippet__tooltip cdr-doc-code-snippet__tooltip--show-on-hover">
-          Copy to clipboard
-        </span>
-        <span class="cdr-doc-code-snippet__tooltip cdr-doc-code-snippet__tooltip--copied-notification" aria-live="polite">
-          <span class="cdr-doc-code-snippet__tooltip-message" v-if="copied">
-            Copied!
-          </span>
-          <span class="cdr-doc-code-snippet__tooltip-message" v-if="copyError">
-            Could not copy to clipboard.
-          </span>
-          <span class="cdr-doc-code-snippet__tooltip-message" v-if="copyNotSupported">
-            This browser does not support automatic copying to clipboard.
-          </span>
-        </span>
-      </div>
       <div class="cdr-doc-code-snippet__action-wrapper">
-        <a class="cdr-doc-code-snippet__action" :href="repositoryRoot + repositoryHref" target="_blank" rel="noopener noreferrer" v-if="repositoryHref">
-          <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github" alt="View source in repository"/>
-        </a>
-        <span class="cdr-doc-code-snippet__tooltip cdr-doc-code-snippet__tooltip--show-on-hover">
-          View in repository
-        </span>
+        <cdr-link modifier="standalone" class="cdr-doc-code-snippet__action" :href="repositoryRoot + repositoryHref" target="_blank" rel="noopener noreferrer" v-if="repositoryHref">
+          <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github" alt=""/>
+          View on Github
+        </cdr-link>
       </div>
       <div class="cdr-doc-code-snippet__action-wrapper" v-if="sandboxHrefComputed">
-        <a class="cdr-doc-code-snippet__action" :href="sandboxHrefComputed" target="_blank" rel="noopener noreferrer">
-          <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-code-sandbox" alt="View in code sandbox"/>
-        </a>
-        <span class="cdr-doc-code-snippet__tooltip cdr-doc-code-snippet__tooltip--show-on-hover">
-          View in sandbox
-        </span>
+        <cdr-link modifier="standalone" class="cdr-doc-code-snippet__action" :href="sandboxHrefComputed" target="_blank" rel="noopener noreferrer">
+          <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-code-sandbox" alt=""/>
+          View on Codesandbox
+        </cdr-link>
       </div>
 
       <button class="cdr-doc-snippet__hide-code-toggle" v-on:click="toggleCodeDisplay" v-if="codeToggle">{{ hideCodeToggleText }}</button>
@@ -52,10 +26,14 @@
 </template>
 
 <script>
+import { CdrLink } from '@rei/cedar';
 import buildSandbox from '../../../utils/buildSandbox';
 
 export default {
   name: 'CdrDocCodeSnippet',
+  components: {
+    CdrLink
+  },
   props: {
     copyButton: {
       default: true,
@@ -96,9 +74,6 @@ export default {
   },
   data: function() {
     return {
-      copied: false,
-      copyError: false,
-      copyNotSupported: false,
       codeHidden: false,
       hideCodeToggleText: 'Hide code',
       sandboxCode: {},
@@ -127,52 +102,6 @@ export default {
       this.codeHidden = !this.codeHidden;
       this.setCodeToggleText();
     },
-    copyToClipBoard() {
-      const source = this.$refs.source.querySelector('code');
-
-      let textarea = document.createElement('textarea');
-      textarea.style.height = '0';
-      textarea.style.width = '0';
-      textarea.style.position = 'absolute';
-      textarea.style.left = '-99999px';
-      textarea.tabIndex = -1;
-      this.$refs.codeWrap.appendChild(textarea);
-
-      textarea.textContent = source.textContent;
-      textarea.select();
-
-      try {
-        var successful = document.execCommand('copy');
-        if (successful) {
-          this.triggerCopySuccess();
-        } else {
-          this.triggerCopyError();
-        }
-      } catch (err) {
-          // Copy to clipboard not supported in this browser
-          this.triggerCopyNotSupported();
-      }
-
-      this.$refs.codeWrap.removeChild(textarea);
-    },
-    triggerCopySuccess() {
-      this.copied = true;
-      this.copyError = false;
-      this.copyNotSupported = false;
-      setTimeout(() => {
-        this.copied = false;
-      }, 2000);
-    },
-    triggerCopyError() {
-      this.copied = false;
-      this.copyError = true;
-      this.copyNotSupported = false;
-    },
-    triggerCopyNotSupported() { 
-      this.copied = false;
-      this.copyError = false;
-      this.copyNotSupported = true;
-    }
   }
 }
 </script>
@@ -229,87 +158,21 @@ export default {
     }
   }
 
-  .cdr-doc-code-snippet__copy-button {
-    background: none;
-    border: 0;
-    display: block;
-    margin: 0;
-    padding: 0;
-  }
-
-  .cdr-doc-code-snippet__copy-action {
-    margin-right: $cdr-space-one-x;
-    position: relative;
-  }
-
-
 
   $cdr-doc-code-snippet-icon-color: $taken-for-granite;
-  $cdr-doc-code-snippet-tooltip-background-color: rgba(0,0,0,0.8);
-  $cdr-doc-code-snippet-tooltip-caret-size: 8px;
-
-  @mixin cdr-doc-reveal-tooltip {
-    top: calc(100% + #{$cdr-doc-code-snippet-tooltip-caret-size});
-    opacity: 1;
-    transition: .4s .5s;
-    visibility: visible;
-  }
-  .cdr-doc-code-snippet__tooltip {
-    background: $cdr-doc-code-snippet-tooltip-background-color;
-    border-radius: $cdr-doc-border-radius-default;
-    color: $cdr-color-text-primary-darkmode;
-    font-size: 14px;
-    left: 50%;
-    opacity: 0;
-    padding: $cdr-space-inset-one-x-squish;
-    pointer-events: none;
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    transition: .4s 0s;
-    transform: translateX(-50%);
-    visibility: hidden;
-    z-index: 100;
-
-
-    &:before {
-      border-color: transparent transparent $cdr-doc-code-snippet-tooltip-background-color transparent;
-      border-style: solid;
-      border-width: $cdr-doc-code-snippet-tooltip-caret-size;
-      content: '';
-      left: 50%;
-      position: absolute;
-      top: -($cdr-doc-code-snippet-tooltip-caret-size * 2);
-      transform: translateX(-50%);
-    }
-  }
 
   .cdr-doc-code-snippet__action-wrapper {
     position: relative;
     margin-right: $cdr-space-one-x;
-  }
-
-  .cdr-doc-code-snippet__action:hover + .cdr-doc-code-snippet__tooltip--show-on-hover,
-  .cdr-doc-code-snippet__copy-button:hover + .cdr-doc-code-snippet__tooltip--show-on-hover {
-    @include cdr-doc-reveal-tooltip;
-
-    .cdr-doc-code-snippet--show-copied-notification & {
-      display: none;
-    }
-  }
-
-  .cdr-doc-code-snippet__tooltip--copied-notification {
-    transition: .4s 0s;
-
-    .cdr-doc-code-snippet--show-copied-notification & {
-      @include cdr-doc-reveal-tooltip;
-      transition: .4s 0s;
+    a {
+      color: $cdr-doc-text-color-primary;
     }
   }
 
   .cdr-doc-code-snippet__action-icon {
     cursor: pointer;
-    display: block;
+    display: inline-block;
+    vertical-align: top;
   }
 
   .cdr-doc-code-snippet--no-line-numbers {
