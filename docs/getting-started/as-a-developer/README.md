@@ -133,7 +133,7 @@ Cedar CSS assets can all be found inside `node_modules/@rei/cedar/dist/style/`. 
 | @rei/cedar/dist/style/color.css | `cdr-bg-`, `cdr-fg-` | CSS utility classes for color. |
 | @rei/cedar/dist/style/container.css | `cdr-container-` | CSS utility classes for container. |
 | @rei/cedar/dist/style/display.css | `cdr-display-` | CSS utility classes for display logic. |
-| @rei/cedar/dist/style/space.css | `cdr-XX-space-` | CSS utility classes for spacing. |
+| @rei/cedar/dist/style/space.css | `cdr-space-inset-`, `cdr-XX-space-` | CSS utility classes for spacing. |
 | @rei/cedar/dist/style/text.css | `cdr-text-` | CSS utility classes for typography. This is the same file as `cdr-text.css`. |
 | @rei/cedar/dist/style/deprecated-utilities.css | various | CSS utility classes that have been deprecated. |
 

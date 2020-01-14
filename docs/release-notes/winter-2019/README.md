@@ -297,7 +297,7 @@ Note that this has been altered from the paragraph style to the `cdr-text--utili
 
 We have updated the recommended mappings for some features that were deprecated in the [Fall 2019 release](https://rei.github.io/rei-cedar-docs/release-notes/fall-2019/#deprecations).
 
-**Text Tokens**
+#### Text Tokens
 | Deprecated token/mixin  | Equivalent token/mixin |
 |-------------------------|-------------------------|
 | cdr-text-header-1 | cdr-text-heading-serif-1100 |
@@ -308,7 +308,7 @@ We have updated the recommended mappings for some features that were deprecated 
 | cdr-text-header-6 | cdr-text-heading-sans-400 |
 | cdr-text-header-7 | cdr-text-heading-sans-300 |
 
-**CdrText Modifiers**
+#### CdrText Modifiers
 | Deprecated modifier name | Equivalent modifier names and breakpoints  |
 |--------------------------|--------------------------------------------|
 | display                  | heading-serif-strong-700 heading-serif-strong-900@md heading-serif-strong-1100@lg |
