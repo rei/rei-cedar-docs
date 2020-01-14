@@ -223,7 +223,7 @@ An optimal length, or measure, of a line of copy is 50 to 60 characters. Line le
 
 #### 1.4.8 Visual Presentation (AAA)
 
-For people with certain reading of vision disabilities, long lines of text can become a significant barrier. They have trouble keeping their place and following the flow of text. Having a narrow block of text makes it easier for them to continue on to the next line in a block. Lines of copy should not exceed 80 characters or glyphs. This accessibility guideline is applied when using Cedar’s [Paragraph](../../components/paragraphs/) component.
+For people with certain reading of vision disabilities, long lines of text can become a significant barrier. They have trouble keeping their place and following the flow of text. Having a narrow block of text makes it easier for them to continue on to the next line in a block. Lines of copy should not exceed 80 characters or glyphs. 
 
 
 
