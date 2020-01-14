@@ -7,17 +7,6 @@
       v-for="(v, k) in webMixinsByType"
       class="cdr-mb-space-two-x"
     >
-    <cdr-text modifier="heading--sans-700">a text </cdr-text>
-  <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData" >
-
-```html
-  <cdr-text
-    :modifier="(k)">
-      When you gear up, we give back
-  </cdr-text>
-```
-  </cdr-doc-example-code-pair>
-      
       <p class="typography-example" :style="makeStyleObj(v)">A different kind of company</p>
       <cdr-text><b>{{ k }}</b> (mixin)</cdr-text>
       <!-- <cdr-text class="cdr-mb-space-one-x">{{descriptionData[k]}}</cdr-text> -->
@@ -26,17 +15,9 @@
         <tbody>
           <tr v-for="token in v">
             <td>
-              <cdr-text modifier="utility-300"><b>{{ token.name }}</b></cdr-text>
+              <cdr-text><b>{{ token.name }}</b></cdr-text>
             </td>
             <td>{{ token.value }}</td>
-          </tr>
-          <tr>
-            <th>
-              Utility class
-            </th>
-            <td>
-              <cdr-text modifier="utility-300"><b>{{ k }}</b></cdr-text>
-            </td>
           </tr>
         </tbody>
       </table>
@@ -65,7 +46,6 @@
           </tr>
         </tbody>
       </table>
-
     </div>
     </template>
     
@@ -78,11 +58,9 @@ import groupBy from 'lodash/groupBy';
 import kebabCase from 'lodash/kebabCase';
 import filter from 'lodash/filter';
 import uniqBy from 'lodash/uniqBy';
-import Overview from './cdr-doc-example-code-pair'
 
 export default {
   name: 'TokensTypography',
-  components: { Overview },
   props: {
     platform: String,
     type: String,
