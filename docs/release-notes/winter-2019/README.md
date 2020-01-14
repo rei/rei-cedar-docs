@@ -45,7 +45,7 @@ If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade
 - Graphik has been introduced to replace Roboto
 - All components have been revised to include Graphik
 - New type tokens have been introduced to support body and utility styles
-- For more information, visit the Text components [// Add link when that page is up] page
+- For more information, visit the [Text component](../../components/text) page
 
 ### Decomposed CSS Output
 
