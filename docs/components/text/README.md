@@ -205,7 +205,7 @@
 
 ## Headings
 
-A heading helps users to identify and create a hierarchical structure within a page. Headings are typically the largest text on the screen and should be short and include important information. Cedar headings include a serif and a sans serif option.
+A heading helps users to identify and create a hierarchical structure within a page. Headings are typically the largest text on the screen and should be short and include important information. Cedar headings include a [serif](#Serif) and a [sans-serif](#Sans) option.
 
 ### Serif
 
@@ -225,7 +225,7 @@ Serif headings, set in REI Stuart, work best in larger sizes (cdr-text-heading-s
 
 ### Serif Strong
 
-Serif strong headings, set in REI Stuart with a greater font weight than serif, work best in larger sizes (cdr-text-heading-serif-strong-600 and above). It’s recommended to use serif strong headings very minimally throughout the page and should generally be reserved for important page titles, in cases where type overlays an image, or in situations where additional emphasis is needed.
+Serif strong headings, set in REI Stuart with a greater font weight than [serif](#Serif), work best in larger sizes (cdr-text-heading-serif-strong-600 and above). It’s recommended to use serif strong headings very minimally throughout the page and should generally be reserved for important page titles, in cases where type overlays an image, or in situations where additional emphasis is needed.
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
@@ -241,7 +241,7 @@ Serif strong headings, set in REI Stuart with a greater font weight than serif, 
 
 ### Sans
 
-Sans headings, set in Graphik, should play a supporting role to serif headings. Sans headings work best in smaller sizes (cdr-text-heading-serif-strong-600 and below). Sans headings are not recommended for page titles or other prominent placements. Instead, use serif or serif strong headings.
+Sans headings, set in Graphik, should play a supporting role to serif headings. Sans headings work best in smaller sizes (cdr-text-heading-serif-strong-600 and below). Sans headings are not recommended for page titles or other prominent placements. Instead, use [serif](#Serif) or [serif strong](#Serif Strong) headings.
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
@@ -260,7 +260,7 @@ Sans headings, set in Graphik, should play a supporting role to serif headings. 
 
 ### Don’t Use When
   - Tagging as a semantic heading when an element only needs to be highlighted or emphasized within your content. Instead, use a sizing modifier for this component
-  - Showcasing long form content. Instead, use body
+  - Showcasing long form content. Instead, use [Body](#Body)
 
 ### The Basics
   - When using this component with semantic headings from `<h1>` to `<h6>`, typographic styles set up a visual hierarchy created within CSS that helps to establish the order of importance
@@ -403,6 +403,11 @@ Body strong is also intended for long-form copy but should be used minimally. Us
   - Displaying member or legal messages, such as on the PDP
   - Displaying product descriptions
   - Displaying customer reviews, such as on the PDP
+  
+### Don't Use When
+  - Displaying form inputs. Instead, use [Inputs](https://rei.github.io/rei-cedar-docs/components/input/)
+  - Listing product features. Instead, use [Lists](https://rei.github.io/rei-cedar-docs/components/lists/) 
+  
 
 ### The Basics
   - Body styles should be used for:
@@ -414,7 +419,7 @@ Body strong is also intended for long-form copy but should be used minimally. Us
     - Long articles
 
   - Max-width for paragraph containers is 634px or line length should not exceed 75 characters per line
-  - Use standard (dark) text color on light backgrounds for article text
+  - Use standard (dark) text colors on light backgrounds for article text
 
 ### Content
   - Use adjacent text, a definition list, a glossary, or other method to supplement words that are ambiguous
@@ -427,7 +432,7 @@ Body strong is also intended for long-form copy but should be used minimally. Us
 
 ### Applying Strong to Body Styles
 
-Body styles include a set of strong options: `cdr-text-body-strong-500`, `cdr-text-body-strong-400`, and `cdr-text-body-strong-300`. Those options should be used when a paragraph needs to be bolder than the surrounding text. However, there might be times when a set of words within a sentence needs to be bold. In those cases, use the generic cdr-text-strong. The set of strong options have a lighter font weight than the generic cdr-text-strong.
+Body styles include a set of strong options: `cdr-text-body-strong-500`, `cdr-text-body-strong-400`, and `cdr-text-body-strong-300`. However, there might be times when a set of words within a sentence needs to be bold. In those cases, use the generic cdr-text-strong. The set of strong options have a lighter font weight than the generic cdr-text-strong.
 
 ### Do / Don’t
 
@@ -440,7 +445,9 @@ Body styles include a set of strong options: `cdr-text-body-strong-500`, `cdr-te
 
 ## Utility
 
-Utility styles are used to communicate  functionality or descriptive information. Shorter content is a good candidate for the more condensed and compact utility styling. Utility styles should not be replaced with headings. While headings help group and categorize content, utility styles help to label elements or give users information on how to take action. Cedar utility styles are available in both serif and sans serif options. Additionally, each utility style has a strong option.
+Utility styles are used to communicate  functionality or descriptive information. Shorter content is a good candidate for the more condensed and compact utility styling. Utility styles should not be replaced with headings. While headings help group and categorize content, utility styles help to label elements or give users information on how to take action. Cedar utility styles are available in both serif and [sans serif](https://rei.github.io/rei-cedar-docs/foundation/typography/#graphik) options. Additionally, each utility style has a strong option.
+
+By default, text within a `cdr-container` will display as `cdr-text-utility-300`.
 
 ### Serif
 Utility serif styles should be used when additional brand emphasis is needed.
@@ -526,7 +533,7 @@ Eyebrows introduce a topic or show how an item is categorized. Content tags or c
 
 <do-dont :examples="$page.frontmatter.eyebrowHeading" />
 
-## Italic and Strong Generic classes
+## Italic and Strong Generic Classes
 
 In addition to the specific type options listed above, we have provided two generic styles. These emphasis styles will extend other type styles allowing you to make text italic or more bold.
 
@@ -576,7 +583,7 @@ To ensure that usage of this component complies with accessibility guidelines:
     - Allow users to navigate to or skip over sections through the use of heading levels
     - Avoid skipping heading levels (e.g., `<h2>` to  `<h4>` )
 
-This component has compliance with WCAG guidelines by:
+This component has compliance with [WCAG SC 2.1.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/keyboard-operation-keyboard-operable.html) guidelines by:
   - Defining semantic heading levels with the ability to assign predefined visual heading styles to each level
 
 ### Paragraphs
@@ -601,7 +608,7 @@ The global text default `cdr-text-default` is defined in each of the available c
 
 The Cedar text css selectors provide no spacing values other than letter-spacing and line-height.
 
-For proper spacing between blocks of text, use the [cedar spacing options](../..//layout/spacing/).
+For proper spacing between blocks of text, use the [Cedar spacing options](../..//layout/spacing/).
 
 The Cedar text options can be utilized by your application using the [token mixins](https://www.npmjs.com/package/@rei/cdr-tokens), [utility classes](https://www.npmjs.com/package/@rei/cedar) or through the [cdr-text component](https://www.npmjs.com/package/@rei/cedar).
 
