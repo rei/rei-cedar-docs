@@ -222,13 +222,256 @@ Serif headings, set in REI Stuart, work best in larger sizes (cdr-text-heading-s
 ```
 </cdr-doc-example-code-pair>
 
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="heading-serif-1100">
+    When you gear up, we give back
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="heading-serif-1000">
+    When you gear up, we give back
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="heading-serif-900">
+    When you gear up, we give back
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="heading-serif-800">
+    When you gear up, we give back
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="heading-serif-700">
+    When you gear up, we give back
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="heading-serif-600">
+    When you gear up, we give back
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="heading-serif-500">
+    When you gear up, we give back
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="heading-serif-400">
+    When you gear up, we give back
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="heading-serif-300">
+    When you gear up, we give back
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="heading-serif-200">
+    When you gear up, we give back
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
 ### Serif Strong
 
 Serif strong headings, set in REI Stuart with a greater font weight than serif, work best in larger sizes (cdr-text-heading-serif-strong-600 and above). It’s recommended to use serif-strong headings very minimally throughout the page and should generally be reserved for important page titles, in cases where type overlays an image, or in situations where additional emphasis is needed.
 
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="heading-serif-strong-1200">
+    When you gear up, we give back
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="heading-serif-strong-1100">
+    When you gear up, we give back
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="heading-serif-strong-1000">
+    When you gear up, we give back
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="heading-serif-strong-900">
+    When you gear up, we give back
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="heading-serif-strong-800">
+    When you gear up, we give back
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="heading-serif-strong-700">
+    When you gear up, we give back
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="heading-serif-strong-600">
+    When you gear up, we give back
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+
 ### Sans
 
 Sans headings, set in Graphik, should play a supporting role to serif headings. Sans headings work best in smaller sizes (cdr-text-heading-serif-strong-600 and below). Sans headings are not recommended for page titles or other prominent placements. Instead, use serif or serif strong headings.
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="heading-sans-600">
+    When you gear up, we give back
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="heading-sans-500">
+    When you gear up, we give back
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="heading-sans-400">
+    When you gear up, we give back
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="heading-sans-300">
+    When you gear up, we give back
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="heading-sans-200">
+    When you gear up, we give back
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
 
 ### Use When
   - Creating a hierarchical structure of information on a page
@@ -293,8 +536,84 @@ Subheadings give support or add meaning to a heading, and are intended to be pai
 ### Sans
 Sans-serif subheadings are set in Graphik. They are intended to be paired with serif or serif strong headings. Pairing a sans subheading with a sans heading is also acceptable.
 
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="subheading-serif-600">
+    When you gear up, we give back
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="subheading-serif-500">
+    When you gear up, we give back
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="subheading-serif-400">
+    When you gear up, we give back
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="subheading-serif-300">
+    When you gear up, we give back
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
 ### Heading and Subheading Combinations
 Heading and subheading combinations should have the appropriate contrast and hierarchy. Headings should always be larger than the accompanying subheading. Serif headings should only accompanied by sans subheadings. Sans headings also work best with sans subheadings. A few examples in practice:
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData" >
+
+```html
+  <cdr-text
+    modifier="heading-serif-strong-900">
+      When you gear up, we give back
+      <cdr-text
+       modifier="subheading-sans-500"
+       class="cdr-pt-space-one-and-a-half-x">
+       Treat yourself to sweet gear
+       </cdr-text>
+  </cdr-text>
+```
+
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData" >
+
+```html
+  <cdr-text
+    modifier="heading-sans-600">
+      When you gear up, we give back
+      <cdr-text
+       modifier="subheading-sans-300"
+       class="cdr-pt-space-one-x">
+       Treat yourself to sweet gear
+       </cdr-text>
+  </cdr-text>
+```
+
+</cdr-doc-example-code-pair>
 
 ### Do / Don’t
 
@@ -305,8 +624,74 @@ Heading and subheading combinations should have the appropriate contrast and hie
 ## Body
 Body styles work best for long-form copy like articles, customer reviews, or legal messages. Body styles have a generous line height and wider letter spacing for optimal reading. For tighter, more compact styles, use [utility](#utility)styles. 
 
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="body-500">
+    Cross-country skiing (sometimes called classic skiing) encompasses several styles, from touring or racing on groomed ski tracks to gliding through deep backcountry snow.
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="body-400">
+    Cross-country skiing (sometimes called classic skiing) encompasses several styles, from touring or racing on groomed ski tracks to gliding through deep backcountry snow.
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="body-300">
+    Cross-country skiing (sometimes called classic skiing) encompasses several styles, from touring or racing on groomed ski tracks to gliding through deep backcountry snow.
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
 ### Strong
 Body strong is also intended for long-form copy but should be used minimally. Use body strong styles when emphasizing a subset of copy—never for the entire length of copy. 
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="body-strong-500">
+    Cross-country skiing (sometimes called classic skiing) encompasses several styles, from touring or racing on groomed ski tracks to gliding through deep backcountry snow.
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="body-strong-400">
+    Cross-country skiing (sometimes called classic skiing) encompasses several styles, from touring or racing on groomed ski tracks to gliding through deep backcountry snow.
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="body-strong-300">
+    Cross-country skiing (sometimes called classic skiing) encompasses several styles, from touring or racing on groomed ski tracks to gliding through deep backcountry snow.
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
 
 ### Use When
   - Displaying articles for long-form content, such as Expert Advice articles or Co-op Journal entries
@@ -357,14 +742,345 @@ Utility styles are used to communicate  functionality or descriptive information
 ### Serif
 Utility serif styles should be used when additional brand emphasis is needed.
 
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="utility-serif-800">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="utility-serif-700">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="utility-serif-600">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="utility-serif-500">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="utility-serif-400">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="utility-serif-300">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="utility-serif-200">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
 ### Serif Strong
 Utility serif strong styles should be used when additional emphasis is needed over utility serif.
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="utility-serif-strong-800">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="utility-serif-strong-700">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="utility-serif-strong-600">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="utility-serif-strong-500">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="utility-serif-strong-400">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="utility-serif-strong-300">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="utility-serif-strong-200">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
 
 ### Sans
 Utility sans styles typically make up the majority of utility styles used on a given page.
 
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="utility-800">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="utility-700">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="utility-600">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="utility-500">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="utility-400">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="utility-300">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="utility-200">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="utility-100">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
 ### Sans Strong
 Utility sans styles should be used when additional emphasis is needed.
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="utility-strong-800">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="utility-strong-700">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="utility-strong-600">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="utility-strong-500">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="utility-strong-400">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="utility-strong-300">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="utility-strong-200">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="utility-strong-100">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
 
 ### Do / don’t
 
@@ -375,6 +1091,17 @@ Utility sans styles should be used when additional emphasis is needed.
 ## Eyebrow
 Eyebrows introduce a topic or show how an item is categorized.—Content tags or certain label styles are two examples. Eyebrow text styles should not be used as headings or used for brand names. 
 
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="eyebrow-100">
+    Hiking, backpacking
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
 ### Do / don’t
 
 <do-dont :examples="$page.frontmatter.eyebrowBrand" />
@@ -384,6 +1111,39 @@ Eyebrows introduce a topic or show how an item is categorized.—Content tags or
 ## Italic and Strong Generic classes
 
 In addition to the specific type options listed above, we have provided two generic styles. These emphasis styles will extend other type styles allowing you to make text italic or more bold.
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="body-300">
+    REI Co-op’s Trailsmith line was featured in  
+    <cdr-text
+    tag="em"
+    modifier="italic">
+    Field & Stream’s 
+    </cdr-text> 
+    “10 Best Pants for Working Outside” 
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text modifier="body-300">
+    This trip is rated as
+    <cdr-text
+    tag="strong"
+    modifier="strong">
+    Vigorous [4]
+    </cdr-text>.
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
 
 ## Accessibility
 
@@ -442,11 +1202,9 @@ For more information on importing these styles and how to use them, visit the [D
 
 ### Usage
 
-The `cdr-text` root class sets all value pairs to `inherit`. When using these classes,  ensure at least the parent class assigns the `cdr-text` root style.  
+The `cdr-text` root class sets all value pairs to `inherit`. When using these classes,  ensure at least the parent class assigns the `cdr-text` root style.
 
-#### Utility class assignment
-
-The utility classes follow [BEM](http://getbem.com/) conventions and have two dashes between `cdr-text` and its modifier `body-300`
+The utility classes follow [BEM](http://getbem.com/)conventions and have two dashes between `cdr-text` and its modifier `body-300`
 
 <cdr-doc-code-snippet :copy-button="false" :line-numbers="false">
 
@@ -459,9 +1217,8 @@ The utility classes follow [BEM](http://getbem.com/) conventions and have two da
   ```
 </cdr-doc-code-snippet>
 
+## Component API
 
-
-This component will bind any attribute that a [native HTML heading element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements) accepts.
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
@@ -471,25 +1228,57 @@ This component will bind any attribute that a [native HTML heading element](http
 
 ## Usage
 
-```vue
+The **CdrText** component allows for styling any HTML element with available text styles. Visual style and semantic meaning are managed independently by providing:
+
+- Element to the `tag` prop
+- Style to the `modifier` prop
+
+This method decouples the semantic meaning of a heading level from the visual representation.
+
+With this decoupling, you can style other markup to look like a heading that semantically isn’t a heading.
+
+When creating page headers be sure to apply the correct semantic tag.
+
+<cdr-doc-code-snippet :copy-button="false" :line-numbers="false">
+
+  ```vue
   <cdr-text
-    tag="strong"
+    tag="h1"
     modifier="heading-700 heading-800@sm heading-800@md heading-800@lg"
    >
-      Styled as a heading
+      A navigable semantic heading
   </cdr-text>
 ```
+</cdr-doc-code-snippet>
 
-This will result in the following HTML:
+<cdr-doc-code-snippet :copy-button="false" :line-numbers="false">
 
-```html
-  <strong class="cdr-text cdr-text-heading-700@xs cdr-text-heading-800">
-    Styled as a heading
-  </strong>
+  ```vue
+  <cdr-text
+    modifier="heading-700 heading-800@sm heading-800@md heading-800@lg"
+   >
+      Text styled as a heading for display only
+  </cdr-text>
 ```
+</cdr-doc-code-snippet>
 
-**CdrText** components can be nested within a parent. The below example shows a subheading properly nested within the `<h2>` tag.
+**CdrText** components can be extended with other cedar or custom classes.
 
+<cdr-doc-code-snippet :copy-button="false" :line-numbers="false">
 
+  ```vue
+  <cdr-text
+      class="
+        cdr-mb-space-one-x"
+      modifier="
+        body-300”
+  >
+  This paragraph is adding a bottom margin to provide space between it and the paragraph below
+  </cdr-text>
+```
+</cdr-doc-code-snippet>
+
+#### Text Responsiveness 
+Text modifiers accept any of the supported Cedar breakpoints. For more information on how breakpoints work on components, visit the [Responsive Layout article](../../layout/responsive/#the-cedar-container).
 
 </cdr-doc-table-of-contents-shell>
