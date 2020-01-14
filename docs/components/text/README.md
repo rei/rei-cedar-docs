@@ -181,7 +181,7 @@
                 "name": "modifier",
                 "type": "string",
                 "default": "N/A",
-                "description": "Modifies the style variant for this component. Possible values: { 'body-300' | 'body-400' | 'body-500' | 'body-strong-300' | 'body-strong-400' | 'body-strong-500' | 'citation' | 'display-600' | 'display-700' | 'display-800' | 'display-900' | 'display-1000' | 'display-1100' | 'display-1200' | 'eyebrow-100' | 'heading-300' | 'heading-400' | 'heading-500' | 'heading-600' | 'heading-700' | 'heading-800' | 'italic' | 'strong' | 'subheading-300' | 'subheading-400' | 'subheading-500' | 'subheading-600' | 'utility-100' | 'utility-200' | 'utility-300' | 'utility-400' | 'utility-500' | 'utility-600' | 'utility-700' | 'utility-800' | 'utility-strong-100' | 'utility-strong-200' | 'utility-strong-300' | 'utility-strong-400' | 'utility-strong-500' | 'utility-strong-600' | 'utility-strong-700' | 'utility-strong-800' | 'utility-serif-100' | 'utility-serif-200' | 'utility-serif-300' | 'utility-serif-400' | 'utility-serif-500' | 'utility-serif-600' | 'utility-serif-700' | 'utility-serif-800' | 'utility-serif-strong-100' | 'utility-serif-strong-200' | 'utility-serif-strong-300' | 'utility-serif-strong-400' | 'utility-serif-strong-500' | 'utility-serif-strong-600' | 'utility-serif-strong-700' | 'utility-serif-strong-800' | }",
+                "description": "Modifies the style variant for this component. see below tables for list of options. ",
               },
             ],
             "slots": [

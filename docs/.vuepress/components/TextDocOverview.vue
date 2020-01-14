@@ -356,7 +356,7 @@
         <tbody>
           <tr>
             <td>
-              <cdr-text> /NA </cdr-text>
+              <cdr-text> N/A </cdr-text>
             </td>
             <td>
               <cdr-text>cdr-text--italic</cdr-text>
@@ -367,7 +367,7 @@
           </tr>
           <tr>
             <td>
-              <cdr-text> /NA </cdr-text>
+              <cdr-text> N/A </cdr-text>
             </td>
             <td>
               <cdr-text>cdr-text--strong</cdr-text>
