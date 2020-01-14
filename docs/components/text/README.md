@@ -1281,4 +1281,8 @@ When creating page headers be sure to apply the correct semantic tag.
 #### Text Responsiveness 
 Text modifiers accept any of the supported Cedar breakpoints. For more information on how breakpoints work on components, visit the [Responsive Layout article](../../layout/responsive/#the-cedar-container).
 
+## Text options 
+
+<text-doc-overview />
+
 </cdr-doc-table-of-contents-shell>
