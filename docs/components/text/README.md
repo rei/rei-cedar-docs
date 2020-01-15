@@ -256,7 +256,7 @@ Sans headings, set in Graphik, should play a supporting role to serif headings. 
 
 ### Don’t Use When
   - Tagging as a semantic heading when an element only needs to be highlighted or emphasized within your content. Instead, use a sizing modifier for this component
-  - Showcasing long form content. Instead, use [Body](#body)
+  - Showcasing long form content. Instead, use [body](#body)
 
 ### The Basics
   - When using this component with semantic headings from `<h1>` to `<h6>`, typographic styles set up a visual hierarchy created within CSS that helps to establish the order of importance
