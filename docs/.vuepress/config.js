@@ -57,7 +57,7 @@ module.exports = {
       {
         text: "Release Notes",
         items: [
-          { text: "Winter 2019", link: "/release-notes/winter-2019/" },
+          { text: "Winter 2020", link: "/release-notes/winter-2020/" },
           { text: "Fall 2019", link: "/release-notes/fall-2019/" },
           { text: "Summer 2019", link: "/release-notes/summer-2019/" },
           { text: "Archive", link: "/release-notes/archive/" },
