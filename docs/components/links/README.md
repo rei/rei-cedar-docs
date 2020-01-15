@@ -20,14 +20,14 @@
   "standalone": [
     {
       "type": "do",
-      "image": "links/links_descriptivetext_do__16-9.png",
+      "image": "links/links_descriptivetext_do.png",
       "ratio": "16-9",
       "alt": "Image showing proper link usage",
       "caption": "use clear, concise, and descriptive text."
     },
     {
       "type": "dont",
-      "image": "links/links_descriptivetext_dont__16-9.png",
+      "image": "links/links_descriptivetext_dont.png",
       "ratio": "16-9",
       "alt": "Image showing click here link",
       "caption": "use “click here” or “start here” for link text."
@@ -36,14 +36,14 @@
   "link": [
     {
       "type": "do",
-      "image": "links/links_underlinestyle_text_do__16-9.png",
+      "image": "links/links_underlinestyle_text_do.png",
       "ratio": "16-9",
       "alt": "The link in this copy uses the cdr-link component, and, so correctly uses an underline",
       "caption": "underline every link."
     },
     {
       "type": "dont",
-      "image": "links/links_underlinestyle_text_dont__16-9.png",
+      "image": "links/links_underlinestyle_text_dont.png",
       "ratio": "16-9",
       "alt": "The default link in body copy incorrectly does not use an underline",
       "caption": "apply different visual treatments for hyperlinks."
@@ -98,11 +98,11 @@
 }
 ---
 
-<cdr-doc-tabs>
-<template slot="Overview">
-<cdr-doc-table-of-contents-shell>
 
-## Default
+<cdr-doc-table-of-contents-shell>
+# Overview
+
+## Default (Medium)
 
 Display within body copy for articles, hub cards, footer, or recommendations.
 
@@ -126,7 +126,7 @@ Display within body copy for articles, hub cards, footer, or recommendations.
 
 ## Standalone
 
-Display independently with a call to action. Some examples are for finding a store, or viewing related products.
+Display independently with a Call to Action. Some examples are for finding a store, or viewing related products.
 
 <cdr-doc-example-code-pair repository-href="/src/components/link" :sandbox-data="$page.frontmatter.sandboxData">
 
@@ -142,16 +142,14 @@ Display independently with a call to action. Some examples are for finding a sto
 
 Display standalone link with icon on left.
 
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" :load-sprite="true" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrLink'})">
+<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrLink, IconShipping'})">
 
 ```html
   <div>
     <cdr-link tag="button" modifier="standalone">
-      <!-- Using the sprite -->
-      <cdr-icon
-          use="#shipping"
-          inherit-color
-          class="cdr-mr-space-half-x"
+      <IconShipping
+        inherit-color
+        class="cdr-mr-space-half-x"
       />
       This item ships for FREE!
     </cdr-link>
@@ -164,17 +162,15 @@ Display standalone link with icon on left.
 
 Display standalone link with icon on right.
 
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" :load-sprite="true" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrLink'})">
+<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrLink, IconExternalLink'})">
 
 ```html
   <div>
       <cdr-link modifier="standalone">
         Visit site
-        <!-- Using the sprite -->
-        <cdr-icon
-            use="#external-link"
-            inherit-color
-            class="cdr-ml-space-half-x"/>
+        <IconExternalLink
+          inherit-color
+          class="cdr-ml-space-half-x"/>
       </cdr-link>
   </div>
 ```
@@ -185,13 +181,13 @@ Display standalone link with icon on right.
 
 To ensure that usage of this component complies with accessibility guidelines:
 
-- Always use a `<button>` element for the `tag` prop when there is no `href` attribute that can be applied to the link. Examples are:
+- Always use a `<button>` element for the `tag` prop when there is no `href` attribute that can be applied to the link.to Examples are:
   - Toggling a display to full screen
   - Opening a modal window
   - Triggering a popup menu
   - Playing media content
-- Always use the default `<a>` element for a link when the link will navigate the user to the location specified by the `href` attribute
-- Avoid using only “click here” or “start here” but if screen space for text is minimal:
+- Always use the default `<a>` element for a link that navigates the user to the location specified by the `href` attribute
+- Avoid using only “Click here” or “Start here” but if screen space for text is minimal:
   - Provide text that can be read by screen readers
   - Use an inline element for hidden text with the 'cdr-sr-only' class
 
@@ -203,7 +199,7 @@ To ensure that usage of this component complies with accessibility guidelines:
 
 - Ensure assistive technology can find all links on a page:
   - Always provide a `href` attribute. Empty `href` attributes are not considered true links
-  - Ensure that each link can be accessed via the keyboard, don’t manipulate the default tab index
+  - Ensure that each link can be accessed using the keyboard. Don’t manipulate the default tab index
   - When using images as links, the `alt` attribute acts as the link text. Describe the action or hyperlink that the image represents
 
 <br/>
@@ -212,33 +208,31 @@ This component has compliance with following WebAIM’s accessibility guidelines
 
 - Using text color with a Level AA contrast ratio of 4.5:1 contrast between the text color and the background but only when displayed on light backgrounds
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="Guidelines">
-<cdr-doc-table-of-contents-shell>
+# Guidelines
 
 ## Use When
 
 - Navigating to another page or a different portion of the same page
 
-## Don't’t Use When
+## Don't Use When
 
 - Navigating a user from promotional or campaign content. Instead, use [Call to Action](../cta/)
 
 ## The Basics
 
-- Link styles are adapted based on context, such as for links included in the [Breadcrumb](../breadcrumb/), Menus and Navigation
-- There are 2 basic link styles, default and standalone:
-  - Use the default link when the link is near a body of text or in appears in a body of text.
-  - Use the standalone link when there is separation from a body of text.
+- Link styles are adapted based on context, such as for links included in the [Breadcrumb](../breadcrumb/), Menus, and Navigation
+- There are 2 basic link styles: default and standalone
+  - Use the default link when the link is near a body of text or in appears in a body of text
+  - Use the standalone link when there is separation from a body of text
 
 ## Content
 
 Use link labels that describe the link’s destination when clicked or tapped:
 
 - Keep link text concise.  Restrict link text length to a maximum of 100 characters
-- Use descriptive text for links, so user knows where they are going. Avoid using “click here” or “start here”
+- Use descriptive text for links, so that the user knows where they are going. Avoid using “Click here” or “Start here”
 - If screen space for text is minimal and text is only “Learn more”:
   - Provide `alt` text that can be read by screen readers
   - For example, if the link text is “Learn more”, then the `alt` text could be “Learn more about pick up in store”
@@ -278,13 +272,13 @@ Apply the following use cases when deciding when to use links as anchors or butt
 
 WebAIM: Links and Hypertext [Introduction to Links and Hypertext](https://webaim.org/techniques/hypertext/)
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
+# API
 
 ## Props
+
+This component will bind any attribute that a [native HTML anchor element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) accepts.
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
@@ -298,7 +292,7 @@ WebAIM: Links and Hypertext [Introduction to Links and Hypertext](https://webaim
 
 ## Usage
 
-By default, the component renders using an anchor element and requires an `href` attribute to render a valid accessible link.
+By default, the component renders using an anchor element and requires an `href` attribute to render a valid, accessible link.
 
 ```vue
   <cdr-link href="http://rei.com">
@@ -306,7 +300,7 @@ By default, the component renders using an anchor element and requires an `href`
   </cdr-link>
 ```
 
-Use the `tag` prop to render the link as a `<button>` element that presents a link appearance without an `href` attribute.
+Use the `tag` prop to render the link as a `<button>` element that appears as a link, but without an `href` attribute.
 
 ```vue
   <cdr-link tag="button">
@@ -320,10 +314,7 @@ Following variants are available to the `cdr-link` modifier attribute:
 
 | Value | Description            |
 |:------|:--------------------------------------------------------------|
-| 'standalone'  | Change visual presentation by removing the underline for the normal state. Intended to be use for an independent call to action to expand content, remove filters, or provide additional information |
+| 'standalone'  | Change visual presentation by removing the underline for the normal state. Intended to be use for an independent Call to Action to expand content, remove filters, or provide additional information. |
 
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>

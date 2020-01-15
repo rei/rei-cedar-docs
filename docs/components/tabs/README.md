@@ -7,14 +7,14 @@
   "select": [
     {
       "type": "do",
-      "image": "tabs/tab_select_do_16-9.png",
+      "image": "tabs/tab_select_do.png",
       "ratio": "16-9",
       "alt": "tab with content displaying",
       "caption": "display a tab section on load."
     },
     {
       "type": "dont",
-      "image": "tabs/tab_select_dont_16-9.png",
+      "image": "tabs/tab_select_dont.png",
       "ratio": "16-9",
       "alt": "tab with empty content",
       "caption": "display tabs without a section visible."
@@ -23,14 +23,14 @@
   "number": [
     {
       "type": "do",
-      "image": "tabs/tab_number_do_16-9.png",
+      "image": "tabs/tab_number_do.png",
       "ratio": "16-9",
       "alt": "tabs with two buttons",
       "caption": "use tabs with at least 2 buttons."
     },
     {
       "type": "dont",
-      "image": "tabs/tab_number_dont_16-9.png",
+      "image": "tabs/tab_number_dont.png",
       "ratio": "16-9",
       "alt": "tab with one button",
       "caption": "use tabs with only 1 button."
@@ -39,14 +39,14 @@
   "capitalization": [
     {
       "type": "do",
-      "image": "tabs/tab_capitalization_do_16-9.png",
+      "image": "tabs/tab_capitalization_do.png",
       "ratio": "16-9",
       "alt": "tabs with title cased labels",
       "caption": "use title case for tab labels."
     },
     {
       "type": "dont",
-      "image": "tabs/tab_capitalization_dont_16-9.png",
+      "image": "tabs/tab_capitalization_dont.png",
       "ratio": "16-9",
       "alt": "tabs with all caps labels",
       "caption": "use all caps for tab labels."
@@ -55,14 +55,14 @@
   "label": [
     {
       "type": "do",
-      "image": "tabs/tab_label_do_16-9.png",
+      "image": "tabs/tab_label_do.png",
       "ratio": "16-9",
       "alt": "tabs with succint labels",
       "caption": "write short and meaningful tab labels. Between 1-2 words is best."
     },
     {
       "type": "dont",
-      "image": "tabs/tab_label_dont_16-9.png",
+      "image": "tabs/tab_label_dont.png",
       "ratio": "16-9",
       "alt": "tabs with truncated labels.",
       "caption": "truncate tab labels. If a label overruns the container, find a shorter alternative."
@@ -88,7 +88,7 @@
                 "name": "modifier",
                 "type": "string",
                 "default": "N/A",
-                "description": "Modifies the style variants for this component. Possible values: {  'compact'  |  'full-width'  |  'no-border'  }"
+                "description": "Modifies the style variants for this component. Possible values: {  'centered'  |  'compact'  |  'full-width'  |  'no-border'  }"
               }
             ],
             "events": [
@@ -126,11 +126,11 @@
 }
 ---
 
-<cdr-doc-tabs>
-<template slot="Overview">
-<cdr-doc-table-of-contents-shell>
 
-## Default
+<cdr-doc-table-of-contents-shell>
+# Overview
+
+## Default (Medium)
 Tab buttons align left and bottom border expands to full width of container.
 
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" >
@@ -148,7 +148,7 @@ Tab buttons align left and bottom border expands to full width of container.
 
 </cdr-doc-example-code-pair>
 
-## Compact
+## Compact (Small)
 
 Reduced spacing around the tab buttons to create a denser visual design.
 
@@ -169,7 +169,7 @@ Reduced spacing around the tab buttons to create a denser visual design.
 
 Tab buttons space evenly across the container.
 
-<cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
+<cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false">
 
 ```html
 <cdr-tabs modifier="full-width" height="100px">
@@ -186,10 +186,27 @@ Tab buttons space evenly across the container.
 
 Bottom border of tab header list is removed.
 
-<cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example">
+<cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false">
 
 ```html
 <cdr-tabs modifier="no-border" height="100px">
+  <cdr-tab-panel name="Product">Tab 1 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Articles">Tab 2 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Classes & Events">Tab 3 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Videos">Tab 4 Content</cdr-tab-panel>
+</cdr-tabs>
+```
+
+</cdr-doc-example-code-pair>
+
+## Centered
+
+Centered tab header content
+
+<cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false">
+
+```html
+<cdr-tabs modifier="centered" height="100px">
   <cdr-tab-panel name="Product">Tab 1 Content</cdr-tab-panel>
   <cdr-tab-panel name="Articles">Tab 2 Content</cdr-tab-panel>
   <cdr-tab-panel name="Classes & Events">Tab 3 Content</cdr-tab-panel>
@@ -216,11 +233,9 @@ This component has compliance with WCAG guidelines by:
 - Includes tab role in tab header element
 - Includes tabpanel role in tab content element
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="Guidelines">
-<cdr-doc-table-of-contents-shell>
+# Guidelines
 
 ## Use When
 
@@ -229,7 +244,7 @@ This component has compliance with WCAG guidelines by:
 - Grouping content to display horizontally
 - Content is lengthy and can be broken into discrete parts
 
-## Don't’t Use When
+## Don't Use When
 
 - Grouping content to display vertically. Instead, use [Accordion](../accordion/)
 - Creating primary navigation that links to other pages
@@ -280,13 +295,11 @@ This component has compliance with WCAG guidelines by:
 - Maintain layout for tabs when switching to smaller viewports. Do not replace the tab component with the accordion component
 - Switching between tab component and accordion component is not supported in Cedar components library
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
+# API
 
-Tabs are built from two components, **CdrTabs** and **CdrTabPanel**, which are meant to be used together.
+Tabs are built from two components: **CdrTabs** and **CdrTabPanel**. These are meant to be used together.
 
 ## Props
 
@@ -317,11 +330,9 @@ The `cdr-tab-panel name` property sets the tab display value and is used for ref
 Following variants are available to the `cdr-tabs` modifier attribute:
 | Value        | Description            |
 |:-------------|:-----------------------|
+| 'centered'   | Centers the tab header content |
 | 'compact'    | Sets the tabs styling for smaller screen sizes |
 | 'full-width' | Sets the tab header to display evenly across the entire width instead of left justified |
 | 'no-border'  | Removes the bottom border of the tabs header |
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>

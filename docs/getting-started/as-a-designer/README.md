@@ -12,10 +12,10 @@
 ---
 
 [cedar-user-support-link]: https://rei.slack.com/messages/CA58YCGN4
+<cdr-doc-alert icon="warning">Instructions on this page are for internal REI designers only.</cdr-doc-alert>
 
-<cdr-doc-table-of-contents-shell>
+<cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
 
-<cdr-doc-alert icon="warning"><strong>Instructions on this page are for internal REI designers only.</strong></cdr-doc-alert>
 
 
 
@@ -33,13 +33,13 @@
 
 ### Required Software
 
-#### Abstract 
+#### Abstract
 Abstract is used to distribute the Cedar UI toolkit and allows for:
 - Version control of design files
 - Collaboration and the ability to view project history
 - Secure backup to REI servers
 
-Download the latest version of Abstract through REI's Self Service application. Install the software to your local user application folder: 
+Download the latest version of Abstract through REI's Self Service application. Install the software to your local user application folder:
 1. From your desktop use the shortcut __Shift+Command+C__ to access your Mac disks.
 2. Navigate to your local application folder, __Macintosh HD > Users > 'yourUserName' > Applications__.
 3. Move the downloaded Abstract app into this application folder.
@@ -68,7 +68,7 @@ __A few things to remember:__
 
 
 #### Legacy Fonts
-Do not use the Legacy fonts in new designs as they are no longer part of Cedar. You'll still need to install them so that the old design files render properly. Similarly, Roboto is still used in many Cedar components and is required for the Cedar Sketch Toolkits to work properly. 
+Do not use the Legacy fonts in new designs as they are no longer part of Cedar. You'll still need to install them so that the old design files render properly. Similarly, Roboto is still used in many Cedar components and is required for the Cedar Sketch Toolkits to work properly.
 
 To Install, open REI’s Self Service application, search for, and install the following fonts:
 - Roboto
@@ -106,7 +106,7 @@ Simulates color blindness and easily checks contrast.
 
 
 
-## Cedar UI Toolkit 
+## Cedar UI Toolkit
 
 __Note:__ Cedar's UI Toolkit is only available for REI employees and approved third-party vendors. If you are an external vendor that needs access, please email cedar@rei.com.
 
@@ -154,7 +154,7 @@ To link the UI Toolkit to your Abstract project:
 
 ### Sketch Update Notification
 
-Cedar releases are communicated through both [#cedar-user-support][cedar-user-support-link] and [#cedar-news](https://rei.slack.com/messages/C5W0VMKGU). 
+Cedar releases are communicated through both [#cedar-user-support][cedar-user-support-link] and [#cedar-news](https://rei.slack.com/messages/C5W0VMKGU).
 
 If the UI Toolkit is linked to your project files, updates will automatically be available.
 
@@ -193,7 +193,7 @@ If you need to replace one version of a linked library with another in a differe
 
 #### How can I transition from the Google Drive version?
 Previously, the UI Toolkit was available using Abstract or Google Drive. Now, the UI Toolkit is only available using Abstract. If you need to relink symbols from the old Google Drive distributed version, use the [Symbol Swapper Plugin](https://sketchpacks.com/sonburn/symbol-swapper).
-If you need extra support, contact the Cedar team using the [#cedar-user-support][cedar-user-support-link] Slack channel or visit Cedar's office hours. 
+If you need extra support, contact the Cedar team using the [#cedar-user-support][cedar-user-support-link] Slack channel or visit Cedar's office hours.
 
 
 ### Abstract
@@ -211,7 +211,7 @@ Yes! You should update Sketch when a new version is available. Note that a major
 You cannot break or change the library when viewing the library in your project files or having the UI Toolkit opened "Untracked"
 
 #### How can I fix a bug or make an improvement to the toolkit?
-You can create a branch of the Cedar library to make the changes yourself, or reach out to the Cedar team using the [#cedar-user-support][cedar-user-support-link] Slack channel to report a bug. 
+You can create a branch of the Cedar library to make the changes yourself, or reach out to the Cedar team using the [#cedar-user-support][cedar-user-support-link] Slack channel to report a bug.
 
 ---
 
@@ -247,7 +247,7 @@ After each project has been updated independently, sync the projects again and m
   <cdr-img alt="screenshot"  :src="$withBase(`/getting-started-for-designers/multi-proj-sync-1.png`)"/>
   <cdr-img alt="screenshot"  :src="$withBase(`/getting-started-for-designers/multi-proj-sync-2.png`)"/>
   <cdr-img alt="screenshot"  :src="$withBase(`/getting-started-for-designers/multi-proj-sync-3.png`)"/>
-2. __Restored Branch > Commits > (Youngest common ancestor __*commit*__ with _vCurrent_) > Restore Commit__. 
+2. __Restored Branch > Commits > (Youngest common ancestor __*commit*__ with _vCurrent_) > Restore Commit__.
   <cdr-img alt="screenshot"  :src="$withBase(`/getting-started-for-designers/multi-proj-sync-4.png`)"/>
 3. [Cross-Project Merge](#cross-project-merge) all _vCurrent_ project files into the _vNext_ ancestor branch project files.
 4. Pull changes from _vNext_ master into the _vNext_ branch and commit.

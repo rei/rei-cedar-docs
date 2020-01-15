@@ -63,14 +63,14 @@ export default {
   }
 
   .cdr-doc-homepage-asset-card__title {
-    @include redwood-display-40;
+    @include cdr-text-utility-400;
     color: $cdr-doc-text-color-primary;
     font-weight: bold;
     margin-bottom: $cdr-space-half-x;
   }
 
   .cdr-doc-homepage-asset-card__description {
-    @include redwood-display-10;
+    @include cdr-text-utility-100;
     color: $cdr-doc-text-color-secondary;
   }
 

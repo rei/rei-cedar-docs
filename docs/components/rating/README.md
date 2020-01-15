@@ -112,13 +112,13 @@
 }
 ---
 
-<cdr-doc-tabs>
-<template slot="Overview">
-<cdr-doc-table-of-contents-shell tab-name="Overview">
 
-<cdr-doc-alert icon="info"><strong>REI.com is currently using Bazaarvoice for ratings.</strong>Styles documented here may not reflect the current styles provided by the tool. Reach out in <cdr-link href="https://rei.slack.com/messages/CA58YCGN4" target="_blank">#cedar-user-support</cdr-link> for further guidance or questions.</cdr-doc-alert>
+<cdr-doc-table-of-contents-shell>
 
-## Default
+# Overview
+<cdr-doc-alert icon="info"><strong>REI.com is currently using Bazaarvoice for ratings.</strong>Styles documented here may not reflect the current styles provided by the tool. Reach out in <cdr-link href="https://rei.slack.com/messages/CA58YCGN4" target="\_blank">#cedar-user-support</cdr-link> for further guidance or questions.</cdr-doc-alert>
+
+## Default (Medium)
 
 Shows review rating with up to 5 stars highlighted. If rating is zero, star icons are displayed using the grey outline star icon.
 
@@ -152,7 +152,7 @@ Creates a link to the corresponding review content if on the same page.
 
 </cdr-doc-example-code-pair>
 
-## Compact
+## Compact (Small)
 
 Removes the word "Reviews" from the label for limited space layout.
 
@@ -202,11 +202,9 @@ This component has compliance with WCAG guidelines by:
   - Underline text style for mouse usage
   - Focus state for keyboard usage
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="Guidelines">
-  <cdr-doc-table-of-contents-shell tab-name="Guidelines">
+# Guidelines
 
 ## Use When
 
@@ -242,12 +240,9 @@ This component has compliance with WCAG guidelines by:
 - [Icons](../icon/)
 - [Iconography](../../foundation/iconography/)
 
+<hr>
 
-</cdr-doc-table-of-contents-shell>
-</template>
-
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
+# API
 
 ## Props
 
@@ -264,6 +259,3 @@ By default the **CdrRating** component renders the icons in medium size (24px) w
 
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>

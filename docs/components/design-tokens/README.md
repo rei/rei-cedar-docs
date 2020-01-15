@@ -13,13 +13,13 @@
 ---
 
 
-<cdr-doc-table-of-contents-shell>
+<cdr-doc-table-of-contents-shell parentSelector="h2" childSelector="h3">
 
 ## Overview
 
 Design tokens are special variables used to maintain a scalable visual system for UI development and brand consistency. Cedar design tokens store the visual design attributes that define the foundation of REI’s visual language, including color, typography, and spacing.
 
-For a complete list of Cedar design tokens, visit the [Cedar Tokens](https://rei.github.io/rei-cedar-tokens) page. 
+For a complete list of Cedar design tokens, visit the [Cedar Tokens](https://rei.github.io/rei-cedar-tokens) page.
 
 Design tokens are key-value pairs. For example:
 
@@ -66,7 +66,7 @@ Design Tokens can be used by teams:
 - When there are technical limitations to consuming components
 
 
-### Don't’t Use When
+### Don't Use When
 - Don’t use design tokens to make modifications to an existing component. **Instead,** submit a request using the [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC) for an existing component
 - Don’t use design tokens to only access a value or values. **Instead,** create a new token in the [shared-tokens repo](https://git.rei.com/projects/FEDPACK/repos/shared-tokens/browse) that meets your specific semantic use case
 
@@ -171,11 +171,11 @@ The naming structure for design tokens follows:
 
 The below tables for the naming structure show that levels will be skipped when not used.
 
-<!-- 
-#### TODO: 
+<!--
+#### TODO:
 Would be nice to use table markdown but alternating row styling is inverted. Heading and first row are the same color. WRONG!
 
-| Category | Sub-Category | Item | Sub-Item | Variant | Size | Mode | 
+| Category | Sub-Category | Item | Sub-Item | Variant | Size | Mode |
 | -- | -- | -- | -- | -- | -- | -- |
 | `color` | `text-` | `form-` | `label-` | | | `lightmode-` |
  -->
@@ -228,7 +228,7 @@ Would be nice to use table markdown but alternating row styling is inverted. Hea
   </tbody>
 </table>
 
-#### cdr-text-heading-800
+#### cdr-text-heading-serif-800
 <table>
   <tbody>
     <tr>
@@ -245,7 +245,7 @@ Would be nice to use table markdown but alternating row styling is inverted. Hea
       <td></td>
       <td>heading-</td>
       <td></td>
-      <td></td>
+      <td>serif</td>
       <td>800</td>
       <td></td>
     </tr>
@@ -258,13 +258,13 @@ Would be nice to use table markdown but alternating row styling is inverted. Hea
 ## How to Use Tokens
 
 ### For Designers
-Design tokens are available in Sketch using Abstract by linking the [CDR Tokens Library](../../getting-started/as-a-designer/#using-the-toolkit) into your project. 
-This library contains Symbols, Text Styles, and Layer Styles that correspond to Cedar tokens. 
-Place the _Stickersheet_ Symbol in your project for a visual overview. 
+Design tokens are available in Sketch using Abstract by linking the [CDR Tokens Library](../../getting-started/as-a-designer/#using-the-toolkit) into your project.
+This library contains Symbols, Text Styles, and Layer Styles that correspond to Cedar tokens.
+Place the _Stickersheet_ Symbol in your project for a visual overview.
 
-When using design tokens, it’s your responsibility to pass the entire design token name to the developer during the design hand-off process—this can be through automated or manual methods. 
+When using design tokens, it’s your responsibility to pass the entire design token name to the developer during the design hand-off process—this can be through automated or manual methods.
 
-For more information, see [Getting Started As A Designer](../../getting-started/as-a-designer/). 
+For more information, see [Getting Started As A Designer](../../getting-started/as-a-designer/).
 
 
 ### For Developers
@@ -349,10 +349,9 @@ Ensure that the design token meets the following requirements:
   - **Web:** Uses Kebab case. For example, cdr-color-background-dark
   - **iOS:** Uses Pascal case. For example, CdrColorBackgroundColor
   - **Android:** Uses Snake case. For example, cdr_color_background_dark
-    
+
 
 <hr/>
 
 
 </cdr-doc-table-of-contents-shell>
-

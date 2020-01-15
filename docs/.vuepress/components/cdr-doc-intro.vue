@@ -49,7 +49,7 @@ export default {
 <style lang="scss">
   @import '../theme/styles/cdr-tokens.scss';
   @import '../theme/styles/cdr-doc-tokens.scss';
-  
+
   $background-color-intro: #225c4e; // Blue Spruce - new 2020 brand color
   $text-color-intro: $cdr-color-text-primary-darkmode;
 
@@ -84,7 +84,7 @@ export default {
   }
 
   .cdr-doc-intro__breadcrumb-link {
-    @include cdr-text-default;
+    @include cdr-text-utility-300;
     color: $text-color-intro;
     margin-right: $cdr-space-half-x;
     margin-bottom: 0;
@@ -95,7 +95,8 @@ export default {
   }
 
   .cdr-doc-intro__title-metadata {
-    @include cdr-text-default-compact;
+    // @include cdr-text-default-compact;
+    @include cdr-text-utility-200;
     margin: 0;
     margin-bottom: $cdr-space-half-x;
 
@@ -107,9 +108,9 @@ export default {
   }
 
   .cdr-doc-intro__summary {
-    @include cdr-text-subheading-500; // Subheadline
+    @include cdr-text-subheading-sans-500; // Subheadline
     margin: 0;
-    
+
     .cdr-doc-intro__title + & {
       border-top: solid 1px $cdr-color-border-secondary-lightmode;
       margin-top: $cdr-space-one-x;

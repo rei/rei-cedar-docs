@@ -152,10 +152,10 @@
 }
 ---
 
-<cdr-doc-tabs>
-<template slot="Overview">
+
 <cdr-doc-table-of-contents-shell>
 
+# Overview
 ## Dark
 
 Use dark Call to Action over a light background image or color to provide proper contrast. This is the default Call to Action style.
@@ -226,7 +226,7 @@ Use brand Call to Action as an alternative.
 
 ## Elevated
 
-Adds drop shadow to increase contrast and visibility of Call to Action when placed over an image.
+Use elevated Call to Action to add drop shadow to increase contrast and visibility when placed over an image.
 
 <cdr-doc-example-code-pair repository-href="/src/components/cta" :sandbox-data="$page.frontmatter.sandboxData">
 
@@ -242,13 +242,34 @@ Adds drop shadow to increase contrast and visibility of Call to Action when plac
 
 </cdr-doc-example-code-pair>
 
+## Full Width
+
+Displays at full width of its container.
+
+<cdr-doc-example-code-pair repository-href="/src/components/cta" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+  <cdr-cta
+    href="https://rei.com"
+    :full-width="true"
+    data-backstop="cdr-cta--full-width"
+  >Full width</cdr-cta>
+  <cdr-cta
+    cta-style="dark"
+    href="https://rei.com"
+    full-width="@md"
+  >Full width @md</cdr-cta>
+```
+
+</cdr-doc-example-code-pair>
+
 ## Accessibility
 
 To ensure that usage of this component complies with accessibility guidelines:
 
 - Clearly and concisely describe the link’s destination when the button is clicked or tapped:
-  - For example, if the button text is "Shop Now", the `aria-label` might read: "Shop our &lt;specific advertising category&gt; now"
-- Avoid using "click here" or "start here" but if screen space for text is minimal:
+  - For example, if the button text is "Shop now", the `aria-label` might read: "Shop our &lt;specific advertising category&gt; now"
+- Avoid using "click here" or "start here". If screen space for text is minimal:
   - Provide text that can be read by screen readers
   - Use an inline element for hidden text with the `cdr-sr-only` class
   ```vue
@@ -258,7 +279,7 @@ To ensure that usage of this component complies with accessibility guidelines:
   ```
 - Ensure screen readers can find all **Call to Action** buttons on a page by:
   - Always providing an `href` attribute. Empty `href` attributes are not considered true links
-  - Ensuring that it can be accessed via the keyboard. Don't manipulate the default tab index
+  - Ensuring that it can be accessed using the keyboard. Avoid manipulating the default tab index
 
 <br />
 
@@ -267,11 +288,9 @@ This component has compliance with [WCAG SC 1.4.3: Contrast (Minimum)](https://w
 - Choose the light button theme for a dark background or the dark button theme for a light background
 - Test color contrast for button themes against all backgrounds
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="Guidelines">
-<cdr-doc-table-of-contents-shell>
+# Guidelines
 
 ## Use When
 - Encouraging a user to navigate to a new location
@@ -287,22 +306,21 @@ This component has compliance with [WCAG SC 1.4.3: Contrast (Minimum)](https://w
 Call to Action exists as a means to navigate users to a new location or additional information:
 
 - Use clear and concise text
-- Make it clear what happens when this link is clicked or tapped
-- For example, “Shop Backpacking” Call to Action on a homepage would navigate the user to an assortment of backpacking-related products available for purchase
-- Use all caps for CTAs, not sentence case, title caps or all lowercase
+- Make it clear what happens when this link is clicked or tapped. For example, “Shop backpacking” Call to Action on a homepage would navigate the user to an assortment of backpacking-related products available for purchase
+- Use sentence case. Do not use all caps, title caps, or all lowercase
 
 <br />
 
 To construct consistent and universal Call to Actions across the site:
 
-- If leading to a Brand/Category/Activity Landing page, UI text for Call to Action should be **[Explore Brand/Category/Activity Name]**
-- If leading to a Product Detail page, UI text for Call to Action should be **[Shop Product Name]**
-- If leading to a Collection/Search Result, UI text for Call to Action should be **[Shop all Brand/Category/Activity Name]**
+- If leading to a Brand, Category, or Activity Landing page, UI text for Call to Action should be **Explore Brand/Category/Activity Name**
+- If leading to a Product Detail page, UI text for Call to Action should be **Shop product name**
+- If leading to a Collection or search result, UI text for Call to Action should be **Shop all Brand/Category/Activity Name**
 
 ## Behavior
 
 - Avoid combining a Call to Action with a basic button. Disabling Call to Actions is not semantically supported
-- Maintain button styling including typographic and sizing for a Call to Action. Do not style as a link
+- Maintain button styling including typographic and sizing for Call to Action. Do not style as a link
 
 ### Do / Don't
 
@@ -325,11 +343,7 @@ To construct consistent and universal Call to Actions across the site:
 <do-dont :examples="$page.frontmatter.link" />
 
 
-</cdr-doc-table-of-contents-shell>
-</template>
-
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
+# API
 
 ## Props
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
@@ -369,6 +383,3 @@ The following variants are available to the `cdr-cta` modifier attribute:
 | 'elevated'  | Adds drop shadow to button |
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>

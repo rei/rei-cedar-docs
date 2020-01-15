@@ -16,15 +16,15 @@
   "case": [
     {
       "type": "do",
-      "image": "checkbox/checkbox_case_do_16-9.png",
-      "ratio": "16-9",
+      "image": "checkbox/checkbox_case_do_4-3.png",
+      "ratio": "4-3",
       "alt": "Image showing proper checkbox sentence case.",
       "caption": "use sentence case, with only proper nouns capitalized."
     },
     {
       "type": "dont",
-      "image": "checkbox/checkbox_case_dont_16-9.png",
-      "ratio": "16-9",
+      "image": "checkbox/checkbox_case_dont_4-3.png",
+      "ratio": "4-3",
       "alt": "Image showing improper title caps use.",
       "caption": "use title caps for labels."
     }
@@ -32,15 +32,15 @@
   "fragment": [
     {
       "type": "do",
-      "image": "checkbox/checkbox_fragment_do_16-9.png",
-      "ratio": "16-9",
+      "image": "checkbox/checkbox_fragment_do_4-3.png",
+      "ratio": "4-3",
       "alt": "Image showing proper checkbox label with no ending punctuation",
       "caption": "write labels as sentence fragments with no ending punctuation."
     },
     {
       "type": "dont",
-      "image": "checkbox/checkbox_fragment_dont_16-9.png",
-      "ratio": "16-9",
+      "image": "checkbox/checkbox_fragment_dont_4-3.png",
+      "ratio": "4-3",
       "alt": "Image showing improper terminal punctuation.",
       "caption": "add terminal punctuation at the end of a label."
     }
@@ -48,15 +48,15 @@
   "label": [
     {
       "type": "do",
-      "image": "checkbox/checkbox_label_do_16-9.png",
-      "ratio": "16-9",
+      "image": "checkbox/checkbox_label_do_4-3.png",
+      "ratio": "4-3",
       "alt": "Image showing proper checkbox label with brief copy",
       "caption": "make labels brief."
     },
     {
       "type": "dont",
-      "image": "checkbox/checkbox_label_dont_16-9.png",
-      "ratio": "16-9",
+      "image": "checkbox/checkbox_label_dont_4-3.png",
+      "ratio": "4-3",
       "alt": "Image showing a label with too much text",
       "caption": "put too much text in the label."
     }
@@ -64,15 +64,15 @@
   "positivecopy": [
     {
       "type": "do",
-      "image": "checkbox/checkbox_positivecopy_do_16-9.png",
-      "ratio": "16-9",
+      "image": "checkbox/checkbox_positivecopy_do_4-3.png",
+      "ratio": "4-3",
       "alt": "Image showing proper checkbox positive phrasing",
       "caption": "use positive phrasing for labels."
     },
     {
       "type": "dont",
-      "image": "checkbox/checkbox_positivecopy_dont_16-9.png",
-      "ratio": "16-9",
+      "image": "checkbox/checkbox_positivecopy_dont_4-3.png",
+      "ratio": "4-3",
       "alt": "Image showing a label with negative phrasing",
       "caption": "use negative phrasing for labels."
     }
@@ -80,15 +80,15 @@
   "simplify": [
     {
       "type": "do",
-      "image": "checkbox/checkbox_simplify_do_16-9.png",
-      "ratio": "16-9",
+      "image": "checkbox/checkbox_simplify_do_4-3.png",
+      "ratio": "4-3",
       "alt": "Image showing proper simple checkbox usage",
       "caption": "use a single checkbox."
     },
     {
       "type": "dont",
-      "image": "checkbox/checkbox_simplify_dont_16-9.png",
-      "ratio": "16-9",
+      "image": "checkbox/checkbox_simplify_dont_4-3.png",
+      "ratio": "4-3",
       "alt": "Image showing a radio button used when a checkbox is preferred",
       "caption": "use radio buttons or toggles for a simple toggle selection."
     }
@@ -155,8 +155,18 @@
                 "name": "modifier",
                 "type": "string",
                 "default": "N/A",
-                "description": "Modifies the style variant for this component.  Possible values: { ‘compact’  |  ‘hide-figure’ }"
-              }
+                "description": "Modifies the style variant for this component.  Possible values: { ‘hide-figure’ }",
+                "alert": {
+                  "type": "deprecated",
+                  "description": "The `compact` modifier is deprecated in the winter 2019 release and will be removed. Use size=\"small\" instead"
+                },
+              },
+              {
+                "name": "size",
+                "type": "string",
+                "default": "'medium'",
+                "description": "Sets the checkbox size; values can target responsive breakpoints. Breakpoint values are: xs, sm, md, and lg. Examples: { 'small' | 'medium' | 'large' | 'large@sm' }",
+              },
             ],
             "slots": [
               {
@@ -181,11 +191,11 @@
 
 ---
 
-<cdr-doc-tabs>
-<template slot="Overview">
-<cdr-doc-table-of-contents-shell tab-name="Overview">
+<cdr-doc-table-of-contents-shell >
 
-## Default
+# Overview
+
+## Default (Medium)
 
 Default and standard spacing for checkboxes.
 
@@ -201,17 +211,17 @@ Default and standard spacing for checkboxes.
 
 </cdr-doc-example-code-pair>
 
-## Compact
+## Size
 
-Compact spacing for checkboxes.
+Different sizing for checkboxes.
 
 <cdr-doc-example-code-pair repository-href="/src/components/checkbox" :sandbox-data="$page.frontmatter.sandboxData" :model="{ex1: true, ex2: false, ex3: false}">
 
 ```html
 <div>
-  <cdr-checkbox v-model="ex1" modifier="compact">Compact checkbox 1</cdr-checkbox>
-  <cdr-checkbox v-model="ex2" modifier="compact">Compact checkbox 2</cdr-checkbox>
-  <cdr-checkbox v-model="ex3" disabled modifier="compact">Compact checkbox 3</cdr-checkbox>
+  <cdr-checkbox v-model="ex1" size="small">Small checkbox</cdr-checkbox>
+  <cdr-checkbox v-model="ex2" size="medium">Medium checkbox</cdr-checkbox>
+  <cdr-checkbox v-model="ex3" disabled size="large">Large checkbox</cdr-checkbox>
 </div>
 ```
 
@@ -287,12 +297,9 @@ For more information, review techniques and failures for:
 - [WCAG 2.0,  1.3.1 Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 - [WCAG 2.0,  3.3.2 Labels and Instructions](https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions.html)
 
+<hr>
 
-</cdr-doc-table-of-contents-shell>
-</template>
-
-<template slot="Guidelines">
-  <cdr-doc-table-of-contents-shell tab-name="Design Guidelines">
+# Guidelines
 
 ## Use When
 
@@ -321,7 +328,7 @@ Checkbox labels should:
 
  - Start with a capital letter
  - Use sentence case
- - Use positive phrasing; so the label describes the selected state
+ - Use positive phrasing so that the label describes the selected state
  - Avoid long labels
  - Be written as sentence fragments
  - No terminal punctuation
@@ -354,13 +361,13 @@ Checkboxes work independently from each other:
 
  - WebAIM: [Semantic Structure: Using Lists Correctly](https://webaim.org/techniques/semanticstructure/)
 
-  </cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
+# API
 
 ## Props
+
+This component will bind any attribute that a [native HTML checkbox element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox) accepts.
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
@@ -410,7 +417,7 @@ Use  `custom-value`  with a shared model to create a checkbox group that will tr
 </template>
 ```
 
-If both values are checked the model would be `[  { value: ‘D’ }, [ 9, 10 ]  ]`. Unchecking either checkbox would remove its value from the model array.
+If both values are checked, the model would be `[  { value: ‘D’ }, [ 9, 10 ]  ]`. Unchecking either checkbox would remove its value from the model array.
 
 Default checkbox to checked/unchecked state by setting the model in Javascript.
 
@@ -454,7 +461,6 @@ Set the `indeterminate` prop to `true` to generate an indeterminate checkbox, wh
 Following variants are available to the `cdr-checkbox` modifier attribute:
 | Value | Description            |
 |:------|:-----------------------|
-| 'compact'  | Sets the spacing for smaller screen sizes |
 | 'hide-figure'  | Hides the checkbox icon |
 
 <br/>
@@ -487,6 +493,3 @@ Use the `hide-figure` modifier to hide the checkbox itself, which leaves the tex
 ```
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>

@@ -34,6 +34,13 @@ module.exports = {
         href: "/cedar.css"
       }
     ],
+    [
+      "link",
+      {
+        rel: "stylesheet",
+        href: "/back-to-top-btn.css"
+      }
+    ]
   ],
   ga: '',
   plugins: [
@@ -50,6 +57,7 @@ module.exports = {
       {
         text: "Release Notes",
         items: [
+          { text: "Winter 2019", link: "/release-notes/winter-2019/" },
           { text: "Fall 2019", link: "/release-notes/fall-2019/" },
           { text: "Summer 2019", link: "/release-notes/summer-2019/" },
           { text: "Archive", link: "/release-notes/archive/" },
@@ -89,6 +97,7 @@ module.exports = {
       {
         text: "Layout",
         items: [
+          { text: "Getting Started", link: "/layout/getting-started/" },
           { text: "Responsive", link: "/layout/responsive/" },
           { text: "Spacing", link: "/layout/spacing/" },
           { text: "Display", link: "/layout/display/" },
@@ -110,19 +119,19 @@ module.exports = {
           { text: "Checkboxes", link: "/components/checkboxes/" },
           { text: "Data Tables", link: "/components/data-tables/" },
           { text: "Grid", link: "/components/grid/" },
-          { text: "Headings", link: "/components/headings/" },
           { text: "Icons", link: "/components/icon/" },
           { text: "Images", link: "/components/image/" },
           { text: "Inputs", link: "/components/input/" },
           { text: "Links", link: "/components/links/" },
           { text: "Lists", link: "/components/lists/" },
+          { text: "Modal", link: "/components/modal/" },
           { text: "Pagination", link: "/components/pagination/" },
-          { text: "Paragraphs", link: "/components/paragraphs/" },
           { text: "Pull Quote", link: "/components/pull-quote/" },
           { text: "Radio Buttons", link: "/components/radio/" },
           { text: "Ratings", link: "/components/rating/" },
           { text: "Select", link: "/components/selects/" },
-          { text: "Tabs", link: "/components/tabs/" }
+          { text: "Tabs", link: "/components/tabs/" },
+          { text: "Text", link: "/components/text/" }
         ]
       },
       {
@@ -131,7 +140,9 @@ module.exports = {
           { text: "Resources", link: "/icons/resources/" },
           { text: "Iconography", link: "/icons/iconography/" }
         ]
-      }
+      },
+      {text: "Report an Issue", link: 'https://airtable.com/shr3wSPCYQbycVx7i'},
+      {text: "Request a Feature", link: 'https://airtable.com/shrcbq9CHthuMO7AC'},
     ]
   },
   configureWebpack(config) {

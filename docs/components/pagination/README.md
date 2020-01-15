@@ -39,14 +39,14 @@
   "truncate": [
     {
       "type": "do",
-      "image": "pagination/pagination_all_do_16-9.png",
+      "image": "pagination/pagination_all_do.png",
       "ratio": "16-9",
       "alt": "Image showing pagination page number truncation",
       "caption": "show the first, previous, next, and last page links when possible. If not, use the degraded designs."
     },
     {
       "type": "dont",
-      "image": "pagination/pagination_all_dont_16-9.png",
+      "image": "pagination/pagination_all_dont.png",
       "ratio": "16-9",
       "alt": "Image showing pagination with all page numbers",
       "caption": "show all available pages."
@@ -82,33 +82,28 @@
             ],
             "events": [
               {
-                "name": "change",
-                "arguments": "pageNumber, event",
-                "description": "$emit event fired when page changes based on user interaction by clicking a link or selecting an option from the select on mobile."
-              },
-              {
                 "name": "input",
                 "arguments": "pageNumber, event",
-                "description": "$emit event fired when page changes based on user interaction by clicking a link or selecting an option from the select on mobile."
+                "description": "$emit event fired when page prop value is updated."
               },
               {
-                "name": "select-change",
-                "arguments": "pageUrl, event",
-                "description": "$emit event fired on select change with the URL value of the selected option. Also triggers the 'change' event (above) with the selected page number."
+                "name": "navigate",
+                "arguments": "pageNumber, url, event",
+                "description": "$emit event fired when page changes based on user interaction by clicking a link or selecting an option from the select on mobile."
               }
             ],
             "scopedSlots": [
               {
                 "name": "link",
-                "description": "Scoped slot used to override the default page links used. Useful for integrating with client-side routing. The slot scope exposes the following attributes: class, href, aria-label, aria-current, page, and content."
+                "description": "Scoped slot used to override the default page links used. Useful for integrating with client-side routing. See \"Scoped Slots and vue-router\" below for exposed prop API."
               },
               {
                 "name": "prevLink",
-                "description": "Scoped slot used to override the default previous page link. Useful for integrating with client-side routing. The slot scope exposes the following attributes: class, href, aria-label, iconClass, iconComponent, page, and content. iconComponent corresponds to a sprite name in @rei/cedar-icons."
+                "description": "Scoped slot used to override the default previous page link. Useful for integrating with client-side routing. See \"Scoped Slots and vue-router\" below for exposed prop API."
               },
               {
                 "name": "nextLink",
-                "description": "Scoped slot used to override the default next page link. Useful for integrating with client-side routing. The slot scope exposes the following attributes: class, href, aria-label, iconClass, iconComponent, page, and content. iconComponent corresponds to a sprite name in @rei/cedar-icons."
+                "description": "Scoped slot used to override the default next page link. Useful for integrating with client-side routing. See \"Scoped Slots and vue-router\" below for exposed prop API."
               }
             ],
           }
@@ -120,15 +115,15 @@
 }
 ---
 
-<cdr-doc-tabs>
-<template slot="Overview">
+
 <cdr-doc-table-of-contents-shell>
 
-## Pagination @ SM, MD, LG
+# Overview
+## Pagination @ sm, md, lg
 
-At the SM, MD, and LG breakpoints, pagination displays as a list of number text links with Prev and Next links when applicable.
+At the sm, md, and lg breakpoints, pagination displays as a list of number text links. Prev and Next links are also added when applicable.
 
-<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ page: 3, pages: [{page: 1, url: '1'}, {page: 2, url: '2'}, {page: 3, url: '3'}, {page: 4, url: '4'}, {page: 5, url: '5'}] }">
+<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ page: 3, pages: [{page: 1, url: '#'}, {page: 2, url: '#'}, {page: 3, url: '#'}, {page: 4, url: '#'}, {page: 5, url: '#'}] }">
 
 ```html
 <cdr-pagination
@@ -141,24 +136,59 @@ At the SM, MD, and LG breakpoints, pagination displays as a list of number text 
 
 ## Link Scoped Slots
 
-Can be used to override the default links rendered in the pagination. Useful for integrating with client side routing, as a `router-link` can be rendered instead of a plain `a` tag. Pagination exposes 3 link scopedSlots: `link`, `prevLink`, and `nextLink`.
+The scoped slots can be used to override the default links rendered in the pagination. Useful for integrating with client-side routing, as a `router-link` can be rendered instead of a plain `a` tag. Pagination exposes 3 link scopedSlots: `link`, `prevLink`, and `nextLink`.
 
-The `link` slot scope contains the following attributes:
+The 'link' slot scope exposes the following prop object:
+
+```js
+attrs: {
+  class,
+  'aria-label',
+  'aria-current',
+  ref:,
+},
+href,
+page,
+content,
+click,
+```
+
 - `class`: a class to be applied to the link in order to match pagination styling
-- `href`: href that the link points to by default
 - `aria-label`: default aria-label for this link
-- `aria-current`: is `true` if this link is the current page
+- `aria-current`: reflects whether current link is the currently selected page
+- `ref`: vue ref for tracking the element. Required for internal component behavior
+- `href`: href that the link points to by default
 - `page`: the page number that corresponds to this link. NOTE: that you must manually update your v-model attribute to be the value of `page` whenever this link is clicked
 - `content`: the default content for that link
+- `click`: function ran when element is clicked. Required for internal component behavior
 
-The `prevLink` and `nextLink` slot scopes contain the following attributes:
+The `prevLink` and `nextLink` slot scopes expose the following prop object:
+
+```js
+attrs: {
+  class,
+  'aria-label',
+  ref,
+},
+href,
+page,
+content,
+iconClass,
+iconComponent,
+iconPath,
+click,
+```
+
 - `class`: a class to be applied to the link in order to match pagination styling
-- `href`: href that the link points to by default
 - `aria-label`: default aria-label for this link
+- `ref`: vue ref for tracking the element for internal component behavior
+- `href`: href that the link points to by default
+- `page`: the page number that corresponds to this link. NOTE: that you must manually update your v-model attribute to be the value of `page` whenever this link is clicked
+- `content`: the default content for that link
 - `iconClass`: a class to be applied to the prev/next arrow icon in order to match pagination styling
 - `iconPath`: the path to the icon in the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) used for this link
-- `page`: the page number that corresponds to this link. NOTE: that you must manually update your v-model attribute to be the value of `page` whenever this link is clicked
-- `content`: the default content for that link
+- `iconComponent`: name of the component used for this link
+- `click`: function ran when element is clicked. Required for internal component behavior
 
 <cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ page: 2, pages: [{page: 1, url: '1'}, {page: 2, url: '2'}, {page: 3, url: '3'}] }">
 
@@ -168,39 +198,48 @@ The `prevLink` and `nextLink` slot scopes contain the following attributes:
   :total-pages="3"
   v-model="page"
 >
-  <template
-    slot="link"
-    slot-scope="link"
-  >
-    <div :class="link.class" :aria-label="link['aria-label']" :aria-current="link['aria-current']" @click="e => page = link.page">
-      {{ link.href }}
-    </div>
+  <!-- Previous -->
+  <template slot="prevLink" slot-scope="prevLink">
+    <p
+      v-bind="prevLink.attrs"
+      @click="prevLink.click"
+    >
+      <component
+        :is="prevLink.iconComponent"
+        :class="prevLink.iconClass"
+      />
+      {{ prevLink.content }}
+    </p>
   </template>
-  <template
-    slot="prevLink"
-    slot-scope="link"
-  >
-    <div @click="e => page = link.page" :aria-label="link['aria-label']">
-      <cdr-icon :use="link.iconPath" :class="link.iconClass" />
-      <span>{{ link.content }}</span>
-    </div>
+  <!-- Single Page links -->
+  <template slot="link" slot-scope="link">
+    <p
+      v-bind="link.attrs"
+      @click="link.click"
+    >
+      {{ link.page }}
+    </p>
   </template>
-  <template
-    slot="nextLink"
-    slot-scope="link"
-  >
-    <div @click="e => page = link.page" :aria-label="link['aria-label']">
-      <span>{{ link.content }}</span>
-      <cdr-icon :use="link.iconPath" :class="link.iconClass" />
-    </div>
+  <!-- Next -->
+  <template slot="nextLink" slot-scope="nextLink">
+    <p
+      v-bind="nextLink.attrs"
+      @click="nextLink.click"
+    >
+      {{ nextLink.content }}
+      <component
+        :is="nextLink.iconComponent"
+        :class="nextLink.iconClass"
+      />
+    </p>
   </template>
 </cdr-pagination>
 ```
 </cdr-doc-example-code-pair>
 
-## Pagination @ XS
+## Pagination @ xs
 
-At the XS breakpoint, pagination adapts to a Select component using the native UI dropdown menu.
+At the xs breakpoint, pagination adapts to a Select component using the native UI dropdown menu.
 
 <img :src="$withBase('/pagination/pagination_breakpoint_xs_2x.png')" alt="Image showing responsive pagination component using Select element" />
 
@@ -222,11 +261,9 @@ This component has compliance WCAG guidelines by:
 - [WCAG 2.4.7](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#qr-navigation-mechanisms-focus-visible): Focus is visible
 - [WCAG 2.5.5](https://www.w3.org/WAI/WCAG21/Understanding/target-size.html): Target size for pagination links are large enough for users to easily activate them
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="Guidelines">
-<cdr-doc-table-of-contents-shell>
+# Guidelines
 
 ## Use When
 - Providing navigation to break apart large quantities of content
@@ -272,12 +309,9 @@ Use pagination logic to truncate link list, when possible.
 
 Pagination adapts to a Select component with a native UI dropdown menu on XS breakpoints to provide a mobile-friendly experience.
 
+<hr>
 
-</cdr-doc-table-of-contents-shell>
-</template>
-
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
+# API
 
 ## Props
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
@@ -294,51 +328,72 @@ Pagination adapts to a Select component with a native UI dropdown menu on XS bre
 
 The **CdrPagination** component provides a current page number control and renders a list of links. The current page value should be bound using `v-model` in your app.
 
-You will need to enable navigation manually for pagination to work at mobile widths (see below).
+The **CdrPagination** component does not make data calls, render or track paginated data, or handle routing beyond simple anchor links. However, it does emit events if you need to customize routing or need to add additional application logic.
 
-The **CdrPagination** component does not make data calls, render or track paginated data, or handle routing beyond simple anchor links. However, it does emit events if you need to customize routing or need to add additional application logic. See section below, "Usage with Vue Router".
+## Scoped Slots and vue-router
 
-### Responsive Behavior and Navigation
-
-The responsive behavior for the **CdrPagination** component automatically converts to **CdrSelect** component rather than a list of links. Values for the **CdrSelect** component are the provided page URL.
-
-If not using Vue Router (see "Usage with Vue Router" below) you will need to manually update window location by using the `select-change` event.
+Previous, next, and individual page links can have their template overridden via scoped slots. While this isn't advisable under normal circumstances, it is necessary to make the component work with vue-router. It is similar to the [scoped slot example](#link-scoped-slots) but uses `router-link` with no click event (when paired with a computed prop v-model):
 
 ```vue
-<template>
-  ...
-     <cdr-pagination
-       :pages="pageData"
-       :total-pages="pageData.length"
-       v-model="ex1Page"
-       @select-change="selectNavigate"      
-     />
-  ...
-</template>
+<cdr-pagination
+  :pages="pages"
+  :total-pages="20"
+  v-model="page"
+>
+  <!-- Previous -->
+  <template v-slot:prevLink="prevLink">
+    <router-link
+      v-bind="prevLink.attrs"
+      :to="{ query: { 'page': prevLink.page } }"
+      replace
+    >
+      <component
+        :is="prevLink.iconComponent"
+        :class="prevLink.iconClass"
+      />
+      {{ prevLink.content }}
+    </router-link>
+  </template>
+  <!-- Single Page links -->
+  <template v-slot:link="link">
+    <router-link
+      v-bind="link.attrs"
+      :to="{ query: { 'page': link.page } }"
+      replace
+    >
+      {{ link.page }}
+    </router-link>
+  </template>
+  <!-- Next -->
+  <template v-slot:nextLink="nextLink">
+    <router-link
+      v-bind="nextLink.attrs"
+      :to="{ query: { 'page': nextLink.page } }"
+      replace
+    >
+      {{ nextLink.content }}
+      <component
+        :is="nextLink.iconComponent"
+        :class="nextLink.iconClass"
+      />
+    </router-link>
+  </template>
+</cdr-pagination>
+
+...
 
 <script>
-import { CdrPagination } from '@rei/cedar';
-export default {
-  ...
-  components: {
-     CdrPagination  
-  },
-  data() {
-    Return {
-      ex1Page: 1,
-      pageData: [
-        { page: 1, url: 'https://www.rei.com/search?page=1' },
-        { page: 2, url: 'https://www.rei.com/search?page=2' },
-        { page: 3, url: 'https://www.rei.com/search?page=3' }
-      ]
-    };
-  },
-  methods: {
-    selectNavigate(url, e) {
-      window.location = url;
+...
+computed: {
+  page: {
+    get() {
+      return parseInt(this.$route.query['page'], 10) || 1;
+    },
+    set() {
+      // No need to do anything for the component here
     },
   },
-}
+},
 </script>
 ```
 
@@ -350,10 +405,7 @@ See REI's SEO Confluence page on [pagination](https://confluence.rei.com/display
 
 Note that REI has chosen HTML `<link>` elements instead of HTTP headers. Make sure to use fully qualified absolute URLs in the `<link>` elements instead of relative URLs.
 
-For general recommendations view Google's Search Console page, [Indicating paginated content to Google](https://support.google.com/webmasters/answer/1663744?hl=en).
+For general recommendations, view Google's Search Console page, [Indicating paginated content to Google](https://support.google.com/webmasters/answer/1663744?hl=en).
 
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>

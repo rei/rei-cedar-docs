@@ -109,7 +109,7 @@
                 <div>
                   <cdr-text
                     tag="h3"
-                    modifier="heading-small-static"
+                    modifier="heading-sans-400"
                     class="cdr-mb-space-one-x"
                   >Cedar Sketch UI toolkit</cdr-text>
                   <cdr-link :href="$withBase('/getting-started/as-a-designer/')" modifier="standalone">Download the Sketch library</cdr-link>
@@ -130,7 +130,7 @@
                 <div>
                   <cdr-text
                     tag="h3"
-                    modifier="heading-small-static"
+                    modifier="heading-sans-400"
                     class="cdr-mb-space-one-x"
                   >Vue.js components</cdr-text>
                   <cdr-link href="https://www.npmjs.com/package/@rei/cedar" target="_blank" modifier="standalone">View the NPM repository</cdr-link>
@@ -148,7 +148,7 @@
           <div class="home-card cdr-space-inset-one-x">
             <cdr-text
               tag="h3"
-              modifier="heading-small-static"
+              modifier="heading-sans-400"
               class="cdr-mb-space-one-x"
             >Contribute to Cedar</cdr-text>
             <cdr-text class="cdr-mb-space-one-x">The Cedar team welcomes contributions from the community. Learn how to become a pilot contributor.  </cdr-text>
@@ -159,7 +159,7 @@
           <div class="home-card cdr-space-inset-one-x">
             <cdr-text
               tag="h3"
-              modifier="heading-small-static"
+              modifier="heading-sans-400"
               class="cdr-mb-space-one-x"
             >Feedback & support</cdr-text>
             <cdr-text class="cdr-mb-space-one-x">Questions, ideas, or comments? Your feedback can help improve Cedar. </cdr-text>
@@ -221,7 +221,7 @@ export default {
   }
 
   &__description {
-    @include redwood-display-40();
+    @include cdr-text-subheading-sans-400;
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
@@ -229,7 +229,7 @@ export default {
 }
 
 .home-heading {
-  @include cdr-text-heading-700;
+  @include cdr-text-heading-serif-700;
   margin-bottom: $cdr-space-one-x;
 
   @media (max-width: $cdr-breakpoint-md) {
@@ -238,7 +238,9 @@ export default {
 }
 
 .home-subheading {
-  @include redwood-body-40();
+  @include cdr-text-body-400;
+  font-size: 20px;
+  line-height: 32px;
   margin-bottom: $cdr-space-one-x;
 
   @media (max-width: $cdr-breakpoint-md) {

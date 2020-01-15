@@ -9,8 +9,9 @@ $side-navigation-width-sm: $side-navigation-logo-width + 24px;
 
 html,
 body {
+  scroll-behavior: smooth;
   color: $cdr-doc-text-color-primary;
-  font-family: Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $cdr-font-family-sans;
   margin: 0;
   padding: 0;
 }
@@ -42,7 +43,7 @@ body {
     flex: 0 0 $side-navigation-width-sm;
     width: $side-navigation-width-sm;
   }
-  
+
   .cdr-doc-side-navigation {
     width: $side-navigation-width-sm;
   }
@@ -67,7 +68,7 @@ body {
 }
 
 .header-anchor {
-  @include cdr-text-heading-500;
+  @include cdr-text-heading-sans-500;
   color: 	$cdr-color-text-link-lightmode;
   text-decoration: none;
 }
@@ -131,9 +132,9 @@ div[class^='language-'] {
   }
 
   // Prism overrides
-  .token { 
+  .token {
     &.string,
-    &.boolean,     
+    &.boolean,
     &.property,
     .tag {
         color: #2574A9;
@@ -235,7 +236,7 @@ div[class^='language-'] {
 // Colors page styles
 .cdr-doc-colors-intro {
   display: flex;
-} 
+}
 
 .cdr-doc-colors-intro__image {
   max-width: 100%;
@@ -246,8 +247,8 @@ div[class^='language-'] {
   margin-right: $cdr-space-four-x;
 }
 
-/* 
-Generic Styling, for Desktops/Laptops  this is for markdown table display, this will need to be refactored to ensure it does not style cdr-tables 
+/*
+Generic Styling, for Desktops/Laptops  this is for markdown table display, this will need to be refactored to ensure it does not style cdr-tables
 */
 
 table {
@@ -282,5 +283,25 @@ th {
 .table-vertical-align {
   td {
     vertical-align: top;
+  }
+}
+
+.back-to-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: rgba(0,0,0,0);
+  color: rgba(0,0,0,0);
+  transition: opacity 200ms;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  opacity: 0;
+  z-index: -1;
+
+  &.back-to-top-btn-show {
+    display: block;
+    z-index: 999;
+    opacity: 1;
   }
 }

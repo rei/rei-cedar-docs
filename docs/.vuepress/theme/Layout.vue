@@ -7,15 +7,11 @@
     <div class="cdr-doc-page-shell">
       <div class="cdr-doc-page-shell__side-navigation">
         <div class="cdr-doc-side-navigation">
-          <Navbar v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar"/>
+          <Navbar v-if="shouldShowNavbar" />
         </div>
       </div>
       <div class="cdr-doc-page-shell__body">
-        <div class="sidebar-mask" @click="toggleSidebar(false)"></div>
-<!--         <Sidebar :items="sidebarItems" @toggle-sidebar="toggleSidebar">
-          <slot name="sidebar-top" slot="top"/>
-          <slot name="sidebar-bottom" slot="bottom"/>
-        </Sidebar> -->
+
         <div class="custom-layout" v-if="$page.frontmatter.layout_type">
           <component :is="$page.frontmatter.layout_type"/>
         </div>
@@ -26,6 +22,7 @@
         </Page>
       </div>
     </div>
+    <back-to-top-btn @click="scrollToTop" />
   </div>
 </template>
 
@@ -33,6 +30,7 @@
 import Vue from 'vue'
 import nprogress from 'nprogress'
 import iconSprite from '@rei/cedar-icons/dist/all-icons.svg';
+import BackToTopBtn from './BackToTop.js';
 import Home from './Home.vue'
 import Navbar from './Navbar.vue'
 import Page from './Page.vue'
@@ -40,7 +38,7 @@ import Sidebar from './Sidebar.vue'
 import { pathToComponentName } from '@app/util'
 import { resolveSidebarItems } from './util'
 export default {
-  components: { Home, Page, Sidebar, Navbar },
+  components: { Home, Page, Sidebar, Navbar, BackToTopBtn },
   data () {
     return {
       isSidebarOpen: false,
@@ -131,6 +129,9 @@ export default {
   },
 
   methods: {
+    scrollToTop() {
+      window.scrollTo(0, 0);
+    },
     updateMeta() {
       document.title = this.$title
       document.documentElement.lang = this.$lang

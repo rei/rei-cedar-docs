@@ -20,14 +20,14 @@
   "list1": [
     {
       "type": "do",
-      "image": "lists/lists_grammar_do__4-3.png",
+      "image": "lists/lists_link_do_4-3.png",
       "ratio": "4-3",
       "alt": "",
       "caption": "link independent clauses and product details."
     },
     {
       "type": "dont",
-      "image": "lists/lists_grammar_dont__4-3.png",
+      "image": "lists/lists_link_dont_4-3.png",
       "ratio": "4-3",
       "alt": "",
       "caption": "link unrelated items together."
@@ -36,15 +36,15 @@
   "list2": [
     {
       "type": "do",
-      "image": "lists/lists_punctuation_do_3-4.png",
-      "ratio": "3-4",
+      "image": "lists/lists_punctuation_do_4-3.png",
+      "ratio": "4-3",
       "alt": "",
       "caption": "end each sentence with a period except last sentence."
     },
     {
       "type": "dont",
-      "image": "lists/lists_punctuation_dont_3-4.png",
-      "ratio": "3-4",
+      "image": "lists/lists_punctuation_dont_4-3.png",
+      "ratio": "4-3",
       "alt": "",
       "caption": "add terminal punctuation."
     }
@@ -88,9 +88,9 @@
 }
 ---
 
-<cdr-doc-tabs>
-<template slot="Overview">
+
 <cdr-doc-table-of-contents-shell>
+# Overview
 
 ## Bare
 
@@ -139,7 +139,6 @@ Collect related items with numeric order or sequence. Numbering starts at 1 with
 
 <cdr-doc-example-code-pair :codeMaxHeight="false" repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
 
-
 ```html
   <cdr-list tag="ol" modifier="ordered">
     <li>Default list item 1</li>
@@ -156,10 +155,9 @@ Collect related items with numeric order or sequence. Numbering starts at 1 with
 
 ## Compact
 
-Compact modifier can be added to any cdr-list in order to reduce the margin between list items
+Compact modifier can be added to any `cdr-list` in order to reduce the margin between list items.
 
 <cdr-doc-example-code-pair repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" >
-
 
 ```html
   <cdr-list modifier="compact unordered">
@@ -181,8 +179,6 @@ Display items horizontally with no divider.
 
 <cdr-doc-example-code-pair :codeMaxHeight="false" repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
 
-<template slot="Default">
-
 ```html
   <cdr-list modifier="inline">
     <li>Default list item 1</li>
@@ -190,19 +186,6 @@ Display items horizontally with no divider.
     <li>Default list item 3</li>
   </cdr-list>
 ```
-</template>
-
-<template slot="compact">
-
-```html
-  <cdr-list modifier="inline compact">
-    <li>Compact list item 1</li>
-    <li>Compact list item 2</li>
-    <li>Compact list item 3</li>
-  </cdr-list>
-```
-
-</template>
 
 </cdr-doc-example-code-pair>
 
@@ -212,8 +195,6 @@ Display items horizontally, separated by a bullet character.
 
 <cdr-doc-example-code-pair :codeMaxHeight="false" repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
 
-<template slot="Default">
-
 ```html
   <cdr-list modifier="inline unordered">
     <li>Default list item 1</li>
@@ -221,19 +202,6 @@ Display items horizontally, separated by a bullet character.
     <li>Default list item 3</li>
   </cdr-list>
 ```
-</template>
-
-<template slot="compact">
-
-```html
-  <cdr-list modifier="inline compact unordered">
-    <li>Compact list item 1</li>
-    <li>Compact list item 2</li>
-    <li>Compact list item 3</li>
-  </cdr-list>
-```
-
-</template>
 
 </cdr-doc-example-code-pair>
 
@@ -263,27 +231,23 @@ This component has compliance with WCAG guidelines by:
 
 - Providing ability to create structured lists. Lists are easier to navigate than simple tables
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="Guidelines">
-<cdr-doc-table-of-contents-shell>
+# Guidelines
 
 ## Use When
 
 - Displaying groups of related items represented by text
 
-## Don't’t Use When
+## Don't Use When
 
 - Displaying content that is not primarily text
 - Displaying content with two or more well-defined dimensions. Instead, use [Data Tables](../data-tables/)
 
 ## The Basics
 
-- Vary list item font size
+- Lists can inherit cdr-text modifiers to make any text a list
 - Follow spacing requirements found on [Typography](../../foundation/typography/) and [Spacing](../../foundation/spacing/) pages
-
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/lists/Spec_List_Font_Size_Variations_16-9.png`)" ratio="16-9"/>
 
 ## Content
 
@@ -317,20 +281,22 @@ Every item in a list must:
 ### Do / Don’t
 
 <do-dont :examples="$page.frontmatter.list1" />
+
 <br />
 <do-dont :examples="$page.frontmatter.list2" />
+
 
 ## Resources
 
 WebAIM: [Semantic Structure: Using Lists Correctly](https://webaim.org/techniques/semanticstructure/)
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
+# API
 
 ## Props
+
+This component will bind any attribute that a [native HTML list element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul) accepts.
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props"/>
 
@@ -347,7 +313,7 @@ Visual style and semantic meaning are managed independently by providing:
 
 <br/>
 
-By default the **CdrList** component renders as an unordered and undecorated "bare" list. To use an ordered list pass `<ol>` to the tag property.
+By default the **CdrList** component renders as an unordered and undecorated "bare" list. To use an ordered list, pass `<ol>` to the tag property.
 
 ```html
 <cdr-list tag="ol">
@@ -360,7 +326,7 @@ The **CdrList** component has decoupled the semantic tags `<ul>` and `<ol>` from
 
 <br/>
 
-It is possible to render a semantic ordered list `<ol>` as a visually non styled or bulleted list using the `cdr-list` modifiers. With this decoupling, individual list items can contain a variety of HTML elements, including paragraphs, headings, form elements, and other (nested) lists. Ensure that content is structured and follows design guidelines.
+It is possible to render a semantic ordered list `<ol>` as a visually non-styled or bulleted list using the `cdr-list` modifiers. With this decoupling, individual list items can contain a variety of HTML elements, including paragraphs, headings, form elements, and other (nested) lists. Ensure that content is structured and follows design guidelines.
 
 ### Tag Variants
 
@@ -387,7 +353,7 @@ Following are different types of lists:
 ```
 
 - Bare or unstyled lists:
-  - Can contain a variety of HTML elements, including paragraphs, headings, form elements, and other (nested) lists
+  - Contains a variety of HTML elements, including paragraphs, headings, form elements, and other (nested) lists
 
 ### Modifiers
 
@@ -402,6 +368,3 @@ Note that the tag itself does not determine display, a modifier must be added fo
 
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>

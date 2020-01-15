@@ -6,7 +6,7 @@
         <component
           :is="`h${level}`"
           class="utility-class-title"
-        >{{ k }}</component>
+        >{{ capitalize(k) }}</component>
         <!-- Recurse -->
         <css-utilities
           :level="level + 1"
@@ -19,7 +19,7 @@
         <component
           :is="`h${level}`"
           class="utility-class-title"
-        >{{ k }}</component>
+        >{{ capitalize(k) }}</component>
         <!-- Table -->
         <table class="utility-table cdr-mb-space-four-x">
           <tbody>
@@ -72,6 +72,9 @@ export default {
       const toTest = Object.keys(o)[0];
       return !Object.prototype.hasOwnProperty.call(o[toTest], 'description');
     },
+    capitalize(string) {
+      return `${string.charAt(0).toUpperCase()}${string.slice(1)}`;
+    }
   }
 }
 </script>
@@ -89,10 +92,6 @@ export default {
   h4 {
     @include cdr-text-display-600();
   }
-}
-
-.utility-class-title {
-  text-transform: capitalize;
 }
 
 .utility-table {

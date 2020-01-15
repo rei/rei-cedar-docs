@@ -47,7 +47,45 @@
     },
   ],
   "sandboxData": {
-    "components": "CdrRow, CdrCol"
+    "components": "CdrRow, CdrCol",
+    "styleTag": ".grid-example-wrap {
+      width: 100%;
+
+      [class^=\"cdr-row\"] {
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 1.6rem;
+          left: 1.6rem;
+          height: 100%;
+          width: 100%;
+          background-color: rgba(130, 234, 255, 0.1);
+
+          @media (max-width: $cdr-breakpoint-md) {
+            top: 0.8rem;
+            left: 0.8rem;
+          }
+        }
+      }
+
+      [class*=\"cdr-row--gutter-xxs\"]::before {
+        top: .2rem;
+        left: .2rem;
+      }
+
+      [class*=\"cdr-row--gutter-none\"]::before {
+        top: 0;
+        left: 0;
+      }
+
+      [class^=\"cdr-col__content\"] {
+        background-color: rgba(130, 234, 255, 0.35);
+        color: rgba(60, 120, 174, 1.0);
+        text-align: center;
+      }
+    }",
   },
   "versions": [
     {
@@ -163,13 +201,13 @@
 }
 ---
 
-<cdr-doc-tabs>
-<template slot="Overview">
+
 <cdr-doc-table-of-contents-shell>
+# Overview
 
 ## Column Layout
 
-Use rows and columns to lay out content by specifying equal-widths for all columns
+Use rows and columns to lay out content by specifying equal widths for all columns.
 
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
@@ -220,7 +258,7 @@ Use rows and columns to lay out content by specifying equal-widths for all colum
 
 ## Justify
 
-Define x-axis alignment and distribute space for all columns per row. Containers may have set widths or may be flexible with max-widths defined. This applies to all columns with left as the default value.
+Define x-axis alignment and distribute space for all columns per row. Containers may have set widths or may be flexible with max widths defined. This applies to all columns with left as the default value.
 
 ### Left
 
@@ -652,7 +690,7 @@ Wrapping columns is the default; however, it is possible to disable or enable co
 
 Controls column width by overriding columns value for a specific column or columns. Span will override values from columns.
 
-### 12 Cols
+### 12 Columns
 
 <cdr-doc-example-code-pair repository-href="/src/components/grid" >
 
@@ -1017,20 +1055,18 @@ To ensure that usage of this component complies with accessibility guidelines:
 This component has compliance with following WCAG guidelines:
 - [WCAG SC 1.3.2: Meaningful Sequence](https://www.w3.org/TR/WCAG20/#content-structure-separation-sequence): Cedar Design System does not provide for Flexbox’s `order` property.  Reverse order or reordering of items is not allowed. Content must be presented in a correct reading sequence to comply with accessibility standards
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="Guidelines">
-<cdr-doc-table-of-contents-shell>
+# Guidelines
 
 ## Use When
 
 - Arranging content and components into rows and columns
 - Laying out a page of 2+ rows of body content (apart from site navigation), some of which may or may not have columns
-- Applying responsive rules to columns of a row and/or regions of a page layout or a container of many components
+- Applying responsive rules to columns of a row and/or regions of a page layout, or a container of many components
 - Arranging elements within a single component with two or more zones, including those aligned to the left or right edge
 
-## Don't’t Use When
+## Don't Use When
 
 - Presenting a multi-row columnar data display, such as features or specs of a product. Instead, use [Data Tables](../data-tables/)
 
@@ -1038,14 +1074,13 @@ This component has compliance with following WCAG guidelines:
 
 Columns, gutters, and margins scales as a fluid system as the device and viewport increases from a small devices to a large device:
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase('/grid/Spec_Grid_Desktop_and_Mobile_4-3.png')" alt="grid concept at desktop and mobile sizes"/>
-<br/>
-<cdr-img class="cdr-doc-article-img" :src="$withBase('/grid/Spec_Grids_Breakpoints_16-9.png')" alt="grid breakpoints"/>
-<br/>
+<cdr-img class="cdr-doc-article-img" :src="$withBase('/grid/Spec_Grid_Desktop_and_Mobile.png')" alt="grid concept at desktop and mobile sizes"/>
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase('/grid/Spec_Grids_Breakpoints.png')" alt="grid breakpoints"/>
 
 ## Anatomy
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase('/grid/Spec_Grids_Gutters_and_Margins_16-9.png')" alt="gutter margins and grids"/>
+<cdr-img class="cdr-doc-article-img" :src="$withBase('/grid/Spec_Grids_Gutters_and_Margins.png')" alt="gutter margins and grids"/>
 
 - Maximum width of 1232px:
   - Allows for padding between grid and browser window
@@ -1123,8 +1158,8 @@ Columns, gutters, and margins scales as a fluid system as the device and viewpor
 
 ## Behavior
 
-- Avoid breaking alignment or slightly oversizing a container to stick out for visual interest or to add emphasis.
-- Create relationships and hierarchy between content elements by using the margins and gutters in the grid shared by the page layout.
+- Avoid breaking alignment or slightly oversizing a container to stick out for visual interest or to add emphasis
+- Create relationships and hierarchy between content elements by using the margins and gutters in the grid shared by the page layout
 
 ## Do/Don't
 
@@ -1145,13 +1180,11 @@ To build an effective responsive grid:
 - Complete and optimize the layout for the widest LG (≥ 1232px) viewport width
 - Inspect responsive displays in between each breakpoint for how content responds across the fluid spectrum
 
-</cdr-doc-table-of-contents-shell>
-</template>
+<hr>
 
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
+# API
 
-Grids are built from two components, **CdrRow** and **CdrCol**.
+Grids are built from two components: **CdrRow** and **CdrCol**.
 
 ## Props
 
@@ -1177,8 +1210,8 @@ Grids are built from two components, **CdrRow** and **CdrCol**.
 
 - Always use **CdrRow** and **CdrCol** together:
     - Attempting to use either without the other will not work
-    - Never include other elements as immediate children of **CdrRow** besides **CdrCol**
-- The grid system is mobile-first, flexbox based, and 12 columns wide. Many props mirror the flexbox API and work as you’d expect CSS flexbox to work.
+    - Never include other elements as immediate children of **CdrRow**, other than **CdrCol**
+- The grid system is mobile-first, flexbox based, and 12 columns wide. Many props mirror the flexbox API and work as you’d expect a CSS flexbox to work.
 
 <br/>
 
@@ -1206,7 +1239,7 @@ Immediate children of `cdr-col` are flexed due to a flex height display bug in s
 Nested grids are made by nesting `cdr-col` and adding the `is-row` prop to the `cdr-col` that acts as the row wrapper:
 
 - Add `is-row` prop to `cdr-col` that has other `cdr-col` as children
-- `is-row` will expose all props for both col and row
+- `is-row` will expose all props for both column and row
 
 
 <cdr-doc-code-snippet :copy-button="false" :max-height="false">
@@ -1220,6 +1253,3 @@ Nested grids are made by nesting `cdr-col` and adding the `is-row` prop to the `
 </cdr-doc-code-snippet>
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>

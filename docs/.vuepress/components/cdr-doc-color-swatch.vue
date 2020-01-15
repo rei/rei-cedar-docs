@@ -27,7 +27,6 @@
 </template>
 
 <script>
-// import tokens from '@rei/cdr-tokens/dist/raw-tokens.json';
 export default {
   name: 'CdrDocColorSwatch',
   props: {
@@ -65,7 +64,7 @@ export default {
   @import '../theme/styles/cdr-doc-tokens.scss';
 
   .cdr-doc-color-swatch {
-    @include redwood-display-20;
+    @include cdr-text-utility-200;
     margin-bottom: $cdr-space-two-x;
   }
 

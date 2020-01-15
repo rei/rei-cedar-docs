@@ -169,11 +169,11 @@
 }
 ---
 
-<cdr-doc-tabs>
-<template slot="Overview">
-<cdr-doc-table-of-contents-shell tab-name="Overview">
 
-## Default
+<cdr-doc-table-of-contents-shell tab-name="Overview">
+# Overview
+
+## Default (Medium)
 
 Basic select control with label.
 
@@ -268,7 +268,7 @@ Select control with link text on right.
 
 ## Select with Icon Above
 
-Select control with icon above input field on right.
+Select control with icon above the input field on right.
 
 
 
@@ -351,12 +351,9 @@ This component has compliance with WCAG guidelines by:
 + Requiring a value for the [ label ] field
 + When hiding a label, the [ aria-label ] attribute is set to the [ label ] value
 
+<hr>
 
-</cdr-doc-table-of-contents-shell>
-</template>
-
-<template slot="Guidelines">
-<cdr-doc-table-of-contents-shell>
+# Guidelines
 
 ## Use When
 
@@ -364,11 +361,11 @@ This component has compliance with WCAG guidelines by:
 + Recommending a default option for most users
 
 
-### Don't Use When
+## Don't Use When
 
 + Viewing or comparing all options is needed. Instead, use [Radio Buttons](https://rei.github.io/rei-cedar-docs/components/radio/)
 + Displaying a limited number of options. Instead, use [Radio Buttons](https://rei.github.io/rei-cedar-docs/components/radio/)
-+ Displaying a yes or no selection. Instead, use [Radio Buttons](https://rei.github.io/rei-cedar-docs/components/radio/)
++ Displaying a "yes" or "no" selection. Instead, use [Radio Buttons](https://rei.github.io/rei-cedar-docs/components/radio/)
 + Turning an option on or off. Instead, use [Checkboxes](https://rei.github.io/rei-cedar-docs/components/checkboxes/)
 + Setting a value is required. Instead, use [Radio Buttons](https://rei.github.io/rei-cedar-docs/components/radio/)
 + Displaying more than 10 options. Instead, use [Inputs](https://rei.github.io/rei-cedar-docs/components/input/)
@@ -377,25 +374,25 @@ This component has compliance with WCAG guidelines by:
 
 ## The Basics
 
-Select and dropdown components tend to look similar, however have differing functionality. While select is used for selecting from a list of options and submitting that data, dropdowns contain links and take users elsewhere. Also, the select appearance is owned by the browser, whereas dropdowns can be styled.
+Select and dropdown components tend to look similar, but have different functionality. While select is used for selecting from a list of options and submitting that data, dropdowns contain links and take users elsewhere. Also, the select appearance is owned by the browser, whereas dropdowns can be styled.
 
 Select components should be:
-+ **Identifiable:** Select fields should indicate that users can change it’s value
++ **Identifiable:** Select fields should indicate that users can change its value
 + **Findable:** It should be easy to find a select field among other elements
 + **Legible:** Select fields indicate their state such as enabled, focused, or disabled
 
 ### Options
 + Define width using CSS styles
-+ Height options are medium and large. These variations can be used for creating media queries for responsive layouts, or to call more or less attention to the component. For an example of medium and large sizes, view [the Overview tab](https://rei.github.io/rei-cedar-docs/components/select/?active-tab=overview)
++ Height options are medium and large. These variations can be used for creating media queries for responsive layouts, or to call more or less attention to the component. For an example of medium and large sizes, visit the [Overview](https://rei.github.io/rei-cedar-docs/components/select#overview) tab
 
 
 ## Content
 
 ### Labels
 
-+ Use concise and consistent labels that describes the meaning of the select field
++ Use concise and consistent labels that describe the meaning of the select field
 + Limit labels to 1–3 words and fewer than 20 characters, including spaces
-+ Use sentence case only. Do not use all caps, title case, or lowercase.
++ Use sentence case only. Do not use all caps, title case, or lowercase
 + Don’t use colons after labels
 
 ### Prompt Text
@@ -415,7 +412,19 @@ Select components should be:
 ### Helper Text
 
 + Use helper text for hints or suggestions
-+ If help text is long or complex, use a tooltip or popover that is opened from the support link on the right above the select field. Note that too much helper text can make a form look and feel difficult to use.
++ Be succinct. Too much helper text can make a form look and feel difficult to use
+
+### Icon
+
+- Use icons to trigger a popover for hints or suggestions
+- Read more about icon guidelines using Cedar [here](https://rei.github.io/rei-cedar-docs/components/icon#guidelines)
+
+### Link Text
+
+- Use a link when moving or navigating to another page or to a different portion of the same page
+- Use if navigating user to long or complex information
+- Read more about links [here](https://rei.github.io/rei-cedar-docs/components/links/)
+
 
 ### Do / Don’t
 
@@ -435,7 +444,7 @@ Select components should be:
 
 ### Required Fields
 
-+ The text, “Required” will appear next to the input label if the status is required
++ The text “Required” will appear next to the input label if the status is required
 
 ### Validation
 
@@ -448,13 +457,11 @@ Select components should be:
 <do-dont :examples="$page.frontmatter.sizes" />
 
 
-</cdr-doc-table-of-contents-shell>
-</template>
-
-<template slot="API">
-<cdr-doc-table-of-contents-shell>
+# API
 
 ## Props
+
+This component will bind any attribute that a [native HTML select element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select) accepts.
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props"/>
 
@@ -491,6 +498,3 @@ The **CdrSelect** component requires `v-model` to bind the selected value to you
 ```
 
 </cdr-doc-table-of-contents-shell>
-</template>
-
-</cdr-doc-tabs>
