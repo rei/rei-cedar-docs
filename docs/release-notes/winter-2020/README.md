@@ -1,6 +1,6 @@
 ---
 {
-  "title": "Winter 2019 Release",
+  "title": "Winter 2020 Release",
   "title_metadata": false,
   "layout_type": "LayoutArticle",
   "summary": false,

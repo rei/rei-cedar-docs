@@ -158,7 +158,7 @@
                 "description": "Modifies the style variant for this component.  Possible values: { ‘hide-figure’ }",
                 "alert": {
                   "type": "deprecated",
-                  "description": "The `compact` modifier is deprecated in the winter 2019 release and will be removed. Use size=\"small\" instead"
+                  "description": "The `compact` modifier is deprecated in the winter 2020 release and will be removed. Use size=\"small\" instead"
                 },
               },
               {
