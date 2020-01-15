@@ -71,7 +71,7 @@ function buildIndexHtml(title) {
 function buildContent(data, model, fontImport) {
   return `
 <template>
-  <div style="margin: 32px;">
+  <div class="example-root">
     ${data.loadSprite ? '<div v-html="svgSprite" style="display: none;"/>' : ''}
     ${data.code}
   </div>
@@ -83,6 +83,7 @@ function buildContent(data, model, fontImport) {
 
 <style lang="scss">
   @import "~@rei/cdr-tokens/dist/scss/cdr-tokens.scss";
+  .example-root { margin: $cdr-space-two-x }
   ${data.styleTag || ''}
 </style>`;
 }
