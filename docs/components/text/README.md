@@ -205,7 +205,7 @@
 
 ## Headings
 
-A heading helps users to identify and create a hierarchical structure within a page. Headings are typically the largest text on the screen and should be short and include important information. Cedar headings include a [serif](#Serif) and a [sans-serif](#Sans) option.
+A heading helps users to identify and create a hierarchical structure within a page. Headings are typically the largest text on the screen and should be short and include important information. Cedar headings include a [serif](#serif) and a [sans-serif](#sans) option.
 
 ### Serif
 
@@ -225,7 +225,7 @@ Serif headings, set in REI Stuart, work best in larger sizes (cdr-text-heading-s
 
 ### Serif Strong
 
-Serif strong headings, set in REI Stuart with a greater font weight than [serif](#Serif), work best in larger sizes (cdr-text-heading-serif-strong-600 and above). It’s recommended to use serif strong headings very minimally throughout the page and should generally be reserved for important page titles, in cases where type overlays an image, or in situations where additional emphasis is needed.
+Serif strong headings, set in REI Stuart with a greater font weight than [serif](#serif), work best in larger sizes (cdr-text-heading-serif-strong-600 and above). It’s recommended to use serif strong headings very minimally throughout the page and should generally be reserved for important page titles, in cases where type overlays an image, or in situations where additional emphasis is needed.
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
@@ -241,7 +241,7 @@ Serif strong headings, set in REI Stuart with a greater font weight than [serif]
 
 ### Sans
 
-Sans headings, set in Graphik, should play a supporting role to serif headings. Sans headings work best in smaller sizes (cdr-text-heading-serif-strong-600 and below). Sans headings are not recommended for page titles or other prominent placements. Instead, use [serif](#Serif) or [serif strong](#Serif Strong) headings.
+Sans headings, set in Graphik, should play a supporting role to serif headings. Sans headings work best in smaller sizes (cdr-text-heading-serif-strong-600 and below). Sans headings are not recommended for page titles or other prominent placements. Instead, use [serif](#serif) or [serif strong](#serif-strong) headings.
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
@@ -260,7 +260,7 @@ Sans headings, set in Graphik, should play a supporting role to serif headings. 
 
 ### Don’t Use When
   - Tagging as a semantic heading when an element only needs to be highlighted or emphasized within your content. Instead, use a sizing modifier for this component
-  - Showcasing long form content. Instead, use [Body](#Body)
+  - Showcasing long form content. Instead, use [Body](#body)
 
 ### The Basics
   - When using this component with semantic headings from `<h1>` to `<h6>`, typographic styles set up a visual hierarchy created within CSS that helps to establish the order of importance
