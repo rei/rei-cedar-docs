@@ -29,7 +29,7 @@ If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade
 
 - Update to `@rei/cedar` ^4.0.0
 - Update to `@rei/febs` ^6.0.0
-- Your package will need to have a build system set up to compile itself, as febs 6.0.0 no longer compiles packages in the `@rei` namespace. See the [@rei/component template](https://github.com/rei/component) for an example of build system, as well as [climber-details-page](https://git.rei.com/projects/FEDPAGES/repos/climber-details-page/browse) and [climbers-site](https://git.rei.com/projects/CLIMB/repos/climbers-site/browse/climbers-site) for a full example of micro-site integration
+- Your package will need to have a build system set up to compile itself, as febs 6.0.0 no longer compiles packages in the `@rei` namespace. See the [@rei/component template](https://github.com/rei/component) for an example of a build system, as well as [climber-details-page](https://git.rei.com/projects/FEDPAGES/repos/climber-details-page/browse) and [climbers-site](https://git.rei.com/projects/CLIMB/repos/climbers-site/browse/climbers-site) for a full example of a micro-site integration
 
 ## New Features
 
@@ -81,8 +81,8 @@ CdrTabs now accepts `centered` as a `modifier` for a center-aligned tab header.
 
 ### CdrBreadcrumb
 
-- Applied focus to the first breadcrumb item when a truncated breadcrumb is expanded in order to support A11Y
-- Re-evaluated truncation logic when breadcrumb items are updated in order to support asynchronous loading
+- Focus is applied to the first breadcrumb item when a truncated breadcrumb is expanded in order to support A11Y
+- Truncation logic is re-evaluated when breadcrumb items are updated in order to support asynchronous loading
 
 ### CdrDataTable
 
