@@ -28,7 +28,7 @@ The doc site is built using [VuePress](https://vuepress.vuejs.org) and is availa
 
 ### Codesandbox Examples
 
-This project will automatically generate Codesandbox.io links for any examples that are passed into `cdr-doc-example-code-pair` as long as you configure them properly. To do this, add a `sandboxData` object to that file's `frontmatter` (note that most examples will only need a name, dependencies, and loadComponentCss set to work properly):
+This project will automatically generate Codesandbox.io links for any examples that are passed into `cdr-doc-example-code-pair` as long as you configure them properly. To do this, add a `sandboxData` object to that file's `frontmatter` (note that most examples will only need a list of `components` set to work properly):
 
 ```
 "sandboxData": {
@@ -39,7 +39,7 @@ This project will automatically generate Codesandbox.io links for any examples t
 
 And pass it into each code example pair on that page: `<cdr-doc-example-code-pair :sandbox-data="$page.frontmatter.sandboxData">`
 
-If your examples make use of CdrIcon, you can pass `:load-sprite="true"` in order to have the sandbox load the `all-icons.svg` file from @rei/cedar-icons. 
+If your examples make use of CdrIcon, you can pass `:load-sprite="true"` in order to have the sandbox load the `all-icons.svg` file from @rei/cedar-icons.
 
 If your examples depend on a `model` being available to the component, you can pass that directly into the object: `<cdr-doc-example-code-pair :sandbox-data="$page.frontmatter.sandboxData" :model="{foo: true}">`
 
