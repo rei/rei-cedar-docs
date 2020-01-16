@@ -81,6 +81,34 @@
       </tbody>
     </table>
 
+    <cdr-text tag="h3" modifier="heading-500" class="cdr-mb-space-one-x">
+      Mobile App Tokens
+    </cdr-text>
+
+    <tokens-typography platform="native" type="header">
+    
+    <cdr-text tag="h4" modifier="heading-400" class="cdr-mb-space-one-x">
+      Headings
+    </cdr-text>
+
+    </tokens-typography>
+
+    <tokens-typography platform="native" type="body">
+    
+    <cdr-text tag="h4" modifier="heading-400" class="cdr-mb-space-one-x">
+      Body
+    </cdr-text>
+
+    </tokens-typography>
+
+    <tokens-typography platform="native" type="button">
+    
+    <cdr-text tag="h4" modifier="heading-400" class="cdr-mb-space-one-x">
+      Buttons
+    </cdr-text>
+
+    </tokens-typography>
+
   </div>
 </template>
 

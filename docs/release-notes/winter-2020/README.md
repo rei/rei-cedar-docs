@@ -17,19 +17,19 @@
 
 ## Update Steps
 
-If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade your project](../summer-2019/)) to the single-package version of Cedar.
+If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade your project](../summer-2019/) to the single-package version of Cedar.
 
 ### For a Micro-Site
 
 - Update to `@rei/cedar` ^4.0.0
 - Update to `@rei/febs` ^6.0.0
-- If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar and febs before updating your micro-site.
+- If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar and febs before updating your micro-site
 
 ### For a Component Package
 
 - Update to `@rei/cedar` ^4.0.0
 - Update to `@rei/febs` ^6.0.0
-- Your package will need to have a build system set up to compile itself, as febs 6.0.0 no longer compiles packages in the `@rei` namespace. See the [@rei/component template](https://github.com/rei/component) for an example build system, as well as [climber-details-page](https://git.rei.com/projects/FEDPAGES/repos/climber-details-page/browse) and [climbers-site](https://git.rei.com/projects/CLIMB/repos/climbers-site/browse/climbers-site) for a full example micro-site integration.
+- Your package will need to have a build system set up to compile itself, as febs 6.0.0 no longer compiles packages in the `@rei` namespace. See the [@rei/component template](https://github.com/rei/component) for an example of a build system, as well as [climber-details-page](https://git.rei.com/projects/FEDPAGES/repos/climber-details-page/browse) and [climbers-site](https://git.rei.com/projects/CLIMB/repos/climbers-site/browse/climbers-site) for a full example of a micro-site integration
 
 ## New Features
 
@@ -51,11 +51,11 @@ If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade
 
 Previously, Cedar offered a single `cedar.css` file that included all of the styling for the Cedar reset, components, and utilities. This made it very easy to set up a Cedar project, but the CSS assets could not be optimized. Now, there are separate CSS files for each element of Cedar.
 
-These CSS files are intended to be compiled by postcss and postcss-import, which will de-dupe any Cedar assets that are required multiple times. If you are using febs^6 then this will already be set up for you. Note that postcss-import should only be run during the final micro-site build, and not as part of any component package build.
+These CSS files are intended to be compiled by postcss and postcss-import, which will de-dupe any Cedar assets that are required multiple times. If you are using febs^6, then this will already be set up for you. Note that postcss-import should only be run during the final micro-site build, and not as a part of any component package build.
 
 ### Single Icon Components
 
-As part of the 3.x.x Cedar release, the Icon SVG assets were moved into their own repository [@rei/cedar-icons](https://github.com/rei/cedar-icons), and deprecated the CdrIconSprite and inline single icon components in @rei/cedar. This was intended to allow teams to build their own SVG sprites containing only the Icons used in their application. However, due to issues with Vue and SVG syntax, this approach did not work well for teams that wanted inline icons in their markup.
+As part of the 3.x.x Cedar release, the Icon SVG assets were moved into their own repository [@rei/cedar-icons](https://github.com/rei/cedar-icons), and CdrIconSprite and inline single icon components in @rei/cedar have been deprecated. This was intended to allow teams to build their own SVG sprites containing only the icons used in their application. However, due to issues with Vue and SVG syntax, this approach did not work well for teams that wanted inline icons in their markup.
 
 To resolve this issue, the [inline single icon components](https://rei.github.io/rei-cedar-docs/components/icon/#inline-icon-components) were left as is as part of @rei/cedar. These components have been updated to use the same SVG assets exported by [@rei/cedar-icons](https://github.com/rei/cedar-icons).
 
@@ -81,8 +81,8 @@ CdrTabs now accepts `centered` as a `modifier` for a center-aligned tab header.
 
 ### CdrBreadcrumb
 
-- Applies focus to the first breadcrumb item when a truncated breadcrumb is expanded in order to support A11Y
-- Re-evaluates truncation logic when breadcrumb items are updated in order to support asynchronous loading
+- Focus is applied to the first breadcrumb item when a truncated breadcrumb is expanded in order to support A11Y
+- Truncation logic is re-evaluated when breadcrumb items are updated in order to support asynchronous loading
 
 ### CdrDataTable
 
@@ -176,7 +176,7 @@ The CdrIconSprite has been removed from Cedar. We recommend that consumers inste
 
 Teams that do want to make use of an icon sprite for performance reasons, can use the [Cedar sprite creator](https://rei.github.io/cedar-icons/#/sprite) to generate an optimized sprite and load it in their HTML.
 
-### CdrPagination Events and Vue-router Support
+### CdrPagination Events and Vue-Router Support
 
 CdrPagination functionality has been simplified and only emits a single `navigate` event. Responsive navigation behavior for Select no longer has to be manually attached. Vue-router example with router-link using scoped slots has been added. Previous and next links are always present (in a "disabled" state when appropriate). Minor style updates for hover and currently selected page.
 
