@@ -57,7 +57,7 @@ These CSS files are intended to be compiled by postcss and postcss-import, which
 
 As part of the 3.x.x Cedar release, the Icon SVG assets were moved into their own repository [@rei/cedar-icons](https://github.com/rei/cedar-icons), and deprecated the CdrIconSprite and inline single icon components in @rei/cedar. This was intended to allow teams to build their own SVG sprites containing only the Icons used in their application. However, due to issues with Vue and SVG syntax, this approach did not work well for teams that wanted inline icons in their markup.
 
-To resolve this issue, the inline single icon components were left as is as part of @rei/cedar. These components have been updated to use the same SVG assets exported by [@rei/cedar-icons](https://github.com/rei/cedar-icons).
+To resolve this issue, the [inline single icon components](https://rei.github.io/rei-cedar-docs/components/icon/#inline-icon-components) were left as is as part of @rei/cedar. These components have been updated to use the same SVG assets exported by [@rei/cedar-icons](https://github.com/rei/cedar-icons).
 
 ### Modal Component
 

@@ -232,7 +232,7 @@ Basic select control with no label.
 
 Select control with link text on right.
 
-<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
+<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrSelect, CdrLink'})" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
 
 ```html
 <cdr-select
@@ -242,7 +242,10 @@ Select control with link text on right.
   :options="defaultOptions"
 >
   <template slot="info">
-    <cdr-link href="#/">
+    <cdr-link
+      href="#/"
+      modifier="standalone"
+    >
       Info Link/Icon
     </cdr-link>
   </template>
@@ -256,7 +259,10 @@ Select control with link text on right.
   disabled
 >
   <template slot="info">
-    <cdr-link href="#/">
+    <cdr-link
+      href="#/"
+      modifier="standalone"
+    >
       Info Link/Icon
     </cdr-link>
   </template>
@@ -272,7 +278,7 @@ Select control with icon above the input field on right.
 
 
 
-<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
+<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrSelect, IconInformationFill'})" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
 
 ```html
 <cdr-select
@@ -282,7 +288,7 @@ Select control with icon above the input field on right.
   :options="defaultOptions"
 >
   <template slot="info">
-    <icon-information-fill />
+    <icon-information-fill size="small" />
   </template>
 </cdr-select>
 <br>
@@ -294,7 +300,7 @@ Select control with icon above the input field on right.
   disabled
 >
   <template slot="info">
-    <icon-information-fill />
+    <icon-information-fill size="small" />
   </template>
 </cdr-select>
 ```

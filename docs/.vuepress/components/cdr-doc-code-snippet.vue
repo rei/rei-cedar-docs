@@ -77,7 +77,7 @@ export default {
       codeHidden: false,
       hideCodeToggleText: 'Hide code',
       sandboxCode: {},
-      repositoryRoot: 'https://github.com/rei/rei-cedar/tree/19.02.1'
+      repositoryRoot: 'https://github.com/rei/rei-cedar/tree/next'
     }
   },
   created: function() {

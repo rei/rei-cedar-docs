@@ -317,7 +317,7 @@ Multiple line input field with expander control in lower right.
 Input field with link text on right.
 
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrLink'})" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
@@ -326,7 +326,7 @@ Input field with link text on right.
   placeholder="Placeholder input"
 >
   <template slot="info">
-    <a href="#">Information link</a>
+    <cdr-link href="#" modifier="standalone">Information link</cdr-link>
   </template>
 </cdr-input>
 ```
@@ -347,7 +347,7 @@ Input field with icon above the input field on right.
 >
   <IconInformationFill
     slot="info"
-    class="cdr-button__icon"
+    size="small"
     inherit-color
   />
 </cdr-input>
