@@ -81,8 +81,6 @@
       </tbody>
     </table>
 
-    <hr>
-
     <cdr-text tag="h3" modifier="heading-500" class="cdr-mb-space-one-x">
       Mobile App Tokens
     </cdr-text>
@@ -110,8 +108,6 @@
     </cdr-text>
 
     </tokens-typography>
-
-<hr/>
 
   </div>
 </template>
