@@ -130,8 +130,8 @@ The inline icon components are the recommended method for using Cedar icons in a
 <cdr-doc-example-code-pair repository-href="/src/components/icon" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'IconAccountProfile, IconCamera'})">
 
 ```html
-  <IconAccountProfile />
-  <IconCamera />
+  <icon-account-profile />
+  <icon-camera />
 ```
 
 </cdr-doc-example-code-pair>
