@@ -10,7 +10,7 @@
     }
   ],
   "sandboxData": {
-    "components": "CdrModal"
+    "components": "CdrModal, CdrButton"
   },
   "versions": [
     {
