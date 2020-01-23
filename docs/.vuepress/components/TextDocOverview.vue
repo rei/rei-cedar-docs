@@ -11,7 +11,7 @@
       <table>
         <thead>
           <tr>
-            <th>Example</th>
+            <th>UI toolkit</th>
             <th>Token</th>
             <th>Utility class</th>
             <th>Component Modifier</th>
@@ -43,7 +43,7 @@
     <table>
       <thead>
         <tr>
-          <th>Example</th>
+          <th>UI toolkit</th>
           <th>Token</th>
           <th>Utility class</th>
           <th>Component Modifier</th>
@@ -82,7 +82,7 @@
     </table>
 
     <cdr-text tag="h3" modifier="heading-500" class="cdr-mb-space-one-x">
-      Mobile App Tokens
+      Native Mobile App Tokens
     </cdr-text>
 
     <tokens-typography platform="native" type="header">
