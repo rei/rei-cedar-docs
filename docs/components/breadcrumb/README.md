@@ -316,7 +316,7 @@ Use the ```truncationThreshold``` prop to alter when truncation occurs:
 
 The below image and example code shows using ```truncationThreshold``` to set truncation to occur at 50%.
 
-<cdr-img class="cdr-doc-article-img" alt="Breadcrumb with truncation threshold at 50% and 80%" :src="$withBase(`/breadcrumb/Spec_API___Breadcrumb_Truncated_Threshold_50to80_16-4.png`)" />
+<cdr-img class="cdr-doc-article-img" alt="Breadcrumb with truncation threshold at 50% and 80%" :src="$withBase(`/breadcrumb/Spec_API___Breadcrumb_Truncated_Theshold_50to80_16-4.png`)" />
 
 ```vue
 <cdr-breadcrumb
@@ -332,7 +332,7 @@ Use the ```truncationXSThreshold``` prop to alter when truncation occurs:
 
 The below image and example code shows using ```truncationXSThreshold``` to set truncation to occur at 70%.
 
-<cdr-img class="cdr-doc-article-img" alt="Breadcrumb with truncation XS  threshold at 70%" :src="$withBase(`/breadcrumb/Spec_API___Breadcrumb_Truncated_XSThreshold_70to100_16-4.png`)" />
+<cdr-img class="cdr-doc-article-img" alt="Breadcrumb with truncation XS  threshold at 70%" :src="$withBase(`/breadcrumb/Spec_API___Breadcrumb_Truncated_XSTheshold_70to100_16-4.png`)" />
 
 ```vue
 <cdr-breadcrumb
