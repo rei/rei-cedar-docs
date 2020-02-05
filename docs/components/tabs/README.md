@@ -242,7 +242,7 @@ This component has compliance with WCAG guidelines by:
 - Organizing related content in a single container
 - Flipping between multiple panes or sections
 - Grouping content to display horizontally
-- Content is lengthy and can be broken into discrete parts
+- Content can be broken into discrete parts
 
 ## Don't Use When
 
@@ -252,10 +252,10 @@ This component has compliance with WCAG guidelines by:
 
 ## The Basics
 
-- Never display disabled tab labels
-- Remove tab button if there is no content
+- Keep tabs in the same order, even when some tabs are disabled
 - Keep to no more than 6 tab buttons
 - Never display fewer than 2 tab buttons
+- Avoid changing the order of the tabs often. If your content changes frequently and needs to be selectively displayed, consider adopting a Filter pattern as in Product Display (https://www.rei.com/c/mens-climbing-shoes) 
 
 ## Content
 
@@ -264,6 +264,7 @@ This component has compliance with WCAG guidelines by:
 - Ensure that each tab label is unique
 - Never truncate tab labels
 - Use title caps for tab labels
+- Tab headers can be animated, but tab content should not be
 
 ## Behavior
 
