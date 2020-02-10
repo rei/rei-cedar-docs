@@ -73,6 +73,10 @@ CdrRadio and CdrCheckbox now have a `size` prop with small, medium (default), an
 
 CdrTabs now accepts `centered` as a `modifier` for a center-aligned tab header.
 
+### Icon Library
+
+The Cedar icon library has been updated with new icons. For the complete and searcheable list of Cedar icons, visit the Cedar Icon Library (https://rei.github.io/cedar-icons/#/).
+
 ## Bug Fixes
 
 ### CdrButton
@@ -102,7 +106,7 @@ CdrTabs now accepts `centered` as a `modifier` for a center-aligned tab header.
 
 ### CdrRating
 
-- Resolved issue with CdrRating where it treated the `count` property differently depending on whether it was passed as a string or a number. Now CdrRating will show the review text any time it receives a value for `count`, and will not show any review text if it does not receive a value. No need to make any changes to the application code to support this change.
+Resolved issue with CdrRating where it treated the `count` property differently depending on whether it was passed as a string or a number. Now CdrRating will show the review text any time it receives a value for `count`, and will not show any review text if it does not receive a value. No need to make any changes to the application code to support this change.
 
 ### CdrSelect
 
