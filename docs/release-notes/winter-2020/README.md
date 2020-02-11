@@ -33,6 +33,11 @@ If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade
 
 ## 4.0.2
 
+### Bug Fixes
+
+- Fixed an issue where `CdrSelect` would emit an event twice.
+- Fixed an issue where `event.preventDefault()` didn't work with the `navigate` event from `CdrPagination`. The above `CdrSelect` fix was also applied.
+
 ### Icon Library
 
 The Cedar icon library has been updated with new icons. For the complete and searcheable list of Cedar icons, visit the Cedar Icon Library (https://rei.github.io/cedar-icons/#/). Corresponding icon components have been added.
