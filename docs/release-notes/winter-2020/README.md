@@ -37,6 +37,9 @@ If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade
 
 - Fixed an issue where `CdrSelect` would emit an event twice
 - Fixed an issue where `event.preventDefault()` didn't work with the `navigate` event from `CdrPagination`. The above `CdrSelect` fix was also applied
+- Fixed a build configuration issue that resulted in Cedar CSS being dropped by Webpack when in production mode
+- Updated the `style` path in Cedar to point to the correct file
+- Added responsive `CdrText` modifiers for `heading-serif-strong`
 
 ### Icon Library
 
