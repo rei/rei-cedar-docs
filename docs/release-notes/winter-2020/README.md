@@ -31,6 +31,28 @@ If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade
 - Update to `@rei/febs` ^6.0.0
 - Your package will need to have a build system set up to compile itself, as febs 6.0.0 no longer compiles packages in the `@rei` namespace. See the [@rei/component template](https://github.com/rei/component) for an example of a build system, as well as [climber-details-page](https://git.rei.com/projects/FEDPAGES/repos/climber-details-page/browse) and [climbers-site](https://git.rei.com/projects/CLIMB/repos/climbers-site/browse/climbers-site) for a full example of a micro-site integration
 
+## 4.0.2
+
+### Bug Fixes
+
+- Fixed an issue where `CdrSelect` would emit an event twice
+- Fixed an issue where `event.preventDefault()` didn't work with the `navigate` event from `CdrPagination`. The above `CdrSelect` fix was also applied
+- Fixed a build configuration issue that resulted in Cedar CSS being dropped by Webpack when in production mode
+- Updated the `style` path in Cedar to point to the correct file
+- Added responsive `CdrText` modifiers for `heading-serif-strong`
+
+### Icon Library
+
+The Cedar icon library has been updated with new icons. For the complete and searchable list of Cedar icons, visit the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/). Corresponding icon components have been added.
+
+## 4.0.1
+
+### Bug Fixes
+
+Resolves display issue with rating icons overlapping, modal close button spacing, and removes italics from caption's citation.
+
+## 4.0.0
+
 ## New Features
 
 ### UI Toolkit Update
