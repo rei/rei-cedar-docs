@@ -42,17 +42,18 @@
 ## Deprecations
 
 ### Type Token Mixins
+
 #### Text Tokens
-| Deprecated token/mixin  | Equivalent token/mixin       |
-|-------------------------|------------------------------|
-| cdr-text-utility        | cdr-text-utility-sans        |
-| cdr-text-utility-strong | cdr-text-utility-sans-strong |
+| Deprecated token/mixin   | Equivalent token/mixin       |
+|--------------------------|------------------------------|
+| cdr-text--utility        | cdr-text-utility-sans        |
+| cdr-text--utility-strong | cdr-text-utility-sans-strong |
 
 ### Type Utility classes
-| Deprecated class name   | Equivalent class name        |
-|-------------------------|------------------------------|
-| cdr-text-utility        | cdr-text-utility-sans        |
-| cdr-text-utility-strong | cdr-text-utility-sans-strong |
+| Deprecated class name   | Equivalent class name         |
+|-------------------------|-------------------------------|
+| cdr-text-utility        | cdr-text--utility-sans        |
+| cdr-text-utility-strong | cdr-text--utility-sans-strong |
 
 ## Removals
 
