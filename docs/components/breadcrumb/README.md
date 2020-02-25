@@ -228,10 +228,7 @@ Breadcrumbs provide context and a sense of place. This is especially important o
 
 ## Behavior
 
-- Within a breadcrumb, link styles are adapted:
-  - Ancestor links are displayed as $sys-color-taken-for-granite
-  - Last child link is emphasized as $sys-color-heart-of-darkness
-- Emphasize breadcrumb hover states with the  $sys-color-heart-of-darkness color and an underline
+- Emphasize breadcrumb hover states with an underline
 
 <cdr-img class="cdr-doc-article-img" alt="Breadcrumb hover state is emphasized using link color and underline" :src="$withBase(`/breadcrumb/Spec__Breadcrumb_Long_16-2.png`)" />
 
