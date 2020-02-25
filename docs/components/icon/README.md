@@ -227,7 +227,7 @@ Icons are available in three sizes: small (16px), medium (24px), and large (32px
 
 
 ### Color
-Ensure that icons use the ratio of 4.5:1 contrast between icon color and background color. Follow recommendations in the [Color article](../../foundation/color/) for pairing light and dark color tokens.
+Ensure that icons use the ratio of 4.5:1 contrast between icon color and background color. Follow recommendations in the [Color article](../../foundation/color/) for pairing color tokens.
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/icon/Spec__Icon__Colors.png`)" alt="Cedar icon color options" />
 
