@@ -283,7 +283,7 @@ This component has compliance WCAG guidelines by:
 
 Within pagination, link styles are adapted
 
-- Text links are displayed as $text-color-primary-on-dark
+- Text links are displayed as the primary text color
 - Prev and Next links use the small size for the caret-left and caret-right icons
 
 
