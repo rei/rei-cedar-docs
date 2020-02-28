@@ -2,22 +2,22 @@
   <div class="token-motion-example">
     <div class="animation-controls" v-if="!useGroupAnimate">
       <cdr-button
-        @click="animate = true" 
+        @click="animate = true"
         :icon-only="true"
         v-show="animationPlayState === 'paused'"
       >
-        <cdr-icon 
-          use="#play-fill" 
-          alt="Play animation" 
+        <cdr-icon
+          use="#play-fill"
+          alt="Play animation"
         />
       </cdr-button>
       <cdr-button 
-        @click="animate = false" 
+        @click="animate = false"
         :icon-only="true"
         v-show="animationPlayState === 'running'"
       >
-        <cdr-icon 
-          use="#pause-fill" 
+        <cdr-icon
+          use="#pause-fill"
           alt="Pause animation"
         />
       </cdr-button>

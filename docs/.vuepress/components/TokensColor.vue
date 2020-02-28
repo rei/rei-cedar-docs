@@ -3,17 +3,15 @@
   <slot />
   <table>
     <tbody>
-      <tr
+      <template
         v-for="token in colorTokensByType"
         v-if="token.attributes.deprecated !== true"
       >
-        <td width="64"> <div class="color-example" :style="{backgroundColor: token.value}"/> </td>
-        <td>
-          <cdr-text><b>{{ token.name }}</b></cdr-text>
-          <cdr-text v-if="token.docs.description">{{ token.docs.description }}</cdr-text>
-        </td>
-        <td width="160">{{ token.value }}</td>
-      </tr>
+        <token-type-color
+          :prop="token"
+          description
+        />
+      </template>
     </tbody>
   </table>
 </div>
@@ -21,12 +19,16 @@
 
 <script>
 import tokenData from '@rei/cdr-tokens/dist/json/platform-tokens.json';
+import TokenTypeColor from './TokenTypeColor';
 import groupBy from 'lodash/groupBy';
 import filter from 'lodash/filter';
 import endsWith from 'lodash/endsWith';
 
 export default {
   name: 'TokensColor',
+  components: {
+    TokenTypeColor,
+  },
   props: {
     type: String,
     mode: {
