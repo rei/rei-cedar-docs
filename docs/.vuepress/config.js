@@ -141,6 +141,10 @@ module.exports = {
           { text: "Iconography", link: "/icons/iconography/" }
         ]
       },
+      {
+        text: "Tokens",
+        link: "/tokens/"
+      },
       {text: "Report an Issue", link: 'https://airtable.com/shr3wSPCYQbycVx7i'},
       {text: "Request a Feature", link: 'https://airtable.com/shrcbq9CHthuMO7AC'},
     ]
