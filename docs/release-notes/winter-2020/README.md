@@ -31,6 +31,12 @@ If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade
 - Update to `@rei/febs` ^6.0.0
 - Your package will need to have a build system set up to compile itself, as febs 6.0.0 no longer compiles packages in the `@rei` namespace. See the [@rei/component template](https://github.com/rei/component) for an example of a build system, as well as [climber-details-page](https://git.rei.com/projects/FEDPAGES/repos/climber-details-page/browse) and [climbers-site](https://git.rei.com/projects/CLIMB/repos/climbers-site/browse/climbers-site) for a full example of a micro-site integration
 
+## 4.0.3
+
+### Bug Fixes
+- Fixed an issue where `CdrTabs` headers would become un-scrollable if their content overflowed their container when using the `centered` modifier
+- Fixed an issue where `CdrTabs` active tab underline element would overlap improperly with tab content
+
 ## 4.0.2
 
 ### Bug Fixes
