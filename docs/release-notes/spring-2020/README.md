@@ -41,6 +41,26 @@ CdrLink previously supported theming by setting an `on-dark` or `on-light` CSS c
 
 ## Deprecations
 
+#### Text Tokens
+| Deprecated token/mixin   | Equivalent token/mixin       |
+|--------------------------|------------------------------|
+| cdr-text-utility-n00         | cdr-text-utility-sans-n00         |
+| cdr-text-utility-strong-n00  | cdr-text-utility-sans-strong-n00  |
+
+### Type Utility classes
+| Deprecated class name   | Equivalent class name         |
+|-------------------------|-------------------------------|
+| cdr-text-utility-n00        | cdr-text--utility-sans-n00         |
+| cdr-text-utility-strong-n00 | cdr-text--utility-sans-strong-n00  |
+
+
+### CdrText Modifiers
+| Deprecated class name   | Equivalent class name         |
+|-------------------------|-------------------------------|
+| utility-n00                 | utility-sans-n00                  |
+| utility-strong-n00          | utility-sans-strong-n00 .         |
+
+
 ### Removals
 
 In accordance with our deprecation policy, features that were deprecated in the [Fall 2019 release](https://rei.github.io/rei-cedar-docs/release-notes/fall-2019/#deprecations) have been removed from Cedar.
