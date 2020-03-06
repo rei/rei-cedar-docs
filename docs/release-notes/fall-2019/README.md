@@ -47,8 +47,7 @@ A new [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) has been create
 - Allows consumers to pick and choose which icons to include in their sprite sheet rather than being forced to load all of them
 - Cedar no longer has to distribute SVG assets, which simplifies our build process
 - Decreases bundle size as sprite sheets are now loaded inline in the HTML rather than being included in the JavaScript bundle
-
-For more information on updating your icon usage, see the [deprecated icon components](#deprecated-icon-components) section.
+- Consumers can still load the inline icon components from `@rei/cedar`
 
 ### Cedar Component Variables 1.0.0
 
@@ -214,6 +213,8 @@ Vue expects event names to use kebab case and not camel case, so the `tabChange`
 ## Deprecations
 
 Whenever possible and practical, the Cedar team will deprecate features rather than issue outright breaking changes in order to allow teams some time to update their codebases. Features will be removed from the doc site when they are deprecated to ensure that they are no longer used in new code.
+
+NOTE: The deprecated typohraphy tokens and mixins listed below received new mappings as part of the [Winter 2020 Release](https://rei.github.io/rei-cedar-docs/release-notes/winter-2020/#updated-deprecation-mappings)
 
 ### Deprecated Typography/Headings
 
@@ -422,34 +423,6 @@ The utility visibility and accessibility classes have been deprecated and update
 | cdr-sr-only-focusable         | cdr-display-sr-focusable    |
 
 
-### Deprecated Icon Components
-
-With the release of the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/), we are deprecating the "single icon" components (i.e, `IconArrowDown`, `IconCart`, etc.) as well as  `CdrIconSprite`. These components will be removed in a future release.  
-
-If you were using the single icon components, you should update them to use `CdrIcon` and the `use` attribute instead, and follow the instructions below to create and load a sprite sheet.
-
-If you were using CdrIconSprite, you should use the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) to create an SVG file containing all the icons required for your application. You will then need to render that SVG file somewhere in your application. The best place to do this is inline with your root HTML template rather than in the JavaScript.
-
-This ensures that when your app is server-side rendered, the sprite sheet is only rendered one time, rather than being included in both the HTML and the JavaScript files. There are various ways to do this depending on how your application is built, but if you are using the standard REI micro-site architecture built on spring-boot or thymeleaf, you can load the sprite sheet as follows:
-
-1. Create a new template named `resources/templates/icon-sprite.html` and copy your generated SVG file into it:
-
-```
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-  <body>
-    <div th:remove="tag" th:fragment="icon-sprite">
-      <!-- copy paste your generated SVG file here -->
-    </div>
-  </body>
-</html>
-```
-
-2. Render the sprite sheet somewhere in your app (note this needs to be rendered on every page that contains icons):
-
-```
-<div th:remove="tag" th:insert="~{icon-sprite :: icon-sprite}"></div>
-```
 ### Breadcrumb Truncation/SSR
 
 In order to fix an issue with server-side rendering, as well as to simplify the API of [CdrBreadcrumb](../../components/breadcrumb/), we have removed the `truncationThreshold` and `truncationXSThreshold` attributes. Instead, the `truncationEnabled` attr can be used to control whether or not the breadcrumb should be truncated. This change will not break any existing consumers of breadcrumb even if they are using those attributes.
