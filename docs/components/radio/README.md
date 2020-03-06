@@ -155,23 +155,34 @@ Default and standard spacing for radio buttons.
 
 ```html
 <div>
-<cdr-radio
-  name="default-example"
-  custom-value="ex1"
-  v-model="ex"
->Default radio 1</cdr-radio>
-<cdr-radio
-  name="default-example"
-  custom-value="ex2"
-  v-model="ex"
->Default radio 2</cdr-radio>
-<cdr-radio
-  name="default-example"
-  :custom-value="{val:'ex3'}"
-  v-model="ex"
-  disabled
->Default radio 3</cdr-radio>
-<p>selected: {{ex}}</p>
+  <fieldset>
+    <legend id="legend-1">Default Radio Example</legend>
+    <cdr-list aria-labelledby="legend-1" role="radiogroup">
+      <li>
+        <cdr-radio
+          name="default-example"
+          custom-value="ex1"
+          v-model="ex"
+        >Default radio 1</cdr-radio>
+      </li>
+      <li>
+        <cdr-radio
+          name="default-example"
+          custom-value="ex2"
+          v-model="ex"
+        >Default radio 2</cdr-radio>
+      </li>
+      <li>
+        <cdr-radio
+          name="default-example"
+          :custom-value="{val:'ex3'}"
+          v-model="ex"
+          disabled
+        >Default radio 3</cdr-radio>
+      </li>
+    </cdr-list>
+  </fieldset>
+  <p>selected: {{ex}}</p>
 </div>
 ```
 
@@ -185,25 +196,36 @@ Different sizing for radio buttons.
 
 ```html
 <div>
-<cdr-radio
-  size="small"
-  name="size-example"
-  custom-value="ex1"
-  v-model="ex"
->Small radio</cdr-radio>
-<cdr-radio
-  name="size-example"
-  custom-value="ex2"
-  v-model="ex"
->Medium radio</cdr-radio>
-<cdr-radio
-  size="large"
-  name="size-example"
-  :custom-value="{val:'ex3'}"
-  v-model="ex"
-  disabled
->Large radio</cdr-radio>
-<p>selected: {{ex}}</p>
+  <fieldset>
+    <legend id="legend-2">Radio Size Example</legend>
+    <cdr-list aria-labelledby="legend-2" role="radiogroup">
+      <li>
+        <cdr-radio
+          size="small"
+          name="size-example"
+          custom-value="ex1"
+          v-model="ex"
+        >Small radio</cdr-radio>
+      </li>
+      <li>
+        <cdr-radio
+          name="size-example"
+          custom-value="ex2"
+          v-model="ex"
+        >Medium radio</cdr-radio>
+      </li>
+      <li>
+        <cdr-radio
+          size="large"
+          name="size-example"
+          :custom-value="{val:'ex3'}"
+          v-model="ex"
+          disabled
+        >Large radio</cdr-radio>
+      </li>
+    </cdr-list>
+  </fieldset>
+  <p>selected: {{ex}}</p>
 </div>
 ```
 
@@ -217,33 +239,43 @@ Custom styles for radio buttons.
 
 ```html
 <div>
-
-<cdr-radio
-  name="custom-example"
-  custom-value="ex1"
-  v-model="ex"
-  modifier="hide-figure"
-  input-class="no-box"
-  content-class="no-box__content"
->Custom radio 1</cdr-radio>
-<cdr-radio
-  name="custom-example"
-  custom-value="ex2"
-  v-model="ex"
-  modifier="hide-figure"
-  input-class="no-box"
-  content-class="no-box__content"
->Custom radio 2</cdr-radio>
-<cdr-radio
-  name="custom-example"
-  :custom-value="{val:'ex3'}"
-  v-model="ex"
-  modifier="hide-figure"
-  input-class="no-box"
-  content-class="no-box__content"
-  disabled
->Custom radio 3</cdr-radio>
-<p>selected: {{ex}}</p>
+  <fieldset>
+    <legend id="legend-3">Custom Radio Example</legend>
+    <cdr-list aria-labelledby="legend-3" role="radiogroup">
+      <li>
+        <cdr-radio
+          name="custom-example"
+          custom-value="ex1"
+          v-model="ex"
+          modifier="hide-figure"
+          input-class="no-box"
+          content-class="no-box__content"
+        >Custom radio 1</cdr-radio>
+      </li>
+      <li>
+        <cdr-radio
+          name="custom-example"
+          custom-value="ex2"
+          v-model="ex"
+          modifier="hide-figure"
+          input-class="no-box"
+          content-class="no-box__content"
+        >Custom radio 2</cdr-radio>
+      </li>
+      <li>
+        <cdr-radio
+          name="custom-example"
+          :custom-value="{val:'ex3'}"
+          v-model="ex"
+          modifier="hide-figure"
+          input-class="no-box"
+          content-class="no-box__content"
+          disabled
+        >Custom radio 3</cdr-radio>
+      </li>
+    </cdr-list>
+  </fieldset>
+  <p>selected: {{ex}}</p>
 </div>
 ```
 
