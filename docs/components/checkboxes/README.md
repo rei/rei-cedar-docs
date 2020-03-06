@@ -229,7 +229,7 @@ Different sizing for checkboxes.
 
 ## Indeterminate
 
-Displays status for checkbox group by indicating that some of the sub-selections in a list are selected. Provides user with ability to select or unselect all items in the list’s sub-group. To see a functioning example see this [codesandbox](https://codesandbox.io/s/cedar-example-sandbox-rubkk).
+Displays status for checkbox group by indicating that some of the sub-selections in a list are selected. Provides user with ability to select or unselect all items in the list’s sub-group. To see a functioning example see this [codesandbox](https://codesandbox.io/s/cedar-indeterminate-checkbox-rubkk).
 
 <cdr-doc-example-code-pair repository-href="/src/components/checkbox" :sandbox-data="$page.frontmatter.sandboxData" :model="{ex1: false}">
 
@@ -442,7 +442,7 @@ Default checkbox to checked/unchecked state by setting the model in Javascript.
 </script>
 ```
 
-Set the `indeterminate` prop to `true` to generate an indeterminate checkbox, which looks different than the default. This is a visual styling only; it does not include any of the functional aspects of an indeterminate checkbox. To see a functioning example see this [codesandbox](https://codesandbox.io/s/cedar-example-sandbox-rubkk).
+Set the `indeterminate` prop to `true` to generate an indeterminate checkbox, which looks different than the default. This is a visual styling only; it does not include any of the functional aspects of an indeterminate checkbox. To see a functioning example see this [codesandbox](https://codesandbox.io/s/cedar-indeterminate-checkbox-rubkk).
 
 ```vue
 <template>
