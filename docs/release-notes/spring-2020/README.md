@@ -35,6 +35,11 @@ If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade
 
 We have added a new variant to CdrButton that allows you to render an icon-only button that has a background and border in order to make icon-only buttons more visible. See the [CdrButton docs](../../components/buttons/#icon-only-with-background) for more details
 
+### New Utility Classes
+
+Utility classes for foreground and background color are now available. See the  [utilities page](../../components/utilities/#color) for a full list.
+Note that the existing color utility classes have been [deprecated](#color-utility-classes)
+
 ## Bug Fixes
 
 ## Breaking Changes
@@ -45,11 +50,23 @@ CdrLink previously supported theming by setting an `on-dark` or `on-light` CSS c
 
 ### CdrButton OnDark Removed
 
-CdrButton previously accepted a prop named `on-dark` which could be used in conjunction with the `icon-only` prop to render a button with a background. This was intended to be used on dark backgrounds to make the icon button more visible and accessible. Due to the new color scale this feature was not possible to continue supporting as is, and has been replaced with a new [with-background](./#cdrbutton-icon-only-variant) property. 
+CdrButton previously accepted a prop named `on-dark` which could be used in conjunction with the `icon-only` prop to render a button with a background. This was intended to be used on dark backgrounds to make the icon button more visible and accessible. Due to the new color scale this feature was not possible to continue supporting as is, and has been replaced with a new [with-background](./#cdrbutton-icon-only-variant) property.
 
 ## Deprecations
 
-#### Text Tokens
+### Color Utility Classes
+
+<!-- TODO: confirm utility mappings -->
+
+| Deprecated utility   | Equivalent utility       |
+|----------------------|--------------------------|
+| cdr-bg--light        | cdr-color-bg-primary     |
+| cdr-bg--lighter      | cdr-color-bg-primary     |
+| cdr-bg--lightest     | cdr-color-bg-primary     |
+| cdr-bg--dark         | n/a  |
+| cdr-bg--darker       | n/a  |
+
+### Text Tokens
 | Deprecated token/mixin   | Equivalent token/mixin       |
 |--------------------------|------------------------------|
 | cdr-text-utility-n00         | cdr-text-utility-sans-n00         |
@@ -69,7 +86,7 @@ CdrButton previously accepted a prop named `on-dark` which could be used in conj
 | utility-strong-n00          | utility-sans-strong-n00 .         |
 
 
-### Removals
+## Removals
 
 In accordance with our deprecation policy, features that were deprecated in the [Fall 2019 release](../fall-2019/#deprecations) have been removed from Cedar.
 
