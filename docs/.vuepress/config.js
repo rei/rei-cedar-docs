@@ -116,6 +116,7 @@ module.exports = {
           { text: "Buttons", link: "/components/buttons/" },
           { text: "Call to Action", link: "/components/cta/" },
           { text: "Caption", link: "/components/caption/" },
+          { text: "Card", link: "/components/card/" },
           { text: "Checkboxes", link: "/components/checkboxes/" },
           { text: "Data Tables", link: "/components/data-tables/" },
           { text: "Grid", link: "/components/grid/" },
