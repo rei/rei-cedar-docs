@@ -31,6 +31,10 @@ If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade
 
 ## New Features
 
+### CdrRating Medium Size
+
+CdrRating now has size options of small, medium, and large. Medium was previously the default size, but couldn't be reset when used with responsive sizing. Now all options can be used at all breakpoints for responsive sizing.
+
 ## Bug Fixes
 
 ## Breaking Changes
