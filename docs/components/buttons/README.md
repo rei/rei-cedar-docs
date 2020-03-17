@@ -127,13 +127,13 @@
                 "name": "iconOnly",
                 "type": "boolean",
                 "default": "false",
-                "description": "Renders an 'icon-only' button. When this value is true, it will override the size and 'responsiveSize' props."
+                "description": "Renders an 'icon-only' button. When this value is true, it will override the size and 'responsiveSize' props. Can be used in conjunction with 'with-border'"
               },
               {
-                "name": "onDark",
+                "name": "withBorder",
                 "type": "boolean",
                 "default": "false",
-                "description": "Renders an 'icon-only' button with a light fill color for use on dark backgrounds. The 'iconOnly' prop must be true."
+                "description": "Renders an 'icon-only' button with a background color and border. Must be used in conjunction with the 'iconOnly' prop."
               },
               {
                 "name": "modifier",
@@ -257,6 +257,29 @@ Use icons to visually communicate an object or action in a limited space. Includ
         slot="icon"
         class="cdr-button__icon"
         inherit-color
+      />
+    </cdr-button>
+  </div>
+```
+
+</cdr-doc-example-code-pair>
+
+## Icon Only With Border
+
+Use `with-border` property in conjunction with the `icon-only` property to make icon buttons more identifiable. Include alternative text to describe what the button does.
+
+<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrButton, IconAccountProfile'})" >
+
+```html
+  <div>
+    <cdr-button
+      :icon-only="true"
+      :with-border="true"
+      aria-label="More information about icon"
+    >
+      <IconAccountProfile
+        slot="icon"
+        class="cdr-button__icon"
       />
     </cdr-button>
   </div>
@@ -517,16 +540,14 @@ Use the following props to modify `cdr-button`:
 
 - Default slot must be empty. If text is present in default slot, the text will render  
 - `size` prop is disabled when `icon-only` prop is true
-- For the SVG files:
-  - If the `fill` color is dark, assign true to the `on-dark` prop
-  - `on-dark` prop only works if `icon-only` prop is also true
+- `with-border` can be used to add a border and background to the icon-only button, ensuring it is more visible on darker backgrounds
 - Add `aria-label` text to describe the button’s action when clicked or tapped
 
 ```vue{3,4,5}
 <template>
   <cdr-button
     :icon-only="true"
-    :on-dark="true"
+    :with-border="true"
     aria-label="Complete this step"
   >
     <icon-check-lg
