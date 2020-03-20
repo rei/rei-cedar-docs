@@ -56,13 +56,12 @@ CdrButton previously accepted a prop named `on-dark` which could be used in conj
 
 ### Color Utility Classes
 
-<!-- TODO: confirm utility mappings -->
 
 | Deprecated utility   | Equivalent utility       |
 |----------------------|--------------------------|
-| cdr-bg--light        | cdr-color-bg-primary     |
-| cdr-bg--lighter      | cdr-color-bg-primary     |
-| cdr-bg--lightest     | cdr-color-bg-primary     |
+| cdr-bg--light        | cdr-color-background-primary     |
+| cdr-bg--lighter      | cdr-color-background-primary     |
+| cdr-bg--lightest     | cdr-color-background-primary     |
 | cdr-bg--dark         | n/a  |
 | cdr-bg--darker       | n/a  |
 
@@ -83,7 +82,7 @@ CdrButton previously accepted a prop named `on-dark` which could be used in conj
 | Deprecated class name   | Equivalent class name         |
 |-------------------------|-------------------------------|
 | utility-n00                 | utility-sans-n00                  |
-| utility-strong-n00          | utility-sans-strong-n00 .         |
+| utility-strong-n00          | utility-sans-strong-n00          |
 
 
 ## Removals
