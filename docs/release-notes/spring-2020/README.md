@@ -33,7 +33,7 @@ If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade
 
 ### CdrButton Icon-Only Variant
 
-We have added a new variant to CdrButton that allows you to render an icon-only button that has a background and border in order to make icon-only buttons more visible. See the [CdrButton docs](../../components/buttons/#icon-only-with-border) for more details
+We have added a new variant to CdrButton that allows you to render an icon-only button that has a background and border in order to make icon-only buttons more visible. See the [CdrButton docs](../../components/buttons/#icon-only-with-background) for more details
 
 ## Bug Fixes
 
@@ -45,7 +45,7 @@ CdrLink previously supported theming by setting an `on-dark` or `on-light` CSS c
 
 ### CdrButton OnDark Removed
 
-CdrButton previously accepted a prop named `on-dark` which could be used in conjunction with the `icon-only` prop to render a button with a background. This was intended to be used on dark backgrounds to make the icon button more visible and accessible. Due to the new color scale this feature was not possible to continue supporting as is, and has been replaced with a new [with-border](./#cdrbutton-icon-only-variant) property. 
+CdrButton previously accepted a prop named `on-dark` which could be used in conjunction with the `icon-only` prop to render a button with a background. This was intended to be used on dark backgrounds to make the icon button more visible and accessible. Due to the new color scale this feature was not possible to continue supporting as is, and has been replaced with a new [with-background](./#cdrbutton-icon-only-variant) property. 
 
 ## Deprecations
 
