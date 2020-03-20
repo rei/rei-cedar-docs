@@ -31,6 +31,10 @@ If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade
 
 ## New Features
 
+### CdrButton Icon-Only Variant
+
+We have added a new variant to CdrButton that allows you to render an icon-only button that has a background and border in order to make icon-only buttons more visible. See the [CdrButton docs](../../components/buttons/#icon-only-with-background) for more details
+
 ## Bug Fixes
 
 ## Breaking Changes
@@ -38,6 +42,10 @@ If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade
 ### CdrLink Theming Removed
 
 CdrLink previously supported theming by setting an `on-dark` or `on-light` CSS class on a container element. Due to the new color scale this feature was not possible to support in a consistent way and has been removed.
+
+### CdrButton OnDark Removed
+
+CdrButton previously accepted a prop named `on-dark` which could be used in conjunction with the `icon-only` prop to render a button with a background. This was intended to be used on dark backgrounds to make the icon button more visible and accessible. Due to the new color scale this feature was not possible to continue supporting as is, and has been replaced with a new [with-background](./#cdrbutton-icon-only-variant) property. 
 
 ## Deprecations
 
@@ -63,9 +71,9 @@ CdrLink previously supported theming by setting an `on-dark` or `on-light` CSS c
 
 ### Removals
 
-In accordance with our deprecation policy, features that were deprecated in the [Fall 2019 release](https://rei.github.io/rei-cedar-docs/release-notes/fall-2019/#deprecations) have been removed from Cedar.
+In accordance with our deprecation policy, features that were deprecated in the [Fall 2019 release](../fall-2019/#deprecations) have been removed from Cedar.
 
-- The cdr-text modifiers for display, heading-small/medium/large, and subheading, as well as cdr-tokens mixins for `cdr-text-header-n` and `spruce-display` should be updated according to the typography mappings from the [Winter 2020 release](https://rei.github.io/rei-cedar-docs/release-notes/winter-2020/#updated-deprecation-mappings) rather than the ones in the Fall 2019 release notes.
+- The cdr-text modifiers for display, heading-small/medium/large, and subheading, as well as cdr-tokens mixins for `cdr-text-header-n` and `spruce-display` should be updated according to the typography mappings from the [Winter 2020 release](../winter-2020/#updated-deprecation-mappings) rather than the ones in the Fall 2019 release notes.
 - Alignment and display utilities should be re-mapped to their new naming structure
 
 </cdr-doc-table-of-contents-shell>
