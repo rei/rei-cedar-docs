@@ -3,7 +3,7 @@
   "title": "Accordion",
   "layout_type": "LayoutComponent",
   "summary": "Vertically-stacked list that allows users to expand and collapse additional content",
-  "title_metadata": "CdrAccordion",
+  "title_metadata": "CdrAccordion, CdrAccordionGroup",
   "breadcrumbs": [
     {
       "text": "Components/"
@@ -43,7 +43,7 @@
     }
   ],
   "sandboxData": {
-    "components": "CdrAccordion, CdrText"
+    "components": "CdrAccordionGroup, CdrAccordion, CdrText"
   },
   "versions": [
     {
@@ -57,6 +57,12 @@
                 "type": "string",
                 "default": "N/A",
                 "description": "Unique id required."
+              },
+              {
+                "name": "level",
+                "type": "string, number",
+                "default": "N/A",
+                "description": "Set the heading that wraps the button to the appropriate level for the page. This aids in accesibility and navigaiton for keyboard users."
               },
               {
                 "name": "label",
@@ -132,8 +138,10 @@ Section borders expand to full width of container.
 <cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ default1: false, default2: false, default3: false }">
 
 ```vue
+<cdr-accordion-group>
   <cdr-accordion
     id="default-1"
+    level="4"
     :opened="default1"
     @accordion-toggle="default1 = !default1"
   >
@@ -147,6 +155,7 @@ Section borders expand to full width of container.
   </cdr-accordion>
   <cdr-accordion
     id="default-2"
+    level="4"
     :opened="default2"
     @accordion-toggle="default2 = !default2"  
   >
@@ -161,6 +170,7 @@ Section borders expand to full width of container.
   </cdr-accordion>
   <cdr-accordion
     id="default-3"
+    level="4"
     :opened="default3"
     @accordion-toggle="default3 = !default3"
   >
@@ -172,6 +182,7 @@ Section borders expand to full width of container.
         or example, your 2018 dividend earned on 2017 purchases will expire in January 2020.
     </cdr-text>
   </cdr-accordion>
+</cdr-accordion-group>
 ```
 
 </cdr-doc-example-code-pair>
@@ -183,8 +194,10 @@ Reduced spacing around title and content body. Also, smaller font sizes resultin
 <cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ compact1: false, compact2: false, compact3: false }">
 
 ```vue
+<cdr-accordion-group>
   <cdr-accordion
     id="compact-1"
+    level="4"
     :compact="true"
     :opened="compact1"
     @accordion-toggle="compact1 = !compact1"
@@ -199,6 +212,7 @@ Reduced spacing around title and content body. Also, smaller font sizes resultin
   </cdr-accordion>
   <cdr-accordion
     id="compact-2"
+    level="4"
     :compact="true"
     :opened="compact2"
     @accordion-toggle="compact2 = !compact2"
@@ -213,6 +227,7 @@ Reduced spacing around title and content body. Also, smaller font sizes resultin
   </cdr-accordion>
   <cdr-accordion
     id="compact-3"
+    level="4"
     :compact="true"
     :opened="compact3"
     @accordion-toggle="compact3 = !compact3"
@@ -225,6 +240,7 @@ Reduced spacing around title and content body. Also, smaller font sizes resultin
       we'll send you a shipping confirmation email that contains your tracking information. Shipping time is generally 3-5 business days.
     </cdr-text>
   </cdr-accordion>
+</cdr-accordion-group>
 ```
 
 </cdr-doc-example-code-pair>
@@ -236,8 +252,10 @@ Border aligns to the title text and expand/collapse icon.
 <cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ borderAligned1: false, borderAligned2: false, borderAligned3: false }">
 
 ```vue
+<cdr-accordion-group>
   <cdr-accordion
     id="border-aligned-1"
+    level="4"
     :border-aligned="true"
     :opened="borderAligned1"
     @accordion-toggle="borderAligned1 = !borderAligned1"
@@ -253,6 +271,7 @@ Border aligns to the title text and expand/collapse icon.
   </cdr-accordion>
   <cdr-accordion
     id="border-aligned-2"
+    level="4"
     :border-aligned="true"
     :opened="borderAligned2"
     @accordion-toggle="borderAligned2 = !borderAligned2"
@@ -269,6 +288,7 @@ Border aligns to the title text and expand/collapse icon.
   </cdr-accordion>
   <cdr-accordion
     id="border-aligned-3"
+    level="4"
     :border-aligned="true"
     :opened="borderAligned3"
     @accordion-toggle="borderAligned3 = !borderAligned3"
@@ -281,6 +301,7 @@ Border aligns to the title text and expand/collapse icon.
       please call us at 1-800-622-2236 or e-mail us at travel@rei.com.
     </cdr-text>
   </cdr-accordion>
+</cdr-accordion-group>
 ```
 
 </cdr-doc-example-code-pair>
@@ -387,6 +408,7 @@ CdrAccordion emits an event when its button is clicked. Use an event listener to
 <template>
   <cdr-accordion
     id="item"
+    level="3"
     :compact="true"
     :opened="opened"
     @accordion-toggle="opened = !opened"
@@ -410,22 +432,29 @@ export default {
 </script>
 ```
 
-CdrAccordion can also be wired up into groups if, for instance, you wanted to close the other accordions when one is opened.
+### Accordion Groups
+
+Accordion has a complementary wrapping component `CdrAccordionGroup` which should be used when creating a group of accordions. `CdrAccordionGroup` has no API and simply acts to enhance a11y and keyboard interactions for the group.
+
+Creating groups can be useful if, for instance, you wanted to close the other accordions when one is opened.
 
 ```vue
-<cdr-accordion
-  v-for="(item, index) in grouped"
-  :id="item.id"
-  :border-aligned="true"
-  :opened="item.opened"
-  :key="item.id"
-  @accordion-toggle="updateGroup(index)"
->
-  <template slot="label">
-    {{ item.label }}
-  </template>
-  {{ item.content }}
-</cdr-accordion>
+<cdr-accordion-group>
+  <cdr-accordion
+    v-for="(item, index) in grouped"
+    :id="item.id"
+    level="2"
+    :border-aligned="true"
+    :opened="item.opened"
+    :key="item.id"
+    @accordion-toggle="updateGroup(index)"
+  >
+    <template slot="label">
+      {{ item.label }}
+    </template>
+    {{ item.content }}
+  </cdr-accordion>
+</cdr-accordion-group>
 
 <script>
 export default {
