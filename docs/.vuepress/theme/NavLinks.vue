@@ -1,26 +1,27 @@
 <template>
   <nav class="nav-links cdr-doc-nav-links" v-if="userLinks.length || repoLink">
-    <!-- user links -->
-    <cdr-accordion
-      v-if="item.type === 'links'"
-      v-for="(item, index) in userLinks"
-      :key="`${item.text}-${index}`"
-      :id="item.text.replace(' ', '-').toLowerCase()"
-      class="nav-item cdr-accordion-nav"
-      :opened="navGroup[index]"
-      @accordion-toggle="navToggle(index)"
-    >
-      <template slot="label">
-        {{ item.text }}
-      </template>
-      <ul class="nav-dropdown cdr-doc-side-navigation__child-links">
-        <li v-for="navItem in item.items" class="dropdown-item">
-          <nav-link :item="navItem" class="cdr-doc-side-navigation__child-link" />
-        </li>
-      </ul>
-    </cdr-accordion>
-    <NavLink v-else :item="item" class="cdr-doc-side-navigation__parent-link"/>
-    <!-- </div> -->
+    <cdr-accordion-group v-if="groupLinks.length > 0">
+      <!-- user links -->
+      <cdr-accordion
+        v-for="(item, index) in groupLinks"
+        :key="`${item.text}-${index}`"
+        :id="item.text.replace(' ', '-').toLowerCase()"
+        level="2"
+        class="nav-item cdr-accordion-nav"
+        :opened="navGroup[index]"
+        @accordion-toggle="navToggle(index)"
+      >
+        <template slot="label">
+          {{ item.text }}
+        </template>
+        <ul class="nav-dropdown cdr-doc-side-navigation__child-links">
+          <li v-for="navItem in item.items" class="dropdown-item">
+            <nav-link :item="navItem" class="cdr-doc-side-navigation__child-link" />
+          </li>
+        </ul>
+      </cdr-accordion>
+    </cdr-accordion-group>
+    <NavLink v-for="item in singleLinks" :item="item" class="cdr-doc-side-navigation__parent-link"/>
     <!-- repo link -->
     <a v-if="repoLink"
       :href="repoLink"
@@ -90,6 +91,12 @@ export default {
           items: (link.items || []).map(resolveNavLinkItem)
         })
       }))
+    },
+    groupLinks() {
+      return this.userLinks.filter(item => item.type === 'links');
+    },
+    singleLinks() {
+      return this.userLinks.filter(item => item.type === 'link');
     },
     repoLink () {
       const { repo } = this.$site.themeConfig

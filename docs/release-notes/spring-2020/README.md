@@ -35,6 +35,10 @@ If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade
 
 We have added a new variant to CdrButton that allows you to render an icon-only button that has a background and border in order to make icon-only buttons more visible. See the [CdrButton docs](../../components/buttons/#icon-only-with-background) for more details
 
+### CdrAccordionGroup
+
+We have added this wrapper component to better support the accessibility of accordion groups. Simply wrap your existing groups of accordions in this component and keyboard navigation will be taken care of. See the [CdrAccordion docs](../../components/accordion/) for more details and examples
+
 ## Bug Fixes
 
 ### CdrRating Medium Size
@@ -42,6 +46,10 @@ We have added a new variant to CdrButton that allows you to render an icon-only 
 Added missing medium responsive size modifier. Now all options can be used at all breakpoints for responsive sizing. The default size is still medium.
 
 ## Breaking Changes
+
+### CdrAccordion new prop
+
+CdrAccordion has a new required prop: `level`. This prop is required in order to meet WCAG accessibility standards and should be set to the appropriate heading level for the context of your page. See the [CdrAccordion docs](../../components/accordion/) for more details and examples
 
 ### CdrLink Theming Removed
 
