@@ -37,6 +37,10 @@ We have added a new variant to CdrButton that allows you to render an icon-only 
 
 ## Bug Fixes
 
+### CdrRating Medium Size
+
+Added missing medium responsive size modifier. Now all options can be used at all breakpoints for responsive sizing. The default size is still medium.
+
 ## Breaking Changes
 
 ### CdrLink Theming Removed
