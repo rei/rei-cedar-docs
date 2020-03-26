@@ -181,7 +181,7 @@ The below example is cropped using center alignment with the aspect ratio set as
 <cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/image" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
-  <cdr-img
+<cdr-img
   src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg"
   alt="REI employees building trails during a stewardship event"
   ratio="square"
@@ -196,10 +196,10 @@ The below example is cropped using center alignment with the aspect ratio set as
 The below example is cropped using center alignment with the aspect ratio set as square and the radius set as circle.
 
 
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/image" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/image" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
-  <cdr-img
+<cdr-img
   src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg"
   alt="REI employees building trails during a stewardship event"
   ratio="square"
@@ -209,6 +209,21 @@ The below example is cropped using center alignment with the aspect ratio set as
 ```
 
 </cdr-doc-example-code-pair>
+
+### Error Event Handler
+
+CdrImg will bind any event handlers to the `img` element that it wraps. This is intended to support attaching an error handler function in case an image does not load, but can be used for any HTML/JS event. Note that because images are usually not "interactive" elements you should not bind click handlers to them.
+
+<cdr-doc-code-snippet :copy-button="false" :line-numbers="false">
+
+```html
+<cdr-img
+  src=""
+  @error="eventHandler"
+/>
+```
+
+</cdr-doc-code-snippet>
 
 ## Accessibility
 
