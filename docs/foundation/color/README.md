@@ -15,7 +15,7 @@
 
 # Overview
 
-Color is one of the most important attributes of brand expression. The Cedar Design System color palette focuses on a primary color of natural and comforting green, with a suppporting cast of secondary colors that reflects REI's brand expression of colors of nature. These brand colors are reflected through color tokens in our UI and other places.  
+Color is one of the most important attributes of brand expression. The Cedar Design System color palette focuses on a primary color of natural and comforting green, with a supporting set of secondary colors that reflects REI's brand expression of the colors of nature. These brand colors are reflected through color tokens in our UI and other places.  
 
 Color design tokens represent the fundamental decisions of Cedar’s visual language:
   - Stores color specifications using variable names, not hard-coded values such as hex values for color
