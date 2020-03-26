@@ -44,6 +44,10 @@ Note that the existing color utility classes have been [deprecated](#color-utili
 
 We have added this wrapper component to better support the accessibility of accordion groups. Simply wrap your existing groups of accordions in this component and keyboard navigation will be taken care of. See the [CdrAccordion docs](../../components/accordion/) for more details and examples
 
+### CdrImg Event Handlers
+
+We have updated CdrImg to accept event handlers. This is intended to support `onError` event handlers. See the [CdrImg docs](../../components/image/#error-event-handler) for more details and examples
+
 ## Bug Fixes
 
 ### CdrRating Medium Size
