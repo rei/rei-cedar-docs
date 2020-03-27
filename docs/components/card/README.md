@@ -10,7 +10,7 @@
     }
   ],
   "sandboxData": {
-    "components": "CdrCard"
+    "components": "CdrCard, CdrText, CdrRating, CdrImg"
   },
   "versions": [
     {
@@ -40,8 +40,30 @@
 :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
-<cdr-card>
-  TODO: Card Content
+<cdr-card class="card-example">
+  <div>
+    <cdr-img
+      alt="card test image alt text"
+      src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg"
+      modifier="responsive"
+    />
+  </div>
+  <div class="cdr-space-inset-one-x">
+    <cdr-text
+      tag="h2"
+      modifier="heading-serif-500"
+    >
+      Complex Card Title
+    </cdr-text>
+    <cdr-rating
+      rating="4.2"
+      count="12"
+      size="small"
+    />
+    <cdr-text modifier="body-300">
+      Card content
+    </cdr-text>
+  </div>
 </cdr-card>
 ```
 </cdr-doc-example-code-pair>
