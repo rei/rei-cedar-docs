@@ -69,7 +69,7 @@ export default {
   }
 
   .cdr-doc-intro__title {
-    @include cdr-text-display-1200; // Headline but larger
+    @include cdr-text-heading-serif-strong-1200; // Headline but larger
     margin: 0;
     padding-bottom: $cdr-space-one-x;
   }
@@ -84,7 +84,7 @@ export default {
   }
 
   .cdr-doc-intro__breadcrumb-link {
-    @include cdr-text-utility-300;
+    @include cdr-text-utility-sans-300;
     color: $text-color-intro;
     margin-right: $cdr-space-half-x;
     margin-bottom: 0;
@@ -96,7 +96,7 @@ export default {
 
   .cdr-doc-intro__title-metadata {
     // @include cdr-text-default-compact;
-    @include cdr-text-utility-200;
+    @include cdr-text-utility-sans-200;
     margin: 0;
     margin-bottom: $cdr-space-half-x;
 

@@ -196,7 +196,7 @@
   }
 
   .cdr-doc-html-example-list__item-label {
-    @include cdr-text-utility-100;
+    @include cdr-text-utility-sans-100;
     bottom: $cdr-space-half-x;
     position: absolute;
     right: $cdr-space-half-x;
@@ -214,7 +214,7 @@
   }
 
   .cdr-doc-item-background-toggle__button {
-    @include cdr-text-utility-200;
+    @include cdr-text-utility-sans-200;
     background-color: $cdr-color-background-lightest;
     border: solid 1px $holy-smoke;
     border-right-width: 0;

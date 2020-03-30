@@ -44,7 +44,7 @@ export default {
   $icon-color: $holy-smoke;
 
   .rei-doc-alert {
-    @include cdr-text-utility-200;
+    @include cdr-text-utility-sans-200;
     align-items: center;
     border: solid 1px $border-color;
     border-radius: $cdr-radius-soft;
