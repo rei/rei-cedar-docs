@@ -11,7 +11,7 @@
       <cdr-text><b>{{ k }}</b> (mixin)</cdr-text>
       <!-- <cdr-text class="cdr-mb-space-one-x">{{descriptionData[k]}}</cdr-text> -->
 
-      <table>
+      <cdr-table>
         <tbody>
           <tr v-for="token in v">
             <td>
@@ -20,7 +20,7 @@
             <td>{{ token.value }}</td>
           </tr>
         </tbody>
-      </table>
+      </cdr-table>
     </div>
     </template>
 
@@ -36,7 +36,7 @@
       <cdr-text><b>iOS:</b> {{ v[0].docs.ios }}</cdr-text>
       <cdr-text class="cdr-mb-space-one-x">{{v[0].docs.description}}.</cdr-text>
 
-      <table>
+      <cdr-table>
         <tbody>
           <tr v-for="token in v">
             <td>
@@ -45,7 +45,7 @@
             <td>{{ token.value }}</td>
           </tr>
         </tbody>
-      </table>
+      </cdr-table>
     </div>
     </template>
     

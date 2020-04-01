@@ -90,8 +90,8 @@ The naming structure for component variables and mixins is as follows:
   - **State:** Describes the interactive state that this variable is applied to. These correspond to CSS selectors such as `:focus`, `:active`, `:hover`, `:disabled`, etc.
 
 ### Examples
-<table>
-  <tbody>
+<cdr-table>
+  <thead>
     <tr>
       <th width=240>
         Namespace
@@ -112,6 +112,8 @@ The naming structure for component variables and mixins is as follows:
         State
       </th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td>cdr-</td>
       <td>button-</td>
@@ -153,7 +155,7 @@ The naming structure for component variables and mixins is as follows:
       <td></td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 

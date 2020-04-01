@@ -1,5 +1,5 @@
 <template>
-  <table class="a-t-example">
+  <cdr-table class="a-t-example">
     <tbody>
       <tr class="a-t-example__primary">
         <td>text-color-primary-on-dark</td>
@@ -12,7 +12,7 @@
         <td>AAA 6.11:1</td>
       </tr>
     </tbody>
-  </table>
+  </cdr-table>
 </template>
 
 <script>

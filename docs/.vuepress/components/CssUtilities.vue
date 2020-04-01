@@ -21,7 +21,7 @@
           class="utility-class-title"
         >{{ capitalize(k) }}</component>
         <!-- Table -->
-        <table class="utility-table cdr-mb-space-four-x">
+        <cdr-table striped class="cdr-mb-space-four-x">
           <tbody>
             <tr v-for="(data, name) in v">
               <td>
@@ -33,7 +33,7 @@
               </td>
             </tr>
           </tbody>
-        </table>
+        </cdr-table>
       </template>
     </template>
   </div>

@@ -132,7 +132,7 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
 #### cdr-color-background-lightest
 (Values for cdr-color-background-lightest: #ffffff or r255 g255 b255)
 
-<table>
+<cdr-table striped>
   <tbody>
     <tr>
       <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_lightest_primary_4-3.png`)"/> </td>
@@ -160,7 +160,7 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
       <td>cdr-color-text-disabled-lightmode <br>Values: #b8b8b8 &nbsp; / &nbsp; r184 g184 b184 <br> When text is disabled </td>      
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 
 <br>
@@ -168,7 +168,7 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
 #### cdr-color-background-lighter
 (Values for cdr-color-background-lighter: #fafafa or r250 g250 b250)
 
-<table>
+<cdr-table striped>
   <tbody>
     <tr>
       <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_lighter_primary_4-3.png`)"/> </td>
@@ -196,14 +196,14 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
       <td>cdr-color-text-disabled-lightmode <br>Values: #b8b8b8 &nbsp; / &nbsp; r184 g184 b184 <br> When text is disabled </td>   
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 
 #### cdr-color-background-light
 (Values for cdr-color-background-light: #f7f7f7 or r247 g247 b247)
 
-<table>
+<cdr-table striped>
   <tbody>
     <tr>
       <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_light_primary_4-3.png`)"/> </td>
@@ -231,7 +231,7 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
       <td>cdr-color-text-disabled-lightmode <br>Values: #b8b8b8 &nbsp; / &nbsp; r184 g184 b184 <br> When text is disabled </td>   
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 
@@ -242,7 +242,7 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
 #### cdr-color-background-dark
 (Values for cdr-color-background-dark: #292929 or r41 g41 b41)
 
-<table>
+<cdr-table striped>
   <tbody>
     <tr>
       <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_dark_primary_4-3.png`)"/> </td>
@@ -270,14 +270,14 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
       <td>cdr-color-text-disabled-darkmode <br>Values: #616161 &nbsp; / &nbsp; r97 g97 b97 <br> When text is disabled </td>   
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 
 #### cdr-color-background-darker
 (Values for cdr-color-background-darker: #1a1a1a or r26 g26 b26)
 
-<table>
+<cdr-table striped>
   <tbody>
     <tr>
       <td> <cdr-img class="cdr-doc-article-img" :src="$withBase(`/color-illustrations/wcag_rating_bkgnd_darker_primary_4-3.png`)"/> </td>
@@ -305,7 +305,7 @@ WCAG color contrast ratios for frequently used Cedar color tokens for text or fo
       <td>cdr-color-text-disabled-darkmode <br>Values: #616161 &nbsp; / &nbsp; r97 g97 b97 <br> When text is disabled </td>   
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 
@@ -350,7 +350,7 @@ The Cedar team welcomes contributions from the digital community at REI. If you 
 ## Grey Colors
 Grey colors support the cohesive use of typography, backgrounds, and borders across the digital ecosystem.
 
-<table>
+<cdr-table>
   <tbody>
     <tr>
       <td colspan=2 height=32 bgcolor="#ffffff"> </td>
@@ -370,11 +370,11 @@ Grey colors support the cohesive use of typography, backgrounds, and borders acr
       </td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 
-<table>
+<cdr-table>
   <tbody>
     <tr>
       <td colspan=2 height=32 bgcolor="#fafafa"> </td>
@@ -396,11 +396,11 @@ Grey colors support the cohesive use of typography, backgrounds, and borders acr
       </td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 
-<table>
+<cdr-table>
   <tbody>
     <tr>
       <td colspan=2 height=32 bgcolor="#f7f7f7"> </td>
@@ -416,11 +416,11 @@ Grey colors support the cohesive use of typography, backgrounds, and borders acr
       </td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 
-<table>
+<cdr-table>
   <tbody>
     <tr>
       <td colspan=2 height=32 bgcolor="#dadada"> </td>
@@ -436,11 +436,11 @@ Grey colors support the cohesive use of typography, backgrounds, and borders acr
       </td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 
-<table>
+<cdr-table>
   <tbody>
     <tr>
       <td colspan=2 height=32 bgcolor="#b8b8b8"> </td>
@@ -460,11 +460,11 @@ Grey colors support the cohesive use of typography, backgrounds, and borders acr
       </td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 
-<table>
+<cdr-table>
   <tbody>
     <tr>
       <td colspan=2 height=32 bgcolor="#999999"> </td>
@@ -484,11 +484,11 @@ Grey colors support the cohesive use of typography, backgrounds, and borders acr
       </td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 
-<table>
+<cdr-table>
   <tbody>
     <tr>
       <td colspan=2 height=32 bgcolor="#7a7a7a"> </td>
@@ -504,11 +504,11 @@ Grey colors support the cohesive use of typography, backgrounds, and borders acr
       </td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 
-<table>
+<cdr-table>
   <tbody>
     <tr>
       <td colspan=2 height=32 bgcolor="#616161"> </td>
@@ -532,11 +532,11 @@ Grey colors support the cohesive use of typography, backgrounds, and borders acr
       </td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 
-<table>
+<cdr-table>
   <tbody>
     <tr>
       <td colspan=2 height=32 bgcolor="#434343"> </td>
@@ -552,11 +552,11 @@ Grey colors support the cohesive use of typography, backgrounds, and borders acr
       </td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 
-<table>
+<cdr-table>
   <tbody>
     <tr>
       <td colspan=2 height=32 bgcolor="#292929"> </td>
@@ -580,11 +580,11 @@ Grey colors support the cohesive use of typography, backgrounds, and borders acr
       </td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 
-<table>
+<cdr-table>
   <tbody>
     <tr>
       <td colspan=2 height=32 bgcolor="#1a1a1a"> </td>
@@ -600,7 +600,7 @@ Grey colors support the cohesive use of typography, backgrounds, and borders acr
       </td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 <hr>
@@ -608,7 +608,7 @@ Grey colors support the cohesive use of typography, backgrounds, and borders acr
 ## Tan Colors
 Tan or brand colors are core to the co-op. They’re often used as backgrounds when an experience calls for a stronger brand impression.
 
-<table>
+<cdr-table>
   <tbody>
     <tr>
       <td colspan=2 height=32 bgcolor="#faf9f5"> </td>
@@ -624,11 +624,11 @@ Tan or brand colors are core to the co-op. They’re often used as backgrounds w
       </td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 
-<table>
+<cdr-table>
   <tbody>
     <tr>
       <td colspan=2 height=32 bgcolor="#f1efe4"> </td>
@@ -644,7 +644,7 @@ Tan or brand colors are core to the co-op. They’re often used as backgrounds w
       </td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 <hr>
@@ -652,7 +652,7 @@ Tan or brand colors are core to the co-op. They’re often used as backgrounds w
 ## Blue Colors
 Blue colors are used in a variety of scenarios such as prompting user actions, communicating informational messaging, and indicating links within body copy.
 
-<table>
+<cdr-table>
   <tbody>
     <tr>
       <td colspan=2 height=32 bgcolor="#5197cd"> </td>
@@ -668,11 +668,11 @@ Blue colors are used in a variety of scenarios such as prompting user actions, c
       </td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 
-<table>
+<cdr-table>
   <tbody>
     <tr>
       <td colspan=2 height=32 bgcolor="#3278ae"> </td>
@@ -688,11 +688,11 @@ Blue colors are used in a variety of scenarios such as prompting user actions, c
       </td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 
-<table>
+<cdr-table>
   <tbody>
     <tr>
       <td colspan=2 height=32 bgcolor="#2b6692"> </td>
@@ -708,11 +708,11 @@ Blue colors are used in a variety of scenarios such as prompting user actions, c
       </td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 
-<table>
+<cdr-table>
   <tbody>
     <tr>
       <td colspan=2 height=32 bgcolor="#1e4e72"> </td>
@@ -728,7 +728,7 @@ Blue colors are used in a variety of scenarios such as prompting user actions, c
       </td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 <hr>
@@ -736,7 +736,7 @@ Blue colors are used in a variety of scenarios such as prompting user actions, c
 ## Green Colors
 Green colors are used in a variety of scenarios such as providing feedback for successful form submission.
 
-<table>
+<cdr-table>
   <tbody>
     <tr>
       <td colspan=2 height=32 bgcolor="#edf7ee"> </td>
@@ -752,11 +752,11 @@ Green colors are used in a variety of scenarios such as providing feedback for s
       </td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 
-<table>
+<cdr-table>
   <tbody>
     <tr>
       <td colspan=2 height=32 bgcolor="#6c9f71"> </td>
@@ -772,11 +772,11 @@ Green colors are used in a variety of scenarios such as providing feedback for s
       </td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 
-<table>
+<cdr-table>
   <tbody>
     <tr>
       <td colspan=2 height=32 bgcolor="#367c3c"> </td>
@@ -792,7 +792,7 @@ Green colors are used in a variety of scenarios such as providing feedback for s
       </td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 <hr>
@@ -800,7 +800,7 @@ Green colors are used in a variety of scenarios such as providing feedback for s
 ## Red Colors
 Red colors are used in a variety of scenarios such as announcing sale items and communicating error messaging.
 
-<table>
+<cdr-table>
   <tbody>
     <tr>
       <td colspan=2 height=32 bgcolor="#e86868"> </td>
@@ -817,11 +817,11 @@ Red colors are used in a variety of scenarios such as announcing sale items and 
       </td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 
-<table>
+<cdr-table>
   <tbody>
     <tr>
       <td colspan=2 height=32 bgcolor="#c83232"> </td>
@@ -837,11 +837,11 @@ Red colors are used in a variety of scenarios such as announcing sale items and 
       </td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 
-<table>
+<cdr-table>
   <tbody>
     <tr>
       <td colspan=2 height=32 bgcolor="#b5292b"> </td>
@@ -857,11 +857,11 @@ Red colors are used in a variety of scenarios such as announcing sale items and 
       </td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 
-<table>
+<cdr-table>
   <tbody>
     <tr>
       <td colspan=2 height=32 bgcolor="#a12024"> </td>
@@ -877,7 +877,7 @@ Red colors are used in a variety of scenarios such as announcing sale items and 
       </td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 <hr>
@@ -885,7 +885,7 @@ Red colors are used in a variety of scenarios such as announcing sale items and 
 ## Yellow Colors
 Yellow colors are used in a variety of scenarios such as providing feedback for warning messages.
 
-<table>
+<cdr-table>
   <tbody>
     <tr>
       <td colspan=2 height=32 bgcolor="#fff5be"> </td>
@@ -901,11 +901,11 @@ Yellow colors are used in a variety of scenarios such as providing feedback for 
       </td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 
-<table>
+<cdr-table>
   <tbody>
     <tr>
       <td colspan=2 height=32 bgcolor="#f8b877"> </td>
@@ -921,11 +921,11 @@ Yellow colors are used in a variety of scenarios such as providing feedback for 
       </td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 
-<table>
+<cdr-table>
   <tbody>
     <tr>
       <td colspan=2 height=32 bgcolor="#c77523"> </td>
@@ -941,7 +941,7 @@ Yellow colors are used in a variety of scenarios such as providing feedback for 
       </td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 <hr>

@@ -236,7 +236,7 @@
     }
 
     /* This is to overrule broad table styles needed for Markdown */
-    table {
+    table:not([class*="cdr-table"]) {
       width: auto;
 
       tr {

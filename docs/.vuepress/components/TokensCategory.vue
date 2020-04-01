@@ -11,7 +11,7 @@
         class="type-title"
       >{{k}}</h4>
 
-      <table
+      <cdr-table
         v-if="otherTokens(v).length > 0"
         class="prop-table"
         data-backstop="capture"
@@ -23,10 +23,10 @@
             :prop="v"
           />
         </tbody>
-      </table>
+      </cdr-table>
 
       <template v-if="Object.keys(mixinTokens(v)).length > 0">
-        <table
+        <cdr-table
           v-for="(v,k) in mixinTokens(v)"
           :key="k"
           class="prop-table mixins"
@@ -42,7 +42,7 @@
               :prop="v"
             />
           </tbody>
-        </table>
+        </cdr-table>
       </template>
     </div>
   </div>
@@ -91,3 +91,13 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+@import '../theme/styles/cdr-tokens.scss';
+
+.prop-table {
+  &+& {
+    margin-top: $cdr-space-one-x;
+  }
+}
+</style>

@@ -1087,7 +1087,7 @@ Columns, gutters, and margins scales as a fluid system as the device and viewpor
   - Utilities are available to manage layout and presentation
   - Stay within max width to match the width of the global navigation
 
-<table>
+<cdr-table striped>
   <tbody>
     <tr>
       <td>XS (Extra Small)</td>
@@ -1114,7 +1114,7 @@ Columns, gutters, and margins scales as a fluid system as the device and viewpor
       <td>32px</td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br/>
 
@@ -1126,7 +1126,7 @@ Columns, gutters, and margins scales as a fluid system as the device and viewpor
 
 - Gutters separate columns with pre-defined padding:
 
-<table>
+<cdr-table striped>
   <tbody>
     <tr>
       <td>XS (Extra Small)</td>
@@ -1149,7 +1149,7 @@ Columns, gutters, and margins scales as a fluid system as the device and viewpor
       <td>32px gutters (16px on left +16px on right)</td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 ## Content
 

@@ -78,7 +78,7 @@ Questions about when to use design tokens? Ask the Cedar team in [#cedar-user-su
 
 ## Token Criteria
 #### Is **“cdr-color-text-primary-lightmode”** a design token?
-<table>
+<cdr-table>
   <tbody>
     <tr>
       <td>Is “cdr-color-text-primary-lightmode” used in several components or layouts?</td>
@@ -96,14 +96,14 @@ Questions about when to use design tokens? Ask the Cedar team in [#cedar-user-su
       <td>Yes </td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 **Result:** All of the criteria are met and so **“cdr-color-text-primary-lightmode”** qualifies as a design token.
 
 <br>
 
 #### Is **“cdr-color-background-button-secondary-disabled”** a design token?
-<table>
+<cdr-table>
   <tbody>
     <tr>
       <td>Is “cdr-color-background-button-secondary-disabled” used in several components or layouts? </td>
@@ -122,14 +122,14 @@ Questions about when to use design tokens? Ask the Cedar team in [#cedar-user-su
       <td><b>No</b></td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 **Result:** The fourth criteria is false, so **“cdr-color-background-button-secondary-disabled”** does not qualify as a design token. Instead, it is considered an UI element variable that is specific to buttons.
 
 <br>
 
 #### Is **“easily-excited”** a design token?
-<table>
+<cdr-table>
   <tbody>
     <tr>
       <td>Is “easily-excited” used in several components or layouts? </td>
@@ -148,7 +148,7 @@ Questions about when to use design tokens? Ask the Cedar team in [#cedar-user-su
       <td><b>Perhaps but it is not used consistently</b></td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 **Result:** Only two criteria are met and so **“easily-excited”** does not qualify as a design token.
 
@@ -181,8 +181,8 @@ Would be nice to use table markdown but alternating row styling is inverted. Hea
  -->
 
 #### cdr-color-text-form-label-lightmode
-<table>
-  <tbody>
+<cdr-table>
+  <thead>
     <tr>
       <th>Category</th>
       <th>Sub-Category</th>
@@ -192,6 +192,8 @@ Would be nice to use table markdown but alternating row styling is inverted. Hea
       <th>Size</th>
       <th>Mode</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td>color-</td>
       <td>text-</td>
@@ -202,11 +204,11 @@ Would be nice to use table markdown but alternating row styling is inverted. Hea
       <td>lightmode</td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 #### cdr-color-background-light
-<table>
-  <tbody>
+<cdr-table>
+  <thead>
     <tr>
       <th>Category</th>
       <th>Sub-Category</th>
@@ -216,6 +218,8 @@ Would be nice to use table markdown but alternating row styling is inverted. Hea
       <th>Size</th>
       <th>Mode</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td>color-</td>
       <td>background-</td>
@@ -226,11 +230,11 @@ Would be nice to use table markdown but alternating row styling is inverted. Hea
       <td></td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 #### cdr-text-heading-serif-800
-<table>
-  <tbody>
+<cdr-table>
+  <thead>
     <tr>
       <th>Category</th>
       <th>Sub-Category</th>
@@ -240,6 +244,8 @@ Would be nice to use table markdown but alternating row styling is inverted. Hea
       <th>Size</th>
       <th>Mode</th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td>text-</td>
       <td></td>
@@ -250,7 +256,7 @@ Would be nice to use table markdown but alternating row styling is inverted. Hea
       <td></td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br>
 <hr/>

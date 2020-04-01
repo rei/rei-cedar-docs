@@ -36,7 +36,7 @@
     "vuepress": "^1.0.3"
   },
   "dependencies": {
-    "@rei/cedar": "^5.0.0-alpha.0",
+    "@rei/cedar": "^5.0.0-alpha.2",
     "throttle-debounce": "^2.1.0"
   },
   "browserslist": [

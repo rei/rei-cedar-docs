@@ -249,29 +249,31 @@ div[class^='language-'] {
 
 /*
 Generic Styling, for Desktops/Laptops  this is for markdown table display, this will need to be refactored to ensure it does not style cdr-tables
+
+TODO: use cdr-table component variables
 */
 
-table {
+table:not([class*="cdr-table"]) {
   width: 100%;
   border-collapse: collapse;
+  /* Zebra striping */
+  
+  tr:nth-of-type(odd) {
+    background: #eee;
+  }
+  
+  th {
+    font-weight: bold;
+  }
+  
+  td,
+  th {
+    padding: 6px;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
 }
 
-/* Zebra striping */
-
-tr:nth-of-type(odd) {
-  background: #eee;
-}
-
-th {
-  font-weight: bold;
-}
-
-td,
-th {
-  padding: 6px;
-  border: 1px solid #ccc;
-  text-align: left;
-}
 
 .table-first-col-align-top {
   tr td:first-child {
@@ -281,7 +283,7 @@ th {
 }
 
 .table-vertical-align {
-  td {
+  tbody {
     vertical-align: top;
   }
 }
