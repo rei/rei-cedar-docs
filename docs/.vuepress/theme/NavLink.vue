@@ -47,21 +47,21 @@ export default {
     text-decoration: none;
 
     &:hover {
-      color: $cdr-color-text-link-lightmode;
+      color: $cdr-color-text-link-hover;
     }
 
     .cdr-doc-side-navigation__child-links & {
       border-top: 0;
       padding: $cdr-space-inset-two-x-squish;
     }
-  
+
     &.router-link-active {
-      color: $cdr-color-text-link-lightmode;
+      color: $cdr-color-text-link-rest;
       position: relative;
 
       &:before {
         content: '';
-        background: $cdr-color-text-link-lightmode;
+        background: $cdr-color-text-link-rest; // ???
         bottom: 0;
         left: 0;
         position: absolute;

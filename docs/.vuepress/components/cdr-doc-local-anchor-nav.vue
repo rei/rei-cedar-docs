@@ -112,7 +112,7 @@ export default {
     }
 
     &:nth-of-type(n+2)::before {
-      color: $cdr-color-text-secondary-darkmode;
+      color: $cdr-color-border-secondary;
       content: '|' !important;
     }
 
