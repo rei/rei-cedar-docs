@@ -19,7 +19,12 @@
     }
   ],
   "sandboxData": {
-    "components": "CdrTable"
+    "components": "CdrTable",
+    "styleTag": ".advanced-table {
+      &__header {
+        background-color: $cdr-color-background-table-header;
+      }
+    }",
   },
   "versions": [
     {
@@ -154,6 +159,81 @@ Alternating light/dark backgrounds.
 
 </cdr-doc-example-code-pair>
 
+## Advanced with custom styles
+
+This is an advanced example with multiple headers and a custom class to change the background color for headers inside `<tbody>`
+
+<cdr-doc-example-code-pair repository-href="/src/components/table" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+<div>
+  <cdr-table class="advanced-table">
+    <caption>Availability of holiday accommodation</caption>
+    <thead>
+      <tr>
+        <td></td>
+        <th id="stud" scope="col">Studio</th>
+        <th id="apt" scope="col"><abbr title="Apartment">Apt</abbr></th>
+        <th id="chal" scope="col">Chalet</th>
+        <th id="villa" scope="col">Villa</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th id="par" colspan="5" scope="colgroup" class="advanced-table__header">Paris</th>
+      </tr>
+      <tr>
+        <th headers="par" id="pbed1" class="advanced-table__header">1 bedroom</th>
+        <td headers="par pbed1 stud">11</td>
+        <td headers="par pbed1 apt">20</td>
+        <td headers="par pbed1 chal">25</td>
+        <td headers="par pbed1 villa">23</td>
+      </tr>
+      <tr>
+        <th headers="par" id="pbed2" class="advanced-table__header">2 bedroom</th>
+        <td headers="par pbed2 stud">-</td>
+        <td headers="par pbed2 apt">43</td>
+        <td headers="par pbed2 chal">52</td>
+        <td headers="par pbed2 villa">32</td>
+      </tr>
+      <tr>
+        <th headers="par" id="pbed3" class="advanced-table__header">3 bedroom</th>
+        <td headers="par pbed3 stud">-</td>
+        <td headers="par pbed3 apt">13</td>
+        <td headers="par pbed3 chal">15</td>
+        <td headers="par pbed3 villa">40</td>
+      </tr>
+      <tr>
+        <th id="rome" colspan="5" scope="colgroup" class="advanced-table__header">Rome</th>
+      </tr>
+      <tr>
+        <th id="rbed1" headers="rome" class="advanced-table__header">1 bedroom</th>
+        <td headers="rome rbed1 stud">13</td>
+        <td headers="rome rbed1 apt">21</td>
+        <td headers="rome rbed1 chal">22</td>
+        <td headers="rome rbed1 villa">3</td>
+      </tr>
+      <tr>
+        <th id="rbed2" headers="rome" class="advanced-table__header">2 bedroom</th>
+        <td headers="rome rbed2 stud">-</td>
+        <td headers="rome rbed2 apt">23</td>
+        <td headers="rome rbed2 chal">43</td>
+        <td headers="rome rbed2 villa">30</td>
+      </tr>
+      <tr>
+          <th id="rbed3" headers="rome" class="advanced-table__header">3 bedroom</th>
+          <td headers="rome rbed3 stud">-</td>
+          <td headers="rome rbed3 apt">16</td>
+          <td headers="rome rbed3 chal">32</td>
+          <td headers="rome rbed3 villa">40</td>
+      </tr>
+    </tbody>
+  </cdr-table>
+</div>
+```
+
+</cdr-doc-example-code-pair>
+
 ## Accessibility
 
 To ensure that usage of this component complies with accessibility guidelines:
@@ -164,7 +244,7 @@ To ensure that usage of this component complies with accessibility guidelines:
 
 This component has compliance with WCAG guidelines by:
 
-- TODO
+- Routing all attributes to the table element
 
 <hr>
 
@@ -190,6 +270,10 @@ This component has compliance with WCAG guidelines by:
 
 ### Markup
 
-While tables can be as simple as `CdrTable > tr > td`, tables should make use of `thead`, `tbody`, and/or `tfoot` for the best user experience and for correct styles. 
+While tables can be as simple as `CdrTable > tr > td`, tables should make use of `thead`, `tbody`, and/or `tfoot` for the best user experience and for correct styles.
+
+### Customizing
+
+CdrTable is a simple wrapper component that provides basic styles that should support the majority of uses. There are cases where you might need to change background colors or add additional borders (see [advanced example](#advanced-with-custom-styles) above). When this is done, tokens for the table colors (background, border, etc.) should be used so your customizations can persist through future cedar updates.
 
 </cdr-doc-table-of-contents-shell>
