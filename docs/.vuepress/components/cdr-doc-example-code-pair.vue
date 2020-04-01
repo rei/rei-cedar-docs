@@ -6,25 +6,25 @@
       <div class="cdr-doc-example-code-pair__item-background-toggle" v-if="backgroundToggle">
         <label
           class="cdr-doc-item-background-toggle__button"
-          :class="{'cdr-doc-item-background-toggle__button--active': backgroundToggleStates[slotLabel] === 'light'}"
+          :class="{'cdr-doc-item-background-toggle__button--active': backgroundToggleStates[slotLabel] === 'primary'}"
         >
           <input
             class="cdr-doc-item-background-toggle__input"
             type="radio"
-            value="light"
+            value="primary"
             v-model="backgroundToggleStates[slotLabel]">
-            Light
+            Primary
         </label>
         <label
           class="cdr-doc-item-background-toggle__button"
-          :class="{'cdr-doc-item-background-toggle__button--active': backgroundToggleStates[slotLabel] === 'dark'}"
+          :class="{'cdr-doc-item-background-toggle__button--active': backgroundToggleStates[slotLabel] === 'secondary'}"
         >
           <input
             class="cdr-doc-item-background-toggle__input"
             type="radio"
-            value="dark"
+            value="secondary"
             v-model="backgroundToggleStates[slotLabel]">
-          Dark
+          Secondary
         </label>
       </div>
       <span
@@ -57,7 +57,7 @@
     props: {
       backgroundToggle: {
         type: Boolean,
-        default: false
+        default: true
       },
       backgroundColors: {
         type: Object,
@@ -232,7 +232,7 @@
 
     &__item-example {
       width: 100%;
-      margin-top: 15px; // prevents full-width components from displaying on top of light/dark toggle
+      margin-top: 15px; // prevents full-width components from displaying on top of background toggle
     }
 
     /* This is to overrule broad table styles needed for Markdown */
@@ -267,12 +267,12 @@
     pointer-events: none; // prevent interaction
   }
 
-  .cdr-doc-example-code-pair__item-background--light {
-    background: $cdr-color-background-lightest;
+  .cdr-doc-example-code-pair__item-background--primary {
+    background: $cdr-color-background-primary;
   }
 
-  .cdr-doc-example-code-pair__item-background--dark {
-    background: $cdr-color-background-dark;
+  .cdr-doc-example-code-pair__item-background--secondary {
+    background: $cdr-color-background-secondary;
   }
 
   .cdr-doc-example-code-pair__code {
@@ -280,14 +280,10 @@
   }
 
   .cdr-doc-example-code-pair__item-label {
-    @include cdr-text-utility-100;
+    @include cdr-text-utility-sans-100;
     bottom: $cdr-space-half-x;
     position: absolute;
     right: $cdr-space-half-x;
-
-    .cdr-doc-example-code-pair__item-background--dark & {
-      color: $cdr-color-text-primary-darkmode;
-    }
   }
 
   .cdr-doc-example-code-pair__item-background-toggle {
@@ -298,7 +294,7 @@
   }
 
   .cdr-doc-item-background-toggle__button {
-    @include cdr-text-utility-200;
+    @include cdr-text-utility-sans-200;
     background-color: $cdr-color-background-lightest;
     border: solid 1px $holy-smoke;
     border-right-width: 0;

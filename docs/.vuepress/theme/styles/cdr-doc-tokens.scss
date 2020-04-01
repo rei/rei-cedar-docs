@@ -1,20 +1,20 @@
-$cdr-doc-color-white: $cdr-color-background-lightest;
+$cdr-doc-color-white: $cdr-color-background-primary;
 
-$cdr-doc-text-color-primary: $cdr-color-text-primary-lightmode;
-$cdr-doc-text-color-secondary: $cdr-color-text-secondary-lightmode;
+$cdr-doc-text-color-primary: $cdr-color-text-primary;
+$cdr-doc-text-color-secondary: $cdr-color-text-secondary;
 $cdr-doc-text-color-code: $quick-fixe;
 
-$cdr-doc-link-color-primary: $cdr-color-text-link-lightmode;
+$cdr-doc-link-color-primary: $cdr-color-text-link-rest;
 
-$cdr-doc-background-color-main-body: $cdr-color-background-lighter;
-$cdr-doc-background-color-default: $cdr-color-background-lightest;
+$cdr-doc-background-color-main-body: $cdr-color-background-primary;
+$cdr-doc-background-color-default: $cdr-color-background-primary;
 
-$cdr-doc-border-separator: solid 1px $partly-cloudy;
+$cdr-doc-border-separator: solid 1px $cdr-color-border-primary;
 $cdr-doc-border-radius-default: 4px;
 
 $cdr-doc-content-max-width: 950px;
 $cdr-doc-long-form-text-max-line-length: 630px;
 $cdr-doc-long-form-text-top-and-bottom-inset-space: 48px; // not a token?
 
+// TODO: roboto? do we have a monospace recommendation?
 $cdr-doc-font-family-mono: 'Roboto Mono', monospace;
-
