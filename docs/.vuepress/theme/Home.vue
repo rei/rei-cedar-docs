@@ -9,7 +9,7 @@
         crop="y-center x-center"
         cover
         alt="hero"/>
-      <div class="hero__container cdr-text-center">
+      <div class="hero__container cdr-align-text-center">
         <cdr-text
           modifier="heading-700 display-900@md display-1100@lg"
           class="cdr-mb-space-one-x"
@@ -56,7 +56,7 @@
 
       <cdr-row cols="1 2@md" class="cdr-mb-space-four-x">
         <cdr-col>
-          <div class="cdr-text-center">
+          <div class="cdr-align-text-center">
             <cdr-img
               class="home-start-image"
               :src="$withBase('home/foundation_icon.png')"
@@ -73,7 +73,7 @@
           </div>
         </cdr-col>
         <cdr-col>
-          <div class="cdr-text-center">
+          <div class="cdr-align-text-center">
             <cdr-img
               class="home-start-image"
               :src="$withBase('home/components_icon.png')"
@@ -99,7 +99,7 @@
       </div>
 
 
-      <h2 class="home-heading cdr-text-center cdr-mb-space-four-x">Resources</h2>
+      <h2 class="home-heading cdr-align-text-center cdr-mb-space-four-x">Resources</h2>
 
       <cdr-row cols="1 2@md" class="cdr-mb-space-four-x">
         <cdr-col>
@@ -214,7 +214,7 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    color: $cdr-color-text-primary-darkmode;
+    color: $cdr-color-text-inverse;
     display: flex;
     flex-direction: column;
     justify-content: center;

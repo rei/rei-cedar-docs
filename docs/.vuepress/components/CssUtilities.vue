@@ -84,13 +84,13 @@ export default {
 
 .utility-wrapper {
   h2 {
-    @include cdr-text-display-1000();
+    @include cdr-text-heading-serif-strong-1000();
   }
   h3 {
-    @include cdr-text-display-800();
+    @include cdr-text-heading-serif-strong-800();
   }
   h4 {
-    @include cdr-text-display-600();
+    @include cdr-text-heading-serif-strong-600();
   }
 }
 

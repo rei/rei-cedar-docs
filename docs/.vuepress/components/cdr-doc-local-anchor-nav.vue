@@ -112,7 +112,7 @@ export default {
     }
 
     &:nth-of-type(n+2)::before {
-      color: $cdr-color-text-secondary-darkmode;
+      color: $cdr-color-border-secondary;
       content: '|' !important;
     }
 
@@ -124,15 +124,15 @@ export default {
     }
   }
   .cdr-doc-local-anchor-nav__link--parent {
-    @include cdr-text-utility-strong-200;
+    @include cdr-text-utility-sans-strong-200;
   }
 
   .cdr-doc-local-anchor-nav__link--child {
-    @include cdr-text-utility-200;
+    @include cdr-text-utility-sans-200;
   }
 
   .cdr-doc-local-anchor-nav__header {
-    @include cdr-text-utility-strong-200;
+    @include cdr-text-utility-sans-strong-200;
     vertical-align: top;
     color: $cdr-doc-text-color-primary;
   }

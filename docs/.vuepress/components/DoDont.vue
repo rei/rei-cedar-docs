@@ -65,7 +65,7 @@ $caution-color: #C77523;
   }
 
   &__caption {
-    @include cdr-text-utility-200;
+    @include cdr-text-utility-sans-200;
 
     &::before {
       content: '';
