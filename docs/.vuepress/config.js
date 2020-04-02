@@ -108,7 +108,6 @@ module.exports = {
       {
         text: "Components",
         items: [
-          { text: "Design Tokens", link: "/components/design-tokens/" },
           { text: "Component Variables", link: "/components/component-variables/" },
           { text: "Utilities", link: "/components/utilities/" },
           { text: "Accordion", link: "/components/accordion/" },
@@ -145,7 +144,10 @@ module.exports = {
       },
       {
         text: "Tokens",
-        link: "/tokens/"
+        items: [
+          { text: "Overview", link: "/tokens/overview/" },
+          { text: "All Tokens", link: "/tokens/all-tokens/" },
+        ]
       },
       {text: "Report an Issue", link: 'https://airtable.com/shr3wSPCYQbycVx7i'},
       {text: "Request a Feature", link: 'https://airtable.com/shrcbq9CHthuMO7AC'},
