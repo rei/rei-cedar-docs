@@ -56,7 +56,11 @@ Added missing medium responsive size modifier. Now all options can be used at al
 
 ## Breaking Changes
 
-### CdrAccordion new prop
+### Unitless JS Tokens For Spacing and Breakpoints
+
+The space (`cdr-space-...`) and breakpoint (`cdr-breakpoint-...`) tokens in the JS distributions of @rei/cdr-tokens have been made "unitless". Those tokens previously had to be manipulated in order to use them effectively in JavaScript, for example by doing: `CdrSpaceOneX.split('px')[0]`. 
+
+### CdrAccordion Level Prop
 
 CdrAccordion has a new required prop: `level`. This prop is required in order to meet WCAG accessibility standards and should be set to the appropriate heading level for the context of your page. See the [CdrAccordion docs](../../components/accordion/) for more details and examples
 
