@@ -59,17 +59,17 @@ The documentation for each component and foundational style includes design guid
 
 ## Dev Tools Comparison Chart
 
-<table class="table-vertical-align">
+<cdr-table class="table-vertical-align">
   <thead>
     <tr>
-      <td></td>
-      <td><b>Features</b></td>
-      <td><b>Requirements of usage</b></td>
+      <th></th>
+      <th><b>Features</b></th>
+      <th><b>Requirements of usage</b></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><b>Design Tokens</b></td>
+      <th><b>Design Tokens</b></th>
       <td>
         <ul>
           <li>Versioned and maintained by the design systems team</li>
@@ -99,7 +99,7 @@ The documentation for each component and foundational style includes design guid
       </td>
     </tr>
     <tr>
-      <td><b>Vue components (recommended)</b></td>
+      <th><b>Vue components (recommended)</b></th>
       <td>
         <ul>
           <li>Versioned and maintained by the design systems team</li>
@@ -138,7 +138,7 @@ The documentation for each component and foundational style includes design guid
       </td>
     </tr>
     <tr>
-      <td><b>Component variables</b></td>
+      <th><b>Component variables</b></th>
       <td>
         <ul>
           <li>Versioned and maintained by the design systems team</li>
@@ -165,7 +165,7 @@ The documentation for each component and foundational style includes design guid
       </td>
     </tr>
     <tr>
-      <td><b>Utility Classes</b></td>
+      <th><b>Utility Classes</b></th>
       <td>
         <ul>
           <li>Non-modularized CSS classes allow you to apply these styles where needed</li>
@@ -191,6 +191,6 @@ The documentation for each component and foundational style includes design guid
       </td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 </cdr-doc-table-of-contents-shell>

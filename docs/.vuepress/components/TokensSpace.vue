@@ -9,7 +9,7 @@
       :name="token.name"
       :is-inset="isInset"
     />
-    <table class="space-token-table">
+    <cdr-table class="space-token-table">
       <tbody>
         <tr>
           <td>
@@ -23,7 +23,7 @@
           <td>{{piece.value}}</td>
         </tr>
       </tbody>
-    </table>
+    </cdr-table>
   </div>
 </div>
 </template>

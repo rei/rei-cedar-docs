@@ -23,7 +23,7 @@
           alt="Pause animation"
         />
       </cdr-button>
-      <table>
+      <cdr-table>
         <tr v-for="token in motionTokensByType[motionType]">
           <td>
             <token-motion-example
@@ -36,14 +36,14 @@
             {{ token.name }}
           </td>
         </tr>
-      </table>
+      </cdr-table>
     </div>
 
     <div
       v-else
       v-for="token in motionTokensByType[motionType]"
     >
-      <table class="motion-token-definition">
+      <cdr-table class="motion-token-definition">
         <tr><td><strong>{{ token.name }}</strong></td></tr>
         <tr><td><token-motion-example :prop="token" /></td></tr>
         <tr>
@@ -52,7 +52,7 @@
             {{ description(token.name) }}
           </td>
         </tr>
-      </table>
+      </cdr-table>
     </div>
   </div>
 </template>

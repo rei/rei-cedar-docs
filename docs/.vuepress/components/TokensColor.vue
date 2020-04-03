@@ -1,7 +1,7 @@
 <template>
 <div v-if="hasContent">
   <slot />
-  <table>
+  <cdr-table>
     <tbody>
       <template
         v-for="token in colorTokensByType"
@@ -13,7 +13,7 @@
         />
       </template>
     </tbody>
-  </table>
+  </cdr-table>
 </div>
 </template>
 

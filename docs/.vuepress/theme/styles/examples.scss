@@ -1,3 +1,4 @@
+// GRID
 // Update frontmatter sandboxData styleTag in components/grid if changing this.
 .grid-example-wrap {
   width: 100%;
@@ -38,6 +39,8 @@
   }
 }
 
+// Radio
+
 .custom-radio-example,
 .custom-checkbox-example {
   .no-box:focus ~ .no-box__content {
@@ -50,5 +53,14 @@
     &::after {
       content: '(checked)';
     }
+  }
+}
+
+// TABLE
+// Update frontmatter sandboxData styleTag in components/grid if changing this.
+
+.advanced-table {
+  &__header {
+    background-color: $cdr-color-background-table-header;
   }
 }

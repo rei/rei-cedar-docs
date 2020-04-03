@@ -131,6 +131,7 @@ module.exports = {
           { text: "Radio Buttons", link: "/components/radio/" },
           { text: "Ratings", link: "/components/rating/" },
           { text: "Select", link: "/components/selects/" },
+          { text: "Table", link: "/components/table/" },
           { text: "Tabs", link: "/components/tabs/" },
           { text: "Text", link: "/components/text/" }
         ]
