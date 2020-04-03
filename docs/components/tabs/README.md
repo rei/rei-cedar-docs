@@ -253,8 +253,8 @@ This component has compliance with WCAG guidelines by:
 ## The Basics
 
 - Keep tabs in the same order, even when some tabs are disabled
-- Keep to no more than 6 tab buttons
-- Never display fewer than 2 tab buttons
+- Keep to no more than 6 tabs
+- Never display fewer than 2 tabs
 - Avoid changing the order of the tabs often. If your content changes frequently and needs to be selectively displayed, consider adopting a Filter pattern as in Product Display (https://www.rei.com/c/mens-climbing-shoes) 
 
 ## Content
@@ -295,6 +295,10 @@ This component has compliance with WCAG guidelines by:
   - When scrolled to end of tabs, a gradient is added to the beginning (left) of tab container
 - Maintain layout for tabs when switching to smaller viewports. Do not replace the tab component with the accordion component
 - Switching between tab component and accordion component is not supported in Cedar components library
+
+### Important
+
+Linking to a specific tab or accordion has SEO costs. If you still wish to implement these changes for your project, reach out to the SEO team at the #team-seo and #team-ia Slack channels.
 
 <hr>
 
