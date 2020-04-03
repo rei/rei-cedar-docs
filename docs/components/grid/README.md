@@ -1243,10 +1243,26 @@ Nested grids are made by nesting `cdr-col` and adding the `is-row` prop to the `
 
 
 <cdr-doc-code-snippet :copy-button="false" :max-height="false">
-  ```html
+  ```html{2}
   <cdr-row cols=”3”>
     <cdr-col is-row span=”6” cols”2”>
       <cdr-col></cdr-col>
+    </cdr-col>
+  </cdr-row>
+  ```
+</cdr-doc-code-snippet>
+
+### Utility class use
+
+Any custom or utility classes should **not** be added to either `cdr-row` or `cdr-col` as they can have adverse effects on things like gutters which can break the layout. Custom or utility classes should only be added to your own markup/content.
+
+<cdr-doc-code-snippet :copy-button="false" :max-height="false">
+  ```html{3}
+  <cdr-row>
+    <cdr-col>
+      <div class="my-class cdr-space-inset-one-x">
+        ...
+      </div>
     </cdr-col>
   </cdr-row>
   ```
