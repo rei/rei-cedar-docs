@@ -52,6 +52,10 @@ We have added this wrapper component to better support the accessibility of acco
 
 We have updated CdrImg to accept event handlers. This is intended to support `onError` event handlers. See the [CdrImg docs](../../components/image/#error-event-handler) for more details and examples
 
+### CdrCard Hover State
+
+CdrCard has been updated with a new hover state. Any custom hover logic that you may have applied to instances of CdrCard should be removed in favor of this new default behavior.
+
 ## Bug Fixes
 
 ### CdrRating Medium Size
@@ -75,6 +79,10 @@ CdrLink previously supported theming by setting an `on-dark` or `on-light` CSS c
 ### CdrButton OnDark Removed
 
 CdrButton previously accepted a prop named `on-dark` which could be used in conjunction with the `icon-only` prop to render a button with a background. This was intended to be used on dark backgrounds to make the icon button more visible and accessible. Due to the new color scale this feature was not possible to continue supporting as is, and has been replaced with a new [with-background](./#cdrbutton-icon-only-variant) property.
+
+### CdrCard Position Update
+
+We have updated the CdrCard component to use `position: relative` in order to support upcoming work that will enable more complex card compositions. If you have been applying custom styling to instances of CdrCard this may cause conflicts with your implementation. 
 
 ## Deprecations
 
