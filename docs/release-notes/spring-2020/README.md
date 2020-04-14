@@ -52,9 +52,9 @@ We have added this wrapper component to better support the accessibility of acco
 
 We have updated CdrImg to accept event handlers. This is intended to support `onError` event handlers. See the [CdrImg docs](../../components/image/#error-event-handler) for more details and examples
 
-### CdrCard Hover State
+### CdrCard Linked State
 
-CdrCard has been updated with a new hover state. Any custom hover logic that you may have applied to instances of CdrCard should be removed in favor of this new default behavior.
+CdrCard has been updated with a new `linked` property which can be used to add a hover effect to cards that are wrapped in a link. Any custom hover logic that you may have applied to instances of CdrCard should be removed in favor of using this new property. See the [CdrCard docs](../../components/card/#linked) for more details and examples
 
 ## Bug Fixes
 
@@ -66,7 +66,7 @@ Added missing medium responsive size modifier. Now all options can be used at al
 
 ### Unitless JS Tokens For Spacing and Breakpoints
 
-The space (`cdr-space-...`) and breakpoint (`cdr-breakpoint-...`) tokens in the JS distributions of @rei/cdr-tokens have been made "unitless". Those tokens previously had to be manipulated in order to use them effectively in JavaScript, for example by doing: `CdrSpaceOneX.split('px')[0]`. 
+The space (`cdr-space-...`) and breakpoint (`cdr-breakpoint-...`) tokens in the JS distributions of @rei/cdr-tokens have been made "unitless". Those tokens previously had to be manipulated in order to use them effectively in JavaScript, for example by doing: `CdrSpaceOneX.split('px')[0]`.
 
 ### CdrAccordion Level Prop
 
@@ -82,7 +82,7 @@ CdrButton previously accepted a prop named `on-dark` which could be used in conj
 
 ### CdrCard Position Update
 
-We have updated the CdrCard component to use `position: relative` in order to support upcoming work that will enable more complex card compositions. If you have been applying custom styling to instances of CdrCard this may cause conflicts with your implementation. 
+We have updated the CdrCard component to use `position: relative` in order to support upcoming work that will enable more complex card compositions. If you have been applying custom styling to instances of CdrCard this may cause conflicts with your implementation.
 
 ## Deprecations
 

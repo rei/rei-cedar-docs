@@ -68,6 +68,35 @@
 ```
 </cdr-doc-example-code-pair>
 
+## Linked Card
+
+Use the `linked` property to add a hover effect to cards that are wrapped in a link
+
+<cdr-doc-example-code-pair repository-href="/src/components/card"
+:sandbox-data="$page.frontmatter.sandboxData" >
+
+```html
+<a href="#">
+  <cdr-card class="card-example" :linked="true">
+    <cdr-text
+      tag="h2"
+      modifier="heading-serif-500"
+    >
+      Linked Card Title
+    </cdr-text>
+    <cdr-rating
+      rating="4.2"
+      count="12"
+      size="small"
+    />
+    <cdr-text modifier="body-300">
+      Linked Card content
+    </cdr-text>
+  </cdr-card>
+</a>
+```
+</cdr-doc-example-code-pair>
+
 ## Accessibility
 
 To ensure that usage of this component complies with accessibility guidelines, do the following:
