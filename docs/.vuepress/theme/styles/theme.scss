@@ -248,30 +248,13 @@ div[class^='language-'] {
 }
 
 /*
-Generic Styling, for Desktops/Laptops  this is for markdown table display, this will need to be refactored to ensure it does not style cdr-tables
-
-TODO: use cdr-table component variables
-*/
+Generic Styling, for Desktops/Laptops  this is for markdown table display */
 
 table:not([class*="cdr-table"]) {
-  width: 100%;
-  border-collapse: collapse;
-  /* Zebra striping */
-  
-  tr:nth-of-type(odd) {
-    background: #eee;
-  }
-  
-  th {
-    font-weight: bold;
-  }
-  
-  td,
-  th {
-    padding: 6px;
-    border: 1px solid #ccc;
-    text-align: left;
-  }
+  @include cdr-table-base-mixin;
+  @include cdr-table-full-width-mixin;
+  @include cdr-table-striped-mixin;
+  @include cdr-table-border-mixin;
 }
 
 
