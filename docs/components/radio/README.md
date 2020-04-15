@@ -62,7 +62,7 @@
     }
   ],
   "sandboxData": {
-    "components": "CdrRadio"
+    "components": "CdrRadio, CdrList"
   },
   "versions": [
     {
