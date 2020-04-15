@@ -72,12 +72,6 @@
                 "type": "number",
                 "default": "300",
                 "description": "Sets animation duration for when the modal is closed."
-              },
-              {
-                "name": "size",
-                "type": "string",
-                "default": "'medium'",
-                "description": "Sets the max-width of the modal. Possible values: { 'medium' | 'large' }"
               }
             ],
             "slots": [
@@ -244,7 +238,7 @@ When using the `label` slot, add CdrText to use the appropriate header styles.
 
 ## Size
 
-The modal `size` prop controls the max-width of the modal. `medium` maps to a max-width of 600px; while `large` maps to 800px.
+The modal has a default width of `640px` which converts to a fullscreen view at `xs` screen sizes.
 
 ## Scroll Behavior
 
