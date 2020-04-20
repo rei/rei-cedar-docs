@@ -15,6 +15,8 @@
 
 # Overview
 
+Color is one of the most important attributes of brand expression. The Cedar Design System color palette focuses on a primary color of natural and comforting green, with a supporting set of secondary colors that reflects REI's brand expression of the colors of nature. These brand colors are reflected through color tokens in our UI and other places.  
+
 Color design tokens represent the fundamental decisions of Cedar’s visual language:
   - Stores color specifications using variable names, not hard-coded values such as hex values for color
   - Specifies a hierarchical and semantically-defined system
@@ -24,10 +26,11 @@ Color design tokens represent the fundamental decisions of Cedar’s visual lang
 <hr>
 
 Below is a list of color tokens with descriptions and values. Web and mobile color tokens have identical hex values but the naming pattern differs. For example, color token names are:
-  - **For Web:** cdr-color-text-primary-lightmode
-  - **For Android:** cdr_color_text_primary_lightmode
-  - **For iOS:** CdrColorTextPrimaryLightmode  
+  - **For Web:** cdr-color-text-primary
+  - **For Android:** cdr_color_text_primary
+  - **For iOS:** CdrColorTextPrimary  
 
+For more information on naming structure for design token, visit the [Design Tokens](https://rei.github.io/rei-cedar-docs/components/design-tokens/#naming-structure-for-design-tokens/) page.
 
 <tokens-color />
 
@@ -70,7 +73,7 @@ Cedar offers a range of colors designed to be accessed, understood, and used by 
 <br>
 
 ## Accessibility
-Text choices should be paired with their corresponding background color to ensure accessibility. Legend descriptions for WCAG contrast ratios requirements are:
+Text color and background color tokens have been chosen to ensure that any combination of them is accessible. By using color tokens semantically you can ensure that your application remains accessible as the system is updated. Mixing in non-Cedar color values may result in inaccessible combinations. Legend descriptions for WCAG contrast ratios requirements are:
   - **AAA:** 7:1 for normal text and 4.5:1 for large text
   - **AA:** 4.5:1 for normal text and 3:1 for large text
   - **AA-LG:** Only for large text, graphical objects and user interface components

@@ -25,9 +25,6 @@ For more information about using the UI Toolkit, visit the [Getting Started for 
 ### Design Tokens
 Design tokens are special variables used to maintain a scalable visual system for UI development and brand consistency. Cedar design tokens store the visual design attributes that define the foundation of REI’s visual language, including color, typography, and spacing.
 
-For example:
-`cdr-color-text-primary-lightmode` would be used to set the primary text color on a light background.
-
 For more information about design tokens, read the [Design Tokens](../../components/design-tokens/) article.
 
 ### Components

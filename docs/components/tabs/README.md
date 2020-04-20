@@ -131,7 +131,7 @@
 # Overview
 
 ## Default (Medium)
-Tab buttons align left and bottom border expands to full width of container.
+Tabs align left and bottom border expands to full width of container.
 
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" >
 
@@ -150,7 +150,7 @@ Tab buttons align left and bottom border expands to full width of container.
 
 ## Compact (Small)
 
-Reduced spacing around the tab buttons to create a denser visual design.
+Reduced spacing around the tabs to create a denser visual design.
 
 <cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false">
 
@@ -167,7 +167,7 @@ Reduced spacing around the tab buttons to create a denser visual design.
 
 ## Full Width
 
-Tab buttons space evenly across the container.
+Tabs space evenly across the container.
 
 <cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false">
 
@@ -201,7 +201,7 @@ Bottom border of tab header list is removed.
 
 ## Centered
 
-Centered tab header content
+Centered tab header content.
 
 <cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false">
 
@@ -242,7 +242,7 @@ This component has compliance with WCAG guidelines by:
 - Organizing related content in a single container
 - Flipping between multiple panes or sections
 - Grouping content to display horizontally
-- Content is lengthy and can be broken into discrete parts
+- Content can be broken into discrete parts
 
 ## Don't Use When
 
@@ -252,18 +252,19 @@ This component has compliance with WCAG guidelines by:
 
 ## The Basics
 
-- Never display disabled tab labels
-- Remove tab button if there is no content
-- Keep to no more than 6 tab buttons
-- Never display fewer than 2 tab buttons
+- Keep tabs in the same order, even when some tabs are disabled
+- Keep to no more than 6 tabs
+- Never display fewer than 2 tabs
+- Avoid changing the order of the tabs often. If your content changes frequently and needs to be selectively displayed, consider adopting a Filter pattern as in Product Display (https://www.rei.com/c/mens-climbing-shoes) 
 
 ## Content
 
-- Order the tab buttons by priority or importance from left to right
+- Order the tabs by priority or importance from left to right
 - Keep tab labels short and meaningful. Between 1-2 words is best and written in plain language
 - Ensure that each tab label is unique
 - Never truncate tab labels
 - Use title caps for tab labels
+- Tab headers can be animated, but tab content should not be
 
 ## Behavior
 
@@ -294,6 +295,10 @@ This component has compliance with WCAG guidelines by:
   - When scrolled to end of tabs, a gradient is added to the beginning (left) of tab container
 - Maintain layout for tabs when switching to smaller viewports. Do not replace the tab component with the accordion component
 - Switching between tab component and accordion component is not supported in Cedar components library
+
+### Important
+
+Linking to a specific tab or accordion has SEO costs. If you still wish to implement these changes for your project, reach out to the SEO team at the #team-seo and #team-ia Slack channels.
 
 <hr>
 

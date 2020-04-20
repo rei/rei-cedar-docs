@@ -375,7 +375,7 @@ export default {
 
 .myClass {
   @include cdr-text-default-body();
-  color: $cdr-color-text-primary-lightmode;
+  color: $cdr-color-text-primary;
 }
 </style>
 ```
@@ -466,7 +466,7 @@ You can set the colors in Interface Builder, or by:
 
 _Terminal_
 ```bash
-Button1.backgroundColor = UIColor(named: "cdr_color_text_primary_lightmode");
+Button1.backgroundColor = UIColor(named: "cdr_color_text_primary");
 ```
 
 ##### Text
