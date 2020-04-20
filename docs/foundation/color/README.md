@@ -30,7 +30,7 @@ Below is a list of color tokens with descriptions and values. Web and mobile col
   - **For Android:** cdr_color_text_primary
   - **For iOS:** CdrColorTextPrimary  
 
-For more information on naming structure for design token, visit the [Design Tokens](https://rei.github.io/rei-cedar-docs/components/design-tokens/#naming-structure-for-design-tokens/) page. <<Comment by RC: Link might change once we update the doc site>>
+For more information on naming structure for design token, visit the [Design Tokens](https://rei.github.io/rei-cedar-docs/components/design-tokens/#naming-structure-for-design-tokens/) page.
 
 <tokens-color />
 
