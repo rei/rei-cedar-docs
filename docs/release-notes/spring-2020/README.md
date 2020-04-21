@@ -33,7 +33,7 @@ If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade
 
 ### New Component: CdrTable
 
-We have added a component for tables. This component is more generic than the existing data table (which has been moved to fed components). See the [CdrTable docs](../../components/table/) for more details and examples
+We have added a component for tables. This component is more generic than the existing data table (which has been moved to fed components). See the [CdrTable docs](../../components/table/) for more details and examples. Note that the [CdrDataTable component has been deprecated](#cdrdatatable).
 
 ### CdrButton Icon-Only Variant
 
@@ -66,11 +66,27 @@ CdrModal now shifts to a fullscreen view at the `xs` breakpoint, and will otherw
 
 Added missing medium responsive size modifier. Now all options can be used at all breakpoints for responsive sizing. The default size is still medium.
 
+### CdrAccordion Content Reflow
+
+CdrAccordion has been updated to better handle content reflows which may occur when a browser window is resized or when content is added or removed to an opened accordion.
+
+### CdrTabs Mobile Underline
+
+CdrTabs has been updated so that the active tab underline no longer causes window size issues on mobile when it is scrolled offscreen.
+
+### Accessibility Enhancements
+
+TODO: briefly list what we fixed?
+
 ## Breaking Changes
 
 ### Unitless JS Tokens For Spacing and Breakpoints
 
 The space (`cdr-space-...`) and breakpoint (`cdr-breakpoint-...`) tokens in the JS distributions of @rei/cdr-tokens have been made "unitless". Those tokens previously had to be manipulated in order to use them effectively in JavaScript, for example by doing: `CdrSpaceOneX.split('px')[0]`.
+
+### CdrAccordionGroup Wrapper
+
+CdrAccordion components must now be wrapped inside an instance of CdrAccordionGroup to ensure that accordions meet accessibility requirements. See the [CdrAccordion docs](../../components/accordion/) for more details and examples
 
 ### CdrAccordion Level Prop
 
@@ -94,8 +110,11 @@ In order to support the CdrModal fullscreen functionality, we have removed it's 
 
 ## Deprecations
 
-### Color Utility Classes
+### CdrDataTable
 
+The CdrDataTable component has been deprecated in favor of the new CdrTable component. CdrDataTable is a complex component which was difficult for developers to customize or enhance, whereas the new CdrTable component is a simple wrapper which applies styling to native HTML `<table>` markup. The existing CdrDataTable component has been ported to the FEDCOMP repository and is now available in the REI private NPM registry as [@rei/data-table](https://git.rei.com/projects/FEDCOMP/repos/data-table/browse). Consumers of CdrDataTable should either replace their usage of that component with CdrTable, or install and use `@rei/data-table` instead.
+
+### Color Utility Classes
 
 | Deprecated utility   | Equivalent utility       |
 |----------------------|--------------------------|

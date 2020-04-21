@@ -3,16 +3,7 @@
   "title": "Table",
   "layout_type": "LayoutComponent",
   "title_metadata": "Table, CdrTable",
-  "summary": "TODO: Summary",
-  "see_also": [
-    {
-      "text": "See Also"
-    },
-    {
-      "text": "TODO?",
-      "href": ""
-    },
-  ],
+  "summary": "Organizes structured content so that it is easy to scan, make comparisons, and analyze the data",
   "breadcrumbs": [
     {
       "text": "Components/"
@@ -84,6 +75,8 @@
 }
 
 ---
+
+<cdr-doc-alert icon="info">CdrTable replaces the now CdrDataTable component. The [documentation for CdrDataTable](../data-tables/) is still available, and the component itself has been ported to FEDCOMP as [@rei/data-table](https://git.rei.com/projects/FEDCOMP/repos/data-table/browse) </cdr-doc-alert>
 
 <cdr-doc-table-of-contents-shell>
 
@@ -252,11 +245,14 @@ This component has compliance with WCAG guidelines by:
 
 ## Use When
 
-- TODO
+- Presenting multiple metrics and categories together
+- Displaying tabular data for users to compare
 
 ## Don't Use When
 
-- TODO
+- Positioning contents on page. Instead, use [Grid](../grid/)
+- Laying out a page design. Instead, use [Grid](../grid/)
+
 
 <hr>
 
