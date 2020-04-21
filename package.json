@@ -24,8 +24,8 @@
     "npm": "^6.9.0"
   },
   "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.9.0",
     "@rei/cdr-component-variables": "^3.0.0-beta.0",
-    "@rei/cdr-tokens": "^4.0.0-beta.5",
     "@rei/cedar-icons": "^1.4.0",
     "@vuepress/plugin-google-analytics": "^1.4.1",
     "codesandbox": "^2.1.14",
@@ -37,6 +37,9 @@
     "vuepress": "^1.4.1"
   },
   "dependencies": {
+    "@babel/runtime": "^7.9.2",
+    "@babel/runtime-corejs3": "^7.9.2",
+    "@rei/cdr-tokens": "^4.0.0-beta.5",
     "@rei/cedar": "^5.0.0-beta.0",
     "throttle-debounce": "^2.1.0"
   },

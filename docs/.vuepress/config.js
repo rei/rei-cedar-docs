@@ -162,6 +162,7 @@ module.exports = {
   },
   chainWebpack(config, isServer) {
     config.resolve.alias.set("$vue", "vue/dist/vue.esm.js");
+    config.resolve.alias.set("@rei/cdr-tokens$", "@rei/cdr-tokens/dist/js/cdr-tokens.esm.js");
     config.module.rules.delete('svg')
     config.module
       .rule('svg')

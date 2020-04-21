@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import tokens from '@rei/cdr-tokens/dist/js/cdr-tokens.common';
+import * as tokens from '@rei/cdr-tokens/dist/js/cdr-tokens.esm';
 import camelCase from 'lodash/camelCase';
 
 export default {

@@ -1,4 +1,4 @@
-var _ = require('lodash');
+import { isEqual } from 'lodash';
 
 export default ({
   Vue, // the version of Vue being used in the VuePress app
@@ -7,7 +7,7 @@ export default ({
   siteData // site metadata
 }) => {
   router.options.scrollBehavior = function(to, frm, savedPosition) {
-    if (frm && to.name === frm.name && _.isEqual(to.params, frm.params)) {
+    if (frm && to.name === frm.name && isEqual(to.params, frm.params)) {
       return;
     }
     // Handle scroll
