@@ -143,6 +143,11 @@ Cedar typography references two distinct font stacks: a serif and a sans-serif. 
 
 `font-family: Graphik, 'Helvetica Neue', sans-serif`
 
+#### Fallbacks
+
+If everything goes right, REI Stuart will load. If it doesn’t, the serif font displayed on Apple and Microsoft platforms will be Georgia. At the same time, Android devices will display Noto Serif and Linux devices will display Liberation Serif.
+
+It’s a similar story for sans-serif fonts. Graphik will display if there are no hiccups. If it fails to load, Apple devices will display Helvetica Neue while Microsoft platforms will display Arial. Android devices will display Roboto and Linux devices will display Liberation Sans.
 
 ### Supported Languages
 
