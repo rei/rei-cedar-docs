@@ -118,7 +118,6 @@ module.exports = {
           { text: "Caption", link: "/components/caption/" },
           { text: "Card", link: "/components/card/" },
           { text: "Checkboxes", link: "/components/checkboxes/" },
-          { text: "Data Tables", link: "/components/data-tables/" },
           { text: "Grid", link: "/components/grid/" },
           { text: "Icons", link: "/components/icon/" },
           { text: "Images", link: "/components/image/" },
