@@ -214,6 +214,11 @@
 
 
 <cdr-doc-table-of-contents-shell>
+
+<br>
+
+<cdr-doc-alert icon="warning">CdrDataTable has been deprecated and replaced with the more flexible <cdr-link href="../table/">CdrTable component</cdr-link>. CdrDataTable will still be available in FEDCOMP as <cdr-link href="https://git.rei.com/projects/FEDCOMP/repos/data-table/browse">@rei/data-table</cdr-link> </cdr-doc-alert>
+
 # Overview
 
 ## Default (Medium)

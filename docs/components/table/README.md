@@ -76,9 +76,13 @@
 
 ---
 
-<cdr-doc-alert icon="info">CdrTable replaces the now CdrDataTable component. The [documentation for CdrDataTable](../data-tables/) is still available, and the component itself has been ported to FEDCOMP as [@rei/data-table](https://git.rei.com/projects/FEDCOMP/repos/data-table/browse) </cdr-doc-alert>
+
 
 <cdr-doc-table-of-contents-shell>
+
+<br>
+
+<cdr-doc-alert icon="info">CdrTable replaces the deprecated CdrDataTable component. The <cdr-link href="../data-tables/">documentation for CdrDataTable</cdr-link> is still available, and the component itself has been ported to FEDCOMP as <cdr-link href="https://git.rei.com/projects/FEDCOMP/repos/data-table/browse">@rei/data-table</cdr-link> </cdr-doc-alert>
 
 # Overview
 
