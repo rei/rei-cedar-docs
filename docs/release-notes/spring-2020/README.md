@@ -31,6 +31,10 @@ If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade
 
 ## New Features
 
+### Updated Brand Color Palette
+
+Cedar components and design tokens have been updated to make use of the new brand palette. Any hardcoded color values in yout application may need to be updated in order to stay in sync with the new brand palette. We have additionally removed the concept of "lightmode" and "darkmode" themes from Cedar to align with the brand palette updates. See the [color token deprecation list](#color-token-updates) for guidance on re-mapping existing color tokens.
+
 ### New Component: CdrTable
 
 We have added a component for tables. This component is more generic than the existing data table (which has been moved to fed components). See the [CdrTable docs](../../components/table/) for more details and examples. Note that the [CdrDataTable component has been deprecated](#cdrdatatable).
@@ -114,13 +118,59 @@ In order to support the CdrModal fullscreen functionality, we have removed it's 
 
 The CdrDataTable component has been deprecated in favor of the new CdrTable component. CdrDataTable is a complex component which was difficult for developers to customize or enhance, whereas the new CdrTable component is a simple wrapper which applies styling to native HTML `<table>` markup. The existing CdrDataTable component has been ported to the FEDCOMP repository and is now available in the REI private NPM registry as [@rei/data-table](https://git.rei.com/projects/FEDCOMP/repos/data-table/browse). Note that `@rei/data-table` replaces the `modifier` property with individual `compact` and `borderless` boolean properties. Consumers of CdrDataTable should either replace their usage of that component with CdrTable, or install and use `@rei/data-table` instead.
 
+### Color Token Updates
+
+TODO: guidance for darkmode values?
+
+Note that Cedar design tokens should always be applied semantically, when re-mapping tokens take care to ensure that the token name matches it's purpose i.e, don't use a `border-input` token for anything besides the border of an input element.
+
+| Deprecated Token | Equivalent Token |
+|------------------|------------------|
+| cdr-color-text-primary-lightmode | cdr-color-text-primary |
+| cdr-color-text-primary-darkmode | n/a |
+| cdr-color-text-secondary-lightmode | cdr-color-text-secondary |
+| cdr-color-text-secondary-darkmode | n/a |
+| cdr-color-text-disabled-lightmode | cdr-color-text-disabled |
+| cdr-color-text-disabled-darkmode | n/a |
+| cdr-color-text-link-lightmode | cdr-color-text-link-rest |
+| cdr-color-text-link-darkmode | n/a |
+| cdr-color-text-error-lightmode | cdr-color-text-error |
+| cdr-color-text-error-darkmode | n/a |
+| cdr-color-text-form-label-lightmode | 	cdr-color-text-input-label |
+| cdr-color-text-form-label-darkmode | n/a |
+| cdr-color-text-form-placeholder-lightmode | cdr-color-text-input-placeholder |
+| cdr-color-text-form-placeholder-darkmode | n/a |
+| cdr-color-text-form-disabled-lightmode | cdr-color-text-input-disabled |
+| cdr-color-text-form-disabled-darkmode | n/a |
+| cdr-color-icon-primary-lightmode | cdr-color-icon-default |
+| cdr-color-icon-primary-darkmode | n/a |
+| cdr-color-icon-emphasis-lightmode | cdr-color-icon-emphasis |
+| cdr-color-icon-emphasis-darkmode | n/a |
+| cdr-color-background-dark | n/a |
+| cdr-color-background-darker | n/a |
+| cdr-color-background-light | cdr-color-background-primary (???) |
+| cdr-color-background-lighter | cdr-color-background-primary (???) |
+| cdr-color-background-lightest | cdr-color-background-primary (???) |
+| cdr-color-background-form-lightmode | cdr-color-background-primary (???)  |
+| cdr-color-background-form-darkmode | n/a |
+| cdr-color-background-form-input-lightmode | cdr-color-background-input-default |
+| cdr-color-background-form-input-darkmode | n/a |
+| cdr-color-border-primary-lightmode | cdr-color-border-primary |
+| cdr-color-border-primary-darkmode | n/a |
+| cdr-color-border-secondary-lightmode | cdr-color-border-secondary |
+| cdr-color-border-secondary-darkmode | n/a |
+| cdr-color-border-disabled-lightmode | cdr-color-border-input-default-disabled |
+| cdr-color-border-disabled-darkmode | n/a |
+| cdr-color-border-error-lightmode | cdr-color-border-error |
+| cdr-color-border-selected-lightmode | cdr-color-border-input-default-selected |
+
 ### Color Utility Classes
 
 | Deprecated utility   | Equivalent utility       |
 |----------------------|--------------------------|
-| cdr-bg--light        | cdr-color-background-primary     |
-| cdr-bg--lighter      | cdr-color-background-primary     |
-| cdr-bg--lightest     | cdr-color-background-primary     |
+| cdr-bg--light        | cdr-color-background-primary (???)    |
+| cdr-bg--lighter      | cdr-color-background-primary (???)    |
+| cdr-bg--lightest     | cdr-color-background-primary (???)    |
 | cdr-bg--dark         | n/a  |
 | cdr-bg--darker       | n/a  |
 
