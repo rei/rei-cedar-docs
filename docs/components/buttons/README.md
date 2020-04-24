@@ -326,8 +326,8 @@ To ensure that usage of this component complies with accessibility guidelines yo
 
 - For icon-only buttons, provide `aria-label` text that describes the button's action
 - If activating the button does not dismiss the current context, then focus typically remains on the button after activation, e.g., an Apply or Recalculate button.
-- If a description of the button's function is present, the button element has aria-describedby set to the ID of the element containing the description.
-- If the button is a toggle button, it has an aria-pressed state. When the button is toggled on, the value of this state is true, and when toggled off, the state is false.
+- If a description of the button's function is present, the button element has `aria-describedby` set to the `ID` of the element containing the description.
+- If the button is a toggle button, it has an `aria-pressed` state. When the button is toggled on, the value of this state is true, and when toggled off, the state is false.
 - If the button action indicates a context change, such as move to next step in a wizard or add another search criteria, then it is often appropriate to move focus to the starting point for that action.
 - Apply keyboard interaction patterns as described on [REI universal design and accessibility: Buttons](https://confluence.rei.com/display/accessibility/Buttons)
 
