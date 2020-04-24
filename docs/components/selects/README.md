@@ -140,6 +140,18 @@
                 "type": "number",
                 "default": "medium",
                 "description": "Sets the select field size. Possible sizes are: {  ‘medium’  |  ‘large’  }. Also works with responsive breakpoints. Breakpoint values are: xs, sm, md, and lg. Examples: { 'small' | 'medium' | 'large' | 'large@sm' }"
+              },
+              {
+                "name": "multiple",
+                "type": "boolean",
+                "default": "false",
+                "description": "Turns CdrSelect into a multi-select element."
+              },
+              {
+                "name": "multipleSize",
+                "type": "number",
+                "default": "null",
+                "description": "Sets the height of the CdrSelect when using the multiple option. This number corresponds to the number of select options that will be visible without scrolling."
               }
             ],
             "events": [
@@ -337,6 +349,36 @@ Input field with helper or hint text below the input field.
     This is helper text.
   </template>
 </cdr-select>
+```
+
+</cdr-doc-example-code-pair>
+
+
+## Multiple Select
+
+CdrSelect can be rendered as a multi-select by passing the native HTML select `multiple` attribute. The `multipleSize` prop can be used to control the height of the multi-select. 
+
+<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: [], defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D', 'Option E', 'Option F']}">
+
+```html
+default multi-select:
+<br>
+<cdr-select
+  v-model="defaultModel"
+  label="Select label"
+  :options="defaultOptions"
+  multiple
+/>
+<br>
+With multipleSize:
+<br>
+<cdr-select
+  v-model="defaultModel"
+  label="Select label"
+  :options="defaultOptions"
+  multiple
+  multipleSize="6"
+/>
 ```
 
 </cdr-doc-example-code-pair>
