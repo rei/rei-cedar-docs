@@ -346,16 +346,16 @@ Input field with helper or hint text below the input field.
 
 To ensure that the usage of Select component complies with the accessibility guidelines:
 + Always provide a label for each select control
-+ If hiding a label, use the [ aria-label ] attribute for the label contents
++ If hiding a label, use the `aria-label` attribute for the label contents
 
-When using the [ aria-describedby ]:
-+ [ aria-describedby ] attribute does not override the select label
+When using the `aria-describedby`:
++ `aria-describedby` attribute does not override the select label
 + Use this attribute in addition to a label
 + Can be used to reference descriptions that appear as 'tooltips'
 
 This component has compliance with WCAG guidelines by:
-+ Requiring a value for the [ label ] field
-+ When hiding a label, the [ aria-label ] attribute is set to the [ label ] value
++ Requiring a value for the `label` field
++ When hiding a label, the `aria-label` attribute is set to the `label` value
 
 <hr>
 
