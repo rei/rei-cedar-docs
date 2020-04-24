@@ -77,6 +77,7 @@ module.exports = {
         items: [
           { text: "As a Designer", link: "/getting-started/as-a-designer/" },
           { text: "As a Developer", link: "/getting-started/as-a-developer/" },
+          { text: "As a Mobile Developer", link: "/getting-started/as-a-mobile-developer/" },
           { text: "Handoff Process", link: "/getting-started/handoff/" },
           { text: "Using Cedar", link: "/getting-started/using-cedar/" },
         ]
