@@ -1068,7 +1068,7 @@ This component has compliance with following WCAG guidelines:
 
 ## Don't Use When
 
-- Presenting a multi-row columnar data display, such as features or specs of a product. Instead, use [Data Tables](../data-tables/)
+- Presenting a multi-row columnar data display, such as features or specs of a product. Instead, use [Table](../table/)
 
 ## The Basics
 

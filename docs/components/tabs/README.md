@@ -248,7 +248,7 @@ This component has compliance with WCAG guidelines by:
 
 - Grouping content to display vertically. Instead, use [Accordion](../accordion/)
 - Creating primary navigation that links to other pages
-- Comparing related content. Instead, use [Data Tables](../data-tables/)
+- Comparing related content. Instead, use [Table](../table/)
 
 ## The Basics
 
