@@ -64,6 +64,10 @@ CdrCard has been updated with a new `linked` property which can be used to add a
 
 CdrModal now shifts to a fullscreen view at the `xs` breakpoint, and will otherwise render at `640px` wide. Note that the `size` property  [has been removed from CdrModal](#cdrmodal-size-prop-removed) in order to accomodate this update.
 
+### CdrTabs active-tab Property
+
+CdrTabs now accepts a property named `active-tab` which allows for changing which tab content is "active" on the initial page load. See the [CdrTabs docs](../../components/tabs/#active-tab) for more information.
+
 ## Bug Fixes
 
 ### CdrRating Medium Size
@@ -111,6 +115,10 @@ We have updated the CdrCard component to use `position: relative` in order to su
 ### CdrModal Size Prop Removed
 
 In order to support the CdrModal fullscreen functionality, we have removed it's `size` prop. CdrModal will now always display at `640px` wide except when viewed in `xs` screen sizes.
+
+### CdrTabPanel Accessibility Requirements
+
+In order to make the CdrTabs component meet accessibility requirements, you must now explicitly set both an `id` and `aria-labelledby` property on CdrTabPanel elements. These properties must be unique identifiers, but other than that their content is arbitrary, for example: `<cdr-tab-panel id="foo-tab-panel" aria-labelledby="foo-tab" name="foo">`. This allows us to wire up `aria-` tags to correctly link the content of each tab to the header element that activates it.  See the [CdrTabs docs](../../components/tabs/#props) for more information and examples of usage.
 
 ## Deprecations
 

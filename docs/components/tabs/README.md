@@ -85,6 +85,12 @@
                 "description": "Sets height of the tabs container element.  This is needed for managing content overflow and animations."
               },
               {
+                "name": "activeTab",
+                "type": "number",
+                "default": "0",
+                "description": "Sets the index of the tab that should be active on initial page load. Note that this property is zero-indexed."
+              },
+              {
                 "name": "modifier",
                 "type": "string",
                 "default": "N/A",
@@ -114,7 +120,13 @@
                 "name": "id",
                 "type": "string",
                 "default": "N/A",
-                "description": "Sets reference identifier.  Must be unique for each tab."
+                "description": "Sets reference identifier for tab content. This property is required and is necessary or accessibility. Must be unique for each tabPanel, and cannot be the same as the `aria-labelledby` property."
+              },
+              {
+                "name": "aria-labelledby",
+                "type": "string",
+                "default": "N/A",
+                "description": "Sets reference identifier for tab header. This property is required and is necessary or accessibility. Must be unique for each tabPanel, and cannot be the same as the `id` property."
               }
             ]
           }
@@ -138,10 +150,10 @@ Tabs align left and bottom border expands to full width of container.
 ```html
 
 <cdr-tabs height="100px">
-  <cdr-tab-panel name="Product">Tab 1 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Articles">Tab 2 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Classes & Events">Tab 3 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Videos">Tab 4 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Product" id="product-tab-panel" aria-labelledby="product-tab">Tab 1 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Articles" id="article-tab-panel" aria-labelledby="article-tab">Tab 2 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Classes & Events" id="classes-tab-panel" aria-labelledby="classes-tab">Tab 3 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Videos" id="videos-tab-panel" aria-labelledby="videos-tab">Tab 4 Content</cdr-tab-panel>
 </cdr-tabs>
 
 ```
@@ -156,10 +168,10 @@ Reduced spacing around the tabs to create a denser visual design.
 
 ```html
 <cdr-tabs modifier="compact" height="100px">
-  <cdr-tab-panel name="Product" >Tab 1 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Articles">Tab 2 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Classes & Events">Tab 3 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Videos">Tab 4 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Product" id="product-tab-panel" aria-labelledby="product-tab">Tab 1 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Articles" id="articles-tab-panel" aria-labelledby="articles-tab">Tab 2 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Classes & Events" id="classes-tab-panel" aria-labelledby="classes-tab">Tab 3 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Videos" id="videos-tab-panel" aria-labelledby="videos-tab">Tab 4 Content</cdr-tab-panel>
 </cdr-tabs>
 ```
 
@@ -173,10 +185,10 @@ Tabs space evenly across the container.
 
 ```html
 <cdr-tabs modifier="full-width" height="100px">
-  <cdr-tab-panel name="Product">Tab 1 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Articles">Tab 2 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Classes & Events">Tab 3 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Videos">Tab 4 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Product" id="product-tab-panel" aria-labelledby="product-tab">Tab 1 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Articles" id="articles-tab-panel" aria-labelledby="articles-tab">Tab 2 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Classes & Events" id="classes-tab-panel" aria-labelledby="classes-tab">Tab 3 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Videos" id="videos-tab-panel" aria-labelledby="videos-tab">Tab 4 Content</cdr-tab-panel>
 </cdr-tabs>
 ```
 
@@ -190,10 +202,10 @@ Bottom border of tab header list is removed.
 
 ```html
 <cdr-tabs modifier="no-border" height="100px">
-  <cdr-tab-panel name="Product">Tab 1 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Articles">Tab 2 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Classes & Events">Tab 3 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Videos">Tab 4 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Product" id="product-tab-panel" aria-labelledby="product-tab">Tab 1 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Articles" id="articles-tab-panel" aria-labelledby="articles-tab">Tab 2 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Classes & Events" id="classes-tab-panel" aria-labelledby="classes-tab">Tab 3 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Videos" id="videos-tab-panel" aria-labelledby="videos-tab">Tab 4 Content</cdr-tab-panel>
 </cdr-tabs>
 ```
 
@@ -207,10 +219,27 @@ Centered tab header content.
 
 ```html
 <cdr-tabs modifier="centered" height="100px">
-  <cdr-tab-panel name="Product">Tab 1 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Articles">Tab 2 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Classes & Events">Tab 3 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Videos">Tab 4 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Product" id="product-tab-panel" aria-labelledby="product-tab">Tab 1 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Articles" id="articles-tab-panel" aria-labelledby="articles-tab">Tab 2 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Classes & Events" id="classes-tab-panel" aria-labelledby="classes-tab">Tab 3 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Videos" id="videos-tab-panel" aria-labelledby="videos-tab">Tab 4 Content</cdr-tab-panel>
+</cdr-tabs>
+```
+
+</cdr-doc-example-code-pair>
+
+## Active Tab
+
+Tabs using the `active-tab` property to make the third element active on page load.
+
+<cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false">
+
+```html
+<cdr-tabs :active-tab="2" height="100px">
+  <cdr-tab-panel name="Product" id="product-tab-panel" aria-labelledby="product-tab">Tab 1 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Articles" id="articles-tab-panel" aria-labelledby="articles-tab">Tab 2 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Classes & Events" id="classes-tab-panel" aria-labelledby="classes-tab">Tab 3 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Videos" id="videos-tab-panel" aria-labelledby="videos-tab">Tab 4 Content</cdr-tab-panel>
 </cdr-tabs>
 ```
 
@@ -255,7 +284,7 @@ This component has compliance with WCAG guidelines by:
 - Keep tabs in the same order, even when some tabs are disabled
 - Keep to no more than 6 tabs
 - Never display fewer than 2 tabs
-- Avoid changing the order of the tabs often. If your content changes frequently and needs to be selectively displayed, consider adopting a Filter pattern as in Product Display (https://www.rei.com/c/mens-climbing-shoes) 
+- Avoid changing the order of the tabs often. If your content changes frequently and needs to be selectively displayed, consider adopting a Filter pattern as in Product Display (https://www.rei.com/c/mens-climbing-shoes)
 
 ## Content
 
