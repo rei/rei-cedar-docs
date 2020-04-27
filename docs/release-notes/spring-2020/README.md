@@ -114,7 +114,7 @@ We have updated the CdrCard component to use `position: relative` in order to su
 
 ### CdrModal Size Prop Removed
 
-In order to support the CdrModal fullscreen functionality, we have removed it's `size` prop. CdrModal will now always display at `640px` wide except when viewed in `xs` screen sizes.
+In order to support the CdrModal fullscreen functionality, we have removed its `size` prop. CdrModal will now always display at `640px` wide except when viewed in `xs` screen sizes.
 
 ### CdrTabPanel Accessibility Requirements
 
