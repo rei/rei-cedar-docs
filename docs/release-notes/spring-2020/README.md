@@ -120,7 +120,7 @@ The CdrDataTable component has been deprecated in favor of the new CdrTable comp
 
 ### Color Token Updates
 
-TODO: guidance for darkmode values?
+Legacy darkmode token variants have been deprecated. To update pages currently using darkmode tokens, consult your designer for a recommendation.  
 
 Note that Cedar design tokens should always be applied semantically, when re-mapping tokens take care to ensure that the token name matches it's purpose i.e, don't use a `border-input` token for anything besides the border of an input element.
 
@@ -148,10 +148,10 @@ Note that Cedar design tokens should always be applied semantically, when re-map
 | cdr-color-icon-emphasis-darkmode | n/a |
 | cdr-color-background-dark | n/a |
 | cdr-color-background-darker | n/a |
-| cdr-color-background-light | cdr-color-background-primary (???) |
-| cdr-color-background-lighter | cdr-color-background-primary (???) |
-| cdr-color-background-lightest | cdr-color-background-primary (???) |
-| cdr-color-background-form-lightmode | cdr-color-background-primary (???)  |
+| cdr-color-background-light | cdr-color-background-primary |
+| cdr-color-background-lighter | cdr-color-background-primary |
+| cdr-color-background-lightest | cdr-color-background-primary |
+| cdr-color-background-form-lightmode | cdr-color-background-primary |
 | cdr-color-background-form-darkmode | n/a |
 | cdr-color-background-form-input-lightmode | cdr-color-background-input-default |
 | cdr-color-background-form-input-darkmode | n/a |
@@ -166,32 +166,32 @@ Note that Cedar design tokens should always be applied semantically, when re-map
 
 ### Color Utility Classes
 
-| Deprecated utility   | Equivalent utility       |
-|----------------------|--------------------------|
-| cdr-bg--light        | cdr-color-background-primary (???)    |
-| cdr-bg--lighter      | cdr-color-background-primary (???)    |
-| cdr-bg--lightest     | cdr-color-background-primary (???)    |
-| cdr-bg--dark         | n/a  |
-| cdr-bg--darker       | n/a  |
+| Deprecated utility | Equivalent utility |
+|--------------------|--------------------|
+| cdr-bg--light | cdr-color-background-primary |
+| cdr-bg--lighter | cdr-color-background-primary |
+| cdr-bg--lightest | cdr-color-background-primary |
+| cdr-bg--dark | n/a |
+| cdr-bg--darker | n/a |
 
 ### Text Tokens
-| Deprecated token/mixin   | Equivalent token/mixin       |
-|--------------------------|------------------------------|
-| cdr-text-utility-n00         | cdr-text-utility-sans-n00         |
-| cdr-text-utility-strong-n00  | cdr-text-utility-sans-strong-n00  |
+| Deprecated token/mixin | Equivalent token/mixin |
+|------------------------|------------------------|
+| cdr-text-utility-n00 | cdr-text-utility-sans-n00 |
+| cdr-text-utility-strong-n00 | cdr-text-utility-sans-strong-n00 |
 
 ### Type Utility classes
-| Deprecated class name   | Equivalent class name         |
-|-------------------------|-------------------------------|
-| cdr-text-utility-n00        | cdr-text--utility-sans-n00         |
-| cdr-text-utility-strong-n00 | cdr-text--utility-sans-strong-n00  |
+| Deprecated class name | Equivalent class name |
+|-----------------------|-----------------------|
+| cdr-text-utility-n00 | cdr-text--utility-sans-n00 |
+| cdr-text-utility-strong-n00 | cdr-text--utility-sans-strong-n00 |
 
 
 ### CdrText Modifiers
-| Deprecated class name   | Equivalent class name         |
-|-------------------------|-------------------------------|
-| utility-n00                 | utility-sans-n00                  |
-| utility-strong-n00          | utility-sans-strong-n00          |
+| Deprecated class name | Equivalent class name |
+|-----------------------|-----------------------|
+| utility-n00 | utility-sans-n00 |
+| utility-strong-n00 | utility-sans-strong-n00 |
 
 
 ## Removals
