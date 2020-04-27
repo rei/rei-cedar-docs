@@ -120,7 +120,7 @@
                 "name": "id",
                 "type": "string",
                 "default": "N/A",
-                "description": "Sets reference identifier for tab content. This property is required and is necessary or accessibility. Must be unique for each tabPanel, and cannot be the same as the `aria-labelledby` property."
+                "description": "Sets reference identifier for tab content. This property is required and is necessary for accessibility. Must be unique for each tabPanel, and cannot be the same as the `aria-labelledby` property."
               },
               {
                 "name": "aria-labelledby",
