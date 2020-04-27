@@ -126,7 +126,7 @@
                 "name": "aria-labelledby",
                 "type": "string",
                 "default": "N/A",
-                "description": "Sets reference identifier for tab header. This property is required and is necessary or accessibility. Must be unique for each tabPanel, and cannot be the same as the `id` property."
+                "description": "Sets reference identifier for tab header. This property is required and is necessary for accessibility. Must be unique for each tabPanel, and cannot be the same as the `id` property."
               }
             ]
           }
