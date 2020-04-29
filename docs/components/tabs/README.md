@@ -142,6 +142,8 @@
 <cdr-doc-table-of-contents-shell>
 # Overview
 
+<cdr-doc-alert icon="warning">Due to an issue with how Codesandbox handles link clicks, the CdrTabs examples do not work properly in the Codesandbox environment.</cdr-doc-alert>
+
 ## Default (Medium)
 Tabs align left and bottom border expands to full width of container.
 
