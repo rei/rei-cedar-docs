@@ -74,11 +74,9 @@ The following design tokens are provided using the `@rei/cdr-tokens` package for
 
 For more information about design tokens and how to use them, visit the [Design Tokens](../../components/design-tokens/) article.
 
-<!--
-TODO: update this once SCSS utilities are available to consumers
-### SCSS Utilities
+### SCSS/LESS Utilities
 
-`...` provides the following responsive breakpoint media queries for our patterns, components, and layouts. These provide size ranges intended to help facilitate the changing of layout at various screen widths or orientations.
+`@rei/cdr-tokens` provides the following responsive breakpoint media queries for our patterns, components, and layouts. These provide size ranges intended to help facilitate the changing of layout at various screen widths or orientations.
 
 | Display size | Utility mixin            | Range        |
 |--------------|--------------------------|--------------|
@@ -90,7 +88,6 @@ TODO: update this once SCSS utilities are available to consumers
 | Medium       | `@include md-mq-only {}` | 992px-1199px |
 | Large        | `@include lg-mq {}`      | >= 1232px    |
 | Large        | `@include lg-mq-only {}` | >= 1232px    |
- -->
 
 ### Targeting the Utility Media Query with Class Names
 
