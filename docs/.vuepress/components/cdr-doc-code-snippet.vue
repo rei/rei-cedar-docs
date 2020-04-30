@@ -155,9 +155,6 @@ export default {
     }
   }
 
-
-  $cdr-doc-code-snippet-icon-color: $taken-for-granite;
-
   .cdr-doc-code-snippet__action-wrapper {
     position: relative;
     margin-right: $cdr-space-one-x;
