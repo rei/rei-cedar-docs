@@ -206,7 +206,6 @@
 <style lang="scss">
   @import '../theme/styles/cdr-tokens.scss';
   @import '../theme/styles/cdr-doc-tokens.scss';
-  $cdr-doc-code-snippet-actions-background-color: $ice-age;
 
   .cdr-doc-example-code-pair {
     border: $cdr-doc-border-separator;
@@ -313,7 +312,7 @@
   }
 
   .cdr-doc-item-background-toggle__button--active {
-    background: $partly-cloudy;
+    background: $cdr-color-border-primary;
   }
 
   .cdr-doc-item-background-toggle__input {
