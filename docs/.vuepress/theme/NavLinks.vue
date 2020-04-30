@@ -22,7 +22,7 @@
       </cdr-accordion>
     </cdr-accordion-group>
     <NavLink v-for="item in singleLinks" :item="item" class="cdr-doc-side-navigation__parent-link"/>
-    <!-- repo link -->
+    <!-- repo link TODDO: uhhh waht? -->
     <a v-if="repoLink"
       :href="repoLink"
       class="repo-link"
@@ -36,13 +36,13 @@
 
 <script>
 import OutboundLink from './OutboundLink.vue'
-import { CdrAccordion, CdrList } from '@rei/cedar';
+import { CdrAccordion, CdrAccordionGroup, CdrList } from '@rei/cedar';
 
 import { resolveNavLinkItem } from './util'
 import NavLink from './NavLink.vue'
 
 export default {
-  components: { OutboundLink, NavLink, CdrAccordion },
+  components: { OutboundLink, NavLink, CdrAccordion, CdrAccordionGroup },
   data() {
     return {
       navGroup: [],
@@ -145,8 +145,8 @@ export default {
         let opened = false;
         if (this.showNavGroup(item.text)) {
           opened = true;
-        } 
-        
+        }
+
         this.$set(this.navGroup, index, opened);
       });
     }
@@ -179,6 +179,6 @@ export default {
   }
 
   .cdr-doc-side-navigation__parent-link {
-    
+
   }
 </style>

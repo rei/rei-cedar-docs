@@ -11,15 +11,10 @@
         </div>
       </div>
       <div class="cdr-doc-page-shell__body">
-
         <div class="custom-layout" v-if="$page.frontmatter.layout_type">
           <component :is="$page.frontmatter.layout_type"/>
         </div>
         <Home v-else-if="$page.frontmatter.home"/>
-        <Page v-else :sidebar-items="sidebarItems">
-          <slot name="page-top" slot="top"/>
-          <slot name="page-bottom" slot="bottom"/>
-        </Page>
       </div>
     </div>
     <back-to-top-btn @click="scrollToTop" />
@@ -33,12 +28,10 @@ import iconSprite from '@rei/cedar-icons/dist/all-icons.svg';
 import BackToTopBtn from './BackToTop.js';
 import Home from './Home.vue'
 import Navbar from './Navbar.vue'
-import Page from './Page.vue'
-import Sidebar from './Sidebar.vue'
-import { pathToComponentName } from '@app/util'
-import { resolveSidebarItems } from './util'
+import { pathToComponentName } from '@app/util';
+import '../cedar.js';
 export default {
-  components: { Home, Page, Sidebar, Navbar, BackToTopBtn },
+  components: { Home, Navbar, BackToTopBtn },
   data () {
     return {
       isSidebarOpen: false,
@@ -59,31 +52,12 @@ export default {
         this.$themeLocaleConfig.nav
       )
     },
-    shouldShowSidebar () {
-      const { themeConfig } = this.$site
-      const { frontmatter } = this.$page
-      return (
-        !frontmatter.layout &&
-        !frontmatter.home &&
-        frontmatter.sidebar !== false &&
-        this.sidebarItems.length
-      )
-    },
-    sidebarItems () {
-      return resolveSidebarItems(
-        this.$page,
-        this.$route,
-        this.$site,
-        this.$localePath
-      )
-    },
     pageClasses() {
       const userPageClass = this.$page.frontmatter.pageClass
       return [
         {
           'no-navbar': !this.shouldShowNavbar,
           'sidebar-open': this.isSidebarOpen,
-          'no-sidebar': !this.shouldShowSidebar,
         },
         userPageClass
       ]
@@ -119,10 +93,6 @@ export default {
       this.isSidebarOpen = false
     })
   },
-  // Causing errors on route change -- just updating meta tags so I think we're ok
-  // watch: {
-  //   '$page': 'updateMeta',
-  // },
 
   beforeDestroy () {
     this.updateMetaTags(null, this.currentMetaTags)
