@@ -1,6 +1,5 @@
 @import 'cdr-tokens';
 @import 'cdr-doc-tokens';
-@import 'cdr-doc-mixins';
 @import 'examples.scss';
 
 $side-navigation-logo-width: 162px;
@@ -231,20 +230,6 @@ div[class^='language-'] {
   justify-content: space-between;
   margin-bottom: $cdr-space-two-x;
   margin-top: $cdr-space-two-x;
-}
-
-// Colors page styles
-.cdr-doc-colors-intro {
-  display: flex;
-}
-
-.cdr-doc-colors-intro__image {
-  max-width: 100%;
-}
-
-.cdr-doc-colors-intro__text {
-  @include cdr-doc-long-form-text;
-  margin-right: $cdr-space-four-x;
 }
 
 /*
