@@ -44,25 +44,23 @@
   @import '../theme/styles/cdr-doc-tokens.scss';
 
   .api-event {
-    background-color: $cdr-color-background-lightest;
-    border: 1px solid $partly-cloudy;
+    background-color: $cdr-color-background-primary;
+    border: 1px solid $cdr-color-border-primary;
     border-radius: 4px;
     padding: $cdr-space-half-x;
 
     .event-name {
-      color: $quick-fixe;
       font-size: 14px;
       margin-bottom: 0px;
     }
-    
+
     .event-type {
-      color: $dehydrated-lemon;
       font-size: 14px;
       margin-bottom: 0px;
     }
 
     .event-label {
-      color: $coal-train;
+      color: $cdr-color-text-secondary;
       font-size: 9px;
     }
 

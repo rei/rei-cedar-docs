@@ -49,14 +49,14 @@ export default {
 <style lang="scss">
 @import '../theme/styles/cdr-tokens.scss';
 
-$do-color: $instant-winner;
-$dont-color: $quick-fixe;
-$caution-color: #C77523;
+$do-color: $cdr-color-text-success;
+$dont-color: $cdr-color-text-error;
+$caution-color: $cdr-color-text-warning;
 
 .do-dont {
 
   &__image {
-    border: 1px solid $partly-cloudy;
+    border: 1px solid $cdr-color-border-primary;
     border-radius: $cdr-radius-softer;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;

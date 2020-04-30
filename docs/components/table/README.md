@@ -156,6 +156,42 @@ Alternating light/dark backgrounds.
 
 </cdr-doc-example-code-pair>
 
+
+## Border
+
+Adds border between rows
+
+<cdr-doc-example-code-pair repository-href="/src/components/table" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+<div>
+  <cdr-table border>
+    <thead>
+      <tr>
+        <th>Test head</th>
+        <th>Test head</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Test content</td>
+        <td>Test content</td>
+      </tr>
+      <tr>
+        <td>Test content</td>
+        <td>Test content</td>
+      </tr>
+      <tr>
+        <td>Test content</td>
+        <td>Test content</td>
+      </tr>
+    </tbody>
+  </cdr-table>
+</div>
+```
+
+</cdr-doc-example-code-pair>
+
 ## Advanced with custom styles
 
 This is an advanced example with multiple headers and a custom class to change the background color for headers inside `<tbody>`

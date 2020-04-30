@@ -108,7 +108,6 @@ export default {
 <style lang="scss">
   @import '../theme/styles/cdr-tokens.scss';
   @import '../theme/styles/cdr-doc-tokens.scss';
-  $cdr-doc-code-snippet-actions-background-color: $cdr-color-background-lighter;
 
   .cdr-doc-code-snippet {
     margin-bottom: $cdr-space-one-x;
@@ -118,10 +117,8 @@ export default {
 
   .cdr-doc-code-snippet__actions {
     align-items: center;
-    background-color: $cdr-doc-code-snippet-actions-background-color;
-    border: $cdr-doc-border-separator;
-    border-bottom: 0;
-    border-radius: $cdr-doc-border-radius-default $cdr-doc-border-radius-default 0 0;
+    background-color: $cdr-color-background-secondary;
+    border: none;
     display: flex;
     padding: $cdr-space-three-quarter-x $cdr-space-inset-one-x;
 

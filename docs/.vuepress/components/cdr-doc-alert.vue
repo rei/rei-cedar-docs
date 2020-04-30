@@ -1,15 +1,15 @@
 <template>
   <div :class="['rei-doc-alert', colorClass]">
-    <cdr-icon 
+    <cdr-icon
       class="rei-doc-alert__icon"
-      use="#information-stroke" 
-      alt="Information icon" 
+      use="#information-stroke"
+      alt="Information icon"
       v-if="icon === 'info'"
     />
-    <cdr-icon 
+    <cdr-icon
       class="rei-doc-alert__icon"
-      use="#warning-tri" 
-      alt="Warning icon" 
+      use="#warning-tri"
+      alt="Warning icon"
       v-if="icon === 'warning'"
     />
     <div>
@@ -39,26 +39,23 @@ export default {
 <style lang="scss">
   @import '../theme/styles/cdr-tokens.scss';
   @import '../theme/styles/cdr-doc-tokens.scss';
-  $text-color-primary: $coal-train;
-  $border-color: $partly-cloudy;
-  $icon-color: $holy-smoke;
 
   .rei-doc-alert {
     @include cdr-text-utility-sans-200;
     align-items: center;
-    border: solid 1px $border-color;
+    border: solid 1px $cdr-color-border-primary;
     border-radius: $cdr-radius-soft;
     box-sizing: border-box;
     color: #2a2a2a;
     display: flex;
     margin-bottom: $cdr-space-one-x;
     padding: $cdr-space-half-x $cdr-space-inset-three-quarter-x;
-    fill: $holy-smoke;
+    fill: $cdr-color-icon-default;
 
     &.alert-color-warning {
-      fill: #c77523;
-      border-left: 8px solid #c77523;
-      border-color: #c77523;
+      fill: $cdr-color-text-warning;
+      border-left: 8px solid $cdr-color-border-warning;
+      border-color: $cdr-color-border-warning;
     }
 
     &.alert-color-info {
