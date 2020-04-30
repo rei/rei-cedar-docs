@@ -251,6 +251,7 @@ div[class^='language-'] {
 Generic Styling, for Desktops/Laptops  this is for markdown table display */
 
 table:not([class*="cdr-table"]) {
+  color: pink;
   @include cdr-table-base-mixin;
   @include cdr-table-full-width-mixin;
   @include cdr-table-striped-mixin;

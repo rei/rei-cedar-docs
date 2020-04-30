@@ -61,7 +61,7 @@
 
   .api-prop {
     background-color: $cdr-color-background-lightest;
-    border: 1px solid $partly-cloudy;
+    border: 1px solid $cdr-color-border-primary;
     border-radius: 4px;
     padding: $cdr-space-half-x;
 
@@ -72,25 +72,22 @@
     }
 
     .prop-name {
-      color: $quick-fixe;
       font-size: 14px;
       margin-bottom: 0px;
     }
-    
+
     .prop-type {
-      color: $dehydrated-lemon;
       font-size: 14px;
       margin-bottom: 0px;
     }
 
     .prop-default {
-      color: $cdr-doc-text-color-primary;
       font-size: 14px;
       margin-bottom: 0px;
     }
 
     .prop-label {
-      color: $coal-train;
+      color: $cdr-color-text-secondary;
       font-size: 9px;
     }
 

@@ -1,16 +1,16 @@
 <template>
   <div class="api-prop-alert" :class="'alert-' + alert.type">
     <div class="api-prop-alert__message prop-description">
-      <cdr-icon 
+      <cdr-icon
         class="api-prop-alert-icon"
-        use="#information-fill" 
-        alt="Prop updated information icon" 
+        use="#information-fill"
+        alt="Prop updated information icon"
         v-if="alert.type === 'updated'"
       />
-      <cdr-icon 
+      <cdr-icon
         class="api-prop-alert-icon"
-        use="#warning-tri" 
-        alt="Prop deprecated warning icon" 
+        use="#warning-tri"
+        alt="Prop deprecated warning icon"
         v-if="alert.type === 'deprecated'"
       />
       {{ alert.description }}
@@ -31,6 +31,8 @@
 </script>
 
 <style lang="scss">
+
+  @import '../theme/styles/cdr-tokens.scss';
   .api-prop-alert {
     margin-bottom: 10px;
     padding-left: 8px;
@@ -42,6 +44,7 @@
   }
 
   .api-prop-alert.alert-updated {
+    // TODO:
     background-color: #3278ae;
     border: 1px solid #3278ae;
 
@@ -51,11 +54,11 @@
   }
 
   .api-prop-alert.alert-deprecated {
-    background-color: #c77523;
-    border: 1px solid #c77523;
+    background-color: $cdr-color-text-warning;
+    border: 1px solid $cdr-color-text-warning;
 
     .api-prop-alert-icon {
-      fill: #c77523;
+      fill: $cdr-color-text-warning;
     }
   }
 

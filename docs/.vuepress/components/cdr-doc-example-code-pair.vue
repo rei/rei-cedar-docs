@@ -247,7 +247,6 @@
 
   .cdr-doc-example-code-pair__item {
     align-items: center;
-    border-bottom: $cdr-doc-border-separator;
     display: flex;
     justify-content: center;
     padding: $cdr-space-inset-two-x;
