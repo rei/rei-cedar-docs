@@ -93,7 +93,7 @@ export default {
   .cdr-doc-local-anchor-nav {
     overflow-y: auto;
     padding: $cdr-space-one-x;
-    background-color: $cdr-color-background-lightest;
+    background-color: $cdr-color-background-primary;
     box-shadow: $cdr-prominence-raised;
   }
   .cdr-doc-local-anchor-nav__list {

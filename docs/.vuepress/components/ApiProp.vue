@@ -60,7 +60,7 @@
   @import '../theme/styles/cdr-doc-tokens.scss';
 
   .api-prop {
-    background-color: $cdr-color-background-lightest;
+    background-color: $cdr-color-background-primary;
     border: 1px solid $cdr-color-border-primary;
     border-radius: 4px;
     padding: $cdr-space-half-x;

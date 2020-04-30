@@ -258,15 +258,9 @@ export default {
   margin: 0 auto $cdr-space-one-x;
 }
 
-.home-adopt {
-  background-color: #EFEEE1;
-  text-align: center;
-  padding: $cdr-space-two-x;
-}
-
 .home-hr {
   height: 1px;
-  background-color: $partly-cloudy;
+  background-color: $cdr-color-border-primary;
 }
 
 .home-hr-tree {
@@ -281,7 +275,7 @@ export default {
     left: 0;
     transform: translateY(-50%);
     width: 33%;
-    border-top: 1px solid $partly-cloudy;
+    border-top: 1px solid $cdr-color-border-primary;
   }
 
   &::after {
@@ -292,7 +286,7 @@ export default {
     right: 0;
     transform: translateY(-50%);
     width: 33%;
-    border-top: 1px solid $partly-cloudy;
+    border-top: 1px solid $cdr-color-border-primary;
   }
 
   &__image {
@@ -301,8 +295,8 @@ export default {
 }
 
 .home-card {
-  background-color: $cdr-color-background-lightest;
-  border: 1px solid $partly-cloudy;
+  background-color: $cdr-color-background-primary;
+  border: 1px solid $cdr-color-border-primary;
   border-radius: $cdr-radius-softer;
   display: block;
 }
@@ -313,8 +307,4 @@ export default {
   margin-left: auto;
 }
 
-.adopt-text {
-  max-width: 700px;
-  margin: 0 auto $cdr-space-two-x;
-}
 </style>

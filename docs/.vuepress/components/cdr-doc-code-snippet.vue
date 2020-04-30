@@ -108,7 +108,6 @@ export default {
 <style lang="scss">
   @import '../theme/styles/cdr-tokens.scss';
   @import '../theme/styles/cdr-doc-tokens.scss';
-  $cdr-doc-code-snippet-actions-background-color: $cdr-color-background-lighter;
 
   .cdr-doc-code-snippet {
     margin-bottom: $cdr-space-one-x;

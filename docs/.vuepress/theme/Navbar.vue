@@ -1,5 +1,6 @@
 <template>
   <header class="cdr-doc-side-navigation__items navbar">
+    <!-- TODO: eradicate garbage -->
     <!-- <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/> -->
     <router-link :to="$localePath" class="home-link cdr-doc-side-navigation__logo-wrap">
       <img class="logo cdr-doc-side-navigation__logo"
@@ -23,7 +24,7 @@ import NavLinks from './NavLinks.vue'
 
 export default {
   components: {
-    SidebarButton, NavLinks, 
+    SidebarButton, NavLinks,
     // SearchBox, AlgoliaSearchBox
   },
   computed: {

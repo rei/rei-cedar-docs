@@ -294,8 +294,8 @@
 
   .cdr-doc-item-background-toggle__button {
     @include cdr-text-utility-sans-200;
-    background-color: $cdr-color-background-lightest;
-    border: solid 1px $holy-smoke;
+    background-color: $cdr-color-background-primary;
+    border: solid 1px $cdr-color-border-primary;
     border-right-width: 0;
     cursor: pointer;
     padding: $cdr-space-half-x;
