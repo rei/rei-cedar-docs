@@ -79,6 +79,10 @@
 
 # Overview
 
+CdrCard is a simple wrapper component that allows for composing various card layouts.
+
+CdrCards should always be used to link to other content, and the `cdr-card__link` utility class should be used on the link element to ensure that the entire card functions as a click target.
+
 <cdr-doc-example-code-pair repository-href="/src/components/card"
 :sandbox-data="$page.frontmatter.sandboxData" >
 
@@ -92,12 +96,14 @@
     />
   </div>
   <div class="cdr-space-inset-one-x">
-    <cdr-text
-      tag="h2"
-      modifier="heading-serif-500"
-    >
-      Complex Card Title
-    </cdr-text>
+    <cdr-link class="cdr-card__link" href="#">
+      <cdr-text
+        tag="h2"
+        modifier="heading-serif-500"
+      >
+        Complex Card Title
+      </cdr-text>
+    </cdr-link>
     <cdr-rating
       rating="4.2"
       count="12"
@@ -111,34 +117,6 @@
 ```
 </cdr-doc-example-code-pair>
 
-## Linked Card
-
-Use the `linked` property to add a hover effect to cards that are wrapped in a link
-
-<cdr-doc-example-code-pair repository-href="/src/components/card"
-:sandbox-data="$page.frontmatter.sandboxData" >
-
-```html
-<a href="#">
-  <cdr-card class="card-example" :linked="true">
-    <cdr-text
-      tag="h2"
-      modifier="heading-serif-500"
-    >
-      Linked Card Title
-    </cdr-text>
-    <cdr-rating
-      rating="4.2"
-      count="12"
-      size="small"
-    />
-    <cdr-text modifier="body-300">
-      Linked Card content
-    </cdr-text>
-  </cdr-card>
-</a>
-```
-</cdr-doc-example-code-pair>
 
 ## Accessibility
 
