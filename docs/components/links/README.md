@@ -179,9 +179,10 @@ Display standalone link with icon on right.
 
 ## Accessibility
 
-To ensure that usage of this component complies with accessibility guidelines:
+Many WCAG requierments are contextual to their implementation. 
+To ensure that usage of this component complies with accessibility guidelines you are responcible for the following:
 
-- Always use a `<button>` element for the `tag` prop when there is no `href` attribute that can be applied to the link.to Examples are:
+- Always use a `<button>` element for the `tag` prop when there is no `href` attribute that can be applied to the link. Examples are:
   - Toggling a display to full screen
   - Opening a modal window
   - Triggering a popup menu
@@ -200,11 +201,12 @@ To ensure that usage of this component complies with accessibility guidelines:
 ```
 
 - Ensure assistive technology can find all links on a page:
-  - Always provide a `href` attribute. Empty `href` attributes are not considered true links
+  - Always provide a `href` attribute. Empty `href` attributes are not considered true links and are not accessible to keyboard users.
   - When using images as links, the `alt` attribute acts as the link text. Describe the action or hyperlink that the image represents
 - Ensure that if the keyboard focus can be moved to a component of the page using a keyboard interface, then focus can be moved away from that component using only a keyboard interface, and, if it requires more than unmodified arrow or tab keys or other standard exit methods, the user is advised of the method for moving focus away.
 -  Use `aria-label` or `aria-labelledby` to provide a more descriptive name when the text content of the link cannot be changed.
-
+- The purpose of each link MUST be understandable and distinguishable from other links on the same page, either from the link text alone (ideally), or from the immediate surrounding context of the link.
+- Links to the same destinations MUST be consistently identified with the same (or very similar) link text across all pages of the site.
 <br/>
 
 This component has compliance with following WebAIM’s accessibility guidelines:

@@ -283,7 +283,8 @@ Custom styles for radio buttons.
 
 ## Accessibility
 
-To ensure that usage of this component complies with accessibility guidelines:
+Many WCAG requierments are contextual to their implementation. 
+To ensure that usage of this component complies with accessibility guidelines you are responcible for the following:
 
 - Each radio button must be focusable and keyboard accessible:
   - When radio button has focus, the **Space** key changes the selection
