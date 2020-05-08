@@ -281,13 +281,13 @@ To ensure that usage of this component complies with accessibility guidelines yo
   - Table data cells MUST be associated with their corresponding header cells.
 Note: Use of scope (`<th scope="col">` and `<th scope="row">`) is highly recommended, though not always necessary (i.e. if all cells in the first row are marked as `<th>` without scope, most modern screen readers will infer that the scope is the column below each header cell).
   - Table data group headers (if any) MUST be associated with their corresponding data cell groups (e.g. via scope="rowgroup" or scope="colgroup").
-  - Data table headers and data associations MUST NOT be referenced across nested, merged, or separate tables.rments:
+  - Table headers and data associations MUST NOT be referenced across nested, merged, or separate tables.
 
 - WCAG level AA requierments:
   - Tabular data SHOULD be represented in a `<table>`.
 Note: Even if the data are not represented in a table, WCAG 1.3.1 requires the data to be associated with their labels.
-  - Data tables SHOULD have a programmatically-associated `<caption>` or name (e.g. via aria-label or aria-labelledby).
-  - The name or `<caption>` of a data table SHOULD describe the identity or purpose of the table accurately, meaningfully, and succinctly.
+  - Tables SHOULD have a programmatically-associated `<caption>` or name (e.g. via aria-label or aria-labelledby).
+  - The name or `<caption>` of a table SHOULD describe the identity or purpose of the table accurately, meaningfully, and succinctly.
 
 
 <br>
