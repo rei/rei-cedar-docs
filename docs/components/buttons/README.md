@@ -322,7 +322,7 @@ Change the button size based on where the button is used. The default size is me
 
 ## Accessibility
 Many WCAG requierments are contextual to their implementation. 
-To ensure that usage of this component complies with accessibility guidelines you are responcible for the following:
+To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
 
 - For icon-only buttons, provide `aria-label` text that describes the button's action
 - If activating the button does not dismiss the current context, then focus typically remains on the button after activation, e.g., an Apply or Recalculate button.
