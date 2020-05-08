@@ -95,24 +95,25 @@ The default table is medium sized, bordered, full width, and has responsive over
 ```html
 <div>
   <cdr-table>
+  <caption>A sample table</caption>
     <thead>
       <tr>
-        <th>Test head</th>
-        <th>Test head</th>
+        <th id="head1" scope="col">Test head</th>
+        <th id="head2" scope="col">Test head</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Test content</td>
-        <td>Test content</td>
+        <td headers="head1">Test content</td>
+        <td headers="head2">Test content</td>
       </tr>
       <tr>
-        <td>Test content</td>
-        <td>Test content</td>
+        <td headers="head1">Test content</td>
+        <td headers="head1">Test content</td>
       </tr>
       <tr>
-        <td>Test content</td>
-        <td>Test content</td>
+        <td headers="head1">Test content</td>
+        <td headers="head2">Test content</td>
       </tr>
     </tbody>
   </cdr-table>
@@ -130,24 +131,25 @@ Alternating light/dark backgrounds.
 ```html
 <div>
   <cdr-table striped>
+    <caption>A sample striped table</caption>
     <thead>
       <tr>
-        <th>Test head</th>
-        <th>Test head</th>
+        <th id="stripedhead1" scope="col">Test head</th>
+        <th id="stripedhead2" scope="col">Test head</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Test content</td>
-        <td>Test content</td>
+        <td headers="stripedhead1">Test content</td>
+        <td headers="stripedhead2">Test content</td>
       </tr>
       <tr>
-        <td>Test content</td>
-        <td>Test content</td>
+        <td headers="stripedhead1">Test content</td>
+        <td headers="stripedhead2">Test content</td>
       </tr>
       <tr>
-        <td>Test content</td>
-        <td>Test content</td>
+        <td headers="stripedhead1" >Test content</td>
+        <td headers="stripedhead2">Test content</td>
       </tr>
     </tbody>
   </cdr-table>
@@ -166,24 +168,25 @@ Adds border between rows
 ```html
 <div>
   <cdr-table border>
+    <caption>A sample table displaying a border</caption>
     <thead>
       <tr>
-        <th>Test head</th>
-        <th>Test head</th>
+        <th id="borderhead1" scope="col">Test head 1</th>
+        <th id="borderhead2" scope="col">Test head 2</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Test content</td>
-        <td>Test content</td>
+        <td headers="borderhead1">Test content</td>
+        <td headers="borderhead2">Test content</td>
       </tr>
       <tr>
-        <td>Test content</td>
-        <td>Test content</td>
+        <td headers="borderhead1">Test content</td>
+        <td headers="borderhead2">Test content</td>
       </tr>
       <tr>
-        <td>Test content</td>
-        <td>Test content</td>
+        <td headers="borderhead1">Test content</td>
+        <td headers="borderhead2">Test content</td>
       </tr>
     </tbody>
   </cdr-table>
@@ -314,7 +317,8 @@ This component has compliance with WCAG guidelines by:
 
 ## Anatomy
 
-- `cdr-table` like `cdr-grid` is a wrapper component without predetermined layout requirements. This allows you the flexibility to construct the structure you need to accurately and accessibly display the data you have. There are cases where you might need to change background colors or add additional borders (see [advanced example](#advanced-with-custom-styles) below). When this is done, tokens for the table colors (background, border, etc.) should be used so your customizations can persist through future cedar updates.
+- `cdr-table` like `cdr-grid` is a wrapper component without predetermined layout requirements. This allows you the flexibility to construct the structure you need to accurately display the data you have. There are cases where you might need to change background colors or add additional borders (see [advanced example](#advanced-with-custom-styles) below). When this is done, tokens for the table colors (background, border, etc.) should be used so your customizations can persist through future cedar updates.
+- Our table component provides the visual class only and does not account for markup requirements to create an accessible table. Be sure to review the examples and the accessibility requirements for this component.
 
 <hr>
 
