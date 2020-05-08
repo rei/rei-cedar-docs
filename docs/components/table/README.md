@@ -109,7 +109,7 @@ The default table is medium sized, bordered, full width, and has responsive over
       </tr>
       <tr>
         <td headers="head1">Test content</td>
-        <td headers="head1">Test content</td>
+        <td headers="head2">Test content</td>
       </tr>
       <tr>
         <td headers="head1">Test content</td>
