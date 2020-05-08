@@ -216,21 +216,21 @@ This is an advanced example with multiple headers and a custom class to change t
         <th id="par" colspan="5" scope="colgroup" class="advanced-table__header">Paris</th>
       </tr>
       <tr>
-        <th headers="par" id="pbed1" class="advanced-table__header">1 bedroom</th>
+        <th headers="par" id="pbed1" class="advanced-table__header" scope="row">1 bedroom</th>
         <td headers="par pbed1 stud">11</td>
         <td headers="par pbed1 apt">20</td>
         <td headers="par pbed1 chal">25</td>
         <td headers="par pbed1 villa">23</td>
       </tr>
       <tr>
-        <th headers="par" id="pbed2" class="advanced-table__header">2 bedroom</th>
+        <th headers="par" id="pbed2" class="advanced-table__header" scope="row">2 bedroom</th>
         <td headers="par pbed2 stud">-</td>
         <td headers="par pbed2 apt">43</td>
         <td headers="par pbed2 chal">52</td>
         <td headers="par pbed2 villa">32</td>
       </tr>
       <tr>
-        <th headers="par" id="pbed3" class="advanced-table__header">3 bedroom</th>
+        <th headers="par" id="pbed3" class="advanced-table__header" scope="row">3 bedroom</th>
         <td headers="par pbed3 stud">-</td>
         <td headers="par pbed3 apt">13</td>
         <td headers="par pbed3 chal">15</td>
@@ -240,21 +240,21 @@ This is an advanced example with multiple headers and a custom class to change t
         <th id="rome" colspan="5" scope="colgroup" class="advanced-table__header">Rome</th>
       </tr>
       <tr>
-        <th id="rbed1" headers="rome" class="advanced-table__header">1 bedroom</th>
+        <th id="rbed1" headers="rome" class="advanced-table__header" scope="row">1 bedroom</th>
         <td headers="rome rbed1 stud">13</td>
         <td headers="rome rbed1 apt">21</td>
         <td headers="rome rbed1 chal">22</td>
         <td headers="rome rbed1 villa">3</td>
       </tr>
       <tr>
-        <th id="rbed2" headers="rome" class="advanced-table__header">2 bedroom</th>
+        <th id="rbed2" headers="rome" class="advanced-table__header" scope="row">2 bedroom</th>
         <td headers="rome rbed2 stud">-</td>
         <td headers="rome rbed2 apt">23</td>
         <td headers="rome rbed2 chal">43</td>
         <td headers="rome rbed2 villa">30</td>
       </tr>
       <tr>
-          <th id="rbed3" headers="rome" class="advanced-table__header">3 bedroom</th>
+          <th id="rbed3" headers="rome" class="advanced-table__header" scope="row">3 bedroom</th>
           <td headers="rome rbed3 stud">-</td>
           <td headers="rome rbed3 apt">16</td>
           <td headers="rome rbed3 chal">32</td>
@@ -269,9 +269,23 @@ This is an advanced example with multiple headers and a custom class to change t
 
 ## Accessibility
 
-To ensure that usage of this component complies with accessibility guidelines:
+Many WCAG requierments are contextual to their implementation. 
+To ensure that usage of this component complies with accessibility guidelines you are responcible for the following:
 
-- TODO
+- WCAG level A requierments:
+  - Table headers MUST be designated with `<th>`
+  - Table header text MUST accurately describe the category of the corresponding data cells.
+  - Table data cells MUST be associated with their corresponding header cells.
+Note: Use of scope (`<th scope="col">` and `<th scope="row">`) is highly recommended, though not always necessary (i.e. if all cells in the first row are marked as `<th>` without scope, most modern screen readers will infer that the scope is the column below each header cell).
+  - Table data group headers (if any) MUST be associated with their corresponding data cell groups (e.g. via scope="rowgroup" or scope="colgroup").
+  - Data table headers and data associations MUST NOT be referenced across nested, merged, or separate tables.rments:
+
+- WCAG level AA requierments:
+  - Tabular data SHOULD be represented in a `<table>`.
+Note: Even if the data are not represented in a table, WCAG 1.3.1 requires the data to be associated with their labels.
+  - Data tables SHOULD have a programmatically-associated `<caption>` or name (e.g. via aria-label or aria-labelledby).
+  - The name or `<caption>` of a data table SHOULD describe the identity or purpose of the table accurately, meaningfully, and succinctly.
+
 
 <br>
 
