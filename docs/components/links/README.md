@@ -206,7 +206,6 @@ To ensure that usage of this component complies with accessibility guidelines yo
 - Ensure that if the keyboard focus can be moved to a component of the page using a keyboard interface, then focus can be moved away from that component using only a keyboard interface, and, if it requires more than unmodified arrow or tab keys or other standard exit methods, the user is advised of the method for moving focus away.
 -  Use `aria-label` or `aria-labelledby` to provide a more descriptive name when the text content of the link cannot be changed.
 - The purpose of each link MUST be understandable and distinguishable from other links on the same page, either from the link text alone (ideally), or from the immediate surrounding context of the link.
-- Links to the same destinations MUST be consistently identified with the same (or very similar) link text across all pages of the site.
 <br/>
 
 This component has compliance with following WebAIM’s accessibility guidelines:

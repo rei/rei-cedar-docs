@@ -191,7 +191,7 @@ Change size for the star icon and text. Default size is medium.
 Many WCAG requierments are contextual to their implementation. 
 To ensure that usage of this component complies with accessibility guidelines you are responcible for the following:
 
-- Always provide a `href` attribute. Empty `href` attributes are not considered true links and are not accessible to keyboard users.
+- When linking the rating component be sure to provide a valid `href` value
 
 <br/>
 
@@ -204,7 +204,6 @@ This component has compliance with WCAG guidelines by:
 - Text links displays:
   - Underline text style for mouse usage
   - Focus state for keyboard usage
-
 <hr>
 
 # Guidelines

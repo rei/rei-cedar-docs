@@ -286,7 +286,6 @@ To ensure that usage of this component complies with accessibility guidelines yo
   - May be interchangeable with a toggle
   - Write labels to be self-explanatory
 - Custom checkboxes maintain accessibility requirements. The checkbox icon is only visually hidden and replaced with custom style
-
 <br/>
 
 This component has compliance with WCAG guidelines by:
