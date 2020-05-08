@@ -214,6 +214,7 @@ To ensure that usage of this component complies with accessibility guidelines:
   - Rapidly browse
   - Navigate a page using list content
   - Announce the number of items in each list when using screen readers
+- Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text. (Level A)
 
 <br />
 
@@ -242,7 +243,7 @@ This component has compliance with WCAG guidelines by:
 ## Don't Use When
 
 - Displaying content that is not primarily text
-- Displaying content with two or more well-defined dimensions. Instead, use [Data Tables](../data-tables/)
+- Displaying content with two or more well-defined dimensions. Instead, use [Table](../table/)
 
 ## The Basics
 
