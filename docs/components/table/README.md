@@ -307,6 +307,14 @@ This component has compliance with WCAG guidelines by:
 - Positioning contents on page. Instead, use [Grid](../grid/)
 - Laying out a page design. Instead, use [Grid](../grid/)
 
+## The Basics
+
+- Use on either light or dark backgrounds.
+- Content within tables can include text, photos, graphics, or other components (i.e. links, buttons, icons)
+
+## Anatomy
+
+- `cdr-table` like `cdr-grid` is a wrapper component without predetermined layout requirements. This allows you the flexibility to construct the structure you need to accurately and accessibly display the data you have. There are cases where you might need to change background colors or add additional borders (see [advanced example](#advanced-with-custom-styles) below). When this is done, tokens for the table colors (background, border, etc.) should be used so your customizations can persist through future cedar updates.
 
 <hr>
 
@@ -315,15 +323,5 @@ This component has compliance with WCAG guidelines by:
 ## Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
-
-## Usage
-
-### Markup
-
-While tables can be as simple as `CdrTable > tr > td`, tables should make use of `thead`, `tbody`, and/or `tfoot` for the best user experience and for correct styles.
-
-### Customizing
-
-CdrTable is a simple wrapper component that provides basic styles that should support the majority of uses. There are cases where you might need to change background colors or add additional borders (see [advanced example](#advanced-with-custom-styles) above). When this is done, tokens for the table colors (background, border, etc.) should be used so your customizations can persist through future cedar updates.
 
 </cdr-doc-table-of-contents-shell>
