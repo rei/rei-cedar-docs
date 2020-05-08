@@ -200,7 +200,6 @@ This component has compliance with WCAG guidelines by:
 - Providing screen reader text customized to each available variant”
 - Using text color with a Level AA contrast ratio of 4.5:1 contrast between the text color and the background (only when displayed on light backgrounds)
 - Replacing icon stars with utf-8 characters when images are disabled 
-- 
 - Text links displays:
   - Underline text style for mouse usage
   - Focus state for keyboard usage
