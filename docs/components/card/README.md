@@ -16,14 +16,14 @@
   "content": [
     {
       "type": "do",
-      "image": "",
+      "image": "card/card_essential_do.png",
       "ratio": "4-3",
       "alt": "Image showing proper card usage",
       "caption": "include essential, summarized information. "
     },
     {
       "type": "dont",
-      "image": "",
+      "image": "card/card_excessive_dont.png",
       "ratio": "4-3",
       "alt": "Image showing improper card usage",
       "caption": "overwhelm the space with excessive content."
@@ -32,14 +32,14 @@
   "grouping": [
     {
       "type": "do",
-      "image": "",
+      "image": "card/card_consistent_do.png",
       "ratio": "4-3",
       "alt": "Image showing proper card usage",
       "caption": "use consistent elements from card to card when arranged in groups."
     },
     {
       "type": "dont",
-      "image": "",
+      "image": "card/card_unlike_dont.png",
       "ratio": "4-3",
       "alt": "Image showing improper card usage",
       "caption": "group unlike cards that use different elements."
