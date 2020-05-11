@@ -20,7 +20,7 @@
   "position": [
     {
       "type": "do",
-      "image": "block-quote/quotes_block__do.png",
+      "image": "block-quote/quotes_block_position_do.png",
       "ratio": "3-2",
       "alt": "Image showing proper block quote use.",
       "caption": "position the quote near the surrounding text."
@@ -36,7 +36,7 @@
   "indenting": [
     {
       "type": "do",
-      "image": "block-quote/quotes_block__do.png",
+      "image": "block-quote/quotes_block_indent_do.png",
       "ratio": "3-2",
       "alt": "Image showing proper block quote use.",
       "caption": "use for emphasizing content or additional content."
@@ -52,7 +52,7 @@
   "too_many": [
     {
       "type": "do",
-      "image": "block-quote/quotes_block__do.png",
+      "image": "block-quote/quotes_block_too_many_do.png",
       "ratio": "3-2",
       "alt": "Image showing proper block quote position.",
       "caption": "position quotes so users can visually scan the page."
