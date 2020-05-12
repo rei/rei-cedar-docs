@@ -52,15 +52,6 @@
         {
           "name": "CdrCard",
           "api": {
-            "props": [
-              {
-                "name": "linked",
-                "type": "boolean",
-                "default": "false",
-                "required": "false",
-                "description": "Adds an elevated effect on hover for use with CdrCards that are wrapped in a link"
-              }
-            ],
             "slots": [
               {
                 "name": "default",
@@ -88,7 +79,7 @@ CdrCards should always be used to link to other content, and the `cdr-card__link
 
 ```html
 <cdr-card class="card-example">
-  <div>
+  <article>
     <cdr-img
       alt="card test image alt text"
       src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg"
@@ -96,7 +87,7 @@ CdrCards should always be used to link to other content, and the `cdr-card__link
     />
   </div>
   <div class="cdr-space-inset-one-x">
-    <cdr-link class="cdr-card__link" href="#">
+    <cdr-link modifier="standalone" class="cdr-card__link" href="#">
       <cdr-text
         tag="h2"
         modifier="heading-serif-500"
@@ -112,7 +103,7 @@ CdrCards should always be used to link to other content, and the `cdr-card__link
     <cdr-text modifier="body-300">
       Card content
     </cdr-text>
-  </div>
+  </article>
 </cdr-card>
 ```
 </cdr-doc-example-code-pair>
@@ -120,10 +111,18 @@ CdrCards should always be used to link to other content, and the `cdr-card__link
 
 ## Accessibility
 
-To ensure that usage of this component complies with accessibility guidelines, do the following:
+<cdr-doc-alert icon="info">Many WCAG requierments are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines you are responcible for the following </cdr-doc-alert>
 
-- TODO: something
-- TODO: something else
+The cdr-card component is a wrapper container with built in functionality to support a linked title. 
+Ask yourself the following as you build out the specific card you need. 
+
+- Use an `<article>` tag if the content includes a heading AND the content would be as useful on another web page
+
+- Use a `<section>` tag if the content contains a heading, but the content is dependent on its context to be meaningful
+
+- Use a `<div>` tag if your card title won’t be using a heading tag. this ensures it will not appear in the document’s outline
+
+- Any actionable elements contained within your cards must follow the guidelines outlined in each of their accessibility sections
 
 # Guidelines
 
