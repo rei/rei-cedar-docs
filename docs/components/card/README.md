@@ -87,7 +87,7 @@ CdrCards should always be used to link to other content, and the `cdr-card__link
     />
   </div>
   <div class="cdr-space-inset-one-x">
-    <cdr-link modifier="standalone" class="cdr-card__link" href="#">
+    <cdr-link class="cdr-card__link" href="#">
       <cdr-text
         tag="h2"
         modifier="heading-serif-500"
@@ -155,11 +155,6 @@ Ask yourself the following as you build out the specific card you need.
 <do-dont :examples="$page.frontmatter.grouping" />
 
 # API
-
-
-## Props
-
-<cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
 ## Slots
 
