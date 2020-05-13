@@ -87,7 +87,7 @@ CdrCards should always be used to link to other content, and the `cdr-card__link
     />
   </div>
   <div class="cdr-space-inset-one-x">
-    <cdr-link class="cdr-card__link" href="#">
+    <cdr-link class="cdr-card__link" href="#Overview">
       <cdr-text
         tag="h2"
         modifier="heading-serif-500"
