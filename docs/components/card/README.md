@@ -111,7 +111,7 @@ CdrCards should always be used to link to other content, and the `cdr-card__link
 
 ## Accessibility
 
-Many WCAG requierments are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines you are responcible for the following:
+Many WCAG requierments are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
 
 - CdrCard must contain a linked title
 - All actionable elements contained within CdrCard must follow the guidelines outlined within their accessibility sections

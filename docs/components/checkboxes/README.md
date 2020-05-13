@@ -273,7 +273,7 @@ Custom styles for checkboxes.
 ## Accessibility
 
 Many WCAG requierments are contextual to their implementation. 
-To ensure that usage of this component complies with accessibility guidelines you are responcible for the following:
+To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
 
 - Each checkbox must be focusable and keyboard accessible:
   - When the checkbox has focus, the **Space** key changes the selection

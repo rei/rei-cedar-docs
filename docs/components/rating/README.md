@@ -189,7 +189,7 @@ Change size for the star icon and text. Default size is medium.
 ## Accessibility
 
 Many WCAG requierments are contextual to their implementation. 
-To ensure that usage of this component complies with accessibility guidelines you are responcible for the following:
+To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
 
 - When linking the rating component be sure to provide a valid `href` value
 

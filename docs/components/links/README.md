@@ -180,7 +180,7 @@ Display standalone link with icon on right.
 ## Accessibility
 
 Many WCAG requierments are contextual to their implementation. 
-To ensure that usage of this component complies with accessibility guidelines you are responcible for the following:
+To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
 
 - Always use a `<button>` element for the `tag` prop when there is no `href` attribute that can be applied to the link. Examples are:
   - Toggling a display to full screen
