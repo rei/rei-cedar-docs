@@ -121,9 +121,9 @@ CdrCards should always be used to link to other content, and the `cdr-card__link
 
 Many WCAG requierments are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
 
-- Use an `<article>` tag if the content includes a heading AND the content would be as useful on another web page
-- Use a `<section>` tag if the content contains a heading, but the content is dependent on its context to be meaningful
-- Use a `<div>` tag if your card title won’t be using a heading tag. this ensures it will not appear in the document’s outline
+- leave the default tag prop of `article` if the content includes a heading AND the content would be as useful on another web page
+- Set the tag prop to `section` if the content contains a heading, but the content is dependent on its context to be meaningful
+- Set the tag prop to `div` if your card title won’t be using a heading tag. this ensures it will not appear in the document’s outline
 - CdrCard must contain a linked title
 - All actionable elements contained within CdrCard must follow the guidelines outlined within their accessibility sections
 
