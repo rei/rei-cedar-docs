@@ -79,30 +79,30 @@ CdrCards should always be used to link to other content, and the `cdr-card__link
 
 ```html
 <cdr-card class="card-example">
-  <article>
+  <div>
     <cdr-img
       alt="card test image alt text"
       src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg"
       modifier="responsive"
     />
-    <div class="cdr-space-inset-one-x">
-      <cdr-link class="cdr-card__link" href="#Overview">
-        <cdr-text
-          tag="h2"
-          modifier="heading-serif-500">
-          Complex Card Title
-        </cdr-text>
-      </cdr-link>
-      <cdr-rating
-        rating="4.2"
-        count="12"
-        size="small"
-      />
-      <cdr-text modifier="body-300">
-        Card content
+  </div>
+  <div class="cdr-space-inset-one-x">
+    <cdr-link class="cdr-card__link" href="#Overview">
+      <cdr-text
+        tag="h2"
+        modifier="heading-serif-500">
+        Complex Card Title
       </cdr-text>
-    </div>
-  </article>
+    </cdr-link>
+    <cdr-rating
+      rating="4.2"
+      count="12"
+      size="small"
+    />
+    <cdr-text modifier="body-300">
+      Card content
+    </cdr-text>
+  </div>
 </cdr-card>
 ```
 </cdr-doc-example-code-pair>
@@ -110,14 +110,9 @@ CdrCards should always be used to link to other content, and the `cdr-card__link
 
 ## Accessibility
 
-<cdr-doc-alert icon="info">Many WCAG requierments are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines you are responcible for the following items</cdr-doc-alert>
+Many WCAG requierments are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines you are responcible for the following:
 
-- Use an `<article>` tag if the content includes a heading AND the content would be as useful on another web page
-
-- Use a `<section>` tag if the content contains a heading, but the content is dependent on its context to be meaningful
-
-- Use a `<div>` tag if your card title won’t be using a heading tag. this ensures it will not appear in the document’s outline
-
+- CdrCard must contain a linked title
 - All actionable elements contained within CdrCard must follow the guidelines outlined within their accessibility sections
 
 # Guidelines
