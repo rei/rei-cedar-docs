@@ -52,6 +52,14 @@
         {
           "name": "CdrCard",
           "api": {
+            "props": [
+              {
+                "name": "tag",
+                "type": "string",
+                "default": "'article'",
+                "description": "Sets valid HTML container element tag."
+              },
+            ],
             "slots": [
               {
                 "name": "default",
@@ -113,6 +121,9 @@ CdrCards should always be used to link to other content, and the `cdr-card__link
 
 Many WCAG requierments are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
 
+- Use an `<article>` tag if the content includes a heading AND the content would be as useful on another web page
+- Use a `<section>` tag if the content contains a heading, but the content is dependent on its context to be meaningful
+- Use a `<div>` tag if your card title won’t be using a heading tag. this ensures it will not appear in the document’s outline
 - CdrCard must contain a linked title
 - All actionable elements contained within CdrCard must follow the guidelines outlined within their accessibility sections
 
@@ -147,6 +158,10 @@ Many WCAG requierments are contextual to their implementation. To ensure that us
 <do-dont :examples="$page.frontmatter.grouping" />
 
 # API
+
+## Props	
+
+<cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
 ## Slots
 
