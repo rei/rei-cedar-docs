@@ -55,38 +55,6 @@
       "caption": "use colons after labels."
     }
   ],
-  "required": [
-    {
-      "type": "do",
-      "image": "select/select_sizes_do_16-9.png",
-      "ratio": "16-9",
-      "alt": "Image showing an input element above a select element of the same size",
-      "caption": "use consistent sizes for components on a single form."
-    },
-    {
-      "type": "dont",
-      "image": "select/select_sizes_dont_16-9.png",
-      "ratio": "16-9",
-      "alt": "Image showing an input element above a select element of a different size",
-      "caption": "mix sizes for components on a single form."
-    }
-  ],
-  "sizes": [
-    {
-      "type": "do",
-      "image": "select/select_required_do_16-9.png",
-      "ratio": "16-9",
-      "alt": "Image showing the text required to the right of the label above the select element",
-      "caption": "position the required label next to the select field label."
-    },
-    {
-      "type": "dont",
-      "image": "select/select_required_dont_16-9.png",
-      "ratio": "16-9",
-      "alt": "Image showing an asterisk to the right of the label above the select element",
-      "caption": "use an asterisk for a required select."
-    }
-  ],
   "breadcrumbs": [
     {
       "text": "Components/"
@@ -356,7 +324,7 @@ Input field with helper or hint text below the input field.
 
 ## Multiple Select
 
-CdrSelect can be rendered as a multi-select by passing the native HTML select `multiple` attribute. The `multipleSize` prop can be used to control the height of the multi-select. 
+CdrSelect can be rendered as a multi-select by passing the native HTML select `multiple` attribute. The `multipleSize` prop can be used to control the height of the multi-select.
 
 <cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: [], defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D', 'Option E', 'Option F']}">
 
@@ -497,12 +465,6 @@ Select components should be:
 ### Validation
 
 + Validate the user’s data before form submission
-
-### Do/Don't
-
-<do-dont :examples="$page.frontmatter.required" />
-
-<do-dont :examples="$page.frontmatter.sizes" />
 
 
 # API
