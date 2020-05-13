@@ -273,7 +273,7 @@ This is an advanced example with multiple headers and a custom class to change t
 ## Accessibility
 
 Many WCAG requierments are contextual to their implementation. 
-To ensure that usage of this component complies with accessibility guidelines you are responcible for the following:
+To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
 
 - WCAG level A requierments:
   - Table headers MUST be designated with `<th>`
