@@ -85,24 +85,23 @@ CdrCards should always be used to link to other content, and the `cdr-card__link
       src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg"
       modifier="responsive"
     />
-  </div>
-  <div class="cdr-space-inset-one-x">
-    <cdr-link class="cdr-card__link" href="#Overview">
-      <cdr-text
-        tag="h2"
-        modifier="heading-serif-500"
-      >
-        Complex Card Title
+    <div class="cdr-space-inset-one-x">
+      <cdr-link class="cdr-card__link" href="#Overview">
+        <cdr-text
+          tag="h2"
+          modifier="heading-serif-500">
+          Complex Card Title
+        </cdr-text>
+      </cdr-link>
+      <cdr-rating
+        rating="4.2"
+        count="12"
+        size="small"
+      />
+      <cdr-text modifier="body-300">
+        Card content
       </cdr-text>
-    </cdr-link>
-    <cdr-rating
-      rating="4.2"
-      count="12"
-      size="small"
-    />
-    <cdr-text modifier="body-300">
-      Card content
-    </cdr-text>
+    </div>
   </article>
 </cdr-card>
 ```
@@ -111,10 +110,7 @@ CdrCards should always be used to link to other content, and the `cdr-card__link
 
 ## Accessibility
 
-<cdr-doc-alert icon="info">Many WCAG requierments are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines you are responcible for the following </cdr-doc-alert>
-
-The cdr-card component is a wrapper container with built in functionality to support a linked title. 
-Ask yourself the following as you build out the specific card you need. 
+<cdr-doc-alert icon="info">Many WCAG requierments are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines you are responcible for the following items</cdr-doc-alert>
 
 - Use an `<article>` tag if the content includes a heading AND the content would be as useful on another web page
 
@@ -122,7 +118,7 @@ Ask yourself the following as you build out the specific card you need.
 
 - Use a `<div>` tag if your card title won’t be using a heading tag. this ensures it will not appear in the document’s outline
 
-- Any actionable elements contained within your cards must follow the guidelines outlined in each of their accessibility sections
+- All actionable elements contained within CdrCard must follow the guidelines outlined within their accessibility sections
 
 # Guidelines
 
