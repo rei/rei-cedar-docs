@@ -90,7 +90,8 @@ CdrCards should always be used to link to other content, and the `cdr-card__link
     <cdr-link class="cdr-card__link" href="#Overview">
       <cdr-text
         tag="h2"
-        modifier="heading-serif-500">
+        modifier="heading-serif-500"
+      >
         Complex Card Title
       </cdr-text>
     </cdr-link>
