@@ -24,7 +24,7 @@
     },
     {
       "text": 'Iconography',
-      "href": '../../foundation/iconography/'
+      "href": '../../icons/iconography/'
     }
   ],
   "meaning": [
