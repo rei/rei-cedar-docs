@@ -111,8 +111,8 @@
                     tag="h3"
                     modifier="heading-sans-400"
                     class="cdr-mb-space-one-x"
-                  >Cedar Sketch UI toolkit</cdr-text>
-                  <cdr-link :href="$withBase('/getting-started/as-a-designer/')" modifier="standalone">Download the Sketch library</cdr-link>
+                  >Cedar Figma UI toolkit</cdr-text>
+                  <cdr-link :href="$withBase('/getting-started/as-a-designer/')" modifier="standalone">Download the Figma library</cdr-link>
                 </div>
               </cdr-col>
               <cdr-col span="3">
