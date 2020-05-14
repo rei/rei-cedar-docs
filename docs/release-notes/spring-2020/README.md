@@ -84,7 +84,78 @@ CdrTabs has been updated so that the active tab underline no longer causes windo
 
 ### Accessibility Enhancements
 
-TODO: briefly list what we fixed?
+#### CdrAccordion
+
+- Documentation updated with usage requirements
+- The button element is the only element inside the heading element. That is, if there are other visually persistent elements, they are not included inside the heading element.
+- Each accordion header button is wrapped in an element with role heading that has a value set for aria-level that is appropriate for the information architecture of the page.
+
+#### CdrLink
+
+- Documentation updated with usage requirements
+- Color meets 4.5:1 contrast with background
+- Color meets 3:1 contrast with surrounding text
+- Hover and focus colors meet 3:1 contrast with surrounding text
+
+#### CdrBreadcrumb
+
+- A nav element labeled Breadcrumb identifies the structure as a breadcrumb trail and makes it a navigation landmark so that it is easy to locate.
+- The ellipsis button has added `aria-expanded="false"` and updated screen reader text ensuring the users understand the number of items hidden in this control
+
+#### CdrButton
+
+- Documentation updated with usage requirements
+- Variants: color meets 3:1 contrast to background
+- Variants: Hover and focus states meet 3:1 contrast to background and surrounding actionable elements
+- Uses an ordered list structure
+
+#### CdrCheckbox
+
+- Documentation updated with usage requirements
+- Active, hover, and focus have increased border width to ensure contrast meets 3:1 with background and default actionable elements
+
+#### CdrModal
+
+Focus on button click moves to modal panel
+
+#### CdrPagination
+
+- Pagination component is wrapped with `<nav>` element
+- Changed `aria-label` to `pagination` rather than `pagination navigation` as navigation would be read out twice
+- Uses an ordered list structure
+
+#### CdrRadio
+
+- Documentation updated with usage requirements
+- Active, hover, and focus have increased border width to ensure contrast meets 3:1 with background and default actionable elements
+
+#### CdrRating
+
+- Documentation updated with usage requirements
+- Star icon visual boundaries provide a minimum of 3:1 to the background
+- Star icon visual boundaries provide a minimum of 3:1 fill to non-fill
+- When images are disabled, star icons are replaced with Unicode characters 
+- Star icon is visible in high contrast mode
+- Screen reader text has been updated for each variant possible
+  
+| Use case | screen reader text |
+|------------------|------------------|
+|linked rating stars with average and count: has reviews | View the (x) reviews with an average rating of #.## out of 5 stars|
+|linked rating stars with count: has reviews | "View the (x) reviews with an average rating of #.## out of 5 stars"|
+|linked rating stars with count: no reviews | "No reviews yet; be the first!"|
+|rating stars with average and count: has reviews|"(x) reviews with an average rating of #.## out of 5 stars"|
+|rating stars with average and count: no reviews|"0 reviews"|
+|rating stars with count: has reviews|"(x) reviews with an average rating of #.## out of 5 stars"|
+|rating stars with count: no reviews|"0 reviews"|
+
+#### CdrTab
+
+- Only the active tab is in the tab order. The user reaches the tabbed panel component by pressing the tab key until the active tab title receives focus.
+- Clicking on the tab title activates the tab and sets focus to the tab title.
+- Tab navigation will move from tab item to the associated panel 
+- The currently selected tab list item has the state aria-selected="true"
+- Uses an unordered list structure
+
 
 ## Breaking Changes
 
