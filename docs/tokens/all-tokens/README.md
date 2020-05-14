@@ -11,7 +11,7 @@
   ],
 }
 ---
-<cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
+<cdr-doc-table-of-contents-shell parentSelector='h3' childSelector='h4'>
 
 <tokens-page />
 
