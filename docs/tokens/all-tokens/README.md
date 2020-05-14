@@ -1,6 +1,6 @@
 ---
 {
-  "title": "Tokens",
+  "title": "All Tokens",
   "title_metadata": false,
   "layout_type": "LayoutArticle",
   "summary": false,
