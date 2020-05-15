@@ -21,6 +21,7 @@ Color design tokens represent the fundamental decisions of Cedar’s visual lang
   - Stores color specifications using variable names, not hard-coded values such as hex values for color
   - Specifies a hierarchical and semantically-defined system
 
+The color values in Cedar have been carefully selected and tested to meet WCAG accessibility requirements for contrast and color. Using colors outside of this palette may result in an inaccessible experience for some users, and should be avoided when possible. Learn more about accessibility in the Cedar Design System in the [Accessibility Foundation](../../accessibility/) article as well as throughout the component guidelines. 
 
 <br/>
 <hr>
