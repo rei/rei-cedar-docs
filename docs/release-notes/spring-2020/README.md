@@ -177,7 +177,7 @@ CdrLink previously supported theming by setting an `on-dark` or `on-light` CSS c
 
 ### CdrButton OnDark Removed
 
-CdrButton previously accepted a prop named `on-dark` which could be used in conjunction with the `icon-only` prop to render a button with a background. This was intended to be used on dark backgrounds to make the icon button more visible and accessible. Due to the new color scale this feature was not possible to continue supporting as is, and has been replaced with a new [with-background](./#cdrbutton-icon-only-variant) property.
+CdrButton previously accepted a prop named `on-dark` which could be used in conjunction with the `icon-only` prop to render a button with a background. This was intended to be used on dark backgrounds to make the icon button more visible and accessible. Due to the new color scale this feature was not possible to continue supporting as is, and has been replaced with a new [with-background](#cdrbutton-icon-only-variant) property.
 
 ### CdrCard Position Update
 
