@@ -22,7 +22,7 @@ If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade
 ### For a Micro-Site
 
 - Update to `@rei/cedar` ^5.0.0
-- If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar and febs before updating your micro-site
+- If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar and febs before updating your micro-site.
 
 ### For a Component Package
 
@@ -33,7 +33,7 @@ If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade
 
 ### Updated Brand Color Palette
 
-Cedar components and design tokens have been updated to make use of the new brand palette. Any hardcoded color values in yout application may need to be updated in order to stay in sync with the new brand palette. We have additionally removed the concept of "lightmode" and "darkmode" themes from Cedar to align with the brand palette updates. See the [color token deprecation list](#color-token-updates) for guidance on re-mapping existing color tokens.
+Cedar components and design tokens have been updated to make use of the new brand palette. Any hardcoded color values in your application may need to be updated in order to stay in sync with the new brand palette. We have additionally removed the concept of "lightmode" and "darkmode" themes from Cedar to align with the brand palette updates. See the [color token deprecation list](#color-token-updates) for guidance on re-mapping existing color tokens.
 
 ### New Component: CdrTable
 
@@ -41,24 +41,24 @@ We have added a component for tables. This component is more generic than the ex
 
 ### CdrButton Icon-Only Variant
 
-We have added a new variant to CdrButton that allows you to render an icon-only button that has a background and border in order to make icon-only buttons more visible. See the [CdrButton docs](../../components/buttons/#icon-only-with-background) for more details
+We have added a new variant to CdrButton that allows you to render an icon-only button that has a background and border in order to make icon-only buttons more visible. See the [CdrButton docs](../../components/buttons/#icon-only-with-background) for more details.
 
 ### New Utility Classes
 
-Utility classes for foreground and background color are now available. See the  [utilities page](../../components/utilities/#color) for a full list.
-Note that the existing color utility classes have been [deprecated](#color-utility-classes)
+Utility classes for foreground and background color are now available. See the [utilities page](../../components/utilities/#color) for a full list.
+Note that the existing color utility classes have been [deprecated](#color-utility-classes).
 
 ### CdrAccordionGroup
 
-We have added this wrapper component to better support the accessibility of accordion groups. Simply wrap your existing groups of accordions in this component and keyboard navigation will be taken care of. See the [CdrAccordion docs](../../components/accordion/) for more details and examples
+We have added this wrapper component to better support the accessibility of accordion groups. Simply wrap your existing groups of accordions in this component and keyboard navigation will be taken care of. See the [CdrAccordion docs](../../components/accordion/) for more details and examples.
 
 ### CdrImg Event Handlers
 
-We have updated CdrImg to accept event handlers. This is intended to support `onError` event handlers. See the [CdrImg docs](../../components/image/#error-event-handler) for more details and examples
+We have updated CdrImg to accept event handlers. This is intended to support `onError` event handlers. See the [CdrImg docs](../../components/image/#error-event-handler) for more details and examples.
 
 ### CdrCard Linked State
 
-CdrCard has been updated with a new `linked` property which can be used to add a hover effect to cards that are wrapped in a link. Any custom hover logic that you may have applied to instances of CdrCard should be removed in favor of using this new property. See the [CdrCard docs](../../components/card/#linked) for more details and examples
+CdrCard has been updated with a new `linked` property which can be used to add a hover effect to cards that are wrapped in a link. Any custom hover logic that you may have applied to instances of CdrCard should be removed in favor of using this new property. See the [CdrCard docs](../../components/card/#linked) for more details and examples.
 
 ### CdrModal Fullscreen
 
@@ -86,59 +86,59 @@ CdrTabs has been updated so that the active tab underline no longer causes windo
 
 #### CdrAccordion
 
-- Documentation updated with usage requirements
+- Documentation updated with usage requirements.
 - The button element is the only element inside the heading element. That is, if there are other visually persistent elements, they are not included inside the heading element.
 - Each accordion header button is wrapped in an element with role heading that has a value set for aria-level that is appropriate for the information architecture of the page.
 
 #### CdrLink
 
-- Documentation updated with usage requirements
-- Color meets 4.5:1 contrast with background
-- Color meets 3:1 contrast with surrounding text
-- Hover and focus colors meet 3:1 contrast with surrounding text
+- Documentation updated with usage requirements.
+- Color meets 4.5:1 contrast with background.
+- Color meets 3:1 contrast with surrounding text.
+- Hover and focus colors meet 3:1 contrast with surrounding text.
 
 #### CdrBreadcrumb
 
 - A nav element labeled Breadcrumb identifies the structure as a breadcrumb trail and makes it a navigation landmark so that it is easy to locate.
-- The ellipsis button has added `aria-expanded="false"` and updated screen reader text ensuring the users understand the number of items hidden in this control
+- The ellipsis button has added `aria-expanded="false"` and updated screen reader text ensuring the users understand the number of items hidden in this control.
 
 #### CdrButton
 
-- Documentation updated with usage requirements
-- Variants: color meets 3:1 contrast to background
-- Variants: Hover and focus states meet 3:1 contrast to background and surrounding actionable elements
-- Uses an ordered list structure
+- Documentation updated with usage requirements.
+- Variants: color meets 3:1 contrast to background.
+- Variants: Hover and focus states meet 3:1 contrast to background and surrounding actionable elements.
+- Uses an ordered list structure.
 
 #### CdrCheckbox
 
-- Documentation updated with usage requirements
-- Active, hover, and focus have increased border width to ensure contrast meets 3:1 with background and default actionable elements
+- Documentation updated with usage requirements.
+- Active, hover, and focus have increased border width to ensure contrast meets 3:1 with background and default actionable elements.
 
 #### CdrModal
 
-Focus on button click moves to modal panel
+- Focus on button click moves to modal panel.
 
 #### CdrPagination
 
-- Pagination component is wrapped with `<nav>` element
-- Changed `aria-label` to `pagination` rather than `pagination navigation` as navigation would be read out twice
-- Uses an ordered list structure
+- Pagination component is wrapped with `<nav>` element.
+- Changed `aria-label` to `pagination` rather than `pagination navigation` as navigation would be read out twice.
+- Uses an ordered list structure.
 
 #### CdrRadio
 
-- Documentation updated with usage requirements
-- Active, hover, and focus have increased border width to ensure contrast meets 3:1 with background and default actionable elements
+- Documentation updated with usage requirements.
+- Active, hover, and focus have increased border width to ensure contrast meets 3:1 with background and default actionable elements.
 
 #### CdrRating
 
-- Documentation updated with usage requirements
-- Star icon visual boundaries provide a minimum of 3:1 to the background
-- Star icon visual boundaries provide a minimum of 3:1 fill to non-fill
-- When images are disabled, star icons are replaced with Unicode characters 
-- Star icon is visible in high contrast mode
-- Screen reader text has been updated for each variant possible
+- Documentation updated with usage requirements.
+- Star icon visual boundaries provide a minimum of 3:1 to the background.
+- Star icon visual boundaries provide a minimum of 3:1 fill to non-fill.
+- When images are disabled, star icons are replaced with Unicode characters .
+- Star icon is visible in high contrast mode.
+- Screen reader text has been updated for each variant possible:
   
-| Use case | screen reader text |
+| Use Case | Screen Reader Text |
 |------------------|------------------|
 |linked rating stars with average and count: has reviews | View the (x) reviews with an average rating of #.## out of 5 stars|
 |linked rating stars with count: has reviews | "View the (x) reviews with an average rating of #.## out of 5 stars"|
@@ -152,9 +152,9 @@ Focus on button click moves to modal panel
 
 - Only the active tab is in the tab order. The user reaches the tabbed panel component by pressing the tab key until the active tab title receives focus.
 - Clicking on the tab title activates the tab and sets focus to the tab title.
-- Tab navigation will move from tab item to the associated panel 
-- The currently selected tab list item has the state aria-selected="true"
-- Uses an unordered list structure
+- Tab navigation will move from tab item to the associated panel. 
+- The currently selected tab list item has the state aria-selected="true".
+- Uses an unordered list structure.
 
 
 ## Breaking Changes
@@ -169,11 +169,11 @@ The space (`cdr-space-...`) and breakpoint (`cdr-breakpoint-...`) tokens in the 
 
 ### CdrAccordionGroup Wrapper
 
-CdrAccordion components must now be wrapped inside an instance of CdrAccordionGroup to ensure that accordions meet accessibility requirements. See the [CdrAccordion docs](../../components/accordion/) for more details and examples
+CdrAccordion components must now be wrapped inside an instance of CdrAccordionGroup to ensure that accordions meet accessibility requirements. See the [CdrAccordion docs](../../components/accordion/) for more details and examples.
 
 ### CdrAccordion Level Prop
 
-CdrAccordion has a new required prop: `level`. This prop is required in order to meet WCAG accessibility standards and should be set to the appropriate heading level for the context of your page. See the [CdrAccordion docs](../../components/accordion/) for more details and examples
+CdrAccordion has a new required prop: `level`. This prop is required in order to meet WCAG accessibility standards and should be set to the appropriate heading level for the context of your page. See the [CdrAccordion docs](../../components/accordion/) for more details and examples.
 
 ### CdrLink Theming Removed
 
@@ -181,7 +181,7 @@ CdrLink previously supported theming by setting an `on-dark` or `on-light` CSS c
 
 ### CdrButton OnDark Removed
 
-CdrButton previously accepted a prop named `on-dark` which could be used in conjunction with the `icon-only` prop to render a button with a background. This was intended to be used on dark backgrounds to make the icon button more visible and accessible. Due to the new color scale this feature was not possible to continue supporting as is, and has been replaced with a new [with-background](./#cdrbutton-icon-only-variant) property.
+CdrButton previously accepted a prop named `on-dark` which could be used in conjunction with the `icon-only` prop to render a button with a background. This was intended to be used on dark backgrounds to make the icon button more visible and accessible. Due to the new color scale this feature was not possible to continue supporting as is, and has been replaced with a new [with-background](#cdrbutton-icon-only-variant) property.
 
 ### CdrCard Position Update
 
@@ -282,6 +282,6 @@ Note that Cedar design tokens should always be applied semantically, when re-map
 In accordance with our deprecation policy, features that were deprecated in the [Fall 2019 release](../fall-2019/#deprecations) have been removed from Cedar.
 
 - The cdr-text modifiers for display, heading-small/medium/large, and subheading, as well as cdr-tokens mixins for `cdr-text-header-n` and `spruce-display` should be updated according to the typography mappings from the [Winter 2020 release](../winter-2020/#updated-deprecation-mappings) rather than the ones in the Fall 2019 release notes.
-- Alignment and display utilities should be re-mapped to their new naming structure
+- Alignment and display utilities should be re-mapped to their new naming structure.
 
 </cdr-doc-table-of-contents-shell>
