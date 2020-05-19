@@ -159,6 +159,10 @@ Focus on button click moves to modal panel
 
 ## Breaking Changes
 
+### IE11 Support Dropped
+
+Internet Explorer 11 has been removed from the REI browser support matrix. Cedar has been updated to no longer include IE11 related polyfills.
+
 ### Unitless JS Tokens For Spacing and Breakpoints
 
 The space (`cdr-space-...`) and breakpoint (`cdr-breakpoint-...`) tokens in the JS distributions of @rei/cdr-tokens have been made "unitless". Those tokens previously had to be manipulated in order to use them effectively in JavaScript, for example by doing: `CdrSpaceOneX.split('px')[0]`.
