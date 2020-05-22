@@ -31,6 +31,9 @@ If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade
 
 ## New Features
 
+### Cedar Design Libraries Move to Figma
+The UI Toolkit has migrated to Figma! Designers can find updated information i the [getting started](../../getting-started/as-a-designer/) articl. Additionally, Figma replaces Abstract in facilitating the design to development [handoff process](../../getting-started/handoff/).
+
 ### Updated Brand Color Palette
 
 Cedar components and design tokens have been updated to make use of the new brand palette. Any hardcoded color values in your application may need to be updated in order to stay in sync with the new brand palette. We have additionally removed the concept of "lightmode" and "darkmode" themes from Cedar to align with the brand palette updates. See the [color token deprecation list](#color-token-updates) for guidance on re-mapping existing color tokens.
