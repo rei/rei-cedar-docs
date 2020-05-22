@@ -42,6 +42,9 @@ Cedar components and design tokens have been updated to make use of the new bran
 
 We have added a component for tables. This component is more generic than the existing data table (which has been moved to fed components). See the [CdrTable docs](../../components/table/) for more details and examples. Note that the [CdrDataTable component has been deprecated](#cdrdatatable).
 
+### New Component: CdrCard
+CdrCard is a simple wrapper component that allows for composing various card layouts, and now officially supported in the system. See the [CdrCard docs](../../components/card/) for more details and usage guidelines.
+
 ### CdrButton Icon-Only Variant
 
 We have added a new variant to CdrButton that allows you to render an icon-only button that has a background and border in order to make icon-only buttons more visible. See the [CdrButton docs](../../components/buttons/#icon-only-with-background) for more details.
