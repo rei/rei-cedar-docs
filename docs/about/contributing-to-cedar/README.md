@@ -27,7 +27,7 @@ If you have a request for the Cedar team, submit a [Feature Request Form](https:
 
 ### Code
 Contribution candidates should be built using Cedar
-[Design Tokens](../../components/design-tokens) and
+[Design Tokens](../../tokens/overview/) and
 [Utilities](../../components/utilities), so that it can easily be pulled into the system.
 Include relevant information in the readme file, which will be used for future documentation. Once added to Cedar,
 the design system team will take over all future maintenance and updates.
@@ -39,10 +39,10 @@ Reference the diagram below to determine how and where to build a new component:
 <cdr-img :src="$withBase('/about/Component-Development-Contributions.png')" alt="a reference tree for when to use Cedar" />
 
 ### Design
-For components added to the fed-components repository, designers should also include the design in Abstract within the CDS Web Sandbox.
-This provides other designers insight into what is available in fed-components, and allows them to re-use the component in their work. Provide relevant design guidelines, usage examples, and do's/don'ts for using the component.
+For components added to the fed-components repository, designers should also include the design in the shared Figma libraries. This provides other designers insight into what is available in fed-components, and allows them to re-use the component in their work. Include relevant design guidelines, usage examples, and do's/don'ts for using the component.
 
-To get set up in Abstract, or to learn more about adding to the CDS Web Sandbox, visit the [Getting Started for Designers](../../getting-started/as-a-designer/) article.
+Reach out in the #cedar-user-support Slack channel for more information on sharing design assets in Figma.
+
 
 ### Bug Fixes
 The Cedar team is committed to maintaining consistent, quality components. If you encounter an issue, please submit it using the [Bug Report Form](https://airtable.com/shr3wSPCYQbycVx7i) or directly in [rei/cedar](https://github.com/rei/rei-cedar/issues) to add it to the Cedar backlog.
@@ -66,7 +66,7 @@ Ensure that the token meets the following requirements:
   - iOS: Uses Pascal case. For example, CdrColorBackgroundColor
   - Android: Uses Snake case. For example, cdr_color_background_dark
 
-Learn more in the [Design Tokens](../../components/design-tokens) article.
+Learn more in the [Design Tokens](../../tokens/overview/) overview.
 
 ## Icon Contributions
 Cedar welcomes and encourages contributions to the icon library that are consistent with the REI style.
