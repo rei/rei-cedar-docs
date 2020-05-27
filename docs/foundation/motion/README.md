@@ -219,7 +219,7 @@ For smooth and responsive animation, use CSS attributes for:
 - **Skew:** Using transform property for `skew()`, to distort an element on the 2D plane
 - **Opacity:** Specifies the opacity or transparency of an element with values from 0.0 - 1.0. Lower values cause the element to be more transparent
 
-For more information, visit the [Adding Tokens to the Repository](../../components/design-tokens#adding-tokens-to-the-repository) page.
+For more information, visit [Adding Tokens to the Repository](../../tokens/overview/#adding-design-tokens-to-the-repository).
 
 
 <br>
