@@ -31,4 +31,4 @@ The Cedar spacing system is based on 16px units. The scaling system uses fractio
 | 2 spaces            | 32px                | 3.2rem            |
 | 4 spaces            | 64px                | 6.4rem            |
 
-For more information about using Cedar's spacing system and layout usage guidance, visit the [Spacing](../../layout/spacing) article.
+Learn more about using Cedar's spacing system and layout usage guidance in the [Spacing for Layouts](../../layout/spacing) article.
