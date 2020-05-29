@@ -79,7 +79,7 @@ There are 3 ways to consume and implement Cedar’s spacing convention: tokens, 
 
 ### Tokens
 
-Use space tokens if you want to apply the Cedar spacing convention within your stylesheets and if your stylesheets are SCSS or LESS.  For a full list of available tokens and information on how to use them in your projects, visit the [Design Tokens](../../components/design-tokens) article.
+Use space tokens if you want to apply the Cedar spacing convention within your stylesheets and if your stylesheets are SCSS or LESS.  For a full list of available tokens and information on how to use them in your projects, visit the [Design Tokens](../../tokens/overview/) article.
 
 ### Utility Classes
 
@@ -153,7 +153,7 @@ An example of setting the generic space classes:
 | inset-squish  | padding                      | cdr-space-inset-squish-one-x  |
 | inset-stretch | padding                      | cdr-space-inset-stretch-one-x |
 
-For a full list of space utility classes, see the [CSS Utility Class](../../components/utilities/) document.
+For a full list of space utility classes, see the [CSS Utility Class](../../components/utilities/) documentation.
 
 ### Breakpoint (Optional)
 
