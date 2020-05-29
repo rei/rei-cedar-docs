@@ -272,10 +272,10 @@ This is an advanced example with multiple headers and a custom class to change t
 
 ## Accessibility
 
-Many WCAG requierments are contextual to their implementation. 
+Many WCAG requirements are contextual to their implementation. 
 To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
 
-- WCAG level A requierments:
+- WCAG level A requirements:
   - Table headers MUST be designated with `<th>`
   - Table header text MUST accurately describe the category of the corresponding data cells.
   - Table data cells MUST be associated with their corresponding header cells.
@@ -317,7 +317,7 @@ This component has compliance with WCAG guidelines by:
 
 ## Anatomy
 
-- `cdr-table` like `cdr-grid` is a wrapper component without predetermined layout requirements. This allows you the flexibility to construct the structure you need to accurately display the data you have. There are cases where you might need to change background colors or add additional borders (see [advanced example](#advanced-with-custom-styles) below). When this is done, tokens for the table colors (background, border, etc.) should be used so your customizations can persist through future cedar updates.
+- `cdr-table` like `cdr-grid` is a wrapper component without predetermined layout requirements. This allows you the flexibility to construct the structure you need to accurately display the data you have. There are cases where you might need to change background colors or add additional borders (see the [advanced example](#advanced-with-custom-styles)). When this is done, tokens for the table colors (background, border, etc.) should be used so your customizations can persist through future cedar updates.
 - Our table component provides the visual class only and does not account for markup requirements to create an accessible table. Be sure to review the examples and the accessibility requirements for this component.
 
 <hr>
