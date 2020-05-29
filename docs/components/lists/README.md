@@ -248,7 +248,7 @@ This component has compliance with WCAG guidelines by:
 ## The Basics
 
 - Lists can inherit cdr-text modifiers to make any text a list
-- Follow spacing requirements found on [Typography](../../foundation/typography/) and [Spacing](../../foundation/spacing/) pages
+- Follow spacing requirements outlined in the [Typography](../../foundation/typography/) and [Spacing](../../foundation/spacing/) foundation articles. 
 
 ## Content
 
