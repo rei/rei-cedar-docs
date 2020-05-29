@@ -272,7 +272,7 @@ Custom styles for checkboxes.
 
 ## Accessibility
 
-Many WCAG requierments are contextual to their implementation. 
+Many WCAG requirements are contextual to their implementation. 
 To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
 
 - Each checkbox must be focusable and keyboard accessible:
@@ -283,7 +283,7 @@ To ensure that usage of this component complies with accessibility guidelines yo
   - Identified or described as a group using a `<legend>` tag
 - Avoid nested fieldsets
 - Single checkboxes:
-  - May be interchangeable with a toggle
+  - May be interchangeable with a toggle or [Radio Button](../radio/)
   - Write labels to be self-explanatory
 - Custom checkboxes maintain accessibility requirements. The checkbox icon is only visually hidden and replaced with custom style
 <br/>
