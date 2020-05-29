@@ -283,7 +283,7 @@ Note: Use of scope (`<th scope="col">` and `<th scope="row">`) is highly recomme
   - Table data group headers (if any) MUST be associated with their corresponding data cell groups (e.g. via scope="rowgroup" or scope="colgroup").
   - Table headers and data associations MUST NOT be referenced across nested, merged, or separate tables.
 
-- WCAG level AA requierments:
+- WCAG level AA requirements:
   - Tabular data SHOULD be represented in a `<table>`.
 Note: Even if the data are not represented in a table, WCAG 1.3.1 requires the data to be associated with their labels.
   - Tables SHOULD have a programmatically-associated `<caption>` or name (e.g. via aria-label or aria-labelledby).
