@@ -179,7 +179,7 @@ Display standalone link with icon on right.
 
 ## Accessibility
 
-Many WCAG requierments are contextual to their implementation. 
+Many WCAG requirements are contextual to their implementation. 
 To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
 
 - Always use a `<button>` element for the `tag` prop when there is no `href` attribute that can be applied to the link. Examples are:
@@ -189,8 +189,8 @@ To ensure that usage of this component complies with accessibility guidelines yo
   - Playing media content
 - Always use the default `<a>` element for a link that navigates the user to the location specified by the `href` attribute
 - A link MUST have programmatically-discernible text
-- Links to the same destinations MUST be consistently identified with the same (or very similar) link text across all pages of the site.
-- Avoid using only “Click here” or “Start here” but if screen space for text is minimal:
+- Links to the same destinations MUST be consistently identified with the same (or very similar) link text across all pages of the site
+- Avoid using only “Click here” or “Start here”, but if screen space for text is minimal:
   - Provide text that can be read by screen readers
   - Use an inline element for hidden text with the 'cdr-sr-only' class
 
