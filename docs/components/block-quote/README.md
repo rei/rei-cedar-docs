@@ -13,8 +13,8 @@
       "href": "../pull-quote/"
     },
     {
-      "text": "Paragraphs",
-      "href": "../paragraphs/"
+      "text": "Text",
+      "href": "../text/"
     }
   ],
   "position": [
