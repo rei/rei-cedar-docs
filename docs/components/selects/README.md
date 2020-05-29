@@ -379,13 +379,13 @@ This component has compliance with WCAG guidelines by:
 
 ## Don't Use When
 
-+ Viewing or comparing all options is needed. Instead, use [Radio Buttons](https://rei.github.io/rei-cedar-docs/components/radio/)
-+ Displaying a limited number of options. Instead, use [Radio Buttons](https://rei.github.io/rei-cedar-docs/components/radio/)
-+ Displaying a "yes" or "no" selection. Instead, use [Radio Buttons](https://rei.github.io/rei-cedar-docs/components/radio/)
-+ Turning an option on or off. Instead, use [Checkboxes](https://rei.github.io/rei-cedar-docs/components/checkboxes/)
-+ Setting a value is required. Instead, use [Radio Buttons](https://rei.github.io/rei-cedar-docs/components/radio/)
-+ Displaying more than 10 options. Instead, use [Inputs](https://rei.github.io/rei-cedar-docs/components/input/)
-+ Sending the user to other areas of the site. Instead, use [Links](https://rei.github.io/rei-cedar-docs/components/links/)
++ Viewing or comparing all options is needed. Instead, use [Radio Buttons](../radio/)
++ Displaying a limited number of options. Instead, use [Radio Buttons](../radio/)
++ Displaying a "yes" or "no" selection. Instead, use [Radio Buttons](../radio/)
++ Turning an option on or off. Instead, use [Checkboxes](../checkboxes/)
++ Setting a value is required. Instead, use [Radio Buttons](../radio/)
++ Displaying more than 10 options. Instead, use [Inputs](../input/)
++ Sending the user to other areas of the site. Instead, use [Links](../links/)
 
 
 ## The Basics
@@ -399,7 +399,7 @@ Select components should be:
 
 ### Options
 + Define width using CSS styles
-+ Height options are medium and large. These variations can be used for creating media queries for responsive layouts, or to call more or less attention to the component. For an example of medium and large sizes, visit the [Overview](https://rei.github.io/rei-cedar-docs/components/select#overview) tab
++ Height options are medium and large. These variations can be used for creating media queries for responsive layouts, or to call more or less attention to the component. 
 
 
 ## Content
@@ -433,14 +433,13 @@ Select components should be:
 ### Icon
 
 - Use icons to trigger a popover for hints or suggestions
-- Read more about icon guidelines using Cedar [here](https://rei.github.io/rei-cedar-docs/components/icon#guidelines)
+- Reference Cedar's [icon guidelines](../icon#guidelines/) for additional information Read more about icon guidelines using Cedar [here]
 
 ### Link Text
 
 - Use a link when moving or navigating to another page or to a different portion of the same page
 - Use if navigating user to long or complex information
-- Read more about links [here](https://rei.github.io/rei-cedar-docs/components/links/)
-
+- Reference the [Links](../links/) component article for more information
 
 ### Do / Don’t
 
