@@ -161,7 +161,7 @@ Default block quote can be used with the following HTML tags: `<p>`, `<div>`, `<
 
 To ensure that usage of this component complies with accessibility guidelines:
 
-- All recommendations listed for [Paragraphs](../paragraphs/#accessibility) component apply to this component
+- All recommendations listed for [Paragraphs](../text/#paragraphs) apply to this component
 - Do not use this component to indent text. Screen readers use the `<blockquote>` element to:
   - Provide semantic understanding of page content by announcing blockquote as quote
   - Define a sectioning root in HTML5, which means that any  `<h1>` - `<h6>`  element doesn't become part of the document’s outline
@@ -216,7 +216,7 @@ To make the block quote content accessible, follow these rules:
   - Must be a valid URL
   - Link only to canonical end-state URLs with no parameter appended
   - Capitalize the cited source title the same as the author does
-- For more information, see [REI Confluence Accessible Patterns: Quotes](https://confluence.rei.com/display/accessibility/Quote)
+- For more information, see [REI Accessible Patterns: Quotes](https://confluence.rei.com/display/accessibility/Quote)
 
 
 ## Responsiveness
