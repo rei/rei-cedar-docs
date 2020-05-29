@@ -13,8 +13,8 @@
       "href": "../block-quote/"
     },
     {
-      "text": "Paragraphs",
-      "href": "../paragraphs/"
+      "text": "Text",
+      "href": "../text/"
     }
   ],
   "indenting": [
