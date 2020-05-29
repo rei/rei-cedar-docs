@@ -72,7 +72,7 @@ The following design tokens are provided using the `@rei/cdr-tokens` package for
 | Medium       | `cdr-breakpoint-md` | 992px  |
 | Large        | `cdr-breakpoint-lg` | 1232px |
 
-For more information about design tokens and how to use them, visit the [Design Tokens](../../components/design-tokens/) article.
+For more information about using design tokens, visit the [Design Tokens](../../tokens/overview/) overview.
 
 ### SCSS/LESS Utilities
 
