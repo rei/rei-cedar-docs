@@ -333,7 +333,7 @@ This component has compliance with WCAG guidelines by:
 ## Don't Use When
 
 - Linking a title to another page. Instead, use [Links](../links/)
-- Designing with sparse content. Instead, use [Lists](../lists/) or [Paragraphs](../paragraphs/)
+- Designing with sparse content. Instead, use [Lists](../lists/)
 - Content is lengthy. Instead, use [Tabs](../tabs/)
 
 ## The Basics
