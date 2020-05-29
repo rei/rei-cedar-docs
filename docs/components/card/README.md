@@ -80,7 +80,7 @@
 
 CdrCard is a simple wrapper component that allows for composing various card layouts.
 
-CdrCards should always be used to link to other content, and the `cdr-card__link` utility class should be used on the link element to ensure that the entire card functions as a click target.
+Cards should always be used to link to other content, and the `cdr-card__link` utility class should be used on the link element to ensure that the entire card functions as a click target.
 
 <cdr-doc-example-code-pair repository-href="/src/components/card"
 :sandbox-data="$page.frontmatter.sandboxData" >
@@ -121,9 +121,9 @@ CdrCards should always be used to link to other content, and the `cdr-card__link
 
 Many WCAG requierments are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
 
-- leave the default tag prop of `article` if the content includes a heading AND the content would be as useful on another web page
+- Leave the default tag prop of `article` if the content includes a heading AND the content would be as useful on another web page
 - Set the tag prop to `section` if the content contains a heading, but the content is dependent on its context to be meaningful
-- Set the tag prop to `div` if your card title won’t be using a heading tag. this ensures it will not appear in the document’s outline
+- Set the tag prop to `div` if your card title won’t be using a heading tag. This ensures it will not appear in the document’s outline
 - CdrCard must contain a linked title
 - All actionable elements contained within CdrCard must follow the guidelines outlined within their accessibility sections
 
@@ -134,8 +134,8 @@ Many WCAG requierments are contextual to their implementation. To ensure that us
 
 ## Don’t use when
 - The card will not link to a destination or contains no actionable elements
-- To display search results
-- The information contained within the card is not related to each other
+- Displaying search results
+- The information contained within the card is not related
 - The visual presentation of a card is desired but the interaction pattern is not
 
 ## The Basics
