@@ -433,7 +433,7 @@ Select components should be:
 ### Icon
 
 - Use icons to trigger a popover for hints or suggestions
-- Reference Cedar's [icon guidelines](../icon#guidelines/) for additional information Read more about icon guidelines using Cedar [here]
+- Reference Cedar's [icon guidelines](../icon#guidelines/) for additional information
 
 ### Link Text
 
