@@ -142,18 +142,17 @@
 
 ## Accessibility
 
-To ensure that usage of this component complies with accessibility guidelines, do the following:
-
+Ensure that usage of this component complies with accessibility guidelines:
 - All text content within the modal is read by screen readers, including the Close button text
 - Only the content in the modal is read by the screen reader. Content outside modal is not read when the modal is in focus
 - Modal can be closed using the keyboard (ESC key), Close button, or by clicking outside of modal
 
 This component has compliance with WCAG guidelines by:
-- Select the appropriate attributes and aria roles:
+- Selecting the appropriate attributes and aria roles:
   - For modal without title: aria-label
   - For short modal: aria-describedby
   - For longer modal: assign role="document" to the modal content
-- Use the `aria-hidden` and `tabindex="-1"` on focusable items for all content outside of the modal
+- Using the `aria-hidden` and `tabindex="-1"` on focusable items for all content outside of the modal
 
 # Guidelines
 
