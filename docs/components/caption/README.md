@@ -199,7 +199,7 @@ This component has compliance with WCAG guidelines by:
 
 ## Don’t Use When
 
-- Displaying body copy. Instead, use [Paragraphs](../paragraphs/)
+- Displaying body copy. Instead, use [Text](../text/#body/)
 - Breaking up the text styles in a layout for aesthetic purposes
 
 ## Content
