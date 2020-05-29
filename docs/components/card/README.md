@@ -119,7 +119,7 @@ Cards should always be used to link to other content, and the `cdr-card__link` u
 
 ## Accessibility
 
-Many WCAG requierments are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
+Many WCAG requirements are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
 
 - Leave the default tag prop of `article` if the content includes a heading AND the content would be as useful on another web page
 - Set the tag prop to `section` if the content contains a heading, but the content is dependent on its context to be meaningful
