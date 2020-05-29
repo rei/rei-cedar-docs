@@ -250,7 +250,8 @@ This component complies with accessibility guidelines by doing the following:
 - Wraps the pagination links in a `<nav>` element to let screen readers recognize the pagination controls
 - Sets `aria-label="pagination"` to describe the type of navigation
 - Indicates the active page by adding `aria-current="page"` to the link that points to the current page
-- View these videos at [a11ymattters, Accessible Pagination](http://www.a11ymatters.com/pattern/pagination/). They demonstrate before and after pagination tests using a screen reader voiceover
+
+View the videos at [a11ymattters, Accessible Pagination](http://www.a11ymatters.com/pattern/pagination/) for a demonstration of before and after pagination tests using a screen reader voiceover.
 
 <br />
 
@@ -404,8 +405,6 @@ For best SEO support, use of pagination requires additional markup and logic in 
 See REI's SEO Confluence page on [pagination](https://confluence.rei.com/display/SI/Pagination+Tag+Implementation) for information on implementing this correctly on your page.
 
 Note that REI has chosen HTML `<link>` elements instead of HTTP headers. Make sure to use fully qualified absolute URLs in the `<link>` elements instead of relative URLs.
-
-For general recommendations, view Google's Search Console page, [Indicating paginated content to Google](https://support.google.com/webmasters/answer/1663744?hl=en).
 
 
 </cdr-doc-table-of-contents-shell>
