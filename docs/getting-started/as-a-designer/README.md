@@ -27,8 +27,10 @@ Cedar manages the design language for the Co-op’s digital products. On this si
 
 
 ## Design Toolkits
-TODO: format as an alert: 
+
+<cdr-doc-alert icon="info">
 As of our 2020 Spring Release, we’re no longer distributing toolkits through Sketch or Abstract. If you’re working on a legacy project and need access to an older version of Cedar, reach out to our [User Support](https://rei.slack.com/archives/CA58YCGN4) channel on Slack. If you need help migrating your project to Figma, reach out to the [Figma Guild](https://rei.slack.com/archives/CT17MBAJ1) on Slack.
+</cdr-doc-alert>
 
 The design system toolkit is distributed as shared libraries through Figma. These libraries are directly managed by the Cedar team and automatically integrated into any new project.
 
