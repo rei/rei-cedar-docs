@@ -17,7 +17,7 @@ The Cedar UI Toolkit provides tools and processes to communicate Cedar component
 
 
 ## Developers
-Developers can jump to the [review handoff](#developer-review) section of this article.
+Developers can jump to the [handoff](#developer-review) section of this article.
 
 
 ## Designers
@@ -71,6 +71,7 @@ We recommended teams keep all their design specifications together under one pro
 - Do keep all design specifications consolidated under one project in Figma
 - Don’t bury design specs within exploratory project files
 
+## Handoff
 ### Developer Review
 As developers, you have view access to any project you’re invited to in Figma. The primary tools at your disposal will be the ability to comment and inspect.
 
