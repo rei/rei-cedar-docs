@@ -30,12 +30,22 @@ To cover all supported [breakpoints](../../components/grid/#the-basics), you wil
 
 To make starting your project easier, duplicate our Figma [template file](https://www.figma.com/file/JlTaoRS1devxB4A4Xdd0oE/Artboards?node-id=0%3A1). If using device-specific artboard sizes for native applications, be sure to apply a Layout Grid to the frame.
 
-TODO: insert image + caption for template file 
+<figure>
+  <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/handoff-artboard-separate.png`)"/>
+  <figcaption>
+    <cdr-caption summary="The template file contains the artboard widths you need to get started."/>
+  </figcaption>
+</figure>
 
 ## Design
 Toolkit libraries are automatically integrated into any new Figma project — simply drag-and-drop components from the asset tab or use shared styles for typography or color.
 
-TODO: insert image + caption for drag-and-drop components
+<figure>
+  <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/handoff-component-example.gif`)"/>
+  <figcaption>
+    <cdr-caption summary="Components can be drag-and-dropped into your project from the assets panel in Figma."/>
+  </figcaption>
+</figure>
 
 For more information on getting set up with Figma, visit the [Getting Started](../as-a-designer/) article for designers.
 
@@ -46,7 +56,12 @@ The global header and footer are available as shared components. Look for them u
 ## Redlining
 Effectively communicating specifications to a developer is the only way to ensure your design intention shows up in the delivered product. When you incorporate assets from the UI Toolkit into your designs, you’re also using the common language shared between the design assets in Figma and the code used to display them on the web.
 
-TODO: insert image + caption for redlining
+<figure>
+  <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/handoff-spacing.png`)"/>
+  <figcaption>
+    <cdr-caption summary="Here, spacing symbols are used to show separation between components."/>
+  </figcaption>
+</figure>
 
 Component and token names are pre-embedded across the UI Toolkit to minimize the amount of redlining needed during this step. Developers can simply inspect the design assets to reference their coded counterparts.
 
@@ -56,10 +71,23 @@ We recommended teams keep all their design specifications together under one pro
 - Do keep all design specifications consolidated under one project in Figma
 - Don’t bury design specs within exploratory project files
 
-### Developer Review 
+### Developer Review
 As developers, you have view access to any project you’re invited to in Figma. The primary tools at your disposal will be the ability to comment and inspect.
 
-TODO: insert 2 images + captions for commenting and inspecting 
+<figure>
+  <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/handoff-commenting.png`)"/>
+  <figcaption>
+    <cdr-caption summary="Commenting directly in Figma is a great way to manage handoff conversations with your designer."/>
+  </figcaption>
+</figure>
+
+<figure>
+  <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/handoff-inspect.png`)"/>
+  <figcaption>
+    <cdr-caption summary="Use the inspect feature to discover component references or token names."/>
+  </figcaption>
+</figure>
+
 
 
 ## Suggestions?
