@@ -31,7 +31,7 @@ To cover all supported [breakpoints](../../components/grid/#the-basics), you wil
 To make starting your project easier, duplicate our Figma [template file](https://www.figma.com/file/JlTaoRS1devxB4A4Xdd0oE/Artboards?node-id=0%3A1). If using device-specific artboard sizes for native applications, be sure to apply a Layout Grid to the frame.
 
 <figure>
-  <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/handoff-artboard-separate.png`)"/>
+  <cdr-img alt="screenshot" :src="$withBase(`/getting-started-handoff/handoff-artboard-setup.png`)"/>
   <figcaption>
     <cdr-caption summary="The template file contains the artboard widths you need to get started."/>
   </figcaption>
