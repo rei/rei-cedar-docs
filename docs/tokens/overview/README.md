@@ -25,7 +25,7 @@ Design tokens are key-value pairs. For example:
 
 ```
 Key: value;
-cdr-text-primary-lightmode: #292929;
+cdr-color-text-primary: rgba(12, 11, 8, 0.75);
 ```
 
   - The key name defines the usage or how to apply the value to a specific context, such as using text on a light background
@@ -77,11 +77,11 @@ Questions about when to use design tokens? Ask the Cedar team in [#cedar-user-su
 
 
 ## Token Criteria
-#### Is **“cdr-color-text-primary-lightmode”** a design token?
+#### Is **“cdr-color-text-primary** a design token?
 <cdr-table>
   <tbody>
     <tr>
-      <td>Is “cdr-color-text-primary-lightmode” used in several components or layouts?</td>
+      <td>Is “cdr-color-text-primary used in several components or layouts?</td>
       <td>Yes </td>
     </tr>
     <tr>
@@ -98,33 +98,9 @@ Questions about when to use design tokens? Ask the Cedar team in [#cedar-user-su
   </tbody>
 </cdr-table>
 
-**Result:** All of the criteria are met and so **“cdr-color-text-primary-lightmode”** qualifies as a design token.
+**Result:** All of the criteria are met and so **“cdr-color-text-primary** qualifies as a design token.
 
 <br>
-
-#### Is **“cdr-color-background-button-secondary-disabled”** a design token?
-<cdr-table>
-  <tbody>
-    <tr>
-      <td>Is “cdr-color-background-button-secondary-disabled” used in several components or layouts? </td>
-      <td>Yes </td>
-    </tr>
-    <tr>
-      <td>Is it clear where this is to be used based on its name?</td>
-      <td>Yes </td>
-    </tr>
-    <tr>
-      <td>If I apply this design token in my component and use it to specify the background color for a secondary button when disabled, will it still be used for the secondary button in a future design update? </td>
-      <td>Yes </td>
-    </tr>
-    <tr>
-       <td>Is this design token used for multiple elements and NOT specific to one element? </td>
-      <td><b>No</b></td>
-    </tr>
-  </tbody>
-</cdr-table>
-
-**Result:** The fourth criteria is false, so **“cdr-color-background-button-secondary-disabled”** does not qualify as a design token. Instead, it is considered an UI element variable that is specific to buttons.
 
 <br>
 
@@ -166,7 +142,6 @@ The naming structure for design tokens follows:
 - **Sub-Item:** Describes and narrows category for token. For instance, `form` could be modified by `input`
 - **Variant:** Describes prominence or state for a token
 - **Size:** Describes size for a token, if applicable
-- **Mode:** Defines tokens based on themes, such as a dark or light background
 
 
 The below tables for the naming structure show that levels will be skipped when not used.
@@ -175,12 +150,12 @@ The below tables for the naming structure show that levels will be skipped when 
 #### TODO:
 Would be nice to use table markdown but alternating row styling is inverted. Heading and first row are the same color. WRONG!
 
-| Category | Sub-Category | Item | Sub-Item | Variant | Size | Mode |
+| Category | Sub-Category | Item | Sub-Item | Variant | Size |
 | -- | -- | -- | -- | -- | -- | -- |
-| `color` | `text-` | `form-` | `label-` | | | `lightmode-` |
+| `color` | `text-` | `form-` | `label-` | ||
  -->
 
-#### cdr-color-text-form-label-lightmode
+#### cdr-color-text-input-label
 <cdr-table>
   <thead>
     <tr>
@@ -190,23 +165,21 @@ Would be nice to use table markdown but alternating row styling is inverted. Hea
       <th>Sub-Item</th>
       <th>Variant</th>
       <th>Size</th>
-      <th>Mode</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>color-</td>
       <td>text-</td>
-      <td>form-</td>
+      <td>input-</td>
       <td>label-</td>
       <td></td>
       <td></td>
-      <td>lightmode</td>
     </tr>
   </tbody>
 </cdr-table>
 
-#### cdr-color-background-light
+#### cdr-color-background-primary
 <cdr-table>
   <thead>
     <tr>
@@ -225,7 +198,7 @@ Would be nice to use table markdown but alternating row styling is inverted. Hea
       <td>background-</td>
       <td></td>
       <td></td>
-      <td>light</td>
+      <td>primary</td>
       <td></td>
       <td></td>
     </tr>
@@ -304,7 +277,7 @@ SCSS example:
 
 .your-other-text-class {
   /* use scss variables if you need to apply specific properties */
-  color: $cdr-color-text-error-lightmode;
+  color: $cdr-color-text-error;
 }
 ```
 
@@ -319,7 +292,7 @@ LESS example:
 
 .your-other-text-class {
   /* use variables if you need to apply specific properties */
-  color: @cdr-color-text-error-lightmode;
+  color: @cdr-color-text-error;
 }
 ```
 
