@@ -78,7 +78,7 @@ The Cedar Icon Library has an easy to-use [sprite creator](https://rei.github.io
 
 Cedar welcomes and encourages contributions to the icon library that are consistent with the REI style.
 
-<cdr-doc-alert icon="info">As of our 2020 Spring Release, we’re no longer using Sketch or Abstract, and will be updating the icon contribution process. Please reach out to our <cdr-link src="https://rei.slack.com/archives/CA58YCGN4">User Support</cdr-link> channel on Slack for the latest guidance for contribution icons to Cedar. </cdr-doc-alert>
+<cdr-doc-alert icon="info">As of our 2020 Spring Release, we’re no longer using Sketch or Abstract, and will be updating the icon contribution process. Please reach out to our <cdr-link src="https://rei.slack.com/archives/CA58YCGN4">User Support</cdr-link> channel on Slack for the latest guidance around contributing icons to Cedar. </cdr-doc-alert>
 
 ### Cedar Icon Guidelines
 
