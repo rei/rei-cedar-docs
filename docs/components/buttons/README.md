@@ -321,7 +321,7 @@ Change the button size based on where the button is used. The default size is me
 </cdr-doc-example-code-pair>
 
 ## Accessibility
-Many WCAG requierments are contextual to their implementation. 
+Many WCAG requierments are contextual to their implementation.
 To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
 
 - For icon-only buttons, provide `aria-label` text that describes the button's action
@@ -370,7 +370,7 @@ When stacking buttons vertically:
   - Align left borders
   - Display all with the same width
   - Separate each by stack-1-x spacing
-  <cdr-img class="cdr-doc-article-img" :src="$withBase(`/buttons/Spec__Button_Vertical_Spacing_16-4.png`)"/>
+  <cdr-img class="cdr-doc-article-img" :src="$withBase(`/buttons/spec__button__vertical_spacing_16-4.png`)"/>
 
 <br />
 
@@ -378,7 +378,7 @@ When arranging buttons horizontally:
   - Align top borders
   - Display all with the same height
   - Separate each by standard inline-1-x spacing
-  <cdr-img class="cdr-doc-article-img" :src="$withBase(`/buttons/Spec__Button_Horizontal_Spacing_16-9.png`)"/>
+  <cdr-img class="cdr-doc-article-img" :src="$withBase(`/buttons/spec__button__horizontal_spacing_16-9.png`)"/>
 
 <br />
 
