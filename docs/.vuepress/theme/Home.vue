@@ -112,7 +112,7 @@
                     modifier="heading-sans-400"
                     class="cdr-mb-space-one-x"
                   >Cedar Design Libraries</cdr-text>
-                  <cdr-link :href="$withBase('/getting-started/as-a-designer/#cedar-ui-toolkit')" modifier="standalone">Download the toolkit</cdr-link>
+                  <cdr-link :href="$withBase('/getting-started/as-a-designer/#design-toolkits')" modifier="standalone">Learn more about the toolkit</cdr-link>
                 </div>
               </cdr-col>
               <cdr-col span="3">
