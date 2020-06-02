@@ -235,7 +235,7 @@ Displays status for checkbox group by indicating that some of the sub-selections
 
 ```html
 <div>
-  <cdr-checkbox v-model="ex1" indeterminate>Indeterminate</cdr-checkbox>
+  <cdr-checkbox v-model="ex1" :indeterminate="!ex1">Indeterminate</cdr-checkbox>
 </div>
 ```
 
@@ -272,7 +272,7 @@ Custom styles for checkboxes.
 
 ## Accessibility
 
-Many WCAG requirements are contextual to their implementation. 
+Many WCAG requirements are contextual to their implementation.
 To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
 
 - Each checkbox must be focusable and keyboard accessible:
