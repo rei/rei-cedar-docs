@@ -237,7 +237,7 @@ Would be nice to use table markdown but alternating row styling is inverted. Hea
 ## How to Use Tokens
 
 ### For Designers
-Token libraries are automatically shared through Figma when you start a new project. These libraries contain color, type, spacing, prominence, and icon styles that correspond to Cedar tokens.
+Token libraries are automatically available in the Assets panel when you create a new file in Figma. These libraries contain color, type, spacing, prominence, and icon styles that correspond to Cedar tokens.
 
 When using design tokens, it’s your responsibility to pass the entire design token name to the developer during the design hand-off process—this can be through automated or manual methods.
 
