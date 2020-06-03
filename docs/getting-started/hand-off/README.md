@@ -1,6 +1,6 @@
 ---
 {
-  "title": "Design to Dev hand-off Process",
+  "title": "Hand-off Process",
   "title_metadata": false,
   "layout_type": "LayoutArticle",
   "breadcrumbs": [
