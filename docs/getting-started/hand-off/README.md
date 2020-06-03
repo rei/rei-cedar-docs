@@ -71,7 +71,7 @@ We recommended teams keep all their design specifications together under one pro
 - Do keep all design specifications consolidated under one project in Figma
 - Don’t bury design specs within exploratory project files
 
-## hand-off
+## Hand-off
 ### Developer Review
 As developers, you have view access to any project you’re invited to in Figma. The primary tools at your disposal will be the ability to comment and inspect.
 
