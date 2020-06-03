@@ -199,7 +199,6 @@ Would be nice to use table markdown but alternating row styling is inverted. Hea
       <td></td>
       <td>primary</td>
       <td></td>
-      <td></td>
     </tr>
   </tbody>
 </cdr-table>
@@ -224,7 +223,6 @@ Would be nice to use table markdown but alternating row styling is inverted. Hea
       <td></td>
       <td>serif</td>
       <td>800</td>
-      <td></td>
     </tr>
   </tbody>
 </cdr-table>
