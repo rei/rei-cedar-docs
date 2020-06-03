@@ -189,7 +189,6 @@ Would be nice to use table markdown but alternating row styling is inverted. Hea
       <th>Sub-Item</th>
       <th>Variant</th>
       <th>Size</th>
-      <th>Mode</th>
     </tr>
   </thead>
   <tbody>
@@ -215,7 +214,6 @@ Would be nice to use table markdown but alternating row styling is inverted. Hea
       <th>Sub-Item</th>
       <th>Variant</th>
       <th>Size</th>
-      <th>Mode</th>
     </tr>
   </thead>
   <tbody>
