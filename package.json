@@ -40,7 +40,7 @@
     "@babel/runtime": "^7.9.2",
     "@babel/runtime-corejs3": "^7.9.2",
     "@rei/cdr-tokens": "^4.0.0-beta.7",
-    "@rei/cedar": "^5.0.0-beta.7",
+    "@rei/cedar": "^5.0.0-beta.8",
     "throttle-debounce": "^2.1.0"
   },
   "browserslist": [
