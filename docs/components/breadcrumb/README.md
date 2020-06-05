@@ -149,12 +149,11 @@ Complete breadcrumb string with all items visible.
 
 ## Link Scoped Slot
 
-Can be used to override the default links rendered in the breadcrumb. Useful for integrating with client-side routing, as a `router-link` can be rendered instead of a plain `a` tag.  The `slot-scope` exposed includes:
+Can be used to override the default links rendered in the breadcrumb. Useful for integrating with client-side routing, as a `router-link` can be rendered instead of a plain `a` tag. The `slot-scope` exposed includes:
 
 - `class`: CSS class to be applied to your override element to match the breadcrumb styling
 - `href`: the path that the link points to
 - `content`: the text content of that link
-- `ref`: a Vue `ref` to bind to your override element
 
 <cdr-doc-example-code-pair repository-href="/src/components/breadcrumb" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight= false>
 
