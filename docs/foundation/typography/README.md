@@ -89,12 +89,8 @@
     },
     {
       "text": "Design Tokens",
-      "href": "../../components/design-tokens/"
+      "href": "../../tokens/overview/"
     },
-    {
-      "text": "Cedar Tokens",
-      "href": "https://rei.github.io/rei-cedar-tokens/"
-    }
   ]
 }
 ---
