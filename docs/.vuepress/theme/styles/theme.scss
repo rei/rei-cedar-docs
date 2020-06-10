@@ -1,6 +1,5 @@
 @import 'cdr-tokens';
 @import 'cdr-doc-tokens';
-@import 'cdr-doc-mixins';
 @import 'examples.scss';
 
 $side-navigation-logo-width: 162px;
@@ -69,7 +68,7 @@ body {
 
 .header-anchor {
   @include cdr-text-heading-sans-500;
-  color: 	$cdr-color-text-link-lightmode;
+  color: 	$cdr-color-text-link-rest;
   text-decoration: none;
 }
 
@@ -233,45 +232,16 @@ div[class^='language-'] {
   margin-top: $cdr-space-two-x;
 }
 
-// Colors page styles
-.cdr-doc-colors-intro {
-  display: flex;
-}
-
-.cdr-doc-colors-intro__image {
-  max-width: 100%;
-}
-
-.cdr-doc-colors-intro__text {
-  @include cdr-doc-long-form-text;
-  margin-right: $cdr-space-four-x;
-}
-
 /*
-Generic Styling, for Desktops/Laptops  this is for markdown table display, this will need to be refactored to ensure it does not style cdr-tables
-*/
+Generic Styling, for Desktops/Laptops  this is for markdown table display */
 
-table {
-  width: 100%;
-  border-collapse: collapse;
+table:not([class*="cdr-table"]) {
+  @include cdr-table-base-mixin;
+  @include cdr-table-full-width-mixin;
+  @include cdr-table-striped-mixin;
+  @include cdr-table-border-mixin;
 }
 
-/* Zebra striping */
-
-tr:nth-of-type(odd) {
-  background: #eee;
-}
-
-th {
-  font-weight: bold;
-}
-
-td,
-th {
-  padding: 6px;
-  border: 1px solid #ccc;
-  text-align: left;
-}
 
 .table-first-col-align-top {
   tr td:first-child {
@@ -281,7 +251,7 @@ th {
 }
 
 .table-vertical-align {
-  td {
+  tbody {
     vertical-align: top;
   }
 }

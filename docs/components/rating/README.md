@@ -188,16 +188,18 @@ Change size for the star icon and text. Default size is medium.
 
 ## Accessibility
 
-To ensure that usage of this component complies with accessibility guidelines:
+Many WCAG requirements are contextual to their implementation. 
+To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
 
-- Use Rating component only on light backgrounds
+- When linking the rating component be sure to provide a valid `href` value
 
 <br/>
 
 This component has compliance with WCAG guidelines by:
 
-- Providing screen reader text that reads “Rated { rounded } out of 5 with { count }”
+- Providing screen reader text customized to each available variant
 - Using text color with a Level AA contrast ratio of 4.5:1 contrast between the text color and the background (only when displayed on light backgrounds)
+- Replacing icon stars with utf-8 characters when images are disabled 
 - Text links displays:
   - Underline text style for mouse usage
   - Focus state for keyboard usage
@@ -238,7 +240,7 @@ This component has compliance with WCAG guidelines by:
 ## Resources
 
 - [Icons](../icon/)
-- [Iconography](../../foundation/iconography/)
+- [Iconography](../../icons/iconography/)
 
 <hr>
 

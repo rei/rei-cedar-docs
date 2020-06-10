@@ -1,6 +1,6 @@
 <template>
   <div class="page cdr-doc-article-layout">
-    <cdr-doc-intro 
+    <cdr-doc-intro
       :size="pageData.intro_size || 'small'"
       :title="pageData.title"
       :metadata="pageData.title_metadata"
@@ -27,15 +27,14 @@ export default {
 <style lang="scss">
   @import '../theme/styles/cdr-tokens';
   @import '../theme/styles/cdr-doc-tokens';
-  @import '../theme/styles/cdr-doc-mixins';
-  
+
   .cdr-doc-article-layout {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
   }
   .cdr-doc-article-img {
-    border: 1px solid $partly-cloudy;
+    border: 1px solid $cdr-color-border-primary;
     border-radius:  $cdr-radius-softer;
   }
 
@@ -49,11 +48,5 @@ export default {
   .cdr-doc-article-layout__body-inner {
     margin: 0 auto;
     width: $cdr-doc-content-max-width;
-
-    @include cdr-doc-long-form-text;
-  }
-
-  .cdr-doc-article-layout__body-inner .content {
-    @include cdr-doc-long-form-text;
   }
 </style>

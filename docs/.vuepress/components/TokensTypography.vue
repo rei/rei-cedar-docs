@@ -11,7 +11,7 @@
       <cdr-text><b>{{ k }}</b> (mixin)</cdr-text>
       <!-- <cdr-text class="cdr-mb-space-one-x">{{descriptionData[k]}}</cdr-text> -->
 
-      <table>
+      <cdr-table>
         <tbody>
           <tr v-for="token in v">
             <td>
@@ -20,7 +20,7 @@
             <td>{{ token.value }}</td>
           </tr>
         </tbody>
-      </table>
+      </cdr-table>
     </div>
     </template>
 
@@ -36,7 +36,7 @@
       <cdr-text><b>iOS:</b> {{ v[0].docs.ios }}</cdr-text>
       <cdr-text class="cdr-mb-space-one-x">{{v[0].docs.description}}.</cdr-text>
 
-      <table>
+      <cdr-table>
         <tbody>
           <tr v-for="token in v">
             <td>
@@ -45,10 +45,10 @@
             <td>{{ token.value }}</td>
           </tr>
         </tbody>
-      </table>
+      </cdr-table>
     </div>
     </template>
-    
+
   </div>
 </template>
 
@@ -67,7 +67,7 @@ export default {
   },
   computed: {
     hasContent() {
-      return Object.keys(this.webMixinsByType).length !== 0 
+      return Object.keys(this.webMixinsByType).length !== 0
        || Object.keys(this.nativeTokensByType).length !== 0;
     },
     webTokensByMixin() {
@@ -107,7 +107,7 @@ export default {
           && v.docs.android !== 'N/A' ) return v.docs.android;
         else if ( Object.prototype.hasOwnProperty.call(v.docs, 'ios')
           && v.docs.ios !== 'N/A' ) return v.docs.ios;
-          
+
           return 'undefined';
       });
 
@@ -142,10 +142,10 @@ export default {
   @import '~@rei/cdr-tokens/dist/scss/cdr-tokens';
 
   .typography-example {
-    background-color: $cdr-color-background-lightest;
+    background-color: $cdr-color-background-primary;
     overflow: hidden;
     white-space: nowrap;
-    margin: 8px 0 8px 0; 
+    margin: 8px 0 8px 0;
     padding: 16px 0 16px 8px;
   }
 </style>

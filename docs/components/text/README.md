@@ -401,8 +401,8 @@ Body strong is also intended for long-form copy but should be used minimally. Us
   - Displaying customer reviews, such as on the PDP
   
 ### Don't Use When
-  - Displaying form inputs. Instead, use [Inputs](https://rei.github.io/rei-cedar-docs/components/input/)
-  - Listing product features. Instead, use [Lists](https://rei.github.io/rei-cedar-docs/components/lists/) 
+  - Displaying form inputs. Instead, use [Inputs](../input/)
+  - Listing product features. Instead, use [Lists](../lists/) 
   
 
 ### The Basics
@@ -598,13 +598,13 @@ This component has compliance with following WebAIM’s accessibility guidelines
 
 # Implementation
 
-To work as intended, tokens, utility classes, and component require both `cdr-reset.css` and access to the REI brand fonts. For more information on how to access these resources, visit the [developer getting started](https://rei.github.io/rei-cedar-docs/getting-started/as-a-developer#setting-up-projects) page.
+To work as intended, tokens, utility classes, and component require both `cdr-reset.css` and access to the REI brand fonts. For more information on how to access these resources, visit the [Developer getting started](../../getting-started/as-a-developer#setting-up-projects) guide.
 
-The global text default `cdr-text-default` is defined in each of the available cdr-container classes as well as the Cedar reset. Ensure that all content is contained in one of the [available container classes](https://rei.github.io/rei-cedar-docs/layout/responsive/#standard-vs-fluid-container).
+The global text default `cdr-text-default` is defined in each of the available cdr-container classes as well as the Cedar reset. Ensure that all content is contained in one of the [available container classes](../../layout/responsive/#standard-vs-fluid-container).
 
 The Cedar text css selectors provide no spacing values other than letter-spacing and line-height.
 
-For proper spacing between blocks of text, use the [Cedar spacing options](../..//layout/spacing/).
+For proper spacing between blocks of text, use the [Cedar spacing options](../../layout/spacing/).
 
 The Cedar text options can be utilized by your application using the [token mixins](https://www.npmjs.com/package/@rei/cdr-tokens), [utility classes](https://www.npmjs.com/package/@rei/cedar) or through the [cdr-text component](https://www.npmjs.com/package/@rei/cedar).
 
@@ -612,14 +612,14 @@ The Cedar text options can be utilized by your application using the [token mixi
 
 Cedar uses design tokens to store typographic attributes that represent the fundamental decisions of Cedar’s visual language.
 
-For a complete list of Cedar design tokens, visit the [Cedar Tokens](https://rei.github.io/rei-cedar-tokens/) page.
+For more information about design tokens and a complete list of tokens available in Cedar, visit the [Design Tokens](../../tokens/overview/) overview.
 
 ## Utility Classes
 
 `cdr-text` styles are available as a standalone css classes for users unable or preferring not to add custom styles to their applications, and who are unable to use the `cdr-text` vue.js component.
 
 
-For more information on importing these styles and how to use them, visit the [Developer getting started](./getting-started/as-a-developer/) page.
+For more information on importing these styles and how to use them, visit the [Developer getting started](../../getting-started/as-a-developer/) guide.
 
 ### Usage
 

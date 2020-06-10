@@ -13,8 +13,8 @@
       "href": "../block-quote/"
     },
     {
-      "text": "Paragraphs",
-      "href": "../paragraphs/"
+      "text": "Text",
+      "href": "../text/"
     }
   ],
   "indenting": [
@@ -158,7 +158,7 @@ Default pull quote can be used with the following HTML tags: `<p>`, `<div>`, `<a
 
 To ensure that usage of this component complies with accessibility guidelines:
 
-- All recommendations listed for [Paragraphs](../paragraphs/#accessibility) component apply to this component
+- All recommendations listed for [Paragraphs](../text/#paragraphs) apply to this component
 - Do not use this component to indent text. Screen readers use the `<blockquote>` element to:
   - Provide semantic understanding of page content by announcing blockquote as quote
   - Define a sectioning root in HTML5, which means that any  `<h1>` - `<h6>`  element doesn't become part of the document’s outline

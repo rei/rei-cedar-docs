@@ -436,7 +436,7 @@ This component has compliance with WCAG guidelines by:
 
 ## Don't Use When
 
-- Selecting from a specific set of options. Instead, use [Selects](https://rei.github.io/rei-cedar-docs/components/selects/)
+- Selecting from a specific set of options. Instead, use [Selects](../selects/)
 
 ## The Basics
 
@@ -447,7 +447,7 @@ This component has compliance with WCAG guidelines by:
 ### Options
 
 - Define width using CSS styles
-- Height options are medium or large. For more information, visit the [Overview](https://rei.github.io/rei-cedar-docs/components/input/) tab
+- Height options are medium or large. 
 - Ability to specify field type for text, email, number, password, search, and URL
 
 ### Multi-Line Input Fields
@@ -485,13 +485,13 @@ This component has compliance with WCAG guidelines by:
 ### Icon
 
 - Use icons to trigger a popover for hints or suggestions
-- Read more about icon guidelines using Cedar [here](https://rei.github.io/rei-cedar-docs/components/icon#guidelines)
+- Reference Cedar's [icon guidelines](../icon/#guidelines/) for additional information
 
 ### Link Text
 
 - Use a link when moving or navigating to another page or to a different portion of the same page
 - Use if navigating user to long or complex information
-- Read more about links [here](https://rei.github.io/rei-cedar-docs/components/links/)
+- Reference the [Links](../links/) component article for more information
 
 ### Do / Don't
 

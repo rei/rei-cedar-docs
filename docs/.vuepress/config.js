@@ -57,6 +57,7 @@ module.exports = {
       {
         text: "Release Notes",
         items: [
+          { text: "Spring 2020", link: "/release-notes/spring-2020/" },
           { text: "Winter 2020", link: "/release-notes/winter-2020/" },
           { text: "Fall 2019", link: "/release-notes/fall-2019/" },
           { text: "Summer 2019", link: "/release-notes/summer-2019/" },
@@ -76,7 +77,8 @@ module.exports = {
         items: [
           { text: "As a Designer", link: "/getting-started/as-a-designer/" },
           { text: "As a Developer", link: "/getting-started/as-a-developer/" },
-          { text: "Handoff Process", link: "/getting-started/handoff/" },
+          { text: "As a Mobile Developer", link: "/getting-started/as-a-mobile-developer/" },
+          { text: "Hand-off Process", link: "/getting-started/hand-off/" },
           { text: "Using Cedar", link: "/getting-started/using-cedar/" },
         ]
       },
@@ -107,7 +109,6 @@ module.exports = {
       {
         text: "Components",
         items: [
-          { text: "Design Tokens", link: "/components/design-tokens/" },
           { text: "Component Variables", link: "/components/component-variables/" },
           { text: "Utilities", link: "/components/utilities/" },
           { text: "Accordion", link: "/components/accordion/" },
@@ -116,8 +117,8 @@ module.exports = {
           { text: "Buttons", link: "/components/buttons/" },
           { text: "Call to Action", link: "/components/cta/" },
           { text: "Caption", link: "/components/caption/" },
+          { text: "Card", link: "/components/card/" },
           { text: "Checkboxes", link: "/components/checkboxes/" },
-          { text: "Data Tables", link: "/components/data-tables/" },
           { text: "Grid", link: "/components/grid/" },
           { text: "Icons", link: "/components/icon/" },
           { text: "Images", link: "/components/image/" },
@@ -130,6 +131,7 @@ module.exports = {
           { text: "Radio Buttons", link: "/components/radio/" },
           { text: "Ratings", link: "/components/rating/" },
           { text: "Select", link: "/components/selects/" },
+          { text: "Table", link: "/components/table/" },
           { text: "Tabs", link: "/components/tabs/" },
           { text: "Text", link: "/components/text/" }
         ]
@@ -139,6 +141,13 @@ module.exports = {
         items: [
           { text: "Resources", link: "/icons/resources/" },
           { text: "Iconography", link: "/icons/iconography/" }
+        ]
+      },
+      {
+        text: "Tokens",
+        items: [
+          { text: "Overview", link: "/tokens/overview/" },
+          { text: "All Tokens", link: "/tokens/all-tokens/" },
         ]
       },
       {text: "Report an Issue", link: 'https://airtable.com/shr3wSPCYQbycVx7i'},
@@ -153,6 +162,7 @@ module.exports = {
   },
   chainWebpack(config, isServer) {
     config.resolve.alias.set("$vue", "vue/dist/vue.esm.js");
+    config.resolve.alias.set("@rei/cdr-tokens$", "@rei/cdr-tokens/dist/js/cdr-tokens.esm.js");
     config.module.rules.delete('svg')
     config.module
       .rule('svg')

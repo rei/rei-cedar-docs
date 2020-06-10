@@ -104,7 +104,7 @@ Use the transition pattern when:
 
 <br>
 
-<table class="table-first-col-align-top">
+<cdr-table class="table-first-col-align-top">
   <tr>
     <td style="width: 160px;"><strong>Accordion</strong></td>
     <td></td>
@@ -113,11 +113,11 @@ Use the transition pattern when:
     <td><cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Symbol for Accordion component" :src="$withBase(`/motion/pattern_symbol_accordion_1-1.png`)"/></td>
     <td>The arrow icon rotates using ease out timing with 300ms duration. <br/><br/> When opening, the Accordion content is revealed using the ease timing with 300ms duration. <br/><br/> When closing, the duration changes to 200ms to hide content. <br/><br/> When opening or closing, the panel content fades on and off using linear timing at 100ms. <br/><br/> View <a href="../../components/accordion/">Accordion</a> component.</td>
   </tr>
-</table>
+</cdr-table>
 
 <br />
 
-<table class="table-first-col-align-top">
+<cdr-table class="table-first-col-align-top">
   <tr>
     <td style="width: 160px"><strong>Tabs</strong></td>
     <td></td>
@@ -126,7 +126,7 @@ Use the transition pattern when:
     <td><cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Symbol for Tabs component" :src="$withBase(`/motion/pattern_symbol_tabs_1-1.png`)"/></td>
     <td>Ease out timing is used for updating the tab bar and revealing new content. <br/><br/> Duration was initially set at 600ms. During the development phase, the duration was updated to 500ms. <br/><br/> View <a href="../../components/tabs/">Tabs</a> component.</td>
   </tr>
-</table>
+</cdr-table>
 
 <br/>
 
@@ -150,29 +150,37 @@ Use the feedback pattern when:
 
 <br>
 
-<table class="table-first-col-align-top">
+<cdr-table class="table-first-col-align-top">
+  <thead>
     <tr>
-      <td style="width: 160px;"><strong>Buttons</strong></td>
-      <td></td>
+      <th style="width: 160px;"><strong>Buttons</strong></th>
+      <th></th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td><cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Symbol for Buttons component" :src="$withBase(`/motion/pattern_symbol_buttons_16-9.png`)"/></td>
       <td>When user hovers on or off, color changes instantaneously.  <br/><br/> View <a href="../../components/buttons/">Button</a> component.</td>
     </tr>
-</table>
+  </tbody>
+</cdr-table>
 
 <br />
 
-<table class="table-first-col-align-top">
+<cdr-table class="table-first-col-align-top">
+  <thead>
     <tr>
-      <td style="width: 160px;"><strong>Breadcrumb</strong></td>
-      <td></td>
+      <th style="width: 160px;"><strong>Breadcrumb</strong></th>
+      <th></th>
     </tr>
+  </thead>
+  <tbody>
     <tr>
       <td><cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Symbol for Breadcrumb component" :src="$withBase(`/motion/pattern_symbol_breadcrumb_16-9.png`)"/></td>
       <td>When users hovers on or off, an underline style is applied to the link text.  <br/><br/> View <a href="../../components/breadcrumb/">Breadcrumb</a> component.</td>
     </tr>
-</table>
+  </tbody>
+</cdr-table>
 
 <br/>
 
@@ -211,7 +219,7 @@ For smooth and responsive animation, use CSS attributes for:
 - **Skew:** Using transform property for `skew()`, to distort an element on the 2D plane
 - **Opacity:** Specifies the opacity or transparency of an element with values from 0.0 - 1.0. Lower values cause the element to be more transparent
 
-For more information, visit the [Adding Tokens to the Repository](../../components/design-tokens#adding-tokens-to-the-repository) page.
+For more information, visit [Adding Tokens to the Repository](../../tokens/overview/#adding-design-tokens-to-the-repository).
 
 
 <br>
@@ -219,7 +227,7 @@ For more information, visit the [Adding Tokens to the Repository](../../componen
 
 ## Glossary
 
-<table class="table-first-col-align-top">
+<cdr-table class="table-first-col-align-top">
   <thead>
     <tr>
       <th>Glossary Term</th>
@@ -291,6 +299,6 @@ For more information, visit the [Adding Tokens to the Repository](../../componen
       <td>An effect that happens between two images or scenes. Common transition effects are cross-dissolve and wipe.</td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 </cdr-doc-table-of-contents-shell>

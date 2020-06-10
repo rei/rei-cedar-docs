@@ -17,18 +17,15 @@ Cedar supports multiple tools and consumption methods. Reference the information
 
 ## Cedar Tools and Resources
 
-### UI Toolkit
-The Sketch UI Toolkit maintained by Cedar includes all published components and foundational styles.
+### Designer Toolkit
+The Cedar UI toolkit is distributed through shared libraries in Figma, and includes all published components and foundational styles.
 
 For more information about using the UI Toolkit, visit the [Getting Started for Designers](../as-a-designer/) article.
 
 ### Design Tokens
 Design tokens are special variables used to maintain a scalable visual system for UI development and brand consistency. Cedar design tokens store the visual design attributes that define the foundation of REI’s visual language, including color, typography, and spacing.
 
-For example:
-`cdr-color-text-primary-lightmode` would be used to set the primary text color on a light background.
-
-For more information about design tokens, read the [Design Tokens](../../components/design-tokens/) article.
+Learn more about design tokens in the [Design Tokens Overview](../../tokens/overview/) article.
 
 ### Components
 Components use Cedar’s tokens and design foundations to distribute code templates that extend basic HTML elements and encapsulate reusable code.
@@ -43,7 +40,7 @@ Component variables are available for a subset of Cedar components. These SCSS o
 For example:
 `cdr-link-base-mixin` would be used to style an element like a CdrLink component.
 
-For more information on  Component variables, visit the [Component Variables](../../components/component-variables/) article.
+Learn more in the [Component Variables](../../components/component-variables/) article.
 
 ### Utilities
 Utility CSS classes allow users to extend Cedar components by providing options for layout, such as spacing, text alignment, or element display.
@@ -59,17 +56,17 @@ The documentation for each component and foundational style includes design guid
 
 ## Dev Tools Comparison Chart
 
-<table class="table-vertical-align">
+<cdr-table class="table-vertical-align">
   <thead>
     <tr>
-      <td></td>
-      <td><b>Features</b></td>
-      <td><b>Requirements of usage</b></td>
+      <th></th>
+      <th><b>Features</b></th>
+      <th><b>Requirements of usage</b></th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><b>Design Tokens</b></td>
+      <th><b>Design Tokens</b></th>
       <td>
         <ul>
           <li>Versioned and maintained by the design systems team</li>
@@ -99,7 +96,7 @@ The documentation for each component and foundational style includes design guid
       </td>
     </tr>
     <tr>
-      <td><b>Vue components (recommended)</b></td>
+      <th><b>Vue components (recommended)</b></th>
       <td>
         <ul>
           <li>Versioned and maintained by the design systems team</li>
@@ -138,7 +135,7 @@ The documentation for each component and foundational style includes design guid
       </td>
     </tr>
     <tr>
-      <td><b>Component variables</b></td>
+      <th><b>Component variables</b></th>
       <td>
         <ul>
           <li>Versioned and maintained by the design systems team</li>
@@ -165,7 +162,7 @@ The documentation for each component and foundational style includes design guid
       </td>
     </tr>
     <tr>
-      <td><b>Utility Classes</b></td>
+      <th><b>Utility Classes</b></th>
       <td>
         <ul>
           <li>Non-modularized CSS classes allow you to apply these styles where needed</li>
@@ -191,6 +188,6 @@ The documentation for each component and foundational style includes design guid
       </td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 </cdr-doc-table-of-contents-shell>

@@ -127,13 +127,13 @@
                 "name": "iconOnly",
                 "type": "boolean",
                 "default": "false",
-                "description": "Renders an 'icon-only' button. When this value is true, it will override the size and 'responsiveSize' props."
+                "description": "Renders an 'icon-only' button. When this value is true, it will override the size and 'responsiveSize' props. Can be used in conjunction with 'with-background'"
               },
               {
-                "name": "onDark",
+                "name": "withBackground",
                 "type": "boolean",
                 "default": "false",
-                "description": "Renders an 'icon-only' button with a light fill color for use on dark backgrounds. The 'iconOnly' prop must be true."
+                "description": "Renders an 'icon-only' button with a background color and border. Must be used in conjunction with the 'iconOnly' prop."
               },
               {
                 "name": "modifier",
@@ -264,6 +264,29 @@ Use icons to visually communicate an object or action in a limited space. Includ
 
 </cdr-doc-example-code-pair>
 
+## Icon Only With Background
+
+Use `with-background` property in conjunction with the `icon-only` property to make icon buttons more identifiable. Include alternative text to describe what the button does.
+
+<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrButton, IconAccountProfile'})" >
+
+```html
+  <div>
+    <cdr-button
+      :icon-only="true"
+      :with-background="true"
+      aria-label="More information about icon"
+    >
+      <IconAccountProfile
+        slot="icon"
+        class="cdr-button__icon"
+      />
+    </cdr-button>
+  </div>
+```
+
+</cdr-doc-example-code-pair>
+
 ## Full Width
 
 Displays at full width of its container.
@@ -298,10 +321,14 @@ Change the button size based on where the button is used. The default size is me
 </cdr-doc-example-code-pair>
 
 ## Accessibility
-
-To ensure that usage of this component complies with accessibility guidelines:
+Many WCAG requierments are contextual to their implementation.
+To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
 
 - For icon-only buttons, provide `aria-label` text that describes the button's action
+- If activating the button does not dismiss the current context, then focus typically remains on the button after activation, e.g., an Apply or Recalculate button.
+- If a description of the button's function is present, the button element has `aria-describedby` set to the `ID` of the element containing the description.
+- If the button is a toggle button, it has an `aria-pressed` state. When the button is toggled on, the value of this state is true, and when toggled off, the state is false.
+- If the button action indicates a context change, such as move to next step in a wizard or add another search criteria, then it is often appropriate to move focus to the starting point for that action.
 - Apply keyboard interaction patterns as described on [REI universal design and accessibility: Buttons](https://confluence.rei.com/display/accessibility/Buttons)
 
 <br />
@@ -343,7 +370,7 @@ When stacking buttons vertically:
   - Align left borders
   - Display all with the same width
   - Separate each by stack-1-x spacing
-  <cdr-img class="cdr-doc-article-img" :src="$withBase(`/buttons/Spec__Button_Vertical_Spacing_16-4.png`)"/>
+  <cdr-img class="cdr-doc-article-img" :src="$withBase(`/buttons/spec__button__vertical_spacing_16-4.png`)"/>
 
 <br />
 
@@ -351,7 +378,7 @@ When arranging buttons horizontally:
   - Align top borders
   - Display all with the same height
   - Separate each by standard inline-1-x spacing
-  <cdr-img class="cdr-doc-article-img" :src="$withBase(`/buttons/Spec__Button_Horizontal_Spacing_16-9.png`)"/>
+  <cdr-img class="cdr-doc-article-img" :src="$withBase(`/buttons/spec__button__horizontal_spacing_16-9.png`)"/>
 
 <br />
 
@@ -517,16 +544,14 @@ Use the following props to modify `cdr-button`:
 
 - Default slot must be empty. If text is present in default slot, the text will render  
 - `size` prop is disabled when `icon-only` prop is true
-- For the SVG files:
-  - If the `fill` color is dark, assign true to the `on-dark` prop
-  - `on-dark` prop only works if `icon-only` prop is also true
+- `with-background` can be used to add a border and background to the icon-only button, ensuring it is more visible on darker backgrounds
 - Add `aria-label` text to describe the button’s action when clicked or tapped
 
 ```vue{3,4,5}
 <template>
   <cdr-button
     :icon-only="true"
-    :on-dark="true"
+    :with-background="true"
     aria-label="Complete this step"
   >
     <icon-check-lg

@@ -85,6 +85,12 @@
                 "description": "Sets height of the tabs container element.  This is needed for managing content overflow and animations."
               },
               {
+                "name": "activeTab",
+                "type": "number",
+                "default": "0",
+                "description": "Sets the index of the tab that should be active on initial page load. Note that this property is zero-indexed."
+              },
+              {
                 "name": "modifier",
                 "type": "string",
                 "default": "N/A",
@@ -114,7 +120,13 @@
                 "name": "id",
                 "type": "string",
                 "default": "N/A",
-                "description": "Sets reference identifier.  Must be unique for each tab."
+                "description": "Sets reference identifier for tab content. This property is required and is necessary for accessibility. Must be unique for each tabPanel, and cannot be the same as the `aria-labelledby` property."
+              },
+              {
+                "name": "aria-labelledby",
+                "type": "string",
+                "default": "N/A",
+                "description": "Sets reference identifier for tab header. This property is required and is necessary for accessibility. Must be unique for each tabPanel, and cannot be the same as the `id` property."
               }
             ]
           }
@@ -130,18 +142,20 @@
 <cdr-doc-table-of-contents-shell>
 # Overview
 
+<cdr-doc-alert icon="warning">Due to an issue with how Codesandbox handles link clicks, the CdrTabs examples do not work properly in the Codesandbox environment.</cdr-doc-alert>
+
 ## Default (Medium)
-Tab buttons align left and bottom border expands to full width of container.
+Tabs align left and bottom border expands to full width of container.
 
 <cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" >
 
 ```html
 
 <cdr-tabs height="100px">
-  <cdr-tab-panel name="Product">Tab 1 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Articles">Tab 2 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Classes & Events">Tab 3 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Videos">Tab 4 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Product" id="product-tab-panel" aria-labelledby="product-tab">Tab 1 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Articles" id="article-tab-panel" aria-labelledby="article-tab">Tab 2 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Classes & Events" id="classes-tab-panel" aria-labelledby="classes-tab">Tab 3 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Videos" id="videos-tab-panel" aria-labelledby="videos-tab">Tab 4 Content</cdr-tab-panel>
 </cdr-tabs>
 
 ```
@@ -150,16 +164,16 @@ Tab buttons align left and bottom border expands to full width of container.
 
 ## Compact (Small)
 
-Reduced spacing around the tab buttons to create a denser visual design.
+Reduced spacing around the tabs to create a denser visual design.
 
 <cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false">
 
 ```html
 <cdr-tabs modifier="compact" height="100px">
-  <cdr-tab-panel name="Product" >Tab 1 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Articles">Tab 2 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Classes & Events">Tab 3 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Videos">Tab 4 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Product" id="product-tab-panel" aria-labelledby="product-tab">Tab 1 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Articles" id="articles-tab-panel" aria-labelledby="articles-tab">Tab 2 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Classes & Events" id="classes-tab-panel" aria-labelledby="classes-tab">Tab 3 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Videos" id="videos-tab-panel" aria-labelledby="videos-tab">Tab 4 Content</cdr-tab-panel>
 </cdr-tabs>
 ```
 
@@ -167,16 +181,16 @@ Reduced spacing around the tab buttons to create a denser visual design.
 
 ## Full Width
 
-Tab buttons space evenly across the container.
+Tabs space evenly across the container.
 
 <cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false">
 
 ```html
 <cdr-tabs modifier="full-width" height="100px">
-  <cdr-tab-panel name="Product">Tab 1 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Articles">Tab 2 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Classes & Events">Tab 3 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Videos">Tab 4 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Product" id="product-tab-panel" aria-labelledby="product-tab">Tab 1 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Articles" id="articles-tab-panel" aria-labelledby="articles-tab">Tab 2 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Classes & Events" id="classes-tab-panel" aria-labelledby="classes-tab">Tab 3 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Videos" id="videos-tab-panel" aria-labelledby="videos-tab">Tab 4 Content</cdr-tab-panel>
 </cdr-tabs>
 ```
 
@@ -190,10 +204,10 @@ Bottom border of tab header list is removed.
 
 ```html
 <cdr-tabs modifier="no-border" height="100px">
-  <cdr-tab-panel name="Product">Tab 1 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Articles">Tab 2 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Classes & Events">Tab 3 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Videos">Tab 4 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Product" id="product-tab-panel" aria-labelledby="product-tab">Tab 1 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Articles" id="articles-tab-panel" aria-labelledby="articles-tab">Tab 2 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Classes & Events" id="classes-tab-panel" aria-labelledby="classes-tab">Tab 3 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Videos" id="videos-tab-panel" aria-labelledby="videos-tab">Tab 4 Content</cdr-tab-panel>
 </cdr-tabs>
 ```
 
@@ -201,16 +215,33 @@ Bottom border of tab header list is removed.
 
 ## Centered
 
-Centered tab header content
+Centered tab header content.
 
 <cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false">
 
 ```html
 <cdr-tabs modifier="centered" height="100px">
-  <cdr-tab-panel name="Product">Tab 1 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Articles">Tab 2 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Classes & Events">Tab 3 Content</cdr-tab-panel>
-  <cdr-tab-panel name="Videos">Tab 4 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Product" id="product-tab-panel" aria-labelledby="product-tab">Tab 1 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Articles" id="articles-tab-panel" aria-labelledby="articles-tab">Tab 2 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Classes & Events" id="classes-tab-panel" aria-labelledby="classes-tab">Tab 3 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Videos" id="videos-tab-panel" aria-labelledby="videos-tab">Tab 4 Content</cdr-tab-panel>
+</cdr-tabs>
+```
+
+</cdr-doc-example-code-pair>
+
+## Active Tab
+
+Tabs using the `active-tab` property to make the third element active on page load.
+
+<cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false">
+
+```html
+<cdr-tabs :active-tab="2" height="100px">
+  <cdr-tab-panel name="Product" id="product-tab-panel" aria-labelledby="product-tab">Tab 1 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Articles" id="articles-tab-panel" aria-labelledby="articles-tab">Tab 2 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Classes & Events" id="classes-tab-panel" aria-labelledby="classes-tab">Tab 3 Content</cdr-tab-panel>
+  <cdr-tab-panel name="Videos" id="videos-tab-panel" aria-labelledby="videos-tab">Tab 4 Content</cdr-tab-panel>
 </cdr-tabs>
 ```
 
@@ -242,28 +273,29 @@ This component has compliance with WCAG guidelines by:
 - Organizing related content in a single container
 - Flipping between multiple panes or sections
 - Grouping content to display horizontally
-- Content is lengthy and can be broken into discrete parts
+- Content can be broken into discrete parts
 
 ## Don't Use When
 
 - Grouping content to display vertically. Instead, use [Accordion](../accordion/)
 - Creating primary navigation that links to other pages
-- Comparing related content. Instead, use [Data Tables](../data-tables/)
+- Comparing related content. Instead, use [Table](../table/)
 
 ## The Basics
 
-- Never display disabled tab labels
-- Remove tab button if there is no content
-- Keep to no more than 6 tab buttons
-- Never display fewer than 2 tab buttons
+- Keep tabs in the same order, even when some tabs are disabled
+- Keep to no more than 6 tabs
+- Never display fewer than 2 tabs
+- Avoid changing the order of the tabs often. If your content changes frequently and needs to be selectively displayed, consider adopting a Filter pattern as in Product Display (https://www.rei.com/c/mens-climbing-shoes)
 
 ## Content
 
-- Order the tab buttons by priority or importance from left to right
+- Order the tabs by priority or importance from left to right
 - Keep tab labels short and meaningful. Between 1-2 words is best and written in plain language
 - Ensure that each tab label is unique
 - Never truncate tab labels
 - Use title caps for tab labels
+- Tab headers can be animated, but tab content should not be
 
 ## Behavior
 
@@ -294,6 +326,10 @@ This component has compliance with WCAG guidelines by:
   - When scrolled to end of tabs, a gradient is added to the beginning (left) of tab container
 - Maintain layout for tabs when switching to smaller viewports. Do not replace the tab component with the accordion component
 - Switching between tab component and accordion component is not supported in Cedar components library
+
+### Important
+
+Linking to a specific tab or accordion has SEO costs. If you still wish to implement these changes for your project, reach out to the SEO team at the #team-seo and #team-ia Slack channels.
 
 <hr>
 

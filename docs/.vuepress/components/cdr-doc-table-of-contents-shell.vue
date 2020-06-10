@@ -121,10 +121,8 @@ export default {
 <style lang="scss">
   @import '../theme/styles/cdr-tokens.scss';
   @import '../theme/styles/cdr-doc-tokens.scss';
-  @import '../theme/styles/cdr-doc-mixins.scss';
 
   .cdr-doc-table-of-contents-shell {
-    @include cdr-doc-long-form-text;
     margin: 0 auto;
     max-width: $cdr-doc-content-max-width;
     padding-top: $cdr-space-two-x;

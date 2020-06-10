@@ -55,38 +55,6 @@
       "caption": "use colons after labels."
     }
   ],
-  "required": [
-    {
-      "type": "do",
-      "image": "select/select_sizes_do_16-9.png",
-      "ratio": "16-9",
-      "alt": "Image showing an input element above a select element of the same size",
-      "caption": "use consistent sizes for components on a single form."
-    },
-    {
-      "type": "dont",
-      "image": "select/select_sizes_dont_16-9.png",
-      "ratio": "16-9",
-      "alt": "Image showing an input element above a select element of a different size",
-      "caption": "mix sizes for components on a single form."
-    }
-  ],
-  "sizes": [
-    {
-      "type": "do",
-      "image": "select/select_required_do_16-9.png",
-      "ratio": "16-9",
-      "alt": "Image showing the text required to the right of the label above the select element",
-      "caption": "position the required label next to the select field label."
-    },
-    {
-      "type": "dont",
-      "image": "select/select_required_dont_16-9.png",
-      "ratio": "16-9",
-      "alt": "Image showing an asterisk to the right of the label above the select element",
-      "caption": "use an asterisk for a required select."
-    }
-  ],
   "breadcrumbs": [
     {
       "text": "Components/"
@@ -140,6 +108,18 @@
                 "type": "number",
                 "default": "medium",
                 "description": "Sets the select field size. Possible sizes are: {  ‘medium’  |  ‘large’  }. Also works with responsive breakpoints. Breakpoint values are: xs, sm, md, and lg. Examples: { 'small' | 'medium' | 'large' | 'large@sm' }"
+              },
+              {
+                "name": "multiple",
+                "type": "boolean",
+                "default": "false",
+                "description": "Turns CdrSelect into a multi-select element."
+              },
+              {
+                "name": "multipleSize",
+                "type": "number",
+                "default": "null",
+                "description": "Sets the height of the CdrSelect when using the multiple option. This number corresponds to the number of select options that will be visible without scrolling."
               }
             ],
             "events": [
@@ -342,20 +322,50 @@ Input field with helper or hint text below the input field.
 </cdr-doc-example-code-pair>
 
 
+## Multiple Select
+
+CdrSelect can be rendered as a multi-select by passing the native HTML select `multiple` attribute. The `multipleSize` prop can be used to control the height of the multi-select.
+
+<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: [], defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D', 'Option E', 'Option F']}">
+
+```html
+default multi-select:
+<br>
+<cdr-select
+  v-model="defaultModel"
+  label="Select label"
+  :options="defaultOptions"
+  multiple
+/>
+<br>
+With multipleSize:
+<br>
+<cdr-select
+  v-model="defaultModel"
+  label="Select label"
+  :options="defaultOptions"
+  multiple
+  multipleSize="6"
+/>
+```
+
+</cdr-doc-example-code-pair>
+
+
 ## Accessibility
 
 To ensure that the usage of Select component complies with the accessibility guidelines:
 + Always provide a label for each select control
-+ If hiding a label, use the [ aria-label ] attribute for the label contents
++ If hiding a label, use the `aria-label` attribute for the label contents
 
-When using the [ aria-describedby ]:
-+ [ aria-describedby ] attribute does not override the select label
+When using the `aria-describedby`:
++ `aria-describedby` attribute does not override the select label
 + Use this attribute in addition to a label
 + Can be used to reference descriptions that appear as 'tooltips'
 
 This component has compliance with WCAG guidelines by:
-+ Requiring a value for the [ label ] field
-+ When hiding a label, the [ aria-label ] attribute is set to the [ label ] value
++ Requiring a value for the `label` field
++ When hiding a label, the `aria-label` attribute is set to the `label` value
 
 <hr>
 
@@ -369,13 +379,13 @@ This component has compliance with WCAG guidelines by:
 
 ## Don't Use When
 
-+ Viewing or comparing all options is needed. Instead, use [Radio Buttons](https://rei.github.io/rei-cedar-docs/components/radio/)
-+ Displaying a limited number of options. Instead, use [Radio Buttons](https://rei.github.io/rei-cedar-docs/components/radio/)
-+ Displaying a "yes" or "no" selection. Instead, use [Radio Buttons](https://rei.github.io/rei-cedar-docs/components/radio/)
-+ Turning an option on or off. Instead, use [Checkboxes](https://rei.github.io/rei-cedar-docs/components/checkboxes/)
-+ Setting a value is required. Instead, use [Radio Buttons](https://rei.github.io/rei-cedar-docs/components/radio/)
-+ Displaying more than 10 options. Instead, use [Inputs](https://rei.github.io/rei-cedar-docs/components/input/)
-+ Sending the user to other areas of the site. Instead, use [Links](https://rei.github.io/rei-cedar-docs/components/links/)
++ Viewing or comparing all options is needed. Instead, use [Radio Buttons](../radio/)
++ Displaying a limited number of options. Instead, use [Radio Buttons](../radio/)
++ Displaying a "yes" or "no" selection. Instead, use [Radio Buttons](../radio/)
++ Turning an option on or off. Instead, use [Checkboxes](../checkboxes/)
++ Setting a value is required. Instead, use [Radio Buttons](../radio/)
++ Displaying more than 10 options. Instead, use [Inputs](../input/)
++ Sending the user to other areas of the site. Instead, use [Links](../links/)
 
 
 ## The Basics
@@ -389,7 +399,7 @@ Select components should be:
 
 ### Options
 + Define width using CSS styles
-+ Height options are medium and large. These variations can be used for creating media queries for responsive layouts, or to call more or less attention to the component. For an example of medium and large sizes, visit the [Overview](https://rei.github.io/rei-cedar-docs/components/select#overview) tab
++ Height options are medium and large. These variations can be used for creating media queries for responsive layouts, or to call more or less attention to the component. 
 
 
 ## Content
@@ -423,14 +433,13 @@ Select components should be:
 ### Icon
 
 - Use icons to trigger a popover for hints or suggestions
-- Read more about icon guidelines using Cedar [here](https://rei.github.io/rei-cedar-docs/components/icon#guidelines)
+- Reference Cedar's [icon guidelines](../icon/#guidelines) for additional information
 
 ### Link Text
 
 - Use a link when moving or navigating to another page or to a different portion of the same page
 - Use if navigating user to long or complex information
-- Read more about links [here](https://rei.github.io/rei-cedar-docs/components/links/)
-
+- Reference the [Links](../links/) component article for more information
 
 ### Do / Don’t
 
@@ -455,12 +464,6 @@ Select components should be:
 ### Validation
 
 + Validate the user’s data before form submission
-
-### Do/Don't
-
-<do-dont :examples="$page.frontmatter.required" />
-
-<do-dont :examples="$page.frontmatter.sizes" />
 
 
 # API

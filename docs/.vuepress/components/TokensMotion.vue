@@ -3,48 +3,47 @@
     <div
       v-if="comparisonView"
     >
-      <cdr-button 
+      <cdr-button
         :icon-only="true"
-        @click="animate = true" 
+        @click="animate = true"
         v-show="!animate"
       >
-        <cdr-icon 
-          use="#play-fill" 
-          alt="Play animation" 
+        <cdr-icon
+          use="#play-fill"
+          alt="Play animation"
         />
       </cdr-button>
-      <cdr-button 
+      <cdr-button
         :icon-only="true"
-        @click="animate = false" 
+        @click="animate = false"
         v-show="animate"
       >
-        <cdr-icon 
-          use="#pause-fill" 
+        <cdr-icon
+          use="#pause-fill"
           alt="Pause animation"
         />
       </cdr-button>
-      <table>
+      <cdr-table>
         <tr v-for="token in motionTokensByType[motionType]">
           <td>
             <token-motion-example
-              :prop="token" 
-              :use-group-animate="true" 
-              :group-animate="animate" 
+              :prop="token"
+              :use-group-animate="true"
+              :group-animate="animate"
             />
           </td>
           <td>
             {{ token.name }}
           </td>
         </tr>
-      </table>
+      </cdr-table>
     </div>
 
     <div
       v-else
       v-for="token in motionTokensByType[motionType]"
-      class="something"
     >
-      <table class="motion-token-definition">
+      <cdr-table class="motion-token-definition">
         <tr><td><strong>{{ token.name }}</strong></td></tr>
         <tr><td><token-motion-example :prop="token" /></td></tr>
         <tr>
@@ -53,7 +52,7 @@
             {{ description(token.name) }}
           </td>
         </tr>
-      </table>
+      </cdr-table>
     </div>
   </div>
 </template>

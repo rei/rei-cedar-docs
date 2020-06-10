@@ -149,12 +149,11 @@ Complete breadcrumb string with all items visible.
 
 ## Link Scoped Slot
 
-Can be used to override the default links rendered in the breadcrumb. Useful for integrating with client-side routing, as a `router-link` can be rendered instead of a plain `a` tag.  The `slot-scope` exposed includes:
+Can be used to override the default links rendered in the breadcrumb. Useful for integrating with client-side routing, as a `router-link` can be rendered instead of a plain `a` tag. The `slot-scope` exposed includes:
 
 - `class`: CSS class to be applied to your override element to match the breadcrumb styling
 - `href`: the path that the link points to
 - `content`: the text content of that link
-- `ref`: a Vue `ref` to bind to your override element
 
 <cdr-doc-example-code-pair repository-href="/src/components/breadcrumb" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight= false>
 
@@ -228,10 +227,7 @@ Breadcrumbs provide context and a sense of place. This is especially important o
 
 ## Behavior
 
-- Within a breadcrumb, link styles are adapted:
-  - Ancestor links are displayed as $sys-color-taken-for-granite
-  - Last child link is emphasized as $sys-color-heart-of-darkness
-- Emphasize breadcrumb hover states with the  $sys-color-heart-of-darkness color and an underline
+- Emphasize breadcrumb hover states with an underline
 
 <cdr-img class="cdr-doc-article-img" alt="Breadcrumb hover state is emphasized using link color and underline" :src="$withBase(`/breadcrumb/Spec__Breadcrumb_Long_16-2.png`)" />
 

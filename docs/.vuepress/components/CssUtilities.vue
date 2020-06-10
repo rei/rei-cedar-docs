@@ -21,7 +21,7 @@
           class="utility-class-title"
         >{{ capitalize(k) }}</component>
         <!-- Table -->
-        <table class="utility-table cdr-mb-space-four-x">
+        <cdr-table striped class="cdr-mb-space-four-x">
           <tbody>
             <tr v-for="(data, name) in v">
               <td>
@@ -33,7 +33,7 @@
               </td>
             </tr>
           </tbody>
-        </table>
+        </cdr-table>
       </template>
     </template>
   </div>
@@ -84,13 +84,13 @@ export default {
 
 .utility-wrapper {
   h2 {
-    @include cdr-text-display-1000();
+    @include cdr-text-heading-serif-strong-1000();
   }
   h3 {
-    @include cdr-text-display-800();
+    @include cdr-text-heading-serif-strong-800();
   }
   h4 {
-    @include cdr-text-display-600();
+    @include cdr-text-heading-serif-strong-600();
   }
 }
 

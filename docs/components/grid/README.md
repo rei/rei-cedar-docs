@@ -1068,7 +1068,7 @@ This component has compliance with following WCAG guidelines:
 
 ## Don't Use When
 
-- Presenting a multi-row columnar data display, such as features or specs of a product. Instead, use [Data Tables](../data-tables/)
+- Presenting a multi-row columnar data display, such as features or specs of a product. Instead, use [Table](../table/)
 
 ## The Basics
 
@@ -1087,7 +1087,7 @@ Columns, gutters, and margins scales as a fluid system as the device and viewpor
   - Utilities are available to manage layout and presentation
   - Stay within max width to match the width of the global navigation
 
-<table>
+<cdr-table striped>
   <tbody>
     <tr>
       <td>XS (Extra Small)</td>
@@ -1114,7 +1114,7 @@ Columns, gutters, and margins scales as a fluid system as the device and viewpor
       <td>32px</td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 <br/>
 
@@ -1126,7 +1126,7 @@ Columns, gutters, and margins scales as a fluid system as the device and viewpor
 
 - Gutters separate columns with pre-defined padding:
 
-<table>
+<cdr-table striped>
   <tbody>
     <tr>
       <td>XS (Extra Small)</td>
@@ -1149,7 +1149,7 @@ Columns, gutters, and margins scales as a fluid system as the device and viewpor
       <td>32px gutters (16px on left +16px on right)</td>
     </tr>
   </tbody>
-</table>
+</cdr-table>
 
 ## Content
 
@@ -1243,10 +1243,26 @@ Nested grids are made by nesting `cdr-col` and adding the `is-row` prop to the `
 
 
 <cdr-doc-code-snippet :copy-button="false" :max-height="false">
-  ```html
+  ```html{2}
   <cdr-row cols=”3”>
     <cdr-col is-row span=”6” cols”2”>
       <cdr-col></cdr-col>
+    </cdr-col>
+  </cdr-row>
+  ```
+</cdr-doc-code-snippet>
+
+### Utility class use
+
+Any custom or utility classes should **not** be added to either `cdr-row` or `cdr-col` as they can have adverse effects on things like gutters which can break the layout. Custom or utility classes should only be added to your own markup/content.
+
+<cdr-doc-code-snippet :copy-button="false" :max-height="false">
+  ```html{3}
+  <cdr-row>
+    <cdr-col>
+      <div class="my-class cdr-space-inset-one-x">
+        ...
+      </div>
     </cdr-col>
   </cdr-row>
   ```

@@ -229,13 +229,13 @@ Different sizing for checkboxes.
 
 ## Indeterminate
 
-Displays status for checkbox group by indicating that some of the sub-selections in a list are selected. Provides user with ability to select or unselect all items in the list’s sub-group.
+Displays status for checkbox group by indicating that some of the sub-selections in a list are selected. Provides user with ability to select or unselect all items in the list’s sub-group. To see a functioning example see this [codesandbox](https://codesandbox.io/s/cedar-indeterminate-checkbox-rubkk).
 
 <cdr-doc-example-code-pair repository-href="/src/components/checkbox" :sandbox-data="$page.frontmatter.sandboxData" :model="{ex1: false}">
 
 ```html
 <div>
-  <cdr-checkbox v-model="ex1" indeterminate>Indeterminate</cdr-checkbox>
+  <cdr-checkbox v-model="ex1" :indeterminate="!ex1">Indeterminate</cdr-checkbox>
 </div>
 ```
 
@@ -272,7 +272,9 @@ Custom styles for checkboxes.
 
 ## Accessibility
 
-To ensure that usage of this component complies with accessibility guidelines:
+Many WCAG requirements are contextual to their implementation.
+To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
+
 - Each checkbox must be focusable and keyboard accessible:
   - When the checkbox has focus, the **Space** key changes the selection
   - **Tab** key moves to next element in list
@@ -281,10 +283,9 @@ To ensure that usage of this component complies with accessibility guidelines:
   - Identified or described as a group using a `<legend>` tag
 - Avoid nested fieldsets
 - Single checkboxes:
-  - May be interchangeable with a toggle
+  - May be interchangeable with a toggle or [Radio Button](../radio/)
   - Write labels to be self-explanatory
 - Custom checkboxes maintain accessibility requirements. The checkbox icon is only visually hidden and replaced with custom style
-
 <br/>
 
 This component has compliance with WCAG guidelines by:
@@ -442,7 +443,7 @@ Default checkbox to checked/unchecked state by setting the model in Javascript.
 </script>
 ```
 
-Set the `indeterminate` prop to `true` to generate an indeterminate checkbox, which looks different than the default. This is a visual styling only; it does not include any of the functional aspects of an indeterminate checkbox.
+Set the `indeterminate` prop to `true` to generate an indeterminate checkbox, which looks different than the default. This is a visual styling only; it does not include any of the functional aspects of an indeterminate checkbox. To see a functioning example see this [codesandbox](https://codesandbox.io/s/cedar-indeterminate-checkbox-rubkk).
 
 ```vue
 <template>

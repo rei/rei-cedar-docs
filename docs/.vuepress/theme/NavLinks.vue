@@ -1,27 +1,28 @@
 <template>
   <nav class="nav-links cdr-doc-nav-links" v-if="userLinks.length || repoLink">
-    <!-- user links -->
-    <cdr-accordion
-      v-if="item.type === 'links'"
-      v-for="(item, index) in userLinks"
-      :key="`${item.text}-${index}`"
-      :id="item.text.replace(' ', '-').toLowerCase()"
-      class="nav-item cdr-accordion-nav"
-      :opened="navGroup[index]"
-      @accordion-toggle="navToggle(index)"
-    >
-      <template slot="label">
-        {{ item.text }}
-      </template>
-      <ul class="nav-dropdown cdr-doc-side-navigation__child-links">
-        <li v-for="navItem in item.items" class="dropdown-item">
-          <nav-link :item="navItem" class="cdr-doc-side-navigation__child-link" />
-        </li>
-      </ul>
-    </cdr-accordion>
-    <NavLink v-else :item="item" class="cdr-doc-side-navigation__parent-link"/>
-    <!-- </div> -->
-    <!-- repo link -->
+    <cdr-accordion-group v-if="groupLinks.length > 0">
+      <!-- user links -->
+      <cdr-accordion
+        v-for="(item, index) in groupLinks"
+        :key="`${item.text}-${index}`"
+        :id="item.text.replace(' ', '-').toLowerCase()"
+        level="2"
+        class="nav-item cdr-accordion-nav"
+        :opened="navGroup[index]"
+        @accordion-toggle="navToggle(index)"
+      >
+        <template slot="label">
+          {{ item.text }}
+        </template>
+        <ul class="nav-dropdown cdr-doc-side-navigation__child-links">
+          <li v-for="navItem in item.items" class="dropdown-item">
+            <nav-link :item="navItem" class="cdr-doc-side-navigation__child-link" />
+          </li>
+        </ul>
+      </cdr-accordion>
+    </cdr-accordion-group>
+    <NavLink v-for="item in singleLinks" :item="item" class="cdr-doc-side-navigation__parent-link"/>
+    <!-- repo link TODDO: uhhh waht? -->
     <a v-if="repoLink"
       :href="repoLink"
       class="repo-link"
@@ -35,13 +36,13 @@
 
 <script>
 import OutboundLink from './OutboundLink.vue'
-import { CdrAccordion, CdrList } from '@rei/cedar';
+import { CdrAccordion, CdrAccordionGroup, CdrList } from '@rei/cedar';
 
 import { resolveNavLinkItem } from './util'
 import NavLink from './NavLink.vue'
 
 export default {
-  components: { OutboundLink, NavLink, CdrAccordion },
+  components: { OutboundLink, NavLink, CdrAccordion, CdrAccordionGroup },
   data() {
     return {
       navGroup: [],
@@ -91,6 +92,12 @@ export default {
         })
       }))
     },
+    groupLinks() {
+      return this.userLinks.filter(item => item.type === 'links');
+    },
+    singleLinks() {
+      return this.userLinks.filter(item => item.type === 'link');
+    },
     repoLink () {
       const { repo } = this.$site.themeConfig
       if (repo) {
@@ -138,8 +145,8 @@ export default {
         let opened = false;
         if (this.showNavGroup(item.text)) {
           opened = true;
-        } 
-        
+        }
+
         this.$set(this.navGroup, index, opened);
       });
     }
@@ -172,6 +179,6 @@ export default {
   }
 
   .cdr-doc-side-navigation__parent-link {
-    
+
   }
 </style>

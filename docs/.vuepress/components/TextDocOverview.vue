@@ -8,7 +8,7 @@
       >
           {{ formatTitle(modifier) }}
       </cdr-text>
-      <table>
+      <cdr-table>
         <thead>
           <tr>
             <th>UI toolkit</th>
@@ -33,14 +33,14 @@
             </td>
           </tr>
         </tbody>
-      </table>
+      </cdr-table>
     </div>
 
     <cdr-text tag="h3" modifier="heading-500" class="cdr-mb-space-one-x">
       Helpers
     </cdr-text>
 
-    <table>
+    <cdr-table>
       <thead>
         <tr>
           <th>UI toolkit</th>
@@ -79,7 +79,7 @@
           </td>
         </tr>
       </tbody>
-    </table>
+    </cdr-table>
 
     <cdr-text tag="h3" modifier="heading-500" class="cdr-mb-space-one-x">
       Native Mobile App Tokens

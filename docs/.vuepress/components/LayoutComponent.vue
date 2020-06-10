@@ -49,7 +49,7 @@ export default {
   }
 
   .cdr-doc-article-img {
-    border: 1px solid $partly-cloudy;
+    border: 1px solid $cdr-color-border-primary;
     border-radius:  $cdr-radius-softer;
     background-color: white;
 

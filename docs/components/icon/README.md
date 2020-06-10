@@ -24,7 +24,7 @@
     },
     {
       "text": 'Iconography',
-      "href": '../../foundation/iconography/'
+      "href": '../../icons/iconography/'
     }
   ],
   "meaning": [
@@ -140,7 +140,7 @@ The inline icon components are the recommended method for using Cedar icons in a
 
 A collection of SVG icon files composed into a single file. This method provides a single server download request and caches icons for display. This is the most efficient way of displaying large numbers of icons, but has an added maintenance cost in that every icon used in the application must be manually added to it's sprite sheet. We recommend using the [inline icon components](#inline-icon-components), and optimizing to use a sprite only if it would provide a measurable performance benefit.
 
-See the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) to generate a sprite sheet for your project. You will need to ensure that your sprite contains all the Cedar icons used in your application, including those used in shared components. The generated sprite sheet should be rendered inline at the root of your HTML. You should avoid rendering the sprite sheet in JavaScript/Vue, as that will cause it to be included twice (once in the server rendered HTML, and once in the client side bundle).
+Visit the [Cedar Icon Sprite Creator](https://rei.github.io/cedar-icons/#/sprite) to generate a sprite sheet for your project. You will need to ensure that your sprite contains all the Cedar icons used in your application, including those used in shared components. The generated sprite sheet should be rendered inline at the root of your HTML. You should avoid rendering the sprite sheet in JavaScript/Vue, as that will cause it to be included twice (once in the server rendered HTML, and once in the client side bundle).
 
 <cdr-doc-example-code-pair repository-href="/src/components/icon" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrIcon'})" :load-sprite="true">
 
@@ -227,7 +227,7 @@ Icons are available in three sizes: small (16px), medium (24px), and large (32px
 
 
 ### Color
-Ensure that icons use the ratio of 4.5:1 contrast between icon color and background color. Follow recommendations in the [Color article](../../foundation/color/) for pairing light and dark color tokens.
+Ensure that icons use the ratio of 4.5:1 contrast between icon color and background color. Follow recommendations in the [Color Foundation](../../foundation/color/) article for pairing color tokens.
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/icon/Spec__Icon__Colors.png`)" alt="Cedar icon color options" />
 
@@ -244,7 +244,7 @@ When the mouse and keyboard are the primary input methods or when icons are pair
 
 ## Icon Library
 
-For a list of all available icons and their names, see the [Icon Library](https://rei.github.io/cedar-icons/#/).
+For a list of all available icons and their names, visit the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/).
 
 ## Behavior
 
@@ -272,7 +272,7 @@ Ensure that icons use contrast ratio of 4.5:1 between icon color and background 
 
 ## Usage
 
-For a list of all available icons and their names, see the [Icon Library](https://rei.github.io/cedar-icons/#/).
+For a list of all available icons and their names, visit the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/).
 
 There are 2 different options to display SVG icons on your page using the **CdrIcon** package.
 
@@ -281,7 +281,7 @@ There are 2 different options to display SVG icons on your page using the **CdrI
 Requires:
 - Icon sprite inline on page
 
-Icon sprites can be generated using the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/).
+Icon sprites can be generated using the [Cedar Icon Sprite Creator](https://rei.github.io/cedar-icons/#/sprite).
 
 The sprite needs to be available on any page where the icons are being used. Add the sprite component at the base layout or index:
 

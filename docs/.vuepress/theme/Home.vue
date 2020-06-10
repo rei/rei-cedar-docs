@@ -9,7 +9,7 @@
         crop="y-center x-center"
         cover
         alt="hero"/>
-      <div class="hero__container cdr-text-center">
+      <div class="hero__container cdr-align-text-center">
         <cdr-text
           modifier="heading-700 display-900@md display-1100@lg"
           class="cdr-mb-space-one-x"
@@ -56,7 +56,7 @@
 
       <cdr-row cols="1 2@md" class="cdr-mb-space-four-x">
         <cdr-col>
-          <div class="cdr-text-center">
+          <div class="cdr-align-text-center">
             <cdr-img
               class="home-start-image"
               :src="$withBase('home/foundation_icon.png')"
@@ -73,7 +73,7 @@
           </div>
         </cdr-col>
         <cdr-col>
-          <div class="cdr-text-center">
+          <div class="cdr-align-text-center">
             <cdr-img
               class="home-start-image"
               :src="$withBase('home/components_icon.png')"
@@ -99,7 +99,7 @@
       </div>
 
 
-      <h2 class="home-heading cdr-text-center cdr-mb-space-four-x">Resources</h2>
+      <h2 class="home-heading cdr-align-text-center cdr-mb-space-four-x">Resources</h2>
 
       <cdr-row cols="1 2@md" class="cdr-mb-space-four-x">
         <cdr-col>
@@ -111,8 +111,8 @@
                     tag="h3"
                     modifier="heading-sans-400"
                     class="cdr-mb-space-one-x"
-                  >Cedar Sketch UI toolkit</cdr-text>
-                  <cdr-link :href="$withBase('/getting-started/as-a-designer/')" modifier="standalone">Download the Sketch library</cdr-link>
+                  >Cedar Design Libraries</cdr-text>
+                  <cdr-link :href="$withBase('/getting-started/as-a-designer/#design-toolkits')" modifier="standalone">Learn more about the toolkit</cdr-link>
                 </div>
               </cdr-col>
               <cdr-col span="3">
@@ -214,7 +214,7 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    color: $cdr-color-text-primary-darkmode;
+    color: $cdr-color-text-inverse;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -258,15 +258,9 @@ export default {
   margin: 0 auto $cdr-space-one-x;
 }
 
-.home-adopt {
-  background-color: #EFEEE1;
-  text-align: center;
-  padding: $cdr-space-two-x;
-}
-
 .home-hr {
   height: 1px;
-  background-color: $partly-cloudy;
+  background-color: $cdr-color-border-primary;
 }
 
 .home-hr-tree {
@@ -281,7 +275,7 @@ export default {
     left: 0;
     transform: translateY(-50%);
     width: 33%;
-    border-top: 1px solid $partly-cloudy;
+    border-top: 1px solid $cdr-color-border-primary;
   }
 
   &::after {
@@ -292,7 +286,7 @@ export default {
     right: 0;
     transform: translateY(-50%);
     width: 33%;
-    border-top: 1px solid $partly-cloudy;
+    border-top: 1px solid $cdr-color-border-primary;
   }
 
   &__image {
@@ -301,8 +295,8 @@ export default {
 }
 
 .home-card {
-  background-color: $cdr-color-background-lightest;
-  border: 1px solid $partly-cloudy;
+  background-color: $cdr-color-background-primary;
+  border: 1px solid $cdr-color-border-primary;
   border-radius: $cdr-radius-softer;
   display: block;
 }
@@ -313,8 +307,4 @@ export default {
   margin-left: auto;
 }
 
-.adopt-text {
-  max-width: 700px;
-  margin: 0 auto $cdr-space-two-x;
-}
 </style>
