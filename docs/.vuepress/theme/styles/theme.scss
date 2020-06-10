@@ -232,10 +232,6 @@ div[class^='language-'] {
   margin-top: $cdr-space-two-x;
 }
 
-.page a:not([class*="cdr-link"]):not([class="header-anchor"]):not(.cdr-doc-example-code-pair a) {
-  @include cdr-link-base-mixin;
-}
-
 /*
 Generic Styling, for Desktops/Laptops  this is for markdown table display */
 
