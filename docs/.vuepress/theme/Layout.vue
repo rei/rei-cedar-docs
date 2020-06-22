@@ -3,7 +3,15 @@
     :class="pageClasses">
     <div v-html="iconSprite" style="display: none"/>
     <div class="cdr-doc-page-shell">
-      <div class="cdr-doc-page-shell__side-navigation">
+      <cdr-button
+        :icon-only="true"
+        :with-background="true"
+        size="large"
+        class="cdr-doc-intro__hamburger"
+        @click="toggleSideNav">
+        <cdr-icon use="#navigation-menu"/>
+      </cdr-button>
+      <div :class="menuClass">
         <div class="cdr-doc-side-navigation">
           <Navbar/>
         </div>
@@ -31,7 +39,8 @@ export default {
   components: { Home, Navbar, BackToTopBtn },
   data () {
     return {
-      iconSprite
+      iconSprite,
+      sideNavOpen: false,
     }
   },
 
@@ -63,8 +72,16 @@ export default {
   beforeDestroy () {
     this.updateMetaTags(null, this.currentMetaTags)
   },
+  computed: {
+    menuClass() {
+      return `cdr-doc-page-shell__side-navigation ${this.sideNavOpen ? 'cdr-doc-page-shell__side-navigation--open' : ''}`
+    }
+  },
 
   methods: {
+    toggleSideNav() {
+      this.sideNavOpen = !this.sideNavOpen;
+    },
     scrollToTop() {
       window.scrollTo(0, 0);
     },
