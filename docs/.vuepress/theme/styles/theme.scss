@@ -93,33 +93,11 @@ body {
   flex: 1 1 100%;
 }
 
+
 .header-anchor {
   @include cdr-text-heading-sans-500;
   color: 	$cdr-color-text-link-rest;
   text-decoration: none;
-}
-
-.cdr-doc-proving-ground {
-  box-sizing: border-box;
-  padding: $cdr-space-inset-one-x;
-  width: 100vw;
-
-  .cdr-doc-page-shell,
-  .cdr-doc-page-shell__body,
-  .page,
-  .content {
-    display: block;
-    width: 100%;
-  }
-
-
-  .cdr-doc-page-shell__side-navigation {
-    display: none;
-  }
-
-  .cdr-doc-page-shell__body {
-    background: none;
-  }
 }
 
 // Code Highlighting
