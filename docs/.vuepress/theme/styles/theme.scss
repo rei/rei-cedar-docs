@@ -23,7 +23,7 @@ body {
   flex: 0 0 $side-navigation-width;
   width: $side-navigation-width;
   z-index: 120;
-  transition: flex 1s, width 1s;
+  transition: flex $cdr-duration-5-x, width $cdr-duration-5-x;
 }
 
 .cdr-doc-side-navigation {
@@ -35,7 +35,7 @@ body {
   overflow-y: scroll;
   width: $side-navigation-width;
   background-color: $cdr-doc-background-color-main-body;
-  transition: width 1s;
+  transition: width $cdr-duration-5-x;
 }
 
 .cdr-doc-intro__hamburger {
