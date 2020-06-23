@@ -76,6 +76,12 @@ export default {
     this.updateMetaTags(null, this.currentMetaTags)
   },
 
+  watch: {
+    $route() {
+      this.sideNavOpen = false;
+    }
+  },
+
   methods: {
     toggleSideNav() {
       this.sideNavOpen = !this.sideNavOpen;
