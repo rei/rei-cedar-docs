@@ -23,6 +23,7 @@ body {
   flex: 0 0 $side-navigation-width;
   width: $side-navigation-width;
   z-index: 120;
+  transition: flex $cdr-duration-5-x, width $cdr-duration-5-x;
 }
 
 .cdr-doc-side-navigation {
@@ -34,17 +35,44 @@ body {
   overflow-y: scroll;
   width: $side-navigation-width;
   background-color: $cdr-doc-background-color-main-body;
+  transition: width $cdr-duration-5-x;
 }
 
+.cdr-doc-intro__hamburger {
+  display: none;
+}
 
 @media only screen and (max-width: $cdr-breakpoint-sm) {
+
+  .cdr-doc-intro__hamburger {
+    display: block;
+    position: fixed;
+    top: $cdr-space-half-x;
+    left: $cdr-space-half-x;
+    z-index: 200;
+  }
+
   .cdr-doc-page-shell__side-navigation {
-    flex: 0 0 $side-navigation-width-sm;
-    width: $side-navigation-width-sm;
+    flex: 0 0 0;
+    width: 0;
+    position: absolute;
   }
 
   .cdr-doc-side-navigation {
+    width: 0;
+  }
+
+  .cdr-doc-page-shell__side-navigation--open {
+    flex: 0 0 $side-navigation-width-sm;
     width: $side-navigation-width-sm;
+
+    .cdr-doc-side-navigation {
+      width: $side-navigation-width-sm;
+    }
+  }
+
+  .cdr-doc-page-shell__body {
+    max-width: 100%;
   }
 }
 
@@ -66,33 +94,11 @@ body {
   flex: 1 1 100%;
 }
 
+
 .header-anchor {
   @include cdr-text-heading-sans-500;
   color: 	$cdr-color-text-link-rest;
   text-decoration: none;
-}
-
-.cdr-doc-proving-ground {
-  box-sizing: border-box;
-  padding: $cdr-space-inset-one-x;
-  width: 100vw;
-
-  .cdr-doc-page-shell,
-  .cdr-doc-page-shell__body,
-  .page,
-  .content {
-    display: block;
-    width: 100%;
-  }
-
-
-  .cdr-doc-page-shell__side-navigation {
-    display: none;
-  }
-
-  .cdr-doc-page-shell__body {
-    background: none;
-  }
 }
 
 // Code Highlighting
