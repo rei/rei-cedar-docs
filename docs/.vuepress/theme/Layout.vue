@@ -16,7 +16,7 @@
           <Navbar/>
         </div>
       </div>
-      <div class="cdr-doc-page-shell__body">
+      <div class="cdr-doc-page-shell__body" @click="closeSideNav">
         <div class="custom-layout" v-if="$page.frontmatter.layout_type">
           <component :is="$page.frontmatter.layout_type"/>
         </div>
@@ -83,6 +83,9 @@ export default {
   },
 
   methods: {
+    closeSideNav() {
+      this.sideNavOpen = false;
+    },
     toggleSideNav() {
       this.sideNavOpen = !this.sideNavOpen;
     },
