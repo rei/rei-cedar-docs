@@ -50,6 +50,9 @@ export default {
       return [
         userPageClass
       ]
+    },
+    menuClass() {
+      return `cdr-doc-page-shell__side-navigation ${this.sideNavOpen ? 'cdr-doc-page-shell__side-navigation--open' : ''}`
     }
   },
 
@@ -72,9 +75,10 @@ export default {
   beforeDestroy () {
     this.updateMetaTags(null, this.currentMetaTags)
   },
-  computed: {
-    menuClass() {
-      return `cdr-doc-page-shell__side-navigation ${this.sideNavOpen ? 'cdr-doc-page-shell__side-navigation--open' : ''}`
+
+  watch: {
+    $route() {
+      this.sideNavOpen = false;
     }
   },
 
