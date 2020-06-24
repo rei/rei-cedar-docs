@@ -32,7 +32,7 @@ export default function makeMeASandbox(data, model) {
             // TODO: can we grab the preceding text to use for description?
           "description": "https://rei.github.io/rei-cedar-docs/",
           "dependencies": {
-            "@rei/cdr-tokens": packageJson.devDependencies['@rei/cdr-tokens'],
+            "@rei/cdr-tokens": packageJson.dependencies['@rei/cdr-tokens'],
             "@rei/cedar": packageJson.dependencies['@rei/cedar'],
             "vue": "^2.5.22"
           }
@@ -89,7 +89,7 @@ function buildContent(data, model, fontImport) {
 }
 
 function buildScriptTag(data, model) {
-  const componentsImport = `import { ${data.components} } from "@rei/cedar";`;
+  const componentsImport = `import { ${data.components} } from "@rei/cedar/dist/cedar.mjs"; // NOTE: importing from '@rei/cedar/dist/cedar.mjs' to bypass a codesandbox bug. Please import from '@rei/cedar' in your code.`;
 
   return `
 ${data.components ? componentsImport : ''}
