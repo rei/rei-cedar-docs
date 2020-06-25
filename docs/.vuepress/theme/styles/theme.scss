@@ -22,7 +22,6 @@ body {
   flex: 0 0 $side-navigation-width;
   width: $side-navigation-width;
   z-index: 120;
-  transition: flex $cdr-duration-5-x, width $cdr-duration-5-x;
 }
 
 .cdr-doc-side-navigation {
@@ -67,23 +66,8 @@ body {
   }
 
   .cdr-doc-page-shell__side-navigation--open {
-    flex: 0 0 $side-navigation-width;
-    width: $side-navigation-width;
-
     .cdr-doc-side-navigation {
-      width: $side-navigation-width;
-    }
-
-    .cdr-doc-side-navigation-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: $cdr-color-background-modal-overlay;
-      backdrop-filter: blur($cdr-space-one-x);
-      opacity: 0.75;
-      transition: opacity $cdr-duration-5-x, background-color $cdr-duration-5-x;
+      width: 100%;
     }
   }
 

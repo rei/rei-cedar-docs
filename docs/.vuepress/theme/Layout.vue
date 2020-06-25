@@ -12,7 +12,6 @@
         <cdr-icon use="#navigation-menu"/>
       </cdr-button>
       <div :class="menuClass">
-        <div class="cdr-doc-side-navigation-overlay" @click="closeSideNav"></div>
         <div class="cdr-doc-side-navigation">
           <Navbar/>
         </div>
