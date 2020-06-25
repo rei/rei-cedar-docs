@@ -74,6 +74,11 @@ body {
   .cdr-doc-page-shell__body {
     max-width: 100%;
   }
+
+  .cdr-doc-page-shell__body--no-scroll {
+    position: fixed;
+    overflow: hidden;
+  }
 }
 
 .cdr-doc-side-navigation__logo-wrap {

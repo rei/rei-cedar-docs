@@ -16,7 +16,7 @@
           <Navbar/>
         </div>
       </div>
-      <div class="cdr-doc-page-shell__body" :style="bodyStyle">
+      <div :class="bodyClass">
         <div class="custom-layout" v-if="$page.frontmatter.layout_type">
           <component :is="$page.frontmatter.layout_type"/>
         </div>
@@ -34,6 +34,8 @@ import BackToTopBtn from './BackToTop.js';
 import Home from './Home.vue'
 import Navbar from './Navbar.vue'
 import { pathToComponentName } from '@app/util';
+import { debounce } from 'throttle-debounce';
+
 import '../cedar.js';
 export default {
   components: { Home, Navbar, BackToTopBtn },
@@ -54,8 +56,8 @@ export default {
     menuClass() {
       return `cdr-doc-page-shell__side-navigation ${this.sideNavOpen ? 'cdr-doc-page-shell__side-navigation--open' : ''}`
     },
-    bodyStyle() {
-      return this.sideNavOpen ? { position: 'fixed', overflow: 'hidden'} : {}
+    bodyClass() {
+      return `cdr-doc-page-shell__body ${this.sideNavOpen ? 'cdr-doc-page-shell__body--no-scroll' : ''}`
     }
   },
 
@@ -73,6 +75,10 @@ export default {
     this.currentMetaTags = []
     this.updateMeta()
 
+    window.addEventListener('resize', debounce(250, () => {
+      this.sideNavOpen = false;
+    }));
+
   },
 
   beforeDestroy () {
@@ -86,9 +92,6 @@ export default {
   },
 
   methods: {
-    closeSideNav() {
-      this.sideNavOpen = false;
-    },
     toggleSideNav() {
       this.sideNavOpen = !this.sideNavOpen;
     },
