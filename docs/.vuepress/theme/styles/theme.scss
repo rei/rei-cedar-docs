@@ -4,7 +4,6 @@
 
 $side-navigation-logo-width: 162px;
 $side-navigation-width: 234px;
-$side-navigation-width-sm: $side-navigation-logo-width + 24px;
 
 html,
 body {
@@ -68,11 +67,11 @@ body {
   }
 
   .cdr-doc-page-shell__side-navigation--open {
-    flex: 0 0 $side-navigation-width-sm;
-    width: $side-navigation-width-sm;
+    flex: 0 0 $side-navigation-width;
+    width: $side-navigation-width;
 
     .cdr-doc-side-navigation {
-      width: $side-navigation-width-sm;
+      width: $side-navigation-width;
     }
 
     .cdr-doc-side-navigation-overlay {
