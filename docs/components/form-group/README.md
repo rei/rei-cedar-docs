@@ -41,13 +41,17 @@
                 "name": "label",
                 "type": "string",
                 "default": "none",
-                "description": "Sets the label/legend for the form group."
+                "description": "Sets the label/legend for the form group. Applies default text styles to this label. To override that default text style or apply other customization, use the `label` slot."
               },
             ],
             "slots": [
               {
                 "name": "default",
-                "description": "Slot for CdrFormGroup content. Should include a set of form elements"
+                "description": "Slot for CdrFormGroup content. Should include a set of form elements."
+              },
+              {
+                "name": "label",
+                "description": "Slot to override the CdrFormGroup label/legend. Should be a text element."
               }
             ]
           }
@@ -64,7 +68,9 @@
 
 CdrFormGroup is a simple wrapper component that allows for composing various form layouts.
 
-Should be passed form elements that are logically related
+Should be passed form elements that are logically related.
+
+## Default
 
 <cdr-doc-example-code-pair repository-href="/src/components/formGroup"
 :sandbox-data="$page.frontmatter.sandboxData" :model="{ex: []}">
@@ -87,8 +93,38 @@ Should be passed form elements that are logically related
 ```
 </cdr-doc-example-code-pair>
 
+## Label Override
+
+Rather than passing a `label` prop, the label element can be customized using the `label` slot.
+
+<cdr-doc-example-code-pair repository-href="/src/components/formGroup"
+:sandbox-data="$page.frontmatter.sandboxData" :model="{ex: []}">
+
+```html
+<cdr-form-group>
+  <template slot="label">
+    <cdr-text modifier="heading-sans-600">Optional Label Slot Override</cdr-text>
+  </template>
+  <cdr-checkbox
+    custom-value="A"
+    v-model="ex"
+  >A</cdr-checkbox>
+  <cdr-checkbox
+    custom-value="B"
+    v-model="ex"
+  >B</cdr-checkbox>
+  <cdr-checkbox
+    custom-value="C"
+    v-model="ex"
+  >C</cdr-checkbox>
+</cdr-form-group>
+```
+</cdr-doc-example-code-pair>
 
 ## Accessibility
+
+CdrFormGroup's are meant to group logically related form elements. Either the `label` prop or slot should be used to explain what these elements are.
+
 TODO
 
 
