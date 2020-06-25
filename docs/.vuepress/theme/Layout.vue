@@ -12,11 +12,12 @@
         <cdr-icon use="#navigation-menu"/>
       </cdr-button>
       <div :class="menuClass">
+        <div class="cdr-doc-side-navigation-overlay" @click="closeSideNav"></div>
         <div class="cdr-doc-side-navigation">
           <Navbar/>
         </div>
       </div>
-      <div class="cdr-doc-page-shell__body" @click="closeSideNav">
+      <div class="cdr-doc-page-shell__body">
         <div class="custom-layout" v-if="$page.frontmatter.layout_type">
           <component :is="$page.frontmatter.layout_type"/>
         </div>

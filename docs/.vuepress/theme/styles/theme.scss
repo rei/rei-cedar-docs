@@ -62,12 +62,29 @@ body {
     width: 0;
   }
 
+  .cdr-doc-side-navigation-overlay {
+    background-color: transparent;
+    opacity: 0;
+  }
+
   .cdr-doc-page-shell__side-navigation--open {
     flex: 0 0 $side-navigation-width-sm;
     width: $side-navigation-width-sm;
 
     .cdr-doc-side-navigation {
       width: $side-navigation-width-sm;
+    }
+
+    .cdr-doc-side-navigation-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $cdr-color-background-modal-overlay;
+      backdrop-filter: blur($cdr-space-one-x);
+      opacity: 0.75;
+      transition: opacity $cdr-duration-5-x, background-color $cdr-duration-5-x;
     }
   }
 
@@ -277,7 +294,7 @@ table:not([class*="cdr-table"]) {
 
   &.back-to-top-btn-show {
     display: block;
-    z-index: 999;
+    z-index: 11;
     opacity: 1;
   }
 }
