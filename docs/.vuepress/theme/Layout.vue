@@ -17,7 +17,7 @@
           <Navbar/>
         </div>
       </div>
-      <div class="cdr-doc-page-shell__body">
+      <div class="cdr-doc-page-shell__body" :style="bodyStyle">
         <div class="custom-layout" v-if="$page.frontmatter.layout_type">
           <component :is="$page.frontmatter.layout_type"/>
         </div>
@@ -54,6 +54,9 @@ export default {
     },
     menuClass() {
       return `cdr-doc-page-shell__side-navigation ${this.sideNavOpen ? 'cdr-doc-page-shell__side-navigation--open' : ''}`
+    },
+    bodyStyle() {
+      return this.sideNavOpen ? { position: 'fixed', overflow: 'hidden'} : {}
     }
   },
 
