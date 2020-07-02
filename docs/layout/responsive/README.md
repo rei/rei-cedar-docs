@@ -80,14 +80,14 @@ For more information about using design tokens, visit the [Design Tokens](../../
 
 | Display size | Utility mixin            | Range        |
 |--------------|--------------------------|--------------|
-| Extra small  | `@include xs-mq {}`      | >= 0         |
-| Extra small  | `@include xs-mq-only {}` | 0-767px      |
-| Small        | `@include sm-mq {}`      | >= 768px     |
-| Small        | `@include sm-mq-only {}` | 768px-991px  |
-| Medium       | `@include md-mq {}`      | >= 992px     |
-| Medium       | `@include md-mq-only {}` | 992px-1199px |
-| Large        | `@include lg-mq {}`      | >= 1232px    |
-| Large        | `@include lg-mq-only {}` | >= 1232px    |
+| Extra small  | `@include cdr-xs-mq {}`      | >= 0         |
+| Extra small  | `@include cdr-xs-mq-only {}` | 0-767px      |
+| Small        | `@include cdr-sm-mq {}`      | >= 768px     |
+| Small        | `@include cdr-sm-mq-only {}` | 768px-991px  |
+| Medium       | `@include cdr-md-mq {}`      | >= 992px     |
+| Medium       | `@include cdr-md-mq-only {}` | 992px-1199px |
+| Large        | `@include cdr-lg-mq {}`      | >= 1232px    |
+| Large        | `@include cdr-lg-mq-only {}` | >= 1232px    |
 
 ### Targeting the Utility Media Query with Class Names
 
@@ -105,14 +105,14 @@ For example, a selector may target a small variant within the small breakpoint r
 
 ```
 .cdr-example {
-  @include sm-mq-only {
+  @include cdr-sm-mq-only {
     &--small\@sm {
       key: value;
     }
   }
 }
 ```
-Exploding the name `sm-mq-only` would read “small-media-query-only
+Exploding the name `cdr-sm-mq-only` would read “cedar-small-media-query-only
 
 Using the range ensures that the specified key:value pairs only applies to the `.cdr-example--small@sm` class name when it is displayed within the range of 768px-991px.
 
@@ -120,7 +120,7 @@ However, if you want to apply a value to the example that only needed to know wh
 
 ```
 .cdr-example {
-  @include sm-mq {
+  @include cdr-sm-mq {
     &--small\@sm {
       key: value;
     }
