@@ -169,6 +169,10 @@ Internet Explorer 11 has been removed from the REI browser support matrix. Cedar
 
 The space (`cdr-space-...`) and breakpoint (`cdr-breakpoint-...`) tokens in the JS distributions of @rei/cdr-tokens have been made "unitless". Those tokens previously had to be manipulated in order to use them effectively in JavaScript, for example by doing: `CdrSpaceOneX.split('px')[0]`.
 
+### Component Variables Now Export Mixins Only
+
+We have updated our [component variables](https://github.com/rei/rei-cedar-component-variables/) package to export only the mixins for component styles and have excluded the individual variables used within those mixins. Component variables are intended for applying the Cedar component CSS styles in projects which cannot use the Vue components directly, which is satisfied by exporting the mixins. Because the individual styles applied by a mixin might change from release to release it was very difficult to manage and document updates to the individual variables in a way that allowed consumers to stay up to date with Cedar. If you were using individual variables from the component variables package, we recommend you either switch to using the full mixin, replace that variable with the appropriate [Cedar token](../../tokens/all-tokens/) if one exists, or simply hardcoding the value.
+
 ### CdrAccordionGroup Wrapper
 
 CdrAccordion components must now be wrapped inside an instance of CdrAccordionGroup to ensure that accordions meet accessibility requirements. See the [CdrAccordion docs](../../components/accordion/) for more details and examples.
