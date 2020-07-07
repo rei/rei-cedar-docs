@@ -35,6 +35,8 @@ If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade
 - Sets `cdr-color-text-link-visited` to the correct value. CdrLink does not currently have a `visited` state.
 - Adds new tokens and utility classes for `cdr-space-three-x`.
 
+## 5.0.0
+
 ## New Features
 
 ### Cedar Design Libraries Move to Figma
