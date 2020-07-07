@@ -29,6 +29,12 @@ If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade
 - Update to `@rei/cedar` ^5.0.0
 - Ensure your component is using `@rei/febs` ^7.1.0 for it's prod and dev build systems
 
+## 5.1.0
+
+- Fixes an issue with our ESM build that was breaking tree-shaking.
+- Sets `cdr-color-text-link-visited` to the correct value. CdrLink does not currently have a `visited` state.
+- Adds new tokens and utility classes for `cdr-space-three-x`.
+
 ## New Features
 
 ### Cedar Design Libraries Move to Figma
