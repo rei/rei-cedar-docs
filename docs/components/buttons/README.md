@@ -319,6 +319,71 @@ Displays at full width of its container.
 
 </cdr-doc-example-code-pair>
 
+
+## Call To Action
+
+TODO: description
+
+<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrButton, IconCaretRight'})" >
+
+```html
+  <div>
+    <cdr-button
+      modifier="sale"
+      tag="a"
+      href="#"
+    >
+      <icon-caret-right
+        slot="iconRight"
+        class="cdr-button__icon"
+        inherit-color
+      />
+      Call To Action
+    </cdr-button>
+
+    <cdr-button
+      modifier="dark"
+      tag="a"
+      href="#"
+    >
+      <icon-caret-right
+        slot="iconRight"
+        class="cdr-button__icon"
+        inherit-color
+      />
+      Call To Action
+    </cdr-button>
+
+    <cdr-button
+      modifier="primary"
+      tag="a"
+      href="#"
+    >
+      <icon-caret-right
+        slot="iconRight"
+        class="cdr-button__icon"
+        inherit-color
+      />
+      Call To Action
+    </cdr-button>
+
+    <cdr-button
+      modifier="secondary"
+      tag="a"
+      href="#"
+    >
+      <icon-caret-right
+        slot="iconRight"
+        class="cdr-button__icon"
+        inherit-color
+      />
+      Call To Action
+    </cdr-button>
+  </div>
+```
+
+</cdr-doc-example-code-pair>
+
 ## Sizing
 
 Change the button size based on where the button is used. The default size is medium. Small is used for supplemental user actions such as product comparison or filter. Large is used for &quot;Add to cart&quot; on product pages or for [Call to Action](../cta/).
