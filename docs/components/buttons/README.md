@@ -287,6 +287,21 @@ Use `with-background` property in conjunction with the `icon-only` property to m
 
 </cdr-doc-example-code-pair>
 
+## Stateful Button
+
+For buttons that trigger asynchronous actions, use the `click` event and dynamic properties in order to change the label or state of a button.
+
+<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" :model="{isLoading: false}">
+
+```html
+<cdr-button :disabled="isLoading" @click="isLoading = true">
+  {{isLoading ? 'Loading...' : 'Add to cart'}}
+</cdr-button>
+```
+
+</cdr-doc-example-code-pair>
+
+
 ## Full Width
 
 Displays at full width of its container.
