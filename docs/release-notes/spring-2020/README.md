@@ -29,6 +29,11 @@ If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade
 - Update to `@rei/cedar` ^5.0.0
 - Ensure your component is using `@rei/febs` ^7.1.0 for it's prod and dev build systems
 
+## 5.2.0
+
+- Adds IconReturns, IconVirtualOutfitting, and IconStorefront components
+- Fixes CdrBreadcrumb text styling at `sm` and `xs` breakpoints
+
 ## 5.1.0
 
 - Fixes an issue with our ESM build that was breaking tree-shaking.
