@@ -70,9 +70,27 @@ We have also updated the Cedar icon components with the following breaking chang
 
 TODO:
 - made CTA more flexible, insert any icon
+- more color options for buttons
+migration:
 - CTA should use `tag="a"` and `href=""`, navigate to new page. Button should trigger action on current page
 - CTA brand => primary button, CTA light => secondary button
-- more color options for buttons
+- elevated is now a prop not a modifier
+
+```
+<cdr-cta modifier="brand">Call To Action</cdr-cta>
+<cdr-cta modifier="light">Call To Action</cdr-cta>
+<cdr-cta modifier="dark">Call To Action</cdr-cta>
+<cdr-cta modifier="sale">Call To Action</cdr-cta>
+<cdr-cta modifier="brand elevated">Call To Action</cdr-cta>
+```
+
+```
+<cdr-button modifier="primary" tag="a" href="rei.com">Call To Action <icon-caret-left slot="icon" class="cdr-button__icon"/></cdr-button>
+<cdr-button modifier="secondary" tag="a" href="rei.com">Call To Action <icon-caret-left slot="icon" class="cdr-button__icon"/></cdr-button>
+<cdr-button modifier="dark" tag="a" href="rei.com">Call To Action <icon-caret-left slot="icon" class="cdr-button__icon"/></cdr-button>
+<cdr-button modifier="sale" tag="a" href="rei.com">Call To Action <icon-caret-left slot="icon" class="cdr-button__icon"/></cdr-button>
+<cdr-button modifier="primary" tag="a" href="rei.com" :elevated="true">Call To Action <icon-caret-left slot="icon" class="cdr-button__icon"/></cdr-button>
+```
 
 ### CdrCta Tokens
 
