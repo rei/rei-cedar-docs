@@ -31,7 +31,7 @@ If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade
 
 ## 5.2.0
 
-- Adds IconReturns, IconVirtualOutffitting, and IconStorefront components
+- Adds IconReturns, IconVirtualOutfitting, and IconStorefront components
 - Fixes CdrBreadcrumb text styling at `sm` and `xs` breakpoints
 
 ## 5.1.0
