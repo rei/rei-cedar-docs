@@ -42,6 +42,28 @@ CdrAlert is a simple wrapper component for grouping together form elements with 
 
 ## Breaking Changes
 
+### Warning and Error Icons
+
+We have updated our icon library to use circular icons for "error" states and triangular icons for "warning" states.
+
+To align with this we have made the following breaking changes to our [icon library](https://rei.github.io/cedar-icons/#/):
+
+| old asset name     | new asset name     |
+|--------------------|--------------------|
+| warning-stroke.svg | error-stroke.svg   |
+| warning-fill.svg   | error-fill.svg     |
+| warning-tri.svg    | warning-fill.svg   |
+| n/a                | warning-stroke.svg |
+
+We have also updated the Cedar icon components with the following breaking changes:
+
+| old component name | new component name |
+|--------------------|--------------------|
+| IconWarningStroke  | IconErrorStroke    |
+| IconWarningFill    | IconErrorFill      |
+| IconWarningTri     | IconWarningFill    |
+| n/a                | IconWarningStroke  |
+
 ## Deprecations
 
 ### CdrCta merged with CdrButton
