@@ -39,7 +39,7 @@
       </div>
     </div>
 
-    <cdr-doc-code-snippet :copy-button="copyButton" :line-numbers="lineNumbers" :max-height="codeMaxHeight" :repository-href="repositoryHref" :sandbox-href="sandboxHref" :sandbox-data="Object.assign({}, sandboxData, {code: sandboxCode, loadSprite})" :model="model" :code-toggle="codeToggle" :hide-code="hideCode">
+    <cdr-doc-code-snippet :copy-button="copyButton" :line-numbers="lineNumbers" :max-height="codeMaxHeight" :repository-href="repositoryHref" :sandbox-href="sandboxHref" :sandbox-data="Object.assign({}, sandboxData, {code: sandboxCode, loadSprite})" :model="model" :computed="computed" :methods="methods" :code-toggle="codeToggle" :hide-code="hideCode">
       <slot :name="slotNames[0]"/> <!-- Only display the code snippet for the first (or only) slot content -->
     </cdr-doc-code-snippet>
   </div>
@@ -125,6 +125,14 @@
         type: Object,
         default: () => {}
       },
+      computed: {
+        type: Object,
+        default: () => {}
+      },
+      methods: {
+        type: Object,
+        default: () => {}
+      },
     },
     data() {
       return {
@@ -157,8 +165,17 @@
       for (const label in this.$slots) {
         const codeNode = this.extractCodeNodeFromVnodeTree(this.$slots[label][0]);
         const templateSource = this.getStoredTemplateSourceForExample(label, codeNode);
-        const m = this.model
-        this.$options.components[`cdr-doc-html-example-${label}-${this.instanceId}`] = { data() { return {...m} }, ...Vue.compile(`<div>${templateSource}</div>`) };
+        const model = this.model;
+        const methods = this.methods;
+        const computed = this.computed;
+        this.$options.components[`cdr-doc-html-example-${label}-${this.instanceId}`] = {
+          data() {
+            return {...model}
+          },
+          methods,
+          computed,
+          ...Vue.compile(`<div>${templateSource}</div>`)
+        };
       }
     },
     methods: {

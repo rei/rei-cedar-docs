@@ -229,14 +229,30 @@ Different sizing for checkboxes.
 
 ## Indeterminate
 
-Displays status for checkbox group by indicating that some of the sub-selections in a list are selected. Provides user with ability to select or unselect all items in the list’s sub-group. To see a functioning example see this [codesandbox](https://codesandbox.io/s/cedar-indeterminate-checkbox-rubkk).
+Displays status for checkbox group by indicating that some of the sub-selections in a list are selected. Provides user with ability to select or unselect all items in the list’s sub-group.
 
-<cdr-doc-example-code-pair repository-href="/src/components/checkbox" :sandbox-data="$page.frontmatter.sandboxData" :model="{ex1: false}">
+<cdr-doc-example-code-pair repository-href="/src/components/checkbox" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrCheckbox, CdrList'})" :model="{selected: ['Cheese'], toppings: ['Cheese', 'Pepperoni', 'Mushroom', 'Peppers'], isIndeterminate: true, allSelected: false }" :methods="{selectAll(isChecked) {if (isChecked) {this.selected = this.toppings.slice();this.allSelected = true; this.isIndeterminate = false;} else { this.selected = []; this.allSelected = false; this.isIndeterminate = false; } }, selectOne() {if (this.selected.length === 0) {this.isIndeterminate = false; this.allSelected = false;} else if (this.selected.length === this.toppings.length) {this.allSelected = true; this.isIndeterminate = false;} else { this.isIndeterminate = true; this.allSelected = false;}}}">
 
 ```html
-<div>
-  <cdr-checkbox v-model="ex1" :indeterminate="!ex1">Indeterminate</cdr-checkbox>
-</div>
+<fieldset>
+  <legend>Choose your toppings</legend>
+   <cdr-checkbox
+     v-model="allSelected"
+     :indeterminate="isIndeterminate"
+     @change="selectAll"
+     aria-controls="toppings"
+   >Select All</cdr-checkbox>
+   <cdr-list role="group" id="toppings" aria-label="Individual toppings" class="cdr-ml-space-one-x">
+     <li v-for="topping in toppings" :key="`checkbox-${topping}`">
+        <cdr-checkbox
+          v-model="selected"
+          :custom-value="topping"
+          name="toppings"
+          @input="selectOne"
+        >{{ topping }}</cdr-checkbox>
+      </li>
+   </cdr-list>
+ </fieldset>
 ```
 
 </cdr-doc-example-code-pair>
@@ -443,7 +459,7 @@ Default checkbox to checked/unchecked state by setting the model in Javascript.
 </script>
 ```
 
-Set the `indeterminate` prop to `true` to generate an indeterminate checkbox, which looks different than the default. This is a visual styling only; it does not include any of the functional aspects of an indeterminate checkbox. To see a functioning example see this [codesandbox](https://codesandbox.io/s/cedar-indeterminate-checkbox-rubkk).
+Set the `indeterminate` prop to `true` to generate an indeterminate checkbox, which looks different than the default. This is a visual styling only; it does not include any of the functional aspects of an indeterminate checkbox. To see a functioning example see the [indeterminate example](#indeterminate).
 
 ```vue
 <template>

@@ -71,6 +71,14 @@ export default {
       type: Object,
       default: () => {}
     },
+    computed: {
+      type: Object,
+      default: () => {}
+    },
+    methods: {
+      type: Object,
+      default: () => {}
+    },
   },
   data: function() {
     return {
@@ -91,7 +99,7 @@ export default {
   },
   computed: {
     sandboxHrefComputed() {
-      return this.sandboxHref || buildSandbox(Object.assign({}, this.sandboxCode, this.sandboxData), this.model);
+      return this.sandboxHref || buildSandbox(Object.assign({}, this.sandboxCode, this.sandboxData), this.model, this.computed, this.methods);
     }
   },
   methods: {
