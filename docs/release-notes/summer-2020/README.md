@@ -37,6 +37,17 @@ CdrAlert is a simple wrapper component that allows for composing various alert l
 
 CdrAlert is a simple wrapper component for grouping together form elements with a common label. See the [CdrFormGroup docs](../../components/form-group/) for more details and usage guidelines.
 
+<!-- TODO update checkbox and radio examples/docs to use form-group instead of fieldset -->
+
+### CdrButton Icon Left and Right Slots
+
+CdrButton has updated with 2 additional slots, `icon-left` and `icon-right`, for rendering icons to the left or right of the button text. Using these slots ensures that the icon is properly spaced within the button and that it's size adjusts with the button size. The original `icon` slot can still be used for rendering `icon-only` buttons.
+
+### CdrButton Icon Utility Class No Longer Needed
+
+TODO: which section does this belong in? kind of a deprecation/removal
+
+Utility class functionality built into button automatically now. No need to add. No harm in leaving it. Class no longer exists.
 
 ## Bug Fixes
 
@@ -66,33 +77,32 @@ We have also updated the Cedar icon components with the following breaking chang
 
 ## Deprecations
 
-### CdrCta merged with CdrButton
+### CdrCta Deprecated and Merged with CdrButton
 
 TODO:
-- made CTA more flexible, insert any icon
+- made CTA more flexible, insert any icon not just caret-right
+- can now use sm/md/lg CTA
 - more color options for buttons
-migration:
+migrating CTAs to buttons:
 - CTA should use `tag="a"` and `href=""`, navigate to new page. Button should trigger action on current page
-- CTA brand => primary button, CTA light => secondary button
+- CTA brand => primary button, CTA light => secondary button, sale and dark remain the same.
 - elevated is now a prop not a modifier
 
-```
-<cdr-cta modifier="brand">Call To Action</cdr-cta>
-<cdr-cta modifier="light">Call To Action</cdr-cta>
-<cdr-cta modifier="dark">Call To Action</cdr-cta>
-<cdr-cta modifier="sale">Call To Action</cdr-cta>
-<cdr-cta modifier="brand elevated">Call To Action</cdr-cta>
-```
+[See the CdrButton call to action examples](../components/buttons#call-to-action) for more information.
 
 ```
-<cdr-button modifier="primary" tag="a" href="rei.com">Call To Action <icon-caret-left slot="icon" class="cdr-button__icon"/></cdr-button>
-<cdr-button modifier="secondary" tag="a" href="rei.com">Call To Action <icon-caret-left slot="icon" class="cdr-button__icon"/></cdr-button>
-<cdr-button modifier="dark" tag="a" href="rei.com">Call To Action <icon-caret-left slot="icon" class="cdr-button__icon"/></cdr-button>
-<cdr-button modifier="sale" tag="a" href="rei.com">Call To Action <icon-caret-left slot="icon" class="cdr-button__icon"/></cdr-button>
-<cdr-button modifier="primary" tag="a" href="rei.com" :elevated="true">Call To Action <icon-caret-left slot="icon" class="cdr-button__icon"/></cdr-button>
+// "sale" CdrCta migrated to a CdrButton
+<cdr-cta modifier="sale">Call To Action</cdr-cta>
+<cdr-button modifier="sale" tag="a" href="rei.com">Call To Action <icon-caret-left slot="icon-right"/></cdr-button>
+
+// "elevated brand" CdrCta migrated to a CdrButton
+<cdr-cta modifier="brand elevated">Call To Action</cdr-cta>
+<cdr-button modifier="primary" tag="a" href="rei.com" :elevated="true">Call To Action <icon-caret-left slot="icon-right"/></cdr-button>
 ```
 
 ### CdrCta Tokens
+
+We have deprecated all of the `cta` tokens and merged them with our `button` tokens. The CTA tokens will be removed in the winter 2021 release. Mappings between the `CTA` and `button` tokens are listed below:
 
 | Deprecated Token | Equivalent Token |
 |------------------|------------------|
@@ -147,6 +157,8 @@ migration:
 |||
 | cdr-color-background-cta-default-disabled | cdr-color-background-button-default-disabled |
 | cdr-color-border-cta-default-disabled | cdr-color-border-button-default-disabled |
+
+###
 
 ## Removals
 
