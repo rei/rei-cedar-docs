@@ -37,7 +37,6 @@ CdrAlert is a simple wrapper component that allows for composing various alert l
 
 CdrAlert is a simple wrapper component for grouping together form elements with a common label. See the [CdrFormGroup docs](../../components/form-group/) for more details and usage guidelines.
 
-<!-- TODO update checkbox and radio examples/docs to use form-group instead of fieldset -->
 
 ### CdrButton Icon Left and Right Slots
 

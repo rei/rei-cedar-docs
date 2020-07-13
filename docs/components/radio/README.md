@@ -301,10 +301,10 @@ To ensure that usage of this component complies with accessibility guidelines yo
 - Each radio button must be focusable and keyboard accessible:
   - When radio button has focus, the **Space** key changes the selection
   - **Tab** key moves to next element in list
-- Fieldsets or `CdrFormGroup` should be:
+- `CdrFormGroup` should be:
   - Used when associating group of radio buttons
-  - Identified or described as a group using a `<legend>` tag
-- Avoid nested fieldsets or `CdrFormGroup`s
+  - Identified or described as a group using the `label` property or slot
+- Avoid nesting `CdrFormGroup`
 - Custom radio buttons maintain accessibility requirements. The radio button icon is only visually hidden and replaced with custom style
 
 <br/>
