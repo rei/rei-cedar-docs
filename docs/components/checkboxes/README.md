@@ -234,8 +234,7 @@ Displays status for checkbox group by indicating that some of the sub-selections
 <cdr-doc-example-code-pair repository-href="/src/components/checkbox" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrCheckbox, CdrList'})" :model="{selected: ['Cheese'], toppings: ['Cheese', 'Pepperoni', 'Mushroom', 'Peppers'], isIndeterminate: true, allSelected: false }" :methods="{selectAll(isChecked) {if (isChecked) {this.selected = this.toppings.slice();this.allSelected = true; this.isIndeterminate = false;} else { this.selected = []; this.allSelected = false; this.isIndeterminate = false; } }, selectOne() {if (this.selected.length === 0) {this.isIndeterminate = false; this.allSelected = false;} else if (this.selected.length === this.toppings.length) {this.allSelected = true; this.isIndeterminate = false;} else { this.isIndeterminate = true; this.allSelected = false;}}}">
 
 ```html
-<fieldset>
-  <legend>Choose your toppings</legend>
+<cdr-form-group label="Choose your toppings">
    <cdr-checkbox
      v-model="allSelected"
      :indeterminate="isIndeterminate"
@@ -252,7 +251,7 @@ Displays status for checkbox group by indicating that some of the sub-selections
         >{{ topping }}</cdr-checkbox>
       </li>
    </cdr-list>
- </fieldset>
+ </cdr-form-group>
 ```
 
 </cdr-doc-example-code-pair>
@@ -294,10 +293,10 @@ To ensure that usage of this component complies with accessibility guidelines yo
 - Each checkbox must be focusable and keyboard accessible:
   - When the checkbox has focus, the **Space** key changes the selection
   - **Tab** key moves to next element in list
-- Fieldsets (or grouped checkboxes) should be:
+- Fieldsets or `CdrFormGroup` should be:
   - Used when associating group of checkboxes
   - Identified or described as a group using a `<legend>` tag
-- Avoid nested fieldsets
+- Avoid nested fieldsets or `CdrFormGroup`s
 - Single checkboxes:
   - May be interchangeable with a toggle or [Radio Button](../radio/)
   - Write labels to be self-explanatory

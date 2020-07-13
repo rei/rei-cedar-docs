@@ -62,7 +62,7 @@
     }
   ],
   "sandboxData": {
-    "components": "CdrRadio, CdrList"
+    "components": "CdrRadio, CdrList, CdrFormGroup"
   },
   "versions": [
     {
@@ -155,8 +155,12 @@ Default and standard spacing for radio buttons.
 
 ```html
 <div>
-  <fieldset>
-    <legend id="legend-1">Default Radio Example</legend>
+  <cdr-form-group>
+
+    <template slot="label">
+      <span id="legend-1">Default Radio Example</span>
+    </template>
+
     <cdr-list aria-labelledby="legend-1" role="radiogroup">
       <li>
         <cdr-radio
@@ -181,7 +185,7 @@ Default and standard spacing for radio buttons.
         >Default radio 3</cdr-radio>
       </li>
     </cdr-list>
-  </fieldset>
+  </cdr-form-group>
   <p>selected: {{ex}}</p>
 </div>
 ```
@@ -196,8 +200,12 @@ Different sizing for radio buttons.
 
 ```html
 <div>
-  <fieldset>
-    <legend id="legend-2">Radio Size Example</legend>
+  <cdr-form-group>
+
+    <template slot="label">
+      <span id="legend-2">Radio Size Example</span>
+    </template>
+
     <cdr-list aria-labelledby="legend-2" role="radiogroup">
       <li>
         <cdr-radio
@@ -224,7 +232,7 @@ Different sizing for radio buttons.
         >Large radio</cdr-radio>
       </li>
     </cdr-list>
-  </fieldset>
+  </cdr-form-group>
   <p>selected: {{ex}}</p>
 </div>
 ```
@@ -239,8 +247,12 @@ Custom styles for radio buttons.
 
 ```html
 <div>
-  <fieldset>
-    <legend id="legend-3">Custom Radio Example</legend>
+  <cdr-form-group>
+
+    <template slot="label">
+      <span id="legend-3">Custom Radio Example</span>
+    </template>
+
     <cdr-list aria-labelledby="legend-3" role="radiogroup">
       <li>
         <cdr-radio
@@ -274,7 +286,7 @@ Custom styles for radio buttons.
         >Custom radio 3</cdr-radio>
       </li>
     </cdr-list>
-  </fieldset>
+  </cdr-form-group>
   <p>selected: {{ex}}</p>
 </div>
 ```
@@ -283,16 +295,16 @@ Custom styles for radio buttons.
 
 ## Accessibility
 
-Many WCAG requirements are contextual to their implementation. 
+Many WCAG requirements are contextual to their implementation.
 To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
 
 - Each radio button must be focusable and keyboard accessible:
   - When radio button has focus, the **Space** key changes the selection
   - **Tab** key moves to next element in list
-- Fieldsets should be:
+- Fieldsets or `CdrFormGroup` should be:
   - Used when associating group of radio buttons
   - Identified or described as a group using a `<legend>` tag
-- Avoid nested fieldsets
+- Avoid nested fieldsets or `CdrFormGroup`s
 - Custom radio buttons maintain accessibility requirements. The radio button icon is only visually hidden and replaced with custom style
 
 <br/>
