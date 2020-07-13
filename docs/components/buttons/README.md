@@ -149,7 +149,15 @@
               },
               {
                 "name": "icon",
-                "description": "Sets the innerHTML for CdrButton. This is for the icon."
+                "description": "Sets the innerHTML for CdrButton icon-only button."
+              },
+              {
+                "name": "icon-left",
+                "description": "Sets the innerHTML for CdrButton with icon to the left of text content."
+              },
+              {
+                "name": "icon-right",
+                "description": "Sets the innerHTML for CdrButton with icon to the right of text content."
               }
             ],
             "events": [
@@ -219,8 +227,7 @@ Pair an icon with text to improve recognition about an object or action.
       modifier="secondary"
     >
       <IconPlayStroke
-        slot="icon"
-        class="cdr-button__icon"
+        slot="icon-left"
         inherit-color
       />
       Play video
@@ -230,8 +237,7 @@ Pair an icon with text to improve recognition about an object or action.
       disabled
     >
       <IconPlayStroke
-        slot="icon"
-        class="cdr-button__icon"
+        slot="icon-left"
         inherit-color
       />
       Play video
@@ -255,7 +261,6 @@ Use icons to visually communicate an object or action in a limited space. Includ
     >
       <IconQuestionFill
         slot="icon"
-        class="cdr-button__icon"
         inherit-color
       />
     </cdr-button>
@@ -279,7 +284,6 @@ Use `with-background` property in conjunction with the `icon-only` property to m
     >
       <IconAccountProfile
         slot="icon"
-        class="cdr-button__icon"
       />
     </cdr-button>
   </div>
@@ -315,6 +319,67 @@ Displays at full width of its container.
     <cdr-button
       full-width="@md"
     >Full Width @md</cdr-button>
+```
+
+</cdr-doc-example-code-pair>
+
+
+## Call To Action
+
+TODO: description
+
+<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrButton, IconCaretRight'})" >
+
+```html
+  <div>
+    <cdr-button
+      modifier="sale"
+      tag="a"
+      href="#"
+    >
+      <icon-caret-right
+        slot="icon-right"
+        inherit-color
+      />
+      Call To Action
+    </cdr-button>
+
+    <cdr-button
+      modifier="dark"
+      tag="a"
+      href="#"
+    >
+      <icon-caret-right
+        slot="icon-right"
+        inherit-color
+      />
+      Call To Action
+    </cdr-button>
+
+    <cdr-button
+      modifier="primary"
+      tag="a"
+      href="#"
+    >
+      <icon-caret-right
+        slot="icon-right"
+        inherit-color
+      />
+      Call To Action
+    </cdr-button>
+
+    <cdr-button
+      modifier="secondary"
+      tag="a"
+      href="#"
+    >
+      <icon-caret-right
+        slot="icon-right"
+        inherit-color
+      />
+      Call To Action
+    </cdr-button>
+  </div>
 ```
 
 </cdr-doc-example-code-pair>
@@ -526,7 +591,7 @@ export default {
 
 ### Text and Icon
 
-To scale Cedar icons appropriately, include the `cdr-button__icon` class with any icon component. The `size` prop scales both the icon and the button.
+To scale Cedar icons appropriately, use the `icon-left` or `icon-right` slots to ensure the proper styles are applied. The `size` prop scales both the icon and the button.
 
 In the below example, a "Download" button is rendered as a button with icon and text using and inline Cedar icon component.
 
@@ -534,8 +599,7 @@ In the below example, a "Download" button is rendered as a button with icon and 
 <template>
   <cdr-button>
     <IconDownload
-      slot="icon"
-      class="cdr-button__icon"
+      slot="icon-left"
     />
     Download
   </cdr-button>
@@ -571,7 +635,6 @@ Use the following props to modify `cdr-button`:
   >
     <icon-check-lg
       slot="icon"
-      class="cdr-button__icon"
     />
   </cdr-button>
 </template>

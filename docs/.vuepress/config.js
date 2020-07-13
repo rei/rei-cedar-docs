@@ -121,7 +121,7 @@ module.exports = {
           { text: "Caption", link: "/components/caption/" },
           { text: "Card", link: "/components/card/" },
           { text: "Checkboxes", link: "/components/checkboxes/" },
-          { text: "FormGroup", link: "/components/form-group/" },
+          { text: "Form Group", link: "/components/form-group/" },
           { text: "Grid", link: "/components/grid/" },
           { text: "Icons", link: "/components/icon/" },
           { text: "Images", link: "/components/image/" },

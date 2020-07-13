@@ -39,8 +39,8 @@
   "dependencies": {
     "@babel/runtime": "^7.9.2",
     "@babel/runtime-corejs3": "^7.9.2",
-    "@rei/cdr-tokens": "^4.1.0",
-    "@rei/cedar": "^5.2.0",
+    "@rei/cdr-tokens": "^5.0.0-alpha.0",
+    "@rei/cedar": "^6.0.0-alpha.0",
     "throttle-debounce": "^2.1.0"
   },
   "browserslist": [
