@@ -399,11 +399,11 @@ Body strong is also intended for long-form copy but should be used minimally. Us
   - Displaying member or legal messages, such as on the PDP
   - Displaying product descriptions
   - Displaying customer reviews, such as on the PDP
-  
+
 ### Don't Use When
   - Displaying form inputs. Instead, use [Inputs](../input/)
-  - Listing product features. Instead, use [Lists](../lists/) 
-  
+  - Listing product features. Instead, use [Lists](../lists/)
+
 
 ### The Basics
   - Body styles should be used for:
@@ -481,7 +481,7 @@ Utility sans styles typically make up the majority of utility styles used on a g
 
 ```html
 
-  <cdr-text modifier="utility-800">
+  <cdr-text modifier="utility-sans-800">
     Mon–Fri, 7am–5pm PT
   </cdr-text>
 
@@ -495,7 +495,7 @@ Utility sans styles should be used when additional emphasis is needed.
 
 ```html
 
-  <cdr-text modifier="utility-strong-800">
+  <cdr-text modifier="utility-sans-strong-800">
     Mon–Fri, 7am–5pm PT
   </cdr-text>
 
