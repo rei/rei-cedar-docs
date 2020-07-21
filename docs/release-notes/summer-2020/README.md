@@ -42,11 +42,20 @@ CdrAlert is a simple wrapper component for grouping together form elements with 
 
 CdrButton has updated with 2 additional slots, `icon-left` and `icon-right`, for rendering icons to the left or right of the button text. Using these slots ensures that the icon is properly spaced within the button and that it's size adjusts with the button size. The original `icon` slot can still be used for rendering `icon-only` buttons.
 
-### CdrButton Icon Utility Class No Longer Needed
+### Media Query Mixins For Breakpoint And Below
 
-TODO: which section does this belong in? kind of a deprecation/removal
+We have updated our [media query mixins](../../layout/responsive/#scss-less-utilities) to add mixins that match below a given breakpoint. We have also renamed some of our existing media query mixins to follow this naming convention  
 
-Utility class functionality built into button automatically now. No need to add. No harm in leaving it. Class no longer exists.
+| Mixin Name     | Target                       |
+|----------------|------------------------------|
+| cdr-sm-mq-down | Below $cdr-breakpoint-sm     |
+| cdr-md-mq-down | Below $cdr-breakpoint-md     |
+| cdr-lg-mq-down | Below $cdr-breakpoint-lg     |
+| | |
+| cdr-xs-mq-up   | $cdr-breakpoint-xs and Above |
+| cdr-sm-mq-up   | $cdr-breakpoint-sm and Above |
+| cdr-md-mq-up   | $cdr-breakpoint-md and Above |
+| cdr-lg-mq-up   | $cdr-breakpoint-lg and Above |
 
 ## Bug Fixes
 
@@ -157,7 +166,21 @@ We have deprecated all of the `cta` tokens and merged them with our `button` tok
 | cdr-color-background-cta-default-disabled | cdr-color-background-button-default-disabled |
 | cdr-color-border-cta-default-disabled | cdr-color-border-button-default-disabled |
 
-###
+### CdrButton Icon Utility Class No Longer Needed
+
+The functionality of the `cdr-button__icon` utility class has been built directly into CdrButton. You can safely remove this class from any instances of CdrButton that uses CdrIcon.
+
+### Media Query Mixin Renaming
+
+In order to support adding the [breakpoint and below media queries](#media-query-mixins-for-breakpoint-and-below), we have renamed some of the existing media query mixins to follow that naming convention.
+
+| Deprecated Mixin | New Mixin    |
+|------------------|--------------|
+| cdr-xs-mq        | cdr-xs-mq-up |
+| cdr-sm-mq        | cdr-sm-mq-up |
+| cdr-md-mq        | cdr-md-mq-up |
+| cdr-lg-mq        | cdr-lg-mq-up |
+
 
 ## Removals
 
