@@ -76,7 +76,19 @@
                 "type": "string",
                 "default": "'#'",
                 "description": "Sets URL to ‘cdr-link’ href property. The tag prop requires value of <a>."
-              }
+              },
+              {
+                "name": "inset",
+                "type": "boolean",
+                "default": "false",
+                "description": "Adds an inset padding to the link that mimics CdrButton sizing and text styling. Should generally be used in conjunction with the `tag` prop set to 'button'. Should not be used for links that are rendered inline with other text. Can be used in conjunction with the `size` prop to render links at small, large, or with responsive sizing."
+              },
+              {
+                "name": "size",
+                "type": "string",
+                "default": "'medium'",
+                "description": "Sets the link size. Only works if the `inset` property is set to `true`. Values can target responsive breakpoints. Breakpoint values are: xs, sm, md, and lg. Examples: { 'small' | 'medium' | 'large' | 'large@sm' }"
+              },
             ],
             "slots": [
               {
@@ -177,9 +189,53 @@ Display standalone link with icon on right.
 
 </cdr-doc-example-code-pair>
 
+
+## Inline Link Button
+
+Use the `tag` prop to render a button that looks like a link. Can be used inline with other text. Should trigger an action rather than navigate to a new page.
+
+<cdr-doc-example-code-pair repository-href="/src/components/link" :sandbox-data="$page.frontmatter.sandboxData" :model="{ count: 0 }">
+
+```html
+  <cdr-text>
+    What do you think?
+    <cdr-link tag="button" @click="count++">
+      Yes
+    </cdr-link>
+    /
+    <cdr-link tag="button" @click="count--">
+      no
+    </cdr-link>
+    {{count}}
+  </cdr-text>
+```
+
+</cdr-doc-example-code-pair>
+
+## Link Button With Inset
+
+Render a button that looks like a link, with inset padding included to provide a larger click target and also match the text styling and sizing options of CdrButton.
+
+<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrLink, CdrButton'})">
+
+```html
+  <div>
+      <cdr-link tag="button" :inset="true">
+        Take Action
+      </cdr-link>
+      <br/><br/>
+      <cdr-link tag="button" :inset="true" size="small">
+        Small Action Link
+      </cdr-link>
+      <cdr-button size="small">Small Action Button</cdr-button>
+  </div>
+```
+
+</cdr-doc-example-code-pair>
+
 ## Accessibility
 
-Many WCAG requirements are contextual to their implementation. 
+Many WCAG requirements are contextual to their implementation.
 To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
 
 - Always use a `<button>` element for the `tag` prop when there is no `href` attribute that can be applied to the link. Examples are:

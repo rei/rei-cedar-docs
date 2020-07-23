@@ -40,7 +40,11 @@ CdrAlert is a simple wrapper component for grouping together form elements with 
 
 ### CdrButton Icon Left and Right Slots
 
-CdrButton has updated with 2 additional slots, `icon-left` and `icon-right`, for rendering icons to the left or right of the button text. Using these slots ensures that the icon is properly spaced within the button and that it's size adjusts with the button size. The original `icon` slot can still be used for rendering `icon-only` buttons.
+CdrButton has updated with 2 additional slots, `icon-left` and `icon-right`, for rendering icons to the left or right of the button text. Using these slots ensures that the icon is properly spaced within the button and that it's size adjusts with the button size. The original `icon` slot can still be used for rendering `icon-only` buttons. See the [CdrButton docs](../../components/buttons/#slots) for more details.
+
+### CdrLink Inset and Size Props
+
+CdrLink has been updated to add new props for `inset` and `size` that allow for rendering a CdrLink with the same text styling and sizing as a CdrButton. These props are intended to be used when the `tag` prop is set to `"button"`. See the [CdrLink docs](../../components/link/#link-button-with-inset) for more details.
 
 ### Media Query Mixins For Breakpoint And Below
 
