@@ -4,6 +4,22 @@
   "layout_type": "LayoutComponent",
   "summary": "Invoke and communicate an action that will occur",
   "title_metadata": "CdrButton",
+  "ctaPlacement": [
+    {
+      "type": "do",
+      "image": "cta/CTA_placement_do_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing proper Call to Action usage",
+      "caption": "use Call to Action to lead users to explore more."
+    },
+    {
+      "type": "dont",
+      "image": "cta/CTA_placement_dont_16-9.png",
+      "ratio": "16-9",
+      "alt": "Image showing proper Call to Action paired with basic button",
+      "caption": "mix Call to Action and basic buttons."
+    }
+  ],
   "vertical": [
     {
       "type": "do",
@@ -326,7 +342,7 @@ Displays at full width of its container.
 
 ## Call To Action
 
-Call to Action is a stylized link used in campaigns and promotions to encourage users to further explore featured products, services or offers. Use CTA when navigating users to a new page. 
+Call to Action is a stylized link used in campaigns and promotions to encourage users to further explore featured products, services or offers. Use CTA when navigating users to a new page. CTA buttons should use the `icon-right` slot, set the `tag` property to `"a"`, and set an `href` to navigate to. 
 
 <cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrButton, IconCaretRight'})" >
 
@@ -486,7 +502,7 @@ When grouping buttons, match button sizes either horizontally or vertically.
 
 <br />
 
-<do-dont :examples="$page.frontmatter.placement" />
+<do-dont :examples="$page.frontmatter.ctaPlacement" />
 
 <br />
 
@@ -496,7 +512,7 @@ When grouping buttons, match button sizes either horizontally or vertically.
   - Start with a verb, if possible. Labels must be action-oriented and set expectations for what the user will see next
   - Never repeat the context of a label when the context is already clear. For example, for a &quot;Save&quot; button, do not expand to &quot;Save Account Information&quot;
   - Use sentence case. Do not use all caps, title caps, or all lowercase
-  
+
   <br />
 
 To construct consistent and universal Calls to Action across the site:
@@ -538,7 +554,7 @@ Apply the following use cases when deciding when to use links as anchors or butt
 | Supporting internal page jumps                                                                      | Can be disabled with disabled attribute                                              |
 
 ### Choosing a Button or Call to Action
-- Use Buttons to trigger interface interactions. 
+- Use Buttons to trigger interface interactions.
 - Use CTA to navigate users to a new location/page.
 - Avoid combining a Call to Action with a basic button. Disabling Calls to Action is not semantically supported.
 - Maintain button styling including typographic and sizing for Call to Action. Do not style as a link.
