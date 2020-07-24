@@ -180,15 +180,13 @@ components: {
 
 _local.vue_
 ```html
-<cdr-button space="cdr-mb-space-one-x">I'm a button</cdr-button>
+<cdr-button>I'm a button</cdr-button>
 ```
 
 4. Load Cedar CSS assets in your main CSS file:
 
 _index.scss_
 ```css
-/* import the space utility classes (i.e, cs-mb-space-one-x) */
-@import url('@rei/cedar/dist/style/space.css');
 /* import the button CSS file */
 @import url('@rei/cedar/dist/style/cdr-button.css');
 ```
@@ -198,7 +196,7 @@ _index.scss_
 _local.vue_
 ```html
 <template>
-    <cdr-button space="cdr-mb-space-one-x">I'm a button</cdr-button>
+    <cdr-button>I'm a button</cdr-button>
 </template>
 
 <script>
@@ -214,7 +212,6 @@ export default {
 
 _index.scss_
 ```css
-@import url('@rei/cedar/dist/style/space.css');
 @import url('@rei/cedar/dist/style/cdr-button.css');
 ```
 
