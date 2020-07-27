@@ -166,6 +166,15 @@ We have deprecated all of the `cta` tokens and merged them with our `button` tok
 | cdr-color-background-cta-default-disabled | cdr-color-background-button-default-disabled |
 | cdr-color-border-cta-default-disabled | cdr-color-border-button-default-disabled |
 
+### Space Property Deprecated
+
+Many of the Cedar components accepted a `space` property which applied a spacing utility class to that component. As part of our efforts to improve performance by de-coupling the utility classes from the components we have deprecated this property in all of our components. This change affects the following components: CdrButton, CdrCheckbox, CdrCta, CdrDataTable, CdrIcon, CdrInput, CdrLink, CdrList, CdrQuote, CdrRadio, CdrRating, CdrSelect, CdrText. Spacing utility classes can still be applied to any of these components by simply passing the utility class in via the `class` prop instead of `space`, for example:
+
+```
+<cdr-button space="cdr-mb-space-one-x">Deprecated</cdr-button>
+<cdr-button class="cdr-mb-space-one-x">Supported</cdr-button>
+```
+
 ### CdrButton Icon Utility Class No Longer Needed
 
 The functionality of the `cdr-button__icon` utility class has been built directly into CdrButton. You can safely remove this class from any instances of CdrButton that uses CdrIcon.
