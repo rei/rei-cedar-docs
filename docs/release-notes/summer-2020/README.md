@@ -48,7 +48,7 @@ CdrLink has been updated to add new props for `inset` and `size` that allow for 
 
 ### Media Query Mixins For Breakpoint And Below
 
-We have updated our [media query mixins](../../layout/responsive/#scss-less-utilities) to add mixins that match below a given breakpoint. We have also renamed some of our existing media query mixins to follow this naming convention  
+We have updated our [media queries](../../layout/responsive/#scss-less-utilities) to add mixins that match below a given breakpoint. We have also renamed some of our existing media query mixins to follow this naming convention  
 
 | Mixin Name     | Target                       |
 |----------------|------------------------------|
@@ -60,6 +60,24 @@ We have updated our [media query mixins](../../layout/responsive/#scss-less-util
 | cdr-sm-mq-up   | $cdr-breakpoint-sm and Above |
 | cdr-md-mq-up   | $cdr-breakpoint-md and Above |
 | cdr-lg-mq-up   | $cdr-breakpoint-lg and Above |
+
+### Mixins for sr-only and cdr-container
+
+Cedar tokens now includes mixins for the screen-reader only and container utility classes. This gives consumers the option of skipping loading the utility class files and instead just inlining the CSS that they need. The new mixins are named `cdr-display-sr-only`, `cdr-display-sr-focusable`, `cdr-container`, and `cdr-container-fluid`.
+
+### Placeholder Selectors for SCSS Mixins
+
+The SCSS distribution of Cedar tokens now includes [placeholder selectors](https://sass-lang.com/documentation/style-rules/placeholder-selectors). If you are using the same mixin multiple times then switching to placeholder selectors will allow SCSS to include that style only once. The placeholder selectors have the same names as their mixin equivalents, but are invoked by using `@extend %mixin-name` rather than `@include mixin-name`: 
+
+```
+.mixin-example {
+  @include cdr-display-sr-only;
+}
+
+.placeholder-example {
+  @extend %cdr-display-sr-only;
+}
+```
 
 ## Bug Fixes
 

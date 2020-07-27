@@ -271,6 +271,11 @@ SCSS example:
   @include cdr-text-default;
 }
 
+.your-other-default-text-class {
+  /* using SCSS placeholder selectors instead of mixins can optimize your final CSS output */
+  @extend %cdr-text-default;
+}
+
 .your-other-text-class {
   /* use scss variables if you need to apply specific properties */
   color: $cdr-color-text-error;
