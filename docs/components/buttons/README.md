@@ -192,8 +192,8 @@
       "text": "See Also",
     },
     {
-      "text": "Call to Action",
-      "href": "../cta/"
+      "text": "Links",
+      "href": "../links/"
     }
   ]
 }
@@ -402,7 +402,7 @@ Call to Action is a stylized link used in campaigns and promotions to encourage 
 
 ## Sizing
 
-Change the button size based on where the button is used. The default size is medium. Small is used for supplemental user actions such as product comparison or filter. Large is used for &quot;Add to cart&quot; on product pages or for a Call to Action.
+Change the button size based on where the button is used. The default size is medium. 
 
 <cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" >
 
@@ -467,10 +467,12 @@ This component has no specific WCAG compliance attributes built into the control
 
 ## The Basics
 
-Buttons sizes are used:
-  - **Small:** Supplemental user actions such as product comparison or filter on product pages
-  - **Medium:** Default size
-  - **Large:** Mobile version for XS grid with full breakpoint width. Also, for &quot;Add to cart&quot; on product pages or for [Call to Action](../cta/) on campaign pages
+Three button sizes are available: Small, Medium, and Large. Medium is the default size. 
+<br />
+Generally, buttons should be sized based on their content and used to convey the importance of actions. 
+  - Use Large buttons for primary page actions
+  - Use Small buttons for supplemental user actions 
+  - For Mobile screens using XS grid, use Large buttons set to full width
 
 <br />
 
