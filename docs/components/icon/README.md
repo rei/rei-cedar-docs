@@ -189,8 +189,40 @@ Create a new SVG icon using any valid SVG markup. The wrapping SVG element can b
 ## Accessibility
 
 To ensure that usage of this component complies with accessibility guidelines:
-- If an icon conveys meaning, there must be an `aria-label` that describes the action or idea that the icon represents
-- If an icon is decorative, use an empty `alt` attribute
+- For purely decorative icons, add `aria-hidden="true"` to hide them from screenreaders
+- For a button that only contains an icon, add `aria-hidden="true"` to the icon and an `aria-label` to the button
+- For a link that only contains an icon, add `aria-hidden="true"` to the icon and include screenreader-only text inside of the link using the `cdr-display-sr-only` utility class or mixin.
+- For a button or link that contains text alongside an icon,
+- - If the text provides sufficient description on it's own (for example, "Add to cart" with a cart icon) simply add `aria-hidden="true"` to the icon
+- - If the icon has meaning that is not conveyed by the text, add `aria-hidden="true"` to the icon and use the `cdr-display-sr-only` utility class or mixin to insert screenreader-only text into the button or link in the appropriate place.
+
+
+
+
+- To apply a description to an icon, either:
+- Add aria-hidden="true" to the icon and include screenreader only text alongside it with the description
+
+```
+<icon-whatever aria-hidden="true"/>
+<p class="cdr-display-sr-only">Whatever!</p>
+```
+
+- Pass a `<title>` and `<desc>` into the icon, each with unique ids. Add `role="img"` to root icon and `aria-labelledby="titleid descid"`. If using CdrIcon with custom SVG, make sure title is the first child element.
+
+```
+<!-- Using icon component -->
+<icon-whatever role="img" aria-labelledby="foo bar">
+  <title id="foo">foo</title>
+  <desc id="bar">bar</desc>
+</icon-whatever>
+
+<!-- with custom SVG -->
+<cdr-icon role="img" aria-labelledby="foo bar">
+  <title id="foo">foo</title>
+  <desc id="bar">bar</desc>
+  <svg><path etc./></svg>
+</cdr-icon>
+```
 
 <br/>
 
@@ -201,11 +233,6 @@ Recommendations for writing screen reader text:
 - Avoid technical jargon
 
 <br/>
-
-W3C recommends using `<title>` and `<desc>` elements in SVG for assistive technologies; however these elements have mixed support for screen readers as explained [here](http://haltersweb.github.io/Accessibility/svg.html). Cedar follows these recommendations by:
-- Adding `role=’presentation’` to icons. This hides them from screen readers and causes the icon to be a nested image inside of a button or a link
-- Assigning the attribute `focusable=’false’` to the SVG element
-- Using `aria-label` for buttons or Cedar’s hidden text CSS style for links
 
 <hr>
 
