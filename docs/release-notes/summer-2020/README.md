@@ -67,7 +67,7 @@ Cedar tokens now includes mixins for the screen-reader only and container utilit
 
 ### Placeholder Selectors for SCSS Mixins
 
-The SCSS distribution of Cedar tokens now includes [placeholder selectors](https://sass-lang.com/documentation/style-rules/placeholder-selectors). If you are using the same mixin multiple times then switching to placeholder selectors will allow SCSS to include that style only once. The placeholder selectors have the same names as their mixin equivalents, but are invoked by using `@extend %mixin-name` rather than `@include mixin-name`: 
+The SCSS distribution of Cedar tokens now includes [placeholder selectors](https://sass-lang.com/documentation/style-rules/placeholder-selectors). If you are using the same mixin multiple times then switching to placeholder selectors will allow SCSS to include that style only once. The placeholder selectors have the same names as their mixin equivalents, but are invoked by using `@extend %mixin-name` rather than `@include mixin-name`:
 
 ```
 .mixin-example {
@@ -80,6 +80,10 @@ The SCSS distribution of Cedar tokens now includes [placeholder selectors](https
 ```
 
 ## Bug Fixes
+
+### CdrIcon a11y Enhancements
+
+We have improved the accessibility of the CdrIcon components by moving the `role="presentation"` attribute from the root element onto the path element. The CdrIcon components now add `aria-hidden="true"` to their root element by default. The meaning of the icon should either be explained by the visible text around it, or by including screenreader-only text using the `cdr-display-sr-only` utility class or mixin. [See the CdrIcon accessibility section](../components/icons#accessibility) for more details.
 
 ## Breaking Changes
 
