@@ -2,8 +2,29 @@
 {
   "title": "FormGroup",
   "layout_type": "LayoutComponent",
-  "summary": "TODO: wraps related input elements",
+  "summary": "Group related input elements together",
   "title_metadata": "CdrFormGroup",
+    "see_also": [
+    {
+      "text": 'See Also'
+    },
+    {
+      "text": 'Checkboxes',
+      "href": '../checkboxes/'
+    },
+    {
+      "text": 'Radio Buttons',
+      "href": '../radio/'
+    },
+    {
+      "text": 'Inputs',
+      "href": '../input/'
+    },
+    {
+      "text": 'Selects',
+      "href": '../selects/'
+    }
+  ],
   "breadcrumbs": [
     {
       "text": "Components/"
@@ -68,7 +89,7 @@
 
 CdrFormGroup is a simple wrapper component that allows for composing various form layouts.
 
-Should be passed form elements that are logically related.
+Use to group form controls and provide structure and consistent spacing within a form. 
 
 ## Default
 
@@ -123,7 +144,7 @@ Rather than passing a `label` prop, the label element can be customized using th
 
 ## Accessibility
 
-CdrFormGroup's are meant to group logically related form elements. Either the `label` prop or slot should be used to explain what these elements are.
+CdrFormGroup is meant to group logically related form elements. Either the `label` prop or slot should be used to explain what these elements are.
 
 TODO
 
