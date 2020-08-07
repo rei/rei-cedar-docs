@@ -5,7 +5,7 @@
 
   [class^="cdr-row"] {
     position: relative;
-    
+
     &::before {
       content: '';
       position: absolute;
@@ -14,7 +14,7 @@
       height: 100%;
       width: 100%;
       background-color: rgba(130, 234, 255, 0.1);
-      
+
       @media (max-width: $cdr-breakpoint-md) {
         top: 0.8rem;
         left: 0.8rem;
@@ -40,6 +40,7 @@
 }
 
 // Radio
+// Update radio example styleTag in components/radios if changing this.
 
 .custom-radio-example,
 .custom-checkbox-example {
@@ -57,10 +58,23 @@
 }
 
 // TABLE
-// Update frontmatter sandboxData styleTag in components/grid if changing this.
+// Update frontmatter sandboxData styleTag in components/table if changing this.
 
 .advanced-table {
   &__header {
     background-color: $cdr-color-background-table-header;
+  }
+}
+
+// CARD
+// Update frontmatter sandboxData styleTag in components/grid if changing this.
+
+.custom-card-example {
+  border: 1px solid $cdr-color-border-secondary;
+  padding: $cdr-space-inset-one-x;
+  .cdr-card__link {
+    &:hover {
+      color: $cdr-color-text-sale !important;
+    }
   }
 }
