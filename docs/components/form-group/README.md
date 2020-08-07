@@ -150,11 +150,8 @@ When not semantically grouped, form elements mixed with text descriptions can qu
 
 In CdrFormGroup, all of the related fields go inside the `fieldset` element, and the `legend` element is used to represent the question or overall theme of this section of your form.
   
-- Use the `label` prop or slot to explain what the form elements are
-- The legend improves accessibility when the fieldset is rendered non-visually
-- A fieldset cannot be used without a legend
-- A legend cannot be used without a fieldset
-- Screen readers may repeat the legend for each control in the group, so the legend's text should be brief and descriptive 
+- Use the `label` prop or slot to explain what the form elements are, this text will be used for the `legend` element
+- Screen readers may repeat the legend for each control in the group, so the `label` text should be brief and descriptive 
 
 
 # Guidelines
