@@ -87,9 +87,9 @@
 
 # Overview
 
-CdrFormGroup is a simple wrapper component that allows for composing various form layouts.
+CdrFormGroup is a simple wrapper component that provides structure and consistent spacing when composing various form layouts.  
 
-Use to group form controls and provide structure and consistent spacing within a form. 
+Grouping related form controls makes forms more understandable for all users, and utilizing the `fieldset` and `legend` elements provides necessary context for users that rely on screen readers. 
 
 ## Default
 
@@ -144,24 +144,30 @@ Rather than passing a `label` prop, the label element can be customized using th
 
 ## Accessibility
 
-CdrFormGroup is meant to group logically related form elements. Either the `label` prop or slot should be used to explain what these elements are.
+CdrFormGroup provides a simple `fieldset` and `legend` wrapper for form element components. Using this component will ensure that your form communicates to screen readers that a group of form fields relate to each other, and will provide a label for the group.
+ 
+When not semantically grouped, form elements mixed with text descriptions can quickly lose context to users who rely on non-visual means. Grouping controls makes it easier for users to understand their purpose
 
-TODO
+In CdrFormGroup, all of the related fields go inside the `fieldset` element, and the `legend` element is used to represent the question or overall theme of this section of your form.
+  
+- Use the `label` prop or slot to explain what the form elements are
+- The legend improves accessibility when the fieldset is rendered non-visually
+- A fieldset cannot be used without a legend
+- A legend cannot be used without a fieldset
+- Screen readers may repeat the legend for each control in the group, so the legend's text should be brief and descriptive 
 
 
 # Guidelines
 
-TODO
-
 ## Use when
+
+- Creating groups of checkboxes or radio buttons for a single, multiple-choice selection
+- Grouping several inputs related to the same topic, such as selecting the color, size and quantity of a product OR grouping fields for a delivery address during checkout
 
 ## Don’t use when
 
-## The Basics
+- Creating a single form field that asks for a single piece of information
 
-## Do / Don't
-
-TODO
 
 # API
 
