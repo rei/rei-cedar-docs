@@ -199,6 +199,10 @@
 <cdr-doc-table-of-contents-shell>
 # Overview
 
+The `CdrText` component is a simple wrapper for text elements. Using the `CdrText` component ensures your text elements inherit the default styling from the Cedar CSS reset. Styling can be applied by either using the `modifier` property in conjunction with the text utility classes, or by applying a custom CSS class which uses one of the text mixins from `cdr-tokens`.
+
+Note that the text utility file (distributed as `@rei/cedar/dist/style/text.css` and `@rei/cedar/dist/style/cdr-text.css`) is over 100kb in size. Usage of the text utility classes and `CdrText` modifier property may impact the bundle size and performance of your application. For projects that are customer facing or which have performance constraints should not load the text utility file or `cdr-text` CSS file and instead apply text styling using the text mixins from `cdr-tokens`. Code samples on this page include examples of both the modifier/utility and text mixin usage.
+
 ## Headings
 
 A heading helps users to identify and create a hierarchical structure within a page. Headings are typically the largest text on the screen and should be short and include important information. Cedar headings include a [serif](#serif) and a [sans-serif](#sans) option.
@@ -218,6 +222,19 @@ Serif headings, set in REI Stuart, work best in larger sizes (cdr-text-heading-s
 ```
 </cdr-doc-example-code-pair>
 
+```vue{2,9}
+<template>
+  <cdr-text class="custom-heading-class">
+    When you gear up, we give back
+  </cdr-text>
+</template>
+<style>
+  @import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
+  .custom-heading-class {
+    @include cdr-text-heading-serif-1200;
+  }
+</style>
+```
 
 ### Serif Strong
 
@@ -235,6 +252,20 @@ Serif strong headings, set in REI Stuart with a greater font weight than [serif]
 </cdr-doc-example-code-pair>
 
 
+```vue{2,9}
+<template>
+  <cdr-text class="custom-heading-class">
+    When you gear up, we give back
+  </cdr-text>
+</template>
+<style>
+  @import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
+  .custom-heading-class {
+    @include cdr-text-heading-serif-strong-1200;
+  }
+</style>
+```
+
 ### Sans
 
 Sans headings, set in Graphik, should play a supporting role to serif headings. Sans headings work best in smaller sizes (cdr-text-heading-serif-strong-600 and below). Sans headings are not recommended for page titles or other prominent placements. Instead, use [serif](#serif) or [serif strong](#serif-strong) headings.
@@ -250,6 +281,19 @@ Sans headings, set in Graphik, should play a supporting role to serif headings. 
 ```
 </cdr-doc-example-code-pair>
 
+```vue{2,9}
+<template>
+  <cdr-text class="custom-heading-class">
+    When you gear up, we give back
+  </cdr-text>
+</template>
+<style>
+  @import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
+  .custom-heading-class {
+    @include cdr-text-heading-sans-600;
+  }
+</style>
+```
 
 ### Use When
   - Creating a hierarchical structure of information on a page
@@ -294,12 +338,29 @@ Cedar does not offer pre-styled responsive headings. Instead, construct responsi
 
 ```html
   <cdr-text
-    modifier="display-800@xs display-900">
+    modifier="heading-serif-800@xs heading-serif-900">
       When you gear up, we give back
   </cdr-text>
 ```
 
 </cdr-doc-example-code-pair>
+
+```vue{2,9-12}
+<template>
+  <cdr-text class="custom-heading-class">
+    When you gear up, we give back
+  </cdr-text>
+</template>
+<style>
+  @import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
+  .custom-heading-class {
+    @include cdr-text-heading-serif-900;
+    @include cdr-xs-mq-only {
+      @include cdr-text-heading-serif-800;
+    }
+  }
+</style>
+```
 
 ### Resources
 
@@ -324,8 +385,24 @@ Sans-serif subheadings are set in Graphik. They are intended to be paired with s
 ```
 </cdr-doc-example-code-pair>
 
+```vue{2,9}
+<template>
+  <cdr-text class="custom-subheading-class">
+    When you gear up, we give back
+  </cdr-text>
+</template>
+<style>
+  @import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
+  .custom-subheading-class {
+    @include cdr-text-subheading-serif-600;
+  }
+</style>
+```
+
 ### Heading and Subheading Combinations
-Heading and subheading combinations should have the appropriate contrast and hierarchy. Headings should always be larger than the accompanying subheading. Serif headings should only accompanied by sans subheadings. Sans headings also work best with sans subheadings. A few examples in practice:
+Heading and subheading combinations should have the appropriate contrast and hierarchy. Headings should always be larger than the accompanying subheading.
+
+Serif headings should only accompanied by sans subheadings.
 
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData" >
 
@@ -343,6 +420,30 @@ Heading and subheading combinations should have the appropriate contrast and hie
 
 </cdr-doc-example-code-pair>
 
+```vue
+<template>
+  <cdr-text class="custom-heading-class">
+    When you gear up, we give back>
+    <cdr-text class="custom-subheading-class">
+      Treat yourself to sweet gear
+    </cdr-text>
+  </cdr-text>
+</template>
+<style>
+  @import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
+  .custom-heading-class {
+    @include cdr-text-heading-serif-strong-900;
+  }
+
+  .custom-subheading-class {
+    @include cdr-text-subheading-sans-500;
+    padding-top: $cdr-space-one-and-a-half-x;
+  }
+</style>
+```
+
+Sans headings also work best with sans subheadings.
+
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
@@ -356,8 +457,29 @@ Heading and subheading combinations should have the appropriate contrast and hie
        </cdr-text>
   </cdr-text>
 ```
-
 </cdr-doc-example-code-pair>
+
+```vue
+<template>
+  <cdr-text class="custom-heading-class">
+    When you gear up, we give back>
+    <cdr-text class="custom-subheading-class">
+      Treat yourself to sweet gear
+    </cdr-text>
+  </cdr-text>
+</template>
+<style>
+  @import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
+  .custom-heading-class {
+    @include cdr-text-heading-sans-600;
+  }
+
+  .custom-subheading-class {
+    @include cdr-text-subheading-sans-300;
+    padding-top: $cdr-space-one-x;
+  }
+</style>
+```
 
 ### Do / Don’t
 
@@ -379,6 +501,21 @@ Body styles work best for long-form copy like articles, customer reviews, or leg
 ```
 </cdr-doc-example-code-pair>
 
+
+```vue{2,9}
+<template>
+  <cdr-text class="custom-body-class">
+    Cross-country skiing (sometimes called classic skiing) encompasses several styles, from touring or racing on groomed ski tracks to gliding through deep backcountry snow.
+  </cdr-text>
+</template>
+<style>
+  @import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
+  .custom-body-class {
+    @include cdr-text-body-500;
+  }
+</style>
+```
+
 ### Strong
 Body strong is also intended for long-form copy but should be used minimally. Use body strong styles when emphasizing a subset of copy and never for the entire length of copy.
 
@@ -393,6 +530,19 @@ Body strong is also intended for long-form copy but should be used minimally. Us
 ```
 </cdr-doc-example-code-pair>
 
+```vue{2,9}
+<template>
+  <cdr-text class="custom-body-class">
+    Cross-country skiing (sometimes called classic skiing) encompasses several styles, from touring or racing on groomed ski tracks to gliding through deep backcountry snow.
+  </cdr-text>
+</template>
+<style>
+  @import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
+  .custom-body-class {
+    @include cdr-text-body-strong-500;
+  }
+</style>
+```
 
 ### Use When
   - Displaying articles for long-form content, such as Expert Advice articles or Co-op Journal entries
@@ -459,6 +609,19 @@ Utility serif styles should be used when additional brand emphasis is needed.
 ```
 </cdr-doc-example-code-pair>
 
+```vue{2,9}
+<template>
+  <cdr-text class="custom-utility-class">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+</template>
+<style>
+  @import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
+  .custom-utility-class {
+    @include cdr-text-utility-serif-800;
+  }
+</style>
+```
 
 ### Serif Strong
 Utility serif strong styles should be used when additional emphasis is needed over utility serif.
@@ -474,6 +637,20 @@ Utility serif strong styles should be used when additional emphasis is needed ov
 ```
 </cdr-doc-example-code-pair>
 
+```vue{2,9}
+<template>
+  <cdr-text class="custom-utility-class">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+</template>
+<style>
+  @import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
+  .custom-utility-class {
+    @include cdr-text-utility-serif-strong-800;
+  }
+</style>
+```
+
 ### Sans
 Utility sans styles typically make up the majority of utility styles used on a given page.
 
@@ -487,6 +664,20 @@ Utility sans styles typically make up the majority of utility styles used on a g
 
 ```
 </cdr-doc-example-code-pair>
+
+```vue{2,9}
+<template>
+  <cdr-text class="custom-utility-class">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+</template>
+<style>
+  @import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
+  .custom-utility-class {
+    @include cdr-text-utility-sans-800;
+  }
+</style>
+```
 
 ### Sans Strong
 Utility sans styles should be used when additional emphasis is needed.
@@ -502,6 +693,20 @@ Utility sans styles should be used when additional emphasis is needed.
 ```
 </cdr-doc-example-code-pair>
 
+
+```vue{2,9}
+<template>
+  <cdr-text class="custom-utility-class">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+</template>
+<style>
+  @import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
+  .custom-utility-class {
+    @include cdr-text-utility-sans-strong-800;
+  }
+</style>
+```
 
 ### Do / don’t
 
@@ -522,6 +727,21 @@ Eyebrows introduce a topic or show how an item is categorized. Content tags or c
 
 ```
 </cdr-doc-example-code-pair>
+
+
+```vue{2,9}
+<template>
+  <cdr-text class="custom-eyebrow-class">
+    Mon–Fri, 7am–5pm PT
+  </cdr-text>
+</template>
+<style>
+  @import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
+  .custom-eyebrow-class {
+    @include cdr-text-eyebrow-100;
+  }
+</style>
+```
 
 ### Do / don’t
 
@@ -550,6 +770,29 @@ In addition to the specific type options listed above, we have provided two gene
 ```
 </cdr-doc-example-code-pair>
 
+```vue
+<template>
+  <cdr-text class="custom-body-class">
+    REI Co-op’s Trailsmith line was featured in  
+    <cdr-text
+    tag="em"
+    class="custom-italic-class">
+    Field & Stream’s
+    </cdr-text>
+    “10 Best Pants for Working Outside”
+  </cdr-text>
+</template>
+<style>
+  @import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
+  .custom-body-class {
+    @include cdr-text-body-300;
+  }
+  .custom-italic-class {
+    @include cdr-text-italic;
+  }
+</style>
+```
+
 <cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
@@ -565,6 +808,28 @@ In addition to the specific type options listed above, we have provided two gene
 
 ```
 </cdr-doc-example-code-pair>
+
+```vue
+<template>
+  <cdr-text class="custom-body-class">
+    This trip is rated as
+    <cdr-text
+    tag="strong"
+    class="custom-strong-class">
+    Vigorous [4]
+    </cdr-text>.
+  </cdr-text>
+</template>
+<style>
+  @import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
+  .custom-body-class {
+    @include cdr-text-body-300;
+  }
+  .custom-strong-class {
+    @include cdr-text-strong;
+  }
+</style>
+```
 
 ## Accessibility
 
@@ -616,8 +881,7 @@ For more information about design tokens and a complete list of tokens available
 
 ## Utility Classes
 
-`cdr-text` styles are available as a standalone css classes for users unable or preferring not to add custom styles to their applications, and who are unable to use the `cdr-text` vue.js component.
-
+`cdr-text` styles are available as a standalone css classes for users unable or preferring not to add custom styles to their applications, and who are unable to use the `cdr-text` vue.js component. Note that the text utility class file is over 100kb in size and may impact the performance of your application. Using the [text token mixins](./#text-token-mixins) will allow you to bundle only the text styles used in your application.
 
 For more information on importing these styles and how to use them, visit the [Developer getting started](../../getting-started/as-a-developer/) guide.
 
@@ -652,7 +916,7 @@ The utility classes have two dashes between `cdr-text` and its modifier `body-30
 The **CdrText** component allows for styling any HTML element with available text styles. Visual style and semantic meaning are managed independently by providing:
 
 - Element to the `tag` prop
-- Style to the `modifier` prop
+- Applying styling by either using the `modifier` prop and a utility class, or with a custom CSS class and a text mixin
 
 This method decouples the semantic meaning of a heading level from the visual representation.
 
@@ -672,6 +936,26 @@ When creating page headers, apply the correct semantic tag.
 ```
 </cdr-doc-code-snippet>
 
+```vue
+<template>
+  <cdr-text tag="h1" class="custom-heading-class">
+    A navigable semantic heading
+  </cdr-text>
+</template>
+<style>
+  @import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
+  .custom-heading-class {
+    @include cdr-text-heading-700;
+    @include cdr-sm-mq {
+      <!-- `cdr-sm-mq` mixin applies styling at small breakpoint and above -->
+      @include cdr-text-heading-800;
+    }
+  }
+</style>
+```
+
+Note that heading styles do not always need to be paired with heading tags. Heading tags should be used for accessibility purposes to describe the page hierarchy.
+
 <cdr-doc-code-snippet :copy-button="false" :line-numbers="false">
 
   ```vue
@@ -682,6 +966,25 @@ When creating page headers, apply the correct semantic tag.
   </cdr-text>
 ```
 </cdr-doc-code-snippet>
+
+
+```vue
+<template>
+  <cdr-text class="custom-heading-class">
+    Text styled as a heading for display only
+  </cdr-text>
+</template>
+<style>
+  @import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
+  .custom-heading-class {
+    @include cdr-text-heading-700;
+    @include cdr-sm-mq {
+      <!-- `cdr-sm-mq` mixin applies styling at small breakpoint and above -->
+      @include cdr-text-heading-800;
+    }
+  }
+</style>
+```
 
 **CdrText** components can be extended with other Cedar or custom classes.
 
@@ -697,6 +1000,23 @@ When creating page headers, apply the correct semantic tag.
   This paragraph is adding a bottom margin to provide space between it and the paragraph below
   </cdr-text>
 ```
+
+
+```vue
+<template>
+  <cdr-text class="custom-body-class">
+    This paragraph is adding a bottom margin to provide space between it and the paragraph below
+  </cdr-text>
+</template>
+<style>
+  @import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
+  .custom-body-class {
+    @include cdr-text-body-300;
+    marign-bottom: $cdr-space-one-x;
+  }
+</style>
+```
+
 </cdr-doc-code-snippet>
 
 #### Text Responsiveness
