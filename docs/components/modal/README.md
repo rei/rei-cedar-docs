@@ -135,7 +135,7 @@
     >Add to Cart
     </cdr-text>
   </template>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet dictum ipsum.</p>
+  <p id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet dictum ipsum.</p>
 </cdr-modal>
 ```
 </cdr-doc-example-code-pair>
@@ -143,15 +143,31 @@
 ## Accessibility
 
 Ensure that usage of this component complies with accessibility guidelines:
+
+- If your modal is launched by a button, add `aria-haspopup="dialog"` to the button element:
+
+```vue
+<cdr-button
+  aria-haspopup="dialog"
+>Launch modal</cdr-button>
+```
+
+- Wrap your modal content with an id, and set the `aria-described-by` prop to point to that id:
+
+```vue
+  <cdr-modal aria-described-by="description" label="modal title">
+    <div id="description">
+      modal content
+    </div>
+  </cdr-modal>
+```
+
+This component complies with WCAG guidelines by:
+- Uses the `label` prop to set the aria-label
+- Assigns role="document" to the modal content
 - All text content within the modal is read by screen readers, including the Close button text
 - Only the content in the modal is read by the screen reader. Content outside modal is not read when the modal is in focus
 - Modal can be closed using the keyboard (ESC key), Close button, or by clicking outside of modal
-
-This component has compliance with WCAG guidelines by:
-- Selecting the appropriate attributes and aria roles:
-  - For modal without title: aria-label
-  - For short modal: aria-describedby
-  - For longer modal: assign role="document" to the modal content
 - Using the `aria-hidden` and `tabindex="-1"` on focusable items for all content outside of the modal
 
 # Guidelines
@@ -199,25 +215,6 @@ This component has compliance with WCAG guidelines by:
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.events" :slots-getting-started-link="false" />
 
-## Usage
-
-```vue
-<cdr-modal
-  label="Add to Cart"
-  :opened="opened"
-  @closed="closed"
-  aria-described-by="description"
->
-  <template slot="title">
-    <cdr-text
-        tag="h1"
-        modifier="heading-600"
-      >Add to Cart
-    </cdr-text>
-  </template>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet dictum ipsum.</p>
-</cdr-modal>
-```
 
 ## Modal Title
 
@@ -243,17 +240,7 @@ The modal has a default width of `640px` which converts to a fullscreen view at 
 
 The modal content area will scroll vertically if there's enough content. The modal title does not scroll; it stays affixed to the top of the modal.
 
-## Accessibility
-
-If your modal is launched by a button, add `aria-haspopup="dialog"` to the button element.
-
-```vue
-<template>
-  <cdr-button
-    aria-haspopup="dialog"
-  >Launch modal</cdr-button>
-</template>
-```
+## Keep Alive
 
 Do not use `v-if` with CdrModal unless the component is wrapped with `keep-alive`. CdrModal handles showing and hiding itself when toggling, so `v-if` should be unneeded in most cases.
 
