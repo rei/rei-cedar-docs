@@ -2,7 +2,7 @@
 {
   "title": "Alert",
   "layout_type": "LayoutComponent",
-  "summary": "TODO: an Alert alerts you to things.",
+  "summary": "Provide contextual feedback messages for typical user actions",
   "title_metadata": "CdrAlert",
   "breadcrumbs": [
     {
@@ -64,7 +64,7 @@
 
 CdrAlert is a simple wrapper component that allows for composing various alert layouts.
 
-Has 4 different options for styling the alert
+There are four different options for styling the alert, based on the [alert type](../alert/#guidelines). 
 
 Alerts should be passed an icon component and text
 
@@ -93,17 +93,50 @@ Alerts should be passed an icon component and text
 
 ## Accessibility
 TODO
-- Component sets `role="alert"` so you don't have to
+- Component sets `role="alert"` on the container to signal to assistive technology that they require the user’s immediate attention 
+
 
 # Guidelines
 
-TODO
+Alert messaging keeps users informed of important and sometimes time-sensitive changes contextual to inline elements on the page. These messages help to clarify an issue and/or notify users of a potential problem that may require their attention. 
+
+There are four types of alerts: **error, warning, success, and informational**. Each type corresponds with a color and icon to provide a consistent, universal experience for users.
+
+### **Error**
+Use to inform that something went wrong. They affect or block the user's experience and must be resolved before moving forward.
+
+### **Warning**
+Use for a message requiring attention but not resolution in order to continue. Warning alerts might tell a user what could happen if they don’t address what they’re being warned about.
+
+### **Success**
+Use to communicate that an action has been successfully completed. Provides a positive response to user actions. No action is required. 
+
+### **Informational**
+Use to provide context around a situation. No action is required.
+
 
 ## Use when
 
+- To provide a user the status of an action they’re trying to complete 
+- As a validation message that alerts someone that they just did something that needs to be corrected (see [Error](../alert/#error) and [Warning](../alert/#warning) types)
+- As confirmation that a task was completed successfully (see [Success](../alert/#success) type)
+- As contextual information that might need their attention (see [Informational](../alert/#informational) type)
+
 ## Don’t use when
 
+TODO 
+- page-level notifications, dismissible, promotional info?  
+
 ## The Basics
+
+TODO
+
+## Content
+- Use full sentences with punctuation
+- Use sentence case 
+- Validation messages should tell users how to correct the error, e.g. “Enter a valid email address.” Don’t simply state the problem, e.g. “Field is blank.”
+
+
 
 ## Do / Don't
 
