@@ -86,7 +86,7 @@
     </cdr-text>
 
     <tokens-typography platform="native" type="header">
-    
+
     <cdr-text tag="h4" modifier="heading-400" class="cdr-mb-space-one-x">
       Headings
     </cdr-text>
@@ -94,7 +94,7 @@
     </tokens-typography>
 
     <tokens-typography platform="native" type="body">
-    
+
     <cdr-text tag="h4" modifier="heading-400" class="cdr-mb-space-one-x">
       Body
     </cdr-text>
@@ -102,7 +102,7 @@
     </tokens-typography>
 
     <tokens-typography platform="native" type="button">
-    
+
     <cdr-text tag="h4" modifier="heading-400" class="cdr-mb-space-one-x">
       Buttons
     </cdr-text>
@@ -130,8 +130,8 @@ export default {
         'eyebrow': [100],
         'body': [300, 400, 500],
         'body-strong': [300, 400, 500],
-        'utility': [100, 200, 300, 400, 500, 600, 700, 800],
-        'utility-strong': [100, 200, 300, 400, 500, 600, 700, 800],
+        'utility-sans': [100, 200, 300, 400, 500, 600, 700, 800],
+        'utility-sans-strong': [100, 200, 300, 400, 500, 600, 700, 800],
         'utility-serif': [200, 300, 400, 500, 600, 700, 800],
         'utility-serif-strong': [200, 300, 400, 500, 600, 700, 800],
       }
