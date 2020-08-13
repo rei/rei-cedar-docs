@@ -11,7 +11,7 @@
         alt="hero"/>
       <div class="hero__container cdr-align-text-center">
         <cdr-text
-          modifier="heading-700 display-900@md display-1100@lg"
+          modifier="heading-serif-700 heading-serif-strong-900@md heading-serif-strong-1100@lg"
           class="cdr-mb-space-one-x"
         >{{ data.heroTitle }}</cdr-text>
         <p class="hero__description">{{ data.heroDescription }}</p>
