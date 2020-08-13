@@ -340,9 +340,9 @@ Displays at full width of its container.
 </cdr-doc-example-code-pair>
 
 
-## Call To Action
+## Alternate Presentations
 
-Call to Action is a stylized link used in campaigns and promotions to encourage users to further explore featured products, services or offers. Use CTA when navigating users to a new page. CTA buttons should use the `icon-right` slot, set the `tag` property to `"a"`, and set an `href` to navigate to. 
+Alternate styles are available for light backgrounds, sales and off-price placement, and promotional calls to action. CTA buttons that link to a new page should set the `tag` property to `"a"`, and set an `href` to navigate to.
 
 <cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrButton, IconCaretRight'})" >
 
@@ -426,17 +426,9 @@ To ensure that usage of this component complies with accessibility guidelines yo
 - If the button is a toggle button, it has an `aria-pressed` state. When the button is toggled on, the value of this state is true, and when toggled off, the state is false.
 - If the button action indicates a context change, such as move to next step in a wizard or add another search criteria, then it is often appropriate to move focus to the starting point for that action.
 - Apply keyboard interaction patterns as described on [REI universal design and accessibility: Buttons](https://confluence.rei.com/display/accessibility/Buttons)
-- For Calls to Action, clearly and concisely describe the link’s destination when the button is clicked or tapped:
+- For Calls to Action that link to new page, clearly and concisely describe the link’s destination when the button is clicked or tapped:
   - For example, if the button text is "Shop now", the `aria-label` might read: "Shop our &lt;specific advertising category&gt; now"
-- Avoid using "click here" or "start here" for Calls to Action. If screen space for text is minimal:
-  - Provide text that can be read by screen readers
-  - Use an inline element for hidden text with the `cdr-sr-only` class
-  ```vue
-  <cdr-cta>
-    Start here <span class="cdr-sr-only">for help finding the proper sleeping bag</span>
-  </cdr-cta>
-  ```
-- Ensure screen readers can find all **Call to Action** buttons on a page by:
+- Ensure screen readers can find all Call to Action buttons on a page by:
   - Always providing an `href` attribute. Empty `href` attributes are not considered true links
   - Ensuring that it can be accessed using the keyboard. Avoid manipulating the default tab index
 <br />
@@ -459,11 +451,11 @@ This component has no specific WCAG compliance attributes built into the control
 - Progressing or regressing a user through a step in a flow
 - Submitting requested information
 - Confirming the completion of a flow or cancelling out of it
-- Use a Call to Action when navigating to another page on the site
+
 
 ## Don't Use When
 
-- Taking users to a different part within the same page. Instead, use [Links](../links/)
+- Navigating to another page or a different portion of the same page. Instead, use [Links](../links/)
 
 ## The Basics
 
@@ -555,11 +547,6 @@ Apply the following use cases when deciding when to use links as anchors or butt
 | Causing a browser redraw or refresh                                                                    | Triggering a popup menu                                                              |
 | Supporting internal page jumps                                                                      | Can be disabled with disabled attribute                                              |
 
-### Choosing a Button or Call to Action
-- Use Buttons to trigger interface interactions.
-- Use CTA to navigate users to a new location/page.
-- Avoid combining a Call to Action with a basic button. Disabling Calls to Action is not semantically supported.
-- Maintain button styling including typographic and sizing for Call to Action. Do not style as a link.
 
 ## Resources
 
