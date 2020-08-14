@@ -139,7 +139,7 @@
                 "name": "modifier",
                 "type": "string",
                 "default": "N/A",
-                "description": "Modifies the style variant for this component. Possible values: { 'secondary' }"
+                "description": "Modifies the style variant for this component. Possible values: { 'primary' | 'secondary' | 'sale' | 'dark' | 'link'}"
               }                          
             ],
             "slots": [
@@ -226,6 +226,20 @@ Use `sale` or `dark` for alternative button styling.
   <cdr-button modifier="sale" disabled>Buy now</cdr-button>
   <cdr-button modifier="dark">Add to wish list</cdr-button>
   <cdr-button modifier="dark" disabled>Add to wish list</cdr-button>
+```
+
+</cdr-doc-example-code-pair>
+
+## Link Style
+
+Use `link` modifier to render a button that is styled like a CdrLink. This can be used to create links with the padding and sizing options of a button. Can be used with the `tag` property set to the default `"button"` or `"a"`. For rendering a link inline with text, use [CdrLink](../links). To render a button that behaves like a link, use a [CdrButton with link tag](#button-with-link-tag).
+
+<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" >
+
+```html
+  <cdr-button modifier="link">Buy now</cdr-button>
+  <br/>
+  <cdr-button modifier="link" tag="a" href="#">View cart</cdr-button>
 ```
 
 </cdr-doc-example-code-pair>

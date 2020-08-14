@@ -42,9 +42,9 @@ CdrAlert is a simple wrapper component for grouping together form elements with 
 
 CdrButton has updated with 2 additional slots, `icon-left` and `icon-right`, for rendering icons to the left or right of the button text. Using these slots ensures that the icon is properly spaced within the button and that it's size adjusts with the button size. The original `icon` slot can still be used for rendering `icon-only` buttons. See the [CdrButton docs](../../components/buttons/#slots) for more details.
 
-### CdrLink Inset and Size Props
+### CdrButton Link Style
 
-CdrLink has been updated to add new props for `inset` and `size` that allow for rendering a CdrLink with the same text styling and sizing as a CdrButton. These props are intended to be used when the `tag` prop is set to `"button"`. See the [CdrLink docs](../../components/link/#link-button-with-inset) for more details.
+CdrButton has been updated to add new modifier: `link`. This is intended to visually style a CdrButton like a link, but with the same size and full-width options of a normal CdrButton. This allows for layouts which use links in the place of or alongside CdrButtons, while also providing an option for links with the bigger click target of a button. CdrLink should still be used for rendering a link inline with other text. See the [CdrButton docs](../../components/buttons/#link-style) for more details.
 
 ### Media Query Mixins For Breakpoint And Below
 
@@ -113,25 +113,29 @@ We have also updated the Cedar icon components with the following breaking chang
 
 ### CdrCta Deprecated and Merged with CdrButton
 
-TODO:
-- made CTA more flexible, insert any icon not just caret-right
-- can now use sm/md/lg CTA
-- more color options for buttons
-migrating CTAs to buttons:
-- CTA should use `tag="a"` and `href=""`, navigate to new page. Button should trigger action on current page
-- CTA brand => primary button, CTA light => secondary button, sale and dark remain the same.
-- elevated is now a prop not a modifier
+The CdrCta component has been deprecated and it's functionality has been merged with CdrButton. The `sale`, `dark`, `elevated`, and right-aligned-icon styles from CdrCta have all been added as options in CdrButton. This was intended to provide more flexibility in constructing calls to action, while also adding additional styling options for rendering CdrButtons.
 
-[See the CdrButton call to action examples](../components/buttons#call-to-action) for more information.
+See the [CdrButton with link tag](../components/buttons#button-with-link-tag) and [CdrButton alternative styles](../components/buttons#alternative-styles) for more information.
+
+In order to update existing instances of CdrCta to instead use CdrButton:
+- Pass the `icon-caret-left` CdrIcon into the `icon-right` slot. Note that this can be replaced with any icon, or the icon can be omitted completely.
+- Update the `ctaStyle` property as needed and pass it into the `modifier` prop of CdrButton
+
+| CdrCta `ctaStyle` | CdrButton `modifier` |
+|--|--|
+| brand | primary |
+| light | secondary |
+| sale | sale |
+| dark | dark |
 
 ```
 // "sale" CdrCta migrated to a CdrButton
-<cdr-cta modifier="sale">Call To Action</cdr-cta>
+<cdr-cta cta-style="sale">Call To Action</cdr-cta>
 <cdr-button modifier="sale" tag="a" href="rei.com">Call To Action <icon-caret-left slot="icon-right"/></cdr-button>
 
-// "elevated brand" CdrCta migrated to a CdrButton
-<cdr-cta modifier="brand elevated">Call To Action</cdr-cta>
-<cdr-button modifier="primary" tag="a" href="rei.com" :elevated="true">Call To Action <icon-caret-left slot="icon-right"/></cdr-button>
+// "brand" CdrCta migrated to a CdrButton
+<cdr-cta cta-style="brand">Call To Action</cdr-cta>
+<cdr-button modifier="primary" tag="a" href="rei.com">Call To Action <icon-caret-left slot="icon-right"/></cdr-button>
 ```
 
 ### CdrCta Tokens
