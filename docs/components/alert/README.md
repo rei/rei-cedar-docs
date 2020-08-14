@@ -66,33 +66,41 @@ CdrAlert is a simple wrapper component that allows for composing various alert l
 
 There are four different options for styling the alert, based on the [alert type](../alert/#guidelines). 
 
-Alerts should be passed an icon component and text
+Alerts should be passed the icon component with the appopriate icon and text for the alert message. 
 
 <cdr-doc-example-code-pair repository-href="/src/components/alert"
 :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <cdr-alert type="info">
-  <icon-information-fill /> Info Alert
+  <icon-information-fill /> Info alert
 </cdr-alert>
 <br>
 <cdr-alert type="success">
-  <icon-check-fill/> success alert
+  <icon-check-fill/> Success alert
 </cdr-alert>
 <br>
 <cdr-alert type="warning">
-  <icon-warning-fill/> warning alert
+  <icon-warning-fill/> Warning alert
 </cdr-alert>
 <br>
 <cdr-alert type="error">
-  <icon-x-fill/> error alert
+  <icon-x-fill/> Error alert
 </cdr-alert>
 ```
 </cdr-doc-example-code-pair>
 
 
 ## Accessibility
-TODO
+
+Many WCAG requirements are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
+- For static messaging that calls out the type of alert in the text and that is loaded with the page there is no need to do anything specific
+- For messages that do not include text to identify what type of alert is being displayed users should add screen reader only text that adds this information to the start of their message
+- Provide a text description when user input falls outside the required format or values: [W3C Techniques for WCAG 2.1](https://www.w3.org/WAI/WCAG21/Techniques/general/G83)
+- Don't rely on color alone to convey your message. Provide an additional indicator to color, like an icon: [WCAG 1.4.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
+- Error Identification techniques and criteria: [WCAG 3.3.1](https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html)
+
+This component has compliance with following WebAIM’s accessibility guidelines:
 - Component sets `role="alert"` on the container to signal to assistive technology that they require the user’s immediate attention 
 
 
@@ -122,25 +130,6 @@ Use to provide context around a situation. No action is required.
 - As confirmation that a task was completed successfully (see [Success](../alert/#success) type)
 - As contextual information that might need their attention (see [Informational](../alert/#informational) type)
 
-## Don’t use when
-
-TODO 
-- page-level notifications, dismissible, promotional info?  
-
-## The Basics
-
-TODO
-
-## Content
-- Use full sentences with punctuation
-- Use sentence case 
-- Validation messages should tell users how to correct the error, e.g. “Enter a valid email address.” Don’t simply state the problem, e.g. “Field is blank.”
-
-
-
-## Do / Don't
-
-TODO
 
 # API
 
