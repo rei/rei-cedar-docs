@@ -16,27 +16,37 @@
 
 ## Update Steps
 
-### For a Micro-Site
+- Update to the latest version of the Cedar packages:
 
-- Update to `@rei/cedar` ^x.x.x (TODO: ???)
-- If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar and febs before updating your micro-site.
+| package name | version |
+|--------------|---------|
+| `@rei/cedar` | ^6.x.x |
+| `@rei/cdr-tokens` | ^5.x.x |
+| `@rei/cdr-component-variables` | ^4.x.x |
+| `@rei/cedar-icons` | ^2.x.x |
 
-### For a Component Package
-
-- Update to `@rei/cedar` ^x.x.x (TODO: ???)
-- Ensure your component is using `@rei/febs` ^7.1.0 for it's prod and dev build systems
+- If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your micro-site.
 
 ## New Features
 
-### CdrAlert Component
+### Mixin and Token Usage
 
+To align with performance goals for the co-op, we have updated our guidance around the [Cedar utility classes](../../components/utilities) to recommend that customer facing projects instead  use [Cedar tokens](../../tokens/all-tokens) to apply styling.
+
+Cedar utility class files often contain a large number of options, and only a small number of them are used in most projects. By using Cedar tokens instead of utility classes, you can ensure that your project is only loading the styles you are directly using. Special attention should be paid to the space (`@rei/cedar/dist/style/space.css`) and text (`@rei/cedar/dist/style/text.css` or `@rei/cedar/dist/style/cdr-text.css`) utility class files as they are especially large.
+
+- The [CdrText page](../../components/text) has been updated to show examples of using mixins instead of the modifier/utilities.
+- CdrText related reset logic has been moved out of the CdrText CSS file and into the Cedar CSS reset file. The CdrText CSS file only needs to be loaded if you are using the `modifier` property to style text.
+- We have deprecated the [space property](#space-property-deprecated) in the Cedar components.
+- We have added mixins for [sr-only and cdr-container](#mixins-for-sr-only-and-cdr-container) so that they can be used in place of the equivalent utility classes.
+
+### CdrAlert Component
 
 CdrAlert is a simple wrapper component that allows for composing various alert layouts, and now officially supported in the system. See the [CdrAlert docs](../../components/alert/) for more details and usage guidelines.
 
 ### CdrFormGroup Component
 
 CdrAlert is a simple wrapper component for grouping together form elements with a common label. See the [CdrFormGroup docs](../../components/form-group/) for more details and usage guidelines.
-
 
 ### CdrButton Icon Left and Right Slots
 
@@ -79,36 +89,6 @@ The SCSS distribution of Cedar tokens now includes [placeholder selectors](https
 }
 ```
 
-## Bug Fixes
-
-### CdrIcon a11y Enhancements
-
-We have improved the accessibility of the CdrIcon components by moving the `role="presentation"` attribute from the root element onto the path element. The CdrIcon components now add `aria-hidden="true"` to their root element by default. The meaning of the icon should either be explained by the visible text around it, or by including screenreader-only text using the `cdr-display-sr-only` utility class or mixin. [See the CdrIcon accessibility section](../components/icons#accessibility) for more details.
-
-## Breaking Changes
-
-### Warning and Error Icons
-
-We have updated our icon library to use circular icons for "error" states and triangular icons for "warning" states.
-
-To align with this we have made the following breaking changes to our [icon library](https://rei.github.io/cedar-icons/#/):
-
-| old asset name     | new asset name     |
-|--------------------|--------------------|
-| warning-stroke.svg | error-stroke.svg   |
-| warning-fill.svg   | error-fill.svg     |
-| warning-tri.svg    | warning-fill.svg   |
-| n/a                | warning-stroke.svg |
-
-We have also updated the Cedar icon components with the following breaking changes:
-
-| old component name | new component name |
-|--------------------|--------------------|
-| IconWarningStroke  | IconErrorStroke    |
-| IconWarningFill    | IconErrorFill      |
-| IconWarningTri     | IconWarningFill    |
-| n/a                | IconWarningStroke  |
-
 ## Deprecations
 
 ### CdrCta Deprecated and Merged with CdrButton
@@ -131,11 +111,15 @@ In order to update existing instances of CdrCta to instead use CdrButton:
 ```
 // "sale" CdrCta migrated to a CdrButton
 <cdr-cta cta-style="sale">Call To Action</cdr-cta>
-<cdr-button modifier="sale" tag="a" href="rei.com">Call To Action <icon-caret-left slot="icon-right"/></cdr-button>
+<cdr-button modifier="sale" tag="a" href="rei.com">
+  Call To Action <icon-caret-left slot="icon-right"/>
+</cdr-button>
 
 // "brand" CdrCta migrated to a CdrButton
 <cdr-cta cta-style="brand">Call To Action</cdr-cta>
-<cdr-button modifier="primary" tag="a" href="rei.com">Call To Action <icon-caret-left slot="icon-right"/></cdr-button>
+<cdr-button modifier="primary" tag="a" href="rei.com">
+  Call To Action <icon-caret-left slot="icon-right"/>
+</cdr-button>
 ```
 
 ### CdrCta Tokens
@@ -221,22 +205,51 @@ In order to support adding the [breakpoint and below media queries](#media-query
 | cdr-lg-mq        | cdr-lg-mq-up |
 
 
-## Removals
+## Breaking Changes
+
+### CdrIcon a11y Enhancements
+
+We have improved the accessibility of the CdrIcon components by moving the `role="presentation"` attribute from the root element onto the path element. The CdrIcon components now add `aria-hidden="true"` to their root element by default. The meaning of the icon should either be explained by the visible text around it, or by including screenreader-only text using the `cdr-display-sr-only` utility class or mixin. [See the CdrIcon accessibility section](../components/icons#accessibility) for more details.
+
+### CdrModal a11y Fix
+
+We have removed the `role="presentation"` attribute from CdrModal as it is not needed for accessibility.
+
+### Warning and Error Icons
+
+We have updated our icon library to use circular icons for "error" states and triangular icons for "warning" states.
+
+To align with this we have made the following breaking changes to our [icon library](https://rei.github.io/cedar-icons/#/):
+
+| old asset name     | new asset name     |
+|--------------------|--------------------|
+| warning-stroke.svg | error-stroke.svg   |
+| warning-fill.svg   | error-fill.svg     |
+| warning-tri.svg    | warning-fill.svg   |
+| n/a                | warning-stroke.svg |
+
+We have also updated the Cedar icon components with the following breaking changes:
+
+| old component name | new component name |
+|--------------------|--------------------|
+| IconWarningStroke  | IconErrorStroke    |
+| IconWarningFill    | IconErrorFill      |
+| IconWarningTri     | IconWarningFill    |
+| n/a                | IconWarningStroke  |
+
+
+### Removals
 
 In accordance with our deprecation policy, features that were deprecated in the [Winter 2020 release](../winter-2020/#deprecations) have been removed from Cedar.
 
-### Deprecated Cdr Tokens and CdrText Modifiers Removed
+#### Deprecated Cedar Tokens and Text Utilities Removed
 
-TODO:
-
-Mixins removed:
-[redwood-display-N0](../winter-2020/#redwood-display)
-[redwood-body-N0](../winter-2020/#redwood-body)
-[maple-utility-N0](../winter-2020/#maple)
-[spruce-display-N0 and spruce-body-N0](../winter-2020/#spruce)
-
-Mixins and utilities removed:
-[cdr-text-display-N00, cdr-text-heading-N00, and cdr-text-subheading-N00](../winter-2020/#headings)
-[cdr-text-body](http://localhost:8080/release-notes/winter-2020/#type-utility-classes)
+The following mixins and utility classes have been removed. See the linked deprecation mapping for information on updating:
+- [redwood-display-N0](../winter-2020/#redwood-display)
+- [redwood-body-N0](../winter-2020/#redwood-body)
+- [maple-utility-N0](../winter-2020/#maple)
+- [spruce-display-N0 and spruce-body-N0](../winter-2020/#spruce)
+- [cdr-text-display-N00, cdr-text-heading-N00, and cdr-text-subheading-N00](../winter-2020/#headings)
+- [cdr-text-body](../winter-2020/#type-utility-classes)
 
 </cdr-doc-table-of-contents-shell>
