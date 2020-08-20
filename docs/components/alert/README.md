@@ -73,19 +73,19 @@ Alerts should be passed the icon component with the appopriate icon and text for
 
 ```html
 <cdr-alert type="info">
-  <icon-information-fill /> Info alert
+  <icon-information-fill /> Informational
 </cdr-alert>
 <br>
 <cdr-alert type="success">
-  <icon-check-fill/> Success alert
+  <icon-check-fill/> Success
 </cdr-alert>
 <br>
 <cdr-alert type="warning">
-  <icon-warning-fill/> Warning alert
+  <icon-warning-fill/> Warning
 </cdr-alert>
 <br>
 <cdr-alert type="error">
-  <icon-x-fill/> Error alert
+  <icon-x-fill/> Error
 </cdr-alert>
 ```
 </cdr-doc-example-code-pair>
