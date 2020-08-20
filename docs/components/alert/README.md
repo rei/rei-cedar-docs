@@ -13,23 +13,6 @@
     "components": "CdrAlert, IconInformationFill, IconCheckFill, IconWarningFill, IconXFill"
   },
 
-  "TODO-DO/DONT": [
-    {
-      "type": "do",
-      "image": "",
-      "ratio": "4-3",
-      "alt": "Image showing proper alert usage",
-      "caption": "TODO"
-    },
-    {
-      "type": "dont",
-      "image": "",
-      "ratio": "4-3",
-      "alt": "Image showing improper alert usage",
-      "caption": "TODO"
-    }
-  ],
-
   "versions": [
     {
       "components": [
@@ -94,14 +77,11 @@ Alerts should be passed the icon component with the appopriate icon and text for
 ## Accessibility
 
 Many WCAG requirements are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
+- Add `role="alert"` for messages that are important or time sensitive to ensure that the messaging is immediately announced to screen readers. For other content, add `aria-live="polite"`.
 - For static messaging that calls out the type of alert in the text and that is loaded with the page there is no need to do anything specific
 - For messages that do not include text to identify what type of alert is being displayed users should add screen reader only text that adds this information to the start of their message
-- Provide a text description when user input falls outside the required format or values: [W3C Techniques for WCAG 2.1](https://www.w3.org/WAI/WCAG21/Techniques/general/G83)
 - Don't rely on color alone to convey your message. Provide an additional indicator to color, like an icon: [WCAG 1.4.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
 - Error Identification techniques and criteria: [WCAG 3.3.1](https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html)
-
-This component has compliance with following WebAIM’s accessibility guidelines:
-- Component sets `role="alert"` on the container to signal to assistive technology that they require the user’s immediate attention 
 
 
 # Guidelines
