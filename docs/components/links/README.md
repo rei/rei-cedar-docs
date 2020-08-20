@@ -76,7 +76,6 @@
                 "type": "string",
                 "default": "'#'",
                 "description": "Sets URL to ‘cdr-link’ href property. The tag prop requires value of <a>."
-              }
             ],
             "slots": [
               {
@@ -182,6 +181,8 @@ Display standalone link with icon on right.
 
 Use the `tag` prop to render a button that looks like a link. Can be used inline with other text. Should trigger an action rather than navigate to a new page. To render a link that has the spacing and sizing of a button, use [CdrButton with link modifier](../components/buttons/#link-style).
 
+To visually render a button that behaves like a link, use [a CdrButton with link tag](../buttons#button-with-link-tag). To visually render a link that has the sizing and spacing of a button, use [a CdrButton with link modifier](../buttons#link-style).
+
 <cdr-doc-example-code-pair repository-href="/src/components/link" :sandbox-data="$page.frontmatter.sandboxData" :model="{ count: 0 }">
 
 ```html
@@ -199,7 +200,6 @@ Use the `tag` prop to render a button that looks like a link. Can be used inline
 ```
 
 </cdr-doc-example-code-pair>
-
 
 ## Accessibility
 

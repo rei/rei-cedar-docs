@@ -4,22 +4,6 @@
   "layout_type": "LayoutComponent",
   "summary": "Invoke and communicate an action that will occur",
   "title_metadata": "CdrButton",
-  "ctaPlacement": [
-    {
-      "type": "do",
-      "image": "cta/CTA_placement_do_16-9.png",
-      "ratio": "16-9",
-      "alt": "Image showing proper Call to Action usage",
-      "caption": "use Call to Action to lead users to explore more."
-    },
-    {
-      "type": "dont",
-      "image": "cta/CTA_placement_dont_16-9.png",
-      "ratio": "16-9",
-      "alt": "Image showing proper Call to Action paired with basic button",
-      "caption": "mix Call to Action and basic buttons."
-    }
-  ],
   "vertical": [
     {
       "type": "do",
@@ -155,7 +139,7 @@
                 "name": "modifier",
                 "type": "string",
                 "default": "N/A",
-                "description": "Modifies the style variant for this component. Possible values: { 'secondary' }"
+                "description": "Modifies the style variant for this component. Possible values: { 'primary' | 'secondary' | 'sale' | 'dark' | 'link'}"
               }                          
             ],
             "slots": [
@@ -227,6 +211,35 @@ Use secondary buttons for all actions that do not move the user to the next step
 ```html
   <cdr-button modifier="secondary">Add to wish list</cdr-button>
   <cdr-button modifier="secondary" disabled>Add to wish list</cdr-button>
+```
+
+</cdr-doc-example-code-pair>
+
+## Alternative Styles
+
+Use `sale` or `dark` for alternative button styling.
+
+<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" >
+
+```html
+  <cdr-button modifier="sale">Buy now</cdr-button>
+  <cdr-button modifier="sale" disabled>Buy now</cdr-button>
+  <cdr-button modifier="dark">Add to wish list</cdr-button>
+  <cdr-button modifier="dark" disabled>Add to wish list</cdr-button>
+```
+
+</cdr-doc-example-code-pair>
+
+## Link Style
+
+Use `link` modifier to render a button that is styled like a CdrLink. This can be used to create links with the padding and sizing options of a button. Can be used with the `tag` property set to the default `"button"` or `"a"`. For rendering a link inline with text, use [CdrLink](../links). To render a button that behaves like a link, use a [CdrButton with link tag](#button-with-link-tag).
+
+<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" >
+
+```html
+  <cdr-button modifier="link">Buy now</cdr-button>
+  <br/>
+  <cdr-button modifier="link" tag="a" href="#">View cart</cdr-button>
 ```
 
 </cdr-doc-example-code-pair>
@@ -340,69 +353,26 @@ Displays at full width of its container.
 </cdr-doc-example-code-pair>
 
 
-## Call To Action
+## Button With Link Tag
 
-Call to Action is a stylized link used in campaigns and promotions to encourage users to further explore featured products, services or offers. Use CTA when navigating users to a new page. CTA buttons should use the `icon-right` slot, set the `tag` property to `"a"`, and set an `href` to navigate to. 
+For a CdrButton that looks like a button but behaves like a link, set `tag="a"` and pass an `href`.
 
 <cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrButton, IconCaretRight'})" >
 
 ```html
-  <div>
-    <cdr-button
-      modifier="sale"
-      tag="a"
-      href="#"
-    >
-      <icon-caret-right
-        slot="icon-right"
-        inherit-color
-      />
-      Call To Action
-    </cdr-button>
-
-    <cdr-button
-      modifier="dark"
-      tag="a"
-      href="#"
-    >
-      <icon-caret-right
-        slot="icon-right"
-        inherit-color
-      />
-      Call To Action
-    </cdr-button>
-
-    <cdr-button
-      modifier="primary"
-      tag="a"
-      href="#"
-    >
-      <icon-caret-right
-        slot="icon-right"
-        inherit-color
-      />
-      Call To Action
-    </cdr-button>
-
-    <cdr-button
-      modifier="secondary"
-      tag="a"
-      href="#"
-    >
-      <icon-caret-right
-        slot="icon-right"
-        inherit-color
-      />
-      Call To Action
-    </cdr-button>
-  </div>
+  <cdr-button
+    tag="a"
+    href="#"
+  >
+    Call To Action
+  </cdr-button>
 ```
 
 </cdr-doc-example-code-pair>
 
 ## Sizing
 
-Change the button size based on where the button is used. The default size is medium. 
+Change the button size based on where the button is used. The default size is medium.
 
 <cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" >
 
@@ -426,9 +396,9 @@ To ensure that usage of this component complies with accessibility guidelines yo
 - If the button is a toggle button, it has an `aria-pressed` state. When the button is toggled on, the value of this state is true, and when toggled off, the state is false.
 - If the button action indicates a context change, such as move to next step in a wizard or add another search criteria, then it is often appropriate to move focus to the starting point for that action.
 - Apply keyboard interaction patterns as described on [REI universal design and accessibility: Buttons](https://confluence.rei.com/display/accessibility/Buttons)
-- For Calls to Action, clearly and concisely describe the link’s destination when the button is clicked or tapped:
+- Clearly and concisely describe the button's action or destination when the button is clicked or tapped:
   - For example, if the button text is "Shop now", the `aria-label` might read: "Shop our &lt;specific advertising category&gt; now"
-- Avoid using "click here" or "start here" for Calls to Action. If screen space for text is minimal:
+- Avoid using "click here" or "start here" for buttons. If screen space for text is minimal:
   - Provide text that can be read by screen readers
   - Use an inline element for hidden text with the `cdr-sr-only` class
   ```vue
@@ -436,9 +406,7 @@ To ensure that usage of this component complies with accessibility guidelines yo
     Start here <span class="cdr-sr-only">for help finding the proper sleeping bag</span>
   </cdr-cta>
   ```
-- Ensure screen readers can find all **Call to Action** buttons on a page by:
-  - Always providing an `href` attribute. Empty `href` attributes are not considered true links
-  - Ensuring that it can be accessed using the keyboard. Avoid manipulating the default tab index
+- For buttons with the `tag` set to `"a"`, always providing an `href` attribute. Empty `href` attributes are not considered true links
 <br />
 
 This component has no specific WCAG compliance attributes built into the control. It is possibile to define this component as a link or button:
@@ -459,7 +427,7 @@ This component has no specific WCAG compliance attributes built into the control
 - Progressing or regressing a user through a step in a flow
 - Submitting requested information
 - Confirming the completion of a flow or cancelling out of it
-- Use a Call to Action when navigating to another page on the site
+- Use `tag="a"` and `href` when navigating to another page on the site
 
 ## Don't Use When
 
@@ -467,11 +435,11 @@ This component has no specific WCAG compliance attributes built into the control
 
 ## The Basics
 
-Three button sizes are available: Small, Medium, and Large. Medium is the default size. 
+Three button sizes are available: Small, Medium, and Large. Medium is the default size.
 <br />
-Generally, buttons should be sized based on their content and used to convey the importance of actions. 
+Generally, buttons should be sized based on their content and used to convey the importance of actions.
   - Use Large buttons for primary page actions
-  - Use Small buttons for supplemental user actions 
+  - Use Small buttons for supplemental user actions
   - For Mobile screens using XS grid, use Large buttons set to full width
 
 <br />
@@ -504,9 +472,6 @@ When grouping buttons, match button sizes either horizontally or vertically.
 
 <br />
 
-<do-dont :examples="$page.frontmatter.ctaPlacement" />
-
-<br />
 
 ## Content
 
@@ -555,11 +520,6 @@ Apply the following use cases when deciding when to use links as anchors or butt
 | Causing a browser redraw or refresh                                                                    | Triggering a popup menu                                                              |
 | Supporting internal page jumps                                                                      | Can be disabled with disabled attribute                                              |
 
-### Choosing a Button or Call to Action
-- Use Buttons to trigger interface interactions.
-- Use CTA to navigate users to a new location/page.
-- Avoid combining a Call to Action with a basic button. Disabling Calls to Action is not semantically supported.
-- Maintain button styling including typographic and sizing for Call to Action. Do not style as a link.
 
 ## Resources
 
@@ -602,7 +562,10 @@ The following variants are available to the `cdr-button` modifier attribute:
 
 | Value | Description            |
 |:------|:-----------------------|
+| 'primary' | Sets the primary style for the button |
 | 'secondary' | Sets the secondary style for the button |
+| 'sale' | Sets the sale style for the button |
+| 'dark' | Sets the dark style for the button |
 
 
 ### Click Actions
