@@ -76,19 +76,7 @@
                 "type": "string",
                 "default": "'#'",
                 "description": "Sets URL to ‘cdr-link’ href property. The tag prop requires value of <a>."
-              },
-              {
-                "name": "inset",
-                "type": "boolean",
-                "default": "false",
-                "description": "Adds an inset padding to the link that mimics CdrButton sizing and text styling. Should generally be used in conjunction with the `tag` prop set to 'button'. Should not be used for links that are rendered inline with other text. Can be used in conjunction with the `size` prop to render links at small, large, or with responsive sizing."
-              },
-              {
-                "name": "size",
-                "type": "string",
-                "default": "'medium'",
-                "description": "Sets the link size. Only works if the `inset` property is set to `true`. Values can target responsive breakpoints. Breakpoint values are: xs, sm, md, and lg. Examples: { 'small' | 'medium' | 'large' | 'large@sm' }"
-              },
+              }
             ],
             "slots": [
               {
@@ -192,7 +180,7 @@ Display standalone link with icon on right.
 
 ## Inline Link Button
 
-Use the `tag` prop to render a button that looks like a link. Can be used inline with other text. Should trigger an action rather than navigate to a new page.
+Use the `tag` prop to render a button that looks like a link. Can be used inline with other text. Should trigger an action rather than navigate to a new page. To render a link that has the spacing and sizing of a button, use [CdrButton with link modifier](../components/buttons/#link-style).
 
 <cdr-doc-example-code-pair repository-href="/src/components/link" :sandbox-data="$page.frontmatter.sandboxData" :model="{ count: 0 }">
 
@@ -212,26 +200,6 @@ Use the `tag` prop to render a button that looks like a link. Can be used inline
 
 </cdr-doc-example-code-pair>
 
-## Link Button With Inset
-
-Render a button that looks like a link, with inset padding included to provide a larger click target and also match the text styling and sizing options of CdrButton.
-
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrLink, CdrButton'})">
-
-```html
-  <div>
-      <cdr-link tag="button" :inset="true">
-        Take Action
-      </cdr-link>
-      <br/><br/>
-      <cdr-link tag="button" :inset="true" size="small">
-        Small Action Link
-      </cdr-link>
-      <cdr-button size="small">Small Action Button</cdr-button>
-  </div>
-```
-
-</cdr-doc-example-code-pair>
 
 ## Accessibility
 
@@ -278,7 +246,6 @@ This component has compliance with following WebAIM’s accessibility guidelines
 
 ## Don't Use When
 
-- Triggering interface interactions, such as opening an modal or progressing a user through a flow. Instead, use [Buttons](../buttons/)
 - Navigating a user from promotional or campaign content. Instead, use [Buttons](../buttons/) styled to match the campaign
 
 ## The Basics
@@ -295,13 +262,12 @@ This component has compliance with following WebAIM’s accessibility guidelines
 Use link labels that describe the link’s destination when clicked or tapped:
 
 - Keep link text concise.  Restrict link text length to a maximum of 100 characters
-- Use descriptive text for links, so that the user knows where they are going. Avoid using “Click here” or “Start here”
+- Use descriptive text for links, so that the user knows where they are going or what action they are taking. Avoid using “Click here” or “Start here”
 - If screen space for text is minimal and text is only “Learn more”:
   - Provide `alt` text that can be read by screen readers
   - For example, if the link text is “Learn more”, then the `alt` text could be “Learn more about pick up in store”
 - Don’t capitalize links. Some screen readers read capitalized text letter-by-letter. Instead, use sentence case
 - Restrict the number of text links on a page. Screen reader will read all the links on a page
-- Be sure the copy used in link buttons clearly communicates the action they'll perform
 
 ## Behavior
 
