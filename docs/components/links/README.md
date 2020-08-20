@@ -76,6 +76,7 @@
                 "type": "string",
                 "default": "'#'",
                 "description": "Sets URL to ‘cdr-link’ href property. The tag prop requires value of <a>."
+              }
             ],
             "slots": [
               {
