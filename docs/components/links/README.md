@@ -76,7 +76,7 @@
                 "type": "string",
                 "default": "'#'",
                 "description": "Sets URL to ‘cdr-link’ href property. The tag prop requires value of <a>."
-              },
+              }
             ],
             "slots": [
               {
@@ -180,7 +180,7 @@ Display standalone link with icon on right.
 
 ## Inline Link Button
 
-Use the `tag` prop to render a button that looks like a link. Can be used inline with other text. Should trigger an action rather than navigate to a new page.
+Use the `tag` prop to render a button that looks like a link. Can be used inline with other text. Should trigger an action rather than navigate to a new page. To render a link that has the spacing and sizing of a button, use [CdrButton with link modifier](../components/buttons/#link-style).
 
 To visually render a button that behaves like a link, use [a CdrButton with link tag](../buttons#button-with-link-tag). To visually render a link that has the sizing and spacing of a button, use [a CdrButton with link modifier](../buttons#link-style).
 
@@ -247,7 +247,7 @@ This component has compliance with following WebAIM’s accessibility guidelines
 
 ## Don't Use When
 
-- Navigating a user from promotional or campaign content. Instead, use [Call to Action](../cta/)
+- Navigating a user from promotional or campaign content. Instead, use [Buttons](../buttons/) styled to match the campaign
 
 ## The Basics
 
@@ -255,13 +255,15 @@ This component has compliance with following WebAIM’s accessibility guidelines
 - There are 2 basic link styles: default and standalone
   - Use the default link when the link is near a body of text or in appears in a body of text
   - Use the standalone link when there is separation from a body of text
+- When using multiple inline links together, be sure that their behaviors are consistent. For instance, don't have one link go to a new page and another one in the group trigger an action
+- Link buttons are often useful for reducing the visual clutter of large groups of actions. For example, when there are many cards in a group using the link button style instead of a true button style
 
 ## Content
 
 Use link labels that describe the link’s destination when clicked or tapped:
 
 - Keep link text concise.  Restrict link text length to a maximum of 100 characters
-- Use descriptive text for links, so that the user knows where they are going. Avoid using “Click here” or “Start here”
+- Use descriptive text for links, so that the user knows where they are going or what action they are taking. Avoid using “Click here” or “Start here”
 - If screen space for text is minimal and text is only “Learn more”:
   - Provide `alt` text that can be read by screen readers
   - For example, if the link text is “Learn more”, then the `alt` text could be “Learn more about pick up in store”
