@@ -46,11 +46,11 @@ CdrAlert is a simple wrapper component that allows for composing various alert l
 
 ### CdrFormGroup Component
 
-CdrAlert is a simple wrapper component for grouping together form elements with a common label. See the [CdrFormGroup docs](../../components/form-group/) for more details and usage guidelines.
+CdrFormGroup is a simple wrapper component for grouping together form elements with a common label. See the [CdrFormGroup docs](../../components/form-group/) for more details and usage guidelines.
 
 ### CdrButton Icon Left and Right Slots
 
-CdrButton has updated with 2 additional slots, `icon-left` and `icon-right`, for rendering icons to the left or right of the button text. Using these slots ensures that the icon is properly spaced within the button and that it's size adjusts with the button size. The original `icon` slot can still be used for rendering `icon-only` buttons. See the [CdrButton docs](../../components/buttons/#slots) for more details.
+CdrButton has updated with 2 additional slots, `icon-left` and `icon-right`, for rendering icons to the left or right of the button text. Using these slots ensures that the icon is properly spaced within the button and that its size adjusts with the button size. The original `icon` slot can still be used for rendering `icon-only` buttons. See the [CdrButton docs](../../components/buttons/#slots) for more details.
 
 ### CdrButton Link Style
 
@@ -93,7 +93,7 @@ The SCSS distribution of Cedar tokens now includes [placeholder selectors](https
 
 ### CdrCta Deprecated and Merged with CdrButton
 
-The CdrCta component has been deprecated and it's functionality has been merged with CdrButton. The `sale`, `dark`, `elevated`, and right-aligned-icon styles from CdrCta have all been added as options in CdrButton. This was intended to provide more flexibility in constructing calls to action, while also adding additional styling options for rendering CdrButtons.
+The CdrCta component has been deprecated and its functionality has been merged with CdrButton. The `sale`, `dark`, `elevated`, and right-aligned-icon styles from CdrCta have all been added as options in CdrButton. This was intended to provide more flexibility in constructing calls to action, while also adding additional styling options for rendering CdrButtons.
 
 See the [CdrButton with link tag](../components/buttons#button-with-link-tag) and [CdrButton alternative styles](../components/buttons#alternative-styles) for more information.
 
