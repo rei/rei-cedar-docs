@@ -56,6 +56,10 @@ CdrButton has updated with 2 additional slots, `icon-left` and `icon-right`, for
 
 CdrButton has been updated to add new modifier: `link`. This is intended to visually style a CdrButton like a link, but with the same size and full-width options of a normal CdrButton. This allows for layouts which use links in the place of or alongside CdrButtons, while also providing an option for links with the bigger click target of a button. CdrLink should still be used for rendering a link inline with other text. See the [CdrButton docs](../../components/buttons/#link-style) for more details.
 
+### CdrRating Rounding Logic
+
+CdrRating has been updated to round the displayed rating to the nearest 1/10th rather than the nearest 1/4. Whole number values now display an empty decimal place. For example, an average rating of "3.71" now renders as "3.7" rather than "3.75", while a rating of "3" now renders as "3.0" rather than "3". Visually the star icons still render in 1/4 increments as they did previously.
+
 ### Media Query Mixins For Breakpoint And Below
 
 We have updated our [media queries](../../layout/responsive/#scss-less-utilities) to add mixins that match below a given breakpoint. We have also renamed some of our existing media query mixins to follow this naming convention  
