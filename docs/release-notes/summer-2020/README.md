@@ -89,6 +89,10 @@ The SCSS distribution of Cedar tokens now includes [placeholder selectors](https
 }
 ```
 
+### CdrTabs Background Color
+
+In order to support CdrTabs that are rendered on non-primary backgrounds, we have added a `background-color` property that can be used to set the gradients inside CdrTabs to match it's background.
+
 ## Deprecations
 
 ### CdrCta Deprecated and Merged with CdrButton

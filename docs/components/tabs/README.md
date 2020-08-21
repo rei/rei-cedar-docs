@@ -95,6 +95,12 @@
                 "type": "string",
                 "default": "N/A",
                 "description": "Modifies the style variants for this component. Possible values: {  'centered'  |  'compact'  |  'full-width'  |  'no-border'  }"
+              },
+              {
+                "name": "backgroundColor",
+                "type": "string",
+                "default": "$cdr-color-background-primary",
+                "description": "For CdrTabs that are rendered on non-primary backgrounds. Pass the background-color into the component to ensure that the scrolling gradients render correctly."
               }
             ],
             "events": [
