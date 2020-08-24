@@ -152,12 +152,12 @@ Ensure that usage of this component complies with accessibility guidelines:
 >Launch modal</cdr-button>
 ```
 
-- Wrap your modal content with an id, and set the `aria-described-by` prop to point to that id:
+- Set the `aria-described-by` prop to point to an element that describes what the modal does:
 
 ```vue
   <cdr-modal aria-described-by="description" label="modal title">
     <div id="description">
-      modal content
+      modal content description
     </div>
   </cdr-modal>
 ```

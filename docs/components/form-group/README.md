@@ -34,23 +34,6 @@
     "components": "CdrFormGroup, CdrCheckbox, CdrRadio, CdrInput, CdrSelect"
   },
 
-  "TODO-DO/DONT": [
-    {
-      "type": "do",
-      "image": "",
-      "ratio": "4-3",
-      "alt": "Image showing proper form group usage",
-      "caption": "TODO"
-    },
-    {
-      "type": "dont",
-      "image": "",
-      "ratio": "4-3",
-      "alt": "Image showing improper form group usage",
-      "caption": "TODO"
-    }
-  ],
-
   "versions": [
     {
       "components": [
@@ -89,7 +72,7 @@
 
 CdrFormGroup is a simple wrapper component that provides structure and consistent spacing when composing various form layouts.  
 
-Grouping related form controls makes forms more understandable for all users, and utilizing the `fieldset` and `legend` elements provides necessary context for users that rely on screen readers. 
+Grouping related form controls makes forms more understandable for all users, and utilizing the `fieldset` and `legend` elements provides necessary context for users that rely on screen readers.
 
 ## Default
 
@@ -145,13 +128,13 @@ Rather than passing a `label` prop, the label element can be customized using th
 ## Accessibility
 
 CdrFormGroup provides a simple `fieldset` and `legend` wrapper for form element components. Using this component will ensure that your form communicates to screen readers that a group of form fields relate to each other, and will provide a label for the group.
- 
+
 When not semantically grouped, form elements mixed with text descriptions can quickly lose context to users who rely on non-visual means. Grouping controls makes it easier for users to understand their purpose
 
 In CdrFormGroup, all of the related fields go inside the `fieldset` element, and the `legend` element is used to represent the question or overall theme of this section of your form.
-  
+
 - Use the `label` prop or slot to explain what the form elements are, this text will be used for the `legend` element
-- Screen readers may repeat the legend for each control in the group, so the `label` text should be brief and descriptive 
+- Screen readers may repeat the legend for each control in the group, so the `label` text should be brief and descriptive
 
 
 # Guidelines
