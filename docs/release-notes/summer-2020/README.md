@@ -93,6 +93,10 @@ The SCSS distribution of Cedar tokens now includes [placeholder selectors](https
 }
 ```
 
+### CdrTabs Auto Height
+
+CdrTabs previously required a static `height` value to be set, with overflowing content rendered with a scrollbar. CdrTabs now accepts `height="auto"` which allows for rendering tabs with variable height based on the size of it's content. See the [CdrTabs docs](../../components/tabs/#auto) for more details.
+
 ### CdrTabs Background Color
 
 In order to support CdrTabs that are rendered on non-primary backgrounds, we have added a `background-color` property that can be used to set the gradients inside CdrTabs to match it's background.
