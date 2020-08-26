@@ -107,7 +107,7 @@ In order to support CdrTabs that are rendered on non-primary backgrounds, we hav
 
 The CdrCta component has been deprecated and its functionality has been merged with CdrButton. The `sale`, `dark`, `elevated`, and right-aligned-icon styles from CdrCta have all been added as options in CdrButton. This was intended to provide more flexibility in constructing calls to action, while also adding additional styling options for rendering CdrButtons.
 
-See the [CdrButton with link tag](../components/buttons#button-with-link-tag) and [CdrButton alternative styles](../components/buttons#alternative-styles) for more information.
+See the [CdrButton with link tag](../../components/buttons#button-with-link-tag) and [CdrButton alternative styles](../../components/buttons#alternative-styles) for more information.
 
 In order to update existing instances of CdrCta to instead use CdrButton:
 - Pass the `icon-caret-left` CdrIcon into the `icon-right` slot. Note that this can be replaced with any icon, or the icon can be omitted completely.
@@ -227,7 +227,7 @@ CdrModal now renders its closing animation properly when the `scroll-behavior` o
 
 ### CdrIcon a11y Enhancements
 
-We have improved the accessibility of the CdrIcon components by moving the `role="presentation"` attribute from the root element onto the path element. The CdrIcon components now add `aria-hidden="true"` to their root element by default. The meaning of the icon should either be explained by the visible text around it, or by including screenreader-only text using the `cdr-display-sr-only` utility class or mixin. [See the CdrIcon accessibility section](../components/icons#accessibility) for more details.
+We have improved the accessibility of the CdrIcon components by moving the `role="presentation"` attribute from the root element onto the path element. The CdrIcon components now add `aria-hidden="true"` to their root element by default. The meaning of the icon should either be explained by the visible text around it, or by including screenreader-only text using the `cdr-display-sr-only` utility class or mixin. [See the CdrIcon accessibility section](../../components/icons#accessibility) for more details.
 
 ### CdrModal a11y Fix
 
