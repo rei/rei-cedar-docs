@@ -217,6 +217,12 @@ In order to support adding the [breakpoint and below media queries](#media-query
 | cdr-lg-mq        | cdr-lg-mq-up |
 
 
+## Bug Fixes
+
+### CdrModal Smooth Scroll
+
+CdrModal now renders it's closing animation properly when the `scroll-behavior` of the page is set to `smooth`.
+
 ## Breaking Changes
 
 ### CdrIcon a11y Enhancements
