@@ -221,7 +221,7 @@ In order to support adding the [breakpoint and below media queries](#media-query
 
 ### CdrModal Smooth Scroll
 
-CdrModal now renders it's closing animation properly when the `scroll-behavior` of the page is set to `smooth`.
+CdrModal now renders its closing animation properly when the `scroll-behavior` of the page is set to `smooth`.
 
 ## Breaking Changes
 
