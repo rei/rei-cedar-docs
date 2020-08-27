@@ -188,9 +188,64 @@ Create a new SVG icon using any valid SVG markup. The wrapping SVG element can b
 
 ## Accessibility
 
-To ensure that usage of this component complies with accessibility guidelines:
-- If an icon conveys meaning, there must be an `aria-label` that describes the action or idea that the icon represents
-- If an icon is decorative, use an empty `alt` attribute
+CdrIcon by default adds `aria-hidden="true"` to the root SVG element. If your usage of CdrIcon is purely decorative, or if the icon is already explained by the text surrounding it, then there are no other accessibility steps needed.
+
+- For a button that only contains an icon, add an `aria-label` to the button element describing what the button does.
+
+```
+<cdr-button :icon-only="true" aria-label="Add to Cart">
+  <icon-cart/>
+</cdr-button>
+```
+
+- For a link that only contains an icon, include screenreader-only text inside of the link element using the `cdr-display-sr-only` utility class or mixin.
+
+```
+<cdr-link href="/cart">
+  <icon-cart/><span class="cdr-display-sr-only">Go to cart page</span>
+</cdr-link>
+```
+
+For a button or link that contains text alongside an icon:
+
+- If the text provides sufficient description on it's own (for example, "Add to cart" with a cart icon) there is no need to add any additional accessible text.
+
+```
+<cdr-button>
+  <icon-cart/> Add to Cart
+</cdr-button>
+```
+
+- If the icon has meaning that is not conveyed by the text, add `aria-hidden="true"` to the icon and use the `cdr-display-sr-only` utility class or mixin to insert screenreader-only text into the button or link in the appropriate place.
+
+```
+<cdr-link>
+  <icon-check-lg/><span class="cdr-display-sr-only">Available For</span> Curbside Pickup
+</cdr-link>
+
+
+<cdr-button>
+  <icon-check-lg/><span class="cdr-display-sr-only">Available for</span> Curbside Pickup
+</cdr-button>
+```
+
+For an icon that exists outside of a link, button, or other actionable element, there are 2 ways to apply accessible text to the icon:
+
+- Include screenreader only text alongside the icon describing it's meaning. This is the simplest approach for applying accessible text to an icon and has the best support across browsers and screenreaders.
+
+```
+<icon-virtual-outfitting/>
+<span class="cdr-display-sr-only">Virtual Outfitting</span>
+```
+
+- Pass a `<title>` and `<desc>` into the default slot of the icon component, each with unique ids. Add `role="img"` and `aria-labelledby="titleid descid"` to the icon component, replacing `titleid` and `descid` with the IDs that correspond to the `<title>` and `<desc>` elements. If using CdrIcon with custom SVG, make sure title is the first child element. Note that this approach should be used to visually describe the icon as if it were an image, and should not be used to add contextual description of the icon's meaning.
+
+```
+<icon-ski role="img" aria-labelledby="skiTitle skiDesc">
+  <title id="skiTitle">Skiing</title>
+  <desc id="skiDesc">A stick figure skiing downhill</desc>
+</icon-ski>
+```
 
 <br/>
 
@@ -201,11 +256,6 @@ Recommendations for writing screen reader text:
 - Avoid technical jargon
 
 <br/>
-
-W3C recommends using `<title>` and `<desc>` elements in SVG for assistive technologies; however these elements have mixed support for screen readers as explained [here](http://haltersweb.github.io/Accessibility/svg.html). Cedar follows these recommendations by:
-- Adding `role=’presentation’` to icons. This hides them from screen readers and causes the icon to be a nested image inside of a button or a link
-- Assigning the attribute `focusable=’false’` to the SVG element
-- Using `aria-label` for buttons or Cedar’s hidden text CSS style for links
 
 <hr>
 

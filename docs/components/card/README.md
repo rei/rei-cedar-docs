@@ -86,7 +86,7 @@ Cards should always be used to link to other content, and the `cdr-card__link` u
 :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
-<cdr-card class="card-example">
+<cdr-card>
   <div>
     <cdr-img
       alt="card test image alt text"
@@ -116,6 +116,43 @@ Cards should always be used to link to other content, and the `cdr-card__link` u
 ```
 </cdr-doc-example-code-pair>
 
+## Customizing Cards
+
+Because CdrCard is a simple wrapper component, it's behavior can be customized or overridden in a variety of ways. For example, adding a border, inset padding, or modifying the link behavior.
+
+<cdr-doc-example-code-pair repository-href="/src/components/card"
+:sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {styleTag: '.custom-card-example {border: 1px solid $cdr-color-border-primary; padding: $cdr-space-inset-one-x;} .custom-card-example .cdr-card__link {&:hover {color: $cdr-color-text-sale !important;}}'})" >
+
+```html
+<cdr-card class="custom-card-example">
+  <div>
+    <cdr-img
+      alt="card test image alt text"
+      src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg"
+      modifier="responsive"
+    />
+  </div>
+  <div>
+    <cdr-link class="cdr-card__link" href="#Overview">
+      <cdr-text
+        tag="h2"
+        modifier="heading-serif-500"
+      >
+        Custom Card Title
+      </cdr-text>
+    </cdr-link>
+    <cdr-rating
+      rating="4.2"
+      count="12"
+      size="small"
+    />
+    <cdr-text modifier="body-300">
+      Card content
+    </cdr-text>
+  </div>
+</cdr-card>
+```
+</cdr-doc-example-code-pair>
 
 ## Accessibility
 
@@ -159,7 +196,7 @@ Many WCAG requirements are contextual to their implementation. To ensure that us
 
 # API
 
-## Props	
+## Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 

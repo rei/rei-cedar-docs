@@ -78,16 +78,19 @@ For more information about using design tokens, visit the [Design Tokens](../../
 
 `@rei/cdr-tokens` provides the following responsive breakpoint media queries for our patterns, components, and layouts. These provide size ranges intended to help facilitate the changing of layout at various screen widths or orientations.
 
-| Display size | Utility mixin            | Range        |
-|--------------|--------------------------|--------------|
-| Extra small  | `@include cdr-xs-mq {}`      | >= 0         |
-| Extra small  | `@include cdr-xs-mq-only {}` | 0-767px      |
-| Small        | `@include cdr-sm-mq {}`      | >= 768px     |
-| Small        | `@include cdr-sm-mq-only {}` | 768px-991px  |
-| Medium       | `@include cdr-md-mq {}`      | >= 992px     |
-| Medium       | `@include cdr-md-mq-only {}` | 992px-1199px |
-| Large        | `@include cdr-lg-mq {}`      | >= 1232px    |
-| Large        | `@include cdr-lg-mq-only {}` | >= 1232px    |
+| Display size        | Utility mixin                | Range        |
+|---------------------|------------------------------|--------------|
+| Extra Small & Above | `@include cdr-xs-mq-up {}`   | >= 0         |
+| Extra Small Only    | `@include cdr-xs-mq-only {}` | 0-767px      |
+| Below Small         | `@include cdr-sm-mq-down {}` | < 768px      |
+| Small & Above       | `@include cdr-sm-mq-up {}`   | >= 768px     |
+| Small Only          | `@include cdr-sm-mq-only {}` | 768px-991px  |
+| Below Medium        | `@include cdr-md-mq-down {}` | < 992px      |
+| Medium & Above      | `@include cdr-md-mq-up {}`   | >= 992px     |
+| Medium Only         | `@include cdr-md-mq-only {}` | 992px-1231px |
+| Below Large         | `@include cdr-lg-mq-down {}` | < 1232px     |
+| Large & Above       | `@include cdr-lg-mq-up {}`   | >= 1232px    |
+| Large Only          | `@include cdr-lg-mq-only {}` | >= 1232px    |
 
 ### Targeting the Utility Media Query with Class Names
 
@@ -120,7 +123,7 @@ However, if you want to apply a value to the example that only needed to know wh
 
 ```
 .cdr-example {
-  @include cdr-sm-mq {
+  @include cdr-sm-mq-up {
     &--small\@sm {
       key: value;
     }

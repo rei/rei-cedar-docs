@@ -82,7 +82,7 @@
                 "name": "height",
                 "type": "string",
                 "default": "240px",
-                "description": "Sets height of the tabs container element.  This is needed for managing content overflow and animations."
+                "description": "Sets height of the tabs container element. Passing a `px` value will render tabs with a static height, passing `auto` will render tabs with variable height based on content size."
               },
               {
                 "name": "activeTab",
@@ -95,6 +95,12 @@
                 "type": "string",
                 "default": "N/A",
                 "description": "Modifies the style variants for this component. Possible values: {  'centered'  |  'compact'  |  'full-width'  |  'no-border'  }"
+              },
+              {
+                "name": "backgroundColor",
+                "type": "string",
+                "default": "$cdr-color-background-primary",
+                "description": "For CdrTabs that are rendered on non-primary backgrounds. Pass the background-color into the component to ensure that the scrolling gradients render correctly."
               }
             ],
             "events": [
@@ -242,6 +248,28 @@ Tabs using the `active-tab` property to make the third element active on page lo
   <cdr-tab-panel name="Articles" id="articles-tab-panel" aria-labelledby="articles-tab">Tab 2 Content</cdr-tab-panel>
   <cdr-tab-panel name="Classes & Events" id="classes-tab-panel" aria-labelledby="classes-tab">Tab 3 Content</cdr-tab-panel>
   <cdr-tab-panel name="Videos" id="videos-tab-panel" aria-labelledby="videos-tab">Tab 4 Content</cdr-tab-panel>
+</cdr-tabs>
+```
+
+</cdr-doc-example-code-pair>
+
+## Auto
+
+Tabs using `height="auto"` to render with variable height based on content size.
+
+<cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false">
+
+```html
+<cdr-tabs height="auto">
+  <cdr-tab-panel name="Product" id="product-tab-panel" aria-labelledby="product-tab">
+    Tab 1 Content
+  </cdr-tab-panel>
+  <cdr-tab-panel name="Articles" id="articles-tab-panel" aria-labelledby="articles-tab">
+    Tab 2 Content. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique quis quae excepturi odit fugit commodi, molestiae eaque architecto dignissimos.
+  </cdr-tab-panel>
+  <cdr-tab-panel name="Classes & Events" id="classes-tab-panel" aria-labelledby="classes-tab">
+    Tab 3 Content
+  </cdr-tab-panel>
 </cdr-tabs>
 ```
 

@@ -14,7 +14,7 @@ components: { App },
 template: "<App/>"
 });`;
 
-export default function makeMeASandbox(data, model) {
+export default function makeMeASandbox(data, model, computed, methods) {
   // TODO: can we grab the preceding heading to use for name/title?
   const name = "Cedar Example Sandbox";
 
@@ -24,7 +24,7 @@ export default function makeMeASandbox(data, model) {
         content: INDEX_JS,
       },
       'App.vue': {
-        content: buildContent(data, model)
+        content: buildContent(data, model, computed, methods)
       },
       'package.json': {
         content: {
@@ -68,7 +68,7 @@ function buildIndexHtml(title) {
   </html>`;
 }
 
-function buildContent(data, model, fontImport) {
+function buildContent(data, model, computed, methods) {
   return `
 <template>
   <div class="example-root">
@@ -78,7 +78,7 @@ function buildContent(data, model, fontImport) {
 </template>
 
 <script>
-  ${buildScriptTag(data, model)}
+  ${buildScriptTag(data, model, computed, methods)}
 </script>
 
 <style lang="scss">
@@ -88,8 +88,16 @@ function buildContent(data, model, fontImport) {
 </style>`;
 }
 
-function buildScriptTag(data, model) {
+function buildScriptTag(data, model, computed, methods) {
   const componentsImport = `import { ${data.components} } from "@rei/cedar/dist/cedar.mjs"; // NOTE: importing from '@rei/cedar/dist/cedar.mjs' to bypass a codesandbox bug. Please import from '@rei/cedar' in your code.`;
+  const spriteString = 'svgSprite, ';
+
+  let stringModel = model ? JSON.stringify(model) : "{}";
+
+  // Insert sprite string into model data
+  if (data.loadSprite) {
+    stringModel = stringModel.slice(0, 1) + spriteString + stringModel.slice(1);
+  }
 
   return `
 ${data.components ? componentsImport : ''}
@@ -101,8 +109,16 @@ export default {
     ${data.components ? data.components : ''}
   },
   data() {
-    return ${model ? JSON.stringify(model) : "{}"}
+    return ${stringModel}
   },
-  ${data.loadSprite ? 'computed: { svgSprite() { return svgSprite; } }' : ''}
+  ${computed ? `computed: ${stringifyFunctionObject(computed)},` : ''}
+  ${methods ? `methods: ${stringifyFunctionObject(methods)},` : ''}
 };`
+}
+
+function stringifyFunctionObject(obj) {
+  const funcs = Object.keys(obj).map((key) => {
+    return `${key}: ${obj[key].toString()}`
+  })
+  return `{${funcs.join(',\n ')}}`
 }

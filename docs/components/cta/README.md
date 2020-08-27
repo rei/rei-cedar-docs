@@ -155,6 +155,10 @@
 
 <cdr-doc-table-of-contents-shell>
 
+<br>
+
+<cdr-doc-alert icon="warning">CdrCTA has been deprecated and it's functionality has been merged into the <cdr-link href="../buttons/#alternative-styles">CdrButton component</cdr-link>. See <cdr-link href="../../release-notes/summer-2020/#cdrcta-deprecated-and-merged-with-cdrbutton">the summer 2020 release notes</cdr-link> for details on migrating.</cdr-doc-alert>
+
 # Overview
 ## Dark
 

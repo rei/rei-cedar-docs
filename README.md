@@ -43,4 +43,6 @@ If your examples make use of CdrIcon, you can pass `:load-sprite="true"` in orde
 
 If your examples depend on a `model` being available to the component, you can pass that directly into the object: `<cdr-doc-example-code-pair :sandbox-data="$page.frontmatter.sandboxData" :model="{foo: true}">`
 
+Function objects can be added to the `methods` and `computed` properties of the component as well. Note that `window` functions will not be available within these functions (i.e, setTimeout, console.log, alert): `<cdr-doc-example-code-pair :sandbox-data="$page.frontmatter.sandboxData" :model="{foo: true}" :computed="{foo() {return this.foo ? 'bar' : 'baz';}}" :methods="{blah() {this.foo = false;}}">`
+
 If you need to override the properties of the frontmatter object for a single example, you can do that with an inline `Object.assign`: `<cdr-doc-example-code-pair :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {styleTag: '.no-box:checked ~ .no-box__content {color: green;}'})">`

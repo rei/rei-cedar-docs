@@ -83,12 +83,9 @@ Use space tokens if you want to apply the Cedar spacing convention within your s
 
 ### Utility Classes
 
-Use the space utility classes if you want to apply the Cedar spacing convention within your markup instead of in stylesheets. For a list of utility classes, visit [CSS Utility Class](../../components/utilities/).
+Use the space utility classes if you want to apply the Cedar spacing convention within your markup instead of in stylesheets. Note that the size of the space utility file is over 50kb, which may have an impact on your project if it is performance constrained. For customer facing projects we recommend using [tokens](./#tokens) to apply spacing as that will result in the smallest bundle size. For a list of utility classes, visit [CSS Utility Class](../../components/utilities/).
 
-### Space Prop
-Some of the Cedar components will allow the application of Cedar space through a prop. Details on how to use the space prop can be found within that particular component API. Note that if the space prop is not documented, then that means it is not available for that component. In that case, you should use either the space utility classes or the space tokens.  
-
-## Space Utility Class Usage
+#### Space Utility Class Usage
 
 The Cedar space utility classes enable you to add padding to a custom container,
 and / or provide margin to push one piece of content away from another.  
@@ -97,14 +94,14 @@ Cedar space utility classes can be applied using the following format:
 
 `Cdr-{property}{direction}-space-{token}@{breakpoint}`
 
-### Property
+##### Property
 
 The property applies the type of spacing:
 
 -  `m` - applies `margin`
 -  `p` - applies `padding`
 
-### Direction
+##### Direction
 
 The direction designates the side the property applies to:
 
@@ -115,7 +112,7 @@ The direction designates the side the property applies to:
 -  `x` - applies the spacing for `*-right` and `*-left`
 -  `t` - applies the spacing for `*-top` and `*-bottom`
 
-### Spacing Tokens for Generic Utility Class
+##### Spacing Tokens for Generic Utility Class
 
 The following are the available spacing token values:
 
@@ -131,7 +128,7 @@ The following are the available spacing token values:
 | cdr-space-four-x           | 64px         | 6.4rem     |
 
 
-### Spacing Example
+##### Spacing Example
 
 An example of setting the generic space classes:
 
@@ -155,7 +152,7 @@ An example of setting the generic space classes:
 
 For a full list of space utility classes, see the [CSS Utility Class](../../components/utilities/) documentation.
 
-### Breakpoint (Optional)
+##### Breakpoint (Optional)
 
 Sometimes your content may need to be spaced differently at specific breakpoints. To accommodate such different spacing needs, spacing utilities are available at each of our defined breakpoints by concatenating the ‘@’ symbol with the desired breakpoint to the end of the class name.
 

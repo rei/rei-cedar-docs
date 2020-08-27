@@ -139,7 +139,7 @@
                 "name": "modifier",
                 "type": "string",
                 "default": "N/A",
-                "description": "Modifies the style variant for this component. Possible values: { 'secondary' }"
+                "description": "Modifies the style variant for this component. Possible values: { 'primary' | 'secondary' | 'sale' | 'dark' | 'link'}"
               }                          
             ],
             "slots": [
@@ -149,7 +149,15 @@
               },
               {
                 "name": "icon",
-                "description": "Sets the innerHTML for CdrButton. This is for the icon."
+                "description": "Sets the innerHTML for CdrButton icon-only button."
+              },
+              {
+                "name": "icon-left",
+                "description": "Sets the innerHTML for CdrButton with icon to the left of text content."
+              },
+              {
+                "name": "icon-right",
+                "description": "Sets the innerHTML for CdrButton with icon to the right of text content."
               }
             ],
             "events": [
@@ -168,8 +176,8 @@
       "text": "See Also",
     },
     {
-      "text": "Call to Action",
-      "href": "../cta/"
+      "text": "Links",
+      "href": "../links/"
     }
   ]
 }
@@ -207,6 +215,35 @@ Use secondary buttons for all actions that do not move the user to the next step
 
 </cdr-doc-example-code-pair>
 
+## Alternative Styles
+
+Use `sale` or `dark` for alternative button styling.
+
+<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" >
+
+```html
+  <cdr-button modifier="sale">Buy now</cdr-button>
+  <cdr-button modifier="sale" disabled>Buy now</cdr-button>
+  <cdr-button modifier="dark">Add to wish list</cdr-button>
+  <cdr-button modifier="dark" disabled>Add to wish list</cdr-button>
+```
+
+</cdr-doc-example-code-pair>
+
+## Link Style
+
+Use `link` modifier to render a button that is styled like a CdrLink. This can be used to create links with the padding and sizing options of a button. Can be used with the `tag` property set to the default `"button"` or `"a"`. For rendering a link inline with text, use [CdrLink](../links). To render a button that behaves like a link, use a [CdrButton with link tag](#button-with-link-tag).
+
+<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" >
+
+```html
+  <cdr-button modifier="link">Buy now</cdr-button>
+  <br/>
+  <cdr-button modifier="link" tag="a" href="#">View cart</cdr-button>
+```
+
+</cdr-doc-example-code-pair>
+
 ## Text and Icon
 
 Pair an icon with text to improve recognition about an object or action.
@@ -219,8 +256,7 @@ Pair an icon with text to improve recognition about an object or action.
       modifier="secondary"
     >
       <IconPlayStroke
-        slot="icon"
-        class="cdr-button__icon"
+        slot="icon-left"
         inherit-color
       />
       Play video
@@ -230,8 +266,7 @@ Pair an icon with text to improve recognition about an object or action.
       disabled
     >
       <IconPlayStroke
-        slot="icon"
-        class="cdr-button__icon"
+        slot="icon-left"
         inherit-color
       />
       Play video
@@ -255,7 +290,6 @@ Use icons to visually communicate an object or action in a limited space. Includ
     >
       <IconQuestionFill
         slot="icon"
-        class="cdr-button__icon"
         inherit-color
       />
     </cdr-button>
@@ -279,13 +313,27 @@ Use `with-background` property in conjunction with the `icon-only` property to m
     >
       <IconAccountProfile
         slot="icon"
-        class="cdr-button__icon"
       />
     </cdr-button>
   </div>
 ```
 
 </cdr-doc-example-code-pair>
+
+## Stateful Button
+
+For buttons that trigger asynchronous actions, use the `click` event and dynamic properties in order to change the label or state of a button.
+
+<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" :model="{isLoading: false}">
+
+```html
+<cdr-button :disabled="isLoading" @click="isLoading = true">
+  {{isLoading ? 'Loading...' : 'Add to cart'}}
+</cdr-button>
+```
+
+</cdr-doc-example-code-pair>
+
 
 ## Full Width
 
@@ -304,9 +352,27 @@ Displays at full width of its container.
 
 </cdr-doc-example-code-pair>
 
+
+## Button With Link Tag
+
+For a CdrButton that looks like a button but behaves like a link, set `tag="a"` and pass an `href`.
+
+<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrButton, IconCaretRight'})" >
+
+```html
+  <cdr-button
+    tag="a"
+    href="#"
+  >
+    Call To Action
+  </cdr-button>
+```
+
+</cdr-doc-example-code-pair>
+
 ## Sizing
 
-Change the button size based on where the button is used. The default size is medium. Small is used for supplemental user actions such as product comparison or filter. Large is used for &quot;Add to cart&quot; on product pages or for [Call to Action](../cta/).
+Change the button size based on where the button is used. The default size is medium.
 
 <cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" >
 
@@ -321,7 +387,7 @@ Change the button size based on where the button is used. The default size is me
 </cdr-doc-example-code-pair>
 
 ## Accessibility
-Many WCAG requierments are contextual to their implementation.
+Many WCAG requirements are contextual to their implementation.
 To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
 
 - For icon-only buttons, provide `aria-label` text that describes the button's action
@@ -330,7 +396,17 @@ To ensure that usage of this component complies with accessibility guidelines yo
 - If the button is a toggle button, it has an `aria-pressed` state. When the button is toggled on, the value of this state is true, and when toggled off, the state is false.
 - If the button action indicates a context change, such as move to next step in a wizard or add another search criteria, then it is often appropriate to move focus to the starting point for that action.
 - Apply keyboard interaction patterns as described on [REI universal design and accessibility: Buttons](https://confluence.rei.com/display/accessibility/Buttons)
-
+- Clearly and concisely describe the button's action or destination when the button is clicked or tapped:
+  - For example, if the button text is "Shop now", the `aria-label` might read: "Shop our &lt;specific advertising category&gt; now"
+- Avoid using "click here" or "start here" for buttons. If screen space for text is minimal:
+  - Provide text that can be read by screen readers
+  - Use an inline element for hidden text with the `cdr-sr-only` class
+  ```vue
+  <cdr-cta>
+    Start here <span class="cdr-sr-only">for help finding the proper sleeping bag</span>
+  </cdr-cta>
+  ```
+- For buttons with the `tag` set to `"a"`, always providing an `href` attribute. Empty `href` attributes are not considered true links
 <br />
 
 This component has no specific WCAG compliance attributes built into the control. It is possibile to define this component as a link or button:
@@ -351,18 +427,20 @@ This component has no specific WCAG compliance attributes built into the control
 - Progressing or regressing a user through a step in a flow
 - Submitting requested information
 - Confirming the completion of a flow or cancelling out of it
+- Use `tag="a"` and `href` when navigating to another page on the site
 
 ## Don't Use When
 
-- Navigating to another page on a site. Instead use [Call to Action](../cta/)
 - Taking users to a different part within the same page. Instead, use [Links](../links/)
 
 ## The Basics
 
-Buttons sizes are used:
-  - **Small:** Supplemental user actions such as product comparison or filter on product pages
-  - **Medium:** Default size
-  - **Large:** Mobile version for XS grid with full breakpoint width. Also, for &quot;Add to cart&quot; on product pages or for [Call to Action](../cta/) on campaign pages
+Three button sizes are available: Small, Medium, and Large. Medium is the default size.
+<br />
+Generally, buttons should be sized based on their content and used to convey the importance of actions.
+  - Use Large buttons for primary page actions
+  - Use Small buttons for supplemental user actions
+  - For Mobile screens using XS grid, use Large buttons set to full width
 
 <br />
 
@@ -394,15 +472,21 @@ When grouping buttons, match button sizes either horizontally or vertically.
 
 <br />
 
+
 ## Content
 
   - Clearly and concisely label with 1–3 words and fewer than 20 characters, including spaces
-
   - Start with a verb, if possible. Labels must be action-oriented and set expectations for what the user will see next
-
   - Never repeat the context of a label when the context is already clear. For example, for a &quot;Save&quot; button, do not expand to &quot;Save Account Information&quot;
-
   - Use sentence case. Do not use all caps, title caps, or all lowercase
+
+  <br />
+
+To construct consistent and universal Calls to Action across the site:
+
+- If leading to a Brand, Category, or Activity Landing page, UI text for Call to Action should be **Explore Brand/Category/Activity Name**
+- If leading to a Product Detail page, UI text for Call to Action should be **Shop product name**
+- If leading to a Collection or search result, UI text for Call to Action should be **Shop all Brand/Category/Activity Name**
 
 ### Do / Don't
 
@@ -435,6 +519,7 @@ Apply the following use cases when deciding when to use links as anchors or butt
 | Changing the URL                                                                                    | Opening a modal window                                                               |
 | Causing a browser redraw or refresh                                                                    | Triggering a popup menu                                                              |
 | Supporting internal page jumps                                                                      | Can be disabled with disabled attribute                                              |
+
 
 ## Resources
 
@@ -477,7 +562,10 @@ The following variants are available to the `cdr-button` modifier attribute:
 
 | Value | Description            |
 |:------|:-----------------------|
+| 'primary' | Sets the primary style for the button |
 | 'secondary' | Sets the secondary style for the button |
+| 'sale' | Sets the sale style for the button |
+| 'dark' | Sets the dark style for the button |
 
 
 ### Click Actions
@@ -511,7 +599,7 @@ export default {
 
 ### Text and Icon
 
-To scale Cedar icons appropriately, include the `cdr-button__icon` class with any icon component. The `size` prop scales both the icon and the button.
+To scale Cedar icons appropriately, use the `icon-left` or `icon-right` slots to ensure the proper styles are applied. The `size` prop scales both the icon and the button.
 
 In the below example, a "Download" button is rendered as a button with icon and text using and inline Cedar icon component.
 
@@ -519,8 +607,7 @@ In the below example, a "Download" button is rendered as a button with icon and 
 <template>
   <cdr-button>
     <IconDownload
-      slot="icon"
-      class="cdr-button__icon"
+      slot="icon-left"
     />
     Download
   </cdr-button>
@@ -556,7 +643,6 @@ Use the following props to modify `cdr-button`:
   >
     <icon-check-lg
       slot="icon"
-      class="cdr-button__icon"
     />
   </cdr-button>
 </template>
