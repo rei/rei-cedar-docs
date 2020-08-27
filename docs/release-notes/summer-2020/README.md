@@ -6,7 +6,7 @@
   "summary": false,
   "breadcrumbs": [
     {
-      "text": "x.x.x Release Notes"
+      "text": "6.x.x Release Notes"
     }
   ],
 }
