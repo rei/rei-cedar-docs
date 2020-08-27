@@ -1,6 +1,6 @@
 {
   "name": "rei-cedar-docs",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "This is the API documentation site for REI Cedar 2 Framework components",
   "private": false,
   "scripts": {
@@ -25,8 +25,8 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.11.0",
-    "@rei/cdr-component-variables": "^4.0.0-alpha.0",
-    "@rei/cedar-icons": "^2.0.0-alpha.1",
+    "@rei/cdr-component-variables": "^4.0.0",
+    "@rei/cedar-icons": "^2.0.0",
     "@vuepress/plugin-google-analytics": "^1.5.3",
     "codesandbox": "^2.1.16",
     "cross-env": "^7.0.2",
@@ -39,8 +39,8 @@
   "dependencies": {
     "@babel/runtime": "^7.11.2",
     "@babel/runtime-corejs3": "^7.11.2",
-    "@rei/cdr-tokens": "^5.0.0-alpha.2",
-    "@rei/cedar": "^6.0.0-beta.3",
+    "@rei/cdr-tokens": "^5.0.0",
+    "@rei/cedar": "^6.0.0",
     "throttle-debounce": "^2.3.0"
   },
   "browserslist": [
