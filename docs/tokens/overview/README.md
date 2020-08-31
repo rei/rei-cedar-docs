@@ -67,8 +67,8 @@ Design Tokens can be used by teams:
 
 
 ### Don't Use When
-- Don’t use design tokens to make modifications to an existing component. **Instead,** submit a request using the [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC) for an existing component
-- Don’t use design tokens to only access a value or values. **Instead,** create a new token in the [shared-tokens repo](https://git.rei.com/projects/FEDPACK/repos/shared-tokens/browse) that meets your specific semantic use case
+- Don’t use design tokens to make modifications to an existing Cedar component. **Instead,** submit a request using the [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC) for an existing component
+- Don’t use design tokens to only access a value or values when the token name does not match it's application (for example, don't use a 'color-background-button' token to style a border or an element that is not a button). **Instead** create a local variable in your project or hardcode the desired value.
 
 
 Questions about when to use design tokens? Ask the Cedar team in [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4)
@@ -299,7 +299,7 @@ LESS example:
 
 JavaScript example:
 ```js
-import { CdrBreakpointLg } from '@rei/cdr-tokens/dist/js/cdr-tokens.esm.js'; /* import the design tokens file */
+import { CdrBreakpointLg } from '@rei/cdr-tokens'; /* import the design tokens file */
 
 let screenWidth = window.outerWidth || 0;
 
@@ -316,7 +316,7 @@ This repository follows SEMVER practices and will notify users of changes and up
 
 ## Adding Design Tokens to the Repository
 
-If you have a request for a design token that is missing from the [Cedar Tokens](../../tokens/all-tokens/) list, you can submit a request using the [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC) or create a design token in the [shared-tokens repo](https://git.rei.com/projects/FEDPACK/repos/shared-tokens/browse) for future integration in Cedar.
+If you have a request for a design token that is missing from the [Cedar Tokens](../../tokens/all-tokens/) list you can submit a request using the [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC).
 
 
 Ensure that the design token meets the following requirements:
