@@ -21,7 +21,7 @@
 | package name | version |
 |--------------|---------|
 | `@rei/cedar` | ^6.x.x |
-| `@rei/cdr-tokens` | ^5.x.x |
+| `@rei/cdr-tokens` | ^6.x.x |
 | `@rei/cdr-component-variables` | ^4.x.x |
 | `@rei/cedar-icons` | ^2.x.x |
 
@@ -255,6 +255,18 @@ We have also updated the Cedar icon components with the following breaking chang
 | IconWarningTri     | IconWarningFill    |
 | n/a                | IconWarningStroke  |
 
+### CdrTokens JS Naming Format
+
+In version 6.x.x of @rei/cdr-tokens we updated the naming format for the CJS output to be `PascalCase` so that it matches the formatting of the ESM output. This was done to ensure that CJS and ESM interoperability works properly. Note that loading the CJS output of tokens directly is not recommended as it results in the entire tokens object being imported.
+
+```
+// CJS import
+var tokens = require('@rei/cdr-tokens');
+var CdrColorTextPrimary = tokens.CdrColorTextPrimary;
+
+// ESM import
+import { CdrColorTextPrimary } from '@rei/cdr-tokens';
+```
 
 ### Removals
 
