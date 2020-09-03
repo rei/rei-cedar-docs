@@ -16,24 +16,26 @@
 
 ## Update Steps
 
-### For a Micro-Site
+- Update to the latest version of the Cedar packages:
 
-- Update to `@rei/cedar` ^x.0.0
-- If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar and febs before updating your micro-site.
+| package name | version |
+|--------------|---------|
+| `@rei/cedar` | ^x.x.x |
+| `@rei/cdr-tokens` | ^x.x.x |
+| `@rei/cdr-component-variables` | ^x.x.x |
+| `@rei/cedar-icons` | ^x.x.x |
 
-### For a Component Package
-
-- Update to `@rei/cedar` ^x.0.0
+- If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your micro-site.
 
 ## New Features
 
 ## Bug Fixes
 
-## Breaking Changes
-
 ## Deprecations
 
-## Removals
+## Breaking Changes
+
+### Removals
 
 In accordance with our deprecation policy, features that were deprecated in the [2RELEASESAGO release](../winter-2020/#deprecations) have been removed from Cedar.
 
