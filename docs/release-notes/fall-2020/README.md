@@ -1,12 +1,12 @@
 ---
 {
-  "title": "SEASON YYYY Release",
+  "title": "Fall 2020 Release",
   "title_metadata": false,
   "layout_type": "LayoutArticle",
   "summary": false,
   "breadcrumbs": [
     {
-      "text": "x.x.x Release Notes"
+      "text": "7.x.x Release Notes"
     }
   ],
 }
@@ -20,7 +20,7 @@
 
 | package name | version |
 |--------------|---------|
-| `@rei/cedar` | ^x.x.x |
+| `@rei/cedar` | ^7.x.x |
 | `@rei/cdr-tokens` | ^x.x.x |
 | `@rei/cdr-component-variables` | ^x.x.x |
 | `@rei/cedar-icons` | ^x.x.x |
@@ -28,6 +28,14 @@
 - If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your micro-site.
 
 ## New Features
+
+### CdrTooltip Component
+
+TODO:
+
+### CdrPopover Component
+
+TODO:
 
 ## Bug Fixes
 
@@ -37,7 +45,7 @@
 
 ### Removals
 
-In accordance with our deprecation policy, features that were deprecated in the [2RELEASESAGO release](../winter-2020/#deprecations) have been removed from Cedar.
+In accordance with our deprecation policy, features that were deprecated in the [Spring 2020 release](../spring-2020/#deprecations) have been removed from Cedar.
 
 TODO: remove these and document what they were
 

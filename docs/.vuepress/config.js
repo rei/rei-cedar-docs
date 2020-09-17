@@ -57,6 +57,7 @@ module.exports = {
       {
         text: "Release Notes",
         items: [
+          { text: "Fall 2020", link: "/release-notes/fall-2020/" },
           { text: "Summer 2020", link: "/release-notes/summer-2020/" },
           { text: "Spring 2020", link: "/release-notes/spring-2020/" },
           { text: "Winter 2020", link: "/release-notes/winter-2020/" },
@@ -130,13 +131,15 @@ module.exports = {
           { text: "Lists", link: "/components/lists/" },
           { text: "Modal", link: "/components/modal/" },
           { text: "Pagination", link: "/components/pagination/" },
+          { text: "Popover", link: "/components/popover/" },
           { text: "Pull Quote", link: "/components/pull-quote/" },
           { text: "Radio Buttons", link: "/components/radio/" },
           { text: "Ratings", link: "/components/rating/" },
           { text: "Select", link: "/components/selects/" },
           { text: "Table", link: "/components/table/" },
           { text: "Tabs", link: "/components/tabs/" },
-          { text: "Text", link: "/components/text/" }
+          { text: "Text", link: "/components/text/" },
+          { text: "Tooltip", link: "/components/tooltip/" }
         ]
       },
       {
