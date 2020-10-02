@@ -86,9 +86,9 @@
             ],
             "events": [
               {
-                  "name": "closed",
-                  "arguments": "event",
-                  "description": "$emit event fired when closing the modal."
+                "name": "closed",
+                "arguments": "event",
+                "description": "$emit event fired when closing the modal."
               }
             ]
           }
