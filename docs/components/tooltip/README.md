@@ -54,6 +54,11 @@
                 "default": "true",
                 "description": "If set to `true`, tooltip will attempt to dynamically set it's position to ensure it renders within the visible browser window. If `false` the tooltip will always render in the provided `position`."
               },
+              {
+                "name": "contentClass",
+                "type": "string",
+                "description": "Adds a custom class to the tooltip content wrapper. Allows for overriding it's size, styling, etc."
+              },
             ],
             "slots": [
               {

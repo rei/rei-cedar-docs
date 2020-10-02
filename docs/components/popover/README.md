@@ -55,6 +55,11 @@
                 "default": "true",
                 "description": "If set to `true`, popover will attempt to dynamically set it's position to ensure it renders within the visible browser window. If `false` the popover will always render in the provided `position`."
               },
+              {
+                "name": "contentClass",
+                "type": "string",
+                "description": "Adds a custom class to the popover content wrapper. Allows for overriding it's size, styling, etc."
+              },
             ],
             "slots": [
               {
