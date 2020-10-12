@@ -135,9 +135,43 @@ The naming structure for component variables and mixins is as follows:
 
 <br>
 
+## Usage
+
+### Install
+
+The component variables inherit values from the Cedar design tokens, so you will need to install both packages and keep them in sync when updating:
+
+`npm install --save-dev @rei/cdr-tokens @rei/cdr-component-variables`
+
+### Usage
+
+SCSS example:
+```
+@import '@rei/cdr-tokens/dist/scss/cdr-tokens.scss'; /* import the tokens file */
+@import '@rei/cdr-component-variables/dist/scss/index.scss'; /* import the component variables */
+
+.your-button-class {
+  /* use mixins to apply many properties at once */
+  @include cdr-button-base-mixin;
+  @include cdr-button-primary-mixin;
+}
+```
+
+LESS example:
+```
+@import '@rei/cdr-tokens/dist/less/cdr-tokens.less'; /* import the tokens file */
+@import '@rei/cdr-component-variables/dist/less/index.less'; /* import the component variables */
+
+.your-button-class {
+  /* use mixins to apply many properties at once */
+  .cdr-button-base-mixin();
+  .cdr-button-primary-mixin();
+}
+```
+
 ## Resources
 
-For more information on installing and using component variables in your project, view the [README.md on GitHub](https://github.com/rei/rei-cedar-component-variables). Additional examples and a list of supported components are located on the [cedar-component-variables doc site](
+Additional examples and a list of supported components are located on the [cedar-component-variables doc site](
 https://rei.github.io/rei-cedar-component-variables/#/).  There is also a [CodeSandbox](https://codesandbox.io/s/qkwn78nw99) set up for testing out the component variables.
 
 Questions about when to use component variables? Ask the Cedar team in [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4)
