@@ -35,6 +35,7 @@ For example, you can import the styling for a Cedar primary button component usi
 }
 ```
 
+Test out what you can do with the component variables in this [CodeSandbox](https://codesandbox.io/s/qkwn78nw99).
 
 ### Contract of Intent
 
@@ -143,8 +144,6 @@ The component variables inherit values from the Cedar design tokens, so you will
 
 `npm install --save-dev @rei/cdr-tokens @rei/cdr-component-variables`
 
-### Usage
-
 SCSS example:
 ```
 @import '@rei/cdr-tokens/dist/scss/cdr-tokens.scss'; /* import the tokens file */
@@ -169,10 +168,9 @@ LESS example:
 }
 ```
 
-## Resources
+### Examples
 
-Additional examples and a list of supported components are located on the [cedar-component-variables doc site](
-https://rei.github.io/rei-cedar-component-variables/#/).  There is also a [CodeSandbox](https://codesandbox.io/s/qkwn78nw99) set up for testing out the component variables.
+<component-variables-page />
 
 Questions about when to use component variables? Ask the Cedar team in [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4)
 
