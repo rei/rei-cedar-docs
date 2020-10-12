@@ -27,8 +27,9 @@
 
 - If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your micro-site.
 
-## 6.0.1
+## 6.1.0
 
+- Adds new `IconMap` component.
 - Removes deprecated media query mixin from `cdr-container` mixin.
 - Includes correct `cdr-container` mixins in LESS output.
 - Removes `min-height` value on table cells.
