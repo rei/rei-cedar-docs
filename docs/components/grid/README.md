@@ -98,31 +98,31 @@
                 "name": "cols",
                 "type": "string",
                 "default": "N/A",
-                "description": "Number of equal-width columns in the row; however the value of ‘auto’ will size columns as wide as the column’s content. Possible values: {  ‘1’  through  ‘12’  |  ‘auto’  }.  Also accepts responsive values @breakpoint: ‘2 4@md’."
+                "description": "Number of equal-width columns in the row; however the value of ‘auto’ will size columns as wide as the column’s content. Possible values: {  ‘1’  through  ‘12’  |  ‘auto’  }.  Also accepts responsive values @breakpoint: ‘2 4@md’. Note that responsive modifiers for grid apply at the given breakpoint and above."
               },
               {
                 "name": "justify",
                 "type": "string",
                 "default": "N/A",
-                "description": "Justify columns within a row. See CSS Flexbox justify-content. Possible values: {  ‘left’  |  ‘center’  |  ‘right’  |  ‘around’  |  ‘between’  }. Also accepts responsive values @breakpoint: ‘center right@lg’."
+                "description": "Justify columns within a row. See CSS Flexbox justify-content. Possible values: {  ‘left’  |  ‘center’  |  ‘right’  |  ‘around’  |  ‘between’  }. Also accepts responsive values @breakpoint: ‘center right@lg’. Note that responsive modifiers for grid apply at the given breakpoint and above."
               },
               {
                 "name": "align",
                 "type": "string",
                 "default": "N/A",
-                "description": "Align columns of different heights. See CSS Flexbox align-items. Possible values: {  ‘top’  |  ‘middle’  |  ‘bottom’  |  ‘stretch’  }. Also accepts responsive values @breakpoint:  ‘top middle@sm’."
+                "description": "Align columns of different heights. See CSS Flexbox align-items. Possible values: {  ‘top’  |  ‘middle’  |  ‘bottom’  |  ‘stretch’  }. Also accepts responsive values @breakpoint:  ‘top middle@sm’. Note that responsive modifiers for grid apply at the given breakpoint and above."
               },
               {
                 "name": "gutter",
                 "type": "string",
                 "default": "N/A",
-                "description": "Defines gutter size. Default gutter size is 16px for @xs and @sm and 32px for @md and @lg. Possible values: {  ‘none’  |  ‘xxs’  }. Also accepts responsive values @breakpoint:  none@md’."
+                "description": "Defines gutter size. Default gutter size is 16px for @xs and @sm (small) and 32px for @md and @lg (medium). Possible values: {  ‘none’  |  ‘xxs’ | 'small' | 'medium' }. Also accepts responsive values @breakpoint:  none@md’. Note that responsive modifiers for grid apply at the given breakpoint and above."
               },
               {
                 "name": "vertical",
                 "type": "string",
                 "default": "N/A",
-                "description": "Changes row to a column layout. See CSS Flexbox flex-direction. Possible values: {  ‘vertical’  }. Also accepts responsive values @breakpoint:  vertical@md’."
+                "description": "Changes row to a column layout. See CSS Flexbox flex-direction. Possible values: {  ‘vertical’  }. Also accepts responsive values @breakpoint:  vertical@md’. Note that responsive modifiers for grid apply at the given breakpoint and above."
               },
               {
                 "name": "wrap",
@@ -134,7 +134,7 @@
                 "name": "nowrap",
                 "type": "string",
                 "default": "N/A",
-                "description": "Disables row wrapping and enables overflow scrolling. See CSS Flexbox flex-wrap. Possible values: {  ‘nowrap’  }. Also accepts responsive values with @breakpoint: ‘nowrap@md’."
+                "description": "Disables row wrapping and enables overflow scrolling. See CSS Flexbox flex-wrap. Possible values: {  ‘nowrap’  }. Also accepts responsive values with @breakpoint: ‘nowrap@md’. Note that responsive modifiers for grid apply at the given breakpoint and above."
               },
               {
                 "name": "type",
@@ -165,19 +165,19 @@
                 "name": "offsetLeft",
                 "type": "string",
                 "default": "N/A",
-                "description": "Adds up to 12 columns of empty space to left of an individual column. Possible values: {  ‘1’  through  ‘12’  }. Also accepts responsive values with @breakpoint: ‘12 8@lg’."
+                "description": "Adds up to 12 columns of empty space to left of an individual column. Possible values: {  ‘1’  through  ‘12’  }. Also accepts responsive values with @breakpoint: ‘12 8@lg’. Note that responsive modifiers for grid apply at the given breakpoint and above."
               },
               {
                 "name": "offsetRight",
                 "type": "string",
                 "default": "N/A",
-                "description": "Adds up to 12 columns of empty space to right of an individual column. Possible values: {  ‘1’  through  ‘12’  }. Also accepts responsive values with @breakpoint: ‘12 8@lg’."
+                "description": "Adds up to 12 columns of empty space to right of an individual column. Possible values: {  ‘1’  through  ‘12’  }. Also accepts responsive values with @breakpoint: ‘12 8@lg’. Note that responsive modifiers for grid apply at the given breakpoint and above."
               },
               {
                 "name": "alignSelf",
                 "type": "string",
                 "default": "N/A",
-                "description": "Aligns individual column by overriding CdrRow alignment. See CSS Flexbox align-self. Possible values: {  ‘top’  |  ‘middle’  |  ‘bottom’  |  ‘stretch’  }. Also accepts responsive values with @breakpoint: ‘middle@sm’."
+                "description": "Aligns individual column by overriding CdrRow alignment. See CSS Flexbox align-self. Possible values: {  ‘top’  |  ‘middle’  |  ‘bottom’  |  ‘stretch’  }. Also accepts responsive values with @breakpoint: ‘middle@sm’. Note that responsive modifiers for grid apply at the given breakpoint and above."
               },
               {
                 "name": "isRow",
@@ -536,6 +536,40 @@ Defines gutter size for all columns on a row and maintains gutter size by breakp
 ```html
 <div class="grid-example-wrap">
   <cdr-row cols="3" gutter="none">
+    <cdr-col>
+      <div class="grid-example">content</div>
+    </cdr-col>
+    <cdr-col>
+      <div class="grid-example">content</div>
+    </cdr-col>
+    <cdr-col>
+      <div class="grid-example">content</div>
+    </cdr-col>
+    <cdr-col>
+      <div class="grid-example">content</div>
+    </cdr-col>
+    <cdr-col>
+      <div class="grid-example">content</div>
+    </cdr-col>
+    <cdr-col>
+      <div class="grid-example">content</div>
+    </cdr-col>
+  </cdr-row>
+</div>
+```
+
+</cdr-doc-example-code-pair>
+
+
+### Custom
+
+Responsive modifiers for grid apply to a given breakpoint and up, to customize the behavior at the xs breakpoint set a value as the default and override it at the other breakpoints.
+
+<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+
+```html
+<div class="grid-example-wrap">
+  <cdr-row cols="3" gutter="none xxs@sm small@md medium@lg">
     <cdr-col>
       <div class="grid-example">content</div>
     </cdr-col>
@@ -1212,6 +1246,7 @@ Grids are built from two components: **CdrRow** and **CdrCol**.
     - Attempting to use either without the other will not work
     - Never include other elements as immediate children of **CdrRow**, other than **CdrCol**
 - The grid system is mobile-first, flexbox based, and 12 columns wide. Many props mirror the flexbox API and work as you’d expect a CSS flexbox to work.
+- Note that responsive breakpoint modifiers (`@sm`, `@md`, and `@lg`) for Grid apply to the given breakpoint and above, unlike most other Cedar components where the modifiers only target a specific breakpoint. 
 
 <br/>
 
