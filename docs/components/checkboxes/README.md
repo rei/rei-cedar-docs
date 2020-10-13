@@ -227,6 +227,57 @@ Different sizing for checkboxes.
 
 </cdr-doc-example-code-pair>
 
+## Custom True/False Value
+
+Use a custom value in place of true/false checked state.
+
+<cdr-doc-example-code-pair repository-href="/src/components/checkbox" :sandbox-data="$page.frontmatter.sandboxData" :model="{ex1: 'no', ex2: 'yes', ex3: 'no'}">
+
+```html
+<div>
+  <cdr-checkbox v-model="ex1" true-value="yes" false-value="no">Option 1?</cdr-checkbox> {{this.ex1}}
+  <cdr-checkbox v-model="ex2" true-value="yes" false-value="no">Option 2?</cdr-checkbox> {{this.ex2}}
+  <cdr-checkbox v-model="ex3" true-value="yes" false-value="no">Option 3?</cdr-checkbox> {{this.ex3}}
+</div>
+```
+
+</cdr-doc-example-code-pair>
+
+## Custom Model Value
+
+Use an array as the model to track a list of custom values.
+
+<cdr-doc-example-code-pair repository-href="/src/components/checkbox" :sandbox-data="$page.frontmatter.sandboxData" :model="{ex: ['2']}">
+
+```html
+<div>
+  <cdr-checkbox v-model="ex" custom-value="1">1</cdr-checkbox>
+  <cdr-checkbox v-model="ex" custom-value="2">2</cdr-checkbox>
+  <cdr-checkbox v-model="ex" custom-value="3">3</cdr-checkbox>
+  {{this.ex}}
+</div>
+```
+
+</cdr-doc-example-code-pair>
+
+## Handling Change Events
+
+Pass checkbox data into change handlers.
+
+<cdr-doc-example-code-pair repository-href="/src/components/checkbox" :sandbox-data="$page.frontmatter.sandboxData" :model="{ex: ['2'], lastEdited: ''}">
+
+```html
+<div>
+  Last edited: {{ this.lastEdited }}
+  <cdr-checkbox v-model="ex" custom-value="1" @change="() => lastEdited = '1'">1</cdr-checkbox>
+  <cdr-checkbox v-model="ex" custom-value="2" @change="() => lastEdited = '2'">2</cdr-checkbox>
+  <cdr-checkbox v-model="ex" custom-value="3" @change="() => lastEdited = '3'">3</cdr-checkbox>
+  {{ this.ex }}
+</div>
+```
+
+</cdr-doc-example-code-pair>
+
 ## Indeterminate
 
 Displays status for checkbox group by indicating that some of the sub-selections in a list are selected. Provides user with ability to select or unselect all items in the list’s sub-group. See the codesandbox for full example implementation.
