@@ -78,7 +78,7 @@ export default {
     window.addEventListener('resize', debounce(250, () => {
       this.sideNavOpen = false;
     }));
-
+    this.navigateToHash();
   },
 
   beforeDestroy () {
@@ -88,10 +88,25 @@ export default {
   watch: {
     $route() {
       this.sideNavOpen = false;
+    },
+    $page(newPage, oldPage) {
+      if (newPage.key !== oldPage.key) {
+        this.navigateToHash();
+      }
     }
   },
 
   methods: {
+    navigateToHash() {
+      if (this.$route.hash) {
+        setTimeout(() => {
+          const element = document.getElementById(this.$route.hash.slice(1));
+          if (element && element.scrollIntoView) {
+            element.scrollIntoView(true);
+          }
+        }, 500);
+      }
+    },
     toggleSideNav() {
       this.sideNavOpen = !this.sideNavOpen;
     },
