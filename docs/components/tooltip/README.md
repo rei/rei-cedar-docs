@@ -100,7 +100,7 @@ CdrTooltip is a wrapper component that accepts a trigger element and tooltip con
 :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
-<cdr-tooltip id="tooltip-example" :position="down">
+<cdr-tooltip id="tooltip-example" position="up">
   <cdr-button slot="trigger">
     Add To Cart
   </cdr-button>

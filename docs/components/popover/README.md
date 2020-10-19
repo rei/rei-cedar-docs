@@ -101,7 +101,7 @@ CdrPopover is a wrapper component that accepts a trigger element and popover con
 :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
-<cdr-popover id="popover-example" :position="down">
+<cdr-popover id="popover-example" position="up">
   <cdr-button slot="trigger" :icon-only="true" :with-background="true">
     <icon-information-stroke slot="icon"/>
   </cdr-button>
