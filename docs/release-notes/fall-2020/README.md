@@ -37,6 +37,14 @@ TODO:
 
 TODO:
 
+### CdrInput Updates
+
+- New `error` prop and slot added to enable validation.
+- Updated `required` state to render as an asterisk `*`.
+- New `optional` state added.
+- New `background` prop added to adjust input styling depending on the background it is rendered on.
+- New `helper-position` prop added to adjust where the `helper-text` slot renders.
+
 ## Bug Fixes
 
 ## Deprecations

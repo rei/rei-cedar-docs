@@ -169,6 +169,30 @@
                 "description": "Sets the field to required and displays the text “Required” next to the input label."
               },
               {
+                "name": "optional",
+                "type": "boolean",
+                "default": "false",
+                "description": "Displays '(optional)' text next to the input label."
+              },
+              {
+                "name": "error",
+                "type": "boolean",
+                "default": "false",
+                "description": "Sets the input to an error state, displays the `error` slot if one is present."
+              },
+              {
+                "name": "helperPosition",
+                "type": "string",
+                "default": "bottom",
+                "description": "Sets the position of the `helper-text` slot. Possible options are: {  ‘top’  |  ‘bottom’  }."
+              },
+              {
+                "name": "background",
+                "type": "string",
+                "default": "primary",
+                "description": "Set which background color the input is being rendered on. Adjusts styling to ensure accessibility. Possible options are: {  ‘primary’  |  ‘secondary’  }."
+              },
+              {
                 "name": "size",
                 "type": "string",
                 "default": "medium",
@@ -176,6 +200,10 @@
               }
             ],
             "slots": [
+              {
+                "name": "error",
+                "description": "Error messaging text that is displayed when the `error` prop is true."
+              },
               {
                 "name": "info",
                 "description": "Location for  information link or icon markup to the right above the input field."
@@ -252,6 +280,24 @@ Basic input field with label and required tag.
 
 </cdr-doc-example-code-pair>
 
+## Optional
+
+Basic input field with label and optional tag.
+
+
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+
+```html
+<cdr-input
+  v-model="defaultModel"
+  label="Input label"
+  placeholder="Placeholder input"
+  optional
+/>
+```
+
+</cdr-doc-example-code-pair>
+
 ## Sizing
 
 Change size for the input field. Default size is medium.
@@ -290,6 +336,32 @@ Input field with no label.
   placeholder="Placeholder input"
   hideLabel
 />
+```
+
+</cdr-doc-example-code-pair>
+
+## Input with Validation
+
+Input field with validation that runs on `blur`. Error state is controlled with the `error` property, while the `error` slot can be used to render messaging. Error messaging will override helper text rendered in the bottom position.
+
+
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', hasError: false}" :methods="{validateInput() {this.hasError = this.defaultModel.length > 4}}">
+
+```html
+<cdr-input
+  v-model="defaultModel"
+  label="Input label"
+  placeholder="Placeholder input"
+  :error="hasError"
+  @blur="validateInput"
+>
+  <template slot="helper-text">
+    Must be 4 or less characters
+  </template>
+  <template slot="error">
+    Too many characters! Four or less!
+  </template>
+</cdr-input>
 ```
 
 </cdr-doc-example-code-pair>
@@ -357,7 +429,7 @@ Input field with icon above the input field on right.
 
 ## Input with Helper Text
 
-Input field with helper or hint text below the input field.
+Input field with helper or hint text below the input field. If the input is in an error state, the error messaging slot will override this text.
 
 <cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
@@ -366,6 +438,27 @@ Input field with helper or hint text below the input field.
   v-model="defaultModel"
   label="Input label"
   placeholder="Placeholder input"
+>
+  <template slot="helper-text">
+    Helper or additional text
+  </template>
+</cdr-input>
+```
+
+</cdr-doc-example-code-pair>
+
+## Input with Helper Text Above
+
+Input field with helper or hint text rendered above the input field.
+
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+
+```html
+<cdr-input
+  v-model="defaultModel"
+  label="Input label"
+  placeholder="Placeholder input"
+  helper-position="top"
 >
   <template slot="helper-text">
     Helper or additional text
@@ -447,7 +540,7 @@ This component has compliance with WCAG guidelines by:
 ### Options
 
 - Define width using CSS styles
-- Height options are medium or large. 
+- Height options are medium or large.
 - Ability to specify field type for text, email, number, password, search, and URL
 
 ### Multi-Line Input Fields
