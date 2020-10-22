@@ -439,7 +439,7 @@ Input field with helper or hint text below the input field. If the input is in a
   label="Input label"
   placeholder="Placeholder input"
 >
-  <template slot="helper-text">
+  <template slot="helper-text-bottom">
     Helper or additional text
   </template>
 </cdr-input>
@@ -458,9 +458,8 @@ Input field with helper or hint text rendered above the input field.
   v-model="defaultModel"
   label="Input label"
   placeholder="Placeholder input"
-  helper-position="top"
 >
-  <template slot="helper-text">
+  <template slot="helper-text-top">
     Helper or additional text
   </template>
 </cdr-input>
@@ -507,6 +506,46 @@ Input field with icon inserted into the input field on right. Icon is decorative
     class="cdr-button__icon"
     inherit-color
   />
+</cdr-input>
+```
+
+</cdr-doc-example-code-pair>
+
+
+## Input with Actions
+
+Input field with icon buttons inserted to the right. Up to 2 buttons can be passed into the `post-icon` slot. Each button should have the `cdr-input__button` utility class applied to it.
+
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, IconCreditCard, IconXLg, CdrTooltip, CdrButton'})" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
+
+```html
+<cdr-input
+  v-model="defaultModel"
+  label="Input label"
+  placeholder="Placeholder input"
+>
+  <template slot="post-icon">
+    <cdr-tooltip class="cdr-input__button" id="input-tooltip">
+      <cdr-button
+        :icon-only="true"
+        slot="trigger"
+      >
+        <icon-x-lg
+          inherit-color
+        />
+      </cdr-button>
+
+      click me to clear this input!
+    </cdr-tooltip>
+    <cdr-button
+      :icon-only="true"
+      class="cdr-input__button"
+    >
+      <icon-credit-card
+        inherit-color
+      />
+    </cdr-button>
+  </template>
 </cdr-input>
 ```
 
