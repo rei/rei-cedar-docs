@@ -82,8 +82,6 @@
 
 <br>
 
-<cdr-doc-alert icon="info">CdrTable replaces the deprecated CdrDataTable component. The <cdr-link href="../data-tables/">documentation for CdrDataTable</cdr-link> is still available, and the component itself has been ported to FEDCOMP as <cdr-link href="https://git.rei.com/projects/FEDCOMP/repos/data-table/browse">@rei/data-table</cdr-link> </cdr-doc-alert>
-
 # Overview
 
 ## Default
@@ -272,7 +270,7 @@ This is an advanced example with multiple headers and a custom class to change t
 
 ## Accessibility
 
-Many WCAG requirements are contextual to their implementation. 
+Many WCAG requirements are contextual to their implementation.
 To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
 
 - WCAG level A requirements:

@@ -119,7 +119,7 @@ Ensure that usage of this component complies with accessibility guidelines:
 
 - Set an `id` property on the CdrPopover. The component will automatically link that `id` to the trigger element.
 - Content passed in to the `trigger` slot must be an actionable element such as a button.
-- Popover content should ...
+- TODO: Popover content should ...
 
 This component complies with WCAG guidelines by:
 
