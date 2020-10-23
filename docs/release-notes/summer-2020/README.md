@@ -27,6 +27,10 @@
 
 - If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your micro-site.
 
+## 6.1.1
+
+- Adds `small` and `medium` options for the `gutter` property of CdrRow. Note that CdrRow has built in responsive gutter behavior, and that the CdrGrid responsive properties target breakpoints and above rather than just specific breakpoints. For example, the default CdrGrid gutter behavior is `<cdr-row gutter="small small@sm medium@md medium@lg">`.
+
 ## 6.1.0
 
 - Adds new `IconMap` component.
