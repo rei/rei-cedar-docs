@@ -29,17 +29,26 @@
 
 ## New Features
 
-### CdrTooltip Component
+### CdrTooltip and CdrPopover Components
 
-TODO:
+CdrTooltip and CdrPopover are both components that accepts a trigger element and content. CdrTooltip renders it's content whenever the trigger element is hovered or focused, and CdrPopover renders it's content whenever it's trigger element is clicked. See the [CdrTooltip page](../../components/tooltip) and  [CdrPopover page](../../components/popover) for more information.
 
-### CdrPopover Component
+### CdrInput Updates
 
-TODO:
+- New `error` prop and slot added to enable validation.
+- Updated `required` state to render as an asterisk `*`.
+- New `optional` state added.
+- New `background` prop added to adjust input styling depending on the background it is rendered on.
+- New `helper-text-top` slot added to render helper text above the input. We have also renamed the `helper-text` slot to be `helper-text-bottom`.
+- New `cdr-input__button` utility class has been added for styling icon buttons that are used inside of the `post-icon` slot.
 
 ## Bug Fixes
 
 ## Deprecations
+
+### CdrInput Helper Text Slot
+
+The `helper-text` slot in CdrInput has been deprecated and replaced with an identical `helper-text-bottom` slot. This was done to be consistent with the [new `helper-text-top` slot](#cdrinput-updates).
 
 ## Breaking Changes
 
