@@ -166,7 +166,7 @@
                 "name": "required",
                 "type": "boolean",
                 "default": "false",
-                "description": "Sets the field to required and displays the text “Required” next to the input label."
+                "description": "Sets the field to required and displays an asterisk next to the input label."
               },
               {
                 "name": "optional",
@@ -179,12 +179,6 @@
                 "type": "boolean",
                 "default": "false",
                 "description": "Sets the input to an error state, displays the `error` slot if one is present."
-              },
-              {
-                "name": "helperPosition",
-                "type": "string",
-                "default": "bottom",
-                "description": "Sets the position of the `helper-text` slot. Possible options are: {  ‘top’  |  ‘bottom’  }."
               },
               {
                 "name": "background",
@@ -207,6 +201,10 @@
               {
                 "name": "info",
                 "description": "Location for  information link or icon markup to the right above the input field."
+              },
+              {
+                "name": "info-action",
+                "description": "Location for icon button rendered to the right outside the input field"
               },
               {
                 "name": "pre-icon",
@@ -344,7 +342,6 @@ Input field with no label.
 
 Input field with validation that runs on `blur`. Error state is controlled with the `error` property, while the `error` slot can be used to render messaging. Error messaging will override helper text rendered in the bottom position.
 
-
 <cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', hasError: false}" :methods="{validateInput() {this.hasError = this.defaultModel.length > 4}}">
 
 ```html
@@ -405,11 +402,11 @@ Input field with link text on right.
 
 </cdr-doc-example-code-pair>
 
-## Input with Icon Above
+## Input with Info Action
 
-Input field with icon above the input field on right.
+Input field with icon outside the input field on right.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, IconInformationFill'})" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, IconInformationFill, CdrLink'})" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
@@ -417,11 +414,12 @@ Input field with icon above the input field on right.
   label="Input label"
   placeholder="Placeholder input"
 >
-  <IconInformationFill
-    slot="info"
-    size="small"
-    inherit-color
-  />
+  <cdr-link tag="button">
+    <icon-information-fill
+      slot="info"
+      inherit-color
+    />
+  </cdr-link>
 </cdr-input>
 ```
 
