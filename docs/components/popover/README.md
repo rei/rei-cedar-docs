@@ -95,7 +95,7 @@
 
 # Overview
 
-CdrPopover is a wrapper component that accepts a trigger element and popover content. When the trigger element is clicked, the poppver content is rendered. Event bindings between the trigger and the popover are set up automatically. The popover will dynamically update it's position property to ensure that it renders on screen, though this functionality can be disabled by setting autoPosition to false.
+CdrPopover is a wrapper component that accepts a trigger element and popover content. When the trigger element is clicked, the poppver content is rendered. Event bindings between the trigger and the popover are set up automatically. The popover will dynamically update its position property to ensure that it renders on screen, though this functionality can be disabled by setting autoPosition to false.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrPopover"
 :sandbox-data="$page.frontmatter.sandboxData" >
@@ -136,13 +136,22 @@ This component complies with WCAG guidelines by:
 
 # Guidelines
 
-TODO
+A popover is a floating container useful for communicating small amounts of clarifying information. It's revealed through acting upon a trigger, like a button, but can also be used to preemptively bring attention to new interface features.
 
 ## Use when
+Use a popover when a subset of users require additional information.
+
+Example:
+- When the co-op requests a user’s email, a popover is used to explain why an email is required and the ways in which it might be used
+Some users aren’t familiar with a credit card security field. Using a popover, describe specifically where to find the information being asked for the identified card type.
 
 ## Don’t use when
+- Don’t put critical information in a popover. Instead, place the information inline so that it’s always visible to users
+- Don’t put excessive content into popover. Instead, use a [Modal](../modal/)
 
-## The Basics
+Example:
+- The terms and conditions of a free shipping offer needs to be easily viewed, if desired. Place the lengthy details of the offer in a modal, not a popover
+
 
 ## Do / Don't
 
