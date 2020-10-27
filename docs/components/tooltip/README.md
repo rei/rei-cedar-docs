@@ -130,13 +130,28 @@ This component complies with WCAG guidelines by:
 
 # Guidelines
 
-TODO
+A tooltip is a floating label used to clarify interface actions.
 
 ## Use when
 
+When an interface action is expressed solely through iconography, use a tooltip to clarify the action. The descriptions provided by tooltips should only contain one or two words: “close”, “clear”, or “save” are common examples.
+
+Examples:
+- A text input uses an icon to show that the field can be cleared. Use a tooltip to describe the action: “Clear”
+- An icon-only button is used to close a modal. Use a tooltip to describe what acting upon the button will do: “Close” 
+- A toolbar within a content editor contains multiple icon-based actions. Use a tooltip to describe what each action does: “Left-align”
+- A quantity counter uses ‘-’ and ‘+’ symbols to increase or decrease the number of items that will be added to a user’s cart. Use a tooltip to describe the actions: “Decrease quantity” and “Increase quantity”
+
+
 ## Don’t use when
 
-## The Basics
+- Don’t use a tooltip to provide additional context for form fields. Instead, use a [Popover](../popover/)
+- Don’t add actions or links inside a tooltip. Instead, use a [Popover](../popover/)
+- Don’t use a tooltip to describe a button that already describes itself through copy 
+
+Example:
+- A credit card security field needs to describe, in detail, where to find the card information. A popover should be used to contain the graphic and card-specific details, not a tooltip
+
 
 ## Do / Don't
 
