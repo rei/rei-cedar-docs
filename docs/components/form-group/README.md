@@ -47,11 +47,21 @@
                 "default": "none",
                 "description": "Sets the label/legend for the form group. Applies default text styles to this label. To override that default text style or apply other customization, use the `label` slot."
               },
+              {
+                "name": "error",
+                "type": "boolean",
+                "default": "false",
+                "description": "Sets the form group to an error state, displays the `error` slot if one is present."
+              },
             ],
             "slots": [
               {
                 "name": "default",
                 "description": "Slot for CdrFormGroup content. Should include a set of form elements."
+              },
+              {
+                "name": "error",
+                "description": "Error messaging text that is displayed when the `error` prop is true."
               },
               {
                 "name": "label",
@@ -121,6 +131,34 @@ Rather than passing a `label` prop, the label element can be customized using th
     custom-value="C"
     v-model="ex"
   >C</cdr-checkbox>
+</cdr-form-group>
+```
+</cdr-doc-example-code-pair>
+
+
+## Error
+
+Render a form group in an error state
+
+<!-- TODO: show how to run validation here? -->
+<cdr-doc-example-code-pair repository-href="/src/components/formGroup"
+:sandbox-data="$page.frontmatter.sandboxData" :model="{ex: []}">
+
+```html
+<cdr-form-group label="What's your favorite letter?" :error="true">
+  <cdr-checkbox
+    custom-value="A"
+    v-model="ex"
+  >A</cdr-checkbox>
+  <cdr-checkbox
+    custom-value="B"
+    v-model="ex"
+  >B</cdr-checkbox>
+  <cdr-checkbox
+    custom-value="C"
+    v-model="ex"
+  >C</cdr-checkbox>
+  <template slot="error">You must select one</template>
 </cdr-form-group>
 ```
 </cdr-doc-example-code-pair>

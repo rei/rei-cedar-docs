@@ -151,6 +151,10 @@
                 "description": "Sets the innerHTML for CdrSelect, used to pass in `<option>` tags. Leave empty if using the `options` prop."
               },
               {
+                "name": "error",
+                "description": "Error messaging text that is displayed when the `error` prop is true."
+              },
+              {
                 "name": "info",
                 "description": "Location for information link or icon markup to the right above the select field."
               },
@@ -340,6 +344,8 @@ Input field with helper or hint text below the input field.
 ## Select with Error
 
 Error prop and slot can be used to render the select in an error state
+
+<!-- TODO: add validation here -->
 
 <cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
 
