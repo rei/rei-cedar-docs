@@ -12,20 +12,37 @@
   "sandboxData": {
     "components": "CdrTooltip, CdrButton"
   },
-  "TODO-DO/DONT": [
+  "consistency": [
     {
       "type": "do",
-      "image": "",
+      "image": "tooltip/tooltip_consistency_do.png",
       "ratio": "4-3",
       "alt": "Image showing proper tooltip usage",
-      "caption": "TODO"
+      "caption": "Do consistently provide tooltips for unlabeled icons "
     },
     {
       "type": "dont",
-      "image": "",
+      "image": "tooltip/tooltip_consistency_dont.png",
       "ratio": "4-3",
       "alt": "Image showing improper tooltip usage",
-      "caption": "TODO"
+      "caption": "Don't provide tooltips for only a subset of icons within a set"
+    }
+  ],
+
+  "redundancy": [
+    {
+      "type": "do",
+      "image": "tooltip/tooltip_redundancy_do.png",
+      "ratio": "4-3",
+      "alt": "Image showing proper tooltip usage",
+      "caption": "Do avoid using tooltips when actions are clearly defined"
+    },
+    {
+      "type": "dont",
+      "image": "tooltip/tooltip_redundancy_dont.png",
+      "ratio": "4-3",
+      "alt": "Image showing improper tooltip usage",
+      "caption": "Don't provide redundant information with a tooltip"
     }
   ],
 
@@ -155,9 +172,9 @@ Example:
 
 ## Do / Don't
 
-TODO: Embed do-dont using metadata from frontmatter
 
-<!-- <do-dont :examples="$page.frontmatter.DATAKEY" /> -->
+<do-dont :examples="$page.frontmatter.consistency" />
+<do-dont :examples="$page.frontmatter.redundancy" />
 
 # API
 
