@@ -13,20 +13,37 @@
     "components": "CdrPopover, CdrButton, IconInformationStroke"
   },
 
-  "TODO-DO/DONT": [
+  "content": [
     {
       "type": "do",
-      "image": "",
+      "image": "popover/popover_content_do.png",
       "ratio": "4-3",
       "alt": "Image showing proper popover usage",
-      "caption": "TODO"
+      "caption": "Do link to additional content within a popover if additional information might be needed"
     },
     {
       "type": "dont",
-      "image": "",
+      "image": "popover/popover_content_dont.png",
       "ratio": "4-3",
       "alt": "Image showing improper popover usage",
-      "caption": "TODO"
+      "caption": "Don't overload the popover with too much content "
+    }
+  ],
+
+  "essential": [
+    {
+      "type": "do",
+      "image": "popover/popover_essential_do.png",
+      "ratio": "4-3",
+      "alt": "Image showing proper popover usage",
+      "caption": "Do provide users with additional information in a popover when a feature or task might need clarification"
+    },
+    {
+      "type": "dont",
+      "image": "popover/popover_essential_dont.png",
+      "ratio": "4-3",
+      "alt": "Image showing improper popover usage",
+      "caption": "Don't put information that's essential for completing a task in a popover"
     }
   ],
 
@@ -155,9 +172,10 @@ Example:
 
 ## Do / Don't
 
-TODO: Embed do-dont using metadata from frontmatter
 
-<!-- <do-dont :examples="$page.frontmatter.DATAKEY" /> -->
+<do-dont :examples="$page.frontmatter.content" />
+
+<do-dont :examples="$page.frontmatter.essential" />
 
 # API
 
