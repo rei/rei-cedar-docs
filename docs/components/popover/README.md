@@ -2,7 +2,7 @@
 {
   "title": "Popover",
   "layout_type": "LayoutComponent",
-  "summary": "TODO: what is a popover, really?",
+  "summary": "Small overlay used to display contextual information",
   "title_metadata": "CdrPopover",
   "breadcrumbs": [
     {
