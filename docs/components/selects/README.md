@@ -2,7 +2,7 @@
 {
   "title": "Select",
   "layout_type": "LayoutComponent",
-  "summary": "Select dropdown component",
+  "summary": "Allows a user to select one or more options from a dropdown list",
   "title_metadata": "Dropdown, CdrSelect, cdr-select",
   "sandboxData": {
     "components": "CdrSelect"
