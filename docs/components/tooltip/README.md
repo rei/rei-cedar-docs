@@ -2,7 +2,7 @@
 {
   "title": "Tooltip",
   "layout_type": "LayoutComponent",
-  "summary": "TODO: show tips for the tools!",
+  "summary": "Floating label used to clarify interface actions",
   "title_metadata": "CdrTooltip",
   "breadcrumbs": [
     {
@@ -146,8 +146,6 @@ This component complies with WCAG guidelines by:
 - Tooltip can be closed by removing focus from the trigger, removing hover from the trigger or content, or by pressing the `esc` key.
 
 # Guidelines
-
-A tooltip is a floating label used to clarify interface actions.
 
 ## Use when
 
