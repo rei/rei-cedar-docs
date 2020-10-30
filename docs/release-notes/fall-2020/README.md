@@ -51,8 +51,12 @@ CdrTooltip and CdrPopover are both components that accepts a trigger element and
 - New `helper-text-top` slot added to render helper text above the input. We have also renamed the `helper-text` slot to be `helper-text-bottom`.
 - New `cdr-input__button` utility class has been added for styling icon buttons that are used inside of the `post-icon` slot.
 
+#### CdrRadio / CdrCheckbox
+- Spacing and interaction logic has been updated.
+
 #### CdrFormGroup
 - New `error` prop and slot added to enable validation of checkbox and radio groups.
+- New `optional` and `required` states added.
 
 ## Bug Fixes
 

@@ -53,6 +53,20 @@
                 "default": "false",
                 "description": "Sets the form group to an error state, displays the `error` slot if one is present."
               },
+
+              {
+                "name": "required",
+                "type": "boolean",
+                "default": "false",
+                "description": "Adds required label to the form group."
+              },
+
+              {
+                "name": "optional",
+                "type": "boolean",
+                "default": "false",
+                "description": "Adds optional label to the form group."
+              },
             ],
             "slots": [
               {
@@ -140,23 +154,25 @@ Rather than passing a `label` prop, the label element can be customized using th
 
 Render a form group in an error state
 
-<!-- TODO: show how to run validation here? -->
 <cdr-doc-example-code-pair repository-href="/src/components/formGroup"
-:sandbox-data="$page.frontmatter.sandboxData" :model="{ex: []}">
+:sandbox-data="$page.frontmatter.sandboxData" :model="{ex: [], hasError: true}" :methods="{validate() {this.hasError = !this.ex.length}}">
 
 ```html
-<cdr-form-group label="What's your favorite letter?" :error="true">
+<cdr-form-group label="What's your favorite letter?" :error="hasError" :required="true">
   <cdr-checkbox
     custom-value="A"
     v-model="ex"
+    @input="validate"
   >A</cdr-checkbox>
   <cdr-checkbox
     custom-value="B"
     v-model="ex"
+    @input="validate"
   >B</cdr-checkbox>
   <cdr-checkbox
     custom-value="C"
     v-model="ex"
+    @input="validate"
   >C</cdr-checkbox>
   <template slot="error">You must select one</template>
 </cdr-form-group>
