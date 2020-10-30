@@ -63,8 +63,8 @@
               {
                 "name": "position",
                 "type": "string",
-                "default": "'up'",
-                "description": "Sets the position where the popover will render relative to the trigger element. Possible values: 'up' | 'down' | 'left' | 'right'"
+                "default": "'top'",
+                "description": "Sets the position where the popover will render relative to the trigger element. Possible values: 'top' | 'bottom' | 'left' | 'right'"
               },
               {
                 "name": "autoPosition",
@@ -118,7 +118,7 @@ CdrPopover is a wrapper component that accepts a trigger element and popover con
 :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
-<cdr-popover id="popover-example" position="up">
+<cdr-popover id="popover-example" position="top">
   <cdr-button slot="trigger" :icon-only="true" :with-background="true">
     <icon-information-stroke slot="icon"/>
   </cdr-button>
