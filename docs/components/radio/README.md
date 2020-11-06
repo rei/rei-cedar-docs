@@ -285,6 +285,38 @@ Custom styles for radio buttons.
 
 </cdr-doc-example-code-pair>
 
+
+## Error
+
+Render a checkbox group with validation
+
+<cdr-doc-example-code-pair repository-href="/src/components/radio"
+:sandbox-data="$page.frontmatter.sandboxData" :model="{ex: [], modelError: 'Please make a selection'}" :methods="{validate() {this.modelError = !this.ex.length && 'Please make a selection'}}">
+
+```html
+<cdr-form-group label="What's your favorite letter?" :error="modelError" :required="true">
+  <cdr-radio
+    name="letter"
+    custom-value="A"
+    v-model="ex"
+    @input="validate"
+  >A</cdr-radio>
+  <cdr-radio
+    name="letter"
+    custom-value="B"
+    v-model="ex"
+    @input="validate"
+  >B</cdr-radio>
+  <cdr-radio
+    name="letter"
+    custom-value="C"
+    v-model="ex"
+    @input="validate"
+  >C</cdr-radio>
+</cdr-form-group>
+```
+</cdr-doc-example-code-pair>
+
 ## Accessibility
 
 Many WCAG requirements are contextual to their implementation.

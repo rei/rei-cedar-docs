@@ -336,6 +336,35 @@ Custom styles for checkboxes.
 
 </cdr-doc-example-code-pair>
 
+
+## Error
+
+Render a checkbox group with validation
+
+<cdr-doc-example-code-pair repository-href="/src/components/checkbox"
+:sandbox-data="$page.frontmatter.sandboxData" :model="{ex: [], modelError: 'Please make a selection'}" :methods="{validate() {this.modelError = !this.ex.length && 'Please make a selection'}}">
+
+```html
+<cdr-form-group label="What's your favorite letter?" :error="modelError" :required="true">
+  <cdr-checkbox
+    custom-value="A"
+    v-model="ex"
+    @input="validate"
+  >A</cdr-checkbox>
+  <cdr-checkbox
+    custom-value="B"
+    v-model="ex"
+    @input="validate"
+  >B</cdr-checkbox>
+  <cdr-checkbox
+    custom-value="C"
+    v-model="ex"
+    @input="validate"
+  >C</cdr-checkbox>
+</cdr-form-group>
+```
+</cdr-doc-example-code-pair>
+
 ## Accessibility
 
 Many WCAG requirements are contextual to their implementation.
