@@ -11,6 +11,10 @@
     {
       "text": 'Checkboxes',
       "href": '../checkboxes/'
+    },
+    {
+      "text": "Form Groups",
+      "href": "../form-group/"
     }
   ],
   "case": [
