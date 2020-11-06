@@ -162,10 +162,10 @@ Rather than passing a `label` prop, the label element can be customized using th
 Render a form group in an error state
 
 <cdr-doc-example-code-pair repository-href="/src/components/formGroup"
-:sandbox-data="$page.frontmatter.sandboxData" :model="{ex: [], hasError: true}" :methods="{validate() {this.hasError = !this.ex.length}}">
+:sandbox-data="$page.frontmatter.sandboxData" :model="{ex: [], modelError: 'Please make a selection'}" :methods="{validate() {this.modelError = !this.ex.length && 'Please make a selection'}}">
 
 ```html
-<cdr-form-group label="What's your favorite letter?" :error="hasError" :required="true">
+<cdr-form-group label="What's your favorite letter?" :error="modelError" :required="true">
   <cdr-checkbox
     custom-value="A"
     v-model="ex"
@@ -181,7 +181,6 @@ Render a form group in an error state
     v-model="ex"
     @input="validate"
   >C</cdr-checkbox>
-  <template slot="error">You must select one</template>
 </cdr-form-group>
 ```
 </cdr-doc-example-code-pair>

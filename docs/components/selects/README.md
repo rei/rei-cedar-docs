@@ -345,9 +345,7 @@ Input field with helper or hint text below the input field.
 
 Error prop and slot can be used to render the select in an error state
 
-<!-- TODO: add validation here -->
-
-<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
+<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', modelError: 'Please make a selection', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}" :methods="{validate() {this.modelError = !this.defaultModel.length && 'Please make a selection'}}">
 
 ```html
 <cdr-select
@@ -355,12 +353,9 @@ Error prop and slot can be used to render the select in an error state
   label="Select label"
   prompt="Prompt text"
   :options="defaultOptions"
-  :error="true"
->
-  <template slot="error">
-    This is error messaging
-  </template>
-</cdr-select>
+  :error="modelError"
+  @change="validate"
+/>
 <br>
 ```
 
