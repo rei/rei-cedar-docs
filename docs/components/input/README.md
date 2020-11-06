@@ -340,23 +340,23 @@ Input field with no label.
 
 ## Input with Validation
 
-Input field with validation that runs on `blur`. Error state is controlled with the `error` property, while the `error` slot can be used to render messaging. Error messaging will override helper text rendered in the bottom position.
+Input field with validation that runs on `blur`. Error state is controlled with the `error` prop. Setting the `error` prop to a string will render that message with default error styling. The `error` slot can be used to fully customize the error message.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', hasError: false}" :methods="{validateInput() {this.hasError = this.defaultModel.length > 4}}">
+
+Error messaging will override helper text rendered in the bottom position.
+
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', modelError: false}" :methods="{validateInput() {this.modelError = this.defaultModel.length > 4 && 'Error: please enter 4 or less characters'}}">
 
 ```html
 <cdr-input
   v-model="defaultModel"
   label="Input label"
   placeholder="Placeholder input"
-  :error="hasError"
+  :error="modelError"
   @blur="validateInput"
 >
   <template slot="helper-text">
     Must be 4 or less characters
-  </template>
-  <template slot="error">
-    Too many characters! Four or less!
   </template>
 </cdr-input>
 ```
@@ -365,8 +365,7 @@ Input field with validation that runs on `blur`. Error state is controlled with 
 
 ## Multi-Line Input
 
-Multiple line input field with expander control in lower right.
-
+Multiple line input field with expander control in lower right. Note that the pre-icon, post-icon, and info-action slots will not work properly in multi-line inputs.
 
 <cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
@@ -416,7 +415,7 @@ Input field with icon outside the input field on right.
 >
   <cdr-link tag="button">
     <icon-information-fill
-      slot="info"
+      slot="info-action"
       inherit-color
     />
   </cdr-link>
@@ -501,7 +500,6 @@ Input field with icon inserted into the input field on right. Icon is decorative
 >
   <IconCreditCard
     slot="post-icon"
-    class="cdr-button__icon"
     inherit-color
   />
 </cdr-input>
@@ -517,34 +515,54 @@ Input field with icon buttons inserted to the right. Up to 2 buttons can be pass
 <cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, IconCreditCard, IconXLg, CdrTooltip, CdrButton'})" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
 
 ```html
-<cdr-input
-  v-model="defaultModel"
-  label="Input label"
-  placeholder="Placeholder input"
->
-  <template slot="post-icon">
-    <cdr-tooltip class="cdr-input__button" id="input-tooltip">
+<div>
+  <cdr-input
+    v-model="defaultModel"
+    label="Input label"
+    placeholder="Placeholder input"
+  >
+    <template slot="post-icon">
+      <cdr-tooltip class="cdr-input__button" id="input-tooltip">
+        <cdr-button
+          :icon-only="true"
+          slot="trigger"
+        >
+          <icon-x-lg
+            inherit-color
+          />
+        </cdr-button>
+
+        click me to clear this input!
+      </cdr-tooltip>
       <cdr-button
         :icon-only="true"
-        slot="trigger"
+        class="cdr-input__button"
       >
-        <icon-x-lg
+        <icon-credit-card
           inherit-color
         />
       </cdr-button>
+    </template>
+  </cdr-input>
 
-      click me to clear this input!
-    </cdr-tooltip>
+  <cdr-input
+    v-model="defaultModel"
+    label="Large Input label"
+    placeholder="Placeholder input"
+    size="large"
+  >
     <cdr-button
+      slot="post-icon"
       :icon-only="true"
+      size="large"
       class="cdr-input__button"
     >
       <icon-credit-card
         inherit-color
       />
     </cdr-button>
-  </template>
-</cdr-input>
+  </cdr-input>
+</div>
 ```
 
 </cdr-doc-example-code-pair>
