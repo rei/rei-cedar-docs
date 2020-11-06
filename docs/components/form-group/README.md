@@ -55,6 +55,13 @@
               },
 
               {
+                "name": "disabled",
+                "type": "boolean",
+                "default": "false",
+                "description": "Renders form group in a disabled state."
+              },
+
+              {
                 "name": "required",
                 "type": "boolean",
                 "default": "false",
@@ -175,6 +182,35 @@ Render a form group in an error state
     @input="validate"
   >C</cdr-checkbox>
   <template slot="error">You must select one</template>
+</cdr-form-group>
+```
+</cdr-doc-example-code-pair>
+
+
+## Disabled
+
+Render a form group in a disabled state
+
+<cdr-doc-example-code-pair repository-href="/src/components/formGroup"
+:sandbox-data="$page.frontmatter.sandboxData" :model="{ex: []}">
+
+```html
+<cdr-form-group label="What's your favorite letter?" :disabled="true" :optional="true">
+  <cdr-checkbox
+    custom-value="A"
+    v-model="ex"
+    :disabled="true"
+  >A</cdr-checkbox>
+  <cdr-checkbox
+    custom-value="B"
+    v-model="ex"
+    :disabled="true"
+  >B</cdr-checkbox>
+  <cdr-checkbox
+    custom-value="C"
+    v-model="ex"
+    :disabled="true"
+  >C</cdr-checkbox>
 </cdr-form-group>
 ```
 </cdr-doc-example-code-pair>
