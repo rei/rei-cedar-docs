@@ -47,11 +47,42 @@
                 "default": "none",
                 "description": "Sets the label/legend for the form group. Applies default text styles to this label. To override that default text style or apply other customization, use the `label` slot."
               },
+              {
+                "name": "error",
+                "type": "boolean",
+                "default": "false",
+                "description": "Sets the form group to an error state, displays the `error` slot if one is present."
+              },
+
+              {
+                "name": "disabled",
+                "type": "boolean",
+                "default": "false",
+                "description": "Renders form group in a disabled state."
+              },
+
+              {
+                "name": "required",
+                "type": "boolean",
+                "default": "false",
+                "description": "Adds required label to the form group."
+              },
+
+              {
+                "name": "optional",
+                "type": "boolean",
+                "default": "false",
+                "description": "Adds optional label to the form group."
+              },
             ],
             "slots": [
               {
                 "name": "default",
                 "description": "Slot for CdrFormGroup content. Should include a set of form elements."
+              },
+              {
+                "name": "error",
+                "description": "Error messaging text that is displayed when the `error` prop is true."
               },
               {
                 "name": "label",
@@ -120,6 +151,64 @@ Rather than passing a `label` prop, the label element can be customized using th
   <cdr-checkbox
     custom-value="C"
     v-model="ex"
+  >C</cdr-checkbox>
+</cdr-form-group>
+```
+</cdr-doc-example-code-pair>
+
+
+## Error
+
+Render a form group in an error state
+
+<cdr-doc-example-code-pair repository-href="/src/components/formGroup"
+:sandbox-data="$page.frontmatter.sandboxData" :model="{ex: [], modelError: 'Please make a selection'}" :methods="{validate() {this.modelError = !this.ex.length && 'Please make a selection'}}">
+
+```html
+<cdr-form-group label="What's your favorite letter?" :error="modelError" :required="true">
+  <cdr-checkbox
+    custom-value="A"
+    v-model="ex"
+    @input="validate"
+  >A</cdr-checkbox>
+  <cdr-checkbox
+    custom-value="B"
+    v-model="ex"
+    @input="validate"
+  >B</cdr-checkbox>
+  <cdr-checkbox
+    custom-value="C"
+    v-model="ex"
+    @input="validate"
+  >C</cdr-checkbox>
+</cdr-form-group>
+```
+</cdr-doc-example-code-pair>
+
+
+## Disabled
+
+Render a form group in a disabled state
+
+<cdr-doc-example-code-pair repository-href="/src/components/formGroup"
+:sandbox-data="$page.frontmatter.sandboxData" :model="{ex: []}">
+
+```html
+<cdr-form-group label="What's your favorite letter?" :disabled="true" :optional="true">
+  <cdr-checkbox
+    custom-value="A"
+    v-model="ex"
+    :disabled="true"
+  >A</cdr-checkbox>
+  <cdr-checkbox
+    custom-value="B"
+    v-model="ex"
+    :disabled="true"
+  >B</cdr-checkbox>
+  <cdr-checkbox
+    custom-value="C"
+    v-model="ex"
+    :disabled="true"
   >C</cdr-checkbox>
 </cdr-form-group>
 ```

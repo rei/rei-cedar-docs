@@ -11,6 +11,10 @@
     {
       "text": 'Checkboxes',
       "href": '../checkboxes/'
+    },
+    {
+      "text": "Form Groups",
+      "href": "../form-group/"
     }
   ],
   "case": [
@@ -62,7 +66,7 @@
     }
   ],
   "sandboxData": {
-    "components": "CdrRadio, CdrList, CdrFormGroup"
+    "components": "CdrRadio, CdrFormGroup"
   },
   "versions": [
     {
@@ -156,31 +160,28 @@ Default and standard spacing for radio buttons.
     <template slot="label">
       <span id="legend-1">Default Radio Example</span>
     </template>
-
-    <cdr-list aria-labelledby="legend-1" role="radiogroup">
-      <li>
-        <cdr-radio
-          name="default-example"
-          custom-value="ex1"
-          v-model="ex"
-        >Default radio 1</cdr-radio>
-      </li>
-      <li>
-        <cdr-radio
-          name="default-example"
-          custom-value="ex2"
-          v-model="ex"
-        >Default radio 2</cdr-radio>
-      </li>
-      <li>
-        <cdr-radio
-          name="default-example"
-          :custom-value="{val:'ex3'}"
-          v-model="ex"
-          disabled
-        >Default radio 3</cdr-radio>
-      </li>
-    </cdr-list>
+    <cdr-radio
+      name="default-example"
+      custom-value="ex1"
+      v-model="ex"
+    >
+      Default radio 1
+    </cdr-radio>
+    <cdr-radio
+      name="default-example"
+      custom-value="ex2"
+      v-model="ex"
+    >
+      Default radio 2
+    </cdr-radio>
+    <cdr-radio
+      name="default-example"
+      :custom-value="{val:'ex3'}"
+      v-model="ex"
+      disabled
+    >
+      Default radio 3
+    </cdr-radio>
   </cdr-form-group>
   <p>selected: {{ex}}</p>
 </div>
@@ -202,32 +203,30 @@ Different sizing for radio buttons.
       <span id="legend-2">Radio Size Example</span>
     </template>
 
-    <cdr-list aria-labelledby="legend-2" role="radiogroup">
-      <li>
-        <cdr-radio
-          size="small"
-          name="size-example"
-          custom-value="ex1"
-          v-model="ex"
-        >Small radio</cdr-radio>
-      </li>
-      <li>
-        <cdr-radio
-          name="size-example"
-          custom-value="ex2"
-          v-model="ex"
-        >Medium radio</cdr-radio>
-      </li>
-      <li>
-        <cdr-radio
-          size="large"
-          name="size-example"
-          :custom-value="{val:'ex3'}"
-          v-model="ex"
-          disabled
-        >Large radio</cdr-radio>
-      </li>
-    </cdr-list>
+    <cdr-radio
+      size="small"
+      name="size-example"
+      custom-value="ex1"
+      v-model="ex"
+    >
+      Small radio
+    </cdr-radio>
+    <cdr-radio
+      name="size-example"
+      custom-value="ex2"
+      v-model="ex"
+    >
+      Medium radio
+    </cdr-radio>
+    <cdr-radio
+      size="large"
+      name="size-example"
+      :custom-value="{val:'ex3'}"
+      v-model="ex"
+      disabled
+    >
+      Large radio
+    </cdr-radio>
   </cdr-form-group>
   <p>selected: {{ex}}</p>
 </div>
@@ -248,45 +247,74 @@ Custom styles for radio buttons.
     <template slot="label">
       <span id="legend-3">Custom Radio Example</span>
     </template>
-
-    <cdr-list aria-labelledby="legend-3" role="radiogroup">
-      <li>
-        <cdr-radio
-          name="custom-example"
-          custom-value="ex1"
-          v-model="ex"
-          modifier="hide-figure"
-          input-class="no-box"
-          content-class="no-box__content"
-        >Custom radio 1</cdr-radio>
-      </li>
-      <li>
-        <cdr-radio
-          name="custom-example"
-          custom-value="ex2"
-          v-model="ex"
-          modifier="hide-figure"
-          input-class="no-box"
-          content-class="no-box__content"
-        >Custom radio 2</cdr-radio>
-      </li>
-      <li>
-        <cdr-radio
-          name="custom-example"
-          :custom-value="{val:'ex3'}"
-          v-model="ex"
-          modifier="hide-figure"
-          input-class="no-box"
-          content-class="no-box__content"
-          disabled
-        >Custom radio 3</cdr-radio>
-      </li>
-    </cdr-list>
+    <cdr-radio
+      name="custom-example"
+      custom-value="ex1"
+      v-model="ex"
+      modifier="hide-figure"
+      input-class="no-box"
+      content-class="no-box__content"
+    >
+      Custom radio 1
+    </cdr-radio>
+    <cdr-radio
+      name="custom-example"
+      custom-value="ex2"
+      v-model="ex"
+      modifier="hide-figure"
+      input-class="no-box"
+      content-class="no-box__content"
+    >
+      Custom radio 2
+    </cdr-radio>
+    <cdr-radio
+      name="custom-example"
+      :custom-value="{val:'ex3'}"
+      v-model="ex"
+      modifier="hide-figure"
+      input-class="no-box"
+      content-class="no-box__content"
+      disabled
+    >
+      Custom radio 3
+    </cdr-radio>
   </cdr-form-group>
   <p>selected: {{ex}}</p>
 </div>
 ```
 
+</cdr-doc-example-code-pair>
+
+
+## Error
+
+Render a checkbox group with validation
+
+<cdr-doc-example-code-pair repository-href="/src/components/radio"
+:sandbox-data="$page.frontmatter.sandboxData" :model="{ex: [], modelError: 'Please make a selection'}" :methods="{validate() {this.modelError = !this.ex.length && 'Please make a selection'}}">
+
+```html
+<cdr-form-group label="What's your favorite letter?" :error="modelError" :required="true">
+  <cdr-radio
+    name="letter"
+    custom-value="A"
+    v-model="ex"
+    @input="validate"
+  >A</cdr-radio>
+  <cdr-radio
+    name="letter"
+    custom-value="B"
+    v-model="ex"
+    @input="validate"
+  >B</cdr-radio>
+  <cdr-radio
+    name="letter"
+    custom-value="C"
+    v-model="ex"
+    @input="validate"
+  >C</cdr-radio>
+</cdr-form-group>
+```
 </cdr-doc-example-code-pair>
 
 ## Accessibility

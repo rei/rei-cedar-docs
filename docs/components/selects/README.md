@@ -101,7 +101,19 @@
                 "name": "required",
                 "type": "boolean",
                 "default": "false",
-                "description": "Sets the field to required and displays the text “Required” next to the input label"
+                "description": "Sets the field to required and displays an asterisk next to the select label"
+              },
+              {
+                "name": "optional",
+                "type": "boolean",
+                "default": "false",
+                "description": "Displays '(optional)' text next to the select label."
+              },
+              {
+                "name": "error",
+                "type": "boolean",
+                "default": "false",
+                "description": "Sets the select to an error state, displays the `error` slot if one is present."
               },
               {
                 "name": "size",
@@ -120,6 +132,12 @@
                 "type": "number",
                 "default": "null",
                 "description": "Sets the height of the CdrSelect when using the multiple option. This number corresponds to the number of select options that will be visible without scrolling."
+              },
+              {
+                "name": "background",
+                "type": "string",
+                "default": "primary",
+                "description": "Set which background color the select is being rendered on. Adjusts styling to ensure accessibility. Possible options are: {  ‘primary’  |  ‘secondary’  }."
               }
             ],
             "events": [
@@ -131,13 +149,26 @@
               {
                 "name": "default",
                 "description": "Sets the innerHTML for CdrSelect, used to pass in `<option>` tags. Leave empty if using the `options` prop."
-              },{
+              },
+              {
+                "name": "error",
+                "description": "Error messaging text that is displayed when the `error` prop is true."
+              },
+              {
                 "name": "info",
                 "description": "Location for information link or icon markup to the right above the select field."
               },
               {
+                "name": "info-action",
+                "description": "Location for icon button rendered to the right outside the input field"
+              },
+              {
+                "name": "pre-icon",
+                "description": "Location for icon markup to the left inside the select field."
+              },
+              {
                 "name": "helper-text",
-                "description": "Location for helper or information text to the left below the select field."
+                "description": "Location for helper or information text to the left above the select field."
               }
             ]
           }
@@ -252,13 +283,11 @@ Select control with link text on right.
 </cdr-doc-example-code-pair>
 
 
-## Select with Icon Above
+## Select with Info Action
 
-Select control with icon above the input field on right.
+Select control with icon outside select field on right.
 
-
-
-<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrSelect, IconInformationFill'})" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
+<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrSelect, IconInformationFill, CdrButton'})" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
 
 ```html
 <cdr-select
@@ -267,20 +296,10 @@ Select control with icon above the input field on right.
   prompt="Prompt text"
   :options="defaultOptions"
 >
-  <template slot="info">
-    <icon-information-fill size="small" />
-  </template>
-</cdr-select>
-<br>
-<cdr-select
-  v-model="defaultModel"
-  label="Select label"
-  prompt="Prompt text"
-  :options="defaultOptions"
-  disabled
->
-  <template slot="info">
-    <icon-information-fill size="small" />
+  <template slot="info-action">
+    <cdr-link tag="button">
+      <icon-information-fill/>
+    </cdr-link>
   </template>
 </cdr-select>
 ```
@@ -321,6 +340,26 @@ Input field with helper or hint text below the input field.
 
 </cdr-doc-example-code-pair>
 
+
+## Select with Error
+
+Error prop and slot can be used to render the select in an error state
+
+<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', modelError: 'Please make a selection', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}" :methods="{validate() {this.modelError = !this.defaultModel.length && 'Please make a selection'}}">
+
+```html
+<cdr-select
+  v-model="defaultModel"
+  label="Select label"
+  prompt="Prompt text"
+  :options="defaultOptions"
+  :error="modelError"
+  @change="validate"
+/>
+<br>
+```
+
+</cdr-doc-example-code-pair>
 
 ## Multiple Select
 
@@ -399,7 +438,7 @@ Select components should be:
 
 ### Options
 + Define width using CSS styles
-+ Height options are medium and large. These variations can be used for creating media queries for responsive layouts, or to call more or less attention to the component. 
++ Height options are medium and large. These variations can be used for creating media queries for responsive layouts, or to call more or less attention to the component.
 
 
 ## Content

@@ -33,14 +33,30 @@
 
 CdrTooltip and CdrPopover are both components that accepts a trigger element and content. CdrTooltip renders it's content whenever the trigger element is hovered or focused, and CdrPopover renders it's content whenever it's trigger element is clicked. See the [CdrTooltip page](../../components/tooltip) and  [CdrPopover page](../../components/popover) for more information.
 
-### CdrInput Updates
+### Form Updates
 
+#### CdrSelect
 - New `error` prop and slot added to enable validation.
+- New `info-action` slot for rendering an icon outside and to the right of the input.
+- Updated `required` state to render as an asterisk `*`.
+- New `optional` state added.
+- New `background` prop added to adjust input styling depending on the background it is rendered on.
+
+#### CdrInput
+- New `error` prop and slot added to enable validation.
+- New `info-action` slot for rendering an icon outside and to the right of the input.
 - Updated `required` state to render as an asterisk `*`.
 - New `optional` state added.
 - New `background` prop added to adjust input styling depending on the background it is rendered on.
 - New `helper-text-top` slot added to render helper text above the input. We have also renamed the `helper-text` slot to be `helper-text-bottom`.
 - New `cdr-input__button` utility class has been added for styling icon buttons that are used inside of the `post-icon` slot.
+
+#### CdrRadio / CdrCheckbox
+- Spacing and interaction logic has been updated.
+
+#### CdrFormGroup
+- New `error` prop and slot added to enable validation of checkbox and radio groups.
+- New `optional` and `required` states added.
 
 ## Bug Fixes
 

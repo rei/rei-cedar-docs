@@ -62,8 +62,8 @@
               {
                 "name": "position",
                 "type": "string",
-                "default": "'up'",
-                "description": "Sets the position where the tooltip will render relative to the trigger element. Possible values: 'up' | 'down' | 'left' | 'right'"
+                "default": "'top'",
+                "description": "Sets the position where the tooltip will render relative to the trigger element. Possible values: 'top' | 'bottom' | 'left' | 'right'"
               },
               {
                 "name": "autoPosition",
@@ -117,7 +117,7 @@ CdrTooltip is a wrapper component that accepts a trigger element and tooltip con
 :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
-<cdr-tooltip id="tooltip-example" position="up">
+<cdr-tooltip id="tooltip-example" position="top">
   <cdr-button slot="trigger">
     Add To Cart
   </cdr-button>
@@ -153,7 +153,7 @@ When an interface action is expressed solely through iconography, use a tooltip 
 
 Examples:
 - A text input uses an icon to show that the field can be cleared. Use a tooltip to describe the action: “Clear”
-- An icon-only button is used to close a modal. Use a tooltip to describe what acting upon the button will do: “Close” 
+- An icon-only button is used to close a modal. Use a tooltip to describe what acting upon the button will do: “Close”
 - A toolbar within a content editor contains multiple icon-based actions. Use a tooltip to describe what each action does: “Left-align”
 - A quantity counter uses ‘-’ and ‘+’ symbols to increase or decrease the number of items that will be added to a user’s cart. Use a tooltip to describe the actions: “Decrease quantity” and “Increase quantity”
 
@@ -162,7 +162,7 @@ Examples:
 
 - Don’t use a tooltip to provide additional context for form fields. Instead, use a [Popover](../popover/)
 - Don’t add actions or links inside a tooltip. Instead, use a [Popover](../popover/)
-- Don’t use a tooltip to describe a button that already describes itself through copy 
+- Don’t use a tooltip to describe a button that already describes itself through copy
 
 Example:
 - A credit card security field needs to describe, in detail, where to find the card information. A popover should be used to contain the graphic and card-specific details, not a tooltip

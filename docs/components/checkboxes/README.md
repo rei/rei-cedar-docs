@@ -11,6 +11,10 @@
     {
       "text": "Radio Buttons",
       "href": "../radio/"
+    },
+    {
+      "text": "Form Groups",
+      "href": "../form-group/"
     }
   ],
   "case": [
@@ -100,7 +104,7 @@
     }
   ],
   "sandboxData": {
-    "components": "CdrCheckbox"
+    "components": "CdrCheckbox, CdrFormGroup"
   },
   "versions": [
     {
@@ -198,11 +202,11 @@ Default and standard spacing for checkboxes.
 <cdr-doc-example-code-pair repository-href="/src/components/checkbox" :sandbox-data="$page.frontmatter.sandboxData" :model="{ex1: true, ex2: false, ex3: false}" >
 
 ```html
-<div>
+<cdr-form-group label="Default label">
   <cdr-checkbox v-model="ex1">Default checkbox 1</cdr-checkbox>
   <cdr-checkbox v-model="ex2">Default checkbox 2</cdr-checkbox>
   <cdr-checkbox v-model="ex3" disabled>Default checkbox 3</cdr-checkbox>
-</div>
+</cdr-form-group>
 ```
 
 </cdr-doc-example-code-pair>
@@ -214,11 +218,11 @@ Different sizing for checkboxes.
 <cdr-doc-example-code-pair repository-href="/src/components/checkbox" :sandbox-data="$page.frontmatter.sandboxData" :model="{ex1: true, ex2: false, ex3: false}">
 
 ```html
-<div>
+<cdr-form-group label="Size label">
   <cdr-checkbox v-model="ex1" size="small">Small checkbox</cdr-checkbox>
   <cdr-checkbox v-model="ex2" size="medium">Medium checkbox</cdr-checkbox>
   <cdr-checkbox v-model="ex3" disabled size="large">Large checkbox</cdr-checkbox>
-</div>
+</cdr-form-group>
 ```
 
 </cdr-doc-example-code-pair>
@@ -230,11 +234,11 @@ Use a custom value in place of true/false checked state.
 <cdr-doc-example-code-pair repository-href="/src/components/checkbox" :sandbox-data="$page.frontmatter.sandboxData" :model="{ex1: 'no', ex2: 'yes', ex3: 'no'}">
 
 ```html
-<div>
+<cdr-form-group label="Custom true/false label">
   <cdr-checkbox v-model="ex1" true-value="yes" false-value="no">Option 1?</cdr-checkbox> {{this.ex1}}
   <cdr-checkbox v-model="ex2" true-value="yes" false-value="no">Option 2?</cdr-checkbox> {{this.ex2}}
   <cdr-checkbox v-model="ex3" true-value="yes" false-value="no">Option 3?</cdr-checkbox> {{this.ex3}}
-</div>
+</cdr-form-group>
 ```
 
 </cdr-doc-example-code-pair>
@@ -246,12 +250,12 @@ Use an array as the model to track a list of custom values.
 <cdr-doc-example-code-pair repository-href="/src/components/checkbox" :sandbox-data="$page.frontmatter.sandboxData" :model="{ex: ['2']}">
 
 ```html
-<div>
+<cdr-form-group label="Custom value label">
   <cdr-checkbox v-model="ex" custom-value="1">1</cdr-checkbox>
   <cdr-checkbox v-model="ex" custom-value="2">2</cdr-checkbox>
   <cdr-checkbox v-model="ex" custom-value="3">3</cdr-checkbox>
   {{this.ex}}
-</div>
+</cdr-form-group>
 ```
 
 </cdr-doc-example-code-pair>
@@ -263,13 +267,13 @@ Pass checkbox data into change handlers.
 <cdr-doc-example-code-pair repository-href="/src/components/checkbox" :sandbox-data="$page.frontmatter.sandboxData" :model="{ex: ['2'], lastEdited: ''}">
 
 ```html
-<div>
+<cdr-form-group label="Handling change label">
   Last edited: {{ this.lastEdited }}
   <cdr-checkbox v-model="ex" custom-value="1" @change="() => lastEdited = '1'">1</cdr-checkbox>
   <cdr-checkbox v-model="ex" custom-value="2" @change="() => lastEdited = '2'">2</cdr-checkbox>
   <cdr-checkbox v-model="ex" custom-value="3" @change="() => lastEdited = '3'">3</cdr-checkbox>
   {{ this.ex }}
-</div>
+</cdr-form-group>
 ```
 
 </cdr-doc-example-code-pair>
@@ -310,7 +314,7 @@ Custom styles for checkboxes.
 <cdr-doc-example-code-pair repository-href="/src/components/checkbox" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {styleTag: '.no-box:checked ~ .no-box__content {color: green;}'})" class="custom-checkbox-example" :model="{ex1: true, ex2: false, ex3: false}">
 
 ```html
-<div>
+<cdr-form-group label="Custom checkbox label">
   <cdr-checkbox
     v-model="ex1"
     modifier="hide-figure"
@@ -327,9 +331,38 @@ Custom styles for checkboxes.
     input-class="no-box"
     content-class="no-box__content"
     disabled>Custom checkbox 3</cdr-checkbox>
-</div>
+</cdr-form-group>
 ```
 
+</cdr-doc-example-code-pair>
+
+
+## Error
+
+Render a checkbox group with validation
+
+<cdr-doc-example-code-pair repository-href="/src/components/checkbox"
+:sandbox-data="$page.frontmatter.sandboxData" :model="{ex: [], modelError: 'Please make a selection'}" :methods="{validate() {this.modelError = !this.ex.length && 'Please make a selection'}}">
+
+```html
+<cdr-form-group label="What's your favorite letter?" :error="modelError" :required="true">
+  <cdr-checkbox
+    custom-value="A"
+    v-model="ex"
+    @input="validate"
+  >A</cdr-checkbox>
+  <cdr-checkbox
+    custom-value="B"
+    v-model="ex"
+    @input="validate"
+  >B</cdr-checkbox>
+  <cdr-checkbox
+    custom-value="C"
+    v-model="ex"
+    @input="validate"
+  >C</cdr-checkbox>
+</cdr-form-group>
+```
 </cdr-doc-example-code-pair>
 
 ## Accessibility
