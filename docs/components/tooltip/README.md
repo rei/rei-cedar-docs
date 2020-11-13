@@ -136,6 +136,9 @@ To ensure your usage of this component complies with accessibility guidelines yo
 - Content passed into the `trigger` slot must be an actionable element such as a button.
 - Tooltip content should directly describe the element that triggers it. For example, providing more information or context about what an input does, or adding a textual description of an icon-only buttton.
 - Avoid rich content. Formatting such as bold text, italics, headings, icons, etc. will not be conveyed through aria-describedby or aria-labelledby.
+- No interactive content. Any interactive content such as links or buttons should not be placed within a tooltip.
+- Do not put essential information in tooltips
+- Do not use a timeout to hide the tooltip
 
 This component complies with WCAG guidelines by:
 
