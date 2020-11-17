@@ -143,8 +143,6 @@ This component complies with WCAG guidelines by:
 
 - Adds click handler to trigger element that manages popover state.
 - When opened, moves focus to the first actionable element inside the popover.
-  - If a dialog is limited to interactions that either provide additional information or continue processing, it may be advisable to set focus to the element that is likely to be most frequently used, such as an OK or Continue button.
-  - If content is large enough that focusing the first interactive element could cause the beginning of content to scroll out of view, it is advisable to add tabindex=-1 to a static element at the top of the dialog, such as the dialog title or first paragraph, and initially focus that element.
 - When closed, restores focus to the last active element before the popover was opened.
 - Dynamically sets `aria-controls` on the trigger element to point to the id of the tooltip.
 - Sets `aria-haspopup="dialog"` on the trigger element.
