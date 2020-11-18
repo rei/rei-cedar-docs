@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.11.0",
-    "@rei/cdr-component-variables": "^4.0.0",
+    "@rei/cdr-component-variables": "^5.0.0-alpha.0",
     "@rei/cedar-icons": "^2.1.0",
     "@vuepress/plugin-google-analytics": "^1.5.3",
     "codesandbox": "^2.1.16",
