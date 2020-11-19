@@ -168,7 +168,7 @@ LESS example:
 }
 ```
 
-### Examples
+## Examples
 
 <component-variables-page />
 
