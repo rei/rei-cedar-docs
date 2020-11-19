@@ -405,6 +405,10 @@ This component will bind any attribute that a [native HTML radio element](https:
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events"/>
 
+## Component Variables
+
+<cdr-doc-comp-vars name="CdrLabelWrapper"/>
+
 ## Usage
 
 The **CdrRadio** component requires `v-model` to track the value of selected radios.

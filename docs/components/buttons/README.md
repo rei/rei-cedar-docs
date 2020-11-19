@@ -540,6 +540,10 @@ This component will bind any attribute that a [native HTML button element](https
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
+## Component Variables
+
+<cdr-doc-comp-vars name="CdrButton"/>
+
 ## Usage
 
 ### Size Prop

@@ -326,4 +326,8 @@ This component has compliance with WCAG guidelines by:
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
+## Component Variables
+
+<cdr-doc-comp-vars name="CdrTable"/>
+
 </cdr-doc-table-of-contents-shell>

@@ -521,6 +521,10 @@ This component will bind any attribute that a [native HTML select element](https
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
 
+## Component Variables
+
+<cdr-doc-comp-vars name="CdrSelect">Note that the <a href="../component-variables/#CdrLabelStandalone">cdr-label-standalone mixins</a> should be used for assembling the label element. </cdr-doc-comp-vars>
+
 ## Usage
 
 The **CdrSelect** component requires `v-model` to bind the selected value to your data model, as well as a `label` for accessibility.
