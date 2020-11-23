@@ -248,5 +248,8 @@ In CdrFormGroup, all of the related fields go inside the `fieldset` element, and
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
+## Component Variables
+
+<cdr-doc-comp-vars name="CdrFormGroup"/>
 
 </cdr-doc-table-of-contents-shell>

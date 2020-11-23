@@ -271,6 +271,11 @@ Truncate breadcrumbs left to right to show the final two links in the trail, so 
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.scopedSlots" />
 
+
+## Component Variables
+
+<cdr-doc-comp-vars name="CdrBreadcrumb"/>
+
 ## Usage
 
 The ```items``` property requires an array of objects, in the format shown above. Notable values include:

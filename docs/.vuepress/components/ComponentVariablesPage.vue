@@ -11,15 +11,25 @@ export default {
   methods: {
     formatSCSS(component, example) {
       return `.${component.name}-${example.name} {\n  ${example.scss.join('\n  ')}\n}`
+    },
+    formatName(name) {
+      // pascalize name
+      return name.split('-').map(x => `${x.charAt(0).toUpperCase()}${x.slice(1)}`).join('');
     }
-  }
+  },
+  mounted() {
+    this.$parent.$emit('update-toc');
+  },
 }
 </script>
-
+<!-- pascal-ize name for TOC -->
 <template>
   <div>
     <div v-for="component in examplesData" :key="component.name">
-      <h4>{{component.name}}</h4>
+      <h3 :id="formatName(component.name)">{{formatName(component.name)}}</h3>
+      <cdr-list v-if="component.notes" modifier="unordered">
+        <li v-for="note in component.notes" :key="note">{{note}}</li>
+      </cdr-list>
       <table class="comp-vars-examples">
         <tr><th>Example</th><th>HTML</th><th>SCSS</th></tr>
         <tr v-for="example in component.examples" :key="`${component.name}-${example.name}`">

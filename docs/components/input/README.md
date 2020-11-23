@@ -686,6 +686,11 @@ This component will bind any attribute that a [native HTML input element](https:
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
 
+
+## Component Variables
+
+<cdr-doc-comp-vars name="CdrInput">Note that the <a href="../component-variables/#CdrLabelStandalone">cdr-label-standalone mixins</a> should be used for assembling the label element. </cdr-doc-comp-vars>
+
 ## Usage
 
 The **CdrInput** component requires `v-model` to bind the input value to your data model.  You can also use `helper-text` to display additional information below the input.

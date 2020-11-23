@@ -321,6 +321,10 @@ This component will bind any attribute that a [native HTML anchor element](https
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events"/>
 
+## Component Variables
+
+<cdr-doc-comp-vars name="CdrLink"/>
+
 ## Usage
 
 By default, the component renders using an anchor element and requires an `href` attribute to render a valid, accessible link.
