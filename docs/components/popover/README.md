@@ -19,14 +19,14 @@
       "image": "popover/popover_content_do.png",
       "ratio": "4-3",
       "alt": "Image showing proper popover usage",
-      "caption": "Do link to additional content within a popover if additional information might be needed"
+      "caption": "link to additional content within a popover if additional information might be needed"
     },
     {
       "type": "dont",
       "image": "popover/popover_content_dont.png",
       "ratio": "4-3",
       "alt": "Image showing improper popover usage",
-      "caption": "Don't overload the popover with too much content "
+      "caption": "overload the popover with too much content "
     }
   ],
 
@@ -36,14 +36,14 @@
       "image": "popover/popover_essential_do.png",
       "ratio": "4-3",
       "alt": "Image showing proper popover usage",
-      "caption": "Do provide users with additional information in a popover when a feature or task might need clarification"
+      "caption": "provide users with additional information in a popover when a feature or task might need clarification"
     },
     {
       "type": "dont",
       "image": "popover/popover_essential_dont.png",
       "ratio": "4-3",
       "alt": "Image showing improper popover usage",
-      "caption": "Don't put information that's essential for completing a task in a popover"
+      "caption": "put information that's essential for completing a task in a popover"
     }
   ],
 
@@ -112,7 +112,7 @@
 
 # Overview
 
-CdrPopover is a wrapper component that accepts a trigger element and popover content. When the trigger element is clicked, the poppver content is rendered. Event bindings between the trigger and the popover are set up automatically. The popover will dynamically update its position property to ensure that it renders on screen, though this functionality can be disabled by setting autoPosition to false.
+CdrPopover is a wrapper component that accepts a trigger element and popover content. When the trigger element is clicked, the popover content is rendered. Event bindings between the trigger and the popover are set up automatically. The popover will dynamically update its position property to ensure that it renders on screen, though this functionality can be disabled by setting autoPosition to false.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrPopover"
 :sandbox-data="$page.frontmatter.sandboxData" >
@@ -160,15 +160,15 @@ A popover is a floating container useful for communicating small amounts of clar
 Use a popover when a subset of users require additional information.
 
 Example:
-- When the co-op requests a user’s email, a popover is used to explain why an email is required and the ways in which it might be used
-Some users aren’t familiar with a credit card security field. Using a popover, describe specifically where to find the information being asked for the identified card type.
+- When the co-op requests a user’s email, a popover is used to explain why an email is required and the ways in which it might be used.
+- Some users aren’t familiar with a credit card security field. Using a popover, describe specifically where to find the information being asked for the identified card type.
 
 ## Don’t use when
-- Don’t put critical information in a popover. Instead, place the information inline so that it’s always visible to users
-- Don’t put excessive content into popover. Instead, use a [Modal](../modal/)
+- Don’t put critical information in a popover. Instead, place the information inline so that it’s always visible to users.
+- Don’t put excessive content into popover. Instead, use a [Modal](../modal/).
 
 Example:
-- The terms and conditions of a free shipping offer needs to be easily viewed, if desired. Place the lengthy details of the offer in a modal, not a popover
+- The terms and conditions of a free shipping offer needs to be easily viewed, if desired. Place the lengthy details of the offer in a modal, not a popover.
 
 
 ## Do / Don't
