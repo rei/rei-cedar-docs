@@ -157,9 +157,9 @@ Rather than passing a `label` prop, the label element can be customized using th
 </cdr-doc-example-code-pair>
 
 
-## Error
+## Validation
 
-Render a form group in an error state
+Render a form group  with validation and error state
 
 <cdr-doc-example-code-pair repository-href="/src/components/formGroup"
 :sandbox-data="$page.frontmatter.sandboxData" :model="{ex: [], modelError: 'Please make a selection'}" :methods="{validate() {this.modelError = !this.ex.length && 'Please make a selection'}}">

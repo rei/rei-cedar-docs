@@ -341,7 +341,7 @@ Input field with helper or hint text below the input field.
 </cdr-doc-example-code-pair>
 
 
-## Select with Error
+## Validation
 
 Error prop and slot can be used to render the select in an error state
 

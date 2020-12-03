@@ -286,9 +286,9 @@ Custom styles for radio buttons.
 </cdr-doc-example-code-pair>
 
 
-## Error
+## Validation
 
-Render a checkbox group with validation
+Render a radio group with validation and error state
 
 <cdr-doc-example-code-pair repository-href="/src/components/radio"
 :sandbox-data="$page.frontmatter.sandboxData" :model="{ex: [], modelError: 'Please make a selection'}" :methods="{validate() {this.modelError = !this.ex.length && 'Please make a selection'}}">
