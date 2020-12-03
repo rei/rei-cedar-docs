@@ -76,6 +76,11 @@
                 "type": "string",
                 "description": "Adds a custom class to the tooltip content wrapper. Allows for overriding it's size, styling, etc."
               },
+              {
+                "name": "open",
+                "type": "boolean",
+                "description": "Used to programmatically control the tooltip state. Does not need to be set if you are using the `trigger` slot. See the Custom Trigger examples for more info."
+              },
             ],
             "slots": [
               {
@@ -125,6 +130,38 @@ CdrTooltip is a wrapper component that accepts a trigger element and tooltip con
     On hover or focus, I provide more information about what this button does
   </div>
 </cdr-tooltip>
+```
+</cdr-doc-example-code-pair>
+
+## Custom Trigger
+
+The tooltip can also be controlled programmatically using the `open` prop. However, doing so means that you must implement certain behavior yourself:
+
+- The CdrTooltip element and the trigger element must be wrapped in a div with `position: relative` and `width: max-content`.
+- The `open` property should be toggled to true on `mouseover` and `focus`, and toggled to false on `blur` and `focus`.
+- The trigger element should set its `aria-describedby` property set to the ID of the CdrTooltip.
+
+<cdr-doc-example-code-pair repository-href="/src/components/CdrTooltip"
+:sandbox-data="$page.frontmatter.sandboxData" :model="{open: false}">
+
+```html
+<div style="position: relative; width: max-content;">
+  <cdr-button
+    modifier="secondary"
+    @mouseover="open = true"
+    @mouseleave="open = false"
+    @focus="open = true"
+    @blur="open = false"
+    aria-describedby="tooltip-custom-example"
+  >
+    Custom Trigger
+  </cdr-button>
+  <cdr-tooltip id="tooltip-custom-example" position="top" :open="open">
+    <div>
+      On click, I provide additional information to the user
+    </div>
+  </cdr-tooltip>
+</div>
 ```
 </cdr-doc-example-code-pair>
 
