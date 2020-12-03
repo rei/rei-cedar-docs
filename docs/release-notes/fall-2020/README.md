@@ -68,6 +68,29 @@ The `helper-text` slot in CdrInput has been deprecated and replaced with an iden
 
 ## Breaking Changes
 
+### Component Variables
+
+- We have created a new [Component Variables examples page](../../components/component-variables) with more information on how to use `@rei/cdr-component-variables`.
+- We have added primary and secondary mixins for input, select, radio, and checkbox to control how they render on different background colors.
+- We have refactored how the form labels work inside Cedar to reduce duplication. Styles for CdrRadio and CdrCheckbox can now be found in the [CdrLabelWrapper mixins](../../components/component-variables/#CdrLabelWrapper), while styles for CdrInput and CdrSelect can now be found in the [CdrLabelStandalone mixins](../../components/component-variables/#CdrLabelStandalone). The `form-label.vars.scss` file has been removed. See the chart below for information on re-mapping those mixins.
+
+| Old Mixin | New Mixin |
+|----|-----|
+| cdr-input-base-label-mixin | cdr-label-standalone-label-mixin |
+| cdr-input-required-label-mixin | cdr-label-standalone-label-mixin |
+| cdr-input-info-container-mixin | cdr-label-standalone-info-mixin |
+| cdr-input-helper-text-mixin | cdr-label-standalone-helper-mixin |
+| cdr-input-base-label-disabled-mixin | cdr-label-standalone-disabled-mixin |
+| cdr-select-base-label-mixin | cdr-label-standalone-label-mixin |
+| cdr-select-base-label-disabled-mixin| cdr-label-standalone-disabled-mixin |
+| cdr-select-required-label-mixin| cdr-label-standalone-label-mixin |
+| cdr-select-info-container-mixin | cdr-label-standalone-info-mixin |
+| cdr-select-helper-text-mixin | cdr-label-standalone-helper-mixin |
+| cdr-label-base-mixin | cdr-label-wrapper-base-mixin, cdr-label-wrapper-primary-mixin |
+| cdr-label-disabled-mixin | cdr-label-wrapper-disabled-mixin|
+| cdr-label-small-mixin | cdr-label-wrapper-small-mixin |
+| cdr-label-large-mixin | cdr-label-wrapper-large-mixin |
+
 ### Removals
 
 In accordance with our deprecation policy, features that were deprecated in the [Spring 2020 release](../spring-2020/#deprecations) or prior have been removed from Cedar.
