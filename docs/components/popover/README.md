@@ -10,7 +10,7 @@
     }
   ],
   "sandboxData": {
-    "components": "CdrPopover, CdrButton, IconInformationStroke"
+    "components": "CdrPopover, CdrButton"
   },
 
   "content": [
@@ -124,11 +124,11 @@ CdrPopover is a wrapper component that accepts a trigger element and popover con
 
 ```html
 <cdr-popover id="popover-example" position="top">
-  <cdr-button slot="trigger" :icon-only="true" :with-background="true">
-    <icon-information-stroke slot="icon"/>
+  <cdr-button slot="trigger">
+    Click me
   </cdr-button>
   <div>
-    On click, I provide additional information to the user
+    I provide additional information to the user
   </div>
 </cdr-popover>
 ```
@@ -148,17 +148,15 @@ The tooltip can also be controlled programmatically using the `open` prop. Howev
 ```html
 <div style="position: relative; width: max-content;">
   <cdr-button
-    :icon-only="true"
-    :with-background="true"
     @click="open = !open"
     aria-haspopup="dialog"
     aria-controls="popover-custom-example"
   >
-    <icon-information-stroke slot="icon"/>
+    Click me
   </cdr-button>
   <cdr-popover id="popover-custom-example" position="top" :open="open">
     <div>
-      On click, I provide additional information to the user
+      I provide additional information to the user
     </div>
   </cdr-popover>
 </div>
