@@ -21,9 +21,8 @@
 | package name | version |
 |--------------|---------|
 | `@rei/cedar` | ^7.x.x |
-| `@rei/cdr-tokens` | ^x.x.x |
-| `@rei/cdr-component-variables` | ^x.x.x |
-| `@rei/cedar-icons` | ^x.x.x |
+| `@rei/cdr-tokens` | ^7.x.x |
+| `@rei/cdr-component-variables` | ^5.x.x |
 
 - If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your micro-site.
 
@@ -58,7 +57,12 @@ CdrTooltip and CdrPopover are both components that accepts a trigger element and
 - New `error` prop and slot added to enable validation of checkbox and radio groups.
 - New `optional` and `required` states added.
 
-## Bug Fixes
+### Doc Site Updates
+
+- The [component variables page](../../components/component-variables) has been updated to include examples of mixin usage for all supported components.
+- Cedar components that support component variables now note that on their pages.
+- The github pages doc sites for `@rei/cdr-component-variables` and `@rei/cdr-tokens` have been deleted and now redirect to the equivalent pages on this site.
+- A new [deprecated](../deprecated) page has been created to more easily track down breaking updates to Cedar.
 
 ## Deprecations
 
