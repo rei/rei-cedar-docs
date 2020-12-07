@@ -337,9 +337,9 @@ Custom styles for checkboxes.
 </cdr-doc-example-code-pair>
 
 
-## Error
+## Validation
 
-Render a checkbox group with validation
+Render a checkbox group with validation and error state
 
 <cdr-doc-example-code-pair repository-href="/src/components/checkbox"
 :sandbox-data="$page.frontmatter.sandboxData" :model="{ex: [], modelError: 'Please make a selection'}" :methods="{validate() {this.modelError = !this.ex.length && 'Please make a selection'}}">

@@ -21,9 +21,8 @@
 | package name | version |
 |--------------|---------|
 | `@rei/cedar` | ^7.x.x |
-| `@rei/cdr-tokens` | ^x.x.x |
-| `@rei/cdr-component-variables` | ^x.x.x |
-| `@rei/cedar-icons` | ^x.x.x |
+| `@rei/cdr-tokens` | ^7.x.x |
+| `@rei/cdr-component-variables` | ^5.x.x |
 
 - If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your micro-site.
 
@@ -58,7 +57,12 @@ CdrTooltip and CdrPopover are both components that accepts a trigger element and
 - New `error` prop and slot added to enable validation of checkbox and radio groups.
 - New `optional` and `required` states added.
 
-## Bug Fixes
+### Doc Site Updates
+
+- The [component variables page](../../components/component-variables) has been updated to include examples of mixin usage for all supported components.
+- Cedar components that support component variables now note that on their pages.
+- The github pages doc sites for `@rei/cdr-component-variables` and `@rei/cdr-tokens` have been deleted and now redirect to the equivalent pages on this site.
+- A new [deprecated](../deprecated) page has been created to more easily track down breaking updates to Cedar.
 
 ## Deprecations
 
@@ -67,6 +71,29 @@ CdrTooltip and CdrPopover are both components that accepts a trigger element and
 The `helper-text` slot in CdrInput has been deprecated and replaced with an identical `helper-text-bottom` slot. This was done to be consistent with the [new `helper-text-top` slot](#cdrinput-updates).
 
 ## Breaking Changes
+
+### Component Variables
+
+- We have created a new [Component Variables examples page](../../components/component-variables) with more information on how to use `@rei/cdr-component-variables`.
+- We have added primary and secondary mixins for input, select, radio, and checkbox to control how they render on different background colors.
+- We have refactored how the form labels work inside Cedar to reduce duplication. Styles for CdrRadio and CdrCheckbox can now be found in the [CdrLabelWrapper mixins](../../components/component-variables/#CdrLabelWrapper), while styles for CdrInput and CdrSelect can now be found in the [CdrLabelStandalone mixins](../../components/component-variables/#CdrLabelStandalone). The `form-label.vars.scss` file has been removed. See the chart below for information on re-mapping those mixins.
+
+| Old Mixin | New Mixin |
+|----|-----|
+| cdr-input-base-label-mixin | cdr-label-standalone-label-mixin |
+| cdr-input-required-label-mixin | cdr-label-standalone-label-mixin |
+| cdr-input-info-container-mixin | cdr-label-standalone-info-mixin |
+| cdr-input-helper-text-mixin | cdr-label-standalone-helper-mixin |
+| cdr-input-base-label-disabled-mixin | cdr-label-standalone-disabled-mixin |
+| cdr-select-base-label-mixin | cdr-label-standalone-label-mixin |
+| cdr-select-base-label-disabled-mixin| cdr-label-standalone-disabled-mixin |
+| cdr-select-required-label-mixin| cdr-label-standalone-label-mixin |
+| cdr-select-info-container-mixin | cdr-label-standalone-info-mixin |
+| cdr-select-helper-text-mixin | cdr-label-standalone-helper-mixin |
+| cdr-label-base-mixin | cdr-label-wrapper-base-mixin, cdr-label-wrapper-primary-mixin |
+| cdr-label-disabled-mixin | cdr-label-wrapper-disabled-mixin|
+| cdr-label-small-mixin | cdr-label-wrapper-small-mixin |
+| cdr-label-large-mixin | cdr-label-wrapper-large-mixin |
 
 ### Removals
 

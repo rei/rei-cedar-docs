@@ -10,7 +10,7 @@
     }
   ],
   "sandboxData": {
-    "components": "CdrPopover, CdrButton, IconInformationStroke"
+    "components": "CdrPopover, CdrButton"
   },
 
   "content": [
@@ -77,6 +77,11 @@
                 "type": "string",
                 "description": "Adds a custom class to the popover content wrapper. Allows for overriding it's size, styling, etc."
               },
+              {
+                "name": "open",
+                "type": "boolean",
+                "description": "Used to programmatically control the popover state. Does not need to be set if you are using the `trigger` slot. See the Custom Trigger examples for more info."
+              },
             ],
             "slots": [
               {
@@ -119,13 +124,42 @@ CdrPopover is a wrapper component that accepts a trigger element and popover con
 
 ```html
 <cdr-popover id="popover-example" position="top">
-  <cdr-button slot="trigger" :icon-only="true" :with-background="true">
-    <icon-information-stroke slot="icon"/>
+  <cdr-button slot="trigger">
+    Click me
   </cdr-button>
   <div>
-    On click, I provide additional information to the user
+    I provide additional information to the user
   </div>
 </cdr-popover>
+```
+</cdr-doc-example-code-pair>
+
+## Custom Trigger
+
+The tooltip can also be controlled programmatically using the `open` prop. However, doing so means that you must implement certain behavior yourself:
+
+- The CdrPopover element and the trigger element must be wrapped in a div with `position: relative` and `width: max-content`.
+- The `open` property should be toggled to true when the trigger element is clicked. Close logic will be handled by CdrPopover.
+- The trigger element should have it's `aria-controls` property set to the ID of the CdrPopover, and it's `aria-haspopup` property set to "dialog".
+
+<cdr-doc-example-code-pair repository-href="/src/components/CdrPopover"
+:sandbox-data="$page.frontmatter.sandboxData" :model="{open: false}">
+
+```html
+<div style="position: relative; width: max-content;">
+  <cdr-button
+    @click="open = !open"
+    aria-haspopup="dialog"
+    aria-controls="popover-custom-example"
+  >
+    Click me
+  </cdr-button>
+  <cdr-popover id="popover-custom-example" position="top" :open="open">
+    <div>
+      I provide additional information to the user
+    </div>
+  </cdr-popover>
+</div>
 ```
 </cdr-doc-example-code-pair>
 

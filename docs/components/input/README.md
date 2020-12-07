@@ -338,7 +338,7 @@ Input field with no label.
 
 </cdr-doc-example-code-pair>
 
-## Input with Validation
+## Validation
 
 Input field with validation that runs on `blur`. Error state is controlled with the `error` prop. Setting the `error` prop to a string will render that message with default error styling. The `error` slot can be used to fully customize the error message.
 
