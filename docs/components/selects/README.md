@@ -390,6 +390,31 @@ With multipleSize:
 
 </cdr-doc-example-code-pair>
 
+## Nested Options
+
+CdrSelect can be rendered with nested options using the `optgroup` tag.
+
+<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: []}">
+
+```html
+<cdr-select
+  v-model="defaultModel"
+  label="Select label"
+>
+  <optgroup label="bread">
+    <option value="rye">rye</option>
+    <option value="sourdough">sourdough</option>
+    <option value="wheat">wheat</option>
+  </optgroup>
+  <optgroup label="toppings">
+    <option value="provolone">provolone</option>
+    <option value="peppers">peppers</option>
+    <option value="gabagool">gabagool</option>
+  </optgroup>
+</cdr-select>
+```
+
+</cdr-doc-example-code-pair>
 
 ## Accessibility
 
