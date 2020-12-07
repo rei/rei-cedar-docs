@@ -189,8 +189,7 @@
 
 
 
-## @rei/cedar
-
+## Cedar Components
 
 ### CdrCta
 
@@ -249,8 +248,7 @@ CdrDataTable has been replaced by CdrTable. See [the release notes](../release-n
 | utility-n00 | utility-sans-n00 |
 | utility-strong-n00 | utility-sans-strong-n00 |
 
-
-### Icons
+### CdrIcon
 
 | old asset name     | new asset name     |
 |--------------------|--------------------|
