@@ -136,7 +136,7 @@ CdrPopover is a wrapper component that accepts a trigger element and popover con
 
 ## Custom Trigger
 
-The tooltip can also be controlled programmatically using the `open` prop. However, doing so means that you must implement certain behavior yourself:
+CdrPopover can also be controlled programmatically using the `open` prop. However, doing so means that you must implement certain behavior yourself:
 
 - The CdrPopover element and the trigger element must be wrapped in a div with `position: relative` and `width: max-content`.
 - The `open` property should be toggled to true when the trigger element is clicked. Close logic will be handled by CdrPopover.
@@ -148,9 +148,10 @@ The tooltip can also be controlled programmatically using the `open` prop. Howev
 ```html
 <div style="position: relative; width: max-content;">
   <cdr-button
-    @click="open = !open"
     aria-haspopup="dialog"
     aria-controls="popover-custom-example"
+    @click="open = true"
+    @closed="open = false"
   >
     Click me
   </cdr-button>
