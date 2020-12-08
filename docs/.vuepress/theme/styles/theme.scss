@@ -182,7 +182,7 @@ div[class^='language-'] {
 
   .line-numbers-wrapper {
     border-right: $cdr-doc-border-separator;
-    font-family: 'Roboto Mono', monospace;
+    font-family: $cdr-doc-font-family-mono;
     font-size: 14px;
     line-height: 1.4;
     padding-right: $cdr-space-one-x;
