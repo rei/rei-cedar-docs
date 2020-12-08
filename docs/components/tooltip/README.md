@@ -135,7 +135,7 @@ CdrTooltip is a wrapper component that accepts a trigger element and tooltip con
 
 ## Custom Trigger
 
-The tooltip can also be controlled programmatically using the `open` prop. However, doing so means that you must implement certain behavior yourself:
+CdrTooltip can also be controlled programmatically using the `open` prop. However, doing so means that you must implement certain behavior yourself:
 
 - The CdrTooltip element and the trigger element must be wrapped in a div with `position: relative` and `width: max-content`.
 - The `open` property should be toggled to true on `mouseover` and `focus`, and toggled to false on `blur` and `focus`.
@@ -147,7 +147,6 @@ The tooltip can also be controlled programmatically using the `open` prop. Howev
 ```html
 <div style="position: relative; width: max-content;">
   <cdr-button
-    modifier="secondary"
     @mouseover="open = true"
     @mouseleave="open = false"
     @focus="open = true"
