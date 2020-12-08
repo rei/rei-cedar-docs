@@ -192,7 +192,7 @@ This component complies with WCAG guidelines by:
 
 ## Use when
 
-When an interface action is expressed solely through iconography, use a tooltip to clarify the action. The descriptions provided by tooltips should only contain one or two words: “close”, “clear”, or “save” are common examples.
+When an interface action is expressed solely through iconography, use a tooltip to clarify the action. Only interactive elements should trigger tooltips. The descriptions provided by tooltips should only contain one or two words: “close”, “clear”, or “save” are common examples.
 
 Examples:
 - A text input uses an icon to show that the field can be cleared. Use a tooltip to describe the action: “Clear”
