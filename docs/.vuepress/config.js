@@ -4,15 +4,6 @@ module.exports = {
   description:
     "The Cedar Design System provides digital teams with reusable UI components based on REI’s visual language.",
   head: [
-    // TODO: remove
-    [
-      "link",
-      {
-        rel: "stylesheet",
-        href:
-          "https://fonts.googleapis.com/css?family=Roboto+Condensed:400|Roboto:400|Roboto+Mono:400"
-      }
-    ],
     [
       "link",
       {
@@ -57,12 +48,14 @@ module.exports = {
       {
         text: "Release Notes",
         items: [
+          { text: "Fall 2020", link: "/release-notes/fall-2020/" },
           { text: "Summer 2020", link: "/release-notes/summer-2020/" },
           { text: "Spring 2020", link: "/release-notes/spring-2020/" },
           { text: "Winter 2020", link: "/release-notes/winter-2020/" },
           { text: "Fall 2019", link: "/release-notes/fall-2019/" },
           { text: "Summer 2019", link: "/release-notes/summer-2019/" },
           { text: "Archive", link: "/release-notes/archive/" },
+          { text: "Deprecated", link: "/release-notes/deprecated/" },
         ]
       },
       {
@@ -130,13 +123,15 @@ module.exports = {
           { text: "Lists", link: "/components/lists/" },
           { text: "Modal", link: "/components/modal/" },
           { text: "Pagination", link: "/components/pagination/" },
+          { text: "Popover", link: "/components/popover/" },
           { text: "Pull Quote", link: "/components/pull-quote/" },
           { text: "Radio Buttons", link: "/components/radio/" },
           { text: "Ratings", link: "/components/rating/" },
           { text: "Select", link: "/components/selects/" },
           { text: "Table", link: "/components/table/" },
           { text: "Tabs", link: "/components/tabs/" },
-          { text: "Text", link: "/components/text/" }
+          { text: "Text", link: "/components/text/" },
+          { text: "Tooltip", link: "/components/tooltip/" }
         ]
       },
       {

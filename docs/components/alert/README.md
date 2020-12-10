@@ -139,6 +139,9 @@ Use to provide context around a situation. No action is required.
 - As confirmation that a task was completed successfully (see [Success](../alert/#success) type)
 - As contextual information that might need their attention (see [Informational](../alert/#informational) type)
 
+## Don't use when
+
+- To provide inline error messaging for form input validation. Instead use the built in validation and error features of the Cedar form components. 
 
 # API
 
@@ -150,5 +153,8 @@ Use to provide context around a situation. No action is required.
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
+## Component Variables
+
+<cdr-doc-comp-vars name="CdrAlert"/>
 
 </cdr-doc-table-of-contents-shell>

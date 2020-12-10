@@ -204,5 +204,8 @@ Many WCAG requirements are contextual to their implementation. To ensure that us
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
+## Component Variables
+
+<cdr-doc-comp-vars name="CdrCard"/>
 
 </cdr-doc-table-of-contents-shell>

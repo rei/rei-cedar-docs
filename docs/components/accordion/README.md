@@ -65,16 +65,6 @@
                 "description": "Set the heading that wraps the button to the appropriate level for the page. This aids in accesibility and navigaiton for keyboard users."
               },
               {
-                "name": "label",
-                "type": "string",
-                "default": "N/A",
-                "description": "Sets the readable text on the CdrAccordion button. Deprecated. Use label slot.",
-                "alert": {
-                  "type": "deprecated",
-                  "description": "Deprecated in v3.0.0. Instead, use 'label' slot."
-                }
-              },
-              {
                 "name": "opened",
                 "type": "boolean",
                 "default": "false",
@@ -96,7 +86,7 @@
             "slots": [
               {
                 "name": "label",
-                "description": "Sets the readable text on the CdrAccordion button. Use this slot instead of label prop."
+                "description": "Sets the readable text on the CdrAccordion button."
               },
               {
                 "name": "default",
