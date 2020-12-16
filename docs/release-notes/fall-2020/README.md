@@ -57,6 +57,10 @@ CdrTooltip and CdrPopover are both components that accepts a trigger element and
 - New `error` prop and slot added to enable validation of checkbox and radio groups.
 - New `optional` and `required` states added.
 
+### Font Performance Update
+
+Cedar worked with the Performance team to optimize the `cdr-fonts.css` file. The fonts must be loaded on every page so this should improve performance across REI. Micro-sites can also opt in to a cached version of this file by loading the [@rei/fonts](https://git.rei.com/projects/FEDPACK/repos/rei-fonts/browse) package rather than importing the `cdr-fonts.css` file directly from Cedar.
+
 ### Documentation Updates
 
 - The [component variables page](../../components/component-variables) has been updated to include examples of mixin usage for all supported components.
