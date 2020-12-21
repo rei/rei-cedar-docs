@@ -95,15 +95,6 @@
         }
       ]
     }
-  ],
-  "see_also": [
-    {
-      "text": "See Also",
-    },
-    {
-      "text": "Call to Action",
-      "href": "../cta/"
-    }
   ]
 }
 ---

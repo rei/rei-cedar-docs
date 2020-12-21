@@ -300,15 +300,15 @@ For a list of all available icons and their names, visit the [Cedar Icon Library
 
 When using icons with links or buttons, ensure that the icon communicates intended meaning.
 
-<do-dont :examples="$page.frontmatter.meaning" class="cdr-mb-space-two-x"/>
+<do-dont :examples="$page.frontmatter.meaning" class="stack-2"/>
 
 Ensure that icons are sized to provide a minimum click or touch target.
 
-<do-dont :examples="$page.frontmatter.clearance" class="cdr-mb-space-two-x"/>
+<do-dont :examples="$page.frontmatter.clearance" class="stack-2"/>
 
 Ensure that icons use contrast ratio of 4.5:1 between icon color and background color.
 
-<do-dont :examples="$page.frontmatter.color" class="cdr-mb-space-two-x"/>
+<do-dont :examples="$page.frontmatter.color" class="stack-2"/>
 
 # API
 

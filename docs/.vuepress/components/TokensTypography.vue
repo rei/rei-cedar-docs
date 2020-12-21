@@ -5,11 +5,11 @@
     <template v-if="platform === 'web'">
     <div
       v-for="(v, k) in webMixinsByType"
-      class="cdr-mb-space-two-x"
+      class="stack-2"
     >
       <p class="typography-example" :style="makeStyleObj(v)">A different kind of company</p>
       <cdr-text><b>{{ k }}</b> (mixin)</cdr-text>
-      <!-- <cdr-text class="cdr-mb-space-one-x">{{descriptionData[k]}}</cdr-text> -->
+      <!-- <cdr-text class="stack-1">{{descriptionData[k]}}</cdr-text> -->
 
       <cdr-table>
         <tbody>
@@ -28,13 +28,13 @@
     <template v-if="platform === 'native'">
     <div
       v-for="(v, k) in nativeTokensByType"
-      class="cdr-mb-space-two-x"
+      class="stack-2"
     >
       <!-- Native tokens don't contain enough info for web display -->
       <!-- <p class="typography-example" :style="makeNativeStyleObj(v)">A different kind of company</p> -->
       <cdr-text><b>Android:</b> {{ v[0].docs.android }}</cdr-text>
       <cdr-text><b>iOS:</b> {{ v[0].docs.ios }}</cdr-text>
-      <cdr-text class="cdr-mb-space-one-x">{{v[0].docs.description}}.</cdr-text>
+      <cdr-text class="stack-1">{{v[0].docs.description}}.</cdr-text>
 
       <cdr-table>
         <tbody>

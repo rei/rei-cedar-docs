@@ -110,7 +110,6 @@ module.exports = {
           { text: "Block Quote", link: "/components/block-quote/" },
           { text: "Breadcrumb", link: "/components/breadcrumb/" },
           { text: "Buttons", link: "/components/buttons/" },
-          { text: "Call to Action", link: "/components/cta/" },
           { text: "Caption", link: "/components/caption/" },
           { text: "Card", link: "/components/card/" },
           { text: "Checkboxes", link: "/components/checkboxes/" },

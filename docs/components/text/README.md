@@ -14,7 +14,8 @@
     }
   ],
   "sandboxData": {
-    "components": "CdrText"
+    "components": "CdrText",
+    "styleTag": ".stack { margin-top: $cdr-space-one-x}"
   },
   "semantic": [
     {
@@ -412,7 +413,7 @@ Serif headings should only accompanied by sans subheadings.
       When you gear up, we give back
       <cdr-text
        modifier="subheading-sans-500"
-       class="cdr-pt-space-one-and-a-half-x">
+       class="stack">
        Treat yourself to sweet gear
        </cdr-text>
   </cdr-text>
@@ -452,7 +453,7 @@ Sans headings also work best with sans subheadings.
       When you gear up, we give back
       <cdr-text
        modifier="subheading-sans-300"
-       class="cdr-pt-space-one-x">
+       class="stack">
        Treat yourself to sweet gear
        </cdr-text>
   </cdr-text>
