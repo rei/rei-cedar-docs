@@ -138,7 +138,7 @@ Rather than passing a `label` prop, the label element can be customized using th
 ```html
 <cdr-form-group>
   <template slot="label">
-    <cdr-text modifier="heading-sans-600">Optional Label Slot Override</cdr-text>
+    <cdr-text style="font-size: 24px;">Optional Label Slot Override</cdr-text>
   </template>
   <cdr-checkbox
     custom-value="A"

@@ -10,7 +10,8 @@
     }
   ],
   "sandboxData": {
-    "components": "CdrModal, CdrButton"
+    "components": "CdrModal, CdrButton",
+    "styleTag": ".title-header { @include cdr-text-heading-serif-600;}"
   },
   "versions": [
     {
@@ -122,7 +123,7 @@
   <template slot="title">
     <cdr-text
       tag="h3"
-      modifier="heading-600"
+      class="title-header"
     >Add to Cart
     </cdr-text>
   </template>
@@ -217,7 +218,7 @@ When using the `label` slot, add CdrText to use the appropriate header styles.
 <template slot="title">
   <cdr-text
     tag="h1"
-    modifier="heading-600"
+    class="custom-text-class"
   >Add to Cart
   </cdr-text>
 </template>

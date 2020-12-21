@@ -13,8 +13,6 @@
           <tr>
             <th>UI toolkit</th>
             <th>Token</th>
-            <th>Utility class</th>
-            <th>Component Modifier</th>
           </tr>
         </thead>
         <tbody>
@@ -24,12 +22,6 @@
             </td>
             <td>
               <cdr-text>cdr-text-{{ modifier }}-{{ level }}</cdr-text>
-            </td>
-            <td>
-              <cdr-text>cdr-text--{{ modifier }}-{{ level }}</cdr-text>
-            </td>
-            <td>
-              <cdr-text>{{ modifier }}-{{ level }}</cdr-text>
             </td>
           </tr>
         </tbody>
