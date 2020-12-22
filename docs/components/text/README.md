@@ -378,7 +378,7 @@ Sans-serif subheadings are set in Graphik. They are intended to be paired with s
 
 ```html
 
-  <cdr-text modifier="subheading-serif-600">
+  <cdr-text modifier="subheading-sans-600">
     When you gear up, we give back
   </cdr-text>
 
@@ -394,7 +394,7 @@ Sans-serif subheadings are set in Graphik. They are intended to be paired with s
 <style>
   @import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
   .custom-subheading-class {
-    @include cdr-text-subheading-serif-600;
+    @include cdr-text-subheading-sans-600;
   }
 </style>
 ```
