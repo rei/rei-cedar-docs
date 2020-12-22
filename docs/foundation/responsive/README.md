@@ -6,7 +6,7 @@
   "summary": false,
   "breadcrumbs": [
     {
-      "text": "Layout/"
+      "text": "Foundation/"
     }
   ],
   "sandboxData": {
