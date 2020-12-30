@@ -68,6 +68,12 @@
                 "type": "string",
                 "default": "N/A",
                 "description": "Defines gutter size. Default gutter size is 16px for @xs and @sm (medium) and 32px for @md and @lg (large). Possible values: {  ‘none’  |  ‘small’ | 'medium' | 'large' }. Also accepts responsive values @breakpoint:  none@md’."
+              },
+              {
+                "name": "tag",
+                "type": "string",
+                "default": "div",
+                "description": "Sets the tag type for the CdrGrid element. Accepts any HTML tag name that can function using `display: grid`. Useful for constructing list based layouts."
               }
             ],
             "slots": [
@@ -90,6 +96,7 @@
   The Flexbox based CdrRow and CdrCol have been deprecated in favor of the more performant and lighter weight CSS Grid based CdrGrid component. Teams using CdrRow and CdrCol should use CdrGrid for any new work, while incrementally migrating any existing CdrRow/CdrCol usage to use CdrGrid instead.
 
   See the <cdr-link href="../../release-notes/winter-2021/#cdrgrid">winter 2021 release notes</cdr-link> for details on migrating, and you can find the <cdr-link href="../grid-deprecated">CdrRow and CdrCol documentation here</cdr-link>
+
 </cdr-doc-alert>
 
 
@@ -416,6 +423,26 @@ Scrollable grids can be created using the `grid-auto-flow` property set to `colu
 
 </cdr-doc-example-code-pair>
 
+
+## List Markup
+
+For accessibility reasons it may make sense to construct your grid using list markup.
+
+<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+
+```html
+
+  <cdr-grid class="grid-2-example" tag="ul" style="overflow: scroll; grid-template-columns: 1fr 1fr;">
+    <li>some normal content</li>
+    <li>short content</li>
+    <li>some content that is longer</li>
+    <li>short content</li>
+  </cdr-grid>
+
+```
+
+</cdr-doc-example-code-pair>
+
 ## Span
 
 Column width can be controlled using the `grid-template-columns` property.
@@ -622,6 +649,7 @@ Use `grid-template-areas` to layout grid items named using the `grid-area` prope
 To ensure that usage of this component complies with accessibility guidelines:
 - Low-vision users should be able to increase the size of the text by up to 200 percent without breaking the layout
 - Ensure the tab order for grid content makes sense. Avoid re-ordering the placement of items to differ from their order in the markup.
+- Use [list markup](#list-markup) for content layout. List markup allow contents to be structured which makes it easier for assistive technologies
 
 <hr>
 
