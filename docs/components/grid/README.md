@@ -92,6 +92,8 @@
 
 <cdr-doc-table-of-contents-shell >
 
+<br/>
+
 <cdr-doc-alert icon="info">
   The Flexbox based CdrRow and CdrCol have been deprecated in favor of the more performant and lighter weight CSS Grid based CdrGrid component. Teams using CdrRow and CdrCol should use CdrGrid for any new work, while incrementally migrating any existing CdrRow/CdrCol usage to use CdrGrid instead.
 
@@ -104,9 +106,16 @@
 
 CdrGrid is a simple wrapper for working with CSS Grid. Any valid CSS Grid properties can be applied to a CdrGrid or it's grid items, allowing for more flexible layouts to be built using less markup and CSS classes.
 
-CdrGrid applies a default responsive gutter which can be customized using the `gutter` prop or overridden completely using CSS. The examples on this page are meant to illustrate some basic usage of CSS grid but are by no means exhaustive.
+CdrGrid applies a default responsive gutter which can be customized using the `gutter` prop or overridden completely using CSS. The examples on this page are meant to illustrate some basic usage of CSS grid but are by no means exhaustive. Note that when constructing page layouts your entire page should be wrapped in a single [cdr-container](../../layout/responsive) to ensure the proper outer margins are maintained.
 
-Note that when constructing page layouts your entire page should be wrapped in a single [cdr-container](../../layout/responsive) to ensure the proper outer margins are maintained.
+
+New to or unfamiliar with CSS Grid? We recommend these resources for getting up to speed with CSS Grid:
+
+- [CSS Tricks guide](https://css-tricks.com/snippets/css/complete-guide-grid) for a handy glossary of examples for each CSS Grid related property.
+- [Wes Bos CSS Grid Course](https://cssgrid.io/) has videos and interactive grid examples you can work through.
+- [MDN CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) has many articles going in depth on CSS Grid features.
+
+
 
 ## Column Layout
 
@@ -759,8 +768,5 @@ To build an effective responsive grid:
 - Wrap your entire page layout in a single `cdr-container`
 
 <br/>
-
-New to or unfamiliar with CSS Grid? Read this [CSS Tricks CSS Grid guide](https://css-tricks.com/snippets/css/complete-guide-grid) for background, terminology, guidelines, and examples.
-
 
 </cdr-doc-table-of-contents-shell>
