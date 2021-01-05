@@ -88,16 +88,7 @@ module.exports = {
           { text: "Motion", link: "/foundation/motion/" },
           { text: "Typography", link: "/foundation/typography/" },
           { text: "Spacing", link: "/foundation/spacing/" },
-        ]
-      },
-      {
-        text: "Layout",
-        items: [
-          { text: "Getting Started", link: "/layout/getting-started/" },
-          { text: "Responsive", link: "/layout/responsive/" },
-          { text: "Spacing", link: "/layout/spacing/" },
-          { text: "Display", link: "/layout/display/" },
-          { text: "Alignment", link: "/layout/alignment/" },
+          { text: "Responsive", link: "/foundation/responsive/" },
         ]
       },
       {

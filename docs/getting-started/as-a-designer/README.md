@@ -49,7 +49,7 @@ Figma is available for use directly in the browser, but we recommend installing 
 Two primary brand typefaces are available as a range of pre-defined, ready-to-use type styles.  
 
 #### Spacing
-All [spacing](../../layout/spacing/) — from the padding inside a button to range of available icon sizes — is derived from a single spacing [scale](../../foundation/spacing/).
+All spacing — from the padding inside a button to range of available icon sizes — is derived from a single spacing [scale](../../foundation/spacing/).
 
 #### Prominence & Shape
 Design decisions like border radii and ranges of available drop shadows are stored in this library.
