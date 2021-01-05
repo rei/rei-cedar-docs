@@ -1,5 +1,5 @@
 <template>
-  <div :class="[!isInset ? 'space-wrapper' : '', 'cdr-mb-space-one-x']">
+  <div :class="[!isInset ? 'space-wrapper' : '', 'stack-1']">
     <div v-if="isInset" class="inset-example" :style="{boxShadow: inset, padding: pad}">content</div>
     <div v-else class="space-example" :style="{width: spaceValue, height: spaceValue}"/>
   </div>

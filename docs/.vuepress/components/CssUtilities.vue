@@ -21,7 +21,7 @@
           class="utility-class-title"
         >{{ capitalize(k) }}</component>
         <!-- Table -->
-        <cdr-table striped class="cdr-mb-space-four-x">
+        <cdr-table striped class="stack-4">
           <tbody>
             <tr v-for="(data, name) in v">
               <td>

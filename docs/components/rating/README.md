@@ -126,7 +126,8 @@ Shows review rating with up to 5 stars highlighted. If rating is zero, star icon
 
 ```html
 <div>
-  <cdr-rating rating="3.33333" count="100" class="cdr-mb-space-one-x" />
+  <cdr-rating rating="3.33333" count="100" />
+  <br/>
   <cdr-rating rating="0" count="0" />
 </div>
 ```
@@ -160,7 +161,8 @@ Removes the word "Reviews" from the label for limited space layout.
 
 ```html
 <div>
-  <cdr-rating rating="3.33333" count="100" compact class="cdr-mb-space-one-x" />
+  <cdr-rating rating="3.33333" count="100" compact />
+  <br/>
   <cdr-rating rating="0" count="0" compact />
 </div>
 ```
@@ -175,12 +177,18 @@ Change size for the star icon and text. Default size is medium.
 
 ```html
 <div>
-  <cdr-rating size="small" rating="3.33333" count="100" compact class="cdr-mb-space-one-x" />
-  <cdr-rating size="medium" rating="3.33333" count="100" compact class="cdr-mb-space-one-x" />
-  <cdr-rating size="large" rating="3.33333" count="100" compact class="cdr-mb-space-one-x" />
-  <cdr-rating size="small" rating="0" count="0" compact class="cdr-mb-space-one-x" />
-  <cdr-rating size="medium" rating="0" count="0" compact class="cdr-mb-space-one-x" />
-  <cdr-rating size="large" rating="0" count="0" compact class="cdr-mb-space-one-x" />
+  <cdr-rating size="small" rating="3.33333" count="100" compact />
+  <br/>
+  <cdr-rating size="medium" rating="3.33333" count="100" compact />
+  <br/>
+  <cdr-rating size="large" rating="3.33333" count="100" compact />
+  <br/>
+  <cdr-rating size="small" rating="0" count="0" compact />
+  <br/>
+  <cdr-rating size="medium" rating="0" count="0" compact />
+  <br/>
+  <cdr-rating size="large" rating="0" count="0" compact />
+  <br/>
 </div>
 ```
 
@@ -188,7 +196,7 @@ Change size for the star icon and text. Default size is medium.
 
 ## Accessibility
 
-Many WCAG requirements are contextual to their implementation. 
+Many WCAG requirements are contextual to their implementation.
 To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
 
 - When linking the rating component be sure to provide a valid `href` value
@@ -199,7 +207,7 @@ This component has compliance with WCAG guidelines by:
 
 - Providing screen reader text customized to each available variant
 - Using text color with a Level AA contrast ratio of 4.5:1 contrast between the text color and the background (only when displayed on light backgrounds)
-- Replacing icon stars with utf-8 characters when images are disabled 
+- Replacing icon stars with utf-8 characters when images are disabled
 - Text links displays:
   - Underline text style for mouse usage
   - Focus state for keyboard usage

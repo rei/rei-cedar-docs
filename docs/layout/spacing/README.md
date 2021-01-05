@@ -75,44 +75,9 @@ Spacing and Insets should be combined to create compositions.
 
 ## Usage Overview
 
-There are 3 ways to consume and implement Cedar’s spacing convention: tokens, utility classes, and the space prop.  
+Use space tokens to apply the Cedar spacing convention within your stylesheets using SCSS or LESS. For a full list of available tokens and information on how to use them in your projects, visit the [Design Tokens](../../tokens/overview/) article.
 
-### Tokens
-
-Use space tokens if you want to apply the Cedar spacing convention within your stylesheets and if your stylesheets are SCSS or LESS.  For a full list of available tokens and information on how to use them in your projects, visit the [Design Tokens](../../tokens/overview/) article.
-
-### Utility Classes
-
-Use the space utility classes if you want to apply the Cedar spacing convention within your markup instead of in stylesheets. Note that the size of the space utility file is over 50kb, which may have an impact on your project if it is performance constrained. For customer facing projects we recommend using [tokens](./#tokens) to apply spacing as that will result in the smallest bundle size. For a list of utility classes, visit [CSS Utility Class](../../components/utilities/).
-
-#### Space Utility Class Usage
-
-The Cedar space utility classes enable you to add padding to a custom container,
-and / or provide margin to push one piece of content away from another.  
-
-Cedar space utility classes can be applied using the following format:
-
-`Cdr-{property}{direction}-space-{token}@{breakpoint}`
-
-##### Property
-
-The property applies the type of spacing:
-
--  `m` - applies `margin`
--  `p` - applies `padding`
-
-##### Direction
-
-The direction designates the side the property applies to:
-
--  `t` - applies the spacing for `*-top`
--  `r` - applies the spacing for `*-right`
--  `b` - applies the spacing for `*-bottom`
--  `l` - applies the spacing for `*-left`
--  `x` - applies the spacing for `*-right` and `*-left`
--  `t` - applies the spacing for `*-top` and `*-bottom`
-
-##### Spacing Tokens for Generic Utility Class
+### Spacing Tokens
 
 The following are the available spacing token values:
 
@@ -126,82 +91,5 @@ The following are the available spacing token values:
 | cdr-space-one-and-a-half-x | 24px         | 2.4rem     |
 | cdr-space-two-x            | 32px         | 3.2rem     |
 | cdr-space-four-x           | 64px         | 6.4rem     |
-
-
-##### Spacing Example
-
-An example of setting the generic space classes:
-
-| Modifier      | CSS property                 | Space utility class           |
-|---------------|------------------------------|-------------------------------|
-| pt            | padding-top                  | cdr-pt-space-one-x            |
-| pr            | padding-right                | cdr-pr-space-one-x            |
-| pb            | padding-bottom               | cdr-pb-space-one-x            |
-| pl            | padding-left                 | cdr-pl-space-one-x            |
-| px            | padding-left & padding-right | cdr-px-space-one-x            |
-| py            | padding-top & padding-bottom | cdr-py-space-one-x            |
-| mt            | margin-top                   | cdr-mt-space-one-x            |
-| mr            | margin-right                 | cdr-mr-space-one-x            |
-| mb            | margin-bottom                | cdr-mb-space-one-x            |
-| ml            | margin-left                  | cdr-ml-space-one-x            |
-| mx            | margin-left & margin-right   | cdr-mx-space-one-x            |
-| my            | margin-top & margin-bottom   | cdr-my-space-one-x            |
-| inset         | padding                      | cdr-space-inset-one-x         |
-| inset-squish  | padding                      | cdr-space-inset-squish-one-x  |
-| inset-stretch | padding                      | cdr-space-inset-stretch-one-x |
-
-For a full list of space utility classes, see the [CSS Utility Class](../../components/utilities/) documentation.
-
-##### Breakpoint (Optional)
-
-Sometimes your content may need to be spaced differently at specific breakpoints. To accommodate such different spacing needs, spacing utilities are available at each of our defined breakpoints by concatenating the ‘@’ symbol with the desired breakpoint to the end of the class name.
-
--  `xs` - applies the spacing **for the extra small breakpoint ( < 768px)**
--  `sm` - applies the spacing **for the small breakpoint (768px <= X < 992px)**
--  `md` - applies the spacing **for the medium breakpoint (992px <= X < 1232px)**
--  `lg `- applies the spacing **for the large breakpoint ( > 1232px)**
-
-For example, `.cdr-space-inset-eighth-x@md` will apply if the user’s screen is currently at the medium breakpoint (within 992px and 1232px wide).
-
-For more information on breakpoints and responsive design, see the [Responsive Layout](../responsive) article.
-
-To add right margin to the Cedar button component at the medium breakpoint and up, but bottom margin to at the small breakpoint and below:
-
-| Breakpoint | Margin       | Space utility class breakpoints |
-|------------|--------------|---------------------------------|
-| @xs        | margin-right | cdr-mb-space-one-x@xs           |
-| @sm        | margin-right | cdr-mb-space-one-x@sm           |
-| @md        | margin-right | cdr-mr-space-one-x@md           |
-| @lg        | margin-right | cdr-mr-space-one-x@lg           |
-
-
-<cdr-doc-example-code-pair :background-toggle="false" :sandbox-data="$page.frontmatter.sandboxData" >
-
-```vue
-  <div>
-    <cdr-button
-     full-width="@xs"
-      space="
-        cdr-mb-space-one-x@xs
-        cdr-mb-space-one-x@sm
-        cdr-mr-space-one-x@sm
-        cdr-mr-space-one-x@md
-        cdr-mr-space-one-x@lg
-      "
-    >
-    A sample Cedar button
-    </cdr-button>
-    <cdr-button
-    modifier="secondary"
-    full-width="@xs"
-    >
-    Another sample Cedar button
-    </cdr-button>
-  </div>
-
-```
-</cdr-doc-example-code-pair>
-
-Note that space utility classes with the `@<breakpoint>` apply within the specified breakpoint range only.
 
 </cdr-doc-table-of-contents-shell>
