@@ -34,7 +34,7 @@ We added a new slot to CdrModal called `modal` which overrides the entire modal 
 
 ### CdrModal Re-Open Fix
 
-We resolved a bug where re-opening a CdrModak immediately after closing can result in blank content.
+We resolved a bug where re-opening a CdrModal immediately after closing can result in blank content.
 
 ## New Features
 
