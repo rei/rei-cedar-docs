@@ -29,11 +29,42 @@
 
 ## New Features
 
+### CdrGrid Component
+
+- uses css-grid. replaces flexbox based cdrrow/cdrcol.
+- more flexible, lightweight. just sets gutters and (????). TODO: bundle size notees
+- use any valid CSS grid syntax.
+
+### CdrImg Refactor
+
+- refactored CdrImg to make use of `object-fit` and `object-position` properties. This allows the use of any native HTML image attribute on any CdrImg element. lazy loading, responsive images, performance (dont load huge image for tiny screen), etc.
+
 ## Bug Fixes
 
 ## Deprecations
 
+### CdrRow CdrCol
+- long term deprecation, incrementally migrate to ____, example of doing that, etc.
+
+### CdrText Modifier
+- long term deprecation, incrementally migrate to ____, example of doing that, etc.
+
+### Space utility classes
+- long term deprecation, incrementally migrate to ____, example of doing that, etc.
+
 ## Breaking Changes
+
+### CdrImg Responsive Ratio and Lazy loading
+
+- Removed responsive ratio props. These used an old syntax that does not match the other cedar components. was not being used.
+- Removed "lazy" props. Were hardcoded to match API of REI lazy loader package. Can apply any arbitrary attrs as needed
+TODO: show re-map to data-lazy- etc.
+
+### CdrText CSS Asset
+
+- CdrText modifier actually uses `text.css` utility class file.
+cdr-text.css has lil default text styling. text.css has every type option at every breakpoint.
+- load text.css file, start migrating to using cdr-text mixins instead
 
 ### Removals
 

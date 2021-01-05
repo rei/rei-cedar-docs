@@ -27,40 +27,10 @@
                 "description": "Sets image source URL."
               },
               {
-                "name": "lazy",
-                "type": "boolean",
-                "default": "false",
-                "description": "Setting this value to true will enable lazy loading for internal applications. Lazy loading is provided using the the FEDPACK rei-lazy-image-loader project."
-              },
-              {
-                "name": "lazyOpts",
-                "type": "object",
-                "default": "array",
-                "description": "For internal projects. Provide an object of lazy options as defined on within the rei-lazy-image-loader API. This will output each option as a `data-` attribute on the root element."
-              },
-              {
                 "name": "ratio",
                 "type": "string",
                 "default": "N/A",
                 "description": "Sets the aspect ratio and scales the image as large as possible without cropping or stretching the image (See CSS background-size: contain). Possible values: {  'auto'  |  'square'  |  '1-2'  |  '2-3'  |  '3-4'  |  '9-16'  |  '2-1'  |  '3-2'  |  '4-3'  |  '16-9'  }"
-              },
-              {
-                "name": "ratioSm",
-                "type": "string",
-                "default": "N/A",
-                "description": "Sets the aspect ratio at the small breakpoint. Possible values: {  'auto'  |  'square'  |  '1-2'  |  '2-3'  |  '3-4'  |  '9-16'  |  '2-1'  |  '3-2'  |  '4-3'  |  '16-9'  }"
-              },
-              {
-                "name": "ratioMd",
-                "type": "string",
-                "default": "N/A",
-                "description": "Sets the aspect ratio at the medium breakpoint. Possible values: {  'auto'  |  'square'  |  '1-2'  |  '2-3'  |  '3-4'  |  '9-16'  |  '2-1'  |  '3-2'  |  '4-3'  |  '16-9'  }"
-              },
-              {
-                "name": "ratioLg",
-                "type": "string",
-                "default": "N/A",
-                "description": "Sets the aspect ratio at the large breakpoint. Possible values: {  'auto'  |  'square'  |  '1-2'  |  '2-3'  |  '3-4'  |  '9-16'  |  '2-1'  |  '3-2'  |  '4-3'  |  '16-9'  }"
               },
               {
                 "name": "crop",
@@ -114,6 +84,10 @@
 
 <cdr-doc-table-of-contents-shell>
 # Overview
+
+<!-- TODO: verify eeverything still works
+see if ratio can be swapped for srcset/sizes
+ -->
 
 ## Default (Medium)
 
@@ -360,7 +334,7 @@ Images are cropped on y-axis with bottom value and on x-axis with left, x-center
   - Each individual clickable area should have an `alt` attribute that describes the purpose or destination of the link
 
 ## Responsiveness
-
+TODO: can use native CSS for responsive image size and lazy loading
 - Ability to control image display at small, medium, and large breakpoints
 - Lazy loading of images is provided
 
