@@ -85,6 +85,30 @@ Cedar worked with the Performance team to optimize the `cdr-fonts.css` file. The
 
 The `helper-text` slot in CdrInput has been deprecated and replaced with an identical `helper-text-bottom` slot. This was done to be consistent with the [new `helper-text-top` slot](#cdrinput-updates).
 
+### CdrText and Space Utilities
+
+In order to align with performance goals, we are working on a long-term deprecation of the CdrText `modifier` property and the `space` utility classes. Both of these features require loading a large CSS asset even if you are only using a handful of the type or space options. Instead, you should begin using the [Cedar Design Tokens](../../tokens/all-tokens/) to apply the same styles using a custom CSS class. Projects that are currently using these features should instead use the design tokens for any new work, and incrementally migrate their existing usage when possible.
+
+Example CdrText modifier update:
+```
+<cdr-text modifier="body-300">Old</cdr-text>
+
+<cdr-text class="your-custom-type-class">New</cdr-text>
+.your-custom-type-class {
+  @include cdr-text-body-300;
+}
+```
+
+Example Space utility update:
+```
+<div class="cdr-mb-space-one-x">old</div>
+
+<div class="your-custom-space-class">new</div>
+.your-custom-space-class {
+  margin-bottom: $cdr-space-one-x
+}
+```
+
 ## Breaking Changes
 
 ### Component Variables
