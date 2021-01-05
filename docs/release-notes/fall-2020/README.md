@@ -26,6 +26,16 @@
 
 - If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your micro-site.
 
+## 7.1.0
+
+### CdrModal Override Slot
+
+We added a new slot to CdrModal called `modal` which overrides the entire modal dialog box including the title and close button.
+
+### CdrModal Re-Open Fix
+
+We resolved a bug where re-opening a CdrModak immediately after closing can result in blank content.
+
 ## New Features
 
 ### CdrTooltip and CdrPopover Components
@@ -52,6 +62,7 @@ CdrTooltip and CdrPopover are both components that accepts a trigger element and
 
 #### CdrRadio / CdrCheckbox
 - Spacing and interaction logic has been updated.
+- New `background` prop added to adjust input styling depending on the background it is rendered on.
 
 #### CdrFormGroup
 - New `error` prop and slot added to enable validation of checkbox and radio groups.
