@@ -82,6 +82,10 @@
               {
                 "name": "title",
                 "description": "Slot for CdrModal title."
+              },
+              {
+                "name": "modal",
+                "description": "Slot to override the entire CdrModal content."
               }
             ],
             "events": [
