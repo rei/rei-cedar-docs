@@ -85,9 +85,6 @@
 <cdr-doc-table-of-contents-shell>
 # Overview
 
-<!-- TODO: verify eeverything still works
-see if ratio can be swapped for srcset/sizes
- -->
 
 ## Default (Medium)
 
@@ -99,7 +96,7 @@ Use for images with no responsive qualities.
 ```html
 
 <cdr-img
-  src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg"
+  src="/live.jpg"
   alt="REI employees building trails during a stewardship event"
 />
 
@@ -115,7 +112,7 @@ Apply rules to an image using ratio and crop properties. The below example is cr
 
 ```html
 <cdr-img
-  src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg"
+  src="/live.jpg"
   alt="REI employees building trails during a stewardship event"
   ratio="9-16"
   crop="top"
@@ -133,7 +130,7 @@ Use the cover property to resize the background image to fill the entire contain
 
 ```html
 <cdr-img
-  src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg"
+  src="/live.jpg"
   alt="REI employees building trails during a stewardship event"
   ratio="16-9"
   cover
@@ -156,7 +153,7 @@ The below example is cropped using center alignment with the aspect ratio set as
 
 ```html
 <cdr-img
-  src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg"
+  src="/live.jpg"
   alt="REI employees building trails during a stewardship event"
   ratio="square"
   radius="rounded"
@@ -174,7 +171,7 @@ The below example is cropped using center alignment with the aspect ratio set as
 
 ```html
 <cdr-img
-  src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg"
+  src="/live.jpg"
   alt="REI employees building trails during a stewardship event"
   ratio="square"
   radius="circle"
@@ -198,6 +195,23 @@ CdrImg will bind any event handlers to the `img` element that it wraps. This is 
 ```
 
 </cdr-doc-code-snippet>
+
+## Lazy Loading
+
+The CdrImg component accepts any valid HTML `img` attribute. CdrImg works with [native lazy loading](https://css-tricks.com/native-lazy-loading/) by setting the `loading` attribute.
+
+<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/image" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+<cdr-img
+  src="/live2.jpg"
+  alt="REI employees building trails during a stewardship event"
+  loading="lazy"
+/>
+
+```
+</cdr-doc-example-code-pair>
 
 ## Accessibility
 
