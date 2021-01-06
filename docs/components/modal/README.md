@@ -127,7 +127,7 @@
     >Add to Cart
     </cdr-text>
   </template>
-  <p id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet dictum ipsum.</p>
+  <cdr-text tag="p" id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet dictum ipsum.</cdr-text>
 </cdr-modal>
 ```
 </cdr-doc-example-code-pair>
