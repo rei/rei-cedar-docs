@@ -65,6 +65,7 @@ TODO: show re-map to data-lazy- etc.
 - CdrText modifier actually uses `text.css` utility class file.
 cdr-text.css has lil default text styling. text.css has every type option at every breakpoint.
 - load text.css file, start migrating to using cdr-text mixins instead
+- `cdr-text` base class now scopeed, will need to update code if you were targetting that class directly.
 
 ### Removals
 
