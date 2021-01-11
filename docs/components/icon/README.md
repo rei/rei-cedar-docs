@@ -25,6 +25,10 @@
     {
       "text": 'Iconography',
       "href": '../../icons/iconography/'
+    },
+    {
+      "text": 'Icon Library',
+      "href": '../../icons/library/'
     }
   ],
   "meaning": [
@@ -125,7 +129,7 @@
 
 ## Inline Icon Components
 
-The inline icon components are the recommended method for using Cedar icons in a Vue application. Cedar exports a component version of every SVG Icon in the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/). These components are named using PascalCase, for example `account-profile` becomes `IconAccountProfile` or `camping` becomes `IconCamping`.
+The inline icon components are the recommended method for using Cedar icons in a Vue application. Cedar exports a component version of every SVG Icon in the [Cedar Icon Library](../../icons/library). These components are named using PascalCase, for example `account-profile` becomes `IconAccountProfile` or `camping` becomes `IconCamping`.
 
 <cdr-doc-example-code-pair repository-href="/src/components/icon" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'IconAccountProfile, IconCamera'})">
 
@@ -154,7 +158,7 @@ Visit the [Cedar Icon Sprite Creator](https://rei.github.io/cedar-icons/#/sprite
 
 ## Non-Cedar SVG
 
-Create a new SVG icon using any valid SVG markup. The wrapping SVG element can be stripped (below) or maintained. Note that if it is not stripped, then `viewBox`, `role`, and `xmlns` attributes will not be preserved. Whereas, all other attributes will be preserved. This method creates an outer SVG wrapper for accessibility and styles. This is not recommended if using a large number of icons.
+Create a new SVG icon using any valid SVG markup. The wrapping SVG element can be stripped (below) or maintained. Note that if it is not stripped, then `viewBox`, `role`, and `xmlns` attributes will not be preserved. Whereas, all other attributes will be preserved. This method creates an outer SVG wrapper for accessibility and styles. This is not recommended if using a large number of icons. See the [iconography](../../icons/iconography) and [icon resources](../../icons/resources) pages for more details on building SVG for use with Cedar.
 
 <cdr-doc-example-code-pair repository-href="/src/components/icon" :sandbox-data="$page.frontmatter.sandboxData" >
 

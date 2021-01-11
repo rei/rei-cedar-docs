@@ -27,40 +27,10 @@
                 "description": "Sets image source URL."
               },
               {
-                "name": "lazy",
-                "type": "boolean",
-                "default": "false",
-                "description": "Setting this value to true will enable lazy loading for internal applications. Lazy loading is provided using the the FEDPACK rei-lazy-image-loader project."
-              },
-              {
-                "name": "lazyOpts",
-                "type": "object",
-                "default": "array",
-                "description": "For internal projects. Provide an object of lazy options as defined on within the rei-lazy-image-loader API. This will output each option as a `data-` attribute on the root element."
-              },
-              {
                 "name": "ratio",
                 "type": "string",
                 "default": "N/A",
                 "description": "Sets the aspect ratio and scales the image as large as possible without cropping or stretching the image (See CSS background-size: contain). Possible values: {  'auto'  |  'square'  |  '1-2'  |  '2-3'  |  '3-4'  |  '9-16'  |  '2-1'  |  '3-2'  |  '4-3'  |  '16-9'  }"
-              },
-              {
-                "name": "ratioSm",
-                "type": "string",
-                "default": "N/A",
-                "description": "Sets the aspect ratio at the small breakpoint. Possible values: {  'auto'  |  'square'  |  '1-2'  |  '2-3'  |  '3-4'  |  '9-16'  |  '2-1'  |  '3-2'  |  '4-3'  |  '16-9'  }"
-              },
-              {
-                "name": "ratioMd",
-                "type": "string",
-                "default": "N/A",
-                "description": "Sets the aspect ratio at the medium breakpoint. Possible values: {  'auto'  |  'square'  |  '1-2'  |  '2-3'  |  '3-4'  |  '9-16'  |  '2-1'  |  '3-2'  |  '4-3'  |  '16-9'  }"
-              },
-              {
-                "name": "ratioLg",
-                "type": "string",
-                "default": "N/A",
-                "description": "Sets the aspect ratio at the large breakpoint. Possible values: {  'auto'  |  'square'  |  '1-2'  |  '2-3'  |  '3-4'  |  '9-16'  |  '2-1'  |  '3-2'  |  '4-3'  |  '16-9'  }"
               },
               {
                 "name": "crop",
@@ -115,6 +85,7 @@
 <cdr-doc-table-of-contents-shell>
 # Overview
 
+
 ## Default (Medium)
 
 Use for images with no responsive qualities.
@@ -125,7 +96,7 @@ Use for images with no responsive qualities.
 ```html
 
 <cdr-img
-  src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg"
+  src="/live.jpg"
   alt="REI employees building trails during a stewardship event"
 />
 
@@ -141,7 +112,7 @@ Apply rules to an image using ratio and crop properties. The below example is cr
 
 ```html
 <cdr-img
-  src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg"
+  src="/live.jpg"
   alt="REI employees building trails during a stewardship event"
   ratio="9-16"
   crop="top"
@@ -159,7 +130,7 @@ Use the cover property to resize the background image to fill the entire contain
 
 ```html
 <cdr-img
-  src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg"
+  src="/live.jpg"
   alt="REI employees building trails during a stewardship event"
   ratio="16-9"
   cover
@@ -182,7 +153,7 @@ The below example is cropped using center alignment with the aspect ratio set as
 
 ```html
 <cdr-img
-  src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg"
+  src="/live.jpg"
   alt="REI employees building trails during a stewardship event"
   ratio="square"
   radius="rounded"
@@ -200,7 +171,7 @@ The below example is cropped using center alignment with the aspect ratio set as
 
 ```html
 <cdr-img
-  src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg"
+  src="/live.jpg"
   alt="REI employees building trails during a stewardship event"
   ratio="square"
   radius="circle"
@@ -224,6 +195,23 @@ CdrImg will bind any event handlers to the `img` element that it wraps. This is 
 ```
 
 </cdr-doc-code-snippet>
+
+## Lazy Loading
+
+The CdrImg component accepts any valid HTML `img` attribute. CdrImg works with [native lazy loading](https://css-tricks.com/native-lazy-loading/) by setting the `loading` attribute.
+
+<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/image" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+<cdr-img
+  src="/live2.jpg"
+  alt="REI employees building trails during a stewardship event"
+  loading="lazy"
+/>
+
+```
+</cdr-doc-example-code-pair>
 
 ## Accessibility
 
@@ -360,7 +348,7 @@ Images are cropped on y-axis with bottom value and on x-axis with left, x-center
   - Each individual clickable area should have an `alt` attribute that describes the purpose or destination of the link
 
 ## Responsiveness
-
+TODO: can use native CSS for responsive image size and lazy loading
 - Ability to control image display at small, medium, and large breakpoints
 - Lazy loading of images is provided
 

@@ -139,7 +139,7 @@ export default {
     }
   }
 
-  .cdr-doc-code-snippet--code-hidden {
+  .cdr-doc-code-snippet--code-hidden .cdr-doc-code-snippet__code-wrap{
     display: none;
   }
 

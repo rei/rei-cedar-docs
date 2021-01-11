@@ -128,7 +128,8 @@ module.exports = {
         text: "Icons",
         items: [
           { text: "Resources", link: "/icons/resources/" },
-          { text: "Iconography", link: "/icons/iconography/" }
+          { text: "Iconography", link: "/icons/iconography/" },
+          { text: "Library", link: "/icons/library/" }
         ]
       },
       {
