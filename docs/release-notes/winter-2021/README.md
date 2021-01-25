@@ -29,17 +29,38 @@
 
 ## New Features
 
+### CdrChip Component
+
+- new component
+- button/link/checkbox/radio
+- signals and highlights user selection/input. (i.e, checkbox search filter in sidebar vs. chip above the results for editing selected filters)
+- [docs page](../../components/chip)
+
 ### CdrGrid Component
 
 - uses css-grid. replaces flexbox based cdrrow/cdrcol.
 - more flexible, lightweight. just sets gutters and (????). TODO: bundle size notees
 - use any valid CSS grid syntax.
+- [docs page](../../components/grid)
 
 ### CdrImg Refactor
 
 - refactored CdrImg to make use of `object-fit` and `object-position` properties. This allows the use of any native HTML image attribute on any CdrImg element. lazy loading, responsive images, performance (dont load huge image for tiny screen), etc.
 
+### Sale Color Update
+
+- update sale color tokens.
+- new background-sale token. use with color-text-inverse
+
+### A11Y Testing Updates
+
+- wcag 3, etc.
+
 ## Bug Fixes
+
+### Button/Icon Fill Animation
+
+### Modal Scrollbar (????)
 
 ## Deprecations
 
