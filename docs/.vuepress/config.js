@@ -48,6 +48,7 @@ module.exports = {
       {
         text: "Release Notes",
         items: [
+          { text: "Winter 2021", link: "/release-notes/winter-2021/" },
           { text: "Fall 2020", link: "/release-notes/fall-2020/" },
           { text: "Summer 2020", link: "/release-notes/summer-2020/" },
           { text: "Spring 2020", link: "/release-notes/spring-2020/" },
@@ -89,6 +90,13 @@ module.exports = {
           { text: "Typography", link: "/foundation/typography/" },
           { text: "Spacing", link: "/foundation/spacing/" },
           { text: "Responsive", link: "/foundation/responsive/" },
+        ]
+      },
+      {
+        text: "Patterns",
+        items: [
+          { text: "Messaging", link: "/patterns/messaging/" },
+          { text: "Forms", link: "/patterns/forms/" },
         ]
       },
       {
