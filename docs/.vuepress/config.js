@@ -93,6 +93,13 @@ module.exports = {
         ]
       },
       {
+        text: "Patterns",
+        items: [
+          { text: "Messaging", link: "/patterns/messaging/" },
+          { text: "Forms", link: "/patterns/forms/" },
+        ]
+      },
+      {
         text: "Components",
         items: [
           { text: "Component Variables", link: "/components/component-variables/" },
