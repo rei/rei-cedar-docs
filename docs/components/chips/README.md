@@ -38,10 +38,10 @@
           "api": {
             "props": [
               {
-                "name": "PROPNAME",
+                "name": "modifier",
                 "type": "string",
-                "default": "'DEFAULT'",
-                "description": ""
+                "default": "'defaultt'",
+                "description": "Sets the styling modifier for chip. Possible values: {'default' | 'emphasis'}"
               },
             ],
             "slots": [
@@ -64,7 +64,7 @@
 
 ## Default
 
-Use default chips to specify, dynamically categorize or dynamically perform a discrete action which is lower in the page's information hierarchy. 
+Use default chips to specify, dynamically categorize or dynamically perform a discrete action which is lower in the page's information hierarchy.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
 :sandbox-data="$page.frontmatter.sandboxData" >
@@ -72,55 +72,77 @@ Use default chips to specify, dynamically categorize or dynamically perform a di
 ```html
 <div>
   <cdr-chip> default chip </cdr-chip>
-  <cdr-chip> disabled default chip </cdr-chip>
+  <cdr-chip disabled> disabled default chip </cdr-chip>
 </div>
 ```
 </cdr-doc-example-code-pair>
 
 ## Emphasis
 
-Use emphasis chips to specify, dynamically categorize or dynamically perform a discrete action which is higher in the page's information hierarchy. 
+Use emphasis chips to specify, dynamically categorize or dynamically perform a discrete action which is higher in the page's information hierarchy.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
 :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div>
-  <cdr-chip> emphasis chip </cdr-chip>
-  <cdr-chip> emphasis disabled chip </cdr-chip>
+  <cdr-chip modifier="emphasis"> emphasis chip </cdr-chip>
+  <cdr-chip modifier="emphasis" disabled> emphasis disabled chip </cdr-chip>
 </div>
 ```
 </cdr-doc-example-code-pair>
 
-## Text and Prefix Icon
+## Icon Slots
 
-Pair an x icon with text to allow users to remove a chip that dynamically categorizes.
+Use `icon-left` or `icon-right` slots to pass icons into a chip.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
-:sandbox-data="$page.frontmatter.sandboxData" >
+ :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconHeartStroke, IconXSm'})">
 
 ```html
 <div>
-  <cdr-chip> text and prefix icon chip </cdr-chip>
+  <cdr-chip> text and icon left <icon-heart-stoke inherit-color slot="icon-left"/></cdr-chip>
+  <cdr-chip> text and icon right <icon-x-sm inherit-color slot="icon-left"/></cdr-chip>
 </div>
 ```
 </cdr-doc-example-code-pair>
 
-## Text and Suffix Icon
+## "Filter Chips"
 
 Pair an x icon with text to allow users to remove a chip with a functional descriptor.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
-:sandbox-data="$page.frontmatter.sandboxData" >
+:sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconXSm, CdrCheckbox'})">
 
 ```html
 <div>
-  <cdr-chip> text and suffix icon chip </cdr-chip>
+  <cdr-chip> text and prefix icon chip <icon-x-sm slot="icon-left"/></cdr-chip>
+  TODO: wire these dudes together
+  <cdr-checkbox></cdr-checkbox>
 </div>
 ```
 </cdr-doc-example-code-pair>
 
-## Stateful Chip
+
+## "Category Chips"
+
+
+
+<cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
+:sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconXSm, CdrCheckbox'})">
+
+```html
+<div>
+  TODO: implement chipGroups to handle this
+  <cdr-chip> Option A</cdr-chip>
+  <cdr-chip> Option B</cdr-chip>
+  <cdr-chip> Option C</cdr-chip>
+
+</div>
+```
+</cdr-doc-example-code-pair>
+
+## Toggle Chip
 
 For chips that trigger asynchronous actions, use the click event and dynamic properties in order to change the label or state of a chip.
 
@@ -156,7 +178,7 @@ Chips allow users to make selections, filter content, or trigger actions. While 
 - Dynamically categorizing content based on descriptive words.
 - Representing a checkbox group with more emphasis.
 - Representing a radio button group with more emphasis.
-- Clearly delineating and displaying options in a compact area. 
+- Clearly delineating and displaying options in a compact area.
 - Offering dynamic and contextual actions related to primary content.
 - Allowing the user to trigger an immediate action while staying on the same page.
 - Allowing users to update or configure settings immediately.
@@ -171,7 +193,7 @@ Chips allow users to make selections, filter content, or trigger actions. While 
 
 ## The Basics
 
-One chip container style is available: pill. 
+One chip container style is available: pill.
 
 When arranging chips horizontally:
 - Left align chip group
@@ -225,12 +247,12 @@ Do use positive phrasing for labels.
 "Do not set as my REI"
 Don't use negative phrasing for labels.
 
-"New arrivals" 
+"New arrivals"
 Do make labels brief.
 "New women's climbing shoe gear arrivals"
 Don't put too much text in the label.
 
-"Set as my REI" 
+"Set as my REI"
 Do write labels as sentence fragments with no ending punctuation.
 "Set this store at my REI store."
 Don't add terminal punctuation at the end of a label.
@@ -255,7 +277,7 @@ Do not display a single chip to offer a selection.
 
 ## Behavior
 
-Stateful chips used to dynamically perform a discrete action: 
+Stateful chips used to dynamically perform a discrete action:
 - Can show confirmation feedback.
 
 Chips used for single selection:
