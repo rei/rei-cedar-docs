@@ -2,7 +2,7 @@
 {
   "title": "Chip",
   "layout_type": "LayoutComponent",
-  "summary": "Chips can be used to specify, filter or perform a discrete action that immediately updates on the page.",
+  "summary": "Chips are compact elements that represent a selection, attribute, or dynamic action.",
   "title_metadata": "CdrChip",
   "breadcrumbs": [
     {
@@ -64,7 +64,7 @@
 
 ## Default
 
-Use default chips for actions to filter or to allow the user to specify or perform a discrete action which is lower in the page's information hierarchy. 
+Use default chips to specify, dynamically categorize or dynamically perform a discrete action which is lower in the information hierarchy.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
 :sandbox-data="$page.frontmatter.sandboxData" >
@@ -79,7 +79,7 @@ Use default chips for actions to filter or to allow the user to specify or perfo
 
 ## Emphasis
 
-Use emphasis chips for actions to filter or to allow the user to specify or perform a discrete action which is higher in the page's information hierarchy. 
+Use default chips to specify, dynamically categorize or dynamically perform a discrete action which is higher in the information hierarchy.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
 :sandbox-data="$page.frontmatter.sandboxData" >
@@ -108,7 +108,7 @@ Pair an icon with text to improve recognition about an object or action.
 
 ## Text and Suffix Icon
 
-Pair an x icon with text to allow users to remove a chip with a functional descriptor.
+Pair an x icon with text to allow users to remove a chip that dynamically categorizes.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
 :sandbox-data="$page.frontmatter.sandboxData" >
@@ -122,7 +122,7 @@ Pair an x icon with text to allow users to remove a chip with a functional descr
 
 ## Stateful Chip
 
-For buttons that trigger asynchronous actions, use the click event and dynamic properties in order to change the label or state of a button.
+For chips that trigger asynchronous actions, use the click event and dynamic properties in order to change the label or state of a chip.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
 :sandbox-data="$page.frontmatter.sandboxData" >
@@ -149,12 +149,14 @@ Many WCAG requirements are contextual to their implementation. To ensure that us
 
 # Guidelines
 
+Chips allow users to make selections, filter content, or trigger actions. While buttons are expected to appear consistently and with familiar calls to action, chips should appear dynamically.
+
 ## Use when
 
-- Categorizing information based on descriptive words
+- Dynamically categorizing content based on descriptive words
 - Representing a checkbox group with more emphasis
 - Representing a radio button group with more emphasis
-- Offering a choice with more than one option
+- Clearly delineating and displaying options in a compact area
 - Allowing the user to trigger an immediate action while staying on the same page
 - Allowing users to update or configure settings immediately
 
@@ -222,7 +224,6 @@ Do use positive phrasing for labels.
 "Do not set as my REI"
 Don't use negative phrasing for labels.
 
-
 "New arrivals" 
 Do make labels brief.
 "New women's climbing shoe gear arrivals"
@@ -233,20 +234,35 @@ Do write labels as sentence fragments with no ending punctuation.
 "Set this store at my REI store."
 Don't add terminal punctuation at the end of a label.
 
+Do use either prefix icon or suffix icon in one chip group.
+Do not mix prefix icons and suffix icons in a single chip group.
+
+Do use suffix icon for chips that dynamically categorize content
+Do not use suffix icon for chips that perform a discrete action or offer a selection.
+
+Do make chips horizontally scrollable or wrap to a new row.
+Do not line up chips on the left margin.
+
+Do allow chip containers to hug their contents.
+Do not make all chips the same width, ignoring varied content widths.
+
+Do display chips that offer a selection sequentially.
+Do not display chips that offer a selection in random order.
+
+Do display chips that offer a selection as a group.
+Do not display a single chip to offer a selection.
+
 ## Behavior
 
-Apply the following use cases when deciding when to use buttons, links or chips:
+Stateful chips used to dynamically perform a discrete action: 
+- Can show confirmation feedback
 
-| **Buttons**                                      | **Links**                                                 | **Chips**                                  |
-| ------------------------------------------------ | --------------------------------------------------------- | ------------------------------------------ |
-| Toggling a display to full screen       | Navigating user to a new page or view	  | Representing a filtered list of content that appear on the same page  |     
-| Opening a modal window                           | Changing the URL                                          | Offering a choice or representing a filter |
-| Triggering a popup menu                          | Causing a browser redraw or refresh                       | Immediately changing a setting on the page |
+Chips used to offer a single selection:
+- Selecting a single choice automatically deselects all other chips in the group.
+- Include more than one option per chip group.
 
-Chips that represent check buttons work independently from each other:
+Chips used to offer a multi-selection:
 - Selecting one chip shouldn’t change the selection status of another chip in the list
-- When parent chip is used for a bulk selection action, all child chip items will be selected or not selected
-- Use a standalone chip for a simple toggle selection. Don’t use radio buttons or toggles
 
 ## Resources
   - WebAIM: [Keyboard Accessibility](https://webaim.org/techniques/keyboard/)
