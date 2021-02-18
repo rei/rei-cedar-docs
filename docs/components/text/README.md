@@ -337,7 +337,7 @@ Sans headings, set in Graphik, should play a supporting role to serif headings. 
     - Left-align multi-line headings
 
 ### Responsive Headings
-Cedar does not offer pre-styled responsive headings. Instead, construct responsive headings by defining a heading style for specific [breakpoints](../../layout/responsive/#the-cedar-container). For instance, if the heading style is cdr-text-heading-serif-900 @lg, @md, and @sm sizes, set the heading style to cdr-text-heading-serif-800 at the @xs size. This helps to create optimal readability, spacing, and proportions for various breakpoint sizes. An examples in practice:
+Cedar does not offer pre-styled responsive headings. Instead, construct responsive headings by defining a heading style for specific [breakpoints](../../foundation/responsive/#the-cedar-container). For instance, if the heading style is cdr-text-heading-serif-900 @lg, @md, and @sm sizes, set the heading style to cdr-text-heading-serif-800 at the @xs size. This helps to create optimal readability, spacing, and proportions for various breakpoint sizes. An examples in practice:
 
 <cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData" >
 
@@ -870,11 +870,11 @@ This component has compliance with following WebAIM’s accessibility guidelines
 
 To work as intended, tokens, utility classes, and component require both `cdr-reset.css` and access to the REI brand fonts. For more information on how to access these resources, visit the [Developer getting started](../../getting-started/as-a-developer#setting-up-projects) guide.
 
-The global text default `cdr-text-default` is defined in each of the available cdr-container classes as well as the Cedar reset. Ensure that all content is contained in one of the [available container classes](../../layout/responsive/#standard-vs-fluid-container).
+The global text default `cdr-text-default` is defined in each of the available cdr-container classes as well as the Cedar reset. Ensure that all content is contained in one of the [available container classes](../../foundation/responsive/#standard-vs-fluid-container).
 
 The Cedar text css selectors provide no spacing values other than letter-spacing and line-height.
 
-For proper spacing between blocks of text, use the [Cedar spacing options](../../layout/spacing/).
+For proper spacing between blocks of text, use the [Cedar spacing options](../../foundation/spacing/).
 
 The Cedar text options can be utilized by your application using the [token mixins](https://www.npmjs.com/package/@rei/cdr-tokens), [utility classes](https://www.npmjs.com/package/@rei/cedar) or through the [cdr-text component](https://www.npmjs.com/package/@rei/cedar).
 
