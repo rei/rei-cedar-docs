@@ -235,12 +235,23 @@ Don't add terminal punctuation at the end of a label.
 
 ## Behavior
 
-Chips that represent radio buttons
+Apply the following use cases when deciding when to use buttons, links or chips:
+
+| **Buttons**                                      | **Links**                                                 | **Chips**                                  |
+| ------------------------------------------------ | --------------------------------------------------------- | ------------------------------------------ |
+| Toggling a display to full screen       | Navigating user to a new page or view	  | Representing a filtered list of content that appear on the same page  |     
+| Opening a modal window                           | Changing the URL                                          | Offering a choice or representing a filter |
+| Triggering a popup menu                          | Causing a browser redraw or refresh                       | Immediately changing a setting on the page |
 
 Chips that represent check buttons work independently from each other:
 - Selecting one chip shouldn’t change the selection status of another chip in the list
 - When parent chip is used for a bulk selection action, all child chip items will be selected or not selected
 - Use a standalone chip for a simple toggle selection. Don’t use radio buttons or toggles
+
+## Resources
+  - WebAIM: [Keyboard Accessibility](https://webaim.org/techniques/keyboard/)
+  - WebAIM [WCAG 2.0 Checklist](https://webaim.org/standards/wcag/checklist)
+  - W3C: [WCAG 3.0 Guidelines](https://www.w3.org/TR/wcag-3.0/)
 
 # API
 
