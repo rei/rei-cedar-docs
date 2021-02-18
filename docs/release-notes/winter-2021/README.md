@@ -32,8 +32,8 @@
 ### CdrChip Component
 
 - new component
-- button/link/checkbox/radio
-- signals and highlights user selection/input. (i.e, checkbox search filter in sidebar vs. chip above the results for editing selected filters)
+- signals and highlights user selection/input
+- generic button that can be composed in different ways to create accessible controls
 - [docs page](../../components/chip)
 
 ### CdrGrid Component
@@ -47,6 +47,10 @@
 
 - refactored CdrImg to make use of `object-fit` and `object-position` properties. This allows the use of any native HTML image attribute on any CdrImg element. lazy loading, responsive images, performance (dont load huge image for tiny screen), etc.
 
+### CdrPagination Intra-Page Navigation
+
+CdrPagination was originally designed for page-level navigation where the user navigates to a new URL. This pattern did not support cases where content is paginated inside of a page, for example when browsing through reviews of a product. CdrPagination now supports two additional properties: `linkTag` and `forLabel` which allow for creating a button based navigation that is linked to the content it paginates. See the [CdrPagination docs](../../components/pagination#intra-page-navigation) for more information. For consumers using CdrPagination for page-level navigation there are no changes required.
+
 ### Sale Color Update
 
 - update sale color tokens.
@@ -58,9 +62,12 @@
 
 ## Bug Fixes
 
-### Button/Icon Fill Animation
-
-### Modal Scrollbar (????)
+- CdrBreadcrumb truncation logic has been updated to better handle screen readers TODO: verify
+- CdrButton has been updated to apply an animation to the fill color on state changes. This matches the animation applied to the text color.
+- CdrModal
+-- No longer applies a fade-out gradient on overflowing content. Fading out content conflicts with accessibility requirements related to text contrast.
+-- Has been updated to improve it's open and close animations. TODO: verify
+-- Padding to the right of content has been removed to accommodate more display patterns
 
 ## Deprecations
 

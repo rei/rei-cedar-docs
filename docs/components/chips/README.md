@@ -38,10 +38,10 @@
           "api": {
             "props": [
               {
-                "name": "PROPNAME",
+                "name": "modifier",
                 "type": "string",
-                "default": "'DEFAULT'",
-                "description": ""
+                "default": "'default'",
+                "description": "Sets the styling modifier for chip. Possible values: {'default' | 'emphasis'}"
               },
             ],
             "slots": [
@@ -64,7 +64,7 @@
 
 ## Default
 
-Use default chips to specify, dynamically categorize or dynamically perform a discrete action which is lower in the page's information hierarchy. 
+Use default chips to specify, dynamically categorize or dynamically perform a discrete action which is lower in the page's information hierarchy.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
 :sandbox-data="$page.frontmatter.sandboxData" >
@@ -72,64 +72,102 @@ Use default chips to specify, dynamically categorize or dynamically perform a di
 ```html
 <div>
   <cdr-chip> default chip </cdr-chip>
-  <cdr-chip> disabled default chip </cdr-chip>
+  <cdr-chip disabled> disabled default chip </cdr-chip>
 </div>
 ```
 </cdr-doc-example-code-pair>
 
 ## Emphasis
 
-Use emphasis chips to specify, dynamically categorize or dynamically perform a discrete action which is higher in the page's information hierarchy. 
+Use emphasis chips to specify, dynamically categorize or dynamically perform a discrete action which is higher in the page's information hierarchy.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
 :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div>
-  <cdr-chip> emphasis chip </cdr-chip>
-  <cdr-chip> emphasis disabled chip </cdr-chip>
+  <cdr-chip modifier="emphasis"> emphasis chip </cdr-chip>
+  <cdr-chip modifier="emphasis" disabled> emphasis disabled chip </cdr-chip>
 </div>
 ```
 </cdr-doc-example-code-pair>
 
-## Text and Prefix Icon
+## Icon Slots
 
-Pair an x icon with text to allow users to remove a chip that dynamically categorizes.
+Use `icon-left` or `icon-right` slots to pass icons into a chip.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
-:sandbox-data="$page.frontmatter.sandboxData" >
+ :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconHeartStroke, IconXSm'})">
 
 ```html
 <div>
-  <cdr-chip> text and prefix icon chip </cdr-chip>
+  <cdr-chip> text and icon left <icon-heart-stroke inherit-color slot="icon-left"/></cdr-chip>
+  <cdr-chip> text and icon right <icon-x-sm inherit-color slot="icon-right"/></cdr-chip>
 </div>
 ```
 </cdr-doc-example-code-pair>
 
-## Text and Suffix Icon
+## Toggle Chip
 
-Pair an x icon with text to allow users to remove a chip with a functional descriptor.
+For chips that toggle a single selection on and off, use the click event and dynamic properties in order to change the label or state of a chip. The `aria-checked` attribute should be used to designate the state of the toggle, and `role="switch"` should be used to designate that the chip behaves as a toggle.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
-:sandbox-data="$page.frontmatter.sandboxData" >
+:sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconHeartStroke, IconHeartFill'})" :model="{ toggled: false }" :methods="{toggle() {this.toggled = !this.toggled}}" >
 
 ```html
 <div>
-  <cdr-chip> text and suffix icon chip </cdr-chip>
+  <cdr-chip
+    @click="toggle"
+    role="switch"
+    :aria-checked="toggled ? 'true' : 'false'"
+  >
+    <icon-heart-stroke
+      slot="icon-left"
+      inherit-color
+      v-if="!toggled"
+    />
+    <icon-heart-fill
+      slot="icon-left"
+      inherit-color
+      v-else
+    />
+    Toggle
+  </cdr-chip>
 </div>
 ```
 </cdr-doc-example-code-pair>
 
-## Stateful Chip
+## "Filter Chips"
 
-For chips that trigger asynchronous actions, use the click event and dynamic properties in order to change the label or state of a chip.
+Add a visual represention of user selections that can be edited. Chip should be linked to the ID of the input it controls using `aria-controls`.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
-:sandbox-data="$page.frontmatter.sandboxData" >
+:sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconXSm, CdrCheckbox'})" :model="{ filtered: true }" :methods="{updateFilter() {this.filtered = !this.filtered}}">
 
 ```html
 <div>
-  <cdr-chip> stateful chip </cdr-chip>
+  <cdr-checkbox v-model="filtered" id="filter-checkbox" @change="updateFilter">Add Filter</cdr-checkbox>
+  <cdr-chip v-if="filtered" @click="updateFilter" aria-controls="filter-checkbox"> Remove filter <icon-x-sm slot="icon-left"/></cdr-chip>
+</div>
+```
+</cdr-doc-example-code-pair>
+
+
+## "Category Chips"
+
+
+
+<cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
+:sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconXSm, CdrCheckbox'})" :model="{ categories: ['a', 'b', 'c'], selectedCategory: 'a' }" :methods="{selectCategory(category) {this.selectedCategory = category}}">
+
+```html
+<div>
+  <!-- <cdr-chip-group> -->
+    <cdr-chip v-for="category in categories" role="radio" :aria-checked="category === selectedCategory" @click="selectCategory(category)">
+      Option {{ category }}
+    </cdr-chip>
+  <!-- </cdr-chip-group> -->
+
 </div>
 ```
 </cdr-doc-example-code-pair>
@@ -137,15 +175,14 @@ For chips that trigger asynchronous actions, use the click event and dynamic p
 ## Accessibility
 Many WCAG requirements are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines:
 
-- Setting `tabindex=”0”` for filter chips
-- Setting `role=”button”` for filter chips
-- Each selection chip must be focusable and keyboard accessible:
-  - When selection chip has focus, the Space key changes the selection
-  - Tab key moves to next element in list
-- `CdrFormGroup` should be:
-  - Used when associating group of selection chips or filter chips.
-  - Identified or described as a group using the label property or slot
-- Avoid nesting `CdrFormGroup`
+- For a group of chips related to a single selection, use `role="radio"` and `aria-checked` on each chip and wrap the group in a CdrChipGroup component.
+- For a chip that controls a selection made elsewhere on the page, set `aria-controls` on the chip to point to the ID of the input being modified
+- For a chip that toggles a selection on and off, use `role="switch"` and `aria-checked` to designate it's state.
+- For other uses of CdrChip please reach out in Slack at #cedar-user-support
+
+CdrChip and CdrChipGroup implement the following accessibility requirements:
+- CdrChip uses a button tag
+- CdrChipGroup implements keyboard navigation and `tabindex` management for a group of CdrChips
 
 # Guidelines
 
@@ -156,7 +193,7 @@ Chips allow users to make selections, filter content, or trigger actions. While 
 - Dynamically categorizing content based on descriptive words.
 - Representing a checkbox group with more emphasis.
 - Representing a radio button group with more emphasis.
-- Clearly delineating and displaying options in a compact area. 
+- Clearly delineating and displaying options in a compact area.
 - Offering dynamic and contextual actions related to primary content.
 - Allowing the user to trigger an immediate action while staying on the same page.
 - Allowing users to update or configure settings immediately.
@@ -171,7 +208,7 @@ Chips allow users to make selections, filter content, or trigger actions. While 
 
 ## The Basics
 
-One chip container style is available: pill. 
+One chip container style is available: pill.
 
 When arranging chips horizontally:
 - Left align chip group
@@ -225,12 +262,12 @@ Do use positive phrasing for labels.
 "Do not set as my REI"
 Don't use negative phrasing for labels.
 
-"New arrivals" 
+"New arrivals"
 Do make labels brief.
 "New women's climbing shoe gear arrivals"
 Don't put too much text in the label.
 
-"Set as my REI" 
+"Set as my REI"
 Do write labels as sentence fragments with no ending punctuation.
 "Set this store at my REI store."
 Don't add terminal punctuation at the end of a label.
@@ -255,7 +292,7 @@ Do not display a single chip to offer a selection.
 
 ## Behavior
 
-Stateful chips used to dynamically perform a discrete action: 
+Stateful chips used to dynamically perform a discrete action:
 - Can show confirmation feedback.
 
 Chips used for single selection:

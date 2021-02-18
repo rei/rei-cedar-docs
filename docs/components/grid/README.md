@@ -106,7 +106,7 @@
 
 CdrGrid is a simple wrapper for working with CSS Grid. Any valid CSS Grid properties can be applied to a CdrGrid or it's grid items, allowing for more flexible layouts to be built using less markup and CSS classes.
 
-CdrGrid applies a default responsive gutter which can be customized using the `gutter` prop or overridden completely using CSS. The examples on this page are meant to illustrate some basic usage of CSS grid but are by no means exhaustive. Note that when constructing page layouts your entire page should be wrapped in a single [cdr-container](../../layout/responsive) to ensure the proper outer margins are maintained.
+CdrGrid applies a default responsive gutter which can be customized using the `gutter` prop or overridden completely using CSS. The examples on this page are meant to illustrate some basic usage of CSS grid but are by no means exhaustive. Note that when constructing page layouts your entire page should be wrapped in a single [cdr-container](../../foundation/responsive) to ensure the proper outer margins are maintained.
 
 
 New to or unfamiliar with CSS Grid? We recommend these resources for getting up to speed with CSS Grid:
