@@ -40,7 +40,7 @@
               {
                 "name": "modifier",
                 "type": "string",
-                "default": "'defaultt'",
+                "default": "'default'",
                 "description": "Sets the styling modifier for chip. Possible values: {'default' | 'emphasis'}"
               },
             ],
@@ -101,24 +101,53 @@ Use `icon-left` or `icon-right` slots to pass icons into a chip.
 
 ```html
 <div>
-  <cdr-chip> text and icon left <icon-heart-stoke inherit-color slot="icon-left"/></cdr-chip>
-  <cdr-chip> text and icon right <icon-x-sm inherit-color slot="icon-left"/></cdr-chip>
+  <cdr-chip> text and icon left <icon-heart-stroke inherit-color slot="icon-left"/></cdr-chip>
+  <cdr-chip> text and icon right <icon-x-sm inherit-color slot="icon-right"/></cdr-chip>
+</div>
+```
+</cdr-doc-example-code-pair>
+
+## Toggle Chip
+
+For chips that toggle a single selection on and off, use the click event and dynamic properties in order to change the label or state of a chip. The `aria-checked` attribute should be used to designate the state of the toggle, and `role="switch"` should be used to designate that the chip behaves as a toggle.
+
+<cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
+:sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconHeartStroke, IconHeartFill'})" :model="{ toggled: false }" :methods="{toggle() {this.toggled = !this.toggled}}" >
+
+```html
+<div>
+  <cdr-chip
+    @click="toggle"
+    role="switch"
+    :aria-checked="toggled ? 'true' : 'false'"
+  >
+    <icon-heart-stroke
+      slot="icon-left"
+      inherit-color
+      v-if="!toggled"
+    />
+    <icon-heart-fill
+      slot="icon-left"
+      inherit-color
+      v-else
+    />
+    Toggle
+  </cdr-chip>
 </div>
 ```
 </cdr-doc-example-code-pair>
 
 ## "Filter Chips"
 
-Pair an x icon with text to allow users to remove a chip with a functional descriptor.
+Add a visual represention of user selections that can be edited. Chip should be linked to the ID of the input it controls using `aria-controls`.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
-:sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconXSm, CdrCheckbox'})">
+:sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconXSm, CdrCheckbox'})" :model="{ filtered: true }" :methods="{updateFilter() {this.filtered = !this.filtered}}">
 
 ```html
 <div>
-  <cdr-chip> text and prefix icon chip <icon-x-sm slot="icon-left"/></cdr-chip>
-  TODO: wire these dudes together
-  <cdr-checkbox></cdr-checkbox>
+  <cdr-checkbox v-model="filtered" id="filter-checkbox" @change="updateFilter">Add Filter</cdr-checkbox>
+  <cdr-chip v-if="filtered" @click="updateFilter" aria-controls="filter-checkbox"> Remove filter <icon-x-sm slot="icon-left"/></cdr-chip>
 </div>
 ```
 </cdr-doc-example-code-pair>
@@ -129,29 +158,16 @@ Pair an x icon with text to allow users to remove a chip with a functional descr
 
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
-:sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconXSm, CdrCheckbox'})">
+:sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconXSm, CdrCheckbox'})" :model="{ categories: ['a', 'b', 'c'], selectedCategory: 'a' }" :methods="{selectCategory(category) {this.selectedCategory = category}}">
 
 ```html
 <div>
-  TODO: implement chipGroups to handle this
-  <cdr-chip> Option A</cdr-chip>
-  <cdr-chip> Option B</cdr-chip>
-  <cdr-chip> Option C</cdr-chip>
+  <!-- <cdr-chip-group> -->
+    <cdr-chip v-for="category in categories" role="radio" :aria-checked="category === selectedCategory" @click="selectCategory(category)">
+      Option {{ category }}
+    </cdr-chip>
+  <!-- </cdr-chip-group> -->
 
-</div>
-```
-</cdr-doc-example-code-pair>
-
-## Toggle Chip
-
-For chips that trigger asynchronous actions, use the click event and dynamic properties in order to change the label or state of a chip.
-
-<cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
-:sandbox-data="$page.frontmatter.sandboxData" >
-
-```html
-<div>
-  <cdr-chip> stateful chip </cdr-chip>
 </div>
 ```
 </cdr-doc-example-code-pair>
@@ -159,15 +175,14 @@ For chips that trigger asynchronous actions, use the click event and dynamic p
 ## Accessibility
 Many WCAG requirements are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines:
 
-- Setting `tabindex=”0”` for filter chips
-- Setting `role=”button”` for filter chips
-- Each selection chip must be focusable and keyboard accessible:
-  - When selection chip has focus, the Space key changes the selection
-  - Tab key moves to next element in list
-- `CdrFormGroup` should be:
-  - Used when associating group of selection chips or filter chips.
-  - Identified or described as a group using the label property or slot
-- Avoid nesting `CdrFormGroup`
+- For a group of chips related to a single selection, use `role="radio"` and `aria-checked` on each chip and wrap the group in a CdrChipGroup component.
+- For a chip that controls a selection made elsewhere on the page, set `aria-controls` on the chip to point to the ID of the input being modified
+- For a chip that toggles a selection on and off, use `role="switch"` and `aria-checked` to designate it's state.
+- For other uses of CdrChip please reach out in Slack at #cedar-user-support
+
+CdrChip and CdrChipGroup implement the following accessibility requirements:
+- CdrChip uses a button tag
+- CdrChipGroup implements keyboard navigation and `tabindex` management for a group of CdrChips
 
 # Guidelines
 
