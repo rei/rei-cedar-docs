@@ -109,7 +109,7 @@ Use `icon-left` or `icon-right` slots to pass icons into a chip.
 
 ## Toggle Chip
 
-For chips that toggle a single selection on and off, use the click event and dynamic properties in order to change the label or state of a chip. The `aria-checked` attribute should be used to designate the state of the toggle, and `role="switch"` should be used to designate that the chip behaves as a toggle.
+For chips that toggle a single selection on and off, use the click event and dynamic properties in order to change the label or state of a chip. The `aria-pressed` attribute should be used to designate the state of the toggle.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
 :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconHeartStroke, IconHeartFill'})" :model="{ toggled: false }" :methods="{toggle() {this.toggled = !this.toggled}}" >
@@ -118,8 +118,7 @@ For chips that toggle a single selection on and off, use the click event and d
 <div>
   <cdr-chip
     @click="toggle"
-    role="switch"
-    :aria-checked="toggled ? 'true' : 'false'"
+    :aria-pressed="toggled ? 'true' : 'false'"
   >
     <icon-heart-stroke
       slot="icon-left"
@@ -155,18 +154,18 @@ Add a visual represention of user selections that can be edited. Chip should be 
 
 ## "Category Chips"
 
-
+For making a single selection out of a group of options, similar to a radio input group. Use `aria-checked="true"` and `tabindex="0"` to designate the selected chip and `aria-checked="false"` and `tabindex="-1"` on the other chips. The chip elements should be grouped directly inside a CdrChipGroup element to ensure keyboard navigation is properly managed.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
 :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconXSm, CdrCheckbox'})" :model="{ categories: ['a', 'b', 'c'], selectedCategory: 'a' }" :methods="{selectCategory(category) {this.selectedCategory = category}}">
 
 ```html
 <div>
-  <!-- <cdr-chip-group> -->
-    <cdr-chip v-for="category in categories" role="radio" :aria-checked="category === selectedCategory" @click="selectCategory(category)">
+  <cdr-chip-group>
+    <cdr-chip v-for="category in categories" role="radio" :aria-checked="category === selectedCategory" :tabindex="category === selectedCategory ? 0 : -1" @click="selectCategory(category)">
       Option {{ category }}
     </cdr-chip>
-  <!-- </cdr-chip-group> -->
+  </cdr-chip-group>
 
 </div>
 ```
@@ -175,14 +174,14 @@ Add a visual represention of user selections that can be edited. Chip should be 
 ## Accessibility
 Many WCAG requirements are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines:
 
-- For a group of chips related to a single selection, use `role="radio"` and `aria-checked` on each chip and wrap the group in a CdrChipGroup component.
+- For a group of chips related to a single selection, use `role="radio"`, `aria-checked`, and `tabindex` on each chip and wrap the group in a CdrChipGroup component. The selected chip should have `aria-checked="true"` and `tabindex="0"` set, while the rest of the chips should have `aria-checked="false"` and `tabindex="-1"`.
 - For a chip that controls a selection made elsewhere on the page, set `aria-controls` on the chip to point to the ID of the input being modified
 - For a chip that toggles a selection on and off, use `role="switch"` and `aria-checked` to designate it's state.
 - For other uses of CdrChip please reach out in Slack at #cedar-user-support
 
 CdrChip and CdrChipGroup implement the following accessibility requirements:
 - CdrChip uses a button tag
-- CdrChipGroup implements keyboard navigation and `tabindex` management for a group of CdrChips
+- CdrChipGroup implements keyboard navigation for a group of CdrChips
 
 # Guidelines
 

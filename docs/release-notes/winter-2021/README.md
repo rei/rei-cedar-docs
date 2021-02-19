@@ -6,7 +6,7 @@
   "summary": false,
   "breadcrumbs": [
     {
-      "text": "x.x.x Release Notes"
+      "text": "8.x.x Release Notes"
     }
   ],
 }
@@ -20,24 +20,24 @@
 
 | package name | version |
 |--------------|---------|
-| `@rei/cedar` | ^x.x.x |
-| `@rei/cdr-tokens` | ^x.x.x |
-| `@rei/cdr-component-variables` | ^x.x.x |
-| `@rei/cedar-icons` | ^x.x.x |
+| `@rei/cedar` | ^8.x.x |
+| `@rei/cdr-tokens` | ^8.x.x |
+<!-- | `@rei/cdr-component-variables` | ^x.x.x |
+| `@rei/cedar-icons` | ^x.x.x | -->
 
 - If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your micro-site.
 
 ## New Features
 
 ### CdrChip Component
-
+TODO:
 - new component
 - signals and highlights user selection/input
 - generic button that can be composed in different ways to create accessible controls
 - [docs page](../../components/chip)
 
 ### CdrGrid Component
-
+TODO: (cole will write this)
 - uses css-grid. replaces flexbox based cdrrow/cdrcol.
 - more flexible, lightweight. just sets gutters and (????). TODO: bundle size notees
 - use any valid CSS grid syntax.
@@ -45,14 +45,21 @@
 
 ### CdrImg Refactor
 
-- refactored CdrImg to make use of `object-fit` and `object-position` properties. This allows the use of any native HTML image attribute on any CdrImg element. lazy loading, responsive images, performance (dont load huge image for tiny screen), etc.
+We refactored CdrImg to no longer use `background-image` to load images, which allows for any native `<img>` atttribute to be used with CdrImg. This not only makes the CdrImg component more flexible but opens up several opportunities to improve performance for image heavy pages. The `srcset` and `sizes` property can now be used to load optimal images for a users screen size, or `loading="lazy"` can be used to enable lazy loading of images.
+
+We did [remove the responsive ratio and rei-lazy-image-loader](#cdrimg-responsive-ratio-and-lazy-loading) related properties as they are no longer necessary.
 
 ### CdrPagination Intra-Page Navigation
 
 CdrPagination was originally designed for page-level navigation where the user navigates to a new URL. This pattern did not support cases where content is paginated inside of a page, for example when browsing through reviews of a product. CdrPagination now supports two additional properties: `linkTag` and `forLabel` which allow for creating a button based navigation that is linked to the content it paginates. See the [CdrPagination docs](../../components/pagination#intra-page-navigation) for more information. For consumers using CdrPagination for page-level navigation there are no changes required.
 
+### CdrAccordion Unwrapped
+
+CdrAccordionGroup now accepts an `unwrap` property which renders the accordion headings and content in a plain "unwrapped" state. This can be used to render content in full at desktop view but display it in a collapsed accordion at mobile view. The `unwrap` property accepts either a boolean which toggles the behavior on and off, or a list of breakpoints `'@xs @sm @md @lg'` which activates it at the given breakpoint(s). See the [CdrAccordion docs](../../components/accordion#unwrapped) for more information.
+
 ### Sale Color Update
 
+TODO: cole will write this
 - update sale color tokens.
 - new background-sale token. use with color-text-inverse
 
@@ -72,39 +79,40 @@ CdrPagination was originally designed for page-level navigation where the user n
 ## Deprecations
 
 ### CdrRow CdrCol
+TODO: cole will write this
 - long term deprecation, incrementally migrate to ____, example of doing that, etc.
 
 ### CdrText Modifier
+TODO: cole will write this
 - long term deprecation, incrementally migrate to ____, example of doing that, etc.
 
 ### Space utility classes
+TODO: cole will write this
 - long term deprecation, incrementally migrate to ____, example of doing that, etc.
 
 ## Breaking Changes
 
 ### CdrImg Responsive Ratio and Lazy loading
 
-- Removed responsive ratio props. These used an old syntax that does not match the other cedar components. was not being used.
-- Removed "lazy" props. Were hardcoded to match API of REI lazy loader package. Can apply any arbitrary attrs as needed
-TODO: show re-map to data-lazy- etc.
+- The `ratioSm`, `ratioMd`, and `ratioLg` properties have been removed as they were not being used and do not match the responsive property patterns in use in the Cedar components. Please reach out in Slack at #cedar-user-support if you need assistance building images with responsive ratios.
+- We have removed the `lazy` and `lazyOpts` properties which were tied to the [rei-lazy-image-loader](https://git.rei.com/projects/FEDPACK/repos/rei-lazy-image-loader/browse) package. Usage of those props should be updated to use `loading="lazy"` and the lazy loader package should be removed from your project. If necessary, the `data-lazy` attributes associated with `rei-lazy-image-loader` can be manually bound to any instance of CdrImg.
 
 ### CdrText CSS Asset
 
-- CdrText modifier actually uses `text.css` utility class file.
-cdr-text.css has lil default text styling. text.css has every type option at every breakpoint.
-- load text.css file, start migrating to using cdr-text mixins instead
-- `cdr-text` base class now scopeed, will need to update code if you were targetting that class directly.
+The CdrText css asset (`@rei/cedar/dist/style/cdr-text.css`) has been updated to move the CdrText modifier classes into the text utility class (`@rei/cedar/dist/style/text.css`).
+- If you are using CdrText in conjunction with type mixins from @rei/cdr-tokens should load the `cdr-text.css` file.
+- If you are using CdrText with the `modifier` property will need to load both the `cdr-text.css` and `text.css` files. You should also begin incrementally migrating your codebase to use the @rei/cdr-tokens type mixins instead of the CdrText modifiers
 
 ### Removals
 
 In accordance with our deprecation policy, features that were deprecated in the [Summer 2020 release](../summer-2020/#deprecations) have been removed from Cedar.
 
 #### CdrCta Removed
-- merged with button. button with tag="a". etc.
-- CTA tokens removed, use corresponding button tokens.
+
+[CdrCta](../summer-2020/#cdrcta-deprecated-and-merged-with-cdrbutton) has been removed from @rei/cedar, @rei/cdr-tokens, and @rei/cdr-component-variables
 
 #### Space Prop Removed
-- can pass as class instead.
-- but actually just migrate to cdr-tokens instead.
+
+The [space property](../summer-2020/#space-property-deprecated) has been removed from @rei/cedar
 
 </cdr-doc-table-of-contents-shell>
