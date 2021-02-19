@@ -127,7 +127,7 @@ Section borders expand to full width of container.
 
 <cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ default1: false, default2: false, default3: false }">
 
-```vue
+```html
 <cdr-accordion-group>
   <cdr-accordion
     id="default-1"
@@ -183,7 +183,7 @@ Reduced spacing around title and content body. Also, smaller font sizes resultin
 
 <cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ compact1: false, compact2: false, compact3: false }">
 
-```vue
+```html
 <cdr-accordion-group>
   <cdr-accordion
     id="compact-1"
@@ -241,7 +241,7 @@ Border aligns to the title text and expand/collapse icon.
 
 <cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ borderAligned1: false, borderAligned2: false, borderAligned3: false }">
 
-```vue
+```html
 <cdr-accordion-group>
   <cdr-accordion
     id="border-aligned-1"
@@ -289,6 +289,63 @@ Border aligns to the title text and expand/collapse icon.
     <cdr-text tag="p">
       This website provides full details of each trip. If you still have questions,
       please call us at 1-800-622-2236 or e-mail us at travel@rei.com.
+    </cdr-text>
+  </cdr-accordion>
+</cdr-accordion-group>
+```
+
+</cdr-doc-example-code-pair>
+
+
+## Unwrapped
+
+The `unwrap` property of `CdrAccordionGroup` can be used to render the accordion content in an "unwrapped" state. This property accepts either a boolean toggle or a list of breakpoints.
+
+<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ unwrap1: false, unwrap2: false, unwrap3: false }">
+
+```html
+<cdr-accordion-group unwrap="@md @lg">
+  <cdr-accordion
+    id="unwrap-1"
+    level="4"
+    :opened="unwrap1"
+    @accordion-toggle="unwrap1 = !unwrap1"
+  >
+    <template slot="label">
+      How do I find my member number?
+    </template>
+    <cdr-text tag="p">
+        Find your member number online. You can also call
+        Customer Support at 1-800-426-4840 (U.S. and Canada) or 1-253-891-2500 (International).
+    </cdr-text>
+  </cdr-accordion>
+  <cdr-accordion
+    id="unwrap-2"
+    level="4"
+    :opened="unwrap2"
+    @accordion-toggle="unwrap2 = !unwrap2"  
+  >
+    <template slot="label">
+      Does every member get an Annual Dividend?
+    </template>
+    <cdr-text tag="p">
+        Only active REI Co-op members receive an Annual Dividend notice. To be an active
+        member, you need to make net merchandise or shipping purchases (purchases minus credits and returns)
+        of at least $10 per year, unless you joined during that calendar year.
+    </cdr-text>
+  </cdr-accordion>
+  <cdr-accordion
+    id="unwrap-3"
+    level="4"
+    :opened="unwrap3"
+    @accordion-toggle="unwrap3 = !unwrap3"
+  >
+    <template slot="label">
+      When does my dividend expire?
+    </template>
+    <cdr-text tag="p">
+        Your dividend expires on Jan. 3, just under two years after it has been issued.
+        or example, your 2018 dividend earned on 2017 purchases will expire in January 2020.
     </cdr-text>
   </cdr-accordion>
 </cdr-accordion-group>
@@ -394,7 +451,7 @@ This component has compliance with WCAG guidelines by:
 
 CdrAccordion emits an event when its button is clicked. Use an event listener to toggle the value of the opened prop to open or close the accordion.
 
-```vue
+```html
 <template>
   <cdr-accordion
     id="item"
@@ -428,7 +485,7 @@ Accordion has a complementary wrapping component `CdrAccordionGroup` which shoul
 
 Creating groups can be useful if, for instance, you wanted to close the other accordions when one is opened.
 
-```vue
+```html
 <cdr-accordion-group>
   <cdr-accordion
     v-for="(item, index) in grouped"

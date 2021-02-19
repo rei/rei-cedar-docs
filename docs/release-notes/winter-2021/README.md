@@ -51,6 +51,10 @@
 
 CdrPagination was originally designed for page-level navigation where the user navigates to a new URL. This pattern did not support cases where content is paginated inside of a page, for example when browsing through reviews of a product. CdrPagination now supports two additional properties: `linkTag` and `forLabel` which allow for creating a button based navigation that is linked to the content it paginates. See the [CdrPagination docs](../../components/pagination#intra-page-navigation) for more information. For consumers using CdrPagination for page-level navigation there are no changes required.
 
+### CdrAccordion Unwrapped
+
+CdrAccordionGroup now accepts an `unwrap` property which renders the accordion headings and content in a plain "unwrapped" state. This can be used to render content in full at desktop view but display it in a collapsed accordion at mobile view. The `unwrap` property accepts either a boolean which toggles the behavior on and off, or a list of breakpoints `'@xs @sm @md @lg'` which activates it at the given breakpoint(s). See the [CdrAccordion docs](../../components/accordion#unwrapped) for more information.
+
 ### Sale Color Update
 
 - update sale color tokens.
