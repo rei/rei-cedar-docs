@@ -22,26 +22,23 @@
 |--------------|---------|
 | `@rei/cedar` | ^8.x.x |
 | `@rei/cdr-tokens` | ^8.x.x |
-<!-- | `@rei/cdr-component-variables` | ^x.x.x |
-| `@rei/cedar-icons` | ^x.x.x | -->
+| `@rei/cdr-component-variables` | ^6.x.x |
 
 - If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your micro-site.
 
 ## New Features
 
 ### CdrChip Component
-TODO:
-- new component
-- signals and highlights user selection/input
-- generic button that can be composed in different ways to create accessible controls
-- [docs page](../../components/chip)
+
+We have created a new CdrChip component that can be used to highlight and signal user selection and input in cases where a basic form element or button do not suffice. 
+
+See the [CdrChip docs page](../../components/chips) for more information.
 
 ### CdrGrid Component
-TODO: (cole will write this)
-- uses css-grid. replaces flexbox based cdrrow/cdrcol.
-- more flexible, lightweight. just sets gutters and (????). TODO: bundle size notees
-- use any valid CSS grid syntax.
-- [docs page](../../components/grid)
+
+We have released a new CdrGrid component that is a simple wrapper around [css-grid](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout). This component is intended to replace the flexbox based CdrRow and CdrCol components. CdrGrid allows for creating the same layouts as CdrRow and CdrCol but with less markup and less CSS assets required, improving performance while also simplifying our code.
+
+See the [CdrGrid docs page](../../components/grid) for more information.
 
 ### CdrImg Refactor
 
@@ -59,13 +56,8 @@ CdrAccordionGroup now accepts an `unwrap` property which renders the accordion h
 
 ### Sale Color Update
 
-TODO: cole will write this
-- update sale color tokens.
-- new background-sale token. use with color-text-inverse
-
-### A11Y Testing Updates
-
-- wcag 3, etc.
+- We have updated our sale color tokens to align with brand guidelines
+- We have created a new $cdr-color-background-sale token. This should be used in conjunction with $cdr-color-text-inverse.
 
 ## Bug Fixes
 
@@ -78,17 +70,33 @@ TODO: cole will write this
 
 ## Deprecations
 
-### CdrRow CdrCol
-TODO: cole will write this
-- long term deprecation, incrementally migrate to ____, example of doing that, etc.
+### CdrRow and CdrCol
 
-### CdrText Modifier
-TODO: cole will write this
-- long term deprecation, incrementally migrate to ____, example of doing that, etc.
+CdrRow and CdrCol have been deprecated in favor of [CdrGrid](../../components/grid). Teams using CdrRow and CdrCol should use CdrGrid for any new work, and begin incrementally migrating any existing usage.
 
-### Space utility classes
-TODO: cole will write this
-- long term deprecation, incrementally migrate to ____, example of doing that, etc.
+### CdrText Modifier and Space Utility Classes
+
+In order to align with performance goals, we are working on a long-term deprecation of the CdrText `modifier` property and the `space` utility classes. Both of these features require loading a large CSS asset even if you are only using a handful of the type or space options. Instead, you should begin using the [Cedar Design Tokens](../../tokens/all-tokens/) to apply the same styles using a custom CSS class. Projects that are currently using these features should instead use the design tokens for any new work, and incrementally migrate their existing usage when possible.
+
+Example CdrText modifier update:
+```
+<cdr-text modifier="body-300">Old</cdr-text>
+
+<cdr-text class="your-custom-type-class">New</cdr-text>
+.your-custom-type-class {
+  @include cdr-text-body-300;
+}
+```
+
+Example Space utility update:
+```
+<div class="cdr-mb-space-one-x">old</div>
+
+<div class="your-custom-space-class">new</div>
+.your-custom-space-class {
+  margin-bottom: $cdr-space-one-x
+}
+```
 
 ## Breaking Changes
 
