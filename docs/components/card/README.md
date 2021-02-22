@@ -91,7 +91,7 @@ Cards should always be used to link to other content, and the `cdr-card__link` u
   <div>
     <cdr-img
       alt="card test image alt text"
-      src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg"
+      src="/rei-cedar-docs/live.jpg"
       modifier="responsive"
     />
   </div>
@@ -129,7 +129,7 @@ Because CdrCard is a simple wrapper component, it's behavior can be customized o
   <div>
     <cdr-img
       alt="card test image alt text"
-      src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg"
+      src="/rei-cedar-docs/live.jpg"
       modifier="responsive"
     />
   </div>

@@ -96,7 +96,7 @@ Use for images with no responsive qualities.
 ```html
 
 <cdr-img
-  src="/live.jpg"
+  src="/rei-cedar-docs/live.jpg"
   alt="REI employees building trails during a stewardship event"
 />
 
@@ -112,7 +112,7 @@ Apply rules to an image using ratio and crop properties. The below example is cr
 
 ```html
 <cdr-img
-  src="/live.jpg"
+  src="/rei-cedar-docs/live.jpg"
   alt="REI employees building trails during a stewardship event"
   ratio="9-16"
   crop="top"
@@ -130,7 +130,7 @@ Use the cover property to resize the background image to fill the entire contain
 
 ```html
 <cdr-img
-  src="/live.jpg"
+  src="/rei-cedar-docs/live.jpg"
   alt="REI employees building trails during a stewardship event"
   ratio="16-9"
   cover
@@ -153,7 +153,7 @@ The below example is cropped using center alignment with the aspect ratio set as
 
 ```html
 <cdr-img
-  src="/live.jpg"
+  src="/rei-cedar-docs/live.jpg"
   alt="REI employees building trails during a stewardship event"
   ratio="square"
   radius="rounded"
@@ -171,7 +171,7 @@ The below example is cropped using center alignment with the aspect ratio set as
 
 ```html
 <cdr-img
-  src="/live.jpg"
+  src="/rei-cedar-docs/live.jpg"
   alt="REI employees building trails during a stewardship event"
   ratio="square"
   radius="circle"
