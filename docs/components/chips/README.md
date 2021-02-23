@@ -79,7 +79,7 @@ Use default chips to specify, dynamically categorize or dynamically perform a di
 
 ## Emphasis
 
-Use emphasis chips to specify, dynamically categorize or dynamically perform a discrete action which is higher in the page's information hierarchy.
+Use emphasis chips to specify, dynamically categorize or dynamically perform a discrete action which is higher in the page's information hierarchy. Emphasis chips are used as to represent user selected filters.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
 :sandbox-data="$page.frontmatter.sandboxData" >
@@ -94,7 +94,7 @@ Use emphasis chips to specify, dynamically categorize or dynamically perform a d
 
 ## Icon Slots
 
-Use `icon-left` or `icon-right` slots to pass icons into a chip.
+Use `icon-left` or `icon-right` slots to pass icons into a chip. Place the X icon to remove a chip in the icon-right slot only. Place other icons in the icon-left slot. Use only one icon per chip.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
  :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconHeartStroke, IconXSm'})">
@@ -107,7 +107,7 @@ Use `icon-left` or `icon-right` slots to pass icons into a chip.
 ```
 </cdr-doc-example-code-pair>
 
-## Toggle Chip
+## "Stateful Chips"
 
 For chips that toggle a single selection on and off, use the click event and dynamic properties in order to change the label or state of a chip. The `aria-pressed` attribute should be used to designate the state of the toggle.
 
@@ -138,7 +138,11 @@ For chips that toggle a single selection on and off, use the click event and d
 
 ## "Filter Chips"
 
-Add a visual represention of user selections that can be edited. Chip should be linked to the ID of the input it controls using `aria-controls`.
+Filter chips use descriptive words to filter content or add a visual representation of user selected filters. 
+
+Filter chips that directly filter content should use the default chip style.
+
+Filter chips that represent user selections can be dynamically added or removed and should use the emphasis chip style. Chip should be linked to the ID of the input it controls using `aria-controls`.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
 :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconXSm, CdrCheckbox'})" :model="{ filtered: true }" :methods="{updateFilter() {this.filtered = !this.filtered}}">
@@ -152,7 +156,7 @@ Add a visual represention of user selections that can be edited. Chip should be 
 </cdr-doc-example-code-pair>
 
 
-## "Category Chips"
+## "Selection Chips"
 
 For making a single selection out of a group of options, similar to a radio input group. Use `aria-checked="true"` and `tabindex="0"` to designate the selected chip and `aria-checked="false"` and `tabindex="-1"` on the other chips. The chip elements should be grouped directly inside a CdrChipGroup element to ensure keyboard navigation is properly managed.
 
@@ -303,6 +307,15 @@ Chips used for multiple selection:
 
 Chips used to dynamically categorize content:
 - Can optionally include a suffix exit icon.
+
+
+When making decisions about whether to use a button, links or chips, consider the following:
+
+| **Buttons**                                      | **Links**                                                 | **Chips**                                  |
+| ------------------------------------------------ | --------------------------------------------------------- | ------------------------------------------ |
+| Toggling a display to full screen       | Navigating user to a new page or view	  | Representing a filtered list of content that appear on the same page  |     
+| Opening a modal window                           | Changing the URL                                          | Offering a choice or representing a filter |
+| Triggering a popup menu                          | Causing a browser redraw or refresh                       | Immediately changing a setting on the page |
 
 ## Resources
   - WebAIM: [Keyboard Accessibility](https://webaim.org/techniques/keyboard/)
