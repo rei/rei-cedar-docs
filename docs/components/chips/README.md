@@ -107,7 +107,7 @@ Use `icon-left` or `icon-right` slots to pass icons into a chip. Place the X ico
 ```
 </cdr-doc-example-code-pair>
 
-## "Stateful Chips"
+## Stateful Chips
 
 For chips that toggle a single selection on and off, use the click event and dynamic properties in order to change the label or state of a chip. The `aria-pressed` attribute should be used to designate the state of the toggle.
 
@@ -136,7 +136,7 @@ For chips that toggle a single selection on and off, use the click event and d
 ```
 </cdr-doc-example-code-pair>
 
-## "Filter Chips"
+## Filter Chips
 
 Filter chips use descriptive words to filter content or add a visual representation of user selected filters. 
 
@@ -156,7 +156,7 @@ Filter chips that represent user selections can be dynamically added or removed 
 </cdr-doc-example-code-pair>
 
 
-## "Selection Chips"
+## Selection Chips
 
 For making a single selection out of a group of options, similar to a radio input group. Use `aria-checked="true"` and `tabindex="0"` to designate the selected chip and `aria-checked="false"` and `tabindex="-1"` on the other chips. The chip elements should be grouped directly inside a CdrChipGroup element to ensure keyboard navigation is properly managed.
 
