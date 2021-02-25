@@ -10,7 +10,7 @@
     }
   ],
   "sandboxData": {
-    "components": "CdrChip"
+    "components": "CdrChip, CdrChipGroup"
   },
 
   "case": [
@@ -180,6 +180,31 @@
               {
                 "name": "default",
                 "description": "Slot for CdrChip content."
+              }
+            ]
+          }
+        },
+        {
+          "name": "CdrChipGroup",
+          "api": {
+            "props": [
+              {
+                "name": "label",
+                "type": "string",
+                "default": "'default'",
+                "description": "Sets a label that describes the chip group and what it is selecting. By default this label is visually hidden and only made available to screen readers."
+              },
+              {
+                "name": "hide-label",
+                "type": "boolean",
+                "default": "'true'",
+                "description": "Visually hides the chip group label but makes it accessible to screen readers."
+              },
+            ],
+            "slots": [
+              {
+                "name": "label",
+                "description": "Slot for overriding CdrChip label content with a custom elementt."
               }
             ]
           }
@@ -476,13 +501,26 @@ When making decisions about whether to use a button, links or chips, consider th
 
 # API
 
-## Props
+
+## CdrChip
+### Props
+
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-## Slots
+### Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
+
+## CdrChipGroup
+### Props
+
+
+<cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[1].api.props" />
+
+### Slots
+
+<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[1].api.slots" />
 
 
 </cdr-doc-table-of-contents-shell>
