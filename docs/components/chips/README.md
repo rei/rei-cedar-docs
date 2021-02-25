@@ -10,7 +10,7 @@
     }
   ],
   "sandboxData": {
-    "components": "CdrChip"
+    "components": "CdrChip, CdrChipGroup"
   },
 
   "case": [
@@ -183,6 +183,31 @@
               }
             ]
           }
+        },
+        {
+          "name": "CdrChipGroup",
+          "api": {
+            "props": [
+              {
+                "name": "label",
+                "type": "string",
+                "default": "'default'",
+                "description": "Sets a label that describes the chip group and what it is selecting. By default this label is visually hidden and only made available to screen readers."
+              },
+              {
+                "name": "hide-label",
+                "type": "boolean",
+                "default": "'true'",
+                "description": "Visually hides the chip group label but makes it accessible to screen readers."
+              },
+            ],
+            "slots": [
+              {
+                "name": "label",
+                "description": "Slot for overriding CdrChip label content with a custom elementt."
+              }
+            ]
+          }
         }
       ]
     }
@@ -302,14 +327,16 @@ Filter chips that directly filter content use the default chip style.
 
 Use selection chips to allow users to make a single select choice or to allow users to make a multiple select choice. Single select chip groups are a good alternative to radio buttons. Multiple select chip groups are a good alternative to checkboxes.
 
-For single select chip groups, use `aria-checked="true"` and `tabindex="0"` to designate the selected chip and `aria-checked="false"` and `tabindex="-1"` on the other chips. The chip elements should be grouped directly inside a CdrChipGroup element to ensure keyboard navigation is properly managed.
+## Single Select
+
+For single select chip groups, apply `role='radio'` to each chip, use `aria-checked="true"` and `tabindex="0"` to designate the selected chip, and apply `aria-checked="false"` and `tabindex="-1"` to the other chips. The chip elements should be grouped directly inside a CdrChipGroup element to ensure keyboard navigation is properly managed. The CdrChipGroup element requires a label property or slot be passed in which describes the chip group. This label is visually hidden by default.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
 :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconXSm, CdrCheckbox'})" :model="{ categories: ['a', 'b', 'c'], selectedCategory: 'a' }" :methods="{selectCategory(category) {this.selectedCategory = category}}">
 
 ```html
 <div>
-  <cdr-chip-group>
+  <cdr-chip-group label="Chip group description">
     <cdr-chip v-for="category in categories" role="radio" :aria-checked="category === selectedCategory" :tabindex="category === selectedCategory ? 0 : -1" @click="selectCategory(category)">
       Option {{ category }}
     </cdr-chip>
@@ -318,6 +345,30 @@ For single select chip groups, use `aria-checked="true"` and `tabindex="0"` to d
 </div>
 ```
 </cdr-doc-example-code-pair>
+
+## Selection Chips (Multiple)
+
+For multiple select chip groups, apply `role='checkbox'` to each chip, use `aria-checked="true"` to designate the selected chip, and apply `aria-checked="false"` to the other chips. The chip elements should be grouped directly inside a CdrChipGroup element to ensure keyboard navigation is properly managed. The CdrChipGroup element requires a label property or slot be passed in which describes the chip group. This label is visually hidden by default.
+
+<cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
+:sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconXSm, CdrCheckbox'})" :model="{ categories: ['a', 'b', 'c', 'd'], selectedCategories: ['b', 'c'] }" :methods="{selectCategory(category) {const i = this.selectedCategories.indexOf(category); if (i !== -1) { this.selectedCategories.splice(i, 1) } else { this.selectedCategories.push(category)}}}">
+
+```html
+<div>
+  <cdr-chip-group label="Chip group description">
+    <cdr-chip v-for="category in categories" role="checkbox" :key="category" :aria-checked="selectedCategories.includes(category)" @click="selectCategory(category)">
+      Option {{ category }}
+    </cdr-chip>
+  </cdr-chip-group>
+
+</div>
+```
+</cdr-doc-example-code-pair>
+
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/chips/overview_selection_a.png`)"/>
+
+Single select chip groups allow the user to select one option out of a group of two or more options.
 
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/chips/overview_selection_a.png`)"/>
@@ -450,13 +501,26 @@ When making decisions about whether to use a button, links or chips, consider th
 
 # API
 
-## Props
+
+## CdrChip
+### Props
+
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-## Slots
+### Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
+
+## CdrChipGroup
+### Props
+
+
+<cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[1].api.props" />
+
+### Slots
+
+<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[1].api.slots" />
 
 
 </cdr-doc-table-of-contents-shell>
