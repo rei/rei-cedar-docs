@@ -221,7 +221,7 @@
 
 ## Default
 
-Use default chips to specify, dynamically categorize or dynamically perform a discrete action which is lower in the page's information hierarchy.
+Use default chips to directly specify, dynamically categorize or dynamically perform a discrete action.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
 :sandbox-data="$page.frontmatter.sandboxData" >
@@ -236,7 +236,7 @@ Use default chips to specify, dynamically categorize or dynamically perform a di
 
 ## Emphasis
 
-Use emphasis chips to specify, dynamically categorize or dynamically perform a discrete action which is higher in the page's information hierarchy. Emphasis chips are used to represent user selected filters.
+Use emphasis chips to represent a separate but linked instance of user selections. Use emphasis chips for user-selected filters within search.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
 :sandbox-data="$page.frontmatter.sandboxData" >
@@ -251,7 +251,7 @@ Use emphasis chips to specify, dynamically categorize or dynamically perform a d
 
 ## Icon Slots
 
-Use `icon-left` or `icon-right` slots to pass icons into a chip. Place the X icon to remove a chip in the icon-right slot only. Place other icons in the icon-left slot. Use only one icon per chip.
+Use `icon-left` or `icon-right` slots to pass icons into a chip. Place the X remove icon in the icon-right slot only. Place other icons in the icon-left slot. Use only one icon per chip.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
  :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconHeartStroke, IconXSm'})">
@@ -265,6 +265,8 @@ Use `icon-left` or `icon-right` slots to pass icons into a chip. Place the X ico
 </cdr-doc-example-code-pair>
 
 ## Stateful Chips
+
+Use stateful chips to update settings immediately or trigger an immediate action while staying on the same page. 
 
 For chips that toggle a single selection on and off, use the click event and dynamic properties in order to change the label or state of a chip. The `aria-pressed` attribute should be used to designate the state of the toggle.
 
@@ -295,15 +297,15 @@ For chips that toggle a single selection on and off, use the click event and d
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/chips/overview_stateful_a.png`)"/>
 
-TODO: image description?
+Stateful chips allow the user to immediately update settings and dynamically trigger an action.
 
 ## Filter Chips
 
-Filter chips use descriptive words to filter content or add a visual representation of user selected filters. These filter chips should include an X remove icon in the right icon slot.
+Filter chips use descriptive words to filter content or add a visual representation of user selected filters.
 
 Filter chips that directly filter content should use the default chip style.
 
-Filter chips that represent user selections can be dynamically added or removed and should use the emphasis chip style. Chip should be linked to the ID of the input it controls using `aria-controls`.
+Filter chips that represent user selections can be dynamically added or removed and should use the emphasis chip style. This type of filter chip should include an X remove icon in the right icon slot. Chip should be linked to the ID of the input it controls using `aria-controls`.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
 :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconXSm, CdrCheckbox'})" :model="{ filtered: true }" :methods="{updateFilter() {this.filtered = !this.filtered}}">
@@ -325,7 +327,7 @@ Filter chips that directly filter content use the default chip style.
 
 ## Selection Chips
 
-Use selection chips to allow users to make a single select choice or to allow users to make a multiple select choice. Single select chip groups are a good alternative to radio buttons. Multiple select chip groups are a good alternative to checkboxes.
+Use selection chips to allow users to make a single select choice or to allow users to make a multiple select choice. Single select chip groups are a good alternative to radio buttons when you want more emphasis. Multiple select chip groups are a good alternative to checkboxes when you want more emphasis.
 
 ## Single Select
 
@@ -371,14 +373,6 @@ For multiple select chip groups, apply `role='checkbox'` to each chip, use `aria
 Single select chip groups allow the user to select one option out of a group of two or more options.
 
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/chips/overview_selection_a.png`)"/>
-
-Single select chip groups allow the user to select one option out of a group of two or more options.
-
-TODO: IMG
-<!-- <cdr-img class="cdr-doc-article-img" :src="$withBase(`/chips/overview_multiple_a.png`)"/> -->
-Multiple select chip groups allow the user to select multiple options out of a group of two or more options.
-
 ## Accessibility
 Many WCAG requirements are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines:
 
@@ -405,7 +399,6 @@ Chips allow users to make selections, filter content, or trigger actions. While 
 - Allowing the user to trigger an immediate action while staying on the same page.
 - Allowing users to update or configure settings immediately.
 
-
 ## Don’t use when
 
 - Navigating a user. Instead, use [Buttons](../buttons/) or [Links](../links/)
@@ -420,12 +413,14 @@ One chip container style is available: pill.
 When arranging chips horizontally:
 - Left align chip group
 - Separate each by cdr-space-half-x
-<!-- ```img: TODO``` -->
+
+```img:horizontal.png```
 
 When stacking chips vertically:
 - Make sure chips overflow based on the width of the chip group area
 - Separate each by cdr-space-half-x
-<!-- ```img: TODO``` -->
+
+```img:vertical.png```
 
 ## Content
 
