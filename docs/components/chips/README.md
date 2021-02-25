@@ -266,7 +266,7 @@ Use `icon-left` or `icon-right` slots to pass icons into a chip. Place the X rem
 
 ## Stateful Chips
 
-Use stateful chips to update settings immediately or trigger an immediate action while staying on the same page. 
+Use stateful chips to update settings immediately or trigger an immediate action while staying on the same page.
 
 For chips that toggle a single selection on and off, use the click event and dynamic properties in order to change the label or state of a chip. The `aria-pressed` attribute should be used to designate the state of the toggle.
 
@@ -414,13 +414,14 @@ When arranging chips horizontally:
 - Left align chip group
 - Separate each by cdr-space-half-x
 
-```img:horizontal.png```
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/chips/basics_horizontal.png`)"/>
 
 When stacking chips vertically:
 - Make sure chips overflow based on the width of the chip group area
 - Separate each by cdr-space-half-x
 
-```img:vertical.png```
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/chips/basics_vertical.png`)"/>
+
 
 ## Content
 
