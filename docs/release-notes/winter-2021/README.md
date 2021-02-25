@@ -30,7 +30,7 @@
 
 ### CdrChip Component
 
-We have created a new CdrChip component that can be used to highlight and signal user selection and input in cases where a basic form element or button do not suffice. 
+We have created a new CdrChip component that can be used to highlight and signal user selection and input in cases where a basic form element or button do not suffice.
 
 See the [CdrChip docs page](../../components/chips) for more information.
 
@@ -107,9 +107,10 @@ Example Space utility update:
 
 ### CdrText CSS Asset
 
-The CdrText css asset (`@rei/cedar/dist/style/cdr-text.css`) has been updated to move the CdrText modifier classes into the text utility class (`@rei/cedar/dist/style/text.css`).
+The CdrText css asset (`@rei/cedar/dist/style/cdr-text.css`) has been updated to move the CdrText modifier classes into the text utility class (`@rei/cedar/dist/style/text.css`). The `cdr-text` base class is also now scoped to the current release to further avoid CSS collissions.
 - If you are using CdrText in conjunction with type mixins from @rei/cdr-tokens should load the `cdr-text.css` file.
 - If you are using CdrText with the `modifier` property will need to load both the `cdr-text.css` and `text.css` files. You should also begin incrementally migrating your codebase to use the @rei/cdr-tokens type mixins instead of the CdrText modifiers
+- If you have any custom CSS that is targeting the `.cdr-text` class you will need to update that code to target a class or property that you add.
 
 ### Removals
 

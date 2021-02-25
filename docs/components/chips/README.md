@@ -13,23 +13,155 @@
     "components": "CdrChip"
   },
 
-  "TODO-DO/DONT": [
+  "case": [
     {
       "type": "do",
-      "image": "",
+      "image": "chips/chips_do_case_1a.png",
       "ratio": "4-3",
-      "alt": "Image showing proper COMPONETNAME usage",
-      "caption": "TODO"
+      "caption": "Do use sentence case with only proper nouns capitalized."
     },
     {
       "type": "dont",
-      "image": "",
+      "image": "chips/chips_dont_case_1b.png",
       "ratio": "4-3",
-      "alt": "Image showing improper COMPONETNAME usage",
-      "caption": "TODO"
+      "caption": "Don't use title caps for labels."
     }
   ],
 
+  "phrasing": [
+    {
+      "type": "do",
+      "image": "chips/chips_do_phrasing_2a.png",
+      "ratio": "4-3",
+      "caption": "Do use positive phrasing for labels."
+    },
+    {
+      "type": "dont",
+      "image": "chips/chips_dont_phrasing_2b.png",
+      "ratio": "4-3",
+      "caption": "Don't use negative phrasing for labels."
+    }
+  ],
+
+  "labels": [
+    {
+      "type": "do",
+      "image": "chips/chips_do_labels_3a.png",
+      "ratio": "4-3",
+      "caption": "Do make labels brief."
+    },
+    {
+      "type": "dont",
+      "image": "chips/chips_dont_labels_3b.png",
+      "ratio": "4-3",
+      "caption": "Don't put too much text in the label."
+    }
+  ],
+
+  "punctuation": [
+    {
+      "type": "do",
+      "image": "chips/chips_do_punctuation_4a.png",
+      "ratio": "4-3",
+      "caption": "Do write labels as sentence fragments with no ending punctuation."
+    },
+    {
+      "type": "dont",
+      "image": "chips/chips_dont_punctuation_4b.png",
+      "ratio": "4-3",
+      "caption": "Don't add terminal punctuation at the end of a label."
+    }
+  ],
+
+  "icon": [
+    {
+      "type": "do",
+      "image": "chips/chips_do_icon_5a.png",
+      "ratio": "4-3",
+      "caption": "Do use either icons in the right or the left slot per chip and chip group."
+    },
+    {
+      "type": "dont",
+      "image": "chips/chips_dont_icon_5b.png",
+      "ratio": "4-3",
+      "caption": "Do not put icons in the right and left slots in a single chip or chip group."
+    }
+  ],
+
+  "x": [
+    {
+      "type": "do",
+      "image": "chips/chips_do_x_6a.png",
+      "ratio": "4-3",
+      "caption": "Do use the X remove icon in the right slot."
+    },
+    {
+      "type": "dont",
+      "image": "chips/chips_dont_x_6b.png",
+      "ratio": "4-3",
+      "caption": "Do not use the X remove icon in the left slot."
+    }
+  ],
+
+  "overflow": [
+    {
+      "type": "do",
+      "image": "chips/chips_do_overflow_7a.png",
+      "ratio": "4-3",
+      "caption": "Do allow a group of chips to overflow to a new row."
+    },
+    {
+      "type": "dont",
+      "image": "chips/chips_dont_overflow_7b.png",
+      "ratio": "4-3",
+      "caption": "Do not create excessive line breaks in a group of chips."
+    }
+  ],
+
+  "padding": [
+    {
+      "type": "do",
+      "image": "chips/chips_do_padding_8a.png",
+      "ratio": "4-3",
+      "caption": "Do allow chip containers to hug their contents."
+    },
+    {
+      "type": "dont",
+      "image": "chips/chips_dont_padding_8b.png",
+      "ratio": "4-3",
+      "caption": "Do not add extra padding and make all chips the same width."
+    }
+  ],
+
+  "sequence": [
+    {
+      "type": "do",
+      "image": "chips/chips_do_sequence_9a.png",
+      "ratio": "4-3",
+      "caption": "Do display selection chips sequentially."
+    },
+    {
+      "type": "dont",
+      "image": "chips/chips_dont_sequence_9b.png",
+      "ratio": "4-3",
+      "caption": "Do not display selection chips in random order."
+    }
+  ],
+
+  "group": [
+    {
+      "type": "do",
+      "image": "chips/chips_do_group_10a.png",
+      "ratio": "4-3",
+      "caption": "Do display chips that offer a selection as a group."
+    },
+    {
+      "type": "dont",
+      "image": "chips/chips_dont_group_10b.png",
+      "ratio": "4-3",
+      "caption": "Do not display a single chip to offer a selection."
+    }
+  ],
   "versions": [
     {
       "components": [
@@ -71,8 +203,8 @@ Use default chips to specify, dynamically categorize or dynamically perform a di
 
 ```html
 <div>
-  <cdr-chip> default chip </cdr-chip>
-  <cdr-chip disabled> disabled default chip </cdr-chip>
+  <cdr-chip>Default chip</cdr-chip>
+  <cdr-chip disabled>Disabled default chip</cdr-chip>
 </div>
 ```
 </cdr-doc-example-code-pair>
@@ -86,8 +218,8 @@ Use emphasis chips to specify, dynamically categorize or dynamically perform a d
 
 ```html
 <div>
-  <cdr-chip modifier="emphasis"> emphasis chip </cdr-chip>
-  <cdr-chip modifier="emphasis" disabled> emphasis disabled chip </cdr-chip>
+  <cdr-chip modifier="emphasis">Emphasis chip</cdr-chip>
+  <cdr-chip modifier="emphasis" disabled>Emphasis disabled chip</cdr-chip>
 </div>
 ```
 </cdr-doc-example-code-pair>
@@ -101,8 +233,8 @@ Use `icon-left` or `icon-right` slots to pass icons into a chip. Place the X ico
 
 ```html
 <div>
-  <cdr-chip> text and icon left <icon-heart-stroke inherit-color slot="icon-left"/></cdr-chip>
-  <cdr-chip> text and icon right <icon-x-sm inherit-color slot="icon-right"/></cdr-chip>
+  <cdr-chip>Text and icon left <icon-heart-stroke inherit-color slot="icon-left"/></cdr-chip>
+  <cdr-chip>Text and icon right <icon-x-sm inherit-color slot="icon-right"/></cdr-chip>
 </div>
 ```
 </cdr-doc-example-code-pair>
@@ -136,8 +268,9 @@ For chips that toggle a single selection on and off, use the click event and d
 ```
 </cdr-doc-example-code-pair>
 
-```img: overview/Stateful A.png```
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/chips/overview_stateful_a.png`)"/>
 
+TODO: image description?
 
 ## Filter Chips
 
@@ -158,12 +291,12 @@ Filter chips that represent user selections can be dynamically added or removed 
 ```
 </cdr-doc-example-code-pair>
 
-
-```img: overview/Filter A.png```
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/chips/overview_filter_a.png`)"/>
 Filter chips that represent user selections use the emphasis chip style.
 
-```img: overview/Stateful B.png```
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/chips/overview_filter_b.png`)"/>
 Filter chips that directly filter content use the default chip style.
+
 
 ## Selection Chips
 
@@ -186,10 +319,13 @@ For single select chip groups, use `aria-checked="true"` and `tabindex="0"` to d
 ```
 </cdr-doc-example-code-pair>
 
-```img: overview/Selection A.png```
+
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/chips/overview_selection_a.png`)"/>
+
 Single select chip groups allow the user to select one option out of a group of two or more options.
 
-```img: TODO```
+TODO: IMG
+<!-- <cdr-img class="cdr-doc-article-img" :src="$withBase(`/chips/overview_multiple_a.png`)"/> -->
 Multiple select chip groups allow the user to select multiple options out of a group of two or more options.
 
 ## Accessibility
@@ -233,26 +369,12 @@ One chip container style is available: pill.
 When arranging chips horizontally:
 - Left align chip group
 - Separate each by cdr-space-half-x
-```img: TODO```
+<!-- ```img: TODO``` -->
 
 When stacking chips vertically:
 - Make sure chips overflow based on the width of the chip group area
 - Separate each by cdr-space-half-x
-```img: TODO```
-
-## Do / Don't
-
-When grouping chips, Do not exceed 2 rows of chips.
-
-<!-- <do-dont :examples="$page.frontmatter.DATAKEY" /> -->
-
-When grouping chips, left align chips.
-
-<!-- <do-dont :examples="$page.frontmatter.DATAKEY" /> -->
-
-When representing radio button or checkbox groups, include more than 2 chips in a group.
-
-<!-- <do-dont :examples="$page.frontmatter.DATAKEY" /> -->
+<!-- ```img: TODO``` -->
 
 ## Content
 
@@ -271,55 +393,31 @@ Chip labels should:
 
 ## Do / Don't
 
-```img: dodont/1a.png```
-Do use sentence case with only proper nouns capitalized.
-```img: dodont/1b.png```
-Don't use title caps for labels.
+<do-dont :examples="$page.frontmatter.case" />
+<do-dont :examples="$page.frontmatter.phrasing" />
+<do-dont :examples="$page.frontmatter.labels" />
+<do-dont :examples="$page.frontmatter.punctuation" />
+<do-dont :examples="$page.frontmatter.icon" />
+<do-dont :examples="$page.frontmatter.x" />
+<do-dont :examples="$page.frontmatter.overflow" />
+<do-dont :examples="$page.frontmatter.padding" />
+<do-dont :examples="$page.frontmatter.sequence" />
+<do-dont :examples="$page.frontmatter.group" />
 
-```img: dodont/2a.png```
-Do use positive phrasing for labels.
-```img: dodont/2b.png```
-Don't use negative phrasing for labels.
 
-```img: dodont/3a.png```
-Do make labels brief.
-```img: dodont/3b.png```
-Don't put too much text in the label.
 
-```img: dodont/4a.png```
-Do write labels as sentence fragments with no ending punctuation.
-```img: dodont/4b.png```
-Don't add terminal punctuation at the end of a label.
 
-```img: dodont/5a.png```
-Do use either icons in the right or the left slot per chip and chip group.
-```img: dodont/5b.png```
-Do not put icons in the right and left slots in a single chip or chip group.
+<!-- When grouping chips, Do not exceed 2 rows of chips.
 
-```img: dodont/6a.png```
-Do use the X remove icon in the right slot.
-```img: dodont/6b.png```
-Do not use the X remove icon in the left slot.
+<do-dont :examples="$page.frontmatter.DATAKEY" />
 
-```img: dodont/7a.png```
-Do allow a group of chips to overflow to a new row.
-```img: dodont/7b.png```
-Do not create excessive line breaks in a group of chips.
+When grouping chips, left align chips.
 
-```img: dodont/8a.png```
-Do allow chip containers to hug their contents.
-```img: dodont/8b.png```
-Do not add extra padding and make all chips the same width.
+<do-dont :examples="$page.frontmatter.DATAKEY" />
 
-```img: dodont/9a.png```
-Do display selection chips sequentially. 
-```img: dodont/9b.png```
-Do not display selection chips in random order.
+When representing radio button or checkbox groups, include more than 2 chips in a group.
 
-```img: dodont/10a.png```
-Do display chips that offer a selection as a group.
-```img: dodont/10b.png```
-Do not display a single chip to offer a selection.
+<do-dont :examples="$page.frontmatter.DATAKEY" /> -->
 
 ## Behavior
 
