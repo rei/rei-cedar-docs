@@ -79,7 +79,7 @@ Use default chips to specify, dynamically categorize or dynamically perform a di
 
 ## Emphasis
 
-Use emphasis chips to specify, dynamically categorize or dynamically perform a discrete action which is higher in the page's information hierarchy. Emphasis chips are used as to represent user selected filters.
+Use emphasis chips to specify, dynamically categorize or dynamically perform a discrete action which is higher in the page's information hierarchy. Emphasis chips are used to represent user selected filters.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
 :sandbox-data="$page.frontmatter.sandboxData" >
@@ -136,9 +136,12 @@ For chips that toggle a single selection on and off, use the click event and d
 ```
 </cdr-doc-example-code-pair>
 
+```img: overview/Stateful A.png```
+
+
 ## Filter Chips
 
-Filter chips use descriptive words to filter content or add a visual representation of user selected filters. 
+Filter chips use descriptive words to filter content or add a visual representation of user selected filters. These filter chips should include an X remove icon in the right icon slot.
 
 Filter chips that directly filter content should use the default chip style.
 
@@ -156,9 +159,17 @@ Filter chips that represent user selections can be dynamically added or removed 
 </cdr-doc-example-code-pair>
 
 
+```img: overview/Filter A.png```
+Filter chips that represent user selections use the emphasis chip style.
+
+```img: overview/Stateful B.png```
+Filter chips that directly filter content use the default chip style.
+
 ## Selection Chips
 
-For making a single selection out of a group of options, similar to a radio input group. Use `aria-checked="true"` and `tabindex="0"` to designate the selected chip and `aria-checked="false"` and `tabindex="-1"` on the other chips. The chip elements should be grouped directly inside a CdrChipGroup element to ensure keyboard navigation is properly managed.
+Use selection chips to allow users to make a single select choice or to allow users to make a multiple select choice. Single select chip groups are a good alternative to radio buttons. Multiple select chip groups are a good alternative to checkboxes.
+
+For single select chip groups, use `aria-checked="true"` and `tabindex="0"` to designate the selected chip and `aria-checked="false"` and `tabindex="-1"` on the other chips. The chip elements should be grouped directly inside a CdrChipGroup element to ensure keyboard navigation is properly managed.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
 :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconXSm, CdrCheckbox'})" :model="{ categories: ['a', 'b', 'c'], selectedCategory: 'a' }" :methods="{selectCategory(category) {this.selectedCategory = category}}">
@@ -174,6 +185,12 @@ For making a single selection out of a group of options, similar to a radio inpu
 </div>
 ```
 </cdr-doc-example-code-pair>
+
+```img: overview/Selection A.png```
+Single select chip groups allow the user to select one option out of a group of two or more options.
+
+```img: TODO```
+Multiple select chip groups allow the user to select multiple options out of a group of two or more options.
 
 ## Accessibility
 Many WCAG requirements are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines:
@@ -216,10 +233,12 @@ One chip container style is available: pill.
 When arranging chips horizontally:
 - Left align chip group
 - Separate each by cdr-space-half-x
+```img: TODO```
 
 When stacking chips vertically:
 - Make sure chips overflow based on the width of the chip group area
 - Separate each by cdr-space-half-x
+```img: TODO```
 
 ## Do / Don't
 
@@ -251,46 +270,55 @@ Chip labels should:
 
 
 ## Do / Don't
-"Can be resoled"
-"New arrivals"
-"Co-op exclusive"
+
+```img: dodont/1a.png```
 Do use sentence case with only proper nouns capitalized.
-"Can Be Resoled"
-"New Arrivals"
-"Co-op Exclusive"
+```img: dodont/1b.png```
 Don't use title caps for labels.
 
-"Set as my REI"
+```img: dodont/2a.png```
 Do use positive phrasing for labels.
-"Do not set as my REI"
+```img: dodont/2b.png```
 Don't use negative phrasing for labels.
 
-"New arrivals"
+```img: dodont/3a.png```
 Do make labels brief.
-"New women's climbing shoe gear arrivals"
+```img: dodont/3b.png```
 Don't put too much text in the label.
 
-"Set as my REI"
+```img: dodont/4a.png```
 Do write labels as sentence fragments with no ending punctuation.
-"Set this store at my REI store."
+```img: dodont/4b.png```
 Don't add terminal punctuation at the end of a label.
 
-Do use either prefix icon or suffix icon in one chip group.
-Do not mix prefix icons and suffix icons in a single chip group.
+```img: dodont/5a.png```
+Do use either icons in the right or the left slot per chip and chip group.
+```img: dodont/5b.png```
+Do not put icons in the right and left slots in a single chip or chip group.
 
-Do use suffix icon for chips that dynamically categorize content
-Do not use suffix icon for chips that perform a discrete action or offer a selection.
+```img: dodont/6a.png```
+Do use the X remove icon in the right slot.
+```img: dodont/6b.png```
+Do not use the X remove icon in the left slot.
 
-Do make chips horizontally scrollable or wrap to a new row.
-Do not line up chips on the left margin.
+```img: dodont/7a.png```
+Do allow a group of chips to overflow to a new row.
+```img: dodont/7b.png```
+Do not create excessive line breaks in a group of chips.
 
+```img: dodont/8a.png```
 Do allow chip containers to hug their contents.
-Do not make all chips the same width, ignoring varied content widths.
+```img: dodont/8b.png```
+Do not add extra padding and make all chips the same width.
 
-Do display chips that offer a selection sequentially.
-Do not display chips that offer a selection in random order.
+```img: dodont/9a.png```
+Do display selection chips sequentially. 
+```img: dodont/9b.png```
+Do not display selection chips in random order.
 
+```img: dodont/10a.png```
 Do display chips that offer a selection as a group.
+```img: dodont/10b.png```
 Do not display a single chip to offer a selection.
 
 ## Behavior
@@ -305,8 +333,8 @@ Chips used for single selection:
 Chips used for multiple selection:
 - Selecting one chip shouldn’t change the selection status of another chip in the list.
 
-Chips used to dynamically categorize content:
-- Can optionally include a suffix exit icon.
+Filter chips:
+- Can optionally include an X remove icon.
 
 
 When making decisions about whether to use a button, links or chips, consider the following:
