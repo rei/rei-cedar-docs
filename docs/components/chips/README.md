@@ -10,7 +10,7 @@
     }
   ],
   "sandboxData": {
-    "components": "CdrChip, CdrChipGroup"
+    "components": "CdrChip"
   },
 
   "case": [
@@ -183,31 +183,6 @@
               }
             ]
           }
-        },
-        {
-          "name": "CdrChipGroup",
-          "api": {
-            "props": [
-              {
-                "name": "label",
-                "type": "string",
-                "default": "'default'",
-                "description": "Sets a label that describes the chip group and what it is selecting. By default this label is visually hidden and only made available to screen readers."
-              },
-              {
-                "name": "hide-label",
-                "type": "boolean",
-                "default": "'true'",
-                "description": "Visually hides the chip group label but makes it accessible to screen readers."
-              },
-            ],
-            "slots": [
-              {
-                "name": "label",
-                "description": "Slot for overriding CdrChip label content with a custom elementt."
-              }
-            ]
-          }
         }
       ]
     }
@@ -221,7 +196,7 @@
 
 ## Default
 
-Use default chips to specify, dynamically categorize or dynamically perform a discrete action which is lower in the page's information hierarchy.
+Use default chips to directly specify, dynamically categorize or dynamically perform a discrete action.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
 :sandbox-data="$page.frontmatter.sandboxData" >
@@ -236,7 +211,7 @@ Use default chips to specify, dynamically categorize or dynamically perform a di
 
 ## Emphasis
 
-Use emphasis chips to specify, dynamically categorize or dynamically perform a discrete action which is higher in the page's information hierarchy. Emphasis chips are used to represent user selected filters.
+Use emphasis chips to represent a separate but linked instance of user selections. Use emphasis chips for user-selected filters within search.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
 :sandbox-data="$page.frontmatter.sandboxData" >
@@ -251,7 +226,7 @@ Use emphasis chips to specify, dynamically categorize or dynamically perform a d
 
 ## Icon Slots
 
-Use `icon-left` or `icon-right` slots to pass icons into a chip. Place the X icon to remove a chip in the icon-right slot only. Place other icons in the icon-left slot. Use only one icon per chip.
+Use `icon-left` or `icon-right` slots to pass icons into a chip. Place the X remove icon in the icon-right slot only. Place other icons in the icon-left slot. Use only one icon per chip.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
  :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconHeartStroke, IconXSm'})">
@@ -265,6 +240,8 @@ Use `icon-left` or `icon-right` slots to pass icons into a chip. Place the X ico
 </cdr-doc-example-code-pair>
 
 ## Stateful Chips
+
+Use stateful chips to update settings immediately or trigger an immediate action while staying on the same page. 
 
 For chips that toggle a single selection on and off, use the click event and dynamic properties in order to change the label or state of a chip. The `aria-pressed` attribute should be used to designate the state of the toggle.
 
@@ -295,15 +272,15 @@ For chips that toggle a single selection on and off, use the click event and d
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/chips/overview_stateful_a.png`)"/>
 
-TODO: image description?
+Stateful chips allow the user to immediately update settings and dynamically trigger an action.
 
 ## Filter Chips
 
-Filter chips use descriptive words to filter content or add a visual representation of user selected filters. These filter chips should include an X remove icon in the right icon slot.
+Filter chips use descriptive words to filter content or add a visual representation of user selected filters.
 
 Filter chips that directly filter content should use the default chip style.
 
-Filter chips that represent user selections can be dynamically added or removed and should use the emphasis chip style. Chip should be linked to the ID of the input it controls using `aria-controls`.
+Filter chips that represent user selections can be dynamically added or removed and should use the emphasis chip style. This type of filter chip should include an X remove icon in the right icon slot. Chip should be linked to the ID of the input it controls using `aria-controls`.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
 :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconXSm, CdrCheckbox'})" :model="{ filtered: true }" :methods="{updateFilter() {this.filtered = !this.filtered}}">
@@ -325,18 +302,16 @@ Filter chips that directly filter content use the default chip style.
 
 ## Selection Chips
 
-Use selection chips to allow users to make a single select choice or to allow users to make a multiple select choice. Single select chip groups are a good alternative to radio buttons. Multiple select chip groups are a good alternative to checkboxes.
+Use selection chips to allow users to make a single select choice or to allow users to make a multiple select choice. Single select chip groups are a good alternative to radio buttons when you want more emphasis. Multiple select chip groups are a good alternative to checkboxes when you want more emphasis.
 
-## Single Select
-
-For single select chip groups, apply `role='radio'` to each chip, use `aria-checked="true"` and `tabindex="0"` to designate the selected chip, and apply `aria-checked="false"` and `tabindex="-1"` to the other chips. The chip elements should be grouped directly inside a CdrChipGroup element to ensure keyboard navigation is properly managed. The CdrChipGroup element requires a label property or slot be passed in which describes the chip group. This label is visually hidden by default.
+For single select chip groups, use `aria-checked="true"` and `tabindex="0"` to designate the selected chip and `aria-checked="false"` and `tabindex="-1"` on the other chips. The chip elements should be grouped directly inside a CdrChipGroup element to ensure keyboard navigation is properly managed.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
 :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconXSm, CdrCheckbox'})" :model="{ categories: ['a', 'b', 'c'], selectedCategory: 'a' }" :methods="{selectCategory(category) {this.selectedCategory = category}}">
 
 ```html
 <div>
-  <cdr-chip-group label="Chip group description">
+  <cdr-chip-group>
     <cdr-chip v-for="category in categories" role="radio" :aria-checked="category === selectedCategory" :tabindex="category === selectedCategory ? 0 : -1" @click="selectCategory(category)">
       Option {{ category }}
     </cdr-chip>
@@ -346,38 +321,10 @@ For single select chip groups, apply `role='radio'` to each chip, use `aria-chec
 ```
 </cdr-doc-example-code-pair>
 
-## Selection Chips (Multiple)
-
-For multiple select chip groups, apply `role='checkbox'` to each chip, use `aria-checked="true"` to designate the selected chip, and apply `aria-checked="false"` to the other chips. The chip elements should be grouped directly inside a CdrChipGroup element to ensure keyboard navigation is properly managed. The CdrChipGroup element requires a label property or slot be passed in which describes the chip group. This label is visually hidden by default.
-
-<cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
-:sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconXSm, CdrCheckbox'})" :model="{ categories: ['a', 'b', 'c', 'd'], selectedCategories: ['b', 'c'] }" :methods="{selectCategory(category) {const i = this.selectedCategories.indexOf(category); if (i !== -1) { this.selectedCategories.splice(i, 1) } else { this.selectedCategories.push(category)}}}">
-
-```html
-<div>
-  <cdr-chip-group label="Chip group description">
-    <cdr-chip v-for="category in categories" role="checkbox" :key="category" :aria-checked="selectedCategories.includes(category)" @click="selectCategory(category)">
-      Option {{ category }}
-    </cdr-chip>
-  </cdr-chip-group>
-
-</div>
-```
-</cdr-doc-example-code-pair>
-
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/chips/overview_selection_a.png`)"/>
 
 Single select chip groups allow the user to select one option out of a group of two or more options.
-
-
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/chips/overview_selection_a.png`)"/>
-
-Single select chip groups allow the user to select one option out of a group of two or more options.
-
-TODO: IMG
-<!-- <cdr-img class="cdr-doc-article-img" :src="$withBase(`/chips/overview_multiple_a.png`)"/> -->
-Multiple select chip groups allow the user to select multiple options out of a group of two or more options.
 
 ## Accessibility
 Many WCAG requirements are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines:
@@ -420,12 +367,14 @@ One chip container style is available: pill.
 When arranging chips horizontally:
 - Left align chip group
 - Separate each by cdr-space-half-x
-<!-- ```img: TODO``` -->
+
+```img:horizontal.png```
 
 When stacking chips vertically:
 - Make sure chips overflow based on the width of the chip group area
 - Separate each by cdr-space-half-x
-<!-- ```img: TODO``` -->
+
+```img:vertical.png```
 
 ## Content
 
@@ -501,26 +450,13 @@ When making decisions about whether to use a button, links or chips, consider th
 
 # API
 
-
-## CdrChip
-### Props
-
+## Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-### Slots
+## Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
-
-## CdrChipGroup
-### Props
-
-
-<cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[1].api.props" />
-
-### Slots
-
-<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[1].api.slots" />
 
 
 </cdr-doc-table-of-contents-shell>
