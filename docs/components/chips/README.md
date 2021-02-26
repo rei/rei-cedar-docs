@@ -221,7 +221,7 @@
 
 ## Default
 
-Use default chips to directly specify, dynamically categorize or dynamically perform a discrete action.
+Use default chips to directly specify, dynamically categorize or immediately perform a discrete action.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
 :sandbox-data="$page.frontmatter.sandboxData" >
@@ -327,7 +327,7 @@ Filter chips that directly filter content use the default chip style.
 
 ## Selection Chips
 
-Use selection chips to allow users to make a single select choice or to allow users to make a multiple select choice. Single select chip groups are a good alternative to radio buttons when you want more emphasis. Multiple select chip groups are a good alternative to checkboxes when you want more emphasis.
+Use selection chips to allow users to make a single select choice or a multiple select choice. Single select chip groups are a more prominent alternative to radio buttons while multiple select chip groups are a more prominent alternative to checkboxes.
 
 ## Single Select
 
@@ -370,7 +370,7 @@ For multiple select chip groups, apply `role='checkbox'` to each chip, use `aria
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/chips/overview_selection_a.png`)"/>
 
-Single select chip groups allow the user to select one option out of a group of two or more options.
+Single select chip groups allow the user to make one selection out of a group of two or more options.
 
 
 ## Accessibility
