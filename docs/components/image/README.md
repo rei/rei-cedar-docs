@@ -348,9 +348,9 @@ Images are cropped on y-axis with bottom value and on x-axis with left, x-center
   - Each individual clickable area should have an `alt` attribute that describes the purpose or destination of the link
 
 ## Responsiveness
-TODO: can use native CSS for responsive image size and lazy loading
 - Ability to control image display at small, medium, and large breakpoints
 - Lazy loading of images is provided
+- The `srcet` and `sizes` attributes can be used to control which image loads at which screeen size
 
 ## Resources
 
@@ -421,6 +421,6 @@ Following variants are available to the `cdr-img` modifier attribute:
 
 ## Performance
 
-For internal applications with large images or images that would benefit from changes due to platform or breakpoint, use lazy load properties to integrate with the [rei-lazy-image-loader project](https://git.rei.com/projects/FEDPACK/repos/rei-lazy-image-loader/browse).
+For internal applications with large images or images that would benefit from changes due to platform or breakpoint, use the `loading="lazy"` property to lazy load the images. The `srcset` and `sizes` properties can also be used to load the optimal image size for the user's screen. CdrImg supports any attribute that a native `img` element accepts, see the [MDN img docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) for more information on the `loading`, `srcset`, `sizes`, and other properties.
 
 </cdr-doc-table-of-contents-shell>
