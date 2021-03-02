@@ -92,13 +92,13 @@ module.exports = {
           { text: "Responsive", link: "/foundation/responsive/" },
         ]
       },
-      {
-        text: "Patterns",
-        items: [
-          { text: "Messaging", link: "/patterns/messaging/" },
-          { text: "Forms", link: "/patterns/forms/" },
-        ]
-      },
+      // {
+      //   text: "Patterns",
+      //   items: [
+      //     { text: "Messaging", link: "/patterns/messaging/" },
+      //     { text: "Forms", link: "/patterns/forms/" },
+      //   ]
+      // },
       {
         text: "Components",
         items: [

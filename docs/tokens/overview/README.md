@@ -146,86 +146,12 @@ The naming structure for design tokens follows:
 
 The below tables for the naming structure show that levels will be skipped when not used.
 
-<!--
-#### TODO:
-Would be nice to use table markdown but alternating row styling is inverted. Heading and first row are the same color. WRONG!
 
 | Category | Sub-Category | Item | Sub-Item | Variant | Size |
 | -- | -- | -- | -- | -- | -- | -- |
-| `color` | `text-` | `form-` | `label-` | ||
- -->
-
-#### cdr-color-text-input-label
-<cdr-table>
-  <thead>
-    <tr>
-      <th>Category</th>
-      <th>Sub-Category</th>
-      <th>Item</th>
-      <th>Sub-Item</th>
-      <th>Variant</th>
-      <th>Size</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>color-</td>
-      <td>text-</td>
-      <td>input-</td>
-      <td>label-</td>
-      <td></td>
-      <td></td>
-    </tr>
-  </tbody>
-</cdr-table>
-
-#### cdr-color-background-primary
-<cdr-table>
-  <thead>
-    <tr>
-      <th>Category</th>
-      <th>Sub-Category</th>
-      <th>Item</th>
-      <th>Sub-Item</th>
-      <th>Variant</th>
-      <th>Size</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>color-</td>
-      <td>background-</td>
-      <td></td>
-      <td></td>
-      <td>primary</td>
-      <td></td>
-    </tr>
-  </tbody>
-</cdr-table>
-
-#### cdr-text-heading-serif-800
-<cdr-table>
-  <thead>
-    <tr>
-      <th>Category</th>
-      <th>Sub-Category</th>
-      <th>Item</th>
-      <th>Sub-Item</th>
-      <th>Variant</th>
-      <th>Size</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>text-</td>
-      <td></td>
-      <td>heading-</td>
-      <td></td>
-      <td>serif</td>
-      <td>800</td>
-    </tr>
-  </tbody>
-</cdr-table>
+| `color` | `text` | `input` | `label` | ||
+| `color` | `background` | | | `primary` ||
+| `text` |  | `heeading` | | `serif` | `800`|
 
 <br>
 <hr/>
