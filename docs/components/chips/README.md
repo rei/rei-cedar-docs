@@ -168,14 +168,6 @@
         {
           "name": "CdrChip",
           "api": {
-            "props": [
-              {
-                "name": "modifier",
-                "type": "string",
-                "default": "'default'",
-                "description": "Sets the styling modifier for chip. Possible values: {'default' | 'emphasis'}"
-              },
-            ],
             "slots": [
               {
                 "name": "default",
@@ -221,7 +213,7 @@
 
 ## Default
 
-Use default chips to directly specify, dynamically categorize or immediately perform a discrete action.
+Use chips to directly specify, dynamically categorize or immediately perform a discrete action.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
 :sandbox-data="$page.frontmatter.sandboxData" >
@@ -230,21 +222,6 @@ Use default chips to directly specify, dynamically categorize or immediately per
 <div>
   <cdr-chip>Default chip</cdr-chip>
   <cdr-chip disabled>Disabled default chip</cdr-chip>
-</div>
-```
-</cdr-doc-example-code-pair>
-
-## Emphasis
-
-Use emphasis chips to represent a separate but linked instance of user selections. Use emphasis chips for user-selected filters within search.
-
-<cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
-:sandbox-data="$page.frontmatter.sandboxData" >
-
-```html
-<div>
-  <cdr-chip modifier="emphasis">Emphasis chip</cdr-chip>
-  <cdr-chip modifier="emphasis" disabled>Emphasis disabled chip</cdr-chip>
 </div>
 ```
 </cdr-doc-example-code-pair>
@@ -301,11 +278,7 @@ Stateful chips allow the user to immediately update settings and dynamically tri
 
 ## Filter Chips
 
-Filter chips use descriptive words to filter content or add a visual representation of user selected filters.
-
-Filter chips that directly filter content should use the default chip style.
-
-Filter chips that represent user selections can be dynamically added or removed and should use the emphasis chip style. This type of filter chip should include an X remove icon in the right icon slot. Chip should be linked to the ID of the input it controls using `aria-controls`.
+Filter chips add a visual representation of user selected filters. Filter chips that represent user selections that can be dynamically removed should include an X icon in the right icon slot and be linked to the ID of the input it controls using `aria-controls`.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
 :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconXSm, CdrCheckbox'})" :model="{ filtered: true }" :methods="{updateFilter() {this.filtered = !this.filtered}}">
@@ -318,11 +291,9 @@ Filter chips that represent user selections can be dynamically added or removed 
 ```
 </cdr-doc-example-code-pair>
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/chips/overview_filter_a.png`)"/>
-Filter chips that represent user selections use the emphasis chip style.
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/chips/overview_filter_b.png`)"/>
-Filter chips that directly filter content use the default chip style.
+Filter chips that directly filter content
 
 
 ## Selection Chips
