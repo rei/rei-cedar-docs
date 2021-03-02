@@ -178,6 +178,7 @@
                 "name": "modifier",
                 "type": "string",
                 "default": "N/A",
+                "alert": "The modifier prop for CdrText is deprecated, @rei/cdr-tokens should be used to apply type styles instead",
                 "description": "Modifies the style variant for this component. see below tables for list of options. ",
               },
             ],
@@ -200,13 +201,7 @@
 <cdr-doc-table-of-contents-shell>
 # Overview
 
-The `CdrText` component is a simple wrapper for text elements. Using the `CdrText` component ensures your text elements inherit the default styling from the Cedar CSS reset.
-
-
-TODO: Styling can be applied by either using the `modifier` property in conjunction with the text utility classes, or by applying a custom CSS class which uses one of the text mixins from `cdr-tokens`.
-
-<!--  -->TODO: update for swapperooni
-Note that the text utility file (distributed as `@rei/cedar/dist/style/text.css` and `@rei/cedar/dist/style/cdr-text.css`) is over 100kb in size. Usage of the text utility classes and `CdrText` modifier property may impact the bundle size and performance of your application. For projects that are customer facing or which have performance constraints should not load the text utility file or `cdr-text` CSS file and instead apply text styling using the text mixins from `cdr-tokens`. Code samples on this page include examples of both the modifier/utility and text mixin usage.
+The `CdrText` component is a simple wrapper for text elements that applies default type styles. Type styling should be applied by using the [design tokens](../../tokens/all-tokens/#text) and a custom CSS class.
 
 ## Headings
 
@@ -304,7 +299,7 @@ Sans headings, set in Graphik, should play a supporting role to serif headings. 
   - Creating a hierarchical structure of information on a page
 
 ### Don’t Use When
-  - Tagging as a semantic heading when an element only needs to be highlighted or emphasized within your content. Instead, use a sizing modifier for this component
+  - Tagging as a semantic heading when an element only needs to be highlighted or emphasized within your content. Instead, use the type scale to alter the size or prominence of the text
   - Showcasing long form content. Instead, use [body](#body)
 
 ### The Basics
@@ -756,7 +751,7 @@ Eyebrows introduce a topic or show how an item is categorized. Content tags or c
 
 ## Italic and Strong Generic Classes
 
-In addition to the specific type options listed above, we have provided two generic styles. These emphasis styles will extend other type styles allowing you to make text italic or more bold.
+In addition to the specific type options listed above, we have provided two generic emphasis styles allowing you to make text italic or bold.
 
 <cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
@@ -868,44 +863,9 @@ This component has compliance with following WebAIM’s accessibility guidelines
 
 # Implementation
 
-To work as intended, tokens, utility classes, and component require both `cdr-reset.css` and access to the REI brand fonts. For more information on how to access these resources, visit the [Developer getting started](../../getting-started/as-a-developer#setting-up-projects) guide.
-
-The global text default `cdr-text-default` is defined in each of the available cdr-container classes as well as the Cedar reset. Ensure that all content is contained in one of the [available container classes](../../foundation/responsive/#standard-vs-fluid-container).
-
-The Cedar text css selectors provide no spacing values other than letter-spacing and line-height.
-
-For proper spacing between blocks of text, use the [Cedar spacing options](../../foundation/spacing/).
-
-The Cedar text options can be utilized by your application using the [token mixins](https://www.npmjs.com/package/@rei/cdr-tokens), [utility classes](https://www.npmjs.com/package/@rei/cedar) or through the [cdr-text component](https://www.npmjs.com/package/@rei/cedar).
-
-## Text Token Mixins
-
 Cedar uses design tokens to store typographic attributes that represent the fundamental decisions of Cedar’s visual language.
 
 For more information about design tokens and a complete list of tokens available in Cedar, visit the [Design Tokens](../../tokens/overview/) overview.
-
-## Utility Classes
-
-`cdr-text` styles are available as a standalone css classes for users unable or preferring not to add custom styles to their applications, and who are unable to use the `cdr-text` vue.js component. Note that the text utility class file is over 100kb in size and may impact the performance of your application. Using the [text token mixins](./#text-token-mixins) will allow you to bundle only the text styles used in your application.
-
-For more information on importing these styles and how to use them, visit the [Developer getting started](../../getting-started/as-a-developer/) guide.
-
-### Usage
-
-The `cdr-text` root class sets all value pairs to `inherit`. When using these classes, ensure at least the parent class assigns the `cdr-text` root style.
-
-The utility classes have two dashes between `cdr-text` and its modifier `body-300`.
-
-<cdr-doc-code-snippet :copy-button="false" :line-numbers="false">
-
-  ```html
-  <p class=”cdr-text cdr-text--body-300”>
-    My body 300 text
-      <em class=”cdr-text--italic”>is</em>
-    amazing
-  </p>
-  ```
-</cdr-doc-code-snippet>
 
 ## Component API
 
@@ -920,8 +880,8 @@ The utility classes have two dashes between `cdr-text` and its modifier `body-30
 
 The **CdrText** component allows for styling any HTML element with available text styles. Visual style and semantic meaning are managed independently by providing:
 
-- Element to the `tag` prop
-- TODO: update me Applying styling by either using the `modifier` prop and a utility class, or with a custom CSS class and a text mixin
+- A `tag` property to control which type of element is rendered
+- Styling which can be applied ith a custom CSS class and a text mixin
 
 This method decouples the semantic meaning of a heading level from the visual representation.
 
@@ -984,7 +944,7 @@ Note that heading styles do not always need to be paired with heading tags. Head
   @import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
   .custom-body-class {
     @include cdr-text-body-300;
-    marign-bottom: $cdr-space-one-x;
+    margin-bottom: $cdr-space-one-x;
   }
 </style>
 ```

@@ -37,8 +37,6 @@
         <tr>
           <th>UI toolkit</th>
           <th>Token</th>
-          <th>Utility class</th>
-          <th>Component Modifier</th>
         </tr>
       </thead>
       <tbody>
@@ -47,13 +45,7 @@
             <cdr-text modifier="italic">italic</cdr-text>
           </td>
           <td>
-            <cdr-text> N/A </cdr-text>
-          </td>
-          <td>
-            <cdr-text>cdr-text--italic</cdr-text>
-          </td>
-          <td>
-            <cdr-text>italic</cdr-text>
+            <cdr-text> cdr-text-italic </cdr-text>
           </td>
         </tr>
         <tr>
@@ -61,13 +53,7 @@
             <cdr-text modifier="strong">strong</cdr-text>
           </td>
           <td>
-            <cdr-text> N/A </cdr-text>
-          </td>
-          <td>
-            <cdr-text>cdr-text--strong</cdr-text>
-          </td>
-          <td>
-            <cdr-text>strong</cdr-text>
+            <cdr-text> cdr-text-strong </cdr-text>
           </td>
         </tr>
       </tbody>
