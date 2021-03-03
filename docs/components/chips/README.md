@@ -312,7 +312,7 @@ For single select chip groups, apply `role='radio'` to each chip, use `aria-chec
 ```
 </cdr-doc-example-code-pair>
 
-## Multiple Select
+### Multiple Select
 
 For multiple select chip groups, apply `role='checkbox'` to each chip, use `aria-checked="true"` to designate the selected chip, and apply `aria-checked="false"` to the other chips. The chip elements should be grouped directly inside a CdrChipGroup element to ensure keyboard navigation is properly managed. The CdrChipGroup element requires a label property or slot be passed in which describes the chip group. This label is visually hidden by default.
 
