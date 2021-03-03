@@ -112,6 +112,10 @@ The CdrText css asset (`@rei/cedar/dist/style/cdr-text.css`) has been updated to
 - If you are using CdrText with the `modifier` property will need to load both the `cdr-text.css` and `text.css` files. You should also begin incrementally migrating your codebase to use the @rei/cdr-tokens type mixins instead of the CdrText modifiers
 - If you have any custom CSS that is targeting the `.cdr-text` class you will need to update that code to target a class or property that you add.
 
+### Cedar Container Mixins
+
+The `cdr-container` and `cdr-container-fluid` mixins now also apply `cdr-text-default`. This makes those mixins match the functionality of the Cedar container utility classes.
+
 ### Removals
 
 In accordance with our deprecation policy, features that were deprecated in the [Summer 2020 release](../summer-2020/#deprecations) have been removed from Cedar.
