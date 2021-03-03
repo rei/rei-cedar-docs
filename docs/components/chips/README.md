@@ -18,13 +18,13 @@
       "type": "do",
       "image": "chips/chips_do_case_1a.png",
       "ratio": "4-3",
-      "caption": "Do use sentence case with only proper nouns capitalized."
+      "caption": "use sentence case with only proper nouns capitalized."
     },
     {
       "type": "dont",
       "image": "chips/chips_dont_case_1b.png",
       "ratio": "4-3",
-      "caption": "Don't use title caps for labels."
+      "caption": "use title caps."
     }
   ],
 
@@ -33,13 +33,13 @@
       "type": "do",
       "image": "chips/chips_do_phrasing_2a.png",
       "ratio": "4-3",
-      "caption": "Do use positive phrasing for labels."
+      "caption": "use positive phrasing"
     },
     {
       "type": "dont",
       "image": "chips/chips_dont_phrasing_2b.png",
       "ratio": "4-3",
-      "caption": "Don't use negative phrasing for labels."
+      "caption": "use negative phrasing for labels"
     }
   ],
 
@@ -48,13 +48,13 @@
       "type": "do",
       "image": "chips/chips_do_labels_3a.png",
       "ratio": "4-3",
-      "caption": "Do make labels brief."
+      "caption": "make text brief."
     },
     {
       "type": "dont",
       "image": "chips/chips_dont_labels_3b.png",
       "ratio": "4-3",
-      "caption": "Don't put too much text in the label."
+      "caption": "put too much text in the chip."
     }
   ],
 
@@ -63,13 +63,13 @@
       "type": "do",
       "image": "chips/chips_do_punctuation_4a.png",
       "ratio": "4-3",
-      "caption": "Do write labels as sentence fragments with no ending punctuation."
+      "caption": "write sentence fragments with no ending punctuation."
     },
     {
       "type": "dont",
       "image": "chips/chips_dont_punctuation_4b.png",
       "ratio": "4-3",
-      "caption": "Don't add terminal punctuation at the end of a label."
+      "caption": "add terminal punctuation."
     }
   ],
 
@@ -78,13 +78,13 @@
       "type": "do",
       "image": "chips/chips_do_icon_5a.png",
       "ratio": "4-3",
-      "caption": "Do use either icons in the right or the left slot per chip and chip group."
+      "caption": "use either icons in the right or the left slot per chip and chip group."
     },
     {
       "type": "dont",
       "image": "chips/chips_dont_icon_5b.png",
       "ratio": "4-3",
-      "caption": "Do not put icons in the right and left slots in a single chip or chip group."
+      "caption": "put icons in the right and left slots in a single chip or chip group."
     }
   ],
 
@@ -93,13 +93,13 @@
       "type": "do",
       "image": "chips/chips_do_x_6a.png",
       "ratio": "4-3",
-      "caption": "Do use the X remove icon in the right slot."
+      "caption": "use the X remove icon in the right slot."
     },
     {
       "type": "dont",
       "image": "chips/chips_dont_x_6b.png",
       "ratio": "4-3",
-      "caption": "Do not use the X remove icon in the left slot."
+      "caption": "use the X remove icon in the left slot."
     }
   ],
 
@@ -108,13 +108,13 @@
       "type": "do",
       "image": "chips/chips_do_overflow_7a.png",
       "ratio": "4-3",
-      "caption": "Do allow a group of chips to overflow to a new row."
+      "caption": "allow a group of chips to overflow to a new row."
     },
     {
       "type": "dont",
       "image": "chips/chips_dont_overflow_7b.png",
       "ratio": "4-3",
-      "caption": "Do not create excessive line breaks in a group of chips."
+      "caption": "create excessive line breaks in a group of chips."
     }
   ],
 
@@ -123,13 +123,13 @@
       "type": "do",
       "image": "chips/chips_do_padding_8a.png",
       "ratio": "4-3",
-      "caption": "Do allow chip containers to hug their contents."
+      "caption": "allow chip containers to hug their contents."
     },
     {
       "type": "dont",
       "image": "chips/chips_dont_padding_8b.png",
       "ratio": "4-3",
-      "caption": "Do not add extra padding and make all chips the same width."
+      "caption": "add extra padding and make all chips the same width."
     }
   ],
 
@@ -138,13 +138,13 @@
       "type": "do",
       "image": "chips/chips_do_sequence_9a.png",
       "ratio": "4-3",
-      "caption": "Do display selection chips sequentially."
+      "caption": "display selection chips sequentially."
     },
     {
       "type": "dont",
       "image": "chips/chips_dont_sequence_9b.png",
       "ratio": "4-3",
-      "caption": "Do not display selection chips in random order."
+      "caption": "display selection chips in random order."
     }
   ],
 
@@ -153,13 +153,13 @@
       "type": "do",
       "image": "chips/chips_do_group_10a.png",
       "ratio": "4-3",
-      "caption": "Do display chips that offer a selection as a group."
+      "caption": "display chips that offer a selection as a group."
     },
     {
       "type": "dont",
       "image": "chips/chips_dont_group_10b.png",
       "ratio": "4-3",
-      "caption": "Do not display a single chip to offer a selection."
+      "caption": "display a single chip to offer a selection."
     }
   ],
   "versions": [
@@ -272,9 +272,6 @@ For chips that toggle a single selection on and off, use the click event and d
 ```
 </cdr-doc-example-code-pair>
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/chips/overview_stateful_a.png`)"/>
-
-Stateful chips allow the user to immediately update settings and dynamically trigger an action.
 
 ## Filter Chips
 
@@ -292,15 +289,11 @@ Filter chips add a visual representation of user selected filters. Filter chips 
 </cdr-doc-example-code-pair>
 
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/chips/overview_filter_b.png`)"/>
-Filter chips that directly filter content
-
-
 ## Selection Chips
 
 Use selection chips to allow users to make a single select choice or a multiple select choice. Single select chip groups are a more prominent alternative to radio buttons while multiple select chip groups are a more prominent alternative to checkboxes.
 
-## Single Select
+### Single Select
 
 For single select chip groups, apply `role='radio'` to each chip, use `aria-checked="true"` and `tabindex="0"` to designate the selected chip, and apply `aria-checked="false"` and `tabindex="-1"` to the other chips. The chip elements should be grouped directly inside a CdrChipGroup element to ensure keyboard navigation is properly managed. The CdrChipGroup element requires a label property or slot be passed in which describes the chip group. This label is visually hidden by default.
 
@@ -319,7 +312,7 @@ For single select chip groups, apply `role='radio'` to each chip, use `aria-chec
 ```
 </cdr-doc-example-code-pair>
 
-## Selection Chips (Multiple)
+## Multiple Select
 
 For multiple select chip groups, apply `role='checkbox'` to each chip, use `aria-checked="true"` to designate the selected chip, and apply `aria-checked="false"` to the other chips. The chip elements should be grouped directly inside a CdrChipGroup element to ensure keyboard navigation is properly managed. The CdrChipGroup element requires a label property or slot be passed in which describes the chip group. This label is visually hidden by default.
 
@@ -339,17 +332,13 @@ For multiple select chip groups, apply `role='checkbox'` to each chip, use `aria
 </cdr-doc-example-code-pair>
 
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/chips/overview_selection_a.png`)"/>
-
-Single select chip groups allow the user to make one selection out of a group of two or more options.
-
 
 ## Accessibility
 Many WCAG requirements are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines:
 
 - For a group of chips related to a single selection, use `role="radio"`, `aria-checked`, and `tabindex` on each chip and wrap the group in a CdrChipGroup component. The selected chip should have `aria-checked="true"` and `tabindex="0"` set, while the rest of the chips should have `aria-checked="false"` and `tabindex="-1"`.
 - For a chip that controls a selection made elsewhere on the page, set `aria-controls` on the chip to point to the ID of the input being modified
-- For a chip that toggles a selection on and off, use `role="switch"` and `aria-checked` to designate it's state.
+- For a chip that toggles a selection on and off, use `role="switch"` and `aria-checked` to designate its state.
 - For other uses of CdrChip please reach out in Slack at #cedar-user-support
 
 CdrChip and CdrChipGroup implement the following accessibility requirements:
@@ -362,13 +351,13 @@ Chips allow users to make selections, filter content, or trigger actions. While 
 
 ## Use when
 
-- Dynamically categorizing content based on descriptive words.
-- Representing a checkbox group with more emphasis.
-- Representing a radio button group with more emphasis.
-- Clearly delineating and displaying options in a compact area.
-- Offering dynamic and contextual actions related to primary content.
-- Allowing the user to trigger an immediate action while staying on the same page.
-- Allowing users to update or configure settings immediately.
+- Dynamically categorizing content based on descriptive words
+- Representing a checkbox group with more emphasis
+- Representing a radio button group with more emphasis
+- Clearly delineating and displaying options in a compact area
+- Offering dynamic and contextual actions related to primary content
+- Allowing the user to trigger an immediate action while staying on the same page
+- Allowing users to update or configure settings immediately
 
 ## Don’t use when
 
@@ -399,9 +388,9 @@ When stacking chips vertically:
 When using chips in a group:
 - Use a logical order, whether it’s alphabetical, numerical, or time-based
 - Clearly communicate the effect of selecting the option
-Provide a link or include a subtitle for more information. Don’t rely on tooltips to explain a radio button
+- Provide a link or include a subtitle for more information. Don’t rely on tooltips to explain a radio button
 
-Chip labels should:
+Chip text should:
 - Start with a capital letter
 - Use sentence case
 - Avoid long labels
