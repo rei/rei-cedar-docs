@@ -2,7 +2,7 @@
 {
   "title": "Chip",
   "layout_type": "LayoutComponent",
-  "summary": "Chips are compact elements that represent a selection, attribute, or dynamic action.",
+  "summary": "Allows users to make selections, filter content, or trigger actions",
   "title_metadata": "CdrChip",
   "breadcrumbs": [
     {
@@ -210,6 +210,7 @@
 <cdr-doc-table-of-contents-shell>
 
 # Overview
+Chips are compact elements that represent a selection, attribute, or dynamic action. 
 
 ## Default
 
