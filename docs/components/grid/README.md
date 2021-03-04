@@ -500,8 +500,6 @@ Individual items can override their sizing with `grid-column` and `grid-row`;
 
 Offsets can be created on grid items using the `grid-column-start` property.
 
-grid-column-start?
-
 <cdr-doc-example-code-pair repository-href="/src/components/grid" >
 
 ```html
