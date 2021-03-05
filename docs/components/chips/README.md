@@ -231,12 +231,12 @@ Use chips to directly specify, dynamically categorize or immediately perform a d
 Use `icon-left` or `icon-right` slots to pass icons into a chip. Place the X remove icon in the icon-right slot only. Place other icons in the icon-left slot. Use only one icon per chip.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
- :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconHeartStroke, IconXLg'})">
+ :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconHeartStroke, IconCheckLg'})">
 
 ```html
 <div>
-  <cdr-chip>Text and icon left <icon-heart-stroke inherit-color slot="icon-left"/></cdr-chip>
-  <cdr-chip>Text and icon right <icon-x-lg size="small" inherit-color slot="icon-right"/></cdr-chip>
+  <cdr-chip>Text and icon left <icon-heart-stroke inherit-color size="small" slot="icon-left"/></cdr-chip>
+  <cdr-chip>Text and icon right <icon-check-lg size="small" inherit-color slot="icon-right"/></cdr-chip>
 </div>
 ```
 </cdr-doc-example-code-pair>
