@@ -25,7 +25,7 @@ export default {
 <!-- pascal-ize name for TOC -->
 <template>
   <div>
-    <!-- <div v-for="component in examplesData" :key="component.name">
+    <div v-for="component in examplesData" :key="component.name">
       <h3 :id="formatName(component.name)">{{formatName(component.name)}}</h3>
       <cdr-list v-if="component.notes" modifier="unordered">
         <li v-for="note in component.notes" :key="note">{{note}}</li>
@@ -38,7 +38,7 @@ export default {
           <td><pre>{{formatSCSS(component, example)}}</pre></td>
         </tr>
       </table>
-    </div> -->
+    </div>
   </div>
 </template>
 
