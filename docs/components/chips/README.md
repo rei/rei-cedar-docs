@@ -280,7 +280,7 @@ Stateful chips allow the user to immediately update settings and dynamically tri
 
 ## Filter Chips
 
-Filter chips add a visual representation of user selected filters. Filter chips that represent user selections that can be dynamically removed should include an X icon in the right icon slot and be linked to the ID of the input it controls using `aria-controls`.
+Filter chips add a visual representation of user selected filters. Filter chips that represent user selections that can be dynamically removed should include an X icon in the right icon slot and be linked to the ID of the input it controls using `aria-controls`. The `aria-pressed` property should be set to true to designate that this selection is active.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
 :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconXLg, CdrCheckbox'})" :model="{ filtered: true }" :methods="{updateFilter() {this.filtered = !this.filtered}}">
@@ -288,7 +288,7 @@ Filter chips add a visual representation of user selected filters. Filter chips 
 ```html
 <div>
   <cdr-checkbox v-model="filtered" id="filter-checkbox" @change="updateFilter">Add Filter</cdr-checkbox>
-  <cdr-chip v-if="filtered" @click="updateFilter" aria-controls="filter-checkbox"> Remove filter <icon-x-lg size="small" slot="icon-right"/></cdr-chip>
+  <cdr-chip v-if="filtered" @click="updateFilter" aria-controls="filter-checkbox" aria-pressed="true"> Remove filter <icon-x-lg size="small" slot="icon-right"/></cdr-chip>
 </div>
 ```
 </cdr-doc-example-code-pair>
