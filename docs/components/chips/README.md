@@ -232,12 +232,12 @@ Use chips to directly specify, dynamically categorize or immediately perform a d
 Use `icon-left` or `icon-right` slots to pass icons into a chip. Place the X remove icon in the icon-right slot only. Place other icons in the icon-left slot. Use only one icon per chip.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
- :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconHeartStroke, IconXSm'})">
+ :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconHeartStroke, IconXLg'})">
 
 ```html
 <div>
   <cdr-chip>Text and icon left <icon-heart-stroke inherit-color slot="icon-left"/></cdr-chip>
-  <cdr-chip>Text and icon right <icon-x-sm inherit-color slot="icon-right"/></cdr-chip>
+  <cdr-chip>Text and icon right <icon-x-lg size="small" inherit-color slot="icon-right"/></cdr-chip>
 </div>
 ```
 </cdr-doc-example-code-pair>
@@ -259,11 +259,13 @@ For chips that toggle a single selection on and off, use the click event and d
   >
     <icon-heart-stroke
       slot="icon-left"
+      size="small"
       inherit-color
       v-if="!toggled"
     />
     <icon-heart-fill
       slot="icon-left"
+      size="small"
       inherit-color
       v-else
     />
@@ -276,15 +278,15 @@ For chips that toggle a single selection on and off, use the click event and d
 
 ## Filter Chips
 
-Filter chips add a visual representation of user selected filters. Filter chips that represent user selections that can be dynamically removed should include an X icon in the right icon slot and be linked to the ID of the input it controls using `aria-controls`.
+Filter chips add a visual representation of user selected filters. Filter chips that represent user selections that can be dynamically removed should include an X icon in the right icon slot and be linked to the ID of the input it controls using `aria-controls`. The `aria-pressed` property should be set to true to designate that this selection is active.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
-:sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconXSm, CdrCheckbox'})" :model="{ filtered: true }" :methods="{updateFilter() {this.filtered = !this.filtered}}">
+:sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconXLg, CdrCheckbox'})" :model="{ filtered: true }" :methods="{updateFilter() {this.filtered = !this.filtered}}">
 
 ```html
 <div>
   <cdr-checkbox v-model="filtered" id="filter-checkbox" @change="updateFilter">Add Filter</cdr-checkbox>
-  <cdr-chip v-if="filtered" @click="updateFilter" aria-controls="filter-checkbox"> Remove filter <icon-x-sm slot="icon-left"/></cdr-chip>
+  <cdr-chip v-if="filtered" @click="updateFilter" aria-controls="filter-checkbox" aria-pressed="true"> Remove filter <icon-x-lg size="small" slot="icon-right"/></cdr-chip>
 </div>
 ```
 </cdr-doc-example-code-pair>
