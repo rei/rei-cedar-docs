@@ -26,6 +26,16 @@
 
 - If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your micro-site.
 
+## 7.1.1
+
+### Bug Fixes
+
+- CdrBreadcrumb truncation logic has been updated to better handle screen readers
+- CdrButton has been updated to apply an animation to the fill color on state changes
+- CdrRadio and CdrCheckbox no longer duplicate HTML attributes when rendered in SSR
+- CdrPopover and CdrTooltip now render properly when used in the `info-action` slot of CdrInput or CdrSelect
+- CdrModal has been updated to improve it's open and close animations
+
 ## 7.1.0
 
 ### CdrModal Override Slot
