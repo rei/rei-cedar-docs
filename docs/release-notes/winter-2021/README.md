@@ -61,13 +61,10 @@ CdrAccordionGroup now accepts an `unwrap` property which renders the accordion h
 
 ## Bug Fixes
 
-- CdrBreadcrumb truncation logic has been updated to better handle screen readers
-- CdrButton has been updated to apply an animation to the fill color on state changes. This matches the animation applied to the text color
-- CdrRadio and CdrCheckbox no longer duplicate HTML attrs when rendered in SSR
-- CdrModal
--- No longer applies a fade-out gradient on overflowing content. Fading out content conflicts with accessibility requirements related to text contrast
--- Has been updated to improve it's open and close animations
--- Padding to the right of content has been removed to accommodate more display patterns
+### CdrModal
+
+CdrModal no longer applies a fade-out gradient on overflowing content. Fading out content conflicts with accessibility requirements related to text contrast.
+Padding to the right of content has been removed to accommodate more display patterns.
 
 ## Deprecations
 
