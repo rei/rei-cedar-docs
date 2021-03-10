@@ -55,7 +55,6 @@ module.exports = {
           { text: "Winter 2020", link: "/release-notes/winter-2020/" },
           { text: "Fall 2019", link: "/release-notes/fall-2019/" },
           { text: "Summer 2019", link: "/release-notes/summer-2019/" },
-          { text: "Archive", link: "/release-notes/archive/" },
           { text: "Deprecated", link: "/release-notes/deprecated/" },
         ]
       },

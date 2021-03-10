@@ -70,7 +70,18 @@ export default {
   },
   computed: {
     typeData() {
-      return groupBy(this.categoryData, 'docs.type');
+      const data = groupBy(this.categoryData, 'docs.type');
+      if (this.categoryTitle === 'colors') {
+        // ensure that generic color tokens appear before component tokens
+        return {
+          text: data.text,
+          background: data.background,
+          border: data.border,
+          icon: data.icon,
+          ...data,
+        }
+      }
+      return data;
     }
   },
   methods: {
