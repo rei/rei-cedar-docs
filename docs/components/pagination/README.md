@@ -78,6 +78,18 @@
                 "type": "number",
                 "default": "null",
                 "description": "Sets the total number of pages for displaying \"Page x of <totalPages>\". Sometimes the total number of pages is different than total page data objects in the pages array. For example, if only the next and previous pages are provided."
+              },
+              {
+                "name": "linkTag",
+                "type": "string",
+                "default": "a",
+                "description": "Sets which tag type is used to render pagination elements. Possible values: { 'a' | 'button' }"
+              },
+              {
+                "name": "forLabel",
+                "type": "string",
+                "default": "N/A",
+                "description": "Used to customize the aria-label for the root pagination element. For page-level pagination (i.e, pagination that updates the entire page content and changes the URL) this property should be omitted. For intra-page navigation this property should describe the element being paginated, for example: `Pagination for sub-content`"
               }
             ],
             "events": [
@@ -127,6 +139,23 @@ At the sm, md, and lg breakpoints, pagination displays as a list of number text 
 
 ```html
 <cdr-pagination
+  :pages="pages"
+  :total-pages="5"
+  v-model="page"
+/>
+```
+</cdr-doc-example-code-pair>
+
+## Intra-Page Navigation
+
+By default, CdrPagination assumes that you are navigating through pages on a site and will update the URL on change. For content that requires pagination but is part of a larger page the `linkTag` and `forLabel` properties can be used to render a button based pagination. Set `linkTag` to be `"button"` and set the `forLabel` to describe what element is being paginated, for example `"Pagination for user reviews"`
+
+<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ page: 3, pages: [{page: 1, url: '#'}, {page: 2, url: '#'}, {page: 3, url: '#'}, {page: 4, url: '#'}, {page: 5, url: '#'}] }">
+
+```html
+<cdr-pagination
+  linkTag="button"
+  forLabel="Pagination for user reviews"
   :pages="pages"
   :total-pages="5"
   v-model="page"

@@ -31,7 +31,7 @@ For information about using the Cedar Icon API, design guidelines, and accessibi
 ## Icon Library and Naming
 Cedar has a library of reusable icons with names and descriptive tags.
 
-Visit the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) for a complete and searchable list of icons.
+Visit the [Cedar Icon Library](../library) for a complete list of icons.
 
 ### Naming Convention
 

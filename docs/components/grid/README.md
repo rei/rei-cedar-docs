@@ -1,9 +1,14 @@
 ---
 {
-  "title": "Grid",
+  "title": "CSS Grid",
   "layout_type": "LayoutComponent",
-  "summary": "A responsive, mobile first, fluid system that appropriately scales 12 columns as the device or viewport size increases",
-  "title_metadata": "Layout, CdrGrid, CdrRow, CdrCol",
+  "summary": "A simple wrapper for working with CSS Grid",
+  "title_metadata": "CdrGrid",
+  "breadcrumbs": [
+    {
+      "text": "Components/"
+    }
+  ],
   "consistent": [
     {
       "type": "do",
@@ -47,211 +52,95 @@
     },
   ],
   "sandboxData": {
-    "components": "CdrRow, CdrCol",
-    "styleTag": ".grid-example-wrap {
-      width: 100%;
-
-      [class^=\"cdr-row\"] {
-        position: relative;
-
-        &::before {
-          content: '';
-          position: absolute;
-          top: 1.6rem;
-          left: 1.6rem;
-          height: 100%;
-          width: 100%;
-          background-color: rgba(130, 234, 255, 0.1);
-
-          @media (max-width: $cdr-breakpoint-md) {
-            top: 0.8rem;
-            left: 0.8rem;
-          }
-        }
-      }
-
-      [class*=\"cdr-row--gutter-xxs\"]::before {
-        top: .2rem;
-        left: .2rem;
-      }
-
-      [class*=\"cdr-row--gutter-none\"]::before {
-        top: 0;
-        left: 0;
-      }
-
-      [class^=\"cdr-col__content\"] {
-        background-color: rgba(130, 234, 255, 0.35);
-        color: rgba(60, 120, 174, 1.0);
-        text-align: center;
-      }
-    }",
+    "components": "CdrGrid",
+    "styleTag": ".grid-2-example div { border: 1px solid lightblue;}"
   },
+
   "versions": [
     {
       "components": [
         {
-          "name": "CdrRow",
+          "name": "CdrGrid",
           "api": {
             "props": [
-              {
-                "name": "cols",
-                "type": "string",
-                "default": "N/A",
-                "description": "Number of equal-width columns in the row; however the value of ‘auto’ will size columns as wide as the column’s content. Possible values: {  ‘1’  through  ‘12’  |  ‘auto’  }.  Also accepts responsive values @breakpoint: ‘2 4@md’. Note that responsive modifiers for grid apply at the given breakpoint and above."
-              },
-              {
-                "name": "justify",
-                "type": "string",
-                "default": "N/A",
-                "description": "Justify columns within a row. See CSS Flexbox justify-content. Possible values: {  ‘left’  |  ‘center’  |  ‘right’  |  ‘around’  |  ‘between’  }. Also accepts responsive values @breakpoint: ‘center right@lg’. Note that responsive modifiers for grid apply at the given breakpoint and above."
-              },
-              {
-                "name": "align",
-                "type": "string",
-                "default": "N/A",
-                "description": "Align columns of different heights. See CSS Flexbox align-items. Possible values: {  ‘top’  |  ‘middle’  |  ‘bottom’  |  ‘stretch’  }. Also accepts responsive values @breakpoint:  ‘top middle@sm’. Note that responsive modifiers for grid apply at the given breakpoint and above."
-              },
               {
                 "name": "gutter",
                 "type": "string",
                 "default": "N/A",
-                "description": "Defines gutter size. Default gutter size is 16px for @xs and @sm (small) and 32px for @md and @lg (medium). Possible values: {  ‘none’  |  ‘xxs’ | 'small' | 'medium' }. Also accepts responsive values @breakpoint:  none@md’. Note that responsive modifiers for grid apply at the given breakpoint and above."
+                "description": "Defines gutter size. Default gutter size is 16px for @xs and @sm (medium) and 32px for @md and @lg (large). Possible values: {  ‘none’  |  ‘small’ | 'medium' | 'large' }. Also accepts responsive values @breakpoint:  none@md’."
               },
               {
-                "name": "vertical",
+                "name": "tag",
                 "type": "string",
-                "default": "N/A",
-                "description": "Changes row to a column layout. See CSS Flexbox flex-direction. Possible values: {  ‘vertical’  }. Also accepts responsive values @breakpoint:  vertical@md’. Note that responsive modifiers for grid apply at the given breakpoint and above."
-              },
-              {
-                "name": "wrap",
-                "type": "string",
-                "default": "N/A",
-                "description": "Enables row wrapping. Change only if overriding `nowrap`. See CSS Flexbox flex-wrap."
-              },
-              {
-                "name": "nowrap",
-                "type": "string",
-                "default": "N/A",
-                "description": "Disables row wrapping and enables overflow scrolling. See CSS Flexbox flex-wrap. Possible values: {  ‘nowrap’  }. Also accepts responsive values with @breakpoint: ‘nowrap@md’. Note that responsive modifiers for grid apply at the given breakpoint and above."
-              },
-              {
-                "name": "type",
-                "type": "string",
-                "default": "\"normal\"",
-                "description": "Sets grid to use <ul> and <li> or <div>. Possible values: {  ‘normal’  |  ‘list’  }"
+                "default": "div",
+                "description": "Sets the tag type for the CdrGrid element. Accepts any HTML tag name that can function using `display: grid`. Useful for constructing list based layouts."
               }
             ],
             "slots": [
               {
                 "name": "default",
-                "description": "Sets the innerHTML for CdrRow content. This includes text and html markup."
-              }
-            ]
-          },
-        },
-        {
-          "name": "CdrCol",
-          "api": {
-            "props": [
-              {
-                "name": "span",
-                "type": "string",
-                "default": "N/A",
-                "description": "Number of columns (out of 12) the column will span. Functions like bootstrap col-* classes. Overrides widths set by ‘cols’ prop on CdrRow. Possible values: {  ‘1’  through   ‘12’  }. Also accepts responsive values with @breakpoint: ‘12 8@lg’."
-              },
-              {
-                "name": "offsetLeft",
-                "type": "string",
-                "default": "N/A",
-                "description": "Adds up to 12 columns of empty space to left of an individual column. Possible values: {  ‘1’  through  ‘12’  }. Also accepts responsive values with @breakpoint: ‘12 8@lg’. Note that responsive modifiers for grid apply at the given breakpoint and above."
-              },
-              {
-                "name": "offsetRight",
-                "type": "string",
-                "default": "N/A",
-                "description": "Adds up to 12 columns of empty space to right of an individual column. Possible values: {  ‘1’  through  ‘12’  }. Also accepts responsive values with @breakpoint: ‘12 8@lg’. Note that responsive modifiers for grid apply at the given breakpoint and above."
-              },
-              {
-                "name": "alignSelf",
-                "type": "string",
-                "default": "N/A",
-                "description": "Aligns individual column by overriding CdrRow alignment. See CSS Flexbox align-self. Possible values: {  ‘top’  |  ‘middle’  |  ‘bottom’  |  ‘stretch’  }. Also accepts responsive values with @breakpoint: ‘middle@sm’. Note that responsive modifiers for grid apply at the given breakpoint and above."
-              },
-              {
-                "name": "isRow",
-                "type": "boolean",
-                "default": "false",
-                "description": "Makes the column act as a CdrRow. Setting this value to true will expose all props of CdrRow in addition to CdrCol props."
-              }
-            ],
-            "slots": [
-              {
-                "name": "default",
-                "description": "Sets the innerHTML for CdrCol content. This includes text and html markup."
+                "description": "Slot for CdrGrid content."
               }
             ]
           }
         }
-      ],
-      "version": "0.1.0"
+      ]
     }
-  ],
+  ]
 }
 ---
 
+<cdr-doc-table-of-contents-shell >
 
-<cdr-doc-table-of-contents-shell>
+<br/>
+
+<cdr-doc-alert icon="info">
+  The Flexbox based CdrRow and CdrCol have been deprecated in favor of the more performant and lighter weight CSS Grid based CdrGrid component. Teams using CdrRow and CdrCol should use CdrGrid for any new work, while incrementally migrating any existing CdrRow/CdrCol usage to use CdrGrid instead.
+
+  See the <cdr-link href="../../release-notes/winter-2021/#cdrgrid">winter 2021 release notes</cdr-link> for details on migrating, and you can find the <cdr-link href="../grid-deprecated">CdrRow and CdrCol documentation here</cdr-link>
+
+</cdr-doc-alert>
+
+
 # Overview
+
+CdrGrid is a simple wrapper for working with CSS Grid. Any valid CSS Grid properties can be applied to a CdrGrid or it's grid items, allowing for more flexible layouts to be built using less markup and CSS classes.
+
+CdrGrid applies a default responsive gutter which can be customized using the `gutter` prop or overridden completely using CSS. The examples on this page are meant to illustrate some basic usage of CSS grid but are by no means exhaustive. Note that when constructing page layouts your entire page should be wrapped in a single [cdr-container](../../foundation/responsive) to ensure the proper outer margins are maintained.
+
+
+New to or unfamiliar with CSS Grid? We recommend these resources for getting up to speed with CSS Grid:
+
+- [CSS Tricks guide](https://css-tricks.com/snippets/css/complete-guide-grid) for a handy glossary of examples for each CSS Grid related property.
+- [Wes Bos CSS Grid Course](https://cssgrid.io/) has videos and interactive grid examples you can work through.
+- [MDN CSS Grid Layout](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout) has many articles going in depth on CSS Grid features.
+
+
 
 ## Column Layout
 
 Use rows and columns to lay out content by specifying equal widths for all columns.
+Columns have a minimum width, if columns cannot be spaced equally etc. new line
 
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
-<div class="grid-example-wrap">
-  <cdr-row cols="12">
-    <cdr-col>
-      <div>1</div>
-    </cdr-col>
-    <cdr-col>
-      <div>2</div>
-    </cdr-col>
-    <cdr-col>
-      <div>3</div>
-    </cdr-col>
-    <cdr-col>
-      <div>4</div>
-    </cdr-col>
-    <cdr-col>
-      <div>5</div>
-    </cdr-col>
-    <cdr-col>
-      <div>6</div>
-    </cdr-col>
-    <cdr-col>
-      <div>7</div>
-    </cdr-col>
-    <cdr-col>
-      <div>8</div>
-    </cdr-col>
-    <cdr-col>
-      <div>9</div>
-    </cdr-col>
-    <cdr-col>
-      <div>10</div>
-    </cdr-col>
-    <cdr-col>
-      <div>11</div>
-    </cdr-col>
-    <cdr-col>
-      <div>12</div>
-    </cdr-col>
-  </cdr-row>
-</div>
+
+  <cdr-grid class="grid-2-example" style="grid-template-columns: repeat(12, 1fr);">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+    <div>12</div>
+  </cdr-grid>
+
 ```
 
 </cdr-doc-example-code-pair>
@@ -265,19 +154,13 @@ Define x-axis alignment and distribute space for all columns per row. Containers
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
-<div class="grid-example-wrap">
-  <cdr-row justify="left">
-    <cdr-col span="3">
-      <div>content</div>
-    </cdr-col>
-    <cdr-col span="3">
-      <div>content</div>
-    </cdr-col>
-    <cdr-col span="3">
-      <div>content</div>
-    </cdr-col>
-  </cdr-row>
-</div>
+
+  <cdr-grid class="grid-2-example" style="grid-template-columns: 1fr 1fr 1fr; justify-items: left;">
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+  </cdr-grid>
+
 ```
 
 </cdr-doc-example-code-pair>
@@ -287,19 +170,13 @@ Define x-axis alignment and distribute space for all columns per row. Containers
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
-<div class="grid-example-wrap">
-  <cdr-row justify="center">
-    <cdr-col span="3">
-      <div>content</div>
-    </cdr-col>
-    <cdr-col span="3">
-      <div>content</div>
-    </cdr-col>
-    <cdr-col span="3">
-      <div>content</div>
-    </cdr-col>
-  </cdr-row>
-</div>
+
+  <cdr-grid class="grid-2-example" style="grid-template-columns: 1fr 1fr 1fr; justify-items: center;">
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+  </cdr-grid>
+
 ```
 
 </cdr-doc-example-code-pair>
@@ -309,19 +186,13 @@ Define x-axis alignment and distribute space for all columns per row. Containers
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
-<div class="grid-example-wrap">
-  <cdr-row justify="right">
-    <cdr-col span="3">
-      <div>content</div>
-    </cdr-col>
-    <cdr-col span="3">
-      <div>content</div>
-    </cdr-col>
-    <cdr-col span="3">
-      <div>content</div>
-    </cdr-col>
-  </cdr-row>
-</div>
+
+  <cdr-grid class="grid-2-example" style="grid-template-columns: 1fr 1fr 1fr; justify-items: end;">
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+  </cdr-grid>
+
 ```
 
 </cdr-doc-example-code-pair>
@@ -331,19 +202,11 @@ Define x-axis alignment and distribute space for all columns per row. Containers
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
-<div class="grid-example-wrap">
-  <cdr-row justify="around">
-    <cdr-col span="3">
-      <div>content</div>
-    </cdr-col>
-    <cdr-col span="3">
-      <div>content</div>
-    </cdr-col>
-    <cdr-col span="3">
-      <div>content</div>
-    </cdr-col>
-  </cdr-row>
-</div>
+  <cdr-grid class="grid-2-example" style="grid-template-columns: 75px 75px 75px; justify-content: space-around;">
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+  </cdr-grid>
 ```
 
 </cdr-doc-example-code-pair>
@@ -353,19 +216,12 @@ Define x-axis alignment and distribute space for all columns per row. Containers
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
-<div class="grid-example-wrap">
-  <cdr-row justify="between">
-    <cdr-col span="3">
-      <div>content</div>
-    </cdr-col>
-    <cdr-col span="3">
-      <div>content</div>
-    </cdr-col>
-    <cdr-col span="3">
-      <div>content</div>
-    </cdr-col>
-  </cdr-row>
-</div>
+
+  <cdr-grid class="grid-2-example" style="grid-template-columns: 75px 75px 75px; justify-content: space-between;">
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+  </cdr-grid>
 ```
 
 </cdr-doc-example-code-pair>
@@ -379,19 +235,13 @@ Define y-axis alignment per row and distribute space across all columns per row.
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
-<div class="grid-example-wrap">
-  <cdr-row cols="3" align="top">
-    <cdr-col>
-      <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique quis quae excepturi odit fugit commodi, molestiae eaque architecto dignissimos.</div>
-    </cdr-col>
-    <cdr-col>
-      <div>content</div>
-    </cdr-col>
-    <cdr-col>
-      <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
-    </cdr-col>
-  </cdr-row>
-</div>
+
+  <cdr-grid class="grid-2-example" style="grid-template-columns: 1fr 1fr 1fr; align-content: start; height: 250px;">
+    <div style="align-self: start;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique quis quae excepturi odit fugit commodi, molestiae eaque architecto dignissimos.</div>
+    <div style="align-self: start;">content</div>
+    <div style="align-self: start;">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+  </cdr-grid>
+
 ```
 
 </cdr-doc-example-code-pair>
@@ -401,19 +251,13 @@ Define y-axis alignment per row and distribute space across all columns per row.
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
-<div class="grid-example-wrap">
-  <cdr-row cols="3" align="bottom">
-    <cdr-col>
-      <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique quis quae excepturi odit fugit commodi, molestiae eaque architecto dignissimos.</div>
-    </cdr-col>
-    <cdr-col>
-      <div>content</div>
-    </cdr-col>
-    <cdr-col>
-      <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
-    </cdr-col>
-  </cdr-row>
-</div>
+
+  <cdr-grid class="grid-2-example" style="grid-template-columns: 1fr 1fr 1fr; align-content: end; height: 250px;">
+    <div style="align-self: end;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique quis quae excepturi odit fugit commodi, molestiae eaque architecto dignissimos.</div>
+    <div style="align-self: end;">content</div>
+    <div style="align-self: end;">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+  </cdr-grid>
+
 ```
 
 </cdr-doc-example-code-pair>
@@ -423,19 +267,13 @@ Define y-axis alignment per row and distribute space across all columns per row.
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
-<div class="grid-example-wrap">
-  <cdr-row cols="3" align="middle">
-    <cdr-col>
-      <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique quis quae excepturi odit fugit commodi, molestiae eaque architecto dignissimos.</div>
-    </cdr-col>
-    <cdr-col>
-      <div>content</div>
-    </cdr-col>
-    <cdr-col>
-      <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
-    </cdr-col>
-  </cdr-row>
-</div>
+
+  <cdr-grid class="grid-2-example"  style="grid-template-columns: 1fr 1fr 1fr; align-content: center; height: 250px;">
+    <div style="align-self: center;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique quis quae excepturi odit fugit commodi, molestiae eaque architecto dignissimos.</div>
+    <div style="align-self: center;">content</div>
+    <div style="align-self: center;">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+  </cdr-grid>
+
 ```
 
 </cdr-doc-example-code-pair>
@@ -445,22 +283,43 @@ Define y-axis alignment per row and distribute space across all columns per row.
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
-<div class="grid-example-wrap">
-  <cdr-row cols="3" align="stretch">
-    <cdr-col>
-      <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique quis quae excepturi odit fugit commodi, molestiae eaque architecto dignissimos.</div>
-    </cdr-col>
-    <cdr-col>
-      <div>content</div>
-    </cdr-col>
-    <cdr-col>
-      <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
-    </cdr-col>
-  </cdr-row>
-</div>
+
+<cdr-grid class="grid-2-example"  style="grid-template-columns: 1fr 1fr 1fr; align-content: stretch; height: 250px;">
+  <div style="align-self: stretch;">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique quis quae excepturi odit fugit commodi, molestiae eaque architecto dignissimos.</div>
+  <div style="align-self: stretch;">content</div>
+  <div style="align-self: stretch;">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
+</cdr-grid>
+
 ```
 
 </cdr-doc-example-code-pair>
+
+
+### Varied Alignment
+
+<cdr-doc-example-code-pair repository-href="/src/components/grid" >
+
+```html
+
+  <cdr-grid class="grid-2-example" style="grid-template-columns: 1fr 1fr 1fr 1fr; height: 250px;">
+    <div style="align-self: start">
+      Top
+    </div>
+    <div style="align-self: center">
+      Middle. Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+    </div>
+    <div style="align-self: end">
+      Bottom
+    </div>
+    <div style="align-self: stretch">
+      Stretch
+    </div>
+  </cdr-grid>
+
+```
+
+</cdr-doc-example-code-pair>
+
 
 ## Gutter
 
@@ -468,62 +327,39 @@ Defines gutter size for all columns on a row and maintains gutter size by breakp
 
 ### Default
 
+The default `gutter` value is `medium@xs medium@sm large@md large@lg`.
+
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
-<div class="grid-example-wrap">
-  <cdr-row cols="3">
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-  </cdr-row>
-</div>
+
+  <cdr-grid class="grid-2-example" style="grid-template-columns: 1fr 1fr 1fr;">
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+  </cdr-grid>
 ```
 
 </cdr-doc-example-code-pair>
 
-### xxs
+### Small
 
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
-<div class="grid-example-wrap">
-  <cdr-row cols="3" gutter="xxs">
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-  </cdr-row>
-</div>
+
+  <cdr-grid class="grid-2-example" style="grid-template-columns: 1fr 1fr 1fr;" gutter="small">
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+  </cdr-grid>
+
 ```
 
 </cdr-doc-example-code-pair>
@@ -534,560 +370,293 @@ Defines gutter size for all columns on a row and maintains gutter size by breakp
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
-<div class="grid-example-wrap">
-  <cdr-row cols="3" gutter="none">
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-  </cdr-row>
-</div>
+
+  <cdr-grid class="grid-2-example" style="grid-template-columns: 1fr 1fr 1fr;" gutter="none">
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+  </cdr-grid>
+
 ```
 
 </cdr-doc-example-code-pair>
 
 
-### Custom
-
-Responsive modifiers for grid apply to a given breakpoint and up, to customize the behavior at the xs breakpoint set a value as the default and override it at the other breakpoints.
+### Custom Responsive Gutters
 
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
-<div class="grid-example-wrap">
-  <cdr-row cols="3" gutter="none xxs@sm small@md medium@lg">
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-  </cdr-row>
-</div>
+
+  <cdr-grid class="grid-2-example" style="grid-template-columns: 1fr 1fr 1fr;" gutter="none@xs small@sm medium@md large@lg">
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+  </cdr-grid>
+
 ```
 
 </cdr-doc-example-code-pair>
 
-## Vertical
+## Scrolling Grid
 
-Defines direction for items in a container for all columns of a row. This applies to all columns. Default is horizontal.
-
-### Default
+Scrollable grids can be created using the `grid-auto-flow` property set to `column` for horizontal scrolling or `row` for vertical scrolling.
 
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
-<div class="grid-example-wrap">
-  <cdr-row cols="3">
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-  </cdr-row>
-</div>
+
+  <cdr-grid class="grid-2-example" style="overflow: scroll; grid-template-columns: 1fr 1fr 1fr; grid-auto-flow: column;">
+    <div>some normal content</div>
+    <div>short content</div>
+    <div>some content that is longer</div>
+    <div>short content</div>
+    <div>some content that is much much longer</div>
+    <div>some more content ...</div>
+    <div>some more content ...</div>
+    <div>some more content ...</div>
+    <div>some more content ...</div>
+    <div>some more content ...</div>
+    <div>some more content ...</div>
+    <div>some more content ...</div>
+    <div>some more content ...</div>
+  </cdr-grid>
+
 ```
 
 </cdr-doc-example-code-pair>
 
-### Vertical
+
+## List Markup
+
+For accessibility reasons it may make sense to construct your grid using list markup.
 
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
-<div class="grid-example-wrap">
-  <cdr-row cols="3" vertical="vertical">
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">content</div>
-    </cdr-col>
-  </cdr-row>
-</div>
-```
 
-</cdr-doc-example-code-pair>
+  <cdr-grid class="grid-2-example" tag="ul" style="overflow: scroll; grid-template-columns: 1fr 1fr;">
+    <li>some normal content</li>
+    <li>short content</li>
+    <li>some content that is longer</li>
+    <li>short content</li>
+  </cdr-grid>
 
-## Wrap/Nowrap
-
-Wrapping columns is the default; however, it is possible to disable or enable column wrapping of a row with the ability to set values based on breakpoint. The disable value also invokes overflow scrolling. This applies to all columns.
-
-### Wrap (Default)
-
-<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
-
-```html
-<div class="grid-example-wrap">
-  <cdr-row cols="auto">
-    <cdr-col>
-      <div class="grid-example">some normal content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">short content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">some content that is longer</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">short content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">some content that is much much longer content</div>
-    </cdr-col>
-  </cdr-row>
-</div>
-```
-
-</cdr-doc-example-code-pair>
-
-### Nowrap (Scroll)
-
-<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
-
-```html
-<div class="grid-example-wrap">
-  <cdr-row cols="auto" nowrap="nowrap">
-    <cdr-col>
-      <div class="grid-example">some normal content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">short content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">some content that is longer</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">short content</div>
-    </cdr-col>
-    <cdr-col>
-      <div class="grid-example">some content that is much much longer content</div>
-    </cdr-col>
-  </cdr-row>
-</div>
 ```
 
 </cdr-doc-example-code-pair>
 
 ## Span
 
-Controls column width by overriding columns value for a specific column or columns. Span will override values from columns.
-
-### 12 Columns
+Column width can be controlled using the `grid-template-columns` property.
 
 <cdr-doc-example-code-pair repository-href="/src/components/grid" >
 
 ```html
-<div class="grid-example-wrap">
-  <cdr-row cols="12">
-    <cdr-col span="1">
-      <div>1</div>
-    </cdr-col>
-    <cdr-col>
-      <div>2</div>
-    </cdr-col>
-    <cdr-col>
-      <div>3</div>
-    </cdr-col>
-    <cdr-col>
-      <div>4</div>
-    </cdr-col>
-    <cdr-col>
-      <div>5</div>
-    </cdr-col>
-    <cdr-col>
-      <div>6</div>
-    </cdr-col>
-    <cdr-col>
-      <div>7</div>
-    </cdr-col>
-    <cdr-col>
-      <div>8</div>
-    </cdr-col>
-    <cdr-col>
-      <div>9</div>
-    </cdr-col>
-    <cdr-col>
-      <div>10</div>
-    </cdr-col>
-    <cdr-col>
-      <div>11</div>
-    </cdr-col>
-    <cdr-col>
-      <div>12</div>
-    </cdr-col>
-  </cdr-row>
-</div>
+
+  <cdr-grid class="grid-2-example" style="grid-template-columns: 1fr 2fr 4fr;">
+    <div>1fr</div>
+    <div>2fr</div>
+    <div>4fr</div>
+    <div>1fr</div>
+    <div>2fr</div>
+    <div>4fr</div>
+  </cdr-grid>
+
 ```
 
 </cdr-doc-example-code-pair>
 
-### Span 2
+
+## Complex Span
+
+Individual items can override their sizing with `grid-column` and `grid-row`;
 
 <cdr-doc-example-code-pair repository-href="/src/components/grid" >
 
 ```html
-<div class="grid-example-wrap">
-  <cdr-row cols="12">
-    <cdr-col span="2">
-      <div>2</div>
-    </cdr-col>
-    <cdr-col>
-      <div>1</div>
-    </cdr-col>
-    <cdr-col>
-      <div>2</div>
-    </cdr-col>
-    <cdr-col>
-      <div>3</div>
-    </cdr-col>
-    <cdr-col>
-      <div>4</div>
-    </cdr-col>
-    <cdr-col>
-      <div>5</div>
-    </cdr-col>
-    <cdr-col>
-      <div>6</div>
-    </cdr-col>
-    <cdr-col>
-      <div>7</div>
-    </cdr-col>
-    <cdr-col>
-      <div>8</div>
-    </cdr-col>
-    <cdr-col>
-      <div>9</div>
-    </cdr-col>
-    <cdr-col>
-      <div>10</div>
-    </cdr-col>
-  </cdr-row>
-</div>
+
+  <cdr-grid class="grid-2-example" style="grid-template-columns: 1fr 1fr 1fr;">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div style="grid-column: span 2; grid-row: span 3;">4</div>
+    <div>5</div>
+    <div>6</div>
+  </cdr-grid>
+
 ```
 
 </cdr-doc-example-code-pair>
 
-### Span 4
-
-<cdr-doc-example-code-pair repository-href="/src/components/grid" >
-
-```html
-<div class="grid-example-wrap">
-  <cdr-row cols="12">
-    <cdr-col span="4">
-      <div>4</div>
-    </cdr-col>
-    <cdr-col>
-      <div>1</div>
-    </cdr-col>
-    <cdr-col>
-      <div>2</div>
-    </cdr-col>
-    <cdr-col>
-      <div>3</div>
-    </cdr-col>
-    <cdr-col>
-      <div>4</div>
-    </cdr-col>
-    <cdr-col>
-      <div>5</div>
-    </cdr-col>
-    <cdr-col>
-      <div>6</div>
-    </cdr-col>
-    <cdr-col>
-      <div>7</div>
-    </cdr-col>
-    <cdr-col>
-      <div>8</div>
-    </cdr-col>
-  </cdr-row>
-</div>
-```
-
-</cdr-doc-example-code-pair>
 
 ## Offset
 
-Adds empty space (or columns) to left or right of a column, either to the left (offset-left) or right (offset-right). This can be applied to an individual column.
-
-### Offset Left
+Offsets can be created on grid items using the `grid-column-start` property.
 
 <cdr-doc-example-code-pair repository-href="/src/components/grid" >
 
 ```html
-<div class="grid-example-wrap">
-  <cdr-row cols="12">
-    <cdr-col offset-left="1">
-      <div>1</div>
-    </cdr-col>
-    <cdr-col offset-left="1">
-      <div>2</div>
-    </cdr-col>
-    <cdr-col offset-left="1">
-      <div>3</div>
-    </cdr-col>
-    <cdr-col offset-left="1">
-      <div>4</div>
-    </cdr-col>
-    <cdr-col offset-left="1">
-      <div>5</div>
-    </cdr-col>
-    <cdr-col offset-left="1">
-      <div>6</div>
-    </cdr-col>
-  </cdr-row>
-</div>
-```
 
-</cdr-doc-example-code-pair>
+  <cdr-grid class="grid-2-example" style="grid-template-columns: 1fr 1fr 1fr;">
+    <div style="grid-column-start: 2;">1</div>
+    <div>2</div>
+  </cdr-grid>
 
-### Offset Right
-
-<cdr-doc-example-code-pair repository-href="/src/components/grid" >
-
-```html
-<div class="grid-example-wrap">
-  <cdr-row cols="12">
-    <cdr-col offset-right="1">
-      <div>1</div>
-    </cdr-col>
-    <cdr-col offset-right="1">
-      <div>2</div>
-    </cdr-col>
-    <cdr-col offset-right="1">
-      <div>3</div>
-    </cdr-col>
-    <cdr-col offset-right="1">
-      <div>4</div>
-    </cdr-col>
-    <cdr-col offset-right="1">
-      <div>5</div>
-    </cdr-col>
-    <cdr-col offset-right="1">
-      <div>6</div>
-    </cdr-col>
-  </cdr-row>
-</div>
-```
-
-</cdr-doc-example-code-pair>
-
-## Align Self
-
-Overrides row-level alignment for a column. This can be applied to an individual column.
-
-<cdr-doc-example-code-pair repository-href="/src/components/grid" >
-
-```html
-<div class="grid-example-wrap">
-  <cdr-row cols="5">
-    <cdr-col>
-      <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Similique quis quae excepturi odit fugit commodi, molestiae eaque architecto dignissimos.</div>
-    </cdr-col>
-    <cdr-col align-self="top">
-      <div>Top</div>
-    </cdr-col>
-    <cdr-col align-self="middle">
-      <div>Middle. Lorem, ipsum dolor sit amet consectetur adipisicing elit.</div>
-    </cdr-col>
-    <cdr-col align-self="bottom">
-      <div>Bottom</div>
-    </cdr-col>
-    <cdr-col align-self="stretch">
-      <div>Stretch</div>
-    </cdr-col>
-  </cdr-row>
-</div>
 ```
 
 </cdr-doc-example-code-pair>
 
 ## Nested Grids
 
-Defines nested columns (also known as `isRow`).
-
-### Simple
+Grids can be nested to any depth by passing another CdrGrid in as a grid item.
 
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
-<div class="grid-example-wrap">
-  <cdr-row cols="3">
-    <cdr-col>
+
+  <cdr-grid class="grid-2-example" style="grid-template-columns: 1fr 2fr;">
+    <div>content</div>
+    <cdr-grid style="grid-template-columns: 1fr 2fr;">
       <div>content</div>
-    </cdr-col>
-    <cdr-col span="8" is-row cols="3">
-      <cdr-col>
-        <div>content</div>
-      </cdr-col>
-      <cdr-col>
-        <div>content</div>
-      </cdr-col>
-      <cdr-col>
-        <div>content</div>
-      </cdr-col>
-    </cdr-col>
-  </cdr-row>
-</div>
+      <div>content</div>
+      <div>content</div>
+    </cdr-grid>
+  </cdr-grid>
+
 ```
 
 </cdr-doc-example-code-pair>
 
-### Complex
+## Responsive Grids
+
+CSS grid layouts using `fr` units will be inherently responsive, however additional breakpoint-specific behaviors can be created using media queries.
 
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
-<div class="grid-example-wrap">
-  <cdr-row cols="1 4@sm">
-    <cdr-col>
-      <div>One</div>
-    </cdr-col>
-    <cdr-col cols="7">
-      <div>Two</div>
-    </cdr-col>
-    <cdr-col>
-      <div>Three</div>
-    </cdr-col>
-    <cdr-col>
-      <div>Four</div>
-    </cdr-col>
-    <cdr-col
-      span="12"
-      is-row
-    >
-      <cdr-col
-        span="12 9@sm"
-        is-row
-      >
-        <cdr-col span="12 4@sm">
-          <div>
-            Five
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, labore. Quos dolor tempore accusamus eius, voluptas, ipsum nulla. At fugiat quas est modi autem quam dolores maxime, provident commodi alias.</p>
-          </div>
-        </cdr-col>
-        <cdr-col
-          span="12 8@sm"
-          is-row
-          cols="1 2@sm"
-        >
-          <cdr-col>
-            <div>Six</div>
-          </cdr-col>
-          <cdr-col>
-            <div>Seven</div>
-          </cdr-col>
-          <cdr-col span="12">
-            <div>Eight</div>
-          </cdr-col>
-        </cdr-col>
-        <cdr-col span="12 9@sm">
-          <div>
-            Nine
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos minima aliquam reprehenderit iusto ratione nihil ipsum, perferendis quasi nulla ad quis. Consequuntur odio blanditiis aliquid voluptatem, veniam porro, ad assumenda!</p>
-          </div>
-        </cdr-col>
-        <cdr-col span="12 3@sm">
-          <div>
-            Ten
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          </div>
-        </cdr-col>
-      </cdr-col>
-      <cdr-col span="12 3@sm">
-        <div>
-          Eleven
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis deserunt, at, illum, earum quibusdam temporibus, molestiae doloremque iure ad est pariatur? Minima, fugit, accusantium. Aspernatur consectetur, labore enim ratione ducimus.</p>
-        </div>
-      </cdr-col>
-    </cdr-col>
-    <cdr-col>
-      <div>
-        Twelve
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      </div>
-    </cdr-col>
-    <cdr-col span="12 6@sm">
-      <div>
-        Thirteen
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque suscipit cum nemo aperiam esse, error ipsam, at aliquam similique optio est quaerat impedit id hic asperiores veritatis unde quod voluptatibus.</p>
-      </div>
-    </cdr-col>
-    <cdr-col>
-      <div>
-        Fourteen
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      </div>
-    </cdr-col>
-  </cdr-row>
+  <cdr-grid class="grid-2-example responsive-grid-example">
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+  </cdr-grid>
+```
+
+</cdr-doc-example-code-pair>
+
+```
+.responsive-grid-example {
+  grid-template-columns: '1fr 1fr 1fr';
+  @include cdr-md-mq-down {
+    grid-template-columns: '1fr';
+  }
+}
+```
+
+## Handling Leftover Columns
+
+For grid layouts with an unknown number of items you may end up with an incomplete row at the end. These "leftover" or "orphan" columns can be styled using a combination of the `last-child`/`nth-last-child` and `nth-child` selectors depending on how many items are in your grid row.
+
+<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+
+```html
+
+  <cdr-grid class="grid-2-example orphan-grid-example-2x2" style="grid-template-columns: 1fr 1fr;">
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+  </cdr-grid>
+
+```
+
+</cdr-doc-example-code-pair>
+
+```
+/* Target leftover grid columns */
+
+.orphan-grid-example-2x2 div:last-child:nth-child(2n + 1) {
+  grid-column: 1 / span 2;
+}
+```
+
+For grid layouts with an odd number of columns per row, make the grid-template and grid-items each twice as large so they can be offset as needed to center them.
+
+<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+
+```html
+<div>
+  2 leftover columns:
+  <cdr-grid class="grid-2-example orphan-grid-example-3x3" style="grid-template-columns: repeat(6, 1fr);">
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+  </cdr-grid>
+  <hr/>
+  1 leftover item:
+  <cdr-grid class="grid-2-example orphan-grid-example-3x3" style="grid-template-columns: repeat(6, 1fr);">
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+  </cdr-grid>
 </div>
 ```
 
 </cdr-doc-example-code-pair>
+
+```
+
+/* Make grid columns take up twice as much space */
+.orphan-grid-example-3x3 div { grid-column: span 2;}
+
+/* If 2 columns are leftover, center them by moving the second to last element to the right by 1 */
+.orphan-grid-example-3x3 div:nth-last-child(2):nth-child(3n + 1) {
+  grid-column: 2 / span 2;
+}
+
+/* If 1 column is leftover, center it by moving it to the right by 2 */
+.orphan-grid-example-3x3 div:last-child:nth-child(3n + 1) {
+  grid-column: 3 / span 2;
+}
+```
+
+
+## Named Grid Areas
+
+Use `grid-template-areas` to layout grid items named using the `grid-area` property.
+
+<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+
+```html
+
+  <cdr-grid class="grid-2-example" style="grid-template-areas: 'logo header header header' 'content content content sidebar' 'footer footer footer footer';">
+    <div style="grid-area: logo;">logo</div>
+    <div style="grid-area: header;">header</div>
+    <div style="grid-area: content;">content</div>
+    <div style="grid-area: sidebar;">sidebar</div>
+    <div style="grid-area: footer;">footer</div>
+  </cdr-grid>
+
+```
+
+</cdr-doc-example-code-pair>
+
 
 ## Accessibility
 
 To ensure that usage of this component complies with accessibility guidelines:
 - Low-vision users should be able to increase the size of the text by up to 200 percent without breaking the layout
-- Use list markup for content layout. List markup allow contents to be structured which makes it easier for assistive technologies
-
-<br/>
-
-This component has compliance with following WCAG guidelines:
-- [WCAG SC 1.3.2: Meaningful Sequence](https://www.w3.org/TR/WCAG20/#content-structure-separation-sequence): Cedar Design System does not provide for Flexbox’s `order` property.  Reverse order or reordering of items is not allowed. Content must be presented in a correct reading sequence to comply with accessibility standards
+- Ensure the tab order for grid content makes sense. Avoid re-ordering the placement of items to differ from their order in the markup.
+- Use [list markup](#list-markup) for content layout. List markup allow contents to be structured which makes it easier for assistive technologies
 
 <hr>
 
@@ -1116,11 +685,6 @@ Columns, gutters, and margins scales as a fluid system as the device and viewpor
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase('/grid/Spec_Grids_Gutters_and_Margins.png')" alt="gutter margins and grids"/>
 
-- Maximum width of 1232px:
-  - Allows for padding between grid and browser window
-  - Utilities are available to manage layout and presentation
-  - Stay within max width to match the width of the global navigation
-
 <cdr-table striped>
   <tbody>
     <tr>
@@ -1151,39 +715,6 @@ Columns, gutters, and margins scales as a fluid system as the device and viewpor
 </cdr-table>
 
 <br/>
-
-- Limit to 12 columns per row:
-  - If more than 12 columns are placed within a single row, each group of extra columns will, as one unit, wrap onto a new line
-  - If a layout does not need 12 columns, specify that number to the engineering team
-
-<br/>
-
-- Gutters separate columns with pre-defined padding:
-
-<cdr-table striped>
-  <tbody>
-    <tr>
-      <td>XS (Extra Small)</td>
-      <td>< 768px</td>
-      <td>16px gutters (8px on left + 8px on right)</td>
-    </tr>
-    <tr>
-      <td>SM (Small)</td>
-      <td>≥ 768px</td>
-      <td>16px gutters (8px on left + 8px on right)</td>
-    </tr>
-    <tr>
-      <td>MD (Medium)</td>
-      <td>≥ 992px</td>
-      <td>32px gutters (16px on left +16px on right)</td>
-    </tr>
-    <tr>
-      <td>LG (Large)</td>
-      <td>≥ 1232px</td>
-      <td>32px gutters (16px on left +16px on right)</td>
-    </tr>
-  </tbody>
-</cdr-table>
 
 ## Content
 
@@ -1210,7 +741,7 @@ To build an effective responsive grid:
 - Design mobile first:
     - Use the XS (≤ 768px) viewport width applicable to small devices like a phone
     - Start with a one column layout and add columns as needed
-- Apply responsive rules to the grid and its contained content at relevant breakpoints including SM (≥ 768px) and MD (≥ 998px)
+- Apply responsive media queries to the grid and its contained content at relevant breakpoints including SM (≥ 768px) and MD (≥ 998px)
 - Complete and optimize the layout for the widest LG (≥ 1232px) viewport width
 - Inspect responsive displays in between each breakpoint for how content responds across the fluid spectrum
 
@@ -1218,89 +749,22 @@ To build an effective responsive grid:
 
 # API
 
-Grids are built from two components: **CdrRow** and **CdrCol**.
-
 ## Props
 
-### CdrRow
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
-
-### CdrCol
-<cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[1].api.props" />
 
 ## Slots
 
-<api-slot :slots-getting-started-link="true" />
-
-### CdrRow
-<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" :slots-getting-started-link="false" />
-
-### CdrCol
-<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[1].api.slots" :slots-getting-started-link="false" />
+<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
 ## Usage
 
-**CdrRow** functions as a flexbox container, and **CdrCol** functions as a flexbox item.
+**CdrGrid** functions as a grid container, and it's immediate children are grid items.
 
-- Always use **CdrRow** and **CdrCol** together:
-    - Attempting to use either without the other will not work
-    - Never include other elements as immediate children of **CdrRow**, other than **CdrCol**
-- The grid system is mobile-first, flexbox based, and 12 columns wide. Many props mirror the flexbox API and work as you’d expect a CSS flexbox to work.
-- Note that responsive breakpoint modifiers (`@sm`, `@md`, and `@lg`) for Grid apply to the given breakpoint and above, unlike most other Cedar components where the modifiers only target a specific breakpoint. 
+- Use any native CSS grid properties on the CdrGrid or it's grid items
+- Use media queries to add responsiveness to your grid layout
+- Wrap your entire page layout in a single `cdr-container`
 
 <br/>
-
-New to or unfamiliar with flexbox? Read this [CSS Tricks flexbox guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background) for background, terminology, guidelines, and examples.
-
-### CdrCol Content Width
-
-Immediate children of `cdr-col` are flexed due to a flex height display bug in some versions of Safari. This causes immediate children to be full-width and display stacked horizontally. Wrapping child elements in a single `<div>` element will fix these problems (if undesired).
-
-<cdr-doc-code-snippet :copy-button="false" :max-height="false">
-  ```html{3,6}
-  <cdr-row>
-    <cdr-col>
-      <div>
-        <p>This will display</p>
-        <p>As expected</p>
-      </div>
-    </cdr-col>
-  </cdr-row>
-  ```
-</cdr-doc-code-snippet>
-
-### Nested Grids
-
-Nested grids are made by nesting `cdr-col` and adding the `is-row` prop to the `cdr-col` that acts as the row wrapper:
-
-- Add `is-row` prop to `cdr-col` that has other `cdr-col` as children
-- `is-row` will expose all props for both column and row
-
-
-<cdr-doc-code-snippet :copy-button="false" :max-height="false">
-  ```html{2}
-  <cdr-row cols=”3”>
-    <cdr-col is-row span=”6” cols”2”>
-      <cdr-col></cdr-col>
-    </cdr-col>
-  </cdr-row>
-  ```
-</cdr-doc-code-snippet>
-
-### Utility class use
-
-Any custom or utility classes should **not** be added to either `cdr-row` or `cdr-col` as they can have adverse effects on things like gutters which can break the layout. Custom or utility classes should only be added to your own markup/content.
-
-<cdr-doc-code-snippet :copy-button="false" :max-height="false">
-  ```html{3}
-  <cdr-row>
-    <cdr-col>
-      <div class="my-class cdr-space-inset-one-x">
-        ...
-      </div>
-    </cdr-col>
-  </cdr-row>
-  ```
-</cdr-doc-code-snippet>
 
 </cdr-doc-table-of-contents-shell>

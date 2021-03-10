@@ -10,7 +10,8 @@
     }
   ],
   "sandboxData": {
-    "components": "CdrCard, CdrText, CdrRating, CdrImg"
+    "components": "CdrCard, CdrText, CdrRating, CdrImg",
+    "styleTag": ".content { padding: $cdr-space-one-x; }\n.title { @include cdr-text-heading-serif-500; }\n.body { @include cdr-text-body-300; }"
   },
 
   "content": [
@@ -90,15 +91,15 @@ Cards should always be used to link to other content, and the `cdr-card__link` u
   <div>
     <cdr-img
       alt="card test image alt text"
-      src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg"
+      src="/rei-cedar-docs/live.jpg"
       modifier="responsive"
     />
   </div>
-  <div class="cdr-space-inset-one-x">
+  <div class="content">
     <cdr-link class="cdr-card__link" href="#Overview">
       <cdr-text
         tag="h2"
-        modifier="heading-serif-500"
+        class="title"
       >
         Complex Card Title
       </cdr-text>
@@ -108,7 +109,7 @@ Cards should always be used to link to other content, and the `cdr-card__link` u
       count="12"
       size="small"
     />
-    <cdr-text modifier="body-300">
+    <cdr-text class="body">
       Card content
     </cdr-text>
   </div>
@@ -128,7 +129,7 @@ Because CdrCard is a simple wrapper component, it's behavior can be customized o
   <div>
     <cdr-img
       alt="card test image alt text"
-      src="https://www.rei.com/assets/drsp/2018/q2/campaign/summer/chapter-4/rei-backpacking-bundle/live.jpg"
+      src="/rei-cedar-docs/live.jpg"
       modifier="responsive"
     />
   </div>
@@ -136,7 +137,7 @@ Because CdrCard is a simple wrapper component, it's behavior can be customized o
     <cdr-link class="cdr-card__link" href="#Overview">
       <cdr-text
         tag="h2"
-        modifier="heading-serif-500"
+        class="title"
       >
         Custom Card Title
       </cdr-text>
@@ -146,7 +147,7 @@ Because CdrCard is a simple wrapper component, it's behavior can be customized o
       count="12"
       size="small"
     />
-    <cdr-text modifier="body-300">
+    <cdr-text class="body">
       Card content
     </cdr-text>
   </div>

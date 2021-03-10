@@ -286,3 +286,15 @@ table:not([class*="cdr-table"]) {
     opacity: 1;
   }
 }
+
+.stack-1 {
+  margin-bottom: $cdr-space-one-x;
+}
+
+.stack-2 {
+  margin-bottom: $cdr-space-two-x;
+}
+
+.stack-4 {
+  margin-bottom: $cdr-space-four-x;
+}

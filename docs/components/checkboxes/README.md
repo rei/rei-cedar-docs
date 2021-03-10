@@ -280,9 +280,10 @@ Pass checkbox data into change handlers.
 
 ## Indeterminate
 
-Displays status for checkbox group by indicating that some of the sub-selections in a list are selected. Provides user with ability to select or unselect all items in the list’s sub-group. See the codesandbox for full example implementation.
+Displays status for checkbox group by indicating that some of the sub-selections in a list are selected. Provides user with ability to select or unselect all items in the list’s sub-group.
+Note the usage of `aria-controls`, `id`, `role`, `aria-label`, and `aria-labelledby`.
 
-<cdr-doc-example-code-pair repository-href="/src/components/checkbox" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrCheckbox, CdrList, CdrFormGroup'})" :model="{selected: ['Cheese'], toppings: ['Cheese', 'Pepperoni', 'Mushroom', 'Peppers'], isIndeterminate: true, allSelected: false }" :methods="{selectAll(isChecked) {if (isChecked) {this.selected = this.toppings.slice();this.allSelected = true; this.isIndeterminate = false;} else { this.selected = []; this.allSelected = false; this.isIndeterminate = false; } }, selectOne() {if (this.selected.length === 0) {this.isIndeterminate = false; this.allSelected = false;} else if (this.selected.length === this.toppings.length) {this.allSelected = true; this.isIndeterminate = false;} else { this.isIndeterminate = true; this.allSelected = false;}}}">
+<cdr-doc-example-code-pair repository-href="/src/components/checkbox" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrCheckbox, CdrList, CdrFormGroup', styleTag: '.inset { margin-left: $cdr-space-one-x;}'})" :model="{selected: ['Cheese'], toppings: ['Cheese', 'Pepperoni', 'Mushroom', 'Peppers'], isIndeterminate: true, allSelected: false }" :methods="{selectAll(isChecked) {if (isChecked) {this.selected = this.toppings.slice();this.allSelected = true; this.isIndeterminate = false;} else { this.selected = []; this.allSelected = false; this.isIndeterminate = false; } }, selectOne() {if (this.selected.length === 0) {this.isIndeterminate = false; this.allSelected = false;} else if (this.selected.length === this.toppings.length) {this.allSelected = true; this.isIndeterminate = false;} else { this.isIndeterminate = true; this.allSelected = false;}}}">
 
 ```html
 <cdr-form-group label="Choose your toppings">
@@ -290,15 +291,16 @@ Displays status for checkbox group by indicating that some of the sub-selections
      v-model="allSelected"
      :indeterminate="isIndeterminate"
      @change="selectAll"
-     aria-controls="toppings"
+     aria-controls="toppings-input"
    >Select All</cdr-checkbox>
-   <cdr-list role="group" id="toppings" aria-label="Individual toppings" class="cdr-ml-space-one-x">
+   <cdr-list role="group" id="toppings-input" aria-label="Individual toppings" class="inset">
      <li v-for="topping in toppings" :key="`checkbox-${topping}`">
         <cdr-checkbox
           v-model="selected"
           :custom-value="topping"
           name="toppings"
           @input="selectOne"
+          aria-labelledby="toppings-input"
         >{{ topping }}</cdr-checkbox>
       </li>
    </cdr-list>

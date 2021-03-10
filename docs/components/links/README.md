@@ -11,10 +11,6 @@
     {
       "text": 'Buttons',
       "href": '../buttons/'
-    },
-    {
-      "text": 'Call to Action',
-      "href": '../cta/'
     }
   ],
   "standalone": [
@@ -142,15 +138,12 @@ Display independently with a Call to Action. Some examples are for finding a sto
 
 Display standalone link with icon on left.
 
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrLink, IconShipping'})">
+<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrLink, IconShipping', styleTag: '.icon-class { margin-left: $cdr-space-one-x; }'})">
 
 ```html
   <div>
     <cdr-link tag="button" modifier="standalone">
-      <IconShipping
-        inherit-color
-        class="cdr-mr-space-half-x"
-      />
+      <icon-shipping inherit-color class="icon-class"/>
       This item ships for FREE!
     </cdr-link>
   </div>
@@ -162,15 +155,13 @@ Display standalone link with icon on left.
 
 Display standalone link with icon on right.
 
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrLink, IconExternalLink'})">
+<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrLink, IconExternalLink', styleTag: '.icon-class { margin-right: $cdr-space-one-x; }'})">
 
 ```html
   <div>
       <cdr-link modifier="standalone">
         Visit site
-        <IconExternalLink
-          inherit-color
-          class="cdr-ml-space-half-x"/>
+        <icon-external-link inherit-color class="icon-class"/>
       </cdr-link>
   </div>
 ```

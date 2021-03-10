@@ -34,6 +34,7 @@ export default function makeMeASandbox(data, model, computed, methods) {
           "dependencies": {
             "@rei/cdr-tokens": packageJson.dependencies['@rei/cdr-tokens'],
             "@rei/cedar": packageJson.dependencies['@rei/cedar'],
+            "@vue/babel-preset-app": "4.5.10",
             "vue": "^2.5.22"
           }
         },

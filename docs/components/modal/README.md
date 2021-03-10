@@ -10,7 +10,8 @@
     }
   ],
   "sandboxData": {
-    "components": "CdrModal, CdrButton"
+    "components": "CdrModal, CdrButton",
+    "styleTag": ".title-header { @include cdr-text-heading-serif-600;}"
   },
   "versions": [
     {
@@ -99,15 +100,6 @@
         }
       ]
     }
-  ],
-  "see_also": [
-    {
-      "text": "See Also",
-    },
-    {
-      "text": "Call to Action",
-      "href": "../cta/"
-    }
   ]
 }
 ---
@@ -135,11 +127,51 @@
   <template slot="title">
     <cdr-text
       tag="h3"
-      modifier="heading-600"
+      class="title-header"
     >Add to Cart
     </cdr-text>
   </template>
-  <p id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet dictum ipsum.</p>
+  <cdr-text tag="p" id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet dictum ipsum.</cdr-text>
+</cdr-modal>
+```
+</cdr-doc-example-code-pair>
+
+
+## Multiple Modals On One Page
+
+When rendering multiple modals on a single page you can reduce your markup size by using a single CdrModal instance to launch all of the modals.
+
+<cdr-doc-example-code-pair repository-href="/src/components/modal"
+:sandbox-data="$page.frontmatter.sandboxData" :model="{ opened: false, termsContent: 'Terms and conditions may apply', termsTitle: 'Terms and Conditions', shippingTitle: 'Free Shipping', shippingContent: 'Free shipping available on certain orders', title: '', content: '' }" :methods="{openTermsModal(){this.title = this.termsTitle; this.content = this.termsContent; this.opened = true;}, openShippingModal(){this.title = this.shippingTitle; this.content = this.shippingContent; this.opened = true;}}">
+
+```html
+<cdr-button
+  @click="openTermsModal"
+  aria-haspopup="dialog"
+>Terms and Conditions
+</cdr-button>
+
+<cdr-button
+  @click="openShippingModal"
+  modifier="secondary"
+  aria-haspopup="dialog"
+>Free Shipping
+</cdr-button>
+
+<cdr-modal
+  :opened="opened"
+  :label="title"
+  @closed="opened = false"
+  aria-described-by="description"
+>
+  <template slot="title">
+    <cdr-text
+      tag="h3"
+      class="title-header"
+    >{{ title }}
+    </cdr-text>
+  </template>
+  <cdr-text tag="p" id="description"> {{ content }}</cdr-text>
 </cdr-modal>
 ```
 </cdr-doc-example-code-pair>
@@ -230,7 +262,7 @@ When using the `label` slot, add CdrText to use the appropriate header styles.
 <template slot="title">
   <cdr-text
     tag="h1"
-    modifier="heading-600"
+    class="custom-text-class"
   >Add to Cart
   </cdr-text>
 </template>

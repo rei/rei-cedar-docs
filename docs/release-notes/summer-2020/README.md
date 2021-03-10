@@ -77,7 +77,7 @@ CdrRating has been updated to round the displayed rating to the nearest 1/10th r
 
 ### Media Query Mixins For Breakpoint And Below
 
-We have updated our [media queries](../../layout/responsive/#scss-less-utilities) to add mixins that match below a given breakpoint. We have also renamed some of our existing media query mixins to follow this naming convention  
+We have updated our [media queries](../../foundation/responsive/#scss-less-utilities) to add mixins that match below a given breakpoint. We have also renamed some of our existing media query mixins to follow this naming convention  
 
 | Mixin Name     | Target                       |
 |----------------|------------------------------|

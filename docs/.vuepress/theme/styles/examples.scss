@@ -39,6 +39,33 @@
   }
 }
 
+
+.grid-2-example div { border: 1px solid lightblue;}
+
+
+.responsive-grid-example {
+  grid-template-columns: '1fr 1fr 1fr';
+  @include cdr-md-mq-down {
+    grid-template-columns: '1fr';
+  }
+}
+.orphan-grid-example-2x2 div:last-child:nth-child(2n + 1) {
+  grid-column: 1 / span 2;
+}
+
+/* Make grid items take up twice as much space */
+.orphan-grid-example-3x3 div { grid-column: span 2;}
+
+/* If 2 items are leftover, center them by moving the second to last element to the right by 1 */
+.orphan-grid-example-3x3 div:nth-last-child(2):nth-child(3n + 1) {
+  grid-column: 2 / span 2;
+}
+
+/* If 1 item is leftover, center it by moving it to the right by 2 */
+.orphan-grid-example-3x3 div:last-child:nth-child(3n + 1) {
+  grid-column: 3 / span 2;
+}
+
 // Radio
 // Update radio example styleTag in components/radios if changing this.
 
@@ -78,3 +105,5 @@
     }
   }
 }
+
+.title-header { @include cdr-text-heading-serif-600;}

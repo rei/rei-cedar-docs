@@ -1,10 +1,10 @@
 <template>
   <div>
-    <div v-for="modifier in Object.keys(text)" class="cdr-mb-space-one-x">
+    <div v-for="modifier in Object.keys(text)" class="stack-1">
       <cdr-text
         tag="h3"
         modifier="heading-500"
-        class="cdr-mb-space-one-x"
+        class="stack-1"
       >
           {{ formatTitle(modifier) }}
       </cdr-text>
@@ -13,8 +13,6 @@
           <tr>
             <th>UI toolkit</th>
             <th>Token</th>
-            <th>Utility class</th>
-            <th>Component Modifier</th>
           </tr>
         </thead>
         <tbody>
@@ -25,18 +23,12 @@
             <td>
               <cdr-text>cdr-text-{{ modifier }}-{{ level }}</cdr-text>
             </td>
-            <td>
-              <cdr-text>cdr-text--{{ modifier }}-{{ level }}</cdr-text>
-            </td>
-            <td>
-              <cdr-text>{{ modifier }}-{{ level }}</cdr-text>
-            </td>
           </tr>
         </tbody>
       </cdr-table>
     </div>
 
-    <cdr-text tag="h3" modifier="heading-500" class="cdr-mb-space-one-x">
+    <cdr-text tag="h3" modifier="heading-500" class="stack-1">
       Helpers
     </cdr-text>
 
@@ -45,8 +37,6 @@
         <tr>
           <th>UI toolkit</th>
           <th>Token</th>
-          <th>Utility class</th>
-          <th>Component Modifier</th>
         </tr>
       </thead>
       <tbody>
@@ -55,13 +45,7 @@
             <cdr-text modifier="italic">italic</cdr-text>
           </td>
           <td>
-            <cdr-text> N/A </cdr-text>
-          </td>
-          <td>
-            <cdr-text>cdr-text--italic</cdr-text>
-          </td>
-          <td>
-            <cdr-text>italic</cdr-text>
+            <cdr-text> cdr-text-italic </cdr-text>
           </td>
         </tr>
         <tr>
@@ -69,25 +53,19 @@
             <cdr-text modifier="strong">strong</cdr-text>
           </td>
           <td>
-            <cdr-text> N/A </cdr-text>
-          </td>
-          <td>
-            <cdr-text>cdr-text--strong</cdr-text>
-          </td>
-          <td>
-            <cdr-text>strong</cdr-text>
+            <cdr-text> cdr-text-strong </cdr-text>
           </td>
         </tr>
       </tbody>
     </cdr-table>
 
-    <cdr-text tag="h3" modifier="heading-500" class="cdr-mb-space-one-x">
+    <cdr-text tag="h3" modifier="heading-500" class="stack-1">
       Native Mobile App Tokens
     </cdr-text>
 
     <tokens-typography platform="native" type="header">
 
-    <cdr-text tag="h4" modifier="heading-400" class="cdr-mb-space-one-x">
+    <cdr-text tag="h4" modifier="heading-400" class="stack-1">
       Headings
     </cdr-text>
 
@@ -95,7 +73,7 @@
 
     <tokens-typography platform="native" type="body">
 
-    <cdr-text tag="h4" modifier="heading-400" class="cdr-mb-space-one-x">
+    <cdr-text tag="h4" modifier="heading-400" class="stack-1">
       Body
     </cdr-text>
 
@@ -103,7 +81,7 @@
 
     <tokens-typography platform="native" type="button">
 
-    <cdr-text tag="h4" modifier="heading-400" class="cdr-mb-space-one-x">
+    <cdr-text tag="h4" modifier="heading-400" class="stack-1">
       Buttons
     </cdr-text>
 

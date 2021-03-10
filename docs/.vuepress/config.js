@@ -48,13 +48,13 @@ module.exports = {
       {
         text: "Release Notes",
         items: [
+          { text: "Winter 2021", link: "/release-notes/winter-2021/" },
           { text: "Fall 2020", link: "/release-notes/fall-2020/" },
           { text: "Summer 2020", link: "/release-notes/summer-2020/" },
           { text: "Spring 2020", link: "/release-notes/spring-2020/" },
           { text: "Winter 2020", link: "/release-notes/winter-2020/" },
           { text: "Fall 2019", link: "/release-notes/fall-2019/" },
           { text: "Summer 2019", link: "/release-notes/summer-2019/" },
-          { text: "Archive", link: "/release-notes/archive/" },
           { text: "Deprecated", link: "/release-notes/deprecated/" },
         ]
       },
@@ -88,18 +88,16 @@ module.exports = {
           { text: "Motion", link: "/foundation/motion/" },
           { text: "Typography", link: "/foundation/typography/" },
           { text: "Spacing", link: "/foundation/spacing/" },
+          { text: "Responsive", link: "/foundation/responsive/" },
         ]
       },
-      {
-        text: "Layout",
-        items: [
-          { text: "Getting Started", link: "/layout/getting-started/" },
-          { text: "Responsive", link: "/layout/responsive/" },
-          { text: "Spacing", link: "/layout/spacing/" },
-          { text: "Display", link: "/layout/display/" },
-          { text: "Alignment", link: "/layout/alignment/" },
-        ]
-      },
+      // {
+      //   text: "Patterns",
+      //   items: [
+      //     { text: "Messaging", link: "/patterns/messaging/" },
+      //     { text: "Forms", link: "/patterns/forms/" },
+      //   ]
+      // },
       {
         text: "Components",
         items: [
@@ -110,10 +108,10 @@ module.exports = {
           { text: "Block Quote", link: "/components/block-quote/" },
           { text: "Breadcrumb", link: "/components/breadcrumb/" },
           { text: "Buttons", link: "/components/buttons/" },
-          { text: "Call to Action", link: "/components/cta/" },
           { text: "Caption", link: "/components/caption/" },
           { text: "Card", link: "/components/card/" },
           { text: "Checkboxes", link: "/components/checkboxes/" },
+          { text: "Chips", link: "/components/chips/" },
           { text: "Form Group", link: "/components/form-group/" },
           { text: "Grid", link: "/components/grid/" },
           { text: "Icons", link: "/components/icon/" },
@@ -138,7 +136,8 @@ module.exports = {
         text: "Icons",
         items: [
           { text: "Resources", link: "/icons/resources/" },
-          { text: "Iconography", link: "/icons/iconography/" }
+          { text: "Iconography", link: "/icons/iconography/" },
+          { text: "Library", link: "/icons/library/" }
         ]
       },
       {

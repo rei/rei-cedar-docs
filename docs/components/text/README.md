@@ -14,7 +14,8 @@
     }
   ],
   "sandboxData": {
-    "components": "CdrText"
+    "components": "CdrText",
+    "styleTag": ".stack { margin-top: $cdr-space-one-x}"
   },
   "semantic": [
     {
@@ -177,6 +178,7 @@
                 "name": "modifier",
                 "type": "string",
                 "default": "N/A",
+                "alert": "The modifier prop for CdrText is deprecated, @rei/cdr-tokens should be used to apply type styles instead",
                 "description": "Modifies the style variant for this component. see below tables for list of options. ",
               },
             ],
@@ -199,9 +201,7 @@
 <cdr-doc-table-of-contents-shell>
 # Overview
 
-The `CdrText` component is a simple wrapper for text elements. Using the `CdrText` component ensures your text elements inherit the default styling from the Cedar CSS reset. Styling can be applied by either using the `modifier` property in conjunction with the text utility classes, or by applying a custom CSS class which uses one of the text mixins from `cdr-tokens`.
-
-Note that the text utility file (distributed as `@rei/cedar/dist/style/text.css` and `@rei/cedar/dist/style/cdr-text.css`) is over 100kb in size. Usage of the text utility classes and `CdrText` modifier property may impact the bundle size and performance of your application. For projects that are customer facing or which have performance constraints should not load the text utility file or `cdr-text` CSS file and instead apply text styling using the text mixins from `cdr-tokens`. Code samples on this page include examples of both the modifier/utility and text mixin usage.
+The `CdrText` component is a simple wrapper for text elements that applies default type styles. Type styling should be applied by using the [design tokens](../../tokens/all-tokens/#text) and a custom CSS class.
 
 ## Headings
 
@@ -211,7 +211,7 @@ A heading helps users to identify and create a hierarchical structure within a p
 
 Serif headings, set in REI Stuart, work best in larger sizes (cdr-text-heading-serif-600 and above). However, it’s also available for areas where space is limited but an important distinction or callout needs to be made, such as a card title or aligning to marketing collateral.
 
-<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 
@@ -240,7 +240,7 @@ Serif headings, set in REI Stuart, work best in larger sizes (cdr-text-heading-s
 
 Serif strong headings, set in REI Stuart with a greater font weight than [serif](#serif), work best in larger sizes (cdr-text-heading-serif-strong-600 and above). It’s recommended to use serif strong headings very minimally throughout the page and should generally be reserved for important page titles, in cases where type overlays an image, or in situations where additional emphasis is needed.
 
-<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 
@@ -270,7 +270,7 @@ Serif strong headings, set in REI Stuart with a greater font weight than [serif]
 
 Sans headings, set in Graphik, should play a supporting role to serif headings. Sans headings work best in smaller sizes (cdr-text-heading-serif-strong-600 and below). Sans headings are not recommended for page titles or other prominent placements. Instead, use [serif](#serif) or [serif strong](#serif-strong) headings.
 
-<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 
@@ -299,7 +299,7 @@ Sans headings, set in Graphik, should play a supporting role to serif headings. 
   - Creating a hierarchical structure of information on a page
 
 ### Don’t Use When
-  - Tagging as a semantic heading when an element only needs to be highlighted or emphasized within your content. Instead, use a sizing modifier for this component
+  - Tagging as a semantic heading when an element only needs to be highlighted or emphasized within your content. Instead, use the type scale to alter the size or prominence of the text
   - Showcasing long form content. Instead, use [body](#body)
 
 ### The Basics
@@ -332,9 +332,9 @@ Sans headings, set in Graphik, should play a supporting role to serif headings. 
     - Left-align multi-line headings
 
 ### Responsive Headings
-Cedar does not offer pre-styled responsive headings. Instead, construct responsive headings by defining a heading style for specific [breakpoints](../../layout/responsive/#the-cedar-container). For instance, if the heading style is cdr-text-heading-serif-900 @lg, @md, and @sm sizes, set the heading style to cdr-text-heading-serif-800 at the @xs size. This helps to create optimal readability, spacing, and proportions for various breakpoint sizes. An examples in practice:
+Cedar does not offer pre-styled responsive headings. Instead, construct responsive headings by defining a heading style for specific [breakpoints](../../foundation/responsive/#the-cedar-container). For instance, if the heading style is cdr-text-heading-serif-900 @lg, @md, and @sm sizes, set the heading style to cdr-text-heading-serif-800 at the @xs size. This helps to create optimal readability, spacing, and proportions for various breakpoint sizes. An examples in practice:
 
-<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-text
@@ -374,7 +374,7 @@ Subheadings give support or add meaning to a heading, and are intended to be pai
 ### Sans
 Sans-serif subheadings are set in Graphik. They are intended to be paired with serif or serif strong headings. Pairing a sans subheading with a sans heading is also acceptable.
 
-<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 
@@ -404,7 +404,7 @@ Heading and subheading combinations should have the appropriate contrast and hie
 
 Serif headings should only accompanied by sans subheadings.
 
-<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-text
@@ -412,7 +412,7 @@ Serif headings should only accompanied by sans subheadings.
       When you gear up, we give back
       <cdr-text
        modifier="subheading-sans-500"
-       class="cdr-pt-space-one-and-a-half-x">
+       class="stack">
        Treat yourself to sweet gear
        </cdr-text>
   </cdr-text>
@@ -444,7 +444,7 @@ Serif headings should only accompanied by sans subheadings.
 
 Sans headings also work best with sans subheadings.
 
-<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-text
@@ -452,7 +452,7 @@ Sans headings also work best with sans subheadings.
       When you gear up, we give back
       <cdr-text
        modifier="subheading-sans-300"
-       class="cdr-pt-space-one-x">
+       class="stack">
        Treat yourself to sweet gear
        </cdr-text>
   </cdr-text>
@@ -490,7 +490,7 @@ Sans headings also work best with sans subheadings.
 ## Body
 Body styles work best for long-form copy like articles, customer reviews, or legal messages. Body styles have a generous line height and wider letter spacing for optimal reading. For tighter, more compact styles, use [utility](#utility) styles.
 
-<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 
@@ -519,7 +519,7 @@ Body styles work best for long-form copy like articles, customer reviews, or leg
 ### Strong
 Body strong is also intended for long-form copy but should be used minimally. Use body strong styles when emphasizing a subset of copy and never for the entire length of copy.
 
-<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 
@@ -598,7 +598,7 @@ By default, text within a `cdr-container` will display as `cdr-text-utility-300`
 ### Serif
 Utility serif styles should be used when additional brand emphasis is needed.
 
-<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 
@@ -626,7 +626,7 @@ Utility serif styles should be used when additional brand emphasis is needed.
 ### Serif Strong
 Utility serif strong styles should be used when additional emphasis is needed over utility serif.
 
-<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 
@@ -654,7 +654,7 @@ Utility serif strong styles should be used when additional emphasis is needed ov
 ### Sans
 Utility sans styles typically make up the majority of utility styles used on a given page.
 
-<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 
@@ -682,7 +682,7 @@ Utility sans styles typically make up the majority of utility styles used on a g
 ### Sans Strong
 Utility sans styles should be used when additional emphasis is needed.
 
-<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 
@@ -717,7 +717,7 @@ Utility sans styles should be used when additional emphasis is needed.
 ## Eyebrow
 Eyebrows introduce a topic or show how an item is categorized. Content tags or certain label styles are two examples. Eyebrow text styles should not be used as headings or used for brand names.
 
-<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 
@@ -751,9 +751,9 @@ Eyebrows introduce a topic or show how an item is categorized. Content tags or c
 
 ## Italic and Strong Generic Classes
 
-In addition to the specific type options listed above, we have provided two generic styles. These emphasis styles will extend other type styles allowing you to make text italic or more bold.
+In addition to the specific type options listed above, we have provided two generic emphasis styles allowing you to make text italic or bold.
 
-<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 
@@ -793,7 +793,7 @@ In addition to the specific type options listed above, we have provided two gene
 </style>
 ```
 
-<cdr-doc-example-code-pair repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 
@@ -863,44 +863,9 @@ This component has compliance with following WebAIM’s accessibility guidelines
 
 # Implementation
 
-To work as intended, tokens, utility classes, and component require both `cdr-reset.css` and access to the REI brand fonts. For more information on how to access these resources, visit the [Developer getting started](../../getting-started/as-a-developer#setting-up-projects) guide.
-
-The global text default `cdr-text-default` is defined in each of the available cdr-container classes as well as the Cedar reset. Ensure that all content is contained in one of the [available container classes](../../layout/responsive/#standard-vs-fluid-container).
-
-The Cedar text css selectors provide no spacing values other than letter-spacing and line-height.
-
-For proper spacing between blocks of text, use the [Cedar spacing options](../../layout/spacing/).
-
-The Cedar text options can be utilized by your application using the [token mixins](https://www.npmjs.com/package/@rei/cdr-tokens), [utility classes](https://www.npmjs.com/package/@rei/cedar) or through the [cdr-text component](https://www.npmjs.com/package/@rei/cedar).
-
-## Text Token Mixins
-
 Cedar uses design tokens to store typographic attributes that represent the fundamental decisions of Cedar’s visual language.
 
 For more information about design tokens and a complete list of tokens available in Cedar, visit the [Design Tokens](../../tokens/overview/) overview.
-
-## Utility Classes
-
-`cdr-text` styles are available as a standalone css classes for users unable or preferring not to add custom styles to their applications, and who are unable to use the `cdr-text` vue.js component. Note that the text utility class file is over 100kb in size and may impact the performance of your application. Using the [text token mixins](./#text-token-mixins) will allow you to bundle only the text styles used in your application.
-
-For more information on importing these styles and how to use them, visit the [Developer getting started](../../getting-started/as-a-developer/) guide.
-
-### Usage
-
-The `cdr-text` root class sets all value pairs to `inherit`. When using these classes, ensure at least the parent class assigns the `cdr-text` root style.
-
-The utility classes have two dashes between `cdr-text` and its modifier `body-300`.
-
-<cdr-doc-code-snippet :copy-button="false" :line-numbers="false">
-
-  ```html
-  <p class=”cdr-text cdr-text--body-300”>
-    My body 300 text
-      <em class=”cdr-text--italic”>is</em>
-    amazing
-  </p>
-  ```
-</cdr-doc-code-snippet>
 
 ## Component API
 
@@ -915,26 +880,14 @@ The utility classes have two dashes between `cdr-text` and its modifier `body-30
 
 The **CdrText** component allows for styling any HTML element with available text styles. Visual style and semantic meaning are managed independently by providing:
 
-- Element to the `tag` prop
-- Applying styling by either using the `modifier` prop and a utility class, or with a custom CSS class and a text mixin
+- A `tag` property to control which type of element is rendered
+- Styling which can be applied ith a custom CSS class and a text mixin
 
 This method decouples the semantic meaning of a heading level from the visual representation.
 
 With this decoupling, you can style other markup to look like a heading that semantically isn’t a heading.
 
 When creating page headers, apply the correct semantic tag.
-
-<cdr-doc-code-snippet :copy-button="false" :line-numbers="false">
-
-  ```vue
-  <cdr-text
-    tag="h1"
-    modifier="heading-700 heading-800@sm heading-800@md heading-800@lg"
-   >
-      A navigable semantic heading
-  </cdr-text>
-```
-</cdr-doc-code-snippet>
 
 ```vue
 <template>
@@ -958,16 +911,6 @@ Note that heading styles do not always need to be paired with heading tags. Head
 
 <cdr-doc-code-snippet :copy-button="false" :line-numbers="false">
 
-  ```vue
-  <cdr-text
-    modifier="heading-700 heading-800@sm heading-800@md heading-800@lg"
-   >
-      Text styled as a heading for display only
-  </cdr-text>
-```
-</cdr-doc-code-snippet>
-
-
 ```vue
 <template>
   <cdr-text class="custom-heading-class">
@@ -985,22 +928,11 @@ Note that heading styles do not always need to be paired with heading tags. Head
   }
 </style>
 ```
+</cdr-doc-code-snippet>
 
 **CdrText** components can be extended with other Cedar or custom classes.
 
 <cdr-doc-code-snippet :copy-button="false" :line-numbers="false">
-
-  ```vue
-  <cdr-text
-      class="
-        cdr-mb-space-one-x"
-      modifier="
-        body-300”
-  >
-  This paragraph is adding a bottom margin to provide space between it and the paragraph below
-  </cdr-text>
-```
-
 
 ```vue
 <template>
@@ -1012,15 +944,13 @@ Note that heading styles do not always need to be paired with heading tags. Head
   @import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
   .custom-body-class {
     @include cdr-text-body-300;
-    marign-bottom: $cdr-space-one-x;
+    margin-bottom: $cdr-space-one-x;
   }
 </style>
 ```
 
 </cdr-doc-code-snippet>
 
-#### Text Responsiveness
-Text modifiers accept any of the supported Cedar breakpoints. For more information on how breakpoints work on components, visit the [Responsive Layout article](../../layout/responsive/#the-cedar-container).
 
 ## Text Options
 

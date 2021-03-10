@@ -3,7 +3,7 @@
   <slot />
   <div
     v-for="token in spaceTokensByType"
-    class="cdr-mb-space-two-x"
+    class="stack-2"
   >
     <tokens-space-example 
       :name="token.name"

@@ -413,9 +413,8 @@ Input field with icon outside the input field on right.
   label="Input label"
   placeholder="Placeholder input"
 >
-  <cdr-link tag="button">
+  <cdr-link tag="button" slot="info-action">
     <icon-information-fill
-      slot="info-action"
       inherit-color
     />
   </cdr-link>
