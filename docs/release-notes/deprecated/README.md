@@ -22,26 +22,26 @@
 | cdr-text-header-6 | cdr-text-heading-sans-400 |
 | cdr-text-header-7 | cdr-text-heading-sans-300 |
 | | |
-| redwood-display-70    | cdr-text-utility-700  |
-| redwood-display-60    | cdr-text-utility-600  |
-| redwood-display-50    | cdr-text-utility-500  |
-| redwood-display-40    | cdr-text-utility-400  |
-| redwood-display-30    | cdr-text-utility-300  |
-| redwood-display-20    | cdr-text-utility-200  |
-| redwood-display-10    | cdr-text-utility-100  |
+| redwood-display-70    | cdr-text-utility-sans-700  |
+| redwood-display-60    | cdr-text-utility-sans-600  |
+| redwood-display-50    | cdr-text-utility-sans-500  |
+| redwood-display-40    | cdr-text-utility-sans-400  |
+| redwood-display-30    | cdr-text-utility-sans-300  |
+| redwood-display-20    | cdr-text-utility-sans-200  |
+| redwood-display-10    | cdr-text-utility-sans-100  |
 | | |
 | redwood-body-40       | cdr-text-body-500     |
 | redwood-body-30       | cdr-text-body-400     |
 | redwood-body-20       | cdr-text-body-300     |
 | redwood-body-10       | cdr-text-body-300     |
 | | |
-| maple-utility-70      | cdr-text-utility-700  |
-| maple-utility-60      | cdr-text-utility-600  |
-| maple-utility-50      | cdr-text-utility-500  |
-| maple-utility-40      | cdr-text-utility-400  |
-| maple-utility-30      | cdr-text-utility-300  |
-| maple-utility-20      | cdr-text-utility-200  |
-| maple-utility-10      | cdr-text-utility-100  |
+| maple-utility-70      | cdr-text-utility-sans-700  |
+| maple-utility-60      | cdr-text-utility-sans-600  |
+| maple-utility-50      | cdr-text-utility-sans-500  |
+| maple-utility-40      | cdr-text-utility-sans-400  |
+| maple-utility-30      | cdr-text-utility-sans-300  |
+| maple-utility-20      | cdr-text-utility-sans-200  |
+| maple-utility-10      | cdr-text-utility-sans-100  |
 | | |
 | spruce-display-100 | cdr-text-heading-serif-strong-1200 |
 | spruce-display-90  | cdr-text-heading-serif-strong-1200 |
