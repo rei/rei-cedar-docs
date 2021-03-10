@@ -193,11 +193,11 @@
 
 ### CdrCta
 
-The functionality of CdrCta has been merged into CdrButton. See [the release notes](../summer-2020/#cdrcta-deprecated-and-merged-with-cdrbutton) for migration steps.
+The functionality of CdrCta has been merged into [CdrButton](../../components/buttons). See [the release notes](../summer-2020/#cdrcta-deprecated-and-merged-with-cdrbutton) for migration steps.
 
 ### CdrDataTable
 
-CdrDataTable has been replaced by CdrTable. See [the release notes](../release-notes/spring-2020/#cdrdatatable) for migration steps.
+CdrDataTable has been replaced by [CdrTable](../../components/table). See [the release notes](../release-notes/spring-2020/#cdrdatatable) for migration steps.
 
 ### CdrCheckbox
 - The `compact` modifier has been removed. Use `size="small"` instead.
@@ -213,6 +213,10 @@ CdrDataTable has been replaced by CdrTable. See [the release notes](../release-n
 
 ### CdrAccordion
 - The `label` prop for CdrAccordion has been replaced with the `label` slot.
+
+### CdrRow and CdrCol
+
+The flexbox based CdrRow and CdrCol have been replaced with the CSS grid based [CdrGrid](../../components/grid). See [the release notes](../release-notes/winter-2021/#cdrgrid-component) for more information.
 
 ### CdrText Modifiers
 | Deprecated modifier name | Equivalent modifier names and breakpoints  |
