@@ -278,7 +278,7 @@ For chips that toggle a single selection on and off, use the click event and d
 
 ## Filter Chips
 
-Filter chips add a visual representation of user selected filters. Filter chips that represent user selections that can be dynamically removed should include an X icon in the right icon slot and be linked to the ID of the input it controls using `aria-controls`. The `aria-pressed` property should be set to true to designate that this selection is active.
+Filter chips add a visual representation of user selected filters. Filter chips that represent user selections that can be dynamically removed should include an X icon in the right icon slot and be linked to the ID of the input it controls using `aria-controls`. The `aria-pressed` property should be set to true to designate that this selection is active. Filter chips that are linked to a checkbox should appear selected and be included in the same form group as the checkboxes.
 
 <cdr-doc-example-code-pair repository-href="/src/components/CdrChip"
 :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconXLg, CdrCheckbox'})" :model="{ filtered: true }" :methods="{updateFilter() {this.filtered = !this.filtered}}">
