@@ -91,13 +91,13 @@ module.exports = {
           { text: "Responsive", link: "/foundation/responsive/" },
         ]
       },
-      // {
-      //   text: "Patterns",
-      //   items: [
-      //     { text: "Messaging", link: "/patterns/messaging/" },
-      //     { text: "Forms", link: "/patterns/forms/" },
-      //   ]
-      // },
+      {
+        text: "Patterns",
+        items: [
+          { text: "Messaging", link: "/patterns/messaging/" },
+          { text: "Forms", link: "/patterns/forms/" },
+        ]
+      },
       {
         text: "Components",
         items: [
@@ -135,8 +135,7 @@ module.exports = {
       {
         text: "Icons",
         items: [
-          { text: "Resources", link: "/icons/resources/" },
-          { text: "Iconography", link: "/icons/iconography/" },
+          { text: "Overview", link: "/icons/overview/" },
           { text: "Library", link: "/icons/library/" }
         ]
       },
