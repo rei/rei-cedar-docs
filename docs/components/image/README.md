@@ -205,7 +205,7 @@ The CdrImg component accepts any valid HTML `img` attribute. CdrImg works with [
 ```html
 
 <cdr-img
-  src="/live2.jpg"
+  src="/rei-cedar-docs/live2.jpg"
   alt="REI employees building trails during a stewardship event"
   loading="lazy"
 />
