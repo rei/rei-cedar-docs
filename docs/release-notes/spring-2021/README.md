@@ -39,6 +39,10 @@ CdrInput type="number" updated to restrict to numeric input, launch numeric keyb
 
 ## Breaking Changes
 
+### CdrModal Aria Describedby
+
+- fixed typo/casing
+
 ### CdrInput Autocorrect
 
 - Updated to default autocorrect/autocapitalize/spellcheck off, can be overridden, etc.

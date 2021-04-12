@@ -72,6 +72,7 @@ module.exports = {
           { text: "As a Mobile Developer", link: "/getting-started/as-a-mobile-developer/" },
           { text: "Hand-off Process", link: "/getting-started/hand-off/" },
           { text: "Using Cedar", link: "/getting-started/using-cedar/" },
+          { text: "Building Reusable Components", link: "/getting-started/building-components-with-cedar/" },
         ]
       },
       {
