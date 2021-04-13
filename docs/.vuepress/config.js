@@ -35,7 +35,8 @@ module.exports = {
   ],
   ga: '',
   plugins: [
-    ['@vuepress/google-analytics', { ga: 'UA-129829250-1' }]
+    ['@vuepress/google-analytics', { ga: 'UA-129829250-1' }],
+    'flowchart'
   ],
   markdown: {
     lineNumbers: true,
@@ -93,7 +94,9 @@ module.exports = {
       {
         text: "Patterns",
         items: [
-          { text: "Messaging", link: "/patterns/messaging/" },
+          { text: "Messaging", link: "/patterns/messaging/", },
+          { text: "Alerts", link: "/patterns/alerts/", },
+          { text: "Notifications", link: "/patterns/notifications/" },
           { text: "Forms", link: "/patterns/forms/" },
         ]
       },
