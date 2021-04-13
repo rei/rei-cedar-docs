@@ -21,15 +21,11 @@ Rather than being part of a pages content they are offered as asides, or respons
 
 Unlike Navigation, Messages don't direct user flow, instead they expose additional in-page content to users and should not be used to navigate users to a new page or window.
 
-## Overview: 
-It is important  tp communicate many things to our users on each page they encunter and creating consistency with messaging is important, are you telling your user they have an oprotunitiy for additional functionaltiy or that they have an error on the page to resove?
-aligning our pages to use a concitent approch to these types of communication will allow our users to famileize themselves with how each message type feel and act.
+As users will encounter many types of messaging on each REI page, consistency is important. 
+Making it easy to distinguish the difference in a message is providing an opportunity vs one pointing to an error will increase the effectiveness of the message.
 
-When deciding what type of messaging pattern to use for different user experiences, reference the definitions and usage guidelines on this page to help determine which components are appropriate for each experience. 
 
-In addition to the content on a page, additional content can be exposed via actionable elements (such as Modals, Tooltips, etc.). Some may require user interaction to trigger the additional messaging (e.g. more information available in a pop-up), while other messaging will be initiated at the system-level (e.g. alert that an item in your cart is out of stock). 
-
-This additional content will open in-page and not navigate users to a new page or window. [Future: see Navigation patterns for those use cases]. In almost all cases, content exposed by messages should not block the user page flow.
+Reference the definitions and usage guidelines below when deciding what type of messaging pattern to use for different user experiences. 
 
 ## Deciding what to use:
 
