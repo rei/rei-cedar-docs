@@ -19,25 +19,29 @@ For example, Cedar provides all of the elements necessary to build a login form 
 
 By distributing flexible atomic design system elements (Vue components, design tokens, CSS styles) we provide teams with all the tools necessary to create performant branded reusable components. By creating new components following shared standards, we can help extend the Cedar library as well as ensure high-quality customer experiences.
 
-## Why It Matters
+## Principles
+When building a new component, we encourage you to keep these core principals in mind to create durable solutions that can easily be shared and maintained:
 
-Consistency — A consistent experience across products & devices
-Business outcome: Reduce support requests
+**Unified**
 
-Efficiency — Efficient workflow & communication across teams
-Business outcome: Faster to market
+Consistent styles and interactions across channels builds trust with customers and improves overall usability. Designing with unity and consistency in mind enables our visual language to scale across an omnichannel experience.
 
-Maintainability — Easier to test and maintain code
-Business outcome: Less maintenance cost
+**Intentional**
 
-Accessibility — Baked in accessibility, to create more inclusive products
-Business outcome: Potential user base increase
+Quality over quantity. Be deliberate about how you approach creating, building, documenting and maintaining components. 
 
-Scalability — Less of a headache to build upon through the future
-Business outcome: A stable foundation that will support the next 5 years of feature growth
+**Flexible** 
 
-Insecurity - Help designers know what others have done before and what already exists in the ecosystem
-Business outcome: Less time churning on discovery / avoid rebuilding the wheel
+Provide options for a component to work under a range of circumstances. The design should be flexible enough to support different scenarios, while still specific enough to be useful.
+
+**Extensible** 
+
+Design to allow the addition of new capabilities or functionality. Create forward-compatible solutions that can be reused and extended in the future to make maintenance easier and help support speed to market. 
+
+**Accessible**
+
+Accessibility is at the core of how we design usable experiences for all. Every design, asset, and piece of code should meet or exceed WCAG 2.1 AA accessibility standards, and should include guidance for any necessary implementation details. 
+
 
 ## Requirements for Reusable Components
 
