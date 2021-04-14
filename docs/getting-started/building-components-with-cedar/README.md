@@ -38,7 +38,7 @@ Provide options for a component to work under a range of circumstances. The desi
 
 Design to allow the addition of new capabilities or functionality. Create forward-compatible solutions that can be reused and extended in the future to make maintenance easier and help support speed to market. 
 
-**Inclusive**
+**Accessible**
 
 Accessibility is at the core of how we design usable experiences for all. Every design, asset, and piece of code should meet or exceed WCAG 2.1 AA accessibility standards, and should include guidance for any necessary implementation details. 
 
