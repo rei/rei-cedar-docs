@@ -18,21 +18,19 @@
 <cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
 * Response to change > User Input(not time sensitive)
 
-A notification flags that something has changed on the page. They are responses to user input and will only ever happen after page load. 
-Generally a user will not be required to interact with a notification. That said, the notification may pertain to required fields that need to be complete prior to proceeding beyond the current page. 
+A notification provides user feedback on changes to a specific element or page section. They are responses to a user’s input that provide helpful UI ques or brief messages.
+Generally they are not required to interact with. however, the notification may pertain to required fields that would need to be complete prior to proceeding beyond the current page. 
 They are intended to keep users informed of changes to a specific element or page section. 
-
-
 
 - **Must**
   - Page state has changed based on user submit
-  - Not be available on page load
+  - Not be present on page load
   - Be activated by user or by system after page load
-  - Be focusable 
+  - Be focusable
   - Not block page navigation
   - Not open in new page
   - Not open in new window
-  - Aria live or “role=”status” markup to announce the notification without interrupting the page flow of the user
+  - Use Aria live or “role=”status” markup to announce the notification without interrupting the page flow of the user
   - If moving focus to the notification, the notification 
     - Must provide At least one focusable UI element (ie. Close button, primary button)
     - Additional content container must be dismissable
