@@ -145,6 +145,8 @@ succinct(yes)->succinctYes
 These notifications are contextual to inline elements on the page. 
 They help to clarify an issue and/or notify users of a potential problem that may require their attention.
 
+by default, cedar form elements error message pattern  default to adding `role="status`, automatically setting your validation to a notification
+
 #### Available Components
 - cdr-input
 - cdr-form-group
