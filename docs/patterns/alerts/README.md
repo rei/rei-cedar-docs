@@ -1,9 +1,9 @@
 ---
 {
-  "title": "Messaging",
+  "title": "Alerts",
   "title_metadata": false,
   "layout_type": "LayoutArticle",
-  "summary": "How to choose the correct component for your content",
+  "summary": "",
   "sandboxData": {
     "components": "CdrAlert"
   },
