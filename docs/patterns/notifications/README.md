@@ -139,8 +139,14 @@ by default, cedar form elements error message pattern  default to adding `role="
 - The error or warning is time sensitive, instead use [alert](../alerts)
 
 #### The Basics
+**aria-invalid**
+indicate that the value entered into an input field does not conform to the format expected by the application.This may include formats such as email addresses or telephone numbers. aria-invalid can also be used to 
+indicate that a required field has not been filled in.
+The attribute should be programmatically set as a result of a validation process.
 
 **aria-errormessage**
+
+
 
 Placed on input and mapped via id to error message.
 used to:
