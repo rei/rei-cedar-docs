@@ -71,7 +71,7 @@ The following provide the base requirement’s expected within a notification me
   - Update a live region of the page
   - Use the HTML `<aside>` tag, denoting the section that, though related to the main element, doesn't belong to the main flow
 
-  ## Accessibility References
+## Accessibility References
 - [Accessible Notifications](https://www.w3.org/WAI/RD/wiki/Accessible_Notifications)
 - [WCAG status messages 4.1.3](https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html)
 
@@ -82,25 +82,47 @@ st=>start: Identify the correct message pattern
 e=>end: End
 
 interactive=>condition: Interactive
-associated=>condition: Associated to a specific page section
+associated=>condition: Associated 
+to a specific 
+page section
 succinct=>condition: succinct
 associatedYes=>operation: validation, inline toast
 succinctNo=>operation: toast
 succinctYes=>operation: cdr-alert
 
-interactive(no)->associated(yes)-> associatedYes
+interactive(no)->associated(yes)->associatedYes
 associated(no, bottom)->succinctNo()
 interactive(yes)->succinct(no)->succinctNo
 succinct(yes)->succinctYes
 @flowend
 
-### Status Messages
+### Status Notifications
 
-#### Requirements
-#### The Basics
+Status notifications provide our users with advisory information that while important, is less critical than an alert.
+These notifications use the role status ensuring non visual users are notifified of changes taking place to the page based on their actions.
+This role has an implicit aria-live value of polite though the `aria-live` property may be used on the region to override how it’s usually handled by assistive technologies.
+#### Examples
+- as the find a store modal is loading results. It displays a loading icon, additionally, a screen reader should announce "application busy".
+- After a user adds a item to their cart that can 
+
+
+#### Notification Composition
+Adding the correct role to status notification infoms the user, on change, that something has happend. 
+However, we still need to ensure that the user will understand the context of what the update is informing them of.
+often we will use status messages to update numeric values on a page,
+be status updates also provide supporting contextual text with the update, this can be screen reader only as appropriate.
+for example:
+- After a user fiters a search results page, the "Results for (search category) #" is updated to provide the items now available on the seach results page.
+- After a user presses an Add to Cart button, a section of content near the Shopping Cart icon increments the number.
+
+- Authors SHOULD ensure an element with role status does not receive focus as a result of change in status.
+- Status is a form of live region. If another part of the page controls what appears in the status, 
+authors SHOULD make the relationship explicit with the aria-controls attribute.
+- Elements with the role status have an implicit aria-live value of polite and an implicit aria-atomic value of true.
 
 #### Using Available Cedar Components
-
+- Cdr-alert*toast?*
+- *Cdr-loading - potential component*
 ## Accessibility References
 - [Accessible Notifications](https://www.w3.org/WAI/RD/wiki/Accessible_Notifications)
 
