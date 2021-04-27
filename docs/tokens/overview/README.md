@@ -250,9 +250,9 @@ Ensure that the design token meets the following requirements:
 - Design token is used for multiple elements and NOT specific to one element
 - Design token name will continue to have the same semantic meaning in future releases
 - Design token name follows platform requirements:
-  - **Web:** Uses Kebab case. For example, cdr-color-background-dark
-  - **iOS:** Uses Pascal case. For example, CdrColorBackgroundColor
-  - **Android:** Uses Snake case. For example, cdr_color_background_dark
+  - **Web:** Uses Kebab case. For example, cdr-color-background-primary
+  - **iOS:** Uses Pascal case. For example, CdrColorBackgroundPrimary
+  - **Android:** Uses Snake case. For example, cdr_color_background_primary
 
 
 <hr/>
