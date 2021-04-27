@@ -75,6 +75,9 @@
 | cdr-text-display-1100 | cdr-text-heading-serif-strong-1100 |
 | cdr-text-display-1200 | cdr-text-heading-serif-strong-1200 |
 | | |
+| cdr-text-default-compact | cdr-text-utility-sans-200 |
+| cdr-text-editorial | cdr-text-default |
+| | |
 | cdr-text-utility-n00 | cdr-text-utility-sans-n00 |
 | cdr-text-utility-strong-n00 | cdr-text-utility-sans-strong-n00 |
 

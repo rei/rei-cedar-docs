@@ -11,8 +11,7 @@
         alt="hero"/>
       <div class="hero__container cdr-align-text-center">
         <cdr-text
-          modifier="heading-serif-700 heading-serif-strong-900@md heading-serif-strong-1100@lg"
-          class="stack-1"
+          class="stack-1 hero-heading"
         >{{ data.heroTitle }}</cdr-text>
         <p class="hero__description">{{ data.heroDescription }}</p>
       </div>
@@ -225,6 +224,18 @@ export default {
     width: 100%;
     max-width: 400px;
     margin: 0 auto;
+  }
+}
+
+.hero-heading {
+  @include cdr-text-heading-serif-700;
+
+  @media (min-width: $cdr-breakpoint-md) {
+    @include cdr-text-heading-serif-strong-900;
+  }
+
+  @media (min-width: $cdr-breakpoint-lg) {
+    @include cdr-text-heading-serif-strong-1100;
   }
 }
 
