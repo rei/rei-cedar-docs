@@ -22,22 +22,21 @@
 
 Notifications are asynchronous events providing user feedback to changes on specific elements or page sections.
 Notifications should be designed to attract rather than capture a user’s attention, they add context to elements that exist on a page and should not employee design that blocks a pages content.
-As messages, notifications offer important responses to changes in content that may help users understand additional options available or actions needing to take place.
+As messages, notifications offer important responses to changes in content that will help users understand additional options available or actions needing to take place.
 These messages, though important, should not interrupt a user and focus should not be moved to them automatically.
 
 ## Guidelines
 
-A Notification has specific behaviors and content objectives that make it unique from other types of messaging. 
+A Notification has specific behaviors and content objectives which make it unique from other types of messaging. 
 
 Use the following list to validate that your message is a notification.
 
 ### Behavior
 
-the following should all be true:
+the following should be true:
 
 - The page state has changed after page load
 - The message is not available until triggered by a user action
-- A screen reader should speak changes whenever the user is idle.
 ### Purpose
 
 At least one of the following should be true:
@@ -75,8 +74,8 @@ The following provide the base requirement’s expected within a notification me
 - [Accessible Notifications](https://www.w3.org/WAI/RD/wiki/Accessible_Notifications)
 - [WCAG status messages 4.1.3](https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html)
 
-## Notification Patterns
-
+## Notification Web Patterns
+(the following do not consider mobile app patterns)
 @flowstart
 st=>start: Identify the correct message pattern
 e=>end: End
@@ -98,33 +97,71 @@ succinct(yes)->succinctYes
 
 ### Status Notifications
 
-Status notifications provide our users with advisory information that while important, is less critical than an alert.
-These notifications use the role status ensuring non visual users are notifified of changes taking place to the page based on their actions.
-This role has an implicit aria-live value of polite though the `aria-live` property may be used on the region to override how it’s usually handled by assistive technologies.
-#### Examples
-- as the find a store modal is loading results. It displays a loading icon, additionally, a screen reader should announce "application busy".
-- After a user adds a item to their cart that can 
+- Passive Messages
+- User Interaction is Not required
+- Advisory Information
 
+Unlike other notifications, Status Notifications tend to update existing inline page content.
+They are informative only and provide our users with advisory information that enhances the site experience.
+Adding the correct HTML `role="status" to a status notification helps to infom a user of assisted technology, on change, that something has happend. 
+The Status role has an implicit aria-live value of polite though the `aria-live` property may also be used.
+Additionaly, you will need to ensure that our users will understand the context of what the update is informing them of. 
+These Notifications will not inturupt the current action of a user so be sure to consider what will be read out once the update is spoken. 
+For instance make sure that the item number in the cart is not read without the additonal "items in your cart" or "x items added to your cart".
+#### Use When
+It is important to grasp that many visual transitions are actually status notifications and should be providing contextual information to our users. 
+This can be provided in the form of screen reader only text, though consider if the action without context will create any cognitive dissonance for our users.
+
+- Loading icons or states
+- Submitting Buttons
+- Incrementing carts
+- Changes to inline content based on user selection
+
+##### Examples
+- As the "Find a store near you" modal is loading results it displays a loading icon, additionally, a screen reader should announce "Finding stores in your area".
+- After a user adds an item to their cart the button grays out or changes to a loading icon, additionally, a screen reader should announce "adding your items to the cart"
+- After a user presses an Add to Cart button, a section of content near the Shopping Cart icon increments the number. A screen reader should announce "x items in your cart"
+- After the user selects the "Co-op Cycles" filter on the Mountain Bikes search resluts page the "Mountain Bikes (number of rusults)" updates to "Co-op Cycles Mountain Bikes
+(7 results)
+
+#### Don't Use When
+- The User makes a selection that does not change or add content to the page
+- The Content added to the page is not updating inline copy or representing an actionable item in progress
+- The content added to the page is critical and needs imediate attention (see [alert](../alerts))
 
 #### Notification Composition
-Adding the correct role to status notification infoms the user, on change, that something has happend. 
-However, we still need to ensure that the user will understand the context of what the update is informing them of.
-often we will use status messages to update numeric values on a page,
-be status updates also provide supporting contextual text with the update, this can be screen reader only as appropriate.
-for example:
-- After a user fiters a search results page, the "Results for (search category) #" is updated to provide the items now available on the seach results page.
-- After a user presses an Add to Cart button, a section of content near the Shopping Cart icon increments the number.
-
 - Authors SHOULD ensure an element with role status does not receive focus as a result of change in status.
+- Identify content that may be updated as a WAI-ARIA live region. Use the aria-live attribute on the container of the content that may be updated or, in special cases, use one of the WAI-ARIA special live region roles.
 - Status is a form of live region. If another part of the page controls what appears in the status, 
 authors SHOULD make the relationship explicit with the aria-controls attribute.
 - Elements with the role status have an implicit aria-live value of polite and an implicit aria-atomic value of true.
 
 #### Using Available Cedar Components
-- Cdr-alert*toast?*
 - *Cdr-loading - potential component*
+- *Cdr-toast - potential component*
 ## Accessibility References
 - [Accessible Notifications](https://www.w3.org/WAI/RD/wiki/Accessible_Notifications)
+
+### Conditional Notifications
+
+- Passive Messages
+- User Interaction is Not required
+- Advisory Information
+- Disruptive
+
+Similar to Status Notifications, these notifications apply the `role="status` HTML markup.
+These event based notifications differ from Status Notifications as they do not update live, inline-regons of a page.
+Conditional Notifications are triggered based on actions completed by the user. 
+These notifications may open or be added to locations unrelated to the action which caused the notification to trigger.
+Additionally, they may open based on conditions a user has created vs actions they have interacted with.
+
+#### Examples
+
+- shipping restrictions display once you have selected a location
+- 
+- new options are available based on selections you have made
+
+#### Conditional Notifications Format
 
 ### Form Validation Messages
 These notifications are contextual to inline elements on the page.
