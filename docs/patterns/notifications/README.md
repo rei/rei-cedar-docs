@@ -47,26 +47,26 @@ At least one of the following should be true:
   - As confirmation that a task was completed successfully 
   - As contextual information that might need their attention
   - communicating a status change caused by the user.
-### Interactive Controles
+### Interactive Controls
 
-Interactive controles within notifications produce several hurdles for users of assistive technology. 
-Specifically, the `Aria-live` region will not perserve the semantics of elements being read aloud.
+Interactive controls within notifications produce several hurdles for users of assistive technology. 
+Specifically, the `Aria-live` region will not preserve the semantics of elements being read aloud.
 As an example consider the virtual outfitting window on the product page: a user will not know what the title, copy, or link are in the following text
 
-"*Need help deciding? Schedual a free 1-on-1 virtual appointment with one of our experts. Book now*". 
+"*Need help deciding? Schedule a free 1-on-1 virtual appointment with one of our experts. Book now*". 
 
-Users may infer the "book now" text is a link - or just as likley search for a button or may guess the entire text would be active.
+Users may infer the "book now" text is a link - or just as likely search for a button or may guess the entire text would be active.
 
 Consider the following:
-- When triggered, live regions only read out their content to assisted technologys. They will not destinguish text from actionable elements present within a notification.
-- Users may infer that actionable element is pressent, however A user will need to guess what element to seach for. This is espesially problematic for notifications that are automatically dismissed, as users will have limited time to correctly guess and act on this choice.
+- When triggered, live regions only read out their content to assisted technologies. They will not distinguish text from actionable elements present within a notification.
+- Users may infer that actionable element is present, however A user will need to guess what element to search for. This is especially problematic for notifications that are automatically dismissed, as users will have limited time to correctly guess and act on this choice.
 
-If the notification must inclued an actionable element you are responcible for the following:
+If the notification must include an actionable element you are responsible for the following:
 - **Must**
   - Return focus to next logical location in the page flow
   - Contained action is also readily available on the page
   - If the action is not available on page, the action should be added to a notification history page (see ARIA’s log role)
-## Constuction
+## Construction
 
 The following provide the base requirement’s expected within a notification message.
 - **Must**
@@ -125,12 +125,12 @@ succinct(yes)->succinctYes
 
 Status Notifications update existing inline page content.
 They are informative only and provide our users with advisory information that enhances the site experience.
-Adding the correct HTML `role="status"` to a status notification helps to infom a user of assisted technology, on change, that something has happend. 
+Adding the correct HTML `role="status"` to a status notification helps to inform a user of assisted technology, on change, that something has happened. 
 The Status role has an implicit aria-live value of polite though the `aria-live` property may also be used.
 
-These Notifications will not inturupt the current action of a user so be sure to consider what will be read out once the update is spoken. 
+These Notifications will not interrupt the current action of a user so be sure to consider what will be read out once the update is spoken. 
 For instance a quantity update for items added to a cart would be of little use if all that was communicated was "one".
-In this case add the additonal "items in your cart" or "x items added to your cart" as screen reader only text. 
+In this case add the additional "items in your cart" or "x items added to your cart" as screen reader only text. 
 #### Use When
 It is important to grasp that many visual transitions are actually status notifications and should be providing contextual information to our users. 
 This can be provided in the form of screen reader only text, though consider if the action without context will create any cognitive dissonance for our users.
@@ -144,14 +144,14 @@ This can be provided in the form of screen reader only text, though consider if 
 - As the "Find a store near you" modal is loading results it displays a loading icon, additionally, a screen reader should announce "Finding stores in your area".
 - After a user adds an item to their cart the button grays out or changes to a loading icon, additionally, a screen reader should announce "adding your items to the cart"
 - After a user presses an Add to Cart button, a section of content near the Shopping Cart icon increments the number. A screen reader should announce "x items in your cart"
-- After the user selects the "Co-op Cycles" filter on the Mountain Bikes search resluts page the "Mountain Bikes (number of rusults)" updates to "Co-op Cycles Mountain Bikes
+- After the user selects the "Co-op Cycles" filter on the Mountain Bikes search results page the "Mountain Bikes (number of results)" updates to "Co-op Cycles Mountain Bikes
 (7 results)
 
 #### Don't Use When
 - The User makes a selection that does not change or add content to the page
 - The notification is not updating inline copy
 - The notification does not relate to an actionable element in a busy state
-- The content added to the page is critical and needs imediate attention (see [alert](../alerts))
+- The content added to the page is critical and needs immediate attention (see [alert](../alerts))
 
 #### Notification Composition
 - Authors SHOULD ensure an element with role status does not receive focus as a result of change in status.
@@ -176,17 +176,17 @@ Content container:
 - Ancillary Information
 
 Similar to Status Notifications, these notifications apply the `role="status"` HTML markup.
-They will not inturupt a user from a task they are engaged in, and are provided on user action rather than as part of the page. 
-These event based notifications differ from Status Notifications as they do not update live, inline-regons of a page.
+They will not interrupt a user from a task they are engaged in, and are provided on user action rather than as part of the page. 
+These event based notifications differ from Status Notifications as they do not update live, inline-regions of a page.
 Conditional Notifications are triggered based on actions completed by the user. 
 These notifications may open or be added to locations unrelated to the action which caused the notification to trigger.
 Additionally, they may open based on conditions a user has created or criterium they have met.
 If someone were to ignore, or miss a toast message, due to its timed display, there should be no negative impact on their current activities or the status that the message conveyed. 
 Using the previous examples, ignoring a toast message would still mean that a file was saved, that a message was sent, or that a meeting was about to start.
 
-#### Automatic dissmisal
+#### Automatic dismissal
 In some scenarios Conditional notifications may be displayed for a set amount of time rather than become an evergreen feature of a page. In these cases there should be no negative impact on their current activities or the status that the message conveyed. 
-ignoring a timed notification would still mean that the action will be completed succefully.
+ignoring a timed notification would still mean that the action will be completed successfully.
 
 - **Must**
   -  ensure notification will not be removed if keyboard focus or mouse hover is within/over the notification.
@@ -194,26 +194,25 @@ ignoring a timed notification would still mean that the action will be completed
 
 ##### Accessibility considerations
 - A blocking window can introduce obstruction issues for people who have zoomed in browsers
-- A non-blocking window may be completley missed by those who are using screen magnification software, but who are not using a screen reader
-- [WCAG 2.1 Understading ajstable timing](https://www.w3.org/WAI/WCAG21/Understanding/timing-adjustable.html)
-
+- A non-blocking window may be completely missed by those who are using screen magnification software, but who are not using a screen reader
+- [WCAG 2.1 Understanding adjustable timing](https://www.w3.org/WAI/WCAG21/Understanding/timing-adjustable.html)
 
 #### Use When
 - Exposing additional offering information that may vary based on user settings
 - Indicate the completion of a task or process initiated by the user
-- notifications containing aditional Rich UI
+- notifications containing additional Rich UI
 
 **Examples**
 - Other options are available that match the users interests
 - There are shipping restrictions to the location the user resides in
 - The user has items that are no longer available in their cart
-- The user has successfuly signed up for an email notifications
+- The user has successfully signed up for an email notifications
 
 #### Don't Use When
 - The User makes a selection that does not change or add content to the page
 - The notification is an update to inline copy (see [status notifications](#status-notifications)
 - The notification relates to an actionable element in a busy state (see [status notifications](#status-notifications)
-- The content added to the page is critical and needs imediate attention (see [alert](../alerts))
+- The content added to the page is critical and needs immediate attention (see [alert](../alerts))
 
 #### Examples
 
@@ -273,12 +272,11 @@ by default, cedar form elements error message pattern  default to adding `role="
 
 #### The Basics
 **aria-invalid**
-indicate that the value entered into an input field does not conform to the format expected by the application.This may include formats such as email addresses or telephone numbers. aria-invalid can also be used to 
+indicate that the value entered into an input field does not conform to the format expected by the application. This may include formats such as email addresses or telephone numbers. aria-invalid can also be used to 
 indicate that a required field has not been filled in.
 The attribute should be programmatically set as a result of a validation process.
 
 **aria-errormessage**
-
 
 
 Placed on input and mapped via id to error message.
@@ -339,7 +337,7 @@ TODO- something about how we only provide the UI/container but not validation lo
 - [WCAG Labels or Instructions 3.3.2](https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions)
 - [WCAG Error Suggestion 3.3.3](https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion)
 - [WCAG Error Prevention 3.3.4: ](https://www.w3.org/WAI/WCAG21/Understanding/error-prevention-legal-financial-data)
-- [Form Notifications](https://www.w3.org/WAI/tutorials/forms/notifications/	)
+- [Form Notifications](https://www.w3.org/WAI/tutorials/forms/notifications/  )
 - [Using Aria-Invalid to Indicate An Error Field](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA21.html)
 - [Using the aria-describedby property to provide a descriptive label for user interface controls](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA1.html)
 ### Status Message
@@ -355,11 +353,6 @@ TODO- something about how we only provide the UI/container but not validation lo
 The intent of this Success Criterion is to make users aware of important changes in content that are not given focus, and to do so in a way that doesn't unnecessarily interrupt their work.
 This means that these requirements are for dynamic, user caused notifications and do not apply to static messaging.
 
-
-
-
-
-
 When an error message is provided it must be identified in certain ways to be accessible. These include:
 
 identifying each field in error
@@ -367,7 +360,6 @@ providing suggestions (when known) to correct the errors,
 properly exposing this information to assistive technology.
 
 **role="status"**
-
 
 
 ### Cart item indicator (header)
@@ -378,5 +370,3 @@ properly exposing this information to assistive technology.
 | role=”status"       |
 
 </cdr-doc-table-of-contents-shell>
-
-
