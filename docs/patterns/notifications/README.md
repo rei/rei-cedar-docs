@@ -20,7 +20,7 @@
 
 # Overview
 
-Notifications are asynchronous events providing user feedback to changes on specific elements or page sections.
+Notifications are unexpected, asynchronous events providing user feedback to changes on specific elements or page sections.
 Notifications should be designed to attract rather than capture a user’s attention, they add context to elements that exist on a page and should not employee design that blocks a pages content.
 As messages, notifications offer important responses to changes in content that will help users understand additional options available or actions needing to take place.
 These messages, though important, should not interrupt a user and focus should not be moved to them automatically.
@@ -91,11 +91,18 @@ The following provide the base requirement’s expected within a notification me
   - Update a live region of the page
   - Use the HTML `<aside>` tag, denoting the section that, though related to the main element, doesn't belong to the main flow
   - appear as a timed display.
-
+  - Include `aria-atomic` markup attribute to define what a content will be presented to assistive technologies
+  - Include `aria-relevant` to define what type of changes are being announced to assistive technologies
+  
 ## Accessibility References
 - [Accessible Notifications](https://www.w3.org/WAI/RD/wiki/Accessible_Notifications)
 - [WCAG status messages 4.1.3](https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html)
-
+- [aria-live](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions)
+Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
+- [aria-atomic](https://www.digitala11y.com/aria-atomic-properties/)
+Indicates whether assistive technologies will present all, or only parts of the changed region based on the change notifications defined by the aria-relevant attribute.
+- [aria-relevant](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute)
+Describes semantically meaningful changes as opposed to merely presentational ones
 ## Notification Web Patterns
 (the following do not consider mobile app patterns)
 @flowstart
@@ -131,6 +138,9 @@ The Status role has an implicit aria-live value of polite though the `aria-live`
 These Notifications will not interrupt the current action of a user so be sure to consider what will be read out once the update is spoken. 
 For instance a quantity update for items added to a cart would be of little use if all that was communicated was "one".
 In this case add the additional "items in your cart" or "x items added to your cart" as screen reader only text. 
+Alternatly you may pair the `aria-live` section with `aria-atomic`.
+aria-atomic will ensure the content within the aria-live element is read on change.
+
 #### Use When
 It is important to grasp that many visual transitions are actually status notifications and should be providing contextual information to our users. 
 This can be provided in the form of screen reader only text, though consider if the action without context will create any cognitive dissonance for our users.
