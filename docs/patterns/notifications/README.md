@@ -169,56 +169,64 @@ Content control:
 Content container:
 - *Cdr-loading - potential component*
 
-### Conditional Notifications
+### Conditional Notifications (when to use on page vs over page)
 
 - Concise Messages
 - User Interaction is Not required
 - Ancillary Information
 
-Similar to Status Notifications, these notifications apply the `role="status"` HTML markup.
+Similar to Status Notifications, these Conditional Notifications apply the `role="status"` to their HTML markup.
 They will not interrupt a user from a task they are engaged in, and are provided on user action rather than as part of the page. 
-These event based notifications differ from Status Notifications as they do not update live, inline-regions of a page.
-Conditional Notifications are triggered based on actions completed by the user. 
+These event based notifications differ from Status Notifications as they do not update live, existing inline sections of a page.
 These notifications may open or be added to locations unrelated to the action which caused the notification to trigger.
 Additionally, they may open based on conditions a user has created or criterium they have met.
-If someone were to ignore, or miss a toast message, due to its timed display, there should be no negative impact on their current activities or the status that the message conveyed. 
-Using the previous examples, ignoring a toast message would still mean that a file was saved, that a message was sent, or that a meeting was about to start.
+
+#### Conditional Notifications as an overlay
+The concise messages contained within Conditional Notifications are not required for a user to interact with and may open unexpectedly, 
+these Notifications should not be blocking. Opening in an overlay may disrupt and confuse or not be seen at all by users at some breakpoints.
+
+If opening a Conditional Notification consider the following:
+- A blocking window can introduce obstruction issues for people who have zoomed in browsers Or for users at smaller breakpoints
+- A non-blocking window may be completely missed by those who are using screen magnification software, but who are not using a screen reader
 
 #### Automatic dismissal
 In some scenarios Conditional notifications may be displayed for a set amount of time rather than become an evergreen feature of a page. In these cases there should be no negative impact on their current activities or the status that the message conveyed. 
-ignoring a timed notification would still mean that the action will be completed successfully.
+ignoring a timed notification would still mean that the action is completed successfully.
 
-- **Must**
-  -  ensure notification will not be removed if keyboard focus or mouse hover is within/over the notification.
-  -  focus would need to return to a logical location (the submit button for the message?) For other instances of toasts that contain “close” buttons, focus would need to be managed here too, otherwise focus could be lost and users would have to return to the top of the current document and navigate back to where they last left off.
+For example an item would still be added to a cart regardless of a users engagement with the notification informing them of the successfully added item.
 
-##### Accessibility considerations
-- A blocking window can introduce obstruction issues for people who have zoomed in browsers
-- A non-blocking window may be completely missed by those who are using screen magnification software, but who are not using a screen reader
 - [WCAG 2.1 Understanding adjustable timing](https://www.w3.org/WAI/WCAG21/Understanding/timing-adjustable.html)
+#### Construction
+- **Must**
+  -  Ensure notification will not be removed if keyboard focus or mouse hover is within or over the notification.
+  -  Return user focus to a logical location.
+  -  Not block the user from the page a notification is triggered from
+  -  Not contain unique actionable items if the notification is an overlay
+- **Should**
+- Be used for short messages to confirm an action
+- Provide necessary support to the primary activities or operations of a page base on users settings or selections
+-**Should not**
+- Be used for error messages
+- Open as a blocking overlay window
+- **May**
+  - display notifications in rich, unique UI to create distinction around itself and the page content
 
 #### Use When
-- Exposing additional offering information that may vary based on user settings
-- Indicate the completion of a task or process initiated by the user
+- Exposing additional product information that may vary based on user selection
+- Indicating the completion of a task or process initiated by the user
 - notifications containing additional Rich UI
 
 **Examples**
-- Other options are available that match the users interests
-- There are shipping restrictions to the location the user resides in
+- New options are available based on selections you have made
+- Shipping restrictions display once you have selected a location
+- Quantity availability
 - The user has items that are no longer available in their cart
 - The user has successfully signed up for an email notifications
-
 #### Don't Use When
 - The User makes a selection that does not change or add content to the page
-- The notification is an update to inline copy (see [status notifications](#status-notifications)
+- The notification is an update to existing inline copy (see [status notifications](#status-notifications)
 - The notification relates to an actionable element in a busy state (see [status notifications](#status-notifications)
 - The content added to the page is critical and needs immediate attention (see [alert](../alerts))
-
-#### Examples
-
-- shipping restrictions display once you have selected a location
-- 
-- new options are available based on selections you have made
 
 #### Conditional Notifications Format
 
@@ -233,9 +241,8 @@ Content container:
   - Warning
   - Info
   - Success
-- *Cdr-toast - potential component*
+- *dismissible-notifications - potential component*
 
-### Push Notifications
 ### Validation Notifications
 These notifications are contextual to inline elements on the page.
 They help to clarify an issue and/or notify users of a potential problem that may require their attention.
