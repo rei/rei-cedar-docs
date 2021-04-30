@@ -44,9 +44,28 @@ At least one of the following should be true:
   - Providing a user the status of an action they’re trying to complete 
   - notifying users of a potential problem that may require their attention
   - As a form validation message
-  - As confirmation that a task was completed successfully (See Success Type)
-  - As contextual information that might need their attention (See Informational Type)
+  - As confirmation that a task was completed successfully 
+  - As contextual information that might need their attention
   - communicating a status change caused by the user.
+### Interactive Controles
+
+Interactive controles within notifications produce several hurdles for users of assistive technology. 
+Specifically, the `Aria-live` region will not perserve the semantics of elements being read aloud.
+As an example consider the virtual outfitting window on the product page: a user will not know what the title, copy, or link are in the following text
+
+"*Need help deciding? Schedual a free 1-on-1 virtual appointment with one of our experts. Book now*". 
+
+Users may infer the "book now" text is a link - or just as likley search for a button or may guess the entire text would be active.
+
+Consider the following:
+- When triggered, live regions only read out their content to assisted technologys. They will not destinguish text from actionable elements present within a notification.
+- Users may infer that actionable element is pressent, however A user will need to guess what element to seach for. This is espesially problematic for notifications that are automatically dismissed, as users will have limited time to correctly guess and act on this choice.
+
+If the notification must inclued an actionable element you are responcible for the following:
+- **Must**
+  - Return focus to next logical location in the page flow
+  - Contained action is also readily available on the page
+  - If the action is not available on page, the action should be added to a notification history page (see ARIA’s log role)
 ## Constuction
 
 The following provide the base requirement’s expected within a notification message.
@@ -65,10 +84,13 @@ The following provide the base requirement’s expected within a notification me
   - Direct the user to a new page or window
   - Overuse notifications. They may interrupt your users experience
   - Create notifications that disappear automatically
+  - Contain interactive controls
+    
 - **May**
   - Open or update content in locations unrelated to the action which caused the notification to appear 
   - Update a live region of the page
   - Use the HTML `<aside>` tag, denoting the section that, though related to the main element, doesn't belong to the main flow
+  - appear as a timed display.
 
 ## Accessibility References
 - [Accessible Notifications](https://www.w3.org/WAI/RD/wiki/Accessible_Notifications)
@@ -101,13 +123,14 @@ succinct(yes)->succinctYes
 - User Interaction is Not required
 - Advisory Information
 
-Unlike other notifications, Status Notifications tend to update existing inline page content.
+Status Notifications update existing inline page content.
 They are informative only and provide our users with advisory information that enhances the site experience.
-Adding the correct HTML `role="status" to a status notification helps to infom a user of assisted technology, on change, that something has happend. 
+Adding the correct HTML `role="status"` to a status notification helps to infom a user of assisted technology, on change, that something has happend. 
 The Status role has an implicit aria-live value of polite though the `aria-live` property may also be used.
-Additionaly, you will need to ensure that our users will understand the context of what the update is informing them of. 
+
 These Notifications will not inturupt the current action of a user so be sure to consider what will be read out once the update is spoken. 
-For instance make sure that the item number in the cart is not read without the additonal "items in your cart" or "x items added to your cart".
+For instance a quantity update for items added to a cart would be of little use if all that was communicated was "one".
+In this case add the additonal "items in your cart" or "x items added to your cart" as screen reader only text. 
 #### Use When
 It is important to grasp that many visual transitions are actually status notifications and should be providing contextual information to our users. 
 This can be provided in the form of screen reader only text, though consider if the action without context will create any cognitive dissonance for our users.
@@ -126,7 +149,8 @@ This can be provided in the form of screen reader only text, though consider if 
 
 #### Don't Use When
 - The User makes a selection that does not change or add content to the page
-- The Content added to the page is not updating inline copy or representing an actionable item in progress
+- The notification is not updating inline copy
+- The notification does not relate to an actionable element in a busy state
 - The content added to the page is critical and needs imediate attention (see [alert](../alerts))
 
 #### Notification Composition
@@ -137,23 +161,59 @@ authors SHOULD make the relationship explicit with the aria-controls attribute.
 - Elements with the role status have an implicit aria-live value of polite and an implicit aria-atomic value of true.
 
 #### Using Available Cedar Components
+
+Content control:
+- Cdr-button
+- Cdr-link
+
+Content container:
 - *Cdr-loading - potential component*
-- *Cdr-toast - potential component*
-## Accessibility References
-- [Accessible Notifications](https://www.w3.org/WAI/RD/wiki/Accessible_Notifications)
 
 ### Conditional Notifications
 
-- Passive Messages
+- Concise Messages
 - User Interaction is Not required
-- Advisory Information
-- Disruptive
+- Ancillary Information
 
-Similar to Status Notifications, these notifications apply the `role="status` HTML markup.
+Similar to Status Notifications, these notifications apply the `role="status"` HTML markup.
+They will not inturupt a user from a task they are engaged in, and are provided on user action rather than as part of the page. 
 These event based notifications differ from Status Notifications as they do not update live, inline-regons of a page.
 Conditional Notifications are triggered based on actions completed by the user. 
 These notifications may open or be added to locations unrelated to the action which caused the notification to trigger.
-Additionally, they may open based on conditions a user has created vs actions they have interacted with.
+Additionally, they may open based on conditions a user has created or criterium they have met.
+If someone were to ignore, or miss a toast message, due to its timed display, there should be no negative impact on their current activities or the status that the message conveyed. 
+Using the previous examples, ignoring a toast message would still mean that a file was saved, that a message was sent, or that a meeting was about to start.
+
+#### Automatic dissmisal
+In some scenarios Conditional notifications may be displayed for a set amount of time rather than become an evergreen feature of a page. In these cases there should be no negative impact on their current activities or the status that the message conveyed. 
+ignoring a timed notification would still mean that the action will be completed succefully.
+
+- **Must**
+  -  ensure notification will not be removed if keyboard focus or mouse hover is within/over the notification.
+  -  focus would need to return to a logical location (the submit button for the message?) For other instances of toasts that contain “close” buttons, focus would need to be managed here too, otherwise focus could be lost and users would have to return to the top of the current document and navigate back to where they last left off.
+
+##### Accessibility considerations
+- A blocking window can introduce obstruction issues for people who have zoomed in browsers
+- A non-blocking window may be completley missed by those who are using screen magnification software, but who are not using a screen reader
+- [WCAG 2.1 Understading ajstable timing](https://www.w3.org/WAI/WCAG21/Understanding/timing-adjustable.html)
+
+
+#### Use When
+- Exposing additional offering information that may vary based on user settings
+- Indicate the completion of a task or process initiated by the user
+- notifications containing aditional Rich UI
+
+**Examples**
+- Other options are available that match the users interests
+- There are shipping restrictions to the location the user resides in
+- The user has items that are no longer available in their cart
+- The user has successfuly signed up for an email notifications
+
+#### Don't Use When
+- The User makes a selection that does not change or add content to the page
+- The notification is an update to inline copy (see [status notifications](#status-notifications)
+- The notification relates to an actionable element in a busy state (see [status notifications](#status-notifications)
+- The content added to the page is critical and needs imediate attention (see [alert](../alerts))
 
 #### Examples
 
@@ -163,7 +223,21 @@ Additionally, they may open based on conditions a user has created vs actions th
 
 #### Conditional Notifications Format
 
-### Form Validation Messages
+#### Using Available Cedar Components
+
+Content control:
+- Cdr-button
+- Cdr-link
+
+Content container:
+- Cdr-alert
+  - Warning
+  - Info
+  - Success
+- *Cdr-toast - potential component*
+
+### Push Notifications
+### Validation Notifications
 These notifications are contextual to inline elements on the page.
 They help to clarify an issue and/or notify users of a potential problem that may require their attention.
 
