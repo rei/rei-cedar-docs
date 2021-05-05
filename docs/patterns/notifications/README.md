@@ -110,11 +110,10 @@ inline(no)->succinctNo
 
 ### Status
 
+- User Priority: low / expected 
 - Passive Messages
 - User Interaction is Not required
 - Advisory Information
-
-- User Priority: low / expected 
 
 Status Notifications update existing inline page content.
 They are informative only and provide our users with advisory information that enhances the site experience.
@@ -124,7 +123,7 @@ The Status role has an implicit aria-live value of polite though the `aria-live`
 These Notifications will not interrupt the current action of a user so be sure to consider what will be read out once the update is spoken. 
 For instance a quantity update for items added to a cart would be of little use if all that was communicated was "one".
 In this case add the additional "items in your cart" or "x items added to your cart" as screen reader only text. 
-Alternatly you may pair the `aria-live` section with `aria-atomic`.
+Alternatively you may pair the `aria-live` section with `aria-atomic`.
 aria-atomic will ensure the content within the aria-live element is read on change.
 #### Use When
 It is important to grasp that many visual transitions are actually status notifications and should be providing contextual information to our users. 
@@ -166,6 +165,18 @@ Content container:
 
 ### Conditional
 
+Similar to Status Notifications, these Conditional Notifications apply the `role="status"` to their HTML markup.
+They will not interrupt a user from a task they are engaged in, and are provided on user action rather than as part of the page. 
+These event based notifications differ from Status Notifications as they do not update live, existing inline sections of a page.
+They provide information that will help users make a decisions or provide warnings about selections they have made.
+These notifications may open or be added to locations unrelated to the action which caused the notification to trigger.
+Additionally, they may open based on conditions a user has created or criterium they have met.
+
+- User Priority: medium / inform
+- Unexpected Response 
+- User Interaction is Not required
+- Concise Ancillary Information
+
 <cdr-doc-example-code-pair repository-href="/src/components/alert"
 :sandbox-data="$page.frontmatter.sandboxData" >
 
@@ -177,18 +188,6 @@ Content container:
 
 ```
 </cdr-doc-example-code-pair>
-
-- Concise Messages
-- User Interaction is Not required
-- Ancillary Information
-
-- User Priority: medium / inform
-
-Similar to Status Notifications, these Conditional Notifications apply the `role="status"` to their HTML markup.
-They will not interrupt a user from a task they are engaged in, and are provided on user action rather than as part of the page. 
-These event based notifications differ from Status Notifications as they do not update live, existing inline sections of a page.
-These notifications may open or be added to locations unrelated to the action which caused the notification to trigger.
-Additionally, they may open based on conditions a user has created or criterium they have met.
 
 #### Conditional Notifications as an overlay
 The concise messages contained within Conditional Notifications are not required for a user to interact with and may open unexpectedly, 
@@ -274,8 +273,13 @@ Content container:
 - *dismissible-notifications - potential component*
 
 ### Validation
-These notifications are contextual to inline elements on the page.
-They help to clarify an issue and/or notify users of a potential problem that may require their attention.
+Form validation responses provide unexpected instructions to the user on blocking problems that must be resolved before moving on. 
+It is critical that they accurately inform and help to clarify an issue that will require their attention.
+
+- User Priority: High / blocking - requires resolution
+- Unexpected Response 
+- User Interaction is required
+- Instructions for an element MUST be meaningful
 
 #### Examples of validation messages
 - the user enters alphabetic characters into a quantity field that only accepts numbers;
@@ -283,7 +287,7 @@ They help to clarify an issue and/or notify users of a potential problem that ma
 - the user enters a nonexistent zip or postal code;
 - the user enters an invalid email;
 
-- User Priority: High / blocking - requires resolution
+
 
 #### Validation considerations
 
