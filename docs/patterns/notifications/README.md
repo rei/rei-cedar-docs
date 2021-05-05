@@ -47,6 +47,7 @@ At least one of the following should be true:
   - communicating a status change caused by the user.
 
 ## Construction
+(Must = WCAG lvl A, Should = WCAG lvl AA, May = WCAG lvl AAA)
 
 The following provide the base requirement’s expected within a notification message.
 - **Must**
@@ -273,263 +274,14 @@ Content container:
 - *dismissible-notifications - potential component*
 
 ### Validation
-Form validation responses provide unexpected instructions to the user on blocking problems that must be resolved before moving on. 
-It is critical that they accurately inform and help to clarify an issue that will require their attention.
+Form validation responses provide unexpected instruction on blocking problems that must be fixed before moving on. 
+Additionally, these messages may respond to input informing the user of further updates needed or to when the error has been resolved.
+It is critical that these notifications accurately inform and help to clarify the issues being raised to the user.
 
 - User Priority: High / blocking - requires resolution
 - Unexpected Response 
 - User Interaction is required
 - Instructions for an element MUST be meaningful
-
-#### Examples of validation messages
-- the user enters alphabetic characters into a quantity field that only accepts numbers;
-- the user enters a negative quantity into a quantity field that only accepts numbers;
-- the user enters a nonexistent zip or postal code;
-- the user enters an invalid email;
-
-
-
-#### Validation considerations
-
-<cdr-table class="advanced-table">
-
-<tr>
-<th class="advanced-table__header">Behavior</th>
-<td>User provided data</td>
-<td>Form fields correctly filled out should stay populated post-error state</td>
-</tr>
-<tr>
-<th class="advanced-table__header">Behavior</th>
-<td>Focus and Tabbing</td>
-<td><p>Live Announcements per Keystroke:</p>
-<p>ARIA live error messages <strong>SHOULD NOT</strong> be scripted to occur with every keystroke (to avoid overwhelming screen reader users), unless there is a delay built into the script to avoid announcements while the user is actively typing.</p></td>
-</tr>
-
-<tr>
-<th class="advanced-table__header">Behavior</th>
-<td>Submit: <em>Critical Error Prevention</em></td>
-<td>
-
-If the form is submitting any of the following:
-
-<cdr-list modifier="unordered">
-  <li>legal commitments</li>
-  <li>financial transactions</li>
-  <li>user-controllable data (e.g. user profile, social media posts)</li>
-</cdr-list>
-
-we are required to implement at least one of the following error prevention techniques:
-
-<cdr-list modifier="unordered">
-  <li>Reversible: Submissions are reversible.</li>
-  <li>Checked: Data entered by the user is checked for input errors and the user is provided an opportunity to correct them.</li>
-  <li>Confirmed: A mechanism is available for reviewing, confirming, and correcting information before finalizing the submission.</li>
-</cdr-list>
-
-</td>
-</tr>
-
-<tr>
-<th class="advanced-table__header">Behavior</th>
-<td> <a href="#error-detection"><strong>Submit: </strong> Error Detection</a> </td>
-<td>
-If an error is automatically detected, the input with the error MUST be identified.
-</td>
-</tr>
-
-<tr>
-<th class="advanced-table__header">Behavior</th>
-<td> <a href="#success-detection"><strong>Submit: </strong> Success Detection</a> </td>
-<td>
-The web page SHOULD confirm successful submission of data.
-</td>
-</tr>
-
-<tr>
-<th class="advanced-table__header">Behavior</th>
-<td> <a href="#success-detection"><strong>Submit: </strong> Disabled</a> </td>
-<td>
-<p>Provide an explanation to the user when the submit button is not available</p>
-<p>Some dynamic forms will make the submit button unavailable until the form is completed correctly. 
-This can be very confusing to users if insufficient error identification is provided</p>
-</td>
-</tr>
-
-<tr>
-<th class="advanced-table__header">Behavior</th>
-<td><strong>Live: </strong> Visible Real-Time Error Messages </td>
-<td>
-<p>ARIA live error messages <strong>Should Not</strong> be scripted to occur with every keystroke (to avoid overwhelming screen reader users), unless there is a delay built into the script to avoid announcements while the user is actively typing.
-</p>
-</td>
-</tr>
-
-<tr>
-<th class="advanced-table__header">Behavior</th>
-<td><strong>Live: </strong> Announcements per Keystroke </td>
-<td>
-  <p>
-    (AAA) Real-time error messages <strong>MAY</strong> be scripted to show on the screen
-    for sighted users, but attempts to announce the real-time messages to screen reader users
-    can be problematic (see the next two rows below). It is usually acceptable to wait to announce
-    real-time errors until after form submission, assuming that no data has been saved yet.
-  </p>
-</td>
-</tr>
-
-<tr>
-<th class="advanced-table__header">Behavior</th>
-<td><strong>Live: </strong> Announcements on Leaving a Field </td>
-<td>
-  <p>
-    ARIA live error messages <strong>SHOULD NOT</strong> be scripted
-    to occur when a user leaves a field, because the <code>aria-live</code>
-    announcement may conflict with the screen reader's attempt to read the next
-    element which receives focus, causing some information to be interrupted
-    or not announced at all.
-  </p>
-</td>
-</tr>
-
-<tr>
-<th class="advanced-table__header">Behavior</th>
-<td>Instructions</td>
-<td>
-<p>
-Instructions for an element MUST be available as programmatically-discernible text. Required WCAG 3.3.2
-</p>
-</td>
-</tr>
-
-<tr>
-<th class="advanced-table__header">Display</th>
-<td>Instructions</td>
-<td>Instructions for an element MUST be meaningful. Required WCAG 3.3.2</td>
-</tr>
-
-<tr>
-<th class="advanced-table__header">Display</th>
-<td>Instructions</td>
-<td>Instructions for an element <strong>MUST</strong> be visible. Required
-WCAG 3.3.2</td>
-</tr>
-
-<tr>
-<th class="advanced-table__header">Display</th>
-<td>Instructions</td>
-<td>Instructions for an element <strong>MUST NOT</strong> rely solely on references to sensory characteristics. Required WCAG 1.3.3 (for example, "round button" or "button to the right")</td>
-</tr>
-
-<tr>
-<th class="advanced-table__header">Display</th>
-<td>Instructions</td>
-<td>If the instructions for an element are not critical, the instructions MAY be hidden until the user requests them.</td>
-</tr>
-
-<tr>
-<th class="advanced-table__header">Display</th>
-<td>Instructions</td>
-<td>Instructions for an element <strong>SHOULD</strong> be visually and programmatically adjacent to the element.</td>
-</tr>
-
-<tr>
-<th class="advanced-table__header">Display</th>
-<td><code>required</code> or <code>aria-required</code></td>
-<td>true for inputs that must be compleeted by the user</td>
-</tr>
-
-<tr>
-<th class="advanced-table__header">Display</th>
-<td>Required Fields</td>
-<td>Require only fields that are absolutely needed</td>
-</tr>
-
-<tr>
-<th class="advanced-table__header">Display</th>
-<td>Required Fields</td>
-<td>Required fields SHOULD have a visual indicator that the field is required.</td>
-</tr>
-<tr>
-<th class="advanced-table__header">Display</th>
-<td>Required Fields</td>
-<td>Required fields SHOULD be programmatically designated as such. Note: At a minimum, WCAG requires an informative error message about the field after the user submits the form.</td>
-</tr>
-<tr>
-<th class="advanced-table__header">Display</th>
-<td>Required Fields </td>
-<td>Ensure that information conveyed by color differences is also available in text.
-provide screen reader text conveying that the field is required</td>
-</tr>
-<tr>
-<th class="advanced-table__header">Display</th>
-<td>Required Fields </td>
-<td>Note: Asterisks may not be read by all screen readers (in all reading modes) and may be difficult for users with low vision because they are rendered in a smaller size than default text. It is important for authors to include the text indicating that asterisk is used and to consider increasing the size of the asterisk that is presented.</td>
-</tr>
-
-<tr>
-<th class="advanced-table__header">Display</th>
-<td>Error Suggestion:</td>
-<td>If an input error is automatically detected, the item that is in error is identified and the error is described to the user in text.
-Required
-WCAG 3.3.3</td>
-</tr>
-
-<tr>
-<th class="advanced-table__header">Display</th>
-<td>Visible Error Message: </td>
-<td>Visible Error Message: Error feedback MUST be visible.</td>
-</tr>
-
-<tr>
-<th class="advanced-table__header">Content</th>
-<td>notification location</td>
-<td>When users enter input that is validated, and errors are detected, the nature of the error needs to be described to the user in manner they can access. One approach is to present an alert dialog that describes fields with errors when the user attempts to submit the form. Another approach, if validation is done by the server, is to return the form (with the user's data still in the fields) and a text description at the top of the page that indicates the fact that there was a validation problem, describes the nature of the problem, and provides ways to locate the field(s) with a problem easily. The "in text" portion of the Success Criterion underscores that it is not sufficient simply to indicate that a field has an error by putting an asterisk on its label or turning the label red. A text description of the problem should be provided.</td>
-</tr>
-<tr>
-<th class="advanced-table__header">Content</th>
-<td>Copy</td>
-<td>Meaningful Error Message: Error feedback MUST clearly and accurately describe the error and/or how to fix the error.</td>
-</tr>
-<tr>
-<th class="advanced-table__header">Content</th>
-<td>Alternate text</td>
-<td><p>if the text does not specifically call out the state of the message, error, warning, success, or info - that text should be provided via screen reader accessible text</p>
-<cdr-list modifier="unordered">
-<li>A form that uses color and text to indicate required fields</li>
-<li>Disabled Form elements</li>
-</cdr-list></td>
-</tr>
-
-<tr>
-<th></th>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<th></th>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<th></th>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<th></th>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<th></th>
-<td></td>
-<td></td>
-</tr>
-</cdr-table>
--  WCAG 3.3.1 Error Identification (lvl A)
--  WCAG 3.3.2 Labels or Instructions (lvl A)
--  WCAG 3.3.3 Error Suggestion (lvl AA)
--  WCAG 3.3.4: Error Prevention (lvl AA)
 
 When an error message is provided it must be identified in certain ways to be accessible. These include:
 
@@ -558,11 +310,87 @@ by default, cedar form elements error message pattern  default to adding `role="
 #### Don't Use When
 
 - The error or warning is time sensitive, instead use [alert](../alerts)
+#### Construction
 
-#### Inline Client Validation Notifications
+- **Must**
+  - Ensure the message container can receive focus
+  - Include the `aria-live` or `role=”status”` markup to announce the notification without interrupting the page flow of the user
+
+-  **Should**
+  - Correctly filled out user provided data in a form that contains errors **SHOULD** remain populated post-submit.
+  - Confirm successful submission of data.
+  - Provide an explanation to the user when the submit button is not available
+
+##### Role status or aria-live
+
+-  **Should Not**
+  - Be scripted to occur with every keystroke unless there is a delay built into the script to avoid announcements while the user is actively typing.
+  - Be scripted to occur when a user leaves a field, because the `aria-live`
+    announcement may conflict with the screen reader's attempt to read the next
+    element which receives focus, causing some information to be interrupted
+    or not announced at all.
+- **May**
+  - Be scripted to show on the screen for sighted users, but attempts to announce the real-time messages to screen reader users
+    can be problematic. It is usually acceptable to wait to announce
+    real-time errors until after form submission, assuming that no data has been saved yet.
+##### Notification Instructions Required WCAG 1.3.3, WCAG 3.3.2
+
+- **Must**
+  - Be available as programmatically-discernible text
+  - Be meaningful
+  - Be visible Visible
+  - Clearly and accurately describe the error and/or how to fix the error.
+- **Should**
+  - be visually and programmatically adjacent to the element.
+  - if the text does not specifically call out the state of the message, error, warning, success, or info - that text should be provided via screen reader accessible text
+- **Must Not**
+  - Rely solely on references to sensory characteristics (for example, "round button" or "button to the right")
+- **May**
+  - Be hidden until the user requests them if the notification instructions are not critical.
+
+When users enter input that is validated, and errors are detected, the nature of the error needs 
+to be described to the user in manner they can access. One approach is to present an alert dialog 
+that describes fields with errors when the user attempts to submit the form. Another approach, 
+if validation is done by the server, is to return the form (with the user's data still in the fields) 
+and a text description at the top of the page that indicates the fact that there was a validation problem, 
+describes the nature of the problem, and provides ways to locate the field(s) with a problem easily. 
+The "in text" portion of the Success Criterion underscores that it is not sufficient simply to indicate 
+that a field has an error by putting an asterisk on its label or turning the label red. 
+A text description of the problem should be provided.
+##### Required Fields
+The Asterisks may not be read by all screen readers (in all reading modes) and may be difficult for users with low vision because they are rendered in a smaller size than default text.
+It is important for authors to include the text indicating that asterisk is used and to consider increasing the size of the asterisk that is presented.
+
+- **Must**
+  - Set `Required` or `aria-required` to true for inputs that must be completed by the user
+- **Should**
+  - Require only fields that are absolutely needed
+  - Required fields **SHOULD** have a visual indicator that the field is required.
+  - Required fields **SHOULD** be programmatically designated as such. Note: At a minimum, WCAG requires an informative error message about the field after the user submits the form.
+  - Ensure that information conveyed by color differences is also available in text.
+  - Provide screen reader text conveying that the field is required
+##### Inline Client Validation Notifications
 client-side validation results in a better user experience and makes resolving validation errors more understandable.
 
-#### Error Detection
+##### Error Suggestion
+- **Must**
+  - If an input error is automatically detected, the item that is in error is identified and the error is described to the user in text WCAG 3.3.3
+
+https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-suggestions.html
+##### Error Prevention
+If the form is submitting any of the following:
+
+-  legal commitments
+-  financial transactions
+-  user-controllable data (e.g. user profile, social media posts)
+
+we are required to implement at least one of the following error prevention techniques:
+
+-  Reversible: Submissions are reversible.
+-  Checked: Data entered by the user is checked for input errors and the user is provided an opportunity to correct them.
+-  Confirmed: A mechanism is available for reviewing, confirming, and correcting information before finalizing the submission.
+
+##### Error Detection
 
 **aria-invalid**
 indicate that the value entered into an input field does not conform to the format expected by the application. This may include formats such as email addresses or telephone numbers. aria-invalid can also be used to 
@@ -599,10 +427,7 @@ used to:
 - When `aria-errormessage` is pertinent, authors MUST ensure the content is not hidden
 - Authors MUST either ensure the content is hidden or remove the aria-errormessage attribute or its value.
 - User agents MUST NOT expose aria-errormessage for an object with an aria-invalid value of false.
-
-
-
-#### Success Detection
+##### Success Detection
 Use at least one of the following techniques:
 
 -  Confirmation text on the web page 
@@ -610,6 +435,10 @@ Use at least one of the following techniques:
 -  **Aria-live announcement**
 
 -  Confirmation message in the page `<title>` if the submission causes a page reload or a new page load.
+
+##### Disabled elements
+-  Some dynamic forms will make the submit button unavailable until the form is completed correctly. 
+This can be very confusing to users if insufficient error identification is provided
 #### Useing Available Cedar Components
 
 the following Cedar components provide generic validation styling
@@ -653,13 +482,12 @@ TODO- something about how we only provide the UI/container but not validation lo
 </cdr-doc-example-code-pair>
 
 #### Accessibility References
-- [WCAG Error Identification 3.3.1:](https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html)
-- [WCAG Labels or Instructions 3.3.2](https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions)
-- [WCAG Error Suggestion 3.3.3](https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion)
-- [WCAG Error Prevention 3.3.4: ](https://www.w3.org/WAI/WCAG21/Understanding/error-prevention-legal-financial-data)
+- [WCAG Error Identification 3.3.1 (lvl A)](https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html)
+- [WCAG Labels or Instructions 3.3.2 (lvl A)](https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions)
+- [WCAG Error Suggestion 3.3.3 (lvl AA)](https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion)
+- [WCAG Error Prevention 3.3.4 (lvl AA) ](https://www.w3.org/WAI/WCAG21/Understanding/error-prevention-legal-financial-data)
 - [Form Notifications](https://www.w3.org/WAI/tutorials/forms/notifications/  )
 - [Using Aria-Invalid to Indicate An Error Field](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA21.html)
 - [Using the aria-describedby property to provide a descriptive label for user interface controls](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA1.html)
-
 
 </cdr-doc-table-of-contents-shell>
