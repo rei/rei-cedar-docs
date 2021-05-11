@@ -89,12 +89,13 @@ describes semantically meaningful changes as opposed to merely presentational on
 st=>start: Identify the correct message pattern
 e=>end: End
 
-interactive=>condition: Is this 
-within 
-a form?
+interactive=>condition: User interaction
+required?
 inline=>condition: replacing 
 content?
-associated=>condition: User error?
+associated=>condition: Instructions on 
+resolving 
+an error?
 succinct=>condition: Inline?
 associatedYes=>operation: Validation |:>#validation-notifications
 associatedNo=>operation: Conditional Notification,
@@ -109,12 +110,7 @@ succinct(yes)->inline(yes)->succinctYes
 inline(no)->succinctNo
 @flowend
 
-### Status
-
-- User Priority: low / expected 
-- Passive Messages
-- User Interaction is Not required
-- Advisory Information
+### Status Notifications
 
 Status Notifications update existing inline page content.
 They are informative only and provide our users with advisory information that enhances the site experience.
@@ -126,6 +122,31 @@ For instance a quantity update for items added to a cart would be of little use 
 In this case add the additional "items in your cart" or "x items added to your cart" as screen reader only text. 
 Alternatively you may pair the `aria-live` section with `aria-atomic`.
 aria-atomic will ensure the content within the aria-live element is read on change.
+
+#### At A Glance
+<cdr-table class="advanced-table" full-width=false>
+  <tr>
+    <th class="advanced-table__header">
+      Priority
+    </th>
+    <td>low</td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">
+      Expectancy
+    </th>
+    <td>Expected / Assumed</td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">Interaction</th>
+    <td>Non-blocking, not required</td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">Information</th>
+    <td>Passive state changes </td>
+  </tr>
+</cdr-table>
+
 #### Use When
 It is important to grasp that many visual transitions are actually status notifications and should be providing contextual information to our users. 
 This can be provided in the form of screen reader only text, though consider if the action without context will create any cognitive dissonance for our users.
@@ -135,7 +156,7 @@ This can be provided in the form of screen reader only text, though consider if 
 - Incrementing carts
 - Changes to inline content based on user selection
 
-##### Examples
+**Examples**
 - As the "Find a store near you" modal is loading results it displays a loading icon, additionally, a screen reader should announce "Finding stores in your area".
 - After a user adds an item to their cart the button grays out or changes to a loading icon, additionally, a screen reader should announce "adding your items to the cart"
 - After a user presses an Add to Cart button, a section of content near the Shopping Cart icon increments the number. A screen reader should announce "x items in your cart"
@@ -148,14 +169,14 @@ This can be provided in the form of screen reader only text, though consider if 
 - The notification does not relate to an actionable element in a busy state
 - The content added to the page is critical and needs immediate attention (see [alert](../alerts))
 
-#### Notification Composition
+#### Constructing A Status Notification
 - Authors SHOULD ensure an element with role status does not receive focus as a result of change in status.
 - Identify content that may be updated as a WAI-ARIA live region. Use the aria-live attribute on the container of the content that may be updated or, in special cases, use one of the WAI-ARIA special live region roles.
 - Status is a form of live region. If another part of the page controls what appears in the status, 
 authors SHOULD make the relationship explicit with the aria-controls attribute.
 - Elements with the role status have an implicit aria-live value of polite and an implicit aria-atomic value of true.
 
-#### Using Available Cedar Components
+##### Using Available Cedar Components
 
 Content control:
 - Cdr-button
@@ -164,7 +185,7 @@ Content control:
 Content container:
 - *Cdr-loading - potential component*
 
-### Conditional
+### Conditional Notifications
 
 Similar to Status Notifications, these Conditional Notifications apply the `role="status"` to their HTML markup.
 They will not interrupt a user from a task they are engaged in, and are provided on user action rather than as part of the page. 
@@ -173,24 +194,62 @@ They provide information that will help users make a decisions or provide warnin
 These notifications may open or be added to locations unrelated to the action which caused the notification to trigger.
 Additionally, they may open based on conditions a user has created or criterium they have met.
 
-- User Priority: medium / inform
-- Unexpected Response 
-- User Interaction is Not required
-- Concise Ancillary Information
+#### At A Glance
+<cdr-table class="advanced-table" full-width=false>
+  <tr>
+    <th class="advanced-table__header">
+      Priority
+    </th>
+    <td>medium / inform</td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">
+      Expectancy
+    </th>
+    <td>Unexpected</td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">Interaction</th>
+    <td>Non-blocking, Not Required</td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">Information</th>
+    <td>Advisory ancillary information </td>
+  </tr>
+</cdr-table>
 
-<cdr-doc-example-code-pair repository-href="/src/components/alert"
-:sandbox-data="$page.frontmatter.sandboxData" >
+#### Use When
+- Exposing additional product information that may vary based on user selection
+- Indicating the completion of a task or process initiated by the user
+- notifications containing additional Rich UI
 
-```html
+**Examples**
+- New options are available based on selections you have made
+- Shipping restrictions display once you have selected a location
+- Quantity availability
+- The user has items that are no longer available in their cart
+- The user has successfully signed up for an email notifications
+#### Don't Use When
+- The User makes a selection that does not change or add content to the page
+- The notification is an update to existing inline copy (see [status notifications](#status-notifications)
+- The notification relates to an actionable element in a busy state (see [status notifications](#status-notifications)
+- The content added to the page is critical and needs immediate attention (see [alert](../alerts))
 
-<cdr-alert type="warning" role="status" aria-relevant="all" aria-atomic=true>
-  <icon-warning-fill/> You did something that has caused this section to appear
-</cdr-alert>
-
-```
-</cdr-doc-example-code-pair>
-
-#### Conditional Notifications as an overlay
+#### Constructing A Conditional Notification
+- **Must**
+  -  Ensure notification will not be removed if keyboard focus or mouse hover is within or over the notification.
+  -  Return user focus to a logical location.
+  -  Not block the user from the page a notification is triggered from
+  -  Not contain unique actionable items if the notification is an overlay
+- **Should**
+- Be used for short messages to confirm an action
+- Provide necessary support to the primary activities or operations of a page base on users settings or selections
+-**Should not**
+- Be used for error messages
+- Open as a blocking overlay window
+- **May**
+  - display notifications in rich, unique UI to create distinction around itself and the page content
+##### Conditional Notifications as an overlay
 The concise messages contained within Conditional Notifications are not required for a user to interact with and may open unexpectedly, 
 these Notifications should not be blocking. Opening in an overlay may disrupt and confuse or not be seen at all by users at some breakpoints.
 
@@ -198,14 +257,14 @@ If opening a Conditional Notification consider the following:
 - A blocking window can introduce obstruction issues for people who have zoomed in browsers Or for users at smaller breakpoints
 - A non-blocking window may be completely missed by those who are using screen magnification software, but who are not using a screen reader
 
-#### Automatic dismissal
+##### Automatic dismissal
 In some scenarios Conditional notifications may be displayed for a set amount of time rather than become an evergreen feature of a page. In these cases there should be no negative impact on their current activities or the status that the message conveyed. 
 ignoring a timed notification would still mean that the action is completed successfully.
 
 For example an item would still be added to a cart regardless of a users engagement with the notification informing them of the successfully added item.
 
 - [WCAG 2.1 Understanding adjustable timing](https://www.w3.org/WAI/WCAG21/Understanding/timing-adjustable.html)
-#### Interactive Controls
+##### Interactive Controls
 
 Interactive controls within notifications produce several hurdles for users of assistive technology. 
 Specifically, the `Aria-live` region will not preserve the semantics of elements being read aloud.
@@ -225,94 +284,88 @@ If the notification must include an actionable element you are responsible for t
   - Contained action is also readily available on the page
   - If the action is not available on page, the action should be added to a notification history page (see ARIA’s log role)
 
-
-#### Construction
-- **Must**
-  -  Ensure notification will not be removed if keyboard focus or mouse hover is within or over the notification.
-  -  Return user focus to a logical location.
-  -  Not block the user from the page a notification is triggered from
-  -  Not contain unique actionable items if the notification is an overlay
-- **Should**
-- Be used for short messages to confirm an action
-- Provide necessary support to the primary activities or operations of a page base on users settings or selections
--**Should not**
-- Be used for error messages
-- Open as a blocking overlay window
-- **May**
-  - display notifications in rich, unique UI to create distinction around itself and the page content
-
-#### Use When
-- Exposing additional product information that may vary based on user selection
-- Indicating the completion of a task or process initiated by the user
-- notifications containing additional Rich UI
-
-**Examples**
-- New options are available based on selections you have made
-- Shipping restrictions display once you have selected a location
-- Quantity availability
-- The user has items that are no longer available in their cart
-- The user has successfully signed up for an email notifications
-#### Don't Use When
-- The User makes a selection that does not change or add content to the page
-- The notification is an update to existing inline copy (see [status notifications](#status-notifications)
-- The notification relates to an actionable element in a busy state (see [status notifications](#status-notifications)
-- The content added to the page is critical and needs immediate attention (see [alert](../alerts))
-
-#### Conditional Notifications Format
-
 #### Using Available Cedar Components
 
 Content control:
-- Cdr-button
-- Cdr-link
+- actionable elements
+  - cdr-button
+  - cdr-link
+- form elements
+  - cdr-radio
+  - cdr-checkbox
+  - cdr-select
 
 Content container:
-- Cdr-alert
-  - Warning
-  - Info
-  - Success
+- Cdr-alert (snackbar?)
+
+<cdr-doc-example-code-pair repository-href="/src/components/alert"
+:sandbox-data="$page.frontmatter.sandboxData" >
+
+```html
+
+<cdr-alert type="warning" role="status" aria-relevant="all" aria-atomic=true>
+  <icon-warning-fill/> You did something that has caused this section to appear
+</cdr-alert>
+
+```
+</cdr-doc-example-code-pair>
+
 - *dismissible-notifications - potential component*
+- *Cdr-toast*
+
 
 ### Validation
 Form validation responses provide unexpected instruction on blocking problems that must be fixed before moving on. 
-Additionally, these messages may respond to input informing the user of further updates needed or to when the error has been resolved.
-It is critical that these notifications accurately inform and help to clarify the issues being raised to the user.
+Additionally, these messages may respond to input informing the user of further updates needed and or to inform the user that an error has been resolved.
+It is critical that these notifications accurately inform and help to clarify the issues being presented to users.
+#### At A Glance
+<cdr-table class="advanced-table" full-width=false>
+  <tr>
+    <th class="advanced-table__header">
+      Priority
+    </th>
+    <td>High</td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">
+      Expectancy
+    </th>
+    <td>Unexpected</td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">Interaction</th>
+    <td>Non-blocking, Required</td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">Information</th>
+    <td>Meaningful instruction</td>
+  </tr>
+</cdr-table>
 
-- User Priority: High / blocking - requires resolution
-- Unexpected Response 
-- User Interaction is required
-- Instructions for an element MUST be meaningful
+#### Use When
+- The notification is directly associated with a form or element within the form
+- Resolving the instruction within the notification is required
+- The notification content provides instructions to resolve an error, warning, or confirms success of a resolved error
+#### Don't Use When
+- The error or warning is time sensitive, instead replace `role="status"` with `role="alert` as outlined in [alert](../alerts)
 
-When an error message is provided it must be identified in certain ways to be accessible. These include:
+#### Anatomy of a Validation Notification
+These notifications are associated with special "required" 
+elements on the page and where possible should be added to the DOM under the element that needs the users attention
 
-identifying each field in error
-providing suggestions (when known) to correct the errors,
-properly exposing this information to assistive technology.
+<cdr-img :src="$withBase('/notifications/validationAnatomy.png')" alt="Diagram showing the required layout of the elements listed below" />
 
-- Providing client-side validation and adding error text via the DOM
-- Providing text descriptions to identify required fields that were not completed
-- Identifying a required field with the aria-required property
+#### Constructing Validation Notifications
 
-by default, cedar form elements error message pattern  default to adding `role="status`, automatically setting your validation to a notification
-#### Do
+Validation Notifications used to present instructions on user errors have specific accessibility requirements. These include:
+
+- **Must**
+  - Identify each field in error
+  - Providing suggestions (when known) to correct the errors
   - Succinctly describe how a user can resolve the problem.
   - Preserve as much user-entered input as possible
   - Help users understand how to fix problems
   - provide specific as possible
-  
-#### Don't
-  - rely solely on visual cues to indicate an error
-  - alter the user provided input to make it validate without providing the user with a validation message conveying this change
-
-#### Use When
-- The notification is directly associated with a form or element within the form
-- Providing an error, warning, or success message caused by user input
-#### Don't Use When
-
-- The error or warning is time sensitive, instead use [alert](../alerts)
-#### Construction
-
-- **Must**
   - Ensure the message container can receive focus
   - Include the `aria-live` or `role=”status”` markup to announce the notification without interrupting the page flow of the user
 
@@ -320,7 +373,9 @@ by default, cedar form elements error message pattern  default to adding `role="
   - Correctly filled out user provided data in a form that contains errors **SHOULD** remain populated post-submit.
   - Confirm successful submission of data.
   - Provide an explanation to the user when the submit button is not available
-
+- **Should Not**
+  - rely solely on visual cues to indicate an error
+  - alter the user provided input to make it validate without providing the user with a validation message conveying this change
 ##### Role status or aria-live
 
 -  **Should Not**
@@ -357,18 +412,7 @@ describes the nature of the problem, and provides ways to locate the field(s) wi
 The "in text" portion of the Success Criterion underscores that it is not sufficient simply to indicate 
 that a field has an error by putting an asterisk on its label or turning the label red. 
 A text description of the problem should be provided.
-##### Required Fields
-The Asterisks may not be read by all screen readers (in all reading modes) and may be difficult for users with low vision because they are rendered in a smaller size than default text.
-It is important for authors to include the text indicating that asterisk is used and to consider increasing the size of the asterisk that is presented.
 
-- **Must**
-  - Set `Required` or `aria-required` to true for inputs that must be completed by the user
-- **Should**
-  - Require only fields that are absolutely needed
-  - Required fields **SHOULD** have a visual indicator that the field is required.
-  - Required fields **SHOULD** be programmatically designated as such. Note: At a minimum, WCAG requires an informative error message about the field after the user submits the form.
-  - Ensure that information conveyed by color differences is also available in text.
-  - Provide screen reader text conveying that the field is required
 ##### Inline Client Validation Notifications
 client-side validation results in a better user experience and makes resolving validation errors more understandable.
 
@@ -436,11 +480,19 @@ Use at least one of the following techniques:
 
 -  Confirmation message in the page `<title>` if the submission causes a page reload or a new page load.
 
-##### Disabled elements
--  Some dynamic forms will make the submit button unavailable until the form is completed correctly. 
-This can be very confusing to users if insufficient error identification is provided
-#### Useing Available Cedar Components
 
+
+#### Server-side Validation
+In the server-side validation, information is being sent to the server and validated using one of server-side 
+languages. If the validation fails, the response is then sent back to the client, page that contains 
+the web form is refreshed and a feedback is shown. 
+
+#### Client-side Validation
+By using script languages user’s input can be validated as they type. This means a more responsive, visually rich validation.
+
+With client-side validation, form never gets submitted if validation fails. 
+#### Using Available Cedar Components
+by default, cedar form elements error message pattern  default to adding `role="status`, automatically setting your validation to a notification
 the following Cedar components provide generic validation styling
 - cdr-input
 - cdr-form-group
@@ -489,5 +541,26 @@ TODO- something about how we only provide the UI/container but not validation lo
 - [Form Notifications](https://www.w3.org/WAI/tutorials/forms/notifications/  )
 - [Using Aria-Invalid to Indicate An Error Field](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA21.html)
 - [Using the aria-describedby property to provide a descriptive label for user interface controls](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA1.html)
+
+
+
+## Move to Form doc as these are not specific to the notification validation topic but to the broader Form validation
+##### Required Fields
+The Asterisks may not be read by all screen readers (in all reading modes) and may be difficult for users with low vision because they are rendered in a smaller size than default text.
+It is important for authors to include the text indicating that asterisk is used and to consider increasing the size of the asterisk that is presented.
+
+- **Must**
+  - Set `Required` or `aria-required` to true for inputs that must be completed by the user
+- **Should**
+  - Require only fields that are absolutely needed
+  - Required fields **SHOULD** have a visual indicator that the field is required.
+  - Required fields **SHOULD** be programmatically designated as such. Note: At a minimum, WCAG requires an informative error message about the field after the user submits the form.
+  - Ensure that information conveyed by color differences is also available in text.
+  - Provide screen reader text conveying that the field is required
+
+##### Disabled elements
+
+-  Some dynamic forms will make the submit button unavailable until the form is completed correctly. 
+This can be very confusing to users if insufficient error identification is provided
 
 </cdr-doc-table-of-contents-shell>
