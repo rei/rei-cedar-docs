@@ -355,28 +355,110 @@ elements on the page and where possible should be added to the DOM under the ele
 
 <cdr-img :src="$withBase('/notifications/validationAnatomy.png')" alt="Diagram showing the required layout of the elements listed below" />
 
-#### Constructing Validation Notifications
+1. **[Validating a required form field](#validating-a-required-form-field)**
+2. **[Required Fields Display](#required-fields-display)**
+3. **[Required Form Fields Static properties](#required-form-fields-static-properties)**
+4. **[On validation](#on-validation)**
+5. **[Notification Instruction container](#notification-instruction)**
+6. **visual aid and Assistive technology text**
+7. **[Instruction](#instruction)**
+#### Validating a required form field
 
 Validation Notifications used to present instructions on user errors have specific accessibility requirements. These include:
 
 - **Must**
   - Identify each field in error
   - Providing suggestions (when known) to correct the errors
-  - Succinctly describe how a user can resolve the problem.
   - Preserve as much user-entered input as possible
-  - Help users understand how to fix problems
-  - provide specific as possible
-  - Ensure the message container can receive focus
-  - Include the `aria-live` or `role=”status”` markup to announce the notification without interrupting the page flow of the user
-
 -  **Should**
   - Correctly filled out user provided data in a form that contains errors **SHOULD** remain populated post-submit.
   - Confirm successful submission of data.
-  - Provide an explanation to the user when the submit button is not available
+  - Provide an explanation to the  when user when the submit button is not available
 - **Should Not**
   - rely solely on visual cues to indicate an error
   - alter the user provided input to make it validate without providing the user with a validation message conveying this change
-##### Role status or aria-live
+
+#### Required Fields Display
+The Asterisks may not be read by all screen readers (in all reading modes) and may be difficult for users with low vision because they are rendered in a smaller size than default text.
+It is important for authors to include the text indicating that asterisk is used and to consider increasing the size of the asterisk that is presented.
+
+- **Should**
+  - Require only fields that are absolutely needed
+  - Required fields **SHOULD** have a visual indicator that the field is required.
+  - Ensure that information conveyed by color differences is also available in text.
+
+#### Required Form Fields Static properties
+
+- **Must**
+  - Set `Required` or `aria-required` to true for inputs that must be completed by the user
+- **Should**
+  - Require only fields that are absolutely needed
+  - Required fields **SHOULD** be programmatically designated as such. Note: At a minimum, WCAG requires an informative error message about the field after the user submits the form.
+  - Ensure assistive technology is provided text conveying that the field is required
+
+##### aria-required or required 
+
+#### On validation
+- **Must**
+  - Identify each field in error
+  - Preserve as much user-entered input as possible
+  - set [aria-invalid]() to `true`
+  - map the associated id of the notification instruction to the [aria-errormessage](aria-errormessage) attribute for each field in error
+- **May**
+  - also use '[aria-describedby]()' in conjunction with [aria-errormessage](aria-errormessage)
+##### aria-errormessage
+The `aria-errormessage` attribute takes an ID reference in the same manner as `aria-describedby`, and is only exposed when aria-invalid is set to ‘true’ on the same element. The use of a live region attribute such as aria-live=”polite” on the error message container element is optional.
+
+Placed on input and mapped via id to error message.
+used to:
+  - Associate instructions with form fields
+  - Provide information on the outcome of an action
+  - To provide verbal information that may be conveyed via visual cues 
+  - associate tooltips to form fields
+
+- Error feedback SHOULD be programmatically-associated with the appropriate element.
+- When `aria-errormessage` is pertinent, authors MUST ensure the content is not hidden
+- Authors MUST either ensure the content is hidden or remove the aria-errormessage attribute or its value.
+- User agents MUST NOT expose aria-errormessage for an object with an aria-invalid value of false.
+#### Notification Instruction 
+WCAG 1.3.3, WCAG 3.3.2 provide the following guidelines for validation instructions.
+When users enter input that is validated, and errors are detected, the nature of the error needs 
+to be described to the user in manner they can access. One approach is to present an alert dialog 
+that describes fields with errors when the user attempts to submit the form. Another approach, 
+if validation is done by the server, is to return the form (with the user's data still in the fields) 
+and a text description at the top of the page that indicates the fact that there was a validation problem, 
+describes the nature of the problem, and provides ways to locate the field(s) with a problem easily. 
+The "in text" portion of the Success Criterion underscores that it is not sufficient simply to indicate 
+that a field has an error by putting an asterisk on its label or turning the label red. 
+A text description of the problem should be provided.
+
+- **Must**
+  - Providing suggestions (when known) to correct the errors
+  - Ensure the message container can receive focus
+  - Include the [`aria-live` or `role=”status”`](role-status-or-aria-live) markup to announce the notification without interrupting the page flow of the user
+- **Should**
+  - be visually and programmatically adjacent to the element.
+- **Should Not**
+  - rely solely on visual cues to indicate an error
+- **May**
+  - Be hidden until the user requests them if the notification instructions are not critical.
+##### Instruction
+
+- **Must**
+  - Be available as programmatically-discernible text
+  - Be meaningful
+  - Be visible
+  - Clearly and accurately describe the error and/or how to fix the error.
+  - Succinctly describe how a user can resolve the problem.
+  - Help users understand how to fix problems
+  - provide instruction that is as specific as possible
+- **Must Not**
+  - Rely solely on references to sensory characteristics (for example, "round button" or "button to the right")
+-  **Should**
+  - Provide an explanation to the  when user when the submit button is not available
+  - if the text does not specifically call out the state of the message, error, warning, success, or info - that text should be provided via screen reader accessible text
+
+##### Role status / aria-live
 
 -  **Should Not**
   - Be scripted to occur with every keystroke unless there is a delay built into the script to avoid announcements while the user is actively typing.
@@ -388,40 +470,16 @@ Validation Notifications used to present instructions on user errors have specif
   - Be scripted to show on the screen for sighted users, but attempts to announce the real-time messages to screen reader users
     can be problematic. It is usually acceptable to wait to announce
     real-time errors until after form submission, assuming that no data has been saved yet.
-##### Notification Instructions Required WCAG 1.3.3, WCAG 3.3.2
 
-- **Must**
-  - Be available as programmatically-discernible text
-  - Be meaningful
-  - Be visible Visible
-  - Clearly and accurately describe the error and/or how to fix the error.
-- **Should**
-  - be visually and programmatically adjacent to the element.
-  - if the text does not specifically call out the state of the message, error, warning, success, or info - that text should be provided via screen reader accessible text
-- **Must Not**
-  - Rely solely on references to sensory characteristics (for example, "round button" or "button to the right")
-- **May**
-  - Be hidden until the user requests them if the notification instructions are not critical.
-
-When users enter input that is validated, and errors are detected, the nature of the error needs 
-to be described to the user in manner they can access. One approach is to present an alert dialog 
-that describes fields with errors when the user attempts to submit the form. Another approach, 
-if validation is done by the server, is to return the form (with the user's data still in the fields) 
-and a text description at the top of the page that indicates the fact that there was a validation problem, 
-describes the nature of the problem, and provides ways to locate the field(s) with a problem easily. 
-The "in text" portion of the Success Criterion underscores that it is not sufficient simply to indicate 
-that a field has an error by putting an asterisk on its label or turning the label red. 
-A text description of the problem should be provided.
-
-##### Inline Client Validation Notifications
+#### Inline Client Validation Notifications
 client-side validation results in a better user experience and makes resolving validation errors more understandable.
 
-##### Error Suggestion
+#### Error Suggestion
 - **Must**
   - If an input error is automatically detected, the item that is in error is identified and the error is described to the user in text WCAG 3.3.3
 
 https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-suggestions.html
-##### Error Prevention
+#### Error Prevention
 If the form is submitting any of the following:
 
 -  legal commitments
@@ -434,7 +492,7 @@ we are required to implement at least one of the following error prevention tech
 -  Checked: Data entered by the user is checked for input errors and the user is provided an opportunity to correct them.
 -  Confirmed: A mechanism is available for reviewing, confirming, and correcting information before finalizing the submission.
 
-##### Error Detection
+#### Error Detection
 
 **aria-invalid**
 indicate that the value entered into an input field does not conform to the format expected by the application. This may include formats such as email addresses or telephone numbers. aria-invalid can also be used to 
@@ -457,21 +515,8 @@ The attribute should be programmatically set as a result of a validation process
 
   - with information about the error in the page `<title>` if the submission causes a page reload or a new page load.
 
-**aria-errormessage**
 
-
-Placed on input and mapped via id to error message.
-used to:
-  - Associate instructions with form fields
-  - Provide information on the outcome of an action
-  - To provide verbal information that may be conveyed via visual cues 
-  - associate tooltips to form fields
-
-- Error feedback SHOULD be programmatically-associated with the appropriate element.
-- When `aria-errormessage` is pertinent, authors MUST ensure the content is not hidden
-- Authors MUST either ensure the content is hidden or remove the aria-errormessage attribute or its value.
-- User agents MUST NOT expose aria-errormessage for an object with an aria-invalid value of false.
-##### Success Detection
+#### Success Detection
 Use at least one of the following techniques:
 
 -  Confirmation text on the web page 
@@ -545,18 +590,7 @@ TODO- something about how we only provide the UI/container but not validation lo
 
 
 ## Move to Form doc as these are not specific to the notification validation topic but to the broader Form validation
-##### Required Fields
-The Asterisks may not be read by all screen readers (in all reading modes) and may be difficult for users with low vision because they are rendered in a smaller size than default text.
-It is important for authors to include the text indicating that asterisk is used and to consider increasing the size of the asterisk that is presented.
 
-- **Must**
-  - Set `Required` or `aria-required` to true for inputs that must be completed by the user
-- **Should**
-  - Require only fields that are absolutely needed
-  - Required fields **SHOULD** have a visual indicator that the field is required.
-  - Required fields **SHOULD** be programmatically designated as such. Note: At a minimum, WCAG requires an informative error message about the field after the user submits the form.
-  - Ensure that information conveyed by color differences is also available in text.
-  - Provide screen reader text conveying that the field is required
 
 ##### Disabled elements
 
