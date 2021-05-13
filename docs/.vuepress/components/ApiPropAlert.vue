@@ -9,7 +9,7 @@
       />
       <cdr-icon
         class="api-prop-alert-icon"
-        use="#warning-tri"
+        use="#warning-fill"
         alt="Prop deprecated warning icon"
         v-if="alert.type === 'deprecated'"
       />
