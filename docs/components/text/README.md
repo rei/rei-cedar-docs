@@ -178,7 +178,10 @@
                 "name": "modifier",
                 "type": "string",
                 "default": "N/A",
-                "alert": "The modifier prop for CdrText is deprecated, @rei/cdr-tokens should be used to apply type styles instead",
+                "alert": {
+                  "type": "deprecated",
+                  "description": "The modifier prop for CdrText is deprecated, @rei/cdr-tokens should be used to apply type styles instead"
+                },
                 "description": "Modifies the style variant for this component. see below tables for list of options. ",
               },
             ],
