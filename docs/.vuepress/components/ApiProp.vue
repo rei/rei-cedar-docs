@@ -52,6 +52,9 @@
   export default {
     name: 'ApiProp',
     props: ['apiData'],
+    components: {
+      ApiPropAlert,
+    }
   };
 </script>
 
