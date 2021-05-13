@@ -20,7 +20,7 @@
 
 # Overview
 
-Notifications are unexpected, asynchronous events providing user feedback to changes on specific elements or page sections.
+Notifications are asynchronous events providing user feedback to changes on specific elements or page sections.
 Notifications should be designed to attract rather than capture a user’s attention, they add context to elements that exist on a page and should not employee design that blocks a pages content.
 As messages, notifications offer important responses to changes in content that will help users understand additional options available or actions needing to take place.
 These messages, though important, should not interrupt a user nor should focus be moved to them automatically.
@@ -46,7 +46,7 @@ At least one of the following should be true:
   - As contextual information that might need their attention
   - communicating a status change caused by the user.
 
-## Construction
+## Construction :TODO Merge into patterns and remove
 (Must = WCAG lvl A, Should = WCAG lvl AA, May = WCAG lvl AAA)
 
 The following provide the base requirement’s expected within a notification message.
@@ -75,7 +75,7 @@ The following provide the base requirement’s expected within a notification me
   - Include `aria-atomic` markup attribute to define what content will be presented to assistive technologies
   - Include `aria-relevant` to define what type of changes are being announced to assistive technologies
   
-## Accessibility References
+## Accessibility References :TODO Merge into patterns and remove
 - [Accessible Notifications](https://www.w3.org/WAI/RD/wiki/Accessible_Notifications)
 - [WCAG status messages 4.1.3](https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html)
 - Use [aria-live](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) to indicate that an element will be updated. It describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
@@ -220,8 +220,12 @@ Additionally, they may open based on conditions a user has created or criterium 
 
 #### Use When
 - Exposing additional product information that may vary based on user selection
-- Indicating the completion of a task or process initiated by the user
-- notifications containing additional Rich UI
+- As confirmation that a task or process initiated by the user was completed successfully 
+- Use when you need to provide a user the status of an action they’re trying to complete 
+- As a validation message that notifies someone that they just did something that needs to be corrected (See Error and Warning Types)
+- As confirmation that a task was completed successfully (See Success Type)
+- As contextual information that might need their attention (See Informational Type)
+
 
 **Examples**
 - New options are available based on selections you have made
@@ -230,12 +234,22 @@ Additionally, they may open based on conditions a user has created or criterium 
 - The user has items that are no longer available in their cart
 - The user has successfully signed up for an email notifications
 #### Don't Use When
+- presenting the user additional actions to take (see [modal](../../components/modal/))
 - The User makes a selection that does not change or add content to the page
-- The notification is an update to existing inline copy (see [status notifications](#status-notifications)
-- The notification relates to an actionable element in a busy state (see [status notifications](#status-notifications)
+- The notification is an update to existing inline copy (see [status notifications](#status-notifications))
+- The notification relates to an actionable element in a busy state (see [status notifications](#status-notifications))
 - The content added to the page is critical and needs immediate attention (see [alert](../alerts))
 
-#### Constructing A Conditional Notification
+#### Anatomy of a Notification
+
+<cdr-img :src="$withBase('/notifications/ConditionalAnatomy.png')" alt="Diagram for conditional notifications as an overlay, annotating the required layout of the elements listed below" />
+
+1. Notification Type - Affects the color and icon associated with the notification. Choose from error, warning, success or informational.
+2. Optional Dismiss Action - Enables the user to remove the notification from view.
+3. Title - Briefly summarizes alert content.
+4. Visual and Assistive technology aid
+5. Message - Includes the core, most important alert content.
+
 - **Must**
   -  Ensure notification will not be removed if keyboard focus or mouse hover is within or over the notification.
   -  Return user focus to a logical location.
@@ -249,6 +263,15 @@ Additionally, they may open based on conditions a user has created or criterium 
 - Open as a blocking overlay window
 - **May**
   - display notifications in rich, unique UI to create distinction around itself and the page content
+
+
+
+<cdr-img :src="$withBase('/notifications/ConditionalOverlayAnatomy.png')" alt="Diagram for conditional notifications as an overlay, annotating the required layout of the elements listed below" />
+
+1. **[Conditional Notifications as an Overlay](#conditional-notifications-as-an-overlay)**
+2. **[Automatic Dismissal](#automatic-dismissal)**
+3. **[Interactive Controls](#interactive-controls)**
+
 ##### Conditional Notifications as an overlay
 The concise messages contained within Conditional Notifications are not required for a user to interact with and may open unexpectedly, 
 these Notifications should not be blocking. Opening in an overlay may disrupt and confuse or not be seen at all by users at some breakpoints.
@@ -257,7 +280,7 @@ If opening a Conditional Notification consider the following:
 - A blocking window can introduce obstruction issues for people who have zoomed in browsers Or for users at smaller breakpoints
 - A non-blocking window may be completely missed by those who are using screen magnification software, but who are not using a screen reader
 
-##### Automatic dismissal
+##### Automatic Dismissal
 In some scenarios Conditional notifications may be displayed for a set amount of time rather than become an evergreen feature of a page. In these cases there should be no negative impact on their current activities or the status that the message conveyed. 
 ignoring a timed notification would still mean that the action is completed successfully.
 
@@ -356,15 +379,28 @@ elements on the page and where possible should be added to the DOM under the ele
 <cdr-img :src="$withBase('/notifications/validationAnatomy.png')" alt="Diagram showing the required layout of the elements listed below" />
 
 1. **[Validating a required form field](#validating-a-required-form-field)**
-2. **[Required Fields Display](#required-fields-display)**
-3. **[Required Form Fields Static properties](#required-form-fields-static-properties)**
-4. **[On validation](#on-validation)**
+2. **[Display](#required-form-fields-display)**
+3. **[Static properties](#required-form-fields-static-properties)**
+4. **[Error Detection](#required-form-fieldson-validation)**
 5. **[Notification Instruction container](#notification-instruction)**
-6. **visual aid and Assistive technology text**
+6. **[visual aid and Assistive technology text](#visual-aid-and-assistive-technology-text)**
 7. **[Instruction](#instruction)**
 #### Validating a required form field
 
 Validation Notifications used to present instructions on user errors have specific accessibility requirements. These include:
+
+##### Client-side Validation
+Client-side validation results in a better user experience and makes resolving validation errors more understandable.
+By using script languages user’s input can be validated as they type. This means a more responsive, visually rich validation.
+With client-side validation, form never gets submitted if validation fails. 
+
+##### Server-side Validation
+In the server-side validation, information is being sent to the server and validated using one of server-side 
+languages. If the validation fails, the response is then sent back to the client, page that contains 
+the web form is refreshed and a feedback is shown. 
+
+
+
 
 - **Must**
   - Identify each field in error
@@ -378,7 +414,7 @@ Validation Notifications used to present instructions on user errors have specif
   - rely solely on visual cues to indicate an error
   - alter the user provided input to make it validate without providing the user with a validation message conveying this change
 
-#### Required Fields Display
+#### Required Form Fields Display
 The Asterisks may not be read by all screen readers (in all reading modes) and may be difficult for users with low vision because they are rendered in a smaller size than default text.
 It is important for authors to include the text indicating that asterisk is used and to consider increasing the size of the asterisk that is presented.
 
@@ -398,14 +434,29 @@ It is important for authors to include the text indicating that asterisk is used
 
 ##### aria-required or required 
 
-#### On validation
+#### Required Form Fields On validation
 - **Must**
   - Identify each field in error
   - Preserve as much user-entered input as possible
-  - set [aria-invalid]() to `true`
+  - set [aria-invalid](#aria-invalid) to `true`
   - map the associated id of the notification instruction to the [aria-errormessage](aria-errormessage) attribute for each field in error
 - **May**
   - also use '[aria-describedby]()' in conjunction with [aria-errormessage](aria-errormessage)
+
+##### aria-invalid
+indicate that the value entered into an input field does not conform to the format expected by the application. This may include formats such as email addresses or telephone numbers. aria-invalid can also be used to 
+indicate that a required field has not been filled in.
+The attribute should be programmatically set as a result of a validation process.
+
+-  Add aria-invalid="true" to the input
+-  Identify the input (referencing the label):
+  - In a simple JavaScript alert
+  - with information associated with the input via aria-describedby (widely supported) or aria-errormessage (not yet widely supported)
+  - with error text added to the input's label (other techniques are more semantically correct, but this is a reliable method)
+  - with text on the web page (it may be appropriate to move the keyboard focus to the error message)
+  - with an aria-live or role="alert" announcement
+  - with information about the error in the page `<title>` if the submission causes a page reload or a new page load.
+
 ##### aria-errormessage
 The `aria-errormessage` attribute takes an ID reference in the same manner as `aria-describedby`, and is only exposed when aria-invalid is set to ‘true’ on the same element. The use of a live region attribute such as aria-live=”polite” on the error message container element is optional.
 
@@ -420,6 +471,8 @@ used to:
 - When `aria-errormessage` is pertinent, authors MUST ensure the content is not hidden
 - Authors MUST either ensure the content is hidden or remove the aria-errormessage attribute or its value.
 - User agents MUST NOT expose aria-errormessage for an object with an aria-invalid value of false.
+
+
 #### Notification Instruction 
 WCAG 1.3.3, WCAG 3.3.2 provide the following guidelines for validation instructions.
 When users enter input that is validated, and errors are detected, the nature of the error needs 
@@ -442,8 +495,13 @@ A text description of the problem should be provided.
   - rely solely on visual cues to indicate an error
 - **May**
   - Be hidden until the user requests them if the notification instructions are not critical.
-##### Instruction
 
+#### visual aid and Assistive technology text
+
+-**Should**
+-  if the text does not specifically call out the state of the message, error, warning, success, or info - that text should be provided via screen reader accessible text
+
+##### Instruction
 - **Must**
   - Be available as programmatically-discernible text
   - Be meaningful
@@ -455,9 +513,7 @@ A text description of the problem should be provided.
 - **Must Not**
   - Rely solely on references to sensory characteristics (for example, "round button" or "button to the right")
 -  **Should**
-  - Provide an explanation to the  when user when the submit button is not available
-  - if the text does not specifically call out the state of the message, error, warning, success, or info - that text should be provided via screen reader accessible text
-
+  - Provide an explanation when the submit button is not available
 ##### Role status / aria-live
 
 -  **Should Not**
@@ -471,8 +527,7 @@ A text description of the problem should be provided.
     can be problematic. It is usually acceptable to wait to announce
     real-time errors until after form submission, assuming that no data has been saved yet.
 
-#### Inline Client Validation Notifications
-client-side validation results in a better user experience and makes resolving validation errors more understandable.
+
 
 #### Error Suggestion
 - **Must**
@@ -492,28 +547,6 @@ we are required to implement at least one of the following error prevention tech
 -  Checked: Data entered by the user is checked for input errors and the user is provided an opportunity to correct them.
 -  Confirmed: A mechanism is available for reviewing, confirming, and correcting information before finalizing the submission.
 
-#### Error Detection
-
-**aria-invalid**
-indicate that the value entered into an input field does not conform to the format expected by the application. This may include formats such as email addresses or telephone numbers. aria-invalid can also be used to 
-indicate that a required field has not been filled in.
-The attribute should be programmatically set as a result of a validation process.
-
--  Add aria-invalid="true" to the input
-
--  Identify the input (referencing the label):
-
-  -  In a simple JavaScript alert
-
-  -  with information associated with the input via aria-describedby (widely supported) or aria-errormessage (not yet widely supported)
-
-  - with error text added to the input's label (other techniques are more semantically correct, but this is a reliable method)
-
-  - with text on the web page (it may be appropriate to move the keyboard focus to the error message)
-
-  - with an aria-live or role="alert" announcement
-
-  - with information about the error in the page `<title>` if the submission causes a page reload or a new page load.
 
 
 #### Success Detection
@@ -524,18 +557,6 @@ Use at least one of the following techniques:
 -  **Aria-live announcement**
 
 -  Confirmation message in the page `<title>` if the submission causes a page reload or a new page load.
-
-
-
-#### Server-side Validation
-In the server-side validation, information is being sent to the server and validated using one of server-side 
-languages. If the validation fails, the response is then sent back to the client, page that contains 
-the web form is refreshed and a feedback is shown. 
-
-#### Client-side Validation
-By using script languages user’s input can be validated as they type. This means a more responsive, visually rich validation.
-
-With client-side validation, form never gets submitted if validation fails. 
 #### Using Available Cedar Components
 by default, cedar form elements error message pattern  default to adding `role="status`, automatically setting your validation to a notification
 the following Cedar components provide generic validation styling
@@ -547,36 +568,7 @@ As a notification is generally what you will use for error validation, the cedar
 
 TODO- something about how we only provide the UI/container but not validation logic
 
-#### Examples
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :model="{defaultModel: '', errorMessage: false}" :methods="{validate() {this.errorMessage = !this.defaultModel.length ? 'A telephone number is required.' : this.defaultModel.length === 14 ? false : 'Enter a 10-digit telephone number beginning with the area code.'}}">
 
-```html
-<cdr-input
-  v-model="defaultModel"
-  label="Phone number"
-  type="tel"
-  v-mask="'(###) ###-####'"
-  autocomplete="tel-national"
-  :error="errorMessage"
-  @blur="validate"
->
-  <template slot="helper-text-top">
-    To call if there's an issue with your order
-  </template>
-
-  <!-- <template slot="info">
-    <cdr-tooltip id="phone-number-example" position="top">
-      <cdr-link slot="trigger" tag="button">
-        Why?
-      </cdr-link>
-      <div>
-        To call if there's an issue with your order
-      </div>
-    </cdr-tooltip>
-  </template> -->
-</cdr-input>
-```    
-</cdr-doc-example-code-pair>
 
 #### Accessibility References
 - [WCAG Error Identification 3.3.1 (lvl A)](https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html)
