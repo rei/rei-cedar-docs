@@ -169,13 +169,23 @@ This can be provided in the form of screen reader only text, though consider if 
 - The notification does not relate to an actionable element in a busy state
 - The content added to the page is critical and needs immediate attention (see [alert](../alerts))
 
-#### Constructing A Status Notification
+#### Anatomy of a Status Notification
+
+<cdr-img :src="$withBase('/notifications/statusAnatomy.png')" alt="Diagram for conditional notifications as an overlay, annotating the required layout of the elements listed below" />
+
+
 - Authors SHOULD ensure an element with role status does not receive focus as a result of change in status.
 - Identify content that may be updated as a WAI-ARIA live region. Use the aria-live attribute on the container of the content that may be updated or, in special cases, use one of the WAI-ARIA special live region roles.
 - Status is a form of live region. If another part of the page controls what appears in the status, 
 authors SHOULD make the relationship explicit with the aria-controls attribute.
 - Elements with the role status have an implicit aria-live value of polite and an implicit aria-atomic value of true.
 
+##### loading status
+
+representing loading icons or submitting buttons 
+
+- **Should**
+  - aria-busy="true"
 ##### Using Available Cedar Components
 
 Content control:
@@ -240,7 +250,7 @@ Additionally, they may open based on conditions a user has created or criterium 
 - The notification relates to an actionable element in a busy state (see [status notifications](#status-notifications))
 - The content added to the page is critical and needs immediate attention (see [alert](../alerts))
 
-#### Anatomy of a Notification
+#### Anatomy of a Conditional Notification
 
 <cdr-img :src="$withBase('/notifications/ConditionalAnatomy.png')" alt="Diagram for conditional notifications as an overlay, annotating the required layout of the elements listed below" />
 
