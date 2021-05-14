@@ -3,7 +3,7 @@
   "title": "Messaging",
   "title_metadata": false,
   "layout_type": "LayoutArticle",
-  "summary": "How to choose the correct component for your content",
+  "summary": "Use messaging patterns to communicate additional information or show responses to user actions",
   "sandboxData": {
     "components": "CdrAlert"
   },
@@ -15,26 +15,33 @@
 }
 ---
 
-<cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
-Messages allow us to communicate with our users. 
-They may provide additional information needed to complete common tasks, direct users attention to additional information, or provide the user with help and tools.
-Rather than being part of a pages content they are offered as asides, or responses to user interaction. They often include actionable elements which, when engaged, with will expose additional content. 
+<cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'> 
 
-Unlike Navigation, Messages don't direct user flow, instead they expose additional in-page content to users and should not be used to navigate users to a new page or window.
+## Overview
 
-Users will encounter many types of actionable elements on our pages. Not knowing when a link or button will open a dialog, popup, tooltip, or a whole new page is confusing.
-Additionally if a user cannot easily distinguish important actions needing their attention from optional messages or navigation, we risk confusing and sometimes aggravating them.
- 
-This makes providing a consistent approach for how each action presents and behaves important. 
-Making it easy to distinguish the difference in a message that will open a dialog to provide an in-page setting or opportunity 
-vs one that will navigate you away from what you are doing will provide all users the best experience.
-
-To help make this happen we have broken down some of the decisions that lead to each type of message
-Reference the definitions and usage guidelines below when deciding what type of messaging pattern to use for different user experiences. 
+Consistency in messaging is important for communicating with users and providing additional information needed to complete common tasks.
 
 
+Aside from the static content on a page, additional content can be exposed as a result of user interactions. As users encounter many types of actionable elements across a website, providing consistent interaction patterns can improve the overall usability of the experience and help distinguish critical actions that need their attention. 
 
-## Deciding what to use:
+There are four primary messaging patterns that should be used consistently to make it easier for users to understand an interface and accomplish their tasks. You can determine which to use by starting with the intent of the communication: 
+- Inform
+- Notify
+- Alert 
+- Help
+
+Alerts and notifications communicate if something has changed, whether it’s based on user interaction (e.g. confirmation that a product has been added to your cart) or initiated at the system-level (e.g. alert that an item in your cart is now out of stock). 
+
+Help and informational messages can appear contextually (e.g. more information available in a popover) or as ancillary information (e.g. shipping restrictions apply). 
+
+Depending on the situation, additional content may appear in an overlay (modals, tooltips, popovers), while other messages will appear in-line (e.g. form field validation). 
+
+This additional content will open in-page and should not navigate users to a new page or window. 
+
+When deciding what type of messaging pattern to use, reference the flowchart and table on this page, as well as the usage guidelines in the subsequent pages to help determine which components are appropriate for each experience.
+
+
+## Deciding what to use
 
 Consider the intent of the messaging and specific user task to determine which pattern to use. 
 
@@ -83,20 +90,20 @@ context(no, bottom)->inform
   <tr>
   <th>Notify</th>
   <td>Notify of status update</td>
-  <td>provided after user interaction / pageload </td>
+  <td>Provided after user interaction / pageload </td>
   </tr>
   <tr>
     <th>Alert</th>
     <td>
       <cdr-list>
         <li>System alerts</li>
-        <li>time sencitive notifications</li>
+        <li>Time sensitive notifications</li>
       </cdr-list>
     </td>
     <td>
       <cdr-list>
-        <li>System alert OR time sencitive notification</li>
-        <li>provided after user interaction / pageload</li>
+        <li>System alert OR time sensitive notification</li>
+        <li>Provided after user interaction / pageload</li>
         </cdr-list>
     </td>
   </tr>
