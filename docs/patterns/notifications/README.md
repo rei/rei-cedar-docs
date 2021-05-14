@@ -114,14 +114,6 @@ inline(no)->succinctNo
 
 Status Notifications update existing inline page content.
 They are informative only and provide our users with advisory information that enhances the site experience.
-Adding the correct HTML `role="status"` to a status notification helps to inform a user of assisted technology, on change, that something has happened. 
-The Status role has an implicit aria-live value of polite though the `aria-live` property may also be used.
-
-These Notifications will not interrupt the current action of a user so be sure to consider what will be read out once the update is spoken. 
-For instance a quantity update for items added to a cart would be of little use if all that was communicated was "one".
-In this case add the additional "items in your cart" or "x items added to your cart" as screen reader only text. 
-Alternatively you may pair the `aria-live` section with `aria-atomic`.
-aria-atomic will ensure the content within the aria-live element is read on change.
 
 #### At A Glance
 <cdr-table class="advanced-table" full-width=false>
@@ -169,13 +161,39 @@ This can be provided in the form of screen reader only text, though consider if 
 - The notification does not relate to an actionable element in a busy state
 - The content added to the page is critical and needs immediate attention (see [alert](../alerts))
 
-#### Constructing A Status Notification
-- Authors SHOULD ensure an element with role status does not receive focus as a result of change in status.
-- Identify content that may be updated as a WAI-ARIA live region. Use the aria-live attribute on the container of the content that may be updated or, in special cases, use one of the WAI-ARIA special live region roles.
-- Status is a form of live region. If another part of the page controls what appears in the status, 
-authors SHOULD make the relationship explicit with the aria-controls attribute.
-- Elements with the role status have an implicit aria-live value of polite and an implicit aria-atomic value of true.
+#### Anatomy of a Status Notification
 
+<cdr-img :src="$withBase('/notifications/statusAnatomy.png')" alt="Diagram for conditional notifications as an overlay, annotating the required layout of the elements listed below" />
+
+##### Status Notification
+
+- **Must**
+  - Add the correct HTML `role="status"` to a status notification. 
+  - Identify content that may be updated as a WAI-ARIA live region. Use the aria-live attribute on the container of the content that may be updated or, in special cases, use one of the WAI-ARIA special live region roles.
+
+- **Should**
+  - Authors SHOULD ensure an element with role status does not receive focus as a result of change in status.
+  - Status is a form of live region. If another part of the page controls what appears in the status, 
+authors SHOULD make the relationship explicit with the aria-controls attribute.
+
+###### Status role
+Adding the correct HTML `role="status"` to a status notification. This helps to inform a user of assisted technology, on change, that something has happened. 
+The Status role has an implicit aria-live value of polite though the `aria-live` property may also be used.
+
+- Elements with the role status have an implicit aria-live value of polite and an implicit aria-atomic value of true.
+If you define a section of the page as aria-live and do not add `role="status"` on change,  you may pair the `aria-live` section with `aria-atomic`.
+aria-atomic will ensure the content within the aria-live element is read on change.
+
+#### Assistive Technology
+These Notifications will not interrupt the current action of a user so be sure to consider what will be read out once the update is spoken. 
+For instance a quantity update for items added to a cart would be of little use if all that was communicated was "one".
+In this case add the additional "items in your cart" or "x items added to your cart" as screen reader only text. 
+##### loading status
+
+representing loading icons or submitting buttons 
+
+- **Should**
+  - aria-busy="true"
 ##### Using Available Cedar Components
 
 Content control:
@@ -240,7 +258,7 @@ Additionally, they may open based on conditions a user has created or criterium 
 - The notification relates to an actionable element in a busy state (see [status notifications](#status-notifications))
 - The content added to the page is critical and needs immediate attention (see [alert](../alerts))
 
-#### Anatomy of a Notification
+#### Anatomy of a Conditional Notification
 
 <cdr-img :src="$withBase('/notifications/ConditionalAnatomy.png')" alt="Diagram for conditional notifications as an overlay, annotating the required layout of the elements listed below" />
 
