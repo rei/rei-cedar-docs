@@ -3,7 +3,7 @@
   "title": "Forms",
   "title_metadata": false,
   "layout_type": "LayoutArticle",
-  "summary": false,
+  "summary": "Use form patterns to allow users to enter information",
   "sandboxData": {
     "components": "CdrInput, CdrLink, CdrSelect"
   },
@@ -19,9 +19,24 @@
 
 <!-- TODO: type="number" IS NOT compatible with v-mask! can't restrict input type AND use v-mask out of the box... fork it? -->
 
-## Form Patterns
+## Overview
 
-TODO: overview
+Forms are the primary way that users interact with a website or application. 
+
+Forms allow users to:
+- Register for / log into an account
+- Make selections
+- Purchase a product
+- Enter information
+- Provide feedback
+
+Consistent application of form design patterns across an online experience improves the overall usability of user interactions, and helps create a familiar interface for users to more easily accomplish their tasks. 
+
+## Anatomy
+
+Forms are typically composed of text and input controls, such as checkboxes, input fields, labels, buttons, and dropdowns. 
+
+TODO: Add visual
 
 ## Guidelines
 
@@ -55,7 +70,7 @@ export default {
 
 ```
 
-## Examples
+## Examples of common input patterns
 
 ### Email
 
