@@ -17,11 +17,9 @@
 
 <cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
 
-<!-- TODO: type="number" IS NOT compatible with v-mask! can't restrict input type AND use v-mask out of the box... fork it? -->
-
 ## Overview
 
-Forms are the primary way that users interact with a website or application. 
+Forms are the primary way that users interact with a website or application. Consistent application of form design patterns across an online experience improves the overall usability of user interactions, and helps create a familiar interface for users to more easily accomplish their tasks.
 
 Forms allow users to:
 - Register for / log into an account
@@ -30,45 +28,14 @@ Forms allow users to:
 - Enter information
 - Provide feedback
 
-Consistent application of form design patterns across an online experience improves the overall usability of user interactions, and helps create a familiar interface for users to more easily accomplish their tasks. 
-
-## Anatomy
-
-Forms are typically composed of text and input controls, such as checkboxes, input fields, labels, buttons, and dropdowns. 
-
-TODO: Add visual
+Cedar provides components for the main HTML input elements: [CdrInput](../../components/input/), [CdrSelect](../../components/selects/), [CdrCheckbox](../../components/checkboxes/), [CdrRadio](../../components/radio/). Input groups that contain logically related form inputs or groups of CdrRadio or CdrCheckbox elements can be constructed using [CdrFormGroup](../../components/form-group/). These Cedar components provide built in labels, controls, and error state logic. Form controls can be constructed using the [CdrButton](../../components/buttons) or [CdrLink](../../components/links) components. Other components may be used to further enhance forms.
 
 ## Guidelines
 
-Ensure the entire field, including validation messaging, is in-view and unobstructed when a field is selected
+- Ensure the entire field, including validation messaging, is in-view and unobstructed when a field is selected
+- Each Cedar component may have specific accessibility or usage guidelines, it is recommended to check the documentation for any components you are using
+- The CdrInput component sets some default attributes to help ensure a consistent experience, see the [CdrInput documentation](../../components/input#default-input-attrs) for more information
 
-## Input Masking
-
-TODO: make CdrInputMasked instead.
-
-User input should be automatically formatted to make forms easier to comprehend and use, for example by adding parentheses and a dash to a phone number or inserting a space between every four digits of a credit card number.
-
-Input masking has not been integrated directly into Cedar, however the CdrInput component implements the same API as a plain HTML text input element and can be used in conjunction with most input masking libraries.
-
-We recommend using [v-mask](https://github.com/probil/v-mask) as a local directive in any components where you need input masking. Benefits: small library, simple API, if we add input masking to cedar directly will use similar API.
-
-```
-<script>
-import { CdrInput } from "@rei/cedar";
-import { VueMaskDirective } from "v-mask";
-
-export default {
-  name: "VueDirectiveExample",
-  components: {
-    CdrInput,
-  },
-  directives: {
-    mask: VueMaskDirective,
-  },
-};
-</script>
-
-```
 
 ## Examples of common input patterns
 
@@ -105,10 +72,10 @@ export default {
 - If a phone number can be provided optionally, consider placing the input behind a link
 - Provide a formatting hint to help the user input the correct format
 - Add special characters automatically—don’t make the user type them (but if they do, accommodate them)
-
-
+<hr/>
 - Set `type` attribute to "tel"
 - Set `autocomplete` attribute to "tel-national" if no country code is required
+- See the [CdrInput documentation](../../components/input#input-masking) for information on setting up an input mask
 
 
 <cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :model="{defaultModel: '', errorMessage: false}" :methods="{validate() {this.errorMessage = !this.defaultModel.length ? 'A telephone number is required.' : this.defaultModel.length === 14 ? false : 'Enter a 10-digit telephone number beginning with the area code.'}}">
@@ -147,7 +114,7 @@ export default {
 - Consider giving the user the option of choosing a “Prefered name” to be used in instances of personalization (eg. marketing emails)
 - If first and last names are required for payment validation, consider adding helper text clarifying the need to match the card and splitting the data on the back-end
 - Avoid optionally asking for a middle name or initial
-
+<hr/>
 - Disable auto-correct
 - Set `autocomplete` attribute to "name"
 - Validate for at least two words if the full name is required for payment processing
@@ -160,8 +127,6 @@ export default {
     v-model="defaultModel"
     label="Full name"
     autocomplete="name"
-    autocorrect="off"
-    spellcheck="off"
     @blur="validate"
     :error="errorMessage"
     :required="true"
@@ -174,8 +139,6 @@ export default {
     v-model="preferredModel"
     label="Preferred name"
     autocomplete="name"
-    autocorrect="off"
-    spellcheck="off"
     :optional="true"
   >
     <template slot="helper-text-top">
@@ -189,11 +152,9 @@ export default {
 
 ### Address
 
-<!-- TODO: autocomplete? -->
-
 - Place the secondary address field behind a link
 - Be descriptive with what types of information a secondary address field might contain
-
+<hr/>
 - Disable auto-correct
 - Use an address finder, if available
 - Assign appropriate autocomplete value—note: “address-line1” vs. “address-level2”
@@ -207,8 +168,6 @@ export default {
     label="Street address"
     required="true"
     autocomplete="address-line1"
-    autocorrect="off"
-    spellcheck="off"
     :required="true"
   >
   </cdr-input>
@@ -218,8 +177,6 @@ export default {
     v-model="lineTwo"
     label="Adddress line 2"
     autocomplete="address-level2"
-    autocorrect="off"
-    spellcheck="off"
     :optional="true"
   >
   </cdr-input>
@@ -232,7 +189,7 @@ export default {
 
 - To reduce typing effort and reduce errors, ask for the postal code before the City and State fields so they can be automatically populated
 - Size the field to the data expected
-
+<hr/>
 - Set `type` attribute to "number"
 - Dynamically change keyboard type depending on country selected—some countries may have letters in their postal code (eg. United Kingdom)
 - Set `autocomplete` attribute to "postal-code" if no country code is required
@@ -248,9 +205,6 @@ export default {
   label="Postal code"
   autocomplete="postal-code"
   type="number"
-  pattern="[0-9]*"
-  inputmode="numeric"
-  novalidate
 >
 </cdr-input>
 ```
@@ -262,13 +216,14 @@ export default {
 - Once identified, dynamically provide a thumbnail icon of the card type
 - Use the field label “Card number” as charge cards and debit cards are accepted card types alongside credit cards
 - The numerical spacing of the data should match the physical card
-
+<hr/>
 - Invoke special “numeric” keyboard
 - Actively validate the card number field
 - Auto-detect the card type based on the card number
 - Once know, Match the numerical sequence of the field to the physical card
 - Ensure the user doesn’t need to re-enter their number if they go back a step in the checkout flow
 - Assign appropriate autocomplete value: “cc-number”
+- See the [CdrInput documentation](../../components/input#input-masking) for information on setting up an input mask
 
 <cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :model="{defaultModel: ''}" :methods="{validate() {}}">
 
@@ -289,13 +244,13 @@ export default {
 ### Security Code
 
 - Provide a format hint based on card type
-- Size the field to the data that’s expected
-
+- Size the field to the data that’s expected using an `input` event listener
+<hr/>
 - Invoke special “numeric” keyboard
 - Assign appropriate autocomplete value: “cc-csc”
 - Dynamically update format hints based on card type
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :model="{defaultModel: ''}" :methods="{}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :model="{defaultModel: ''}" :methods="{limitLength(e) {this.defaultModel = this.defaultModel.substring(0,3)}}">
 
 ```html
 <cdr-input
@@ -303,9 +258,7 @@ export default {
   label="Security code"
   autocomplete="cc-csc"
   type="number"
-  pattern="[0-9]*"
-  inputmode="numeric"
-  novalidate
+  @input="limitLength"
 >
   <template slot="helper-text-top">
     Three digit number on the back.
@@ -319,9 +272,10 @@ export default {
 
 - Use the MM/YY format
 - Size the field to the data that’s expected
-
+<hr/>
 - Invoke special “numeric” keyboard
 - Assign appropriate autocomplete value: “cc-exp”
+- See the [CdrInput documentation](../../components/input#input-masking) for information on setting up an input mask
 
 <cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :model="{defaultModel: ''}" :methods="{}">
 
@@ -340,6 +294,7 @@ export default {
 
 ### Country
 
+<!-- TODO: guidance here ??? -->
 
 <cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :model="{defaultModel: ''}" :methods="{}">
 
