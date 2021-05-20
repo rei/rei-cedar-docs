@@ -94,10 +94,10 @@ module.exports = {
       {
         text: "Patterns",
         items: [
-          { text: "Messaging", link: "/patterns/messaging/", },
           { text: "Alerts", link: "/patterns/alerts/", },
-          { text: "Notifications", link: "/patterns/notifications/" },
           { text: "Forms", link: "/patterns/forms/" },
+          { text: "Messaging", link: "/patterns/messaging/", },
+          { text: "Notifications", link: "/patterns/notifications/" },
         ]
       },
       {

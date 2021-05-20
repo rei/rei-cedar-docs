@@ -227,7 +227,7 @@ JavaScript example:
 ```js
 import { CdrBreakpointLg } from '@rei/cdr-tokens'; /* import the design tokens file */
 
-let screenWidth = window.outerWidth || 0;
+let screenWidth = window.innerWidth || 0;
 
 // Detect Large Breakpoint
 if (screenWidth >= CdrBreakpointLg) {

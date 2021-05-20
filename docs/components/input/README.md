@@ -654,6 +654,75 @@ This component has compliance with WCAG guidelines by:
 
 ## Behavior
 
+### Default Input Attrs
+
+CdrInput sets some default attributes to make it easier to construct consistent and accessible forms. These default attributes can be overridden by passing the same attribute to the CdrInput component.
+
+For all CdrInput elements:
+- `spellcheck` is set to `false`
+- `autocorrect` is set to `'off'`
+- `autocapitalize` is set to `'off'`
+
+For CdrInput elements with `type="number"` set, the following attributes are enabled to help ensure that numeric inputs behave consistently across browsers and devices:
+- `pattern` is set to `[0-9]*`, which restricts
+- `novalidate` is set to `true`
+- `inputmode` is set to `numeric`
+
+Note that the `maxlength` attribute does not work in conjunction with numeric inputs as they are treated as numbers not strings. Instead, the length can be restricted using either an event listener or the min/max attributes:
+
+```
+<!-- restrict numeric input to 3 characters max with a listener -->
+<cdr-input type="number" v-model="default" @input="() => {this.default = this.default.substring(0, 3)}"/>
+
+<!-- restrict numeric input to 3 digit numbers -->
+<cdr-input type="number" v-model="default" min="0" max="999"/>
+
+```
+
+
+### Input Masking
+
+User input should be automatically formatted to make forms easier to comprehend and use, for example by adding parentheses and a dash to a phone number or inserting a space between every four digits of a credit card number.
+
+Input masking has not been integrated directly into Cedar, however the CdrInput component implements the same API as a plain HTML text input element and can be used in conjunction with most input masking libraries.
+
+We recommend using [v-mask](https://github.com/probil/v-mask) as a local directive in any components where you need input masking, as it provides a number of benefits:
+
+- one of the smallest vue plugins for input masking
+- can be loaded as a local directive directly in your component rather than as a global plugin that must be registered at the application level
+- the API of `v-mask` is extremely simple and easy to understand
+- if and when input masking support is built into CdrInput the `v-mask` API is what we will implement, making it easier for you to migrate in the future
+
+```
+<script>
+import { CdrInput } from "@rei/cedar";
+import { VueMaskDirective } from "v-mask";
+
+export default {
+  name: "VueDirectiveExample",
+  components: {
+    CdrInput,
+  },
+  directives: {
+    mask: VueMaskDirective,
+  },
+  data() {
+    return {
+      defaultModel: '',
+    }
+  }
+};
+</script>
+<template>
+<cdr-input
+  v-model="defaultModel"
+  type="tel"
+  v-mask="'(###) ###-####'"
+>
+</template>
+
+```
+
 ### Inputs with Icons
 
 - Icons inserted into input fields are decorative, not inteded for any action
