@@ -181,6 +181,12 @@
                 "description": "Sets the input to an error state, displays the `error` slot if one is present."
               },
               {
+                "name": "errorRole",
+                "type": "string",
+                "default": "status",
+                "description": "Sets the `role` attribute for the embedded error state messaging."
+              },
+              {
                 "name": "background",
                 "type": "string",
                 "default": "primary",

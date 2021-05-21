@@ -116,6 +116,12 @@
                 "description": "Sets the select to an error state, displays the `error` slot if one is present."
               },
               {
+                "name": "errorRole",
+                "type": "string",
+                "default": "status",
+                "description": "Sets the `role` attribute for the embedded error state messaging."
+              },
+              {
                 "name": "size",
                 "type": "number",
                 "default": "medium",
