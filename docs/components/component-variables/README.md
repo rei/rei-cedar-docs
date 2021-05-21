@@ -170,7 +170,8 @@ LESS example:
 
 ## Examples
 
-<component-variables-page />
+<!-- TODO: re-enable after comp vars beta is created -->
+<!-- <component-variables-page /> -->
 
 Questions about when to use component variables? Ask the Cedar team in [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4)
 

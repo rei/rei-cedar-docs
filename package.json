@@ -41,8 +41,8 @@
     "@babel/runtime": "^7.13.9",
     "@babel/runtime-corejs3": "^7.13.9",
     "@rei/cdr-component-variables": "^6.0.0",
-    "@rei/cdr-tokens": "^8.0.0",
-    "@rei/cedar": "^8.1.0-alpha.0",
+    "@rei/cdr-tokens": "^9.0.0-alpha.1",
+    "@rei/cedar": "^9.0.0-beta.0",
     "throttle-debounce": "^3.0.0"
   },
   "browserslist": [
