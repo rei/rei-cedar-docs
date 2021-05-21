@@ -163,6 +163,12 @@
                 "description": "Sets the disabled state for the input field and label styling. Also, restricts user input."
               },
               {
+                "name": "numeric",
+                "type": "boolean",
+                "default": "false",
+                "description": "Sets default attributes for an input that should launch a numeric keyboard but is not strictly a 'number' (credit card, security code, postal code, etc.). Should be used in conjunction with the default text type input. An `input` listener can be used to fully restrict input values to numerical characters only"
+              },
+              {
                 "name": "required",
                 "type": "boolean",
                 "default": "false",
@@ -381,6 +387,25 @@ Multiple line input field with expander control in lower right. Note that the pr
   label="Input label"
   placeholder="Placeholder input"
   :rows="4"
+/>
+```
+
+</cdr-doc-example-code-pair>
+
+## Numeric Input
+
+Input field designed to accept numerical input. Launches the numerical keyboard on mobile devices. Does not use the `type="number"` attribute as that is intended for values that are strictly "numbers" such as quantities and not values that contain numerical characters such as credit cards, security codes, month/year values, etc. Can be used in conjunction with [input masking](#input-masking) to handle formatting values like credit cards, or an `input` listener can be used to format or restrict input.
+
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}" :methods="{restrictInput() {this.defaultModel = this.defaultModel.replace(/\D/g, '')}}">
+
+```html
+<cdr-input
+  v-model="defaultModel"
+  label="Numerical input label"
+  placeholder="Placeholder input"
+  optional
+  :numeric="true"
+  @input="restrictInput"
 />
 ```
 
