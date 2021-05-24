@@ -259,13 +259,11 @@ Basic input field with label.
 <cdr-input
   v-model="defaultModel"
   label="Input label"
-  placeholder="Placeholder input"
 />
 <br>
 <cdr-input
   v-model="defaultModel"
   label="Input label"
-  placeholder="Placeholder input"
   disabled
 />
 ```
@@ -283,7 +281,6 @@ Basic input field with label and required tag.
 <cdr-input
   v-model="defaultModel"
   label="Input label"
-  placeholder="Placeholder input"
   required
 />
 ```
@@ -301,7 +298,6 @@ Basic input field with label and optional tag.
 <cdr-input
   v-model="defaultModel"
   label="Input label"
-  placeholder="Placeholder input"
   optional
 />
 ```
@@ -319,13 +315,11 @@ Change size for the input field. Default size is medium.
 <cdr-input
   v-model="defaultModel"
   label="Input label"
-  placeholder="Placeholder input"
 />
 <br>
 <cdr-input
   v-model="defaultModel"
   label="Input label"
-  placeholder="Placeholder input"
   size="large"
 />
 ```
@@ -343,7 +337,6 @@ Input field with no label.
 <cdr-input
   v-model="defaultModel"
   label="Input label"
-  placeholder="Placeholder input"
   hideLabel
 />
 ```
@@ -363,7 +356,6 @@ Error messaging will override helper text rendered in the bottom position.
 <cdr-input
   v-model="defaultModel"
   label="Input label"
-  placeholder="Placeholder input"
   :error="modelError"
   @blur="validateInput"
 >
@@ -385,7 +377,6 @@ Multiple line input field with expander control in lower right. Note that the pr
 <cdr-input
   v-model="defaultModel"
   label="Input label"
-  placeholder="Placeholder input"
   :rows="4"
 />
 ```
@@ -402,7 +393,6 @@ Input field designed to accept numerical input. Launches the numerical keyboard 
 <cdr-input
   v-model="defaultModel"
   label="Numerical input label"
-  placeholder="Placeholder input"
   optional
   :numeric="true"
   @input="restrictInput"
@@ -422,7 +412,6 @@ Input field with link text on right.
 <cdr-input
   v-model="defaultModel"
   label="Input label"
-  placeholder="Placeholder input"
 >
   <template slot="info">
     <cdr-link href="#" modifier="standalone">Information link</cdr-link>
@@ -442,7 +431,6 @@ Input field with icon outside the input field on right.
 <cdr-input
   v-model="defaultModel"
   label="Input label"
-  placeholder="Placeholder input"
 >
   <cdr-link tag="button" slot="info-action">
     <icon-information-fill
@@ -464,7 +452,6 @@ Input field with helper or hint text below the input field. If the input is in a
 <cdr-input
   v-model="defaultModel"
   label="Input label"
-  placeholder="Placeholder input"
 >
   <template slot="helper-text-bottom">
     Helper or additional text
@@ -484,7 +471,6 @@ Input field with helper or hint text rendered above the input field.
 <cdr-input
   v-model="defaultModel"
   label="Input label"
-  placeholder="Placeholder input"
 >
   <template slot="helper-text-top">
     Helper or additional text
@@ -504,7 +490,6 @@ Input field with icon inserted into the input field on left. Icon is decorative 
 <cdr-input
   v-model="defaultModel"
   label="Input label"
-  placeholder="Placeholder input"
 >
   <IconLocationPinStroke
     slot="pre-icon"
@@ -526,7 +511,6 @@ Input field with icon inserted into the input field on right. Icon is decorative
 <cdr-input
   v-model="defaultModel"
   label="Input label"
-  placeholder="Placeholder input"
 >
   <IconCreditCard
     slot="post-icon"
@@ -549,7 +533,7 @@ Input field with icon buttons inserted to the right. Up to 2 buttons can be pass
   <cdr-input
     v-model="defaultModel"
     label="Input label"
-    placeholder="Placeholder input"
+
   >
     <template slot="post-icon">
       <cdr-tooltip class="cdr-input__button" id="input-tooltip">
@@ -578,7 +562,7 @@ Input field with icon buttons inserted to the right. Up to 2 buttons can be pass
   <cdr-input
     v-model="defaultModel"
     label="Large Input label"
-    placeholder="Placeholder input"
+
     size="large"
   >
     <cdr-button
