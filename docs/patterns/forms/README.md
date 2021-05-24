@@ -190,21 +190,23 @@ Cedar provides components for the main HTML input elements: [CdrInput](../../com
 - To reduce typing effort and reduce errors, ask for the postal code before the City and State fields so they can be automatically populated
 - Size the field to the data expected
 <hr/>
-- Set `type` attribute to "number"
+- Invoke special “numeric” keyboard by passing `:numeric="true"` to CdrInput
 - Dynamically change keyboard type depending on country selected—some countries may have letters in their postal code (eg. United Kingdom)
 - Set `autocomplete` attribute to "postal-code" if no country code is required
+- Use an `input` listener to control the format of the input
+- Use the `maxlength` property to restrict input to the maximum expected length
 
-<!-- TODO: update CdrInput so type="number" dynamically adds pattern/inputmode/novalidate -->
 
-
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :model="{defaultModel: ''}" :methods="{}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :model="{defaultModel: ''}" :methods="{massageInput() {this.defaultModel = this.defaultModel.replace(/\D/g, '')}}">
 
 ```html
 <cdr-input
   v-model="defaultModel"
   label="Postal code"
   autocomplete="postal-code"
-  type="number"
+  :numeric="true"
+  maxlength="5"
+  @input="massageInput"
 >
 </cdr-input>
 ```
@@ -217,7 +219,7 @@ Cedar provides components for the main HTML input elements: [CdrInput](../../com
 - Use the field label “Card number” as charge cards and debit cards are accepted card types alongside credit cards
 - The numerical spacing of the data should match the physical card
 <hr/>
-- Invoke special “numeric” keyboard
+- Invoke special “numeric” keyboard by passing `:numeric="true"` to CdrInput
 - Actively validate the card number field
 - Auto-detect the card type based on the card number
 - Once know, Match the numerical sequence of the field to the physical card
@@ -229,13 +231,13 @@ Cedar provides components for the main HTML input elements: [CdrInput](../../com
 
 ```html
 <cdr-input
-      placeholder="Credit card"
-      v-mask="'#### #### #### ####'"
-      label="Credit card"
-      v-model="defaultModel"
-      autocomplete="cc-number"
-      type="number"
-    >
+  placeholder="Credit card"
+  v-mask="'#### #### #### ####'"
+  label="Credit card"
+  v-model="defaultModel"
+  autocomplete="cc-number"
+  :numeric="true"
+>
 </cdr-input>
 ```
 
@@ -246,19 +248,22 @@ Cedar provides components for the main HTML input elements: [CdrInput](../../com
 - Provide a format hint based on card type
 - Size the field to the data that’s expected using an `input` event listener
 <hr/>
-- Invoke special “numeric” keyboard
+- Invoke special “numeric” keyboard by passing `:numeric="true"` to CdrInput
+- Use an `input` listener to limit input to possible values for the security code
+- Use the `maxlength` attribute to restrict input to the maximum possible length for the security code
 - Assign appropriate autocomplete value: “cc-csc”
 - Dynamically update format hints based on card type
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :model="{defaultModel: ''}" :methods="{limitLength(e) {this.defaultModel = this.defaultModel.substring(0,3)}}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :model="{defaultModel: ''}" :methods="{restrictInput(e) {this.defaultModel = this.defaultModel.replace(/\D/g, '')}}">
 
 ```html
 <cdr-input
   v-model="defaultModel"
   label="Security code"
   autocomplete="cc-csc"
-  type="number"
-  @input="limitLength"
+  :numeric="true"
+  maxlength="3"
+  @input="restrictInput"
 >
   <template slot="helper-text-top">
     Three digit number on the back.
@@ -273,7 +278,7 @@ Cedar provides components for the main HTML input elements: [CdrInput](../../com
 - Use the MM/YY format
 - Size the field to the data that’s expected
 <hr/>
-- Invoke special “numeric” keyboard
+- Invoke special “numeric” keyboard by passing `:numeric="true"` to CdrInput
 - Assign appropriate autocomplete value: “cc-exp”
 - See the [CdrInput documentation](../../components/input#input-masking) for information on setting up an input mask
 
@@ -286,6 +291,7 @@ Cedar provides components for the main HTML input elements: [CdrInput](../../com
   v-mask="'##/##'"
   placeholder="MM/YY"
   autocomplete="cc-exp"
+  :numeric="true"
 >
 </cdr-input>
 ```
@@ -294,7 +300,7 @@ Cedar provides components for the main HTML input elements: [CdrInput](../../com
 
 ### Country
 
-<!-- TODO: guidance here ??? -->
+- Assign appropriate autocomplete value: “country”
 
 <cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :model="{defaultModel: ''}" :methods="{}">
 
@@ -311,5 +317,29 @@ Cedar provides components for the main HTML input elements: [CdrInput](../../com
 ```
 
 </cdr-doc-example-code-pair>
+
+### Gender
+
+- Never ask for a user’s gender unless absolutely necessary
+- Always provide a reason why the information is required and how it will be used
+- Give the user the option to self-identify
+- Consider adding an additional, optional field for users to further clarify their answer
+- Size the field to the data that’s expected
+<hr/>
+- Assign appropriate autocomplete value: “sex”
+
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :model="{defaultModel: ''}" :methods="{}">
+
+```html
+<cdr-input
+  v-model="defaultModel"
+  label="Gender"
+  autocomplete="sex"
+>
+</cdr-input>
+```
+
+</cdr-doc-example-code-pair>
+
 
 </cdr-doc-table-of-contents-shell>

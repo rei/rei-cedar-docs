@@ -26,6 +26,12 @@
 
 - If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your micro-site.
 
+## 8.0.2
+
+### Bug Fixes
+
+- CdrAccordion `unwrap` breakpoint logic has been updated to handle cross browser issues and more closely match the behavior of media queries
+
 ## 8.0.1
 
 ### Bug Fixes

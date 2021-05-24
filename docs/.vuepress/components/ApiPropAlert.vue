@@ -54,7 +54,7 @@
   }
 
   .api-prop-alert.alert-deprecated {
-    background-color: $cdr-color-background-warning;
+    background-color: $cdr-color-background-message-warning;
     border: 1px solid $cdr-color-border-warning;
 
     .api-prop-alert-icon {
