@@ -144,9 +144,9 @@ This can be provided in the form of screen reader only text, though consider if 
 
 <cdr-img :src="$withBase('/notifications/statusNotification.png')" alt="Diagram for conditional notifications as an overlay, annotating the required layout of the elements listed below" />
 
-- 1 [Status Container](#status-container)
-- 2 [User action that triggers Status Notification](#user-action-that-triggers-status-notification)
-##### Status Container
+- 1 [Status Content Container](#status-content-container)
+- 2 [Status Content Control](#status-content-controln)
+##### Status Content Container
 
 The Status Container wraps both the element being updated and any assistive technology helpers such as screen reader text. It may be a pre-existing section of a page or dynamically added.
 
@@ -209,7 +209,7 @@ Status Notifications will often be used to represent loading icons or submitting
   <!-- contents -->
 </section>
 ```
-##### User action that triggers Status Notification
+##### Status Content Control
 
 - **Should**
   - Status is a form of live region. If another part of the page controls what appears in the status, 
@@ -531,10 +531,6 @@ This experience is while less optimal than client validation can be helped with 
   - Give the error a heading level: Provide a header, preferably a H1, so that assistive technology users can jump directly to the error and correct it.
   - Visually style the error in such a way that it is distinguishable from other content
   - Provide a same-page link so that users can jump directly to the form field that has the error.
-
-
-
-
 
 #### Required Form Fields Display
 The Asterisks may not be read by all screen readers (in all reading modes) and may be difficult for users with low vision because they are rendered in a smaller size than default text.
