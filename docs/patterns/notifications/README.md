@@ -144,9 +144,9 @@ This can be provided in the form of screen reader only text, though consider if 
 
 <cdr-img :src="$withBase('/notifications/statusNotification.png')" alt="Diagram for conditional notifications as an overlay, annotating the required layout of the elements listed below" />
 
-
-
-##### 1. Status Container
+- 1 [Status Container](#status-container)
+- 2 [User action that triggers Status Notification](#user-action-that-triggers-status-notification)
+##### Status Container
 
 The Status Container wraps both the element being updated and any assistive technology helpers such as screen reader text. It may be a pre-existing section of a page or dynamically added.
 
@@ -154,16 +154,42 @@ The Status Container wraps both the element being updated and any assistive tech
   - Define pre-existing page sections where content may be updated as a WAI-ARIA live region. Use the aria-live attribute on the container of the content that may be updated or, in special cases, use one of the WAI-ARIA special live region roles.
   - Ensure the container generating the status is able to receive focus
   - on activation, add `role=”status”` to the markup announcing the notification without interrupting the page flow of the user
+```html
+<!-- EXAMPLE: while stable -->
+
+```
+```html
+<!-- EXAMPLE: while active -->
+ <div role="status">
+ Determining your location...
+ </div>
+```
+
 - **Should**
   - Authors SHOULD ensure an element with role status does not receive focus as a result of change in status.
 - **Should not**
   - Move Focus automatically to the notification
   - Overuse status notifications. They may interrupt your users experience
 - **May**
-  - Open or update content in locations unrelated to the action which caused the notification to appear 
   - Update a live region of the page
+   ```html
+   <!-- EXAMPLE: while stable -->
+  <div aria-live="polite" role="region" aria-labelledby="shopping-cart">
+    4
+    <span class="cdr-display-sr-only">items in your cart</span>
+  </div>
+  ```
+  ```html
+   <!-- EXAMPLE: when updated -->
+  <div role="status" aria-live="polite" role="region" aria-labelledby="shopping-cart">
+
+    <span class="cdr-display-sr-only">there are now</span>
+    5 
+    <span class="cdr-display-sr-only">items in your cart</span>
+  </div>
+  ```
   - appear as a timed display.
-  - Include `aria-atomic` markup attribute to define what content will be presented to assistive technologies
+  - Include [aria-atomic](https://www.digitala11y.com/aria-atomic-properties/) markup attribute to define what content will be presented to assistive technologies
   - Include `aria-relevant` to define what type of changes are being announced to assistive technologies
 ##### loading status
 
@@ -172,19 +198,18 @@ Status Notifications will often be used to represent loading icons or submitting
   - Define pre-existing page sections where content may be updated as a WAI-ARIA live region.
   - Use the `aria-busy` attribute to call out the loading state of the section or element
 ```html
-  <!-- while reloading -->
-<section aria-live="polite" aria-busy="true">
-  <!-- contents -->
-</section>
-```
-```html
-<!-- while stable -->
+<!-- EXAMPLE: while stable -->
 <section aria-live="polite" aria-busy="false">
   <!-- contents -->
 </section>
 ```
-
-##### 2. User action that triggers Status Notification
+```html
+  <!-- EXAMPLE: while reloading -->
+<section aria-live="polite" aria-busy="true">
+  <!-- contents -->
+</section>
+```
+##### User action that triggers Status Notification
 
 - **Should**
   - Status is a form of live region. If another part of the page controls what appears in the status, 
@@ -476,16 +501,6 @@ elements on the page and where possible should be added to the DOM under the ele
 
 Validation Notifications used to present instructions on user errors have specific accessibility requirements. These include:
 
-##### Client-side Validation
-Client-side validation results in a better user experience and makes resolving validation errors more understandable.
-By using script languages user’s input can be validated as they type. This means a more responsive, visually rich validation.
-With client-side validation, form never gets submitted if validation fails. 
-
-##### Server-side Validation
-In the server-side validation, information is being sent to the server and validated using one of server-side 
-languages. If the validation fails, the response is then sent back to the client, page that contains 
-the web form is refreshed and a feedback is shown. 
-
 - **Must**
   - Identify each field in error
   - Providing suggestions (when known) to correct the errors
@@ -498,6 +513,28 @@ the web form is refreshed and a feedback is shown.
 - **Should Not**
   - rely solely on visual cues to indicate an error
   - alter the user provided input to make it validate without providing the user with a validation message conveying this change
+
+  ##### Client-side Validation
+Client-side validation results in a better user experience and makes resolving validation errors more understandable.
+By using script languages user’s input can be validated as they type. This means a more responsive, visually rich validation.
+With client-side validation, form never gets submitted if validation fails. 
+
+##### Server-side Validation
+**Server-side Validation responses occur as part of a page refresh, the are available as part of a pages content and are not notifications.**
+With these responses information is being sent to the server and validated using server-side languages. 
+If the validation fails, the response is then sent back, the page is refreshed and the new data is presented to the users.
+
+This experience is while less optimal than client validation can be helped with the following considerations:
+
+- **May**
+  - Change the title of the page
+  - Give the error a heading level: Provide a header, preferably a H1, so that assistive technology users can jump directly to the error and correct it.
+  - Visually style the error in such a way that it is distinguishable from other content
+  - Provide a same-page link so that users can jump directly to the form field that has the error.
+
+
+
+
 
 #### Required Form Fields Display
 The Asterisks may not be read by all screen readers (in all reading modes) and may be difficult for users with low vision because they are rendered in a smaller size than default text.
