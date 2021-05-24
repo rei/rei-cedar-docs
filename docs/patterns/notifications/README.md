@@ -18,96 +18,67 @@
 <cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
 * Response to change > User Input(not time sensitive)
 
-# Overview
+## Overview
 
 Notifications are asynchronous events providing user feedback to changes on specific elements or page sections.
-Notifications should be designed to attract rather than capture a user’s attention, they add context to elements that exist on a page and should not employee design that blocks a pages content.
-As messages, notifications offer important responses to changes in content that will help users understand additional options available or actions needing to take place.
-These messages, though important, should not interrupt a user nor should focus be moved to them automatically.
+Notifications should be designed to attract rather than capture a user’s attention, they add context to elements that exist on a page and should not employee design that blocks page content.
+As messages, notifications offer responses to change. These responses help users understand page processes, actions they have competed, additional options available, or actions still needing attention.
+Though important, notifications should not interrupt a user nor should focus be moved to them automatically.
 
-A Notification has specific behaviors and content objectives which make it unique from other types of messaging. 
+In general all notifications share the following traits:
 
-Use the following list to validate that your message is a notification.
-
-## Behavior
-
-the following should be true:
-
-- The page state has changed after page load
-- The message is not available until triggered by a user action
-## Purpose
-
-At least one of the following should be true:
-
-  - Providing a user the status of an action they’re trying to complete 
-  - notifying users of a potential problem that may require their attention
-  - As a form validation message
-  - As confirmation that a task was completed successfully 
-  - As contextual information that might need their attention
-  - communicating a status change caused by the user.
-
-## Construction :TODO Merge into patterns and remove
-(Must = WCAG lvl A, Should = WCAG lvl AA, May = WCAG lvl AAA)
-
-The following provide the base requirement’s expected within a notification message.
-- **Must**
-  - Ensure the message container can receive focus
-  - Include the `aria-live` or `role=”status”` markup to announce the notification without interrupting the page flow of the user
-  - If moving focus to the notification, the notification 
-    - Must provide At least one focusable UI element (i.e. Close button, primary button)
-    - content container must be dismissible
-    - On dismiss, must return focus to the next logical location in the page flow
-- **Should**
-  - Clearly communicate what is happening
-- **Should not**
-  - Move Focus automatically to the notification
-  - Block page navigation
-  - Direct the user to a new page or window
-  - Overuse notifications. They may interrupt your users experience
-  - Create notifications that disappear automatically
-  - Contain interactive controls if notification is displayed as an overlay
-    
-- **May**
-  - Open or update content in locations unrelated to the action which caused the notification to appear 
-  - Update a live region of the page
-  - Use the HTML `<aside>` tag, denoting the section that, though related to the main element, doesn't belong to the main flow
-  - appear as a timed display.
-  - Include `aria-atomic` markup attribute to define what content will be presented to assistive technologies
-  - Include `aria-relevant` to define what type of changes are being announced to assistive technologies
-  
-## Accessibility References :TODO Merge into patterns and remove
-- [Accessible Notifications](https://www.w3.org/WAI/RD/wiki/Accessible_Notifications)
-- [WCAG status messages 4.1.3](https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html)
-- Use [aria-live](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) to indicate that an element will be updated. It describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
-- Use [aria-atomic](https://www.digitala11y.com/aria-atomic-properties/) to indicate whether assistive technologies will present all, or only parts of the changed region based on the change notifications defined by the aria-relevant attribute.
-- [aria-relevant](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute)
-describes semantically meaningful changes as opposed to merely presentational ones
+- Notifications provide feedback to users about actions they are taking on a page. They are not promotional nor navigational
+- Notifications do not block a users access to the page and should not use a blocking overlay window
+- Notifications are not a part of the page content and become available when triggered by a user action
 
 ## Patterns
 (the following do not consider mobile app patterns)
+
+<cdr-table class="advanced-table" full-width=false>
+  <tr>
+    <th class="advanced-table__header">
+      <cdr-link href="#status-notifications">Status Notification</cdr-link>
+    </th>
+    <td>UI updates and non-verbal application status communications (such as "busy" or "loading" icons)</td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">
+      <cdr-link href="#conditional-notifications">Conditional Notifications</cdr-link>
+    </th>
+    <td>Page level messaging available only in some situations</td>
+  </tr>
+  <tr>
+  <tr>
+    <th class="advanced-table__header">
+      <cdr-link href="#validation">Validation Notifications</cdr-link>
+    </th>
+    <td>
+      Form validation instruction
+    </td>
+  </tr>
+</cdr-table>
+
 @flowstart
 st=>start: Identify the correct message pattern
 e=>end: End
 
 interactive=>condition: User interaction
 required?
-inline=>condition: replacing 
-content?
-associated=>condition: Instructions on 
-resolving 
-an error?
+inline=>condition: providing 
+messaging?
+associated=>condition: Response to 
+form inputs?
 succinct=>condition: Inline?
-associatedYes=>operation: Validation |:>#validation-notifications
-associatedNo=>operation: Conditional Notification,
-Validation
+associatedYes=>operation: Validation |:>#validation 
+associatedNo=>operation: Conditional Notification |:>#conditional-notifications
 succinctNo=>operation: Conditional Notification |:>#conditional-notifications
 succinctYes=>operation: Status Notification |:>#status-notifications
 
 interactive(yes)->associated(yes)->associatedYes
 associated(no, bottom)->associatedNo()
 interactive(no)->succinct(no)->succinctNo
-succinct(yes)->inline(yes)->succinctYes
-inline(no)->succinctNo
+succinct(yes)->inline(yes)->succinctNo
+inline(no, bottom)->succinctYes
 @flowend
 
 ### Status Notifications
@@ -130,6 +101,18 @@ They are informative only and provide our users with advisory information that e
     <td>Expected / Assumed</td>
   </tr>
   <tr>
+  <tr>
+    <th class="advanced-table__header">
+      Purpose
+    </th>
+    <td>
+      <ul>
+        <li>reporting page processes</li>
+        <li>Confirming user initiated actions</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
     <th class="advanced-table__header">Interaction</th>
     <td>Non-blocking, not required</td>
   </tr>
@@ -140,6 +123,7 @@ They are informative only and provide our users with advisory information that e
 </cdr-table>
 
 #### Use When
+
 It is important to grasp that many visual transitions are actually status notifications and should be providing contextual information to our users. 
 This can be provided in the form of screen reader only text, though consider if the action without context will create any cognitive dissonance for our users.
 
@@ -148,35 +132,97 @@ This can be provided in the form of screen reader only text, though consider if 
 - Incrementing carts
 - Changes to inline content based on user selection
 
-**Examples**
-- As the "Find a store near you" modal is loading results it displays a loading icon, additionally, a screen reader should announce "Finding stores in your area".
-- After a user adds an item to their cart the button grays out or changes to a loading icon, additionally, a screen reader should announce "adding your items to the cart"
-- After a user presses an Add to Cart button, a section of content near the Shopping Cart icon increments the number. A screen reader should announce "x items in your cart"
-- After the user selects the "Co-op Cycles" filter on the Mountain Bikes search results page the "Mountain Bikes (number of results)" updates to "Co-op Cycles Mountain Bikes
-(7 results)
-
 #### Don't Use When
 - The User makes a selection that does not change or add content to the page
 - The notification is not updating inline copy
 - The notification does not relate to an actionable element in a busy state
-- The content added to the page is critical and needs immediate attention (see [alert](../alerts))
+- The content added to the page is important or needs attention
+- During the appearance / disappearance of content following a user interaction which is also announced to assistive technology (for example, the screen reader is announced "open / closed" for a menu, an accordion)
+- For a panel system, whose selected tab is announced at AT
 
 #### Anatomy of a Status Notification
 
-<cdr-img :src="$withBase('/notifications/statusAnatomy.png')" alt="Diagram for conditional notifications as an overlay, annotating the required layout of the elements listed below" />
+<cdr-img :src="$withBase('/notifications/statusNotification.png')" alt="Diagram for conditional notifications as an overlay, annotating the required layout of the elements listed below" />
 
-##### Status Notification
+- 1 [Status Container](#status-container)
+- 2 [User action that triggers Status Notification](#user-action-that-triggers-status-notification)
+##### Status Container
+
+The Status Container wraps both the element being updated and any assistive technology helpers such as screen reader text. It may be a pre-existing section of a page or dynamically added.
 
 - **Must**
-  - Add the correct HTML `role="status"` to a status notification. 
-  - Identify content that may be updated as a WAI-ARIA live region. Use the aria-live attribute on the container of the content that may be updated or, in special cases, use one of the WAI-ARIA special live region roles.
+  - Define pre-existing page sections where content may be updated as a WAI-ARIA live region. Use the aria-live attribute on the container of the content that may be updated or, in special cases, use one of the WAI-ARIA special live region roles.
+  - Ensure the container generating the status is able to receive focus
+  - on activation, add `role=”status”` to the markup announcing the notification without interrupting the page flow of the user
+```html
+<!-- EXAMPLE: while stable -->
+
+```
+```html
+<!-- EXAMPLE: while active -->
+ <div role="status">
+ Determining your location...
+ </div>
+```
 
 - **Should**
   - Authors SHOULD ensure an element with role status does not receive focus as a result of change in status.
+- **Should not**
+  - Move Focus automatically to the notification
+  - Overuse status notifications. They may interrupt your users experience
+- **May**
+  - Update a live region of the page
+   ```html
+   <!-- EXAMPLE: while stable -->
+  <div aria-live="polite" role="region" aria-labelledby="shopping-cart">
+    4
+    <span class="cdr-display-sr-only">items in your cart</span>
+  </div>
+  ```
+  ```html
+   <!-- EXAMPLE: when updated -->
+  <div role="status" aria-live="polite" role="region" aria-labelledby="shopping-cart">
+
+    <span class="cdr-display-sr-only">there are now</span>
+    5 
+    <span class="cdr-display-sr-only">items in your cart</span>
+  </div>
+  ```
+  - appear as a timed display.
+  - Include [aria-atomic](https://www.digitala11y.com/aria-atomic-properties/) markup attribute to define what content will be presented to assistive technologies
+  - Include `aria-relevant` to define what type of changes are being announced to assistive technologies
+##### loading status
+
+Status Notifications will often be used to represent loading icons or submitting buttons. These types of Status notifications 
+- **Should**
+  - Define pre-existing page sections where content may be updated as a WAI-ARIA live region.
+  - Use the `aria-busy` attribute to call out the loading state of the section or element
+```html
+<!-- EXAMPLE: while stable -->
+<section aria-live="polite" aria-busy="false">
+  <!-- contents -->
+</section>
+```
+```html
+  <!-- EXAMPLE: while reloading -->
+<section aria-live="polite" aria-busy="true">
+  <!-- contents -->
+</section>
+```
+##### User action that triggers Status Notification
+
+- **Should**
   - Status is a form of live region. If another part of the page controls what appears in the status, 
 authors SHOULD make the relationship explicit with the aria-controls attribute.
 
-###### Status role
+```html
+<button aria-controls="statusContainer-id" >Add to cart</button>
+```
+- **Should not**
+  - Move Focus automatically to the notification
+- **May**
+  - Open or update content in locations unrelated to the action which caused the notification to appear 
+##### Status role
 Adding the correct HTML `role="status"` to a status notification. This helps to inform a user of assisted technology, on change, that something has happened. 
 The Status role has an implicit aria-live value of polite though the `aria-live` property may also be used.
 
@@ -184,17 +230,19 @@ The Status role has an implicit aria-live value of polite though the `aria-live`
 If you define a section of the page as aria-live and do not add `role="status"` on change,  you may pair the `aria-live` section with `aria-atomic`.
 aria-atomic will ensure the content within the aria-live element is read on change.
 
-#### Assistive Technology
+#### Visual and Assistive technology aid
 These Notifications will not interrupt the current action of a user so be sure to consider what will be read out once the update is spoken. 
 For instance a quantity update for items added to a cart would be of little use if all that was communicated was "one".
 In this case add the additional "items in your cart" or "x items added to your cart" as screen reader only text. 
-##### loading status
 
-representing loading icons or submitting buttons 
+#### Status Notification Examples
 
-- **Should**
-  - aria-busy="true"
-##### Using Available Cedar Components
+- As the "Find a store near you" modal is loading results it displays a loading icon, additionally, a screen reader should announce "Finding stores in your area".
+- After a user adds an item to their cart the button grays out or changes to a loading icon, additionally, a screen reader should announce "adding your items to the cart"
+- After a user presses an Add to Cart button, a section of content near the Shopping Cart icon increments the number. A screen reader should announce "x items in your cart"
+- After the user selects the "Co-op Cycles" filter on the Mountain Bikes search results page the "Mountain Bikes (number of results)" updates to "Co-op Cycles Mountain Bikes
+(7 results)
+#### Using Available Cedar Components
 
 Content control:
 - Cdr-button
@@ -227,6 +275,18 @@ Additionally, they may open based on conditions a user has created or criterium 
     <td>Unexpected</td>
   </tr>
   <tr>
+    <th class="advanced-table__header">
+      Purpose
+    </th>
+    <td>
+        <ul>
+          <li>Communicating a status change caused by the user</li>
+          <li>As contextual information that might need their attention</li>
+          <li>Notifying users of a potential problem that may require their attention</li>
+        </ul>
+    </td>
+  </tr>
+  <tr>
     <th class="advanced-table__header">Interaction</th>
     <td>Non-blocking, Not Required</td>
   </tr>
@@ -239,20 +299,12 @@ Additionally, they may open based on conditions a user has created or criterium 
 #### Use When
 - Exposing additional product information that may vary based on user selection
 - As confirmation that a task or process initiated by the user was completed successfully 
-- Use when you need to provide a user the status of an action they’re trying to complete 
-- As a validation message that notifies someone that they just did something that needs to be corrected (See Error and Warning Types)
+
 - As confirmation that a task was completed successfully (See Success Type)
 - As contextual information that might need their attention (See Informational Type)
-
-
-**Examples**
-- New options are available based on selections you have made
-- Shipping restrictions display once you have selected a location
-- Quantity availability
-- The user has items that are no longer available in their cart
-- The user has successfully signed up for an email notifications
 #### Don't Use When
 - presenting the user additional actions to take (see [modal](../../components/modal/))
+- The UI is presented as a dialog that requires a user action, on which the focus is set (see [modal](../../components/modal/))
 - The User makes a selection that does not change or add content to the page
 - The notification is an update to existing inline copy (see [status notifications](#status-notifications))
 - The notification relates to an actionable element in a busy state (see [status notifications](#status-notifications))
@@ -269,19 +321,40 @@ Additionally, they may open based on conditions a user has created or criterium 
 5. Message - Includes the core, most important alert content.
 
 - **Must**
-  -  Ensure notification will not be removed if keyboard focus or mouse hover is within or over the notification.
-  -  Return user focus to a logical location.
-  -  Not block the user from the page a notification is triggered from
-  -  Not contain unique actionable items if the notification is an overlay
+  - Include the `aria-live` or `role=”status”` markup to announce the notification without interrupting the page flow of the user
+  - Not contain unique actionable items if the notification is an overlay
+  - Ensure the notification container is able to receive focus
+  - Ensure notification will not be removed if keyboard focus or mouse hover is within or over the notification.
+  - Not block page content
+  - Return user focus to a logical location.
+  - If moving focus to the notification, the notification 
+    - Must provide At least one focusable UI element (i.e. Close button, primary button)
+    - content container must be dismissible
+    - On dismiss, must return focus to the next logical location in the page flow
 - **Should**
-- Be used for short messages to confirm an action
-- Provide necessary support to the primary activities or operations of a page base on users settings or selections
+  - Be used for short messages to confirm an action
+  - Provide necessary support to the primary activities or operations of a page base on users settings or selections
+  - Authors SHOULD ensure an element with role status does not receive focus as a result of change in status.
+  - Status is a form of live region. If another part of the page controls what appears in the status, 
+authors SHOULD make the relationship explicit with the aria-controls attribute.
+  - Clearly communicate what is happening
 -**Should not**
-- Be used for error messages
-- Open as a blocking overlay window
+  - Be used for error messages
+  - Open as a blocking overlay window
+  - Move Focus automatically to the notification
+  - Direct the user to a new page or window
+  - Overuse Conditional notifications. They may interrupt your users experience
+  - Reuse bespoke UI intended for other message or navigation types
+  - Create notifications that disappear automatically
+  - Contain interactive controls if notification is displayed as an overlay
 - **May**
   - display notifications in rich, unique UI to create distinction around itself and the page content
-
+  - Open or update content in locations unrelated to the action which caused the notification to appear 
+  - Update a live region of the page
+  - Use the HTML `<aside>` tag, denoting the section that, though related to the main element, doesn't belong to the main flow
+  - appear as a timed display.
+  - Include `aria-atomic` markup attribute to define what content will be presented to assistive technologies
+  - Include `aria-relevant` to define what type of changes are being announced to assistive technologies
 
 
 <cdr-img :src="$withBase('/notifications/ConditionalOverlayAnatomy.png')" alt="Diagram for conditional notifications as an overlay, annotating the required layout of the elements listed below" />
@@ -325,6 +398,13 @@ If the notification must include an actionable element you are responsible for t
   - Contained action is also readily available on the page
   - If the action is not available on page, the action should be added to a notification history page (see ARIA’s log role)
 
+
+#### Examples
+- New options are available based on selections you have made
+- Shipping restrictions display once you have selected a location
+- Quantity availability
+- The user has items that are no longer available in their cart
+- The user has successfully signed up for an email notifications
 #### Using Available Cedar Components
 
 Content control:
@@ -374,6 +454,18 @@ It is critical that these notifications accurately inform and help to clarify th
     <td>Unexpected</td>
   </tr>
   <tr>
+    <th class="advanced-table__header">
+      Purpose
+    </th>
+    <td>
+        <ul>
+          <li>As a form validation message</li>
+          <li>As confirmation that an error was resolved successfully</li>
+          <li>Notifying users of a potential problem that may require their attention</li>
+        </ul>
+    </td>
+  </tr>
+  <tr>
     <th class="advanced-table__header">Interaction</th>
     <td>Non-blocking, Required</td>
   </tr>
@@ -385,6 +477,8 @@ It is critical that these notifications accurately inform and help to clarify th
 
 #### Use When
 - The notification is directly associated with a form or element within the form
+- Use when you need to provide a user the status of an action they’re trying to complete
+- As a validation message that notifies someone that they just did something that needs to be corrected (See Error and Warning Types)
 - Resolving the instruction within the notification is required
 - The notification content provides instructions to resolve an error, warning, or confirms success of a resolved error
 #### Don't Use When
@@ -407,30 +501,40 @@ elements on the page and where possible should be added to the DOM under the ele
 
 Validation Notifications used to present instructions on user errors have specific accessibility requirements. These include:
 
-##### Client-side Validation
+- **Must**
+  - Identify each field in error
+  - Providing suggestions (when known) to correct the errors
+  - Preserve as much user-entered input as possible
+
+-  **Should**
+  - Correctly filled out user provided data in a form that contains errors **SHOULD** remain populated post-submit.
+  - Confirm successful submission of data.
+  - Provide an explanation to the when user when the submit button is not available
+- **Should Not**
+  - rely solely on visual cues to indicate an error
+  - alter the user provided input to make it validate without providing the user with a validation message conveying this change
+
+  ##### Client-side Validation
 Client-side validation results in a better user experience and makes resolving validation errors more understandable.
 By using script languages user’s input can be validated as they type. This means a more responsive, visually rich validation.
 With client-side validation, form never gets submitted if validation fails. 
 
 ##### Server-side Validation
-In the server-side validation, information is being sent to the server and validated using one of server-side 
-languages. If the validation fails, the response is then sent back to the client, page that contains 
-the web form is refreshed and a feedback is shown. 
+**Server-side Validation responses occur as part of a page refresh, the are available as part of a pages content and are not notifications.**
+With these responses information is being sent to the server and validated using server-side languages. 
+If the validation fails, the response is then sent back, the page is refreshed and the new data is presented to the users.
+
+This experience is while less optimal than client validation can be helped with the following considerations:
+
+- **May**
+  - Change the title of the page
+  - Give the error a heading level: Provide a header, preferably a H1, so that assistive technology users can jump directly to the error and correct it.
+  - Visually style the error in such a way that it is distinguishable from other content
+  - Provide a same-page link so that users can jump directly to the form field that has the error.
 
 
 
 
-- **Must**
-  - Identify each field in error
-  - Providing suggestions (when known) to correct the errors
-  - Preserve as much user-entered input as possible
--  **Should**
-  - Correctly filled out user provided data in a form that contains errors **SHOULD** remain populated post-submit.
-  - Confirm successful submission of data.
-  - Provide an explanation to the  when user when the submit button is not available
-- **Should Not**
-  - rely solely on visual cues to indicate an error
-  - alter the user provided input to make it validate without providing the user with a validation message conveying this change
 
 #### Required Form Fields Display
 The Asterisks may not be read by all screen readers (in all reading modes) and may be difficult for users with low vision because they are rendered in a smaller size than default text.
@@ -461,36 +565,6 @@ It is important for authors to include the text indicating that asterisk is used
 - **May**
   - also use '[aria-describedby]()' in conjunction with [aria-errormessage](aria-errormessage)
 
-##### aria-invalid
-indicate that the value entered into an input field does not conform to the format expected by the application. This may include formats such as email addresses or telephone numbers. aria-invalid can also be used to 
-indicate that a required field has not been filled in.
-The attribute should be programmatically set as a result of a validation process.
-
--  Add aria-invalid="true" to the input
--  Identify the input (referencing the label):
-  - In a simple JavaScript alert
-  - with information associated with the input via aria-describedby (widely supported) or aria-errormessage (not yet widely supported)
-  - with error text added to the input's label (other techniques are more semantically correct, but this is a reliable method)
-  - with text on the web page (it may be appropriate to move the keyboard focus to the error message)
-  - with an aria-live or role="alert" announcement
-  - with information about the error in the page `<title>` if the submission causes a page reload or a new page load.
-
-##### aria-errormessage
-The `aria-errormessage` attribute takes an ID reference in the same manner as `aria-describedby`, and is only exposed when aria-invalid is set to ‘true’ on the same element. The use of a live region attribute such as aria-live=”polite” on the error message container element is optional.
-
-Placed on input and mapped via id to error message.
-used to:
-  - Associate instructions with form fields
-  - Provide information on the outcome of an action
-  - To provide verbal information that may be conveyed via visual cues 
-  - associate tooltips to form fields
-
-- Error feedback SHOULD be programmatically-associated with the appropriate element.
-- When `aria-errormessage` is pertinent, authors MUST ensure the content is not hidden
-- Authors MUST either ensure the content is hidden or remove the aria-errormessage attribute or its value.
-- User agents MUST NOT expose aria-errormessage for an object with an aria-invalid value of false.
-
-
 #### Notification Instruction 
 WCAG 1.3.3, WCAG 3.3.2 provide the following guidelines for validation instructions.
 When users enter input that is validated, and errors are detected, the nature of the error needs 
@@ -519,7 +593,7 @@ A text description of the problem should be provided.
 -**Should**
 -  if the text does not specifically call out the state of the message, error, warning, success, or info - that text should be provided via screen reader accessible text
 
-##### Instruction
+#### Instruction
 - **Must**
   - Be available as programmatically-discernible text
   - Be meaningful
@@ -532,7 +606,7 @@ A text description of the problem should be provided.
   - Rely solely on references to sensory characteristics (for example, "round button" or "button to the right")
 -  **Should**
   - Provide an explanation when the submit button is not available
-##### Role status / aria-live
+#### Role status / aria-live
 
 -  **Should Not**
   - Be scripted to occur with every keystroke unless there is a delay built into the script to avoid announcements while the user is actively typing.
@@ -545,11 +619,14 @@ A text description of the problem should be provided.
     can be problematic. It is usually acceptable to wait to announce
     real-time errors until after form submission, assuming that no data has been saved yet.
 
+Find more information on this topic in the [Accessibility References](#accessibility-references)
 
 
 #### Error Suggestion
 - **Must**
   - If an input error is automatically detected, the item that is in error is identified and the error is described to the user in text WCAG 3.3.3
+
+Find more information on this topic in the [Accessibility References](#accessibility-references)
 
 https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-suggestions.html
 #### Error Prevention
@@ -565,8 +642,42 @@ we are required to implement at least one of the following error prevention tech
 -  Checked: Data entered by the user is checked for input errors and the user is provided an opportunity to correct them.
 -  Confirmed: A mechanism is available for reviewing, confirming, and correcting information before finalizing the submission.
 
+Find more information on this topic in the [Accessibility References](#accessibility-references)
 
+#### Error Detection
 
+##### aria-invalid
+indicate that the value entered into an input field does not conform to the format expected by the application. This may include formats such as email addresses or telephone numbers. aria-invalid can also be used to 
+indicate that a required field has not been filled in.
+The attribute should be programmatically set as a result of a validation process.
+
+-  Add aria-invalid="true" to the input
+-  Identify the input (referencing the label):
+  - In a simple JavaScript alert
+  - with information associated with the input via aria-describedby (widely supported) or aria-errormessage (not yet widely supported)
+  - with error text added to the input's label (other techniques are more semantically correct, but this is a reliable method)
+  - with text on the web page (it may be appropriate to move the keyboard focus to the error message)
+  - with an aria-live or role="alert" announcement
+  - with information about the error in the page `<title>` if the submission causes a page reload or a new page load.
+
+Find more information on this topic in the [Accessibility References](#accessibility-references)
+
+##### aria-errormessage
+The `aria-errormessage` attribute takes an ID reference in the same manner as `aria-describedby`, and is only exposed when aria-invalid is set to ‘true’ on the same element. The use of a live region attribute such as aria-live=”polite” on the error message container element is optional.
+
+Placed on input and mapped via id to error message.
+used to:
+  - Associate instructions with form fields
+  - Provide information on the outcome of an action
+  - To provide verbal information that may be conveyed via visual cues 
+  - associate tooltips to form fields
+
+- Error feedback SHOULD be programmatically-associated with the appropriate element.
+- When `aria-errormessage` is pertinent, authors MUST ensure the content is not hidden
+- Authors MUST either ensure the content is hidden or remove the aria-errormessage attribute or its value.
+- User agents MUST NOT expose aria-errormessage for an object with an aria-invalid value of false.
+
+Find more information on this topic in the [Accessibility References](#accessibility-references)
 #### Success Detection
 Use at least one of the following techniques:
 
@@ -589,14 +700,19 @@ TODO- something about how we only provide the UI/container but not validation lo
 
 
 #### Accessibility References
+- [Accessible Notifications](https://www.w3.org/WAI/RD/wiki/Accessible_Notifications)
+- [WCAG status messages 4.1.3](https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html)
 - [WCAG Error Identification 3.3.1 (lvl A)](https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html)
 - [WCAG Labels or Instructions 3.3.2 (lvl A)](https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions)
 - [WCAG Error Suggestion 3.3.3 (lvl AA)](https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion)
 - [WCAG Error Prevention 3.3.4 (lvl AA) ](https://www.w3.org/WAI/WCAG21/Understanding/error-prevention-legal-financial-data)
-- [Form Notifications](https://www.w3.org/WAI/tutorials/forms/notifications/  )
+- [Form Notifications](https://www.w3.org/WAI/tutorials/forms/notifications/)
 - [Using Aria-Invalid to Indicate An Error Field](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA21.html)
 - [Using the aria-describedby property to provide a descriptive label for user interface controls](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA1.html)
-
+- Use [aria-live](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) to indicate that an element will be updated. It describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
+- Use [aria-atomic](https://www.digitala11y.com/aria-atomic-properties/) to indicate whether assistive technologies will present all, or only parts of the changed region based on the change notifications defined by the aria-relevant attribute.
+- [aria-relevant](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute)
+describes semantically meaningful changes as opposed to merely presentational ones
 
 
 ## Move to Form doc as these are not specific to the notification validation topic but to the broader Form validation
