@@ -150,6 +150,17 @@ This can be provided in the form of screen reader only text, though consider if 
 
 The Status Container wraps both the element being updated and any assistive technology helpers such as screen reader text. It may be a pre-existing section of a page or dynamically added.
 
+###### Design Considerations
+
+- **Should**
+  - Ensure the Status notification does not receive focus as a result of a change in status.
+- **Should not**
+  - Move Focus automatically to the notification
+  - Overuse status notifications. They may interrupt your users experience
+- **May**
+  - appear as a timed display.
+###### Development Considerations
+
 - **Must**
   - Define pre-existing page sections where content may be updated as a WAI-ARIA live region. Use the aria-live attribute on the container of the content that may be updated or, in special cases, use one of the WAI-ARIA special live region roles.
   - Ensure the container generating the status is able to receive focus
@@ -164,12 +175,6 @@ The Status Container wraps both the element being updated and any assistive tech
  Determining your location...
  </div>
 ```
-
-- **Should**
-  - Authors SHOULD ensure an element with role status does not receive focus as a result of change in status.
-- **Should not**
-  - Move Focus automatically to the notification
-  - Overuse status notifications. They may interrupt your users experience
 - **May**
   - Update a live region of the page
    ```html
@@ -188,10 +193,10 @@ The Status Container wraps both the element being updated and any assistive tech
     <span class="cdr-display-sr-only">items in your cart</span>
   </div>
   ```
-  - appear as a timed display.
   - Include [aria-atomic](https://www.digitala11y.com/aria-atomic-properties/) markup attribute to define what content will be presented to assistive technologies
   - Include `aria-relevant` to define what type of changes are being announced to assistive technologies
 ##### loading status
+<cdr-img :src="$withBase('/notifications/loadingNotification.png')" alt="Diagram of loading animation annotating the list below" width="600px"/>
 
 Status Notifications will often be used to represent loading icons or submitting buttons. These types of Status notifications 
 - **Should**
@@ -211,29 +216,22 @@ Status Notifications will often be used to represent loading icons or submitting
 ```
 ##### Status Content Control
 
+###### Design Considerations
+
+- **Should not**
+  - Move Focus automatically to the notification
+- **May**
+  - Open or up
+
+###### Development Considerations
+
 - **Should**
-  - Status is a form of live region. If another part of the page controls what appears in the status, 
-authors SHOULD make the relationship explicit with the aria-controls attribute.
+  - Use the aria-controls attribute if another part of the page controls what appears in the status
 
 ```html
 <button aria-controls="statusContainer-id" >Add to cart</button>
 ```
-- **Should not**
-  - Move Focus automatically to the notification
-- **May**
-  - Open or update content in locations unrelated to the action which caused the notification to appear 
-##### Status role
-Adding the correct HTML `role="status"` to a status notification. This helps to inform a user of assisted technology, on change, that something has happened. 
-The Status role has an implicit aria-live value of polite though the `aria-live` property may also be used.
-
-- Elements with the role status have an implicit aria-live value of polite and an implicit aria-atomic value of true.
-If you define a section of the page as aria-live and do not add `role="status"` on change,  you may pair the `aria-live` section with `aria-atomic`.
-aria-atomic will ensure the content within the aria-live element is read on change.
-
-#### Visual and Assistive technology aid
-These Notifications will not interrupt the current action of a user so be sure to consider what will be read out once the update is spoken. 
-For instance a quantity update for items added to a cart would be of little use if all that was communicated was "one".
-In this case add the additional "items in your cart" or "x items added to your cart" as screen reader only text. 
+date content in locations unrelated to the action which caused the notification to appear
 
 #### Status Notification Examples
 
