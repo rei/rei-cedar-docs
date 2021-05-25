@@ -144,24 +144,24 @@ This can be provided in the form of screen reader only text, though consider if 
 
 <cdr-img :src="$withBase('/notifications/statusNotification.png')" alt="Diagram for conditional notifications as an overlay, annotating the required layout of the elements listed below" />
 
-- 1 [Status Content Container](#status-content-container)
-- 2 [Status Content Control](#status-content-controln)
-##### Status Content Container
+- 1 [Content Container](#content-container)
+- 2 [Content Control](#content-control)
+##### Content Container
 
-The Status Container wraps both the element being updated and any assistive technology helpers such as screen reader text. It may be a pre-existing section of a page or dynamically added.
+The Status Notification Content Container wraps both the element being updated and any assistive technology helpers such as screen reader text. It may be a pre-existing section of a page or dynamically added upon user action.
 
 ###### Design Considerations
 
-- **Should**
+- Should
   - Ensure the Status notification does not receive focus as a result of a change in status.
-- **Should not**
+- Should not
   - Move Focus automatically to the notification
   - Overuse status notifications. They may interrupt your users experience
-- **May**
+- May
   - appear as a timed display.
 ###### Development Considerations
 
-- **Must**
+- Must
   - Define pre-existing page sections where content may be updated as a WAI-ARIA live region. Use the aria-live attribute on the container of the content that may be updated or, in special cases, use one of the WAI-ARIA special live region roles.
   - Ensure the container generating the status is able to receive focus
   - on activation, add `role=”status”` to the markup announcing the notification without interrupting the page flow of the user
@@ -175,7 +175,7 @@ The Status Container wraps both the element being updated and any assistive tech
  Determining your location...
  </div>
 ```
-- **May**
+- May
   - Update a live region of the page
    ```html
    <!-- EXAMPLE: while stable -->
@@ -214,14 +214,14 @@ Status Notifications will often be used to represent loading icons or submitting
   <!-- contents -->
 </section>
 ```
-##### Status Content Control
-
+##### Content Control
+ The Status Notification Content Control may be any actionable element, such as a link or button.
 ###### Design Considerations
 
 - **Should not**
   - Move Focus automatically to the notification
 - **May**
-  - Open or up
+  - Open or update content in locations unrelated to the action which caused the notification to appear
 
 ###### Development Considerations
 
