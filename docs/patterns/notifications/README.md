@@ -108,7 +108,7 @@ They are informative only and provide our users with advisory information that e
     <td>
       <ul>
         <li>reporting page processes</li>
-        <li>Confirming user initiated actions</li>
+        <li>Responses to user initiated actions</li>
       </ul>
     </td>
   </tr>
@@ -165,34 +165,34 @@ The Status Notification Content Container wraps both the element being updated a
   - Define pre-existing page sections where content may be updated as a WAI-ARIA live region. Use the aria-live attribute on the container of the content that may be updated or, in special cases, use one of the WAI-ARIA special live region roles.
   - Ensure the container generating the status is able to receive focus
   - on activation, add `role=”status”` to the markup announcing the notification without interrupting the page flow of the user
-```html
-<!-- EXAMPLE: while stable -->
+    ```html
+    <!-- EXAMPLE: while stable -->
 
-```
-```html
-<!-- EXAMPLE: while active -->
- <div role="status">
- Determining your location...
- </div>
-```
+    ```
+    ```html
+    <!-- EXAMPLE: while active -->
+    <div role="status">
+    Determining your location...
+    </div>
+    ```
 - May
   - Update a live region of the page
-   ```html
-   <!-- EXAMPLE: while stable -->
-  <div aria-live="polite" role="region" aria-labelledby="shopping-cart">
-    4
-    <span class="cdr-display-sr-only">items in your cart</span>
-  </div>
-  ```
-  ```html
-   <!-- EXAMPLE: when updated -->
-  <div role="status" aria-live="polite" role="region" aria-labelledby="shopping-cart">
+    ```html
+    <!-- EXAMPLE: while stable -->
+    <div aria-live="polite" role="region" aria-labelledby="shopping-cart">
+      4
+      <span class="cdr-display-sr-only">items in your cart</span>
+    </div>
+    ```
+    ```html
+    <!-- EXAMPLE: when updated -->
+    <div role="status" aria-live="polite" role="region" aria-labelledby="shopping-cart">
 
-    <span class="cdr-display-sr-only">there are now</span>
-    5 
-    <span class="cdr-display-sr-only">items in your cart</span>
-  </div>
-  ```
+      <span class="cdr-display-sr-only">there are now</span>
+      5 
+      <span class="cdr-display-sr-only">items in your cart</span>
+    </div>
+    ```
   - Include [aria-atomic](https://www.digitala11y.com/aria-atomic-properties/) markup attribute to define what content will be presented to assistive technologies
   - Include `aria-relevant` to define what type of changes are being announced to assistive technologies
 ##### loading status
@@ -202,18 +202,18 @@ Status Notifications will often be used to represent loading icons or submitting
 - **Should**
   - Define pre-existing page sections where content may be updated as a WAI-ARIA live region.
   - Use the `aria-busy` attribute to call out the loading state of the section or element
-```html
-<!-- EXAMPLE: while stable -->
-<section aria-live="polite" aria-busy="false">
-  <!-- contents -->
-</section>
-```
-```html
-  <!-- EXAMPLE: while reloading -->
-<section aria-live="polite" aria-busy="true">
-  <!-- contents -->
-</section>
-```
+    ```html
+    <!-- EXAMPLE: while stable -->
+    <section aria-live="polite" aria-busy="false">
+      <!-- contents -->
+    </section>
+    ```
+    ```html
+      <!-- EXAMPLE: while reloading -->
+    <section aria-live="polite" aria-busy="true">
+      <!-- contents -->
+    </section>
+    ```
 ##### Content Control
  The Status Notification Content Control may be any actionable element, such as a link or button.
 ###### Design Considerations
@@ -227,24 +227,58 @@ Status Notifications will often be used to represent loading icons or submitting
 
 - **Should**
   - Use the aria-controls attribute if another part of the page controls what appears in the status
-
-```html
-<button aria-controls="statusContainer-id" >Add to cart</button>
-```
+    ```html
+    <button aria-controls="statusContainer-id" >Add to cart</button>
+    ```
 date content in locations unrelated to the action which caused the notification to appear
 
 #### Status Notification Examples
+<cdr-list modifier="unordered">
+  <li>
+    <figure>
+      <cdr-img :src="$withBase('/notifications/statusExamples.png')" alt="An example on REI.com of this status notifications" width="250px"/>
+      <figcaption>
+        <cdr-caption
+        summary=" As the 'Find a store near you' modal is loading results it displays a loading icon, additionally, a screen reader should announce 'Finding stores in your area'."/>
+      </figcaption>
+    </figure>
+  </li>
+  <li>
+   <figure>
+      <cdr-img :src="$withBase('/notifications/statusExampleAddToCartButton.png')" alt="An example on REI.com of this status notifications" width="250px"/>
+      <figcaption>
+        <cdr-caption
+        summary=" After a user adds an item to their cart the button grays out or changes to a loading icon, additionally, a screen reader should announce 'adding your items to the cart'"/>
+      </figcaption>
+    </figure> 
+  
+  </li>
+  <li>
+    <figure>
+      <cdr-img :src="$withBase('/notifications/cartStatusExample.png')" alt="An example on REI.com of this status notifications" width="80px"/>
+      <figcaption>
+        <cdr-caption
+        summary="After a user presses an Add to Cart button, a section of content near the Shopping Cart icon increments the number. A screen reader should announce 'x items in your cart'"/>
+      </figcaption>
+    </figure>
+  </li>
+  <li>
+    <figure>
+      <cdr-img :src="$withBase('/notifications/statusExample.png')" alt="An example on REI.com of this status notifications" width="350px"/>
+      <figcaption>
+        <cdr-caption
+        summary=" After the user selects the 'Bontrager' filter on the Mountain Bike Helmets search results page the 'Mountain Bike Helmets
+    (number of results)' updates to 'Bontrager Mountain Bike Helmets (5 results)'"/>
+      </figcaption>
+    </figure>
+  </li>
+</cdr-list>
 
-- As the "Find a store near you" modal is loading results it displays a loading icon, additionally, a screen reader should announce "Finding stores in your area".
-- After a user adds an item to their cart the button grays out or changes to a loading icon, additionally, a screen reader should announce "adding your items to the cart"
-- After a user presses an Add to Cart button, a section of content near the Shopping Cart icon increments the number. A screen reader should announce "x items in your cart"
-- After the user selects the "Co-op Cycles" filter on the Mountain Bikes search results page the "Mountain Bikes (number of results)" updates to "Co-op Cycles Mountain Bikes
-(7 results)
 #### Using Available Cedar Components
 
 Content control:
-- Cdr-button
-- Cdr-link
+- [cdr-button](../../components/buttons/)
+- [cdr-link](../../components/links/)
 
 Content container:
 - *Cdr-loading - potential component*
@@ -336,7 +370,7 @@ Additionally, they may open based on conditions a user has created or criterium 
   - Status is a form of live region. If another part of the page controls what appears in the status, 
 authors SHOULD make the relationship explicit with the aria-controls attribute.
   - Clearly communicate what is happening
--**Should not**
+- **Should not**
   - Be used for error messages
   - Open as a blocking overlay window
   - Move Focus automatically to the notification
