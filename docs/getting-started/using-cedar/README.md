@@ -42,14 +42,6 @@ For example:
 
 Learn more in the [Component Variables](../../components/component-variables/) article.
 
-### Utilities
-Utility CSS classes allow users to extend Cedar components by providing options for layout, such as spacing, text alignment, or element display.
-
-For example:
-`cdr-align-text-center` would be used to align text to the center.
-
-Find the list of Utility classes in the [Utilities](../../components/utilities/) article.
-
 
 ### Documentation Site
 The documentation for each component and foundational style includes design guidelines, do’s and don’ts, considerations for accessibility, and API instructions for developers.
@@ -151,32 +143,6 @@ The documentation for each component and foundational style includes design guid
       <td>
         <ul>
           <li>Requires SCSS or LESS preprocessor</li>
-          <li>Distributed as a pull model which your team integrates and maintains within your project</li>
-          <li>Support provided only for:
-            <ul>
-              <li>Current and previous major versions</li>
-              <li>Current REI.com supported browser matrix</li>
-            </ul>
-          </li>
-        </ul>
-      </td>
-    </tr>
-    <tr>
-      <th><b>Utility Classes</b></th>
-      <td>
-        <ul>
-          <li>Non-modularized CSS classes allow you to apply these styles where needed</li>
-          <li>Consistent release schedule</li>
-          <li>Up-to-date with digital brand standards</li>
-          <li>Documented markup contract</li>
-          <li>Meets WCAG AA standards for specific proprietary display only</li>
-          <li>Distributed as CSS</li>
-          <li>Compatible and can be combined with all other Cedar-distributed display assets</li>
-        </ul>
-      </td>
-      <td>
-        <ul>
-          <li>Ability to extend or define the application markup</li>
           <li>Distributed as a pull model which your team integrates and maintains within your project</li>
           <li>Support provided only for:
             <ul>
