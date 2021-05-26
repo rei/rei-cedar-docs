@@ -26,11 +26,8 @@ When creating a new component, first reach out to the Cedar team to see if the c
 If you have a request for the Cedar team, submit a [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC) with all relevant information.
 
 ### Code
-Contribution candidates should be built using Cedar
-[Design Tokens](../../tokens/overview/) and
-[Utilities](../../components/utilities), so that it can easily be pulled into the system.
-Include relevant information in the readme file, which will be used for future documentation. Once added to Cedar,
-the design system team will take over all future maintenance and updates.
+Contribution candidates should be built using Cedar [Design Tokens](../../tokens/overview/) and Components, so that it can easily be pulled into the system.
+Include relevant information in the readme file, which will be used for future documentation. Once added to Cedar, the design system team will take over all future maintenance and updates.
 
 If you are working on a component or feature that can be shared with other projects, utilize design tokens to build it and add it to the [fed-components repository](https://git.rei.com/projects/FEDCOMP). The design system team will be looking at the fed-components repository for candidates to add to the system.
 

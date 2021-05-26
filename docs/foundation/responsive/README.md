@@ -15,16 +15,34 @@
 ---
 
 <cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
-Cedar Design System’s layout tools are built with responsively-aware breakpoints. Cedar components
-and utility classes makes sure that your content remains consistent to the REI Digital brand expectations
-within each of our supported breakpoints.
 
-Containers, rows, and columns work to achieve the same goal to provide you a consistent way to
-visually separate the unique content structures within your page. Note that these utilities
-represent a visual structure rather than a content structure.
 
 ## The Cedar Container
-The Cedar container `cdr-container` is the foundational layout mechanism on your page. It centers your content and provides the page with a left and right gutter helping you to separate your content and the edge of the browser window. The container should be added to the root wrapping element of your template.
+The Cedar container `cdr-container` is the foundational layout mechanism on your page. It centers your content and provides the page with a left and right gutter helping you to separate your content and the edge of the browser window. The container should be added to the root wrapping element of your template using the `cdr-container` mixin from `@rei/cdr-tokens`.
+
+
+```vue
+<template>
+  <div>
+    <div class="container-class">
+      <div class="content">A cdr-container mixin</div>
+    </div>
+
+    <div class="container-fluid-class">
+      <div class="content">A cdr-container-fluid mixin</div>
+    </div>
+  </div>
+</template>
+<style>
+  @import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
+  .container-class {
+    @include cdr-container;
+  }
+  .container-fluid-class {
+    @include cdr-container-fluid;
+  }
+</style>
+```
 
 Unlike other deliverables from Cedar, our container breaks in its display settings for each of the breakpoints into one class. This allows all pages to begin from the same layout context as each other. The container has two variants: standard container and fluid container.
 
@@ -36,23 +54,7 @@ The Cedar container allows flexible content width, up to a max width of 1232px. 
 
 <cdr-img :src="$withBase('/layout/StandardvFluid.gif')" alt="Standard vs. Fluid container " />
 
-To explore how the containers work, check out this code sandbox:
 
-<cdr-doc-code-snippet :max-height="false" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {styleTag: 'body { background-color: rgba(130, 234, 255, 0.35);} .content {background-color: #fff;} .cdr-container, .cdr-container-fluid { background-color: lightcoral; color: purple;}'})" >
-
-```vue
-  <div>
-    <div class="cdr-container">
-      <div class="content">A cdr-container class</div>
-    </div>
-
-    <div class="cdr-container-fluid">
-      <div class="content">A cdr-container-fluid class</div>
-    </div>
-  </div>
-
-```
-</cdr-doc-code-snippet>
 
 ## Display Breakpoints
 Cedar provides support for four layout screen widths: extra small, small, medium, and large.
@@ -74,7 +76,7 @@ The following design tokens are provided using the `@rei/cdr-tokens` package for
 
 For more information about using design tokens, visit the [Design Tokens](../../tokens/overview/) overview.
 
-### SCSS/LESS Utilities
+### SCSS/LESS Mixins
 
 `@rei/cdr-tokens` provides the following responsive breakpoint media queries for our patterns, components, and layouts. These provide size ranges intended to help facilitate the changing of layout at various screen widths or orientations.
 

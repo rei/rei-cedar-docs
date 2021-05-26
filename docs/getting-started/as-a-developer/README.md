@@ -47,8 +47,6 @@ export default {
   <cdr-text>Foo</cdr-text>
   <cdr-button>Bar</cdr-button>
   <cdr-link>Baz</cdr-link>
-  // Cedar utility classes can be used as long as they are loaded in your main CSS file
-  <cdr-text class="cdr-display-sr-only">Fizz</cdr-text>
 </template>
 
 <style>
@@ -57,14 +55,15 @@ export default {
 ```
 _index.scss_
 ```css
-/* import the Cedar CSS reset first*/
+/* import the Cedar CSS reset and fonts first,
+  these files only needs to be loaded once on each page,
+  components should expect that the micro-site consuming them will load the fonts and reset */
+@import url('@rei/cedar/dist/cdr-fonts.css');
 @import url('@rei/cedar/dist/style/reset.css');
 /* import each component used in your project  */
 @import url('@rei/cedar/dist/style/cdr-text.css');
 @import url('@rei/cedar/dist/style/cdr-button.css');
 @import url('@rei/cedar/dist/style/cdr-link.css');
-/* import any Cedar utility classes used */
-@import url('@rei/cedar/dist/style/display.css');
 ```
 
 <hr>
@@ -84,9 +83,9 @@ Cedar requires a core reset stylesheet to render properly. This file should be l
 
 To include the stylesheet, import the `reset.css` file:
 
-_main.js_
+_main.scss_
 ```js
-import '@rei/cedar/dist/style/reset.css';
+@import url('@rei/cedar/dist/style/reset.css');
 ```
 
 ### Install Required Fonts
@@ -94,18 +93,18 @@ Cedar uses specific fonts – Stuart and Graphik – that are required for your 
 
 To include these fonts, import `cdr-fonts.css`:
 
-_main.js_
+_main.scss_
 ```js
-import '@rei/cedar/dist/cdr-fonts.css';
+@import url('@rei/cedar/dist/cdr-fonts.css');
 ```
 
 <hr>
 
-### Include Component and Utility CSS
+### Include Component CSS
 
 How you include CSS depends on your tech stack and varies from project to project. We recommend using `postcss` with the `postcss-import` plugin to allow Cedar CSS assets to be de-duped. If you are using FEBS^6 then this is set up for you by default.
 
-1. Create an SCSS file that imports the CSS for any Cedar components or utility classes used in your project.
+1. Create an SCSS file that imports the CSS for any Cedar components used in your project.
 
 _index.scss_
 ```css
@@ -113,8 +112,6 @@ _index.scss_
 @import url('@rei/cedar/dist/style/cdr-text.css');
 @import url('@rei/cedar/dist/style/cdr-button.css');
 @import url('@rei/cedar/dist/style/cdr-link.css');
-/* import any Cedar utility classes used */
-@import url('@rei/cedar/dist/style/display.css');
 ```
 
 2. Load that file in your main JavaScript entry:
@@ -125,31 +122,11 @@ import './index.scss';
 /* rest of your component/app */
 ```
 
-Cedar CSS assets can all be found inside `node_modules/@rei/cedar/dist/style/`. Filenames for component CSS match the `kebab-case` name of the component. Filenames for utility classes match their prefix as follows:
-
-| Path | Prefix | Description |
-|--------|------|------|
-| @rei/cedar/dist/style/align.css | `cdr-align-` | CSS utility classes for alignment. |
-| @rei/cedar/dist/style/color.css | `cdr-color-` | CSS utility classes for color. |
-| @rei/cedar/dist/style/container.css | `cdr-container-` | CSS utility classes for container. |
-| @rei/cedar/dist/style/display.css | `cdr-display-` | CSS utility classes for display logic. |
-| @rei/cedar/dist/style/space.css | `cdr-space-inset-`, `cdr-XX-space-` | CSS utility classes for spacing. |
-| @rei/cedar/dist/style/text.css | `cdr-text-` | CSS utility classes for typography. This is the same file as `cdr-text.css`. |
-| @rei/cedar/dist/style/deprecated-utilities.css | various | CSS utility classes that have been deprecated. |
-
-Note that any deprecated utility classes are bundled into a separate file.
+Cedar CSS assets can all be found inside `node_modules/@rei/cedar/dist/style/`. Filenames for component CSS match the `kebab-case` name of the component.
 
 #### Include Full CSS
 
-For public facing production micro-sites you should always optimize your Cedar CSS imports by only loading the assets you need. However, for some projects it may make sense to skip that process and just load all of the Cedar assets. To support this we provide both compiled and un-compiled versions of the full Cedar CSS and the full utility classes. If your project is loading shared components then you should use the un-compiled version along with `postcss` and `postcss-import` to ensure that duplicate Cedar assets are not loaded. If your project is not using any shared components or has no build system at all it may make more sense to use the compiled version.
-
-| path | description | compiled |
-|--------|------|------|
-| @rei/cedar/dist/style/cedar-full.css | Imports all of the Cedar component CSS and utility classes. | no |
-| @rei/cedar/dist/style/utilities-full.css | Imports all of the Cedar CSS utility classes.  | no |
-| @rei/cedar/dist/cedar-compiled.css | Full compiled Cedar component CSS and utilities. | yes |
-| @rei/cedar/dist/utilities-compiled.css | Full compiled Cedar CSS utility classes. | yes |
-
+For public facing production micro-sites you should always optimize your Cedar CSS imports by only loading the assets you need. However, for some projects it may make sense to skip that process and just load all of the Cedar assets. To support this we provide both compiled and un-compiled versions of the full Cedar CSS. If your project is loading shared components then you should use the un-compiled version (`@rei/cedar/dist/style/cedar-full.css`) along with `postcss` and `postcss-import` to ensure that duplicate Cedar assets are not loaded. If your project is not using any shared components or has no build system at all it may make more sense to use the compiled version (`@rei/cedar/dist/cedar-compiled.css`).
 
 <hr/>
 

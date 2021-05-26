@@ -202,7 +202,7 @@ CdrIcon by default adds `aria-hidden="true"` to the root SVG element. If your us
 </cdr-button>
 ```
 
-- For a link that only contains an icon, include screenreader-only text inside of the link element using the `cdr-display-sr-only` utility class or mixin.
+- For a link that only contains an icon, include screenreader-only text inside of the link element using the `cdr-display-sr-only` mixin from `@rei/cdr-tokens`.
 
 ```
 <cdr-link href="/cart">
@@ -220,7 +220,7 @@ For a button or link that contains text alongside an icon:
 </cdr-button>
 ```
 
-- If the icon has meaning that is not conveyed by the text, add `aria-hidden="true"` to the icon and use the `cdr-display-sr-only` utility class or mixin to insert screenreader-only text into the button or link in the appropriate place.
+- If the icon has meaning that is not conveyed by the text, add `aria-hidden="true"` to the icon and use the `cdr-display-sr-only` mixin from `@rei/cdr-tokens` to insert screenreader-only text into the button or link in the appropriate place.
 
 ```
 <cdr-link>
