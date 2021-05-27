@@ -37,15 +37,15 @@ In general all notifications share the following traits:
 <cdr-table class="advanced-table" full-width=false>
   <tr>
     <th class="advanced-table__header">
-      <cdr-link href="#status-notifications">Status Notification</cdr-link>
+      <cdr-link href="#update-notifications">Update Notification</cdr-link>
     </th>
-    <td>UI updates and non-verbal application status communications (such as "busy" or "loading" icons)</td>
+    <td>UI updates and non-verbal application state communications (such as "busy" or "loading" icons)</td>
   </tr>
   <tr>
     <th class="advanced-table__header">
-      <cdr-link href="#conditional-notifications">Conditional Notifications</cdr-link>
+      <cdr-link href="#status-notifications">Status Notifications</cdr-link>
     </th>
-    <td>Page level messaging available only in some situations</td>
+    <td>Page level responses to user interactions Confirming actions made, communicating additional information based on user provided input</td>
   </tr>
   <tr>
   <tr>
@@ -70,9 +70,9 @@ associated=>condition: Response to
 form inputs?
 succinct=>condition: Inline?
 associatedYes=>operation: Validation |:>#validation 
-associatedNo=>operation: Conditional Notification |:>#conditional-notifications
-succinctNo=>operation: Conditional Notification |:>#conditional-notifications
-succinctYes=>operation: Status Notification |:>#status-notifications
+associatedNo=>operation: Status Notification |:>#status-notifications
+succinctNo=>operation: Status Notification |:>#status-notifications
+succinctYes=>operation: Update Notification |:>#update-notifications
 
 interactive(yes)->associated(yes)->associatedYes
 associated(no, bottom)->associatedNo()
@@ -81,11 +81,15 @@ succinct(yes)->inline(yes)->succinctNo
 inline(no, bottom)->succinctYes
 @flowend
 
-### Status Notifications
+### Update Notifications
 
-Status Notifications update existing inline page content.
-They are informative only and provide our users with advisory information that enhances the site experience.
+Update Notifications update existing inline page content.
+They inform users of advisory information that enhances the site experience such as quantity updates or busy states.
+Additionally, These notifications often only update a specific part of an inline content section.
 
+It is important to grasp that many visual transitions are actually update notifications and should provide contextual information to our users. 
+This can be added in the form of screen reader only text, though consider if the action without context will create any cognitive dissonance for our visual users.
+Remember to create sufficient Visual feedback as many update notifications are unassociated triggering action.
 #### At A Glance
 <cdr-table class="advanced-table" full-width=false>
   <tr>
@@ -124,58 +128,50 @@ They are informative only and provide our users with advisory information that e
 
 #### Use When
 
-It is important to grasp that many visual transitions are actually status notifications and should be providing contextual information to our users. 
-This can be provided in the form of screen reader only text, though consider if the action without context will create any cognitive dissonance for our users.
-
-- Loading icons or states
-- Submitting Buttons
-- Incrementing carts
-- Changes to inline content based on user selection
+- Providing loading icons or states
+- Informing users that the application is busy
+- Incrementing results or items
+- Changing inline content based on user selection
+- Confirming an action has taken place
 
 #### Don't Use When
 - The User makes a selection that does not change or add content to the page
-- The notification is not updating inline copy
 - The notification does not relate to an actionable element in a busy state
 - The content added to the page is important or needs attention
-- During the appearance / disappearance of content following a user interaction which is also announced to assistive technology (for example, the screen reader is announced "open / closed" for a menu, an accordion)
-- For a panel system, whose selected tab is announced at AT
+- For delivery of messaging
+- During the appearance / disappearance of content following a user interaction which is also announced to assistive technology such as the following:
+  - tab
+  - accordion
+  - dialog
+  - popover
+  - tooltip
 
-#### Anatomy of a Status Notification
+#### Anatomy of a Update Notification
 
-<cdr-img :src="$withBase('/notifications/statusNotification.png')" alt="Diagram for conditional notifications as an overlay, annotating the required layout of the elements listed below" />
+<cdr-img :src="$withBase('/notifications/updateNotification.png')" alt="Diagram for conditional notifications as an overlay, annotating the required layout of the elements listed below" />
 
 - 1 [Content Container](#content-container)
 - 2 [Content Control](#content-control)
 ##### Content Container
 
-The Status Notification Content Container wraps both the element being updated and any assistive technology helpers such as screen reader text. It may be a pre-existing section of a page or dynamically added upon user action.
+The Update Notification Content Container wraps both the element being updated and any assistive technology helpers such as screen reader text. It may be a pre-existing section of a page or dynamically added upon user action.
 
 ###### Design Considerations
 
+
 - Should
-  - Ensure the Status notification does not receive focus as a result of a change in status.
+  - Ensure the Update notification does not receive focus as a result of a change in status.
+  - Ensure sufficient Visual feedback is provided to inform users that an update that may not be associated with the element they have interacted with has been updated
 - Should not
   - Move Focus automatically to the notification
-  - Overuse status notifications. They may interrupt your users experience
+  - Overuse Update notifications. They may interrupt your users experience
 - May
   - appear as a timed display.
 ###### Development Considerations
 
 - Must
   - Define pre-existing page sections where content may be updated as a WAI-ARIA live region. Use the aria-live attribute on the container of the content that may be updated or, in special cases, use one of the WAI-ARIA special live region roles.
-  - Ensure the container generating the status is able to receive focus
-  - on activation, add `role=”status”` to the markup announcing the notification without interrupting the page flow of the user
-    ```html
-    <!-- EXAMPLE: while stable -->
-
-    ```
-    ```html
-    <!-- EXAMPLE: while active -->
-    <div role="status">
-    Determining your location...
-    </div>
-    ```
-- May
+  - Ensure the container generating the update is able to receive focus
   - Update a live region of the page
     ```html
     <!-- EXAMPLE: while stable -->
@@ -193,12 +189,25 @@ The Status Notification Content Container wraps both the element being updated a
       <span class="cdr-display-sr-only">items in your cart</span>
     </div>
     ```
+
+- May
+  - on activation, add `role=”status”` to the markup announcing the notification without interrupting the page flow of the user
+    ```html
+    <!-- EXAMPLE: while stable -->
+
+    ```
+    ```html
+    <!-- EXAMPLE: while active -->
+    <div role="status">
+    Determining your location...
+    </div>
+    ```
   - Include [aria-atomic](https://www.digitala11y.com/aria-atomic-properties/) markup attribute to define what content will be presented to assistive technologies
   - Include `aria-relevant` to define what type of changes are being announced to assistive technologies
 ##### loading status
 <cdr-img :src="$withBase('/notifications/loadingNotification.png')" alt="Diagram of loading animation annotating the list below" width="600px"/>
 
-Status Notifications will often be used to represent loading icons or submitting buttons. These types of Status notifications 
+Update Notifications will often be used to represent loading icons or submitting buttons. These types of Update notifications 
 - **Should**
   - Define pre-existing page sections where content may be updated as a WAI-ARIA live region.
   - Use the `aria-busy` attribute to call out the loading state of the section or element
@@ -215,7 +224,7 @@ Status Notifications will often be used to represent loading icons or submitting
     </section>
     ```
 ##### Content Control
- The Status Notification Content Control may be any actionable element, such as a link or button.
+ The Update Notification Content Control may be any actionable element, such as a link or button.
 ###### Design Considerations
 
 - **Should not**
@@ -226,51 +235,63 @@ Status Notifications will often be used to represent loading icons or submitting
 ###### Development Considerations
 
 - **Should**
-  - Use the aria-controls attribute if another part of the page controls what appears in the status
+  - Use the aria-controls attribute if another part of the page controls what appears in the notification
     ```html
-    <button aria-controls="statusContainer-id" >Add to cart</button>
+    <button aria-controls="updateContainer-id" >Add to cart</button>
     ```
 date content in locations unrelated to the action which caused the notification to appear
 
-#### Status Notification Examples
+#### Examples that should be Update Notifications
 <cdr-list modifier="unordered">
   <li>
     <figure>
-      <cdr-img :src="$withBase('/notifications/statusExamples.png')" alt="An example on REI.com of this status notifications" width="250px"/>
+      <cdr-img :src="$withBase('/notifications/updateExamples.png')" alt="An example on REI.com of this update notification" width="250px"/>
       <figcaption>
         <cdr-caption
-        summary=" As the 'Find a store near you' modal is loading results it displays a loading icon, additionally, a screen reader should announce 'Finding stores in your area'."/>
+        summary=" As the 'Find a store near you' modal is loading results it displays a loading icon, additionally, assistive technology should inform non-vision users of the busy state. For more information review the loading notification section above"/>
       </figcaption>
     </figure>
   </li>
   <li>
    <figure>
-      <cdr-img :src="$withBase('/notifications/statusExampleAddToCartButton.png')" alt="An example on REI.com of this status notifications" width="250px"/>
+      <cdr-img :src="$withBase('/notifications/updateExampleAddToCartButton.png')" alt="An example on REI.com of this update notification" width="250px"/>
       <figcaption>
         <cdr-caption
-        summary=" After a user adds an item to their cart the button grays out or changes to a loading icon, additionally, a screen reader should announce 'adding your items to the cart'"/>
+        summary="After a user presses the Add to Cart button, the button grays out or changes to a loading icon, additionally, assistive technology should inform users of the busy state. For more information review the loading notification section above"/>
       </figcaption>
     </figure> 
   
   </li>
   <li>
     <figure>
-      <cdr-img :src="$withBase('/notifications/cartStatusExample.png')" alt="An example on REI.com of this status notifications" width="80px"/>
+      <cdr-img :src="$withBase('/notifications/cartUpdateExample.png')" alt="An example on REI.com of this notifications" width="80px"/>
       <figcaption>
         <cdr-caption
-        summary="After a user presses an Add to Cart button, a section of content near the Shopping Cart icon increments the number. A screen reader should announce 'x items in your cart'"/>
+        summary="After a user adds an item to their cart a section of content near the Shopping Cart icon increments the number. additionally, assistive technology should announce 'x items in your cart'"/>
       </figcaption>
     </figure>
   </li>
   <li>
     <figure>
-      <cdr-img :src="$withBase('/notifications/statusExample.png')" alt="An example on REI.com of this status notifications" width="350px"/>
+      <cdr-img :src="$withBase('/notifications/updateExample.png')" alt="An example on REI.com of this notifications" width="350px"/>
       <figcaption>
         <cdr-caption
-        summary=" After the user selects the 'Bontrager' filter on the Mountain Bike Helmets search results page the 'Mountain Bike Helmets
-    (number of results)' updates to 'Bontrager Mountain Bike Helmets (5 results)'"/>
+        summary=" After a user selects the 'Bontrager' filter on the Mountain Bike Helmets search results page the 'Mountain Bike Helmets
+    (number of results)' updates to 'Bontrager Mountain Bike Helmets (5 results)', ensuring this is marked up as a notification enable users of assistive technology stay informed of this update."/>
       </figcaption>
     </figure>
+  </li>
+  <li>
+    <figure>
+      <cdr-img :src="$withBase('/notifications/quantityUpdate.png')" alt="An example on REI.com of this notifications" width="500px"/>
+      <figcaption>
+        <cdr-caption
+        summary=" A user updates the quantity of an item in the shopping cart, multiple items are updated to reflect this change including the item price, the order summary subtotal, order total, and total and savings of the shopping cart"/>
+      </figcaption>
+    </figure>
+  </li>
+  <li>
+   removing an item from wish list
   </li>
 </cdr-list>
 
@@ -283,12 +304,12 @@ Content control:
 Content container:
 - *Cdr-loading - potential component*
 
-### Conditional Notifications
+### Status Notifications
 
-Similar to Status Notifications, these Conditional Notifications apply the `role="status"` to their HTML markup.
+Status Notifications apply the `role="status"` to their HTML markup.
 They will not interrupt a user from a task they are engaged in, and are provided on user action rather than as part of the page. 
-These event based notifications differ from Status Notifications as they do not update live, existing inline sections of a page.
-They provide information that will help users make a decisions or provide warnings about selections they have made.
+These event based notifications differ from Update Notifications as they do not update live, existing inline sections of a page.
+They provide information which will help users make a decision, communicate statuses, or provide feedback about selections that have been have made.
 These notifications may open or be added to locations unrelated to the action which caused the notification to trigger.
 Additionally, they may open based on conditions a user has created or criterium they have met.
 
@@ -333,7 +354,6 @@ Additionally, they may open based on conditions a user has created or criterium 
 - As confirmation that a task or process initiated by the user was completed successfully 
 
 - As confirmation that a task was completed successfully (See Success Type)
-- As contextual information that might need their attention (See Informational Type)
 #### Don't Use When
 - presenting the user additional actions to take (see [modal](../../components/modal/))
 - The UI is presented as a dialog that requires a user action, on which the focus is set (see [modal](../../components/modal/))
@@ -342,9 +362,9 @@ Additionally, they may open based on conditions a user has created or criterium 
 - The notification relates to an actionable element in a busy state (see [status notifications](#status-notifications))
 - The content added to the page is critical and needs immediate attention (see [alert](../alerts))
 
-#### Anatomy of a Conditional Notification
+#### Anatomy of a Status Notification
 
-<cdr-img :src="$withBase('/notifications/ConditionalAnatomy.png')" alt="Diagram for conditional notifications as an overlay, annotating the required layout of the elements listed below" />
+<cdr-img :src="$withBase('/notifications/statusAnatomy.png')" alt="Diagram for status notifications as an overlay, annotating the required layout of the elements listed below" />
 
 1. Notification Type - Affects the color and icon associated with the notification. Choose from error, warning, success or informational.
 2. Optional Dismiss Action - Enables the user to remove the notification from view.
@@ -353,7 +373,17 @@ Additionally, they may open based on conditions a user has created or criterium 
 5. Message - Includes the core, most important alert content.
 
 - **Must**
-  - Include the `aria-live` or `role=”status”` markup to announce the notification without interrupting the page flow of the user
+  - on activation, add `role=”status”` to the markup announcing the notification without interrupting the page flow of the user
+    ```html
+    <!-- EXAMPLE: while stable -->
+
+    ```
+    ```html
+    <!-- EXAMPLE: while active -->
+    <div role="status">
+    Determining your location...
+    </div>
+    ```
   - Not contain unique actionable items if the notification is an overlay
   - Ensure the notification container is able to receive focus
   - Ensure notification will not be removed if keyboard focus or mouse hover is within or over the notification.
@@ -375,7 +405,7 @@ authors SHOULD make the relationship explicit with the aria-controls attribute.
   - Open as a blocking overlay window
   - Move Focus automatically to the notification
   - Direct the user to a new page or window
-  - Overuse Conditional notifications. They may interrupt your users experience
+  - Overuse Status notifications. They may interrupt your users experience
   - Reuse bespoke UI intended for other message or navigation types
   - Create notifications that disappear automatically
   - Contain interactive controls if notification is displayed as an overlay
@@ -389,22 +419,22 @@ authors SHOULD make the relationship explicit with the aria-controls attribute.
   - Include `aria-relevant` to define what type of changes are being announced to assistive technologies
 
 
-<cdr-img :src="$withBase('/notifications/ConditionalOverlayAnatomy.png')" alt="Diagram for conditional notifications as an overlay, annotating the required layout of the elements listed below" />
+<cdr-img :src="$withBase('/notifications/statusOverlayAnatomy.png')" alt="Diagram for status notifications as an overlay, annotating the required layout of the elements listed below" />
 
-1. **[Conditional Notifications as an Overlay](#conditional-notifications-as-an-overlay)**
+1. **[Status Notifications as an Overlay](#status-notifications-as-an-overlay)**
 2. **[Automatic Dismissal](#automatic-dismissal)**
 3. **[Interactive Controls](#interactive-controls)**
 
-##### Conditional Notifications as an overlay
-The concise messages contained within Conditional Notifications are not required for a user to interact with and may open unexpectedly, 
+##### Status Notifications as an overlay
+The concise messages contained within Status Notifications are not required for a user to interact with and may open unexpectedly, 
 these Notifications should not be blocking. Opening in an overlay may disrupt and confuse or not be seen at all by users at some breakpoints.
 
-If opening a Conditional Notification consider the following:
+If opening a Status Notification consider the following:
 - A blocking window can introduce obstruction issues for people who have zoomed in browsers Or for users at smaller breakpoints
 - A non-blocking window may be completely missed by those who are using screen magnification software, but who are not using a screen reader
 
 ##### Automatic Dismissal
-In some scenarios Conditional notifications may be displayed for a set amount of time rather than become an evergreen feature of a page. In these cases there should be no negative impact on their current activities or the status that the message conveyed. 
+In some scenarios Status notifications may be displayed for a set amount of time rather than become an evergreen feature of a page. In these cases there should be no negative impact on their current activities or the status that the message conveyed. 
 ignoring a timed notification would still mean that the action is completed successfully.
 
 For example an item would still be added to a cart regardless of a users engagement with the notification informing them of the successfully added item.
@@ -432,6 +462,37 @@ If the notification must include an actionable element you are responsible for t
 
 
 #### Examples
+
+<cdr-list>
+  <li>
+    <figure>
+      <cdr-img :src="$withBase('/notifications/storeStatusNotification.png')" alt="An example on REI.com of this notification" width="200px"/>
+      <figcaption>
+        <cdr-caption
+        summary="After a user selects 'Set as my REI' for and REI store a 'saved' notification overlay displays. Assistive technology should inform users of the busy state."/>
+      </figcaption>
+    </figure>
+  </li>
+  <li>
+    <figure>
+      <cdr-img :src="$withBase('/notifications/locationStatus.png')" alt="" width="500px"/>
+      <figcaption>
+        <cdr-caption
+        summary="A user navigates to the classes and events landing page and is asked to enable location services."/>
+      </figcaption>
+    </figure>
+  </li>
+  <li>
+    <figure>
+      <cdr-img :src="$withBase('/notifications/wishlist.png')" alt="" width="500px"/>
+      <figcaption>
+        <cdr-caption
+        summary="The user adds an item to their wishlist"/>
+      </figcaption>
+    </figure>
+  </li>
+</cdr-list>
+
 - New options are available based on selections you have made
 - Shipping restrictions display once you have selected a location
 - Quantity availability
@@ -593,7 +654,7 @@ It is important for authors to include the text indicating that asterisk is used
 - **May**
   - also use '[aria-describedby]()' in conjunction with [aria-errormessage](aria-errormessage)
 
-#### Notification Instruction 
+#### Notification Instruction
 WCAG 1.3.3, WCAG 3.3.2 provide the following guidelines for validation instructions.
 When users enter input that is validated, and errors are detected, the nature of the error needs 
 to be described to the user in manner they can access. One approach is to present an alert dialog 
@@ -728,6 +789,7 @@ TODO- something about how we only provide the UI/container but not validation lo
 
 
 #### Accessibility References
+- [Notifications and feedback](https://www.w3.org/WAI/perspective-videos/notifications/)
 - [Accessible Notifications](https://www.w3.org/WAI/RD/wiki/Accessible_Notifications)
 - [WCAG status messages 4.1.3](https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html)
 - [WCAG Error Identification 3.3.1 (lvl A)](https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html)
