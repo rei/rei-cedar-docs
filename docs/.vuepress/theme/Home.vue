@@ -9,10 +9,9 @@
         crop="y-center x-center"
         cover
         alt="hero"/>
-      <div class="hero__container cdr-align-text-center">
+      <div class="hero__container align-center">
         <cdr-text
-          modifier="heading-serif-700 heading-serif-strong-900@md heading-serif-strong-1100@lg"
-          class="stack-1"
+          class="stack-1 hero-heading"
         >{{ data.heroTitle }}</cdr-text>
         <p class="hero__description">{{ data.heroDescription }}</p>
       </div>
@@ -56,7 +55,7 @@
 
       <cdr-row cols="1 2@md" class="stack-4">
         <cdr-col>
-          <div class="cdr-align-text-center">
+          <div class="align-center">
             <cdr-img
               class="home-start-image"
               :src="$withBase('home/foundation_icon.png')"
@@ -73,7 +72,7 @@
           </div>
         </cdr-col>
         <cdr-col>
-          <div class="cdr-align-text-center">
+          <div class="align-center">
             <cdr-img
               class="home-start-image"
               :src="$withBase('home/components_icon.png')"
@@ -99,7 +98,7 @@
       </div>
 
 
-      <h2 class="home-heading cdr-align-text-center stack-4">Resources</h2>
+      <h2 class="home-heading align-center stack-4">Resources</h2>
 
       <cdr-row cols="1 2@md" class="stack-4">
         <cdr-col>
@@ -228,6 +227,18 @@ export default {
   }
 }
 
+.hero-heading {
+  @include cdr-text-heading-serif-700;
+
+  @media (min-width: $cdr-breakpoint-md) {
+    @include cdr-text-heading-serif-strong-900;
+  }
+
+  @media (min-width: $cdr-breakpoint-lg) {
+    @include cdr-text-heading-serif-strong-1100;
+  }
+}
+
 .home-heading {
   @include cdr-text-heading-serif-700;
   margin-bottom: $cdr-space-one-x;
@@ -305,6 +316,11 @@ export default {
   max-width: 55px !important;
   display: block;
   margin-left: auto;
+}
+
+
+.align-center {
+  text-align: center;
 }
 
 </style>

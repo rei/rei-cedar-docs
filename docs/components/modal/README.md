@@ -51,6 +51,12 @@
                 "description": "Unique id for modal."
               },
               {
+                "name": "role",
+                "type": "string",
+                "default": "dialog",
+                "description": "Overrides the `role` attribute on the modal content element."
+              },
+              {
                 "name": "overlayClass",
                 "type": "string",
                 "default": "N/A",

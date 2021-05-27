@@ -75,6 +75,9 @@
 | cdr-text-display-1100 | cdr-text-heading-serif-strong-1100 |
 | cdr-text-display-1200 | cdr-text-heading-serif-strong-1200 |
 | | |
+| cdr-text-default-compact | cdr-text-utility-sans-200 |
+| cdr-text-editorial | cdr-text-default |
+| | |
 | cdr-text-utility-n00 | cdr-text-utility-sans-n00 |
 | cdr-text-utility-strong-n00 | cdr-text-utility-sans-strong-n00 |
 
@@ -119,6 +122,11 @@
 | cdr-color-border-disabled-darkmode | n/a |
 | cdr-color-border-error-lightmode | cdr-color-border-error |
 | cdr-color-border-selected-lightmode | cdr-color-border-input-default-selected |
+| cdr-color-background-success | cdr-color-background-message-success |
+| cdr-color-background-warning | cdr-color-background-message-warning |
+| cdr-color-background-error | cdr-color-background-message-error |
+| cdr-color-background-info | cdr-color-background-message-info |
+| cdr-color-background-sale | cdr-color-background-message-sale |
 
 
 ### Media Query Mixins
@@ -218,6 +226,27 @@ CdrDataTable has been replaced by [CdrTable](../../components/table). See [the r
 
 The flexbox based CdrRow and CdrCol have been replaced with the CSS grid based [CdrGrid](../../components/grid). See [the release notes](../release-notes/winter-2021/#cdrgrid-component) for more information.
 
+### CdrIcon
+
+| old asset name     | new asset name     |
+|--------------------|--------------------|
+| warning-stroke.svg | error-stroke.svg   |
+| warning-fill.svg   | error-fill.svg     |
+| warning-tri.svg    | warning-fill.svg   |
+
+| old component name | new component name |
+|--------------------|--------------------|
+| IconWarningStroke  | IconErrorStroke    |
+| IconWarningFill    | IconErrorFill      |
+| IconWarningTri     | IconWarningFill    |
+
+
+
+
+## Utility Classes
+
+NOTE: the Cedar utility classes and CdrText modifier have been removed as of Cedar version 9.0.0. These mappings exist purely to guide consumers who may be updating from earlier versions of Cedar. Cedar tokens or plain CSS should be used instead to apply these same styles.
+
 ### CdrText Modifiers
 | Deprecated modifier name | Equivalent modifier names and breakpoints  |
 |--------------------------|--------------------------------------------|
@@ -251,23 +280,6 @@ The flexbox based CdrRow and CdrCol have been replaced with the CSS grid based [
 | | |
 | utility-n00 | utility-sans-n00 |
 | utility-strong-n00 | utility-sans-strong-n00 |
-
-### CdrIcon
-
-| old asset name     | new asset name     |
-|--------------------|--------------------|
-| warning-stroke.svg | error-stroke.svg   |
-| warning-fill.svg   | error-fill.svg     |
-| warning-tri.svg    | warning-fill.svg   |
-
-| old component name | new component name |
-|--------------------|--------------------|
-| IconWarningStroke  | IconErrorStroke    |
-| IconWarningFill    | IconErrorFill      |
-| IconWarningTri     | IconWarningFill    |
-
-
-## Utility Classes
 
 ### Space
 

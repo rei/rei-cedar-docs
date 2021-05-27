@@ -163,6 +163,12 @@
                 "description": "Sets the disabled state for the input field and label styling. Also, restricts user input."
               },
               {
+                "name": "numeric",
+                "type": "boolean",
+                "default": "false",
+                "description": "Sets default attributes for an input that should launch a numeric keyboard but is not strictly a 'number' (credit card, security code, postal code, etc.). Should be used in conjunction with the default text type input. An `input` listener can be used to fully restrict input values to numerical characters only"
+              },
+              {
                 "name": "required",
                 "type": "boolean",
                 "default": "false",
@@ -179,6 +185,12 @@
                 "type": "boolean",
                 "default": "false",
                 "description": "Sets the input to an error state, displays the `error` slot if one is present."
+              },
+              {
+                "name": "errorRole",
+                "type": "string",
+                "default": "status",
+                "description": "Sets the `role` attribute for the embedded error state messaging."
               },
               {
                 "name": "background",
@@ -247,13 +259,11 @@ Basic input field with label.
 <cdr-input
   v-model="defaultModel"
   label="Input label"
-  placeholder="Placeholder input"
 />
 <br>
 <cdr-input
   v-model="defaultModel"
   label="Input label"
-  placeholder="Placeholder input"
   disabled
 />
 ```
@@ -271,7 +281,6 @@ Basic input field with label and required tag.
 <cdr-input
   v-model="defaultModel"
   label="Input label"
-  placeholder="Placeholder input"
   required
 />
 ```
@@ -289,7 +298,6 @@ Basic input field with label and optional tag.
 <cdr-input
   v-model="defaultModel"
   label="Input label"
-  placeholder="Placeholder input"
   optional
 />
 ```
@@ -307,13 +315,11 @@ Change size for the input field. Default size is medium.
 <cdr-input
   v-model="defaultModel"
   label="Input label"
-  placeholder="Placeholder input"
 />
 <br>
 <cdr-input
   v-model="defaultModel"
   label="Input label"
-  placeholder="Placeholder input"
   size="large"
 />
 ```
@@ -331,7 +337,6 @@ Input field with no label.
 <cdr-input
   v-model="defaultModel"
   label="Input label"
-  placeholder="Placeholder input"
   hideLabel
 />
 ```
@@ -351,7 +356,6 @@ Error messaging will override helper text rendered in the bottom position.
 <cdr-input
   v-model="defaultModel"
   label="Input label"
-  placeholder="Placeholder input"
   :error="modelError"
   @blur="validateInput"
 >
@@ -373,8 +377,25 @@ Multiple line input field with expander control in lower right. Note that the pr
 <cdr-input
   v-model="defaultModel"
   label="Input label"
-  placeholder="Placeholder input"
   :rows="4"
+/>
+```
+
+</cdr-doc-example-code-pair>
+
+## Numeric Input
+
+Input field designed to accept numerical input. Launches the numerical keyboard on mobile devices. Does not use the `type="number"` attribute as that is intended for values that are strictly "numbers" such as quantities and not values that contain numerical characters such as credit cards, security codes, month/year values, etc. Can be used in conjunction with [input masking](#input-masking) to handle formatting values like credit cards, or an `input` listener can be used to format or restrict input.
+
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}" :methods="{restrictInput() {this.defaultModel = this.defaultModel.replace(/\D/g, '')}}">
+
+```html
+<cdr-input
+  v-model="defaultModel"
+  label="Numerical input label"
+  optional
+  :numeric="true"
+  @input="restrictInput"
 />
 ```
 
@@ -391,7 +412,6 @@ Input field with link text on right.
 <cdr-input
   v-model="defaultModel"
   label="Input label"
-  placeholder="Placeholder input"
 >
   <template slot="info">
     <cdr-link href="#" modifier="standalone">Information link</cdr-link>
@@ -411,7 +431,6 @@ Input field with icon outside the input field on right.
 <cdr-input
   v-model="defaultModel"
   label="Input label"
-  placeholder="Placeholder input"
 >
   <cdr-link tag="button" slot="info-action">
     <icon-information-fill
@@ -433,7 +452,6 @@ Input field with helper or hint text below the input field. If the input is in a
 <cdr-input
   v-model="defaultModel"
   label="Input label"
-  placeholder="Placeholder input"
 >
   <template slot="helper-text-bottom">
     Helper or additional text
@@ -453,7 +471,6 @@ Input field with helper or hint text rendered above the input field.
 <cdr-input
   v-model="defaultModel"
   label="Input label"
-  placeholder="Placeholder input"
 >
   <template slot="helper-text-top">
     Helper or additional text
@@ -473,7 +490,6 @@ Input field with icon inserted into the input field on left. Icon is decorative 
 <cdr-input
   v-model="defaultModel"
   label="Input label"
-  placeholder="Placeholder input"
 >
   <IconLocationPinStroke
     slot="pre-icon"
@@ -495,7 +511,6 @@ Input field with icon inserted into the input field on right. Icon is decorative
 <cdr-input
   v-model="defaultModel"
   label="Input label"
-  placeholder="Placeholder input"
 >
   <IconCreditCard
     slot="post-icon"
@@ -518,7 +533,7 @@ Input field with icon buttons inserted to the right. Up to 2 buttons can be pass
   <cdr-input
     v-model="defaultModel"
     label="Input label"
-    placeholder="Placeholder input"
+
   >
     <template slot="post-icon">
       <cdr-tooltip class="cdr-input__button" id="input-tooltip">
@@ -547,7 +562,7 @@ Input field with icon buttons inserted to the right. Up to 2 buttons can be pass
   <cdr-input
     v-model="defaultModel"
     label="Large Input label"
-    placeholder="Placeholder input"
+
     size="large"
   >
     <cdr-button
@@ -571,6 +586,8 @@ Input field with icon buttons inserted to the right. Up to 2 buttons can be pass
 This component has compliance with WCAG guidelines by:
 - Requiring a value for the `label` field
 - When hiding a label, the `aria-label` attribute is set to the `label` value
+
+The HTML `placeholder` attribute should not be used as it creates an inaccessible experience when the placeholder content disappears as soon as the user begins typing into the input field. Instead the `helper-text` or `info` slots should be used to provide any additional information needed to complete the input.
 
 <hr>
 
@@ -649,10 +666,83 @@ This component has compliance with WCAG guidelines by:
 <do-dont :examples="$page.frontmatter.case" />
 
 <do-dont :examples="$page.frontmatter.punctuation" />
+<!-- TODO: replace with DO use info/helper slots to describe desired input DON'T use placeholder attribute
+<do-dont :examples="$page.frontmatter.placeholder" /> -->
 
-<do-dont :examples="$page.frontmatter.placeholder" />
+<do-dont :examples="$page.frontmatter.required" />
+
+<do-dont :examples="$page.frontmatter.sizes" />
 
 ## Behavior
+
+### Default Input Attrs
+
+CdrInput sets some default attributes to make it easier to construct consistent and accessible forms. These default attributes can be overridden by passing the same attribute to the CdrInput component.
+
+For all CdrInput elements:
+- `spellcheck` is set to `false`
+- `autocorrect` is set to `'off'`
+- `autocapitalize` is set to `'off'`
+
+For CdrInput elements with `type="number"` set, the following attributes are enabled to help ensure that numeric inputs behave consistently across browsers and devices:
+- `pattern` is set to `[0-9]*`, which restricts
+- `novalidate` is set to `true`
+- `inputmode` is set to `numeric`
+
+Note that the `maxlength` attribute does not work in conjunction with numeric inputs as they are treated as numbers not strings. Instead, the length can be restricted using either an event listener or the min/max attributes:
+
+```
+<!-- restrict numeric input to 3 characters max with a listener -->
+<cdr-input type="number" v-model="default" @input="() => {this.default = this.default.substring(0, 3)}"/>
+
+<!-- restrict numeric input to 3 digit numbers -->
+<cdr-input type="number" v-model="default" min="0" max="999"/>
+
+```
+
+
+### Input Masking
+
+User input should be automatically formatted to make forms easier to comprehend and use, for example by adding parentheses and a dash to a phone number or inserting a space between every four digits of a credit card number.
+
+Input masking has not been integrated directly into Cedar, however the CdrInput component implements the same API as a plain HTML text input element and can be used in conjunction with most input masking libraries.
+
+We recommend using [v-mask](https://github.com/probil/v-mask) as a local directive in any components where you need input masking, as it provides a number of benefits:
+
+- one of the smallest vue plugins for input masking
+- can be loaded as a local directive directly in your component rather than as a global plugin that must be registered at the application level
+- the API of `v-mask` is extremely simple and easy to understand
+- if and when input masking support is built into CdrInput the `v-mask` API is what we will implement, making it easier for you to migrate in the future
+
+```
+<script>
+import { CdrInput } from "@rei/cedar";
+import { VueMaskDirective } from "v-mask";
+
+export default {
+  name: "VueDirectiveExample",
+  components: {
+    CdrInput,
+  },
+  directives: {
+    mask: VueMaskDirective,
+  },
+  data() {
+    return {
+      defaultModel: '',
+    }
+  }
+};
+</script>
+<template>
+<cdr-input
+  v-model="defaultModel"
+  type="tel"
+  v-mask="'(###) ###-####'"
+>
+</template>
+
+```
 
 ### Inputs with Icons
 
@@ -663,11 +753,6 @@ This component has compliance with WCAG guidelines by:
 - The default status of an input field is “optional”
 - If the status is set to “required”, the text, “Required” will appear next to the input label
 
-### Do / Don't
-
-<do-dont :examples="$page.frontmatter.required" />
-
-<do-dont :examples="$page.frontmatter.sizes" />
 
 # API
 
@@ -689,59 +774,5 @@ This component will bind any attribute that a [native HTML input element](https:
 ## Component Variables
 
 <cdr-doc-comp-vars name="CdrInput">Note that the <a href="../component-variables/#CdrLabelStandalone">cdr-label-standalone mixins</a> should be used for assembling the label element. </cdr-doc-comp-vars>
-
-## Usage
-
-The **CdrInput** component requires `v-model` to bind the input value to your data model.  You can also use `helper-text` to display additional information below the input.
-
-```vue {3,6,7,8}
-<cdr-input
-  class="demo-input"
-  v-model="inputWithSlots"
-  id="slots-demo"
-  label="Billing address ZIP code">
-  <template slot="helper-text">
-    International customers, if no postal code, enter "NA"
-  </template>
-</cdr-input>
-```
-
-The `aria-label` attribute will be automatically added on compilation based upon what is provided in the `label` prop.
-
-```vue
-<cdr-input
-  class="demo-input"
-  v-model="ariaModel"
-  id="aria-demo"
-  label="First Name">
-</cdr-input>
-```
-
-This will result in the following HTML:
-
-```vue
-<div class="cdr-input-wrap">
-  <input
-    id="aria-demo"
-    type="text"
-    class="cdr-input"
-    aria-label="First Name">
-</div>
-```
-
-Input inherits the `placeholder` attribute for the placeholder text. You can also use the `post-icon` slot for adding an icon.
-
-```vue {4,7,8,9}
-<cdr-input
-  class="demo-input"
-  v-model="inputWithSlots"
-  placeholder="mm/dd/yyyy"
-  id="slots-demo"
-  label="Event Date">
-  <template slot="post-icon">
-    <icon-calendar />
-  </template>
-</cdr-input>
-```
 
 </cdr-doc-table-of-contents-shell>

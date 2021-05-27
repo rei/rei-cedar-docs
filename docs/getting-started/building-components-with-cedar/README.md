@@ -46,16 +46,16 @@ Accessibility is at the core of how we design usable experiences for all. Every 
 ## Requirements for Reusable Components
 
 Build with reusability in mind:
-- Add to Figma sandbox. process TBD
-- Add to FED Component repo. see: npm packages at REI https://confluence.rei.com/display/FED/npm+packages+at+REI
-- Include usage guidelines. process TBD - in Readme file / future goal to automate docs
+- Add to the Greenhouse Figma sandbox.
+- Add to FED Component repo. See: [npm packages at REI](https://confluence.rei.com/display/FED/npm+packages+at+REI)
+- Include usage guidelines alongside the design in the Figma library, and in the readme file
 
 Technical requirements:
 - Leverage existing Cedar components, tokens, and variables wherever possible
 - Work with the Cedar team to extend or modify Cedar elements that do not satisfy your requirements
 - Adhere to Cedar usability and accessibility standards
-- Compliant with Cedar deprecation policy - utilize the current version https://confluence.rei.com/display/TP/Cedar+Deprecation+Policy
-- Component API must adhere to semantic versioning when updated  https://confluence.rei.com/display/FED/semver%2C+npm+versioning%2C+and+git+tags
+- Compliant with [Cedar's deprecation policy](https://confluence.rei.com/display/TP/Cedar+Deprecation+Policy) - utilizing the current version 
+- Component API must adhere to [semantic versioning](https://confluence.rei.com/display/FED/semver%2C+npm+versioning%2C+and+git+tags) when updated 
 
 Process:
 - Include Cedar team as a stakeholder at kick-off
