@@ -231,7 +231,6 @@ Cedar provides components for the main HTML input elements: [CdrInput](../../com
 
 ```html
 <cdr-input
-  placeholder="Credit card"
   v-mask="'#### #### #### ####'"
   label="Credit card"
   v-model="defaultModel"
@@ -289,7 +288,6 @@ Cedar provides components for the main HTML input elements: [CdrInput](../../com
   v-model="defaultModel"
   label="Input label"
   v-mask="'##/##'"
-  placeholder="MM/YY"
   autocomplete="cc-exp"
   :numeric="true"
 >
