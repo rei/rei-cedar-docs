@@ -587,6 +587,8 @@ This component has compliance with WCAG guidelines by:
 - Requiring a value for the `label` field
 - When hiding a label, the `aria-label` attribute is set to the `label` value
 
+The HTML `placeholder` attribute should not be used as it creates an inaccessible experience when the placeholder content disappears as soon as the user begins typing into the input field. Instead the `helper-text` or `info` slots should be used to provide any additional information needed to complete the input.
+
 <hr>
 
 # Guidelines
