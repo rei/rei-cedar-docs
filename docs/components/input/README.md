@@ -587,6 +587,8 @@ This component has compliance with WCAG guidelines by:
 - Requiring a value for the `label` field
 - When hiding a label, the `aria-label` attribute is set to the `label` value
 
+The HTML `placeholder` attribute should not be used as it creates an inaccessible experience when the placeholder content disappears as soon as the user begins typing into the input field. Instead the `helper-text` or `info` slots should be used to provide any additional information needed to complete the input.
+
 <hr>
 
 # Guidelines
@@ -664,8 +666,12 @@ This component has compliance with WCAG guidelines by:
 <do-dont :examples="$page.frontmatter.case" />
 
 <do-dont :examples="$page.frontmatter.punctuation" />
+<!-- TODO: replace with DO use info/helper slots to describe desired input DON'T use placeholder attribute
+<do-dont :examples="$page.frontmatter.placeholder" /> -->
 
-<do-dont :examples="$page.frontmatter.placeholder" />
+<do-dont :examples="$page.frontmatter.required" />
+
+<do-dont :examples="$page.frontmatter.sizes" />
 
 ## Behavior
 
@@ -747,11 +753,6 @@ export default {
 - The default status of an input field is “optional”
 - If the status is set to “required”, the text, “Required” will appear next to the input label
 
-### Do / Don't
-
-<do-dont :examples="$page.frontmatter.required" />
-
-<do-dont :examples="$page.frontmatter.sizes" />
 
 # API
 
@@ -773,59 +774,5 @@ This component will bind any attribute that a [native HTML input element](https:
 ## Component Variables
 
 <cdr-doc-comp-vars name="CdrInput">Note that the <a href="../component-variables/#CdrLabelStandalone">cdr-label-standalone mixins</a> should be used for assembling the label element. </cdr-doc-comp-vars>
-
-## Usage
-
-The **CdrInput** component requires `v-model` to bind the input value to your data model.  You can also use `helper-text` to display additional information below the input.
-
-```vue {3,6,7,8}
-<cdr-input
-  class="demo-input"
-  v-model="inputWithSlots"
-  id="slots-demo"
-  label="Billing address ZIP code">
-  <template slot="helper-text">
-    International customers, if no postal code, enter "NA"
-  </template>
-</cdr-input>
-```
-
-The `aria-label` attribute will be automatically added on compilation based upon what is provided in the `label` prop.
-
-```vue
-<cdr-input
-  class="demo-input"
-  v-model="ariaModel"
-  id="aria-demo"
-  label="First Name">
-</cdr-input>
-```
-
-This will result in the following HTML:
-
-```vue
-<div class="cdr-input-wrap">
-  <input
-    id="aria-demo"
-    type="text"
-    class="cdr-input"
-    aria-label="First Name">
-</div>
-```
-
-Input inherits the `placeholder` attribute for the placeholder text. You can also use the `post-icon` slot for adding an icon.
-
-```vue {4,7,8,9}
-<cdr-input
-  class="demo-input"
-  v-model="inputWithSlots"
-  placeholder="mm/dd/yyyy"
-  id="slots-demo"
-  label="Event Date">
-  <template slot="post-icon">
-    <icon-calendar />
-  </template>
-</cdr-input>
-```
 
 </cdr-doc-table-of-contents-shell>
