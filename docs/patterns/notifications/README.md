@@ -87,6 +87,9 @@ Update Notifications update existing inline page content.
 They inform users of advisory information that enhances the site experience such as quantity updates or busy states.
 Additionally, These notifications often only update a specific part of an inline content section.
 
+It is important to grasp that many visual transitions are actually update notifications and should provide contextual information to our users. 
+This can be added in the form of screen reader only text, though consider if the action without context will create any cognitive dissonance for our visual users.
+Remember to create sufficient Visual feedback as many update notifications are unassociated triggering action.
 #### At A Glance
 <cdr-table class="advanced-table" full-width=false>
   <tr>
@@ -125,10 +128,6 @@ Additionally, These notifications often only update a specific part of an inline
 
 #### Use When
 
-It is important to grasp that many visual transitions are actually update notifications and should be providing contextual information to our users. 
-This can be provided in the form of screen reader only text, though consider if the action without context will create any cognitive dissonance for our users.
-Additionally, as many update notifications are not associated with the action that launches them considerations towards sufficient Visual feedback are important.
-
 - Providing loading icons or states
 - Informing users that the application is busy
 - Incrementing results or items
@@ -140,8 +139,12 @@ Additionally, as many update notifications are not associated with the action th
 - The notification does not relate to an actionable element in a busy state
 - The content added to the page is important or needs attention
 - For delivery of messaging
-- During the appearance / disappearance of content following a user interaction which is also announced to assistive technology 
-- The User interacts with a panel system such as tabs or accordion, whose selected tab is announced already to assistive technology
+- During the appearance / disappearance of content following a user interaction which is also announced to assistive technology such as the following:
+  - tab
+  - accordion
+  - dialog
+  - popover
+  - tooltip
 
 #### Anatomy of a Update Notification
 
@@ -238,7 +241,7 @@ Update Notifications will often be used to represent loading icons or submitting
     ```
 date content in locations unrelated to the action which caused the notification to appear
 
-#### Update Notification Examples
+#### Examples that should be Update Notifications
 <cdr-list modifier="unordered">
   <li>
     <figure>
@@ -274,9 +277,21 @@ date content in locations unrelated to the action which caused the notification 
       <figcaption>
         <cdr-caption
         summary=" After a user selects the 'Bontrager' filter on the Mountain Bike Helmets search results page the 'Mountain Bike Helmets
-    (number of results)' updates to 'Bontrager Mountain Bike Helmets (5 results), ensuring is marked up as a notification will ensure users of assistive technology are informed of this update.'"/>
+    (number of results)' updates to 'Bontrager Mountain Bike Helmets (5 results)', ensuring this is marked up as a notification enable users of assistive technology stay informed of this update."/>
       </figcaption>
     </figure>
+  </li>
+  <li>
+    <figure>
+      <cdr-img :src="$withBase('/notifications/quantityUpdate.png')" alt="An example on REI.com of this notifications" width="500px"/>
+      <figcaption>
+        <cdr-caption
+        summary=" A user updates the quantity of an item in the shopping cart, multiple items are updated to reflect this change including the item price, the order summary subtotal, order total, and total and savings of the shopping cart"/>
+      </figcaption>
+    </figure>
+  </li>
+  <li>
+   removing an item from wish list
   </li>
 </cdr-list>
 
@@ -294,7 +309,7 @@ Content container:
 Status Notifications apply the `role="status"` to their HTML markup.
 They will not interrupt a user from a task they are engaged in, and are provided on user action rather than as part of the page. 
 These event based notifications differ from Update Notifications as they do not update live, existing inline sections of a page.
-They provide information that will help users make a decisions or provide warnings about selections they have made.
+They provide information which will help users make a decision, communicate statuses, or provide feedback about selections that have been have made.
 These notifications may open or be added to locations unrelated to the action which caused the notification to trigger.
 Additionally, they may open based on conditions a user has created or criterium they have met.
 
@@ -339,7 +354,6 @@ Additionally, they may open based on conditions a user has created or criterium 
 - As confirmation that a task or process initiated by the user was completed successfully 
 
 - As confirmation that a task was completed successfully (See Success Type)
-- As contextual information that might need their attention (See Informational Type)
 #### Don't Use When
 - presenting the user additional actions to take (see [modal](../../components/modal/))
 - The UI is presented as a dialog that requires a user action, on which the focus is set (see [modal](../../components/modal/))
@@ -456,6 +470,24 @@ If the notification must include an actionable element you are responsible for t
       <figcaption>
         <cdr-caption
         summary="After a user selects 'Set as my REI' for and REI store a 'saved' notification overlay displays. Assistive technology should inform users of the busy state."/>
+      </figcaption>
+    </figure>
+  </li>
+  <li>
+    <figure>
+      <cdr-img :src="$withBase('/notifications/locationStatus.png')" alt="" width="500px"/>
+      <figcaption>
+        <cdr-caption
+        summary="A user navigates to the classes and events landing page and is asked to enable location services."/>
+      </figcaption>
+    </figure>
+  </li>
+  <li>
+    <figure>
+      <cdr-img :src="$withBase('/notifications/wishlist.png')" alt="" width="500px"/>
+      <figcaption>
+        <cdr-caption
+        summary="The user adds an item to their wishlist"/>
       </figcaption>
     </figure>
   </li>
