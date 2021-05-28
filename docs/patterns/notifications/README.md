@@ -210,19 +210,20 @@ The Update Notification Content Container wraps both the element being updated a
 Update Notifications will often be used to represent loading icons or submitting buttons. These types of Update notifications 
 - **Should**
   - Define pre-existing page sections where content may be updated as a WAI-ARIA live region.
-  - Use the `aria-busy` attribute to call out the loading state of the section or element
+  - Use the `aria-busy` attribute to indicate an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
+
+   <cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" :model="{isLoading: false}">
+
     ```html
-    <!-- EXAMPLE: while stable -->
-    <section aria-live="polite" aria-busy="false">
-      <!-- contents -->
-    </section>
+    <cdr-button :disabled="isLoading"  @click="isLoading = true">
+      {{isLoading ? 'Loading...' : 'Add to cart'}}
+    </cdr-button>
+
+    <p aria-live="polite" :aria-busy="isLoading">{{isLoading ? 'Loading...' : 'live content section'}}</p>
     ```
-    ```html
-      <!-- EXAMPLE: while reloading -->
-    <section aria-live="polite" aria-busy="true">
-      <!-- contents -->
-    </section>
-    ```
+
+    </cdr-doc-example-code-pair>
+
 ##### Content Control
  The Update Notification Content Control may be any actionable element, such as a link or button.
 ###### Design Considerations
@@ -299,6 +300,7 @@ date content in locations unrelated to the action which caused the notification 
 
 Content control:
 - [cdr-button](../../components/buttons/)
+
 - [cdr-link](../../components/links/)
 
 Content container:
@@ -517,7 +519,7 @@ Content container:
 
 ```html
 
-<cdr-alert type="warning" role="status" aria-relevant="all" aria-atomic=true>
+<cdr-alert type="warning" role="status">
   <icon-warning-fill/> You did something that has caused this section to appear
 </cdr-alert>
 
