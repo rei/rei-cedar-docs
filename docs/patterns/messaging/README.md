@@ -3,7 +3,7 @@
   "title": "Messaging",
   "title_metadata": false,
   "layout_type": "LayoutArticle",
-  "summary": "Use messaging patterns to communicate additional information or show responses to user actions",
+  "summary": "Use messaging patterns to provide supplemental communication and actively respond to user actions.",
   "sandboxData": {
     "components": "CdrAlert"
   },
@@ -21,25 +21,21 @@
 
 Consistency in messaging is important for communicating with users and providing additional information needed to complete common tasks.
 
+Aside from the static content on a page, additional content can be exposed as a result of a user's actions or system-level events. As users encounter many types of actionable elements across a website, providing consistent interaction patterns can improve the overall usability of the experience and help distinguish critical actions that need their attention. 
 
-Aside from the static content on a page, additional content can be exposed as a result of user interactions. As users encounter many types of actionable elements across a website, providing consistent interaction patterns can improve the overall usability of the experience and help distinguish critical actions that need their attention. 
-
-There are four primary messaging patterns that should be used consistently to make it easier for users to understand an interface and accomplish their tasks. You can determine which to use by starting with the intent of the communication: 
+There are four primary messaging patterns. Determine which to use by starting with the intent of the communication: 
 - Inform
 - Notify
 - Alert 
 - Help
 
-Alerts and notifications communicate if something has changed, whether it’s based on user interaction (e.g. confirmation that a product has been added to your cart) or initiated at the system-level (e.g. alert that an item in your cart is now out of stock). 
+Alerts and notifications communicate that something on the page has changed. The event could be based on a user action (e.g. notified that a product has been successfully added to a cart) or initiated at the system-level (e.g. alerted that an item in a cart is now out of stock).
 
-Help and informational messages can appear contextually (e.g. more information available in a popover) or as ancillary information (e.g. shipping restrictions apply). 
+Help and informational messaging appear contextually (e.g. helping a user locate a credit card's security code) or as ancillary information (e.g. information explaining how shipping restrictions apply to an item).
 
-Depending on the situation, additional content may appear in an overlay (modals, tooltips, popovers), while other messages will appear in-line (e.g. form field validation). 
-
-This additional content will open in-page and should not navigate users to a new page or window. 
+Depending on the situation, messaging may appear in an overlay (modals, tooltips, popovers), while other messaging will appear in-line (e.g. form field validation). Regardless of approach, the messaging will open in-page and should not navigate users to a new page or window.
 
 When deciding what type of messaging pattern to use, reference the flowchart and table on this page, as well as the usage guidelines in the subsequent pages to help determine which components are appropriate for each experience.
-
 
 ## Deciding what to use
 
