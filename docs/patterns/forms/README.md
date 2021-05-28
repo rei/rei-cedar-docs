@@ -3,7 +3,7 @@
   "title": "Forms",
   "title_metadata": false,
   "layout_type": "LayoutArticle",
-  "summary": "Use form patterns to allow users to enter information",
+  "summary": "Use form patterns to capture user data in a consistent, optimized manner.",
   "sandboxData": {
     "components": "CdrInput, CdrLink, CdrSelect"
   },
@@ -19,25 +19,24 @@
 
 ## Overview
 
-Forms are the primary way that users interact with a website or application. Consistent application of form design patterns across an online experience improves the overall usability of user interactions, and helps create a familiar interface for users to more easily accomplish their tasks.
+Forms are the primary means of communication between users and a website or application. Consistent implementation of form patterns improves overall usability by creating a familiar interactions across digital experiences.
 
 Forms allow users to:
-- Register for / log into an account
-- Make selections
-- Purchase a product
-- Enter information
+- Sign up or sign in to an account
+- Manage thier preferences
+- Select a product or adventure to purchase
+- Enter personal information
 - Provide feedback
 
-Cedar provides components for the main HTML input elements: [CdrInput](../../components/input/), [CdrSelect](../../components/selects/), [CdrCheckbox](../../components/checkboxes/), [CdrRadio](../../components/radio/). Input groups that contain logically related form inputs or groups of CdrRadio or CdrCheckbox elements can be constructed using [CdrFormGroup](../../components/form-group/). These Cedar components provide built in labels, controls, and error state logic. Form controls can be constructed using the [CdrButton](../../components/buttons) or [CdrLink](../../components/links) components. Other components may be used to further enhance forms.
+Cedar provides components for the basic HTML input elements: [CdrInput](../../components/input/), [CdrSelect](../../components/selects/), [CdrCheckbox](../../components/checkboxes/), and [CdrRadio](../../components/radio/). Input groups that contain logically related form inputs or groups of radio or checkbox elements can be constructed using [CdrFormGroup](../../components/form-group/). These Cedar components provide built in labels, controls, and error state logic. Form controls can be constructed using the [CdrButton](../../components/buttons) or [CdrLink](../../components/links) components. Other components may be used to further enhance forms.
 
 ## Guidelines
 
 - Ensure the entire field, including validation messaging, is in-view and unobstructed when a field is selected
-- Each Cedar component may have specific accessibility or usage guidelines, it is recommended to check the documentation for any components you are using
+- As each Cedar component may have specific accessibility or usage guidelines, it is recommended to check the documentation for any components you are using
 - The CdrInput component sets some default attributes to help ensure a consistent experience, see the [CdrInput documentation](../../components/input#default-input-attrs) for more information
 
-
-## Examples of common input patterns
+## Examples
 
 ### Email
 
@@ -71,7 +70,7 @@ Cedar provides components for the main HTML input elements: [CdrInput](../../com
 - Explain why a phone number is required and/or how the data will be used
 - If a phone number can be provided optionally, consider placing the input behind a link
 - Provide a formatting hint to help the user input the correct format
-- Add special characters automatically—don’t make the user type them (but if they do, accommodate them)
+- Add special characters automatically but also accommodate ones typed by the user
 <hr/>
 - Set `type` attribute to "tel"
 - Set `autocomplete` attribute to "tel-national" if no country code is required
@@ -110,7 +109,7 @@ Cedar provides components for the main HTML input elements: [CdrInput](../../com
 
 ### Name
 
-- Use a single “Full name” field whenever possible—”First name” and “Last name” fields are not culturally inclusive
+- Use a single “Full name” field whenever possible as ”First name” and “Last name” fields are not culturally inclusive
 - Consider giving the user the option of choosing a “Prefered name” to be used in instances of personalization (eg. marketing emails)
 - If first and last names are required for payment validation, consider adding helper text clarifying the need to match the card and splitting the data on the back-end
 - Avoid optionally asking for a middle name or initial
@@ -222,7 +221,7 @@ Cedar provides components for the main HTML input elements: [CdrInput](../../com
 - Invoke special “numeric” keyboard by passing `:numeric="true"` to CdrInput
 - Actively validate the card number field
 - Auto-detect the card type based on the card number
-- Once know, Match the numerical sequence of the field to the physical card
+- Once known, match the numerical sequence of the field to the physical card
 - Ensure the user doesn’t need to re-enter their number if they go back a step in the checkout flow
 - Assign appropriate autocomplete value: “cc-number”
 - See the [CdrInput documentation](../../components/input#input-masking) for information on setting up an input mask
@@ -232,7 +231,7 @@ Cedar provides components for the main HTML input elements: [CdrInput](../../com
 ```html
 <cdr-input
   v-mask="'#### #### #### ####'"
-  label="Credit card"
+  label="Card number"
   v-model="defaultModel"
   autocomplete="cc-number"
   :numeric="true"
@@ -245,7 +244,7 @@ Cedar provides components for the main HTML input elements: [CdrInput](../../com
 ### Security Code
 
 - Provide a format hint based on card type
-- Size the field to the data that’s expected using an `input` event listener
+- Size the field to the data expected by using an `input` event listener
 <hr/>
 - Invoke special “numeric” keyboard by passing `:numeric="true"` to CdrInput
 - Use an `input` listener to limit input to possible values for the security code
@@ -322,7 +321,7 @@ Cedar provides components for the main HTML input elements: [CdrInput](../../com
 - Always provide a reason why the information is required and how it will be used
 - Give the user the option to self-identify
 - Consider adding an additional, optional field for users to further clarify their answer
-- Size the field to the data that’s expected
+- Size the field to the data expected
 <hr/>
 - Assign appropriate autocomplete value: “sex”
 
