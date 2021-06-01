@@ -195,11 +195,12 @@
 Basic select control with label.
 
 
-<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
+<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
 
 ```html
 <cdr-select
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Select label"
   prompt="Prompt text"
   :options="defaultOptions"
@@ -207,6 +208,7 @@ Basic select control with label.
 <br>
 <cdr-select
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Select label"
   prompt="Prompt text"
   :options="defaultOptions"
@@ -221,11 +223,12 @@ Basic select control with label.
 
 Basic select control with no label.
 
-<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
+<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
 
 ```html
 <cdr-select
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Select label"
   prompt="Prompt text"
   :options="defaultOptions"
@@ -234,6 +237,7 @@ Basic select control with no label.
 <br>
 <cdr-select
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Select label"
   prompt="Prompt text"
   :options="defaultOptions"
@@ -249,11 +253,12 @@ Basic select control with no label.
 
 Select control with link text on right.
 
-<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrSelect, CdrLink'})" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
+<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrSelect, CdrLink'})" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
 
 ```html
 <cdr-select
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Select label"
   prompt="Prompt text"
   :options="defaultOptions"
@@ -270,6 +275,7 @@ Select control with link text on right.
 <br>
 <cdr-select
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Select label"
   prompt="Prompt text"
   :options="defaultOptions"
@@ -293,11 +299,12 @@ Select control with link text on right.
 
 Select control with icon outside select field on right.
 
-<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrSelect, IconInformationFill, CdrButton'})" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
+<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrSelect, IconInformationFill, CdrButton'})" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
 
 ```html
 <cdr-select
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Select label"
   prompt="Prompt text"
   :options="defaultOptions"
@@ -317,11 +324,12 @@ Select control with icon outside select field on right.
 
 Input field with helper or hint text below the input field.
 
-<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
+<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
 
 ```html
 <cdr-select
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Select label"
   prompt="Prompt text"
   :options="defaultOptions"
@@ -333,6 +341,7 @@ Input field with helper or hint text below the input field.
 <br>
 <cdr-select
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Select label"
   prompt="Prompt text"
   :options="defaultOptions"
@@ -351,11 +360,12 @@ Input field with helper or hint text below the input field.
 
 Error prop and slot can be used to render the select in an error state
 
-<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', modelError: 'Please make a selection', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}" :methods="{validate() {this.modelError = !this.defaultModel.length && 'Please make a selection'}}">
+<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: '', modelError: 'Please make a selection', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}" :methods="{validate() {this.modelError = !this.defaultModel.length && 'Please make a selection'}}">
 
 ```html
 <cdr-select
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Select label"
   prompt="Prompt text"
   :options="defaultOptions"
@@ -371,13 +381,14 @@ Error prop and slot can be used to render the select in an error state
 
 CdrSelect can be rendered as a multi-select by passing the native HTML select `multiple` attribute. The `multipleSize` prop can be used to control the height of the multi-select.
 
-<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: [], defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D', 'Option E', 'Option F']}">
+<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: [], defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D', 'Option E', 'Option F']}">
 
 ```html
 default multi-select:
 <br>
 <cdr-select
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Select label"
   :options="defaultOptions"
   multiple
@@ -387,6 +398,7 @@ With multipleSize:
 <br>
 <cdr-select
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Select label"
   :options="defaultOptions"
   multiple
@@ -400,11 +412,12 @@ With multipleSize:
 
 CdrSelect can be rendered with nested options using the `optgroup` tag.
 
-<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: []}">
+<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: []}">
 
 ```html
 <cdr-select
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Select label"
 >
   <optgroup label="bread">

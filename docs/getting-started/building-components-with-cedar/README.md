@@ -1,6 +1,6 @@
 ---
 {
-  "title": "Building Re-Usable Components With Cedar",
+  "title": "Building Reusable Components With Cedar",
   "title_metadata": false,
   "layout_type": "LayoutArticle",
   "breadcrumbs": [
@@ -46,8 +46,8 @@ Accessibility is at the core of how we design usable experiences for all. Every 
 ## Requirements for Reusable Components
 
 Build with reusability in mind:
-- Add to the Greenhouse Figma sandbox.
-- Add to FED Component repo. See: [npm packages at REI](https://confluence.rei.com/display/FED/npm+packages+at+REI)
+- Designers: add to the [Greenhouse Figma libary](https://www.figma.com/file/5R0ElfCIEJbRJx2tKzlA7s/Greenhouse?node-id=1673%3A4)
+- Developers: add to FED Component repo. See: [npm packages at REI](https://confluence.rei.com/display/FED/npm+packages+at+REI)
 - Include usage guidelines alongside the design in the Figma library, and in the readme file
 
 Technical requirements:
@@ -69,9 +69,9 @@ Note that not every front-end element should be built as a reusable component. T
 
 There may be cases where the Cedar design system elements do not satisfy the requirements for your application, at which point you may need to override Cedar directly or replace those elements with entirely new ones. In such cases, all of the above requirements for reusable components still apply, in addition to the following considerations and risks:
 
-- You will need to manually update your component as the design system evolves, as you will no longer be able to simply update your Cedar version to pull in updates
-- Your team will need to handle accessibility implementation and testing for your component. For some elements, especially background colors, this may have a high cost. For example, every Cedar element is guaranteed to have accessible contrast levels when rendered on our primary and secondary background colors, but we cannot make that same guarantee for arbitrary background colors
-- If you override internal Cedar logic like markup or CSS classes your code may break even with a patch release of Cedar as we can only semantically version the public API of the elements we distribute
-- Other teams may copy what you are doing without knowing that they are diverging from the design system, please ensure that any overrides are well documented
+- You will need to manually update your component as the design system evolves, as you will no longer be able to simply update your Cedar version to pull in updates.
+- Your team will need to handle accessibility implementation and testing for your component. For some elements, especially background colors, this may have a high cost. For example, every Cedar element is guaranteed to have accessible contrast levels when rendered on our primary and secondary background colors, but we cannot make that same guarantee for arbitrary background colors.
+- If you override internal Cedar logic like markup or CSS classes your code may break even with a patch release of Cedar as we can only semantically version the public API of the elements we distribute.
+- Other teams may copy what you are doing without knowing that they are diverging from the design system, please ensure that any overrides are well documented.
 
 </cdr-doc-table-of-contents-shell>
