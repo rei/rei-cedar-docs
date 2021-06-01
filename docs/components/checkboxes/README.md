@@ -203,9 +203,9 @@ Default and standard spacing for checkboxes.
 
 ```html
 <cdr-form-group label="Default label">
-  <cdr-checkbox v-model="ex1">Default checkbox 1</cdr-checkbox>
-  <cdr-checkbox v-model="ex2">Default checkbox 2</cdr-checkbox>
-  <cdr-checkbox v-model="ex3" disabled>Default checkbox 3</cdr-checkbox>
+  <cdr-checkbox v-model="ex1" :background="backgroundColor">Default checkbox 1</cdr-checkbox>
+  <cdr-checkbox v-model="ex2" :background="backgroundColor">Default checkbox 2</cdr-checkbox>
+  <cdr-checkbox v-model="ex3" :background="backgroundColor" disabled>Default checkbox 3</cdr-checkbox>
 </cdr-form-group>
 ```
 
@@ -219,9 +219,9 @@ Different sizing for checkboxes.
 
 ```html
 <cdr-form-group label="Size label">
-  <cdr-checkbox v-model="ex1" size="small">Small checkbox</cdr-checkbox>
-  <cdr-checkbox v-model="ex2" size="medium">Medium checkbox</cdr-checkbox>
-  <cdr-checkbox v-model="ex3" disabled size="large">Large checkbox</cdr-checkbox>
+  <cdr-checkbox v-model="ex1" :background="backgroundColor" size="small">Small checkbox</cdr-checkbox>
+  <cdr-checkbox v-model="ex2" :background="backgroundColor" size="medium">Medium checkbox</cdr-checkbox>
+  <cdr-checkbox v-model="ex3" :background="backgroundColor" disabled size="large">Large checkbox</cdr-checkbox>
 </cdr-form-group>
 ```
 
@@ -235,9 +235,9 @@ Use a custom value in place of true/false checked state.
 
 ```html
 <cdr-form-group label="Custom true/false label">
-  <cdr-checkbox v-model="ex1" true-value="yes" false-value="no">Option 1?</cdr-checkbox> {{this.ex1}}
-  <cdr-checkbox v-model="ex2" true-value="yes" false-value="no">Option 2?</cdr-checkbox> {{this.ex2}}
-  <cdr-checkbox v-model="ex3" true-value="yes" false-value="no">Option 3?</cdr-checkbox> {{this.ex3}}
+  <cdr-checkbox v-model="ex1" :background="backgroundColor" true-value="yes" false-value="no">Option 1?</cdr-checkbox> {{this.ex1}}
+  <cdr-checkbox v-model="ex2" :background="backgroundColor" true-value="yes" false-value="no">Option 2?</cdr-checkbox> {{this.ex2}}
+  <cdr-checkbox v-model="ex3" :background="backgroundColor" true-value="yes" false-value="no">Option 3?</cdr-checkbox> {{this.ex3}}
 </cdr-form-group>
 ```
 
@@ -251,9 +251,9 @@ Use an array as the model to track a list of custom values.
 
 ```html
 <cdr-form-group label="Custom value label">
-  <cdr-checkbox v-model="ex" custom-value="1">1</cdr-checkbox>
-  <cdr-checkbox v-model="ex" custom-value="2">2</cdr-checkbox>
-  <cdr-checkbox v-model="ex" custom-value="3">3</cdr-checkbox>
+  <cdr-checkbox v-model="ex" :background="backgroundColor" custom-value="1">1</cdr-checkbox>
+  <cdr-checkbox v-model="ex" :background="backgroundColor" custom-value="2">2</cdr-checkbox>
+  <cdr-checkbox v-model="ex" :background="backgroundColor" custom-value="3">3</cdr-checkbox>
   {{this.ex}}
 </cdr-form-group>
 ```
@@ -269,9 +269,9 @@ Pass checkbox data into change handlers.
 ```html
 <cdr-form-group label="Handling change label">
   Last edited: {{ this.lastEdited }}
-  <cdr-checkbox v-model="ex" custom-value="1" @change="() => lastEdited = '1'">1</cdr-checkbox>
-  <cdr-checkbox v-model="ex" custom-value="2" @change="() => lastEdited = '2'">2</cdr-checkbox>
-  <cdr-checkbox v-model="ex" custom-value="3" @change="() => lastEdited = '3'">3</cdr-checkbox>
+  <cdr-checkbox v-model="ex" :background="backgroundColor" custom-value="1" @change="() => lastEdited = '1'">1</cdr-checkbox>
+  <cdr-checkbox v-model="ex" :background="backgroundColor" custom-value="2" @change="() => lastEdited = '2'">2</cdr-checkbox>
+  <cdr-checkbox v-model="ex" :background="backgroundColor" custom-value="3" @change="() => lastEdited = '3'">3</cdr-checkbox>
   {{ this.ex }}
 </cdr-form-group>
 ```
@@ -289,6 +289,7 @@ Note the usage of `aria-controls`, `id`, `role`, `aria-label`, and `aria-labelle
 <cdr-form-group label="Choose your toppings">
    <cdr-checkbox
      v-model="allSelected"
+     :background="backgroundColor"
      :indeterminate="isIndeterminate"
      @change="selectAll"
      aria-controls="toppings-input"
@@ -297,6 +298,7 @@ Note the usage of `aria-controls`, `id`, `role`, `aria-label`, and `aria-labelle
      <li v-for="topping in toppings" :key="`checkbox-${topping}`">
         <cdr-checkbox
           v-model="selected"
+          :background="backgroundColor"
           :custom-value="topping"
           name="toppings"
           @input="selectOne"
@@ -319,16 +321,19 @@ Custom styles for checkboxes.
 <cdr-form-group label="Custom checkbox label">
   <cdr-checkbox
     v-model="ex1"
+    :background="backgroundColor"
     modifier="hide-figure"
     input-class="no-box"
     content-class="no-box__content">Custom checkbox 1</cdr-checkbox>
   <cdr-checkbox
     v-model="ex2"
+    :background="backgroundColor"
     modifier="hide-figure"
     input-class="no-box"
     content-class="no-box__content">Custom checkbox 2</cdr-checkbox>
   <cdr-checkbox
     v-model="ex3"
+    :background="backgroundColor"
     modifier="hide-figure"
     input-class="no-box"
     content-class="no-box__content"
@@ -351,16 +356,19 @@ Render a checkbox group with validation and error state
   <cdr-checkbox
     custom-value="A"
     v-model="ex"
+    :background="backgroundColor"
     @input="validate"
   >A</cdr-checkbox>
   <cdr-checkbox
     custom-value="B"
     v-model="ex"
+    :background="backgroundColor"
     @input="validate"
   >B</cdr-checkbox>
   <cdr-checkbox
     custom-value="C"
     v-model="ex"
+    :background="backgroundColor"
     @input="validate"
   >C</cdr-checkbox>
 </cdr-form-group>

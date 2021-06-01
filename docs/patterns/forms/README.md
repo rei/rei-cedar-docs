@@ -51,6 +51,7 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Email"
   type="email"
   autocomplete="email"
@@ -78,6 +79,7 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Phone number"
   type="tel"
   v-mask="'(###) ###-####'"
@@ -108,6 +110,7 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
 <div>
   <cdr-input
     v-model="defaultModel"
+    :background="backgroundColor"
     label="Full name"
     autocomplete="name"
     @blur="validate"
@@ -118,6 +121,7 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
   <cdr-input
     v-if="showPreferredName"
     v-model="preferredModel"
+    :background="backgroundColor"
     label="Preferred name"
     autocomplete="name"
     :optional="true"
@@ -146,6 +150,7 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
 <div>
   <cdr-input
     v-model="lineOne"
+    :background="backgroundColor"
     label="Street address"
     autocomplete="address-line1"
     :required="true"
@@ -155,6 +160,7 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
   <cdr-input
     v-if="showLineTwo"
     v-model="lineTwo"
+    :background="backgroundColor"
     label="Adddress line 2"
     autocomplete="address-level2"
     :optional="true"
@@ -183,6 +189,7 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Postal code"
   autocomplete="postal-code"
   :numeric="true"
@@ -216,6 +223,7 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
   v-mask="'#### #### #### ####'"
   label="Card number"
   v-model="defaultModel"
+  :background="backgroundColor"
   autocomplete="cc-number"
   :numeric="true"
 >
@@ -240,6 +248,7 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Security code"
   autocomplete="cc-csc"
   :numeric="true"
@@ -269,6 +278,7 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Valid thru"
   v-mask="'##/##'"
   autocomplete="cc-exp"
@@ -292,6 +302,7 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
 ```html
 <cdr-select
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Country"
   autocomplete="country"
 >
@@ -318,6 +329,7 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
 ```html
 <cdr-select
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Gender"
   :required="true"
   autocomplete="sex"
@@ -340,6 +352,7 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
 <cdr-input
   v-if="showDescribe"
   v-model="describeModel"
+  :background="backgroundColor"
   label="Please describe"
   :required="true"
   autocomplete="sex"

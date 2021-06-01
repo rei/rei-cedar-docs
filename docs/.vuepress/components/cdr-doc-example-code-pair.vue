@@ -1,29 +1,29 @@
 <template>
   <div class="cdr-doc-example-code-pair" :class="{'cdr-doc-example-code-pair--not-interactive': !interactive }">
     <div class="cdr-doc-example-code-pair__item"
-          :class="'cdr-doc-example-code-pair__item-background--' + backgroundToggleStates[slotLabel]"
+          :class="'cdr-doc-example-code-pair__item-background--' + backgroundColor"
           v-for="slotContent, slotLabel in $slots">
       <div class="cdr-doc-example-code-pair__item-background-toggle" v-if="backgroundToggle">
         <label
           class="cdr-doc-item-background-toggle__button"
-          :class="{'cdr-doc-item-background-toggle__button--active': backgroundToggleStates[slotLabel] === 'primary'}"
+          :class="{'cdr-doc-item-background-toggle__button--active': backgroundColor === 'primary'}"
         >
           <input
             class="cdr-doc-item-background-toggle__input"
             type="radio"
             value="primary"
-            v-model="backgroundToggleStates[slotLabel]">
+            v-model="backgroundColor">
             Primary
         </label>
         <label
           class="cdr-doc-item-background-toggle__button"
-          :class="{'cdr-doc-item-background-toggle__button--active': backgroundToggleStates[slotLabel] === 'secondary'}"
+          :class="{'cdr-doc-item-background-toggle__button--active': backgroundColor === 'secondary'}"
         >
           <input
             class="cdr-doc-item-background-toggle__input"
             type="radio"
             value="secondary"
-            v-model="backgroundToggleStates[slotLabel]">
+            v-model="backgroundColor">
           Secondary
         </label>
       </div>
@@ -39,7 +39,7 @@
       </div>
     </div>
 
-    <cdr-doc-code-snippet :copy-button="copyButton" :line-numbers="lineNumbers" :max-height="codeMaxHeight" :repository-href="repositoryHref" :sandbox-href="sandboxHref" :sandbox-data="Object.assign({}, sandboxData, {code: sandboxCode, loadSprite})" :model="model" :computed="computed" :methods="methods" :code-toggle="codeToggle" :hide-code="hideCode">
+    <cdr-doc-code-snippet :copy-button="copyButton" :line-numbers="lineNumbers" :max-height="codeMaxHeight" :repository-href="repositoryHref" :sandbox-href="sandboxHref" :sandbox-data="Object.assign({}, sandboxData, {code: sandboxCode, loadSprite})" :model="Object.assign({}, model, {backgroundColor: this.backgroundColor})" :computed="computed" :methods="methods" :code-toggle="codeToggle" :hide-code="hideCode">
       <slot :name="slotNames[0]"/> <!-- Only display the code snippet for the first (or only) slot content -->
     </cdr-doc-code-snippet>
   </div>
@@ -58,16 +58,6 @@
       backgroundToggle: {
         type: Boolean,
         default: true
-      },
-      backgroundColors: {
-        type: Object,
-        default: function() {
-          return {};
-        }
-      },
-      backgroundColor: {
-        type: String,
-        default: 'light'
       },
       interactive: {
         type: Boolean,
@@ -139,7 +129,8 @@
         exampleCount: 0,
         backgroundToggleStates: {},
         templateSources: {},
-        slotNames: []
+        slotNames: [],
+        backgroundColor: 'primary'
       }
     },
     computed: {
@@ -151,34 +142,35 @@
       }
     },
     beforeMount() {
-      // Loop over all the slots and set the default background color for each example. Also create an array of all the slot names so that just the first slot's code can be displayed
-      for (const label in this.$slots) {
-        if (this.backgroundColors[label]) {
-          this.$set(this.backgroundToggleStates, label, this.backgroundColors[label]);
-        } else {
-          this.$set(this.backgroundToggleStates, label, this.backgroundColor);
-        }
-      }
       this.slotNames = Object.keys(this.$slots);
       this.exampleCount = Object.keys(this.$slots).length; // If more than one example is present, labels will be turned on by default
       // Loop over all the slots and extract the source HTML/Custom Element code from the escaped markdown code snippet. This code is saved as a Vue template string that is then rendered into a dynamically created empty div in the template
-      for (const label in this.$slots) {
-        const codeNode = this.extractCodeNodeFromVnodeTree(this.$slots[label][0]);
-        const templateSource = this.getStoredTemplateSourceForExample(label, codeNode);
-        const model = this.model;
-        const methods = this.methods;
-        const computed = this.computed;
-        this.$options.components[`cdr-doc-html-example-${label}-${this.instanceId}`] = {
-          data() {
-            return {...model}
-          },
-          methods,
-          computed,
-          ...Vue.compile(`<div>${templateSource}</div>`)
-        };
+      this.compileExample();
+    },
+    watch: {
+      backgroundColor() {
+        this.compileExample();
       }
     },
     methods: {
+      compileExample() {
+        for (const label in this.$slots) {
+          const codeNode = this.extractCodeNodeFromVnodeTree(this.$slots[label][0]);
+          const templateSource = this.getStoredTemplateSourceForExample(label, codeNode);
+          const model = this.model;
+          const methods = this.methods;
+          const computed = this.computed;
+          const backgroundColor = this.backgroundColor;
+          this.$options.components[`cdr-doc-html-example-${label}-${this.instanceId}`] = {
+            data() {
+              return {backgroundColor, ...model}
+            },
+            methods,
+            computed,
+            ...Vue.compile(`<div>${templateSource}</div>`)
+          };
+        }
+      },
       getStoredTemplateSourceForExample(label, codeNode) {
         // This method checks a data object to see if the vue template has already been stored as a string for subsequent renders
         let templateSource = this.templateSources[label]
