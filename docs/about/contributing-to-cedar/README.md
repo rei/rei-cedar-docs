@@ -26,7 +26,7 @@ When creating a new component, first reach out to the Cedar team to see if the c
 If you have a request for the Cedar team, submit a [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC) with all relevant information.
 
 ### Design
-New component designs can be added to the (Greenhouse library in Figma)[https://www.figma.com/file/5R0ElfCIEJbRJx2tKzlA7s/Greenhouse?node-id=1673%3A4]. Greenhouse is an internal library where designers can add new components, variants, and patterns to share with the community. The Cedar team will help facilitate additions to Greenhouse, and monitor the library for potential contributions to Cedar.
+New component designs can be added to the [Greenhouse library in Figma](https://www.figma.com/file/5R0ElfCIEJbRJx2tKzlA7s/Greenhouse?node-id=1673%3A4). Greenhouse is an internal library where designers can add new components, variants, and patterns to share with the community. The Cedar team will help facilitate additions to Greenhouse, and monitor the library for potential contributions to the design system.
  
   
 ### Code
@@ -67,6 +67,6 @@ Learn more in the [Design Tokens](../../tokens/overview/) overview.
 ## Icon Contributions
 Cedar welcomes and encourages contributions to the icon library that are consistent with the REI style.
 
-Learn more about contributing icons in the [Icon Resources](../../icons/resources) article.
+Learn more about designing and contributing icons in the [Icon Resources](../../icons/resources) article.
 
 </cdr-doc-table-of-contents-shell>
