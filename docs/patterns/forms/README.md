@@ -5,7 +5,8 @@
   "layout_type": "LayoutArticle",
   "summary": "Use form patterns to capture user data in a consistent, optimized manner.",
   "sandboxData": {
-    "components": "CdrInput, CdrLink, CdrSelect"
+    "components": "CdrInput, CdrLink, CdrSelect",
+    "styleTag": ".form-space {margin-top: $cdr-space-two-x;}"
   },
   "breadcrumbs": [
     {
@@ -41,11 +42,9 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
 ### Email
 
 - Don’t automatically opt-in users to email marketing offers
-- Disable auto-correct and auto-capitalization
 - Set `type` attribute to "email"
 - set autocomplete value to "email"
 
-<!-- TODO: update CdrInput to auto-disable auto-correct/cap/etc. -->
 
 <cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :model="{defaultModel: ''}" :methods="{}">
 
@@ -55,10 +54,7 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
   label="Email"
   type="email"
   autocomplete="email"
-  autocorrect="off"
-  autocapitalize="off"
-  spellcheck="false"
-  required="true"
+  :required="true"
 >
 </cdr-input>
 ```
@@ -90,19 +86,8 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
   @blur="validate"
 >
   <template slot="helper-text-top">
-    To call if there's an issue with your order
+    To call if there's an issue with your order.
   </template>
-
-  <!-- <template slot="info">
-    <cdr-tooltip id="phone-number-example" position="top">
-      <cdr-link slot="trigger" tag="buttton">
-        Why?
-      </cdr-link>
-      <div>
-        To call if there's an issue with your order
-      </div>
-    </cdr-tooltip>
-  </template> -->
 </cdr-input>
 ```    
 </cdr-doc-example-code-pair>
@@ -114,11 +99,10 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
 - If first and last names are required for payment validation, consider adding helper text clarifying the need to match the card and splitting the data on the back-end
 - Avoid optionally asking for a middle name or initial
 <hr/>
-- Disable auto-correct
 - Set `autocomplete` attribute to "name"
 - Validate for at least two words if the full name is required for payment processing
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :model="{defaultModel: '', preferredModel: '', errorMessage: false}" :methods="{validate() {this.errorMessage = this.defaultModel.split(' ').length >= 2 ? false : 'Please enter your full name as it appears on your credit card'}}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :model="{defaultModel: '', preferredModel: '', showPreferredName: false, errorMessage: false}" :methods="{validate() {this.errorMessage = this.defaultModel.split(' ').length >= 2 ? false : 'Please enter your full name as it appears on your credit card'}}">
 
 ```html
 <div>
@@ -129,16 +113,15 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
     @blur="validate"
     :error="errorMessage"
     :required="true"
-  >
-    <template slot="helper-text-top">
-      As it appears on your credit card.
-    </template>
-  </cdr-input>
+  />
+  <cdr-link tag="button" @click="showPreferredName = true" v-if="!showPreferredName" class="form-space">Add a preferred name</cdr-link>
   <cdr-input
+    v-if="showPreferredName"
     v-model="preferredModel"
     label="Preferred name"
     autocomplete="name"
     :optional="true"
+    class="form-space"
   >
     <template slot="helper-text-top">
       Is there another name you prefer to go by?
@@ -154,7 +137,6 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
 - Place the secondary address field behind a link
 - Be descriptive with what types of information a secondary address field might contain
 <hr/>
-- Disable auto-correct
 - Use an address finder, if available
 - Assign appropriate autocomplete value—note: “address-line1” vs. “address-level2”
 
@@ -165,18 +147,18 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
   <cdr-input
     v-model="lineOne"
     label="Street address"
-    required="true"
     autocomplete="address-line1"
     :required="true"
   >
   </cdr-input>
-  <cdr-link tag="button" @click="showLineTwo = true" v-if="!showLineTwo">Add Apt #, Suite, etc.</cdr-link>
+  <cdr-link tag="button" @click="showLineTwo = true" v-if="!showLineTwo" class="form-space">Add Apt #, Suite, etc.</cdr-link>
   <cdr-input
     v-if="showLineTwo"
     v-model="lineTwo"
     label="Adddress line 2"
     autocomplete="address-level2"
     :optional="true"
+    class="form-space"
   >
   </cdr-input>
 </div>
@@ -206,6 +188,7 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
   :numeric="true"
   maxlength="5"
   @input="massageInput"
+  style="width: 160px;"
 >
 </cdr-input>
 ```
@@ -261,6 +244,7 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
   autocomplete="cc-csc"
   :numeric="true"
   maxlength="3"
+  style="width: 160px;"
   @input="restrictInput"
 >
   <template slot="helper-text-top">
@@ -285,11 +269,15 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
 ```html
 <cdr-input
   v-model="defaultModel"
-  label="Input label"
+  label="Valid thru"
   v-mask="'##/##'"
   autocomplete="cc-exp"
+  style="width: 160px;"
   :numeric="true"
 >
+  <template slot="helper-text-top">
+    Use MM/YY format.
+  </template>
 </cdr-input>
 ```
 
@@ -299,7 +287,7 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
 
 - Assign appropriate autocomplete value: “country”
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :model="{defaultModel: ''}" :methods="{}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :model="{defaultModel: 'United States'}" :methods="{}">
 
 ```html
 <cdr-select
@@ -325,13 +313,37 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
 <hr/>
 - Assign appropriate autocomplete value: “sex”
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :model="{defaultModel: ''}" :methods="{}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrSelect, CdrInput, CdrPopover, CdrLink, IconInformationStroke'})" :model="{defaultModel: '', describeModel: '', showDescribe: false}" :methods="{handleChange() {this.showDescribe = this.defaultModel === 'describe'}}">
 
 ```html
-<cdr-input
+<cdr-select
   v-model="defaultModel"
   label="Gender"
+  :required="true"
   autocomplete="sex"
+  prompt="Select option"
+  @change="handleChange"
+>
+  <option value="male">Female</option>
+  <option value="female">Male</option>
+  <option value="describe">Prefer to describe</option>
+  <cdr-popover id="popover-example" position="top" slot="info">
+    <cdr-link slot="trigger" tag="button">
+      <icon-information-stroke inherit-color/>
+    </cdr-link>
+    <div>
+      Why do we ask for gender? This popover explains what this information is used for.
+    </div>
+  </cdr-popover>
+</cdr-select>
+
+<cdr-input
+  v-if="showDescribe"
+  v-model="describeModel"
+  label="Please describe"
+  :required="true"
+  autocomplete="sex"
+  class="form-space"
 >
 </cdr-input>
 ```
