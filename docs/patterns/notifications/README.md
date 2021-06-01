@@ -215,11 +215,11 @@ Update Notifications will often be used to represent loading icons or submitting
    <cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" :model="{isLoading: false}">
 
     ```html
-    <cdr-button :disabled="isLoading"  @click="isLoading = true">
+    <cdr-button :disabled="isLoading"  @click="isLoading = true" aria-controls="updateContainer">
       {{isLoading ? 'Loading...' : 'Add to cart'}}
     </cdr-button>
 
-    <p aria-live="polite" :aria-busy="isLoading">{{isLoading ? 'Loading...' : 'live content section'}}</p>
+    <section role="region" aria-live="polite" :aria-busy="isLoading" id="updateContainer">{{isLoading ? 'this content is being updated...' : 'live content section'}}</section>
     ```
 
     </cdr-doc-example-code-pair>
@@ -296,15 +296,18 @@ date content in locations unrelated to the action which caused the notification 
   </li>
 </cdr-list>
 
-#### Using Available Cedar Components
+#### Available Cedar Components
 
 Content control:
 - [cdr-button](../../components/buttons/)
-
 - [cdr-link](../../components/links/)
+- [cdr-chip](../../components/links/)
+- [cdr-checkbox](../../components/links/)
+- [cdr-radio](../../components/links/)
 
 Content container:
 - *Cdr-loading - potential component*
+
 
 ### Status Notifications
 
@@ -463,9 +466,20 @@ If the notification must include an actionable element you are responsible for t
   - If the action is not available on page, the action should be added to a notification history page (see ARIA’s log role)
 
 
-#### Examples
+#### Potential Components
 
-<cdr-list>
+- **Cdr-toast  / [snackbar](https://anvil.servicetitan.com/components/snackbar/)**
+  - The user is being informed of an event, with the option to take action.
+  - Should be minimal content
+  - temporary 
+  - overlay the page at the top left
+  - Should not contain actions
+  - user input not required
+  - timed
+
+##### Usage Examples
+
+<cdr-list modifier="ordered">
   <li>
     <figure>
       <cdr-img :src="$withBase('/notifications/storeStatusNotification.png')" alt="An example on REI.com of this notification" width="200px"/>
@@ -477,19 +491,39 @@ If the notification must include an actionable element you are responsible for t
   </li>
   <li>
     <figure>
-      <cdr-img :src="$withBase('/notifications/locationStatus.png')" alt="" width="500px"/>
+      <cdr-img :src="$withBase('/notifications/wishlist.png')" alt="" width="500px"/>
       <figcaption>
         <cdr-caption
-        summary="A user navigates to the classes and events landing page and is asked to enable location services."/>
+        summary="The user adds an item to their wishlist"/>
+      </figcaption>
+    </figure>
+  </li>
+</cdr-list>
+
+- *[Banner](https://anvil.servicetitan.com/components/banner/)* / *[Announcement](https://anvil.servicetitan.com/components/announcement/)*
+  - detailed information
+  - may include additional actions
+  - inline on page
+  - may be dismissible
+
+##### Usage Examples
+
+<cdr-list>
+  <li>
+    <figure>
+      <cdr-img :src="$withBase('/notifications/announcementExample.png')" alt="An example on REI.com of this notification" width="500px"/>
+      <figcaption>
+        <cdr-caption
+        summary="After a moves or removes an unavailable item from their cart a status notification banner replaces the item."/>
       </figcaption>
     </figure>
   </li>
   <li>
     <figure>
-      <cdr-img :src="$withBase('/notifications/wishlist.png')" alt="" width="500px"/>
+      <cdr-img :src="$withBase('/notifications/cartstockExample.png')" alt="An example on REI.com of this notification" width="500px"/>
       <figcaption>
         <cdr-caption
-        summary="The user adds an item to their wishlist"/>
+        summary="After a user adds more stock than is available on the shopping cart page a status notification banner displays informing the user of the product availability."/>
       </figcaption>
     </figure>
   </li>
@@ -512,7 +546,7 @@ Content control:
   - cdr-select
 
 Content container:
-- Cdr-alert (snackbar?)
+- Cdr-banner (alert) Use cdr-banner for detailed notifications that may have additional actions assoceated to them. Banners are generaly informational rather than providing status updates 
 
 <cdr-doc-example-code-pair repository-href="/src/components/alert"
 :sandbox-data="$page.frontmatter.sandboxData" >
@@ -526,8 +560,8 @@ Content container:
 ```
 </cdr-doc-example-code-pair>
 
-- *dismissible-notifications - potential component*
-- *Cdr-toast*
+
+
 
 
 ### Validation
