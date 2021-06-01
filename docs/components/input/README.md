@@ -253,16 +253,18 @@
 Basic input field with label.
 
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Input label"
 />
 <br>
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Input label"
   disabled
 />
@@ -275,11 +277,12 @@ Basic input field with label.
 Basic input field with label and required tag.
 
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Input label"
   required
 />
@@ -292,11 +295,12 @@ Basic input field with label and required tag.
 Basic input field with label and optional tag.
 
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Input label"
   optional
 />
@@ -309,16 +313,18 @@ Basic input field with label and optional tag.
 Change size for the input field. Default size is medium.
 
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Input label"
 />
 <br>
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Input label"
   size="large"
 />
@@ -331,11 +337,12 @@ Change size for the input field. Default size is medium.
 Input field with no label.
 
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Input label"
   hideLabel
 />
@@ -350,11 +357,12 @@ Input field with validation that runs on `blur`. Error state is controlled with 
 
 Error messaging will override helper text rendered in the bottom position.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', modelError: false}" :methods="{validateInput() {this.modelError = this.defaultModel.length > 4 && 'Error: please enter 4 or less characters'}}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: '', modelError: false}" :methods="{validateInput() {this.modelError = this.defaultModel.length > 4 && 'Error: please enter 4 or less characters'}}">
 
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Input label"
   :error="modelError"
   @blur="validateInput"
@@ -371,11 +379,12 @@ Error messaging will override helper text rendered in the bottom position.
 
 Multiple line input field with expander control in lower right. Note that the pre-icon, post-icon, and info-action slots will not work properly in multi-line inputs.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Input label"
   :rows="4"
 />
@@ -387,11 +396,12 @@ Multiple line input field with expander control in lower right. Note that the pr
 
 Input field designed to accept numerical input. Launches the numerical keyboard on mobile devices. Does not use the `type="number"` attribute as that is intended for values that are strictly "numbers" such as quantities and not values that contain numerical characters such as credit cards, security codes, month/year values, etc. Can be used in conjunction with [input masking](#input-masking) to handle formatting values like credit cards, or an `input` listener can be used to format or restrict input.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}" :methods="{restrictInput() {this.defaultModel = this.defaultModel.replace(/\D/g, '')}}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: ''}" :methods="{restrictInput() {this.defaultModel = this.defaultModel.replace(/\D/g, '')}}">
 
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Numerical input label"
   optional
   :numeric="true"
@@ -406,11 +416,12 @@ Input field designed to accept numerical input. Launches the numerical keyboard 
 Input field with link text on right.
 
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrLink'})" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrLink'})" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Input label"
 >
   <template slot="info">
@@ -425,11 +436,12 @@ Input field with link text on right.
 
 Input field with icon outside the input field on right.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, IconInformationFill, CdrLink'})" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, IconInformationFill, CdrLink'})" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Input label"
 >
   <cdr-link tag="button" slot="info-action">
@@ -446,11 +458,12 @@ Input field with icon outside the input field on right.
 
 Input field with helper or hint text below the input field. If the input is in an error state, the error messaging slot will override this text.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Input label"
 >
   <template slot="helper-text-bottom">
@@ -465,11 +478,12 @@ Input field with helper or hint text below the input field. If the input is in a
 
 Input field with helper or hint text rendered above the input field.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Input label"
 >
   <template slot="helper-text-top">
@@ -484,11 +498,12 @@ Input field with helper or hint text rendered above the input field.
 
 Input field with icon inserted into the input field on left. Icon is decorative and not intended for any action.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, IconLocationPinStroke'})" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, IconLocationPinStroke'})" :codeMaxHeight="false"  :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Input label"
 >
   <IconLocationPinStroke
@@ -505,11 +520,12 @@ Input field with icon inserted into the input field on left. Icon is decorative 
 
 Input field with icon inserted into the input field on right. Icon is decorative and not intended for any action.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, IconCreditCard'})" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, IconCreditCard'})" :codeMaxHeight="false"  :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Input label"
 >
   <IconCreditCard
@@ -526,12 +542,13 @@ Input field with icon inserted into the input field on right. Icon is decorative
 
 Input field with icon buttons inserted to the right. Up to 2 buttons can be passed into the `post-icon` slot. Each button should have the `cdr-input__button` utility class applied to it.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, IconCreditCard, IconXLg, CdrTooltip, CdrButton'})" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, IconCreditCard, IconXLg, CdrTooltip, CdrButton'})" :codeMaxHeight="false"  :model="{defaultModel: ''}">
 
 ```html
 <div>
   <cdr-input
     v-model="defaultModel"
+    :background="backgroundColor"
     label="Input label"
 
   >
@@ -561,6 +578,7 @@ Input field with icon buttons inserted to the right. Up to 2 buttons can be pass
 
   <cdr-input
     v-model="defaultModel"
+    :background="backgroundColor"
     label="Large Input label"
 
     size="large"
