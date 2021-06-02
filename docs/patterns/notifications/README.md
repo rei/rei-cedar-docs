@@ -468,14 +468,47 @@ If the notification must include an actionable element you are responsible for t
 
 #### Potential Components
 
+- *[Banner](https://anvil.servicetitan.com/components/banner/)* / *[Announcement](https://anvil.servicetitan.com/components/announcement/)*
+  - high priority status messages that are important to the user flow
+  - may contain detailed information
+  - may include additional actions
+  - located inline on page generally located in associated section of effected content
+  - may be dismissible
+
+##### Usage Examples
+
+<cdr-list>
+  <li>
+    <figure>
+      <cdr-img :src="$withBase('/notifications/announcementExample.png')" alt="An example on REI.com of this notification" width="500px"/>
+      <figcaption>
+        <cdr-caption
+        summary="After a user selects 'save for latter'  or removes an unavailable item from their cart a status notification banner replaces the item with the text that the item has been saved or removed."/>
+      </figcaption>
+    </figure>
+  </li>
+  <li>
+    <figure>
+      <cdr-img :src="$withBase('/notifications/cartstockExample.png')" alt="An example on REI.com of this notification" width="500px"/>
+      <figcaption>
+        <cdr-caption
+        summary="After a user adds more stock than is available on the shopping cart page a status notification banner displays informing the user of the product availability."/>
+      </figcaption>
+    </figure>
+  </li>
+</cdr-list>
+
 - **Cdr-toast  / [snackbar](https://anvil.servicetitan.com/components/snackbar/)**
-  - The user is being informed of an event, with the option to take action.
-  - Should be minimal content
-  - temporary 
-  - overlay the page at the top left
+  - low priority status messages generally confirming actions 
+  - The user is being informed of an event
+  - Should be minimal content that can be understood at a glance
+  - Temporary, usually auto dismissing
+  - Overlay the page at the top left
   - Should not contain actions
   - user input not required
-  - timed
+  - Should not change their state nor update their content once visible
+  - Should not get in the way of important page content
+  - May be clicked on to see what’s previously happened
 
 ##### Usage Examples
 
@@ -500,34 +533,7 @@ If the notification must include an actionable element you are responsible for t
   </li>
 </cdr-list>
 
-- *[Banner](https://anvil.servicetitan.com/components/banner/)* / *[Announcement](https://anvil.servicetitan.com/components/announcement/)*
-  - detailed information
-  - may include additional actions
-  - inline on page
-  - may be dismissible
 
-##### Usage Examples
-
-<cdr-list>
-  <li>
-    <figure>
-      <cdr-img :src="$withBase('/notifications/announcementExample.png')" alt="An example on REI.com of this notification" width="500px"/>
-      <figcaption>
-        <cdr-caption
-        summary="After a moves or removes an unavailable item from their cart a status notification banner replaces the item."/>
-      </figcaption>
-    </figure>
-  </li>
-  <li>
-    <figure>
-      <cdr-img :src="$withBase('/notifications/cartstockExample.png')" alt="An example on REI.com of this notification" width="500px"/>
-      <figcaption>
-        <cdr-caption
-        summary="After a user adds more stock than is available on the shopping cart page a status notification banner displays informing the user of the product availability."/>
-      </figcaption>
-    </figure>
-  </li>
-</cdr-list>
 
 - New options are available based on selections you have made
 - Shipping restrictions display once you have selected a location
