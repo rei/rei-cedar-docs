@@ -53,7 +53,7 @@ Notifications may be used with the following message types
     <th class="advanced-table__header">
       <cdr-link href="#status-notifications">Status Notifications</cdr-link>
     </th>
-    <td>Page level responses to user interactions Confirming actions made, communicating additional information based on user provided input</td>
+    <td>Page level responses to user interactions confirming actions made, communicating additional information based on user provided input</td>
   </tr>
   <tr>
   <tr>
@@ -65,29 +65,6 @@ Notifications may be used with the following message types
     </td>
   </tr>
 </cdr-table>
-
-@flowstart
-st=>start: Identify the correct message pattern
-e=>end: End
-
-interactive=>condition: User interaction
-required?
-inline=>condition: providing 
-messaging?
-associated=>condition: Response to 
-form inputs?
-succinct=>condition: Inline?
-associatedYes=>operation: Validation |:>#validation 
-associatedNo=>operation: Status Notification |:>#status-notifications
-succinctNo=>operation: Status Notification |:>#status-notifications
-succinctYes=>operation: Update Notification |:>#update-notifications
-
-interactive(yes)->associated(yes)->associatedYes
-associated(no, bottom)->associatedNo()
-interactive(no)->succinct(no)->succinctNo
-succinct(yes)->inline(yes)->succinctNo
-inline(no, bottom)->succinctYes
-@flowend
 
 ### Update Notifications
 
