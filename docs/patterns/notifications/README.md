@@ -31,6 +31,14 @@ In general all notifications share the following traits:
 - Notifications do not block a users access to the page and should not use a blocking overlay window
 - Notifications are not a part of the page content and become available when triggered by a user action
 
+Notifications may be used with the following message types
+
+ - Errors
+ - Warnings
+ - Success
+ - Page status
+ - Content updates
+
 ## Patterns
 (the following do not consider mobile app patterns)
 
