@@ -68,6 +68,9 @@ Notifications may be used with the following message types
 
 ### Update Notifications
 
+- **Loading**
+- **Inline page content updates**
+
 Update Notifications update existing inline page content.
 They inform users of advisory information that enhances the site experience such as quantity updates or busy states.
 Additionally, These notifications often only update a specific part of an inline content section.
@@ -142,7 +145,6 @@ Remember to create sufficient Visual feedback as many update notifications are u
 The Update Notification Content Container wraps both the element being updated and any assistive technology helpers such as screen reader text. It may be a pre-existing section of a page or dynamically added upon user action.
 
 ###### Design Considerations
-
 
 - Should
   - Ensure the Update notification does not receive focus as a result of a change in status.
@@ -295,6 +297,9 @@ Content container:
 
 
 ### Status Notifications
+
+
+- **Page and page section errors, warnings, success or status responses based on user input**
 
 Status Notifications apply the `role="status"` to their HTML markup.
 They will not interrupt a user from a task they are engaged in, and are provided on user action rather than as part of the page. 
@@ -556,6 +561,9 @@ Content container:
 
 
 ### Validation
+
+- **Form errors, warnings, success or status responses based on user input**
+
 Form validation responses provide unexpected instruction on blocking problems that must be fixed before moving on. 
 Additionally, these messages may respond to input informing the user of further updates needed and or to inform the user that an error has been resolved.
 It is critical that these notifications accurately inform and help to clarify the issues being presented to users.
