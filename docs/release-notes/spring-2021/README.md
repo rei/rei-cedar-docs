@@ -55,15 +55,20 @@ We have created a new `cdr-color-background-brand-spruce` color token (TODO: inf
 
 ## Deprecations
 
-TODO: vue 3 related deprecations? scopedSlots -> slots? pagination/breadcrumb/vue-router overrides?
+### TODO: ????
 
 ## Breaking Changes
+
+### CdrAlert Renamed to CdrBanner
+
+The CdrAlert component has been renamed to be CdrBanner to better align with the intention and meaning of the component and distinguish it from the accessible [alert pattern](../../patterns/alerts). Nothing in the component API has changed aside from the name, consumers can migrate by simply replacing any instance of `cdr-alert` with `cdr-banner`, as well as replacing `CdrAlert` with `CdrBanner`. Note that this change impacts both the @rei/cedar component package as well as the @rei/cdr-component-variables SCSS/LESS mixins.
 
 ### CdrTokens Background Scoping
 
 In order to distinguish generic background colors like primary and secondary from more specific background colors we have re-named several of our background color tokens. This is necessary because the Cedar team exhaustively tests the accessibility of our components against our primary and secondary background colors, but we are unable to guarantee that every state of every Cedar component will be accessible against certain rarer or more specific background types. This scoping also helps clarify that these background color tokens are intended to be used for simple messaging and should not be applied as general background colors.
 
 | Old token name | New token name |
+|----|-------|
 | cdr-color-background-success | cdr-color-background-message-success |
 | cdr-color-background-warning | cdr-color-background-message-warning |
 | cdr-color-background-error | cdr-color-background-message-error |
