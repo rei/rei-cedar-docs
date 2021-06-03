@@ -83,7 +83,7 @@
                 "name": "hideLabel",
                 "type": "boolean",
                 "default": "false",
-                "description": "Hides the label element and sets the input ‘aria-label’ to the value of the ‘label’ prop for a11y compliance."
+                "description": "Visually hides the label element, but leaves it available to screen readers for a11y compliance."
               },
               {
                 "name": "prompt",
@@ -232,7 +232,7 @@ Basic select control with no label.
   label="Select label"
   prompt="Prompt text"
   :options="defaultOptions"
-  hideLabel
+  :hide-label="true"
 />
 <br>
 <cdr-select
@@ -242,7 +242,7 @@ Basic select control with no label.
   prompt="Prompt text"
   :options="defaultOptions"
   disabled
-  hideLabel
+  :hide-label="true"
 />
 ```
 
