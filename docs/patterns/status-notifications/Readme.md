@@ -41,6 +41,7 @@ Additionally, they may open based on conditions a user has created or criterium 
 
 ## Persistent Status notifications
 
+
 <cdr-table class="advanced-table" full-width=false>
   <tr>
     <th class="advanced-table__header">
@@ -169,6 +170,8 @@ authors SHOULD make the relationship explicit with the aria-controls attribute.
 
 ## Transient Status notifications
 
+ temporary messages that come and go without users’ input and they 
+
 <cdr-table class="advanced-table" full-width=false>
   <tr>
     <th class="advanced-table__header">
@@ -190,6 +193,7 @@ authors SHOULD make the relationship explicit with the aria-controls attribute.
         <ul>
           <li>proved confirmation when updating and removing items</li>
           <li>providing simple messages when saving user preferences</li>
+          <li>provide contextual information on the page processes</li>
         </ul>
     </td>
   </tr>
@@ -213,7 +217,7 @@ authors SHOULD make the relationship explicit with the aria-controls attribute.
       Location
     </th>
     <td>
-      Overlay the page at the top left
+      Overlay the page at the top|bottom left. notification location should not intersect with the navigation area.
     </td>
   </tr>
   <tr>
