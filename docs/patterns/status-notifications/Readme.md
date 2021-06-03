@@ -170,7 +170,7 @@ authors SHOULD make the relationship explicit with the aria-controls attribute.
 
 ## Transient Status notifications
 
- temporary messages that come and go without users’ input and they 
+ temporary messages that come and go without users’ input, They indicate the completion of a task or process initiated by the user or the application itself
 
 <cdr-table class="advanced-table" full-width=false>
   <tr>
@@ -217,7 +217,7 @@ authors SHOULD make the relationship explicit with the aria-controls attribute.
       Location
     </th>
     <td>
-      Overlay the page at the top|bottom left. notification location should not intersect with the navigation area.
+      Overlay the page at the top|bottom? left (TODO: decide on consistent location - once aligned this should not be optional). notification location should not intersect with the navigation area.
     </td>
   </tr>
   <tr>
@@ -234,7 +234,7 @@ authors SHOULD make the relationship explicit with the aria-controls attribute.
   </tr>
   <tr>
   <th class="advanced-table__header">Potential Component</th>
-  <td>toast / snack-bar </td>
+  <td>toast (a non-modal dialog that appears and disappears in the span of a few seconds)/ snack-bar </td>
   </tr>
   <tr>
   <th class="advanced-table__header">Examples</th>
@@ -287,6 +287,7 @@ these Notifications should not be blocking. Opening in an overlay may disrupt an
     - Must provide At least one focusable UI element (i.e. Close button, primary button)
     - content container must be dismissible
     - On dismiss, must return focus to the next logical location in the page flow
+  - meet the standard color ratio requirements for both text (4.5:1) and activatable components (3.0:1).
 - **Should**
   - Be used for short messages to confirm an action
 - **Should not**
