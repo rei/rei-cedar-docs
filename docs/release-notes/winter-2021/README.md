@@ -26,6 +26,12 @@
 
 - If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your micro-site.
 
+## 8.0.4
+
+### Bug Fixes
+
+- CdrModal has been updated to resolve an issue with the iOS bug fix released in Cedar 8.0.1
+
 ## 8.0.3
 
 ### Bug Fixes
