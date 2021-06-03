@@ -219,19 +219,19 @@ In this example, the `size` prop accepts a string denoting size at different bre
 
 Some components use slots for content distribution. Most components will have a single default slot; others will have named slots or scoped slots. Slots are listed as part of the API for all components. For more information about slots, read [Vue's Slots documentation](https://vuejs.org/v2/guide/components-slots.html).
 
-Adding content to a default slot
+Adding content to a component that has a default slot
 
 ```html
 <cdr-button>I'm content in the default slot</cdr-button>
 ```
 
-Adding content to a named slot
+Adding content to a component that has named slots
 
 ```html
 <my-component>
-  <slot name="header">I'm content in the header slot</slot>
+  <template v-slot:header>I'm content in the header slot</template>
 
-  <slot name="footer">I'm content in the footer slot</slot>
+  <template v-slot:footer>I'm content in the footer slot</template>
 </my-component>
 ```
 

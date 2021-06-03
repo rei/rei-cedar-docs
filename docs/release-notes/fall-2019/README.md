@@ -151,7 +151,7 @@ After:
   :opened="opened"
   @accordion-toggle="opened = !opened"
 >
-  <template slot="label">
+  <template v-slot:label>
     How do I find my member number?
   </template>
   <cdr-text>

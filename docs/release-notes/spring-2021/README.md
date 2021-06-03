@@ -55,18 +55,26 @@ We have created a new `cdr-color-background-brand-spruce` color token (TODO: inf
 
 ## Deprecations
 
+### CdrBreadcrumb and CdrPagination Scoped Slots
+
+CdrBreadcrumb and CdrPagination both allow for passing in a scoped slot for rendering their link elements which was intended to support things like vue-router which must override the default link navigation behavior. This feature increased the complexity of both components, making it difficult to maintain and improve the components over time. It requires that consumers bind multiple attributes to the slot element to ensure a consistent UI. Most importantly, this functionality is better served through an event handler which would allow the Cedar components to remain simple and consistent but give consumers the flexibility to customize their behavior.
+
+ We are planning to remove support for scoped slots in both components as part of our future Vue 3 updates. See the [CdrBreadcrumb](TODO ADD EXAMPLE) or [CdrPagination](TODO ADD EXAMPLE) pages for examples of how to override their default navigation behavior. Please reach out to the Cedar team if you have any questions or concerns about this change.
+
 ### Vue 3: Update Slot Syntax
 
-Vue 2.6 introduced a new syntax for passing slot content into components. The old syntax is removed from Vue 3 and we recommend updating your codebase to make use of the new slot syntax to simplify the upgrade process in the future.
+Vue 2.6 introduced a new syntax for passing slot content into components. The old syntax is removed from Vue 3 and we recommend updating your codebase to make use of the new slot syntax to simplify the upgrade process in the future. Note that the new `v-slot` syntax can only be used on a `template` tag, however those additional `template` tags will not be included in the rendered HTML.
 
 ```
 <!-- Named slots -->
-<template slot="label">old named slot syntax</template>
-<template v-slot:label>new named slot syntax</slot>
+<span slot="slotname">old named slot syntax</span>
+<template v-slot:slotname>
+  <span>new named slot syntax<span>
+</template>
 
 <!-- Scoped slots -->
-<template slot="link" slot-scope="link">old scoped slot syntax {{ link.name }}</template>
-<template v-slot:link="link">new scoped slot syntax {{ link.name }}</template>
+<template slot="slotname" slot-scope="scopeObject">old scoped slot syntax {{ scopeObject.name }}</template>
+<template v-slot:slotname="scopeObject">new scoped slot syntax {{ scopeObject.name }}</template>
 ```
 
 The examples on this doc site have been updated to make use of the new syntax, see the [Vue documentation](https://vuejs.org/v2/guide/components-slots.html#Named-Slots) for more information.
@@ -75,7 +83,7 @@ The examples on this doc site have been updated to make use of the new syntax, s
 
 CdrBreadcrumb and CdrPagination both allow for passing in a scoped slot for rendering their link elements which was intended to support things like vue-router which must override the default link navigation behavior. This feature increased the complexity of both components, making it difficult to maintain and improve the components over time. It requires that consumers bind multiple attributes to the slot element to ensure a consistent UI. Most importantly, this functionality is better served through an event handler which would allow the Cedar components to remain simple and consistent but give consumers the flexibility to customize their behavior.
 
- We are planning to remove support for scoped slots in both components as part of our future Vue 3 updates. See the [CdrBreadcrumb](TODO ADD EXAMPLE) or [CdrPagination](TODO ADD EXAMPLE) pages for examples of how to override their default navigation behavior. Please reach out to the Cedar team if you have any questions or concerns about this change.
+We are planning to remove support for scoped slots in both components as part of our future Vue 3 updates. See the [CdrBreadcrumb](../../components/breadcrumb/#custom-navigation) or [CdrPagination](../../components/pagination/#overriding-default-navigation) pages for examples of how to override their default navigation behavior. Please reach out to the Cedar team if you have any questions or concerns about this change.
 
 ## Breaking Changes
 

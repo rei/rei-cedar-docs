@@ -177,33 +177,6 @@ Can be used to override the default link navigation behavior inside a breadcrumb
 ```
 </cdr-doc-example-code-pair>
 
-<!--
-TODO: mark as deprecated? just delete?
- ## Link Scoped Slot
-
-Can be used to override the default links rendered in the breadcrumb. Useful for integrating with client-side routing, as a `router-link` can be rendered instead of a plain `a` tag. The `slot-scope` exposed includes:
-
-- `class`: CSS class to be applied to your override element to match the breadcrumb styling
-- `href`: the path that the link points to
-- `content`: the text content of that link
-
-<cdr-doc-example-code-pair repository-href="/src/components/breadcrumb" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight= false>
-
-```html
-<cdr-breadcrumb :items="[
-  {item:{url:'/snowboarding', name: 'Snowboarding'}},
-  {item:{url:'/snowboarding/clothing', name: ' Clothing'}}
-]">
-  <template
-    v-slot:link="link"
-  >
-    <div :class="link.class" @click="console.log(link.href)">
-      {{ link.content }}
-    </div>
-  </template>
-</cdr-breadcrumb>
-```
-</cdr-doc-example-code-pair> -->
 
 ## Accessibility
 
@@ -301,6 +274,10 @@ Truncate breadcrumbs left to right to show the final two links in the trail, so 
 ## Scoped Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.scopedSlots" />
+
+## Events
+
+<cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
 
 
 ## Component Variables
