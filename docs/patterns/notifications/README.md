@@ -5,7 +5,7 @@
   "layout_type": "LayoutArticle",
   "summary": "How to choose the correct component for your content",
   "sandboxData": {
-    "components": "CdrAlert"
+    "components": "CdrBanner"
   },
   "breadcrumbs": [
     {
