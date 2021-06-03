@@ -399,68 +399,51 @@ Additionally, they may open based on conditions a user has created or criterium 
   </tr>
 </cdr-table>
 
-##### Usage Examples TODO incorporate into one of the sub types
+##### Anatomy of a Persistent Status notifications
 
-- New options are available based on selections you have made
-- Shipping restrictions display once you have selected a location
-- Quantity availability
-- The user has items that are no longer available in their cart
-- The user has successfully signed up for an email notifications
+<cdr-img :src="$withBase('/notifications/persistentStatusAnatomy.png')" alt="Diagram for persistent status notifications, annotating the required layout of the elements listed below" />
 
-<cdr-img :src="$withBase('/notifications/statusAnatomy.png')" alt="Diagram for status notifications as an overlay, annotating the required layout of the elements listed below" />
-
-1. Notification Type - Affects the color and icon associated with the notification. Choose from error, warning, success or informational.
+1. [Status Container](#status-container)
 2. Optional Dismiss Action - Enables the user to remove the notification from view.
 3. Title - Briefly summarizes alert content.
 4. Visual and Assistive technology aid
 5. Message - Includes the core, most important alert content.
 
+##### Status Container
 - **Must**
   - on activation, add `role=”status”` to the markup announcing the notification without interrupting the page flow of the user
-    ```html
-    <!-- EXAMPLE: while stable -->
-
-    ```
-    ```html
-    <!-- EXAMPLE: while active -->
-    <div role="status">
-    Determining your location...
-    </div>
-    ```
   - Not contain unique actionable items if the notification is an overlay
   - Ensure the notification container is able to receive focus
-  - Ensure notification will not be removed if keyboard focus or mouse hover is within or over the notification.
-  - Not block page content
-  - Return user focus to a logical location.
-  - If moving focus to the notification, the notification 
-    - Must provide At least one focusable UI element (i.e. Close button, primary button)
-    - content container must be dismissible
-    - On dismiss, must return focus to the next logical location in the page flow
 - **Should**
   - Be used for short messages to confirm an action
-  - Provide necessary support to the primary activities or operations of a page base on users settings or selections
   - Authors SHOULD ensure an element with role status does not receive focus as a result of change in status.
   - Status is a form of live region. If another part of the page controls what appears in the status, 
 authors SHOULD make the relationship explicit with the aria-controls attribute.
   - Clearly communicate what is happening
 - **Should not**
-  - Be used for error messages
   - Open as a blocking overlay window
   - Move Focus automatically to the notification
   - Direct the user to a new page or window
   - Overuse Status notifications. They may interrupt your users experience
   - Reuse bespoke UI intended for other message or navigation types
-  - Create notifications that disappear automatically
-  - Contain interactive controls if notification is displayed as an overlay
 - **May**
   - display notifications in rich, unique UI to create distinction around itself and the page content
   - Open or update content in locations unrelated to the action which caused the notification to appear 
   - Update a live region of the page
   - Use the HTML `<aside>` tag, denoting the section that, though related to the main element, doesn't belong to the main flow
-  - appear as a timed display.
   - Include `aria-atomic` markup attribute to define what content will be presented to assistive technologies
   - Include `aria-relevant` to define what type of changes are being announced to assistive technologies
 
+##### status dismissal
+- **Must**
+  - Ensure notification will not be removed if keyboard focus or mouse hover is within or over the notification.
+  - Return user focus to a logical location.
+  - If moving focus to the notification, the notification 
+    - Must provide At least one focusable UI element (i.e. Close button, primary button)
+    - content container must be dismissible
+    - On dismiss, must return focus to the next logical location in the page flow
+- **Should not**
+  - Create notifications that disappear automatically
 
 #### Transient Status notifications
 
@@ -557,7 +540,11 @@ authors SHOULD make the relationship explicit with the aria-controls attribute.
   </tr>
 </cdr-table>
 
-<cdr-img :src="$withBase('/notifications/statusOverlayAnatomy.png')" alt="Diagram for status notifications as an overlay, annotating the required layout of the elements listed below" />
+##### Anatomy of a Transient Status notifications
+
+<cdr-img :src="$withBase('/notifications/transientStatusAnatomy.png')" alt="Diagram for transient status notifications, annotating the required layout of the elements listed below" />
+
+Transient Status notifications have the following requirements in addition to the requirements for Persistent Status Notifications:
 
 1. **[Status Notifications as an Overlay](#status-notifications-as-an-overlay)**
 2. **[Automatic Dismissal](#automatic-dismissal)**
@@ -566,6 +553,21 @@ authors SHOULD make the relationship explicit with the aria-controls attribute.
 ##### Status Notifications as an overlay
 The concise messages contained within Status Notifications are not required for a user to interact with and may open unexpectedly, 
 these Notifications should not be blocking. Opening in an overlay may disrupt and confuse or not be seen at all by users at some breakpoints.
+
+- **Must**
+  - Not block page content
+  - Return user focus to a logical location.
+  - If moving focus to the notification, the notification 
+    - Must provide At least one focusable UI element (i.e. Close button, primary button)
+    - content container must be dismissible
+    - On dismiss, must return focus to the next logical location in the page flow
+- **Should**
+  - Be used for short messages to confirm an action
+- **Should not**
+  - Contain interactive controls if notification is displayed as an overlay
+  - Open as a blocking overlay window**
+- **May**
+  - appear as a timed display.
 
 If opening a Status Notification consider the following:
 - A blocking window can introduce obstruction issues for people who have zoomed in browsers Or for users at smaller breakpoints
