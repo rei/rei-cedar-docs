@@ -5,7 +5,7 @@
   "layout_type": "LayoutArticle",
   "summary": "Loading and inline page content updates",
   "sandboxData": {
-    "components": "CdrAlert"
+    "components": "CdrBanner"
   },
   "breadcrumbs": [
     {

@@ -5,7 +5,7 @@
   "layout_type": "LayoutArticle",
   "summary": "Use messaging patterns to provide supplemental communication and actively respond to user actions.",
   "sandboxData": {
-    "components": "CdrAlert"
+    "components": "CdrBanner"
   },
   "breadcrumbs": [
     {

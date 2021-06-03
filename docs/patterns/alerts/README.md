@@ -5,7 +5,7 @@
   "layout_type": "LayoutArticle",
   "summary": "",
   "sandboxData": {
-    "components": "CdrAlert"
+    "components": "CdrBanner"
   },
   "breadcrumbs": [
     {
