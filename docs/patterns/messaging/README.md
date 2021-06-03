@@ -119,8 +119,52 @@ context(no, bottom)->inform
   </tbody>
   </cdr-table>
 
+## Notifications
+Notifications are asynchronous events providing user feedback to changes on specific elements or page sections.
+Notifications should be designed to attract rather than capture a user’s attention, they add context to elements that exist on a page and should not employee design that blocks page content.
+As messages, notifications offer responses to change. These responses help users understand page processes, actions they have competed, additional options available, or actions still needing attention.
+Though important, notifications should not interrupt a user nor should focus be moved to them automatically.
 
+In general all notifications share the following traits:
 
+- Notifications provide feedback to users about actions they are taking on a page. They are not promotional nor navigational
+- Notifications do not block a users access to the page and should not use a blocking overlay window
+- Notifications are not a part of the page content and become available when triggered by a user action
+
+Notifications may be used with the following message types
+
+ - Errors
+ - Warnings
+ - Success
+ - Page status
+ - Content updates
+
+### Patterns
+(the following do not consider mobile app patterns)
+
+<cdr-table class="advanced-table" full-width=false>
+  <tr>
+    <th class="advanced-table__header">
+      <cdr-link href="../update-notifications">Update Notification</cdr-link>
+    </th>
+    <td>UI updates and non-verbal application state communications (such as "busy" or "loading" icons)</td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">
+      <cdr-link href="../status-notifications">Status Notifications</cdr-link>
+    </th>
+    <td>Page level responses to user interactions confirming actions made, communicating additional information based on user provided input</td>
+  </tr>
+  <tr>
+  <tr>
+    <th class="advanced-table__header">
+      <cdr-link href="../validation">Validation Notifications</cdr-link>
+    </th>
+    <td>
+      Form validation instruction
+    </td>
+  </tr>
+</cdr-table>
 
 
 
