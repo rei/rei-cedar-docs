@@ -278,9 +278,6 @@ date content in locations unrelated to the action which caused the notification 
       </figcaption>
     </figure>
   </li>
-  <li>
-   removing an item from wish list
-  </li>
 </cdr-list>
 
 #### Available Cedar Components
@@ -307,43 +304,6 @@ These event based notifications differ from Update Notifications as they do not 
 They provide information which will help users make a decision, communicate statuses, or provide feedback about selections that have been have made.
 These notifications may open or be added to locations unrelated to the action which caused the notification to trigger.
 Additionally, they may open based on conditions a user has created or criterium they have met.
-
-#### At A Glance
-<cdr-table class="advanced-table" full-width=false>
-  <tr>
-    <th class="advanced-table__header">
-      Priority
-    </th>
-    <td>medium / inform</td>
-  </tr>
-  <tr>
-    <th class="advanced-table__header">
-      Expectancy
-    </th>
-    <td>Unexpected</td>
-  </tr>
-  <tr>
-    <th class="advanced-table__header">
-      Purpose
-    </th>
-    <td>
-        <ul>
-          <li>Communicating a status change caused by the user</li>
-          <li>As contextual information that might need their attention</li>
-          <li>Notifying users of a potential problem that may require their attention</li>
-        </ul>
-    </td>
-  </tr>
-  <tr>
-    <th class="advanced-table__header">Interaction</th>
-    <td>Non-blocking, Not Required</td>
-  </tr>
-  <tr>
-    <th class="advanced-table__header">Information</th>
-    <td>Advisory ancillary information </td>
-  </tr>
-</cdr-table>
-
 #### Use When
 - Exposing additional product information that may vary based on user selection
 - As confirmation that a task or process initiated by the user was completed successfully 
@@ -357,7 +317,95 @@ Additionally, they may open based on conditions a user has created or criterium 
 - The notification relates to an actionable element in a busy state (see [status notifications](#status-notifications))
 - The content added to the page is critical and needs immediate attention (see [alert](../alerts))
 
-#### Anatomy of a Status Notification
+#### Persistent Status notifications
+
+<cdr-table class="advanced-table" full-width=false>
+  <tr>
+    <th class="advanced-table__header">
+      Priority
+    </th>
+    <td>medium</td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">
+      Expectancy
+    </th>
+    <td>Unexpected</td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">
+      Purpose
+    </th>
+    <td>
+        <ul>
+          <li>proved error or warnings on the status of items in your carts</li>
+          <li>providing confirmation when updating and removing items that provides navigation or other actions</li>
+          <li>Communicating a status change caused by the user</li>
+          <li>Contextual information that might need their attention</li>
+          <li>Notifying users of a potential problem that may require their attention</li>
+        </ul>
+    </td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">Interaction</th>
+    <td>Non-blocking, Not Required</td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">Information</th>
+    <td>Advisory ancillary information </td>
+  </tr>
+  <tr>
+  <th class="advanced-table__header">Location</th>
+  <td>Inline on page generally located in associated section of effected content</td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">Options</th>
+    <td>
+      <cdr-list>
+        <li>may contain detailed information</li>
+        <li>may include additional actions</li>
+        <li>may be dismissible</li>
+      </cdr-list>
+    </td>
+  </tr>
+  <tr>
+  <th class="advanced-table__header">Potential Component</th>
+  <td>banner / announcement</td>
+  </tr>
+  <tr>
+  <th class="advanced-table__header">Examples</th>
+  <td>
+  <cdr-list>
+  <li>
+    <figure>
+      <cdr-img :src="$withBase('/notifications/announcementExample.png')" alt="An example on REI.com of this notification" width="500px"/>
+      <figcaption>
+        <cdr-caption
+        summary="After a user selects 'save for latter' or removes an unavailable item from their cart a status notification banner replaces the item with the text that the item has been saved or removed."/>
+      </figcaption>
+    </figure>
+  </li>
+  <li>
+    <figure>
+      <cdr-img :src="$withBase('/notifications/cartstockExample.png')" alt="An example on REI.com of this notification" width="500px"/>
+      <figcaption>
+        <cdr-caption
+        summary="After a user adds more stock than is available on the shopping cart page a status notification banner displays informing the user of the product availability."/>
+      </figcaption>
+    </figure>
+  </li>
+</cdr-list>
+  </td>
+  </tr>
+</cdr-table>
+
+##### Usage Examples TODO incorporate into one of the sub types
+
+- New options are available based on selections you have made
+- Shipping restrictions display once you have selected a location
+- Quantity availability
+- The user has items that are no longer available in their cart
+- The user has successfully signed up for an email notifications
 
 <cdr-img :src="$withBase('/notifications/statusAnatomy.png')" alt="Diagram for status notifications as an overlay, annotating the required layout of the elements listed below" />
 
@@ -414,6 +462,101 @@ authors SHOULD make the relationship explicit with the aria-controls attribute.
   - Include `aria-relevant` to define what type of changes are being announced to assistive technologies
 
 
+#### Transient Status notifications
+
+<cdr-table class="advanced-table" full-width=false>
+  <tr>
+    <th class="advanced-table__header">
+      Priority
+    </th>
+    <td>low / inform</td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">
+      Expectancy
+    </th>
+    <td>Unexpected</td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">
+      Purpose
+    </th>
+    <td>
+        <ul>
+          <li>proved confirmation when updating and removing items</li>
+          <li>providing simple messages when saving user preferences</li>
+        </ul>
+    </td>
+  </tr>
+  <tr>
+      <th class="advanced-table__header">
+        Interaction
+      </th>
+      <td>
+        Non-blocking, Not Required Temporary, usually auto dismissing
+      </td>
+  </tr>
+  <tr>
+      <th class="advanced-table__header">
+        Information
+      </th>
+      <td> 
+        Advisory ancillary information 
+      </td>
+  </tr>
+    <th class="advanced-table__header">
+      Location
+    </th>
+    <td>
+      Overlay the page at the top left
+    </td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">Options</th>
+    <td>
+      <cdr-list>
+        <li>Should not contain actions unless these actions are also available on the parent page</li>
+        <li>Should not change their state nor update their content once visible</li>
+        <li>may be dismissible</li>
+        <li>Should not get in the way of important page content</li>
+        <li>May be clicked on to see what’s previously happened</li>
+      </cdr-list>
+    </td>
+  </tr>
+  <tr>
+  <th class="advanced-table__header">Potential Component</th>
+  <td>toast / snack-bar </td>
+  </tr>
+  <tr>
+  <th class="advanced-table__header">Examples</th>
+  <td>
+  <cdr-list modifier="ordered">
+  <li>
+    <figure>
+      <cdr-img :src="$withBase('/notifications/storeStatusNotification.png')" alt="An example on REI.com of this notification" width="200px"/>
+      <figcaption>
+        <cdr-caption
+        summary="After a user selects 'Set as my REI' for and REI store a 'saved' notification overlay displays. Assistive technology should inform users of the busy state."/>
+      </figcaption>
+    </figure>
+  </li>
+  <li>
+    <figure>
+      <cdr-img :src="$withBase('/notifications/wishlist.png')" alt="" width="500px"/>
+      <figcaption>
+        <cdr-caption
+        summary="The user adds an item to their wishlist"/>
+      </figcaption>
+    </figure>
+  </li>
+  <li>
+   updating and removing an item from wish list
+  </li>
+</cdr-list>
+  </td>
+  </tr>
+</cdr-table>
+
 <cdr-img :src="$withBase('/notifications/statusOverlayAnatomy.png')" alt="Diagram for status notifications as an overlay, annotating the required layout of the elements listed below" />
 
 1. **[Status Notifications as an Overlay](#status-notifications-as-an-overlay)**
@@ -454,112 +597,6 @@ If the notification must include an actionable element you are responsible for t
   - Return focus to next logical location in the page flow
   - Contained action is also readily available on the page
   - If the action is not available on page, the action should be added to a notification history page (see ARIA’s log role)
-
-
-#### Potential Components
-
-- *[Banner](https://anvil.servicetitan.com/components/banner/)* / *[Announcement](https://anvil.servicetitan.com/components/announcement/)*
-  - high priority status messages that are important to the user flow
-  - may contain detailed information
-  - may include additional actions
-  - located inline on page generally located in associated section of effected content
-  - may be dismissible
-
-##### Usage Examples
-
-<cdr-list>
-  <li>
-    <figure>
-      <cdr-img :src="$withBase('/notifications/announcementExample.png')" alt="An example on REI.com of this notification" width="500px"/>
-      <figcaption>
-        <cdr-caption
-        summary="After a user selects 'save for latter'  or removes an unavailable item from their cart a status notification banner replaces the item with the text that the item has been saved or removed."/>
-      </figcaption>
-    </figure>
-  </li>
-  <li>
-    <figure>
-      <cdr-img :src="$withBase('/notifications/cartstockExample.png')" alt="An example on REI.com of this notification" width="500px"/>
-      <figcaption>
-        <cdr-caption
-        summary="After a user adds more stock than is available on the shopping cart page a status notification banner displays informing the user of the product availability."/>
-      </figcaption>
-    </figure>
-  </li>
-</cdr-list>
-
-- **Cdr-toast  / [snackbar](https://anvil.servicetitan.com/components/snackbar/)**
-  - low priority status messages generally confirming actions 
-  - The user is being informed of an event
-  - Should be minimal content that can be understood at a glance
-  - Temporary, usually auto dismissing
-  - Overlay the page at the top left
-  - Should not contain actions
-  - user input not required
-  - Should not change their state nor update their content once visible
-  - Should not get in the way of important page content
-  - May be clicked on to see what’s previously happened
-
-##### Usage Examples
-
-<cdr-list modifier="ordered">
-  <li>
-    <figure>
-      <cdr-img :src="$withBase('/notifications/storeStatusNotification.png')" alt="An example on REI.com of this notification" width="200px"/>
-      <figcaption>
-        <cdr-caption
-        summary="After a user selects 'Set as my REI' for and REI store a 'saved' notification overlay displays. Assistive technology should inform users of the busy state."/>
-      </figcaption>
-    </figure>
-  </li>
-  <li>
-    <figure>
-      <cdr-img :src="$withBase('/notifications/wishlist.png')" alt="" width="500px"/>
-      <figcaption>
-        <cdr-caption
-        summary="The user adds an item to their wishlist"/>
-      </figcaption>
-    </figure>
-  </li>
-</cdr-list>
-
-
-
-- New options are available based on selections you have made
-- Shipping restrictions display once you have selected a location
-- Quantity availability
-- The user has items that are no longer available in their cart
-- The user has successfully signed up for an email notifications
-#### Using Available Cedar Components
-
-Content control:
-- actionable elements
-  - cdr-button
-  - cdr-link
-- form elements
-  - cdr-radio
-  - cdr-checkbox
-  - cdr-select
-
-Content container:
-- Cdr-banner (alert) Use cdr-banner for detailed notifications that may have additional actions assoceated to them. Banners are generaly informational rather than providing status updates 
-
-<cdr-doc-example-code-pair repository-href="/src/components/alert"
-:sandbox-data="$page.frontmatter.sandboxData" >
-
-```html
-
-<cdr-alert type="warning" role="status">
-  <icon-warning-fill/> You did something that has caused this section to appear
-</cdr-alert>
-
-```
-</cdr-doc-example-code-pair>
-
-
-
-
-
 ### Validation
 
 - **Form errors, warnings, success or status responses based on user input**
