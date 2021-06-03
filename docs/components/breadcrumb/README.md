@@ -94,9 +94,20 @@
             "scopedSlots": [
               {
                 "name": "link",
-                "description": "Scoped slot used to override the default links used in the breadcrumb. Useful for integrating with client-side routing. The slot scope exposes the following attributes: class, href, and content."
+                "description": "Scoped slot used to override the default links used in the breadcrumb. Useful for integrating with client-side routing. The slot scope exposes the following attributes: class, href, and content.",
+                "alert": {
+                  "type": "deprecated",
+                  "description": "The link scoped slot has been deprecated, use an event handler on the `navigate` event instead to customize link navigation behavior"
+                },
               }
             ],
+            "events": [
+              {
+                  "name": "navigate",
+                  "arguments": "breadcrumb, event",
+                  "description": "$emit event fired when a breadcrumb item is clicked. `e.preventDefault()` may be used to override the default link navigation."
+              }
+            ]
           }
         }
       ],
@@ -146,8 +157,29 @@ Complete breadcrumb string with all items visible.
 
 </cdr-doc-example-code-pair>
 
+## Custom Navigation
 
-## Link Scoped Slot
+Can be used to override the default link navigation behavior inside a breadcrumb.
+
+<cdr-doc-example-code-pair repository-href="/src/components/breadcrumb" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :methods="{handleNavigation(bc, e) {e.preventDefault(); this.lastClicked = bc.item.name}}" :model="{lastClicked: ''}">
+
+```html
+<div>
+  <cdr-breadcrumb :items="[
+    {item:{url:'/snowboarding', name: 'Snowboarding'}},
+    {item:{url:'/snowboarding/clothing', name: ' Clothing'}}
+  ]"
+  @navigate="handleNavigation"
+  />
+
+  Last Clicked: {{ lastClicked }}
+</div>
+```
+</cdr-doc-example-code-pair>
+
+<!--
+TODO: mark as deprecated? just delete?
+ ## Link Scoped Slot
 
 Can be used to override the default links rendered in the breadcrumb. Useful for integrating with client-side routing, as a `router-link` can be rendered instead of a plain `a` tag. The `slot-scope` exposed includes:
 
@@ -163,8 +195,7 @@ Can be used to override the default links rendered in the breadcrumb. Useful for
   {item:{url:'/snowboarding/clothing', name: ' Clothing'}}
 ]">
   <template
-    slot="link"
-    slot-scope="link"
+    v-slot:link="link"
   >
     <div :class="link.class" @click="console.log(link.href)">
       {{ link.content }}
@@ -172,7 +203,7 @@ Can be used to override the default links rendered in the breadcrumb. Useful for
   </template>
 </cdr-breadcrumb>
 ```
-</cdr-doc-example-code-pair>
+</cdr-doc-example-code-pair> -->
 
 ## Accessibility
 

@@ -239,10 +239,7 @@ Adding content to a scoped slot
 
 ```html
 <my-component>
-  <template
-    slot="name-of-the-slot"
-    slot-scope="scopeObject"
-  >
+  <template v-slot:name-of-the-slot="scopeObject">
     {{scopeObject.content}} {{scopeObject.someAttribute}}
   </template>
 </my-component>

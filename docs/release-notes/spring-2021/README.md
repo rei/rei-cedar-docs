@@ -55,7 +55,27 @@ We have created a new `cdr-color-background-brand-spruce` color token (TODO: inf
 
 ## Deprecations
 
-### TODO: ????
+### Vue 3: Update Slot Syntax
+
+Vue 2.6 introduced a new syntax for passing slot content into components. The old syntax is removed from Vue 3 and we recommend updating your codebase to make use of the new slot syntax to simplify the upgrade process in the future.
+
+```
+<!-- Named slots -->
+<template slot="label">old named slot syntax</template>
+<template v-slot:label>new named slot syntax</slot>
+
+<!-- Scoped slots -->
+<template slot="link" slot-scope="link">old scoped slot syntax {{ link.name }}</template>
+<template v-slot:link="link">new scoped slot syntax {{ link.name }}</template>
+```
+
+The examples on this doc site have been updated to make use of the new syntax, see the [Vue documentation](https://vuejs.org/v2/guide/components-slots.html#Named-Slots) for more information.
+
+### CdrBreadcrumb and CdrPagination Scoped Slots
+
+CdrBreadcrumb and CdrPagination both allow for passing in a scoped slot for rendering their link elements which was intended to support things like vue-router which must override the default link navigation behavior. This feature increased the complexity of both components, making it difficult to maintain and improve the components over time. It requires that consumers bind multiple attributes to the slot element to ensure a consistent UI. Most importantly, this functionality is better served through an event handler which would allow the Cedar components to remain simple and consistent but give consumers the flexibility to customize their behavior.
+
+ We are planning to remove support for scoped slots in both components as part of our future Vue 3 updates. See the [CdrBreadcrumb](TODO ADD EXAMPLE) or [CdrPagination](TODO ADD EXAMPLE) pages for examples of how to override their default navigation behavior. Please reach out to the Cedar team if you have any questions or concerns about this change.
 
 ## Breaking Changes
 
