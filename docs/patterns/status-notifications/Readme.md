@@ -126,22 +126,17 @@ Additionally, they may open based on conditions a user has created or criterium 
 <cdr-img :src="$withBase('/notifications/persistentStatusAnatomy.png')" alt="Diagram for persistent status notifications, annotating the required layout of the elements listed below" />
 
 1. [Status Container](#status-container)
-2. Optional Dismiss Action - Enables the user to remove the notification from view.
-3. Title - Briefly summarizes alert content.
-4. Visual and Assistive technology aid
-5. Message - Includes the core, most important alert content.
+2. [Optional Dismiss Action](#optional-dismiss-action)
+3. [Message](#message)
 
 #### Status Container
 - **Must**
   - on activation, add `role=”status”` to the markup announcing the notification without interrupting the page flow of the user
-  - Not contain unique actionable items if the notification is an overlay
   - Ensure the notification container is able to receive focus
 - **Should**
-  - Be used for short messages to confirm an action
   - Authors SHOULD ensure an element with role status does not receive focus as a result of change in status.
   - Status is a form of live region. If another part of the page controls what appears in the status, 
 authors SHOULD make the relationship explicit with the aria-controls attribute.
-  - Clearly communicate what is happening
 - **Should not**
   - Open as a blocking overlay window
   - Move Focus automatically to the notification
@@ -156,7 +151,7 @@ authors SHOULD make the relationship explicit with the aria-controls attribute.
   - Include `aria-atomic` markup attribute to define what content will be presented to assistive technologies
   - Include `aria-relevant` to define what type of changes are being announced to assistive technologies
 
-#### status dismissal
+#### Optional Dismiss Action
 - **Must**
   - Ensure notification will not be removed if keyboard focus or mouse hover is within or over the notification.
   - Return user focus to a logical location.
@@ -166,6 +161,11 @@ authors SHOULD make the relationship explicit with the aria-controls attribute.
     - On dismiss, must return focus to the next logical location in the page flow
 - **Should not**
   - Create notifications that disappear automatically
+
+#### Message
+- **Should**
+  - Be used for short messages to confirm an action
+  - Clearly communicate what is happening
 
 ## Transient Status notifications
 
