@@ -14,6 +14,10 @@ body {
   padding: 0;
 }
 
+h1, h2, h3, h4, h5 {
+  @include cdr-text-heading-serif-strong-600;
+}
+
 .cdr-doc-page-shell {
   display: flex;
 }
