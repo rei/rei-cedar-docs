@@ -148,7 +148,7 @@
                 "name": "hideLabel",
                 "type": "boolean",
                 "default": "false",
-                "description": "Hides the label element and sets the input ‘aria-label’ to the value of the ‘label’ prop for a11y compliance."
+                "description": "Visually hides the label element, but leaves it available to screen readers for a11y compliance."
               },
               {
                 "name": "rows",
@@ -344,7 +344,7 @@ Input field with no label.
   v-model="defaultModel"
   :background="backgroundColor"
   label="Input label"
-  hideLabel
+  :hide-label="true"
 />
 ```
 
@@ -456,7 +456,7 @@ Input field with icon outside the input field on right.
 
 ## Input with Helper Text
 
-Input field with helper or hint text below the input field. If the input is in an error state, the error messaging slot will override this text.
+Input field with helper or hint text below the input field. If the input is in an error state, the error messaging slot will override this text. Helper text should be used instead of the HTML `placeholder` attribute to provide additional information or context about the input.
 
 <cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
@@ -476,7 +476,7 @@ Input field with helper or hint text below the input field. If the input is in a
 
 ## Input with Helper Text Above
 
-Input field with helper or hint text rendered above the input field.
+Input field with helper or hint text rendered above the input field. Helper text should be used instead of the HTML `placeholder` attribute to provide additional information or context about the input.
 
 <cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
@@ -651,12 +651,6 @@ The HTML `placeholder` attribute should not be used as it creates an inaccessibl
 - Limit labels to 1–3 words and fewer than 20 characters, including spaces
 - Use sentence case. Do not use all caps, title caps, or all lowercase
 - Don’t use colons after labels
-
-### Placeholder Text
-
-- When user enters data into the input field, the placeholder text is not visible
-- Placeholder text gives context about a field’s input, such as what type of input is expected.  For example, for a date input field, use “mm/dd/yyyy”
-- Limit placeholder text to 1–3 words
 
 ### Helper Text
 
