@@ -22,7 +22,7 @@
 
 Status Notifications apply the `role="status"` to their HTML markup.
 They will not interrupt a user from a task they are engaged in. They are provided on user action rather than as part of the page. 
-These event based notifications differ from Update Notifications as they do not update live, existing inline sections of a page.
+These event based notifications differ from Update Notifications as they are bespoke UI expressions and do not update live, existing inline sections of a page.
 They provide information which will help users make a decision, communicate statuses, or provide feedback about selections that have been have made.
 These notifications may open or be added to locations unrelated to the action which caused the notification to trigger.
 Additionally, they may open based on conditions a user has created or criterium they have met.
