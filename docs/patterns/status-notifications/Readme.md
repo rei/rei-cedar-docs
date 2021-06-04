@@ -20,10 +20,9 @@
 
 ## Overview
 
-Status Notifications apply the `role="status"` to their HTML markup.
-They will not interrupt a user from a task they are engaged in. They are provided on user action rather than as part of the page. 
-These event based notifications differ from Update Notifications as they are bespoke UI expressions and do not update live, existing inline sections of a page.
-They provide information which will help users make a decision, communicate statuses, or provide feedback about selections that have been have made.
+Status Notifications will not interrupt a user from a task they are engaged in. They are provided on user action rather than as part of the page. 
+These non-dialog, event based notifications differ from Update Notifications as they are bespoke UI expressions which do not update live, existing inline sections of a page.
+They provide information which will help users make a decision, communicate statuses, or provide feedback about selections.
 These notifications may open or be added to locations unrelated to the action which caused the notification to trigger.
 Additionally, they may open based on conditions a user has created or criterium they have met.
 
@@ -116,13 +115,16 @@ Additionally, they may open based on conditions a user has created or criterium 
 - Notifying users of a potential problem, outside of a form, that may require their attention
 
 ### Don't Use When
-- As confirmation that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](#transient-status-notifications))
-- providing contextual information on the page processes (see [Transient Status Notifications](#transient-status-notifications))
-- The UI is presented as a dialog that requires a user action, on which the focus is set (see [modal](../../components/modal/))
-- The User makes a selection that does not change or add content to the page
 - The notification is an update to existing inline copy (see [Update and Loading Notifications](../update-and-loading-notifications/))
 - The notification relates to an actionable element in a busy state (see [Update and Loading Notifications](../update-and-loading-notifications/))
+- As confirmation that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](#transient-status-notifications))
+- providing contextual information on the page processes (see [Transient Status Notifications](#transient-status-notifications))
+- User interaction is required or content is critical to the user flow(see [modal](../../components/modal/))
+- The message contains a rich UI experience(see [modal](../../components/modal/))
 - The content added to the page is critical and needs immediate attention (see [alert](../alerts))
+- Page usage should be blocked until the user takes an action within the message or exits (see [alert](../alerts))
+- The User makes a selection that does not change or add content to the page
+
 ### Anatomy of a Persistent Status notifications
 
 <cdr-img :src="$withBase('/notifications/persistentStatusAnatomy.png')" alt="Diagram for persistent status notifications, annotating the required layout of the elements listed below" />
@@ -280,15 +282,18 @@ authors SHOULD make the relationship explicit with the aria-controls attribute.
 - As confirmation that a task or process initiated by the user was completed successfully 
 - providing contextual information on the page processes
 ### Don't Use When
+
+- The notification is an update to existing inline copy (see [Update and Loading Notifications](../update-and-loading-notifications/))
+- The notification relates to an actionable element in a busy state (see [Update and Loading Notifications](../update-and-loading-notifications/))
 - Exposing a status change to a product caused by user selection (see [Persistent Status Notifications](#persistent-status-notifications))
 - providing error or warnings on the status of items in the users cart (see [Persistent Status Notifications](#persistent-status-notifications))
 - Providing confirmation when updating and removing items that provides navigation or other actions (see [Persistent Status Notifications](#persistent-status-notifications))
 - Notifying users of a potential problem, outside of a form, that may require their attention (see [Persistent Status Notifications](#persistent-status-notifications))
-- The UI is presented as a dialog that requires a user action, on which the focus is set (see [modal](../../components/modal/))
-- The User makes a selection that does not change or add content to the page
-- The notification is an update to existing inline copy (see [Update and Loading Notifications](../update-and-loading-notifications/))
-- The notification relates to an actionable element in a busy state (see [Update and Loading Notifications](../update-and-loading-notifications/))
+- User interaction is required or content is critical to the user flow(see [modal](../../components/modal/))
+- The message contains a rich UI experience(see [modal](../../components/modal/))
 - The content added to the page is critical and needs immediate attention (see [alert](../alerts))
+- Page usage should be blocked until the user takes an action within the message or exits (see [alert](../alerts))
+- The User makes a selection that does not change or add content to the page
 
 ### Anatomy of a Transient Status notifications
 
