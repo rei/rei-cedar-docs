@@ -35,7 +35,7 @@ Additionally, they may open based on conditions a user has created or criterium 
     <th class="advanced-table__header">
       Priority
     </th>
-    <td>medium</td>
+    <td>Prominent, medium priority</td>
   </tr>
   <tr>
     <th class="advanced-table__header">
@@ -178,7 +178,7 @@ authors SHOULD make the relationship explicit with the aria-controls attribute.
     <th class="advanced-table__header">
       Priority
     </th>
-    <td>low / inform</td>
+    <td>low / minimally disruptive</td>
   </tr>
   <tr>
     <th class="advanced-table__header">
