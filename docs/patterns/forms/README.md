@@ -87,7 +87,7 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
   :error="errorMessage"
   @blur="validate"
 >
-  <template slot="helper-text-top">
+  <template v-slot:helper-text-top>
     To call if there's an issue with your order.
   </template>
 </cdr-input>
@@ -127,7 +127,7 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
     :optional="true"
     class="form-space"
   >
-    <template slot="helper-text-top">
+    <template v-slot:helper-text-top>
       Is there another name you prefer to go by?
     </template>
   </cdr-input>
@@ -256,7 +256,7 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
   style="width: 160px;"
   @input="restrictInput"
 >
-  <template slot="helper-text-top">
+  <template v-slot:helper-text-top>
     Three digit number on the back.
   </template>
 </cdr-input>
@@ -285,7 +285,7 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
   style="width: 160px;"
   :numeric="true"
 >
-  <template slot="helper-text-top">
+  <template v-slot:helper-text-top>
     Use MM/YY format.
   </template>
 </cdr-input>
@@ -339,14 +339,18 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
   <option value="male">Female</option>
   <option value="female">Male</option>
   <option value="describe">Prefer to describe</option>
-  <cdr-popover id="popover-example" position="top" slot="info">
-    <cdr-link slot="trigger" tag="button">
-      <icon-information-stroke inherit-color/>
-    </cdr-link>
-    <div>
-      Why do we ask for gender? This popover explains what this information is used for.
-    </div>
-  </cdr-popover>
+  <template v-slot:info>
+    <cdr-popover id="popover-example" position="top">
+      <template v-slot:trigger>
+        <cdr-link tag="button">
+          <icon-information-stroke inherit-color/>
+        </cdr-link>
+      </template>
+      <div>
+        Why do we ask for gender? This popover explains what this information is used for.
+      </div>
+    </cdr-popover>
+  </template>
 </cdr-select>
 
 <cdr-input

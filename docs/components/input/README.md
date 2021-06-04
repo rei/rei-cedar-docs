@@ -367,7 +367,7 @@ Error messaging will override helper text rendered in the bottom position.
   :error="modelError"
   @blur="validateInput"
 >
-  <template slot="helper-text">
+  <template v-slot:helper-text>
     Must be 4 or less characters
   </template>
 </cdr-input>
@@ -413,7 +413,7 @@ Input field designed to accept numerical input. Launches the numerical keyboard 
 
 ## Input with Link Text
 
-Input field with link text on right.
+Input field with link text on right. The link should describe it's relationship to the input field either through it's text content or an aria-label.
 
 
 <cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrLink'})" :codeMaxHeight="false" :model="{defaultModel: ''}">
@@ -424,7 +424,7 @@ Input field with link text on right.
   :background="backgroundColor"
   label="Input label"
 >
-  <template slot="info">
+  <template v-slot:info>
     <cdr-link href="#" modifier="standalone">Information link</cdr-link>
   </template>
 </cdr-input>
@@ -434,7 +434,7 @@ Input field with link text on right.
 
 ## Input with Info Action
 
-Input field with icon outside the input field on right.
+Input field with icon wrapped in an actionable element outside the input field on right. The actionable element should have an aria-label that explains it's relationship to the input field and what happens when you click on it.
 
 <cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, IconInformationFill, CdrLink'})" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
@@ -444,11 +444,13 @@ Input field with icon outside the input field on right.
   :background="backgroundColor"
   label="Input label"
 >
-  <cdr-link tag="button" slot="info-action">
-    <icon-information-fill
-      inherit-color
-    />
-  </cdr-link>
+  <template v-slot:info-action>
+    <cdr-link tag="button">
+      <icon-information-fill
+        inherit-color
+      />
+    </cdr-link>
+  </template>
 </cdr-input>
 ```
 
@@ -456,7 +458,7 @@ Input field with icon outside the input field on right.
 
 ## Input with Helper Text
 
-Input field with helper or hint text below the input field. If the input is in an error state, the error messaging slot will override this text. Helper text should be used instead of the HTML `placeholder` attribute to provide additional information or context about the input.
+Input field with helper or hint text below the input field. If the input is in an error state, the error messaging slot will override this text. Helper text should be used instead of the HTML `placeholder` attribute to provide additional information or context about the input.  Helper text is automatically linked to the input field through the `aria-describedby` attribute.
 
 <cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
@@ -466,7 +468,7 @@ Input field with helper or hint text below the input field. If the input is in a
   :background="backgroundColor"
   label="Input label"
 >
-  <template slot="helper-text-bottom">
+  <template v-slot:helper-text-bottom>
     Helper or additional text
   </template>
 </cdr-input>
@@ -476,7 +478,7 @@ Input field with helper or hint text below the input field. If the input is in a
 
 ## Input with Helper Text Above
 
-Input field with helper or hint text rendered above the input field. Helper text should be used instead of the HTML `placeholder` attribute to provide additional information or context about the input.
+Input field with helper or hint text rendered above the input field. Helper text should be used instead of the HTML `placeholder` attribute to provide additional information or context about the input. Helper text is automatically linked to the input field through the `aria-describedby` attribute.
 
 <cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
@@ -486,7 +488,7 @@ Input field with helper or hint text rendered above the input field. Helper text
   :background="backgroundColor"
   label="Input label"
 >
-  <template slot="helper-text-top">
+  <template v-slot:helper-text-top>
     Helper or additional text
   </template>
 </cdr-input>
@@ -506,11 +508,9 @@ Input field with icon inserted into the input field on left. Icon is decorative 
   :background="backgroundColor"
   label="Input label"
 >
-  <IconLocationPinStroke
-    slot="pre-icon"
-    class="cdr-button__icon"
-    inherit-color
-  />
+  <template v-slot:pre-icon>
+    <icon-location-pin-stroke inherit-color />
+  </template>
 </cdr-input>
 ```
 
@@ -528,10 +528,12 @@ Input field with icon inserted into the input field on right. Icon is decorative
   :background="backgroundColor"
   label="Input label"
 >
-  <IconCreditCard
-    slot="post-icon"
-    inherit-color
-  />
+  <template v-slot:post-icon>
+    <icon-credit-card
+      inherit-color
+      class="cdr-button__icon"
+    />
+  </template>
 </cdr-input>
 ```
 
@@ -540,7 +542,7 @@ Input field with icon inserted into the input field on right. Icon is decorative
 
 ## Input with Actions
 
-Input field with icon buttons inserted to the right. Up to 2 buttons can be passed into the `post-icon` slot. Each button should have the `cdr-input__button` utility class applied to it.
+Input field with icon buttons inserted to the right. Up to 2 buttons can be passed into the `post-icon` slot. Each button should have the `cdr-input__button` utility class applied to it. Each button should indicate it's function and relationship to the input field through either an `aria-label` or a tooltip.
 
 <cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, IconCreditCard, IconXLg, CdrTooltip, CdrButton'})" :codeMaxHeight="false"  :model="{defaultModel: ''}">
 
@@ -552,16 +554,17 @@ Input field with icon buttons inserted to the right. Up to 2 buttons can be pass
     label="Input label"
 
   >
-    <template slot="post-icon">
+    <template v-slot:post-icon>
       <cdr-tooltip class="cdr-input__button" id="input-tooltip">
-        <cdr-button
-          :icon-only="true"
-          slot="trigger"
-        >
-          <icon-x-lg
-            inherit-color
-          />
-        </cdr-button>
+        <template v-slot:trigger>
+          <cdr-button
+            :icon-only="true"
+          >
+            <icon-x-lg
+              inherit-color
+            />
+          </cdr-button>
+        </template>
 
         click me to clear this input!
       </cdr-tooltip>
@@ -583,16 +586,17 @@ Input field with icon buttons inserted to the right. Up to 2 buttons can be pass
 
     size="large"
   >
-    <cdr-button
-      slot="post-icon"
-      :icon-only="true"
-      size="large"
-      class="cdr-input__button"
-    >
-      <icon-credit-card
-        inherit-color
-      />
-    </cdr-button>
+    <template v-slot:post-icon>
+      <cdr-button
+        :icon-only="true"
+        size="large"
+        class="cdr-input__button"
+      >
+        <icon-credit-card
+          inherit-color
+        />
+      </cdr-button>
+    </template>
   </cdr-input>
 </div>
 ```
@@ -606,6 +610,8 @@ This component has compliance with WCAG guidelines by:
 - When hiding a label, the `aria-label` attribute is set to the `label` value
 
 The HTML `placeholder` attribute should not be used as it creates an inaccessible experience when the placeholder content disappears as soon as the user begins typing into the input field. Instead the `helper-text` or `info` slots should be used to provide any additional information needed to complete the input.
+
+Any additional actionable elements related to the input field, which may be external to the input component or passed in via the `info`, `info-action`, or `post-icon` slots, should indicate their function and relationship to the input field through their text content, and `aria-label`, or a tooltip.
 
 <hr>
 

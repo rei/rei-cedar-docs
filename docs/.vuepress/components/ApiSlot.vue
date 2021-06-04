@@ -8,6 +8,12 @@
       >
         <cdr-col
           span="12"
+          v-if="apiSlot.alert"
+        >
+          <api-prop-alert :alert="apiSlot.alert" />
+        </cdr-col>
+        <cdr-col
+          span="12"
         >
           <div>
             <p :aria-labelledby="'slotName' + index" class="slot-name">{{ apiSlot.name }}</p>

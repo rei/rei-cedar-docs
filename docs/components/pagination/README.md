@@ -101,21 +101,33 @@
               {
                 "name": "navigate",
                 "arguments": "pageNumber, url, event",
-                "description": "$emit event fired when page changes based on user interaction by clicking a link or selecting an option from the select on mobile."
+                "description": "$emit event fired when page changes based on user interaction by clicking a link or selecting an option from the select on mobile. `event.preventDefault()` can be used to override the default link navigation behavior"
               }
             ],
             "scopedSlots": [
               {
                 "name": "link",
-                "description": "Scoped slot used to override the default page links used. Useful for integrating with client-side routing. See \"Scoped Slots and vue-router\" below for exposed prop API."
+                "description": "Scoped slot used to override the default page links used. Useful for integrating with client-side routing.",
+                "alert": {
+                  "type": "deprecated",
+                  "description": "The link scoped slot has been deprecated, use an event handler on the `navigate` event instead to customize link navigation behavior"
+                },
               },
               {
                 "name": "prevLink",
-                "description": "Scoped slot used to override the default previous page link. Useful for integrating with client-side routing. See \"Scoped Slots and vue-router\" below for exposed prop API."
+                "description": "Scoped slot used to override the default previous page link. Useful for integrating with client-side routing.",
+                "alert": {
+                  "type": "deprecated",
+                  "description": "The prevLink scoped slot has been deprecated, use an event handler on the `navigate` event instead to customize link navigation behavior"
+                },
               },
               {
                 "name": "nextLink",
-                "description": "Scoped slot used to override the default next page link. Useful for integrating with client-side routing. See \"Scoped Slots and vue-router\" below for exposed prop API."
+                "description": "Scoped slot used to override the default next page link. Useful for integrating with client-side routing.",
+                "alert": {
+                  "type": "deprecated",
+                  "description": "The nextLink scoped slot has been deprecated, use an event handler on the `navigate` event instead to customize link navigation behavior"
+                },
               }
             ],
           }
@@ -154,8 +166,8 @@ By default, CdrPagination assumes that you are navigating through pages on a sit
 
 ```html
 <cdr-pagination
-  linkTag="button"
-  forLabel="Pagination for user reviews"
+  link-tag="button"
+  for-label="Pagination for user reviews"
   :pages="pages"
   :total-pages="5"
   v-model="page"
@@ -163,107 +175,24 @@ By default, CdrPagination assumes that you are navigating through pages on a sit
 ```
 </cdr-doc-example-code-pair>
 
-## Link Scoped Slots
+## Overriding Default Navigation
 
-The scoped slots can be used to override the default links rendered in the pagination. Useful for integrating with client-side routing, as a `router-link` can be rendered instead of a plain `a` tag. Pagination exposes 3 link scopedSlots: `link`, `prevLink`, and `nextLink`.
+By default pagination uses anchor elements which navigate the users web browser when clicked. This behavior can be overriden by adding a handler to the `navigate` event which emits `(currentPage, currentUrl, event)` and calling `event.preventDefault()` in the handler function. The `currentPage` and `currentUrl` can then be used to implement router based navigation or programmatically navigate the page. This can also be used in conjunction with the `link-tag` property to render a button based pagination.
 
-The 'link' slot scope exposes the following prop object:
-
-```js
-attrs: {
-  class,
-  'aria-label',
-  'aria-current',
-  ref:,
-},
-href,
-page,
-content,
-click,
-```
-
-- `class`: a class to be applied to the link in order to match pagination styling
-- `aria-label`: default aria-label for this link
-- `aria-current`: reflects whether current link is the currently selected page
-- `ref`: vue ref for tracking the element. Required for internal component behavior
-- `href`: href that the link points to by default
-- `page`: the page number that corresponds to this link. NOTE: that you must manually update your v-model attribute to be the value of `page` whenever this link is clicked
-- `content`: the default content for that link
-- `click`: function ran when element is clicked. Required for internal component behavior
-
-The `prevLink` and `nextLink` slot scopes expose the following prop object:
-
-```js
-attrs: {
-  class,
-  'aria-label',
-  ref,
-},
-href,
-page,
-content,
-iconClass,
-iconComponent,
-iconPath,
-click,
-```
-
-- `class`: a class to be applied to the link in order to match pagination styling
-- `aria-label`: default aria-label for this link
-- `ref`: vue ref for tracking the element for internal component behavior
-- `href`: href that the link points to by default
-- `page`: the page number that corresponds to this link. NOTE: that you must manually update your v-model attribute to be the value of `page` whenever this link is clicked
-- `content`: the default content for that link
-- `iconClass`: a class to be applied to the prev/next arrow icon in order to match pagination styling
-- `iconPath`: the path to the icon in the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/) used for this link
-- `iconComponent`: name of the component used for this link
-- `click`: function ran when element is clicked. Required for internal component behavior
-
-<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ page: 2, pages: [{page: 1, url: '1'}, {page: 2, url: '2'}, {page: 3, url: '3'}] }">
+<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ lastNavigation: '', page: 3, pages: [{page: 1, url: '#'}, {page: 2, url: '#'}, {page: 3, url: '#'}, {page: 4, url: '#'}, {page: 5, url: '#'}] }" :methods="{handleNavigation(num, url, e) {e.preventDefault(); this.lastNavigation = num }}">
 
 ```html
-<cdr-pagination
-  :pages="pages"
-  :total-pages="3"
-  v-model="page"
->
-  <!-- Previous -->
-  <template slot="prevLink" slot-scope="prevLink">
-    <p
-      v-bind="prevLink.attrs"
-      @click="prevLink.click"
-    >
-      <component
-        :is="prevLink.iconComponent"
-        :class="prevLink.iconClass"
-      />
-      {{ prevLink.content }}
-    </p>
-  </template>
-  <!-- Single Page links -->
-  <template slot="link" slot-scope="link">
-    <p
-      v-bind="link.attrs"
-      @click="link.click"
-    >
-      {{ link.page }}
-    </p>
-  </template>
-  <!-- Next -->
-  <template slot="nextLink" slot-scope="nextLink">
-    <p
-      v-bind="nextLink.attrs"
-      @click="nextLink.click"
-    >
-      {{ nextLink.content }}
-      <component
-        :is="nextLink.iconComponent"
-        :class="nextLink.iconClass"
-      />
-    </p>
-  </template>
-</cdr-pagination>
+<div>
+  <cdr-pagination
+    :pages="pages"
+    :total-pages="5"
+    v-model="page"
+    @navigate="handleNavigation"
+  />
+  Last Navigation: {{ lastNavigation }}
+</div>
 ```
+
 </cdr-doc-example-code-pair>
 
 ## Pagination @ xs
@@ -277,14 +206,30 @@ At the xs breakpoint, pagination adapts to a Select component using the native U
 This component complies with accessibility guidelines by doing the following:
 
 - Wraps the pagination links in a `<nav>` element to let screen readers recognize the pagination controls
-- Sets `aria-label="pagination"` to describe the type of navigation
+- Sets `aria-label="pagination"` to describe the type of navigation.
 - Indicates the active page by adding `aria-current="page"` to the link that points to the current page
 
-View the videos at [a11ymattters, Accessible Pagination](http://www.a11ymatters.com/pattern/pagination/) for a demonstration of before and after pagination tests using a screen reader voiceover.
+If you are building an intra-page button based pagination, the `forLabel` property must be used to indicate what content is being paginated. For example,
+
+```
+<div>
+  <div>{{ reviews content }}</div>
+
+  <cdr-pagination
+    link-tag="button"
+    for-label="pagination for reviews"
+
+    :pages="pages"
+    :total-pages="5"
+    v-model="page"
+  />
+</div>
+
+```
 
 <br />
 
-This component has compliance WCAG guidelines by:
+This component has compliance with WCAG guidelines by:
 - [WCAG 2.4.8](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0&showtechniques=248#location): Information about the user's location within a set of Web pages is available
 - [WCAG 3.2.3](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-consistent-locations.html): Navigation patterns follow a consistent pattern. Only position pagination component at the bottom of the page
 - [WCAG 2.4.3](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#qr-navigation-mechanisms-focus-order): Focus state receives focus in an order that preserves meaning
@@ -359,73 +304,6 @@ Pagination adapts to a Select component with a native UI dropdown menu on XS bre
 The **CdrPagination** component provides a current page number control and renders a list of links. The current page value should be bound using `v-model` in your app.
 
 The **CdrPagination** component does not make data calls, render or track paginated data, or handle routing beyond simple anchor links. However, it does emit events if you need to customize routing or need to add additional application logic.
-
-## Scoped Slots and vue-router
-
-Previous, next, and individual page links can have their template overridden via scoped slots. While this isn't advisable under normal circumstances, it is necessary to make the component work with vue-router. It is similar to the [scoped slot example](#link-scoped-slots) but uses `router-link` with no click event (when paired with a computed prop v-model):
-
-```vue
-<cdr-pagination
-  :pages="pages"
-  :total-pages="20"
-  v-model="page"
->
-  <!-- Previous -->
-  <template v-slot:prevLink="prevLink">
-    <router-link
-      v-bind="prevLink.attrs"
-      :to="{ query: { 'page': prevLink.page } }"
-      replace
-    >
-      <component
-        :is="prevLink.iconComponent"
-        :class="prevLink.iconClass"
-      />
-      {{ prevLink.content }}
-    </router-link>
-  </template>
-  <!-- Single Page links -->
-  <template v-slot:link="link">
-    <router-link
-      v-bind="link.attrs"
-      :to="{ query: { 'page': link.page } }"
-      replace
-    >
-      {{ link.page }}
-    </router-link>
-  </template>
-  <!-- Next -->
-  <template v-slot:nextLink="nextLink">
-    <router-link
-      v-bind="nextLink.attrs"
-      :to="{ query: { 'page': nextLink.page } }"
-      replace
-    >
-      {{ nextLink.content }}
-      <component
-        :is="nextLink.iconComponent"
-        :class="nextLink.iconClass"
-      />
-    </router-link>
-  </template>
-</cdr-pagination>
-
-...
-
-<script>
-...
-computed: {
-  page: {
-    get() {
-      return parseInt(this.$route.query['page'], 10) || 1;
-    },
-    set() {
-      // No need to do anything for the component here
-    },
-  },
-},
-</script>
-```
 
 ### SEO
 
