@@ -263,7 +263,7 @@ Select control with link text on right.
   prompt="Prompt text"
   :options="defaultOptions"
 >
-  <template slot="info">
+  <template v-slot:info>
     <cdr-link
       href="#/"
       modifier="standalone"
@@ -281,7 +281,7 @@ Select control with link text on right.
   :options="defaultOptions"
   disabled
 >
-  <template slot="info">
+  <template v-slot:info>
     <cdr-link
       href="#/"
       modifier="standalone"
@@ -309,7 +309,7 @@ Select control with icon outside select field on right.
   prompt="Prompt text"
   :options="defaultOptions"
 >
-  <template slot="info-action">
+  <template v-slot:info-action>
     <cdr-link tag="button">
       <icon-information-fill/>
     </cdr-link>
@@ -334,7 +334,7 @@ Input field with helper or hint text below the input field.
   prompt="Prompt text"
   :options="defaultOptions"
 >
-  <template slot="helper-text">
+  <template v-slot:helper-text>
     This is helper text.
   </template>
 </cdr-select>
@@ -347,7 +347,7 @@ Input field with helper or hint text below the input field.
   :options="defaultOptions"
   disabled
 >
-  <template slot="helper-text">
+  <template v-slot:helper-text>
     This is helper text.
   </template>
 </cdr-select>

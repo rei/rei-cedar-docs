@@ -96,7 +96,7 @@ They appear over the interface and block further interactions until an action is
   aria-described-by="description"
   role="alertdialog"
 >
-  <template slot="title">
+  <template v-slot:title>
     <cdr-text
       tag="h3"
       class="title-header"
