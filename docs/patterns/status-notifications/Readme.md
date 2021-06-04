@@ -358,7 +358,7 @@ If the notification must include an actionable element you are responsible for t
   - If the action is not available on page, the action should be added to a notification history page (see ARIA’s log role)
 
 
-### Accessibility References
+## Accessibility References
 - [Notifications and feedback](https://www.w3.org/WAI/perspective-videos/notifications/)
 - [Accessible Notifications](https://www.w3.org/WAI/RD/wiki/Accessible_Notifications)
 - [WCAG status messages 4.1.3](https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html)
