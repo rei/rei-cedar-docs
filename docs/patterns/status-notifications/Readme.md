@@ -122,12 +122,14 @@ Persistent Status Notifications are 'in page messages', often errors or warnings
 - providing contextual information on the page processes (see [Transient Status Notifications](#transient-status-notifications))
 - Providing errors, warnings, or success messaging related to user entered formatting, incomplete inputs, or invalid selections (see [Validation Notifications](validation/#validation-notifications))
 - The content added to the page is critical and needs immediate attention (see [alert](../alerts))
-- Page usage should be blocked until the user takes an action within the message or exits (see [alert-dialog](alerts/#alert-dialog)
+- Page usage should be blocked until the user takes an action within the message or exits (see [alert-dialog](alerts/#alert-dialog))
 - User interaction is required or content is critical to the user flow(see [modal](../../components/modal/))
 - The message contains a rich UI experience(see [modal](../../components/modal/))
 - The User makes a selection that does not change or add content to the page
 
 ### Anatomy of a Persistent Status notifications
+
+**note: This section is provided as a set of requirements used for the construction of cedar components and for projects needing custom solutions not using provided cedar components**
 
 <cdr-img :src="$withBase('/notifications/persistentStatusAnatomy.png')" alt="Diagram for persistent status notifications, annotating the required layout of the elements listed below" />
 
@@ -285,16 +287,18 @@ Persistent Status Notifications are 'in page messages', often errors or warnings
 - Notifying users of a potential problem, outside of a form, that may require their attention (see [Persistent Status Notifications](#persistent-status-notifications))
 - Providing errors, warnings, or success messaging related to user entered formatting, incomplete inputs, or invalid selections (see [Validation Notifications](validation/#validation-notifications))
 - The content added to the page is critical and needs immediate attention (see [alert](../alerts))
-- Page usage should be blocked until the user takes an action within the message or exits (see [alert](../alerts))
+- Page usage should be blocked until the user takes an action within the message or exits (see [alert-dialog](alerts/#alert-dialog))
 - User interaction is required or content is critical to the user flow(see [modal](../../components/modal/))
 - The message contains a rich UI experience(see [modal](../../components/modal/))
 - The User makes a selection that does not change or add content to the page
 
 ### Anatomy of a Transient Status notifications
 
+**note: This section is provided as a set of requirements used for the construction of cedar components and for projects needing custom solutions not using provided cedar components**
+
 <cdr-img :src="$withBase('/notifications/transientStatusAnatomy.png')" alt="Diagram for transient status notifications, annotating the required layout of the elements listed below" />
 
-Transient Status notifications have the following requirements in addition to the requirements for Persistent Status Notifications:
+Transient Status notifications have the following requirements in addition to the requirements for Persistent Status Notifications (TODO should requirements that are pertinent be additive or all inclusive?)
 
 1. **[Status Notifications as an Overlay](#status-notifications-as-an-overlay)**
 2. **[Automatic Dismissal](#automatic-dismissal)**
@@ -302,7 +306,8 @@ Transient Status notifications have the following requirements in addition to th
 
 #### Status Notifications as an overlay
 The concise messages contained within Status Notifications are not required for a user to interact with and may open unexpectedly, 
-these Notifications should not be blocking. Opening in an overlay may disrupt and confuse or not be seen at all by users at some breakpoints.
+these Notifications should not be blocking. Opening in an overlay may disrupt or confuse users additionally they may not be seen at all by users at some breakpoints.
+
 
 - **Must**
   - Not block page content
@@ -351,5 +356,11 @@ If the notification must include an actionable element you are responsible for t
   - Return focus to next logical location in the page flow
   - Contained action is also readily available on the page
   - If the action is not available on page, the action should be added to a notification history page (see ARIA’s log role)
+
+
+### Accessibility References
+- [Notifications and feedback](https://www.w3.org/WAI/perspective-videos/notifications/)
+- [Accessible Notifications](https://www.w3.org/WAI/RD/wiki/Accessible_Notifications)
+- [WCAG status messages 4.1.3](https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html)
 
 </cdr-doc-table-of-contents-shell>
