@@ -21,32 +21,21 @@
 ## Overview
 
 Status Notifications apply the `role="status"` to their HTML markup.
-They will not interrupt a user from a task they are engaged in, and are provided on user action rather than as part of the page. 
-These event based notifications differ from Update Notifications as they do not update live, existing inline sections of a page.
+They will not interrupt a user from a task they are engaged in. They are provided on user action rather than as part of the page. 
+These event based notifications differ from Update Notifications as they are bespoke UI expressions and do not update live, existing inline sections of a page.
 They provide information which will help users make a decision, communicate statuses, or provide feedback about selections that have been have made.
 These notifications may open or be added to locations unrelated to the action which caused the notification to trigger.
 Additionally, they may open based on conditions a user has created or criterium they have met.
-### Use When
-- Exposing additional product information that may vary based on user selection
-- As confirmation that a task or process initiated by the user was completed successfully 
-
-- As confirmation that a task was completed successfully (See Success Type)
-### Don't Use When
-- presenting the user additional actions to take (see [modal](../../components/modal/))
-- The UI is presented as a dialog that requires a user action, on which the focus is set (see [modal](../../components/modal/))
-- The User makes a selection that does not change or add content to the page
-- The notification is an update to existing inline copy (see [status notifications](#status-notifications))
-- The notification relates to an actionable element in a busy state (see [status notifications](#status-notifications))
-- The content added to the page is critical and needs immediate attention (see [alert](../alerts))
 
 ## Persistent Status notifications
+
 
 <cdr-table class="advanced-table" full-width=false>
   <tr>
     <th class="advanced-table__header">
       Priority
     </th>
-    <td>medium</td>
+    <td>Prominent, medium priority</td>
   </tr>
   <tr>
     <th class="advanced-table__header">
@@ -60,11 +49,10 @@ Additionally, they may open based on conditions a user has created or criterium 
     </th>
     <td>
         <ul>
-          <li>proved error or warnings on the status of items in your carts</li>
-          <li>providing confirmation when updating and removing items that provides navigation or other actions</li>
-          <li>Communicating a status change caused by the user</li>
-          <li>Contextual information that might need their attention</li>
-          <li>Notifying users of a potential problem that may require their attention</li>
+          <li>Exposing a status change to a product caused by user selection</li>
+          <li>providing error or warnings on the status of items in the users cart</li>
+          <li>Providing confirmation when updating and removing items that provides navigation or other actions</li>
+          <li>Notifying users of a potential problem, outside of a form, that may require their attention</li>
         </ul>
     </td>
   </tr>
@@ -121,6 +109,20 @@ Additionally, they may open based on conditions a user has created or criterium 
   </tr>
 </cdr-table>
 
+### Use When
+- Exposing a status change to a product caused by user selection
+- providing error or warnings on the status of items in the users cart
+- Providing confirmation when updating and removing items that provides navigation or other actions
+- Notifying users of a potential problem, outside of a form, that may require their attention
+
+### Don't Use When
+- As confirmation that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](#transient-status-notifications))
+- providing contextual information on the page processes (see [Transient Status Notifications](#transient-status-notifications))
+- The UI is presented as a dialog that requires a user action, on which the focus is set (see [modal](../../components/modal/))
+- The User makes a selection that does not change or add content to the page
+- The notification is an update to existing inline copy (see [Update and Loading Notifications](../update-and-loading-notifications/))
+- The notification relates to an actionable element in a busy state (see [Update and Loading Notifications](../update-and-loading-notifications/))
+- The content added to the page is critical and needs immediate attention (see [alert](../alerts))
 ### Anatomy of a Persistent Status notifications
 
 <cdr-img :src="$withBase('/notifications/persistentStatusAnatomy.png')" alt="Diagram for persistent status notifications, annotating the required layout of the elements listed below" />
@@ -169,12 +171,14 @@ authors SHOULD make the relationship explicit with the aria-controls attribute.
 
 ## Transient Status notifications
 
+ temporary messages that come and go without users’ input, They indicate the completion of a task or process initiated by the user or the application itself
+
 <cdr-table class="advanced-table" full-width=false>
   <tr>
     <th class="advanced-table__header">
       Priority
     </th>
-    <td>low / inform</td>
+    <td>low / minimally disruptive</td>
   </tr>
   <tr>
     <th class="advanced-table__header">
@@ -188,8 +192,9 @@ authors SHOULD make the relationship explicit with the aria-controls attribute.
     </th>
     <td>
         <ul>
-          <li>proved confirmation when updating and removing items</li>
-          <li>providing simple messages when saving user preferences</li>
+          <li>Provide confirmation when updating and removing items</li>
+          <li>Providing simple messages when saving user preferences</li>
+          <li>provide contextual information on the page processes</li>
         </ul>
     </td>
   </tr>
@@ -198,7 +203,12 @@ authors SHOULD make the relationship explicit with the aria-controls attribute.
         Interaction
       </th>
       <td>
-        Non-blocking, Not Required Temporary, usually auto dismissing
+        <ul>
+          <li>Non-blocking</li>
+          <li>Not Required</li>
+          <li>Temporary</li>
+          <li>Usually auto dismissing</li>
+        </ul>
       </td>
   </tr>
   <tr>
@@ -213,7 +223,11 @@ authors SHOULD make the relationship explicit with the aria-controls attribute.
       Location
     </th>
     <td>
-      Overlay the page at the top left
+    <ul>
+    <li>Overlay</li>
+    <li>top|bottom? left</li>
+    </ul>
+      (TODO: decide on consistent location - once aligned this should not be optional). 
     </td>
   </tr>
   <tr>
@@ -230,7 +244,7 @@ authors SHOULD make the relationship explicit with the aria-controls attribute.
   </tr>
   <tr>
   <th class="advanced-table__header">Potential Component</th>
-  <td>toast / snack-bar </td>
+  <td>toast (a non-modal dialog that appears and disappears in the span of a few seconds)/ snack-bar </td>
   </tr>
   <tr>
   <th class="advanced-table__header">Examples</th>
@@ -262,6 +276,20 @@ authors SHOULD make the relationship explicit with the aria-controls attribute.
   </tr>
 </cdr-table>
 
+### Use When
+- As confirmation that a task or process initiated by the user was completed successfully 
+- providing contextual information on the page processes
+### Don't Use When
+- Exposing a status change to a product caused by user selection (see [Persistent Status Notifications](#persistent-status-notifications))
+- providing error or warnings on the status of items in the users cart (see [Persistent Status Notifications](#persistent-status-notifications))
+- Providing confirmation when updating and removing items that provides navigation or other actions (see [Persistent Status Notifications](#persistent-status-notifications))
+- Notifying users of a potential problem, outside of a form, that may require their attention (see [Persistent Status Notifications](#persistent-status-notifications))
+- The UI is presented as a dialog that requires a user action, on which the focus is set (see [modal](../../components/modal/))
+- The User makes a selection that does not change or add content to the page
+- The notification is an update to existing inline copy (see [Update and Loading Notifications](../update-and-loading-notifications/))
+- The notification relates to an actionable element in a busy state (see [Update and Loading Notifications](../update-and-loading-notifications/))
+- The content added to the page is critical and needs immediate attention (see [alert](../alerts))
+
 ### Anatomy of a Transient Status notifications
 
 <cdr-img :src="$withBase('/notifications/transientStatusAnatomy.png')" alt="Diagram for transient status notifications, annotating the required layout of the elements listed below" />
@@ -283,9 +311,11 @@ these Notifications should not be blocking. Opening in an overlay may disrupt an
     - Must provide At least one focusable UI element (i.e. Close button, primary button)
     - content container must be dismissible
     - On dismiss, must return focus to the next logical location in the page flow
+  - meet the standard color ratio requirements for both text (4.5:1) and activatable components (3.0:1).
 - **Should**
   - Be used for short messages to confirm an action
 - **Should not**
+  - be located near or on top of navigation area.
   - Contain interactive controls if notification is displayed as an overlay
   - Open as a blocking overlay window**
 - **May**
