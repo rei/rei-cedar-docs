@@ -166,8 +166,8 @@ By default, CdrPagination assumes that you are navigating through pages on a sit
 
 ```html
 <cdr-pagination
-  linkTag="button"
-  forLabel="Pagination for user reviews"
+  link-tag="button"
+  for-label="Pagination for user reviews"
   :pages="pages"
   :total-pages="5"
   v-model="page"
@@ -177,7 +177,7 @@ By default, CdrPagination assumes that you are navigating through pages on a sit
 
 ## Overriding Default Navigation
 
-TODO: vue-router support...customize navigation logic...uhhhh
+By default pagination uses anchor elements which navigate the users web browser when clicked. This behavior can be overriden by adding a handler to the `navigate` event which emits `(currentPage, currentUrl, event)` and calling `event.preventDefault()` in the handler function. The `currentPage` and `currentUrl` can then be used to implement router based navigation or programmatically navigate the page. This can also be used in conjunction with the `link-tag` property to render a button based pagination.
 
 <cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ lastNavigation: '', page: 3, pages: [{page: 1, url: '#'}, {page: 2, url: '#'}, {page: 3, url: '#'}, {page: 4, url: '#'}, {page: 5, url: '#'}] }" :methods="{handleNavigation(num, url, e) {e.preventDefault(); this.lastNavigation = num }}">
 
