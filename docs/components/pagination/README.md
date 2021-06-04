@@ -206,14 +206,30 @@ At the xs breakpoint, pagination adapts to a Select component using the native U
 This component complies with accessibility guidelines by doing the following:
 
 - Wraps the pagination links in a `<nav>` element to let screen readers recognize the pagination controls
-- Sets `aria-label="pagination"` to describe the type of navigation. TODO: forLabel prop if not page navigation!!!
+- Sets `aria-label="pagination"` to describe the type of navigation.
 - Indicates the active page by adding `aria-current="page"` to the link that points to the current page
 
-View the videos at [a11ymattters, Accessible Pagination](http://www.a11ymatters.com/pattern/pagination/) for a demonstration of before and after pagination tests using a screen reader voiceover.
+If you are building an intra-page button based pagination, the `forLabel` property must be used to indicate what content is being paginated. For example,
+
+```
+<div>
+  <div>{{ reviews content }}</div>
+
+  <cdr-pagination
+    link-tag="button"
+    for-label="pagination for reviews"
+
+    :pages="pages"
+    :total-pages="5"
+    v-model="page"
+  />
+</div>
+
+```
 
 <br />
 
-This component has compliance WCAG guidelines by:
+This component has compliance with WCAG guidelines by:
 - [WCAG 2.4.8](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0&showtechniques=248#location): Information about the user's location within a set of Web pages is available
 - [WCAG 3.2.3](https://www.w3.org/TR/UNDERSTANDING-WCAG20/consistent-behavior-consistent-locations.html): Navigation patterns follow a consistent pattern. Only position pagination component at the bottom of the page
 - [WCAG 2.4.3](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#qr-navigation-mechanisms-focus-order): Focus state receives focus in an order that preserves meaning
