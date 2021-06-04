@@ -19,7 +19,7 @@
 * Response to change > System updates
 * Response to change > User Input: requires time sensitive interaction 
 
-Alerts are critical responces to changes that have happened after page load. 
+Alerts are critical responses to changes that have happened after page load. 
 Their job is to keep our users informed of important system or time-sensitive changes. 
 
 Before using an alert make sure your answer to the following questions are all "yes"
@@ -28,13 +28,13 @@ Make sure the information you are presenting in an alert warrants taking away yo
 ## System alerts 
 these short messages appear due to critical issues that have effected the user session or application.
 
-| alert prioritys      | error, warning |
+| alert priorities     | error, warning |
 | Content              | Includes the core, most important alert content. |
 ### Cedar component options
 - Alert
 - Toast
 
-- ToDO identify(name) the types of alerts rather than the components to suppot them - alert dialog is a component, what type of message should use this?
+- ToDO identify(name) the types of alerts rather than the components to support them - alert dialog is a component, what type of message should use this?
 
 ## Accessibility
 An alert is a special type of ARIA live region. Screen readers will announce the text inside the alert, without moving the focus to the alert message. 
@@ -66,10 +66,10 @@ An alert is a special kind of assertive ARIA live region, so screen readers shou
 ```
 </cdr-doc-example-code-pair>
 
-### Alert diolog
+### Alert dialog
 
-Alert Dialogs are page blocking information that users are required to interect with before proceeding.
-They arehey appear over the interface and block further interactions until an action is selected.
+Alert Dialogs provide page blocking information that users are required to interact with before proceeding.
+They appear over the interface and block further interactions until an action is selected.
 
 #### Use When
 - When the page requires immediate action by the current user.
