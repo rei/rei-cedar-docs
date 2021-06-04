@@ -49,7 +49,7 @@ Additionally, they may open based on conditions a user has created or criterium 
     </th>
     <td>
         <ul>
-          <li>Exposing a status change to a product was caused by user selection</li>
+          <li>Exposing a status change to a product caused by user selection</li>
           <li>providing error or warnings on the status of items in the users cart</li>
           <li>Providing confirmation when updating and removing items that provides navigation or other actions</li>
           <li>Notifying users of a potential problem, outside of a form, that may require their attention</li>
@@ -110,7 +110,7 @@ Additionally, they may open based on conditions a user has created or criterium 
 </cdr-table>
 
 ### Use When
-- Exposing a status change to a product was caused by user selection
+- Exposing a status change to a product caused by user selection
 - providing error or warnings on the status of items in the users cart
 - Providing confirmation when updating and removing items that provides navigation or other actions
 - Notifying users of a potential problem, outside of a form, that may require their attention
@@ -280,7 +280,10 @@ authors SHOULD make the relationship explicit with the aria-controls attribute.
 - As confirmation that a task or process initiated by the user was completed successfully 
 - providing contextual information on the page processes
 ### Don't Use When
-- Exposing additional product information that may vary based on user selection (see [Persistent Status Notifications](#persistent-status-notifications))
+- Exposing a status change to a product caused by user selection (see [Persistent Status Notifications](#persistent-status-notifications))
+- providing error or warnings on the status of items in the users cart (see [Persistent Status Notifications](#persistent-status-notifications))
+- Providing confirmation when updating and removing items that provides navigation or other actions (see [Persistent Status Notifications](#persistent-status-notifications))
+- Notifying users of a potential problem, outside of a form, that may require their attention (see [Persistent Status Notifications](#persistent-status-notifications))
 - The UI is presented as a dialog that requires a user action, on which the focus is set (see [modal](../../components/modal/))
 - The User makes a selection that does not change or add content to the page
 - The notification is an update to existing inline copy (see [Update and Loading Notifications](../update-and-loading-notifications/))
