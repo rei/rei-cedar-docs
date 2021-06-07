@@ -29,11 +29,29 @@
 
 ## New Features
 
+### Brand Color Updates
+
+We have updated the color values of some Cedar tokens to make use of the REI brand color palette. Those tokens are also being used to style the `default` and `sale` version of the CdrButton
+
+We have created a new `cdr-color-background-brand-spruce` color token (TODO: info on usage???)
+
+### CdrBreadcrumb Navigate Event
+
+The CdrBreadcrumb component now emits a `navigate` event which allows users to override the default link-based navigation or otherwise programmatically handle breadcrumb link clicks. This is intended to support router based navigation without requiring the use of scoped slots. See the [CdrBreadcrumb](../../components/breadcrumb/#custom-navigation) page for more information.
+
 ### Numeric CdrInput Default Attributes
 
 CdrInput now accepts a new boolean property called `numeric` which sets some default attributes for inputs that are composed of numerical characters but are not strictly "number" values themselves. The `type="number"` attribute for input elements is designed to be used with actual numbers such as quantities, and does not behave properly with values such as credit cards, security codes, postal codes, or month/year combos.
 
 If a CdrInput receives either `type="number"` or `:numeric="true"`, it will set default values for the `inputmode` and `pattern` attributes which will force mobile devices to launch a numeric only keyboard. Note that solely using `:numeric="true"` will not restrict input to only numeric characters, see the [CdrInput page](../../components/input#numeric-input)
+
+### Form Accessibility Improvements
+
+We have made a number of improvements to our form components to make them more accessible and consistent:
+
+- Default `autocorrect`, `autocapitalize`, and `spellcheck` attributes on CdrInput are now set automatically to make input more consistent across different browsers and devices. These attributes can be overridden if needed.
+- If a `helper-text` slot is used in conjunction with CdrInput or CdrSelect that helper text element is now automatically linked to the input field using the `aria-describedby` attribute. The `aria-describedby` attribute can still be used to link additional elements to the input if needed.
+- If the `error` property is used on a CdrInput, CdrSelect, or CdrFormGroup component the input field gets marked as `aria-invalid="true"` and the error message is linked to the input field using the `aria-errormessage` attribute.
 
 ### Form Element Error Role Property
 
@@ -46,12 +64,6 @@ TODO: add examples to those docs pages witch guidance on when to override that?
 CdrModal now accepts a `role` property that allows for overriding the accessible `role` property on the modal content element
 
 TODO: add example to modal page with guidance?
-
-### Brand Color Updates
-
-We have updated the color values of some Cedar tokens to make use of the REI brand color palette. Those tokens are also being used to style the `default` and `sale` version of the CdrButton
-
-We have created a new `cdr-color-background-brand-spruce` color token (TODO: info on usage???)
 
 ## Deprecations
 
@@ -79,12 +91,6 @@ Vue 2.6 introduced a new syntax for passing slot content into components. The ol
 
 The examples on this doc site have been updated to make use of the new syntax, see the [Vue documentation](https://vuejs.org/v2/guide/components-slots.html#Named-Slots) for more information.
 
-### CdrBreadcrumb and CdrPagination Scoped Slots
-
-CdrBreadcrumb and CdrPagination both allow for passing in a scoped slot for rendering their link elements which was intended to support things like vue-router which must override the default link navigation behavior. This feature increased the complexity of both components, making it difficult to maintain and improve the components over time. It requires that consumers bind multiple attributes to the slot element to ensure a consistent UI. Most importantly, this functionality is better served through an event handler which would allow the Cedar components to remain simple and consistent but give consumers the flexibility to customize their behavior.
-
-We are planning to remove support for scoped slots in both components as part of our future Vue 3 updates. See the [CdrBreadcrumb](../../components/breadcrumb/#custom-navigation) or [CdrPagination](../../components/pagination/#overriding-default-navigation) pages for examples of how to override their default navigation behavior. Please reach out to the Cedar team if you have any questions or concerns about this change.
-
 ## Breaking Changes
 
 ### CdrAlert Renamed to CdrBanner
@@ -107,15 +113,6 @@ In order to distinguish generic background colors like primary and secondary fro
 
 The `aria-describedby` property on CdrModal has been updated to use the correct casing in order to match the default HTML aria attribute
 
-### CdrInput Default Attributes
-
-CdrInput has been updated to set some default attributes that make form inputs behave more consistently across browsers. These attributes can be overridden by passing the same attribute name onto the CdrInput element.
-
-```
-autocorrect="off"
-spellcheck="false"
-autocapitalize="off"
-```
 
 ### Removals
 
