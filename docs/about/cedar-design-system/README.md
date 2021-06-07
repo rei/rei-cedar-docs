@@ -42,7 +42,7 @@ All new requests for components will be evaluated, beginning with a discovery pr
 New feature and enhancement requests can be submitted on [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) or during our weekly office hours.
 
 ###  Report an Issue
-The Cedar team is committed to maintaining consistent, high-quality components. If you encounter any defects in the Sketch UI Toolkit, Vue code, or on the documentation site, please submit them to [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) or come and talk to us during our weekly office hours.
+The Cedar team is committed to maintaining consistent, high-quality components. If you encounter any defects in the Figma UI Toolkit, Vue code, or on the documentation site, please submit them to [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) or come and talk to us during our weekly office hours.
 
 The team will address the bug as soon as possible, depending on the severity of the issue and the sprint capacity. Please include as much relevant information as possible when submitting a bug report, including steps to reproduce, urgency, and impact to help prioritize the task.
 
