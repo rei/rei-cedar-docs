@@ -72,7 +72,7 @@ import { CdrButton, CdrLink } from '@rei/cedar';
 
 4. Delete the old `@rei/cdr-` dependencies from your package.json (excluding `cdr-tokens` if you are using that), run npm install, and verify that your app builds correctly
 
-5. You can always reach out to the Cedar team in the #cedar-user-support slack channel for assistance
+5. You can always reach out to the Cedar team in the [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) slack channel for assistance
 
 ### For a Component
 

@@ -124,7 +124,7 @@ Example Space utility update:
 
 ### CdrImg Responsive Ratio and Lazy loading
 
-- The `ratioSm`, `ratioMd`, and `ratioLg` properties have been removed as they were not being used and do not match the responsive property patterns in use in the Cedar components. Please reach out in Slack at #cedar-user-support if you need assistance building images with responsive ratios.
+- The `ratioSm`, `ratioMd`, and `ratioLg` properties have been removed as they were not being used and do not match the responsive property patterns in use in the Cedar components. Please reach out in Slack at [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) if you need assistance building images with responsive ratios.
 - We have removed the `lazy` and `lazyOpts` properties which were tied to the [rei-lazy-image-loader](https://git.rei.com/projects/FEDPACK/repos/rei-lazy-image-loader/browse) package. Usage of those props should be updated to use `loading="lazy"` and the lazy loader package should be removed from your project. If necessary, the `data-lazy` attributes associated with `rei-lazy-image-loader` can be manually bound to any instance of CdrImg.
 
 ### CdrText CSS Asset
