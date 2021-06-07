@@ -19,15 +19,15 @@
 
 ## Overview
 
-Update and Loading Notifications update existing inline page content.
-They inform users of advisory information that enhances the site experience such as quantity updates or busy states.
-Additionally, These notifications often only update a specific part of an inline content section.
+Update and Loading Notifications update pre-existing inline page content. 
+loading Notifications often effect the same section of live content on a page and precede the update notification being communicated to our users.
+When not pairing a loading notification with an update, remember to create sufficient Visual feedback as many update notifications will be unassociated to their triggering actions.
 
-It is important to grasp that many visual transitions are actually update notifications and should provide contextual information to our users. 
-This can be added in the form of screen reader only text, though consider if the action without context will create any cognitive dissonance for our visual users.
-Remember to create sufficient Visual feedback as many update notifications are unassociated triggering action.
+## Update Notifications
 
-### At A Glance
+Update Notifications inform users of advisory information that enhances the site experience such as quantity updates or busy states.
+Additionally, These notifications often only update a specific part of an inline content section, such as the number of items in a cart.
+
 <cdr-table class="advanced-table" full-width=false>
   <tr>
     <th class="advanced-table__header">
@@ -48,7 +48,7 @@ Remember to create sufficient Visual feedback as many update notifications are u
     </th>
     <td>
       <ul>
-        <li>reporting page processes</li>
+        <li>updating comunications filter settings</li>
         <li>Responses to user initiated actions</li>
       </ul>
     </td>
@@ -65,15 +65,12 @@ Remember to create sufficient Visual feedback as many update notifications are u
 
 ### Use When
 
-- Providing loading icons or states
-- Informing users that the application is busy
 - Incrementing results or items
 - Changing inline content based on user selection
 - Confirming an action has taken place
 
 ### Don't Use When
 - The User makes a selection that does not change or add content to the page
-- The notification does not relate to an actionable element in a busy state
 - The content added to the page is important or needs attention
 - For delivery of messaging
 - During the appearance / disappearance of content following a user interaction which is also announced to assistive technology such as the following:
@@ -140,10 +137,74 @@ The Update Notification Content Container wraps both the element being updated a
     ```
   - Include [aria-atomic](https://www.digitala11y.com/aria-atomic-properties/) markup attribute to define what content will be presented to assistive technologies
   - Include `aria-relevant` to define what type of changes are being announced to assistive technologies
-#### loading status
+
+## loading Notifications
+
+When we use visual loading transitions to show that a live section of a page is changing or presenting new data, we are actually notifying our users that something is happening, that the page is busy.
+these transition should also notify assistive technology that it should temporarily ignore changes to an element.
+This can be added in the form of additional element attributes that communicate to assistive technology, though consider if the action without context will create any cognitive dissonance for our visual users.
+
+
+<cdr-table class="advanced-table" full-width=false>
+  <tr>
+    <th class="advanced-table__header">
+      Priority
+    </th>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">
+      Expectancy
+    </th>
+    <td>Expected / Assumed</td>
+  </tr>
+  <tr>
+  <tr>
+    <th class="advanced-table__header">
+      Purpose
+    </th>
+    <td>
+      <ul>
+      <li>communicating the refresh of page data</li>
+      <li>disabling a section of a page as new data is presented</li>
+      <li>reporting the busy status of a page or section</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">Interaction</th>
+    <td>Blocking, disabling</td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">Information</th>
+    <td>User requested state changes</td>
+  </tr>
+</cdr-table>
+
+### Use When
+
+- refreshing data in a live region
+- loading additional page content
+- Providing loading icons or states
+- Informing users that the application is busy
+### Don't Use When
+
+- The notification does not relate to an actionable element in a busy state
+- During the appearance / disappearance of content following a user interaction which is also announced to assistive technology such as the following:
+  - tab
+  - accordion
+  - dialog
+  - popover
+  - tooltip
+
+### Anatomy of a Loading Notification
+
 <cdr-img :src="$withBase('/notifications/loadingNotification.png')" alt="Diagram of loading animation annotating the list below" width="600px"/>
 
-Update Notifications will often be used to represent loading icons or submitting buttons. These types of Update notifications 
+
+
+
+
 - **Should**
   - Define pre-existing page sections where content may be updated as a WAI-ARIA live region.
   - Use the `aria-busy` attribute to indicate an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
