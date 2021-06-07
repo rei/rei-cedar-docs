@@ -18,12 +18,12 @@ One of the best ways to influence the visual language of the Co-op’s digital p
 
 There are many ways to contribute to Cedar—new components, enhancements, and bug fixes will all be accepted for consideration. Cedar welcomes contributions to the system that meet brand and quality standards, and can be reused by two or more teams.
 
-See the guidelines mentioned below on this page for more information about contributions, and reach out using the #cedar-user-support Slack channel if you have any questions.  
+See the guidelines mentioned below on this page for more information about contributions, and reach out using [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) if you have any questions.  
 
 ## Component Contributions
 When creating a new component, first reach out to the Cedar team to see if the component is already under development in the [Cedar backlog](https://issues.rei.com/secure/RapidBoard.jspa?rapidView=1996) or if exists in a shared repo. If not, the Cedar team can help advise on how to [build resuable components](../../getting-started/building-components-with-cedar/) using REI design foundations and system assets, so that it can be pulled into the system in the future.
 
-If you have a request for the Cedar team, submit a [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC) with all relevant information.
+If you have a request for the Cedar team, please submit it on [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) or come and talk to us during our weekly office hours.
 
 ### Design
 New component designs can be added to the [Greenhouse library in Figma](https://www.figma.com/file/5R0ElfCIEJbRJx2tKzlA7s/Greenhouse?node-id=1673%3A4). Greenhouse is an internal library where designers can add new components, variants, and patterns to share with the community. The Cedar team will help facilitate additions to Greenhouse, and monitor the library for potential contributions to the design system.
@@ -41,15 +41,15 @@ Reference the diagram below to determine how and where to build a new component:
 
 
 ### Bug Fixes
-The Cedar team is committed to maintaining consistent, quality components. If you encounter an issue, please submit it using the [Bug Report Form](https://airtable.com/shr3wSPCYQbycVx7i) or directly in [rei/cedar](https://github.com/rei/rei-cedar/issues) to add it to the Cedar backlog.
+The Cedar team is committed to maintaining consistent, quality components. If you encounter an issue, please submit it on [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) or come and talk to us during our weekly office hours.
 
 The team will address the bug as soon as possible, depending on the severity of the issue and sprint capacity. Please include as much relevant information as possible when submitting a bug report, including steps to reproduce, urgency, and impact to help us prioritize.
 
-If you have a fix for a bug and would like to submit a pull request for it, create a new PR in [rei/cedar](https://github.com/rei/rei-cedar/issues), or reach out in the #cedar-user-support Slack channel with any questions.
+If you have a fix for a bug and would like to submit a pull request for it, create a new PR in [rei/cedar](https://github.com/rei/rei-cedar/issues), or reach out in the [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) Slack channel with any questions.
 
 
 ## Token Contributions
-If you have a request for a new token, you can submit it using the [Feature Request Form](https://airtable.com/shrcbq9CHthuMO7AC).
+If you have a request for a new token, let us know on [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) or come and talk to us during our weekly office hours.
 
 You can also create a new token in the [shared-tokens repository](https://git.rei.com/projects/FEDPACK/repos/shared-tokens/browse) for future integration in Cedar.
 
