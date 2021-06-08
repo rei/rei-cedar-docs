@@ -89,7 +89,7 @@ The Cedar team is available to help with adopting, consuming, or contributing to
 You won’t be able to make changes to the library that would impact other projects. By keeping Cedar libraries enabled and using components as-is, you minimize your risk of falling out of sync. Note that if you detach a component, you will no longer receive future updates from our team for that component. Never detach a component for production work.
 
 #### How can I fix a bug or make an improvement to the toolkit?
-You can create a branch of the Cedar library to make the changes yourself, or reach out to the Cedar team using the #cedar-user-support Slack channel to report a bug.
+You can create a branch of the Cedar library to make the changes yourself, or reach out to the Cedar team using the [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) Slack channel to report a bug.
 
 #### Should I always consume updates to Figma Components?
 We keep the design and code aligned so if there’s an update available in Figma it means your developer has access to an update as well. It’s always smart to check in with your developer though.
