@@ -3,8 +3,7 @@
     <div v-for="modifier in Object.keys(text)" class="stack-1">
       <cdr-text
         tag="h3"
-        modifier="heading-500"
-        class="stack-1"
+        class="cdr-text--heading-500 stack-1"
       >
           {{ formatTitle(modifier) }}
       </cdr-text>
@@ -18,7 +17,7 @@
         <tbody>
           <tr v-for="level in text[modifier]" :key="`${modifier}-${level}`">
             <td>
-              <cdr-text :modifier="`${modifier}-${level}`">{{ modifier }}-{{ level }}</cdr-text>
+              <cdr-text :class="`cdr-text--${modifier}-${level}`">{{ modifier }}-{{ level }}</cdr-text>
             </td>
             <td>
               <cdr-text>cdr-text-{{ modifier }}-{{ level }}</cdr-text>
@@ -28,7 +27,7 @@
       </cdr-table>
     </div>
 
-    <cdr-text tag="h3" modifier="heading-500" class="stack-1">
+    <cdr-text tag="h3" class="cdr-text--heading-500 stack-1">
       Helpers
     </cdr-text>
 
@@ -42,7 +41,7 @@
       <tbody>
         <tr>
           <td>
-            <cdr-text modifier="italic">italic</cdr-text>
+            <cdr-text class="cdr-text--italic">italic</cdr-text>
           </td>
           <td>
             <cdr-text> cdr-text-italic </cdr-text>
@@ -50,7 +49,7 @@
         </tr>
         <tr>
           <td>
-            <cdr-text modifier="strong">strong</cdr-text>
+            <cdr-text class="cdr-text--strong">strong</cdr-text>
           </td>
           <td>
             <cdr-text> cdr-text-strong </cdr-text>
@@ -59,13 +58,13 @@
       </tbody>
     </cdr-table>
 
-    <cdr-text tag="h3" modifier="heading-500" class="stack-1">
+    <cdr-text tag="h3" class="cdr-text--heading-500 stack-1">
       Native Mobile App Tokens
     </cdr-text>
 
     <tokens-typography platform="native" type="header">
 
-    <cdr-text tag="h4" modifier="heading-400" class="stack-1">
+    <cdr-text tag="h4" class="cdr-text--heading-400 stack-1">
       Headings
     </cdr-text>
 
@@ -73,7 +72,7 @@
 
     <tokens-typography platform="native" type="body">
 
-    <cdr-text tag="h4" modifier="heading-400" class="stack-1">
+    <cdr-text tag="h4" class="cdr-text--heading-400 stack-1">
       Body
     </cdr-text>
 
@@ -81,7 +80,7 @@
 
     <tokens-typography platform="native" type="button">
 
-    <cdr-text tag="h4" modifier="heading-400" class="stack-1">
+    <cdr-text tag="h4" class="cdr-text--heading-400 stack-1">
       Buttons
     </cdr-text>
 

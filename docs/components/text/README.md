@@ -173,17 +173,7 @@
                 "type": "string",
                 "default": "'p'",
                 "description": "Sets valid HTML element tag."
-              },
-              {
-                "name": "modifier",
-                "type": "string",
-                "default": "N/A",
-                "alert": {
-                  "type": "deprecated",
-                  "description": "The modifier prop for CdrText is deprecated, @rei/cdr-tokens should be used to apply type styles instead"
-                },
-                "description": "Modifies the style variant for this component. see below tables for list of options. ",
-              },
+              }
             ],
             "slots": [
               {
@@ -218,7 +208,7 @@ Serif headings, set in REI Stuart, work best in larger sizes (cdr-text-heading-s
 
 ```html
 
-  <cdr-text modifier="heading-serif-1200">
+  <cdr-text class="cdr-text--heading-serif-1200">
     When you gear up, we give back
   </cdr-text>
 
@@ -247,7 +237,7 @@ Serif strong headings, set in REI Stuart with a greater font weight than [serif]
 
 ```html
 
-  <cdr-text modifier="heading-serif-strong-1200">
+  <cdr-text class="cdr-text--heading-serif-strong-1200">
     When you gear up, we give back
   </cdr-text>
 
@@ -277,7 +267,7 @@ Sans headings, set in Graphik, should play a supporting role to serif headings. 
 
 ```html
 
-  <cdr-text modifier="heading-sans-600">
+  <cdr-text class="cdr-text--heading-sans-600">
     When you gear up, we give back
   </cdr-text>
 
@@ -341,7 +331,7 @@ Cedar does not offer pre-styled responsive headings. Instead, construct responsi
 
 ```html
   <cdr-text
-    modifier="heading-serif-800@xs heading-serif-900">
+    class="cdr-text--heading-serif-800@xs heading-serif-900">
       When you gear up, we give back
   </cdr-text>
 ```
@@ -381,7 +371,7 @@ Sans-serif subheadings are set in Graphik. They are intended to be paired with s
 
 ```html
 
-  <cdr-text modifier="subheading-sans-600">
+  <cdr-text class="cdr-text--subheading-sans-600">
     When you gear up, we give back
   </cdr-text>
 
@@ -411,11 +401,10 @@ Serif headings should only accompanied by sans subheadings.
 
 ```html
   <cdr-text
-    modifier="heading-serif-strong-900">
+    class="cdr-text--heading-serif-strong-900">
       When you gear up, we give back
       <cdr-text
-       modifier="subheading-sans-500"
-       class="stack">
+       class="cdr-text--subheading-sans-500 stack">
        Treat yourself to sweet gear
        </cdr-text>
   </cdr-text>
@@ -451,11 +440,10 @@ Sans headings also work best with sans subheadings.
 
 ```html
   <cdr-text
-    modifier="heading-sans-600">
+    class="cdr-text--heading-sans-600">
       When you gear up, we give back
       <cdr-text
-       modifier="subheading-sans-300"
-       class="stack">
+       class="cdr-text--subheading-sans-300 stack">
        Treat yourself to sweet gear
        </cdr-text>
   </cdr-text>
@@ -497,7 +485,7 @@ Body styles work best for long-form copy like articles, customer reviews, or leg
 
 ```html
 
-  <cdr-text modifier="body-500">
+  <cdr-text class="cdr-text--body-500">
     Cross-country skiing (sometimes called classic skiing) encompasses several styles, from touring or racing on groomed ski tracks to gliding through deep backcountry snow.
   </cdr-text>
 
@@ -526,7 +514,7 @@ Body strong is also intended for long-form copy but should be used minimally. Us
 
 ```html
 
-  <cdr-text modifier="body-strong-500">
+  <cdr-text class="cdr-text--body-strong-500">
     Cross-country skiing (sometimes called classic skiing) encompasses several styles, from touring or racing on groomed ski tracks to gliding through deep backcountry snow.
   </cdr-text>
 
@@ -596,7 +584,6 @@ Body styles include a set of strong options: `cdr-text-body-strong-500`, `cdr-te
 
 Utility styles are used to communicate  functionality or descriptive information. Shorter content is a good candidate for the more condensed and compact utility styling. Utility styles should not be replaced with headings. While headings help group and categorize content, utility styles help to label elements or give users information on how to take action. Cedar utility styles are available in both serif and [sans serif](https://rei.github.io/rei-cedar-docs/foundation/typography/#graphik) options. Additionally, each utility style has a strong option.
 
-By default, text within a `cdr-container` will display as `cdr-text-utility-300`.
 
 ### Serif
 Utility serif styles should be used when additional brand emphasis is needed.
@@ -605,7 +592,7 @@ Utility serif styles should be used when additional brand emphasis is needed.
 
 ```html
 
-  <cdr-text modifier="utility-serif-800">
+  <cdr-text class="cdr-text--utility-serif-800">
     Mon–Fri, 7am–5pm PT
   </cdr-text>
 
@@ -633,7 +620,7 @@ Utility serif strong styles should be used when additional emphasis is needed ov
 
 ```html
 
-  <cdr-text modifier="utility-serif-strong-800">
+  <cdr-text class="cdr-text--utility-serif-strong-800">
     Mon–Fri, 7am–5pm PT
   </cdr-text>
 
@@ -661,7 +648,7 @@ Utility sans styles typically make up the majority of utility styles used on a g
 
 ```html
 
-  <cdr-text modifier="utility-sans-800">
+  <cdr-text class="cdr-text--utility-sans-800">
     Mon–Fri, 7am–5pm PT
   </cdr-text>
 
@@ -689,7 +676,7 @@ Utility sans styles should be used when additional emphasis is needed.
 
 ```html
 
-  <cdr-text modifier="utility-sans-strong-800">
+  <cdr-text class="cdr-text--utility-sans-strong-800">
     Mon–Fri, 7am–5pm PT
   </cdr-text>
 
@@ -724,7 +711,7 @@ Eyebrows introduce a topic or show how an item is categorized. Content tags or c
 
 ```html
 
-  <cdr-text modifier="eyebrow-100">
+  <cdr-text class="cdr-text--eyebrow-100">
     Hiking, backpacking
   </cdr-text>
 
@@ -760,11 +747,11 @@ In addition to the specific type options listed above, we have provided two gene
 
 ```html
 
-  <cdr-text modifier="body-300">
+  <cdr-text class="cdr-text--body-300">
     REI Co-op’s Trailsmith line was featured in  
     <cdr-text
     tag="em"
-    modifier="italic">
+    class="cdr-text--italic">
     Field & Stream’s
     </cdr-text>
     “10 Best Pants for Working Outside”
@@ -800,11 +787,11 @@ In addition to the specific type options listed above, we have provided two gene
 
 ```html
 
-  <cdr-text modifier="body-300">
+  <cdr-text class="cdr-text--body-300">
     This trip is rated as
     <cdr-text
     tag="strong"
-    modifier="strong">
+    class="cdr-text--strong">
     Vigorous [4]
     </cdr-text>.
   </cdr-text>
@@ -884,7 +871,7 @@ For more information about design tokens and a complete list of tokens available
 The **CdrText** component allows for styling any HTML element with available text styles. Visual style and semantic meaning are managed independently by providing:
 
 - A `tag` property to control which type of element is rendered
-- Styling which can be applied ith a custom CSS class and a text mixin
+- Styling which can be applied with a custom CSS class and a text mixin
 
 This method decouples the semantic meaning of a heading level from the visual representation.
 

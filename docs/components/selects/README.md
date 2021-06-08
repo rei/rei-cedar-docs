@@ -439,16 +439,18 @@ CdrSelect can be rendered with nested options using the `optgroup` tag.
 
 To ensure that the usage of Select component complies with the accessibility guidelines:
 + Always provide a label for each select control
-+ If hiding a label, use the `aria-label` attribute for the label contents
++ The `hide-label` property can be used to visually hide the label text while still leaving it available to screen readers
 
 When using the `aria-describedby`:
 + `aria-describedby` attribute does not override the select label
 + Use this attribute in addition to a label
 + Can be used to reference descriptions that appear as 'tooltips'
++ Content passed into the `helper-text` slot is automatically linked to the `aria-describedby` attribute
 
 This component has compliance with WCAG guidelines by:
 + Requiring a value for the `label` field
 + When hiding a label, the `aria-label` attribute is set to the `label` value
++ Links `helper-text` content to the input field using the `aria-describedby` attribute
 
 <hr>
 
@@ -515,12 +517,12 @@ Select components should be:
 
 ### Icon
 
-- Use icons to trigger a popover for hints or suggestions
+- Use icons to trigger a [popover](../popover) or [tooltip](../tooltip) for hints or suggestions
 - Reference Cedar's [icon guidelines](../icon/#guidelines) for additional information
 
 ### Link Text
 
-- Use a link when moving or navigating to another page or to a different portion of the same page
+- Use a link in the `info` slot when moving or navigating to another page or to a different portion of the same page
 - Use if navigating user to long or complex information
 - Reference the [Links](../links/) component article for more information
 
@@ -568,29 +570,5 @@ This component will bind any attribute that a [native HTML select element](https
 ## Component Variables
 
 <cdr-doc-comp-vars name="CdrSelect">Note that the <a href="../component-variables/#CdrLabelStandalone">cdr-label-standalone mixins</a> should be used for assembling the label element. </cdr-doc-comp-vars>
-
-## Usage
-
-The **CdrSelect** component requires `v-model` to bind the selected value to your data model, as well as a `label` for accessibility.
-
-```vue
-<cdr-select
-  label="Label Text"
-  v-model="selected"
->
-  <option value="1">
-    1
-  </option>
-  <option value="2">
-    2
-  </option>
-  <option value="3">
-    3
-  </option>
-  <option value="4">
-    4
-  </option>
-</cdr-select>
-```
 
 </cdr-doc-table-of-contents-shell>

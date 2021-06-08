@@ -18,7 +18,7 @@
     </div>
 
 
-    <div class="cdr-container">
+    <div class="container">
       <cdr-row cols="1 2@md" align="middle" class="stack-4">
         <cdr-col>
           <cdr-img
@@ -102,14 +102,13 @@
 
       <cdr-row cols="1 2@md" class="stack-4">
         <cdr-col>
-          <div class="home-card cdr-space-inset-one-x">
+          <div class="home-card">
             <cdr-row align="middle">
               <cdr-col span="9">
                 <div>
                   <cdr-text
                     tag="h3"
-                    modifier="heading-sans-400"
-                    class="stack-1"
+                    class="home-card-heading stack-1"
                   >Cedar Design Libraries</cdr-text>
                   <cdr-link :href="$withBase('/getting-started/as-a-designer/#design-toolkits')" modifier="standalone">Learn more about the toolkit</cdr-link>
                 </div>
@@ -123,14 +122,13 @@
           </div>
         </cdr-col>
         <cdr-col>
-          <div class="home-card cdr-space-inset-one-x">
+          <div class="home-card">
             <cdr-row align="middle">
               <cdr-col span="9">
                 <div>
                   <cdr-text
                     tag="h3"
-                    modifier="heading-sans-400"
-                    class="stack-1"
+                    class="home-card-heading stack-1"
                   >Vue.js components</cdr-text>
                   <cdr-link href="https://www.npmjs.com/package/@rei/cedar" target="_blank" modifier="standalone">View the NPM repository</cdr-link>
                 </div>
@@ -144,22 +142,20 @@
           </div>
         </cdr-col>
         <cdr-col>
-          <div class="home-card cdr-space-inset-one-x">
+          <div class="home-card">
             <cdr-text
               tag="h3"
-              modifier="heading-sans-400"
-              class="stack-1"
+              class="home-card-heading stack-1"
             >Contribute to Cedar</cdr-text>
             <cdr-text class="stack-1">The Cedar team welcomes contributions from the community. Learn how to become a pilot contributor.  </cdr-text>
             <cdr-link :href="$withBase('/about/contributing-to-cedar/')" modifier="standalone">Help build Cedar</cdr-link>
           </div>
         </cdr-col>
         <cdr-col>
-          <div class="home-card cdr-space-inset-one-x">
+          <div class="home-card">
             <cdr-text
               tag="h3"
-              modifier="heading-sans-400"
-              class="stack-1"
+              class="home-card-heading stack-1"
             >Feedback & support</cdr-text>
             <cdr-text class="stack-1">Questions, ideas, or comments? Your feedback can help improve Cedar. </cdr-text>
             <cdr-link href="mailto:cedar@rei.com" modifier="standalone">Get in touch</cdr-link>
@@ -194,6 +190,10 @@ export default {
 
 <style lang="scss">
 @import "styles/cdr-tokens.scss";
+
+.container {
+  @include cdr-container;
+}
 
 .hero {
   position: relative;
@@ -310,6 +310,11 @@ export default {
   border: 1px solid $cdr-color-border-primary;
   border-radius: $cdr-radius-softer;
   display: block;
+  padding: $cdr-space-one-x;
+}
+
+.home-card-heading {
+  @include cdr-text-heading-sans-400;
 }
 
 .home-resource-icon {

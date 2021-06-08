@@ -23,7 +23,7 @@ Update and Loading Notifications update existing inline page content.
 They inform users of advisory information that enhances the site experience such as quantity updates or busy states.
 Additionally, These notifications often only update a specific part of an inline content section.
 
-It is important to grasp that many visual transitions are actually update notifications and should provide contextual information to our users. 
+It is important to grasp that many visual transitions are actually update notifications and should provide contextual information to our users.
 This can be added in the form of screen reader only text, though consider if the action without context will create any cognitive dissonance for our visual users.
 Remember to create sufficient Visual feedback as many update notifications are unassociated triggering action.
 
@@ -113,16 +113,16 @@ The Update Notification Content Container wraps both the element being updated a
     <!-- EXAMPLE: while stable -->
     <div aria-live="polite" role="region" aria-labelledby="shopping-cart">
       4
-      <span class="cdr-display-sr-only">items in your cart</span>
+      <span class="sr-only">items in your cart</span>
     </div>
     ```
     ```html
     <!-- EXAMPLE: when updated -->
     <div role="status" aria-live="polite" role="region" aria-labelledby="shopping-cart">
 
-      <span class="cdr-display-sr-only">there are now</span>
-      5 
-      <span class="cdr-display-sr-only">items in your cart</span>
+      <span class="sr-only">there are now</span>
+      5
+      <span class="sr-only">items in your cart</span>
     </div>
     ```
 
@@ -143,7 +143,7 @@ The Update Notification Content Container wraps both the element being updated a
 #### loading status
 <cdr-img :src="$withBase('/notifications/loadingNotification.png')" alt="Diagram of loading animation annotating the list below" width="600px"/>
 
-Update Notifications will often be used to represent loading icons or submitting buttons. These types of Update notifications 
+Update Notifications will often be used to represent loading icons or submitting buttons. These types of Update notifications
 - **Should**
   - Define pre-existing page sections where content may be updated as a WAI-ARIA live region.
   - Use the `aria-busy` attribute to indicate an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
@@ -196,8 +196,8 @@ date content in locations unrelated to the action which caused the notification 
         <cdr-caption
         summary="After a user presses the Add to Cart button, the button grays out or changes to a loading icon, additionally, assistive technology should inform users of the busy state. For more information review the loading notification section above"/>
       </figcaption>
-    </figure> 
-  
+    </figure>
+
   </li>
   <li>
     <figure>

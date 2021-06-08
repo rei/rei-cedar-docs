@@ -1,6 +1,7 @@
 @import 'cdr-tokens';
 @import 'cdr-doc-tokens';
 @import 'examples.scss';
+@import 'deprecated-text.css';
 
 $side-navigation-logo-width: 162px;
 $side-navigation-width: 234px;
@@ -16,6 +17,10 @@ body {
 
 h1, h2, h3, h4, h5 {
   @include cdr-text-heading-serif-strong-600;
+}
+
+.sr-only {
+  @include cdr-display-sr-only;
 }
 
 .cdr-doc-page-shell {
