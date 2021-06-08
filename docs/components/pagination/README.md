@@ -240,6 +240,14 @@ This component has compliance with WCAG guidelines by:
 
 # Guidelines
 
+## SEO
+
+For best SEO support, use of pagination requires additional markup and logic in the `<head>` of the page.
+
+See REI's SEO Confluence page on [pagination](https://confluence.rei.com/display/SI/Pagination+Tag+Implementation) for information on implementing this correctly on your page.
+
+Note that REI has chosen HTML `<link>` elements instead of HTTP headers. Make sure to use fully qualified absolute URLs in the `<link>` elements instead of relative URLs.
+
 ## Use When
 - Providing navigation to break apart large quantities of content
 - Breaking up search result pages into manageable sections
@@ -298,20 +306,5 @@ Pagination adapts to a Select component with a native UI dropdown menu on XS bre
 ## Scoped Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.scopedSlots" />
-
-## Usage
-
-The **CdrPagination** component provides a current page number control and renders a list of links. The current page value should be bound using `v-model` in your app.
-
-The **CdrPagination** component does not make data calls, render or track paginated data, or handle routing beyond simple anchor links. However, it does emit events if you need to customize routing or need to add additional application logic.
-
-### SEO
-
-For best SEO support, use of pagination requires additional markup and logic in the `<head>` of the page.
-
-See REI's SEO Confluence page on [pagination](https://confluence.rei.com/display/SI/Pagination+Tag+Implementation) for information on implementing this correctly on your page.
-
-Note that REI has chosen HTML `<link>` elements instead of HTTP headers. Make sure to use fully qualified absolute URLs in the `<link>` elements instead of relative URLs.
-
 
 </cdr-doc-table-of-contents-shell>
