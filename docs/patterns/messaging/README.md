@@ -36,7 +36,6 @@ Help and informational messaging appear contextually (e.g. helping a user locate
 Depending on the situation, messaging may appear in an overlay (modals, tooltips, popovers), while other messaging will appear in-line (e.g. form field validation). Regardless of approach, the messaging will open in-page and should not navigate users to a new page or window.
 
 When deciding what type of messaging pattern to use, reference the flowchart and table on this page, as well as the usage guidelines in the subsequent pages to help determine which components are appropriate for each experience.
-
 ## Deciding what to use
 
 Consider the intent of the messaging and specific user task to determine which pattern to use. 
@@ -138,6 +137,16 @@ Notifications may be used with the following message types
  - Success
  - Page status
  - Content updates
+
+
+Notifications may be stacked with each other to communicate complex processes to our users
+
+** example removing an item from a cart **
+
+A User removes an item from their wishlist using the "remove item" button; this triggers the following 3 actions:
+1. action 1 > A loading notification displays, identifying that the list is busy processing request
+2. action 2 > once the data has been updated, an update notification, listening for "removes" communicates that the item has been removed to assistive technology
+3. action 3 > last in this example, a transient notification pops up confirming to the user that the item has been removed successfully
 
 ### Patterns
 (the following do not consider mobile app patterns)
