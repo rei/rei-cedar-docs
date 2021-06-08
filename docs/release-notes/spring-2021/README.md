@@ -111,8 +111,7 @@ In order to distinguish generic background colors like primary and secondary fro
 
 ### CdrModal Aria Describedby
 
-The `aria-describedby` property on CdrModal has been updated to use the correct casing in order to match the default HTML aria attribute
-
+The `aria-describedby` property on CdrModal has been updated to use the correct casing in order to match the default HTML aria attribute. To address this change, in any CdrModal instance replace `ariaDescribedBy` with `ariaDescribedby` or `aria-described-by` with `aria-describedby`.
 
 ### Removals
 

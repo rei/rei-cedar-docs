@@ -39,7 +39,7 @@
                 "description": "Toggles the modal title text, which comes from `label` or `labelSlot`."
               },
               {
-                "name": "ariaDescribedBy",
+                "name": "ariaDescribedby",
                 "type": "string",
                 "default": "'medium'",
                 "description": "Text for the `aria-describedby` attribute."
@@ -128,7 +128,7 @@
   label="Add to Cart"
   :opened="opened"
   @closed="opened = false"
-  aria-described-by="description"
+  aria-describedby="description"
 >
   <template v-slot:title>
     <cdr-text
@@ -168,7 +168,7 @@ When rendering multiple modals on a single page you can reduce your markup size 
   :opened="opened"
   :label="title"
   @closed="opened = false"
-  aria-described-by="description"
+  aria-describedby="description"
 >
   <template v-slot:title>
     <cdr-text
@@ -194,10 +194,10 @@ Ensure that usage of this component complies with accessibility guidelines:
 >Launch modal</cdr-button>
 ```
 
-- Set the `aria-described-by` prop to point to an element that describes what the modal does:
+- Set the `aria-describedby` prop to point to an element that describes what the modal does:
 
 ```vue
-  <cdr-modal aria-described-by="description" label="modal title">
+  <cdr-modal aria-describedby="description" label="modal title">
     <div id="description">
       modal content description
     </div>
@@ -293,7 +293,7 @@ Do not use `v-if` with CdrModal unless the component is wrapped with `keep-alive
     :opened="opened"
     label="Add to Cart"
     @closed="closed"
-    aria-described-by="description"
+    aria-describedby="description"
   >
     ...
   </cdr-modal>
