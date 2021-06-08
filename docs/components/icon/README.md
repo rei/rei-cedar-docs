@@ -206,7 +206,7 @@ CdrIcon by default adds `aria-hidden="true"` to the root SVG element. If your us
 
 ```
 <cdr-link href="/cart">
-  <icon-cart/><span class="cdr-display-sr-only">Go to cart page</span>
+  <icon-cart/><span class="sr-only">Go to cart page</span>
 </cdr-link>
 ```
 
@@ -224,12 +224,12 @@ For a button or link that contains text alongside an icon:
 
 ```
 <cdr-link>
-  <icon-check-lg/><span class="cdr-display-sr-only">Available For</span> Curbside Pickup
+  <icon-check-lg/><span class="sr-only">Available For</span> Curbside Pickup
 </cdr-link>
 
 
 <cdr-button>
-  <icon-check-lg/><span class="cdr-display-sr-only">Available for</span> Curbside Pickup
+  <icon-check-lg/><span class="sr-only">Available for</span> Curbside Pickup
 </cdr-button>
 ```
 
@@ -239,7 +239,7 @@ For an icon that exists outside of a link, button, or other actionable element, 
 
 ```
 <icon-virtual-outfitting/>
-<span class="cdr-display-sr-only">Virtual Outfitting</span>
+<span class="sr-only">Virtual Outfitting</span>
 ```
 
 - Pass a `<title>` and `<desc>` into the default slot of the icon component, each with unique ids. Add `role="img"` and `aria-labelledby="titleid descid"` to the icon component, replacing `titleid` and `descid` with the IDs that correspond to the `<title>` and `<desc>` elements. If using CdrIcon with custom SVG, make sure title is the first child element. Note that this approach should be used to visually describe the icon as if it were an image, and should not be used to add contextual description of the icon's meaning.
