@@ -39,9 +39,9 @@ If you are working on a component or feature that can be shared with other proje
 ### Bug Fixes
 The Cedar team is committed to maintaining consistent, quality components. If you encounter an issue, please submit it in the[#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) channel or come and talk to us during our weekly office hours.
 
-The team will address the bug as soon as possible, depending on the severity of the issue and sprint capacity. Please include as much relevant information as possible when submitting a bug report, including steps to reproduce, urgency, and impact to help us prioritize.
+The team will address the bug as soon as possible, depending on the severity of the issue and sprint capacity. Please include as much relevant information as possible when submitting a bug report, including steps to reproduce, urgency, and impact to help us prioritize. If the bug is present on a try server or branch it is especially helpful to include links to those so we can quickly assess the issue.
 
-If you have a fix for a bug and would like to submit a pull request for it, create a new PR in [rei/cedar](https://github.com/rei/rei-cedar/issues), or reach out in to [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) with any questions.
+If you have a fix for a bug and would like to submit a pull request for it, reach out in the [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) Slack channel so we can work with you on submitting a PR.
 
 
 ## Token Contributions
