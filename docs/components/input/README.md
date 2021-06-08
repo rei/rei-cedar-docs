@@ -227,8 +227,12 @@
                 "description": "Location for icon markup to the right inside the input field."
               },
               {
-                "name": "helper-text",
+                "name": "helper-text-bottom",
                 "description": "Location for helper or information text to the left below the input field."
+              },
+              {
+                "name": "helper-text-top",
+                "description": "Location for helper or information text to the left above the input field."
               }
             ],
             "events": [
@@ -367,7 +371,7 @@ Error messaging will override helper text rendered in the bottom position.
   :error="modelError"
   @blur="validateInput"
 >
-  <template v-slot:helper-text>
+  <template v-slot:helper-text-bottom>
     Must be 4 or less characters
   </template>
 </cdr-input>
@@ -609,7 +613,7 @@ This component has compliance with WCAG guidelines by:
 - Requiring a value for the `label` field
 - When hiding a label, the `aria-label` attribute is set to the `label` value
 
-The HTML `placeholder` attribute should not be used as it creates an inaccessible experience when the placeholder content disappears as soon as the user begins typing into the input field. Instead the `helper-text` or `info` slots should be used to provide any additional information needed to complete the input.
+The HTML `placeholder` attribute should not be used as it creates an inaccessible experience when the placeholder content disappears as soon as the user begins typing into the input field. Instead the `helper-text-top`, `helper-text-bottom`, or `info` slots should be used to provide any additional information needed to complete the input.
 
 Any additional actionable elements related to the input field, which may be external to the input component or passed in via the `info`, `info-action`, or `post-icon` slots, should indicate their function and relationship to the input field through their text content, and `aria-label`, or a tooltip.
 
