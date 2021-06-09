@@ -75,18 +75,18 @@ CdrBreadcrumb and CdrPagination both allow for passing in a scoped slot for rend
 
 ### Vue 3: Update Slot Syntax
 
-Vue 2.6 introduced a new syntax for passing slot content into components. The old syntax is removed from Vue 3 and we recommend updating your codebase to make use of the new slot syntax to simplify the upgrade process in the future. Note that the new `v-slot` syntax can only be used on a `template` tag, however those additional `template` tags will not be included in the rendered HTML.
+Vue 2.6 introduced a new `v-slot` syntax for passing slot content into components. A pound sign `#` can be used as a shorthand for `v-slot:`, much like a colon `:` can be used as a shorthand for `v-bind`. The old syntax is removed from Vue 3 and we recommend updating your codebase to make use of the new slot syntax to simplify the upgrade process in the future. Note that the new `v-slot` or `#` syntax can only be used on a `template` tag, however those additional `template` tags will not be included in the rendered HTML.
 
 ```
 <!-- Named slots -->
 <span slot="slotname">old named slot syntax</span>
-<template v-slot:slotname>
+<template #slotname>
   <span>new named slot syntax<span>
 </template>
 
 <!-- Scoped slots -->
 <template slot="slotname" slot-scope="scopeObject">old scoped slot syntax {{ scopeObject.name }}</template>
-<template v-slot:slotname="scopeObject">new scoped slot syntax {{ scopeObject.name }}</template>
+<template #slotname="scopeObject">new scoped slot syntax {{ scopeObject.name }}</template>
 ```
 
 The examples on this doc site have been updated to make use of the new syntax, see the [Vue documentation](https://vuejs.org/v2/guide/components-slots.html#Named-Slots) for more information.

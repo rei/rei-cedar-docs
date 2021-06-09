@@ -130,7 +130,7 @@
   @closed="opened = false"
   aria-describedby="description"
 >
-  <template v-slot:title>
+  <template #title>
     <cdr-text
       tag="h3"
       class="title-header"
@@ -170,7 +170,7 @@ When rendering multiple modals on a single page you can reduce your markup size 
   @closed="opened = false"
   aria-describedby="description"
 >
-  <template v-slot:title>
+  <template #title>
     <cdr-text
       tag="h3"
       class="title-header"
@@ -265,7 +265,7 @@ If the `title` slot is left empty, the `label` prop will be rendered as the titl
 When using the `label` slot, add CdrText to use the appropriate header styles.
 
 ```vue{3,4}
-<template v-slot:title>
+<template #title>
   <cdr-text
     tag="h1"
     class="custom-text-class"

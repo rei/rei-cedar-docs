@@ -371,7 +371,7 @@ Error messaging will override helper text rendered in the bottom position.
   :error="modelError"
   @blur="validateInput"
 >
-  <template v-slot:helper-text-bottom>
+  <template #helper-text-bottom>
     Must be 4 or less characters
   </template>
 </cdr-input>
@@ -428,7 +428,7 @@ Input field with link text on right. The link should describe it's relationship 
   :background="backgroundColor"
   label="Input label"
 >
-  <template v-slot:info>
+  <template #info>
     <cdr-link href="#" modifier="standalone">Information link</cdr-link>
   </template>
 </cdr-input>
@@ -448,7 +448,7 @@ Input field with icon wrapped in an actionable element outside the input field o
   :background="backgroundColor"
   label="Input label"
 >
-  <template v-slot:info-action>
+  <template #info-action>
     <cdr-link tag="button">
       <icon-information-fill
         inherit-color
@@ -472,7 +472,7 @@ Input field with helper or hint text below the input field. If the input is in a
   :background="backgroundColor"
   label="Input label"
 >
-  <template v-slot:helper-text-bottom>
+  <template #helper-text-bottom>
     Helper or additional text
   </template>
 </cdr-input>
@@ -492,7 +492,7 @@ Input field with helper or hint text rendered above the input field. Helper text
   :background="backgroundColor"
   label="Input label"
 >
-  <template v-slot:helper-text-top>
+  <template #helper-text-top>
     Helper or additional text
   </template>
 </cdr-input>
@@ -512,7 +512,7 @@ Input field with icon inserted into the input field on left. Icon is decorative 
   :background="backgroundColor"
   label="Input label"
 >
-  <template v-slot:pre-icon>
+  <template #pre-icon>
     <icon-location-pin-stroke inherit-color />
   </template>
 </cdr-input>
@@ -532,7 +532,7 @@ Input field with icon inserted into the input field on right. Icon is decorative
   :background="backgroundColor"
   label="Input label"
 >
-  <template v-slot:post-icon>
+  <template #post-icon>
     <icon-credit-card
       inherit-color
       class="cdr-button__icon"
@@ -558,9 +558,9 @@ Input field with icon buttons inserted to the right. Up to 2 buttons can be pass
     label="Input label"
 
   >
-    <template v-slot:post-icon>
+    <template #post-icon>
       <cdr-tooltip class="cdr-input__button" id="input-tooltip">
-        <template v-slot:trigger>
+        <template #trigger>
           <cdr-button
             :icon-only="true"
           >
@@ -590,7 +590,7 @@ Input field with icon buttons inserted to the right. Up to 2 buttons can be pass
 
     size="large"
   >
-    <template v-slot:post-icon>
+    <template #post-icon>
       <cdr-button
         :icon-only="true"
         size="large"

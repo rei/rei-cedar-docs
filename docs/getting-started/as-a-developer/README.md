@@ -229,9 +229,9 @@ Adding content to a component that has named slots
 
 ```html
 <my-component>
-  <template v-slot:header>I'm content in the header slot</template>
+  <template #header>I'm content in the header slot</template>
 
-  <template v-slot:footer>I'm content in the footer slot</template>
+  <template #footer>I'm content in the footer slot</template>
 </my-component>
 ```
 
@@ -239,7 +239,7 @@ Adding content to a scoped slot
 
 ```html
 <my-component>
-  <template v-slot:name-of-the-slot="scopeObject">
+  <template #name-of-the-slot="scopeObject">
     {{scopeObject.content}} {{scopeObject.someAttribute}}
   </template>
 </my-component>

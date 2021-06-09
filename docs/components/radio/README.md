@@ -157,7 +157,7 @@ Default and standard spacing for radio buttons.
 <div>
   <cdr-form-group>
 
-    <template v-slot:label>
+    <template #label>
       <span id="legend-1">Default Radio Example</span>
     </template>
     <cdr-radio
@@ -202,7 +202,7 @@ Different sizing for radio buttons.
 <div>
   <cdr-form-group>
 
-    <template v-slot:label>
+    <template #label>
       <span id="legend-2">Radio Size Example</span>
     </template>
 
@@ -250,7 +250,7 @@ Custom styles for radio buttons.
 <div>
   <cdr-form-group>
 
-    <template v-slot:label>
+    <template #label>
       <span id="legend-3">Custom Radio Example</span>
     </template>
     <cdr-radio
