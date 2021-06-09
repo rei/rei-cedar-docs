@@ -30,9 +30,9 @@
 
 ### Brand Color Updates
 
-We have updated the color values of some Cedar tokens to make use of the REI brand color palette. Those tokens are also being used to style the `default` and `sale` version of the CdrButton
+We have updated the color values of some Cedar tokens to make use of the REI brand color palette. Those tokens are also being used to style the `default` and `sale` version of the CdrButton.
 
-We have created a new `cdr-color-background-brand-spruce` color token (TODO: info on usage???)
+We have created a new `cdr-color-background-brand-spruce` color token that can be used as a background color in certain situations. Note that only the `background-primary` and `background-secondary` color tokens are designed to work and have accessible contrast levels against all of Cedar.
 
 ### CdrBreadcrumb Navigate Event
 
@@ -55,15 +55,12 @@ We have made a number of improvements to our form components to make them more a
 
 ### Form Element Error Role Property
 
-CdrFormGroup, CdrInput, and CdrSelect now accept an `error-role` property that allows for overriding the accessible `role` attribute on their embedded error state notification.
-
-TODO: add examples to those docs pages witch guidance on when to override that?
+CdrFormGroup, CdrInput, and CdrSelect now accept an `error-role` property that allows for overriding the accessible `role` attribute on their embedded error state notification. The default value of `error-role` is `status`.
 
 ### CdrModal Role Property
 
-CdrModal now accepts a `role` property that allows for overriding the accessible `role` property on the modal content element
+CdrModal now accepts a `role` property that allows for overriding the accessible `role` property on the modal content element. The default value of `role` is `dialog`.
 
-TODO: add example to modal page with guidance?
 
 ## Deprecations
 
