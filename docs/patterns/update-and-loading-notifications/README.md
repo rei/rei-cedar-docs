@@ -21,8 +21,7 @@
 
 Update and Loading Notifications update pre-existing inline page content. 
 loading Notifications often effect the same section of live content on a page and may precede an update notification being communicated to our users.
-When not pairing a loading and update notifications, remember to create sufficient Visual feedback as many update notifications will be unassociated to their triggering actions.
-
+When not pairing loading and update notifications, remember to create sufficient Visual feedback as many update notifications will be unassociated to their triggering actions.
 ## Update Notifications
 
 Update Notifications inform users of advisory information that enhances the site experience such as quantity updates or busy states.
@@ -146,16 +145,16 @@ The Update Notification Content Container wraps both the element being updated a
     <!-- EXAMPLE: while stable -->
     <div aria-live="polite" role="region" aria-labelledby="shopping-cart">
       4
-      <span class="cdr-display-sr-only">items in your cart</span>
+      <span class="sr-only">items in your cart</span>
     </div>
     ```
     ```html
     <!-- EXAMPLE: when updated -->
     <div role="status" aria-live="polite" role="region" aria-labelledby="shopping-cart">
 
-      <span class="cdr-display-sr-only">there are now</span>
-      5 
-      <span class="cdr-display-sr-only">items in your cart</span>
+      <span class="sr-only">there are now</span>
+      5
+      <span class="sr-only">items in your cart</span>
     </div>
     ```
   - Ensure the container generating the update is able to receive focus
@@ -174,7 +173,6 @@ The Update Notification Content Container wraps both the element being updated a
     ```
   - Include [aria-atomic](https://www.digitala11y.com/aria-atomic-properties/) markup attribute to define what content will be presented to assistive technologies
   - Include `aria-relevant` to define what type of changes are being announced to assistive technologies
-
 #### Content Control
  The Update Notification Content Control may be any actionable element, such as a link or button.
 ##### Design Considerations
