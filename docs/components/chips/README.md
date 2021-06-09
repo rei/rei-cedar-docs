@@ -236,8 +236,8 @@ Use `icon-left` or `icon-right` slots to pass icons into a chip. Place the X rem
 
 ```html
 <div>
-  <cdr-chip>Text and icon left <template v-slot:icon-left><icon-heart-stroke inherit-color size="small"/></template></cdr-chip>
-  <cdr-chip>Text and icon right <template v-slot:icon-right><icon-check-lg size="small" inherit-color/></template></cdr-chip>
+  <cdr-chip>Text and icon left <template #icon-left><icon-heart-stroke inherit-color size="small"/></template></cdr-chip>
+  <cdr-chip>Text and icon right <template #icon-right><icon-check-lg size="small" inherit-color/></template></cdr-chip>
 </div>
 ```
 </cdr-doc-example-code-pair>
@@ -257,14 +257,14 @@ For chips that toggle a single selection on and off, use the click event and d
     @click="toggle"
     :aria-pressed="toggled ? 'true' : 'false'"
   >
-    <template v-slot:icon-left>
+    <template #icon-left>
       <icon-heart-stroke
         size="small"
         inherit-color
         v-if="!toggled"
       />
     </template>
-    <template v-slot:icon-left>
+    <template #icon-left>
       <icon-heart-fill
         size="small"
         inherit-color
@@ -288,7 +288,7 @@ Filter chips add a visual representation of user selected filters. Filter chips 
 ```html
 <div>
   <cdr-checkbox v-model="filtered" id="filter-checkbox" @change="updateFilter">Add Filter</cdr-checkbox>
-  <cdr-chip v-if="filtered" @click="updateFilter" aria-controls="filter-checkbox" aria-pressed="true"> Remove filter <template v-slot:icon-right><icon-x-lg size="small" /></template></cdr-chip>
+  <cdr-chip v-if="filtered" @click="updateFilter" aria-controls="filter-checkbox" aria-pressed="true"> Remove filter <template #icon-right><icon-x-lg size="small" /></template></cdr-chip>
 </div>
 ```
 </cdr-doc-example-code-pair>

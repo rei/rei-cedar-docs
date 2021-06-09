@@ -123,9 +123,9 @@ CdrTooltip is a wrapper component that accepts a trigger element and tooltip con
 
 ```html
 <cdr-tooltip id="tooltip-example" position="top">
-  <template v-slot:trigger>
+  <template #trigger>
     <cdr-button :icon-only="true" :with-background="true">
-      <template v-slot:icon>
+      <template #icon>
         <icon-information-stroke/>
       </template>
     </cdr-button>
@@ -159,7 +159,7 @@ CdrTooltip can also be controlled programmatically using the `open` prop. Howeve
     :with-background="true"
     aria-describedby="tooltip-custom-example"
   >
-    <template v-slot:icon>
+    <template #icon>
       <icon-information-stroke/>
     </template>
   </cdr-button>

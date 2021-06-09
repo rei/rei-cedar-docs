@@ -22,8 +22,7 @@
 |--------------|---------|
 | `@rei/cedar` | ^9.x.x |
 | `@rei/cdr-tokens` | ^9.x.x |
-| `@rei/cdr-component-variables` | ^x.x.x |
-| `@rei/cedar-icons` | ^x.x.x |
+| `@rei/cdr-component-variables` | ^7.x.x |
 
 - If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your micro-site.
 
@@ -50,6 +49,7 @@ If a CdrInput receives either `type="number"` or `:numeric="true"`, it will set 
 We have made a number of improvements to our form components to make them more accessible and consistent:
 
 - Default `autocorrect`, `autocapitalize`, and `spellcheck` attributes on CdrInput are now set automatically to make input more consistent across different browsers and devices. These attributes can be overridden if needed.
+- CdrInput and CdrSelect now set `aria-required` instead of the `required` attribute on the HTML input element when the `required` property is passed in. Because validation is handled programmatically `aria-required` results in a more consistent user experience across browsers than `required` does.
 - If a `helper-text` slot is used in conjunction with CdrInput or CdrSelect that helper text element is now automatically linked to the input field using the `aria-describedby` attribute. The `aria-describedby` attribute can still be used to link additional elements to the input if needed.
 - If the `error` property is used on a CdrInput, CdrSelect, or CdrFormGroup component the input field gets marked as `aria-invalid="true"` and the error message is linked to the input field using the `aria-errormessage` attribute.
 
@@ -75,18 +75,18 @@ CdrBreadcrumb and CdrPagination both allow for passing in a scoped slot for rend
 
 ### Vue 3: Update Slot Syntax
 
-Vue 2.6 introduced a new syntax for passing slot content into components. The old syntax is removed from Vue 3 and we recommend updating your codebase to make use of the new slot syntax to simplify the upgrade process in the future. Note that the new `v-slot` syntax can only be used on a `template` tag, however those additional `template` tags will not be included in the rendered HTML.
+Vue 2.6 introduced a new `v-slot` syntax for passing slot content into components. A pound sign `#` can be used as a shorthand for `v-slot:`, much like a colon `:` can be used as a shorthand for `v-bind`. The old syntax is removed from Vue 3 and we recommend updating your codebase to make use of the new slot syntax to simplify the upgrade process in the future. Note that the new `v-slot` or `#` syntax can only be used on a `template` tag, however those additional `template` tags will not be included in the rendered HTML.
 
 ```
 <!-- Named slots -->
 <span slot="slotname">old named slot syntax</span>
-<template v-slot:slotname>
+<template #slotname>
   <span>new named slot syntax<span>
 </template>
 
 <!-- Scoped slots -->
 <template slot="slotname" slot-scope="scopeObject">old scoped slot syntax {{ scopeObject.name }}</template>
-<template v-slot:slotname="scopeObject">new scoped slot syntax {{ scopeObject.name }}</template>
+<template #slotname="scopeObject">new scoped slot syntax {{ scopeObject.name }}</template>
 ```
 
 The examples on this doc site have been updated to make use of the new syntax, see the [Vue documentation](https://vuejs.org/v2/guide/components-slots.html#Named-Slots) for more information.
