@@ -22,8 +22,7 @@
 |--------------|---------|
 | `@rei/cedar` | ^9.x.x |
 | `@rei/cdr-tokens` | ^9.x.x |
-| `@rei/cdr-component-variables` | ^x.x.x |
-| `@rei/cedar-icons` | ^x.x.x |
+| `@rei/cdr-component-variables` | ^7.x.x |
 
 - If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your micro-site.
 
@@ -50,6 +49,7 @@ If a CdrInput receives either `type="number"` or `:numeric="true"`, it will set 
 We have made a number of improvements to our form components to make them more accessible and consistent:
 
 - Default `autocorrect`, `autocapitalize`, and `spellcheck` attributes on CdrInput are now set automatically to make input more consistent across different browsers and devices. These attributes can be overridden if needed.
+- CdrInput and CdrSelect now set `aria-required` instead of the `required` attribute on the HTML input element when the `required` property is passed in. Because validation is handled programmatically `aria-required` results in a more consistent user experience across browsers than `required` does.
 - If a `helper-text` slot is used in conjunction with CdrInput or CdrSelect that helper text element is now automatically linked to the input field using the `aria-describedby` attribute. The `aria-describedby` attribute can still be used to link additional elements to the input if needed.
 - If the `error` property is used on a CdrInput, CdrSelect, or CdrFormGroup component the input field gets marked as `aria-invalid="true"` and the error message is linked to the input field using the `aria-errormessage` attribute.
 

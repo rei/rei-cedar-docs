@@ -101,7 +101,7 @@
                 "name": "required",
                 "type": "boolean",
                 "default": "false",
-                "description": "Sets the field to required and displays an asterisk next to the select label"
+                "description": "Sets aria-required on the input field and displays an asterisk next to the select label"
               },
               {
                 "name": "optional",
