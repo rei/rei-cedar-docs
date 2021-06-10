@@ -544,11 +544,11 @@ Select components should be:
 
 ### Required Fields
 
-+ The text “Required” will appear next to the input label if the status is required
++ An asterisk will appear next to the input label if the status is required and the input field will have `aria-required` set
 
 ### Validation
 
-+ Validate the user’s data before form submission
++ Validate the user’s data before form submission. The `error` property and slot can be used to render a message on error.
 
 
 # API

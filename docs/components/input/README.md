@@ -84,22 +84,6 @@
       "caption": "use placeholder text as an alternative to a label."
     }
   ],
-  "required": [
-    {
-      "type": "do",
-      "image": "input/Input__Required_Do__16-9.png",
-      "ratio": "16-9",
-      "alt": "Image showing 'Required' label next to field label",
-      "caption": "position the required label next to input field label."
-    },
-    {
-      "type": "dont",
-      "image": "input/Input__Required_Dont__16-9.png",
-      "ratio": "16-9",
-      "alt": "Image showing asterisk to denote required label",
-      "caption": "use an asterisk for a required field."
-    }
-  ],
   "sizes": [
     {
       "type": "do",
@@ -717,8 +701,6 @@ Any additional actionable elements related to the input field, which may be exte
 <!-- TODO: replace with DO use info/helper slots to describe desired input DON'T use placeholder attribute
 <do-dont :examples="$page.frontmatter.placeholder" /> -->
 
-<do-dont :examples="$page.frontmatter.required" />
-
 <do-dont :examples="$page.frontmatter.sizes" />
 
 ## Behavior
@@ -798,8 +780,8 @@ export default {
 
 ### Required Fields
 
-- The default status of an input field is “optional”
-- If the status is set to “required”, the text, “Required” will appear next to the input label
+- The default status of an input field is “optional”. Setting the `optional` prop on the input will render a text label indicating it is optional
+- If the status is set to “required”, an asterisk will appear next to the input label with an aria-label indicating that the input is required and the input field will be marked `aria-required`
 
 
 # API
