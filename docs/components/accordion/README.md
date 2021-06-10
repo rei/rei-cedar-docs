@@ -297,6 +297,35 @@ Border aligns to the title text and expand/collapse icon.
 </cdr-doc-example-code-pair>
 
 
+## Dynamic Accordions
+
+In order to render a dynamic list of accordions, for example using data retrieved from a back-end API, you will need to use `this.$set` or some other Vue method to make the array of accordion data reactive. This can also be used to avoid creating an individual data attribute for every accordion and instead track their state with an array of booleans.
+
+<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ accordions: [{id: 'dynamic-a', label: 'Dynamic A label', content: 'Dynamic A content', opened: false},{id: 'dynamic-b', label: 'Dynamic B label', content: 'Dynamic B content', opened: false},{id: 'dynamic-c', label: 'Dynamic C label', content: 'Dynamic C content', opened: false},] }" :methods="{toggleAccordion(idx){ this.$set(this.accordions[idx], 'opened', !this.accordions[idx].opened)}}">
+
+```html
+<cdr-accordion-group>
+  <cdr-accordion
+    v-for="(accordion, idx) in accordions"
+    :key="accordion.id"
+    :id="accordion.id"
+    level="4"
+    :opened="accordion.opened"
+    @accordion-toggle="toggleAccordion(idx)"
+  >
+    <template #label>
+      {{ accordion.label }}
+    </template>
+    <cdr-text tag="p">
+      {{ accordion.content }}
+    </cdr-text>
+  </cdr-accordion>
+</cdr-accordion-group>
+```
+
+</cdr-doc-example-code-pair>
+
+
 ## Unwrapped
 
 The `unwrap` property of `CdrAccordionGroup` can be used to render the accordion content in an "unwrapped" state. This property accepts either a boolean toggle or a list of breakpoints.
