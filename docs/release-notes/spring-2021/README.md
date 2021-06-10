@@ -92,7 +92,7 @@ The examples on this doc site have been updated to make use of the new syntax, s
 
 ### CdrAlert Renamed to CdrBanner
 
-The CdrAlert component has been renamed to be CdrBanner to better align with the intention and meaning of the component and distinguish it from the accessible [alert pattern](../../patterns/alerts). Nothing in the component API has changed aside from the name, consumers can migrate by simply replacing any instance of `cdr-alert` with `cdr-banner`, as well as replacing `CdrAlert` with `CdrBanner`. Note that this change impacts both the @rei/cedar component package as well as the @rei/cdr-component-variables SCSS/LESS mixins.
+The CdrAlert component has been renamed to be CdrBanner to better align with the intention and meaning of the component. CdrBanner may be used for a [wide array of messaging types](../../components/banner/#ccessibility) not restricted to the accessible "alert" pattern. Nothing in the component API has changed aside from the name, consumers can migrate by simply replacing any instance of `cdr-alert` with `cdr-banner`, as well as replacing `CdrAlert` with `CdrBanner`. Note that this change impacts both the @rei/cedar component package as well as the @rei/cdr-component-variables SCSS/LESS mixins.
 
 ### CdrTokens Background Scoping
 
