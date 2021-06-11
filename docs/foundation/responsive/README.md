@@ -18,7 +18,7 @@
 
 
 ## The Cedar Container
-The Cedar container `cdr-container` is the foundational layout mechanism on your page. It centers your content and provides the page with a left and right gutter helping you to separate your content and the edge of the browser window. The container should be added to the root wrapping element of your template using the `cdr-container` mixin from `@rei/cdr-tokens`.
+The Cedar container `cdr-container` is the foundational layout mechanism on your page. It centers your content and provides the page with a left and right gutter helping you to separate your content and the edge of the browser window. The container should be added to the root wrapping element of your template using the `cdr-container` mixin from `@rei/cdr-tokens`, or the [CdrContainer](../../components/container) component can be used as your root element.
 
 
 ```vue
@@ -31,6 +31,14 @@ The Cedar container `cdr-container` is the foundational layout mechanism on your
     <div class="container-fluid-class">
       <div class="content">A cdr-container-fluid mixin</div>
     </div>
+
+    <cdr-container>
+      <div class="content">A cdr-container component</div>
+    </cdr-container>
+
+    <cdr-container modifier="fluid">
+      <div class="content">A cdr-container-fluid component</div>
+    </cdr-container>
   </div>
 </template>
 <style>
@@ -44,7 +52,7 @@ The Cedar container `cdr-container` is the foundational layout mechanism on your
 </style>
 ```
 
-Unlike other deliverables from Cedar, our container breaks in its display settings for each of the breakpoints into one class. This allows all pages to begin from the same layout context as each other. The container has two variants: standard container and fluid container.
+The container builds in its display settings for each of the breakpoints. This allows all pages to begin from the same layout context as each other. The container has two variants: standard container and fluid container.
 
 <cdr-img :src="$withBase('/layout/Spec_Grids_Breakpoints_16-9.png')" alt="Breakpoints for REI’s responsive layout" />
 

@@ -28,6 +28,10 @@
 
 ## New Features
 
+### CdrContainer Component
+
+We have created a new CdrContainer component which encapsulates the basic responsive layout logic for REI pages. This component behaves the same as the `cdr-container` mixins and is intended as an option for replacing the now deprecated `cdr-container` utility class. See the [CdrContainer](../../components/container) page for more information.
+
 ### Brand Color Updates
 
 We have updated the color values of some Cedar tokens to make use of the REI brand color palette. Those tokens are also being used to style the `default` and `sale` version of the CdrButton.
@@ -194,7 +198,7 @@ Color utilities can be replaced with the equivalent value from @rei/cdr-tokens t
 
 ##### Container Utils
 
-The `cdr-container` and `cdr-container-fluid` utility classes should be replaced with the equivalent mixin from @rei/cdr-tokens. See the [Cedar Responsive article](https://rei.github.io/rei-cedar-docs/foundation/responsive/) for more information on container usage.
+The `cdr-container` and `cdr-container-fluid` utility classes should be replaced with either the [CdrContainer](../../components/container) component or the equivalent mixin from @rei/cdr-tokens. See the [Cedar Responsive article](https://rei.github.io/rei-cedar-docs/foundation/responsive/) for more information on general container usage.
 
 ```html
 <div class="cdr-container">
@@ -204,8 +208,15 @@ The `cdr-container` and `cdr-container-fluid` utility classes should be replaced
 
 ```html
 <template>
-  <div class="your-custom-container-class">
-    Using plain CSS/tokens
+  <div>
+    <cdr-container>
+      Using the CdrContainer component
+    </cdr-container>
+
+    <div class="your-custom-container-class">
+      Using plain CSS/tokens
+    </div>
+
   </div>
 </template>
 <style lang="scss">
