@@ -20,9 +20,9 @@
 
 | package name | version |
 |--------------|---------|
-| `@rei/cedar` | ^9.x.x |
-| `@rei/cdr-tokens` | ^9.x.x |
-| `@rei/cdr-component-variables` | ^7.x.x |
+| `@rei/cedar` | ^9.0.0 |
+| `@rei/cdr-tokens` | ^9.0.0 |
+| `@rei/cdr-component-variables` | ^7.0.0 |
 
 - If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your micro-site.
 
@@ -42,7 +42,7 @@ The CdrBreadcrumb component now emits a `navigate` event which allows users to o
 
 CdrInput now accepts a new boolean property called `numeric` which sets some default attributes for inputs that are composed of numerical characters but are not strictly "number" values themselves. The `type="number"` attribute for input elements is designed to be used with actual numbers such as quantities, and does not behave properly with values such as credit cards, security codes, postal codes, or month/year combos.
 
-If a CdrInput receives either `type="number"` or `:numeric="true"`, it will set default values for the `inputmode` and `pattern` attributes which will force mobile devices to launch a numeric only keyboard. Note that solely using `:numeric="true"` will not restrict input to only numeric characters, see the [CdrInput page](../../components/input#numeric-input)
+If a CdrInput receives either `type="number"` or `:numeric="true"`, it will set default values for the `inputmode` and `pattern` attributes which will force mobile devices to launch a numeric only keyboard. Note that solely using `:numeric="true"` will not restrict input to only numeric characters, see the [CdrInput page](../../components/input#numeric-input) for more information.
 
 ### Form Accessibility Improvements
 
@@ -113,6 +113,10 @@ The `aria-describedby` property on CdrModal has been updated to use the correct 
 ### Removals
 
 In accordance with our deprecation policy, features that were deprecated in the [Fall 2020 release](../fall-2020/#deprecations) have been removed from Cedar.
+
+#### CdrInput Helper Text Slot
+
+The `helper-text` slot in CdrInput was removed in favor of the `helper-text-bottom` slot. To update, rename any instance of `helper-text` in CdrInput to be `helper-text-bottom` instead.
 
 #### Cedar Utility Classes And CdrText Modifier Have Been Removed
 
