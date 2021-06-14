@@ -28,8 +28,6 @@ Cedar manages the design language for the Co-op’s digital products. On this si
 
 ## Design Toolkits
 
-<cdr-doc-alert icon="info">As of our 2020 Spring Release, we’re no longer distributing toolkits through Sketch or Abstract. If you’re working on a legacy project and need access to an older version of Cedar, reach out to our <cdr-link src="https://rei.slack.com/archives/CA58YCGN4">User Support</cdr-link> channel on Slack. If you need help migrating your project to Figma, reach out to the <cdr-link src="https://rei.slack.com/archives/CT17MBAJ1">Figma Guild</cdr-link> on Slack.</cdr-doc-alert>
-
 The design system toolkit is distributed as shared libraries through Figma. These libraries are directly managed by the Cedar team and automatically integrated into any new project.
 
 
@@ -43,10 +41,10 @@ Figma is available for use directly in the browser, but we recommend installing 
 [Design tokens](../../tokens/overview/) are available for use in any project using any platform and are easy for developers to work with. Token libraries are automatically shared through Figma when you start a new project.
 
 #### Color
-[Color](../../foundation/color) choices are all derived from a close working relationship with the Brand team.
+[Color](../../foundation/color) choices are all derived from a close working relationship with the Brand team, and have been carefully tested to ensure accessibility on digital mediums. 
 
 #### Type
-Two primary brand typefaces are available as a range of pre-defined, ready-to-use type styles.  
+Two primary brand typefaces are available as a range of pre-defined, ready-to-use type styles. Review the [typography guidelines](../../foundation/typography/) for detailed usage information.
 
 #### Spacing
 All spacing — from the padding inside a button to range of available icon sizes — is derived from a single spacing [scale](../../foundation/spacing/).
@@ -55,10 +53,10 @@ All spacing — from the padding inside a button to range of available icon size
 Design decisions like border radii and ranges of available drop shadows are stored in this library.
 
 #### Grid & Breakpoints
-The [grid system](../../components/grid/) enables consistency of layout while our breakpoints.
+The [grid system](../../components/grid/) enables consistency of layout within supported breakpoints.
 
 #### Iconography
-Additionally, you can visit the [Icon Library](https://rei.github.io/cedar-icons/#/) for a complete and searchable list of icons.
+Reference the [Icon library](../../icons/library/) for a complete list of icons available in Cedar.
 
 ### Shared Component Libraries
 #### Web Components
