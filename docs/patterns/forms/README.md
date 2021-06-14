@@ -24,7 +24,7 @@ Forms are the primary means of communication between users and a website or appl
 
 Forms allow users to:
 - Sign up or sign in to an account
-- Manage thier preferences
+- Manage their preferences
 - Select a product or adventure to purchase
 - Enter personal information
 - Provide feedback
