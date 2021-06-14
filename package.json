@@ -40,7 +40,7 @@
   "dependencies": {
     "@rei/cdr-component-variables": "^7.0.0-beta.1",
     "@rei/cdr-tokens": "^9.0.0-beta.1",
-    "@rei/cedar": "^9.0.0-beta.8",
+    "@rei/cedar": "^9.0.0-beta.9",
     "throttle-debounce": "^3.0.0"
   },
   "browserslist": [
