@@ -92,6 +92,12 @@ Vue 2.6 introduced a new `v-slot` syntax for passing slot content into component
 
 The examples on this doc site have been updated to make use of the new syntax, see the [Vue documentation](https://vuejs.org/v2/guide/components-slots.html#Named-Slots) for more information.
 
+## Bug Fixes
+
+### CdrImg Ratio Auto
+
+We have fixed a bug in CdrImg when the `ratio` prop is set to `"auto"` where a CSS value would resolve to `NaN`. We have also updated the [CdrImg page](../../components/image/#ratio-auto) to better demonstrate how to use the cropping features of CdrImg without giving the image a specific aspect ratio. 
+
 ## Breaking Changes
 
 ### CdrAlert Renamed to CdrBanner

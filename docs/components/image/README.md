@@ -158,7 +158,7 @@ To use cover or crop properties without a defined aspect ratio, set `ratio="auto
     ratio="auto"
     cover
     crop="top"
-    style="height: 100px"
+    style="min-height: 200px"
   />
 
   <div style="width: 200px; height: 300px;">
@@ -182,7 +182,7 @@ To use cover or crop properties without a defined aspect ratio, set `ratio="auto
       style="height: 100px"
     />
     <div>Content to the side of an image in a grid</div>
-  </div>
+  </cdr-grid>
 
 </div>
 ```
