@@ -1,5 +1,5 @@
 <template>
-  <div class="cdr-container ">
+  <div class="container ">
     <h3 class="category-title">{{ categoryTitle }}</h3>
 
     <div

@@ -35,7 +35,8 @@ module.exports = {
   ],
   ga: '',
   plugins: [
-    ['@vuepress/google-analytics', { ga: 'UA-129829250-1' }]
+    ['@vuepress/google-analytics', { ga: 'UA-129829250-1' }],
+    'flowchart'
   ],
   markdown: {
     lineNumbers: true,
@@ -48,14 +49,12 @@ module.exports = {
       {
         text: "Release Notes",
         items: [
+          { text: "Spring 2021", link: "/release-notes/spring-2021/" },
           { text: "Winter 2021", link: "/release-notes/winter-2021/" },
           { text: "Fall 2020", link: "/release-notes/fall-2020/" },
           { text: "Summer 2020", link: "/release-notes/summer-2020/" },
-          { text: "Spring 2020", link: "/release-notes/spring-2020/" },
-          { text: "Winter 2020", link: "/release-notes/winter-2020/" },
-          { text: "Fall 2019", link: "/release-notes/fall-2019/" },
-          { text: "Summer 2019", link: "/release-notes/summer-2019/" },
           { text: "Deprecated", link: "/release-notes/deprecated/" },
+          { text: "Archive", link: "/release-notes/archive/" },
         ]
       },
       {
@@ -74,6 +73,7 @@ module.exports = {
           { text: "As a Mobile Developer", link: "/getting-started/as-a-mobile-developer/" },
           { text: "Hand-off Process", link: "/getting-started/hand-off/" },
           { text: "Using Cedar", link: "/getting-started/using-cedar/" },
+          { text: "Building Reusable Components", link: "/getting-started/building-components-with-cedar/" },
         ]
       },
       {
@@ -91,20 +91,24 @@ module.exports = {
           { text: "Responsive", link: "/foundation/responsive/" },
         ]
       },
-      // {
-      //   text: "Patterns",
-      //   items: [
-      //     { text: "Messaging", link: "/patterns/messaging/" },
-      //     { text: "Forms", link: "/patterns/forms/" },
-      //   ]
-      // },
+      {
+        text: "Patterns",
+        items: [
+          // { text: "Alerts", link: "/patterns/alerts/", },
+          { text: "Forms", link: "/patterns/forms/" },
+          // { text: "Validation", link: "/patterns/validation/" },
+          // { text: "Messaging", link: "/patterns/messaging/", },
+          // { text: "Update and Loading Notifications", link: "/patterns/update-and-loading-notifications/" },
+          // { text: "Status Notifications", link: "/patterns/status-notifications/" },
+        ]
+      },
       {
         text: "Components",
         items: [
           { text: "Component Variables", link: "/components/component-variables/" },
           { text: "Utilities", link: "/components/utilities/" },
           { text: "Accordion", link: "/components/accordion/" },
-          { text: "Alert", link: "/components/alert/" },
+          { text: "Banner", link: "/components/banner/" },
           { text: "Block Quote", link: "/components/block-quote/" },
           { text: "Breadcrumb", link: "/components/breadcrumb/" },
           { text: "Buttons", link: "/components/buttons/" },
@@ -112,6 +116,7 @@ module.exports = {
           { text: "Card", link: "/components/card/" },
           { text: "Checkboxes", link: "/components/checkboxes/" },
           { text: "Chips", link: "/components/chips/" },
+          { text: "Container", link: "/components/container/" },
           { text: "Form Group", link: "/components/form-group/" },
           { text: "Grid", link: "/components/grid/" },
           { text: "Icons", link: "/components/icon/" },
@@ -135,8 +140,7 @@ module.exports = {
       {
         text: "Icons",
         items: [
-          { text: "Resources", link: "/icons/resources/" },
-          { text: "Iconography", link: "/icons/iconography/" },
+          { text: "Overview", link: "/icons/overview/" },
           { text: "Library", link: "/icons/library/" }
         ]
       },

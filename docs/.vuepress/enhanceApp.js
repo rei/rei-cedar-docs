@@ -1,4 +1,5 @@
 import { isEqual } from 'lodash';
+import { VueMaskDirective } from 'v-mask';
 
 export default ({
   Vue, // the version of Vue being used in the VuePress app
@@ -6,6 +7,8 @@ export default ({
   router, // the router instance for the app
   siteData // site metadata
 }) => {
+
+  Vue.directive('mask', VueMaskDirective);
   router.options.scrollBehavior = function(to, frm, savedPosition) {
     if (frm && to.name === frm.name && isEqual(to.params, frm.params)) {
       return;

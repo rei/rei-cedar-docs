@@ -124,9 +124,11 @@ CdrPopover is a wrapper component that accepts a trigger element and popover con
 
 ```html
 <cdr-popover id="popover-example" position="top">
-  <cdr-button slot="trigger">
-    Click me
-  </cdr-button>
+  <template #trigger>
+    <cdr-button>
+      Click me
+    </cdr-button>
+  </template>
   <div>
     I provide additional information to the user
   </div>

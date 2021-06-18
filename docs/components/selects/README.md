@@ -83,7 +83,7 @@
                 "name": "hideLabel",
                 "type": "boolean",
                 "default": "false",
-                "description": "Hides the label element and sets the input ‘aria-label’ to the value of the ‘label’ prop for a11y compliance."
+                "description": "Visually hides the label element, but leaves it available to screen readers for a11y compliance."
               },
               {
                 "name": "prompt",
@@ -101,7 +101,7 @@
                 "name": "required",
                 "type": "boolean",
                 "default": "false",
-                "description": "Sets the field to required and displays an asterisk next to the select label"
+                "description": "Sets aria-required on the input field and displays an asterisk next to the select label"
               },
               {
                 "name": "optional",
@@ -114,6 +114,12 @@
                 "type": "boolean",
                 "default": "false",
                 "description": "Sets the select to an error state, displays the `error` slot if one is present."
+              },
+              {
+                "name": "errorRole",
+                "type": "string",
+                "default": "status",
+                "description": "Sets the `role` attribute for the embedded error state messaging."
               },
               {
                 "name": "size",
@@ -189,11 +195,12 @@
 Basic select control with label.
 
 
-<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
+<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
 
 ```html
 <cdr-select
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Select label"
   prompt="Prompt text"
   :options="defaultOptions"
@@ -201,6 +208,7 @@ Basic select control with label.
 <br>
 <cdr-select
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Select label"
   prompt="Prompt text"
   :options="defaultOptions"
@@ -215,24 +223,26 @@ Basic select control with label.
 
 Basic select control with no label.
 
-<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
+<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
 
 ```html
 <cdr-select
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Select label"
   prompt="Prompt text"
   :options="defaultOptions"
-  hideLabel
+  :hide-label="true"
 />
 <br>
 <cdr-select
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Select label"
   prompt="Prompt text"
   :options="defaultOptions"
   disabled
-  hideLabel
+  :hide-label="true"
 />
 ```
 
@@ -243,16 +253,17 @@ Basic select control with no label.
 
 Select control with link text on right.
 
-<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrSelect, CdrLink'})" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
+<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrSelect, CdrLink'})" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
 
 ```html
 <cdr-select
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Select label"
   prompt="Prompt text"
   :options="defaultOptions"
 >
-  <template slot="info">
+  <template #info>
     <cdr-link
       href="#/"
       modifier="standalone"
@@ -264,12 +275,13 @@ Select control with link text on right.
 <br>
 <cdr-select
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Select label"
   prompt="Prompt text"
   :options="defaultOptions"
   disabled
 >
-  <template slot="info">
+  <template #info>
     <cdr-link
       href="#/"
       modifier="standalone"
@@ -287,16 +299,17 @@ Select control with link text on right.
 
 Select control with icon outside select field on right.
 
-<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrSelect, IconInformationFill, CdrButton'})" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
+<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrSelect, IconInformationFill, CdrButton'})" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
 
 ```html
 <cdr-select
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Select label"
   prompt="Prompt text"
   :options="defaultOptions"
 >
-  <template slot="info-action">
+  <template #info-action>
     <cdr-link tag="button">
       <icon-information-fill/>
     </cdr-link>
@@ -311,28 +324,30 @@ Select control with icon outside select field on right.
 
 Input field with helper or hint text below the input field.
 
-<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
+<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: '', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}">
 
 ```html
 <cdr-select
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Select label"
   prompt="Prompt text"
   :options="defaultOptions"
 >
-  <template slot="helper-text">
+  <template #helper-text>
     This is helper text.
   </template>
 </cdr-select>
 <br>
 <cdr-select
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Select label"
   prompt="Prompt text"
   :options="defaultOptions"
   disabled
 >
-  <template slot="helper-text">
+  <template #helper-text>
     This is helper text.
   </template>
 </cdr-select>
@@ -345,11 +360,12 @@ Input field with helper or hint text below the input field.
 
 Error prop and slot can be used to render the select in an error state
 
-<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', modelError: 'Please make a selection', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}" :methods="{validate() {this.modelError = !this.defaultModel.length && 'Please make a selection'}}">
+<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: '', modelError: 'Please make a selection', defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D']}" :methods="{validate() {this.modelError = !this.defaultModel.length && 'Please make a selection'}}">
 
 ```html
 <cdr-select
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Select label"
   prompt="Prompt text"
   :options="defaultOptions"
@@ -365,13 +381,14 @@ Error prop and slot can be used to render the select in an error state
 
 CdrSelect can be rendered as a multi-select by passing the native HTML select `multiple` attribute. The `multipleSize` prop can be used to control the height of the multi-select.
 
-<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: [], defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D', 'Option E', 'Option F']}">
+<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: [], defaultOptions: ['Option A', 'Option B', 'Option C', 'Option D', 'Option E', 'Option F']}">
 
 ```html
 default multi-select:
 <br>
 <cdr-select
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Select label"
   :options="defaultOptions"
   multiple
@@ -381,6 +398,7 @@ With multipleSize:
 <br>
 <cdr-select
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Select label"
   :options="defaultOptions"
   multiple
@@ -394,11 +412,12 @@ With multipleSize:
 
 CdrSelect can be rendered with nested options using the `optgroup` tag.
 
-<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: []}">
+<cdr-doc-example-code-pair repository-href="/src/components/select" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: []}">
 
 ```html
 <cdr-select
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Select label"
 >
   <optgroup label="bread">
@@ -420,16 +439,18 @@ CdrSelect can be rendered with nested options using the `optgroup` tag.
 
 To ensure that the usage of Select component complies with the accessibility guidelines:
 + Always provide a label for each select control
-+ If hiding a label, use the `aria-label` attribute for the label contents
++ The `hide-label` property can be used to visually hide the label text while still leaving it available to screen readers
 
 When using the `aria-describedby`:
 + `aria-describedby` attribute does not override the select label
 + Use this attribute in addition to a label
 + Can be used to reference descriptions that appear as 'tooltips'
++ Content passed into the `helper-text` slot is automatically linked to the `aria-describedby` attribute
 
 This component has compliance with WCAG guidelines by:
 + Requiring a value for the `label` field
 + When hiding a label, the `aria-label` attribute is set to the `label` value
++ Links `helper-text` content to the input field using the `aria-describedby` attribute
 
 <hr>
 
@@ -496,12 +517,12 @@ Select components should be:
 
 ### Icon
 
-- Use icons to trigger a popover for hints or suggestions
+- Use icons to trigger a [popover](../popover) or [tooltip](../tooltip) for hints or suggestions
 - Reference Cedar's [icon guidelines](../icon/#guidelines) for additional information
 
 ### Link Text
 
-- Use a link when moving or navigating to another page or to a different portion of the same page
+- Use a link in the `info` slot when moving or navigating to another page or to a different portion of the same page
 - Use if navigating user to long or complex information
 - Reference the [Links](../links/) component article for more information
 
@@ -523,11 +544,11 @@ Select components should be:
 
 ### Required Fields
 
-+ The text “Required” will appear next to the input label if the status is required
++ An asterisk will appear next to the input label if the status is required and the input field will have `aria-required` set
 
 ### Validation
 
-+ Validate the user’s data before form submission
++ Validate the user’s data before form submission. The `error` property and slot can be used to render a message on error.
 
 
 # API
@@ -549,29 +570,5 @@ This component will bind any attribute that a [native HTML select element](https
 ## Component Variables
 
 <cdr-doc-comp-vars name="CdrSelect">Note that the <a href="../component-variables/#CdrLabelStandalone">cdr-label-standalone mixins</a> should be used for assembling the label element. </cdr-doc-comp-vars>
-
-## Usage
-
-The **CdrSelect** component requires `v-model` to bind the selected value to your data model, as well as a `label` for accessibility.
-
-```vue
-<cdr-select
-  label="Label Text"
-  v-model="selected"
->
-  <option value="1">
-    1
-  </option>
-  <option value="2">
-    2
-  </option>
-  <option value="3">
-    3
-  </option>
-  <option value="4">
-    4
-  </option>
-</cdr-select>
-```
 
 </cdr-doc-table-of-contents-shell>

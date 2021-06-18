@@ -255,20 +255,22 @@ Pair an icon with text to improve recognition about an object or action.
     <cdr-button
       modifier="secondary"
     >
-      <IconPlayStroke
-        slot="icon-left"
-        inherit-color
-      />
+      <template #icon-left>
+        <icon-play-stroke
+          inherit-color
+        />
+      </template>
       Play video
     </cdr-button>
     <cdr-button
       modifier="secondary"
       disabled
     >
-      <IconPlayStroke
-        slot="icon-left"
-        inherit-color
-      />
+      <template #icon-left>
+        <icon-play-stroke
+          inherit-color
+        />
+      </template>
       Play video
     </cdr-button>
   </div>
@@ -288,10 +290,9 @@ Use icons to visually communicate an object or action in a limited space. Includ
       :icon-only="true"
       aria-label="More information about icon"
     >
-      <IconQuestionFill
-        slot="icon"
-        inherit-color
-      />
+      <template #icon>
+        <icon-question-fill inherit-color />
+      </template>
     </cdr-button>
   </div>
 ```
@@ -311,9 +312,9 @@ Use `with-background` property in conjunction with the `icon-only` property to m
       :with-background="true"
       aria-label="More information about icon"
     >
-      <IconAccountProfile
-        slot="icon"
-      />
+      <template #icon>
+        <icon-account-profile />
+      </template>
     </cdr-button>
   </div>
 ```
@@ -540,117 +541,13 @@ This component will bind any attribute that a [native HTML button element](https
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
+## Events
+
+<cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
+
+
 ## Component Variables
 
 <cdr-doc-comp-vars name="CdrButton"/>
-
-## Usage
-
-### Size Prop
-
-The below example uses the `size` prop to set a default and responsive size. This button’s size is small, but it will become a large button at the `xs` and `sm` breakpoints.
-
-```vue{3}
-<template>
-  <cdr-button
-    size="small large@xs large@sm"
-  >
-    Add to cart
-  </cdr-button>
-</template>
-```
-
-### Modifiers
-
-The following variants are available to the `cdr-button` modifier attribute:
-
-| Value | Description            |
-|:------|:-----------------------|
-| 'primary' | Sets the primary style for the button |
-| 'secondary' | Sets the secondary style for the button |
-| 'sale' | Sets the sale style for the button |
-| 'dark' | Sets the dark style for the button |
-
-
-### Click Actions
-
-Use an `@click` event handler to attach custom actions and event handling.
-
-```vue{3}
-<template>
-  <cdr-button
-    @click="greet"
-  >
-    Greet
-  </cdr-button>
-</template>
-
-<script>
-export default {
-  ...
-  methods: {
-    greet() {
-      console.log(‘Hello there’);
-    }
-  }
-}
-</script>
-```
-
-## Composing with Icons
-
-**CdrButton** component can be used with the icon component from the **CdrIcon** package.
-
-### Text and Icon
-
-To scale Cedar icons appropriately, use the `icon-left` or `icon-right` slots to ensure the proper styles are applied. The `size` prop scales both the icon and the button.
-
-In the below example, a "Download" button is rendered as a button with icon and text using and inline Cedar icon component.
-
-```vue{5}
-<template>
-  <cdr-button>
-    <IconDownload
-      slot="icon-left"
-    />
-    Download
-  </cdr-button>
-</template>
-
-<script>
-import { CdrButton, IconDownload } from '@rei/cedar';
-export default {
-  ...
-  components: {
-     CdrButton,
-     IconDownload,  
-  }
-}
-</script>
-```
-
-### Icon Only
-
-Use the following props to modify `cdr-button`:
-
-- Default slot must be empty. If text is present in default slot, the text will render  
-- `size` prop is disabled when `icon-only` prop is true
-- `with-background` can be used to add a border and background to the icon-only button, ensuring it is more visible on darker backgrounds
-- Add `aria-label` text to describe the button’s action when clicked or tapped
-
-```vue{3,4,5}
-<template>
-  <cdr-button
-    :icon-only="true"
-    :with-background="true"
-    aria-label="Complete this step"
-  >
-    <icon-check-lg
-      slot="icon"
-    />
-  </cdr-button>
-</template>
-```
-
 
 </cdr-doc-table-of-contents-shell>

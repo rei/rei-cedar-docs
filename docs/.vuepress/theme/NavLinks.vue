@@ -11,7 +11,7 @@
         :opened="navGroup[index]"
         @accordion-toggle="navToggle(index)"
       >
-        <template slot="label">
+        <template #label>
           {{ item.text }}
         </template>
         <ul class="nav-dropdown cdr-doc-side-navigation__child-links">

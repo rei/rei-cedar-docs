@@ -39,7 +39,7 @@
                 "description": "Toggles the modal title text, which comes from `label` or `labelSlot`."
               },
               {
-                "name": "ariaDescribedBy",
+                "name": "ariaDescribedby",
                 "type": "string",
                 "default": "'medium'",
                 "description": "Text for the `aria-describedby` attribute."
@@ -49,6 +49,12 @@
                 "type": "string",
                 "default": "null",
                 "description": "Unique id for modal."
+              },
+              {
+                "name": "role",
+                "type": "string",
+                "default": "dialog",
+                "description": "Overrides the `role` attribute on the modal content element."
               },
               {
                 "name": "overlayClass",
@@ -122,9 +128,9 @@
   label="Add to Cart"
   :opened="opened"
   @closed="opened = false"
-  aria-described-by="description"
+  aria-describedby="description"
 >
-  <template slot="title">
+  <template #title>
     <cdr-text
       tag="h3"
       class="title-header"
@@ -162,9 +168,9 @@ When rendering multiple modals on a single page you can reduce your markup size 
   :opened="opened"
   :label="title"
   @closed="opened = false"
-  aria-described-by="description"
+  aria-describedby="description"
 >
-  <template slot="title">
+  <template #title>
     <cdr-text
       tag="h3"
       class="title-header"
@@ -188,10 +194,10 @@ Ensure that usage of this component complies with accessibility guidelines:
 >Launch modal</cdr-button>
 ```
 
-- Set the `aria-described-by` prop to point to an element that describes what the modal does:
+- Set the `aria-describedby` prop to point to an element that describes what the modal does:
 
 ```vue
-  <cdr-modal aria-described-by="description" label="modal title">
+  <cdr-modal aria-describedby="description" label="modal title">
     <div id="description">
       modal content description
     </div>
@@ -259,7 +265,7 @@ If the `title` slot is left empty, the `label` prop will be rendered as the titl
 When using the `label` slot, add CdrText to use the appropriate header styles.
 
 ```vue{3,4}
-<template slot="title">
+<template #title>
   <cdr-text
     tag="h1"
     class="custom-text-class"
@@ -287,7 +293,7 @@ Do not use `v-if` with CdrModal unless the component is wrapped with `keep-alive
     :opened="opened"
     label="Add to Cart"
     @closed="closed"
-    aria-described-by="description"
+    aria-describedby="description"
   >
     ...
   </cdr-modal>

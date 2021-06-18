@@ -21,39 +21,34 @@ There are many ways to contribute to Cedar—new components, enhancements, and b
 See the guidelines mentioned below on this page for more information about contributions, and reach out using [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) if you have any questions.  
 
 ## Component Contributions
-When creating a new component, first reach out to the Cedar team to see if the component is already under development or exists in a shared repo. If not, the Cedar team can help advise on how to build the component using REI design foundations and system assets, so that it can be pulled into the system in the future.
+When creating a new component, first reach out to the Cedar team to see if the component is already under development in the [Cedar backlog](https://issues.rei.com/secure/RapidBoard.jspa?rapidView=1996) or if exists in a shared repo. If not, the Cedar team can help advise on how to [build resuable components](../../getting-started/building-components-with-cedar/) using REI design foundations and system assets, so that it can be pulled into the system in the future.
 
-If you have a request for the Cedar team, please submit it on [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) or come and talk to us during our weekly office hours.
+If you have a request for the Cedar team, please submit it in [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) or come and talk to us during our weekly office hours.
 
+
+### Design
+New component designs can be added to the [Greenhouse library in Figma](https://www.figma.com/file/5R0ElfCIEJbRJx2tKzlA7s/Greenhouse?node-id=1673%3A4). Greenhouse is an internal library where designers can add new components, variants, and patterns to share with the community. The Cedar team will help facilitate additions to Greenhouse, and monitor the library for potential contributions to the design system.
+ 
+  
 ### Code
-Contribution candidates should be built using Cedar
-[Design Tokens](../../tokens/overview/) and
-[Utilities](../../components/utilities), so that it can easily be pulled into the system.
-Include relevant information in the readme file, which will be used for future documentation. Once added to Cedar,
-the design system team will take over all future maintenance and updates.
+Contribution candidates should be built using Cedar [Design Tokens](../../tokens/overview/) and Components, so that they can easily be pulled into the system.
+Include relevant information in the readme file, which will be used for future documentation. Once added to Cedar, the design system team will take over all future maintenance and updates.
 
 If you are working on a component or feature that can be shared with other projects, utilize design tokens to build it and add it to the [fed-components repository](https://git.rei.com/projects/FEDCOMP). The design system team will be looking at the fed-components repository for candidates to add to the system.
 
-Reference the diagram below to determine how and where to build a new component:
-
-<cdr-img :src="$withBase('/about/Component-Development-Contributions.png')" alt="a reference tree for when to use Cedar" />
-
-### Design
-For components added to the fed-components repository, designers should also include the design in the shared Figma libraries. This provides other designers insight into what is available in fed-components, and allows them to re-use the component in their work. Include relevant design guidelines, usage examples, and do's/don'ts for using the component.
-
-Reach out in the #cedar-user-support Slack channel for more information on sharing design assets in Figma.
-
 
 ### Bug Fixes
+
 The Cedar team is committed to maintaining consistent, quality components. If you encounter an issue, please submit it on [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) or come and talk to us during our weekly office hours.
 
-The team will address the bug as soon as possible, depending on the severity of the issue and sprint capacity. Please include as much relevant information as possible when submitting a bug report, including steps to reproduce, urgency, and impact to help us prioritize.
 
-If you have a fix for a bug and would like to submit a pull request for it, create a new PR in [rei/cedar](https://github.com/rei/rei-cedar/issues), or reach out in the [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) Slack channel with any questions.
+The team will address the bug as soon as possible, depending on the severity of the issue and sprint capacity. Please include as much relevant information as possible when submitting a bug report, including steps to reproduce, urgency, and impact to help us prioritize. If the bug is present on a try server or branch it is especially helpful to include links to those so we can quickly assess the issue.
+
+If you have a fix for a bug and would like to submit a pull request for it, reach out in the [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) Slack channel so we can work with you on submitting a PR.
 
 
 ## Token Contributions
-If you have a request for a new token, let us know on [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) or come and talk to us during our weekly office hours.
+If you have a request for a new token, let us know in [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) or come and talk to us during our weekly office hours.
 
 You can also create a new token in the [shared-tokens repository](https://git.rei.com/projects/FEDPACK/repos/shared-tokens/browse) for future integration in Cedar.
 
@@ -71,6 +66,6 @@ Learn more in the [Design Tokens](../../tokens/overview/) overview.
 ## Icon Contributions
 Cedar welcomes and encourages contributions to the icon library that are consistent with the REI style.
 
-Learn more about contributing icons in the [Icon Resources](../../icons/resources) article.
+Learn more about designing and contributing icons in the [Icon Resources](../../icons/resources) article.
 
 </cdr-doc-table-of-contents-shell>

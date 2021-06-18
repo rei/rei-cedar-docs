@@ -135,7 +135,7 @@ Section borders expand to full width of container.
     :opened="default1"
     @accordion-toggle="default1 = !default1"
   >
-    <template slot="label">
+    <template #label>
       How do I find my member number?
     </template>
     <cdr-text tag="p">
@@ -149,7 +149,7 @@ Section borders expand to full width of container.
     :opened="default2"
     @accordion-toggle="default2 = !default2"  
   >
-    <template slot="label">
+    <template #label>
       Does every member get an Annual Dividend?
     </template>
     <cdr-text tag="p">
@@ -164,7 +164,7 @@ Section borders expand to full width of container.
     :opened="default3"
     @accordion-toggle="default3 = !default3"
   >
-    <template slot="label">
+    <template #label>
       When does my dividend expire?
     </template>
     <cdr-text tag="p">
@@ -192,7 +192,7 @@ Reduced spacing around title and content body. Also, smaller font sizes resultin
     :opened="compact1"
     @accordion-toggle="compact1 = !compact1"
   >
-    <template slot="label">
+    <template #label>
       Why buy used gear?
     </template>
     <cdr-text tag="p">
@@ -207,7 +207,7 @@ Reduced spacing around title and content body. Also, smaller font sizes resultin
     :opened="compact2"
     @accordion-toggle="compact2 = !compact2"
   >
-    <template slot="label">
+    <template #label>
       What's your cancellation policy?
     </template>
     <cdr-text tag="p">
@@ -222,7 +222,7 @@ Reduced spacing around title and content body. Also, smaller font sizes resultin
     :opened="compact3"
     @accordion-toggle="compact3 = !compact3"
   >
-    <template slot="label">
+    <template #label>
       When will my order arrive?
     </template>
     <cdr-text tag="p">
@@ -250,7 +250,7 @@ Border aligns to the title text and expand/collapse icon.
     :opened="borderAligned1"
     @accordion-toggle="borderAligned1 = !borderAligned1"
   >
-    <template slot="label">
+    <template #label>
       How long have you been in business?
     </template>
     <cdr-text tag="p">
@@ -266,7 +266,7 @@ Border aligns to the title text and expand/collapse icon.
     :opened="borderAligned2"
     @accordion-toggle="borderAligned2 = !borderAligned2"
   >
-    <template slot="label">
+    <template #label>
       What kinds of trips are offered?
     </template>
     <cdr-text tag="p">
@@ -283,12 +283,41 @@ Border aligns to the title text and expand/collapse icon.
     :opened="borderAligned3"
     @accordion-toggle="borderAligned3 = !borderAligned3"
   >
-    <template slot="label">
+    <template #label>
       How do I know what each trip is like?
     </template>
     <cdr-text tag="p">
       This website provides full details of each trip. If you still have questions,
       please call us at 1-800-622-2236 or e-mail us at travel@rei.com.
+    </cdr-text>
+  </cdr-accordion>
+</cdr-accordion-group>
+```
+
+</cdr-doc-example-code-pair>
+
+
+## Dynamic Accordions
+
+In order to render a dynamic list of accordions, for example using data retrieved from a back-end API, you will need to use `this.$set` or some other Vue method to make the array of accordion data reactive. This can also be used to avoid creating an individual data attribute for every accordion and instead track their state with an array of booleans.
+
+<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ accordions: [{id: 'dynamic-a', label: 'Dynamic A label', content: 'Dynamic A content', opened: false},{id: 'dynamic-b', label: 'Dynamic B label', content: 'Dynamic B content', opened: false},{id: 'dynamic-c', label: 'Dynamic C label', content: 'Dynamic C content', opened: false},] }" :methods="{toggleAccordion(idx){ this.$set(this.accordions[idx], 'opened', !this.accordions[idx].opened)}}">
+
+```html
+<cdr-accordion-group>
+  <cdr-accordion
+    v-for="(accordion, idx) in accordions"
+    :key="accordion.id"
+    :id="accordion.id"
+    level="4"
+    :opened="accordion.opened"
+    @accordion-toggle="toggleAccordion(idx)"
+  >
+    <template #label>
+      {{ accordion.label }}
+    </template>
+    <cdr-text tag="p">
+      {{ accordion.content }}
     </cdr-text>
   </cdr-accordion>
 </cdr-accordion-group>
@@ -311,7 +340,7 @@ The `unwrap` property of `CdrAccordionGroup` can be used to render the accordion
     :opened="unwrap1"
     @accordion-toggle="unwrap1 = !unwrap1"
   >
-    <template slot="label">
+    <template #label>
       How do I find my member number?
     </template>
     <cdr-text tag="p">
@@ -325,7 +354,7 @@ The `unwrap` property of `CdrAccordionGroup` can be used to render the accordion
     :opened="unwrap2"
     @accordion-toggle="unwrap2 = !unwrap2"  
   >
-    <template slot="label">
+    <template #label>
       Does every member get an Annual Dividend?
     </template>
     <cdr-text tag="p">
@@ -340,7 +369,7 @@ The `unwrap` property of `CdrAccordionGroup` can be used to render the accordion
     :opened="unwrap3"
     @accordion-toggle="unwrap3 = !unwrap3"
   >
-    <template slot="label">
+    <template #label>
       When does my dividend expire?
     </template>
     <cdr-text tag="p">
@@ -460,7 +489,7 @@ CdrAccordion emits an event when its button is clicked. Use an event listener to
     :opened="opened"
     @accordion-toggle="opened = !opened"
   >
-    <template slot="label">
+    <template #label>
       Click me to show content!
     </template>
       This content is revealed when the accordion is opened.
@@ -496,7 +525,7 @@ Creating groups can be useful if, for instance, you wanted to close the other ac
     :key="item.id"
     @accordion-toggle="updateGroup(index)"
   >
-    <template slot="label">
+    <template #label>
       {{ item.label }}
     </template>
     {{ item.content }}

@@ -151,19 +151,20 @@
 ## Default (Medium)
 Default and standard spacing for radio buttons.
 
-<cdr-doc-example-code-pair repository-href="/src/components/radio" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{ex: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/radio" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{ex: ''}">
 
 ```html
 <div>
   <cdr-form-group>
 
-    <template slot="label">
+    <template #label>
       <span id="legend-1">Default Radio Example</span>
     </template>
     <cdr-radio
       name="default-example"
       custom-value="ex1"
       v-model="ex"
+      :background="backgroundColor"
     >
       Default radio 1
     </cdr-radio>
@@ -171,6 +172,7 @@ Default and standard spacing for radio buttons.
       name="default-example"
       custom-value="ex2"
       v-model="ex"
+      :background="backgroundColor"
     >
       Default radio 2
     </cdr-radio>
@@ -178,6 +180,7 @@ Default and standard spacing for radio buttons.
       name="default-example"
       :custom-value="{val:'ex3'}"
       v-model="ex"
+      :background="backgroundColor"
       disabled
     >
       Default radio 3
@@ -193,13 +196,13 @@ Default and standard spacing for radio buttons.
 
 Different sizing for radio buttons.
 
-<cdr-doc-example-code-pair repository-href="/src/components/radio" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{ex: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/radio" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{ex: ''}">
 
 ```html
 <div>
   <cdr-form-group>
 
-    <template slot="label">
+    <template #label>
       <span id="legend-2">Radio Size Example</span>
     </template>
 
@@ -208,6 +211,7 @@ Different sizing for radio buttons.
       name="size-example"
       custom-value="ex1"
       v-model="ex"
+      :background="backgroundColor"
     >
       Small radio
     </cdr-radio>
@@ -215,6 +219,7 @@ Different sizing for radio buttons.
       name="size-example"
       custom-value="ex2"
       v-model="ex"
+      :background="backgroundColor"
     >
       Medium radio
     </cdr-radio>
@@ -223,6 +228,7 @@ Different sizing for radio buttons.
       name="size-example"
       :custom-value="{val:'ex3'}"
       v-model="ex"
+      :background="backgroundColor"
       disabled
     >
       Large radio
@@ -238,19 +244,20 @@ Different sizing for radio buttons.
 
 Custom styles for radio buttons.
 
-<cdr-doc-example-code-pair repository-href="/src/components/radio" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {styleTag: '.no-box:checked ~ .no-box__content {color: green;}'})" :backgroundToggle="false" :codeMaxHeight="false" class="custom-radio-example" :model="{ex: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/radio" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {styleTag: '.no-box:checked ~ .no-box__content {color: green;}'})" :codeMaxHeight="false" class="custom-radio-example" :model="{ex: ''}">
 
 ```html
 <div>
   <cdr-form-group>
 
-    <template slot="label">
+    <template #label>
       <span id="legend-3">Custom Radio Example</span>
     </template>
     <cdr-radio
       name="custom-example"
       custom-value="ex1"
       v-model="ex"
+      :background="backgroundColor"
       modifier="hide-figure"
       input-class="no-box"
       content-class="no-box__content"
@@ -261,6 +268,7 @@ Custom styles for radio buttons.
       name="custom-example"
       custom-value="ex2"
       v-model="ex"
+      :background="backgroundColor"
       modifier="hide-figure"
       input-class="no-box"
       content-class="no-box__content"
@@ -271,6 +279,7 @@ Custom styles for radio buttons.
       name="custom-example"
       :custom-value="{val:'ex3'}"
       v-model="ex"
+      :background="backgroundColor"
       modifier="hide-figure"
       input-class="no-box"
       content-class="no-box__content"
@@ -299,18 +308,21 @@ Render a radio group with validation and error state
     name="letter"
     custom-value="A"
     v-model="ex"
+    :background="backgroundColor"
     @input="validate"
   >A</cdr-radio>
   <cdr-radio
     name="letter"
     custom-value="B"
     v-model="ex"
+    :background="backgroundColor"
     @input="validate"
   >B</cdr-radio>
   <cdr-radio
     name="letter"
     custom-value="C"
     v-model="ex"
+    :background="backgroundColor"
     @input="validate"
   >C</cdr-radio>
 </cdr-form-group>

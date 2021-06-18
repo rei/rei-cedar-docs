@@ -53,7 +53,12 @@
                 "default": "false",
                 "description": "Sets the form group to an error state, displays the `error` slot if one is present."
               },
-
+              {
+                "name": "errorRole",
+                "type": "string",
+                "default": "status",
+                "description": "Sets the `role` attribute for the embedded error state messaging."
+              },
               {
                 "name": "disabled",
                 "type": "boolean",
@@ -115,14 +120,17 @@ Grouping related form controls makes forms more understandable for all users, an
   <cdr-checkbox
     custom-value="A"
     v-model="ex"
+    :background="backgroundColor"
   >A</cdr-checkbox>
   <cdr-checkbox
     custom-value="B"
     v-model="ex"
+    :background="backgroundColor"
   >B</cdr-checkbox>
   <cdr-checkbox
     custom-value="C"
     v-model="ex"
+    :background="backgroundColor"
   >C</cdr-checkbox>
 </cdr-form-group>
 ```
@@ -137,20 +145,23 @@ Rather than passing a `label` prop, the label element can be customized using th
 
 ```html
 <cdr-form-group>
-  <template slot="label">
+  <template #label>
     <cdr-text style="font-size: 24px;">Optional Label Slot Override</cdr-text>
   </template>
   <cdr-checkbox
     custom-value="A"
     v-model="ex"
+    :background="backgroundColor"
   >A</cdr-checkbox>
   <cdr-checkbox
     custom-value="B"
     v-model="ex"
+    :background="backgroundColor"
   >B</cdr-checkbox>
   <cdr-checkbox
     custom-value="C"
     v-model="ex"
+    :background="backgroundColor"
   >C</cdr-checkbox>
 </cdr-form-group>
 ```
@@ -169,16 +180,19 @@ Render a form group  with validation and error state
   <cdr-checkbox
     custom-value="A"
     v-model="ex"
+    :background="backgroundColor"
     @input="validate"
   >A</cdr-checkbox>
   <cdr-checkbox
     custom-value="B"
     v-model="ex"
+    :background="backgroundColor"
     @input="validate"
   >B</cdr-checkbox>
   <cdr-checkbox
     custom-value="C"
     v-model="ex"
+    :background="backgroundColor"
     @input="validate"
   >C</cdr-checkbox>
 </cdr-form-group>
@@ -198,16 +212,19 @@ Render a form group in a disabled state
   <cdr-checkbox
     custom-value="A"
     v-model="ex"
+    :background="backgroundColor"
     :disabled="true"
   >A</cdr-checkbox>
   <cdr-checkbox
     custom-value="B"
     v-model="ex"
+    :background="backgroundColor"
     :disabled="true"
   >B</cdr-checkbox>
   <cdr-checkbox
     custom-value="C"
     v-model="ex"
+    :background="backgroundColor"
     :disabled="true"
   >C</cdr-checkbox>
 </cdr-form-group>

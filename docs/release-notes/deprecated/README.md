@@ -122,6 +122,11 @@
 | cdr-color-border-disabled-darkmode | n/a |
 | cdr-color-border-error-lightmode | cdr-color-border-error |
 | cdr-color-border-selected-lightmode | cdr-color-border-input-default-selected |
+| cdr-color-background-success | cdr-color-background-message-success |
+| cdr-color-background-warning | cdr-color-background-message-warning |
+| cdr-color-background-error | cdr-color-background-message-error |
+| cdr-color-background-info | cdr-color-background-message-info |
+| cdr-color-background-sale | cdr-color-background-message-sale |
 
 
 ### Media Query Mixins
@@ -217,9 +222,36 @@ CdrDataTable has been replaced by [CdrTable](../../components/table). See [the r
 ### CdrAccordion
 - The `label` prop for CdrAccordion has been replaced with the `label` slot.
 
+### CdrBreadcrumb
+- The `link` scoped slot for CdrBreadcrumb has been removed, instead to add custom link behavior use the `navigate` event
+
+### CdrPagination
+- The `link`, `prevLink`, and `nextLink` scoped slots for CdrPagination has been removed, instead to add custom link behavior use the `navigate` eventß
+
 ### CdrRow and CdrCol
 
 The flexbox based CdrRow and CdrCol have been replaced with the CSS grid based [CdrGrid](../../components/grid). See [the release notes](../release-notes/winter-2021/#cdrgrid-component) for more information.
+
+### CdrIcon
+
+| old asset name     | new asset name     |
+|--------------------|--------------------|
+| warning-stroke.svg | error-stroke.svg   |
+| warning-fill.svg   | error-fill.svg     |
+| warning-tri.svg    | warning-fill.svg   |
+
+| old component name | new component name |
+|--------------------|--------------------|
+| IconWarningStroke  | IconErrorStroke    |
+| IconWarningFill    | IconErrorFill      |
+| IconWarningTri     | IconWarningFill    |
+
+
+
+
+## Utility Classes
+
+NOTE: the Cedar utility classes and CdrText modifier have been removed as of Cedar version 9.0.0. These mappings exist purely to guide consumers who may be updating from earlier versions of Cedar. Cedar tokens or plain CSS should be used instead to apply these same styles.
 
 ### CdrText Modifiers
 | Deprecated modifier name | Equivalent modifier names and breakpoints  |
@@ -254,23 +286,6 @@ The flexbox based CdrRow and CdrCol have been replaced with the CSS grid based [
 | | |
 | utility-n00 | utility-sans-n00 |
 | utility-strong-n00 | utility-sans-strong-n00 |
-
-### CdrIcon
-
-| old asset name     | new asset name     |
-|--------------------|--------------------|
-| warning-stroke.svg | error-stroke.svg   |
-| warning-fill.svg   | error-fill.svg     |
-| warning-tri.svg    | warning-fill.svg   |
-
-| old component name | new component name |
-|--------------------|--------------------|
-| IconWarningStroke  | IconErrorStroke    |
-| IconWarningFill    | IconErrorFill      |
-| IconWarningTri     | IconWarningFill    |
-
-
-## Utility Classes
 
 ### Space
 
@@ -360,6 +375,226 @@ The utility visibility and accessibility classes have been deprecated and update
 | cdr-bg--lightest | cdr-color-background-primary |
 | cdr-bg--dark | n/a |
 | cdr-bg--darker | n/a |
+
+
+### Migrating CSS Utilities to Tokens/Mixins
+
+The Cedar CSS utility classes have been removed due to their negative impact on site performance, code quality/maintainability, and the architectural risk of using global un-scoped shared CSS classes. The examples below outline how to migrate instances of the various utility classes to instead use plain CSS and tokens or mixins from `@rei/cdr-tokens`
+
+#### Align Utils
+
+Alignment utilities can be replaced with the equivalent plain CSS
+```html
+<div class="cdr-align-text-center">
+  Deprecated utility
+</div>
+```
+```html
+<template>
+  <div class="your-custom-alignment-class">
+    Using plain CSS
+  </div>
+</template>
+<style lang="scss">
+  .your-custom-alignment-class {
+    text-align: center;
+  }
+</style>
+
+```
+
+#### Color Utils
+
+Color utilities can be replaced with the equivalent value from @rei/cdr-tokens targeting either `background-color`, `color`, or `fill` as appropriate.
+
+```html
+<div class="cdr-color-background-primary">
+  Deprecated background color utility
+</div>
+
+<div class="cdr-color-text-primary">
+  Deprecated text color utility
+</div>
+```
+
+```html
+<template>
+  <div class="your-custom-background-color-class">
+    Using plain CSS/tokens for background color
+  </div>
+
+  <div class="your-custom-text-color-class">
+    Using plain CSS/tokens for text color
+  </div>
+</template>
+<style lang="scss">
+  @import '~@rei/cdr-tokens/dist/scss/cdr-tokens';
+
+  .your-custom-background-color-class {
+    background-color: $cdr-color-background-primary;
+  }
+
+  .your-custom-text-color-class {
+    color: $cdr-color-text-primary;
+  }
+</style>
+```
+
+#### Container Utils
+
+The `cdr-container` and `cdr-container-fluid` utility classes should be replaced with either the [CdrContainer](../../components/container) component or the equivalent mixin from @rei/cdr-tokens. See the [Cedar Responsive article](https://rei.github.io/rei-cedar-docs/foundation/responsive/) for more information on general container usage.
+
+```html
+<div class="cdr-container">
+  Deprecated utility
+</div>
+```
+
+```html
+<template>
+  <div>
+    <cdr-container>
+      Using the CdrContainer component
+    </cdr-container>
+
+    <div class="your-custom-container-class">
+      Using plain CSS/tokens
+    </div>
+
+  </div>
+</template>
+<style lang="scss">
+  @import '~@rei/cdr-tokens/dist/scss/cdr-tokens';
+
+  .your-custom-container-class {
+    @include cdr-container;
+  }
+</style>
+```
+
+
+#### Display Utils
+
+Display utilities can be replaced with the equivalent plain CSS
+
+```html
+<div class="cdr-display-none">
+  Deprecated utility
+</div>
+```
+```html
+<template>
+  <div class="your-custom-display-class">
+    Using plain CSS
+  </div>
+</template>
+<style lang="scss">
+  .your-custom-display-class {
+    display: none;
+  }
+</style>
+```
+
+#### Space Utils
+
+Space utility classes were a combination of the targeted property and a Cedar spacing token.
+
+| prefix | property |
+|--|--|
+| inset | padding |
+| pl | padding-left |
+| pt | padding-top |
+| pr | padding-right |
+| pb | padding-bottom |
+| px | padding-left and padding-right |
+| py | padding-top and padding-bottom |
+| ml | margin-left |
+| mt | margin-top |
+| mr | margin-right |
+| mb | margin-bottom |
+| mx | margin-left and margin-right |
+| my | margin-top and margin-bottom |
+
+
+```html
+<div class="cdr-space-inset-half-x">
+  Deprecated utility
+</div>
+```
+
+```html
+<template>
+  <div class="your-custom-space-class">
+    Using plain CSS/tokens
+  </div>
+</template>
+<style lang="scss">
+  @import '~@rei/cdr-tokens/dist/scss/cdr-tokens';
+
+  .your-custom-space-class {
+    padding: $cdr-space-half-x;
+  }
+</style>
+```
+
+
+#### Text Utils
+
+Note that the text utility classes were available both as CSS utility classes and via the cdr-text modifier prop. The migration path is the same for both patterns.
+
+```html
+<p class="cdr-text--utility-sans-strong-300">
+  Deprecated utility
+</p>
+
+<cdr-text modifier="utility-sans-strong-300" tag="p">
+  Deprecated modifier
+</cdr-text>
+```
+
+```html
+<template>
+  <p class="your-custom-type-class">
+    Using plain CSS/tokens
+  </p>
+</template>
+<style lang="scss">
+  @import '~@rei/cdr-tokens/dist/scss/cdr-tokens';
+
+  .your-custom-type-class {
+    @include cdr-text-utility-sans-strong-300;
+  }
+</style>
+```
+
+#### Responsive Utilities
+
+The align, display, space, and text utility classes supported breakpoint modifiers as a suffix which would only activate the utility class at the given breakpoint. Those instances should be migrated as described above but additionally use a [breakpoint mixin from @rei/cdr-tokens](https://rei.github.io/rei-cedar-docs/foundation/responsive/#scss-less-utilities).
+
+```html
+<div class="cdr-mb-space-quarter-x\@md">
+  Deprecated responsive utility
+</div>
+```
+
+```html
+<template>
+  <div class="your-custom-responsive-space-class">
+    Using plain CSS/tokens
+  </div>
+</template>
+<style lang="scss">
+  @import '~@rei/cdr-tokens/dist/scss/cdr-tokens';
+
+  @include cdr-md-mq-only {
+    .your-custom-responsive-space-class {
+      margin-bottom: $cdr-space-quarter-x;
+    }
+  }
+
+</style>
+```
+
 
 
 </cdr-doc-table-of-contents-shell>

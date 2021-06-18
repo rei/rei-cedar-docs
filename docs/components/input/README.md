@@ -84,22 +84,6 @@
       "caption": "use placeholder text as an alternative to a label."
     }
   ],
-  "required": [
-    {
-      "type": "do",
-      "image": "input/Input__Required_Do__16-9.png",
-      "ratio": "16-9",
-      "alt": "Image showing 'Required' label next to field label",
-      "caption": "position the required label next to input field label."
-    },
-    {
-      "type": "dont",
-      "image": "input/Input__Required_Dont__16-9.png",
-      "ratio": "16-9",
-      "alt": "Image showing asterisk to denote required label",
-      "caption": "use an asterisk for a required field."
-    }
-  ],
   "sizes": [
     {
       "type": "do",
@@ -148,7 +132,7 @@
                 "name": "hideLabel",
                 "type": "boolean",
                 "default": "false",
-                "description": "Hides the label element and sets the input ‘aria-label’ to the value of the ‘label’ prop for a11y compliance."
+                "description": "Visually hides the label element, but leaves it available to screen readers for a11y compliance."
               },
               {
                 "name": "rows",
@@ -163,10 +147,16 @@
                 "description": "Sets the disabled state for the input field and label styling. Also, restricts user input."
               },
               {
+                "name": "numeric",
+                "type": "boolean",
+                "default": "false",
+                "description": "Sets default attributes for an input that should launch a numeric keyboard but is not strictly a 'number' (credit card, security code, postal code, etc.). Should be used in conjunction with the default text type input. An `input` listener can be used to fully restrict input values to numerical characters only"
+              },
+              {
                 "name": "required",
                 "type": "boolean",
                 "default": "false",
-                "description": "Sets the field to required and displays an asterisk next to the input label."
+                "description": "Sets aria-required on the input field and displays an asterisk next to the input label."
               },
               {
                 "name": "optional",
@@ -179,6 +169,12 @@
                 "type": "boolean",
                 "default": "false",
                 "description": "Sets the input to an error state, displays the `error` slot if one is present."
+              },
+              {
+                "name": "errorRole",
+                "type": "string",
+                "default": "status",
+                "description": "Sets the `role` attribute for the embedded error state messaging."
               },
               {
                 "name": "background",
@@ -215,8 +211,12 @@
                 "description": "Location for icon markup to the right inside the input field."
               },
               {
-                "name": "helper-text",
+                "name": "helper-text-bottom",
                 "description": "Location for helper or information text to the left below the input field."
+              },
+              {
+                "name": "helper-text-top",
+                "description": "Location for helper or information text to the left above the input field."
               }
             ],
             "events": [
@@ -241,19 +241,19 @@
 Basic input field with label.
 
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Input label"
-  placeholder="Placeholder input"
 />
 <br>
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Input label"
-  placeholder="Placeholder input"
   disabled
 />
 ```
@@ -265,13 +265,13 @@ Basic input field with label.
 Basic input field with label and required tag.
 
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Input label"
-  placeholder="Placeholder input"
   required
 />
 ```
@@ -283,13 +283,13 @@ Basic input field with label and required tag.
 Basic input field with label and optional tag.
 
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Input label"
-  placeholder="Placeholder input"
   optional
 />
 ```
@@ -301,19 +301,19 @@ Basic input field with label and optional tag.
 Change size for the input field. Default size is medium.
 
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Input label"
-  placeholder="Placeholder input"
 />
 <br>
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Input label"
-  placeholder="Placeholder input"
   size="large"
 />
 ```
@@ -325,14 +325,14 @@ Change size for the input field. Default size is medium.
 Input field with no label.
 
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Input label"
-  placeholder="Placeholder input"
-  hideLabel
+  :hide-label="true"
 />
 ```
 
@@ -345,17 +345,17 @@ Input field with validation that runs on `blur`. Error state is controlled with 
 
 Error messaging will override helper text rendered in the bottom position.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: '', modelError: false}" :methods="{validateInput() {this.modelError = this.defaultModel.length > 4 && 'Error: please enter 4 or less characters'}}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: '', modelError: false}" :methods="{validateInput() {this.modelError = this.defaultModel.length > 4 && 'Error: please enter 4 or less characters'}}">
 
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Input label"
-  placeholder="Placeholder input"
   :error="modelError"
   @blur="validateInput"
 >
-  <template slot="helper-text">
+  <template #helper-text-bottom>
     Must be 4 or less characters
   </template>
 </cdr-input>
@@ -367,33 +367,78 @@ Error messaging will override helper text rendered in the bottom position.
 
 Multiple line input field with expander control in lower right. Note that the pre-icon, post-icon, and info-action slots will not work properly in multi-line inputs.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Input label"
-  placeholder="Placeholder input"
   :rows="4"
 />
 ```
 
 </cdr-doc-example-code-pair>
 
-## Input with Link Text
+## Numeric Input
 
-Input field with link text on right.
+Input field designed to accept numerical input. Launches the numerical keyboard on mobile devices. Does not use the `type="number"` attribute as that is intended for values that are strictly "numbers" such as quantities and not values that contain numerical characters such as credit cards, security codes, month/year values, etc. Can be used in conjunction with [input masking](#input-masking) to handle formatting values like credit cards, or an `input` listener can be used to format or restrict input.
 
-
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrLink'})" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: ''}" :methods="{restrictInput() {this.defaultModel = this.defaultModel.replace(/\D/g, '')}}">
 
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
+  label="Numerical input label"
+  optional
+  :numeric="true"
+  @input="restrictInput"
+/>
+```
+
+</cdr-doc-example-code-pair>
+
+## Number/Quantity Input
+
+Use the `type="number"` attribute only for input fields that reference a numerical value, for example a quantity of something. For input fields that are composed of numerical characters but are not strictly a number value, for example a credit card number or a month/year value, use a [numeric input](./#numeric-input) instead. An input field with `type="number"` set will only accept pure number values as input and rejects all other content, which can cause issues with a numeric identifier that has leading zeroes and may behave differently across browsers and devices.
+
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrButton, IconPlusLg, IconMinusLg'})" :codeMaxHeight="false" :model="{defaultModel: 0, decrementDisabled: true}" :methods="{decrement() {this.defaultModel--; if (this.defaultModel <= 0) {this.defaultModel = 0; this.decrementDisabled = true;}}, increment() {this.defaultModel++; this.decrementDisabled = false;}}">
+
+```html
+<div>
+  <cdr-button :icon-only="true" :with-background="true" @click="decrement" aria-label="Decrement counter" :disabled="decrementDisabled">
+    <icon-minus-lg/>
+  </cdr-button>
+  <cdr-input
+    v-model="defaultModel"
+    :background="backgroundColor"
+    label="Number input"
+    type="number"
+    style="display: inline-block; width: 160px;"
+  />
+  <cdr-button :icon-only="true" :with-background="true" @click="increment" aria-label="Increment counter">
+    <icon-plus-lg/>
+  </cdr-button>
+</div>
+```
+
+</cdr-doc-example-code-pair>
+
+## Input with Link Text
+
+Input field with link text on right. The link should describe it's relationship to the input field either through it's text content or an aria-label.
+
+
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrLink'})" :codeMaxHeight="false" :model="{defaultModel: ''}">
+
+```html
+<cdr-input
+  v-model="defaultModel"
+  :background="backgroundColor"
   label="Input label"
-  placeholder="Placeholder input"
 >
-  <template slot="info">
+  <template #info>
     <cdr-link href="#" modifier="standalone">Information link</cdr-link>
   </template>
 </cdr-input>
@@ -403,21 +448,23 @@ Input field with link text on right.
 
 ## Input with Info Action
 
-Input field with icon outside the input field on right.
+Input field with icon wrapped in an actionable element outside the input field on right. The actionable element should have an aria-label that explains it's relationship to the input field and what happens when you click on it.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, IconInformationFill, CdrLink'})" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, IconInformationFill, CdrLink'})" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Input label"
-  placeholder="Placeholder input"
 >
-  <cdr-link tag="button" slot="info-action">
-    <icon-information-fill
-      inherit-color
-    />
-  </cdr-link>
+  <template #info-action>
+    <cdr-link tag="button">
+      <icon-information-fill
+        inherit-color
+      />
+    </cdr-link>
+  </template>
 </cdr-input>
 ```
 
@@ -425,17 +472,17 @@ Input field with icon outside the input field on right.
 
 ## Input with Helper Text
 
-Input field with helper or hint text below the input field. If the input is in an error state, the error messaging slot will override this text.
+Input field with helper or hint text below the input field. If the input is in an error state, the error messaging slot will override this text. Helper text should be used instead of the HTML `placeholder` attribute to provide additional information or context about the input.  Helper text is automatically linked to the input field through the `aria-describedby` attribute.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Input label"
-  placeholder="Placeholder input"
 >
-  <template slot="helper-text-bottom">
+  <template #helper-text-bottom>
     Helper or additional text
   </template>
 </cdr-input>
@@ -445,17 +492,17 @@ Input field with helper or hint text below the input field. If the input is in a
 
 ## Input with Helper Text Above
 
-Input field with helper or hint text rendered above the input field.
+Input field with helper or hint text rendered above the input field. Helper text should be used instead of the HTML `placeholder` attribute to provide additional information or context about the input. Helper text is automatically linked to the input field through the `aria-describedby` attribute.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Input label"
-  placeholder="Placeholder input"
 >
-  <template slot="helper-text-top">
+  <template #helper-text-top>
     Helper or additional text
   </template>
 </cdr-input>
@@ -467,19 +514,17 @@ Input field with helper or hint text rendered above the input field.
 
 Input field with icon inserted into the input field on left. Icon is decorative and not intended for any action.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, IconLocationPinStroke'})" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, IconLocationPinStroke'})" :codeMaxHeight="false"  :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Input label"
-  placeholder="Placeholder input"
 >
-  <IconLocationPinStroke
-    slot="pre-icon"
-    class="cdr-button__icon"
-    inherit-color
-  />
+  <template #pre-icon>
+    <icon-location-pin-stroke inherit-color />
+  </template>
 </cdr-input>
 ```
 
@@ -489,18 +534,20 @@ Input field with icon inserted into the input field on left. Icon is decorative 
 
 Input field with icon inserted into the input field on right. Icon is decorative and not intended for any action.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, IconCreditCard'})" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, IconCreditCard'})" :codeMaxHeight="false"  :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
   v-model="defaultModel"
+  :background="backgroundColor"
   label="Input label"
-  placeholder="Placeholder input"
 >
-  <IconCreditCard
-    slot="post-icon"
-    inherit-color
-  />
+  <template #post-icon>
+    <icon-credit-card
+      inherit-color
+      class="cdr-button__icon"
+    />
+  </template>
 </cdr-input>
 ```
 
@@ -509,27 +556,29 @@ Input field with icon inserted into the input field on right. Icon is decorative
 
 ## Input with Actions
 
-Input field with icon buttons inserted to the right. Up to 2 buttons can be passed into the `post-icon` slot. Each button should have the `cdr-input__button` utility class applied to it.
+Input field with icon buttons inserted to the right. Up to 2 buttons can be passed into the `post-icon` slot. Each button should have the `cdr-input__button` utility class applied to it. Each button should indicate it's function and relationship to the input field through either an `aria-label` or a tooltip.
 
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, IconCreditCard, IconXLg, CdrTooltip, CdrButton'})" :backgroundToggle="false" :codeMaxHeight="false"  :model="{defaultModel: ''}">
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, IconCreditCard, IconXLg, CdrTooltip, CdrButton'})" :codeMaxHeight="false"  :model="{defaultModel: ''}">
 
 ```html
 <div>
   <cdr-input
     v-model="defaultModel"
+    :background="backgroundColor"
     label="Input label"
-    placeholder="Placeholder input"
+
   >
-    <template slot="post-icon">
+    <template #post-icon>
       <cdr-tooltip class="cdr-input__button" id="input-tooltip">
-        <cdr-button
-          :icon-only="true"
-          slot="trigger"
-        >
-          <icon-x-lg
-            inherit-color
-          />
-        </cdr-button>
+        <template #trigger>
+          <cdr-button
+            :icon-only="true"
+          >
+            <icon-x-lg
+              inherit-color
+            />
+          </cdr-button>
+        </template>
 
         click me to clear this input!
       </cdr-tooltip>
@@ -546,20 +595,22 @@ Input field with icon buttons inserted to the right. Up to 2 buttons can be pass
 
   <cdr-input
     v-model="defaultModel"
+    :background="backgroundColor"
     label="Large Input label"
-    placeholder="Placeholder input"
+
     size="large"
   >
-    <cdr-button
-      slot="post-icon"
-      :icon-only="true"
-      size="large"
-      class="cdr-input__button"
-    >
-      <icon-credit-card
-        inherit-color
-      />
-    </cdr-button>
+    <template #post-icon>
+      <cdr-button
+        :icon-only="true"
+        size="large"
+        class="cdr-input__button"
+      >
+        <icon-credit-card
+          inherit-color
+        />
+      </cdr-button>
+    </template>
   </cdr-input>
 </div>
 ```
@@ -571,6 +622,10 @@ Input field with icon buttons inserted to the right. Up to 2 buttons can be pass
 This component has compliance with WCAG guidelines by:
 - Requiring a value for the `label` field
 - When hiding a label, the `aria-label` attribute is set to the `label` value
+
+The HTML `placeholder` attribute should not be used as it creates an inaccessible experience when the placeholder content disappears as soon as the user begins typing into the input field. Instead the `helper-text-top`, `helper-text-bottom`, or `info` slots should be used to provide any additional information needed to complete the input.
+
+Any additional actionable elements related to the input field, which may be external to the input component or passed in via the `info`, `info-action`, or `post-icon` slots, should indicate their function and relationship to the input field through their text content, and `aria-label`, or a tooltip.
 
 <hr>
 
@@ -617,12 +672,6 @@ This component has compliance with WCAG guidelines by:
 - Use sentence case. Do not use all caps, title caps, or all lowercase
 - Don’t use colons after labels
 
-### Placeholder Text
-
-- When user enters data into the input field, the placeholder text is not visible
-- Placeholder text gives context about a field’s input, such as what type of input is expected.  For example, for a date input field, use “mm/dd/yyyy”
-- Limit placeholder text to 1–3 words
-
 ### Helper Text
 
 - Use helper text for hints or suggestions
@@ -649,10 +698,81 @@ This component has compliance with WCAG guidelines by:
 <do-dont :examples="$page.frontmatter.case" />
 
 <do-dont :examples="$page.frontmatter.punctuation" />
+<!-- TODO: replace with DO use info/helper slots to describe desired input DON'T use placeholder attribute
+<do-dont :examples="$page.frontmatter.placeholder" /> -->
 
-<do-dont :examples="$page.frontmatter.placeholder" />
+<do-dont :examples="$page.frontmatter.sizes" />
 
 ## Behavior
+
+### Default Input Attrs
+
+CdrInput sets some default attributes to make it easier to construct consistent and accessible forms. These default attributes can be overridden by passing the same attribute to the CdrInput component.
+
+For all CdrInput elements:
+- `spellcheck` is set to `false`
+- `autocorrect` is set to `'off'`
+- `autocapitalize` is set to `'off'`
+
+For CdrInput elements with `type="number"` set, the following attributes are enabled to help ensure that numeric inputs behave consistently across browsers and devices:
+- `pattern` is set to `[0-9]*`, which restricts
+- `novalidate` is set to `true`
+- `inputmode` is set to `numeric`
+
+Note that the `maxlength` attribute does not work in conjunction with numeric inputs as they are treated as numbers not strings. Instead, the length can be restricted using either an event listener or the min/max attributes:
+
+```
+<!-- restrict numeric input to 3 characters max with a listener -->
+<cdr-input type="number" v-model="default" @input="() => {this.default = this.default.substring(0, 3)}"/>
+
+<!-- restrict numeric input to 3 digit numbers -->
+<cdr-input type="number" v-model="default" min="0" max="999"/>
+
+```
+
+
+### Input Masking
+
+User input should be automatically formatted to make forms easier to comprehend and use, for example by adding parentheses and a dash to a phone number or inserting a space between every four digits of a credit card number.
+
+Input masking has not been integrated directly into Cedar, however the CdrInput component implements the same API as a plain HTML text input element and can be used in conjunction with most input masking libraries.
+
+We recommend using [v-mask](https://github.com/probil/v-mask) as a local directive in any components where you need input masking, as it provides a number of benefits:
+
+- one of the smallest vue plugins for input masking
+- can be loaded as a local directive directly in your component rather than as a global plugin that must be registered at the application level
+- the API of `v-mask` is extremely simple and easy to understand
+- if and when input masking support is built into CdrInput the `v-mask` API is what we will implement, making it easier for you to migrate in the future
+
+```
+<script>
+import { CdrInput } from "@rei/cedar";
+import { VueMaskDirective } from "v-mask";
+
+export default {
+  name: "VueDirectiveExample",
+  components: {
+    CdrInput,
+  },
+  directives: {
+    mask: VueMaskDirective,
+  },
+  data() {
+    return {
+      defaultModel: '',
+    }
+  }
+};
+</script>
+<template>
+<cdr-input
+  v-model="defaultModel"
+  type="tel"
+  v-mask="'(###) ###-####'"
+>
+</template>
+
+```
 
 ### Inputs with Icons
 
@@ -660,14 +780,9 @@ This component has compliance with WCAG guidelines by:
 
 ### Required Fields
 
-- The default status of an input field is “optional”
-- If the status is set to “required”, the text, “Required” will appear next to the input label
+- The default status of an input field is “optional”. Setting the `optional` prop on the input will render a text label indicating it is optional
+- If the status is set to “required”, an asterisk will appear next to the input label with an aria-label indicating that the input is required and the input field will be marked `aria-required`
 
-### Do / Don't
-
-<do-dont :examples="$page.frontmatter.required" />
-
-<do-dont :examples="$page.frontmatter.sizes" />
 
 # API
 
@@ -689,59 +804,5 @@ This component will bind any attribute that a [native HTML input element](https:
 ## Component Variables
 
 <cdr-doc-comp-vars name="CdrInput">Note that the <a href="../component-variables/#CdrLabelStandalone">cdr-label-standalone mixins</a> should be used for assembling the label element. </cdr-doc-comp-vars>
-
-## Usage
-
-The **CdrInput** component requires `v-model` to bind the input value to your data model.  You can also use `helper-text` to display additional information below the input.
-
-```vue {3,6,7,8}
-<cdr-input
-  class="demo-input"
-  v-model="inputWithSlots"
-  id="slots-demo"
-  label="Billing address ZIP code">
-  <template slot="helper-text">
-    International customers, if no postal code, enter "NA"
-  </template>
-</cdr-input>
-```
-
-The `aria-label` attribute will be automatically added on compilation based upon what is provided in the `label` prop.
-
-```vue
-<cdr-input
-  class="demo-input"
-  v-model="ariaModel"
-  id="aria-demo"
-  label="First Name">
-</cdr-input>
-```
-
-This will result in the following HTML:
-
-```vue
-<div class="cdr-input-wrap">
-  <input
-    id="aria-demo"
-    type="text"
-    class="cdr-input"
-    aria-label="First Name">
-</div>
-```
-
-Input inherits the `placeholder` attribute for the placeholder text. You can also use the `post-icon` slot for adding an icon.
-
-```vue {4,7,8,9}
-<cdr-input
-  class="demo-input"
-  v-model="inputWithSlots"
-  placeholder="mm/dd/yyyy"
-  id="slots-demo"
-  label="Event Date">
-  <template slot="post-icon">
-    <icon-calendar />
-  </template>
-</cdr-input>
-```
 
 </cdr-doc-table-of-contents-shell>
