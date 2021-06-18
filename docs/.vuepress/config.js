@@ -94,12 +94,12 @@ module.exports = {
       {
         text: "Patterns",
         items: [
-          // { text: "Alerts", link: "/patterns/alerts/", },
+          { text: "Alerts", link: "/patterns/alerts/", },
           { text: "Forms", link: "/patterns/forms/" },
-          // { text: "Validation", link: "/patterns/validation/" },
-          // { text: "Messaging", link: "/patterns/messaging/", },
-          // { text: "Update and Loading Notifications", link: "/patterns/update-and-loading-notifications/" },
-          // { text: "Status Notifications", link: "/patterns/status-notifications/" },
+          { text: "Validation", link: "/patterns/validation/" },
+          { text: "Messaging", link: "/patterns/messaging/", },
+          { text: "Update and Loading Notifications", link: "/patterns/update-and-loading-notifications/" },
+          { text: "Status Notifications", link: "/patterns/status-notifications/" },
         ]
       },
       {
