@@ -22,7 +22,7 @@
 Cedar manages the design language for the Co-op’s digital products. On this site, you will find supporting documentation for everything Cedar offers. After you’re set up with our Toolkits, check out our foundation pages and pay special attention to [Color](../../foundation/color) and [Typography](../../foundation/typography/) for more nuanced guidance.
 
 ### Additional Brand Guidelines
-- [Brand Asset Guide](https://public.cloud-dam.rei.com/api/public/content/6dcb72cc891243c0b8235c5cd0487637)
+- [REI Co-op Brand Guidelines](https://public.cloud-dam.rei.com/api/public/content/7d09614ed12d4f4d8c56060a2f298c73)
 - [Photography Style Guide](https://www.cloud-dam.rei.com/en-us/AssetGuidesandCreativeStandards/AssetGuideBuild/REIPhotographyStandards)
 
 
