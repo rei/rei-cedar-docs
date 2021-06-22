@@ -32,7 +32,7 @@ Persistent Status Notifications are 'in page messages', often errors or warnings
     <th class="advanced-table__header">
       Priority
     </th>
-    <td>Prominent, medium priority</td>
+    <td><icon-warning-fill/> Prominent, medium priority</td>
   </tr>
   <tr>
     <th class="advanced-table__header">
@@ -177,7 +177,7 @@ Persistent Status Notifications are 'in page messages', often errors or warnings
     <th class="advanced-table__header">
       Priority
     </th>
-    <td>low / minimally disruptive</td>
+    <td><icon-information-fill /> low / minimally disruptive</td>
   </tr>
   <tr>
     <th class="advanced-table__header">

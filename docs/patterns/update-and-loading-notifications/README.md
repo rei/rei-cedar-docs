@@ -32,7 +32,7 @@ Additionally, These notifications often only update a specific part of an inline
     <th class="advanced-table__header">
       Priority
     </th>
-    <td>low</td>
+    <td> <icon-information-fill /> low</td>
   </tr>
   <tr>
     <th class="advanced-table__header">
@@ -127,20 +127,18 @@ Additionally, These notifications often only update a specific part of an inline
 #### Content Container
 
 The Update Notification Content Container wraps both the element being updated and any assistive technology helpers such as screen reader text. It may be a pre-existing section of a page or dynamically added upon user action.
-##### Design Considerations
 
-- Should
-  - Ensure the Update notification does not receive focus as a result of a change in status.
-  - Ensure sufficient Visual feedback is provided to inform users that an update that may not be associated with the element they have interacted with has been updated
-- Should not
-  - Overuse Update notifications. They may interrupt your users experience
-- May
-  - be stacked with loading notification
-##### Development Considerations
+Design 
+- Should ensure the Update notification does not receive focus as a result of a change in status.
+- Should ensure sufficient Visual feedback is provided to inform users that an update that may not be associated with the element they have interacted with has been updated
+- Should Not overuse Update notifications. They may interrupt your users experience
+- May be stacked with a loading notification
+<hr/>
 
-- Must
-  - Define pre-existing page sections where content may be updated as a WAI-ARIA live region. 
-  Use the aria-live attribute on the container of the content that may be updated or, in special cases, use one of the WAI-ARIA special live region roles.
+Development
+- Must ensure the container generating the update is able to receive focus
+- Must define pre-existing page sections where content may be updated as a WAI-ARIA live region. 
+- Must use the `aria-live` attribute on the container of the content that may be updated or, in special cases, use one of the WAI-ARIA special live region roles.
    ```html
     <!-- EXAMPLE: while stable -->
     <div aria-live="polite" role="region" aria-labelledby="shopping-cart">
@@ -157,38 +155,19 @@ The Update Notification Content Container wraps both the element being updated a
       <span class="sr-only">items in your cart</span>
     </div>
     ```
-  - Ensure the container generating the update is able to receive focus
-   
-- May
-  - on activation of dynamic messaging, use `role=”status”` in place of or in addition to `aria-live` to the markup announcing the notification
-    ```html
-    <!-- EXAMPLE: while stable -->
-
-    ```
-    ```html
-    <!-- EXAMPLE: while active -->
-    <div role="status">
-    Determining your location...
-    </div>
-    ```
-  - Include [aria-atomic](https://www.digitala11y.com/aria-atomic-properties/) markup attribute to define what content will be presented to assistive technologies
-  - Include `aria-relevant` to define what type of changes are being announced to assistive technologies
+- May use `role=”status”` in place of or in addition to `aria-live`
+- May include [aria-atomic](https://www.digitala11y.com/aria-atomic-properties/) markup attribute to define what content will be presented to assistive technologies
+- May include `aria-relevant` to define what type of changes are being announced to assistive technologies
 #### Content Control
  The Update Notification Content Control may be any actionable element, such as a link or button.
-##### Design Considerations
 
-- **Should not**
-  - Move Focus automatically to the notification
-- **May**
-  - Open or update content in locations unrelated to the action which caused the notification to appear
+Design 
+- Should Not move Focus automatically to the notification
+- May open or update content in locations unrelated to the action which caused the notification to appear
+<hr/>
 
-##### Development Considerations
-
-- **Should**
-  - Use the aria-controls attribute if another part of the page controls what appears in the notification
-    ```html
-    <button aria-controls="updateContainer-id" >Add to cart</button>
-    ```
+Development
+- Should use the aria-controls attribute if another part of the page controls what appears in the notification
 ## loading Notifications
 
 When we use visual loading transitions to show that a live section of a page is changing or presenting new data, we are actually notifying our users that something is happening, that the page is busy.
@@ -201,7 +180,7 @@ This can be added in the form of additional element attributes that communicate 
     <th class="advanced-table__header">
       Priority
     </th>
-    <td>N/A</td>
+    <td> <icon-information-fill /> low</td>
   </tr>
   <tr>
     <th class="advanced-table__header">
@@ -271,20 +250,19 @@ This can be added in the form of additional element attributes that communicate 
 
 <cdr-img :src="$withBase('/notifications/loadingNotification.png')" alt="Diagram of loading animation annotating the list below" width="600px"/>
 
-- **Should**
-  - Define pre-existing page sections where content may be updated as a WAI-ARIA live region.
-  - Use the `aria-busy` attribute to indicate an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
+- Should define pre-existing page sections where content may be updated as a WAI-ARIA live region.
+- Should use the `aria-busy` attribute to indicate an element is being modified and that assistive technologies MAY want to wait until the modifications are complete before exposing them to the user.
 
-   <cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" :model="{isLoading: false}">
+<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" :model="{isLoading: false}">
 
-    ```html
-    <cdr-button :disabled="isLoading"  @click="isLoading = true" aria-controls="updateContainer">
-      {{isLoading ? 'Loading...' : 'Add to cart'}}
-    </cdr-button>
+```html
+<cdr-button :disabled="isLoading"  @click="isLoading = true" aria-controls="updateContainer">
+  {{isLoading ? 'Loading...' : 'Add to cart'}}
+</cdr-button>
 
-    <section role="region" aria-live="polite" :aria-busy="isLoading" id="updateContainer">{{isLoading ? 'this content is being updated...' : 'live content section'}}</section>
-    ```
+<section role="region" aria-live="polite" :aria-busy="isLoading" id="updateContainer">{{isLoading ? 'this content is being updated...' : 'live content section'}}</section>
+```
 
-    </cdr-doc-example-code-pair>
+</cdr-doc-example-code-pair>
 
 </cdr-doc-table-of-contents-shell>
