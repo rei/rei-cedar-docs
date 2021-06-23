@@ -101,7 +101,7 @@
                 "name": "required",
                 "type": "boolean",
                 "default": "false",
-                "description": "Sets the field to required and displays an asterisk next to the select label"
+                "description": "Sets aria-required on the input field and displays an asterisk next to the select label"
               },
               {
                 "name": "optional",
@@ -263,7 +263,7 @@ Select control with link text on right.
   prompt="Prompt text"
   :options="defaultOptions"
 >
-  <template v-slot:info>
+  <template #info>
     <cdr-link
       href="#/"
       modifier="standalone"
@@ -281,7 +281,7 @@ Select control with link text on right.
   :options="defaultOptions"
   disabled
 >
-  <template v-slot:info>
+  <template #info>
     <cdr-link
       href="#/"
       modifier="standalone"
@@ -309,7 +309,7 @@ Select control with icon outside select field on right.
   prompt="Prompt text"
   :options="defaultOptions"
 >
-  <template v-slot:info-action>
+  <template #info-action>
     <cdr-link tag="button">
       <icon-information-fill/>
     </cdr-link>
@@ -334,7 +334,7 @@ Input field with helper or hint text below the input field.
   prompt="Prompt text"
   :options="defaultOptions"
 >
-  <template v-slot:helper-text>
+  <template #helper-text>
     This is helper text.
   </template>
 </cdr-select>
@@ -347,7 +347,7 @@ Input field with helper or hint text below the input field.
   :options="defaultOptions"
   disabled
 >
-  <template v-slot:helper-text>
+  <template #helper-text>
     This is helper text.
   </template>
 </cdr-select>
@@ -544,11 +544,11 @@ Select components should be:
 
 ### Required Fields
 
-+ The text “Required” will appear next to the input label if the status is required
++ An asterisk will appear next to the input label if the status is required and the input field will have `aria-required` set
 
 ### Validation
 
-+ Validate the user’s data before form submission
++ Validate the user’s data before form submission. The `error` property and slot can be used to render a message on error.
 
 
 # API

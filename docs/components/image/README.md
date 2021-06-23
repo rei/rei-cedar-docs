@@ -30,7 +30,7 @@
                 "name": "ratio",
                 "type": "string",
                 "default": "N/A",
-                "description": "Sets the aspect ratio and scales the image as large as possible without cropping or stretching the image (See CSS background-size: contain). Possible values: {  'auto'  |  'square'  |  '1-2'  |  '2-3'  |  '3-4'  |  '9-16'  |  '2-1'  |  '3-2'  |  '4-3'  |  '16-9'  }"
+                "description": "Sets the aspect ratio and scales the image as large as possible without cropping or stretching the image. Possible values: {  'auto'  |  'square'  |  '1-2'  |  '2-3'  |  '3-4'  |  '9-16'  |  '2-1'  |  '3-2'  |  '4-3'  |  '16-9'  }"
               },
               {
                 "name": "crop",
@@ -42,7 +42,7 @@
                 "name": "cover",
                 "type": "boolean",
                 "default": "N/A",
-                "description": "Requires ‘ratio’ to scale the image to be as large as possible to fill the entire background area. See CSS background-size: cover."
+                "description": "Requires ‘ratio’ to scale the image to be as large as possible to fill the entire background area."
               },
               {
                 "name": "radius",
@@ -139,6 +139,56 @@ Use the cover property to resize the background image to fill the entire contain
 ```
 
 </cdr-doc-example-code-pair>
+
+
+## Ratio Auto
+
+To use cover or crop properties without a defined aspect ratio, set `ratio="auto"` and give the image an explicit height and/or width. This can be done in several ways:
+- Apply `height` or `min-height` to the CdrImg element directly
+- Apply `height: 100%` to the CdrImg element to have it take up the full height of it's container (which must also have a height defined through some means)
+- Make the CdrImg be a grid item, in which case the image height would be determined by the height of the other grid items in the same row
+
+<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/image" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrImg, CdrGrid'})" >
+
+```html
+<div>
+  <cdr-img
+    src="/rei-cedar-docs/live.jpg"
+    alt="REI employees building trails during a stewardship event"
+    ratio="auto"
+    cover
+    crop="top"
+    style="min-height: 200px"
+  />
+
+  <div style="width: 200px; height: 300px;">
+    <cdr-img
+      src="/rei-cedar-docs/live.jpg"
+      alt="REI employees building trails during a stewardship event"
+      ratio="auto"
+      cover
+      crop="top"
+      style="height: 100%"
+    />
+  </div>
+
+  <cdr-grid class="grid-template-columns: 1fr 2fr">
+    <cdr-img
+      src="/rei-cedar-docs/live.jpg"
+      alt="REI employees building trails during a stewardship event"
+      ratio="auto"
+      cover
+      crop="top"
+      style="height: 100px"
+    />
+    <div>Content to the side of an image in a grid</div>
+  </cdr-grid>
+
+</div>
+```
+
+</cdr-doc-example-code-pair>
+
 
 
 ## Shaping Images

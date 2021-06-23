@@ -18,12 +18,13 @@ One of the best ways to influence the visual language of the Co-op’s digital p
 
 There are many ways to contribute to Cedar—new components, enhancements, and bug fixes will all be accepted for consideration. Cedar welcomes contributions to the system that meet brand and quality standards, and can be reused by two or more teams.
 
-See the guidelines mentioned below on this page for more information about contributions, and reach out using [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) channel if you have any questions.  
+See the guidelines mentioned below on this page for more information about contributions, and reach out using [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) if you have any questions.  
 
 ## Component Contributions
 When creating a new component, first reach out to the Cedar team to see if the component is already under development in the [Cedar backlog](https://issues.rei.com/secure/RapidBoard.jspa?rapidView=1996) or if exists in a shared repo. If not, the Cedar team can help advise on how to [build resuable components](../../getting-started/building-components-with-cedar/) using REI design foundations and system assets, so that it can be pulled into the system in the future.
 
 If you have a request for the Cedar team, please submit it in [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) or come and talk to us during our weekly office hours.
+
 
 ### Design
 New component designs can be added to the [Greenhouse library in Figma](https://www.figma.com/file/5R0ElfCIEJbRJx2tKzlA7s/Greenhouse?node-id=1673%3A4). Greenhouse is an internal library where designers can add new components, variants, and patterns to share with the community. The Cedar team will help facilitate additions to Greenhouse, and monitor the library for potential contributions to the design system.
@@ -37,7 +38,9 @@ If you are working on a component or feature that can be shared with other proje
 
 
 ### Bug Fixes
-The Cedar team is committed to maintaining consistent, quality components. If you encounter an issue, please submit it in the[#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) channel or come and talk to us during our weekly office hours.
+
+The Cedar team is committed to maintaining consistent, quality components. If you encounter an issue, please submit it on [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) or come and talk to us during our weekly office hours.
+
 
 The team will address the bug as soon as possible, depending on the severity of the issue and sprint capacity. Please include as much relevant information as possible when submitting a bug report, including steps to reproduce, urgency, and impact to help us prioritize. If the bug is present on a try server or branch it is especially helpful to include links to those so we can quickly assess the issue.
 

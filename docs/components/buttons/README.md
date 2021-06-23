@@ -255,7 +255,7 @@ Pair an icon with text to improve recognition about an object or action.
     <cdr-button
       modifier="secondary"
     >
-      <template v-slot:icon-left>
+      <template #icon-left>
         <icon-play-stroke
           inherit-color
         />
@@ -266,7 +266,7 @@ Pair an icon with text to improve recognition about an object or action.
       modifier="secondary"
       disabled
     >
-      <template v-slot:icon-left>
+      <template #icon-left>
         <icon-play-stroke
           inherit-color
         />
@@ -290,7 +290,7 @@ Use icons to visually communicate an object or action in a limited space. Includ
       :icon-only="true"
       aria-label="More information about icon"
     >
-      <template v-slot:icon>
+      <template #icon>
         <icon-question-fill inherit-color />
       </template>
     </cdr-button>
@@ -312,7 +312,7 @@ Use `with-background` property in conjunction with the `icon-only` property to m
       :with-background="true"
       aria-label="More information about icon"
     >
-      <template v-slot:icon>
+      <template #icon>
         <icon-account-profile />
       </template>
     </cdr-button>

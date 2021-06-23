@@ -20,20 +20,23 @@
 
 | package name | version |
 |--------------|---------|
-| `@rei/cedar` | ^9.x.x |
-| `@rei/cdr-tokens` | ^9.x.x |
-| `@rei/cdr-component-variables` | ^x.x.x |
-| `@rei/cedar-icons` | ^x.x.x |
+| `@rei/cedar` | ^9.0.0 |
+| `@rei/cdr-tokens` | ^9.0.0 |
+| `@rei/cdr-component-variables` | ^7.0.0 |
 
 - If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your micro-site.
 
 ## New Features
 
+### CdrContainer Component
+
+We have created a new CdrContainer component which encapsulates the basic responsive layout logic for REI pages. This component behaves the same as the `cdr-container` mixins and is intended as an option for replacing the now deprecated `cdr-container` utility class. See the [CdrContainer](../../components/container) page for more information.
+
 ### Brand Color Updates
 
-We have updated the color values of some Cedar tokens to make use of the REI brand color palette. Those tokens are also being used to style the `default` and `sale` version of the CdrButton
+We have updated the color values of some Cedar tokens to make use of the REI brand color palette. Those tokens are also being used to style the `default` and `sale` version of the CdrButton.
 
-We have created a new `cdr-color-background-brand-spruce` color token (TODO: info on usage???)
+We have created a new `cdr-color-background-brand-spruce` color token that can be used as a background color in certain situations. Note that only the `background-primary` and `background-secondary` color tokens are designed to work and have accessible contrast levels against all of Cedar.
 
 ### CdrBreadcrumb Navigate Event
 
@@ -43,27 +46,25 @@ The CdrBreadcrumb component now emits a `navigate` event which allows users to o
 
 CdrInput now accepts a new boolean property called `numeric` which sets some default attributes for inputs that are composed of numerical characters but are not strictly "number" values themselves. The `type="number"` attribute for input elements is designed to be used with actual numbers such as quantities, and does not behave properly with values such as credit cards, security codes, postal codes, or month/year combos.
 
-If a CdrInput receives either `type="number"` or `:numeric="true"`, it will set default values for the `inputmode` and `pattern` attributes which will force mobile devices to launch a numeric only keyboard. Note that solely using `:numeric="true"` will not restrict input to only numeric characters, see the [CdrInput page](../../components/input#numeric-input)
+If a CdrInput receives either `type="number"` or `:numeric="true"`, it will set default values for the `inputmode` and `pattern` attributes which will force mobile devices to launch a numeric only keyboard. Note that solely using `:numeric="true"` will not restrict input to only numeric characters, see the [CdrInput page](../../components/input#numeric-input) for more information.
 
 ### Form Accessibility Improvements
 
 We have made a number of improvements to our form components to make them more accessible and consistent:
 
 - Default `autocorrect`, `autocapitalize`, and `spellcheck` attributes on CdrInput are now set automatically to make input more consistent across different browsers and devices. These attributes can be overridden if needed.
+- CdrInput and CdrSelect now set `aria-required` instead of the `required` attribute on the HTML input element when the `required` property is passed in. Because validation is handled programmatically `aria-required` results in a more consistent user experience across browsers than `required` does.
 - If a `helper-text` slot is used in conjunction with CdrInput or CdrSelect that helper text element is now automatically linked to the input field using the `aria-describedby` attribute. The `aria-describedby` attribute can still be used to link additional elements to the input if needed.
 - If the `error` property is used on a CdrInput, CdrSelect, or CdrFormGroup component the input field gets marked as `aria-invalid="true"` and the error message is linked to the input field using the `aria-errormessage` attribute.
 
 ### Form Element Error Role Property
 
-CdrFormGroup, CdrInput, and CdrSelect now accept an `error-role` property that allows for overriding the accessible `role` attribute on their embedded error state notification.
-
-TODO: add examples to those docs pages witch guidance on when to override that?
+CdrFormGroup, CdrInput, and CdrSelect now accept an `error-role` property that allows for overriding the accessible `role` attribute on their embedded error state notification. The default value of `error-role` is `status`.
 
 ### CdrModal Role Property
 
-CdrModal now accepts a `role` property that allows for overriding the accessible `role` property on the modal content element
+CdrModal now accepts a `role` property that allows for overriding the accessible `role` property on the modal content element. The default value of `role` is `dialog`.
 
-TODO: add example to modal page with guidance?
 
 ## Deprecations
 
@@ -75,27 +76,33 @@ CdrBreadcrumb and CdrPagination both allow for passing in a scoped slot for rend
 
 ### Vue 3: Update Slot Syntax
 
-Vue 2.6 introduced a new syntax for passing slot content into components. The old syntax is removed from Vue 3 and we recommend updating your codebase to make use of the new slot syntax to simplify the upgrade process in the future. Note that the new `v-slot` syntax can only be used on a `template` tag, however those additional `template` tags will not be included in the rendered HTML.
+Vue 2.6 introduced a new `v-slot` syntax for passing slot content into components. A pound sign `#` can be used as a shorthand for `v-slot:`, much like a colon `:` can be used as a shorthand for `v-bind`. The old syntax is removed from Vue 3 and we recommend updating your codebase to make use of the new slot syntax to simplify the upgrade process in the future. Note that the new `v-slot` or `#` syntax can only be used on a `template` tag, however those additional `template` tags will not be included in the rendered HTML.
 
 ```
 <!-- Named slots -->
 <span slot="slotname">old named slot syntax</span>
-<template v-slot:slotname>
+<template #slotname>
   <span>new named slot syntax<span>
 </template>
 
 <!-- Scoped slots -->
 <template slot="slotname" slot-scope="scopeObject">old scoped slot syntax {{ scopeObject.name }}</template>
-<template v-slot:slotname="scopeObject">new scoped slot syntax {{ scopeObject.name }}</template>
+<template #slotname="scopeObject">new scoped slot syntax {{ scopeObject.name }}</template>
 ```
 
 The examples on this doc site have been updated to make use of the new syntax, see the [Vue documentation](https://vuejs.org/v2/guide/components-slots.html#Named-Slots) for more information.
+
+## Bug Fixes
+
+### CdrImg Ratio Auto
+
+We have fixed a bug in CdrImg when the `ratio` prop is set to `"auto"` where a CSS value would resolve to `NaN`. We have also updated the [CdrImg page](../../components/image/#ratio-auto) to better demonstrate how to use the cropping features of CdrImg without giving the image a specific aspect ratio. 
 
 ## Breaking Changes
 
 ### CdrAlert Renamed to CdrBanner
 
-The CdrAlert component has been renamed to be CdrBanner to better align with the intention and meaning of the component and distinguish it from the accessible [alert pattern](../../patterns/alerts). Nothing in the component API has changed aside from the name, consumers can migrate by simply replacing any instance of `cdr-alert` with `cdr-banner`, as well as replacing `CdrAlert` with `CdrBanner`. Note that this change impacts both the @rei/cedar component package as well as the @rei/cdr-component-variables SCSS/LESS mixins.
+The CdrAlert component has been renamed to be CdrBanner to better align with the intention and meaning of the component. CdrBanner may be used for a [wide array of messaging types](../../components/banner/#ccessibility) not restricted to the accessible "alert" pattern. Nothing in the component API has changed aside from the name, consumers can migrate by simply replacing any instance of `cdr-alert` with `cdr-banner`, as well as replacing `CdrAlert` with `CdrBanner`. Note that this change impacts both the @rei/cedar component package as well as the @rei/cdr-component-variables SCSS/LESS mixins.
 
 ### CdrTokens Background Scoping
 
@@ -116,6 +123,10 @@ The `aria-describedby` property on CdrModal has been updated to use the correct 
 ### Removals
 
 In accordance with our deprecation policy, features that were deprecated in the [Fall 2020 release](../fall-2020/#deprecations) have been removed from Cedar.
+
+#### CdrInput Helper Text Slot
+
+The `helper-text` slot in CdrInput was removed in favor of the `helper-text-bottom` slot. To update, rename any instance of `helper-text` in CdrInput to be `helper-text-bottom` instead.
 
 #### Cedar Utility Classes And CdrText Modifier Have Been Removed
 
@@ -193,7 +204,7 @@ Color utilities can be replaced with the equivalent value from @rei/cdr-tokens t
 
 ##### Container Utils
 
-The `cdr-container` and `cdr-container-fluid` utility classes should be replaced with the equivalent mixin from @rei/cdr-tokens. See the [Cedar Responsive article](https://rei.github.io/rei-cedar-docs/foundation/responsive/) for more information on container usage.
+The `cdr-container` and `cdr-container-fluid` utility classes should be replaced with either the [CdrContainer](../../components/container) component or the equivalent mixin from @rei/cdr-tokens. See the [Cedar Responsive article](https://rei.github.io/rei-cedar-docs/foundation/responsive/) for more information on general container usage.
 
 ```html
 <div class="cdr-container">
@@ -203,8 +214,15 @@ The `cdr-container` and `cdr-container-fluid` utility classes should be replaced
 
 ```html
 <template>
-  <div class="your-custom-container-class">
-    Using plain CSS/tokens
+  <div>
+    <cdr-container>
+      Using the CdrContainer component
+    </cdr-container>
+
+    <div class="your-custom-container-class">
+      Using plain CSS/tokens
+    </div>
+
   </div>
 </template>
 <style lang="scss">

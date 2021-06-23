@@ -84,22 +84,6 @@
       "caption": "use placeholder text as an alternative to a label."
     }
   ],
-  "required": [
-    {
-      "type": "do",
-      "image": "input/Input__Required_Do__16-9.png",
-      "ratio": "16-9",
-      "alt": "Image showing 'Required' label next to field label",
-      "caption": "position the required label next to input field label."
-    },
-    {
-      "type": "dont",
-      "image": "input/Input__Required_Dont__16-9.png",
-      "ratio": "16-9",
-      "alt": "Image showing asterisk to denote required label",
-      "caption": "use an asterisk for a required field."
-    }
-  ],
   "sizes": [
     {
       "type": "do",
@@ -172,7 +156,7 @@
                 "name": "required",
                 "type": "boolean",
                 "default": "false",
-                "description": "Sets the field to required and displays an asterisk next to the input label."
+                "description": "Sets aria-required on the input field and displays an asterisk next to the input label."
               },
               {
                 "name": "optional",
@@ -371,7 +355,7 @@ Error messaging will override helper text rendered in the bottom position.
   :error="modelError"
   @blur="validateInput"
 >
-  <template v-slot:helper-text-bottom>
+  <template #helper-text-bottom>
     Must be 4 or less characters
   </template>
 </cdr-input>
@@ -415,6 +399,32 @@ Input field designed to accept numerical input. Launches the numerical keyboard 
 
 </cdr-doc-example-code-pair>
 
+## Number/Quantity Input
+
+Use the `type="number"` attribute only for input fields that reference a numerical value, for example a quantity of something. For input fields that are composed of numerical characters but are not strictly a number value, for example a credit card number or a month/year value, use a [numeric input](./#numeric-input) instead. An input field with `type="number"` set will only accept pure number values as input and rejects all other content, which can cause issues with a numeric identifier that has leading zeroes and may behave differently across browsers and devices.
+
+<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrButton, IconPlusLg, IconMinusLg'})" :codeMaxHeight="false" :model="{defaultModel: 0, decrementDisabled: true}" :methods="{decrement() {this.defaultModel--; if (this.defaultModel <= 0) {this.defaultModel = 0; this.decrementDisabled = true;}}, increment() {this.defaultModel++; this.decrementDisabled = false;}}">
+
+```html
+<div>
+  <cdr-button :icon-only="true" :with-background="true" @click="decrement" aria-label="Decrement counter" :disabled="decrementDisabled">
+    <icon-minus-lg/>
+  </cdr-button>
+  <cdr-input
+    v-model="defaultModel"
+    :background="backgroundColor"
+    label="Number input"
+    type="number"
+    style="display: inline-block; width: 160px;"
+  />
+  <cdr-button :icon-only="true" :with-background="true" @click="increment" aria-label="Increment counter">
+    <icon-plus-lg/>
+  </cdr-button>
+</div>
+```
+
+</cdr-doc-example-code-pair>
+
 ## Input with Link Text
 
 Input field with link text on right. The link should describe it's relationship to the input field either through it's text content or an aria-label.
@@ -428,7 +438,7 @@ Input field with link text on right. The link should describe it's relationship 
   :background="backgroundColor"
   label="Input label"
 >
-  <template v-slot:info>
+  <template #info>
     <cdr-link href="#" modifier="standalone">Information link</cdr-link>
   </template>
 </cdr-input>
@@ -448,7 +458,7 @@ Input field with icon wrapped in an actionable element outside the input field o
   :background="backgroundColor"
   label="Input label"
 >
-  <template v-slot:info-action>
+  <template #info-action>
     <cdr-link tag="button">
       <icon-information-fill
         inherit-color
@@ -472,7 +482,7 @@ Input field with helper or hint text below the input field. If the input is in a
   :background="backgroundColor"
   label="Input label"
 >
-  <template v-slot:helper-text-bottom>
+  <template #helper-text-bottom>
     Helper or additional text
   </template>
 </cdr-input>
@@ -492,7 +502,7 @@ Input field with helper or hint text rendered above the input field. Helper text
   :background="backgroundColor"
   label="Input label"
 >
-  <template v-slot:helper-text-top>
+  <template #helper-text-top>
     Helper or additional text
   </template>
 </cdr-input>
@@ -512,7 +522,7 @@ Input field with icon inserted into the input field on left. Icon is decorative 
   :background="backgroundColor"
   label="Input label"
 >
-  <template v-slot:pre-icon>
+  <template #pre-icon>
     <icon-location-pin-stroke inherit-color />
   </template>
 </cdr-input>
@@ -532,7 +542,7 @@ Input field with icon inserted into the input field on right. Icon is decorative
   :background="backgroundColor"
   label="Input label"
 >
-  <template v-slot:post-icon>
+  <template #post-icon>
     <icon-credit-card
       inherit-color
       class="cdr-button__icon"
@@ -558,9 +568,9 @@ Input field with icon buttons inserted to the right. Up to 2 buttons can be pass
     label="Input label"
 
   >
-    <template v-slot:post-icon>
+    <template #post-icon>
       <cdr-tooltip class="cdr-input__button" id="input-tooltip">
-        <template v-slot:trigger>
+        <template #trigger>
           <cdr-button
             :icon-only="true"
           >
@@ -590,7 +600,7 @@ Input field with icon buttons inserted to the right. Up to 2 buttons can be pass
 
     size="large"
   >
-    <template v-slot:post-icon>
+    <template #post-icon>
       <cdr-button
         :icon-only="true"
         size="large"
@@ -691,8 +701,6 @@ Any additional actionable elements related to the input field, which may be exte
 <!-- TODO: replace with DO use info/helper slots to describe desired input DON'T use placeholder attribute
 <do-dont :examples="$page.frontmatter.placeholder" /> -->
 
-<do-dont :examples="$page.frontmatter.required" />
-
 <do-dont :examples="$page.frontmatter.sizes" />
 
 ## Behavior
@@ -772,8 +780,8 @@ export default {
 
 ### Required Fields
 
-- The default status of an input field is “optional”
-- If the status is set to “required”, the text, “Required” will appear next to the input label
+- The default status of an input field is “optional”. Setting the `optional` prop on the input will render a text label indicating it is optional
+- If the status is set to “required”, an asterisk will appear next to the input label with an aria-label indicating that the input is required and the input field will be marked `aria-required`
 
 
 # API

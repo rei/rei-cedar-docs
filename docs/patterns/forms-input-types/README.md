@@ -87,7 +87,7 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
   :error="errorMessage"
   @blur="validate"
 >
-  <template v-slot:helper-text-top>
+  <template #helper-text-top>
     To call if there's an issue with your order.
   </template>
 </cdr-input>
@@ -127,7 +127,7 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
     :optional="true"
     class="form-space"
   >
-    <template v-slot:helper-text-top>
+    <template #helper-text-top>
       Is there another name you prefer to go by?
     </template>
   </cdr-input>
@@ -256,7 +256,7 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
   style="width: 160px;"
   @input="restrictInput"
 >
-  <template v-slot:helper-text-top>
+  <template #helper-text-top>
     Three digit number on the back.
   </template>
 </cdr-input>
@@ -285,7 +285,7 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
   style="width: 160px;"
   :numeric="true"
 >
-  <template v-slot:helper-text-top>
+  <template #helper-text-top>
     Use MM/YY format.
   </template>
 </cdr-input>
@@ -339,9 +339,9 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
   <option value="male">Female</option>
   <option value="female">Male</option>
   <option value="describe">Prefer to describe</option>
-  <template v-slot:info>
+  <template #info>
     <cdr-popover id="popover-example" position="top">
-      <template v-slot:trigger>
+      <template #trigger>
         <cdr-link tag="button">
           <icon-information-stroke inherit-color/>
         </cdr-link>
