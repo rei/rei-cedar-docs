@@ -1,6 +1,6 @@
 ---
 {
-  "title": "Form Errors",
+  "title": "Form Validation",
   "title_metadata": false,
   "layout_type": "LayoutArticle",
   "summary": "Form errors and warning responses based on user input",
@@ -66,14 +66,14 @@
       "image": "notifications/dataRetained.png",
       "ratio": "4-3",
       "alt": "an error on an input with the data retained",
-      "caption": "provide live validation on tab or exit"
+      "caption": "provide validation as soon as the user has finished filling in a field"
     },
     {
       "type": "dont",
       "image": "notifications/didNotRetainData.png",
       "ratio": "4-3",
       "alt": "form validation for a formatted phone field",
-      "caption": "invalidate a form element while a user is actively typing"
+      "caption": "use live validation to instantly provide feedback while a user is typing for non complicated form fields"
     }
   ],
 }
@@ -125,7 +125,7 @@
 Validating forms ensures that the users and our expectations align. 
 but returning a bunch of unassociated errors  at the top of a form may cause confusion, frustration, and, end in abandonment.
 
-Inline validation allows us to display a message within or below identified inputs prior to submitting or refreshing the page.
+Inline client side validation allows us to display a message within or below identified inputs prior to submitting or refreshing the page.
 this allows us to confirm the data has successfully met the form field requirements or 
 present the user with further instruction.
 Validation initiates a conversation with our users where we can provide unique feedback before, during, or after a user interaction.
@@ -139,11 +139,13 @@ always keep in mind that presenting blocking error instruction stops the user fr
 
 - Avoid it
   - By clearly labeling required fields
+  - By accepting multiple formats for data such as phone number and credit cards
   - By using helper text slots to state content requirements
   - By using helper text to clearly and concisely inform the user of formatting requirements
   - Only requiring form field that are absolutely needed
   - Only require specific formatting where absolutely needed
 - Limit it
+  - Request less information in your form. Combine field such as first and last name where possible and solicit only the most relevant and important info about the users. 
   - By only providing error instruction after a user has interacted with it and moved on
   - By not providing error instruction after a user clicks into and out of a form field without engaging with it
 - Make it easy
@@ -151,18 +153,27 @@ always keep in mind that presenting blocking error instruction stops the user fr
   - Craft the validation experience to the unique needs of the data being requested
   - Use clear and simple language, Have a conversation with the user
   - Ensure the instruction is visible to all users
+    -  By not moving the form fields up or down when displaying validation
+    -  Display instruction at the right place, directly below the field in error, replacing the bottom helper text if present
   - Display it using meaningful colors and iconography
   - Display the validation within the context of the action
-  - Display instruction at the right place, directly below the field in error, replacing the bottom helper text if present
   - Consider placing helpful formatting instruction above the input if that formatting instruction will remain helpful to your users during error resolution
   - Consider disabling the form submission to help direct the users attention to issues that exist
-- Make it unassuming and friendly 
+- Make it unassuming and friendly
   - Don’t use technical language
   - Don't shame the user for the error
+  - Don't joke with the user about the error
+  - Don't use cute language
   - Use language that conveys REI's Brand
   - Avoid uppercase text as it gives the visual impact of shouting.
 
 
+## Javascript Validation
+HTML5 natively supports some form validation which has the benefit of not requiring much JavaScript. This means that built-in form validation has better performance than JavaScript based validation.
+Unfortunately it is not fully customizable and does not support several best practices that are important to providing the best experience to our users.
+
+## Instant feedback
+Use Instant validation only for difficult to answer (and finite) questions
 
 ### Do / Don't
 
@@ -184,7 +195,8 @@ always keep in mind that presenting blocking error instruction stops the user fr
 - The form returns server provided validation instruction
 - An error or warning is unassociated with a form input
 
-## Anatomy of a Validation Notification
+
+## Anatomy of form field Validation
 These notifications are associated with special
 elements on the page, either required fields or fields with unique formatting expectations. Whi
 
@@ -258,8 +270,9 @@ A text description of the problem should be provided.
 -  if the text does not specifically call out the state of the message, error, warning, success, or info - that text should be provided via screen reader accessible text
 
 
-### Role status / aria-live
+### Error Notifications 
 
+Role status / aria-live
 -  **Should Not**
   - Be scripted to occur with every keystroke unless there is a delay built into the script to avoid announcements while the user is actively typing.
   - Be scripted to occur when a user leaves a field, because the `aria-live`
@@ -283,17 +296,18 @@ Find more information on this topic in the [Accessibility References](#accessibi
 
 
 Using an asterisks, to the right of the input labels is a widely-adopted method notifying users that a form control is required. 
+Additionally, when a majority of the inputs in a form are required mark the optional fields as "(optional)"
 
 #### Making your own
 
-##### Required Fields on Rest
+##### On Rest
 - **Must**
   - Set `Required` or `aria-required` to true for inputs that must be completed by the user
 - **Should**
   - Require only fields that are absolutely needed
   - Ensure assistive technology is provided text conveying that the field is required
 
-##### Required  Fields On validation
+##### On validation
 - **Must**
   - Identify each field in error
   - Preserve as much user-entered input as possible
