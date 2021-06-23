@@ -76,6 +76,22 @@
       "caption": "use live validation to instantly provide feedback while a user is typing for non complicated form fields"
     }
   ],
+  "live1": [
+    {
+      "type": "do",
+      "image": "forms/liveValidation.png",
+      "ratio": "4-3",
+      "alt": "live password validation showing how strong the password is",
+      "caption": "use live validation on form fields with the strictest input requirements"
+    },
+    {
+      "type": "dont",
+      "image": "notifications/didNotRetainData.png",
+      "ratio": "4-3",
+      "alt": "form validation for a formatted phone field",
+      "caption": "use live validation to provide generic error instruction"
+    }
+  ],
 }
 ---
 
@@ -126,13 +142,11 @@ Validating forms ensures that the users and our expectations align.
 but returning a bunch of unassociated errors  at the top of a form may cause confusion, frustration, and, end in abandonment.
 
 Inline client side validation allows us to display a message within or below identified inputs prior to submitting or refreshing the page.
-this allows us to confirm the data has successfully met the form field requirements or 
+It can allow us to confirm the data has successfully met the form field requirements or 
 present the user with further instruction.
 Validation initiates a conversation with our users where we can provide unique feedback before, during, or after a user interaction.
-We can also wait to provide feedback until after the user tries to submit the form.
+We can also wait to provide feedback until after the user tries to submit the entirety of the form.
 What we do to a form field and the messaging we provide can be catered to where and what the user is doing. 
-
-However, the trick with a form is to get users to submit it 
 always keep in mind that presenting blocking error instruction stops the user from doing what they want and may cause form abandonment.
 
 ## Best practices
@@ -173,7 +187,28 @@ HTML5 natively supports some form validation which has the benefit of not requir
 Unfortunately it is not fully customizable and does not support several best practices that are important to providing the best experience to our users.
 
 ## Instant feedback
-Use Instant validation only for difficult to answer (and finite) questions
+Live validation displays as the user is typing
+rather than once they exit from the form field.
+While extremely useful as a guide for form fields with the strictest input requirements, in general, it has
+[proven](https://www.researchgate.net/publication/221054469_Online_Form_Validation_Don't_Show_Errors_Right_Away) 
+to [cause](https://www.researchgate.net/publication/220054837_Usable_error_message_presentation_in_the_World_Wide_Web_Do_not_show_errors_right_away) 
+more user errors and take longer to successfully complete the form when it is used incorrectly.
+
+This method is less likely to be missed by users but also forces them out of their initial completion mindset and my cause frustration.
+
+Instruction offered this way should focus on positive progressive cues and should not present error instruction.
+It should not be used to immediately communicate that the user has caused an error
+
+- Use Instant validation 
+  - for difficult to answer questions where a user may create several formatting errors
+  - to indicate progress as a user types 
+
+- Don't annoy the user 
+  - By providing instant error instruction
+  - By using on simple inputs
+
+
+
 
 ### Do / Don't
 
@@ -184,6 +219,8 @@ Use Instant validation only for difficult to answer (and finite) questions
 <do-dont :examples="$page.frontmatter.data" />
 <br />
 <do-dont :examples="$page.frontmatter.premature2" />
+<br />
+<do-dont :examples="$page.frontmatter.live1" />
 
 ### Use When
 - The notification is directly associated to an element within the form that has an error
@@ -419,6 +456,8 @@ The response of the “validator” is sent back to the user’s computer and it
   - Provide a same-page link so that users can jump directly to the form field that has the error.
 
 ### Accessibility References
+- [Deque Checklist](https://dequeuniversity.com/checklists/web/form-validation-feedback)
+- [Instant Validation](https://uxmovement.com/forms/why-users-make-more-errors-with-instant-inline-validation/)
 - [Notifications and feedback](https://www.w3.org/WAI/perspective-videos/notifications/)
 - [Accessible Notifications](https://www.w3.org/WAI/RD/wiki/Accessible_Notifications)
 - [WCAG status messages 4.1.3](https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html)
