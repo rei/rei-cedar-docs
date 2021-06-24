@@ -36,37 +36,35 @@ Help and informational messaging appear contextually (e.g. helping a user locate
 Depending on the situation, messaging may appear in an overlay (modals, tooltips, popovers), while other messaging will appear in-line (e.g. form field validation). Regardless of approach, the messaging will open in-page and should not navigate users to a new page or window.
 
 When deciding what type of messaging pattern to use, reference the flowchart and table on this page, as well as the usage guidelines in the subsequent pages to help determine which components are appropriate for each experience.
-
 ## Deciding what to use
 
 Consider the intent of the messaging and specific user task to determine which pattern to use. 
 
+### Priority scale
+
+- **Low**
+<br />
+Confirmations, applications process, and information unassociated to the primary purpose of the page. These messages or notifications can be missed without blocking a user from 
+successfully moving through the primary flow of a page
+  - [loading Notifications](../update-and-loading-notifications/#loading-notifications)
+  - [Transient Status Notifications](../status-notifications/#transient-status-notifications)
+- **Medium**
+<br />
+Ancillary, informative messaging or notifications, pertinent to a task the user is doing
+  - [Update Notifications](../update-and-loading-notifications/#update-notifications)
+  - [Persistent Status Notifications](../status-notifications/#persistent-status-notifications)
+- **High**
+<br />
+Messaging that is important for our users to see and interact with, but that should not disrupt them when they are in the process of interacting with the page
+  - [Error Validation](../form-validation/) (Notifications)
+- **Critical**
+<br />
+For the most important blocking, disrupting updates that need immediate user attention and 
+  - [System Alerts](../alerts/)
+  - [Important User Prompts](../alerts/#alert-dialog)
+  - Time Sensitive User Caused [Error Validation](../form-validation/) (Alerts)
+
  -- add condition for ending up as navigation as a parallel process 
-@flowstart
-st=>start: Identify the correct message pattern
-e=>end: End
-
-cond=>condition: Requires
-user interaction 
-
-interactionNo=>condition: Response to change?
-interactionYes=>condition: time sensitive
-or system error?
-notification=>operation: Notifications |:>../notifications/
-context=>condition: Provides help?
-help=>operation: Help
-inform=>operation: Inform
-alert=>operation: Alerts |:>../alerts/
-
-st@>cond({"arrow-end":"classic-wide-long"})
-cond@>interactionYes({"arrow-end":"classic-wide-long"})
-
-cond(yes, right)->interactionYes(no, bottom)->notification
-interactionYes(yes,right)->alert
-cond(no, bottom)->interactionNo(yes, right)->notification
-interactionNo(no)->context(yes)->help
-context(no, bottom)->inform
-@flowend
 
 <cdr-table>
   <thead>
@@ -138,6 +136,16 @@ Notifications may be used with the following message types
  - Success
  - Page status
  - Content updates
+
+
+Notifications may be stacked with each other to communicate complex processes to our users
+
+** example removing an item from a cart **
+
+A User removes an item from their wishlist using the "remove item" button; this triggers the following 3 actions:
+1. action 1 > A loading notification displays, identifying that the list is busy processing request
+2. action 2 > once the data has been updated, an update notification, listening for "removes" communicates that the item has been removed to assistive technology
+3. action 3 > last in this example, a transient notification pops up confirming to the user that the item has been removed successfully
 
 ### Patterns
 (the following do not consider mobile app patterns)

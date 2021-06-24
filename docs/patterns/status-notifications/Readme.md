@@ -32,7 +32,7 @@ Persistent Status Notifications are 'in page messages', often errors or warnings
     <th class="advanced-table__header">
       Priority
     </th>
-    <td>Prominent, medium priority</td>
+    <td><icon-warning-fill/> Prominent, medium priority</td>
   </tr>
   <tr>
     <th class="advanced-table__header">
@@ -116,8 +116,8 @@ Persistent Status Notifications are 'in page messages', often errors or warnings
 - Providing confirmation when updating and removing items that provides navigation or other actions
 
 ### Don't Use When
-- The notification is an update to existing inline copy (see [Update and Loading Notifications](../update-and-loading-notifications/))
-- The notification relates to an actionable element in a busy state (see [Update and Loading Notifications](../update-and-loading-notifications/))
+- Changing inline content based on user selection (see [Update Notifications](../update-and-loading-notifications/#update-notifications))
+- The notification relates to an actionable element in a busy state (see [Loading Notifications](../update-and-loading-notifications/#loading-notifications))
 - As confirmation that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](#transient-status-notifications))
 - providing contextual information on the page processes (see [Transient Status Notifications](#transient-status-notifications))
 - Providing errors, warnings, or success messaging related to user entered formatting, incomplete inputs, or invalid selections (see [Validation Notifications](validation/#validation-notifications))
@@ -177,7 +177,7 @@ Persistent Status Notifications are 'in page messages', often errors or warnings
     <th class="advanced-table__header">
       Priority
     </th>
-    <td>low / minimally disruptive</td>
+    <td><icon-information-fill /> low / minimally disruptive</td>
   </tr>
   <tr>
     <th class="advanced-table__header">
@@ -278,9 +278,8 @@ Persistent Status Notifications are 'in page messages', often errors or warnings
 - As confirmation that a task or process initiated by the user was completed successfully 
 - providing contextual information on the page processes
 ### Don't Use When
-
-- The notification is an update to existing inline copy (see [Update and Loading Notifications](../update-and-loading-notifications/))
-- The notification relates to an actionable element in a busy state (see [Update and Loading Notifications](../update-and-loading-notifications/))
+- Changing inline content based on user selection (see [Update Notifications](../update-and-loading-notifications/#update-notifications))
+- The notification relates to an actionable element in a busy state (see [Loading Notifications](../update-and-loading-notifications/#loading-notifications))
 - Exposing a status change to a product caused by user selection (see [Persistent Status Notifications](#persistent-status-notifications))
 - providing error or warnings on the status of items in the users cart (see [Persistent Status Notifications](#persistent-status-notifications))
 - Providing confirmation when updating and removing items that provides navigation or other actions (see [Persistent Status Notifications](#persistent-status-notifications))
