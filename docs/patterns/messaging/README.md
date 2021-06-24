@@ -40,32 +40,31 @@ When deciding what type of messaging pattern to use, reference the flowchart and
 
 Consider the intent of the messaging and specific user task to determine which pattern to use. 
 
+### Priority scale
+
+- **Low**
+<br />
+Confirmations, applications process, and information unassociated to the primary purpose of the page. These messages or notifications can be missed without blocking a user from 
+successfully moving through the primary flow of a page
+  - [loading Notifications](../update-and-loading-notifications/#loading-notifications)
+  - [Transient Status Notifications](../status-notifications/#transient-status-notifications)
+- **Medium**
+<br />
+Ancillary, informative messaging or notifications, pertinent to a task the user is doing
+  - [Update Notifications](../update-and-loading-notifications/#update-notifications)
+  - [Persistent Status Notifications](../status-notifications/#persistent-status-notifications)
+- **High**
+<br />
+Messaging that is important for our users to see and interact with, but that should not disrupt them when they are in the process of interacting with the page
+  - [Error Validation](../form-validation/) (Notifications)
+- **Critical**
+<br />
+For the most important blocking, disrupting updates that need immediate user attention and 
+  - [System Alerts](../alerts/)
+  - [Important User Prompts](../alerts/#alert-dialog)
+  - Time Sensitive User Caused [Error Validation](../form-validation/) (Alerts)
+
  -- add condition for ending up as navigation as a parallel process 
-@flowstart
-st=>start: Identify the correct message pattern
-e=>end: End
-
-cond=>condition: Requires
-user interaction 
-
-interactionNo=>condition: Response to change?
-interactionYes=>condition: time sensitive
-or system error?
-notification=>operation: Notifications |:>../notifications/
-context=>condition: Provides help?
-help=>operation: Help
-inform=>operation: Inform
-alert=>operation: Alerts |:>../alerts/
-
-st@>cond({"arrow-end":"classic-wide-long"})
-cond@>interactionYes({"arrow-end":"classic-wide-long"})
-
-cond(yes, right)->interactionYes(no, bottom)->notification
-interactionYes(yes,right)->alert
-cond(no, bottom)->interactionNo(yes, right)->notification
-interactionNo(no)->context(yes)->help
-context(no, bottom)->inform
-@flowend
 
 <cdr-table>
   <thead>

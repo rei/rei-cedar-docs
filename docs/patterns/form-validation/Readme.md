@@ -234,31 +234,29 @@ It should not be used to immediately communicate that the user has caused an err
 
 
 ## Anatomy of form field Validation
-These notifications are associated with special
-elements on the page, either required fields or fields with unique formatting expectations. Whi
 
 <cdr-img :src="$withBase('/notifications/validationAnatomy.png')" alt="Diagram showing the required layout of the elements listed below" />
 
+There are several elements that have unique expectations and requirements as the form is providing validation to our users.
+So what's going on? 
+Our first set of requirements and best practices focus on **[Error Prevention](#error-prevention)**, 
+
+
 1. **[Validating a required form field](#validating-a-required-form-field)**
-2. **[Display](#required-form-fields-display)**
-3. **[Static properties](#required-form-fields-static-properties)**
-4. **[Error Detection](#required-form-fieldson-validation)**
-5. **[Notification Instruction container](#notification-instruction)**
+2. **[Error Prevention](#error-prevention)**
+4. **[Error Detection](#error-detection)**
 6. **[visual aid and Assistive technology text](#visual-aid-and-assistive-technology-text)**
-7. **[Instruction](#instruction)**
+7. **[Validation Notification](#validation-notification)**
 
-## Validating a form field
-
-
+## Validation Notifications
 
 Validation Notifications used to present instructions on user errors have specific accessibility requirements. These include:
-
 
 - **Must**
   - Identify each field in error
   - Provide suggestions (when known) to correct the errors
   - Preserve as much user-entered input as possible
-
+  - If an input error is automatically detected, the item that is in error is identified and the error is described to the user in text WCAG 3.3.3
 -  **Should**
   - Correctly filled out user provided data in a form that contains errors **SHOULD** remain populated post-submit.
   - Confirm successful submission of data.
@@ -267,8 +265,14 @@ Validation Notifications used to present instructions on user errors have specif
   - rely solely on visual cues to indicate an error
   - alter the user provided input to make it validate without providing the user with a validation message conveying this change
 
+Find more information on this topic in the [Accessibility References](#accessibility-references)
 
-## Instruction
+### Success Detection
+Use at least one of the following techniques:
+
+
+ 
+### Instruction
 WCAG 1.3.3, WCAG 3.3.2 provide the following guidelines for validation instructions.
 When users enter input that is validated, and errors are detected, the nature of the error needs 
 to be described to the user in manner they can access. One approach is to present an alert dialog 
@@ -306,10 +310,7 @@ A text description of the problem should be provided.
 -**Should**
 -  if the text does not specifically call out the state of the message, error, warning, success, or info - that text should be provided via screen reader accessible text
 
-
-### Error Notifications 
-
-Role status / aria-live
+### Role status / aria-live
 -  **Should Not**
   - Be scripted to occur with every keystroke unless there is a delay built into the script to avoid announcements while the user is actively typing.
   - Be scripted to occur when a user leaves a field, because the `aria-live`
@@ -404,23 +405,6 @@ used to:
 
 Find more information on this topic in the [Accessibility References](#accessibility-references)
 
-## Error Suggestion
-- **Must**
-  - If an input error is automatically detected, the item that is in error is identified and the error is described to the user in text WCAG 3.3.3
-
-Find more information on this topic in the [Accessibility References](#accessibility-references)
-
-### Success Detection
-Use at least one of the following techniques:
-
--  Confirmation text on the web page 
-(it may be appropriate to move the keyboard focus to the error message)
--  **Aria-live announcement**
-
--  Confirmation message in the page `<title>` if the submission causes a page reload or a new page load.
-
-
-
 ## Using Available Cedar Components
 by default, cedar form elements error message pattern  default to adding `role="status`, automatically setting your validation to a notification
 the following Cedar components provide generic validation styling
@@ -438,6 +422,11 @@ usually by hitting the button, the information is sent to the server and validat
 The response of the “validator” is sent back to the user’s computer and it’s visualized as either a confirmation message (“everything went fine!”) 
 or a set of error messages.
 
+-  Confirmation text on the web page 
+(it may be appropriate to move the keyboard focus to the error message)
+-  **Aria-live announcement**
+
+-  Confirmation message in the page `<title>` if the submission causes a page reload or a new page load.
 
 **Unlike client validation server-side validation is returned as part of the page content, They do not alter the page and are not status notifications.**
 
