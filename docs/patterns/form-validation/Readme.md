@@ -66,7 +66,7 @@
       "image": "notifications/dataRetained.png",
       "ratio": "4-3",
       "alt": "an error on an input with the data retained",
-      "caption": "provide validation as soon as the user has finished filling in a field"
+      "caption": "provide validation as soon as the user has left a form field"
     },
     {
       "type": "dont",
@@ -137,6 +137,9 @@
   </tr>
 </cdr-table>
 
+See also 
+- alert
+## Overview
 
 Validating forms ensures that the users and our expectations align. 
 but returning a bunch of unassociated errors  at the top of a form may cause confusion, frustration, and, end in abandonment.
@@ -148,6 +151,34 @@ Validation initiates a conversation with our users where we can provide unique f
 We can also wait to provide feedback until after the user tries to submit the entirety of the form.
 What we do to a form field and the messaging we provide can be catered to where and what the user is doing. 
 always keep in mind that presenting blocking error instruction stops the user from doing what they want and may cause form abandonment.
+
+### Javascript Validation
+HTML5 natively supports some form validation which has the benefit of not requiring much JavaScript. This means that built-in form validation has better performance than JavaScript based validation.
+Unfortunately it is not fully customizable and does not support several best practices that are important to providing the best experience to our users.
+
+### Cognitive Load
+When a user choses to engage with a form they enter a mindset to move forward as quickly as possible to complete the task
+### Instant feedback
+Live validation displays as the user is typing
+rather than once they exit from the form field.
+While extremely useful as a guide for form fields with the strictest input requirements, in general, it has
+[proven](https://www.researchgate.net/publication/221054469_Online_Form_Validation_Don't_Show_Errors_Right_Away) 
+to [cause](https://www.researchgate.net/publication/220054837_Usable_error_message_presentation_in_the_World_Wide_Web_Do_not_show_errors_right_away) 
+more user errors and take longer to successfully complete the form.
+
+This method is less likely to be missed by users but also forces them out of their initial completion mindset and my cause frustration.
+
+Instruction offered this way should focus on positive progressive cues and should not present error instruction.
+It should not be used to immediately communicate that the user has caused an error
+
+- Use Instant validation 
+  - for difficult to answer questions where a user may create several formatting errors
+  - to indicate progress as a user types 
+
+- Don't annoy the user 
+  - By providing instant error instruction
+  - By using on simple inputs
+
 
 ## Best practices
 
@@ -168,7 +199,9 @@ always keep in mind that presenting blocking error instruction stops the user fr
   - Use clear and simple language, Have a conversation with the user
   - Ensure the instruction is visible to all users
     -  By not moving the form fields up or down when displaying validation
-    -  Display instruction at the right place, directly below the field in error, replacing the bottom helper text if present
+    -  Display instruction at the right place
+      -  For a singular form element, directly below the field in error, replacing the bottom helper text if present
+      -  For a group of elements such a form group of checkboxes, below the fieldset container
   - Display it using meaningful colors and iconography
   - Display the validation within the context of the action
   - Consider placing helpful formatting instruction above the input if that formatting instruction will remain helpful to your users during error resolution
@@ -180,35 +213,6 @@ always keep in mind that presenting blocking error instruction stops the user fr
   - Don't use cute language
   - Use language that conveys REI's Brand
   - Avoid uppercase text as it gives the visual impact of shouting.
-
-
-## Javascript Validation
-HTML5 natively supports some form validation which has the benefit of not requiring much JavaScript. This means that built-in form validation has better performance than JavaScript based validation.
-Unfortunately it is not fully customizable and does not support several best practices that are important to providing the best experience to our users.
-
-## Instant feedback
-Live validation displays as the user is typing
-rather than once they exit from the form field.
-While extremely useful as a guide for form fields with the strictest input requirements, in general, it has
-[proven](https://www.researchgate.net/publication/221054469_Online_Form_Validation_Don't_Show_Errors_Right_Away) 
-to [cause](https://www.researchgate.net/publication/220054837_Usable_error_message_presentation_in_the_World_Wide_Web_Do_not_show_errors_right_away) 
-more user errors and take longer to successfully complete the form when it is used incorrectly.
-
-This method is less likely to be missed by users but also forces them out of their initial completion mindset and my cause frustration.
-
-Instruction offered this way should focus on positive progressive cues and should not present error instruction.
-It should not be used to immediately communicate that the user has caused an error
-
-- Use Instant validation 
-  - for difficult to answer questions where a user may create several formatting errors
-  - to indicate progress as a user types 
-
-- Don't annoy the user 
-  - By providing instant error instruction
-  - By using on simple inputs
-
-
-
 
 ### Do / Don't
 
@@ -222,15 +226,18 @@ It should not be used to immediately communicate that the user has caused an err
 <br />
 <do-dont :examples="$page.frontmatter.live1" />
 
-### Use When
-- The notification is directly associated to an element within the form that has an error
-- The notification successfully conforms to input formatting requirements
-- The formatting requirements of a form item have not been met
-- The user is attempting to submit a form without providing required data
-### Don't Use When
-- The error or warning is time sensitive, instead replace `role="status"` with `role="alert` as outlined in [alert](../alerts)
-- The form returns server provided validation instruction
-- An error or warning is unassociated with a form input
+## Error state
+Design guidelines for 
+
+-  error on exit of input
+-  error on submit of form
+-  error while user is active in form field
+
+## Warning state
+Live validation may present opportunities where it will make sense to offer the user a warning rather than an actual error, Design guidelines
+
+## Success State
+Design guidelines
 
 
 ## Anatomy of form field Validation
@@ -239,7 +246,7 @@ It should not be used to immediately communicate that the user has caused an err
 
 There are several elements that have unique expectations and requirements as the form is providing validation to our users.
 So what's going on? 
-Our first set of requirements and best practices focus on **[Error Prevention](#error-prevention)**, 
+Our first set of requirements and best practices focus on **[Error Prevention](#error-prevention)**. These requirements 
 
 
 1. **[Validating a required form field](#validating-a-required-form-field)**
@@ -248,7 +255,7 @@ Our first set of requirements and best practices focus on **[Error Prevention](#
 6. **[visual aid and Assistive technology text](#visual-aid-and-assistive-technology-text)**
 7. **[Validation Notification](#validation-notification)**
 
-## Validation Notifications
+### Validation Notifications
 
 Validation Notifications used to present instructions on user errors have specific accessibility requirements. These include:
 
@@ -267,12 +274,20 @@ Validation Notifications used to present instructions on user errors have specif
 
 Find more information on this topic in the [Accessibility References](#accessibility-references)
 
-### Success Detection
+#### Repeated Errors
+
+Using analytics to track where the same error occurs repeatedly 
+can help 
+uncover error instructions which are not clear, simple, or helpful. 
+layouts that cause users to much cognitive shifting
+but there could also be another mismatch between the design and users’ needs. 
+
+#### Success Detection
 Use at least one of the following techniques:
 
 
  
-### Instruction
+#### Instruction
 WCAG 1.3.3, WCAG 3.3.2 provide the following guidelines for validation instructions.
 When users enter input that is validated, and errors are detected, the nature of the error needs 
 to be described to the user in manner they can access. One approach is to present an alert dialog 
@@ -305,12 +320,12 @@ A text description of the problem should be provided.
 - **May**
   - Be hidden until the user requests them if the notification instructions are not critical.
 
-### visual aid and Assistive technology text
+#### visual aid and Assistive technology text
 
 -**Should**
 -  if the text does not specifically call out the state of the message, error, warning, success, or info - that text should be provided via screen reader accessible text
 
-### Role status / aria-live
+#### Role status / aria-live
 -  **Should Not**
   - Be scripted to occur with every keystroke unless there is a delay built into the script to avoid announcements while the user is actively typing.
   - Be scripted to occur when a user leaves a field, because the `aria-live`
@@ -324,9 +339,9 @@ A text description of the problem should be provided.
 
 Find more information on this topic in the [Accessibility References](#accessibility-references)
 
-## Error Prevention
+### Error Prevention
 
-### Required Form Fields
+#### Required Form Fields
 
 - Only require fields that are absolutely needed
 - Required fields use an asterisks to indicate that the field is required.
@@ -335,8 +350,6 @@ Find more information on this topic in the [Accessibility References](#accessibi
 
 Using an asterisks, to the right of the input labels is a widely-adopted method notifying users that a form control is required. 
 Additionally, when a majority of the inputs in a form are required mark the optional fields as "(optional)"
-
-#### Making your own
 
 ##### On Rest
 - **Must**
@@ -354,7 +367,7 @@ Additionally, when a majority of the inputs in a form are required mark the opti
 - **May**
   - also use '[aria-describedby]()' in conjunction with [aria-errormessage](aria-errormessage)
 
-### Submitting Sensitive Data
+#### Submitting Sensitive Data
 If the form is submitting any of the following:
 
 -  legal commitments
@@ -369,9 +382,9 @@ we are required to implement at least one of the following error prevention tech
 
 Find more information on this topic in the [Accessibility References](#accessibility-references)
 
-## Error Detection
+### Error Detection
 
-### aria-invalid
+#### aria-invalid
 indicate that the value entered into an input field does not conform to the format expected by the application. This may include formats such as email addresses or telephone numbers. aria-invalid can also be used to 
 indicate that a required field has not been filled in.
 The attribute should be programmatically set as a result of a validation process.
@@ -388,7 +401,7 @@ The attribute should be programmatically set as a result of a validation process
 
 Find more information on this topic in the [Accessibility References](#accessibility-references)
 
-### aria-errormessage
+#### aria-errormessage
 The `aria-errormessage` attribute takes an ID reference in the same manner as `aria-describedby`, and is only exposed when aria-invalid is set to ‘true’ on the same element. The use of a live region attribute such as aria-live=”polite” on the error message container element is optional.
 
 Placed on input and mapped via id to error message.
@@ -405,17 +418,26 @@ used to:
 
 Find more information on this topic in the [Accessibility References](#accessibility-references)
 
-## Using Available Cedar Components
-by default, cedar form elements error message pattern  default to adding `role="status`, automatically setting your validation to a notification
-the following Cedar components provide generic validation styling
-- cdr-input
-- cdr-form-group
-- cdr-select
 
-As a notification is generally what you will use for error validation, the cedar form components error message container role defaults to `role="status"`. All you have to do is provide the messaging.
+## Validation summaries
+Up to this point we have been going over best practices and requirements for individual form elements or form groups such as a singular text input within a set of other form elements.
+This type of inline validation works well as the users are provided feedback immediately that something has gone wrong. 
+If they miss this or move on without resolving it they may no longer see the field in error.
+A validation summary outlines all errors that are active within a form, it lets users know that there are errors that need to be fixed on the page, 
+whether those errors are in the viewport or below/above the fold. 
+A validation summary can give the user a global understanding of all the errors in a form, 
+Where possible Validation Summaries shouldn’t be used as the only form of error indication,
+ as it forces the user to search for the field in error; moreover, the error message may no longer be present 
+ in the viewport when the user reaches the error field, 
+ thus forcing the user to memorize the error message while fixing the issue.
 
-TODO- something about how we only provide the UI/container but not validation logic
 
+- Use
+  -  Providing guidance on several errors
+  -  When valid form options cause invalid product selections
+  -  When validation is not possible prior to submit
+Don't Use
+- As the Only Indication of an error/s
 ## Server-side Validation
 when the user provides all the data and submits the form, 
 usually by hitting the button, the information is sent to the server and validated. 
@@ -444,24 +466,39 @@ The response of the “validator” is sent back to the user’s computer and it
   - Visually style the error in such a way that it is distinguishable from other content
   - Provide a same-page link so that users can jump directly to the form field that has the error.
 
-### Accessibility References
-- [Deque Checklist](https://dequeuniversity.com/checklists/web/form-validation-feedback)
-- [Instant Validation](https://uxmovement.com/forms/why-users-make-more-errors-with-instant-inline-validation/)
-- [Notifications and feedback](https://www.w3.org/WAI/perspective-videos/notifications/)
-- [Accessible Notifications](https://www.w3.org/WAI/RD/wiki/Accessible_Notifications)
-- [WCAG status messages 4.1.3](https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html)
-- [WCAG Error Identification 3.3.1 (lvl A)](https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html)
-- [WCAG Labels or Instructions 3.3.2 (lvl A)](https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions)
-- [WCAG Error Suggestion 3.3.3 (lvl AA)](https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion)
-- [WCAG Error Prevention 3.3.4 (lvl AA) ](https://www.w3.org/WAI/WCAG21/Understanding/error-prevention-legal-financial-data)
-- [Form Notifications](https://www.w3.org/WAI/tutorials/forms/notifications/)
-- [Using Aria-Invalid to Indicate An Error Field](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA21.html)
-- [Using the aria-describedby property to provide a descriptive label for user interface controls](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA1.html)
-- Use [aria-live](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) to indicate that an element will be updated. It describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
-- Use [aria-atomic](https://www.digitala11y.com/aria-atomic-properties/) to indicate whether assistive technologies will present all, or only parts of the changed region based on the change notifications defined by the aria-relevant attribute.
-- [aria-relevant](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute)
-describes semantically meaningful changes as opposed to merely presentational ones
 
+## Using Available Cedar Components
+by default, cedar form elements error message pattern default to adding `role="status`, automatically setting our generic validation as a notification
+the following Cedar components provide generic validation styling
+- cdr-input
+- cdr-form-group
+- cdr-select
+
+As a notification is generally what you will use for error validation, the cedar form components error message container role defaults to `role="status"`. All you have to do is provide the messaging.
+
+TODO- something about how we only provide the UI/container but not validation logic
+## References
+- Accessibility
+  - [Deque Checklist](https://dequeuniversity.com/checklists/web/form-validation-feedback)
+  - [Notifications and feedback](https://www.w3.org/WAI/perspective-videos/notifications/)
+  - [Accessible Notifications](https://www.w3.org/WAI/RD/wiki/Accessible_Notifications)
+  - [WCAG status messages 4.1.3](https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html)
+  - [WCAG Error Identification 3.3.1 (lvl A)](https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html)
+  - [WCAG Labels or Instructions 3.3.2 (lvl A)](https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions)
+  - [WCAG Error Suggestion 3.3.3 (lvl AA)](https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion)
+  - [WCAG Error Prevention 3.3.4 (lvl AA) ](https://www.w3.org/WAI/WCAG21/Understanding/error-prevention-legal-financial-data)
+  - [Form Notifications](https://www.w3.org/WAI/tutorials/forms/notifications/)
+  - [Using Aria-Invalid to Indicate An Error Field](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA21.html)
+  - [Using the aria-describedby property to provide a descriptive label for user interface controls](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA1.html)
+  - Use [aria-live](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) to indicate that an element will be updated. It describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
+  - Use [aria-atomic](https://www.digitala11y.com/aria-atomic-properties/) to indicate whether assistive technologies will present all, or only parts of the changed region based on the change notifications defined by the aria-relevant attribute.
+  - [aria-relevant](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute)
+- UX/UI
+- [Instant Validation](https://uxmovement.com/forms/why-users-make-more-errors-with-instant-inline-validation/)
+- [UI Guidelines](https://www.nngroup.com/articles/errors-forms-design-guidelines/)
+- [Error message placement](https://uxmovement.com/forms/the-best-place-for-error-messages-on-forms/)
+- [Form Validation Best Practices](https://medium.com/@andrew.burton/form-validation-best-practices-8e3bec7d0549)
+- [Reporting errors](https://www.nngroup.com/articles/errors-forms-design-guidelines/)
 
 ## Move to Form doc as these are not specific to the notification validation topic but to the broader Form validation
 
