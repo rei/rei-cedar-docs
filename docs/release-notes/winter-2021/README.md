@@ -26,6 +26,12 @@
 
 - If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your micro-site.
 
+## 8.0.5
+
+### Bug Fixes
+
+- CdrModal has been updated to address an issue with managing event handlers which could result in errors being thrown when the window is resized
+
 ## 8.0.4
 
 ### Bug Fixes
