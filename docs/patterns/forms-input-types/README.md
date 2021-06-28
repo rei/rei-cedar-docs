@@ -1,6 +1,6 @@
 ---
 {
-  "title": "Forms",
+  "title": "Form Input Types",
   "title_metadata": false,
   "layout_type": "LayoutArticle",
   "summary": "Use form patterns to capture user data in a consistent, optimized manner.",
