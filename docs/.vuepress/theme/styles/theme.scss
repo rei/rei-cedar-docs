@@ -17,6 +17,7 @@ body {
 
 h1, h2, h3, h4, h5 {
   @include cdr-text-heading-serif-strong-600;
+  color: $cdr-color-text-emphasis;
 }
 
 .sr-only {
