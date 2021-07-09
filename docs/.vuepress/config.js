@@ -49,10 +49,10 @@ module.exports = {
       {
         text: "Release Notes",
         items: [
+          { text: "Summer 2021", link: "/release-notes/summer-2021/" },
           { text: "Spring 2021", link: "/release-notes/spring-2021/" },
           { text: "Winter 2021", link: "/release-notes/winter-2021/" },
           { text: "Fall 2020", link: "/release-notes/fall-2020/" },
-          { text: "Summer 2020", link: "/release-notes/summer-2020/" },
           { text: "Deprecated", link: "/release-notes/deprecated/" },
           { text: "Archive", link: "/release-notes/archive/" },
         ]
