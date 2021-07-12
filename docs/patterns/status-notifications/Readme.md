@@ -25,7 +25,7 @@ Additionally, they may open based on conditions a user has created or criterium 
 
 ## Persistent Status Notifications
 
-Persistent Status Notifications are 'in page messages', often errors or warnings, presented to the user based on conditions the user has created via a selection of product or adjustment of settings.
+Persistent Status Notifications are 'in page messages', often [validation summaries](../form-validation/#validation-summaries), presented to the user based on conditions the user has created via a selection of product or adjustment of settings.
 
 <cdr-table class="advanced-table" full-width=false>
   <tr>
@@ -112,8 +112,11 @@ Persistent Status Notifications are 'in page messages', often errors or warnings
 
 ### Use When
 - Exposing a status change to a product caused by user selection
-- providing error or warnings on the status of items in the users cart
 - Providing confirmation when updating and removing items that provides navigation or other actions
+- To summarize and direct users back to existing errors 
+- To increase visibility of existing errors
+- When valid form options cause invalid selections
+- When validation is not possible prior to submit
 
 ### Don't Use When
 - Changing inline content based on user selection (see [Update Notifications](../update-and-loading-notifications/#update-notifications))
@@ -126,6 +129,7 @@ Persistent Status Notifications are 'in page messages', often errors or warnings
 - User interaction is required or content is critical to the user flow(see [modal](../../components/modal/))
 - The message contains a rich UI experience(see [modal](../../components/modal/))
 - The User makes a selection that does not change or add content to the page
+- As the Only Indication of an error/s
 
 ### Anatomy of a Persistent Status notifications
 
