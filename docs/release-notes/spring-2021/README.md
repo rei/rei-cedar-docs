@@ -26,6 +26,12 @@
 
 - If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your micro-site.
 
+## 9.0.1
+
+### Bug Fixes
+
+- CdrModal has been updated to address an issue with managing event handlers which could result in errors being thrown when the window is resized
+
 ## New Features
 
 ### CdrContainer Component
@@ -96,7 +102,7 @@ The examples on this doc site have been updated to make use of the new syntax, s
 
 ### CdrImg Ratio Auto
 
-We have fixed a bug in CdrImg when the `ratio` prop is set to `"auto"` where a CSS value would resolve to `NaN`. We have also updated the [CdrImg page](../../components/image/#ratio-auto) to better demonstrate how to use the cropping features of CdrImg without giving the image a specific aspect ratio. 
+We have fixed a bug in CdrImg when the `ratio` prop is set to `"auto"` where a CSS value would resolve to `NaN`. We have also updated the [CdrImg page](../../components/image/#ratio-auto) to better demonstrate how to use the cropping features of CdrImg without giving the image a specific aspect ratio.
 
 ## Breaking Changes
 

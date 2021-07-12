@@ -39,8 +39,8 @@
   },
   "dependencies": {
     "@rei/cdr-component-variables": "^7.0.0",
-    "@rei/cdr-tokens": "^9.0.0",
-    "@rei/cedar": "^9.0.0",
+    "@rei/cdr-tokens": "^10.0.0-alpha.0",
+    "@rei/cedar": "^9.0.1",
     "throttle-debounce": "^3.0.0"
   },
   "browserslist": [
