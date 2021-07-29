@@ -158,7 +158,7 @@
               class="home-card-heading stack-1"
             >Feedback & support</cdr-text>
             <cdr-text class="stack-1">Questions, ideas, or comments? Your feedback can help improve Cedar. </cdr-text>
-            <cdr-link href="mailto:cedar@rei.com" modifier="standalone">Get in touch</cdr-link>
+            <cdr-link :href="$withBase('/about/cedar-design-system/#communications/')" modifier="standalone">Get in touch</cdr-link>
           </div>
         </cdr-col>
       </cdr-row>
