@@ -66,6 +66,6 @@ Learn more in the [Design Tokens](../../tokens/overview/) overview.
 ## Icon Contributions
 Cedar welcomes and encourages contributions to the icon library that are consistent with the REI style.
 
-Learn more about designing and contributing icons in the [Icon Resources](../../icons/resources) article.
+Learn more about designing and contributing icons in the [Icon Overview](../../icons/overview/) article.
 
 </cdr-doc-table-of-contents-shell>
