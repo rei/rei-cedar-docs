@@ -37,6 +37,8 @@ For example, you can import the styling for a Cedar primary button component usi
 
 Test out what you can do with the component variables in this [CodeSandbox](https://codesandbox.io/s/qkwn78nw99).
 
+See the [component variables example project](https://github.com/rei/rei-cedar-component-variables-example) for a template demonstrating how to use Cedar tokens and component variables to generate a unique CSS stylesheet that applies Cedar styles to arbitrary HTML markup.
+
 ### Contract of Intent
 
 Versioning
