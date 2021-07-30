@@ -26,6 +26,11 @@
 
 - If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your micro-site.
 
+## 8.0.6
+
+### Bug Fixes
+
+- Text heading tokens have been updated to address an issue with font ligatures not applying correctly
 ## 8.0.5
 
 ### Bug Fixes
