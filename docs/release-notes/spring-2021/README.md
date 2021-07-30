@@ -20,12 +20,23 @@
 
 | package name | version |
 |--------------|---------|
-| `@rei/cedar` | ^9.0.0 |
-| `@rei/cdr-tokens` | ^9.0.0 |
-| `@rei/cdr-component-variables` | ^7.0.0 |
+| `@rei/cedar` | ^9.x.x |
+| `@rei/cdr-tokens` | ^9.x.x |
+| `@rei/cdr-component-variables` | ^7.x.x |
 
 - If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your micro-site.
 
+## 9.1.0
+
+### New Features
+#### Brand Color Updates
+
+- We have created a new `cdr-color-text-emphasis` color token that can be used as a text color in certain situations
+- Updates the `cdr-color-text-brand` color token to match match new guidelines
+
+### Bug Fixes
+
+- Text heading tokens have been updated to address an issue with font ligatures not applying correctly
 ## 9.0.1
 
 ### Bug Fixes
