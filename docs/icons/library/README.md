@@ -29,7 +29,9 @@
 }
 ---
 
-Note that the icons shown on this page are for visual reference only. Icons can be found in the [Figma iconography library](https://www.figma.com/file/RuzW1gp60W1tahwD4m1uBc/Cedar-Iconography) and [Vue component](../../components/icon/) package.
-SVG icons can be downloaded [here](https://rei.github.io/cedar-icons/#/).
+<cdr-doc-alert icon="info">
+  Note that the icons shown on this page are for visual reference only. Icons can be found in the [Figma iconography library](https://www.figma.com/file/RuzW1gp60W1tahwD4m1uBc/Cedar-Iconography) and [Vue component](../../components/icon/) package.
+  SVG icons can be downloaded [here](https://rei.github.io/cedar-icons/#/).
+</cdr-doc-alert>
 
 <icon-page/>
