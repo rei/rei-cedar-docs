@@ -138,41 +138,96 @@
 </cdr-table>
 
 See also 
-- alert
+- [alert](../alerts/)
+- [persistent-status-notifications](../status-notifications/#persistent-status-notifications/)
 ## Overview
 
-Validating forms ensures that the users and our expectations align. 
-but returning a bunch of unassociated errors  at the top of a form may cause confusion, frustration, and, end in abandonment.
+Validation messages are provided to help ensure that user data is formatted in a way that we expect.
+
+However, some methods may cause more harm than good. For instance returning a group of unassociated errors at the top of a form to a low vision user.
+This may cause confusion, frustration, and, end in abandonment.
 
 Inline client side validation allows us to display a message within or below identified inputs prior to submitting or refreshing the page.
 It can allow us to confirm the data has successfully met the form field requirements or 
 present the user with further instruction.
-Validation initiates a conversation with our users where we can provide unique feedback before, during, or after a user interaction.
-We can also wait to provide feedback until after the user tries to submit the entirety of the form.
+
+Validation messaging is able to provide feedback before, during, or after a user interaction on a specific element or the entirety of the form.
 What we do to a form field and the messaging we provide can be catered to where and what the user is doing. 
-always keep in mind that presenting blocking error instruction stops the user from doing what they want and may cause form abandonment.
+Be sensitive that presenting blocking error instruction stops the user from doing what they want and may cause form abandonment, 
+consider if validation is essential or if additional formatting can take place on our side.
 
 ### Basics
 Before diving into requirements and best practices for validation it makes sense to take a second and reiterate that to validate a form element 
 the element must be well formed. 
 - Form elements must have a label and input
 - Label must have a relationship to the input
-- [groups of controls](#grouping-controls) should use the form-group component or be within a fieldset and be provided a legend description
-- Use the help text slots for formatting information
-- Do not use the placeholder attribute
+- [groups of controls](#grouping-controls) should use the form-group component or be within a `fieldset` and be provided a legend description
+- Use the help `text` slots to provide formatting information
+- Do not use the `placeholder` attribute
 - Outside of page and site controls, form elements should be contained within a form
-- Use aria-required rather than required to avoid HTML5 native validation for
+- Use `aria-required` rather than `required` to avoid HTML5 native validation
 
 
-### Constraint Validation
-HTML5 natively supports some form validation which has the benefit of not requiring much JavaScript. 
-This means that built-in form validation has better performance than JavaScript based validation.
-Unfortunately it is not fully customizable and does not support several best practices that are important to providing the best experience to our users.
+### HTML5 Native Constraint Validation
 
-Cedar is taking a partial approach to using the constraint validation API
-Rather than setting a form to `novalidate` Boolean attribute to true we are replacing `required` with `aria-required`
+HTML5 Native Constraint Validation provides form elements, such as `<input>`, `<select>` and `<checkbox>`, to restrict the format of allowable values, using attributes like `required` and `pattern` to set basic constraints.
+We use the basic and intrinsic constraints on almost all of our forms. For example, setting the input type to `email` automatically creates a constraint that will check a entered value for email format conformance.
+additionally we use many of the provided validation attributes such as `required` or `maxlength` 
+
+However there are more tools at our disposal. best of all they come for free from the browser, including the constraint validation API.
+this API provides access to a couple of useful methods that do the bulk of validation without the need to have javascript enabled.
+This means that client validation can happen even if javascript is disabled.
+Additionally, these methods also interact with multiple css pseudo selectors such as [:invalid](https://css-tricks.com/almanac/selectors/i/invalid/)
+using these can open the door to creating progressive validation on input, change, and submit events.
+
+for example:
+We may use the `change` event listener and target the css `:out-of-range` pseudo selector, altering the border color of the input field once the provided value exceeded the allowed range limits specified by the min and max validation attributes.
+the color of our border would change once the user had moved focus to the next element.
+additionally, we could then use the 'input' event to reset the updated color or warning back to default while the user was typing.
+And if the user did not address the "warning color" we could then use the submit to append and actual status notification message, providing further instruction on how to proceed. 
+
+<cdr-img :src="$withBase('/input/progressiveexample.png')" alt="An example on REI.com of this notification" width="500px"/>
+
+
+
+
+and a validation API there is a lot to 
+be gained by using this native approach. It also has the benefit of not requiring much JavaScript. 
+This means that built-in form validation has better performance than JavaScript based validation. 
+And that native HTML validation will work with javascript disabled.
+
+
+It may be tempting to disable native validation with the `novalidate` attribute, and in some instances
+that may be appropriate, specifically when needing to provided a more nuanced array of messages for a 
+specific input.
+Note that setting the `novalidate` attribute to a form or form element will override both the 
+`checkValidity` and `reportValidity` methods from the validity API
+
+-  [Constraint validation API](https://developer.mozilla.org/en-US/docs/Web/API/Constraint_validation)
+-  [Validity state API](https://developer.mozilla.org/en-US/docs/Web/API/ValidityState)
+-  [Validity API overview video](https://www.youtube.com/watch?v=D9JHizCAx8U)
+
+A better more consistent and accessible outcome may be achieved simply by using the validation API methods
+
+-  [checkValidity()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/checkValidity)
+  - checkValidity() method checks whether the element has any constraints and whether it satisfies them. If the element fails its constraints, the browser fires a cancelable invalid event at the element, and then returns false .
+-  [setCustomValidity()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/setCustomValidity)
+  - The setCustomValidity() method of the HTMLObjectElement interface sets a custom validity message for the element.
+
+and omitting the
+-  `reportValidity()` method - which is what is used to display the captured errors
+
+so essentially use the built in html validation API, 
+which enables us to not need to recreate much of the logic of testing things like valid email while disabling the popover return of validation errors
+#### More reading
+- [https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)
+
+- [https://medium.com/front-end-weekly/html5-form-validation-in-react-65712f778196](https://medium.com/front-end-weekly/html5-form-validation-in-react-65712f778196)
+
 ### Instant feedback
-Live validation displays as the user is typing
+Note: `input` event listener from the contraint validation API
+
+This validation displays as the user is typing, 
 rather than once they exit from the form field.
 While extremely useful as a guide for form fields with the strictest input requirements, in general, it has
 [proven](https://www.researchgate.net/publication/221054469_Online_Form_Validation_Don't_Show_Errors_Right_Away) 
@@ -182,7 +237,11 @@ more user errors and take longer to successfully complete the form.
 This method is less likely to be missed by users but also forces them out of their initial completion mindset and my cause frustration.
 
 Instruction offered this way should focus on positive progressive cues and should not present error instruction.
-It should not be used to immediately communicate that the user has caused an error
+It should not be used to immediately communicate that the user has caused an error.
+
+Example:
+utilizing the `input` event listener to target the css `out-of-range` pseudo selector, altering the border color of an input field prior to providing 
+an actual validation notification via the `change` event listener.
 
 - Use Instant validation 
   - for difficult to answer questions where a user may create several formatting errors
