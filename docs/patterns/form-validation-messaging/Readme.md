@@ -1,6 +1,6 @@
 ---
 {
-  "title": "Form Validation",
+  "title": "Form Validation Messaging",
   "title_metadata": false,
   "layout_type": "LayoutArticle",
   "summary": "Form errors and warning responses based on user input",
@@ -144,7 +144,7 @@ See also
 
 Validation messages are provided to help ensure that user data is formatted in a way that we expect.
 
-However, some methods may cause more harm than good. For instance returning a group of unassociated errors at the top of a form to a low vision user.
+However, some techniques may cause more harm than good. For instance returning a group of unassociated errors at the top of a form to a low vision user.
 This may cause confusion, frustration, and, end in abandonment.
 
 Inline client side validation allows us to display a message within or below identified inputs prior to submitting or refreshing the page.
@@ -170,14 +170,15 @@ the element must be well formed.
 
 ### HTML5 Native Constraint Validation
 
-HTML5 Native Constraint Validation provides form elements, such as `<input>`, `<select>` and `<checkbox>`, to restrict the format of allowable values, using attributes like `required` and `pattern` to set basic constraints.
-We use the basic and intrinsic constraints on almost all of our forms. For example, setting the input type to `email` automatically creates a constraint that will check a entered value for email format conformance.
-additionally we use many of the provided validation attributes such as `required` or `maxlength` 
+HTML5 Native Constraint Validation provides form inputs with attributes that restrict their allowed values.
 
-However there are more tools at our disposal. best of all they come for free from the browser, including the constraint validation API.
-this API provides access to a couple of useful methods that do the bulk of validation without the need to have javascript enabled.
-This means that client validation can happen even if javascript is disabled.
-Additionally, these methods also interact with multiple css pseudo selectors such as [:invalid](https://css-tricks.com/almanac/selectors/i/invalid/)
+We use these basic and intrinsic constraints on almost all of our forms. 
+For example, setting the input type to `email` automatically creates a constraint that will check a entered value for email format conformance.
+Or, we may apply provided validation attributes such as `required` or `maxlength` 
+
+However there are more tools at our disposal that also come for free from the browser, including the constraint validation API.
+this API provides access to a couple of useful methods that can do the bulk of your client validation.
+These methods also interact with multiple css pseudo selectors such as [:invalid](https://css-tricks.com/almanac/selectors/i/invalid/)
 using these can open the door to creating progressive validation on input, change, and submit events.
 
 for example:
