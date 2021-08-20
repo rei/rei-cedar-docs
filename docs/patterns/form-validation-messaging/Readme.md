@@ -5,7 +5,7 @@
   "layout_type": "LayoutArticle",
   "summary": "Form errors and warning responses based on user input",
   "sandboxData": {
-    "components": "CdrAlert"
+    "components": "CdrBanner"
   },
   "breadcrumbs": [
     {
@@ -140,21 +140,25 @@
 See also 
 - [alert](../alerts/)
 - [persistent-status-notifications](../status-notifications/#persistent-status-notifications/)
+
+Note: Form validation is a vast topic, this articles focus specifically on validation UI presentation, instruction, and their resulting user requirements.
+
 ## Overview
 
-Validation messages are provided to help ensure that user data is formatted in a way that we expect.
+Validation is used to ensure the data that a user inputs is formatted in a manner that we expect.
+Applied well, it can provide a seamless experience which the user will happily work through.
+Provide appropriate feedback before, during, or after a user interaction on a specific element or the entirety of the form allows us to cater the instruction to where and what the user is doing.
+However, some techniques may cause more harm than good.
+For example, a user with limited vision may become confused, frustrated, and abandon form that returns errors in a location unassociated to the elements the user is interacting with.
 
-However, some techniques may cause more harm than good. For instance returning a group of unassociated errors at the top of a form to a low vision user.
-This may cause confusion, frustration, and, end in abandonment.
-
-Inline client side validation allows us to display a message within or below identified inputs prior to submitting or refreshing the page.
-It can allow us to confirm the data has successfully met the form field requirements or 
-present the user with further instruction.
-
-Validation messaging is able to provide feedback before, during, or after a user interaction on a specific element or the entirety of the form.
-What we do to a form field and the messaging we provide can be catered to where and what the user is doing. 
-Be sensitive that presenting blocking error instruction stops the user from doing what they want and may cause form abandonment, 
+Validation should be looked at as the last option we have when attempting to guide our users through a form flow.
+Accepting multiple formats for input data, providing informative help text, and or using input masking can all help to limit its need.
 consider if validation is essential or if additional formatting can take place on our side.
+
+When required, its up to us to be sure to make it as user friendly as possible.
+
+
+
 
 ### Basics
 Before diving into requirements and best practices for validation it makes sense to take a second and reiterate that to validate a form element 
@@ -166,9 +170,14 @@ the element must be well formed.
 - Do not use the `placeholder` attribute
 - Outside of page and site controls, form elements should be contained within a form
 - Use `aria-required` rather than `required` to avoid HTML5 native validation
+- Limit the amount or need of validation using other options first
 
+### Client Side Validation
 
-### HTML5 Native Constraint Validation
+Inline client side validation allows us to display a message within or below identified inputs prior to submitting or refreshing the page.
+It can allow us to confirm the data has successfully met the form field requirements or 
+present the user with further instruction.
+#### HTML5 Native Constraint Validation
 
 HTML5 Native Constraint Validation provides form inputs with attributes that restrict their allowed values.
 
@@ -188,9 +197,6 @@ additionally, we could then use the 'input' event to reset the updated color or 
 And if the user did not address the "warning color" we could then use the submit to append and actual status notification message, providing further instruction on how to proceed. 
 
 <cdr-img :src="$withBase('/input/progressiveexample.png')" alt="An example on REI.com of this notification" width="500px"/>
-
-
-
 
 and a validation API there is a lot to 
 be gained by using this native approach. It also has the benefit of not requiring much JavaScript. 
@@ -220,15 +226,14 @@ and omitting the
 
 so essentially use the built in html validation API, 
 which enables us to not need to recreate much of the logic of testing things like valid email while disabling the popover return of validation errors
-#### More reading
+##### More reading
 - [https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)
 
 - [https://medium.com/front-end-weekly/html5-form-validation-in-react-65712f778196](https://medium.com/front-end-weekly/html5-form-validation-in-react-65712f778196)
 
-### Instant feedback
-Note: `input` event listener from the contraint validation API
+#### Instant feedback
 
-This validation displays as the user is typing, 
+Validation provided user input displays as the user is typing, 
 rather than once they exit from the form field.
 While extremely useful as a guide for form fields with the strictest input requirements, in general, it has
 [proven](https://www.researchgate.net/publication/221054469_Online_Form_Validation_Don't_Show_Errors_Right_Away) 
@@ -261,6 +266,7 @@ an actual validation notification via the `change` event listener.
   - By using helper text to clearly and concisely inform the user of formatting requirements
   - Only requiring form field that are absolutely needed
   - Only require specific formatting where absolutely needed
+  - Integrate input masking that can clearly visualize formatting expectations 
 - Limit it
   - Request less information in your form. Combine field such as first and last name where possible and solicit only the most relevant and important info about the users. 
   - By only providing error instruction after a user has interacted with it and moved on
