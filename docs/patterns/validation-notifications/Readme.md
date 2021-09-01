@@ -214,9 +214,9 @@ Client side validation allows us to interact with a user prior to the data being
 the inline presentation of validation within or below identified inputs prior to submitting or refreshing the page.
 It can allow us to confirm the data has successfully met the form field requirements or present the user with further instruction. 
 
-It is assumed that client validation is used where possible.
+It is assumed that client side validation is used where possible.
 
-There are three specific timing events that can be targeted to provide notification updates
+There are three unique opportunities which can be targeted to provide notification updates
 
 -  [While user is typing](#while-user-is-typing-oninput): using the `OnInput` event
 -  [Once the user moves focus](#once-the-user-moves-focus-onchange): using the `OnChange` event
@@ -245,16 +245,18 @@ It should not be used to immediately communicate that the user has caused an err
 
 ### Once the user moves focus (OnChange)
 
-"On Change" validation takes place after the user changes or removes focus from their current element. In general this is the best time to begin validating users data.
+"On Change" validation takes place after the user changes or removes focus from their current element. 
+In most cases this is the best time to begin validating users data as the user will not need to locate or navigate back to the form field that contains the error.
+This informs the user that there are additional expectations but does not block them from moving on and working through the remainder of the form. 
 
-Using the "on change" validation in concert with "on submit" can ease the users through the form without blocking or frustrating them. 
-We could for example, alter the the appearance of an element on change, which would warn or confirm the users input and if needed on submit reinforce this change with validation instruction
+Providing validation instruction on change, and enhancing the validation on submit can ease the users through the form without blocking or frustrating them. 
+We could for example, alter the the appearance of an element on change, which would warn or confirm the users input and if needed on submit reinforce this change with additional validation instruction
 
 <cdr-img :src="$withBase('/input/progressiveexample.png')" alt="An example on REI.com of this notification" width="500px"/>
 
 ### Once the user submits (OnSubmit)
-A user submitting a form will be expecting to move on from the task of filling out items within a form.
-They may be on a location of the page where they are not able to see that individual form fields are invalid, nor that they have additional instruction associated to them.
+A user submitting a form will be expecting to move on.
+They may be on a location of the page where they are unable to see individual invalidated form fields.
 It may benefit user of longer forms to be presented with a [validation summary](#validation-summaries) that can reiterate the errors and guide them to the locations needing work.
 
 This is the last chance we have prior to submitting the users data to the server, while not as optimal a location as onChange, presenting instruction during this event does happen before page refresh.
@@ -263,6 +265,19 @@ May users in a completion mindset may knowingly move trough a form, even once aw
 
 -  Don't removing incorrect user entered data
 -  Consider providing a [validation summary](#validation-summaries)
+
+### Validation instruction location
+
+Enabling users to think less allows them to complete a form more quickly.
+We can help reduce a users cognitive lift by adding any additional information to locations within a users natural reading flow. 
+Additionally for screen reader users, by ensuring any added information is provided the proper `role` markup. 
+
+Cedar recommends placing validation information below the form field for a couple of reasons.
+
+-  Allows for a consistent location, that will not change depending on space considerations
+-  Place instruction where users expect to see them
+-  place them corresponding to user reading flow
+
 
 ### Validation Requirements 
 
@@ -558,7 +573,6 @@ A text description of the problem should be provided.
   - [UI Guidelines](https://www.nngroup.com/articles/errors-forms-design-guidelines/)
   - [Error message placement](https://uxmovement.com/forms/the-best-place-for-error-messages-on-forms/)
   - [Form Validation Best Practices](https://medium.com/@andrew.burton/form-validation-best-practices-8e3bec7d0549)
-  - [Reporting errors](https://www.nngroup.com/articles/errors-forms-design-guidelines/)
   - [Constraint validation](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Constraint_validation)
 - FED
   - [HTML5 Constraint validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)
