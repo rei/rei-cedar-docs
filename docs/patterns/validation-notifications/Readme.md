@@ -207,22 +207,31 @@ the element must be well formed.
 
 ## Inline Notifications
 
-What we provide and When and where we provide it depends on if validation is taking place on the client or server.
+Client side or "inline" validation notifications can interact with the user as they are working through the form process.
+inline validation allows us to interact with a user prior to the data being submitted to a server. 
+This validation does not replace server validation, rather it enhances it with the ability to present instruction prior to submitting or refreshing the page.
+ 
+As this provides such an enhanced user experience, it is assumed that inline validation is used where possible.
+### Inline Notification Location
 
-Client side or inline validation notifications can interact with the user as they are working through the form process.
-Client side validation allows us to interact with a user prior to the data being submitted to a server. This validation does not replace server validation but does allow
-the inline presentation of validation within or below identified inputs prior to submitting or refreshing the page.
-It can allow us to confirm the data has successfully met the form field requirements or present the user with further instruction. 
+A users ability to complete a form may be impacted if the validation notification is not displayed in a manner the user expects.
 
-It is assumed that client side validation is used where possible.
+Displaying all validation in a validation summary at the top of a page or top/bottom of a form will produce worse outcomes that providing messaging inline as the user interacts with each form element.
+When providing inline instruction it is important to be non disruptive, enabling users to think less allows them to complete a form more quickly.
+We can help reduce a users cognitive lift by adding any additional information to locations within a users natural reading flow, either to the right of the form element or below it.
+
+Cedar recommends placing validation information below the form field for a couple of reasons.
+
+-  Constrained space will not alter the location of instruction
+-  Below the form element is an expected pattern that is within a users reading flow
 
 There are three unique opportunities which can be targeted to provide notification updates
 
 -  [While user is typing](#while-user-is-typing-oninput): using the `OnInput` event
 -  [Once the user moves focus](#once-the-user-moves-focus-onchange): using the `OnChange` event
 -  [Once the user submits](#once-the-user-submits-onsubmit): using the `OnSubmit` event
-
-### While user is typing (OnInput)
+### Inline Notification timing
+#### While user is typing (OnInput)
 
 "On input" validation provides instant feedback as the user types making it highly visible.
 However, it forces them out of a "completion" mindset and my cause frustration.
@@ -243,7 +252,7 @@ It should not be used to immediately communicate that the user has caused an err
   - By providing instant error instruction
   - By using on simple inputs
 
-### Once the user moves focus (OnChange)
+#### Once the user moves focus (OnChange)
 
 "On Change" validation takes place after the user changes or removes focus from their current element. 
 In most cases this is the best time to begin validating users data as the user will not need to locate or navigate back to the form field that contains the error.
@@ -254,7 +263,7 @@ We could for example, alter the the appearance of an element on change, which wo
 
 <cdr-img :src="$withBase('/input/progressiveexample.png')" alt="An example on REI.com of this notification" width="500px"/>
 
-### Once the user submits (OnSubmit)
+#### Once the user submits (OnSubmit)
 A user submitting a form will be expecting to move on.
 They may be on a location of the page where they are unable to see individual invalidated form fields.
 It may benefit user of longer forms to be presented with a [validation summary](#validation-summaries) that can reiterate the errors and guide them to the locations needing work.
@@ -265,135 +274,40 @@ May users in a completion mindset may knowingly move trough a form, even once aw
 
 -  Don't removing incorrect user entered data
 -  Consider providing a [validation summary](#validation-summaries)
-
-### Validation instruction location
-
-Enabling users to think less allows them to complete a form more quickly.
-We can help reduce a users cognitive lift by adding any additional information to locations within a users natural reading flow. 
-Additionally for screen reader users, by ensuring any added information is provided the proper `role` markup. 
-
-Cedar recommends placing validation information below the form field for a couple of reasons.
-
--  Allows for a consistent location, that will not change depending on space considerations
--  Place instruction where users expect to see them
--  place them corresponding to user reading flow
-
-
 ### Validation Requirements 
 
-<cdr-img :src="$withBase('/forms/formFieldAnatomy.png')" alt="Diagram showing the required layout of the elements listed below" />
-1. [Label with required or optional indicator](#error-prevention)
-2. [Help text to provide formatting help](#error-prevention)
-3. [form element Static properties](#error-prevention)
-  - `aria-required`
-  - `aria-describedby` id array for other static  elements such as help text
-4. [properties added during validation](#error-detection)
-  - `aria-invalid`
-  - `aria-errormessage`
-  - `aria-describedby` append id for notification container display
-5. [Notification container properties](#validation-notification)
-  - `Id`
-  - `Role=”status”`
-  - `tabindex=”0”`
-  - `Display=none` when not active
-6. Notification Instruction
+<cdr-img :src="$withBase('/notifications/validationAnatomy.png')" alt="Diagram showing the location of the following requirements" />
+1. [Error prevention](#error-prevention)
+2. [Error detection](#error-detection)
+3. [Validation Notifications](#validation-notification)
 
-### Validation Notifications
 
-Validation Notifications used to present instructions on user errors have specific accessibility requirements. These include:
-
-- **Must**
-  - Identify each field in error
-  - Provide suggestions (when known) to correct the errors
-  - Preserve as much user-entered input as possible
-  - If an input error is automatically detected, the item that is in error is identified and the error is described to the user in text WCAG 3.3.3
--  **Should**
-  - Correctly filled out user provided data in a form that contains errors **SHOULD** remain populated post-submit.
-  - Confirm successful submission of data.
-  - Provide an explanation to the when user when the submit button is not available
-- **Should Not**
-  - rely solely on visual cues to indicate an error
-  - alter the user provided input to make it validate without providing the user with a validation message conveying this change
-
-Find more information on this topic in the [Accessibility References](#accessibility-references)
-
-#### Repeated Errors
-
-Using analytics to track where the same error occurs repeatedly 
-can help 
-uncover error instructions which are not clear, simple, or helpful. 
-layouts that cause users to much cognitive shifting
-but there could also be another mismatch between the design and users’ needs. 
-TODO -
-
-#### Instruction
-
-Validation instruction should clearly state:
-- errors
-  –  What happened
-  –  What’s the next step the user should take to succeed 
-  -  avoid using technical jargon.
-Make it 
-Using generic messaging can add to user confusion, for example providing "the email is invalid" messaging does not inform the user in what is invalid about it nor how to resolve the error.
-- success
-  - indication affordance
-
-##### Instruction Requirements
-
-WCAG 1.3.3, WCAG 3.3.2 provide the following guidelines for validation instructions.
-When users enter input that is validated, and errors are detected, the nature of the error needs 
-to be described to the user in manner they can access. One approach is to present an alert dialog 
-that describes fields with errors when the user attempts to submit the form. Another approach, 
-if validation is done by the server, is to return the form (with the user's data still in the fields) 
-and a text description at the top of the page that indicates the fact that there was a validation problem, 
-describes the nature of the problem, and provides ways to locate the field(s) with a problem easily. 
-The "in text" portion of the Success Criterion underscores that it is not sufficient simply to indicate 
-that a field has an error by putting an asterisk on its label or turning the label red. 
-A text description of the problem should be provided.
-
-- **Must**
-  - Providing suggestions (when known) to correct the errors
-  - Ensure the message container can receive focus
-  - Include the [`aria-live` or `role=”status”`](role-status-or-aria-live) markup to announce the notification without interrupting the page flow of the user
-  - Be available as programmatically-discernible text
-  - Be meaningful
-  - Be visible
-  - Clearly and accurately describe the error and/or how to fix the error.
-  - Succinctly describe how a user can resolve the problem.
-  - Help users understand how to fix problems
-  - provide instruction that is as specific as possible
-- **Must Not**
-  - Rely solely on references to sensory characteristics (for example, "round button" or "button to the right")
-- **Should**
-  - be visually and programmatically adjacent to the element.
-  - Provide an explanation when the submit button is not available
-- **Should Not**
-  - rely solely on visual cues to indicate an error
-- **May**
-  - Be hidden until the user requests them if the notification instructions are not critical.
-
-#### visual aid and Assistive technology text
-
--**Should**
--  if the text does not specifically call out the state of the message, error, warning, success, or info - that text should be provided via screen reader accessible text
-
-#### Role status / aria-live
--  **Should Not**
-  - Be scripted to occur with every keystroke unless there is a delay built into the script to avoid announcements while the user is actively typing.
-  - Be scripted to occur when a user leaves a field, because the `aria-live`
-    announcement may conflict with the screen reader's attempt to read the next
-    element which receives focus, causing some information to be interrupted
-    or not announced at all.
-- **May**
-  - Be scripted to show on the screen for sighted users, but attempts to announce the real-time messages to screen reader users
-    can be problematic. It is usually acceptable to wait to announce
-    real-time errors until after form submission, assuming that no data has been saved yet.
-
-Find more information on this topic in the [Accessibility References](#accessibility-references)
 
 ### Error Prevention
 
-#### Required Form Fields
+The best interaction a user can have with a form is to easily enter their data and move on, never aware of blocking validation.
+We can help our users avoid validation by clearly identifying required form fields, Using clear and informative text for labels, and providing persistent formatting instructions.
+The following requirements will help reduce user exposure to form blocking validation.
+
+-  **Should**
+  - Provide an explanation to the user when the submit button is not available
+  - Clearly label required fields
+  - Provide a clear an informative title for the form
+  - Create a clean and easy to understand layout by placing groups of form fields into fieldsets and provide adequate spacing of all elements within the form
+  - Accept and filter multiple formats for data
+  - Use helper text slots to state content requirements
+  - Use helper text to clearly and concisely inform the user of formatting requirements
+  - Integrate input masking that can clearly visualize formatting expectations
+  - Do not 
+- **Should Not**
+  -  Alter the user provided input to make it validate without providing the user with a validation message conveying this change
+  -  Place formatting help or expectations in the placeholder of an input
+  
+#### markup properties
+  - `required`
+  - `aria-required`
+  - `aria-describedby` id array for other static elements such as help text
+  #### Required Form Fields
 
 - Only require fields that are absolutely needed
 - Required fields use an asterisks to indicate that the field is required.
@@ -406,7 +320,7 @@ Additionally, when a majority of the inputs in a form are required mark the opti
 
 ##### On Rest
 - **Must**
-  - Set `Required` or `aria-required` to true for inputs that must be completed by the user
+  - Set `Required` and or `aria-required` to true for inputs that must be completed by the user
 - **Should**
   - Require only fields that are absolutely needed
   - Ensure assistive technology is provided text conveying that the field is required
@@ -419,6 +333,14 @@ Additionally, when a majority of the inputs in a form are required mark the opti
   - map the associated id of the notification instruction to the [aria-errormessage](aria-errormessage) attribute for each field in error
 - **May**
   - also use '[aria-describedby]()' in conjunction with [aria-errormessage](aria-errormessage)
+
+#### Repeated Errors
+
+Providing simple and helpful instruction is key to successful form completion, yet without tracking how our users engage with the forms we cannot verify they work as expected.
+
+Repeated errors may point to instructions which is not clear, simple, or helpful; or towards layouts causing users to much cognitive shifting.
+
+-  Use analytics to track the most frequently encountered errors 
 
 ##### Grouping Controls
 Form groups are a collection of elements, they are defined by a shared label using the `legend` tag.
@@ -459,6 +381,19 @@ Find more information on this topic in the [Accessibility References](#accessibi
 
 ### Error Detection
 
+- **Must**
+  - Identify each field in error
+  - Provide suggestions (when known) to correct the errors
+  - Preserve as much user-entered input as possible
+-  **Should**
+  - Correctly filled out user provided data in a form that contains errors **SHOULD** remain populated post-submit.
+- **Should Not**
+  - rely solely on visual cues to indicate an error
+#### markup properties
+
+  - `aria-invalid`
+  - `aria-errormessage`
+  - `aria-describedby` append id for notification container display
 #### aria-invalid
 indicate that the value entered into an input field does not conform to the format expected by the application. This may include formats such as email addresses or telephone numbers. aria-invalid can also be used to 
 indicate that a required field has not been filled in.
@@ -493,6 +428,75 @@ used to:
 
 Find more information on this topic in the [Accessibility References](#accessibility-references)
 
+### Validation Notifications
+
+Notifying the user of validation status's can take many forms, from adding iconography to signify success, altering the color of borders text or background, to providing detailed instruction.
+Regardless of the means they all have to goal of communicating information back to the user. To ensure this happens effectively the following requirements and best practices should accounted for.
+
+#### markup properties
+-  Active: `<div id="formFieldInstruction" role="status" tabindex=0>`
+-  Inactive: `<div id="formFieldInstruction" display="none">`
+
+- **Must**
+  - If an input error is automatically detected, the item that is in error is identified and the error is described to the user in text WCAG 3.3.3
+  - Provide suggestions (when known) to correct the errors
+  - Ensure the message container can receive focus
+  - Include the [`aria-live` or `role=”status”`](role-status-or-aria-live) markup to announce the notification without interrupting the page flow of the user
+  - Be available as programmatically-discernible text
+  - Be meaningful
+  - Be visible
+  - Use clear and simple language
+  - Ensure the instruction is visible to all users
+    -  By not moving the form fields up or down when displaying validation
+    -  By displaying instruction at the right place
+      -  For a singular form element, directly below the field in error, replacing the bottom helper text if present
+      -  For a group of elements such a form group of checkboxes, below the fieldset container
+   - Use meaningful colors and iconography
+  
+- **Must Not**
+  - Rely solely on references to sensory characteristics (for example, "round button" or "button to the right")
+- **Should**
+  - Be visually and programmatically adjacent to the element.
+  - Provide the state of the error, if using visual cues for error, warning, success, or info - that text should be provided via screen reader accessible text
+  - Provide instruction that is as specific as possible
+  - Clearly state errors
+    –  What happened
+    –  What’s the next step the user should take to succeed 
+    -  avoid using technical jargon.
+  - Confirm successful submission of data.
+  - Display it within the context of the action
+  - Consider placing helpful formatting instruction above the input if that formatting instruction will remain helpful to your users during error resolution
+  - Consider disabling the form submission to help direct the users attention to issues that exist
+  - Use language that conveys REI's Brand
+  - Avoid uppercase text as it gives the visual impact of shouting.
+- **Should Not**
+  - Rely solely on visual cues to indicate an error
+  - Alter the user provided input to make it validate without providing the user with a validation message conveying this change
+  - Remove incorrect data entered by the user
+  - Provide validation messages for unfilled inputs until the users attempts to submit the form
+  - Use technical language
+  - Shame the user for the error
+  - Joke with the user about the error
+  - Use cute language
+- **May**
+  - Be hidden until the user requests them if the notification instructions are not critical.
+  - Provide instruction that changes progressively to guide the user through the error process
+
+#### Role status / aria-live
+
+-  **Should Not**
+  - Be scripted to occur with every keystroke unless there is a delay built into the script to avoid announcements while the user is actively typing.
+  - Be scripted to occur when a user leaves a field, because the `aria-live`
+    announcement may conflict with the screen reader's attempt to read the next
+    element which receives focus, causing some information to be interrupted
+    or not announced at all.
+- **May**
+  - Be scripted to show on the screen for sighted users, but attempts to announce the real-time messages to screen reader users
+    can be problematic. It is usually acceptable to wait to announce
+    real-time errors until after form submission, assuming that no data has been saved yet.
+
+Find more information on this topic in the [Accessibility References](#accessibility-references)
+
 ## Validation summaries
 Up to this point we have been going over best practices and requirements for individual form elements or form groups such as a singular text input or group of checkboxes.
 This type of inline validation works well as the users are provided feedback immediately. 
@@ -519,9 +523,14 @@ Don't Use
 
 ## Server-side Validation
 
-when the user provides all the data and submits the form the information is sent to the server and validated. 
-The response of the “validator” is sent back to the user’s computer and may be visualized as either a confirmation message 
-or a set of error messages.
+when the user submits the form their information is sent to the server and validated.
+When the response of the “validator” is sent back to the user’s computer
+
+-  Return the form (with the user's data still in the fields)
+-  Provide a text description at the top of the page that indicates 
+  -  there was a validation problem
+  -  describes the nature of the problem
+  -  provides ways to locate the field(s) with a problem easily.
 
 This experience, while less optimal than client validation, can be helped with the following considerations:
 
@@ -581,6 +590,7 @@ A text description of the problem should be provided.
   - [Validity API overview video](https://www.youtube.com/watch?v=D9JHizCAx8U)
   - [checkValidity()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/checkValidity)
   - [setCustomValidity()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/setCustomValidity)
+  - [Vue validation cookbook](https://vuejs.org/v2/cookbook/form-validation.html)
   - [https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)
   - [https://medium.com/front-end-weekly/html5-form-validation-in-react-65712f778196](https://medium.com/front-end-weekly/html5-form-validation-in-react-65712f778196)
 
