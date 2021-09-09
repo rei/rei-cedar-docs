@@ -156,15 +156,11 @@ providing informative help text, accepting multiple formats for input data, and 
 
 
 ### Basics
-Before diving into requirements and best practices for validation it makes sense to take a second and reiterate that to validate a form element 
-the element must be well formed.
 - Form elements must have a label and input
 - Label must have a relationship to the input
 - [groups of controls](#grouping-controls) should use the [cdr-form-group](../../components/form-group/) component or be within a `fieldset` and be provided a legend description
-- Use the help `text` slots to provide formatting information
-- Do not use the `placeholder` attribute
+- Avoid using the `placeholder` attribute, instead, use the help `text` slots to provide formatting information
 - Outside of page and site controls, form elements should be contained within a form
-- Use `aria-required` rather than `required` to avoid HTML5 native validation
 - Limit the amount or need of validation using other options first
 
 ## Best practices
@@ -205,75 +201,6 @@ the element must be well formed.
   - Use language that conveys REI's Brand
   - Avoid uppercase text as it gives the visual impact of shouting.
 
-## Inline Notifications
-
-Client side or "inline" validation notifications can interact with the user as they are working through the form process.
-inline validation allows us to interact with a user prior to the data being submitted to a server. 
-This validation does not replace server validation, rather it enhances it with the ability to present instruction prior to submitting or refreshing the page.
- 
-As this provides such an enhanced user experience, it is assumed that inline validation is used where possible.
-### Inline Notification Location
-
-A users ability to complete a form may be impacted if the validation notification is not displayed in a manner the user expects.
-
-Displaying all validation in a validation summary at the top of a page or top/bottom of a form will produce worse outcomes that providing messaging inline as the user interacts with each form element.
-When providing inline instruction it is important to be non disruptive, enabling users to think less allows them to complete a form more quickly.
-We can help reduce a users cognitive lift by adding any additional information to locations within a users natural reading flow, either to the right of the form element or below it.
-
-Cedar recommends placing validation information below the form field for a couple of reasons.
-
--  Constrained space will not alter the location of instruction
--  Below the form element is an expected pattern that is within a users reading flow
-
-There are three unique opportunities which can be targeted to provide notification updates
-
--  [While user is typing](#while-user-is-typing-oninput): using the `OnInput` event
--  [Once the user moves focus](#once-the-user-moves-focus-onchange): using the `OnChange` event
--  [Once the user submits](#once-the-user-submits-onsubmit): using the `OnSubmit` event
-### Inline Notification timing
-#### While user is typing (OnInput)
-
-"On input" validation provides instant feedback as the user types making it highly visible.
-However, it forces them out of a "completion" mindset and my cause frustration.
-
-while useful for form fields with very strict input requirements, it has
-[proven](https://www.researchgate.net/publication/221054469_Online_Form_Validation_Don't_Show_Errors_Right_Away) 
-to [cause](https://www.researchgate.net/publication/220054837_Usable_error_message_presentation_in_the_World_Wide_Web_Do_not_show_errors_right_away) 
-more user errors and take longer to successfully complete the form.
-
-Instruction offered this way should focus on positive progressive cues and should not present error instruction.
-It should not be used to immediately communicate that the user has caused an error.
-
-- Use Instant validation 
-  - for difficult to answer questions where a user may create several formatting errors
-  - to indicate progress as a user types 
-
-- Don't annoy the user 
-  - By providing instant error instruction
-  - By using on simple inputs
-
-#### Once the user moves focus (OnChange)
-
-"On Change" validation takes place after the user changes or removes focus from their current element. 
-In most cases this is the best time to begin validating users data as the user will not need to locate or navigate back to the form field that contains the error.
-This informs the user that there are additional expectations but does not block them from moving on and working through the remainder of the form. 
-
-Providing validation instruction on change, and enhancing the validation on submit can ease the users through the form without blocking or frustrating them. 
-We could for example, alter the the appearance of an element on change, which would warn or confirm the users input and if needed on submit reinforce this change with additional validation instruction
-
-<cdr-img :src="$withBase('/input/progressiveexample.png')" alt="An example on REI.com of this notification" width="500px"/>
-
-#### Once the user submits (OnSubmit)
-A user submitting a form will be expecting to move on.
-They may be on a location of the page where they are unable to see individual invalidated form fields.
-It may benefit user of longer forms to be presented with a [validation summary](#validation-summaries) that can reiterate the errors and guide them to the locations needing work.
-
-This is the last chance we have prior to submitting the users data to the server, while not as optimal a location as onChange, presenting instruction during this event does happen before page refresh.
-May users in a completion mindset may knowingly move trough a form, even once aware of errors and wait to for submit prior to addressing additional form needs.
-
-
--  Don't removing incorrect user entered data
--  Consider providing a [validation summary](#validation-summaries)
 ### Validation Requirements 
 
 <cdr-img :src="$withBase('/notifications/validationAnatomy.png')" alt="Diagram showing the location of the following requirements" />
@@ -281,50 +208,41 @@ May users in a completion mindset may knowingly move trough a form, even once aw
 2. [Error detection](#error-detection)
 3. [Validation Notifications](#validation-notification)
 
-
-
 ### Error Prevention
 
 The best interaction a user can have with a form is to easily enter their data and move on, never aware of blocking validation.
 We can help our users avoid validation by clearly identifying required form fields, Using clear and informative text for labels, and providing persistent formatting instructions.
 The following requirements will help reduce user exposure to form blocking validation.
 
+When constructing form elements you
 -  **Should**
   - Provide an explanation to the user when the submit button is not available
   - Clearly label required fields
-  - Provide a clear an informative title for the form
-  - Create a clean and easy to understand layout by placing groups of form fields into fieldsets and provide adequate spacing of all elements within the form
+  - Provide a clear informative form title
+  - Create a clean and easy to understand layout by placing groups of form fields into fieldsets and providing adequate spacing
   - Accept and filter multiple formats for data
-  - Use helper text slots to state content requirements
   - Use helper text to clearly and concisely inform the user of formatting requirements
   - Integrate input masking that can clearly visualize formatting expectations
-  - Do not 
 - **Should Not**
-  -  Alter the user provided input to make it validate without providing the user with a validation message conveying this change
+  -  Alter the user provided input to make it validate
   -  Place formatting help or expectations in the placeholder of an input
   
 #### markup properties
   - `required`
   - `aria-required`
   - `aria-describedby` id array for other static elements such as help text
-  #### Required Form Fields
+#### Required Form Fields
 
 - Only require fields that are absolutely needed
 - Required fields use an asterisks to indicate that the field is required.
 - Optional fields within a form where the bulk of elements are required should append the (Optional) text to their label
 - Don't use color alone to convey required or non required fields
-
-
-Using an asterisks, to the right of the input labels is a widely-adopted method notifying users that a form control is required. 
-Additionally, when a majority of the inputs in a form are required mark the optional fields as "(optional)"
-
 ##### On Rest
 - **Must**
   - Set `Required` and or `aria-required` to true for inputs that must be completed by the user
 - **Should**
   - Require only fields that are absolutely needed
   - Ensure assistive technology is provided text conveying that the field is required
-
 ##### On validation
 - **Must**
   - Identify each field in error
@@ -333,16 +251,8 @@ Additionally, when a majority of the inputs in a form are required mark the opti
   - map the associated id of the notification instruction to the [aria-errormessage](aria-errormessage) attribute for each field in error
 - **May**
   - also use '[aria-describedby]()' in conjunction with [aria-errormessage](aria-errormessage)
-
-#### Repeated Errors
-
-Providing simple and helpful instruction is key to successful form completion, yet without tracking how our users engage with the forms we cannot verify they work as expected.
-
-Repeated errors may point to instructions which is not clear, simple, or helpful; or towards layouts causing users to much cognitive shifting.
-
--  Use analytics to track the most frequently encountered errors 
-
 ##### Grouping Controls
+
 Form groups are a collection of elements, they are defined by a shared label using the `legend` tag.
 
 It is not recommended to require elements with a form group as logically there should be no incorrect answer for these elements.
@@ -380,22 +290,30 @@ we are required to implement at least one of the following error prevention tech
 Find more information on this topic in the [Accessibility References](#accessibility-references)
 
 ### Error Detection
-
+Once the user has created an error, we need to call out the form field/s in error and provide instruction on how to resolve them.
 - **Must**
   - Identify each field in error
   - Provide suggestions (when known) to correct the errors
-  - Preserve as much user-entered input as possible
 -  **Should**
-  - Correctly filled out user provided data in a form that contains errors **SHOULD** remain populated post-submit.
+  - Preserve as much user-entered input as possible
 - **Should Not**
   - rely solely on visual cues to indicate an error
 #### markup properties
 
+The following properties are added to the form field element:
+
   - `aria-invalid`
   - `aria-errormessage`
   - `aria-describedby` append id for notification container display
+
+Client side or "inline" validation notifications can interact with the user as they are working through the form process.
+inline validation allows us to interact with a user prior to the data being submitted to a server. 
+This validation does not replace server validation, rather it enhances it with the ability to present instruction prior to submitting or refreshing the page.
+ 
+As this provides such an enhanced user experience, it is assumed that inline validation is used where possible.
 #### aria-invalid
-indicate that the value entered into an input field does not conform to the format expected by the application. This may include formats such as email addresses or telephone numbers. aria-invalid can also be used to 
+indicate that the value entered into an input field does not conform to the format expected by the application. 
+This may include formats such as email addresses or telephone numbers. aria-invalid can also be used to 
 indicate that a required field has not been filled in.
 The attribute should be programmatically set as a result of a validation process.
 
@@ -410,7 +328,6 @@ The attribute should be programmatically set as a result of a validation process
   - with information about the error in the page `<title>` if the submission causes a page reload or a new page load.
 
 Find more information on this topic in the [Accessibility References](#accessibility-references)
-
 #### aria-errormessage
 The `aria-errormessage` attribute takes an ID reference in the same manner as `aria-describedby`, and is only exposed when aria-invalid is set to ‘true’ on the same element. The use of a live region attribute such as aria-live=”polite” on the error message container element is optional.
 
@@ -434,7 +351,7 @@ Notifying the user of validation status's can take many forms, from adding icono
 Regardless of the means they all have to goal of communicating information back to the user. To ensure this happens effectively the following requirements and best practices should accounted for.
 
 #### markup properties
--  Active: `<div id="formFieldInstruction" role="status" tabindex=0>`
+-  Active: `<div id="ErrorMessageID" role="status" tabindex=0>`
 -  Inactive: `<div id="formFieldInstruction" display="none">`
 
 - **Must**
@@ -496,6 +413,69 @@ Regardless of the means they all have to goal of communicating information back 
     real-time errors until after form submission, assuming that no data has been saved yet.
 
 Find more information on this topic in the [Accessibility References](#accessibility-references)
+
+#### Inline Notification Location
+
+A users ability to complete a form may be impacted if the validation notification is not displayed in a manner the user expects.
+
+Displaying all validation in a validation summary at the top of a page or top/bottom of a form will produce worse outcomes that providing messaging inline as the user interacts with each form element.
+When providing inline instruction it is important to be non disruptive, enabling users to think less allows them to complete a form more quickly.
+We can help reduce a users cognitive lift by adding any additional information to locations within a users natural reading flow, either to the right of the form element or below it.
+
+Cedar recommends placing validation information below the form field for a couple of reasons.
+
+-  Constrained space will not alter the location of instruction
+-  Below the form element is an expected pattern that is within a users reading flow
+
+There are three unique opportunities which can be targeted to provide notification updates
+
+-  [While user is typing](#while-user-is-typing-oninput): using the `OnInput` event
+-  [Once the user moves focus](#once-the-user-moves-focus-onchange): using the `OnChange` event
+-  [Once the user submits](#once-the-user-submits-onsubmit): using the `OnSubmit` event
+#### Inline Notification timing
+##### While user is typing (OnInput)
+
+"On input" validation provides instant feedback as the user types making it highly visible.
+However, it forces them out of a "completion" mindset and my cause frustration.
+
+while useful for form fields with very strict input requirements, it has
+[proven](https://www.researchgate.net/publication/221054469_Online_Form_Validation_Don't_Show_Errors_Right_Away) 
+to [cause](https://www.researchgate.net/publication/220054837_Usable_error_message_presentation_in_the_World_Wide_Web_Do_not_show_errors_right_away) 
+more user errors and take longer to successfully complete the form.
+
+Instruction offered this way should focus on positive progressive cues and should not present error instruction.
+It should not be used to immediately communicate that the user has caused an error.
+
+- Use Instant validation 
+  - for difficult to answer questions where a user may create several formatting errors
+  - to indicate progress as a user types 
+
+- Don't annoy the user 
+  - By providing instant error instruction
+  - By using on simple inputs
+
+##### Once the user moves focus (OnChange)
+
+"On Change" validation takes place after the user changes or removes focus from their current element. 
+In most cases this is the best time to begin validating users data as the user will not need to locate or navigate back to the form field that contains the error.
+This informs the user that there are additional expectations but does not block them from moving on and working through the remainder of the form. 
+
+Providing validation instruction on change, and enhancing the validation on submit can ease the users through the form without blocking or frustrating them. 
+We could for example, alter the the appearance of an element on change, which would warn or confirm the users input and if needed on submit reinforce this change with additional validation instruction
+
+<cdr-img :src="$withBase('/input/progressiveexample.png')" alt="An example on REI.com of this notification" width="500px"/>
+
+##### Once the user submits (OnSubmit)
+A user submitting a form will be expecting to move on.
+They may be on a location of the page where they are unable to see individual invalidated form fields.
+It may benefit user of longer forms to be presented with a [validation summary](#validation-summaries) that can reiterate the errors and guide them to the locations needing work.
+
+This is the last chance we have prior to submitting the users data to the server, while not as optimal a location as onChange, presenting instruction during this event does happen before page refresh.
+May users in a completion mindset may knowingly move trough a form, even once aware of errors and wait to for submit prior to addressing additional form needs.
+
+
+-  Don't removing incorrect user entered data
+-  Consider providing a [validation summary](#validation-summaries)
 
 ## Validation summaries
 Up to this point we have been going over best practices and requirements for individual form elements or form groups such as a singular text input or group of checkboxes.
