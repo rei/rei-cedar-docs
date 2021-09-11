@@ -210,48 +210,32 @@ providing informative help text, accepting multiple formats for input data, and 
 
 ### Error Prevention
 
-The best interaction a user can have with a form is to easily enter their data and move on, never aware of blocking validation.
-We can help our users avoid validation by clearly identifying required form fields, Using clear and informative text for labels, and providing persistent formatting instructions.
+The best interaction a user can have with a form is to easily enter their data and to move on, never interacting with the provided validation.
+We can help our users avoid blocking validation by clearly identifying required form fields, Using clear and informative text for labels, and providing persistent formatting instructions.
 The following requirements will help reduce user exposure to form blocking validation.
 
-When constructing form elements you
+When constructing form elements you:
+-  **Must**
+  - Clearly label required form fields
+  - apply `Required` and or `aria-required` to "required form fields
+  - Ensure assistive technology is provided text conveying that the field is required
+-  **Must Not**
+  - Use color alone to convey required or non required fields
 -  **Should**
-  - Provide an explanation to the user when the submit button is not available
-  - Clearly label required fields
+  - Provide an explanation to the user when the "submit" button is not available
   - Provide a clear informative form title
-  - Create a clean and easy to understand layout by placing groups of form fields into fieldsets and providing adequate spacing
-  - Accept and filter multiple formats for data
-  - Use helper text to clearly and concisely inform the user of formatting requirements
+  - Create a clean and easy to understand layout by placing groups of form fields into fieldsets and providing adequate spacing between all elements
+  - Accept and filter multiple formats for form field data
+  - Use helper text to clearly and concisely inform the user of any formatting requirements
   - Integrate input masking that can clearly visualize formatting expectations
+  - Only require fields that are absolutely needed
+  - Use an asterisks to indicate that the field is required.
+  - Append "(Optional)" text to non-required fields within a form where the bulk of elements are required
 - **Should Not**
   -  Alter the user provided input to make it validate
   -  Place formatting help or expectations in the placeholder of an input
-  
-#### markup properties
-  - `required`
-  - `aria-required`
-  - `aria-describedby` id array for other static elements such as help text
-#### Required Form Fields
 
-- Only require fields that are absolutely needed
-- Required fields use an asterisks to indicate that the field is required.
-- Optional fields within a form where the bulk of elements are required should append the (Optional) text to their label
-- Don't use color alone to convey required or non required fields
-##### On Rest
-- **Must**
-  - Set `Required` and or `aria-required` to true for inputs that must be completed by the user
-- **Should**
-  - Require only fields that are absolutely needed
-  - Ensure assistive technology is provided text conveying that the field is required
-##### On validation
-- **Must**
-  - Identify each field in error
-  - Preserve as much user-entered input as possible
-  - set [aria-invalid](#aria-invalid) to `true`
-  - map the associated id of the notification instruction to the [aria-errormessage](aria-errormessage) attribute for each field in error
-- **May**
-  - also use '[aria-describedby]()' in conjunction with [aria-errormessage](aria-errormessage)
-##### Grouping Controls
+#### Grouping Controls
 
 Form groups are a collection of elements, they are defined by a shared label using the `legend` tag.
 
@@ -267,9 +251,9 @@ We need to do some extra work with these groups to make sure they work for all o
 on a broad range of assisted tech solutions was achieved by Dynamically injecting the error text into the legend. This forgoes the recommendation to add the `aria-describedby` attribute to the `fieldset` or `legend`.
 Additionally the addition of `aria-invalid` to each control was not recommended as it may lead to user confusion.
 
-- Should
+- **Should**
   - dynamically inject the error instruction as a `span` into the form-group legend
-- Should not
+- **Should Not**
   - add `aria-describedby` to the `legend`, linking to a span out of the form-group. This produces mixed results across the assisted tech matrix
   - use `aria-describedby` to the `fieldset`, linking to a span out of the form-group. This produces mixed results across the assisted tech matrix
   - add the `aria-invalid` attribute to form-group controls as this may cause user confusion on if all or just one item are required.
@@ -290,46 +274,38 @@ we are required to implement at least one of the following error prevention tech
 Find more information on this topic in the [Accessibility References](#accessibility-references)
 
 ### Error Detection
-Once the user has created an error, we need to call out the form field/s in error and provide instruction on how to resolve them.
+
+
+Once the user has created an error and validation has been triggered, we need to call out the form field/s in error and provide instruction on how to resolve them.
 - **Must**
   - Identify each field in error
+  - Be programmatically-associated with the appropriate element.
   - Provide suggestions (when known) to correct the errors
+  - Append `aria-invalid="true"` to the input
+  - map the associated id of the notification instruction to the input via `aria-describedby` (widely supported) or [aria-errormessage](https://a11ysupport.io/tech/aria/aria-errormessage_attribute) (not yet widely supported)
+  - append `aria-live` `role="status"`, or `role="alert"` to the notification container
+  - No hide the content of error messages when `aria-errormessage` is pertinent
+  - Authors MUST either ensure the content is hidden or remove the aria-errormessage attribute or its value.
+-  **Must Not**
+  - Use color alone to convey a field in error
+  - Expose aria-errormessage for an object with an aria-invalid value of false.
 -  **Should**
   - Preserve as much user-entered input as possible
+  - add information about the error in the page `<title>` if the submission causes a page reload or a new page load.
 - **Should Not**
-  - rely solely on visual cues to indicate an error
-#### markup properties
+  - Rely solely on visual cues to indicate an error
+  - Set the `aria-invalid` attribute on required field prior to incorrect user data or attempted submission.
+  - **May**
+    - also use `aria-describedby` in conjunction with `aria-errormessage`
 
-The following properties are added to the form field element:
-
-  - `aria-invalid`
-  - `aria-errormessage`
-  - `aria-describedby` append id for notification container display
-
-Client side or "inline" validation notifications can interact with the user as they are working through the form process.
-inline validation allows us to interact with a user prior to the data being submitted to a server. 
-This validation does not replace server validation, rather it enhances it with the ability to present instruction prior to submitting or refreshing the page.
- 
-As this provides such an enhanced user experience, it is assumed that inline validation is used where possible.
 #### aria-invalid
-indicate that the value entered into an input field does not conform to the format expected by the application. 
+This true or false form field property indicates that the value entered into an input field does not conform to the format expected by the application. 
 This may include formats such as email addresses or telephone numbers. aria-invalid can also be used to 
 indicate that a required field has not been filled in.
 The attribute should be programmatically set as a result of a validation process.
-
--  When the user attempts to submit data involving a field for which aria-required is true, authors MAY use the aria-invalid attribute to signal there is an error. However, if the user has not attempted to submit the form, authors SHOULD NOT set the aria-invalid attribute on required widgets simply because the user has not yet entered data.
--  Add `aria-invalid="true"` to the input
--  Identify the input (referencing the label):
-  - In a simple JavaScript alert
-  - with information associated with the input via aria-describedby (widely supported) or aria-errormessage (not yet widely supported)
-  - with error text added to the input's label (other techniques are more semantically correct, but this is a reliable method)
-  - with text on the web page (it may be appropriate to move the keyboard focus to the error message)
-  - with an aria-live or role="alert" announcement
-  - with information about the error in the page `<title>` if the submission causes a page reload or a new page load.
-
-Find more information on this topic in the [Accessibility References](#accessibility-references)
 #### aria-errormessage
-The `aria-errormessage` attribute takes an ID reference in the same manner as `aria-describedby`, and is only exposed when aria-invalid is set to ‘true’ on the same element. The use of a live region attribute such as aria-live=”polite” on the error message container element is optional.
+The `aria-errormessage` attribute takes an `ID` reference in the same manner as `aria-describedby`, and is only exposed when `aria-invalid` is set to ‘true’ on the same element. 
+The use of a live region attribute such as aria-live=”polite” or `role="status" on the notification container element is optional.
 
 Placed on input and mapped via id to error message.
 used to:
@@ -338,19 +314,18 @@ used to:
   - To provide verbal information that may be conveyed via visual cues 
   - associate tooltips to form fields
 
-- Error feedback SHOULD be programmatically-associated with the appropriate element.
-- When `aria-errormessage` is pertinent, authors MUST ensure the content is not hidden
-- Authors MUST either ensure the content is hidden or remove the aria-errormessage attribute or its value.
-- User agents MUST NOT expose aria-errormessage for an object with an aria-invalid value of false.
 
 Find more information on this topic in the [Accessibility References](#accessibility-references)
+
+
+
 
 ### Validation Notifications
 
 Notifying the user of validation status's can take many forms, from adding iconography to signify success, altering the color of borders text or background, to providing detailed instruction.
 Regardless of the means they all have to goal of communicating information back to the user. To ensure this happens effectively the following requirements and best practices should accounted for.
 
-#### markup properties
+#### markup properties of error notification container
 -  Active: `<div id="ErrorMessageID" role="status" tabindex=0>`
 -  Inactive: `<div id="formFieldInstruction" display="none">`
 
@@ -466,16 +441,14 @@ We could for example, alter the the appearance of an element on change, which wo
 <cdr-img :src="$withBase('/input/progressiveexample.png')" alt="An example on REI.com of this notification" width="500px"/>
 
 ##### Once the user submits (OnSubmit)
-A user submitting a form will be expecting to move on.
+A user submitting a form will be expecting to move on or to be reminded of existing errors.
 They may be on a location of the page where they are unable to see individual invalidated form fields.
 It may benefit user of longer forms to be presented with a [validation summary](#validation-summaries) that can reiterate the errors and guide them to the locations needing work.
 
-This is the last chance we have prior to submitting the users data to the server, while not as optimal a location as onChange, presenting instruction during this event does happen before page refresh.
-May users in a completion mindset may knowingly move trough a form, even once aware of errors and wait to for submit prior to addressing additional form needs.
-
-
--  Don't removing incorrect user entered data
--  Consider providing a [validation summary](#validation-summaries)
+OnSubmit is an user expected location to offer validation.
+While less optimal than onChange, this event is preferable to OnInput. Users in a completion mindset may knowingly move thru a form, 
+even once aware of errors and wait to submit prior to addressing additional form needs. Consider pairing OnChange progressively with onSubmit validation.
+A users that receives errors on durning event may not visually see the fields in error, in this case they may find a validation summary useful or needed.
 
 ## Validation summaries
 Up to this point we have been going over best practices and requirements for individual form elements or form groups such as a singular text input or group of checkboxes.
@@ -493,48 +466,44 @@ Where possible Validation Summaries shouldn’t be used as the only form of erro
  thus forcing the user to memorize the error message while fixing the issue.
 
 
-- Use
+- **Use**
   -  To summarize and direct users back to existing errors 
   -  To increase visibility of existing errors
   -  When valid form options cause invalid product selections
   -  For server returned instruction
-Don't Use
+- **Don't Use**
 - As the Only Indication of an error/s
 
 ## Server-side Validation
+Client side or "inline" validation notifications can interact with the user as they are working through the form process.
+inline validation allows us to interact with a user prior to the data being submitted to a server. 
+
+As this provides such an enhanced user experience, it is assumed that inline validation is used where possible.
+
+This validation does not replace server validation, rather it enhances it with the ability to present instruction prior to submitting or refreshing the page.
 
 when the user submits the form their information is sent to the server and validated.
-When the response of the “validator” is sent back to the user’s computer
+If validation did not take place prior to server validation or if there are additional errors the response of the “validator” is sent back to the user’s computer
 
+**Must**
 -  Return the form (with the user's data still in the fields)
 -  Provide a text description at the top of the page that indicates 
-  -  there was a validation problem
-  -  describes the nature of the problem
-  -  provides ways to locate the field(s) with a problem easily.
+  -  There was a validation problem
+  -  Describes the nature of the problem
+  -  Provides ways to locate the field(s) with a problem easily.
+  -  Visually style the error in such a way that it is distinguishable from other content
+**Should**
+-  Return the form with the user's data still in the fields
+**May**
+-  Change the title of the page
+-  Give the error a heading level: Provide a header, preferably a H1, so that assistive technology users can jump directly to the error and correct it.
+-  Provide a same-page link so that users can jump directly to the form field that has the error.
 
-This experience, while less optimal than client validation, can be helped with the following considerations:
 
-For a successful 
--  Confirmation text on the web page 
-(it may be appropriate to move the keyboard focus to the error message)
--  **Aria-live announcement**
-
--  Confirmation message in the page `<title>` if the submission causes a page reload or a new page load.
-
-**Unlike client validation server-side validation is returned as part of the page content, They do not alter the page and are not status notifications.**
-
-- **May**
-  - Change the title of the page
-  - Give the error a heading level: Provide a header, preferably a H1, so that assistive technology users can jump directly to the error and correct it.
-  - Visually style the error in such a way that it is distinguishable from other content
-  - Provide a same-page link so that users can jump directly to the form field that has the error.
-
-### Instruction Requirements
-
-- Return the form with the user's data still in the fields
-and provide a [validation summary](#validation-summaries) at the top of the page that indicates the fact that there was a validation problem, 
-describes the nature of the problem, and provides ways to locate the field(s) with a problem easily. 
-The "in text" portion of the Success Criterion underscores that it is not sufficient simply to indicate 
+Provide a [validation summary](#validation-summaries) at the top of the page.
+This summary should indicate the fact that there was a validation problem, 
+describes the nature of the problem, and provides ways to locate the field(s) with a problem easily.
+The "in text" portion of the Success Criterion underscores that it is not sufficient simply to indicate
 that a field has an error by putting an asterisk on its label or turning the label red. 
 A text description of the problem should be provided.
 
