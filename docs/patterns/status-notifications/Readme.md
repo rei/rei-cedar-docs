@@ -76,7 +76,7 @@ Persistent Status Notifications are 'in page messages', often [validation summar
   <th class="advanced-table__header">Components</th>
   <td>
     <cdr-list>
-      <li>[Banner](../../components/banner/)</li>
+      <li><cdr-link href="../../components/banner/">Banner</cdr-link></li>
       <li>Announcement</li>
     </cdr-list>
   </td>
@@ -322,7 +322,7 @@ these notifications should not be blocking. Opening in an overlay may disrupt or
 - **Should not**
   - Be located near or on top of navigation area
   - Contain interactive controls if notification is displayed as an overlay
-  - Open as a blocking overlay window**
+  - Open as a blocking overlay window
 - **May**
   - Appear as a timed display
 
