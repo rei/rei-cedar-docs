@@ -19,7 +19,7 @@
 
 Status Notifications inform users that something on the page has changed. These responses help users understand page processes, actions they have competed, additional options available, or actions still needing attention. Common examples include success and warning messages.
 
-Based on the information being communicated, status notifications can be persistent or transient. While it’s important to keep users informed when there is an update or status change, these notifications should not be page blocking. 
+Depending on the information being communicated, status notifications can be persistent or transient. While it’s important to keep users informed when there is an update or status change, these notifications should not be page blocking. 
 
 ## Persistent Status Notifications
 
@@ -119,7 +119,7 @@ Persistent Status Notifications are 'in page messages', often [validation summar
 ### Don't Use When
 - Changing inline content based on user selection (see [Update Notifications](../update-and-loading-notifications/#update-notifications))
 - The notification relates to an actionable element in a busy state (see [Loading Notifications](../update-and-loading-notifications/#loading-notifications))
-- As confirmation that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](#transient-status-notifications))
+- Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](#transient-status-notifications))
 - Providing contextual information on the page processes (see [Transient Status Notifications](#transient-status-notifications))
 - Providing errors, warnings, or success messaging related to user entered formatting, incomplete inputs, or invalid selections (see [Validation Notifications](../validation-notifications))
 - The content added to the page is critical and needs immediate attention (see [Alerts](../alerts))
@@ -278,7 +278,7 @@ Persistent Status Notifications are 'in page messages', often [validation summar
 </cdr-table>
 
 ### Use When
-- As confirmation that a task or process initiated by the user was completed successfully 
+- Confirming that a task or process initiated by the user was completed successfully 
 - Providing contextual information on the page processes
 ### Don't Use When
 - Changing inline content based on user selection (see [Update Notifications](../update-and-loading-notifications/#update-notifications))
