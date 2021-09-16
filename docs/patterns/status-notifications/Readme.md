@@ -298,7 +298,7 @@ Persistent Status Notifications are 'in page messages', often [validation summar
 
 <cdr-img :src="$withBase('/notifications/transientStatusAnatomy.png')" alt="Diagram for transient status notifications, annotating the required layout of the elements listed below" />
 
-Transient Status Motifications have the following requirements in addition to the requirements for Persistent Status Notifications (TODO should requirements that are pertinent be additive or all inclusive?)
+Transient Status Notifications have the following requirements in addition to the requirements for Persistent Status Notifications (TODO should requirements that are pertinent be additive or all inclusive?)
 
 1. **[Status Notifications as an Overlay](#status-notifications-as-an-overlay)**
 2. **[Automatic Dismissal](#automatic-dismissal)**
