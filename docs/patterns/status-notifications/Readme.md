@@ -158,8 +158,8 @@ Persistent Status Notifications are 'in page messages', often [validation summar
   - Use the HTML `<aside>` tag, denoting the section that, though related to the main element, doesn't belong to the main flow
 #### Optional Dismiss Action
 - **Must**
-  - Ensure the notification will not be removed if keyboard focus or mouse hover is within or over the notification.
-  - Return user focus to a logical location.
+  - Ensure the notification will not be removed if keyboard focus or mouse hover is within or over the notification
+  - Return user focus to a logical location
   - Provide at least one focusable UI element (i.e. Close button, primary button)
 - **Should not**
   - Create notifications that disappear automatically
