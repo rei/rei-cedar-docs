@@ -19,12 +19,13 @@
 
 ## Overview
 
-Update and Loading Notifications update pre-existing, inline page content. Loading Notifications often affect the same section of live content on a page and may precede an update notification being communicated to our users. When not pairing loading and update notifications, remember to create sufficient visual feedback as many update notifications will be unassociated to their triggering actions.
+Update and Loading Notifications inform users of the current working state of their request and help reduce uncertainty. These notifications update pre-existing, inline page content. 
+  
+Often a Loading Notification will precede an Update Notification, affecting the same content element on a page and intentionally paired together to communicate to users the ongoing status of their request. When not pairing Loading and Update Notifications, remember to create sufficient visual feedback as many Update Notifications will be unassociated to their triggering actions.
 
 ## Update Notifications
 
-Update Notifications inform users of advisory information that enhances the site experience such as quantity updates or busy states.
-Additionally, these notifications update a specific part of an inline content section, such as the number of items in a cart.
+Update Notifications inform users of advisory information that enhances the site experience such as quantity updates or busy states. These notifications update a specific part of an inline content section, such as the number of items in a cart.
 
 <cdr-table class="advanced-table" full-width=false>
   <tr>
@@ -104,13 +105,13 @@ Additionally, these notifications update a specific part of an inline content se
 
 ### Don't Use When
 - The notification relates to an actionable element in a busy state (see [Loading Notifications](../update-and-loading-notifications/#loading-notifications))
-- As confirmation that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](#transient-status-notifications))
-- Providing contextual information on the page processes (see [Transient Status Notifications](#transient-status-notifications))
-- Providing errors, warnings, or success messaging related to user entered formatting, incomplete inputs, or invalid selections (see [Validation Notifications](validation/#validation-notifications))
-- The content added to the page is critical and needs immediate attention (see [alert](../alerts))
-- Page usage should be blocked until the user takes an action within the message or exits (see [alert-dialog](alerts/#alert-dialog))
-- User interaction is required or content is critical to the user flow(see [modal](../../components/modal/))
-- The message contains a rich UI experience (see [modal](../../components/modal/))
+- Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](../status-notifications/#transient-status-notifications))
+- Providing contextual information on the page processes (see [Transient Status Notifications](../status-notifications/#transient-status-notifications))
+- Providing errors, warnings, or success messaging related to user entered formatting, incomplete inputs, or invalid selections (see [Validation Notifications](../validation-notifications/))
+- The content added to the page is critical and needs immediate attention (see [Alert](../alerts/))
+- Page usage should be blocked until the user takes an action within the message or exits (see [Alert Dialog](../alerts/#alert-dialog))
+- User interaction is required or content is critical to the user flow (see [Modal](../../components/modal/))
+- The message contains a rich UI experience (see [Modal](../../components/modal/))
 - During the appearance or disappearance of content following a user's interaction which is also announced to assistive technology such as the following:
   - Tab
   - Accordion
@@ -127,13 +128,13 @@ Additionally, these notifications update a specific part of an inline content se
   
 #### Content Container
 
-The Update Notification Content Container wraps both the element being updated and any assistive technology helpers such as screen reader text. It may be a pre-existing section of a page or dynamically added upon user action.
+The Update Notification content container wraps both the element being updated and any assistive technology helpers such as screen reader text. It may be a pre-existing section of a page or dynamically added upon user action.
 
 Design 
-- Should ensure the Update notification does not receive focus as a result of a change in status
+- Should ensure the Update Notification does not receive focus as a result of a change in status
 - Should ensure sufficient visual feedback is provided to inform users that an update that may not be associated with the element they have interacted with has been updated
-- Should not overuse update notifications as they may interrupt the user experience
-- May be stacked with a loading notification
+- Should not overuse Update Notifications as they may interrupt the user experience
+- May be stacked with a Loading Notification
 <hr/>
 
 Development
@@ -163,7 +164,7 @@ Development
 - May include `aria-relevant` to define what type of changes are being announced to assistive technologies
   
 #### Content Control
- The Update Notification Content Control may be any actionable element, such as a link or button.
+ The Update Notification content control may be any actionable element, such as a link or button.
 
 Design 
 - Should not move focus to the notification automatically
@@ -175,8 +176,9 @@ Development
   
 ## Loading Notifications
 
-When we use visual loading transitions to show that a live section of a page is changing or presenting new data, we are actually notifying our users that something is happening and that the page is busy. Transitions should also notify assistive technology that it should temporarily ignore changes to an element.
-This can be added in the form of additional element attributes that communicate to assistive technology, though consider if the action without context will create any cognitive dissonance for our visual users.
+Loading Notifications signal to users that loading is occurring, but do not give any specific indication of progress. Use Loading Notifcations to communicate the busy state of the page or content element, reassuring users that that page is not frozen and their request is in progress. 
+
+Transitions should also notify assistive technology to temporarily ignore changes to an element. This can be added in the form of additional element attributes that communicate to assistive technology, though consider if the action without context will create any cognitive dissonance for our visual users.
 
 <cdr-table class="advanced-table" full-width=false>
   <tr>
