@@ -76,7 +76,7 @@ Persistent Status Notifications are 'in page messages', often [validation summar
   <th class="advanced-table__header">Components</th>
   <td>
     <cdr-list>
-      <li>[Banner](../../components/banner/)</li>
+      <li><cdr-link href="../../components/banner/">Banner</cdr-link></li>
       <li>Announcement</li>
     </cdr-list>
   </td>
@@ -242,7 +242,7 @@ Persistent Status Notifications are 'in page messages', often [validation summar
   <th class="advanced-table__header">Components</th>
    <td>
     <cdr-list>
-      <li>[Toast](../../components/toast/)</li>
+      <li><cdr-link href="../../components/toast/">Toast</cdr-link></li>
       <li>Snack Bar</li>
        </cdr-list>
     </td>
