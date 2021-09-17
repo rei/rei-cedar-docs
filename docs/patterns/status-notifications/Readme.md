@@ -176,7 +176,7 @@ Persistent Status Notifications are 'in page messages', often [validation summar
     <th class="advanced-table__header">
       Priority
     </th>
-    <td><icon-information-fill /> low / minimally disruptive</td>
+    <td><icon-information-fill /> Low, minimally disruptive</td>
   </tr>
   <tr>
     <th class="advanced-table__header">
@@ -300,13 +300,13 @@ Persistent Status Notifications are 'in page messages', often [validation summar
 
 Transient Status Notifications have the following requirements in addition to the requirements for Persistent Status Notifications (TODO should requirements that are pertinent be additive or all inclusive?)
 
-1. **[Status Notifications as an Overlay](#status-notifications-as-an-overlay)**
-2. **[Automatic Dismissal](#automatic-dismissal)**
-3. **[Interactive Controls](#interactive-controls)**
+1. [Status Notifications as an Overlay](#status-notifications-as-an-overlay)
+2. [Automatic Dismissal](#automatic-dismissal)
+3. [Interactive Controls](#interactive-controls)
 
 #### Status Notifications as an overlay
-The concise messages contained within Status Notifications are not required for a user to interact with and may open unexpectedly, 
-these notifications should not be blocking. Opening in an overlay may disrupt or confuse users - additionally they may not be seen at all by users at some breakpoints.
+The concise messages contained within Status Notifications are not required for a user to interact with, may open unexpectedly, 
+and should not be blocking. Note that opening in an overlay may disrupt or confuse users and may not be seen at all by users at some breakpoints.
 
 
 - **Must**
@@ -322,7 +322,7 @@ these notifications should not be blocking. Opening in an overlay may disrupt or
 - **Should not**
   - Be located near or on top of navigation area
   - Contain interactive controls if notification is displayed as an overlay
-  - Open as a blocking overlay window**
+  - Open as a blocking overlay window
 - **May**
   - Appear as a timed display
 
@@ -331,8 +331,7 @@ If opening a Status Notification consider the following:
 - A non-blocking window may be completely missed by those who are using screen magnification software, but who are not using a screen reader
 
 #### Automatic Dismissal
-In some scenarios status notifications may be displayed for a set amount of time rather than become a lasting feature of a page. In these cases there should be no negative impact on their current activities or the status that the message conveyed. 
-Ignoring a timed notification would still mean that the action is completed successfully.
+In some scenarios status notifications may be displayed for a set amount of time rather than become a lasting feature of a page. In these cases there should be no negative impact on their current activities or the status that the message conveyed. Ignoring a timed notification would still mean that the action is completed successfully.
 
 For example, an item would still be added to a cart regardless of a user's engagement with the notification informing them of the successfully added item.
 
@@ -348,10 +347,10 @@ As an example, consider the virtual outfitting notification previousy seend on t
 Users may infer the "book now" text is a link - or just as likely search for a button or guess the entire text would be active.
 
 Consider the following:
-- When triggered, live regions only read out their content to assisted technologies. They will not distinguish text from actionable elements present within a notification.
-- Users may infer that actionable element is present, however a user will need to guess what element to search for. This is especially problematic for notifications that are automatically dismissed, as users will have limited time to correctly guess and act on this choice.
+- When triggered, live regions only read out their content to assisted technologies. They will not distinguish text from actionable elements present within a notification
+- Users may infer that actionable element is present, however a user will need to guess what element to search for. This is especially problematic for notifications that are automatically dismissed, as users will have limited time to correctly guess and act on this choice
 
-If the notification must include an actionable element you are responsible for the following:
+If the notification must include an actionable element, you are responsible for the following:
 - **Must**
   - Return focus to next logical location in the page flow
   - Contained action is also readily available on the page
