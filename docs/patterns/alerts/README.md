@@ -16,14 +16,40 @@
 ---
 
 <cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
-* Response to change > System updates
-* Response to change > User Input: requires time sensitive interaction 
 
-Alerts are critical responses to changes that have happened after page load. 
-Their job is to keep our users informed of important system or time-sensitive changes. 
+## Overview
 
-Before using an alert make sure your answer to the following questions are all "yes"
-Make sure the information you are presenting in an alert warrants taking away your user’s attention from what they are doing (i.e. for errors, warnings, and validations)
+
+Alerts are a critical response to changes that have happened after page load.
+Their job is to keep our users informed of important system or time-sensitive changes.
+
+Like notifications, alerts are messages that occur after some external thing has happened, 
+they are not provided as part of a pages content.
+
+Unlike notifications, alerts use the `role="alert"` markup and are intended to interrupt a user from their current flow.
+For example, when `role=”alert”` is applied to a banner message the browsers user agent
+will trigger a system alert event if the operating system allows. This event will ensure that,
+even if the user is on a different browser window they will be interrupted and notified that 
+something has happened on the page.
+Because of their intrusive nature, alerts must be used sparingly and only in situations where the user's immediate attention is required. 
+Dynamic messages that are less urgent should use one of the appropriate notification types, such as [persi]()`aria-live="polite"`.
+
+These messages are provided to the user when:
+-  The application has made updates
+-  There are application failures
+  - such as a lost connection to the server, local changes will not be saved
+-  The user is required to provide time sensitive interactions
+-  The user is presented with a required option that is page blocking
+
+While not invalid, using an alert, rather than a status notification within form field validation my cause 
+confusion to some users of assisted technology. This is because it may read over the current or next form field label.
+
+It may be helpful however to user role alert to represent a 
+validation summary which would populate after a user attempts to submit the form.
+
+### Use when
+-  Use `role=”alert”` for non-dismissible alert messages
+-  Use `role=”alertdialog”` for dismissible alert messages
 
 ## System alerts 
 these short messages appear due to critical issues that have effected the user session or application.
@@ -55,7 +81,7 @@ An alert is a special kind of assertive ARIA live region, so screen readers shou
 
 ## UI options and considerations
 
-### Cedar alert component
+### Cedar banner component
 <cdr-doc-example-code-pair repository-href="/src/components/alert"
 :sandbox-data="$page.frontmatter.sandboxData" >
 
@@ -108,4 +134,7 @@ They appear over the interface and block further interactions until an action is
 ```
 </cdr-doc-example-code-pair>
 
+## References
+- [Error Identification WCAG 3.3.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-identified.html)
+- [How to meet SC 3.3.1](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#qr-minimize-error-identified)
 </cdr-doc-table-of-contents-shell>
