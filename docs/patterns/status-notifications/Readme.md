@@ -220,10 +220,10 @@ Persistent Status Notifications are 'in page messages', often [validation summar
       Location
     </th>
     <td>
-    <cdr-list>
-    <li>Overlay</li>
-    <li>Typically in the top right of the page
-    </cdr-list>
+      <cdr-list>
+      <li>Overlay</li>
+      <li>Typically in the top right of the page</li>
+      </cdr-list>
     </td>
   </tr>
   <tr>

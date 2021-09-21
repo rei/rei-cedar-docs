@@ -5,7 +5,7 @@
   "layout_type": "LayoutArticle",
   "summary": "",
   "sandboxData": {
-    "components": "CdrBanner"
+    "components": "CdrBanner, CdrButton"
   },
   "breadcrumbs": [
     {
@@ -46,6 +46,24 @@ confusion to some users of assisted technology. This is because it may read over
 
 It may be helpful however to user role alert to represent a 
 validation summary which would populate after a user attempts to submit the form.
+
+### Implementation
+
+<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" :model="{isHidden: true}">
+
+```html
+
+<cdr-button  @click="isHidden = !isHidden" aria-controls="alertContainer">
+  {{isHidden ? 'click me' : 'dooh!'}}
+</cdr-button>
+<cdr-banner id="alertContainer" type="error" role="alert" v-if="!isHidden">
+  <icon-x-fill/> you have a critical error
+</cdr-banner>
+
+
+```
+
+</cdr-doc-example-code-pair>
 
 ### Use when
 -  Use `role=”alert”` for non-dismissible alert messages
@@ -135,6 +153,8 @@ They appear over the interface and block further interactions until an action is
 </cdr-doc-example-code-pair>
 
 ## References
-- [Error Identification WCAG 3.3.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-identified.html)
-- [How to meet SC 3.3.1](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#qr-minimize-error-identified)
+
+-  [Error Identification WCAG 3.3.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-identified.html)
+-  [How to meet SC 3.3.1](https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#qr-minimize-error-identified)
+
 </cdr-doc-table-of-contents-shell>
