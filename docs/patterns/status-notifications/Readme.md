@@ -132,6 +132,7 @@ Persistent Status Notifications are 'in page messages', often [validation summar
 #### Status Container
 - **Must**
   - Add `role=”status”`to the markup on activation, announcing the notification without interrupting the page flow of the user
+  - Add ID to be referenced via `aria-controls` on the element which is causing the notification
   - Ensure the notification container is able to receive focus
   - If moving focus to the notification, the notification content container must be dismissible
 - **Should**

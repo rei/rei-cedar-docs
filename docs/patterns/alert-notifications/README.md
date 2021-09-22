@@ -19,23 +19,15 @@
 
 ## Overview
 
-
-Alerts provide critical response or notifications due to changes to a pages data or user state.
+Alert notifications provide brief, critical responses to changes in a pages data or user state.
 Their job is to keep users informed of important system or time-sensitive changes.
-
-Like notifications, alerts are messages occurring after some external event has transpired. 
-they are not provided as part of a pages content.
-
+like other notifications, they are not provided as part of a pages content.
 
 ## Persistent Alert Notifications
 
-Unlike status notifications, alerts use the `role="alert"` markup and are intended to interrupt a user from their current flow.
-For example, when `role=”alert”` is applied to a banner message the browsers user agent
-will trigger a system alert event if the operating system allows. This event will ensure that,
-even if the user is on a different browser window they will be interrupted and notified that 
-something has happened on the page.
-Because of their intrusive nature, alerts must be used sparingly and only in situations where the user's immediate attention is required. 
-Dynamic messages that are less urgent should use one of the appropriate [status notification](/patterns/status-notifications/) types.
+Persistent Alert Notifications are messages, displayed inline, normally in close relation to the elements needing users attention.
+Because of their assertive nature, alert notifications should be used sparingly, reserved for situations where the user's immediate attention is required. 
+Dynamic notifications that are less urgent should use one of the appropriate [status notification](/patterns/status-notifications/) types instead.
 
 <cdr-table class="advanced-table" full-width=false>
   <tr>
@@ -69,7 +61,7 @@ Dynamic messages that are less urgent should use one of the appropriate [status 
   </tr>
   <tr>
     <th class="advanced-table__header">Information</th>
-    <td>Critical or time sensitive information </td>
+    <td>Critical or time sensitive errors and warnings </td>
   </tr>
   <tr>
   <th class="advanced-table__header">Location</th>
@@ -79,7 +71,6 @@ Dynamic messages that are less urgent should use one of the appropriate [status 
     <th class="advanced-table__header">Options</th>
     <td>
       <cdr-list>
-        <li>May contain detailed information</li>
         <li>May auto-dismiss once originating cause has been resolved</li>
         <li>May provide anchors directing users to error origin</li>
       </cdr-list>
@@ -96,10 +87,22 @@ Dynamic messages that are less urgent should use one of the appropriate [status 
 </cdr-table>
 
 ### Use When
+-  The content added to the page is critical and needs immediate attention
 -  The application has made updates
 -  There are application failures, such as a lost connection to the server where local changes will not be saved
 -  The user is required to make a time sensitive interaction
 -  The user is presented with a required option that is page blocking
+
+### Don't Use When
+- Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](#transient-status-notifications))
+- Providing contextual information on the page processes (see [Transient Status Notifications](#transient-status-notifications))
+- Providing errors, warnings, or success messaging related to user entered formatting, incomplete inputs, or invalid selections (see [Validation Notifications](../validation-notifications))
+- Page usage should be blocked until the user takes an action within the message or exits (see [Alert Dialog](../alert-notifications/#transient-alert-notifications))
+- User interaction is required or content is critical to the user flow (see [Modal](../../components/modal/))
+- The message contains a rich UI experience (see [Modal](../../components/modal/))
+- The user makes a selection that does not change or add content to the page
+- As the only indication of an error
+
 
 While not invalid, using an alert, rather than a status notification within form field validation my cause 
 confusion to some users of assisted technology. This is because it may read over the current or next form field label.
@@ -124,50 +127,57 @@ validation summary which would populate after a user attempts to submit the form
 
 </cdr-doc-example-code-pair>
 
-### Use when
--  Use `role=”alert”` for messages that are only dismissible once the condition is no longer in an error state 
--  Use `role=”alertdialog”` for dismissible alert messages
+### Anatomy of a Persistent Status Notification
 
-## System alerts 
-these short messages appear due to critical issues that have effected the user session or application.
+<cdr-img :src="$withBase('/notifications/persistentAlertAnatomy.png')" alt="Diagram for persistent alert notifications, annotating the required layout of the elements listed below" />
 
-| alert priorities     | error, warning |
-| Content              | Includes the core, most important alert content. |
-### Cedar component options
-- Alert
-- Toast
+1. [Container](#alert-container)
+2. [Message](#alert-message)
 
-- ToDO identify(name) the types of alerts rather than the components to support them - alert dialog is a component, what type of message should use this?
+#### Alert Container
+- **Must**
+  - Add `role=”alert”`to the markup on activation, interrupting the page flow of the user without interfering with their ability to continue working
+  - Add ID to be referenced via `aria-controls` on the element which is causing the notification
+  - Ensure the notification container is able to receive focus
+- **Must Not**
+  - Move focus automatically to the alert notification
+  - Open as a blocking overlay window
+  - Direct the user to a new page or window
+  - Overuse alert notifications, [frequent interruptions](https://www.w3.org/TR/UNDERSTANDING-WCAG20/time-limits-postponed.html) inhibit usability for people with visual and cognitive disabilities
+- **Should**
+  - Make the relationship between page controls and the notification explicit with the `aria-controls` attribute if another part of the page controls what appears in the alert
+- **Should not**
+  - Reuse bespoke UI intended for other message or navigation types
+- **May**
+  - May auto-dismiss once originating cause has been resolved
+  - Display notifications in unique UI to create distinction around themselves and the the page content
+  - Update a live region of the page
+  - Use the HTML `<aside>` tag, denoting the section that, though related to the main element, doesn't belong to the main flow
 
-## Accessibility
-An alert is a special type of ARIA live region. Screen readers will announce the text inside the alert, without moving the focus to the alert message. 
-"Activation: 
-An alert can be activated by a user action (such as clicking on a button), a timed event, or other circumstance.
+#### Alert Message
+- **Should**
+  -  Clearly communicate what has happened and how to proceed
+- **May**
+  - May provide anchors directing users to error origin
 
-Keyboard: 
-The focus stays where it is. The focus does not move anywhere when an alert is activated.
-
-Screen Readers:
-An alert is a special kind of assertive ARIA live region, so screen readers should immediately interrupt anything they were previously saying and instead read the announcement. Most screen readers say ""Alert,"" before reading the text inside the alert.
-"
-## API
-| Content                                          | Accessibility          |
-|--------------------------------------------------|------------------------|
-| Includes the core, most important alert content. | `aria-live="Asertive"` |
-|                                                  | 'role="alert"          |
 
 ## Transient Alert Notifications
 
 Transient Alert Notifications are dismissible messages requiring additional user input.
 They request the user confirmation of a task or process initiated by the user or the application itself.
 ### Use When
-- When the page requires immediate action by the current user.
-- When the message content provides actionable options
+- When the message content provides actionable options, which are themselves critical and needing immediate attention
 - When the message is dismissible by a user
-- When the message content should block other page interaction.
+- Page usage should be blocked until the user takes an action within the message or exits
+
 ### Don't use when
 - There is no action which the user must take.
 - The alert provides context to the page or page section.
+- Providing errors, warnings, or success messaging related to user entered formatting, incomplete inputs, or invalid selections (see [Validation Notifications](../validation-notifications))
+- Providing contextual information on the page processes (see [Transient Status Notifications](#transient-status-notifications))
+- Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](#transient-status-notifications))
+- User interaction is required or content is critical to the user flow (see [Modal](../../components/modal/))
+- The message contains a rich UI experience where users interaction is not required (see [Modal](../../components/modal/))
 
 ### Alert Dialog
 Most often, transient alert notifications will use a [modal dialog](../../components/modal/)
