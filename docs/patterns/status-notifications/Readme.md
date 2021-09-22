@@ -81,31 +81,6 @@ Persistent Status Notifications are 'in page messages', often [validation summar
     </cdr-list>
   </td>
   </tr>
-  <tr>
-  <th class="advanced-table__header">Examples</th>
-  <td>
-  <cdr-list>
-  <li>
-    <figure>
-      <cdr-img :src="$withBase('/notifications/announcementExample.png')" alt="An example on REI.com of this notification" width="500px"/>
-      <figcaption>
-        <cdr-caption
-        summary="After a user selects 'save for later' or removes an unavailable item from their cart, a status notification banner replaces the item with the text that the item has been saved or removed."/>
-      </figcaption>
-    </figure>
-  </li>
-  <li>
-    <figure>
-      <cdr-img :src="$withBase('/notifications/cartstockExample.png')" alt="An example on REI.com of this notification" width="500px"/>
-      <figcaption>
-        <cdr-caption
-        summary="After a user adds more stock than is available on the shopping cart page, a status notification banner displays informing the user of the product availability."/>
-      </figcaption>
-    </figure>
-  </li>
-</cdr-list>
-  </td>
-  </tr>
 </cdr-table>
 
 ### Use When
@@ -122,12 +97,29 @@ Persistent Status Notifications are 'in page messages', often [validation summar
 - Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](#transient-status-notifications))
 - Providing contextual information on the page processes (see [Transient Status Notifications](#transient-status-notifications))
 - Providing errors, warnings, or success messaging related to user entered formatting, incomplete inputs, or invalid selections (see [Validation Notifications](../validation-notifications))
-- The content added to the page is critical and needs immediate attention (see [Alerts](../alerts))
-- Page usage should be blocked until the user takes an action within the message or exits (see [Alert Dialog](../alerts/#alert-dialog))
+- The content added to the page is critical and needs immediate attention (see [Alerts](../alert-notifications))
+- Page usage should be blocked until the user takes an action within the message or exits (see [Alert Dialog](../alert-notifications/#transient-alert-notifications))
 - User interaction is required or content is critical to the user flow (see [Modal](../../components/modal/))
 - The message contains a rich UI experience (see [Modal](../../components/modal/))
 - The user makes a selection that does not change or add content to the page
 - As the only indication of an error
+
+### Implementation
+
+<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" :model="{isHidden: true}">
+
+```html
+
+<cdr-button  @click="isHidden = !isHidden" aria-controls="statusContainer">
+  {{isHidden ? 'click me' : 'dooh!'}}
+</cdr-button>
+<cdr-banner id="statusContainer" type="error" role="status" v-if="!isHidden">
+  <icon-x-fill /> We don't have the quantity you want
+</cdr-banner>
+
+```
+
+</cdr-doc-example-code-pair>
 
 ### Anatomy of a Persistent Status Notification
 
@@ -140,6 +132,7 @@ Persistent Status Notifications are 'in page messages', often [validation summar
 #### Status Container
 - **Must**
   - Add `role=”status”`to the markup on activation, announcing the notification without interrupting the page flow of the user
+  - Add ID to be referenced via `aria-controls` on the element which is causing the notification
   - Ensure the notification container is able to receive focus
   - If moving focus to the notification, the notification content container must be dismissible
 - **Should**
@@ -220,10 +213,10 @@ Persistent Status Notifications are 'in page messages', often [validation summar
       Location
     </th>
     <td>
-    <cdr-list>
-    <li>Overlay</li>
-    <li>Typically in the top right of the page
-    </cdr-list>
+      <cdr-list>
+      <li>Overlay</li>
+      <li>Typically in the top right of the page</li>
+      </cdr-list>
     </td>
   </tr>
   <tr>
