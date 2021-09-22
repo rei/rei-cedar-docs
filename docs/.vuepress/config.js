@@ -94,7 +94,7 @@ module.exports = {
       {
         text: "Patterns",
         items: [
-          { text: "Alert Notifications", link: "/patterns/alert-notifications/", },
+          { text: "Alerts", link: "/patterns/alerts/", },
           { text: "Form Input Types", link: "/patterns/forms-input-types/" },
           { text: "Form Validation", link: "/patterns/validation-notifications/" },
           { text: "Messaging", link: "/patterns/messaging/", },

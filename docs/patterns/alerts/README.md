@@ -1,6 +1,6 @@
 ---
 {
-  "title": "Alert Notifications",
+  "title": "Alerts",
   "title_metadata": false,
   "layout_type": "LayoutArticle",
   "summary": "",
@@ -19,13 +19,16 @@
 
 ## Overview
 
-Alert notifications provide brief, critical responses to changes in a pages data or user state.
+Alerts provide brief, critical responses to changes in a pages data or user state.
 Their job is to keep users informed of important system or time-sensitive changes.
 like other notifications, they are not provided as part of a pages content.
 
-## Persistent Alert Notifications
+## Alert Notifications
 
-Persistent Alert Notifications are messages, displayed inline, normally in close relation to the elements needing users attention.
+Persistent Alert Notifications provide brief, critical responses to changes in a pages data or user state.
+These messages, displayed inline, normally in close relation to the elements needing users attention.
+Their job is to keep users informed of important system or time-sensitive changes.
+As with other notifications, alert notifications are not provided as part of a pages content.
 Because of their assertive nature, alert notifications should be used sparingly, reserved for situations where the user's immediate attention is required. 
 Dynamic notifications that are less urgent should use one of the appropriate [status notification](/patterns/status-notifications/) types instead.
 
@@ -161,7 +164,7 @@ validation summary which would populate after a user attempts to submit the form
   - May provide anchors directing users to error origin
 
 
-## Transient Alert Notifications
+## User Confirmation Alerts
 
 Transient Alert Notifications are dismissible messages requiring additional user input.
 They request the user confirmation of a task or process initiated by the user or the application itself.
@@ -173,11 +176,10 @@ They request the user confirmation of a task or process initiated by the user or
 ### Don't use when
 - There is no action which the user must take.
 - The alert provides context to the page or page section.
-- Providing errors, warnings, or success messaging related to user entered formatting, incomplete inputs, or invalid selections (see [Validation Notifications](../validation-notifications))
-- Providing contextual information on the page processes (see [Transient Status Notifications](#transient-status-notifications))
-- Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](#transient-status-notifications))
-- User interaction is required or content is critical to the user flow (see [Modal](../../components/modal/))
-- The message contains a rich UI experience where users interaction is not required (see [Modal](../../components/modal/))
+- Providing errors, warnings, or success messaging related to user entered formatting, incomplete inputs, or invalid selections (see [Validation Notifications](../validation-notifications)
+- Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](#transient-status-notifications)
+- User interaction is required or content is critical to the user flow (see [Modal](../../components/modal/)
+- The message contains a rich UI experience where users interaction is not required (see [Modal](../../components/modal/)
 
 ### Alert Dialog
 Most often, transient alert notifications will use a [modal dialog](../../components/modal/)
