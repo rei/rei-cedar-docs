@@ -1,6 +1,6 @@
 ---
 {
-  "title": "Alerts",
+  "title": "Alert Notifications",
   "title_metadata": false,
   "layout_type": "LayoutArticle",
   "summary": "",
@@ -20,25 +20,85 @@
 ## Overview
 
 
-Alerts are a critical response to changes that have happened after page load.
-Their job is to keep our users informed of important system or time-sensitive changes.
+Alerts provide critical response or notifications due to changes to a pages data or user state.
+Their job is to keep users informed of important system or time-sensitive changes.
 
-Like notifications, alerts are messages that occur after some external thing has happened, 
+Like notifications, alerts are messages occurring after some external event has transpired. 
 they are not provided as part of a pages content.
 
-Unlike notifications, alerts use the `role="alert"` markup and are intended to interrupt a user from their current flow.
+
+## Persistent Alert Notifications
+
+Unlike status notifications, alerts use the `role="alert"` markup and are intended to interrupt a user from their current flow.
 For example, when `role=”alert”` is applied to a banner message the browsers user agent
 will trigger a system alert event if the operating system allows. This event will ensure that,
 even if the user is on a different browser window they will be interrupted and notified that 
 something has happened on the page.
 Because of their intrusive nature, alerts must be used sparingly and only in situations where the user's immediate attention is required. 
-Dynamic messages that are less urgent should use one of the appropriate notification types, such as [persi]()`aria-live="polite"`.
+Dynamic messages that are less urgent should use one of the appropriate [status notification](/patterns/status-notifications/) types.
 
-These messages are provided to the user when:
+<cdr-table class="advanced-table" full-width=false>
+  <tr>
+    <th class="advanced-table__header">
+      Priority
+    </th>
+    <td><icon-warning-fill/> Prominent, high priority</td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">
+      Expectancy
+    </th>
+    <td>Unexpected</td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">
+      Purpose
+    </th>
+    <td>
+        <cdr-list>
+          <li>The application has made updates</li>
+          <li>There are application failures, such as a lost connection to the server where local changes will not be saved</li>
+          <li>The user is required to make a time sensitive interaction</li>
+          <li>The user is presented with a required option that is page blocking</li>
+        </cdr-list>
+    </td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">Interaction</th>
+    <td>Non-blocking, required</td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">Information</th>
+    <td>Critical or time sensitive information </td>
+  </tr>
+  <tr>
+  <th class="advanced-table__header">Location</th>
+  <td>Inline on page, generally located in associated section of effected content</td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">Options</th>
+    <td>
+      <cdr-list>
+        <li>May contain detailed information</li>
+        <li>May auto-dismiss once originating cause has been resolved</li>
+        <li>May provide anchors directing users to error origin</li>
+      </cdr-list>
+    </td>
+  </tr>
+  <tr>
+  <th class="advanced-table__header">Components</th>
+  <td>
+    <cdr-list>
+      <li><cdr-link href="../../components/banner/">Banner</cdr-link></li>
+    </cdr-list>
+  </td>
+  </tr>
+</cdr-table>
+
+### Use When
 -  The application has made updates
--  There are application failures
-  - such as a lost connection to the server, local changes will not be saved
--  The user is required to provide time sensitive interactions
+-  There are application failures, such as a lost connection to the server where local changes will not be saved
+-  The user is required to make a time sensitive interaction
 -  The user is presented with a required option that is page blocking
 
 While not invalid, using an alert, rather than a status notification within form field validation my cause 
@@ -57,16 +117,15 @@ validation summary which would populate after a user attempts to submit the form
   {{isHidden ? 'click me' : 'dooh!'}}
 </cdr-button>
 <cdr-banner id="alertContainer" type="error" role="alert" v-if="!isHidden">
-  <icon-x-fill/> you have a critical error
+  <icon-x-fill/> There was a critical error
 </cdr-banner>
-
 
 ```
 
 </cdr-doc-example-code-pair>
 
 ### Use when
--  Use `role=”alert”` for non-dismissible alert messages
+-  Use `role=”alert”` for messages that are only dismissible once the condition is no longer in an error state 
 -  Use `role=”alertdialog”` for dismissible alert messages
 
 ## System alerts 
@@ -97,31 +156,28 @@ An alert is a special kind of assertive ARIA live region, so screen readers shou
 | Includes the core, most important alert content. | `aria-live="Asertive"` |
 |                                                  | 'role="alert"          |
 
-## UI options and considerations
+## Transient Alert Notifications
 
-### Cedar banner component
-<cdr-doc-example-code-pair repository-href="/src/components/alert"
-:sandbox-data="$page.frontmatter.sandboxData" >
+Transient Alert Notifications are dismissible messages requiring additional user input.
+They request the user confirmation of a task or process initiated by the user or the application itself.
+### Use When
+- When the page requires immediate action by the current user.
+- When the message content provides actionable options
+- When the message is dismissible by a user
+- When the message content should block other page interaction.
+### Don't use when
+- There is no action which the user must take.
+- The alert provides context to the page or page section.
 
-```html
-<cdr-alert type="error" role="alert">
-  <icon-x-fill/> Error
-</cdr-alert>
-```
-</cdr-doc-example-code-pair>
+### Alert Dialog
+Most often, transient alert notifications will use a [modal dialog](../../components/modal/)
+to present the user with a page blocking experience.
 
-### Alert dialog
+To use a modal as an alert add `role="alertdialog"`, note that dialogs do not use the `role="alert"` property
+review the [Cedar modal component](../../components/modal/) for instruction on using Cedar components for your `alertdialog`.
 
 Alert Dialogs provide page blocking information that users are required to interact with before proceeding.
 They appear over the interface and block further interactions until an action is selected.
-
-#### Use When
-- When the page requires immediate action by the current user.
-- When the message content should block other page interaction.
-
-#### Don't use when
-- There is no action the the user must take ([see modal](/components/modal/)).
-- The alert provides context to the page or page section.
 
 <cdr-doc-example-code-pair repository-href="/src/components/modal"
 :sandbox-data="$page.frontmatter.sandboxData" :model="{ opened: false }">
