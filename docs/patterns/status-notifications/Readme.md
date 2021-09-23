@@ -160,6 +160,10 @@ Persistent Status Notifications are 'in page messages', often [validation summar
 - **Should**
   - Clearly communicate what is happening
 
+<br />
+<hr />
+<br />
+
 ## Transient Status Notifications
 
  Transient Status Notifications are temporary messages that come and go without user input. They indicate the completion of a task or process initiated by the user or the application itself.
@@ -234,10 +238,7 @@ Persistent Status Notifications are 'in page messages', often [validation summar
   <tr>
   <th class="advanced-table__header">Components</th>
    <td>
-    <cdr-list>
-      <li><cdr-link href="../../components/toast/">Toast</cdr-link></li>
-      <li>Snack Bar</li>
-       </cdr-list>
+      <cdr-link href="../../components/toast/">Toast</cdr-link>
     </td>
   </tr>
   <tr>

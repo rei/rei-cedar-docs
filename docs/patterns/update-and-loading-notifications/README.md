@@ -168,11 +168,15 @@ Development
 Design 
 - Should not move focus to the notification automatically
 - May open or update content in locations unrelated to the action which caused the notification to appear
-<hr/>
+<hr />
 
 Development
 - Should use the aria-controls attribute if another part of the page controls what appears in the notification
-  
+
+<br />
+<hr />
+<br />
+
 ## Loading Notifications
 
 When we use visual loading transitions to show that a live section of a page is changing or presenting new data, we are actually notifying our users that something is happening and that the page is busy. Transitions should also notify assistive technology that it should temporarily ignore changes to an element.
