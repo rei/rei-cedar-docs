@@ -92,15 +92,15 @@ Persistent Status Notifications are 'in page messages', often [validation summar
 - When validation is not possible prior to submit
 
 ### Don't Use When
-- Changing inline content based on user selection (see [Update Notifications](../update-and-loading-notifications/#update-notifications))
-- The notification relates to an actionable element in a busy state (see [Loading Notifications](../update-and-loading-notifications/#loading-notifications))
-- Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](#transient-status-notifications))
-- Providing contextual information on the page processes (see [Transient Status Notifications](#transient-status-notifications))
-- Providing errors, warnings, or success messaging related to user entered formatting, incomplete inputs, or invalid selections (see [Validation Notifications](../validation-notifications))
-- The content added to the page is critical and needs immediate attention (see [Alerts](../alert-notifications))
-- Page usage should be blocked until the user takes an action within the message or exits (see [Alert Dialog](../alert-notifications/#transient-alert-notifications))
-- User interaction is required or content is critical to the user flow (see [Modal](../../components/modal/))
-- The message contains a rich UI experience (see [Modal](../../components/modal/))
+- Changing inline content based on user selection (see [Update Notifications](../update-and-loading-notifications/#update-notifications)
+- The notification relates to an actionable element in a busy state (see [Loading Notifications](../update-and-loading-notifications/#loading-notifications)
+- Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](#transient-status-notifications)
+- Providing contextual information on the page processes (see [Transient Status Notifications](#transient-status-notifications)
+- Providing errors, warnings, or success messaging related to user entered formatting, incomplete inputs, or invalid selections (see [Validation Notifications](../validation-notifications)
+- The content added to the page is critical and needs immediate attention (see [Alerts](../alerts/)
+- Page usage should be blocked until the user takes an action within the message or exits (see [Alert Dialog](../alerts/#user-confirmation-alerts)
+- User interaction is required or content is critical to the user flow (see [Modal](../../components/modal/)
+- The message contains a rich UI experience (see [Modal](../../components/modal/)
 - The user makes a selection that does not change or add content to the page
 - As the only indication of an error
 
@@ -159,6 +159,10 @@ Persistent Status Notifications are 'in page messages', often [validation summar
 #### Message
 - **Should**
   - Clearly communicate what is happening
+
+<br />
+<hr />
+<br />
 
 ## Transient Status Notifications
 
@@ -234,10 +238,7 @@ Persistent Status Notifications are 'in page messages', often [validation summar
   <tr>
   <th class="advanced-table__header">Components</th>
    <td>
-    <cdr-list>
-      <li><cdr-link href="../../components/toast/">Toast</cdr-link></li>
-      <li>Snack Bar</li>
-       </cdr-list>
+      <cdr-link href="../../components/toast/">Toast</cdr-link>
     </td>
   </tr>
   <tr>
@@ -274,17 +275,17 @@ Persistent Status Notifications are 'in page messages', often [validation summar
 - Confirming that a task or process initiated by the user was completed successfully 
 - Providing contextual information on the page processes
 ### Don't Use When
-- Changing inline content based on user selection (see [Update Notifications](../update-and-loading-notifications/#update-notifications))
-- The notification relates to an actionable element in a busy state (see [Loading Notifications](../update-and-loading-notifications/#loading-notifications))
-- Exposing a status change to a product caused by user selection (see [Persistent Status Notifications](#persistent-status-notifications))
-- Providing error or warnings on the status of items in the users cart (see [Persistent Status Notifications](#persistent-status-notifications))
-- Providing confirmation when updating and removing items that provides navigation or other actions (see [Persistent Status Notifications](#persistent-status-notifications))
-- Notifying users of a potential problem, outside of a form, that may require their attention (see [Persistent Status Notifications](#persistent-status-notifications))
-- Providing errors, warnings, or success messaging related to user entered formatting, incomplete inputs, or invalid selections (see [Validation Notifications](../validation-notifications/))
-- The content added to the page is critical and needs immediate attention (see [Alerts](../alerts))
-- Page usage should be blocked until the user takes an action within the message or exits (see [Alert Dialog](../alerts/#alert-dialog))
+- Changing inline content based on user selection (see [Update Notifications](../update-and-loading-notifications/#update-notifications)
+- The notification relates to an actionable element in a busy state (see [Loading Notifications](../update-and-loading-notifications/#loading-notifications)
+- Exposing a status change to a product caused by user selection (see [Persistent Status Notifications](#persistent-status-notifications/)
+- Providing error or warnings on the status of items in the users cart (see [Persistent Status Notifications](#persistent-status-notifications/)
+- Providing confirmation when updating and removing items that provides navigation or other actions (see [Persistent Status Notifications](#persistent-status-notifications)
+- Notifying users of a potential problem, outside of a form, that may require their attention (see [Persistent Status Notifications](#persistent-status-notifications)
+- Providing errors, warnings, or success messaging related to user entered formatting, incomplete inputs, or invalid selections (see [Validation Notifications](../validation-notifications/)
+- The content added to the page is critical and needs immediate attention (see [Alerts](../alerts/)
+- Page usage should be blocked until the user takes an action within the message or exits (see [Alert Dialog](../alerts/#alert-dialog)
 - User interaction is required or content is critical to the user flow (see [Modal](../../components/modal/))
-- The message contains a rich UI experience (see [Modal](../../components/modal/))
+- The message contains a rich UI experience (see [Modal](../../components/modal/)
 - The user makes a selection that does not change or add content to the page
 
 ### Anatomy of a Transient Status Notification
@@ -333,7 +334,7 @@ For example, an item would still be added to a cart regardless of a user's engag
 
 Interactive controls within notifications produce several hurdles for users of assistive technology. 
 Specifically, the `Aria-live` region will not preserve the semantics of elements being read aloud.
-As an example, consider the virtual outfitting notification previousy seend on the product page: a user will not know what the title, copy, or link are in the following text:
+As an example, consider the virtual outfitting notification previously seen on the product page: a user will not know what the title, copy, or link are in the following text:
 
 "*Need help deciding? Schedule a free 1-on-1 virtual appointment with one of our experts. Book now*". 
 

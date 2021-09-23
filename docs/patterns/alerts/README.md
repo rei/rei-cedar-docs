@@ -1,6 +1,6 @@
 ---
 {
-  "title": "Alert Notifications",
+  "title": "Alerts",
   "title_metadata": false,
   "layout_type": "LayoutArticle",
   "summary": "",
@@ -19,13 +19,16 @@
 
 ## Overview
 
-Alert notifications provide brief, critical responses to changes in a pages data or user state.
+Alerts inform our users that something important has happened on the page.
+They may communicate a critical error or request additional required input from our users.
+Even if not page page blocking, alerts need to be assertive, important messages whose intent is to interrupt the user flow.
+
+## Alert Notifications
+
+Persistent Alert Notifications provide brief, critical responses to changes in a pages data or user state.
+These messages, displayed inline, normally in close relation to the elements needing users attention.
 Their job is to keep users informed of important system or time-sensitive changes.
-like other notifications, they are not provided as part of a pages content.
-
-## Persistent Alert Notifications
-
-Persistent Alert Notifications are messages, displayed inline, normally in close relation to the elements needing users attention.
+As with other notifications, alert notifications are not provided as part of a pages content.
 Because of their assertive nature, alert notifications should be used sparingly, reserved for situations where the user's immediate attention is required. 
 Dynamic notifications that are less urgent should use one of the appropriate [status notification](/patterns/status-notifications/) types instead.
 
@@ -51,7 +54,6 @@ Dynamic notifications that are less urgent should use one of the appropriate [st
           <li>The application has made updates</li>
           <li>There are application failures, such as a lost connection to the server where local changes will not be saved</li>
           <li>The user is required to make a time sensitive interaction</li>
-          <li>The user is presented with a required option that is page blocking</li>
         </cdr-list>
     </td>
   </tr>
@@ -127,7 +129,7 @@ validation summary which would populate after a user attempts to submit the form
 
 </cdr-doc-example-code-pair>
 
-### Anatomy of a Persistent Status Notification
+### Anatomy of an alert notification
 
 <cdr-img :src="$withBase('/notifications/persistentAlertAnatomy.png')" alt="Diagram for persistent alert notifications, annotating the required layout of the elements listed below" />
 
@@ -160,11 +162,76 @@ validation summary which would populate after a user attempts to submit the form
 - **May**
   - May provide anchors directing users to error origin
 
+<br />
+<hr />
+<br />
 
-## Transient Alert Notifications
+## User Confirmation Alerts
 
-Transient Alert Notifications are dismissible messages requiring additional user input.
+These alerts require the user to interact with additional options provided within the message.
 They request the user confirmation of a task or process initiated by the user or the application itself.
+
+<cdr-table class="advanced-table" full-width=false>
+  <tr>
+    <th class="advanced-table__header">
+      Priority
+    </th>
+    <td><icon-warning-fill/> Prominent, high priority</td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">
+      Expectancy
+    </th>
+    <td>Unexpected</td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">
+      Purpose
+    </th>
+    <td>
+        <cdr-list>
+          <li>The user must confirm a requested action</li>
+          <li>The user must agree to terms and conditions</li>
+          <li>The user must acknowledge a change or condition that will effect the page</li>
+          <li>The user is presented with a required option that is page blocking</li>
+        </cdr-list>
+    </td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">Interaction</th>
+    <td>Blocking, required</td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">Information</th>
+    <td>Required user conditions or acceptance</td>
+  </tr>
+  <tr>
+  <th class="advanced-table__header">Location</th>
+  <td>
+    <cdr-list>
+      <li>Overlay</li>
+      <li>Typically in the middle of the page</li>
+    </cdr-list>
+  </td>
+  </tr>
+  <tr>
+    <th class="advanced-table__header">Options</th>
+    <td>
+      <cdr-list>
+        <li>May assign focus to the most appropriate action</li>
+      </cdr-list>
+    </td>
+  </tr>
+  <tr>
+  <th class="advanced-table__header">Components</th>
+  <td>
+    <cdr-list>
+      <li><cdr-link href="../../components/modal/">Modal</cdr-link></li>
+    </cdr-list>
+  </td>
+  </tr>
+</cdr-table>
+
 ### Use When
 - When the message content provides actionable options, which are themselves critical and needing immediate attention
 - When the message is dismissible by a user
@@ -172,22 +239,37 @@ They request the user confirmation of a task or process initiated by the user or
 
 ### Don't use when
 - There is no action which the user must take.
-- The alert provides context to the page or page section.
-- Providing errors, warnings, or success messaging related to user entered formatting, incomplete inputs, or invalid selections (see [Validation Notifications](../validation-notifications))
-- Providing contextual information on the page processes (see [Transient Status Notifications](#transient-status-notifications))
-- Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](#transient-status-notifications))
-- User interaction is required or content is critical to the user flow (see [Modal](../../components/modal/))
-- The message contains a rich UI experience where users interaction is not required (see [Modal](../../components/modal/))
+- The alert provides context to the page or page section (see [Alert Notifications](#alert-notifications)
+- Providing errors, warnings, or success messaging related to user entered formatting, incomplete inputs, or invalid selections (see [Validation Notifications](../validation-notifications)
+- Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](#transient-status-notifications)
+- User interaction is required or content is critical to the user flow (see [Modal](../../components/modal/)
+- The message contains a rich UI experience where users interaction is not required (see [Modal](../../components/modal/)
+
+### Anatomy of a confirmation alert
+
+<cdr-img :src="$withBase('/notifications/confirmation-alert-anatomy.png')" alt="Diagram for alert dialogs, annotating the required layout of the elements listed below" />
+
+1. [Container](#alert-container)
+2. [Actions](#alert-actions)
+
+
+- **Must**
+  -  Contain at minimum one actionable element which should receive focus
+  -  Block page content and contain focus within the alert until it is dismissed
+  -  Move focus to the alert
+  -  On alert dismissal, replace focus to the originating item or the next most logical and focusable element
+  -  Use `role="alertdialog"`
+- **May**
+  - assign focus to the most appropriate actionable element within the alert
 
 ### Alert Dialog
 Most often, transient alert notifications will use a [modal dialog](../../components/modal/)
 to present the user with a page blocking experience.
 
 To use a modal as an alert add `role="alertdialog"`, note that dialogs do not use the `role="alert"` property
-review the [Cedar modal component](../../components/modal/) for instruction on using Cedar components for your `alertdialog`.
+review the [Cedar modal component](../../components/modal/) for further instruction.
 
-Alert Dialogs provide page blocking information that users are required to interact with before proceeding.
-They appear over the interface and block further interactions until an action is selected.
+### Implementation
 
 <cdr-doc-example-code-pair repository-href="/src/components/modal"
 :sandbox-data="$page.frontmatter.sandboxData" :model="{ opened: false }">
