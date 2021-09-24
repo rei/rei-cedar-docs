@@ -59,7 +59,7 @@ Dynamic notifications that are less urgent should use one of the appropriate [st
   </tr>
   <tr>
     <th class="advanced-table__header">Interaction</th>
-    <td>Non-blocking, required</td>
+    <td>Non-blocking, most often inline, required</td>
   </tr>
   <tr>
     <th class="advanced-table__header">Information</th>
@@ -133,10 +133,10 @@ validation summary which would populate after a user attempts to submit the form
 
 <cdr-img :src="$withBase('/notifications/persistentAlertAnatomy.png')" alt="Diagram for persistent alert notifications, annotating the required layout of the elements listed below" />
 
-1. [Container](#alert-container)
-2. [Message](#alert-message)
+1. [Container](#alert-notification-container)
+2. [Message](#alert-notification-message)
 
-#### Alert Container
+#### Alert Notification Container
 - **Must**
   - Add `role=”alert”`to the markup on activation, interrupting the page flow of the user without interfering with their ability to continue working
   - Add ID to be referenced via `aria-controls` on the element which is causing the notification
@@ -156,7 +156,7 @@ validation summary which would populate after a user attempts to submit the form
   - Update a live region of the page
   - Use the HTML `<aside>` tag, denoting the section that, though related to the main element, doesn't belong to the main flow
 
-#### Alert Message
+#### Alert Notification Message
 - **Should**
   -  Clearly communicate what has happened and how to proceed
 - **May**
@@ -245,31 +245,21 @@ They request the user confirmation of a task or process initiated by the user or
 - User interaction is required or content is critical to the user flow (see [Modal](../../components/modal/)
 - The message contains a rich UI experience where users interaction is not required (see [Modal](../../components/modal/)
 
-### Anatomy of a confirmation alert
+### Anatomy of a user confirmation alert
 
 <cdr-img :src="$withBase('/notifications/confirmation-alert-anatomy.png')" alt="Diagram for alert dialogs, annotating the required layout of the elements listed below" />
 
-1. [Container](#alert-container)
-2. [Actions](#alert-actions)
+User confirmation alerts are urgent blocking interactions that use a special type of modal called an alert dialog
 
-
+The following are additive requirements to what the [Cedar modal component](../../components/modal/) provides by default.
+#### Alert Container
 - **Must**
-  -  Contain at minimum one actionable element which should receive focus
-  -  Block page content and contain focus within the alert until it is dismissed
-  -  Move focus to the alert
-  -  On alert dismissal, replace focus to the originating item or the next most logical and focusable element
-  -  Use `role="alertdialog"`
+  -  Apply the `role="alertdialog"` to the modal dialog property, review [Cedar modal component](../../components/modal/) for more instruction
+#### Alert Actions
 - **May**
   - assign focus to the most appropriate actionable element within the alert
 
-### Alert Dialog
-Most often, transient alert notifications will use a [modal dialog](../../components/modal/)
-to present the user with a page blocking experience.
-
-To use a modal as an alert add `role="alertdialog"`, note that dialogs do not use the `role="alert"` property
-review the [Cedar modal component](../../components/modal/) for further instruction.
-
-### Implementation
+#### Implementation
 
 <cdr-doc-example-code-pair repository-href="/src/components/modal"
 :sandbox-data="$page.frontmatter.sandboxData" :model="{ opened: false }">
