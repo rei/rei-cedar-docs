@@ -112,23 +112,6 @@ confusion to some users of assisted technology. This is because it may read over
 It may be helpful however to user role alert to represent a 
 validation summary which would populate after a user attempts to submit the form.
 
-### Implementation
-
-<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" :model="{isHidden: true}">
-
-```html
-
-<cdr-button  @click="isHidden = !isHidden" aria-controls="alertContainer">
-  {{isHidden ? 'click me' : 'dooh!'}}
-</cdr-button>
-<cdr-banner id="alertContainer" type="error" role="alert" v-if="!isHidden">
-  <icon-x-fill/> There was a critical error
-</cdr-banner>
-
-```
-
-</cdr-doc-example-code-pair>
-
 ### Anatomy of an alert notification
 
 <cdr-img :src="$withBase('/notifications/persistentAlertAnatomy.png')" alt="Diagram for persistent alert notifications, annotating the required layout of the elements listed below" />
@@ -138,8 +121,9 @@ validation summary which would populate after a user attempts to submit the form
 
 #### Alert Notification Container
 - **Must**
-  - Add `role=”alert”`to the markup on activation, interrupting the page flow of the user without interfering with their ability to continue working
-  - Add ID to be referenced via `aria-controls` on the element which is causing the notification
+  - Add `role=”alert”`to the container on activation, interrupting the page flow of the user without interfering with their ability to continue working
+  - Add an ID to the container 
+  - Pass the alert ID to the causing control if this alert was caused by an in-page action
   - Ensure the notification container is able to receive focus
 - **Must Not**
   - Move focus automatically to the alert notification
@@ -161,6 +145,26 @@ validation summary which would populate after a user attempts to submit the form
   -  Clearly communicate what has happened and how to proceed
 - **May**
   - May provide anchors directing users to error origin
+
+
+### Implementation
+
+<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" :model="{isHidden: true}">
+
+```html
+
+<cdr-button  @click="isHidden = !isHidden" aria-controls="alertContainer">
+ Demo User Account Alert
+</cdr-button>
+
+
+<cdr-banner id="alertContainer" type="error" role="alert" v-if="!isHidden">
+  <icon-x-fill/> You will be logged out, click the "Demo User Account Alert" Button to stay logged in
+</cdr-banner>
+
+```
+
+</cdr-doc-example-code-pair>
 
 <br />
 <hr />
@@ -258,38 +262,9 @@ The following are additive requirements to what the [Cedar modal component](../.
 #### Alert Actions
 - **May**
   - assign focus to the most appropriate actionable element within the alert
+## Implementation
 
-#### Implementation
-
-<cdr-doc-example-code-pair repository-href="/src/components/modal"
-:sandbox-data="$page.frontmatter.sandboxData" :model="{ opened: false }">
-
-```html
-<cdr-button
-  @click="opened = true"
-  aria-haspopup="dialog"
->Terms and Conditions
-</cdr-button>
-
-<cdr-modal
-  label="Add to Cart"
-  :opened="opened"
-  @closed="opened = false"
-  aria-described-by="description"
-  role="alertdialog"
->
-  <template #title>
-    <cdr-text
-      tag="h3"
-      class="title-header"
-    >Add to Cart
-    </cdr-text>
-  </template>
-  <cdr-text tag="p" id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet dictum ipsum.</cdr-text>
-</cdr-modal>
-```
-</cdr-doc-example-code-pair>
-
+[Cedar modal component](../../components/modal/#multiple-modals-on-one-page)
 ## References
 
 -  [Error Identification WCAG 3.3.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-identified.html)

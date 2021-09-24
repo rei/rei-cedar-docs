@@ -191,7 +191,17 @@ When rendering multiple modals on a single page you can reduce your markup size 
 
 ## Using Modals as alert dialogs
 
-Setting the cdr-modal `role` property to `alertdialog` will notify users of critical information requiring their immediate attention. 
+In the above example the cdr-modal `role` property of the "Terms and Conditions" modal has been changed to `alertdialog`.
+This role will notify users of critical information requiring their immediate attention. 
+
+```vue
+  <cdr-modal role="alertdialog" aria-describedby="description" label="modal title">
+    <div id="description">
+      modal content description
+    </div>
+  </cdr-modal>
+```
+
 
 Generally they have at least a Confirmation and close button but can have additional interactive controls as needed.
 Like a traditional modal dialog, alert dialogs move and capture the users focus to the blocking overlay window.
