@@ -138,8 +138,9 @@ validation summary which would populate after a user attempts to submit the form
 
 #### Alert Notification Container
 - **Must**
-  - Add `role=”alert”`to the markup on activation, interrupting the page flow of the user without interfering with their ability to continue working
-  - Add ID to be referenced via `aria-controls` on the element which is causing the notification
+  - Add `role=”alert”`to the container on activation, interrupting the page flow of the user without interfering with their ability to continue working
+  - Add an ID to the container 
+  - Pass the alert ID to the causing control if this alert was caused by an in-page action
   - Ensure the notification container is able to receive focus
 - **Must Not**
   - Move focus automatically to the alert notification
