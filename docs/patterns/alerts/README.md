@@ -258,38 +258,9 @@ The following are additive requirements to what the [Cedar modal component](../.
 #### Alert Actions
 - **May**
   - assign focus to the most appropriate actionable element within the alert
+## Implementation
 
-#### Implementation
-
-<cdr-doc-example-code-pair repository-href="/src/components/modal"
-:sandbox-data="$page.frontmatter.sandboxData" :model="{ opened: false }">
-
-```html
-<cdr-button
-  @click="opened = true"
-  aria-haspopup="dialog"
->Terms and Conditions
-</cdr-button>
-
-<cdr-modal
-  label="Add to Cart"
-  :opened="opened"
-  @closed="opened = false"
-  aria-described-by="description"
-  role="alertdialog"
->
-  <template #title>
-    <cdr-text
-      tag="h3"
-      class="title-header"
-    >Add to Cart
-    </cdr-text>
-  </template>
-  <cdr-text tag="p" id="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet dictum ipsum.</cdr-text>
-</cdr-modal>
-```
-</cdr-doc-example-code-pair>
-
+[Cedar modal component](../../components/modal/#multiple-modals-on-one-page)
 ## References
 
 -  [Error Identification WCAG 3.3.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-identified.html)
