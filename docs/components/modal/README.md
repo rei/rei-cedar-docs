@@ -176,7 +176,7 @@ When rendering multiple modals on a single page you can reduce your markup size 
     <cdr-text
       tag="h3"
       class="title-header"
-    >{{ title }}, {{ role }}
+    > <span v-if="isAlert"><icon-warning-fill/></span> {{ title }}, {{ role }}
     </cdr-text>
   </template>
   <cdr-text tag="p" id="description"> {{ content }}</cdr-text>
