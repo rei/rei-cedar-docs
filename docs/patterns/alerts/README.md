@@ -112,23 +112,6 @@ confusion to some users of assisted technology. This is because it may read over
 It may be helpful however to user role alert to represent a 
 validation summary which would populate after a user attempts to submit the form.
 
-### Implementation
-
-<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" :model="{isHidden: true}">
-
-```html
-
-<cdr-button  @click="isHidden = !isHidden" aria-controls="alertContainer">
-  {{isHidden ? 'click me' : 'dooh!'}}
-</cdr-button>
-<cdr-banner id="alertContainer" type="error" role="alert" v-if="!isHidden">
-  <icon-x-fill/> There was a critical error
-</cdr-banner>
-
-```
-
-</cdr-doc-example-code-pair>
-
 ### Anatomy of an alert notification
 
 <cdr-img :src="$withBase('/notifications/persistentAlertAnatomy.png')" alt="Diagram for persistent alert notifications, annotating the required layout of the elements listed below" />
@@ -162,6 +145,26 @@ validation summary which would populate after a user attempts to submit the form
   -  Clearly communicate what has happened and how to proceed
 - **May**
   - May provide anchors directing users to error origin
+
+
+### Implementation
+
+<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" :model="{isHidden: true}">
+
+```html
+
+<cdr-button  @click="isHidden = !isHidden" aria-controls="alertContainer">
+ Demo User Account Alert
+</cdr-button>
+
+
+<cdr-banner id="alertContainer" type="error" role="alert" v-if="!isHidden">
+  <icon-x-fill/> You will be logged out, click the "Demo User Account Alert" Button to stay logged in
+</cdr-banner>
+
+```
+
+</cdr-doc-example-code-pair>
 
 <br />
 <hr />
