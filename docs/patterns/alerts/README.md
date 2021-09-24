@@ -249,11 +249,12 @@ They request the user confirmation of a task or process initiated by the user or
 
 <cdr-img :src="$withBase('/notifications/confirmation-alert-anatomy.png')" alt="Diagram for alert dialogs, annotating the required layout of the elements listed below" />
 
-Most often, user confirmation alerts will use a special type of modal dialog
+User confirmation alerts are urgent blocking interactions that use a special type of modal called an alert dialog
+
 The following are additive requirements to what the [Cedar modal component](../../components/modal/) provides by default.
 #### Alert Container
 - **Must**
-  -  Apply the `role="alertdialog"` to the modal dialog container, review [Cedar modal component](../../components/modal/) for more instruction
+  -  Apply the `role="alertdialog"` to the modal dialog property, review [Cedar modal component](../../components/modal/) for more instruction
 #### Alert Actions
 - **May**
   - assign focus to the most appropriate actionable element within the alert
