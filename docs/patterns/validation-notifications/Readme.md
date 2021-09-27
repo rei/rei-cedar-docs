@@ -1,20 +1,3 @@
----
-{
-  "title": "Validation Notifications",
-  "title_metadata": false,
-  "layout_type": "LayoutArticle",
-  "summary": "Form errors and warning responses based on user input",
-  "sandboxData": {
-    "components": "CdrInput, CdrLink, CdrSelect, CdrBanner",
-    "styleTag": ".form-space {margin-top: $cdr-space-two-x;}"
-  },
-  "breadcrumbs": [
-    {
-      "text": "Patterns/Forms, Patterns/Messaging"
-    }
-  ],
-}
----
 
 <cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
 
@@ -77,13 +60,10 @@
 ## Overview
 
 Validating a form ensures that the data a user enters matches the formatting requirements of our systems.
-Depending on the need and technique used, validation feedback can be presented before, during, or after an interaction,
-allowing us to cater the instruction to where and what the user is doing.
-However, some techniques may cause more harm than good.
-For example, a user with limited vision may become confused, frustrated, and abandon a form that returns errors out of their view.
+Validation feedback allows us to cater instructions to where and what the user is doing. This feedback can be presented before, during or after an interaction, depending on the need and technique used. Validation should only be used once non-blocking techniques such as providing help text, accepting multiple formats for input data and using input masking have all failed.
 
-Validation allows us the opportunity to have a conversation with our users but should be used only once non blocking techniques such as 
-providing informative help text, accepting multiple formats for input data, and or using input masking have all failed.
+It is important to keep all users in mind when designing form validations. For example, form validation should not be entirely dependent on a user’s sight so that non-sighted can understand form validation errors![image](https://user-images.githubusercontent.com/23645132/134953002-05e2b9f1-b496-4443-bb8f-5f7e92eff058.png)
+
 
 <cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: '', modelError: false}" :methods="{validateInput() {this.modelError = this.defaultModel.length > 4 && 'Error: please enter 4 or less characters'}}">
 
@@ -102,6 +82,24 @@ providing informative help text, accepting multiple formats for input data, and 
 ```
 
 </cdr-doc-example-code-pair>
+
+---
+{
+  "title": "Validation Notifications",
+  "title_metadata": false,
+  "layout_type": "LayoutArticle",
+  "summary": "Form errors and warning responses based on user input",
+  "sandboxData": {
+    "components": "CdrInput, CdrLink, CdrSelect, CdrBanner",
+    "styleTag": ".form-space {margin-top: $cdr-space-two-x;}"
+  },
+  "breadcrumbs": [
+    {
+      "text": "Patterns/Forms, Patterns/Messaging"
+    }
+  ],
+}
+---
 
 ### Basics
 - Ensure Forms are Logical and Easy to Use
