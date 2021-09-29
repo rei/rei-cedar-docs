@@ -94,7 +94,7 @@ As with other notifications, Alert Notifications are not provided as part of a p
 - Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](../status-notifications/#transient-status-notifications))
 - Providing contextual information on the page processes (see [Transient Status Notifications](../status-notifications/#transient-status-notifications))
 - Providing errors, warnings, or success messaging related to user-entered formatting, incomplete inputs, or invalid selections (see [Form Validation](../validation-notifications))
-- Page usage needs to be blocked until the user takes an action within the message or exits (see [Alert Dialog](../alert-notifications/#transient-alert-notifications))
+- Page usage needs to be blocked until the user takes an action within the message or exits (see [User Confirmation Alerts](#user-confirmation-alerts))
 - User interaction is required or content is critical to the user flow (see [Modal](../../components/modal/))
 - The message contains a rich UI experience (see [Modal](../../components/modal/))
 - The user makes a selection that does not add or change content to the page
