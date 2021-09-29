@@ -19,13 +19,13 @@
 
 ## Overview
 
-Alerts inform users that something important has happened on the page. They need to be assertive and important messages whose intent is to interrupt the user flow, even if not page page blocking. They may communicate a critical error or request additional required input from our users.
+Alerts inform users that something important has happened on the page. They need to be assertive and important messages with the intent to interrupt the user flow, even if not page blocking. They may communicate a critical error or request additional required input from our users.
 
 ## Alert Notifications
 
 Persistent Alert Notifications provide brief, critical responses to changes in a page's data or user state. Their job is to keep users informed of important system or time-sensitive changes. These messages are displayed inline and are normally in close relation to the elements needing the user's attention. 
   
-As with other notifications, alert notifications are not provided as part of a page's content. Because of their assertive nature, alert notifications should be used sparingly and reserved for situations where the user's immediate attention is required. Dynamic notifications that are less urgent should use one of the appropriate [status notification](/patterns/status-notifications/) types.
+As with other notifications, Alert Notifications are not provided as part of a page's content. Because of their assertive nature, Alert Notifications should be used sparingly and reserved for situations where the user's immediate attention is required. Dynamic notifications that are less urgent should use one of the appropriate [Status Notification](/patterns/status-notifications/) types.
 
 <cdr-table class="advanced-table" full-width=false>
   <tr>
@@ -91,9 +91,9 @@ As with other notifications, alert notifications are not provided as part of a p
 -  The user is presented with a required option that is page blocking
 
 ### Don't Use When
-- Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](#transient-status-notifications))
-- Providing contextual information on the page processes (see [Transient Status Notifications](#transient-status-notifications))
-- Providing errors, warnings, or success messaging related to user-entered formatting, incomplete inputs, or invalid selections (see [Validation Notifications](../validation-notifications))
+- Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](../status-notifications/#transient-status-notifications))
+- Providing contextual information on the page processes (see [Transient Status Notifications](../status-notifications/#transient-status-notifications))
+- Providing errors, warnings, or success messaging related to user-entered formatting, incomplete inputs, or invalid selections (see [Form Validation](../validation-notifications))
 - Page usage needs to be blocked until the user takes an action within the message or exits (see [Alert Dialog](../alert-notifications/#transient-alert-notifications))
 - User interaction is required or content is critical to the user flow (see [Modal](../../components/modal/))
 - The message contains a rich UI experience (see [Modal](../../components/modal/))
@@ -101,7 +101,7 @@ As with other notifications, alert notifications are not provided as part of a p
 - Providing the only indication of an error, if needing to alert users on how to resolve the problem
 
 ### Use Caution When
-- Using an alert rather than a status notification within form field validation. While not invalid, this may cause confusion to some users of assisted technology as it may read over the current or next form field label. It may be helpful however to user role alert to represent a validation summary which would populate after a user attempts to submit the form.
+- Using an alert rather than a status notification within form field validation. While not invalid, this may cause confusion to some users of assisted technology as it may read over the current or next form field label. It may be helpful however to use role alert to represent a validation summary which would populate after a user attempts to submit the form.
 
 ### Anatomy of an Alert Notification
 
@@ -233,10 +233,10 @@ These alerts require the user to interact with additional options provided withi
 
 ### Don't Use When
 - There is no action the user must take
-- The alert provides context to the page or page section (see [Alert Notifications](#alert-notifications)
-- Providing errors, warnings, or success messaging related to user entered formatting, incomplete inputs, or invalid selections (see [Validation Notifications](../validation-notifications)
-- Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](#transient-status-notifications)
-- The message contains a rich UI experience where users interaction is not required (see [Modal](../../components/modal/)
+- The alert provides context to the page or page section (see [Alert Notifications](#alert-notifications))
+- Providing errors, warnings, or success messaging related to user entered formatting, incomplete inputs, or invalid selections (see [Form Validation](../validation-notifications))
+- Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](../status-notifications/#transient-status-notifications))
+- The message contains a rich UI experience where users interaction is not required (see [Modal](../../components/modal/))
 
 ### Anatomy of a User Confirmation Alert
 
@@ -246,16 +246,16 @@ User confirmation alerts are urgent, blocking interactions that use a special ty
 
   
   
-The following are additive requirements to what the [Cedar modal component](../../components/modal/) provides by default:
+The following are additive requirements to what the [Cedar Modal component](../../components/modal/) provides by default:
 #### Alert Container
 - **Must**
-  -  Apply the `role="alertdialog"` to the modal dialog property, review [Cedar modal component](../../components/modal/) for more instruction
+  -  Apply the `role="alertdialog"` to the modal dialog property, review [Modal](../../components/modal/) component documentation for more instruction
 #### Alert Actions
 - **May**
   - Assign focus to the most appropriate actionable element within the alert
 ## Implementation
 
-[Cedar modal component](../../components/modal/#multiple-modals-on-one-page)
+[Cedar Modal component](../../components/modal/#multiple-modals-on-one-page)
 ## References
 
 -  [Error Identification WCAG 3.3.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-identified.html)
