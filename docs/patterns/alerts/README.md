@@ -153,9 +153,9 @@ validation summary which would populate after a user attempts to submit the form
 
 ```html
 
-<cdr-button  @click="isHidden = !isHidden" aria-controls="alertContainer">
+<cdr-chip  @click="isHidden = !isHidden" aria-controls="alertContainer">
  Demo User Account Alert
-</cdr-button>
+</cdr-chip>
 
 
 <cdr-banner id="alertContainer" type="error" role="alert" v-if="!isHidden">

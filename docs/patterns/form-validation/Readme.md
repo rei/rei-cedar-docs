@@ -189,6 +189,7 @@ Once the user has created an error and validation has been triggered, it's neces
 <cdr-img :src="$withBase('/forms/ErrorDetection.png')" alt="Diagram showing the location of the following requirements" />
 
 When displaying form errors you:
+
 - **Must**
   - Identify each field in error
   - Provide suggestions to correct the errors
@@ -197,10 +198,10 @@ When displaying form errors you:
   - Append `aria-live` `role="status"`, or `role="alert"` to the notification container
   - Not hide the content of error messages when `aria-errormessage` is pertinent
   - Ensure the notification content is hidden or remove the aria-errormessage attribute or its value
--  **Must Not**
+- **Must Not**
   - Use color alone to convey a field in error
   - Expose aria-errormessage for an object with an aria-invalid value of false
--  **Should**
+- **Should**
   - Preserve as much user-entered input as possible
   - Add information about the error in the page `<title>` if the submission causes a page reload or a new page load
 - **Should Not**
@@ -216,6 +217,7 @@ When displaying form errors you:
   - Be scripted to show on the screen for sighted users, but attempts to announce the real-time messages to screen reader users
     can be problematic. It is usually acceptable to wait to announce
     real-time errors until after form submission, assuming that no data has been saved yet.
+
 ### Validation Notifications
 
 Notifying the user of validation status's can take many forms, from adding iconography to signify success, altering the color of border text or background, and/or providing detailed instruction.
@@ -224,6 +226,7 @@ Regardless of the means they all have the goal of communicating information back
 <cdr-img :src="$withBase('/forms/ValidationNotification.png')" alt="Diagram showing the location of the following requirements" />
 
 When communicating form errors to the user you:
+
 - **Must**
   - Provide suggestions (when known) to correct the errors
   - Ensure the message container can receive focus
@@ -238,7 +241,6 @@ When communicating form errors to the user you:
       -  For a singular form element, directly below the field in error, replacing the bottom helper text if present
       -  For a group of elements such a form group of checkboxes, below the fieldset container
    - Use meaningful colors and iconography
-  
 - **Must Not**
   - Rely solely on references to sensory characteristics (for example, "round button" or "button to the right")
 - **Should**
@@ -246,9 +248,9 @@ When communicating form errors to the user you:
   - Provide the state of the error, if using visual cues for error, warning, success, or info - that text should be provided via screen reader accessible text
   - Provide instruction that is as specific as possible
   - Clearly state errors:
-    –  What happened
-    –  What’s the next step the user should take to succeed 
-    -  Avoid using technical jargon
+    – What happened
+    – What’s the next step the user should take to succeed 
+    - Avoid using technical jargon
   - Confirm successful submission of data
   - Display it within the context of the action
   - Consider placing helpful formatting instruction above the input if that formatting instruction will remain helpful to your users during error resolution
@@ -256,7 +258,6 @@ When communicating form errors to the user you:
   - Use language that conveys REI's Brand
   - Avoid uppercase text as it gives the visual impact of shouting.
 - **Should Not**
-
   - Rely solely on visual cues to indicate an error
   - Alter the user-provided input to make it validate without providing the user with a validation message conveying this change
   - Remove incorrect data entered by the user
@@ -366,12 +367,12 @@ Where possible validation summaries should not be used as the only form of error
  in the viewport when the user reaches the error field, forcing the user to memorize the error message while fixing the issue.
 
 - **Use**
-  -  To summarize and direct users back to existing errors 
-  -  To increase visibility of existing errors
-  -  When valid form options cause invalid product selections
-  -  For server-returned instruction
+  - To summarize and direct users back to existing errors 
+  - To increase visibility of existing errors
+  - When valid form options cause invalid product selections
+  - For server-returned instruction
 - **Don't Use**
-  -  As the only indication of an error/sWe 
+  - As the only indication of an error/s
 
 ## Server-side Validation
 Client side or "inline" validation notifications can interact with the user as they are working through the form process.
@@ -384,19 +385,20 @@ This validation does not replace server validation, rather it enhances it with t
 When the user submits the form their information is sent to the server and validated. If validation did not take place prior to server validation or if there are additional errors, the response of the “validator” is sent back to the user’s computer
 
 Server-side validation notifications:
-**Must**
--  Return the form (with the user's data still in the fields)
--  Provide a text description at the top of the page that:
-  -  Indicates there was a validation problem
-  -  Describes the nature of the problem
-  -  Provides ways to locate the field(s) with a problem easily
-  -  Visually styles the error in such a way that it is distinguishable from other content
-**Should**
--  Return the form with the user's data still in the fields
-**May**
--  Change the title of the page
--  Give the error a heading level: provide a header, preferably a H1, so that assistive technology users can jump directly to the error and correct it.
--  Provide a same-page link so that users can jump directly to the form field that has the error.
+
+- **Must**
+  - Return the form (with the user's data still in the fields)
+  - Provide a text description at the top of the page that:
+    - Indicates there was a validation problem
+    - Describes the nature of the problem
+    - Provides ways to locate the field(s) with a problem easily
+    - Visually styles the error in such a way that it is distinguishable from other content
+- **Should**
+  - Return the form with the user's data still in the fields
+- **May**
+  - Change the title of the page
+  - Give the error a heading level: provide a header, preferably a H1, so that assistive technology users can jump directly to the error and correct it.
+  - Provide a same-page link so that users can jump directly to the form field that has the error.
 
 
 Provide a [validation summary](#validation-summaries) at the top of the page.
