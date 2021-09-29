@@ -84,7 +84,7 @@ accepting multiple formats for input data and using input masking have all faile
 
 It is important to keep all users in mind when designing form validations. For example, 
 form validation should not be entirely dependent on a user’s sight so that non-sighted 
-can understand form validation errors![image](https://user-images.githubusercontent.com/23645132/134953002-05e2b9f1-b496-4443-bb8f-5f7e92eff058.png)
+can understand form validation errors!
 
 <cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: '', modelError: false}" :methods="{validateInput() {this.modelError = this.defaultModel.length > 4 && 'Error: please enter 4 or less characters'}}">
 
