@@ -250,7 +250,7 @@ Many WCAG requirements are contextual to their implementation. To ensure that us
 
 Banner messaging keeps users informed of important and sometimes time-sensitive changes contextual to inline elements on the page. These messages help to clarify an issue and/or notify users of a potential problem that may require their attention.
 
-There are five types of banners: **error, warning, success, informational, and default**. Each type corresponds with a color and icon to provide a consistent, universal experience for users.
+There are five information types supported for banners: **error, warning, success, informational, and default**. Each type corresponds with a color and icon to provide a consistent, universal experience for users.
 
 ### **Error**
 Use to inform that something went wrong. They affect or block the user's experience and must be resolved before moving forward.
