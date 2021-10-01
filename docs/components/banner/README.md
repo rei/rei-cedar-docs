@@ -10,7 +10,7 @@
     }
   ],
   "sandboxData": {
-    "components": "CdrBanner, IconInformationFill, IconCheckFill, IconWarningFill, IconXFill"
+    "components": "CdrBanner, CdrTooltip, CdrButton, IconInformationStroke, IconInformationFill, IconCheckFill, IconWarningFill, IconXFill, IconQuestionFill, IconErrorFill, IconXLg"
   },
 
   "versions": [
@@ -23,15 +23,31 @@
               {
                 "name": "type",
                 "type": "string",
-                "default": "'info'",
-                "description": "Sets the banner style. Possible values: { 'info' | 'success' | 'warning' | 'error'}"
+                "default": "'default'",
+                "description": "Sets the banner style. Possible values: { 'info' | 'success' | 'warning' | 'error' | 'default'}"
               },
             ],
             "slots": [
               {
                 "name": "default",
-                "description": "Slot for CdrBanner content."
-              }
+                "description": "Slot for primary message text"
+              },
+              {
+                "name": "icon-left",
+                "description": "Slot for icon matching banner type"
+              },
+              {
+                "name": "message-body",
+                "description": "Slot for additional content about the message"
+              },
+              {
+                "name": "icon-right",
+                "description": "Slot for an additional icon on right"
+              },
+              {
+                "name": "info-action",
+                "description": "Slot for an action-wrapped icon"
+              },
             ]
           }
         }
@@ -47,32 +63,137 @@
 
 CdrBanner is a simple wrapper component that allows for composing various banner layouts.
 
-There are four different options for styling the banner, based on the [banner type](../banner/#guidelines).
+There are five different options for styling the banner, based on the [banner type](../banner/#guidelines).
 
+## Default Banner with Icon Left
 Banners should be passed an appropriate icon and text for the banner message type.
 
 <cdr-doc-example-code-pair repository-href="/src/components/banner"
 :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
+<cdr-banner>
+  <template #icon-left>
+    <icon-question-fill />
+  </template>
+  Default
+</cdr-banner>
+<br>
 <cdr-banner type="info">
-  <icon-information-fill /> Informational
+  <template #icon-left>
+    <icon-information-fill />
+  </template>
+  Informational
 </cdr-banner>
 <br>
 <cdr-banner type="success">
-  <icon-check-fill/> Success
+  <template #icon-left>
+    <icon-check-fill />
+  </template>
+  Success
 </cdr-banner>
 <br>
 <cdr-banner type="warning">
-  <icon-warning-fill/> Warning
+  <template #icon-left>
+    <icon-warning-fill />
+  </template>
+  Warning
 </cdr-banner>
 <br>
 <cdr-banner type="error">
-  <icon-x-fill/> Error
+  <template #icon-left>
+    <icon-error-fill />
+  </template>
+  Error
 </cdr-banner>
 ```
 </cdr-doc-example-code-pair>
 
+## Message Body
+
+CdrBanner provides an optional `message-body` slot in the case where additional information about the message needs to be communicated.
+
+<cdr-doc-example-code-pair repository-href="/src/components/banner"
+:sandbox-data="$page.frontmatter.sandboxData" >
+
+```html
+<cdr-banner type="warning">
+  <template #icon-left>
+    <icon-warning-fill />
+  </template>
+  Ortlieb Top Tube Pack is partially out of stock.
+  <template #message-body>
+    While you requested 4 of these items, only 3 are currently available in inventory. We’ll automatically remove unavailable items during checkout.
+  </template>
+</cdr-banner>
+```
+</cdr-doc-example-code-pair>
+
+## Icon Right
+
+CdrBanner provides an optional `icon-right` slot that can be used to provide an action related to the Banner such as a close button. The actionable element should have an aria-label that explains it's relationship to the banner and what happens when you click on it.
+
+<cdr-doc-example-code-pair repository-href="/src/components/banner"
+:sandbox-data="$page.frontmatter.sandboxData" >
+
+```html
+<cdr-banner type="error" role="alert">
+  <template #icon-left>
+    <icon-error-fill />
+  </template>
+  Ortlieb Top Tube Pack is out of stock.
+  <template #icon-right>
+    <cdr-button
+      :icon-only="true"
+      aria-label="Close"
+    >
+      <template #icon>
+        <icon-x-lg inherit-color />
+      </template>
+    </cdr-button>
+  </template>
+</cdr-banner>
+```
+</cdr-doc-example-code-pair>
+
+## Info Action
+
+Optional `info-action` slot that can be used to provide an action related to the Banner such as a link or tooltip. The actionable element should have an aria-label that explains it's relationship to the banner and what happens when you click on it.
+
+<cdr-doc-example-code-pair repository-href="/src/components/banner"
+:sandbox-data="$page.frontmatter.sandboxData" >
+
+```html
+<cdr-banner type="success" aria-live="polite">
+  <template #icon-left>
+    <icon-check-fill />
+  </template>
+  Membership added to cart
+  <template #info-action>
+    <cdr-tooltip
+      id="tooltip-example"
+      position="top"
+    >
+      <template #trigger>
+        <cdr-button
+          :icon-only="true"
+          tag="a"
+          href="#"
+          aria-label="Explore the benefits of REI membership"
+        >
+          <template #icon>
+            <icon-information-stroke />
+          </template>
+        </cdr-button>
+      </template>
+      <div>
+        Explore the benefits of REI membership
+      </div>
+    </cdr-tooltip>
+  </template>
+</cdr-banner>
+```
+</cdr-doc-example-code-pair>
 
 ## Accessibility
 
@@ -89,25 +210,37 @@ Many WCAG requirements are contextual to their implementation. To ensure that us
 ```html
 
 <cdr-banner type="info">
-  <icon-information-fill /> Static Informational Messaging With No Accessibility Markup Needed
+  <template #icon-left>
+    <icon-information-fill />
+  </template>
+  Static Informational Messaging With No Accessibility Markup Needed
 </cdr-banner>
 
 <br>
 
 <cdr-banner type="error" role="alert">
-  <icon-x-fill/> Urgent Error Message With `role="alert"`
+  <template #icon-left>
+    <icon-error-fill />
+  </template>
+  Urgent Error Message With `role="alert"`
 </cdr-banner>
 
 <br>
 
 <cdr-banner type="success" aria-live="polite">
-  <icon-check-fill/> Non-Urgent Success Message With `aria-live="polite"`
+  <template #icon-left>
+    <icon-check-fill />
+  </template>
+  Non-Urgent Success Message With `aria-live="polite"`
 </cdr-banner>
 
 <br>
 
-<cdr-banner type="warning" aria-label="Banner with no text and aria-label applied" style="width: min-content">
-  <icon-warning-fill/>
+<cdr-banner aria-label="Additional information about what kind of message is being displayed">
+    <template #icon-left>
+      <icon-question-fill />
+    </template>
+    Generic banner
 </cdr-banner>
 
 ```
@@ -117,7 +250,7 @@ Many WCAG requirements are contextual to their implementation. To ensure that us
 
 Banner messaging keeps users informed of important and sometimes time-sensitive changes contextual to inline elements on the page. These messages help to clarify an issue and/or notify users of a potential problem that may require their attention.
 
-There are four types of banners: **error, warning, success, and informational**. Each type corresponds with a color and icon to provide a consistent, universal experience for users.
+There are five information types supported for banners: **error, warning, success, informational, and default**. Each type corresponds with a color and icon to provide a consistent, universal experience for users.
 
 ### **Error**
 Use to inform that something went wrong. They affect or block the user's experience and must be resolved before moving forward.
@@ -131,6 +264,8 @@ Use to communicate that an action has been successfully completed. Provides a po
 ### **Informational**
 Use to provide context around a situation. No action is required.
 
+### **Default**
+Use to provide generic messaging that does not fit the other types
 
 ## Use when
 
@@ -152,9 +287,5 @@ Use to provide context around a situation. No action is required.
 ## Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
-
-## Component Variables
-
-<cdr-doc-comp-vars name="CdrBanner"/>
 
 </cdr-doc-table-of-contents-shell>
