@@ -20,10 +20,10 @@
 
 ## Overview
 
-Form validation ensures the data a user has entered into a form matches the requirements of our systems. Validation allows us to cater contextual feedback and instructions to what the user is doing. This feedback can be presented before, during or after an interaction, depending on the need and technique used. Validation should only be used once non-blocking techniques such as providing help text, accepting multiple formats for input data and using input masking have all failed.
+Validation notifications provide important feedback to users during and after form submission.
+These notifications include in-line feedback at or near the form controls and overall summaries that are typically provided after form submission.
 
-It is important to keep all users in mind when designing form validations. For example, form validation should not be entirely dependent on a user’s sight (visual design) so that non-sighted can also understand form validation errors.
-
+While error messages are the most usual and critical use for validation notifications, success messages are also important to confirm task completion.
 
 ## form Control Validation Notification
 
@@ -73,7 +73,7 @@ Regardless of the means they all have the goal of communicating information back
 </cdr-table>
 
 
-### Anatomy of an Validation Notification
+### Anatomy of a Validation Notification
 
 <cdr-img :src="$withBase('/forms/ValidationNotification.png')" alt="Diagram showing the location of the following requirements" />
 
@@ -100,7 +100,8 @@ Regardless of the means they all have the goal of communicating information back
   - Be available as programmatically-discernible text
   - Be meaningful
   - Use clear and simple language
-   - Use meaningful colors and iconography
+  - Use meaningful colors and iconography
+  - Be as concise as possible
 - **Must Not**
   - Rely solely on references to sensory characteristics (for example, "round button" or "button to the right")
 - **Should**
@@ -172,6 +173,14 @@ Additionally the addition of `aria-invalid` to each control was not recommended 
 
 ## Validation Summary 
 
+Up to this point we have been going over best practices and requirements for individual form controls and form groups such as a singular text input or group of checkboxes.
+This type of inline validation works well as the users are provided feedback immediately. 
+However, for various reasons a user may lose sight of the problems needing remediation and become stuck on submit.
+
+A validation summary outlines, informs and directs users to all existing errors that need to be fixed on the page.
+The summary should be an additive error indication, summarizing pre-existing form control notifications. 
+As this may be the only error notification within a users viewport providing links to each specific error is recommended.
+
 
 <cdr-table class="advanced-table" full-width=false>
   <tr>
@@ -213,17 +222,6 @@ Additionally the addition of `aria-invalid` to each control was not recommended 
   </tr>
 </cdr-table>
 
-Up to this point we have been going over best practices and requirements for individual form elements or form groups such as a singular text input or group of checkboxes.
-This type of inline validation works well as the users are provided feedback immediately. 
-However, for various reasons a user may lose sight of the problems needing remediation and become stuck on submit.
-
-A validation summary outlines all errors that are active within a form and lets users know that there are errors that need to be fixed on the page, whether those errors are in the viewport or below/above the fold. 
-
-A validation summary can give the user a global understanding of all the errors in a form, 
-Where possible validation summaries should not be used as the only form of error indication,
- as it forces the user to search for the field in error; additionally, the error message may no longer be present 
- in the viewport when the user reaches the error field, forcing the user to memorize the error message while fixing the issue.
-
 - **Use**
   - To indicate there were validation problems
   - To increase visibility of existing errors
@@ -231,73 +229,68 @@ Where possible validation summaries should not be used as the only form of error
 - **Don't Use**
   - As the only indication of an error/s
 
-- **Must**
-  - Summarize and direct users back to existing errors 
-- **Should**
-  - Indicate the fact that there was a validation problem
-  - Describe the nature of the problem
-  - Provide ways to locate the field(s) with a problem easily
+### Anatomy of a Validation Summary
+
+<cdr-img :src="$withBase('/notifications/validation-summary.png')" alt="Diagram showing the validation container and messaging requirements" />
 
 ### Validation Summary  Container
-- **May**
-  - use role="alert" to assertively reiterate existing page errors
-
-## Server-side Validation
-Client side or "inline" validation notifications can interact with the user as they are working through the form process.
-Inline validation allows us to interact with a user prior to the data being submitted to a server. 
-
-As this provides such an enhanced user experience, inline validation should be used where possible.
-
-This validation does not replace server validation, rather it enhances it with the ability to present instruction prior to submitting or refreshing the page.
-
-When the user submits the form their information is sent to the server and validated. If validation did not take place prior to server validation or if there are additional errors, the response of the “validator” is sent back to the user’s computer
-
-Server-side validation notifications:
-
 - **Must**
-  - Return the form (with the user's data still in the fields)
-  - Provide a validation summary at the top of the page
+  - Ensure the message container can receive focus
+  - Move user focus to this summary when presented
+    - Focus can be set to the message with client-side scripting
+    - include an anchor name in the URL for server returned summaries 
+  - Ensure the instruction is visible to all users
+  - Use meaningful colors and iconography
 - **Should**
-  - Return the form with the user's data still in the fields
+  - Be presented adjacent to the form when the summary is presented prior to page reload
+  - Be presented at the top of the page when the summary is provided post form-submit
 - **May**
-  - Change the title of the page
-  - Give the error a heading level: provide a header, preferably a H1, so that assistive technology users can jump directly to the error and correct it.
-  - Provide a same-page link so that users can jump directly to the form field that has the error.
+  - Be hidden until the user requests them if the notification instructions are not critical.
+  - use role="alert" to assertively reiterate existing page errors if the summary is presented prior to page reload
+
+### Validation Summary instruction
+- **Must**
+  - Indicate the fact that there was a validation problem
+  - Summarize existing errors
+  - Be available as programmatically-discernible text
+  - Be meaningful
+  - Use clear and simple language
+  - Use meaningful colors and iconography
+  - Be as concise as possible
+- **Must Not**
+  - Rely solely on references to sensory characteristics (for example, "round button" or "button to the right")
+- **Should**
+  - direct users back to existing errors
+  - Provide the states of the items within the summary, if using visual cues for error, warning, success, or info - that text should be provided via screen reader accessible text
+  - Provide instruction that is as specific as possible
+  - Clearly state errors:
+    – What happened
+    – What’s the next step the user should take to succeed 
+    - Avoid using technical jargon
+  - remove items from the summary as they are resolved
+  - Use language that conveys REI's Brand
+  - Avoid uppercase text as it gives the visual impact of shouting.
+- **Should Not**
+  - Use technical language
+  - Shame the user for the error
+  - Joke with the user about the error
+  - Use cute language
 
 ## References
-### More reading and sources
 - Accessibility - find more information on this topic in the following resource:
-  - [Deque Checklist](https://dequeuniversity.com/checklists/web/form-validation-feedback)
-  - [Notifications and feedback](https://www.w3.org/WAI/perspective-videos/notifications/)
+
   - [Accessible Notifications](https://www.w3.org/WAI/RD/wiki/Accessible_Notifications)
   - [WCAG status messages 4.1.3](https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html)
-  - [WCAG Error Identification 3.3.1 (lvl A)](https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html)
   - [WCAG Labels or Instructions 3.3.2 (lvl A)](https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions)
   - [WCAG Error Suggestion 3.3.3 (lvl AA)](https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion)
-  - [WCAG Error Prevention 3.3.4 (lvl AA) ](https://www.w3.org/WAI/WCAG21/Understanding/error-prevention-legal-financial-data)
   - [Form Notifications](https://www.w3.org/WAI/tutorials/forms/notifications/)
-  - [Using Aria-Invalid to Indicate An Error Field](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA21.html)
-  - [Using the aria-describedby property to provide a descriptive label for user interface controls](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA1.html)
   - Use [aria-live](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions) to indicate that an element will be updated. It describes the types of updates the user agents, assistive technologies, and user can expect from the live region.
   - Use [aria-atomic](https://www.digitala11y.com/aria-atomic-properties/) to indicate whether assistive technologies will present all, or only parts of the changed region based on the change notifications defined by the aria-relevant attribute.
-  - [aria-relevant](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-relevant_attribute)
   - [Grouping Controls](https://www.w3.org/WAI/tutorials/forms/grouping/)
-  - [Checkbox and radiobutton groups](https://blog.tenon.io/accessible-validation-of-checkbox-and-radiobutton-groups/)
 - UX/UI
   - [Instant Validation](https://uxmovement.com/forms/why-users-make-more-errors-with-instant-inline-validation/)
   - [UI Guidelines](https://www.nngroup.com/articles/errors-forms-design-guidelines/)
   - [Error message placement](https://uxmovement.com/forms/the-best-place-for-error-messages-on-forms/)
   - [Form Validation Best Practices](https://medium.com/@andrew.burton/form-validation-best-practices-8e3bec7d0549)
-  - [Constraint validation](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Constraint_validation)
-- Front-end
-  - [HTML5 Constraint validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)
-  - [Constraint validation API](https://developer.mozilla.org/en-US/docs/Web/API/Constraint_validation)
-  - [Validity state API](https://developer.mozilla.org/en-US/docs/Web/API/ValidityState)
-  - [Validity API overview video](https://www.youtube.com/watch?v=D9JHizCAx8U)
-  - [checkValidity()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLSelectElement/checkValidity)
-  - [setCustomValidity()](https://developer.mozilla.org/en-US/docs/Web/API/HTMLObjectElement/setCustomValidity)
-  - [Vue validation cookbook](https://vuejs.org/v2/cookbook/form-validation.html)
-  - [Client-side form validation](https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation)
-  - [HTML5 form validation](https://medium.com/front-end-weekly/html5-form-validation-in-react-65712f778196)
 
 </cdr-doc-table-of-contents-shell>

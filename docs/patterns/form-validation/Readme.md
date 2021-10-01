@@ -18,28 +18,11 @@
 
 <cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
 
-<br />
-
-<cdr-banner type="info">
-<icon-information-fill /> Form validation is a vast topic, this articles focus specifically on the UI presentation, its instructional notifications, and the resulting requirements.</p>
-  <p>See Also:</p>
-  <cdr-list>
-    <li>
-      <cdr-link href="../alerts/">Alert</cdr-link> 
-    </li>
-    <li>
-      <cdr-link href="../status-notifications/#persistent-status-notifications/">Persistent Status Notifications</cdr-link>
-    </li>
-  </cdr-list>
-</cdr-banner>
-
-<br />
-
 ## Overview
 
-Form validation ensures the data a user has entered into a form matches the requirements of our systems. Validation allows us to cater contextual feedback and instructions to what the user is doing. This feedback can be presented before, during or after an interaction, depending on the need and technique used. Validation should only be used once non-blocking techniques such as providing help text, accepting multiple formats for input data and using input masking have all failed.
-
-It is important to keep all users in mind when designing form validations. For example, form validation should not be entirely dependent on a user’s sight (visual design) so that non-sighted can also understand form validation errors.
+Form validation ensures the data a user has entered into a form matches the requirements of our systems. Validation allows us to cater contextual feedback and instructions to what the user is doing. 
+Validation feedback can be presented before, during or after an interaction, depending on the need and technique used. 
+Validation should only be used once non-blocking techniques such as providing help text, accepting multiple formats for input data and using input masking have all failed.
 
 ### Basics
 - Ensure forms are logical and easy to use
@@ -94,7 +77,7 @@ It is important to keep all users in mind when designing form validations. For e
 <cdr-img :src="$withBase('/notifications/validationAnatomy.png')" alt="Diagram showing the location of the following requirements" />
 1. [Error prevention](#error-prevention)
 2. [Error detection](#error-detection)
-3. [Validation Notifications](#validation-notification)
+3. [Validation Notifications](#validation-notifications)
 
 ### Error Prevention
 
@@ -230,223 +213,7 @@ While less optimal than onChange, this event is preferable to OnInput. Users in 
 even once aware of errors, and wait to submit prior to addressing additional form needs. Consider pairing OnChange progressively with onSubmit validation.
 A user who receives errors after submitting the form may no longer be able to see the input errors due to page scroll or some other limiting factor, in this case they may find a validation summary useful or needed.
 
-
-## Validation Notification
-
-Notifying the user of a form fields validation status's can take many forms, from adding iconography to signify success, altering the color of border text or background, and/or providing detailed instruction.
-Regardless of the means they all have the goal of communicating information back to the user. To ensure this happens effectively the following requirements and best practices should accounted for.
-
-
-<cdr-table class="advanced-table" full-width=false>
-  <tr>
-    <th class="advanced-table__header">
-      Priority
-    </th>
-    <td><icon-x-fill/> High</td>
-  </tr>
-  <tr>
-    <th class="advanced-table__header">
-      Expectancy
-    </th>
-    <td>Unexpected</td>
-  </tr>
-  <tr>
-    <th class="advanced-table__header">
-      Purpose
-    </th>
-    <td>
-        <cdr-list>
-          <li>As instruction, once the form field has been filled out by the user</li>
-          <li>As confirmation that a field requiring specific formatting is valid</li>
-          <li>In order to notify users of a potential problem that may require their attention</li>
-        </cdr-list>
-    </td>
-  </tr>
-  <tr>
-    <th class="advanced-table__header">Interaction</th>
-    <td>Non-blocking, Required</td>
-  </tr>
-  <tr>
-    <th class="advanced-table__header">Information</th>
-    <td>Meaningful instruction</td>
-  </tr>
-  <tr>
-    <th class="advanced-table__header">Location</th>
-    <td>In an associated section of the effected required form field</td>
-  </tr>
-</cdr-table>
-
-
-### Anatomy of an Validation Notification
-
-<cdr-img :src="$withBase('/forms/ValidationNotification.png')" alt="Diagram showing the location of the following requirements" />
-
-### Validation Notification Container
-
-- **Must**
-  - Ensure the message container can receive focus
-  - Include the [`aria-live` or `role=”status”`](role-status-or-aria-live) markup to announce the notification without interrupting the page flow of the user
-  - Be visible
-  - Ensure the instruction is visible to all users
-    -  Avoid moving the form fields up or down when displaying validation
-    -  Display instruction at the right place:
-      -  For a singular form element, directly below the field in error, replacing the bottom helper text if present
-      -  For a group of elements such a form group of checkboxes, below the fieldset container
-   - Use meaningful colors and iconography
-- **Should**
-  - Be visually and programmatically adjacent to the element.
-  - Display within the context of the action
-- **May**
-  - Be hidden until the user requests them if the notification instructions are not critical.
-### Validation Notification Instruction
-- **Must**
-  - Provide suggestions (when known) to correct the errors
-  - Be available as programmatically-discernible text
-  - Be meaningful
-  - Use clear and simple language
-   - Use meaningful colors and iconography
-- **Must Not**
-  - Rely solely on references to sensory characteristics (for example, "round button" or "button to the right")
-- **Should**
-  - Provide the state of the error, if using visual cues for error, warning, success, or info - that text should be provided via screen reader accessible text
-  - Provide instruction that is as specific as possible
-  - Clearly state errors:
-    – What happened
-    – What’s the next step the user should take to succeed 
-    - Avoid using technical jargon
-  - Confirm successful submission of data
-  - Use language that conveys REI's Brand
-  - Avoid uppercase text as it gives the visual impact of shouting.
-- **Should Not**
-  - Rely solely on visual cues to indicate an error
-  - Remove incorrect data entered by the user
-  - Provide validation messages for unfilled inputs until the users attempts to submit the form
-  - Use technical language
-  - Shame the user for the error
-  - Joke with the user about the error
-  - Use cute language
-- **May**
-  - Provide instruction that changes progressively to guide the user through the error process
-
-
-#### Implementation
-
-<cdr-doc-example-code-pair repository-href="/src/components/input" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: '', modelError: false}" :methods="{validateInput() {this.modelError = this.defaultModel.length > 4 && 'Error: please enter 4 or less characters'}}">
-
-```html
-<cdr-input
-  v-model="defaultModel"
-  :background="backgroundColor"
-  label="Input label"
-  :error="modelError"
-  @blur="validateInput"
->
-  <template #helper-text-bottom>
-    Must be 4 or less characters
-  </template>
-</cdr-input>
-```
-
-</cdr-doc-example-code-pair>
-
-
-#### Grouping Controls
-
-Form groups are a collection of elements, defined by a shared label using the `legend` tag.
-
-It is not recommended to require elements with a form group as logically there should be no incorrect answer for these elements.
-They are either true or false. When designing a form where a user must make a selection consider a [select](../../components/selects/) control.
-However, it is common to see these groups have the following needs:
-- Require the user to select one of the set of options
-- Require that the user select at least one but only to 'x' amount of options
-
-As of now there seems to be no way to link one message to a group of controls with a form group that will communicate clearly to all users. 
-We need to do some extra work with these groups to make sure they work for all our users.
-[Tennon.Io's article on this topic](https://blog.tenon.io/accessible-validation-of-checkbox-and-radiobutton-groups/) found that the best solution for support
-on a broad range of assisted tech solutions was achieved by dynamically injecting the error text into the legend. This forgoes the recommendation to add the `aria-describedby` attribute to the `fieldset` or `legend`.
-Additionally the addition of `aria-invalid` to each control was not recommended as it may lead to user confusion.
-
-- **Should**
-  - Dynamically inject the error instruction as a `span` into the form-group legend
-- **Should Not**
-  - Add `aria-describedby` to the `legend`, linking to a span out of the form-group. This produces mixed results across the assisted tech matrix.
-  - Use `aria-describedby` to the `fieldset`, linking to a span out of the form-group. This produces mixed results across the assisted tech matrix.
-  - Add the `aria-invalid` attribute to form-group controls as this may cause user confusion on if all or just one item are required
-
-
-## Validation Summary 
-
-
-<cdr-table class="advanced-table" full-width=false>
-  <tr>
-    <th class="advanced-table__header">
-      Priority
-    </th>
-    <td><icon-x-fill/> High</td>
-  </tr>
-  <tr>
-    <th class="advanced-table__header">
-      Expectancy
-    </th>
-    <td>Unexpected</td>
-  </tr>
-  <tr>
-    <th class="advanced-table__header">
-      Purpose
-    </th>
-    <td>
-        <cdr-list>
-          <li>To provide additional visibility to validation notifications</li>
-          <li>As a summary for multiple validation problems</li>
-          <li>For validation instruction returned by the server</li>
-        </cdr-list>
-    </td>
-  </tr>
-  <tr>
-    <th class="advanced-table__header">Interaction</th>
-    <td>Non-blocking, Required</td>
-  </tr>
-  <tr>
-    <th class="advanced-table__header">Information</th>
-    <td>guided summary, reiterating validation notifications</td>
-  </tr>
-  <tr>
-    <th class="advanced-table__header">Location</th>
-    <td>Client validation: below the form</td>
-    <td>Server validation: at the top of the page</td>
-  </tr>
-</cdr-table>
-
-Up to this point we have been going over best practices and requirements for individual form elements or form groups such as a singular text input or group of checkboxes.
-This type of inline validation works well as the users are provided feedback immediately. 
-However, for various reasons a user may lose sight of the problems needing remediation and become stuck on submit.
-
-A validation summary outlines all errors that are active within a form and lets users know that there are errors that need to be fixed on the page, whether those errors are in the viewport or below/above the fold. 
-
-A validation summary can give the user a global understanding of all the errors in a form, 
-Where possible validation summaries should not be used as the only form of error indication,
- as it forces the user to search for the field in error; additionally, the error message may no longer be present 
- in the viewport when the user reaches the error field, forcing the user to memorize the error message while fixing the issue.
-
-- **Use**
-  - To indicate there were validation problems
-  - To increase visibility of existing errors
-  - For server-returned instruction
-- **Don't Use**
-  - As the only indication of an error/s
-
-- **Must**
-  - Summarize and direct users back to existing errors 
-- **Should**
-  - Indicate the fact that there was a validation problem
-  - Describe the nature of the problem
-  - Provide ways to locate the field(s) with a problem easily
-
-### Validation Summary  Container
-- **May**
-  - use role="alert" to assertively reiterate existing page errors
-
-## Server-side Validation
+##### As a return from the server (server-side validation)
 Client side or "inline" validation notifications can interact with the user as they are working through the form process.
 Inline validation allows us to interact with a user prior to the data being submitted to a server. 
 
@@ -467,9 +234,13 @@ Server-side validation notifications:
   - Change the title of the page
   - Give the error a heading level: provide a header, preferably a H1, so that assistive technology users can jump directly to the error and correct it.
   - Provide a same-page link so that users can jump directly to the form field that has the error.
+### Validation Notifications
 
-## References
-### More reading and sources
+[Validation notifications](../validation-notifications/) provide the instruction on how to resolve the detected errors. 
+There are multiple types of validation notification which are applicable based on the validation technique being used. Types and requirements may be found on the [Validation notifications](../validation-notifications/) page.
+
+
+## More reading and sources
 - Accessibility - find more information on this topic in the following resource:
   - [Deque Checklist](https://dequeuniversity.com/checklists/web/form-validation-feedback)
   - [Notifications and feedback](https://www.w3.org/WAI/perspective-videos/notifications/)
