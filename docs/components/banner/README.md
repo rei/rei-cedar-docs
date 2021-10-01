@@ -288,11 +288,4 @@ Use to provide generic messaging that does not fit the other types
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Component Variables
-
-### Deprecated
-CdrBanner is no longer recommended for use as a component variable
-
-<cdr-doc-comp-vars name="CdrBanner"/>
-
 </cdr-doc-table-of-contents-shell>
