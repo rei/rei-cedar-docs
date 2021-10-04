@@ -165,9 +165,10 @@ CdrToast provides an optional `autoDismiss` property to disable the auto-dismiss
 ## Accessibility
 
 Many WCAG requirements are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
-- Add `role="alert"` for messages that are important or time sensitive to ensure that the messaging is immediately announced to screen readers. For other content, add `aria-live="polite"`.
+- Add `role="status"` for messages that are important or time sensitive to ensure that the messaging is immediately announced to screen readers. For other content, add `aria-live="polite"`.
 - Don't rely on color alone to convey your message. Provide an additional indicator to color, like an icon: [WCAG 1.4.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
 - Error Identification techniques and criteria: [WCAG 3.3.1](https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html)
+- See [Transient Status Notifications](../../patterns/status-notifications#transient-status-notifications) for more information
 
 # Guidelines
 
@@ -190,9 +191,8 @@ Use to provide generic messaging that does not fit the other types
 
 ## Use when
 
-- When providing an at-a-glance view into the status of a task or process 
-- When confirming a user’s action was successful 
-- When a background process updates 
+- Confirming that a task or process initiated by the user was completed successfully
+- Providing contextual information on the page processes 
 
 ## Don’t use when
 
