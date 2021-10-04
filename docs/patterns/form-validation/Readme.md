@@ -29,14 +29,14 @@ Validation should only be used once non-blocking techniques such as providing he
 - Ensure forms are keyboard accessible
 - Associate form labels with controls
 - Label must have a relationship to the input
-- [Groups of controls](#grouping-controls) should use the [cdr-form-group](../../components/form-group/) component or be within a `fieldset`, and be provided a legend description
+- [Groups of controls](../validation-notifications/#grouping-controls) should use the [cdr-form-group](../../components/form-group/) component or be within a `fieldset`, and be provided a legend description
 - Avoid using the `placeholder` attribute, instead, use the help `text` slots to provide formatting information
 - Outside of page and site controls, form elements should be contained within a form
 - Limit the amount or need of validation using other options first
 
-## Best practices for form validation
+## Best Practices for Form Validation
 
-- **Avoid it**
+- **Avoid it - design to prevent errors**
   - Clearly label required fields
   - Label text must adequately inform the user of input type expectations
   - Accept and filter multiple formats for data
@@ -105,7 +105,7 @@ The following requirements will help reduce user exposure to form blocking valid
   -  Only require fields that are absolutely needed
   -  Use an asterisk to indicate that the field is required
   -  Append "(Optional)" text to non-required fields within a form where the bulk of elements are required
-  - Consider placing helpful formatting instruction above the input if that formatting instruction will remain helpful to your users during error resolution
+  - Consider placing formatting instruction above the input if that formatting instruction will remain helpful to your users during error resolution
 
 - **Should Not**
   -  Alter the user provided input to make it validate
@@ -113,7 +113,7 @@ The following requirements will help reduce user exposure to form blocking valid
 
 ### Error Detection
 
-Once the user has created an error and validation has been triggered, it's necessary to call out the form field/s in error and provide instruction on how to resolve them.
+Once the user has created an error and validation has been triggered, it's necessary to call out the form field(s) in error and provide instruction on how to resolve them.
 
 #### Anatomy of Form Validation Error Detection
 
@@ -154,9 +154,9 @@ Once the user has created an error and validation has been triggered, it's neces
 
 #### Error Detection Location
 
-A users ability to complete a form may be impacted if the [validation notification](#validation-notification) is not displayed in a manner the user expects.
+A users ability to complete a form may be impacted if the [validation notification](../validation-notifications/#form-control-validation-notification) is not displayed in a manner the user expects.
 
-Displaying all validation in a [validation summary](#validation-summaries) at the top of a page or top/bottom of a form will produce a poorer user experience than providing messaging inline as the user interacts with each form element.
+Displaying all validation in a [validation summary](../validation-notifications/#validation-summary) at the top of a page or top/bottom of a form will produce a poorer user experience than providing messaging inline as the user interacts with each form element.
 When providing inline instruction it is important to be non-disruptive, as enabling users to think less allows them to complete a form more quickly.
 We can help reduce a user's cognitive lift by adding any additional information to locations within their natural reading flow, either to the right of the form element or below it.
 
@@ -165,7 +165,7 @@ Cedar recommends placing validation information below the form field for a coupl
 -  Constrained space will not alter the location of instruction
 -  Below the form element is an expected pattern that is within a user's reading flow
 
-There are three unique opportunities which can be targeted to provide notification updates
+There are three unique opportunities which can be targeted to provide notification updates:
 
 -  [While user is typing](#while-user-is-typing-oninput): using the `OnInput` event
 -  [Once the user moves focus](#once-the-user-moves-focus-onchange): using the `OnChange` event
@@ -206,9 +206,9 @@ We could for example, alter the the appearance of an element on change, which wo
 ##### Once the user submits (OnSubmit)
 A user submitting a form will be expecting to move on or to be reminded of existing errors.
 They may be on a location of the page where they are unable to see individual invalidated form fields.
-It may benefit user of longer forms to be presented with a [validation summary](#validation-summaries) that can reiterate the errors and guide them to the locations needing work.
+It may benefit user of longer forms to be presented with a [validation summary](../validation-notifications/#validation-summary) that can reiterate the errors and guide them to the locations needing work.
 
-OnSubmit is a user expected location to offer validation.
+OnSubmit is a user-expected location to offer validation.
 While less optimal than onChange, this event is preferable to OnInput. Users in a completion mindset may knowingly move through a form, 
 even once aware of errors, and wait to submit prior to addressing additional form needs. Consider pairing OnChange progressively with onSubmit validation.
 A user who receives errors after submitting the form may no longer be able to see the input errors due to page scroll or some other limiting factor, in this case they may find a validation summary useful or needed.
@@ -217,7 +217,7 @@ A user who receives errors after submitting the form may no longer be able to se
 Client side or "inline" validation notifications can interact with the user as they are working through the form process.
 Inline validation allows us to interact with a user prior to the data being submitted to a server. 
 
-As this provides such an enhanced user experience, inline validation should be used where possible.
+As this provides an enhanced user experience, inline validation should be used where possible.
 
 This validation does not replace server validation, rather it enhances it with the ability to present instruction prior to submitting or refreshing the page.
 
@@ -236,12 +236,12 @@ Server-side validation notifications:
   - Provide a same-page link so that users can jump directly to the form field that has the error.
 ### Validation Notifications
 
-[Validation notifications](../validation-notifications/) provide the instruction on how to resolve the detected errors. 
-There are multiple types of validation notification which are applicable based on the validation technique being used. Types and requirements may be found on the [Validation notifications](../validation-notifications/) page.
+[Validation Notifications](../validation-notifications/) provide the instruction on how to resolve the detected errors or confirm task completion. 
+There are multiple types of validation notification which are applicable based on the validation technique being used, such as inline feedback and validation summaries. Detailed infomration about the types and requirements may be found on the [Validation Botifications](../validation-notifications/) page.
 
 
-## More reading and sources
-- Accessibility - find more information on this topic in the following resource:
+## More Reading and Resources
+- Accessibility:
   - [Deque Checklist](https://dequeuniversity.com/checklists/web/form-validation-feedback)
   - [Notifications and feedback](https://www.w3.org/WAI/perspective-videos/notifications/)
   - [Accessible Notifications](https://www.w3.org/WAI/RD/wiki/Accessible_Notifications)
