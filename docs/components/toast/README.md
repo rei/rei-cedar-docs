@@ -100,7 +100,7 @@ CdrToast is a type of non-modal dialog used to communicate the status of a task 
 
 There are five different options for styling the toast, based on the [message type](../toast/#guidelines).
 
-## Default Toast with Icon Left
+## Default toast with icon
 
 A toast should be passed a contextually appropriate icon using the `icon-left` slot.
 
@@ -162,10 +162,39 @@ CdrToast provides an optional `autoDismiss` property to disable the auto-dismiss
 ```
 </cdr-doc-example-code-pair>
 
+## Adjusting auto-dismiss timing
+
+CdrToast provides an optional `dismissDelay` property to adjust timing of the automatic dimissal under certain conditions, such as when the toast contains an action.
+
+<cdr-doc-example-code-pair repository-href="/src/components/CdrToast"
+:load-sprite="true"
+:sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrToast, CdrButton, CdrLink, IconInformationFill'})" :model="{ opened: false }" >
+
+```html
+<div>
+  <cdr-button @click="opened = true">Trigger toast</cdr-button>
+  <!-- CdrToast should always be contained within an absolutely 
+  positioned element in the top right of your page -->
+  <div style="position: absolute; top: 2rem; right: 1.5rem">
+    <cdr-toast
+      :open="opened"
+      :dismiss-delay="10000"
+      type="info"
+      @closed="opened = false">
+      <template #icon-left>
+        <icon-information-fill inherit-color>
+      </template>
+      I am an informational toast with an <cdr-link href="#">action</cdr-link>
+    </cdr-toast>
+  </div>
+</div>
+```
+</cdr-doc-example-code-pair>
+
 ## Accessibility
 
 Many WCAG requirements are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
-- Add `role="status"` for messages that are important or time sensitive to ensure that the messaging is immediately announced to screen readers. For other content, add `aria-live="polite"`.
+- Add `role="status"` for messages to ensure that the messaging is announced to screen readers. For other content, add `aria-live="polite"`.
 - Don't rely on color alone to convey your message. Provide an additional indicator to color, like an icon: [WCAG 1.4.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
 - Error Identification techniques and criteria: [WCAG 3.3.1](https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html)
 - See [Transient Status Notifications](../../patterns/status-notifications#transient-status-notifications) for more information
