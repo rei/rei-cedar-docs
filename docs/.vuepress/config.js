@@ -134,6 +134,7 @@ module.exports = {
           { text: "Table", link: "/components/table/" },
           { text: "Tabs", link: "/components/tabs/" },
           { text: "Text", link: "/components/text/" },
+          { text: "Toast", link: "/components/toast/" },
           { text: "Tooltip", link: "/components/tooltip/" }
         ]
       },
