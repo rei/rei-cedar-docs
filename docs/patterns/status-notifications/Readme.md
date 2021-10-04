@@ -23,7 +23,7 @@ Depending on the information being communicated, status notifications can be per
 
 ## Persistent Status Notifications
 
-Persistent Status Notifications are 'in page messages', often [validation summaries](../validation-notifications/#validation-summaries), presented to the user based on conditions the user has created via a selection of product or adjustment of settings.
+Persistent Status Notifications are 'in page messages' presented to the user based on conditions the user has created via a selection of product or adjustment of settings.
 
 <cdr-table class="advanced-table" full-width=false>
   <tr>
