@@ -72,6 +72,23 @@ Regardless of the means they all have the goal of communicating information back
   </tr>
 </cdr-table>
 
+### Use When
+- **On Input** 
+  - A user is typing into a form control which has complex formatting requirements
+- **On Change**
+- Providing errors or warning UI related to user entered formatting or invalid selections
+- Providing errors or warning messaging related to user entered formatting or invalid selections
+- Providing success confirmations related to a user entered form control which complies with formatting requirements
+- **On Submit**
+- Providing errors or warning messaging related to user entered formatting, incomplete inputs, or invalid selections
+- Elevating error or warning UI that already provided via OnChange or OnInput validation
+
+### Don't Use When
+- Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](#transient-status-notifications)
+- Providing contextual information on the page processes (see [Transient Status Notifications](#transient-status-notifications)
+- Providing summaries of errors, warnings, or success messaging related to form submission [validation summaries](../validation-notifications/#validation-summary),
+- Page usage should be blocked until the user takes an action within the message or exits (see [Alert Dialog](../alerts/#user-confirmation-alerts)
+
 
 ### Anatomy of a Validation Notification
 
@@ -169,8 +186,6 @@ Additionally the addition of `aria-invalid` to each control was not recommended 
   - Add `aria-describedby` to the `legend`, linking to a span out of the form-group. This produces mixed results across the assisted tech matrix.
   - Use `aria-describedby` to the `fieldset`, linking to a span out of the form-group. This produces mixed results across the assisted tech matrix.
   - Add the `aria-invalid` attribute to form-group controls as this may cause user confusion on if all or just one item are required
-
-
 ## Validation Summary 
 
 Up to this point we have been going over best practices and requirements for individual form controls and form groups such as a singular text input or group of checkboxes.
@@ -222,12 +237,16 @@ As this may be the only error notification within a users viewport providing lin
   </tr>
 </cdr-table>
 
-- **Use**
-  - To indicate there were validation problems
-  - To increase visibility of existing errors
-  - For server-returned instruction
-- **Don't Use**
-  - As the only indication of an error/s
+### Use When
+- To summarize and direct users back to existing errors 
+- To increase visibility of existing errors
+- For server-returned instruction
+### Don't Use When
+- Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](#transient-status-notifications)
+- Providing contextual information on the page processes (see [Transient Status Notifications](#transient-status-notifications)
+- Providing errors, warnings, or success messaging related to user entered formatting, incomplete inputs, or invalid selections (see [Validation Notifications](../validation-notifications)
+- Page usage should be blocked until the user takes an action within the message or exits (see [Alert Dialog](../alerts/#user-confirmation-alerts)
+- As the only indication of an error
 
 ### Anatomy of a Validation Summary
 
@@ -241,12 +260,12 @@ As this may be the only error notification within a users viewport providing lin
     - include an anchor name in the URL for server returned summaries 
   - Ensure the instruction is visible to all users
   - Use meaningful colors and iconography
+  - use role="alert" to assertively reiterate existing page errors if the summary is presented prior to page reload
 - **Should**
   - Be presented adjacent to the form when the summary is presented prior to page reload
   - Be presented at the top of the page when the summary is provided post form-submit
 - **May**
   - Be hidden until the user requests them if the notification instructions are not critical.
-  - use role="alert" to assertively reiterate existing page errors if the summary is presented prior to page reload
 
 ### Validation Summary instruction
 - **Must**
@@ -278,7 +297,6 @@ As this may be the only error notification within a users viewport providing lin
 
 ## References
 - Accessibility - find more information on this topic in the following resource:
-
   - [Accessible Notifications](https://www.w3.org/WAI/RD/wiki/Accessible_Notifications)
   - [WCAG status messages 4.1.3](https://www.w3.org/WAI/WCAG21/Understanding/status-messages.html)
   - [WCAG Labels or Instructions 3.3.2 (lvl A)](https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions)

@@ -23,7 +23,7 @@ Depending on the information being communicated, status notifications can be per
 
 ## Persistent Status Notifications
 
-Persistent Status Notifications are 'in page messages', often [validation summaries](../validation-notifications/#validation-summaries), presented to the user based on conditions the user has created via a selection of product or adjustment of settings.
+Persistent Status Notifications are 'in page messages' presented to the user based on conditions the user has created via a selection of product or adjustment of settings.
 
 <cdr-table class="advanced-table" full-width=false>
   <tr>
@@ -86,17 +86,15 @@ Persistent Status Notifications are 'in page messages', often [validation summar
 ### Use When
 - Exposing a status change to a product caused by user selection
 - Providing confirmation when updating and removing items that provides navigation or other actions
-- To summarize and direct users back to existing errors 
 - To increase visibility of existing errors
 - When valid form options cause invalid selections
-- When validation is not possible prior to submit
-
 ### Don't Use When
 - Changing inline content based on user selection (see [Update Notifications](../update-and-loading-notifications/#update-notifications)
 - The notification relates to an actionable element in a busy state (see [Loading Notifications](../update-and-loading-notifications/#loading-notifications)
 - Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](#transient-status-notifications)
 - Providing contextual information on the page processes (see [Transient Status Notifications](#transient-status-notifications)
 - Providing errors, warnings, or success messaging related to user entered formatting, incomplete inputs, or invalid selections (see [Validation Notifications](../validation-notifications)
+- Providing summaries of errors, warnings, or success messaging related to form submission [validation summaries](../validation-notifications/#validation-summary),
 - The content added to the page is critical and needs immediate attention (see [Alerts](../alerts/)
 - Page usage should be blocked until the user takes an action within the message or exits (see [Alert Dialog](../alerts/#user-confirmation-alerts)
 - User interaction is required or content is critical to the user flow (see [Modal](../../components/modal/)
