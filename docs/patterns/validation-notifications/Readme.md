@@ -241,12 +241,12 @@ As this may be the only error notification within a users viewport providing lin
     - include an anchor name in the URL for server returned summaries 
   - Ensure the instruction is visible to all users
   - Use meaningful colors and iconography
+  - use role="alert" to assertively reiterate existing page errors if the summary is presented prior to page reload
 - **Should**
   - Be presented adjacent to the form when the summary is presented prior to page reload
   - Be presented at the top of the page when the summary is provided post form-submit
 - **May**
   - Be hidden until the user requests them if the notification instructions are not critical.
-  - use role="alert" to assertively reiterate existing page errors if the summary is presented prior to page reload
 
 ### Validation Summary instruction
 - **Must**
