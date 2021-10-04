@@ -72,6 +72,23 @@ Regardless of the means they all have the goal of communicating information back
   </tr>
 </cdr-table>
 
+### Use When
+- **On Input** 
+  - A user is typing into a form control which has complex formatting requirements
+- **On Change**
+- Providing errors or warning UI related to user entered formatting or invalid selections
+- Providing errors or warning messaging related to user entered formatting or invalid selections
+- Providing success confirmations related to a user entered form control which complies with formatting requirements
+- **On Submit**
+- Providing errors or warning messaging related to user entered formatting, incomplete inputs, or invalid selections
+- Elevating error or warning UI that already provided via OnChange or OnInput validation
+
+### Don't Use When
+- Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](#transient-status-notifications)
+- Providing contextual information on the page processes (see [Transient Status Notifications](#transient-status-notifications)
+- Providing summaries of errors, warnings, or success messaging related to form submission [validation summaries](../validation-notifications/#validation-summary),
+- Page usage should be blocked until the user takes an action within the message or exits (see [Alert Dialog](../alerts/#user-confirmation-alerts)
+
 
 ### Anatomy of a Validation Notification
 
@@ -169,24 +186,6 @@ Additionally the addition of `aria-invalid` to each control was not recommended 
   - Add `aria-describedby` to the `legend`, linking to a span out of the form-group. This produces mixed results across the assisted tech matrix.
   - Use `aria-describedby` to the `fieldset`, linking to a span out of the form-group. This produces mixed results across the assisted tech matrix.
   - Add the `aria-invalid` attribute to form-group controls as this may cause user confusion on if all or just one item are required
-
-### Use When
-- **On Input** 
-  - A user is typing into a form control which has complex formatting requirements
-- **On Change**
-- Providing errors or warning UI related to user entered formatting or invalid selections
-- Providing errors or warning messaging related to user entered formatting or invalid selections
-- Providing success confirmations related to a user entered form control which complies with formatting requirements
-- **On Submit**
-- Providing errors or warning messaging related to user entered formatting, incomplete inputs, or invalid selections
-- Elevating error or warning UI that already provided via OnChange or OnInput validation
-
-### Don't Use When
-- Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](#transient-status-notifications)
-- Providing contextual information on the page processes (see [Transient Status Notifications](#transient-status-notifications)
-- Providing summaries of errors, warnings, or success messaging related to form submission [validation summaries](../validation-notifications/#validation-summary),
-- Page usage should be blocked until the user takes an action within the message or exits (see [Alert Dialog](../alerts/#user-confirmation-alerts)
-
 ## Validation Summary 
 
 Up to this point we have been going over best practices and requirements for individual form controls and form groups such as a singular text input or group of checkboxes.
@@ -238,12 +237,16 @@ As this may be the only error notification within a users viewport providing lin
   </tr>
 </cdr-table>
 
-- **Use**
-  - To indicate there were validation problems
-  - To increase visibility of existing errors
-  - For server-returned instruction
-- **Don't Use**
-  - As the only indication of an error/s
+### Use When
+- To summarize and direct users back to existing errors 
+- To increase visibility of existing errors
+- For server-returned instruction
+### Don't Use When
+- Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](#transient-status-notifications)
+- Providing contextual information on the page processes (see [Transient Status Notifications](#transient-status-notifications)
+- Providing errors, warnings, or success messaging related to user entered formatting, incomplete inputs, or invalid selections (see [Validation Notifications](../validation-notifications)
+- Page usage should be blocked until the user takes an action within the message or exits (see [Alert Dialog](../alerts/#user-confirmation-alerts)
+- As the only indication of an error
 
 ### Anatomy of a Validation Summary
 
@@ -291,18 +294,6 @@ As this may be the only error notification within a users viewport providing lin
   - Shame the user for the error
   - Joke with the user about the error
   - Use cute language
-
-### Use When
-- To summarize and direct users back to existing errors 
-- To increase visibility of existing errors
-
-### Don't Use When
-- Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](#transient-status-notifications)
-- Providing contextual information on the page processes (see [Transient Status Notifications](#transient-status-notifications)
-- Providing errors, warnings, or success messaging related to user entered formatting, incomplete inputs, or invalid selections (see [Validation Notifications](../validation-notifications)
-- Page usage should be blocked until the user takes an action within the message or exits (see [Alert Dialog](../alerts/#user-confirmation-alerts)
-- As the only indication of an error
-
 
 ## References
 - Accessibility - find more information on this topic in the following resource:
