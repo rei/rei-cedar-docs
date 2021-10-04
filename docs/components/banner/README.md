@@ -61,9 +61,9 @@
 
 # Overview
 
-CdrBanner is a simple wrapper component that allows for composing various banner layouts.
-
-There are five different options for styling the banner, based on the [banner type](../banner/#guidelines).
+A banner is used to communicate a general status event or to promote a feature.
+  
+CdrBanner is a simple wrapper component that allows for composing various banner layouts. There are five different options for styling the banner, based on the [banner type](#guidelines).
 
 ## Default Banner with Icon Left
 Banners should be passed an appropriate icon and text for the banner message type.
@@ -265,18 +265,42 @@ Use to communicate that an action has been successfully completed. Provides a po
 Use to provide context around a situation. No action is required.
 
 ### **Default**
-Use to provide generic messaging that does not fit the other types
+Use to provide generic messaging that does not fit the other types.
 
 ## Use when
 
-- To provide a user the status of an action they’re trying to complete
-- As a validation message that banners someone that they just did something that needs to be corrected (see [Error](../banner/#error) and [Warning](../banner/#warning) types)
-- As confirmation that a task was completed successfully (see [Success](../banner/#success) type)
-- As contextual information that might need their attention (see [Informational](../banner/#informational) type)
+- When communicating an event not related to a specific task 
+- When promoting a new feature 
+- Indicating that a change has happened since a previous session 
+
 
 ## Don't use when
 
-- To provide inline error messaging for form input validation. Instead use the built in validation and error features of the Cedar form components.
+- When validation is required immediately after the user interacts with a form input. Instead, use the built-in validation features of form components 
+
+
+## Content
+  
+- An icon is both user-configurable and required 
+- Body copy should not exceed two lines 
+- Content should be focused and be specific to a single message 
+- A call-to-action may be included 
+
+## Structure
+  
+- A banner always spans the width of its parent container 
+- The height of a banner is variable, content depending 
+  
+## Behavior 
+
+- A banner persists until their conditions are either met or they are dismissed 
+- Banners with the role of alert are not dismissible 
+
+## Placement 
+
+- Banners should be placed above their area of concern 
+- Banners that persist across pages should sit alongside the global header 
+  
 
 # API
 
