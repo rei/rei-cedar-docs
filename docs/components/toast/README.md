@@ -41,7 +41,7 @@
                 "name": "type",
                 "type": "string",
                 "default": "'default'",
-                "description": "Sets the banner style. Possible values: { 'info' | 'success' | 'warning' | 'error' | 'default'}"
+                "description": "Sets the toast style. Possible values: { 'info' | 'success' | 'warning' | 'error' | 'default'}"
               },
               {
                 "name": "open",
@@ -98,9 +98,9 @@
 
 CdrToast is a type of non-modal dialog used to communicate the status of a task or process. A proper toast is concise, time-relevant, and temporary.
 
-There are five different options for styling the banner, based on the [message type](../toast/#guidelines).
+There are five different options for styling the toast, based on the [message type](../toast/#guidelines).
 
-## Default Banner with Icon Left
+## Default Toast with Icon Left
 
 A toast should be passed a contextually appropriate icon using the `icon-left` slot.
 
@@ -177,7 +177,7 @@ There are five information types supported for toasts: **error, warning, success
 Use to inform that something went wrong. They affect or block the user's experience and must be resolved before moving forward.
 
 ### **Warning**
-Use for a message requiring attention but not resolution in order to continue. Warning banners might tell a user what could happen if they don’t address what they’re being warned about.
+Use for a message requiring attention but not resolution in order to continue. Warning toasts might tell a user what could happen if they don’t address what they’re being warned about.
 
 ### **Success**
 Use to communicate that an action has been successfully completed. Provides a positive response to user actions. No action is required.
