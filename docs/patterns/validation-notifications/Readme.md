@@ -25,11 +25,11 @@ These notifications include in-line feedback at or near the form controls and ov
 
 While error messages are the most usual and critical use for validation notifications, success messages are also important to confirm task completion.
 
-## form Control Validation Notification
+## Form Control Validation Notification
 
-This notification is an [error detection](../form-validation/#error-detection) responses to incorrect or incomplete data entered into a forms control, such as an input, checkbox, radio, or select. 
+This notification is an [error detection](../form-validation/#error-detection) response to incorrect or incomplete data entered into a form control, such as an input, checkbox, radio, or select. 
 
-Notifying the user of a form control validation status's can take many forms, from adding iconography to signify success, altering the color of border text or background, and/or providing detailed instruction.
+Notifying the user of a form control's validation status can manifest in many ways, from adding iconography to signify success, altering the color of border text or background, and/or providing detailed instruction.
 Regardless of the means they all have the goal of communicating information back to the user. To ensure this happens effectively the following requirements and best practices should be accounted for.
 
 
@@ -76,18 +76,18 @@ Regardless of the means they all have the goal of communicating information back
 - **On Input** 
   - A user is typing into a form control which has complex formatting requirements
 - **On Change**
-- Providing errors or warning UI related to user entered formatting or invalid selections
-- Providing errors or warning messaging related to user entered formatting or invalid selections
-- Providing success confirmations related to a user entered form control which complies with formatting requirements
+  - Providing errors or warning UI related to user entered formatting or invalid selections
+  - Providing errors or warning messaging related to user entered formatting or invalid selections
+  - Providing success confirmations related to a user entered form control which complies with formatting requirements
 - **On Submit**
-- Providing errors or warning messaging related to user entered formatting, incomplete inputs, or invalid selections
-- Elevating error or warning UI that already provided via OnChange or OnInput validation
+  - Providing errors or warning messaging related to user entered formatting, incomplete inputs, or invalid selections
+  - Elevating error or warning UI that already provided via OnChange or OnInput validation
 
 ### Don't Use When
-- Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](#transient-status-notifications)
-- Providing contextual information on the page processes (see [Transient Status Notifications](#transient-status-notifications)
-- Providing summaries of errors, warnings, or success messaging related to form submission [validation summaries](../validation-notifications/#validation-summary),
-- Page usage should be blocked until the user takes an action within the message or exits (see [Alert Dialog](../alerts/#user-confirmation-alerts)
+- Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](../status-notifications/#transient-status-notifications))
+- Providing contextual information on the page processes (see [Transient Status Notifications](../status-notifications/#transient-status-notifications))
+- Providing summaries of errors, warnings, or success messaging related to form submission (see [Validation Summaries](#validation-summary))
+- Page usage should be blocked until the user takes an action within the message or exits (see [Alert Dialog](../alerts/#user-confirmation-alerts))
 
 
 ### Anatomy of a Validation Notification
@@ -125,12 +125,12 @@ Regardless of the means they all have the goal of communicating information back
   - Provide the state of the error, if using visual cues for error, warning, success, or info - that text should be provided via screen reader accessible text
   - Provide instruction that is as specific as possible
   - Clearly state errors:
-    – What happened
-    – What’s the next step the user should take to succeed 
+    - What happened
+    - What’s the next step the user should take to succeed 
     - Avoid using technical jargon
   - Confirm successful submission of data
   - Use language that conveys REI's Brand
-  - Avoid uppercase text as it gives the visual impact of shouting.
+  - Avoid uppercase text as it gives the visual impact of shouting
 - **Should Not**
   - Rely solely on visual cues to indicate an error
   - Remove incorrect data entered by the user
@@ -186,16 +186,16 @@ Additionally the addition of `aria-invalid` to each control was not recommended 
   - Add `aria-describedby` to the `legend`, linking to a span out of the form-group. This produces mixed results across the assisted tech matrix.
   - Use `aria-describedby` to the `fieldset`, linking to a span out of the form-group. This produces mixed results across the assisted tech matrix.
   - Add the `aria-invalid` attribute to form-group controls as this may cause user confusion on if all or just one item are required
-## Validation Summary 
+
+ ## Validation Summary 
 
 Up to this point we have been going over best practices and requirements for individual form controls and form groups such as a singular text input or group of checkboxes.
-This type of inline validation works well as the users are provided feedback immediately. 
+This type of inline validation works well as users are provided feedback immediately. 
 However, for various reasons a user may lose sight of the problems needing remediation and become stuck on submit.
 
 A validation summary outlines, informs and directs users to all existing errors that need to be fixed on the page.
 The summary should be an additive error indication, summarizing pre-existing form control notifications. 
-As this may be the only error notification within a users viewport providing links to each specific error is recommended.
-
+As this may be the only error notification within a user's viewport, providing links to each specific error is recommended.
 
 <cdr-table class="advanced-table" full-width=false>
   <tr>
@@ -228,7 +228,7 @@ As this may be the only error notification within a users viewport providing lin
   </tr>
   <tr>
     <th class="advanced-table__header">Information</th>
-    <td>guided summary, reiterating validation notifications</td>
+    <td>Guided summary, reiterating validation notifications</td>
   </tr>
   <tr>
     <th class="advanced-table__header">Location</th>
@@ -242,10 +242,10 @@ As this may be the only error notification within a users viewport providing lin
 - To increase visibility of existing errors
 - For server-returned instruction
 ### Don't Use When
-- Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](#transient-status-notifications)
-- Providing contextual information on the page processes (see [Transient Status Notifications](#transient-status-notifications)
-- Providing errors, warnings, or success messaging related to user entered formatting, incomplete inputs, or invalid selections (see [Validation Notifications](../validation-notifications)
-- Page usage should be blocked until the user takes an action within the message or exits (see [Alert Dialog](../alerts/#user-confirmation-alerts)
+- Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](../status-notifications/#transient-status-notifications))
+- Providing contextual information on the page processes (see [Transient Status Notifications](../status-notifications/#transient-status-notifications))
+- Providing errors, warnings, or success messaging related to user entered formatting, incomplete inputs, or invalid selections (see [Validation Notifications](#form-control-validation-notification))
+- Page usage should be blocked until the user takes an action within the message or exits (see [Alert Dialog](../alerts/#user-confirmation-alerts))
 - As the only indication of an error
 
 ### Anatomy of a Validation Summary
@@ -260,14 +260,14 @@ As this may be the only error notification within a users viewport providing lin
     - include an anchor name in the URL for server returned summaries 
   - Ensure the instruction is visible to all users
   - Use meaningful colors and iconography
-  - use role="alert" to assertively reiterate existing page errors if the summary is presented prior to page reload
+  - Use role="alert" to assertively reiterate existing page errors if the summary is presented prior to page reload
 - **Should**
   - Be presented adjacent to the form when the summary is presented prior to page reload
   - Be presented at the top of the page when the summary is provided post form-submit
 - **May**
-  - Be hidden until the user requests them if the notification instructions are not critical.
+  - Be hidden until the user requests them if the notification instructions are not critical
 
-### Validation Summary instruction
+### Validation Summary Instruction
 - **Must**
   - Indicate the fact that there was a validation problem
   - Summarize existing errors
@@ -279,16 +279,16 @@ As this may be the only error notification within a users viewport providing lin
 - **Must Not**
   - Rely solely on references to sensory characteristics (for example, "round button" or "button to the right")
 - **Should**
-  - direct users back to existing errors
+  - Direct users back to existing errors
   - Provide the states of the items within the summary, if using visual cues for error, warning, success, or info - that text should be provided via screen reader accessible text
   - Provide instruction that is as specific as possible
   - Clearly state errors:
-    – What happened
-    – What’s the next step the user should take to succeed 
+    - What happened
+    - What’s the next step the user should take to succeed 
     - Avoid using technical jargon
   - remove items from the summary as they are resolved
   - Use language that conveys REI's Brand
-  - Avoid uppercase text as it gives the visual impact of shouting.
+  - Avoid uppercase text as it gives the visual impact of shouting
 - **Should Not**
   - Use technical language
   - Shame the user for the error
