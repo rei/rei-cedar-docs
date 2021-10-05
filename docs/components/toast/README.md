@@ -2,7 +2,7 @@
 {
   "title": "Toast",
   "layout_type": "LayoutComponent",
-  "summary": "A type of non-modal dialog used to communicate the status of a task or process.",
+  "summary": "Non-modal dialog used to communicate the status of a task or process.",
   "title_metadata": "CdrToast",
   "breadcrumbs": [
     {
