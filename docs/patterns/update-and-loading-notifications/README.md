@@ -108,8 +108,8 @@ Update Notifications inform users of advisory information that enhances the site
 - Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](../status-notifications/#transient-status-notifications))
 - Providing contextual information on the page processes (see [Transient Status Notifications](../status-notifications/#transient-status-notifications))
 - Providing errors, warnings, or success messaging related to user entered formatting, incomplete inputs, or invalid selections (see [Validation Notifications](../validation-notifications/))
-- The content added to the page is critical and needs immediate attention (see [Alert](../alerts/))
-- Page usage should be blocked until the user takes an action within the message or exits (see [Alert Dialog](../alerts/#alert-dialog))
+- The content added to the page is critical and needs immediate attention (see [Alerts](../alerts/))
+- Page usage should be blocked until the user takes an action within the message or exits (see [User Confirmation Alerts](../alerts/#alert-dialog))
 - User interaction is required or content is critical to the user flow (see [Modal](../../components/modal/))
 - The message contains a rich UI experience (see [Modal](../../components/modal/))
 - During the appearance or disappearance of content following a user's interaction which is also announced to assistive technology such as the following:
