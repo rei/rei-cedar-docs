@@ -20,28 +20,39 @@ description
 
 ## Default variant
 
-description
+-  Description
 
-example
+### Use When
+
+### Don't Use When
+### Implementation
+
+-  code example
+### Anatomy of Default variant
+
+-  wireframe
+
+### Accessibility
 
 ## Variant 2
 
-description
+-  Description
 
-example
+### Use When
 
-## Accessibility
+### Don't Use When
+### Implementation
 
-description
+-  code example
+### Anatomy of Default variant
 
-example
+-  wireframe
 
-# Guidelines
 
-## Use when
+### Accessibility
 
-## Don't use when
 
+May use these 
 ## Content
   
 ## Structure
