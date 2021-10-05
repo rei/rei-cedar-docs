@@ -116,15 +116,8 @@
 <cdr-doc-table-of-contents-shell>
 
 # Overview  
-<cdr-banner type="info">
-  <template #icon-left>
-    <icon-information-fill />
-  </template>
-REI.com is currently using Bazaarvoice for ratings.
-  <template #message-body>
-Styles documented here may not reflect the current styles provided by the tool. Reach out in <cdr-link href="https://rei.slack.com/messages/CA58YCGN4" target="\_blank">#cedar-user-support</cdr-link> for further guidance or questions.
-  </template>
-</cdr-banner>
+
+<cdr-doc-alert icon="info"><strong>REI.com is currently using Bazaarvoice for ratings.</strong>Styles documented here may not reflect the current styles provided by the tool. Reach out in <cdr-link href="https://rei.slack.com/messages/CA58YCGN4" target="\_blank">#cedar-user-support</cdr-link> for further guidance or questions.</cdr-doc-alert>
 
 ## Default (Medium)
 
