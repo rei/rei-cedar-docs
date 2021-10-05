@@ -16,10 +16,16 @@
 <cdr-doc-table-of-contents-shell >
 
 # Overview
-
-<cdr-doc-alert icon="info">
-<p>Filmstrip is a Cedar cookbook component. Developers can choose from an optional range of subcomponents to create a custom version of it.</p>
-</cdr-doc-alert>
+    
+<cdr-banner type="info">
+  <template #icon-left>
+    <icon-information-fill />
+  </template>
+Filmstrip is a Cedar cookbook component.
+  <template #message-body>
+   Developers can choose from an optional range of subcomponents to create a custom version of it.
+  </template>
+</cdr-banner>
 
 A filmstrip is a functional component container which allows users to preview multiple related pieces of content such as images, text, or cards in an allocated amount of space.
  
@@ -38,10 +44,11 @@ Because the Filmstrip is a cookbook of multiple subcomponents, its structure can
 - The user will need to focus on 1 piece of content at a time 
 
 ### Implementation
--  code example
+<img src="https://i.imgur.com/Co3dIqI.jpg">
   
-### Anatomy of Default variant
--  wireframe
+### Anatomy
+<img src="https://i.imgur.com/ZSpOvmp.jpg">
+  
 
 ### Accessibility
   
@@ -59,13 +66,9 @@ Many WCAG requirements are contextual to their implementation. To ensure that us
 ### Don't Use When
 ### Implementation
 
--  EXAMPLE 1 : code example
+-  EXAMPLE 3 : code example
+  
 ### Anatomy of Default variant
-
--  wireframe
-
-
-### Accessibility
 
 
 May use these 
