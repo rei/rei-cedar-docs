@@ -16,23 +16,45 @@
 <cdr-doc-table-of-contents-shell >
 
 # Overview
-description
+    
+<cdr-banner type="info">
+  <template #icon-left>
+    <icon-information-fill />
+  </template>
+Filmstrip is a Cedar cookbook component.
+  <template #message-body>
+   Developers can choose from an optional range of subcomponents to create a custom version of it.
+  </template>
+</cdr-banner>
 
-## Default variant
+A filmstrip is a functional component container which allows users to preview multiple related pieces of content such as images, text, or cards in an allocated amount of space.
+ 
 
--  Description
+## Customizing Filmstrip
+
+Because the Filmstrip is a cookbook of multiple subcomponents, its structure can be customized or overridden in a variety of ways. For example, not using a container, including a header, adding more or less content blocks in the preview, not including arrow pagination or using different types of content within the content blocks such as images, product tiles, animation or cards.
 
 ### Use When
+- Providing a teaser of products, events, articles or categories to users
 
 ### Don't Use When
+- The content blocks will not link to a destination or contains no actionable elements
+- The information contained within the filmstrip is not related
+- The content will exceed a maximum of 5 swipes to preview all the content
+- The user will need to focus on 1 piece of content at a time 
+
 ### Implementation
-
 -  code example
+  
 ### Anatomy of Default variant
-
 -  wireframe
 
 ### Accessibility
+  
+Many WCAG requirements are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
+
+- Include a skip link for keyboard and screen reading users to skip the filmstrip
+- Ensuring all on-screen and touch target areas are at least 44 by 44 pixels.
 
 ## Variant 2
 
