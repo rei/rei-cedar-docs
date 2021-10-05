@@ -3,7 +3,7 @@
   "title": "Rating",
   "layout_type": "LayoutComponent",
   "title_metadata": "Rating, Stars, Reviews, CdrRating",
-  "summary": "Provide insight of others’ opinions for products, experiences and expert information",
+  "summary": "Provides insights into user opinions for products, experiences and expert information",
   "stars": [
     {
       "type": "do",
