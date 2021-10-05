@@ -2,7 +2,7 @@
 {
   "title": "Banner",
   "layout_type": "LayoutComponent",
-  "summary": "Provide contextual feedback messages for typical user actions",
+  "summary": "Provides contextual feedback messages for typical user actions",
   "title_metadata": "CdrBanner",
   "breadcrumbs": [
     {
