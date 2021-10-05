@@ -237,7 +237,7 @@ Server-side validation notifications:
 ### Validation Notifications
 
 [Validation Notifications](../validation-notifications/) provide the instruction on how to resolve the detected errors or confirm task completion. 
-There are multiple types of validation notification which are applicable based on the validation technique being used, such as inline feedback and validation summaries. Detailed infomration about the types and requirements may be found on the [Validation Botifications](../validation-notifications/) page.
+There are multiple types of validation notification which are applicable based on the validation technique being used, such as inline feedback and validation summaries. Detailed infomration about the types and requirements may be found on the [Validation Notifications](../validation-notifications/) page.
 
 
 ## More Reading and Resources
