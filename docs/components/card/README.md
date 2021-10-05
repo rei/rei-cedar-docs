@@ -2,7 +2,7 @@
 {
   "title": "Card",
   "layout_type": "LayoutComponent",
-  "summary": "A card is a linked, interactive surface that groups related information and/or actions associated with a singular subject or destination.",
+  "summary": "Linked, interactive surface that groups related information and/or actions associated with a singular subject or destination.",
   "title_metadata": "CdrCard",
   "breadcrumbs": [
     {
