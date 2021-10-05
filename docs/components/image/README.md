@@ -2,7 +2,7 @@
 {
   "title": "Images",
   "layout_type": "LayoutComponent",
-  "summary": "Capture the user’s attention and communicate your message",
+  "summary": "Captures the user’s attention and communicate your message",
   "title_metadata": "CdrImg",
   "sandboxData": {
     "components": "CdrImg"
