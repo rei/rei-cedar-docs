@@ -36,7 +36,7 @@ Because the Filmstrip is a cookbook of multiple subcomponents, its structure can
 - The user will need to focus on 1 piece of content at a time 
 
 ### Implementation
-
+TODO code example should mimic this image (remove image once code sample is working as expected)
 <cdr-img src="https://i.imgur.com/Co3dIqI.jpg" alt="image of REI.com product recommendations filmstrip"/>
 
 ## Scrolling Grid
