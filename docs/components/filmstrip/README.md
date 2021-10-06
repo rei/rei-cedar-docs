@@ -39,6 +39,253 @@ Because the Filmstrip is a cookbook of multiple subcomponents, its structure can
 
 <cdr-img src="https://i.imgur.com/Co3dIqI.jpg" alt="image of REI.com product recommendations filmstrip"/>
 
+## Scrolling Grid
+
+Scrollable grids can be created using the `grid-auto-flow` property set to `column` for horizontal scrolling or `row` for vertical scrolling.
+
+<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+
+```html
+<h3> Demo filmstrip </h3>
+  <cdr-grid class="filmstrip-example" style="overflow: scroll; grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; grid-auto-flow: column;">
+    <div>
+      <cdr-card>
+        <div>
+          <cdr-img
+            alt="card test image alt text"
+            :src="$withBase('/live.jpg')"
+            modifier="responsive"
+          />
+        </div>
+        <div class="content">
+          <cdr-link class="cdr-card__link" href="#Overview">
+            <cdr-text
+              tag="h2"
+              class="title"
+            >
+              Complex Card Title
+            </cdr-text>
+          </cdr-link>
+          <cdr-rating
+            rating="4.2"
+            count="12"
+            size="small"
+          />
+          <cdr-text class="body">
+            Card content
+          </cdr-text>
+        </div>
+      </cdr-card>
+    </div>
+        <div>
+      <cdr-card>
+        <div>
+          <cdr-img
+            alt="card test image alt text"
+            :src="$withBase('/live.jpg')"
+            modifier="responsive"
+          />
+        </div>
+        <div class="content">
+          <cdr-link class="cdr-card__link" href="#Overview">
+            <cdr-text
+              tag="h2"
+              class="title"
+            >
+              Complex Card Title
+            </cdr-text>
+          </cdr-link>
+          <cdr-rating
+            rating="4.2"
+            count="12"
+            size="small"
+          />
+          <cdr-text class="body">
+            Card content
+          </cdr-text>
+        </div>
+      </cdr-card>
+    </div>
+        <div>
+      <cdr-card>
+        <div>
+          <cdr-img
+            alt="card test image alt text"
+            :src="$withBase('/live.jpg')"
+            modifier="responsive"
+          />
+        </div>
+        <div class="content">
+          <cdr-link class="cdr-card__link" href="#Overview">
+            <cdr-text
+              tag="h2"
+              class="title"
+            >
+              Complex Card Title
+            </cdr-text>
+          </cdr-link>
+          <cdr-rating
+            rating="4.2"
+            count="12"
+            size="small"
+          />
+          <cdr-text class="body">
+            Card content
+          </cdr-text>
+        </div>
+      </cdr-card>
+    </div>
+        <div>
+      <cdr-card>
+        <div>
+          <cdr-img
+            alt="card test image alt text"
+            :src="$withBase('/live.jpg')"
+            modifier="responsive"
+          />
+        </div>
+        <div class="content">
+          <cdr-link class="cdr-card__link" href="#Overview">
+            <cdr-text
+              tag="h2"
+              class="title"
+            >
+              Complex Card Title
+            </cdr-text>
+          </cdr-link>
+          <cdr-rating
+            rating="4.2"
+            count="12"
+            size="small"
+          />
+          <cdr-text class="body">
+            Card content
+          </cdr-text>
+        </div>
+      </cdr-card>
+    </div>
+        <div>
+      <cdr-card>
+        <div>
+          <cdr-img
+            alt="card test image alt text"
+            :src="$withBase('/live.jpg')"
+            modifier="responsive"
+          />
+        </div>
+        <div class="content">
+          <cdr-link class="cdr-card__link" href="#Overview">
+            <cdr-text
+              tag="h2"
+              class="title"
+            >
+              Complex Card Title
+            </cdr-text>
+          </cdr-link>
+          <cdr-rating
+            rating="4.2"
+            count="12"
+            size="small"
+          />
+          <cdr-text class="body">
+            Card content
+          </cdr-text>
+        </div>
+      </cdr-card>
+    </div>
+        <div>
+      <cdr-card>
+        <div>
+          <cdr-img
+            alt="card test image alt text"
+            :src="$withBase('/live.jpg')"
+            modifier="responsive"
+          />
+        </div>
+        <div class="content">
+          <cdr-link class="cdr-card__link" href="#Overview">
+            <cdr-text
+              tag="h2"
+              class="title"
+            >
+              Complex Card Title
+            </cdr-text>
+          </cdr-link>
+          <cdr-rating
+            rating="4.2"
+            count="12"
+            size="small"
+          />
+          <cdr-text class="body">
+            Card content
+          </cdr-text>
+        </div>
+      </cdr-card>
+    </div>
+        <div>
+      <cdr-card>
+        <div>
+          <cdr-img
+            alt="card test image alt text"
+            :src="$withBase('/live.jpg')"
+            modifier="responsive"
+          />
+        </div>
+        <div class="content">
+          <cdr-link class="cdr-card__link" href="#Overview">
+            <cdr-text
+              tag="h2"
+              class="title"
+            >
+              Complex Card Title
+            </cdr-text>
+          </cdr-link>
+          <cdr-rating
+            rating="4.2"
+            count="12"
+            size="small"
+          />
+          <cdr-text class="body">
+            Card content
+          </cdr-text>
+        </div>
+      </cdr-card>
+    </div>
+        <div>
+      <cdr-card>
+        <div>
+          <cdr-img
+            alt="card test image alt text"
+            :src="$withBase('/live.jpg')"
+            modifier="responsive"
+          />
+        </div>
+        <div class="content">
+          <cdr-link class="cdr-card__link" href="#Overview">
+            <cdr-text
+              tag="h2"
+              class="title"
+            >
+              Complex Card Title
+            </cdr-text>
+          </cdr-link>
+          <cdr-rating
+            rating="4.2"
+            count="12"
+            size="small"
+          />
+          <cdr-text class="body">
+            Card content
+          </cdr-text>
+        </div>
+      </cdr-card>
+    </div>
+  </cdr-grid>
+
+```
+
+</cdr-doc-example-code-pair>
+
 ### Anatomy of a Filmstrip
 
 <cdr-img src="https://i.imgur.com/LYgWLPG.png" alt="a wireframe outlining the parts listed below"/>
