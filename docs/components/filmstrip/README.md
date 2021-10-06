@@ -46,24 +46,21 @@ Because the Filmstrip is a cookbook of multiple subcomponents, its structure can
 Note that the header and link are not part of a filmstrip pattern per-say and are additional recommendations for page layout
 #### Overflow Grid Container
 
--  **Must**
-  -  Be able to receive tab focus
+- **Must**
+  - Be able to receive tab focus
+  - Include a skip link for keyboard and screen reading users to skip the filmstrip
+  - Ensure all on-screen and touch target areas are at least 44 by 44 pixels.
 
 #### Grid item
 
--  **Should**
-  -  be a set of like data
+- **Should**
+  - be a set of like data
 
 #### Button Controls
 
--  **Must**
-  -  Provide visual boundaries with a minimum of 3:1 contrast to the background
-  -  For both keyboard focus and hover, it is important for the content to continue to have sufficient contrast, although it will depend on whether that content is text (relates to 1.4.3) or graphical (1.4.11) in nature.
-  -  Provide 
-Many WCAG requirements are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
-
-- Include a skip link for keyboard and screen reading users to skip the filmstrip
-- Ensuring all on-screen and touch target areas are at least 44 by 44 pixels.
+- **Must**
+  - Provide visual boundaries with a minimum of 3:1 contrast to the background
+  - For both keyboard focus and hover, it is important for the content to continue to have sufficient contrast, although it will depend on whether that content is text (relates to 1.4.3) or graphical (1.4.11) in nature.
 
 ## Variant 2
 
