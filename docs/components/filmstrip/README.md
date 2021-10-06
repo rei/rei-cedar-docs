@@ -44,17 +44,17 @@ Because the Filmstrip is a cookbook of multiple subcomponents, its structure can
 <cdr-img src="https://i.imgur.com/ZSpOvmp.jpg" alt="a wireframe outlining the parts listed below"/>
 
 Note that the header and link are not part of a filmstrip pattern per-say and are additional recommendations for page layout
-#### Container
+#### Overflow Grid Container
 
 -  **Must**
   -  Be able to receive tab focus
 
-#### Contents
+#### Grid item
 
 -  **Should**
   -  be a set of like data
 
-#### Controls 
+#### Button Controls
 
 -  **Must**
   -  Provide visual boundaries with a minimum of 3:1 contrast to the background
