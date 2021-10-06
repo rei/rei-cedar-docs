@@ -290,35 +290,38 @@ Scrollable grids can be created using the `grid-auto-flow` property set to `colu
 
 <cdr-img src="https://i.imgur.com/LYgWLPG.png" alt="a wireframe outlining the parts listed below"/>
 
-1. <strong>Container (optional)</strong>
-  <br>The container keeps the filmstrip within the grid. You can break out of the grid by not including a container.
-2. <strong>Header (optional)</strong> 
-   <br>The header is a recommended element for many filmstrip use cases to prime the user on the content that is within the filmstrip.
-3. <strong>Content blocks</strong> 
-   <br>Content blocks can include any type of content such as images, product tiles, animation or cards.
-4. <strong>Arrow navigation (optional)</strong> 
-  <br>Arrow navigation is an optional element that allows the user to move from one display view to another. 
-5. <strong>Link to all content (optional)</strong> 
-    <br>The view all link is a recommended element for many filmstrip use cases to allow the user to view all the content in another format, often in a search list, rather than in the filmstrip. 
-  <br>  
-#### Container
+#### 1. Container (optional)
 
+  The container keeps the filmstrip within the grid. You can break out of the grid by not including a container.
+  
 - **Must**
   - Be able to receive tab focus
   - Include a skip link for keyboard and screen reading users to skip the filmstrip
   - Ensure all on-screen and touch target areas are at least 44 by 44 pixels
 
-#### Content Block
-
+### 2. Header (optional)
+  
+The header is a recommended element for many filmstrip use cases to prime the user on the content that is within the filmstrip.
+  
+#### 3. Content Blocks
+  
+Content blocks can include any type of content such as images, product tiles, videos, gifs or cards.
+  
 - **Should**
   - be a set of like data
 
-#### Arrow navigation
+#### 4. Arrow navigation (optional)
 
+  Arrow navigation is an optional element that allows the user to move from one display view to another. 
+  
 - **Must**
   - Provide visual boundaries with a minimum of 3:1 contrast to the background
   - For both keyboard focus and hover, it is important for the content to continue to have sufficient contrast, although it will depend on whether that content is text (relates to 1.4.3) or graphical (1.4.11) in nature.
 
+#### 5. Link to all content (optional)
+
+The view all link is a recommended element for many filmstrip use cases to allow the user to view all the content in another format, often in a search list, rather than in the filmstrip. 
+  
 
 May use these 
 ## Content
