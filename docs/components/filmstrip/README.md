@@ -41,45 +41,48 @@ Because the Filmstrip is a cookbook of multiple subcomponents, its structure can
 
 ### Anatomy of a Filmstrip
 
-<cdr-img src="https://i.imgur.com/ZSpOvmp.jpg" alt="a wireframe outlining the parts listed below"/>
+<cdr-img src="https://i.imgur.com/LYgWLPG.png" alt="a wireframe outlining the parts listed below"/>
 
-Note that the header and link are not part of a filmstrip pattern per-say and are additional recommendations for page layout
-#### Overflow Grid Container
+1. <strong>Container (optional)</strong>
+  <br>The container keeps the filmstrip within the grid. You can break out of the grid by not including a container.
+   <br>
+2. <strong>Header (optional)</strong> 
+   <br>The header is a recommended element for many filmstrip use cases to prime the user on the content that is within the filmstrip.
+   <br>
+3. <strong>Content blocks</strong> 
+   <br>Content blocks can include any type of content such as images, product tiles, animation or cards.
+  <br>
+4. <strong>Arrow navigation (optional)</strong> 
+  <br>Arrow navigation is an optional element that allows the user to move from one display view to another. 
+  <br>
+5. <strong>Link to all content (optional)</strong> 
+    <br>The view all link is a recommended element for many filmstrip use cases to allow the user to view all the content in another format, often in a search list, rather than in the filmstrip. 
+  <br>  
+#### Container
 
 - **Must**
   - Be able to receive tab focus
   - Include a skip link for keyboard and screen reading users to skip the filmstrip
-  - Ensure all on-screen and touch target areas are at least 44 by 44 pixels.
+  - Ensure all on-screen and touch target areas are at least 44 by 44 pixels
 
-#### Grid item
+#### Content Block
 
 - **Should**
   - be a set of like data
 
-#### Button Controls
+#### Arrow navigation
 
 - **Must**
   - Provide visual boundaries with a minimum of 3:1 contrast to the background
   - For both keyboard focus and hover, it is important for the content to continue to have sufficient contrast, although it will depend on whether that content is text (relates to 1.4.3) or graphical (1.4.11) in nature.
-
-## Variant 2
-
--  Description
-
-### Use When
-
-### Don't Use When
-### Implementation
-
--  EXAMPLE 3 : code example
-  
-### Anatomy of Default variant
 
 
 May use these 
 ## Content
   
 ## Structure
+
+## Do/Don't
   
 ## Behavior 
 
