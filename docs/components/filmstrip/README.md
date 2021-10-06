@@ -292,16 +292,12 @@ Scrollable grids can be created using the `grid-auto-flow` property set to `colu
 
 1. <strong>Container (optional)</strong>
   <br>The container keeps the filmstrip within the grid. You can break out of the grid by not including a container.
-   <br>
 2. <strong>Header (optional)</strong> 
    <br>The header is a recommended element for many filmstrip use cases to prime the user on the content that is within the filmstrip.
-   <br>
 3. <strong>Content blocks</strong> 
    <br>Content blocks can include any type of content such as images, product tiles, animation or cards.
-  <br>
 4. <strong>Arrow navigation (optional)</strong> 
   <br>Arrow navigation is an optional element that allows the user to move from one display view to another. 
-  <br>
 5. <strong>Link to all content (optional)</strong> 
     <br>The view all link is a recommended element for many filmstrip use cases to allow the user to view all the content in another format, often in a search list, rather than in the filmstrip. 
   <br>  
