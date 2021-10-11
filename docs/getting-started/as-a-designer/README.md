@@ -12,8 +12,7 @@
 ---
 
 [cedar-user-support-link]: https://rei.slack.com/messages/CA58YCGN4
-<cdr-doc-alert icon="warning">Instructions on this page are applicable to internal REI designers only.</cdr-doc-alert>
-
+<cdr-banner type="warning" aria-live="polite"><template #icon-left><icon-warning-fill inherit-color /></template>Instructions on this page are applicable to internal REI designers only.</cdr-banner>
 <cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
 
 

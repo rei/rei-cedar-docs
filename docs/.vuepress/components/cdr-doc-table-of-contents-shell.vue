@@ -6,8 +6,9 @@
       :child-selectors="childSelectors"
       :links="links"
       :appended-items="appendedNavItems"/>
-
-    <slot/>
+    <div class="cdr-doc-table-of-contents-shell__content">
+      <slot/>
+    </div>
   </div>
 </template>
 
@@ -136,6 +137,18 @@ export default {
     @media (max-width: $cdr-breakpoint-xs) {
       margin: 0 $cdr-space-one-x;
       max-width: 500px;
+    }
+    &__content {
+      a {
+        @include cdr-link-base-mixin;
+      }
+      h2 {
+        @include cdr-text-heading-sans-400;
+      }
+      h3 {
+        @include cdr-text-heading-sans-200;
+      }
+
     }
   }
 
