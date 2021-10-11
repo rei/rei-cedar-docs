@@ -93,7 +93,7 @@ As with other notifications, Alert Notifications are not provided as part of a p
 ### Don't Use When
 - Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](../status-notifications/#transient-status-notifications))
 - Providing contextual information on the page processes (see [Transient Status Notifications](../status-notifications/#transient-status-notifications))
-- Providing errors, warnings, or success messaging related to user-entered formatting, incomplete inputs, or invalid selections (see [Form Validation](../validation-notifications))
+- Providing errors, warnings, or success messaging related to user-entered formatting, incomplete inputs, or invalid selections (see [Validation Notifications](../validation-notifications))
 - Page usage needs to be blocked until the user takes an action within the message or exits (see [User Confirmation Alerts](#user-confirmation-alerts))
 - User interaction is required or content is critical to the user flow (see [Modal](../../components/modal/))
 - The message contains a rich UI experience (see [Modal](../../components/modal/))
@@ -234,7 +234,7 @@ These alerts require the user to interact with additional options provided withi
 ### Don't Use When
 - There is no action the user must take
 - The alert provides context to the page or page section (see [Alert Notifications](#alert-notifications))
-- Providing errors, warnings, or success messaging related to user entered formatting, incomplete inputs, or invalid selections (see [Form Validation](../validation-notifications))
+- Providing errors, warnings, or success messaging related to user entered formatting, incomplete inputs, or invalid selections (see [Validation Notifications](../validation-notifications))
 - Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](../status-notifications/#transient-status-notifications))
 - The message contains a rich UI experience where users interaction is not required (see [Modal](../../components/modal/))
 

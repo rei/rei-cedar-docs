@@ -87,7 +87,7 @@ Regardless of the means they all have the goal of communicating information back
 - Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](../status-notifications/#transient-status-notifications))
 - Providing contextual information on the page processes (see [Transient Status Notifications](../status-notifications/#transient-status-notifications))
 - Providing summaries of errors, warnings, or success messaging related to form submission (see [Validation Summaries](#validation-summary))
-- Page usage should be blocked until the user takes an action within the message or exits (see [Alert Dialog](../alerts/#user-confirmation-alerts))
+- Page usage should be blocked until the user takes an action within the message or exits (see [User Confirmation Alerts](../alerts/#user-confirmation-alerts))
 
 
 ### Anatomy of a Validation Notification
@@ -245,7 +245,7 @@ As this may be the only error notification within a user's viewport, providing l
 - Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](../status-notifications/#transient-status-notifications))
 - Providing contextual information on the page processes (see [Transient Status Notifications](../status-notifications/#transient-status-notifications))
 - Providing errors, warnings, or success messaging related to user entered formatting, incomplete inputs, or invalid selections (see [Validation Notifications](#form-control-validation-notification))
-- Page usage should be blocked until the user takes an action within the message or exits (see [Alert Dialog](../alerts/#user-confirmation-alerts))
+- Page usage should be blocked until the user takes an action within the message or exits (see [User Confirmation Alerts](../alerts/#user-confirmation-alerts))
 - As the only indication of an error
 
 ### Anatomy of a Validation Summary

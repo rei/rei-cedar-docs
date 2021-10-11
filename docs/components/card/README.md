@@ -2,7 +2,7 @@
 {
   "title": "Card",
   "layout_type": "LayoutComponent",
-  "summary": "A card is a linked, interactive surface that groups related information and/or actions associated with a singular subject or destination.",
+  "summary": "Linked, interactive surface that groups related information and/or actions associated with a singular subject or destination.",
   "title_metadata": "CdrCard",
   "breadcrumbs": [
     {
@@ -119,7 +119,7 @@ Cards should always be used to link to other content, and the `cdr-card__link` u
 
 ## Customizing Cards
 
-Because CdrCard is a simple wrapper component, it's behavior can be customized or overridden in a variety of ways. For example, adding a border, inset padding, or modifying the link behavior.
+Because CdrCard is a simple wrapper component, its behavior can be customized or overridden in a variety of ways. For example, adding a border, inset padding, or modifying the link behavior.
 
 <cdr-doc-example-code-pair repository-href="/src/components/card"
 :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {styleTag: '.custom-card-example {border: 1px solid $cdr-color-border-primary; padding: $cdr-space-inset-one-x;} .custom-card-example .cdr-card__link {&:hover {color: $cdr-color-text-sale !important;}}'})" >

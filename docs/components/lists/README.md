@@ -2,7 +2,7 @@
 {
   "title": "Lists",
   "layout_type": "LayoutComponent",
-  "summary": "Group related content items together either vertically or horizontally",
+  "summary": "Groups related content items together either vertically or horizontally",
   "title_metadata": "CdrList",
   "see_also": [
     {

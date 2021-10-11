@@ -2,7 +2,7 @@
 {
   "title": "FormGroup",
   "layout_type": "LayoutComponent",
-  "summary": "Group related input elements together",
+  "summary": "Groups related input elements together",
   "title_metadata": "CdrFormGroup",
     "see_also": [
     {

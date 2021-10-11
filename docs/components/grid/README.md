@@ -2,7 +2,7 @@
 {
   "title": "CSS Grid",
   "layout_type": "LayoutComponent",
-  "summary": "A simple wrapper for working with CSS Grid",
+  "summary": "Wrapper for working with CSS Grid",
   "title_metadata": "CdrGrid",
   "breadcrumbs": [
     {
