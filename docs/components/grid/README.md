@@ -92,16 +92,6 @@
 
 <cdr-doc-table-of-contents-shell >
 
-<br/>
-
-<cdr-doc-alert icon="info">
-  The Flexbox based CdrRow and CdrCol have been deprecated in favor of the more performant and lighter weight CSS Grid based CdrGrid component. Teams using CdrRow and CdrCol should use CdrGrid for any new work, while incrementally migrating any existing CdrRow/CdrCol usage to use CdrGrid instead.
-
-  See the <cdr-link href="../../release-notes/winter-2021/#cdrgrid">winter 2021 release notes</cdr-link> for details on migrating, and you can find the <cdr-link href="../grid-deprecated">CdrRow and CdrCol documentation here</cdr-link>
-
-</cdr-doc-alert>
-
-
 # Overview
 
 CdrGrid is a simple wrapper for working with CSS Grid. Any valid CSS Grid properties can be applied to a CdrGrid or it's grid items, allowing for more flexible layouts to be built using less markup and CSS classes.
