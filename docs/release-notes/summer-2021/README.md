@@ -21,22 +21,14 @@
 | package name | version |
 |--------------|---------|
 | `@rei/cedar` | ^10.x.x |
+| `@rei/febs` | ^8.x.x |
 
+- Remove `@babel/preset-env` and `@babel/register` if they are included in your project.
+- If `@rei/browser-history` is included in your project, install `core-js@3.x.x`. Eventually `core-js` can be removed when `@rei/browser-history` has been updated to use `@rei/febs`.
 - If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your micro-site.
 
 ## New Features
 
-Babel config updates
-## Bug Fixes
-
-## Deprecations
-
-## Breaking Changes
-
-### Removals
-
-In accordance with our deprecation policy, features that were deprecated in the [Winter 2021 release](../winter-2021/#deprecations) have been removed from Cedar.
-
-TODO: remove these and document what they were
+Polyfills for older, unsupported browsers have been removed. This should reduce the bundle sizes and result in better performance.
 
 </cdr-doc-table-of-contents-shell>
