@@ -21,7 +21,7 @@
 | package name | version |
 |--------------|---------|
 | `@rei/cedar` | ^10.x.x |
-| `@rei/febs` | ^8.x.x |
+| `@rei/febs` | ^8.3.x |
 
 - Remove `@babel/preset-env` and `@babel/register` if they are included in your project.
 - Since you're updating packages, now would be a good time to update some of your other dependencies as well!
