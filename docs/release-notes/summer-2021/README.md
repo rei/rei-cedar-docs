@@ -24,7 +24,7 @@
 | `@rei/febs` | ^8.x.x |
 
 - Remove `@babel/preset-env` and `@babel/register` if they are included in your project.
-- If `@rei/browser-history` is included in your project, install `core-js@3.x.x`. Eventually `core-js` can be removed when `@rei/browser-history` has been updated to use `@rei/febs`.
+- Since you're updating packages, now would be a good time to update some of your other dependencies as well!
 - If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your micro-site.
 
 ## New Features
