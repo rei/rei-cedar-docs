@@ -13,7 +13,7 @@ module.exports = {
     ["meta", { property: "og:type", content: "website" }],
     ["meta", { property: "og:url", content: "https://rei.github.io/rei-cedar-docs/" }],
     ["meta", { property: "og:description", content: "The Cedar Design System provides digital teams with reusable UI components based on REI’s visual language." }],
-    ["meta", { property: "og:image", content: "/rei-cedar-docs/og.png" }],
+    ["meta", { property: "og:image", content: "/og.png" }],
   ],
   ga: '',
   plugins: [
