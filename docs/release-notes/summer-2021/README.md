@@ -23,12 +23,19 @@
 | `@rei/cedar` | ^10.x.x |
 | `@rei/febs` | ^8.3.x |
 
-- Remove `@babel/preset-env` and `@babel/register` if they are included in your project.
-- Since you're updating packages, now would be a good time to update some of your other dependencies as well!
-- If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your micro-site.
-
+- Remove `@babel/preset-env` and `@babel/register` if they are included in your project, the functionality provided by these modules is now included in the latest version of FEBS.
+- Depending on the age of your microsite, you may wish to ensure your other dependencies are also up to date. As always, [Climbers Site](https://git.rei.com/projects/CLIMB/repos/climbers-site/browse) is a good reference point.
+- If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your microsite.
+- Please reach out in Slack at [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) or [#frontier-users](https://rei.slack.com/archives/CLWJC9FFW) if you have any questions.
 ## New Features
+### Polyfill Removals
 
 Polyfills for older, unsupported browsers have been removed. This should reduce the bundle sizes and result in better performance.
+
+## Breaking Changes
+
+The removal of polyfills involves some risk of breaking changes. If for some reason you need to support older browsers, you should ensure this update does not break critical functionality prior to incorporating.
+
+
 
 </cdr-doc-table-of-contents-shell>
