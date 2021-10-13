@@ -2,7 +2,7 @@
 {
   "title": "Toast",
   "layout_type": "LayoutComponent",
-  "summary": "A type of non-modal dialog used to communicate the status of a task or process.",
+  "summary": "Non-modal dialog used to communicate the status of a task or process.",
   "title_metadata": "CdrToast",
   "breadcrumbs": [
     {
@@ -119,7 +119,7 @@ A toast should be passed a contextually appropriate icon using the `icon-left` s
       type="success"
       @closed="opened = false">
       <template #icon-left>
-        <icon-check-fill inherit-color>
+        <icon-check-fill inherit-color/>
       </template>
       I am a success toast
     </cdr-toast>
@@ -153,7 +153,7 @@ CdrToast provides an optional `autoDismiss` property to disable the auto-dismiss
       type="warning"
       @closed="opened = false">
       <template #icon-left>
-        <icon-warning-fill inherit-color>
+        <icon-warning-fill inherit-color/>
       </template>
       I am a warning toast and must be dismissed by user action
     </cdr-toast>
@@ -182,7 +182,7 @@ CdrToast provides an optional `dismissDelay` property to adjust timing of the au
       type="info"
       @closed="opened = false">
       <template #icon-left>
-        <icon-information-fill inherit-color>
+        <icon-information-fill inherit-color/>
       </template>
       I am an informational toast with an <cdr-link href="#">action</cdr-link>
     </cdr-toast>

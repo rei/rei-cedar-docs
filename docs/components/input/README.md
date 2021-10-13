@@ -2,7 +2,7 @@
 {
   "title": "Inputs",
   "layout_type": "LayoutComponent",
-  "summary": "Allows a user to enter and edit data. Also used for search",
+  "summary": "Allows a user to enter data, edit data and search",
   "title_metadata": "Text field, CdrInput, cdr-input",
   "length": [
     {

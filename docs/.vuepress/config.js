@@ -4,34 +4,16 @@ module.exports = {
   description:
     "The Cedar Design System provides digital teams with reusable UI components based on REI’s visual language.",
   head: [
-    [
-      "link",
-      {
-        rel: "icon",
-        href: "/favicon.ico"
-      }
-    ],
-    [
-      "link",
-      {
-        rel: "stylesheet",
-        href: "/cdr-fonts.css"
-      }
-    ],
-    [
-      "link",
-      {
-        rel: "stylesheet",
-        href: "/cedar.css"
-      }
-    ],
-    [
-      "link",
-      {
-        rel: "stylesheet",
-        href: "/back-to-top-btn.css"
-      }
-    ]
+    ["link", { rel: "icon", href: "/favicon.ico" }],
+    ["link", { rel: "stylesheet", href: "/cdr-fonts.css" }],
+    ["link", { rel: "stylesheet", href: "/cedar.css" }],
+    ["link", { rel: "stylesheet", href: "/back-to-top-btn.css" }],
+    ["meta", { property: "og:title", content: "Cedar Design System | REI Co-op" }],
+    ["meta", { property: "twitter:title", content: "Cedar Design System | REI Co-op" }],
+    ["meta", { property: "og:type", content: "website" }],
+    ["meta", { property: "og:url", content: "https://rei.github.io/rei-cedar-docs/" }],
+    ["meta", { property: "og:description", content: "The Cedar Design System provides digital teams with reusable UI components based on REI’s visual language." }],
+    ["meta", { property: "og:image", content: "/og.png" }],
   ],
   ga: '',
   plugins: [
@@ -49,10 +31,10 @@ module.exports = {
       {
         text: "Release Notes",
         items: [
+          { text: "Fall 2021", link: "/release-notes/fall-2021/" },
           { text: "Summer 2021", link: "/release-notes/summer-2021/" },
           { text: "Spring 2021", link: "/release-notes/spring-2021/" },
           { text: "Winter 2021", link: "/release-notes/winter-2021/" },
-          { text: "Fall 2020", link: "/release-notes/fall-2020/" },
           { text: "Deprecated", link: "/release-notes/deprecated/" },
           { text: "Archive", link: "/release-notes/archive/" },
         ]
@@ -106,7 +88,6 @@ module.exports = {
         text: "Components",
         items: [
           { text: "Component Variables", link: "/components/component-variables/" },
-          { text: "Utilities", link: "/components/utilities/" },
           { text: "Accordion", link: "/components/accordion/" },
           { text: "Banner", link: "/components/banner/" },
           { text: "Block Quote", link: "/components/block-quote/" },

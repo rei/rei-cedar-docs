@@ -2,7 +2,7 @@
 {
   "title": "Modal",
   "layout_type": "LayoutComponent",
-  "summary": "Display additional page content in an overlay",
+  "summary": "Displays additional page content in an overlay",
   "title_metadata": "CdrModal",
   "breadcrumbs": [
     {
