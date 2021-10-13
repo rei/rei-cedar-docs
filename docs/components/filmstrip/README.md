@@ -368,7 +368,4 @@ TODO: code example, then replace the above image
 * When a user moves to a new view, there will always be 1 content block that stays the same, allowing the user to understand how the new view relates to the last view seen (for example, when the user clicks the right arrow, the last card becomes the first card and when the user clicks the left arrow, the first card becomes the last card).
 * The number of new content blocks shown on the last page is determined by the remainder of content blocks when the total number of content blocks is divided by the amount of content blocks per view (for example, if there are 9 total blocks of content in a filmstrip that shows 4 blocks of content per view, then only 1 new block of content will display in the last view along with 3 blocks of repeated content from the previous views).
 
-
-## Placement 
-
 </cdr-doc-table-of-contents-shell>
