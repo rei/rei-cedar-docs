@@ -17,7 +17,6 @@
 
 # Overview
     
-
 <cdr-doc-alert icon="info">Filmstrip is a Cedar cookbook component. Developers can choose from an optional range of subcomponents to create a custom version of it.</cdr-doc-alert>
 
 A filmstrip is a functional component container which allows users to preview multiple related pieces of content such as images, text, or cards in an allocated amount of space.
@@ -25,15 +24,19 @@ A filmstrip is a functional component container which allows users to preview mu
 TODO code example should mimic this image (remove image once code sample is working as expected)
 <cdr-img src="https://i.imgur.com/Co3dIqI.jpg" alt="image of REI.com product recommendations filmstrip"/>
 
-## Customizing Filmstrip
 
-Because the Filmstrip is a cookbook of multiple subcomponents, its structure can be customized or overridden in a variety of ways. For example, not using a container, including a header, adding more or less content blocks in the preview, not including arrow pagination or using different types of content within the content blocks such as images, product tiles, animation or cards.
+## Anatomy of a Filmstrip
 
-### Anatomy of a Filmstrip
+Because the Filmstrip is a cookbook of multiple sub-components, its structure can be customized in a variety of ways.
+For example, your page hierarchy will alter which heading you use. The amount and type of content being presented may alter the amount of content blocks 
+in the preview. The style, inclusion, or speed of navigational controls may also be something unique to your page. 
+Regardless of what changes you make, the following examples will outline some usage best practices, producing what we feel to be a good starting point for most implementations.
+
 
 <cdr-img src="https://i.imgur.com/LYgWLPG.png" alt="a wireframe outlining the parts listed below"/>
 
-#### 1. Container (optional)
+
+### 1. Container (optional)
 
   The container keeps the filmstrip within the grid. You can break out of the grid by not including a container.
   
@@ -46,14 +49,14 @@ Because the Filmstrip is a cookbook of multiple subcomponents, its structure can
   
 The header is a recommended element for many filmstrip use cases to prime the user on the content that is within the filmstrip.
   
-#### 3. Content Blocks
+### 3. Content Blocks
   
 Content blocks can include any type of content such as images, product tiles, videos, gifs or cards.
   
 - **Must**
   - be a set of like content
 
-#### 4. Arrow navigation (optional)
+### 4. Arrow navigation (optional)
 
   Arrow navigation is an optional element that allows the user to move from one display view to another. 
   
@@ -61,20 +64,22 @@ Content blocks can include any type of content such as images, product tiles, vi
   - Provide visual boundaries with a minimum of 3:1 contrast to the background
   - For both keyboard focus and hover, it is important for the content to continue to have sufficient contrast, although it will depend on whether that content is text (relates to 1.4.3) or graphical (1.4.11) in nature.
 
-#### 5. Link to all content (optional)
+### 5. Link to all content (optional)
 
 The view all link is a recommended element for many filmstrip use cases to allow the user to view all the content in another format, often in a search list, rather than in the filmstrip. 
   
+  
 ## Filmstrip Cookbook Steps
  
-### 1. TODO fill in development steps for composing a filmstrip
+###  1. Grid
 
-  Scrollable grids can be created using the `grid-auto-flow` property set to `column` for horizontal scrolling or `row` for vertical scrolling. 
+Our filmstrip example uses a cdr-grid component set to overflow
+-  Add a cdr-grid component to your application
+-  update the `style` property to look something like `overflow: scroll; grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; grid-auto-flow: column;`
 
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
-<h3> Demo filmstrip </h3>
   <cdr-grid class="filmstrip-example" style="overflow: scroll; grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr; grid-auto-flow: column;">
     <div>
       <cdr-card>
@@ -313,6 +318,14 @@ The view all link is a recommended element for many filmstrip use cases to allow
 ```
 
 </cdr-doc-example-code-pair>
+
+-  2. buttons
+
+  Scrollable grids can be created using the `grid-auto-flow` property set to `column` for horizontal scrolling or `row` for vertical scrolling. 
+
+
+<h3> Demo filmstrip </h3>
+
 
 ## Product Recommendation Filmstrip
 This the product recommendation filmstrip pattern to showcase relevant and related product recommendations. 
