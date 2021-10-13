@@ -143,9 +143,18 @@ export default {
         @include cdr-link-base-mixin;
       }
       h2 {
-        @include cdr-text-heading-sans-400;
+        @include cdr-text-heading-serif-strong-800;
       }
       h3 {
+        @include cdr-text-heading-sans-600;
+      }
+      h4 {
+        @include cdr-text-heading-sans-400;
+      }
+      h5 {
+        @include cdr-text-heading-sans-300;
+      }
+      h6 {
         @include cdr-text-heading-sans-200;
       }
 
