@@ -71,7 +71,7 @@ The view all link is a recommended element for many filmstrip use cases to allow
   
 ## Filmstrip Cookbook Steps
  
-###  1. Grid
+###  1. Start by adding a Grid
 
 Our filmstrip example uses a cdr-grid component set to overflow
 -  Add a cdr-grid component to your application
