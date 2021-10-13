@@ -35,41 +35,56 @@ Regardless of what changes you make, the following examples will outline some us
 
 <cdr-img src="https://i.imgur.com/LYgWLPG.png" alt="a wireframe outlining the parts listed below"/>
 
+(we don't need to have a section for each element - only the ones that have requirements that users need to be made aware of)
 
-### 1. Container (optional)
+-  1.) [wrapping container](wrapping-container)
+-  2.) Heading
+-  3.) Link to see all
+-  4.) [Overflow Grid](overflow-grid)
+-  5.) Navigation Controls
 
-  The container keeps the filmstrip within the grid. You can break out of the grid by not including a container.
-  
-- **Should**
-  - Be able to receive tab focus
-  - Include a skip link for keyboard and screen reading users to skip the filmstrip
+
+NOTE - this is the expected structure: (the graphic does not align to the whole structure at the moment)
+- wrapping container (not optional)
+  - filmstrip header (not optional)
+  - link to see all items in filmstrip category (optional)
+  - overflow grid container (not optional)
+    - navigation controls (optional)
+    - grid items
+    - overflow contents (not optional)
+
+
+### Wrapping Container
+- **Must**
   - Ensure all on-screen and touch target areas are at least 44 by 44 pixels
+  - Include a skip link for keyboard and screen reading users to skip the filmstrip
+- **Should**
+  - Provide a heading title for the filmstrip
+  - Provide navigation to view the entire category 
+  
+### Overflow Grid
+The overflow grid container is the heavy lifter of this pattern, this is where the filmstrip items will be displayed. 
+It will set up how many items are in view at a time, the spacing between items, hide all items not in view, 
+and provide the very basic functionality of a horizontal scroll container.
 
-### 2. Header (optional)
-  
-The header is a recommended element for many filmstrip use cases to prime the user on the content that is within the filmstrip.
-  
-### 3. Content Blocks
-  
-Content blocks can include any type of content such as images, product tiles, videos, gifs or cards.
-  
+- **Must**
+  - Be able to receive tab focus
+
+### Overflow Grid items
+
 - **Must**
   - be a set of like content
 
-### 4. Arrow navigation (optional)
-
-  Arrow navigation is an optional element that allows the user to move from one display view to another. 
-  
+### 4. Filmstrip navigation
+The horizontal scroll provided by the overflow container will not by itself offer the most user friendly way to navigate all the items contained with a filmstrip,
+We can enhance and augment the basic functionality already provided with the addition of some navigation controls and some logic informing the controls what to do when clicked
+when overlaying additional actionable controls you
 - **Must**
-  - Provide visual boundaries with a minimum of 3:1 contrast to the background
-  - For both keyboard focus and hover, it is important for the content to continue to have sufficient contrast, although it will depend on whether that content is text (relates to 1.4.3) or graphical (1.4.11) in nature.
+  - Provide visual boundaries with a minimum of 3:1 contrast to the background.
+ For both keyboard focus and hover, it is important for the content to continue to have sufficient contrast, although it will depend on whether that content is text (relates to 1.4.3) or graphical (1.4.11) in nature.
 
-### 5. Link to all content (optional)
+  
 
-The view all link is a recommended element for many filmstrip use cases to allow the user to view all the content in another format, often in a search list, rather than in the filmstrip. 
-  
-  
-## Filmstrip Cookbook Steps
  
 ###  1. Start by adding a Grid
 
