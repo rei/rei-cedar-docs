@@ -27,6 +27,12 @@
 - Depending on the age of your microsite, you may wish to ensure your other dependencies are also up to date. As always, [Climbers Site](https://git.rei.com/projects/CLIMB/repos/climbers-site/browse) is a good reference point.
 - If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your microsite.
 - Please reach out in Slack at [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) or [#frontier-users](https://rei.slack.com/archives/CLWJC9FFW) if you have any questions.
+
+## 10.0.1
+
+### Bug Fixes
+
+- CdrModal has been updated to address an issue when using the modal slot that would result in errors being thrown when opened
 ## New Features
 ### Polyfill Removals
 
