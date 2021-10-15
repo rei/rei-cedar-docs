@@ -113,9 +113,9 @@
 }
 ---
 
-<cdr-doc-table-of-contents-shell >
+<cdr-doc-table-of-contents-shell parentSelector="h2" childSelector="h3">
 
-# Overview
+## Overview
 
 CdrPopover is a wrapper component that accepts a trigger element and popover content. When the trigger element is clicked, the popover content is rendered. Event bindings between the trigger and the popover are set up automatically. The popover will dynamically update its position property to ensure that it renders on screen, though this functionality can be disabled by setting autoPosition to false.
 
@@ -136,7 +136,7 @@ CdrPopover is a wrapper component that accepts a trigger element and popover con
 ```
 </cdr-doc-example-code-pair>
 
-## Custom Trigger
+### Custom Trigger
 
 CdrPopover can also be controlled programmatically using the `open` prop. However, doing so means that you must implement certain behavior yourself:
 
@@ -167,7 +167,7 @@ CdrPopover can also be controlled programmatically using the `open` prop. Howeve
 </cdr-doc-example-code-pair>
 
 
-## Accessibility
+### Accessibility
 
 To ensure your usage of this component complies with accessibility guidelines you are responsible for the following:
 
@@ -189,18 +189,18 @@ This component complies with WCAG guidelines by:
 - Popover can be closed by pressing the close button in the top right corner, by pressing the `esc` key, or by clicking anywhere outside of the popover content.
 
 
-# Guidelines
+## Guidelines
 
 A popover is a floating container useful for communicating small amounts of clarifying information. It's revealed through acting upon a trigger, like a button, but can also be used to preemptively bring attention to new interface features.
 
-## Use when
+### Use when
 Use a popover when a subset of users require additional information.
 
 Example:
 - When the co-op requests a user’s email, a popover is used to explain why an email is required and the ways in which it might be used.
 - Some users aren’t familiar with a credit card security field. Using a popover, describe specifically where to find the information being asked for the identified card type.
 
-## Don’t use when
+### Don’t use when
 - Don’t put critical information in a popover. Instead, place the information inline so that it’s always visible to users.
 - Don’t put excessive content into popover. Instead, use a [Modal](../modal/).
 
@@ -208,24 +208,24 @@ Example:
 - The terms and conditions of a free shipping offer needs to be easily viewed, if desired. Place the lengthy details of the offer in a modal, not a popover.
 
 
-## Do / Don't
+### Do / Don't
 
 
 <do-dont :examples="$page.frontmatter.content" />
 
 <do-dont :examples="$page.frontmatter.essential" />
 
-# API
+## API
 
-## Props
+### Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-## Slots
+### Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Events
+### Events
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.events" :slots-getting-started-link="false" />
 

@@ -57,15 +57,15 @@
 }
 ---
 
-<cdr-doc-table-of-contents-shell >
+<cdr-doc-table-of-contents-shell parentSelector="h2" childSelector="h3">
 
-# Overview
+## Overview
 
 A banner is used to communicate a general status event or to promote a feature.
   
 CdrBanner is a simple wrapper component that allows for composing various banner layouts. There are five different options for styling the banner, based on the [banner type](#guidelines).
 
-## Default Banner with Icon Left
+### Default Banner with Icon Left
 Banners should be passed an appropriate icon and text for the banner message type.
 
 <cdr-doc-example-code-pair repository-href="/src/components/banner"
@@ -109,7 +109,7 @@ Banners should be passed an appropriate icon and text for the banner message typ
 ```
 </cdr-doc-example-code-pair>
 
-## Message Body
+### Message Body
 
 CdrBanner provides an optional `message-body` slot in the case where additional information about the message needs to be communicated.
 
@@ -129,7 +129,7 @@ CdrBanner provides an optional `message-body` slot in the case where additional 
 ```
 </cdr-doc-example-code-pair>
 
-## Icon Right
+### Icon Right
 
 CdrBanner provides an optional `icon-right` slot that can be used to provide an action related to the Banner such as a close button. The actionable element should have an aria-label that explains it's relationship to the banner and what happens when you click on it.
 
@@ -156,7 +156,7 @@ CdrBanner provides an optional `icon-right` slot that can be used to provide an 
 ```
 </cdr-doc-example-code-pair>
 
-## Info Action
+### Info Action
 
 Optional `info-action` slot that can be used to provide an action related to the Banner such as a link or tooltip. The actionable element should have an aria-label that explains it's relationship to the banner and what happens when you click on it.
 
@@ -195,7 +195,7 @@ Optional `info-action` slot that can be used to provide an action related to the
 ```
 </cdr-doc-example-code-pair>
 
-## Accessibility
+### Accessibility
 
 Many WCAG requirements are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
 - Add `role="alert"` for messages that are important or time sensitive to ensure that the messaging is immediately announced to screen readers. For other content, add `aria-live="polite"`.
@@ -246,69 +246,71 @@ Many WCAG requirements are contextual to their implementation. To ensure that us
 ```
 </cdr-doc-example-code-pair>
 
-# Guidelines
+## Guidelines
 
 Banner messaging keeps users informed of important and sometimes time-sensitive changes contextual to inline elements on the page. These messages help to clarify an issue and/or notify users of a potential problem that may require their attention.
 
 There are five information types supported for banners: **error, warning, success, informational, and default**. Each type corresponds with a color and icon to provide a consistent, universal experience for users.
 
-### **Error**
+
+### Information types
+#### Error
 Use to inform that something went wrong. They affect or block the user's experience and must be resolved before moving forward.
 
-### **Warning**
+#### Warning
 Use for a message requiring attention but not resolution in order to continue. Warning banners might tell a user what could happen if they don’t address what they’re being warned about.
 
-### **Success**
+#### Success
 Use to communicate that an action has been successfully completed. Provides a positive response to user actions. No action is required.
 
-### **Informational**
+#### Informational
 Use to provide context around a situation. No action is required.
 
-### **Default**
+#### Default
 Use to provide generic messaging that does not fit the other types.
 
-## Use when
+### Use when
 
 - When communicating an event not related to a specific task 
 - When promoting a new feature 
 - Indicating that a change has happened since a previous session 
 
 
-## Don't use when
+### Don't use when
 
 - When validation is required immediately after the user interacts with a form input. Instead, use the built-in validation features of form components 
 
 
-## Content
+### Content
   
 - An icon is both user-configurable and required 
 - Body copy should not exceed two lines 
 - Content should be focused and be specific to a single message 
 - A call-to-action may be included 
 
-## Structure
+### Structure
   
 - A banner always spans the width of its parent container 
 - The height of a banner is variable, content depending 
   
-## Behavior 
+### Behavior 
 
 - A banner persists until their conditions are either met or they are dismissed 
 - Banners with the role of alert are not dismissible 
 
-## Placement 
+### Placement 
 
 - Banners should be placed above their area of concern 
 - Banners that persist across pages should sit alongside the global header 
   
 
-# API
+## API
 
-## Props
+### Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-## Slots
+### Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 

@@ -92,15 +92,15 @@
 }
 ---
 
-<cdr-doc-table-of-contents-shell >
+<cdr-doc-table-of-contents-shell parentSelector="h2" childSelector="h3">
 
-# Overview
+## Overview
 
 CdrToast is a type of non-modal dialog used to communicate the status of a task or process. A proper toast is concise, time-relevant, and temporary.
 
 There are five different options for styling the toast, based on the [message type](../toast/#guidelines).
 
-## Default toast with icon
+### Default toast with icon
 
 A toast should be passed a contextually appropriate icon using the `icon-left` slot.
 
@@ -128,7 +128,7 @@ A toast should be passed a contextually appropriate icon using the `icon-left` s
 ```
 </cdr-doc-example-code-pair>
 
-## Persistent toast
+### Persistent toast
 
 CdrToast provides an optional `autoDismiss` property to disable the auto-dismiss functionality.
 
@@ -162,7 +162,7 @@ CdrToast provides an optional `autoDismiss` property to disable the auto-dismiss
 ```
 </cdr-doc-example-code-pair>
 
-## Adjusting auto-dismiss timing
+### Adjusting auto-dismiss timing
 
 CdrToast provides an optional `dismissDelay` property to adjust timing of the automatic dimissal under certain conditions, such as when the toast contains an action.
 
@@ -191,7 +191,7 @@ CdrToast provides an optional `dismissDelay` property to adjust timing of the au
 ```
 </cdr-doc-example-code-pair>
 
-## Accessibility
+### Accessibility
 
 Many WCAG requirements are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
 - Add `role="status"` for messages to ensure that the messaging is announced to screen readers. For other content, add `aria-live="polite"`.
@@ -199,37 +199,38 @@ Many WCAG requirements are contextual to their implementation. To ensure that us
 - Error Identification techniques and criteria: [WCAG 3.3.1](https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html)
 - See [Transient Status Notifications](../../patterns/status-notifications#transient-status-notifications) for more information
 
-# Guidelines
+## Guidelines
 
 There are five information types supported for toasts: **error, warning, success, informational, and default**. Each type corresponds with a color and icon to provide a consistent, universal experience for users.
 
-### **Error**
+### Information types
+#### **Error**
 Use to inform that something went wrong. They affect or block the user's experience and must be resolved before moving forward.
 
-### **Warning**
+#### **Warning**
 Use for a message requiring attention but not resolution in order to continue. Warning toasts might tell a user what could happen if they don’t address what they’re being warned about.
 
-### **Success**
+#### **Success**
 Use to communicate that an action has been successfully completed. Provides a positive response to user actions. No action is required.
 
-### **Informational**
+#### **Informational**
 Use to provide context around a situation. No action is required.
 
-### **Default**
+#### **Default**
 Use to provide generic messaging that does not fit the other types
 
-## Use when
+### Use when
 
 - Confirming that a task or process initiated by the user was completed successfully
 - Providing contextual information on the page processes 
 
-## Don’t use when
+### Don’t use when
 
 - When a user’s input is required  
 - When critical information is being communicated 
 - When communicating alerts 
 
-## Content 
+### Content 
 
 - An icon is both user-configurable and required
 - Titles should not exceed three words 
@@ -237,39 +238,39 @@ Use to provide generic messaging that does not fit the other types
 - Content should be focused and be specific to a single message 
 - Actions or links must be available elsewhere on the page 
 
-## Structure 
+### Structure 
 
 - The width of a toast is fixed for non-mobile implementations 
 - The height of a toast is variable, content depending
 
-## Behavior 
+### Behavior 
 
 - Toasts auto-dismiss after 5 seconds—ten if it includes an action
 - Toasts may be manually dismissed sooner via the close button
 - Mousing over a toast will pause the auto-dismiss timer and reset it on mouse leave.
 
-## Placement 
+### Placement 
 
 - Toasts are delivered from the top-right of a page 
 - The most recent toast is always displayed on top of a stack 
 
-## Do / Don't
+### Do / Don't
 
 TODO: Embed do-dont using metadata from frontmatter
 
 <!-- <do-dont :examples="$page.frontmatter.DATAKEY" /> -->
 
-# API
+## API
 
-## Props
+### Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-## Slots
+### Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Events
+### Events
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
 
