@@ -47,11 +47,11 @@ See the [CdrToast docs page](../../components/toast) for more information.
 
 ### Heading Display
 
-We have introduced a new suite of display heading styles
+We have introduced a new suite of display heading styles for certain campaign applications. These larger and lighter styles can be consumed via [token mixins](../../tokens/all-tokens/#text)
 
 ### Messaging color update
 
-New messaging color tokens have been added to CdrTokens 
+New messaging [color tokens](../../tokens/all-tokens/#colors) have been added to CdrTokens to support our updates to messaging patterns.
 
 ### New Error Icons
 
