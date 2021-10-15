@@ -47,7 +47,7 @@ See the [CdrToast docs page](../../components/toast) for more information.
 
 ### Heading Display
 
-We have introduced a new suite of display heading styles for certain campaign applications. These larger and lighter styles can be consumed via [token mixins](../../tokens/all-tokens/#text)
+We have introduced a new suite of display heading styles for certain campaign applications. These larger and lighter styles can be consumed via [token mixins](../../tokens/all-tokens/#text).
 
 ### Messaging color update
 
@@ -61,18 +61,31 @@ We have introduced new error icons to our [icon library](../..//icons/library/) 
 
 ### CdrButton Type Size
 
-We have aligned the type size of CdrButton to be same at the medium (default) and large [button sizes](../..//components/buttons/#sizing)
+We have aligned the type size of CdrButton to be same at the medium (default) and large [button sizes](../..//components/buttons/#sizing).
 
 <br>
 
-## New Patterns
+## Patterns
+Patterns are intended serve as guidance for teams solving similar problems over and over, and to document best practices for interaction design patterns to guide users through common tasks.
 
+The goals for Patterns are twofold: 
+- Rather then solving the same problem from scratch, providing well-researched solutions helps teams save time and simplify decision making.
+- By solving the same problem in the same way, we can provide users with a consistent and more coherent experience, making the interface more familiar and reducing cognitive lift. 
+ 
+The first batch of Cedar Patterns focuses on the themes of Forms and Messaging, bringing forward the research and reasoning behind many new components delivered in the past year, and helping teams determine what available components are appropriate for each experience.
+
+ 
 ### Alerts
 
 Alerts inform users that something important has happened on the page.
 
 See the [Alerts docs page](../../patterns/alerts) for more information.
 
+### Form Inputs
+
+Use form input patterns to capture user data in a consistent, optimized manner.
+
+See the [Form Input Types docs page](../../patterns/forms-input-types) for more information.
 
 ### Form Validation
 
@@ -101,7 +114,9 @@ See the [Status notifications docs page](../../patterns/status-notifications) fo
 
 ## Cookbooks
 
-We have introduced a new type documentation dubbed a "cookbook" to provide teams with the guidance to construct specific compositions using existing Cedar components.
+To support greater flexibility when building certain types of complex components, we’re introducing a new type of documentation that follows more of a “recipe” format as part of upcoming Cedar Component “Cookbooks“.
+
+The documentation will provide teams with the guidance to construct specific compositions using existing Cedar components, but will not be available as pre-built Vue components. Reference design patterns will be available in Figma for designers to customize for their needs. Developers can create custom components using available sub-components. 
 
 ### Filmstrip
 
