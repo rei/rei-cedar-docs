@@ -124,16 +124,16 @@ CdrModal has been updated to address an issue when using the `modal` slot that w
 
 With the redesign of CdrBanner, the component variable has been deprecated and will be removed in a future release. Teams who are unable to utilize the Vue component should plan to make use of the [messaging tokens](http://localhost:8080/tokens/all-tokens/#colors) to create their banners. 
 
-<br/>
+### Preparing for Vue 3
 
 *The following have been carried over from the [Spring 2021 release](../spring-2021/#deprecations). We will continue to note Vue 3 related deprecations so teams can adequately prepare for the upcoming migration.*
-### CdrBreadcrumb and CdrPagination Scoped Slots
+#### CdrBreadcrumb and CdrPagination Scoped Slots
 
 CdrBreadcrumb and CdrPagination both allow for passing in a scoped slot for rendering their link elements which was intended to support things like vue-router which must override the default link navigation behavior. This feature increased the complexity of both components, making it difficult to maintain and improve the components over time. It requires that consumers bind multiple attributes to the slot element to ensure a consistent UI. Most importantly, this functionality is better served through an event handler which would allow the Cedar components to remain simple and consistent but give consumers the flexibility to customize their behavior.
 
  We are planning to remove support for scoped slots in both components as part of our future Vue 3 updates. See the [CdrBreadcrumb](../../components/breadcrumb/#custom-navigation) or [CdrPagination](../../components/pagination/#overriding-default-navigation) pages for examples of how to override their default navigation behavior. Please reach out to the Cedar team if you have any questions or concerns about this change.
 
-### Vue 3: Update Slot Syntax
+#### Vue 3: Update Slot Syntax
 
 Vue 2.6 introduced a new `v-slot` syntax for passing slot content into components. A pound sign `#` can be used as a shorthand for `v-slot:`, much like a colon `:` can be used as a shorthand for `v-bind`. The old syntax is removed from Vue 3 and we recommend updating your codebase to make use of the new slot syntax to simplify the upgrade process in the future. Note that the new `v-slot` or `#` syntax can only be used on a `template` tag, however those additional `template` tags will not be included in the rendered HTML.
 
