@@ -191,11 +191,11 @@
 
 ---
 
-<cdr-doc-table-of-contents-shell >
+<cdr-doc-table-of-contents-shell parentSelector="h2" childSelector="h3">
 
-# Overview
+## Overview
 
-## Default (Medium)
+### Default (Medium)
 
 Default and standard spacing for checkboxes.
 
@@ -211,7 +211,7 @@ Default and standard spacing for checkboxes.
 
 </cdr-doc-example-code-pair>
 
-## Size
+### Size
 
 Different sizing for checkboxes.
 
@@ -227,7 +227,7 @@ Different sizing for checkboxes.
 
 </cdr-doc-example-code-pair>
 
-## Custom True/False Value
+### Custom True/False Value
 
 Use a custom value in place of true/false checked state.
 
@@ -243,7 +243,7 @@ Use a custom value in place of true/false checked state.
 
 </cdr-doc-example-code-pair>
 
-## Custom Model Value
+### Custom Model Value
 
 Use an array as the model to track a list of custom values.
 
@@ -260,7 +260,7 @@ Use an array as the model to track a list of custom values.
 
 </cdr-doc-example-code-pair>
 
-## Handling Change Events
+### Handling Change Events
 
 Pass checkbox data into change handlers.
 
@@ -278,7 +278,7 @@ Pass checkbox data into change handlers.
 
 </cdr-doc-example-code-pair>
 
-## Indeterminate
+### Indeterminate
 
 Displays status for checkbox group by indicating that some of the sub-selections in a list are selected. Provides user with ability to select or unselect all items in the list’s sub-group.
 Note the usage of `aria-controls`, `id`, `role`, `aria-label`, and `aria-labelledby`.
@@ -311,7 +311,7 @@ Note the usage of `aria-controls`, `id`, `role`, `aria-label`, and `aria-labelle
 
 </cdr-doc-example-code-pair>
 
-## Custom
+### Custom
 
 Custom styles for checkboxes.
 
@@ -344,7 +344,7 @@ Custom styles for checkboxes.
 </cdr-doc-example-code-pair>
 
 
-## Validation
+### Validation
 
 Render a checkbox group with validation and error state
 
@@ -375,7 +375,7 @@ Render a checkbox group with validation and error state
 ```
 </cdr-doc-example-code-pair>
 
-## Accessibility
+### Accessibility
 
 Many WCAG requirements are contextual to their implementation.
 To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
@@ -405,9 +405,9 @@ For more information, review techniques and failures for:
 
 <hr>
 
-# Guidelines
+## Guidelines
 
-## Use When
+### Use When
 
 - Selecting one or multiple choices from a list
 - Selecting options from a list that contains sub-selections
@@ -415,11 +415,11 @@ For more information, review techniques and failures for:
 - Viewing all available options is needed
 - Comparing between a list of selections is desired
 
-## Don't Use When
+### Don't Use When
 
 - Selecting from a list when only one choice is allowed. Instead, use [Radio Buttons](../radio/)
 
-## Content
+### Content
 
 When using checkboxes in a list:
 
@@ -451,7 +451,7 @@ Checkbox labels should:
 
 <do-dont :examples="$page.frontmatter.fragment" />
 
-## Behavior
+### Behavior
 
 Checkboxes work independently from each other:
 
@@ -469,24 +469,24 @@ Checkboxes work independently from each other:
 
 <hr>
 
-# API
+## API
 
-## Props
+### Props
 
 This component will bind any attribute that a [native HTML checkbox element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox) accepts.
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
 
-## Slots
+### Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Events
+### Events
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
 
-## Component Variables
+### Component Variables
 
 <cdr-doc-comp-vars name="CdrLabelWrapper"/>
 

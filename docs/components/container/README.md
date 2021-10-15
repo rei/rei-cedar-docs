@@ -46,9 +46,9 @@
 }
 ---
 
-<cdr-doc-table-of-contents-shell >
+<cdr-doc-table-of-contents-shell parentSelector="h2" childSelector="h3">
 
-# Overview
+## Overview
 
 CdrContainer is a simple wrapper that provides basic responsive layout logic. The padding and margin applied by CdrContainer is designed to align with the header and footer in the REI page template. This component provides the same functionality as the `cdr-container` or `cdr-container-fluid` mixins from `@rei/cdr-tokens` but wrapped in a Vue component for ease of use. Note that the example below needs to be opened in CodeSandbox to see the full static vs. fluid behavior.
 
@@ -73,20 +73,20 @@ CdrContainer is a simple wrapper that provides basic responsive layout logic. Th
 </cdr-doc-example-code-pair>
 
 
-## Accessibility
+### Accessibility
 
 Usage of the `tag` prop should semantically match the layout of your page. In general, the default tag value `div` will work for the majority of use cases.
 
-# Guidelines
+## Guidelines
 
 
 The default `static` CdrContainer has a flexible content width up to a max width of 1232px which corresponds to our `large` breakpoint, while the `fluid` CdrContainer has no max-width. See the [responsive foundations](../../foundation/responsive/#the-cedar-container) article for more information on container usage.
 
-## Use when
+### Use when
 
 - Use CdrContainer to wrap your page content and provide proper padding and margins around it.
 
-## Don’t use when
+### Don’t use when
 
 - Do not nest instances of CdrContainer within one another.
 - Do not wrap content that is intended to take up the full screen width within a CdrContainer, for example a hero image. Instead use multiple instances of CdrContainer adjacent to that full width content:
@@ -103,13 +103,13 @@ The default `static` CdrContainer has a flexible content width up to a max width
 </cdr-container>
 ```
 
-# API
+## API
 
-## Props
+### Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-## Slots
+### Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
