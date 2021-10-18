@@ -6,13 +6,13 @@
     <div class="cdr-doc-code-snippet__actions" v-if="copyButton">
       <div class="cdr-doc-code-snippet__action-wrapper">
         <cdr-link modifier="standalone" class="cdr-doc-code-snippet__action" :href="repositoryRoot + repositoryHref" target="_blank" rel="noopener noreferrer" v-if="repositoryHref">
-          <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github" alt=""/>
+          <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/>
           View on GitHub
         </cdr-link>
       </div>
       <div class="cdr-doc-code-snippet__action-wrapper" v-if="sandboxHrefComputed">
         <cdr-link modifier="standalone" class="cdr-doc-code-snippet__action" :href="sandboxHrefComputed" target="_blank" rel="noopener noreferrer">
-          <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-code-sandbox" alt=""/>
+          <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-code-sandbox"/>
           View on CodeSandbox
         </cdr-link>
       </div>
