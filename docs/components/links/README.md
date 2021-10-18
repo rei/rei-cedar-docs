@@ -160,8 +160,10 @@ Display standalone link with icon on right.
 ```html
   <div>
       <cdr-link modifier="standalone">
-        Visit site
-        <icon-external-link inherit-color class="icon-class"/>
+        Example external link
+        <icon-external-link inherit-color class="icon-class">
+          <title id="externalLink">An example of an external link icon</title>
+        </icon-external-link>
       </cdr-link>
   </div>
 ```
