@@ -142,6 +142,10 @@ export default {
       a {
         @include cdr-link-base-mixin;
       }
+      p code {
+        background-color: $cdr-color-background-secondary;
+        padding: 0.2rem;
+      }
       h2 {
         @include cdr-text-heading-serif-strong-800;
       }
