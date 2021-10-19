@@ -3,31 +3,31 @@
     <p v-if="slotsGettingStartedLink">Find more information about using Slots in the article <cdr-link :href="$withBase('/getting-started/as-a-developer/#add-content-using-slots')">Getting Started as a Developer.</cdr-link></p>
 
     <div class="api-slot" v-for="(apiSlot, index) in apiData" :key="apiSlot.text">
-      <cdr-row
+      <cdr-grid
         gutter="none"
+        class="api-slot__grid"
       >
-        <cdr-col
-          span="12"
+        <div
           v-if="apiSlot.alert"
         >
           <api-prop-alert :alert="apiSlot.alert" />
-        </cdr-col>
-        <cdr-col
-          span="12"
+        </div>
+        <div
+          
         >
           <div>
             <p :aria-labelledby="'slotName' + index" class="slot-name">{{ apiSlot.name }}</p>
             <p :id="'slotName' + index" class="slot-label">name </p>
           </div>
-        </cdr-col>
-        <cdr-col
-          span="12"
+        </div>
+        <div
+          
         >
           <p aria-label="slot description" class="slot-description">
             {{ apiSlot.description }}
           </p>
-        </cdr-col>
-      </cdr-row>
+        </div>
+      </cdr-grid>
     </div>
   </div>
 </template>
@@ -48,6 +48,10 @@
     border: 1px solid $cdr-color-border-primary;
     border-radius: 4px;
     padding: $cdr-space-half-x;
+
+    &__grid {
+      grid-template-columns: 1fr;
+    }
 
     .slot-name {
       font-size: 14px;

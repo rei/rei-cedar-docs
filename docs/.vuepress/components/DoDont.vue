@@ -1,10 +1,10 @@
 <template>
   <div class="do-dont__wrap">
-    <cdr-row cols="1" cols-sm="2">
-      <cdr-col
+    <cdr-grid class="do-dont__grid">
+      <div
         v-for="(example, idx) in examples"
         :key="`${example.type}${idx}`"
-        :span="example.fullWidth? '12' : '12 6@sm'"
+        :class="example.fullWidth? 'do-dont__grid--full' : 'do-dont__grid--half'"
       >
         <figure class="do-dont">
           <cdr-img
@@ -20,8 +20,8 @@
             <slot/>
           </figcaption>
         </figure>
-      </cdr-col>
-    </cdr-row>
+      </div>
+    </cdr-grid>
   </div>
 </template>
 
@@ -54,7 +54,17 @@ $dont-color: $cdr-color-text-error;
 $caution-color: $cdr-color-text-warning;
 
 .do-dont {
-
+  &__grid {
+    grid-template-columns: 1fr 1fr;
+    &--full {
+      grid-column: 1 / span 2;
+    }
+    &--half {
+      @include cdr-xs-mq-only {
+        grid-column: 1 / span 2;
+      }
+    }
+  }
   &__image {
     border: 1px solid $cdr-color-border-primary;
     border-radius: $cdr-radius-softer;

@@ -1,33 +1,27 @@
 <template>
   <div>
     <div class="api-event" v-for="(apiEvent, index) in apiData" :key="apiEvent.text">
-      <cdr-row
+      <cdr-grid
         gutter="none"
-      >
-        <cdr-col
-          span="12 6@sm"
-        >
+        class="api-event__grid">
+        <div class="api-event__grid--item">
           <div v-if="apiEvent.name">
             <p :aria-labelledby="'eventName' + index" class="event-name">{{ apiEvent.name }}</p>
             <p :id="'eventName' + index" class="event-label">name</p>
           </div>
-        </cdr-col>
-        <cdr-col
-          span="12 6@sm"
-        >
+        </div>
+        <div class="api-event__grid--item">
           <div v-if="apiEvent.arguments">
             <p :aria-labelledby="'eventType' + index" class="event-type">{{ apiEvent.arguments }}</p>
             <p :id="'eventType' + index" class="event-label">arguments</p>
           </div>
-        </cdr-col>
-        <cdr-col
-          span="12"
-        >
+        </div>
+        <div class="api-event__grid--full">
           <p aria-lable="event description" class="event-description">
             {{ apiEvent.description }}
           </p>
-        </cdr-col>
-      </cdr-row>
+        </div>
+      </cdr-grid>
     </div>
   </div>
 </template>
@@ -48,6 +42,18 @@
     border: 1px solid $cdr-color-border-primary;
     border-radius: 4px;
     padding: $cdr-space-half-x;
+
+    &__grid {
+      grid-template-columns: 1fr 1fr;
+      &--item {
+        @include cdr-xs-mq-only {
+          grid-column: 1 / span 2;
+        }
+      }
+      &--full {
+        grid-column: 1 / span 2;
+      }
+    }
 
     .event-name {
       font-size: 14px;

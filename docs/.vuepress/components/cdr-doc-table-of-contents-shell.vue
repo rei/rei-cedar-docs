@@ -139,29 +139,28 @@ export default {
       max-width: 500px;
     }
     &__content {
-      a {
+      a:is(:not(.cdr-doc-example-code-pair a)) {
         @include cdr-link-base-mixin;
+      }
+      h2:is(:not(.cdr-doc-example-code-pair h2)) {
+        @include cdr-text-heading-serif-strong-800;
+      }
+      h3:is(:not(.cdr-doc-example-code-pair h3)) {
+        @include cdr-text-heading-sans-600;
+      }
+      h4:is(:not(.cdr-doc-example-code-pair h4)) {
+        @include cdr-text-heading-sans-400;
+      }
+      h5:is(:not(.cdr-doc-example-code-pair h5)) {
+        @include cdr-text-heading-sans-300;
+      }
+      h6:is(:not(.cdr-doc-example-code-pair h6)) {
+        @include cdr-text-heading-sans-200;
       }
       p code {
         background-color: $cdr-color-background-secondary;
         padding: 0.2rem;
       }
-      h2 {
-        @include cdr-text-heading-serif-strong-800;
-      }
-      h3 {
-        @include cdr-text-heading-sans-600;
-      }
-      h4 {
-        @include cdr-text-heading-sans-400;
-      }
-      h5 {
-        @include cdr-text-heading-sans-300;
-      }
-      h6 {
-        @include cdr-text-heading-sans-200;
-      }
-
     }
   }
 
