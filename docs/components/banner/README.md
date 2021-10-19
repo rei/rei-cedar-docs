@@ -147,7 +147,7 @@ CdrBanner provides an optional `icon-right` slot that can be used to provide an 
       :icon-only="true"
       aria-label="Close"
     >
-      <template #icon-right>
+      <template #icon>
         <icon-x-lg inherit-color />
       </template>
     </cdr-button>
