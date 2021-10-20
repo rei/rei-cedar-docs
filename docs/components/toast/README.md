@@ -193,8 +193,9 @@ CdrToast provides an optional `dismissDelay` property to adjust timing of the au
 
 ### Accessibility
 
+- All CdrToast components provide `role="status"` to expose the notification to Accessibility APIs
+
 Many WCAG requirements are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
-- Add `role="status"` for messages to ensure that the messaging is announced to screen readers. For other content, add `aria-live="polite"`.
 - Don't rely on color alone to convey your message. Provide an additional indicator to color, like an icon: [WCAG 1.4.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
 - Error Identification techniques and criteria: [WCAG 3.3.1](https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html)
 - See [Transient Status Notifications](../../patterns/status-notifications#transient-status-notifications) for more information
@@ -254,12 +255,6 @@ Use to provide generic messaging that does not fit the other types
 - Toasts are delivered from the top-right of a page 
 - The most recent toast is always displayed on top of a stack 
 
-### Do / Don't
-
-TODO: Embed do-dont using metadata from frontmatter
-
-<!-- <do-dont :examples="$page.frontmatter.DATAKEY" /> -->
-
 ## API
 
 ### Props
@@ -274,5 +269,18 @@ TODO: Embed do-dont using metadata from frontmatter
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
 
+## Usage
+
+### Positioning
+
+CdrToast component(s) should be contained within a `position: absolute` container in the top-right corner of your page. On smaller screens, they should appear at the top of the page and span the whole width of the viewport.
+
+### Elevation
+
+The CdrToast container should be be given an appropriate `z-index` value so that the toast components within will "float" on top of the other page elements.
+
+### Multiples
+
+If multiple CdrToast components are present, they should appear stacked with the newest at the bottom. Note: When a toast is closed, any toast components below it will take the place of the one above.
 
 </cdr-doc-table-of-contents-shell>

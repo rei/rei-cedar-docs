@@ -112,7 +112,8 @@ Persistent Status Notifications are 'in page messages' presented to the user bas
   {{isHidden ? 'click me' : 'doh!'}}
 </cdr-button>
 <cdr-banner id="statusContainer" type="error" role="status" v-if="!isHidden">
-  <icon-error-fill /> We don't have the quantity you want
+  <template #icon-left><icon-error-fill inherit-color/></template>
+  We don't have the quantity you want
 </cdr-banner>
 
 ```
