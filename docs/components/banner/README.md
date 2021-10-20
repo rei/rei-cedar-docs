@@ -10,7 +10,7 @@
     }
   ],
   "sandboxData": {
-    "components": "CdrBanner, CdrTooltip, CdrButton, IconInformationStroke, IconInformationFill, IconCheckFill, IconWarningFill, IconXFill, IconQuestionFill, IconErrorFill, IconXLg"
+    "components": "CdrBanner"
   },
 
   "versions": [
@@ -68,8 +68,9 @@ CdrBanner is a simple wrapper component that allows for composing various banner
 ### Default Banner with Icon Left
 Banners should be passed an appropriate icon and text for the banner message type.
 
-<cdr-doc-example-code-pair repository-href="/src/components/banner"
-:sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair repository-href="/src/components/CdrBanner"
+:load-sprite="true"
+:sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrBanner, IconWarningFill,IconQuestionFill, IconInformationFill, IconCheckFill, IconErrorFill'})">
 
 ```html
 <cdr-banner>
@@ -113,8 +114,9 @@ Banners should be passed an appropriate icon and text for the banner message typ
 
 CdrBanner provides an optional `message-body` slot in the case where additional information about the message needs to be communicated.
 
-<cdr-doc-example-code-pair repository-href="/src/components/banner"
-:sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair repository-href="/src/components/CdrBanner"
+:load-sprite="true"
+:sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrBanner, IconWarningFill'})">
 
 ```html
 <cdr-banner type="warning">
@@ -133,11 +135,12 @@ CdrBanner provides an optional `message-body` slot in the case where additional 
 
 CdrBanner provides an optional `icon-right` slot that can be used to provide an action related to the Banner such as a close button. The actionable element should have an aria-label that explains it's relationship to the banner and what happens when you click on it.
 
-<cdr-doc-example-code-pair repository-href="/src/components/banner"
-:sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair repository-href="/src/components/CdrBanner"
+:load-sprite="true"
+:sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrBanner, CdrButton, IconErrorFill, IconXLg'})" :model="{ open: true }" >
 
 ```html
-<cdr-banner type="error" role="alert">
+<cdr-banner v-if="open" type="error" role="alert">
   <template #icon-left>
     <icon-error-fill />
   </template>
@@ -146,6 +149,7 @@ CdrBanner provides an optional `icon-right` slot that can be used to provide an 
     <cdr-button
       :icon-only="true"
       aria-label="Close"
+      @click="open = false"
     >
       <template #icon>
         <icon-x-lg inherit-color />
@@ -160,8 +164,9 @@ CdrBanner provides an optional `icon-right` slot that can be used to provide an 
 
 Optional `info-action` slot that can be used to provide an action related to the Banner such as a link or tooltip. The actionable element should have an aria-label that explains it's relationship to the banner and what happens when you click on it.
 
-<cdr-doc-example-code-pair repository-href="/src/components/banner"
-:sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair repository-href="/src/components/CdrBanner"
+:load-sprite="true"
+:sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrBanner, CdrTooltip, CdrButton, IconCheckFill, IconInformationStroke'})">
 
 ```html
 <cdr-banner type="success" aria-live="polite">
@@ -204,8 +209,9 @@ Many WCAG requirements are contextual to their implementation. To ensure that us
 - Don't rely on color alone to convey your message. Provide an additional indicator to color, like an icon: [WCAG 1.4.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
 - Error Identification techniques and criteria: [WCAG 3.3.1](https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html)
 
-<cdr-doc-example-code-pair repository-href="/src/components/banner"
-:sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair repository-href="/src/components/CdrBanner"
+:load-sprite="true"
+:sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrBanner, IconQuestionFill, IconInformationFill, IconCheckFill, IconErrorFill'})">
 
 ```html
 
