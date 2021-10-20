@@ -193,8 +193,9 @@ CdrToast provides an optional `dismissDelay` property to adjust timing of the au
 
 ### Accessibility
 
+- All CdrToast components provide `role="status"` to expose the notification to Accessibility APIs
+
 Many WCAG requirements are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
-- Add `role="status"` for messages to ensure that the messaging is announced to screen readers. For other content, add `aria-live="polite"`.
 - Don't rely on color alone to convey your message. Provide an additional indicator to color, like an icon: [WCAG 1.4.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
 - Error Identification techniques and criteria: [WCAG 3.3.1](https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html)
 - See [Transient Status Notifications](../../patterns/status-notifications#transient-status-notifications) for more information
