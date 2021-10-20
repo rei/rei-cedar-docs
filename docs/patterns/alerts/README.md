@@ -101,7 +101,7 @@ As with other notifications, Alert Notifications are not provided as part of a p
 - Providing the only indication of an error, if needing to alert users on how to resolve the problem
 
 ### Use Caution When
-- Using an alert rather than a status notification within form field validation. While not invalid, this may cause confusion to some users of assisted technology as it may read over the current or next form field label. It may be helpful however to use role alert to represent a [validation summary](../validation-notifications#validation-summary) which would populate after a user attempts to submit the form.
+- Using an alert rather than a status notification within form field validation. While not invalid, this may cause confusion to some users of assisted technology as it may read over the current or next form field label. It may be helpful however to use role alert to represent a validation summary which would populate after a user attempts to submit the form.
 
 ### Anatomy of an Alert Notification
 
@@ -150,7 +150,8 @@ As with other notifications, Alert Notifications are not provided as part of a p
 
 
 <cdr-banner id="alertContainer" type="error" role="alert" v-if="!isHidden">
-  <icon-error-fill/> You will be logged out, click the "Demo User Account Alert" Button to stay logged in
+  <template #icon-left><icon-error-fill inherit-color/></template>
+  You will be logged out, click the "Demo User Account Alert" Button to stay logged in
 </cdr-banner>
 
 ```
