@@ -157,7 +157,7 @@ export default {
       h6:is(:not(.cdr-doc-example-code-pair h6)) {
         @include cdr-text-heading-sans-200;
       }
-      p code {
+      p code, li code {
         background-color: $cdr-color-background-secondary;
         padding: 0.2rem;
       }
