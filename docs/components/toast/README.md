@@ -274,5 +274,18 @@ TODO: Embed do-dont using metadata from frontmatter
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
 
+## Usage
+
+### Positioning
+
+CdrToast component(s) should be contained within a `position: absolute` container in the top-right corner of your page. On smaller screens, they should appear at the top of the page and span the whole width of the viewport.
+
+### Elevation
+
+The CdrToast container should be be given an appropriate `z-index` value so that the toast components within will "float" on top of the other page elements.
+
+### Multiples
+
+If multiple CdrToast components are present, they should appear stacked with the newest at the bottom. Note: When a toast is closed, any toast components below it will take the place of the one above.
 
 </cdr-doc-table-of-contents-shell>
