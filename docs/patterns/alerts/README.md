@@ -150,7 +150,8 @@ As with other notifications, Alert Notifications are not provided as part of a p
 
 
 <cdr-banner id="alertContainer" type="error" role="alert" v-if="!isHidden">
-  <template #icon-left><icon-error-fill/></template> You will be logged out, click the "Demo User Account Alert" Button to stay logged in
+  <template #icon-left><icon-error-fill inherit-color/></template>
+  You will be logged out, click the "Demo User Account Alert" Button to stay logged in
 </cdr-banner>
 
 ```
