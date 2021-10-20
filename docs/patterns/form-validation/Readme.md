@@ -154,11 +154,10 @@ Once the user has created an error and validation has been triggered, it's neces
 
 #### Error Detection Location
 
-A users ability to complete a form may be impacted if the [validation notification](../validation-notifications/#form-control-validation-notification) is not displayed in a manner the user expects.
+A user's ability to complete a form may be impacted if the [validation notification](../validation-notifications/#form-control-validation-notification) is not displayed in a manner the user expects.
 
-Displaying all validation in a [validation summary](../validation-notifications/#validation-summary) at the top of a page or top/bottom of a form will produce a poorer user experience than providing messaging inline as the user interacts with each form element.
 When providing inline instruction it is important to be non-disruptive, as enabling users to think less allows them to complete a form more quickly.
-We can help reduce a user's cognitive lift by adding any additional information to locations within their natural reading flow, either to the right of the form element or below it.
+We can help reduce a user's cognitive lift by adding any additional information to locations within their natural reading flow, either to the right of the form element or below it. Displaying all validation in a [validation summary](../validation-notifications/#validation-summary) at the top of a page or top/bottom of a form will produce a poorer user experience than providing messaging inline as the user interacts with each form element.
 
 Cedar recommends placing validation information below the form field for a couple of reasons:
 
@@ -221,15 +220,13 @@ As this provides an enhanced user experience, inline validation should be used w
 
 This validation does not replace server validation, rather it enhances it with the ability to present instruction prior to submitting or refreshing the page.
 
-When the user submits the form their information is sent to the server and validated. If validation did not take place prior to server validation or if there are additional errors, the response of the “validator” is sent back to the user’s computer
+When the user submits the form their information is sent to the server and validated. If validation did not take place prior to server validation or if there are additional errors, the response of the “validator” is sent back to the user’s computer.
 
 Server-side validation notifications:
 
 - **Must**
   - Return the form (with the user's data still in the fields)
   - Provide a validation summary at the top of the page
-- **Should**
-  - Return the form with the user's data still in the fields
 - **May**
   - Change the title of the page
   - Give the error a heading level: provide a header, preferably a H1, so that assistive technology users can jump directly to the error and correct it.
@@ -237,7 +234,7 @@ Server-side validation notifications:
 ### Validation Notifications
 
 [Validation Notifications](../validation-notifications/) provide the instruction on how to resolve the detected errors or confirm task completion. 
-There are multiple types of validation notification which are applicable based on the validation technique being used, such as inline feedback and validation summaries. Detailed infomration about the types and requirements may be found on the [Validation Notifications](../validation-notifications/) page.
+There are multiple types of validation notification which are applicable based on the validation technique being used, such as inline feedback and validation summaries. Detailed information about the types and requirements can be found on the [Validation Notifications](../validation-notifications/) page.
 
 
 ## More Reading and Resources
