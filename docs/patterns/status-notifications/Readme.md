@@ -109,7 +109,7 @@ Persistent Status Notifications are 'in page messages' presented to the user bas
 ```html
 
 <cdr-button  @click="isHidden = !isHidden" aria-controls="statusContainer">
-  {{isHidden ? 'click me' : 'dooh!'}}
+  {{isHidden ? 'click me' : 'doh!'}}
 </cdr-button>
 <cdr-banner id="statusContainer" type="error" role="status" v-if="!isHidden">
   <template #icon-left><icon-error-fill inherit-color/></template>
@@ -141,7 +141,7 @@ Persistent Status Notifications are 'in page messages' presented to the user bas
   - Open as a blocking overlay window
   - Move focus automatically to the notification
   - Direct the user to a new page or window
-  - Overuse Status Notifications as they may interrupt your users experience
+  - Overuse notifications as they may interrupt the user experience
   - Reuse bespoke UI intended for other message or navigation types
 - **May**
   - Display notifications in unique UI to create distinction around themselves and the the page content
@@ -309,7 +309,7 @@ and should not be blocking. Note that opening in an overlay may disrupt or confu
     - Must provide at least one focusable UI element (i.e. close button, primary button)
     - Content container must be dismissible
     - On dismiss, must return focus to the next logical location in the page flow
-  - Meet the standard color ratio requirements for both text (4.5:1) and activatable components (3.0:1).
+  - Meet the standard color ratio requirements for both text (4.5:1) and activatable components (3.0:1)
 - **Should**
   - Be used for short messages to confirm an action
 - **Should not**
