@@ -253,9 +253,9 @@ The following are additive requirements to what the [Cedar Modal component](../.
 #### Alert Actions
 - **May**
   - Assign focus to the most appropriate actionable element within the alert
-## Implementation
+### Implementation
 
-[Cedar Modal component](../../components/modal/#multiple-modals-on-one-page)
+[Using Modals as alert dialogs](../../components/modal/#using-modals-as-alert-dialogs)
 ## References
 
 -  [Error Identification WCAG 3.3.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/minimize-error-identified.html)
