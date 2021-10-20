@@ -255,12 +255,6 @@ Use to provide generic messaging that does not fit the other types
 - Toasts are delivered from the top-right of a page 
 - The most recent toast is always displayed on top of a stack 
 
-### Do / Don't
-
-TODO: Embed do-dont using metadata from frontmatter
-
-<!-- <do-dont :examples="$page.frontmatter.DATAKEY" /> -->
-
 ## API
 
 ### Props
