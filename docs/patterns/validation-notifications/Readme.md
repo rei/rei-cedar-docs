@@ -98,7 +98,7 @@ Regardless of the means they all have the goal of communicating information back
 
 - **Must**
   - Ensure the message container can receive focus
-  - Include the [`aria-live` or `role=”status”`](role-status-or-aria-live) markup to announce the notification without interrupting the page flow of the user
+  - Include the `aria-live` or `role=”status”` markup to announce the notification without interrupting the page flow of the user
   - Be visible
   - Ensure the instruction is visible to all users
     -  Avoid moving the form fields up or down when displaying validation
@@ -107,10 +107,10 @@ Regardless of the means they all have the goal of communicating information back
       -  For a group of elements such a form group of checkboxes, below the fieldset container
    - Use meaningful colors and iconography
 - **Should**
-  - Be visually and programmatically adjacent to the element.
+  - Be visually and programmatically adjacent to the element
   - Display within the context of the action
 - **May**
-  - Be hidden until the user requests them if the notification instructions are not critical.
+  - Be hidden until the user requests them if the notification instructions are not critical
 ### Validation Notification Instruction
 - **Must**
   - Provide suggestions (when known) to correct the errors
@@ -257,7 +257,7 @@ As this may be the only error notification within a user's viewport, providing l
   - Ensure the message container can receive focus
   - Move user focus to this summary when presented
     - Focus can be set to the message with client-side scripting
-    - include an anchor name in the URL for server returned summaries 
+    - Include an anchor name in the URL for server-returned summaries 
   - Ensure the instruction is visible to all users
   - Use meaningful colors and iconography
   - Use role="alert" to assertively reiterate existing page errors if the summary is presented prior to page reload
