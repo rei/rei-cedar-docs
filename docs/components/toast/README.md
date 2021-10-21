@@ -224,6 +224,7 @@ Use to provide generic messaging that does not fit the other types
 
 - Confirming that a task or process initiated by the user was completed successfully
 - Providing contextual information on the page processes 
+- Read more about using Toasts for [Transient Status Notifications](../../patterns/status-notifications#transient-status-notifications)
 
 ### Don’t use when
 
