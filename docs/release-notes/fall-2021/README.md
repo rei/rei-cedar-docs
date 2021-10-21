@@ -67,10 +67,6 @@ We have aligned the type size of CdrButton to be same at the medium (default) an
 
 ## Patterns
 Patterns are intended serve as guidance for teams solving similar problems over and over, and to document best practices for interaction design patterns to guide users through common tasks.
-
-The goals for Patterns are twofold: 
-- Rather then solving the same problem from scratch, providing well-researched solutions helps teams save time and simplify decision making.
-- By solving the same problem in the same way, we can provide users with a consistent and more coherent experience, making the interface more familiar and reducing cognitive lift. 
  
 The first batch of Cedar Patterns focuses on the themes of Forms and Messaging, bringing forward the research and reasoning behind many new components delivered in the past year, and helping teams determine what available components are appropriate for each experience.
 
