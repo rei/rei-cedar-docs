@@ -30,7 +30,8 @@
 
 ### Bug Fixes
 
-- CdrModal has been updated to address an issue when using the modal slot that would result in errors being thrown when opened
+- CdrModal has been updated to address an issue when using the `modal` slot that would result in errors being thrown when opened
+
 ## 9.1.0
 
 ### New Features
