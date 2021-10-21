@@ -2,7 +2,7 @@
 {
   "title": "Modal",
   "layout_type": "LayoutComponent",
-  "summary": "Display additional page content in an overlay",
+  "summary": "Displays additional page content in an overlay",
   "title_metadata": "CdrModal",
   "breadcrumbs": [
     {
@@ -54,7 +54,7 @@
                 "name": "role",
                 "type": "string",
                 "default": "dialog",
-                "description": "Overrides the `role` attribute on the modal content element."
+                "description": "Overrides the `role` attribute on the modal content element. Possible values: { 'dialog' | 'alertdialog' }"
               },
               {
                 "name": "overlayClass",
@@ -110,9 +110,9 @@
 }
 ---
 
-<cdr-doc-table-of-contents-shell >
+<cdr-doc-table-of-contents-shell parentSelector="h2" childSelector="h3">
 
-# Overview
+## Overview
 
 <cdr-doc-example-code-pair repository-href="/src/components/modal"
 :sandbox-data="$page.frontmatter.sandboxData" :model="{ opened: false }">
@@ -143,17 +143,18 @@
 </cdr-doc-example-code-pair>
 
 
-## Multiple Modals On One Page
+### Multiple Modals On One Page
 
 When rendering multiple modals on a single page you can reduce your markup size by using a single CdrModal instance to launch all of the modals.
 
 <cdr-doc-example-code-pair repository-href="/src/components/modal"
-:sandbox-data="$page.frontmatter.sandboxData" :model="{ opened: false, termsContent: 'Terms and conditions may apply', termsTitle: 'Terms and Conditions', shippingTitle: 'Free Shipping', shippingContent: 'Free shipping available on certain orders', title: '', content: '' }" :methods="{openTermsModal(){this.title = this.termsTitle; this.content = this.termsContent; this.opened = true;}, openShippingModal(){this.title = this.shippingTitle; this.content = this.shippingContent; this.opened = true;}}">
+:sandbox-data="$page.frontmatter.sandboxData" 
+:model="{ opened: false, isAlert: false, termsTitle: 'Terms and Conditions', termsContent: 'Click to accept the Terms and Conditions and place item in your shopping cart.', termsRole: 'alertdialog', shippingTitle: 'Free Shipping', shippingContent: 'Free shipping available on certain orders', shippingRole: 'dialog', title: '', content: '', role: ''}" :methods="{openTermsModal(){this.title = this.termsTitle; this.content = this.termsContent; this.role = this.termsRole; this.opened = true; this.isAlert = true; }, openShippingModal(){this.title = this.shippingTitle; this.content = this.shippingContent; this.role = this.shippingRole; this.opened = true; this.isAlert = false;}}">
 
 ```html
 <cdr-button
   @click="openTermsModal"
-  aria-haspopup="dialog"
+  aria-haspopup="alertdialog"
 >Terms and Conditions
 </cdr-button>
 
@@ -169,20 +170,47 @@ When rendering multiple modals on a single page you can reduce your markup size 
   :label="title"
   @closed="opened = false"
   aria-describedby="description"
+  :role="role"
 >
   <template #title>
     <cdr-text
-      tag="h3"
+      tag="h4"
       class="title-header"
-    >{{ title }}
+    > <span v-if="isAlert"><icon-warning-fill/></span> {{ title }}, {{ role }}
     </cdr-text>
   </template>
   <cdr-text tag="p" id="description"> {{ content }}</cdr-text>
+  <div v-if="isAlert">
+     <cdr-button @click="opened= false">Accept</cdr-button>
+     <cdr-button @click="opened= false" modifier="secondary" >Cancel</cdr-button>
+  </div>
+  
 </cdr-modal>
 ```
 </cdr-doc-example-code-pair>
 
-## Accessibility
+### Using Modals as alert dialogs
+
+In the above example the cdr-modal `role` property of the "Terms and Conditions" modal has been changed to `alertdialog`.
+This role will notify users of critical information requiring their immediate attention. 
+
+```vue
+  <cdr-modal role="alertdialog" aria-describedby="description" label="modal title">
+    <div id="description">
+      modal content description
+    </div>
+  </cdr-modal>
+```
+
+
+Generally they have at least a Confirmation and close button but can have additional interactive controls as needed.
+Like a traditional modal dialog, alert dialogs move and capture the users focus to the blocking overlay window.
+By default focus will be placed on the modal window however for alert dialogs you should alter this to be placed on the most appropriate interactive control
+
+The `alertdialog` role should only be used when an [alert](../../patterns/alerts/) occurs.
+Additionally, an alert dialog may only be used for alert messages which have associated interactive controls.
+Review [alert](../../patterns/alerts/#alert-notifications) for requirements on an alert which only contains static content and has no interactive controls.
+### Accessibility
 
 Ensure that usage of this component complies with accessibility guidelines:
 
@@ -212,20 +240,20 @@ This component complies with WCAG guidelines by:
 - Modal can be closed using the keyboard (ESC key), Close button, or by clicking outside of modal
 - Using the `aria-hidden` and `tabindex="-1"` on focusable items for all content outside of the modal
 
-# Guidelines
+## Guidelines
 
-## Use When
+### Use When
 
 - Displaying important information users need to respond to
 - Displaying non-essential content related to the underlying page that exceeds 560 characters
 
 
-## Don't Use When
+### Don't Use When
 
 - Displaying limited additional page content
 - Providing status feedback or messages
 
-## The Basics
+### The Basics
 
 - Use modals sparingly. Modals are disruptive and their sudden appearance forces users to stop their current task and focus on the modal content
 - Two width options are available: 600px (default) and 800px (large)
@@ -233,7 +261,7 @@ This component complies with WCAG guidelines by:
 - Modal centers within the page
 - Keep modal titles succinct and informative
 
-## Behavior
+### Behavior
 
 - If two buttons are needed, place the primary button on the left and the secondary button on the right. Stack buttons at XS
 - Content behind modal does not scroll and cannot be interacted with in any way
@@ -244,21 +272,22 @@ This component complies with WCAG guidelines by:
   - Pressing the escape key (ESC)
 - Modal opens one at a time and are never displayed in groups
 
-# API
-## Props
+## API
+### Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-## Slots
+### Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Events
+### Events
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.events" :slots-getting-started-link="false" />
 
+## Usage
 
-## Modal Title
+### Modal Title
 
 If the `title` slot is left empty, the `label` prop will be rendered as the title. The title can be hidden altogether by setting `showTitle` to `false`.
 
@@ -274,15 +303,15 @@ When using the `label` slot, add CdrText to use the appropriate header styles.
 </template>
 ```
 
-## Size
+### Size
 
 The modal has a default width of `640px` which converts to a fullscreen view at `xs` screen sizes.
 
-## Scroll Behavior
+### Scroll Behavior
 
 The modal content area will scroll vertically if there's enough content. The modal title does not scroll; it stays affixed to the top of the modal.
 
-## Keep Alive
+### Keep Alive
 
 Do not use `v-if` with CdrModal unless the component is wrapped with `keep-alive`. CdrModal handles showing and hiding itself when toggling, so `v-if` should be unneeded in most cases.
 

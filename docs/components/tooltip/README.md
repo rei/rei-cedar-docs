@@ -112,9 +112,9 @@
 }
 ---
 
-<cdr-doc-table-of-contents-shell >
+<cdr-doc-table-of-contents-shell parentSelector="h2" childSelector="h3">
 
-# Overview
+## Overview
 
 CdrTooltip is a wrapper component that accepts a trigger element and tooltip content. When the trigger element is hovered or focused, the tooltip content is rendered. Event bindings between the trigger and the tooltip are set up automatically. The tooltip will dynamically update its `position` property to ensure that it renders on screen, though this functionality can be disabled by setting `autoPosition` to `false`.
 
@@ -137,7 +137,7 @@ CdrTooltip is a wrapper component that accepts a trigger element and tooltip con
 ```
 </cdr-doc-example-code-pair>
 
-## Custom Trigger
+### Custom Trigger
 
 CdrTooltip can also be controlled programmatically using the `open` prop. However, doing so means that you must implement certain behavior yourself:
 
@@ -172,7 +172,7 @@ CdrTooltip can also be controlled programmatically using the `open` prop. Howeve
 ```
 </cdr-doc-example-code-pair>
 
-## Accessibility
+### Accessibility
 
 To ensure your usage of this component complies with accessibility guidelines you are responsible for the following:
 
@@ -193,9 +193,9 @@ This component complies with WCAG guidelines by:
 - Tooltip content can be hovered over without the tooltip closing.
 - Tooltip can be closed by removing focus from the trigger, removing hover from the trigger or content, or by pressing the `esc` key.
 
-# Guidelines
+## Guidelines
 
-## Use when
+### Use when
 
 When an interface action is expressed solely through iconography, use a tooltip to clarify the action. Only interactive elements should trigger tooltips. The descriptions provided by tooltips should only contain one or two words: “close”, “clear”, or “save” are common examples.
 
@@ -206,7 +206,7 @@ Examples:
 - A quantity counter uses ‘-’ and ‘+’ symbols to increase or decrease the number of items that will be added to a user’s cart. Use a tooltip to describe the actions: “Decrease quantity” and “Increase quantity”
 
 
-## Don’t use when
+### Don’t use when
 
 - Don’t use a tooltip to provide additional context for form fields. Instead, use a [Popover](../popover/)
 - Don’t add actions or links inside a tooltip. Instead, use a [Popover](../popover/)
@@ -216,23 +216,23 @@ Example:
 - A credit card security field needs to describe, in detail, where to find the card information. A popover should be used to contain the graphic and card-specific details, not a tooltip
 
 
-## Do / Don't
+### Do / Don't
 
 
 <do-dont :examples="$page.frontmatter.consistency" />
 <do-dont :examples="$page.frontmatter.redundancy" />
 
-# API
+## API
 
-## Props
+### Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-## Slots
+### Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Events
+### Events
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.events" :slots-getting-started-link="false" />
 

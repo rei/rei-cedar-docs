@@ -2,7 +2,7 @@
 {
   "title": "FormGroup",
   "layout_type": "LayoutComponent",
-  "summary": "Group related input elements together",
+  "summary": "Groups related input elements together",
   "title_metadata": "CdrFormGroup",
     "see_also": [
     {
@@ -102,15 +102,15 @@
 }
 ---
 
-<cdr-doc-table-of-contents-shell >
+<cdr-doc-table-of-contents-shell parentSelector="h2" childSelector="h3">
 
-# Overview
+## Overview
 
 CdrFormGroup is a simple wrapper component that provides structure and consistent spacing when composing various form layouts.  
 
 Grouping related form controls makes forms more understandable for all users, and utilizing the `fieldset` and `legend` elements provides necessary context for users that rely on screen readers.
 
-## Default
+### Default
 
 <cdr-doc-example-code-pair repository-href="/src/components/formGroup"
 :sandbox-data="$page.frontmatter.sandboxData" :model="{ex: []}">
@@ -136,7 +136,7 @@ Grouping related form controls makes forms more understandable for all users, an
 ```
 </cdr-doc-example-code-pair>
 
-## Label Override
+### Label Override
 
 Rather than passing a `label` prop, the label element can be customized using the `label` slot.
 
@@ -168,7 +168,7 @@ Rather than passing a `label` prop, the label element can be customized using th
 </cdr-doc-example-code-pair>
 
 
-## Validation
+### Validation
 
 Render a form group  with validation and error state
 
@@ -200,7 +200,7 @@ Render a form group  with validation and error state
 </cdr-doc-example-code-pair>
 
 
-## Disabled
+### Disabled
 
 Render a form group in a disabled state
 
@@ -231,7 +231,7 @@ Render a form group in a disabled state
 ```
 </cdr-doc-example-code-pair>
 
-## Accessibility
+### Accessibility
 
 CdrFormGroup provides a simple `fieldset` and `legend` wrapper for form element components. Using this component will ensure that your form communicates to screen readers that a group of form fields relate to each other, and will provide a label for the group.
 
@@ -243,29 +243,29 @@ In CdrFormGroup, all of the related fields go inside the `fieldset` element, and
 - Screen readers may repeat the legend for each control in the group, so the `label` text should be brief and descriptive
 
 
-# Guidelines
+## Guidelines
 
-## Use when
+### Use when
 
 - Creating groups of checkboxes or radio buttons for a single, multiple-choice selection
 - Grouping several inputs related to the same topic, such as selecting the color, size and quantity of a product OR grouping fields for a delivery address during checkout
 
-## Don’t use when
+### Don’t use when
 
 - Creating a single form field that asks for a single piece of information
 
 
-# API
+## API
 
-## Props
+### Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-## Slots
+### Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Component Variables
+### Component Variables
 
 <cdr-doc-comp-vars name="CdrFormGroup"/>
 

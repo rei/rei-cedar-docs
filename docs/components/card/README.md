@@ -2,7 +2,7 @@
 {
   "title": "Card",
   "layout_type": "LayoutComponent",
-  "summary": "A card is a linked, interactive surface that groups related information and/or actions associated with a singular subject or destination.",
+  "summary": "Linked, interactive surface that groups related information and/or actions associated with a singular subject or destination.",
   "title_metadata": "CdrCard",
   "breadcrumbs": [
     {
@@ -75,9 +75,9 @@
 }
 ---
 
-<cdr-doc-table-of-contents-shell >
+<cdr-doc-table-of-contents-shell parentSelector="h2" childSelector="h3">
 
-# Overview
+## Overview
 
 CdrCard is a simple wrapper component that allows for composing various card layouts.
 
@@ -98,7 +98,7 @@ Cards should always be used to link to other content, and the `cdr-card__link` u
   <div class="content">
     <cdr-link class="cdr-card__link" href="#Overview">
       <cdr-text
-        tag="h2"
+        tag="h4"
         class="title"
       >
         Complex Card Title
@@ -117,9 +117,9 @@ Cards should always be used to link to other content, and the `cdr-card__link` u
 ```
 </cdr-doc-example-code-pair>
 
-## Customizing Cards
+### Customizing Cards
 
-Because CdrCard is a simple wrapper component, it's behavior can be customized or overridden in a variety of ways. For example, adding a border, inset padding, or modifying the link behavior.
+Because CdrCard is a simple wrapper component, its behavior can be customized or overridden in a variety of ways. For example, adding a border, inset padding, or modifying the link behavior.
 
 <cdr-doc-example-code-pair repository-href="/src/components/card"
 :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {styleTag: '.custom-card-example {border: 1px solid $cdr-color-border-primary; padding: $cdr-space-inset-one-x;} .custom-card-example .cdr-card__link {&:hover {color: $cdr-color-text-sale !important;}}'})" >
@@ -136,7 +136,7 @@ Because CdrCard is a simple wrapper component, it's behavior can be customized o
   <div>
     <cdr-link class="cdr-card__link" href="#Overview">
       <cdr-text
-        tag="h2"
+        tag="h4"
         class="title"
       >
         Custom Card Title
@@ -155,7 +155,7 @@ Because CdrCard is a simple wrapper component, it's behavior can be customized o
 ```
 </cdr-doc-example-code-pair>
 
-## Accessibility
+### Accessibility
 
 Many WCAG requirements are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
 
@@ -165,18 +165,18 @@ Many WCAG requirements are contextual to their implementation. To ensure that us
 - CdrCard must contain a linked title
 - All actionable elements contained within CdrCard must follow the guidelines outlined within their accessibility sections
 
-# Guidelines
+## Guidelines
 
-## Use when
+### Use when
 - Previewing bite-sized information about an article or activity—such as a class or event
 
-## Don’t use when
+### Don’t use when
 - The card will not link to a destination or contains no actionable elements
 - Displaying search results
 - The information contained within the card is not related
 - The visual presentation of a card is desired but the interaction pattern is not
 
-## The Basics
+### The Basics
 - A card is a linked container with several pre-defined behaviors:
     - Cards have a defined background color
     - Cards resemble physical cards in that they have a defined area and visually sit above the background
@@ -187,7 +187,7 @@ Many WCAG requirements are contextual to their implementation. To ensure that us
     - Ensure the components used are consistent from card to card
     - Use the same height and width for each card on the page
 
-## Do / Don't
+### Do / Don't
 
 <do-dont :examples="$page.frontmatter.content" />
 
@@ -195,17 +195,17 @@ Many WCAG requirements are contextual to their implementation. To ensure that us
 
 <do-dont :examples="$page.frontmatter.grouping" />
 
-# API
+## API
 
-## Props
+### Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-## Slots
+### Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Component Variables
+### Component Variables
 
 <cdr-doc-comp-vars name="CdrCard"/>
 

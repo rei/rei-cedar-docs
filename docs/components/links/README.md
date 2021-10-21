@@ -2,7 +2,7 @@
 {
   "title": "Links",
   "layout_type": "LayoutComponent",
-  "summary": "Clickable text element to navigate to page section, another page or open an overlaid window such as modal dialog or popover",
+  "summary": "Clickable text element used to navigate to page section, another page or open an overlaid window such as modal dialog or popover",
   "title_metadata": "Hyperlink, Anchor, CdrButton, CdrLink",
   "see_also": [
     {
@@ -160,8 +160,10 @@ Display standalone link with icon on right.
 ```html
   <div>
       <cdr-link modifier="standalone">
-        Visit site
-        <icon-external-link inherit-color class="icon-class"/>
+        Example external link
+        <icon-external-link inherit-color class="icon-class">
+          <title id="externalLink">An example of an external link icon</title>
+        </icon-external-link>
       </cdr-link>
   </div>
 ```

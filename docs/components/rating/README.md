@@ -3,7 +3,7 @@
   "title": "Rating",
   "layout_type": "LayoutComponent",
   "title_metadata": "Rating, Stars, Reviews, CdrRating",
-  "summary": "Provide insight of others’ opinions for products, experiences and expert information",
+  "summary": "Provides insights into user opinions for products, experiences and expert information",
   "stars": [
     {
       "type": "do",
@@ -116,7 +116,8 @@
 <cdr-doc-table-of-contents-shell>
 
 # Overview
-<cdr-doc-alert icon="info"><strong>REI.com is currently using Bazaarvoice for ratings.</strong>Styles documented here may not reflect the current styles provided by the tool. Reach out in <cdr-link href="https://rei.slack.com/messages/CA58YCGN4" target="\_blank">#cedar-user-support</cdr-link> for further guidance or questions.</cdr-doc-alert>
+
+<cdr-banner type="info" aria-live="polite"><template #icon-left><icon-information-fill inherit-color /></template><strong>REI.com is currently using Bazaarvoice for ratings.</strong><template #message-body>Styles documented here may not reflect the current styles provided by the tool. Reach out in <cdr-link href="https://rei.slack.com/messages/CA58YCGN4" target="\_blank">#cedar-user-support</cdr-link> for further guidance or questions.</template></cdr-banner>
 
 ## Default (Medium)
 

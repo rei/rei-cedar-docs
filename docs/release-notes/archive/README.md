@@ -9,6 +9,8 @@
 
 Notes from Cedar releases that are older than 1 year are removed from our main navigation and archived here. We also maintain a [deprecated features page](../deprecated/) for quickly looking up how to migrate deprecated Cedar features.
 
+- [Fall 2021 11.x.x](../fall-2021/)
+- [Summer 2021 10.x.x](../summer-2021/)
 - [Spring 2021 9.x.x](../spring-2021/)
 - [Winter 2021 8.x.x](../winter-2021/)
 - [Fall 2020 7.x.x](../fall-2020/)

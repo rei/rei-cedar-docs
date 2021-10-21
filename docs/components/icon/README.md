@@ -158,7 +158,7 @@ Visit the [Cedar Icon Sprite Creator](https://rei.github.io/cedar-icons/#/sprite
 
 ## Non-Cedar SVG
 
-Create a new SVG icon using any valid SVG markup. The wrapping SVG element can be stripped (below) or maintained. Note that if it is not stripped, then `viewBox`, `role`, and `xmlns` attributes will not be preserved. Whereas, all other attributes will be preserved. This method creates an outer SVG wrapper for accessibility and styles. This is not recommended if using a large number of icons. See the [iconography](../../icons/iconography) and [icon resources](../../icons/resources) pages for more details on building SVG for use with Cedar.
+Create a new SVG icon using any valid SVG markup. The wrapping SVG element can be stripped (below) or maintained. Ensure that ID is not a used attribute in your icon to avoid introducing non-unique ID's on a page that may use this icon several times. Note that if it is not stripped, then `viewBox`, `role`, and `xmlns` attributes will not be preserved. Whereas, all other attributes will be preserved. This method creates an outer SVG wrapper for accessibility and styles. This is not recommended if using a large number of icons. See the [icon overview](../../icons/overview/) page for more details on building SVG for use with Cedar.
 
 <cdr-doc-example-code-pair repository-href="/src/components/icon" :sandbox-data="$page.frontmatter.sandboxData" >
 
@@ -180,8 +180,8 @@ Create a new SVG icon using any valid SVG markup. The wrapping SVG element can b
     <g id="Icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="extremeBlk" stroke-width="1.5" stroke="#F2F2F2" fill="#000000">
             <g id="extreme">
-                <use id="Fill-9" mask="url(#mask-2)" xlink:href="#path-1"></use>
-                <use id="Fill-9" mask="url(#mask-4)" xlink:href="#path-3"></use>
+                <use mask="url(#mask-2)" xlink:href="#path-1"></use>
+                <use mask="url(#mask-4)" xlink:href="#path-3"></use>
             </g>
         </g>
     </g>

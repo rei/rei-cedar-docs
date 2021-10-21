@@ -2,7 +2,7 @@
 {
   "title": "CSS Grid",
   "layout_type": "LayoutComponent",
-  "summary": "A simple wrapper for working with CSS Grid",
+  "summary": "Wrapper for working with CSS Grid",
   "title_metadata": "CdrGrid",
   "breadcrumbs": [
     {
@@ -90,19 +90,9 @@
 }
 ---
 
-<cdr-doc-table-of-contents-shell >
+<cdr-doc-table-of-contents-shell parentSelector="h2" childSelector="h3">
 
-<br/>
-
-<cdr-doc-alert icon="info">
-  The Flexbox based CdrRow and CdrCol have been deprecated in favor of the more performant and lighter weight CSS Grid based CdrGrid component. Teams using CdrRow and CdrCol should use CdrGrid for any new work, while incrementally migrating any existing CdrRow/CdrCol usage to use CdrGrid instead.
-
-  See the <cdr-link href="../../release-notes/winter-2021/#cdrgrid">winter 2021 release notes</cdr-link> for details on migrating, and you can find the <cdr-link href="../grid-deprecated">CdrRow and CdrCol documentation here</cdr-link>
-
-</cdr-doc-alert>
-
-
-# Overview
+## Overview
 
 CdrGrid is a simple wrapper for working with CSS Grid. Any valid CSS Grid properties can be applied to a CdrGrid or it's grid items, allowing for more flexible layouts to be built using less markup and CSS classes.
 
@@ -117,7 +107,7 @@ New to or unfamiliar with CSS Grid? We recommend these resources for getting up 
 
 
 
-## Column Layout
+### Column Layout
 
 Use rows and columns to lay out content by specifying equal widths for all columns.
 Columns have a minimum width, if columns cannot be spaced equally etc. new line
@@ -145,11 +135,11 @@ Columns have a minimum width, if columns cannot be spaced equally etc. new line
 
 </cdr-doc-example-code-pair>
 
-## Justify
+### Justify
 
 Define x-axis alignment and distribute space for all columns per row. Containers may have set widths or may be flexible with max widths defined. This applies to all columns with left as the default value.
 
-### Left
+#### Left
 
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
@@ -165,7 +155,7 @@ Define x-axis alignment and distribute space for all columns per row. Containers
 
 </cdr-doc-example-code-pair>
 
-### Center
+#### Center
 
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
@@ -181,7 +171,7 @@ Define x-axis alignment and distribute space for all columns per row. Containers
 
 </cdr-doc-example-code-pair>
 
-### Right
+#### Right
 
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
@@ -197,7 +187,7 @@ Define x-axis alignment and distribute space for all columns per row. Containers
 
 </cdr-doc-example-code-pair>
 
-### Around
+#### Around
 
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
@@ -211,7 +201,7 @@ Define x-axis alignment and distribute space for all columns per row. Containers
 
 </cdr-doc-example-code-pair>
 
-### Between
+#### Between
 
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
@@ -226,11 +216,11 @@ Define x-axis alignment and distribute space for all columns per row. Containers
 
 </cdr-doc-example-code-pair>
 
-## Align
+### Align
 
 Define y-axis alignment per row and distribute space across all columns per row. This applies to all columns with stretch as the default value.
 
-### Top
+#### Top
 
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
@@ -246,7 +236,7 @@ Define y-axis alignment per row and distribute space across all columns per row.
 
 </cdr-doc-example-code-pair>
 
-### Bottom
+#### Bottom
 
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
@@ -262,7 +252,7 @@ Define y-axis alignment per row and distribute space across all columns per row.
 
 </cdr-doc-example-code-pair>
 
-### Middle
+#### Middle
 
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
@@ -278,7 +268,7 @@ Define y-axis alignment per row and distribute space across all columns per row.
 
 </cdr-doc-example-code-pair>
 
-### Stretch
+#### Stretch
 
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
@@ -295,7 +285,7 @@ Define y-axis alignment per row and distribute space across all columns per row.
 </cdr-doc-example-code-pair>
 
 
-### Varied Alignment
+#### Varied Alignment
 
 <cdr-doc-example-code-pair repository-href="/src/components/grid" >
 
@@ -321,11 +311,11 @@ Define y-axis alignment per row and distribute space across all columns per row.
 </cdr-doc-example-code-pair>
 
 
-## Gutter
+### Gutter
 
 Defines gutter size for all columns on a row and maintains gutter size by breakpoint. This applies to all columns. When this value is not set, default sizes are used.
 
-### Default
+#### Default
 
 The default `gutter` value is `medium@xs medium@sm large@md large@lg`.
 
@@ -345,7 +335,7 @@ The default `gutter` value is `medium@xs medium@sm large@md large@lg`.
 
 </cdr-doc-example-code-pair>
 
-### Small
+#### Small
 
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
@@ -364,7 +354,7 @@ The default `gutter` value is `medium@xs medium@sm large@md large@lg`.
 
 </cdr-doc-example-code-pair>
 
-### None
+#### None
 
 
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
@@ -385,7 +375,7 @@ The default `gutter` value is `medium@xs medium@sm large@md large@lg`.
 </cdr-doc-example-code-pair>
 
 
-### Custom Responsive Gutters
+#### Custom Responsive Gutters
 
 <cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
 
@@ -404,7 +394,7 @@ The default `gutter` value is `medium@xs medium@sm large@md large@lg`.
 
 </cdr-doc-example-code-pair>
 
-## Scrolling Grid
+### Scrolling Grid
 
 Scrollable grids can be created using the `grid-auto-flow` property set to `column` for horizontal scrolling or `row` for vertical scrolling.
 
@@ -433,7 +423,7 @@ Scrollable grids can be created using the `grid-auto-flow` property set to `colu
 </cdr-doc-example-code-pair>
 
 
-## List Markup
+### List Markup
 
 For accessibility reasons it may make sense to construct your grid using list markup.
 
@@ -452,7 +442,7 @@ For accessibility reasons it may make sense to construct your grid using list ma
 
 </cdr-doc-example-code-pair>
 
-## Span
+### Span
 
 Column width can be controlled using the `grid-template-columns` property.
 
@@ -474,7 +464,7 @@ Column width can be controlled using the `grid-template-columns` property.
 </cdr-doc-example-code-pair>
 
 
-## Complex Span
+### Complex Span
 
 Individual items can override their sizing with `grid-column` and `grid-row`;
 
@@ -496,7 +486,7 @@ Individual items can override their sizing with `grid-column` and `grid-row`;
 </cdr-doc-example-code-pair>
 
 
-## Offset
+### Offset
 
 Offsets can be created on grid items using the `grid-column-start` property.
 
@@ -513,7 +503,7 @@ Offsets can be created on grid items using the `grid-column-start` property.
 
 </cdr-doc-example-code-pair>
 
-## Nested Grids
+### Nested Grids
 
 Grids can be nested to any depth by passing another CdrGrid in as a grid item.
 
@@ -534,7 +524,7 @@ Grids can be nested to any depth by passing another CdrGrid in as a grid item.
 
 </cdr-doc-example-code-pair>
 
-## Responsive Grids
+### Responsive Grids
 
 CSS grid layouts using `fr` units will be inherently responsive, however additional breakpoint-specific behaviors can be created using media queries.
 
@@ -560,7 +550,7 @@ CSS grid layouts using `fr` units will be inherently responsive, however additio
 }
 ```
 
-## Handling Leftover Columns
+### Handling Leftover Columns
 
 For grid layouts with an unknown number of items you may end up with an incomplete row at the end. These "leftover" or "orphan" columns can be styled using a combination of the `last-child`/`nth-last-child` and `nth-child` selectors depending on how many items are in your grid row.
 
@@ -630,7 +620,7 @@ For grid layouts with an odd number of columns per row, make the grid-template a
 ```
 
 
-## Named Grid Areas
+### Named Grid Areas
 
 Use `grid-template-areas` to layout grid items named using the `grid-area` property.
 
@@ -651,7 +641,7 @@ Use `grid-template-areas` to layout grid items named using the `grid-area` prope
 </cdr-doc-example-code-pair>
 
 
-## Accessibility
+### Accessibility
 
 To ensure that usage of this component complies with accessibility guidelines:
 - Low-vision users should be able to increase the size of the text by up to 200 percent without breaking the layout
@@ -660,20 +650,20 @@ To ensure that usage of this component complies with accessibility guidelines:
 
 <hr>
 
-# Guidelines
+## Guidelines
 
-## Use When
+### Use When
 
 - Arranging content and components into rows and columns
 - Laying out a page of 2+ rows of body content (apart from site navigation), some of which may or may not have columns
 - Applying responsive rules to columns of a row and/or regions of a page layout, or a container of many components
 - Arranging elements within a single component with two or more zones, including those aligned to the left or right edge
 
-## Don't Use When
+### Don't Use When
 
 - Presenting a multi-row columnar data display, such as features or specs of a product. Instead, use [Table](../table/)
 
-## The Basics
+### The Basics
 
 Columns, gutters, and margins scales as a fluid system as the device and viewport increases from a small devices to a large device:
 
@@ -681,7 +671,7 @@ Columns, gutters, and margins scales as a fluid system as the device and viewpor
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase('/grid/Spec_Grids_Breakpoints.png')" alt="grid breakpoints"/>
 
-## Anatomy
+### Anatomy
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase('/grid/Spec_Grids_Gutters_and_Margins.png')" alt="gutter margins and grids"/>
 
@@ -716,17 +706,17 @@ Columns, gutters, and margins scales as a fluid system as the device and viewpor
 
 <br/>
 
-## Content
+### Content
 
 - Prioritize your content by organizing content to highlight the most important information
 - Use white space created by grid system because too much dense information can be disorienting and overwhelming
 
-## Behavior
+### Behavior
 
 - Avoid breaking alignment or slightly oversizing a container to stick out for visual interest or to add emphasis
 - Create relationships and hierarchy between content elements by using the margins and gutters in the grid shared by the page layout
 
-## Do/Don't
+### Do/Don't
 
 <do-dont :examples="$page.frontmatter.consistent" />
 
@@ -734,7 +724,7 @@ Columns, gutters, and margins scales as a fluid system as the device and viewpor
 
 <do-dont :examples="$page.frontmatter.gutters" />
 
-## Responsiveness
+### Responsiveness
 
 To build an effective responsive grid:
 
@@ -747,9 +737,9 @@ To build an effective responsive grid:
 
 <hr>
 
-# API
+## API
 
-## Props
+### Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
@@ -757,7 +747,7 @@ To build an effective responsive grid:
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Usage
+### Usage
 
 **CdrGrid** functions as a grid container, and it's immediate children are grid items.
 
