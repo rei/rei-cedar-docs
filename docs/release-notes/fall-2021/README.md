@@ -108,20 +108,6 @@ See the [Status notifications docs page](../../patterns/status-notifications) fo
 
 <br>
 
-## Cookbooks
-
-To support greater flexibility when building certain types of complex components, we’re introducing a new type of documentation that follows more of a “recipe” format as part of upcoming Cedar Component “Cookbooks“.
-
-The documentation will provide teams with the guidance to construct specific compositions using existing Cedar components, but will not be available as pre-built Vue components. Reference design patterns will be available in Figma for designers to customize for their needs. Developers can create custom components using available sub-components. 
-
-### Filmstrip
-
-Filmstrip is an overflowing content container designed to allow users to preview multiple pieces of content in an allocated amount of space.
-
-See the [Filmstrip docs page](../../components/filmstrip) for more information.
-
-<br>
-
 ## Bug Fixes
 
 ### CdrModal

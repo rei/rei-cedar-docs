@@ -98,7 +98,6 @@ module.exports = {
           { text: "Checkboxes", link: "/components/checkboxes/" },
           { text: "Chips", link: "/components/chips/" },
           { text: "Container", link: "/components/container/" },
-          { text: "Filmstrip", link: "/components/filmstrip/" },
           { text: "Form Group", link: "/components/form-group/" },
           { text: "Grid", link: "/components/grid/" },
           { text: "Icons", link: "/components/icon/" },
