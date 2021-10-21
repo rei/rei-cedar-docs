@@ -10,7 +10,7 @@
     }
   ],
   "sandboxData": {
-    "components": "CdrToast, CdrButton, CdrChip"
+    "components": "CdrToast"
   },
 
   "TODO-DO/DONT": [
