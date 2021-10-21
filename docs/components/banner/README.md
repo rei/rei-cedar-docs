@@ -280,6 +280,7 @@ Use to provide generic messaging that does not fit the other types.
 - When communicating an event not related to a specific task 
 - When promoting a new feature 
 - Indicating that a change has happened since a previous session 
+- Read more about using Banners for [Status Notifications](../../patterns/status-notifications)
 
 
 ### Don't use when
