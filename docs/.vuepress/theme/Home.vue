@@ -19,8 +19,8 @@
 
 
     <div class="container">
-      <cdr-row cols="1 2@md" align="middle" class="stack-4">
-        <cdr-col>
+      <cdr-grid class="home-grid stack-4">
+        <div>
           <cdr-img
             class="getting-started-image"
             :src="$withBase('home/gettingstarted_icon.png')"
@@ -28,33 +28,39 @@
             cover
             radius="rounded"
           />
-        </cdr-col>
-        <cdr-col>
+        </div>
+        <div>
           <div>
             <h2 class="home-heading">Getting Started</h2>
             <p class="home-subheading">Learn how to start using Cedar components with handy onboarding guides.</p>
-            <cdr-row cols="auto" justify="around left@md">
-              <cdr-col>
+            <cdr-grid gutter="small" class="home-grid--sub-grid">
+              <div>
                 <cdr-button
                   tag="a"
                   :href="$withBase('/getting-started/as-a-designer/')"
-                  modifier="secondary">View Designer Guide</cdr-button>
-              </cdr-col>
-              <cdr-col>
+                  modifier="secondary"
+                >
+                  View Designer Guide
+                </cdr-button>
+              </div>
+              <div>
                 <cdr-button
                   tag="a"
                   :href="$withBase('/getting-started/as-a-developer/')"
-                  modifier="secondary">View Developer Guide</cdr-button>
-              </cdr-col>
-            </cdr-row>
+                  modifier="secondary"
+                >
+                  View Developer Guide
+                </cdr-button>
+              </div>
+            </cdr-grid>
           </div>
-        </cdr-col>
-      </cdr-row>
+        </div>
+      </cdr-grid>
 
       <div class="home-hr stack-4" role="presentation"></div>
 
-      <cdr-row cols="1 2@md" class="stack-4">
-        <cdr-col>
+      <cdr-grid class="home-grid stack-4">
+        <div>
           <div class="align-center">
             <cdr-img
               class="home-start-image"
@@ -70,8 +76,8 @@
               modifier="standalone"
             >Start with color</cdr-link>
           </div>
-        </cdr-col>
-        <cdr-col>
+        </div>
+        <div>
           <div class="align-center">
             <cdr-img
               class="home-start-image"
@@ -87,8 +93,8 @@
               modifier="standalone"
             >Start with buttons</cdr-link>
           </div>
-        </cdr-col>
-      </cdr-row>
+        </div>
+      </cdr-grid>
 
       <div class="home-hr-tree stack-4">
         <cdr-img
@@ -100,11 +106,11 @@
 
       <h2 class="home-heading align-center stack-4">Resources</h2>
 
-      <cdr-row cols="1 2@md" class="stack-4">
-        <cdr-col>
+      <cdr-grid class="home-grid stack-4">
+        <div>
           <div class="home-card">
-            <cdr-row align="middle">
-              <cdr-col span="9">
+            <cdr-grid class="home-grid--card-grid">
+              <div span="9">
                 <div>
                   <cdr-text
                     tag="h3"
@@ -112,19 +118,19 @@
                   >Cedar Design Libraries</cdr-text>
                   <cdr-link :href="$withBase('/getting-started/as-a-designer/#design-toolkits')" modifier="standalone">Learn more about the toolkit</cdr-link>
                 </div>
-              </cdr-col>
-              <cdr-col span="3">
+              </div>
+              <div style="justify-items: end;">
                 <div>
                   <cdr-img class="home-resource-icon" :src="$withBase('sketch_icon.png')" />
                 </div>
-              </cdr-col>
-            </cdr-row>
+              </div>
+            </cdr-grid>
           </div>
-        </cdr-col>
-        <cdr-col>
+        </div>
+        <div>
           <div class="home-card">
-            <cdr-row align="middle">
-              <cdr-col span="9">
+            <cdr-grid class="home-grid--card-grid">
+              <div span="9">
                 <div>
                   <cdr-text
                     tag="h3"
@@ -132,16 +138,16 @@
                   >Vue.js components</cdr-text>
                   <cdr-link href="https://www.npmjs.com/package/@rei/cedar" target="_blank" modifier="standalone">View the NPM repository</cdr-link>
                 </div>
-              </cdr-col>
-              <cdr-col span="3">
+              </div>
+              <div style="justify-items: end;">
                 <div>
                   <cdr-img class="home-resource-icon" :src="$withBase('vue_icon.png')" />
                 </div>
-              </cdr-col>
-            </cdr-row>
+              </div>
+            </cdr-grid>
           </div>
-        </cdr-col>
-        <cdr-col>
+        </div>
+        <div>
           <div class="home-card">
             <cdr-text
               tag="h3"
@@ -150,8 +156,8 @@
             <cdr-text class="stack-1">The Cedar team welcomes contributions from the community. Learn how to become a pilot contributor.  </cdr-text>
             <cdr-link :href="$withBase('/about/contributing-to-cedar/')" modifier="standalone">Help build Cedar</cdr-link>
           </div>
-        </cdr-col>
-        <cdr-col>
+        </div>
+        <div>
           <div class="home-card">
             <cdr-text
               tag="h3"
@@ -160,8 +166,8 @@
             <cdr-text class="stack-1">Questions, ideas, or comments? Your feedback can help improve Cedar. </cdr-text>
             <cdr-link :href="$withBase('/about/cedar-design-system/#communications/')" modifier="standalone">Get in touch</cdr-link>
           </div>
-        </cdr-col>
-      </cdr-row>
+        </div>
+      </cdr-grid>
 
     </div>
 
@@ -258,7 +264,19 @@ export default {
     text-align: center;
   }
 }
-
+.home-grid {
+  grid-template-columns: 1fr 1fr;
+  @include cdr-xs-mq-only {
+    grid-template-columns: 1fr;
+  }
+  &--sub-grid {
+    // align-content: space-between;
+    grid-template-columns: 1fr 1fr;
+  }
+  &--card-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
 .getting-started-image {
   max-width: 375px;
   margin: 0 auto;
