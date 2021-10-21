@@ -76,19 +76,12 @@ module.exports = {
       {
         text: "Patterns",
         items: [
-          // { text: "Alerts", link: "/patterns/alerts/", },
+          { text: "Alerts", link: "/patterns/alerts/", },
           { text: "Form Input Types", link: "/patterns/forms-input-types/" },
-<<<<<<< HEAD
           { text: "Form Validation", link: "/patterns/form-validation/" },
           { text: "Validation Notifications", link: "/patterns/validation-notifications/" },
           { text: "Update and Loading Notifications", link: "/patterns/update-and-loading-notifications/" },
           { text: "Status Notifications", link: "/patterns/status-notifications/" },
-=======
-          // { text: "Form Validation", link: "/patterns/form-validation/" },
-          // { text: "Messaging", link: "/patterns/messaging/", },
-          // { text: "Update and Loading Notifications", link: "/patterns/update-and-loading-notifications/" },
-          // { text: "Status Notifications", link: "/patterns/status-notifications/" },
->>>>>>> master
         ]
       },
       {
