@@ -15,7 +15,7 @@
 
 <cdr-doc-table-of-contents-shell parentSelector="h2" childSelector="h3">
 
-# Overview
+## Overview
     
 Filmstrip is a type of constrained content container which allows users to preview multiple related pieces of content such as images, text, or cards in a horizontal overflow.  
   
@@ -29,7 +29,7 @@ TODO code example should mimic this image (remove image once code sample is work
 <cdr-img src="https://i.imgur.com/Co3dIqI.jpg" alt="image of REI.com product recommendations filmstrip"/>
 
 
-# Anatomy
+## Anatomy
 
 Because the Filmstrip is a cookbook of multiple sub-components, its structure can be customized in a variety of ways.
 
@@ -99,7 +99,7 @@ The overflow grid container is the heavy lifter of this pattern, this is where t
   
   
 
-# Development Instructions
+## Development Instructions
 ###  1. Start by adding a Grid
 
 Our filmstrip example uses a cdr-grid component set to overflow
@@ -122,7 +122,7 @@ Our filmstrip example uses a cdr-grid component set to overflow
         <div class="content">
           <cdr-link class="cdr-card__link" href="#Overview">
             <cdr-text
-              tag="h2"
+              tag="h4"
               class="title"
             >
               Complex Card Title
@@ -151,7 +151,7 @@ Our filmstrip example uses a cdr-grid component set to overflow
         <div class="content">
           <cdr-link class="cdr-card__link" href="#Overview">
             <cdr-text
-              tag="h2"
+              tag="h4"
               class="title"
             >
               Complex Card Title
@@ -180,7 +180,7 @@ Our filmstrip example uses a cdr-grid component set to overflow
         <div class="content">
           <cdr-link class="cdr-card__link" href="#Overview">
             <cdr-text
-              tag="h2"
+              tag="h4"
               class="title"
             >
               Complex Card Title
@@ -209,7 +209,7 @@ Our filmstrip example uses a cdr-grid component set to overflow
         <div class="content">
           <cdr-link class="cdr-card__link" href="#Overview">
             <cdr-text
-              tag="h2"
+              tag="h4"
               class="title"
             >
               Complex Card Title
@@ -238,7 +238,7 @@ Our filmstrip example uses a cdr-grid component set to overflow
         <div class="content">
           <cdr-link class="cdr-card__link" href="#Overview">
             <cdr-text
-              tag="h2"
+              tag="h4"
               class="title"
             >
               Complex Card Title
@@ -267,7 +267,7 @@ Our filmstrip example uses a cdr-grid component set to overflow
         <div class="content">
           <cdr-link class="cdr-card__link" href="#Overview">
             <cdr-text
-              tag="h2"
+              tag="h4"
               class="title"
             >
               Complex Card Title
@@ -296,7 +296,7 @@ Our filmstrip example uses a cdr-grid component set to overflow
         <div class="content">
           <cdr-link class="cdr-card__link" href="#Overview">
             <cdr-text
-              tag="h2"
+              tag="h4"
               class="title"
             >
               Complex Card Title
@@ -325,7 +325,7 @@ Our filmstrip example uses a cdr-grid component set to overflow
         <div class="content">
           <cdr-link class="cdr-card__link" href="#Overview">
             <cdr-text
-              tag="h2"
+              tag="h4"
               class="title"
             >
               Complex Card Title
@@ -354,7 +354,7 @@ Our filmstrip example uses a cdr-grid component set to overflow
 
 
 
-# Examples 
+## Examples 
   
 The following are two common use cases that can be followed. Designers can copy and paste these examples from the Figma library.
   
@@ -375,7 +375,7 @@ This pattern commonly displays 3 to 4 content blocks per view and does not requi
 TODO: code example, then replace the above image
   
   
-# Guidelines
+## Guidelines
   
 ### Use When
 - Providing a teaser of products, events, articles or categories to users
@@ -419,6 +419,6 @@ TODO: code example, then replace the above image
 **Overflow and Focus solution**
 - Add `tabindex="0"` to the overflowing container to make it baseline keyboard accessible. 
 - Show this keyboard accessibility to users by applying focus styles (Cedar token mixin) 
-- "Promote" the <div> to a landmark region by both applying role="region" and supplying an accessible name, by using aria-label, for example. By doing so, you provide much-needed context to screen reader users - because they suddenly discover a focusable element that is not interactive in the classic sense (like a link or button would be). 
+- "Promote" the `<div>` to a landmark region by both applying role="region" and supplying an accessible name, by using aria-label, for example. By doing so, you provide much-needed context to screen reader users - because they suddenly discover a focusable element that is not interactive in the classic sense (like a link or button would be). 
 
 </cdr-doc-table-of-contents-shell>
