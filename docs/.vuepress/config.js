@@ -63,6 +63,8 @@ module.exports = {
           { text: "Accessibility", link: "/foundation/accessibility/" },
           { text: "Color", link: "/foundation/color/" },
           { text: "Motion", link: "/foundation/motion/" },
+          { text: "Prominence", link: "/foundation/prominence/" },
+          { text: "Radius", link: "/foundation/radius/" },
           { text: "Typography", link: "/foundation/typography/" },
           { text: "Spacing", link: "/foundation/spacing/" },
           { text: "Responsive", link: "/foundation/responsive/" },
