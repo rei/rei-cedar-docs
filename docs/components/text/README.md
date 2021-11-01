@@ -191,7 +191,7 @@
 ---
 
 
-<cdr-doc-table-of-contents-shell>
+<cdr-doc-table-of-contents-shell parentSelector="h2" childSelector="h3">
 ## Overview
 
 The `CdrText` component is a simple wrapper for text elements that applies default type styles. Type styling should be applied by using the [design tokens](../../tokens/all-tokens/#text) and a custom CSS class.
@@ -205,7 +205,30 @@ A heading helps users to identify and create a hierarchical structure within a p
 
 Display headings, set in REI Stuart, include the largest type styles available and are intended to be used for emotional and impactful messages on top of the funnel experiences (i.e., homepage, brand pages, or landing pages). Because display styles are lighter in weight than other heading styles, they are meant for sizes 800 and above. However, it is recommended to reserve sizes 800 and 900 for mobile breakpoints.  
   
-  ---> Add code example, similar to Serif & Serif Strong below <---
+<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+
+```html
+
+  <cdr-text class="cdr-text--heading-display-1600">
+    When you gear up, we give back
+  </cdr-text>
+
+```
+</cdr-doc-example-code-pair>
+
+```vue{2,9}
+<template>
+  <cdr-text class="custom-heading-class">
+    When you gear up, we give back
+  </cdr-text>
+</template>
+<style>
+  @import '~@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
+  .custom-heading-class {
+    @include cdr-text-heading-display-1600;
+  }
+</style>
+```
 
 ### Serif
 
@@ -294,15 +317,15 @@ Sans headings, set in Graphik, should play a supporting role to serif headings. 
   }
 </style>
 ```
-
-### Use When
+### Guidelines
+#### Use When
   - Creating a hierarchical structure of information on a page
 
-### Don’t Use When
+#### Don’t Use When
   - Tagging as a semantic heading when an element only needs to be highlighted or emphasized within your content. Instead, use the type scale to alter the size or prominence of the text
   - Showcasing long form content. Instead, use [body](#body)
 
-### The Basics
+#### The Basics
   - When using this component with semantic headings from `<h1>` to `<h6>`, typographic styles set up a visual hierarchy created within CSS that helps to establish the order of importance
   - Identify headings at the beginning of a section
   - Position headings at, or near, the top of a section
@@ -312,13 +335,13 @@ Sans headings, set in Graphik, should play a supporting role to serif headings. 
     - Implement image text with proper HTML markup and use CSS to embed any special fonts
     - Consider using heading-serif-strong styles
 
-### Do / Don’t
+#### Do / Don’t
 
 <do-dont :examples="$page.frontmatter.semantic" />
 
 <do-dont :examples="$page.frontmatter.utility" />
 
-### Content
+#### Content
   - Be specific. Provide facts or information that pique user interest. Avoid broad and generic headings
   - Start heading titles with strong and familiar keywords to increase scannability
   - Ensure the heading works out of page context, such as search results, social media streams, blog posts, and news feeds
@@ -480,7 +503,8 @@ Sans headings also work best with sans subheadings.
 </style>
 ```
 
-### Do / Don’t
+### Guidelines
+#### Do / Don’t
 
 <do-dont :examples="$page.frontmatter.subtitle" />
 
@@ -543,18 +567,19 @@ Body strong is also intended for long-form copy but should be used minimally. Us
 </style>
 ```
 
-### Use When
+### Guidelines
+#### Use When
   - Displaying articles for long-form content, such as Expert Advice articles or Co-op Journal entries
   - Displaying member or legal messages, such as on the PDP
   - Displaying product descriptions
   - Displaying customer reviews, such as on the PDP
 
-### Don't Use When
+#### Don't Use When
   - Displaying form inputs. Instead, use [Inputs](../input/)
   - Listing product features. Instead, use [Lists](../lists/)
 
 
-### The Basics
+#### The Basics
   - Body styles should be used for:
     - Legal messages
     - Shipping messages
@@ -568,7 +593,7 @@ Body strong is also intended for long-form copy but should be used minimally. Us
   - Consider cdr-color-text-primary, cdr-color-text-secondary, cdr-color-text-emphasis, or cdr-color-text-inverse when choosing body colors. If needed, cdr-color-text-sale is also available. Avoid cdr-color-text-brand for body styles
 
 
-### Content
+#### Content
   - Use adjacent text, a definition list, a glossary, or other method to supplement words that are ambiguous
   - Abbreviations:
     - Follow [REI Copy Guidelines](https://www.cloud-dam.rei.com/en-us/AssetGuidesandCreativeStandards/StyleGuidePage/MasterBrandCopyGuides) for dates, time, dimensions, measurements, electrical units, and geographic reference
@@ -577,11 +602,11 @@ Body strong is also intended for long-form copy but should be used minimally. Us
   - For ease of reading, readability level should be about Grade 7. To test the body text, use the [Hemingway Editor](http://www.hemingwayapp.com/).
   - When possible, write the first sentence as an introduction to the paragraph. With screen readers, users can jump from paragraph to paragraph, listening to the first sentence or two before moving on to the next paragraph
 
-### Applying Strong to Body Styles
+#### Applying Strong to Body Styles
 
 Body styles include a set of strong options: `cdr-text-body-strong-500`, `cdr-text-body-strong-400`, and `cdr-text-body-strong-300`. However, there might be times when a set of words within a sentence needs to be bold. In those cases, use the generic cdr-text-strong. The set of strong options have a lighter font weight than the generic cdr-text-strong.
 
-### Do / Don’t
+#### Do / Don’t
 
 <do-dont :examples="$page.frontmatter.characterlength" />
 
@@ -708,11 +733,12 @@ Utility sans styles should be used when additional emphasis is needed.
 </style>
 ```
 
-### The Basics
+### Guidelines
+
   - Utility styles should be used to label elements or give users information on how to take action. For instance, on error messages or pricing information 
   - Consider all cdr-color-text colors with the exception of cdr-color-text-brand for utility styles
 
-### Do / don’t
+#### Do / don’t
 
 <do-dont :examples="$page.frontmatter.utilityHeadings" />
 
@@ -747,7 +773,8 @@ Eyebrows introduce a topic or show how an item is categorized. Content tags or c
 </style>
 ```
 
-### Do / don’t
+### Guidelines
+#### Do / don’t
 
 <do-dont :examples="$page.frontmatter.eyebrowBrand" />
 
@@ -871,12 +898,12 @@ Cedar uses design tokens to store typographic attributes that represent the fund
 
 For more information about design tokens and a complete list of tokens available in Cedar, visit the [Design Tokens](../../tokens/overview/) overview.
 
-## Component API
+### Component API
 
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-## Slots
+### Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
