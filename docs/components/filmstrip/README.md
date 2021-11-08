@@ -100,8 +100,10 @@ The overflow grid container is the heavy lifter of this pattern, this is where t
 - Be assigned a `role` of “region” 
 - If providing your filmstrip a heading us `aria-labelledby` to associate your filmstrip to the title, otherwise apply `aria-label` and provide the filmstrip a meaningful name.  
   
-## Development Instructions
-###  1. Start by adding a Grid
+  
+## Development Instructions 
+
+These instructions will take you through three stages of filmstrip development. These stages are: 
 
 1. Development of a simple filmstrip with an overflow container 
 
