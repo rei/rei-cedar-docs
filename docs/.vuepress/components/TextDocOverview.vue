@@ -100,6 +100,7 @@ export default {
   data() {
     return {
       text: {
+        'heading-display': [800, 900, 1100, 1200, 1300, 1400, 1500, 1600],
         'heading-serif': [200, 300, 400, 500, 600, 700, 800, 900, 1100, 1200],
         'heading-serif-strong': [600, 700, 800, 900, 1100, 1200],
         'heading-sans': [200, 300, 400, 500, 600],

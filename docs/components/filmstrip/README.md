@@ -102,6 +102,7 @@ The overflow grid container is the heavy lifter of this pattern, this is where t
   
   
 ## Development Instructions 
+<<<<<<< HEAD
 
 These instructions will take you through three stages of filmstrip development. These stages are: 
 
@@ -166,6 +167,84 @@ Additionally, it's worth pointing out that no additional styling is needed to re
 **Is the filmstrip finished?**
 
 At this point you should have a simple functioning filmstrip which should be good enough for a demo or a proof of concept. However, there are a few accessibility and performance concerns that need to be addressed before using this in a production environment. We will go over these concerns in the next stage of our filmstrip development.
+=======
+
+These instructions will take you through three stages of filmstrip development. These stages are: 
+
+1. Development of a simple filmstrip with an overflow container 
+
+2. Enhancing the simple filmstrip to address accessibility and performance issues  
+
+3. Extending and some refactoring of the filmstrip to include interactive controls 
+
+
+### Stage 1: Developing a simple filmstrip 
+
+The development of a simple filmstrip will require the use of a `<cdr-grid>` component and the addition of some CSS styling. 
+
+**Step 1: Create markup and populate content**
+
+Your markup should look something like this: 
+
+``` 
+<cdr-grid class=”filmstrip”> 
+  <! --- Your grid items go here ---> 
+</cdr-grid>
+``` 
+The individual grid items that you place inside the grid can be any type of content you wish as long as the markup and size of each item is identical. For simplicity’s sake we're using images although you'll likely be using more complex content blocks for a real implementation. 
+
+Now that we have our initial markup, let’s populate our filmstrip with some dummy content. First let’s return a simple array of items in your data function.
+``` 
+data() { 
+  return { 
+    items: [1, 2, 3, 4, 5, 6, 7, 8, 9],
+  }; 
+},
+``` 
+Then, in your markup, use a `v-for` directive to iterate through the individual items in the array.
+```
+<cdr-grid class=”filmstrip”> 
+  <div v-for="item in items"> 
+    <cdr-img src="https://via.placeholder.com/400/400"/> 
+  </div> 
+</cdr-grid> 
+``` 
+**Step 2: Add filmstrip styling**
+
+At this point you should see nine images stacked vertically because at the moment the default behavior of `<cdr-grid>` will be to have just one column and to create a new row for each grid item. As we need these items to display all in one row, the next step will be to add CSS styling to your `.filmstrip` class so that it becomes a proper cedar filmstrip. 
+
+``` 
+.filmstrip { 
+  grid-template-columns: repeat(auto-fill, 25rem);
+  grid-auto-columns: 25rem;
+  grid-auto-flow: column;
+  overflow: scroll; 
+} 
+``` 
+Let’s break down what each of these properties do and why we chose these values for them: 
+
+`grid-template-columns`:  
+
+This property is doing most of the heavy lifting. The `repeat()` function here takes two arguments. The first argument can be a number (For example, we can use the number ‘9’ to create 9 columns to correspond with our 9 grid items). However, because we likely won’t know how many items our filmstrip will contain, we have chosen `auto-fill` as our value for this argument. `auto-fill` will essentially create as many columns as there are items within the grid for us automatically. 
+
+The second value that we pass to the repeat function is the size we want for each column. In this case we are using a fixed unit of `rem`. While you can use percentages or `vw` units you will find that your grid items get smaller as the viewport gets smaller, which will lead to very tiny looking filmstrips at mobile widths. Thus it is more manageable to decide upon fixed units for your column sizes and change them with media queries. 
+
+`grid-auto-columns`:  
+
+This will dictate the size of each item that doesn’t fit in the main container. If you don’t set this property you will notice that the grid items will be the size you specify for the `repeat()` function until the items reach the end of the container. After that they will be a different size. 
+
+`grid-auto-flow`: 
+
+The default behavior is to lay out each grid item by row, which means that after the container has been filled another row will be created. Because we want all our items in the same row, we are setting this property to `column`. 
+
+`overflow`: 
+
+This property is set to `scroll` so that we get the handy scrollbar at the bottom of the filmstrip.
+
+**Is the filmstrip finished?**
+
+At this point you should have a simple functioning filmstrip which should be good enough for a demo or a proof of concept. However, there are a few accessibility and performance concerns that need to be addressed before using this in a production environment. We will go over these concerns in the next stage of our filmstrip development. 
+>>>>>>> e036402ba94301716469b2d4ec8d76d09cca97cd
 
 This example below is what you should have after completing stage 1:
 
@@ -181,6 +260,7 @@ This example below is what you should have after completing stage 1:
 
 ```
 </cdr-doc-example-code-pair>
+<<<<<<< HEAD
 
 ##Stage 2: Enhancing filmstrip accessibility and performance 
 
@@ -705,6 +785,10 @@ Below is an example of a filmstrip with left and right buttons:
 </cdr-doc-example-code-pair>
 
 ## More Examples 
+=======
+## Examples 
+  
+>>>>>>> e036402ba94301716469b2d4ec8d76d09cca97cd
 The following are two common use cases that can be followed. Designers can copy and paste these examples from the Figma library.
   
 ### Product Recommendation Filmstrip
