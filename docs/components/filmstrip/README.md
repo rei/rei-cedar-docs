@@ -28,8 +28,151 @@ Designers can copy and paste the two most common examples listed in this documen
 
 Developers use the following [guide](TODO link to start of steps) which applies specific filmstrip requirements to our basic cedar components as a starting point for your custom filmstrip. Please feel free to share feedback with us by posting in the [cedar-user-support slack channel here](https://rei.slack.com/archives/CA58YCGN4) or coming to an office hours.
   
-TODO code example should mimic this image (remove image once code sample is working as expected)
-<cdr-img src="https://i.imgur.com/Co3dIqI.jpg" alt="image of REI.com product recommendations filmstrip"/>
+<cdr-doc-example-code-pair copy-button="false" repository-href="/src/components/grid" 
+  :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData)"
+  :methods="{
+    getFilmstripDimensions() {
+      this.filmstrip = this.$refs.filmstrip.$el;
+      this.filmstripWidth = this.filmstrip.offsetWidth;
+      this.currentPosition = this.filmstrip.scrollLeft;
+      this.maxScrollRight = this.filmstrip.scrollWidth - this.filmstrip.clientWidth;
+    },
+    handleButtonState() {
+      this.getFilmstripDimensions();
+      this.filmstrip = this.$refs.filmstrip.$el;
+      this.leftButton = this.$refs['left-button'].$el;
+      this.rightButton = this.$refs['right-button'].$el;
+      if (this.currentPosition === this.maxScrollRight) {
+        this.rightArrowDisabled = true;
+        this.rightButton.setAttribute('aria-disabled', 'true');
+        this.rightButton.style = this.rightButtonDisabled;
+      }
+      if (this.currentPosition === 0) {
+        this.leftArrowDisabled = true;
+        this.leftButton.setAttribute('aria-disabled', 'true');
+        this.leftButton.style = this.leftButtonDisabled;
+      }
+      if (this.currentPosition !== this.maxScrollRight) {
+        this.enableRightButton();
+      }
+      if (this.currentPosition !== 0) {
+        this.enableLeftButton();
+      }
+    },
+    enableRightButton(){
+      this.rightButton = this.$refs['right-button'].$el;
+      this.rightArrowDisabled = false;
+      this.rightButton.setAttribute('aria-disabled', 'false');
+      this.rightButton.style = this.rightButtonEnabled;
+    },
+    enableLeftButton(){
+      this.leftButton = this.$refs['left-button'].$el;
+      this.leftArrowDisabled = false;
+      this.leftButton.setAttribute('aria-disabled', 'false');
+      this.leftButton.style = this.leftButtonEnabled;
+    },
+    scrollRight() {
+      this.filmstrip = this.$refs.filmstrip.$el;
+      this.getFilmstripDimensions();
+      this.filmstrip.scrollTo(this.currentPosition + 900, 0);
+      this.currentPosition = this.filmstrip.scrollLeft;
+      this.handleButtonState();
+      this.enableLeftButton();
+    },
+    scrollLeft() {
+      this.filmstrip = this.$refs.filmstrip.$el;
+      this.getFilmstripDimensions();
+      this.filmstrip.scrollTo(this.currentPosition - 900, 0);
+      this.currentPosition = this.filmstrip.scrollLeft;
+      this.handleButtonState();
+      this.enableRightButton();
+    }
+  }"
+  :model="{items: [1, 2, 3, 4, 5, 6, 7, 8, 9], currentPosition: null, rightButtonEnabled: 'grid-row-start: 1; z-index: 1; justify-self: end; align-self: center; grid-column-end: -1;', leftButtonEnabled: 'grid-row-start: 1; z-index: 1; justify-self: start; align-self: center; grid-column-start: 1;', rightButtonDisabled: 'grid-row-start: 1; z-index: 1; justify-self: end; align-self: center; grid-column-end: -1; color: #d1cbbd;cursor: not-allowed;background-color: #f9f8f6 !important;box-shadow: inset 0 0 0 0.1rem #dcd6cb !important;fill: #d1cbbd !important;border: none !important;', leftButtonDisabled: 'grid-row-start: 1; z-index: 1; justify-self: start; align-self: center; grid-column-start: 1; color: #d1cbbd;cursor: not-allowed;background-color: #f9f8f6 !important;box-shadow: inset 0 0 0 0.1rem #dcd6cb !important;fill: #d1cbbd !important;border: none !important;'}"
+>
+
+```html
+<cdr-grid style="grid-template-columns: 1fr;">
+    <cdr-button
+      @click="scrollLeft"
+      ref="left-button"
+      class="arrow-button__left"
+      style="grid-row-start: 1; z-index: 1; justify-self: start; align-self: center; grid-column-start: 1;"
+      :icon-only="true"
+      :with-background="true"
+      :full-width="true"
+      size="small"
+      aria-label="scroll left"
+      data-backstop="cdr-button--icon-only"
+      tabindex="-1"
+    >
+    <cdr-icon
+      use="#arrow-left"
+      inherit-color
+      slot="icon"
+    />
+  </cdr-button>   
+  <cdr-grid class="filmstrip" ref="filmstrip" tag="ul" style="grid-row-start: 1; grid-column: 1 / -1; grid-template-columns: repeat(auto-fill, 25rem); grid-auto-columns: 25rem; grid-auto-flow: column; overflow: scroll; scroll-behavior: smooth; transition: 0.30s cubic-bezier(0.32, 0.94, 0.60, 1); z-index: 0;">
+          <li
+            @wheel="handleButtonState"
+            v-for="(item,index) in items"
+            class="grid-item"
+            :key="index"
+          >
+            <cdr-card>
+              <div>
+                <cdr-img
+                  alt="card test image alt text"
+                  :src="$withBase('/live.jpg')"
+                  modifier="responsive"
+                />
+              </div>
+              <div class="content">
+                <cdr-link
+                  class="cdr-card__link"
+                  href="#Overview"
+                  tabindex="-1"
+                >
+                  <cdr-text
+                    class="title"
+                  >
+                    Complex Card Title
+                  </cdr-text>
+                </cdr-link>
+                <cdr-rating
+                  rating="4.2"
+                  count="12"
+                  size="small"
+                />
+                <cdr-text class="body">
+                  Card content
+                </cdr-text>
+              </div>
+            </cdr-card>
+          </li>
+  </cdr-grid>
+  <cdr-button
+    ref="right-button"
+    @click="scrollRight"
+    class="arrow-button__right"
+    style="grid-row-start: 1; z-index: 1; justify-self: end; align-self: center; grid-column-end: -1;"
+    :icon-only="true"
+    :with-background="true"
+    :full-width="true"
+    size="small"
+    aria-label="scroll right"
+    data-backstop="cdr-button--icon-only"
+    tabindex="-1"
+  >
+  <cdr-icon
+    use="#arrow-right"
+    inherit-color
+    slot="icon"
+  />
+</cdr-button>
+</cdr-grid>
+```
+</cdr-doc-example-code-pair>
 
 
 ## Anatomy
@@ -115,7 +258,7 @@ These instructions will take you through three stages of filmstrip development. 
 
 The development of a simple filmstrip will require the use of a `<cdr-grid>` component and the addition of some CSS styling. 
 
-**Step 1: Create markup and populate content**
+#### Step 1: Create markup and populate content
 
 Your markup should look something like this: 
 
@@ -129,7 +272,7 @@ Your markup should look something like this:
 ``` 
 The individual grid items that you place inside the grid can be any type of content you wish as long as the size of each item is identical.
 
-**Step 2: Add filmstrip styling**
+#### Step 2: Add filmstrip styling
 
 The next step will be to add CSS styling to your `.filmstrip` class so that it becomes a proper cedar filmstrip.
 
@@ -163,7 +306,7 @@ This property is set to `scroll` so that we get the handy scrollbar at the botto
 
 Additionally, it's worth pointing out that no additional styling is needed to remove default styling from the list items.
 
-**Is the filmstrip finished?**
+#### Is the filmstrip finished?
 
 At this point you should have a simple functioning filmstrip which should be good enough for a demo or a proof of concept. However, there are a few accessibility and performance concerns that need to be addressed before using this in a production environment. We will go over these concerns in the next stage of our filmstrip development.
 
@@ -182,11 +325,11 @@ This example below is what you should have after completing stage 1:
 ```
 </cdr-doc-example-code-pair>
 
-##Stage 2: Enhancing filmstrip accessibility and performance 
+### Stage 2: Enhancing filmstrip accessibility and performance 
 
 While the filmstrip looks good and seems to function smoothly, there are several accessibility and performance requirements that we need to address. 
 
-**Issue 1: Keyboard Navigation Requirements** 
+#### Issue 1: Keyboard Navigation Requirements
 
 Keyboard navigation in web pages is the process by which keyboard or [switch device](https://www.youtube.com/watch?v=V1yoOLhx_qA) users can navigate from one interactive element to another. Users can observe which element is active or **focused** by certain cues such as a blue outlined border around a form field or, as in the case of screen readers, an audio description of the element that is currently receiving focus. 
 
@@ -280,7 +423,7 @@ handleKeyDown(e) {
 
 ``` 
 
-**What about nested filmstrip content?** 
+#### What about nested filmstrip content?
 
 It’s possible that you may have filmstrip items where one or more focusable elements are nested within the filmstrip item. An example of this is a filmstrip full of [card components](https://rei.github.io/rei-cedar-docs/components/card/). Here are a few additional rules that you should follow when responding to keydown events with nested content: 
 
@@ -292,7 +435,7 @@ If an element nested within a filmstrip item has focus, and there are no more el
 
 If an element nested within a filmstrip item has focus, and there are no previous elements within the filmstrip item to focus on, hitting **Shift-tab** will shift focus over to the filmstrip item itself. 
 
-**Issue 2: Proper semantic markup, aria-role, and aria-labels** 
+#### Issue 2: Proper semantic markup, aria-role, and aria-labels
 
 It’s important that the markup we put on the page properly expresses what kind of content happens to be on the page. While this may seem evident to visual users, it may not be so apparent to those using screen readers. Furthermore, semantic HTML makes web page content more crawlable by search engines, thus ensuring that the page containing the filmstrip is properly indexed. 
 
@@ -325,16 +468,15 @@ In many cases, however, an `aria-label=gallery` should be enough. Choose either 
 In addition to the addition of `aria-role`, `aria-label`, and `aria-describedby`. It would be helpful to add an `aria-label` to the individual filmstrip items. Here, you may put a product name, or use `aria-labelledby` to reference a header tag within the filmstrip item. Whatever you choose for the aria-label for filmstrip items, be sure that the label succinctly and accurately describes the content within. 
 
  
-
-**Issue 3: Lazy-loading of images** 
+#### Issue 3: Lazy-loading of images
 
 Although our `<cdr-img>` components use native lazy loading which is as simple as putting the `loading= "lazy"` attribute on them, this unfortunately won’t work for filmstrip images that happen to be hidden by the overflow container. Native lazy loading only works with the main viewport, so you will need to implement your own solution here.
 
-## Stage 3: Adding interactive controls to the filmstrip ##
+### Stage 3: Adding interactive controls to the filmstrip
 
 As an enhancement to the filmstrip you can add arrow button controls. In order to do this you will first need to modify the markup and styles so that the button can appear where we expect them.  
 
-**Modify the markup for control placement** 
+#### Modify the markup for control placement
 
 While a simple filmstrip requires only one CSS grid, you will need to use nested CSS grids in order to properly place the filmstrip buttons. Here’s what the markup should look like: 
 
@@ -543,11 +685,11 @@ This property sets alignment for the buttons on the x-axis. The default value fo
 `grid-column-start`/`grid-column-end`:
 If we don't set these properties for the left and right buttons the grid will want to create new columns for each of the buttons. Since we don’t want this, we specify the grid line where we want the left button to start and the grid line where we want the right button to end. This will position the left and right buttons at the beginning and end of the one column we’ve created the one column grid we’ve created for the buttons and the filmstrip content. 
 
-**Disabled button styles:** 
+##### Disabled button styles 
 
 Finally, while disabled styles come out of the box for the icon button, disabling the filmstrip buttons will make it so they don’t capture click events. While normally we want that, in some cases you may want to trigger a “bounce” animation as a cue to users that you are at the end of filmstrip. In order to fire this event you’ll need to disable the button in a different way. Using the `[aria-disabled=”true”]` should serve this purpose for you. 
 
-**Additional Enhancements:**
+##### Additional Enhancements
 
 At this point we have set up a filmstrip with buttons as well as attach click listeners on each. As a developer, it’ll be up to you to write the methods to handle the click events. Below is a list of high level suggestions for the rest of your filmstrip implementation: 
 
@@ -703,26 +845,6 @@ Below is an example of a filmstrip with left and right buttons:
 </cdr-grid>
 ```
 </cdr-doc-example-code-pair>
-
-## More Examples 
-The following are two common use cases that can be followed. Designers can copy and paste these examples from the Figma library.
-  
-### Product Recommendation Filmstrip
-This the product recommendation filmstrip pattern to showcase relevant and related product recommendations. 
-  
-This pattern commonly displays six content blocks per view and does not require more than 5 clicks or swipes to view all of the content within it.
-
-<cdr-img src="https://i.imgur.com/HMe834L.png"/>
-TODO: code example, then replace the above image
-  
-### Category Hub Filmstrip
-Use the category hub filmstrip pattern to display larger categories of content.
-  
-This pattern commonly displays 3 to 4 content blocks per view and does not require more than 5 clicks or swipes to view all of the content within it.
-  
-<cdr-img src="https://i.imgur.com/KFZMzV2.png"/>
-TODO: code example, then replace the above image
-  
   
 ## Guidelines
   
@@ -752,20 +874,19 @@ TODO: code example, then replace the above image
 * Do use like content for content blocks within the same filmstrip
 * Do not present different types of content within the same filmstrip
   
-  
 ### Behavior 
 
 - A tab user will focus first on the filmstrip container 
 - The container should be scrollable via left and right arrow keys 
 - A screen reader user will not hear the arrow controls but should hear the filmstrip container (Use aria-hidden to remove controls from the tab and AT reading order) 
-  
-  
+   
 ### Accessibility 
 
-**Overflow and Focus problem**
+#### Overflow and Focus problem
 - Firefox puts an overflowing container into the tab order, making it reachable and its content scrollable. Because it has no focus styles, it is not obvious   
-- Chrome, Chrome-based Edge and Safari do not add overflow containers to the tab order. By default, overflowing content on these browsers is not scrollable with the keyboard  
-**Overflow and Focus solution**
+- Chrome, Chrome-based Edge and Safari do not add overflow containers to the tab order. By default, overflowing content on these browsers is not scrollable with the keyboard
+
+#### Overflow and Focus solution
 - Add `tabindex="0"` to the overflowing container to make it baseline keyboard accessible. 
 - Show this keyboard accessibility to users by applying focus styles (Cedar token mixin) 
 - "Promote" the `<div>` to a landmark region by both applying role="region" and supplying an accessible name, by using aria-label, for example. By doing so, you provide much-needed context to screen reader users - because they suddenly discover a focusable element that is not interactive in the classic sense (like a link or button would be). 
