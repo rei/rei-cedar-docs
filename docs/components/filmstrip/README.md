@@ -543,11 +543,11 @@ This property sets alignment for the buttons on the x-axis. The default value fo
 `grid-column-start`/`grid-column-end`:
 If we don't set these properties for the left and right buttons the grid will want to create new columns for each of the buttons. Since we don’t want this, we specify the grid line where we want the left button to start and the grid line where we want the right button to end. This will position the left and right buttons at the beginning and end of the one column we’ve created the one column grid we’ve created for the buttons and the filmstrip content. 
 
-** Step b) Disabled button styles:** 
+**Step b) Disabled button styles:** 
 
 Finally, while disabled styles come out of the box for the icon button, disabling the filmstrip buttons will make it so they don’t capture click events. While normally we want that, in some cases you may want to trigger a “bounce” animation as a cue to users that you are at the end of filmstrip. In order to fire this event you’ll need to disable the button in a different way. Using the `[aria-disabled=”true”]` should serve this purpose for you. 
 
-** Step c) Additional Enhancements:**
+**Step c) Additional Enhancements:**
 
 At this point we have set up a filmstrip with buttons as well as attach click listeners on each. As a developer, it’ll be up to you to write the methods to handle the click events. Below is a list of high level suggestions for the rest of your filmstrip implementation: 
 
