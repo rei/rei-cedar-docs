@@ -115,7 +115,7 @@ These instructions will take you through three stages of filmstrip development. 
 
 The development of a simple filmstrip will require the use of a `<cdr-grid>` component and the addition of some CSS styling. 
 
-**Step 1: Create markup and populate content**
+**Step a) Create markup and populate content**
 
 Your markup should look something like this: 
 
@@ -129,7 +129,7 @@ Your markup should look something like this:
 ``` 
 The individual grid items that you place inside the grid can be any type of content you wish as long as the size of each item is identical.
 
-**Step 2: Add filmstrip styling**
+**Step b) Add filmstrip styling**
 
 The next step will be to add CSS styling to your `.filmstrip` class so that it becomes a proper cedar filmstrip.
 
@@ -182,11 +182,11 @@ This example below is what you should have after completing stage 1:
 ```
 </cdr-doc-example-code-pair>
 
-##Stage 2: Enhancing filmstrip accessibility and performance 
+### Stage 2: Enhancing filmstrip accessibility and performance 
 
 While the filmstrip looks good and seems to function smoothly, there are several accessibility and performance requirements that we need to address. 
 
-**Issue 1: Keyboard Navigation Requirements** 
+**Step a) Keyboard Navigation Requirements** 
 
 Keyboard navigation in web pages is the process by which keyboard or [switch device](https://www.youtube.com/watch?v=V1yoOLhx_qA) users can navigate from one interactive element to another. Users can observe which element is active or **focused** by certain cues such as a blue outlined border around a form field or, as in the case of screen readers, an audio description of the element that is currently receiving focus. 
 
@@ -292,7 +292,7 @@ If an element nested within a filmstrip item has focus, and there are no more el
 
 If an element nested within a filmstrip item has focus, and there are no previous elements within the filmstrip item to focus on, hitting **Shift-tab** will shift focus over to the filmstrip item itself. 
 
-**Issue 2: Proper semantic markup, aria-role, and aria-labels** 
+**Step b) Proper semantic markup, aria-role, and aria-labels** 
 
 It’s important that the markup we put on the page properly expresses what kind of content happens to be on the page. While this may seem evident to visual users, it may not be so apparent to those using screen readers. Furthermore, semantic HTML makes web page content more crawlable by search engines, thus ensuring that the page containing the filmstrip is properly indexed. 
 
@@ -326,15 +326,15 @@ In addition to the addition of `aria-role`, `aria-label`, and `aria-describedby`
 
  
 
-**Issue 3: Lazy-loading of images** 
+**Step c) Lazy-loading of images** 
 
 Although our `<cdr-img>` components use native lazy loading which is as simple as putting the `loading= "lazy"` attribute on them, this unfortunately won’t work for filmstrip images that happen to be hidden by the overflow container. Native lazy loading only works with the main viewport, so you will need to implement your own solution here.
 
-## Stage 3: Adding interactive controls to the filmstrip ##
+### Stage 3: Adding interactive controls to the filmstrip ##
 
 As an enhancement to the filmstrip you can add arrow button controls. In order to do this you will first need to modify the markup and styles so that the button can appear where we expect them.  
 
-**Modify the markup for control placement** 
+**Step a) Modify the markup for control placement** 
 
 While a simple filmstrip requires only one CSS grid, you will need to use nested CSS grids in order to properly place the filmstrip buttons. Here’s what the markup should look like: 
 
@@ -543,11 +543,11 @@ This property sets alignment for the buttons on the x-axis. The default value fo
 `grid-column-start`/`grid-column-end`:
 If we don't set these properties for the left and right buttons the grid will want to create new columns for each of the buttons. Since we don’t want this, we specify the grid line where we want the left button to start and the grid line where we want the right button to end. This will position the left and right buttons at the beginning and end of the one column we’ve created the one column grid we’ve created for the buttons and the filmstrip content. 
 
-**Disabled button styles:** 
+** Step b) Disabled button styles:** 
 
 Finally, while disabled styles come out of the box for the icon button, disabling the filmstrip buttons will make it so they don’t capture click events. While normally we want that, in some cases you may want to trigger a “bounce” animation as a cue to users that you are at the end of filmstrip. In order to fire this event you’ll need to disable the button in a different way. Using the `[aria-disabled=”true”]` should serve this purpose for you. 
 
-**Additional Enhancements:**
+** Step c) Additional Enhancements:**
 
 At this point we have set up a filmstrip with buttons as well as attach click listeners on each. As a developer, it’ll be up to you to write the methods to handle the click events. Below is a list of high level suggestions for the rest of your filmstrip implementation: 
 
