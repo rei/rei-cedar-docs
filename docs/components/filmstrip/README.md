@@ -26,7 +26,7 @@ Designers and developers will need to compose their own custome filmstrip based 
   
 Designers can copy and paste the two most common examples listed in this documentation or use another variant for a more custom use case from [the Figma library here.](https://www.figma.com/file/dGjTo4tpmVlSZQPWPnCLy0/Cedar-Web-Components?node-id=2019%3A183215)  
 
-Developers use the following [guide](TODO link to start of steps) which applies specific filmstrip requirements to our basic cedar components as a starting point for your custom filmstrip. Please feel free to share feedback with us by posting in the [cedar-user-support slack channel here](https://rei.slack.com/archives/CA58YCGN4) or coming to an office hours.
+Developers use the following [guide](#development-instructions) which applies specific filmstrip requirements to our basic cedar components as a starting point for your custom filmstrip. Please feel free to share feedback with us by posting in the [cedar-user-support slack channel here](https://rei.slack.com/archives/CA58YCGN4) or coming to an office hours.
   
 <cdr-doc-example-code-pair copy-button="false" repository-href="/src/components/grid" 
   :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData)"
