@@ -27,152 +27,6 @@ Designers and developers will need to compose their own custome filmstrip based 
 Designers can copy and paste the two most common examples listed in this documentation or use another variant for a more custom use case from [the Figma library here.](https://www.figma.com/file/dGjTo4tpmVlSZQPWPnCLy0/Cedar-Web-Components?node-id=2019%3A183215)  
 
 Developers use the following [guide](#development-instructions) which applies specific filmstrip requirements to our basic cedar components as a starting point for your custom filmstrip. Please feel free to share feedback with us by posting in the [cedar-user-support slack channel here](https://rei.slack.com/archives/CA58YCGN4) or coming to an office hours.
-  
-<cdr-doc-example-code-pair copy-button="false" repository-href="/src/components/grid" 
-  :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData)"
-  :methods="{
-    getFilmstripDimensions() {
-      this.filmstrip = this.$refs.filmstrip.$el;
-      this.filmstripWidth = this.filmstrip.offsetWidth;
-      this.currentPosition = this.filmstrip.scrollLeft;
-      this.maxScrollRight = this.filmstrip.scrollWidth - this.filmstrip.clientWidth;
-    },
-    handleButtonState() {
-      this.getFilmstripDimensions();
-      this.filmstrip = this.$refs.filmstrip.$el;
-      this.leftButton = this.$refs['left-button'].$el;
-      this.rightButton = this.$refs['right-button'].$el;
-      if (this.currentPosition === this.maxScrollRight) {
-        this.rightArrowDisabled = true;
-        this.rightButton.setAttribute('aria-disabled', 'true');
-        this.rightButton.style = this.rightButtonDisabled;
-      }
-      if (this.currentPosition === 0) {
-        this.leftArrowDisabled = true;
-        this.leftButton.setAttribute('aria-disabled', 'true');
-        this.leftButton.style = this.leftButtonDisabled;
-      }
-      if (this.currentPosition !== this.maxScrollRight) {
-        this.enableRightButton();
-      }
-      if (this.currentPosition !== 0) {
-        this.enableLeftButton();
-      }
-    },
-    enableRightButton(){
-      this.rightButton = this.$refs['right-button'].$el;
-      this.rightArrowDisabled = false;
-      this.rightButton.setAttribute('aria-disabled', 'false');
-      this.rightButton.style = this.rightButtonEnabled;
-    },
-    enableLeftButton(){
-      this.leftButton = this.$refs['left-button'].$el;
-      this.leftArrowDisabled = false;
-      this.leftButton.setAttribute('aria-disabled', 'false');
-      this.leftButton.style = this.leftButtonEnabled;
-    },
-    scrollRight() {
-      this.filmstrip = this.$refs.filmstrip.$el;
-      this.getFilmstripDimensions();
-      this.filmstrip.scrollTo(this.currentPosition + 900, 0);
-      this.currentPosition = this.filmstrip.scrollLeft;
-      this.handleButtonState();
-      this.enableLeftButton();
-    },
-    scrollLeft() {
-      this.filmstrip = this.$refs.filmstrip.$el;
-      this.getFilmstripDimensions();
-      this.filmstrip.scrollTo(this.currentPosition - 900, 0);
-      this.currentPosition = this.filmstrip.scrollLeft;
-      this.handleButtonState();
-      this.enableRightButton();
-    }
-  }"
-  :model="{items: [1, 2, 3, 4, 5, 6, 7, 8, 9], currentPosition: null, rightButtonEnabled: 'grid-row-start: 1; z-index: 1; justify-self: end; align-self: center; grid-column-end: -1;', leftButtonEnabled: 'grid-row-start: 1; z-index: 1; justify-self: start; align-self: center; grid-column-start: 1;', rightButtonDisabled: 'grid-row-start: 1; z-index: 1; justify-self: end; align-self: center; grid-column-end: -1; color: #d1cbbd;cursor: not-allowed;background-color: #f9f8f6 !important;box-shadow: inset 0 0 0 0.1rem #dcd6cb !important;fill: #d1cbbd !important;border: none !important;', leftButtonDisabled: 'grid-row-start: 1; z-index: 1; justify-self: start; align-self: center; grid-column-start: 1; color: #d1cbbd;cursor: not-allowed;background-color: #f9f8f6 !important;box-shadow: inset 0 0 0 0.1rem #dcd6cb !important;fill: #d1cbbd !important;border: none !important;'}"
->
-
-```html
-<cdr-grid style="grid-template-columns: 1fr;">
-    <cdr-button
-      @click="scrollLeft"
-      ref="left-button"
-      class="arrow-button__left"
-      style="grid-row-start: 1; z-index: 1; justify-self: start; align-self: center; grid-column-start: 1;"
-      :icon-only="true"
-      :with-background="true"
-      :full-width="true"
-      size="small"
-      aria-label="scroll left"
-      data-backstop="cdr-button--icon-only"
-      tabindex="-1"
-    >
-    <cdr-icon
-      use="#arrow-left"
-      inherit-color
-      slot="icon"
-    />
-  </cdr-button>   
-  <cdr-grid class="filmstrip" ref="filmstrip" tag="ul" style="grid-row-start: 1; grid-column: 1 / -1; grid-template-columns: repeat(auto-fill, 25rem); grid-auto-columns: 25rem; grid-auto-flow: column; overflow: scroll; scroll-behavior: smooth; transition: 0.30s cubic-bezier(0.32, 0.94, 0.60, 1); z-index: 0;">
-          <li
-            @wheel="handleButtonState"
-            v-for="(item,index) in items"
-            class="grid-item"
-            :key="index"
-          >
-            <cdr-card>
-              <div>
-                <cdr-img
-                  alt="card test image alt text"
-                  :src="$withBase('/live.jpg')"
-                  modifier="responsive"
-                />
-              </div>
-              <div class="content">
-                <cdr-link
-                  class="cdr-card__link"
-                  href="#Overview"
-                  tabindex="-1"
-                >
-                  <cdr-text
-                    class="title"
-                  >
-                    Complex Card Title
-                  </cdr-text>
-                </cdr-link>
-                <cdr-rating
-                  rating="4.2"
-                  count="12"
-                  size="small"
-                />
-                <cdr-text class="body">
-                  Card content
-                </cdr-text>
-              </div>
-            </cdr-card>
-          </li>
-  </cdr-grid>
-  <cdr-button
-    ref="right-button"
-    @click="scrollRight"
-    class="arrow-button__right"
-    style="grid-row-start: 1; z-index: 1; justify-self: end; align-self: center; grid-column-end: -1;"
-    :icon-only="true"
-    :with-background="true"
-    :full-width="true"
-    size="small"
-    aria-label="scroll right"
-    data-backstop="cdr-button--icon-only"
-    tabindex="-1"
-  >
-  <cdr-icon
-    use="#arrow-right"
-    inherit-color
-    slot="icon"
-  />
-</cdr-button>
-</cdr-grid>
-```
-</cdr-doc-example-code-pair>
 
 
 ## Anatomy
@@ -845,6 +699,23 @@ Below is an example of a filmstrip with left and right buttons:
 </cdr-grid>
 ```
 </cdr-doc-example-code-pair>
+
+## Examples 
+The following are two common use cases that can be followed. Designers can copy and paste these examples from the Figma library.
+
+### Product Recommendation Filmstrip
+This the product recommendation filmstrip pattern to showcase relevant and related product recommendations. 
+
+This pattern commonly displays six content blocks per view and does not require more than 5 clicks or swipes to view all of the content within it.
+
+<cdr-img src="https://i.imgur.com/HMe834L.png"/>
+
+### Category Hub Filmstrip
+Use the category hub filmstrip pattern to display larger categories of content.
+
+This pattern commonly displays 3 to 4 content blocks per view and does not require more than 5 clicks or swipes to view all of the content within it.
+
+<cdr-img src="https://i.imgur.com/KFZMzV2.png"/>
   
 ## Guidelines
   
