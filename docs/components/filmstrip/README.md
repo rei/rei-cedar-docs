@@ -28,13 +28,13 @@ Designers can copy and paste the two most common examples listed in this documen
 
 Developers use the following [guide](#development-instructions) which applies specific filmstrip requirements to our basic cedar components as a starting point for your custom filmstrip. Please feel free to share feedback with us by posting in the [cedar-user-support slack channel here](https://rei.slack.com/archives/CA58YCGN4) or coming to an office hours.
 
-<cdr-img src="https://i.imgur.com/Co3dIqI.jpg" alt="image of REI.com product recommendations filmstrip"/>
+<cdr-img :src="$withBase('/filmstrip/product-filmstrip.jpeg')" alt="image of REI.com product recommendations filmstrip"/>
 
 ## Anatomy
 
 Because the Filmstrip is a cookbook of multiple sub-components, its structure can be customized in a variety of ways.
 
-<cdr-img src="https://i.imgur.com/LYgWLPG.png" alt="a wireframe outlining the parts listed below"/>
+<cdr-img :src="$withBase('/filmstrip/filmstrip-anatomy.png')" alt="a wireframe outlining the parts listed below"/>
   
   
  ### 1. Wrapping container 
@@ -709,14 +709,14 @@ This the product recommendation filmstrip pattern to showcase relevant and relat
 
 This pattern commonly displays six content blocks per view and does not require more than 5 clicks or swipes to view all of the content within it.
 
-<cdr-img src="https://i.imgur.com/HMe834L.png"/>
+<cdr-img :src="$withBase('/filmstrip/product-filmstrip.jpeg')" alt="image of REI.com product recommendations filmstrip"/>
 
 ### Category Hub Filmstrip
 Use the category hub filmstrip pattern to display larger categories of content.
 
 This pattern commonly displays 3 to 4 content blocks per view and does not require more than 5 clicks or swipes to view all of the content within it.
 
-<cdr-img src="https://i.imgur.com/KFZMzV2.png"/>
+<cdr-img :src="$withBase('/filmstrip/category-hub-filmstrip.png')" alt="image of REI.com category hub filmstrip"/>
   
 ## Guidelines
   
