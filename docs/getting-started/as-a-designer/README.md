@@ -76,7 +76,7 @@ Want to jump in and start using Cedar? We have a task for you! Understand when t
 ## Guides & resources
   
   Col 1: https://www.figma.com/file/O5VYAUnSrzoTVikTMyIQtT/Production-Graphics?node-id=644%3A582
-  [Tokens](https://www.figma.com/file/dZF2dkGLlu14ROjoPLGIbH/Tokens%3A-Tutorial?node-id=1%3A9)
+  [File setup](https://www.figma.com/file/dZF2dkGLlu14ROjoPLGIbH/File-setup%3A-tutorial?node-id=0%3A1)
   
   Col 2: https://www.figma.com/file/O5VYAUnSrzoTVikTMyIQtT/Production-Graphics?node-id=644%3A559
   [Typography](https://www.figma.com/file/BIHbjk562VfoKMsHYS2rwg/Typography-in-Cedar%3A-Tutorial?node-id=1301%3A454)
@@ -94,7 +94,7 @@ Col 1: https://www.figma.com/file/O5VYAUnSrzoTVikTMyIQtT/Production-Graphics?nod
   [Accessibility](https://www.figma.com/file/tdZn3PIv5B1G6OX8zPkQDb/Accessibility%3A-Tutorial?node-id=1%3A11)
   
   ## Connect with us
-  The team is available for questions or one-on-one help. The best way to reach out is through the Slack channel #cedar-user-support or by joining office hours (reach out to the team for an invite). If you'd like extra support, sign up for one-on-one help.
+  The team is available for questions or one-on-one help. The best way to reach out is through the Slack channel #cedar-user-support or by joining office hours (reach out to the team for an invite).
   
   Up next: [Hand-off Process](../../getting-started/hand-off/)
 
