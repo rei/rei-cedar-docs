@@ -28,6 +28,7 @@ Designers can copy and paste the two most common examples listed in this documen
 
 Developers use the following [guide](#development-instructions) which applies specific filmstrip requirements to our basic cedar components as a starting point for your custom filmstrip. Please feel free to share feedback with us by posting in the [cedar-user-support slack channel here](https://rei.slack.com/archives/CA58YCGN4) or coming to an office hours.
 
+<cdr-img src="https://i.imgur.com/Co3dIqI.jpg" alt="image of REI.com product recommendations filmstrip"/>
 
 ## Anatomy
 
