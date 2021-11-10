@@ -26,17 +26,15 @@ Designers and developers will need to compose their own custome filmstrip based 
   
 Designers can copy and paste the two most common examples listed in this documentation or use another variant for a more custom use case from [the Figma library here.](https://www.figma.com/file/dGjTo4tpmVlSZQPWPnCLy0/Cedar-Web-Components?node-id=2019%3A183215)  
 
-Developers use the following [guide](TODO link to start of steps) which applies specific filmstrip requirements to our basic cedar components as a starting point for your custom filmstrip. Please feel free to share feedback with us by posting in the [cedar-user-support slack channel here](https://rei.slack.com/archives/CA58YCGN4) or coming to an office hours.
-  
-TODO code example should mimic this image (remove image once code sample is working as expected)
-<cdr-img src="https://i.imgur.com/Co3dIqI.jpg" alt="image of REI.com product recommendations filmstrip"/>
+Developers use the following [guide](#development-instructions) which applies specific filmstrip requirements to our basic cedar components as a starting point for your custom filmstrip. Please feel free to share feedback with us by posting in the [cedar-user-support slack channel here](https://rei.slack.com/archives/CA58YCGN4) or coming to an office hours.
 
+<cdr-img :src="$withBase('/filmstrip/product-filmstrip.jpeg')" alt="image of REI.com product recommendations filmstrip"/>
 
 ## Anatomy
 
 Because the Filmstrip is a cookbook of multiple sub-components, its structure can be customized in a variety of ways.
 
-<cdr-img src="https://i.imgur.com/LYgWLPG.png" alt="a wireframe outlining the parts listed below"/>
+<cdr-img :src="$withBase('/filmstrip/filmstrip-anatomy.png')" alt="a wireframe outlining the parts listed below"/>
   
   
  ### 1. Wrapping container 
@@ -163,7 +161,7 @@ This property is set to `scroll` so that we get the handy scrollbar at the botto
 
 Additionally, it's worth pointing out that no additional styling is needed to remove default styling from the list items.
 
-**Is the filmstrip finished?**
+#### Is the filmstrip finished?
 
 At this point you should have a simple functioning filmstrip which should be good enough for a demo or a proof of concept. However, there are a few accessibility and performance concerns that need to be addressed before using this in a production environment. We will go over these concerns in the next stage of our filmstrip development.
 
@@ -280,7 +278,7 @@ handleKeyDown(e) {
 
 ``` 
 
-**What about nested filmstrip content?** 
+#### What about nested filmstrip content?
 
 It’s possible that you may have filmstrip items where one or more focusable elements are nested within the filmstrip item. An example of this is a filmstrip full of [card components](https://rei.github.io/rei-cedar-docs/components/card/). Here are a few additional rules that you should follow when responding to keydown events with nested content: 
 
@@ -323,8 +321,6 @@ In many cases, however, an `aria-label=gallery` should be enough. Choose either 
 ``` 
 
 In addition to the addition of `aria-role`, `aria-label`, and `aria-describedby`. It would be helpful to add an `aria-label` to the individual filmstrip items. Here, you may put a product name, or use `aria-labelledby` to reference a header tag within the filmstrip item. Whatever you choose for the aria-label for filmstrip items, be sure that the label succinctly and accurately describes the content within. 
-
- 
 
 **Step c) Lazy-loading of images** 
 
@@ -704,25 +700,22 @@ Below is an example of a filmstrip with left and right buttons:
 ```
 </cdr-doc-example-code-pair>
 
-## More Examples 
+## Examples 
 The following are two common use cases that can be followed. Designers can copy and paste these examples from the Figma library.
-  
+
 ### Product Recommendation Filmstrip
 This the product recommendation filmstrip pattern to showcase relevant and related product recommendations. 
-  
+
 This pattern commonly displays six content blocks per view and does not require more than 5 clicks or swipes to view all of the content within it.
 
-<cdr-img src="https://i.imgur.com/HMe834L.png"/>
-TODO: code example, then replace the above image
-  
+<cdr-img :src="$withBase('/filmstrip/product-filmstrip.jpeg')" alt="image of REI.com product recommendations filmstrip"/>
+
 ### Category Hub Filmstrip
 Use the category hub filmstrip pattern to display larger categories of content.
-  
+
 This pattern commonly displays 3 to 4 content blocks per view and does not require more than 5 clicks or swipes to view all of the content within it.
-  
-<cdr-img src="https://i.imgur.com/KFZMzV2.png"/>
-TODO: code example, then replace the above image
-  
+
+<cdr-img :src="$withBase('/filmstrip/category-hub-filmstrip.png')" alt="image of REI.com category hub filmstrip"/>
   
 ## Guidelines
   
@@ -752,20 +745,19 @@ TODO: code example, then replace the above image
 * Do use like content for content blocks within the same filmstrip
 * Do not present different types of content within the same filmstrip
   
-  
 ### Behavior 
 
 - A tab user will focus first on the filmstrip container 
 - The container should be scrollable via left and right arrow keys 
 - A screen reader user will not hear the arrow controls but should hear the filmstrip container (Use aria-hidden to remove controls from the tab and AT reading order) 
-  
-  
+   
 ### Accessibility 
 
-**Overflow and Focus problem**
+#### Overflow and Focus problem
 - Firefox puts an overflowing container into the tab order, making it reachable and its content scrollable. Because it has no focus styles, it is not obvious   
-- Chrome, Chrome-based Edge and Safari do not add overflow containers to the tab order. By default, overflowing content on these browsers is not scrollable with the keyboard  
-**Overflow and Focus solution**
+- Chrome, Chrome-based Edge and Safari do not add overflow containers to the tab order. By default, overflowing content on these browsers is not scrollable with the keyboard
+
+#### Overflow and Focus solution
 - Add `tabindex="0"` to the overflowing container to make it baseline keyboard accessible. 
 - Show this keyboard accessibility to users by applying focus styles (Cedar token mixin) 
 - "Promote" the `<div>` to a landmark region by both applying role="region" and supplying an accessible name, by using aria-label, for example. By doing so, you provide much-needed context to screen reader users - because they suddenly discover a focusable element that is not interactive in the classic sense (like a link or button would be). 
