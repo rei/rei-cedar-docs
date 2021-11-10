@@ -31,6 +31,12 @@
 
 <br>
 
+## 11.0.1
+
+### Bug fixes
+
+- CdrToast and CdrBanner have been updated to address style discrepancies between the design and code libraries.
+
 ## New Features
 
 ### CdrBanner Redesign
