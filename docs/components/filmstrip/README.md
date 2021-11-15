@@ -22,7 +22,7 @@
     
 Filmstrip is a type of constrained content container which allows users to preview multiple related pieces of content such as images, text, or cards in a horizontal overflow.  
   
-Designers and developers will need to compose their own custome filmstrip based on their specific needs. The following documentation follows more of a ‘recipe’ format, with guidance and necessary component ‘ingredients’ available to customize as needed. 
+**Designers and developers will need to compose their own custom filmstrip based on their specific needs.** The following documentation follows more of a ‘recipe’ format, with guidance and necessary component ‘ingredients’ available to customize as needed. 
   
 Designers can copy and paste the two most common examples listed in this documentation or use another variant for a more custom use case from [the Figma library here.](https://www.figma.com/file/dGjTo4tpmVlSZQPWPnCLy0/Cedar-Web-Components?node-id=2019%3A183215)  
 
@@ -50,12 +50,12 @@ The wrapping container is a required element to house the filmstrip structure. T
 **Should**
   
 
-### 2. Header (optional)
+### 2. Header (optional and customizable)
 
 The header is a recommended element for many filmstrip use cases to prime the user on the content that is within the filmstrip. 
   
 
-### 3. Content Blocks 
+### 3. Content Blocks (customizable)
   
 Content blocks can include any type of content such as images, product tiles, videos, gifs or cards. 
 
@@ -66,7 +66,7 @@ On an X-axis, filmstrips items are linear and ordered, they start at item1 and e
 - be a set of like content 
   
   
-### 4. Pagination Controls (optional) 
+### 4. Pagination Controls (optional)
   
 Pagination controls are an optional element that allows the user to move from one display view to another.  
   
@@ -84,11 +84,11 @@ Pagination controls are an optional element that allows the user to move from on
 **Should**
 - Use aria-hidden to remove controls from the tab and AT reading order
   
-### 5. Link to all content (optional) 
+### 5. Link to all content (optional and customizable) 
 
 The view all link is a recommended element for many filmstrip use cases to allow the user to view all the content in another format, often in a search list, rather than in the filmstrip. 
 
-### 6. Overflow Grid 
+### 6. Overflow Grid (customizable)
 
 The overflow grid container is the heavy lifter of this pattern, this is where the filmstrip items will be displayed. It will set up how many items are in view at a time, the spacing between items, hide all items not in view, and provide the basic functionality of a horizontal scroll container. 
 
@@ -103,11 +103,11 @@ The overflow grid container is the heavy lifter of this pattern, this is where t
 
 These instructions will take you through three stages of filmstrip development. These stages are: 
 
-1. Development of a simple filmstrip with an overflow container 
+Stage 1. Development of a simple filmstrip with an overflow container 
 
-2. Enhancing the simple filmstrip to address accessibility and performance issues  
+Stage 2. Enhancing the simple filmstrip to address accessibility and performance issues  
 
-3. Extending and some refactoring of the filmstrip to include interactive controls 
+Stage 3. Extending and light refactoring of the filmstrip to include interactive controls 
 
 ### Stage 1: Developing a simple filmstrip 
 
