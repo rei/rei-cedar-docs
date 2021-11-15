@@ -20,13 +20,21 @@
 
 ## Overview
     
-Filmstrip is a type of constrained content container which allows users to preview multiple related pieces of content such as images, text, or cards in a horizontal overflow.  
+Filmstrip allows users to preview multiple pieces of related content in a constrained container. Filmstrip is different from carousel because while filmstrip shows multiple pieces of content per view, carousel only show one piece of content per view.
   
-**Designers and developers will need to compose their own custom filmstrip based on their specific needs.** The following documentation follows more of a ‘recipe’ format, with guidance and necessary component ‘ingredients’ available to customize as needed. 
+**Filmstrip is not a traditional component that is functional out of the box. Designers and developers need to use this documentation to compose their own custom version of a filmstrip using the recommended components and guidance relevant to their specific use case.**
   
-Designers can copy and paste the two most common examples listed in this documentation or use another variant for a more custom use case from [the Figma library here.](https://www.figma.com/file/dGjTo4tpmVlSZQPWPnCLy0/Cedar-Web-Components?node-id=2019%3A183215)  
+  
+## Getting Started Building a Filmstrip
+  
+There are two common examples documented below--[Product Recommendation Filmstrip](#product-recommendation-filmstrip) and [Category Hub Filmstrip](#category-hub-filmstrip). 
+  
+Designers can get started by pulling one of these examples from [the Figma library here.](https://www.figma.com/file/dGjTo4tpmVlSZQPWPnCLy0/Cedar-Web-Components?node-id=2019%3A183215) and then optionally customizing the header and subheader, content blocks, pagination controls, link to all content and overflow grid based on the needs of your use case.
 
-Developers use the following [guide](#development-instructions) which applies specific filmstrip requirements to our basic cedar components as a starting point for your custom filmstrip. Please feel free to share feedback with us by posting in the [cedar-user-support slack channel here](https://rei.slack.com/archives/CA58YCGN4) or coming to an office hours.
+Developers can use the following [guide](#development-instructions) which applies specific filmstrip requirements to basic cedar components as a starting point for your custom filmstrip. 
+  
+Please feel free to share feedback with us by posting in the [cedar-user-support slack channel here](https://rei.slack.com/archives/CA58YCGN4) or by coming to an office hours.
+  
 
 <cdr-img :src="$withBase('/filmstrip/product-filmstrip.jpeg')" alt="image of REI.com product recommendations filmstrip"/>
 
@@ -50,25 +58,24 @@ The wrapping container is a required element to house the filmstrip structure. T
 **Should**
   
 
-### 2. Header (optional and customizable)
+### 2. Header and subheader (optional and customizable)
 
-The header is a recommended element for many filmstrip use cases to prime the user on the content that is within the filmstrip. 
+The header is a recommended element for many filmstrip use cases to prime the user on the content that is within the filmstrip. A subheader can be used if more information is needed to understand the content within the filmstrip.
   
 
 ### 3. Content Blocks (customizable)
   
-Content blocks can include any type of content such as images, product tiles, videos, gifs or cards. 
+Content blocks can include any type of content such as images, product tiles, videos, gifs or cards. You can have 3-6 content blocks shown in a filmstrip at a time. Generally, the less content blocks a filmstrip has in a view, the greater the focus is on each content block in the filmstrip and the greater the filmstrip's general visual hierarchy is on the page. Choose the number of content blocks which corresponds with each individual content's importance and the importance that the filstrip has on the page as a whole.
 
 On an X-axis, filmstrips items are linear and ordered, they start at item1 and end at item(n). 
   
 **Must**
-
-- be a set of like content 
+- Be a set of like content. For example, a filmstrip with images should only show images while a filmstrip with videos should only show videos within its content blocks.
   
   
 ### 4. Pagination Controls (optional)
   
-Pagination controls are an optional element that allows the user to move from one display view to another.  
+Pagination controls are an optional element that allows the user to move from one display view to another. Pagination controls in the form of arrow buttons allow users to navigate from one view to the next or previous.
   
 **Behavior**
 - Pagination controls become disabled when the set of data reaches either end of the x-axis.  
@@ -86,7 +93,7 @@ Pagination controls are an optional element that allows the user to move from on
   
 ### 5. Link to all content (optional and customizable) 
 
-The view all link is a recommended element for many filmstrip use cases to allow the user to view all the content in another format, often in a search list, rather than in the filmstrip. 
+The view all link is a recommended element for filmstrip use cases that have more related content than is being shown in the filmstrip. 
 
 ### 6. Overflow Grid (customizable)
 
