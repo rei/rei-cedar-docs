@@ -22,7 +22,7 @@
     
 Filmstrip allows users to preview multiple pieces of related content in a constrained container. Filmstrip is different from carousel because while filmstrip shows multiple pieces of content per view, carousel only show one piece of content per view.
   
-**Filmstrip is not a traditional component that is functional out of the box. Designers and developers need to use this documentation to compose their own custom version of a filmstrip using the recommended components and guidance relevant to their specific use case.**
+**Filmstrip is not a traditional component that is functional out of the box.** Designers and developers need to use this documentation to compose their own custom version of a filmstrip using the recommended components and guidance relevant to their specific use case.
   
   
 ## Getting Started Building a Filmstrip
