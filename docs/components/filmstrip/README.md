@@ -20,23 +20,22 @@
 
 ## Overview
     
-Filmstrip allows users to preview multiple pieces of related content in a constrained container. Filmstrip is different from carousel because while filmstrip shows multiple pieces of content per view, carousel only show one piece of content per view.
+Filmstrip allows users to preview multiple pieces of related content in a constrained container. Filmstrip is different from carousel because while filmstrip shows multiple pieces of content per view, carousel only shows one piece of content per view.
   
 **Filmstrip is not a traditional component that is functional out of the box.** Designers and developers need to use this documentation to compose their own custom version of a filmstrip using the recommended components and guidance relevant to their specific use case.
   
-  
+<cdr-img :src="$withBase('/filmstrip/product-filmstrip.jpeg')" alt="image of REI.com product recommendations filmstrip"/>
+
 ## Getting Started Building a Filmstrip
   
-There are two common examples documented below--[Product Recommendation Filmstrip](#product-recommendation-filmstrip) and [Category Hub Filmstrip](#category-hub-filmstrip). 
+There are two common examples documented below: [Product Recommendation Filmstrip](#product-recommendation-filmstrip) and [Category Hub Filmstrip](#category-hub-filmstrip). 
   
-Designers can get started by pulling one of these examples from [the Figma library here.](https://www.figma.com/file/dGjTo4tpmVlSZQPWPnCLy0/Cedar-Web-Components?node-id=2019%3A183215) and then optionally customizing the header and subheader, content blocks, pagination controls, link to all content and overflow grid based on the needs of your use case.
+Designers can get started by pulling one of these examples from [the Figma library here.](https://www.figma.com/file/dGjTo4tpmVlSZQPWPnCLy0/Cedar-Web-Components?node-id=2019%3A183215) and then optionally customizing the header and subheader, content blocks, pagination controls, link to all content and/or overflow grid based on the needs of your use case.
 
-Developers can use the following [guide](#development-instructions) which applies specific filmstrip requirements to basic cedar components as a starting point for your custom filmstrip. 
+Developers can use the following [development guide](#development-instructions) which applies specific filmstrip requirements to basic cedar components as a starting point for your custom filmstrip. 
   
-Please feel free to share feedback with us by posting in the [cedar-user-support slack channel here](https://rei.slack.com/archives/CA58YCGN4) or by coming to an office hours.
+Please feel free to share feedback with us by posting in the [cedar-user-support slack channel](https://rei.slack.com/archives/CA58YCGN4) or by coming to an office hours.
   
-
-<cdr-img :src="$withBase('/filmstrip/product-filmstrip.jpeg')" alt="image of REI.com product recommendations filmstrip"/>
 
 ## Anatomy
 
@@ -54,23 +53,23 @@ The wrapping container is a required element to house the filmstrip structure. T
 - Ensure all on-screen and touch target areas are at least 44 by 44 pixels  
 
 - Include a skip link for keyboard and screen reading users to skip the filmstrip 
-
-**Should**
   
 
 ### 2. Header and subheader (optional and customizable)
 
 The header is a recommended element for many filmstrip use cases to prime the user on the content that is within the filmstrip. A subheader can be used if more information is needed to understand the content within the filmstrip.
   
-
+**Should**
+ - Be short, informative and directly related to the content within the filmstrip
+  
 ### 3. Content Blocks (customizable)
   
 Content blocks can include any type of content such as images, product tiles, videos, gifs or cards. You can have 3-6 content blocks shown in a filmstrip at a time. Generally, the less content blocks a filmstrip has in a view, the greater the focus is on each content block in the filmstrip and the greater the filmstrip's general visual hierarchy is on the page. Choose the number of content blocks which corresponds with each individual content's importance and the importance that the filstrip has on the page as a whole.
 
-On an X-axis, filmstrips items are linear and ordered, they start at item1 and end at item(n). 
+On an X-axis, filmstrips items are linear and ordered, they start at item1 and end at item(n).
   
 **Must**
-- Be a set of like content. For example, a filmstrip with images should only show images while a filmstrip with videos should only show videos within its content blocks.
+- Be a set of like content. For example, a filmstrip with images should only show images while a filmstrip with videos should only show videos within its content blocks
   
   
 ### 4. Pagination Controls (optional)
@@ -85,7 +84,7 @@ Pagination controls are an optional element that allows the user to move from on
   
 **Must**
 - Provide visual boundaries with a minimum of 3:1 contrast to the background 
-- For both keyboard focus and hover, it is important for the content to continue to have sufficient contrast, although it will depend on whether that content is text (relates to 1.4.3) or graphical (1.4.11) in nature. 
+- For both keyboard focus and hover, it is important for the content to continue to have sufficient contrast, although it will depend on whether that content is text (relates to 1.4.3) or graphical (1.4.11) in nature 
 - Provide a way for someone to escape the filmstrip items once they enter 
 
 **Should**
@@ -95,22 +94,26 @@ Pagination controls are an optional element that allows the user to move from on
 
 The view all link is a recommended element for filmstrip use cases that have more related content than is being shown in the filmstrip. 
 
+**Should**
+- Follow [standalone link guidelines](https://rei.github.io/rei-cedar-docs/components/links/#standalone)
+  
 ### 6. Overflow Grid (customizable)
 
-The overflow grid container is the heavy lifter of this pattern, this is where the filmstrip items will be displayed. It will set up how many items are in view at a time, the spacing between items, hide all items not in view, and provide the basic functionality of a horizontal scroll container. 
+The overflow grid container is the heavy lifter of this pattern, this is where the filmstrip items will be displayed. It sets up how many items are in view at a time, the spacing between items, the hiding of all items not in view, and it provides the basic functionality of a horizontal scroll container. 
 
 **Must**
 - Be able to receive tab focus 
 - Allow left and right arrow key scrolling  
 - Be assigned a `role` of “region” 
-- If providing your filmstrip a heading us `aria-labelledby` to associate your filmstrip to the title, otherwise apply `aria-label` and provide the filmstrip a meaningful name.  
+- Associate your filmstrip to the optional title by providing your filmstrip a heading as `aria-labelledby`
+- Apply `aria-label` if you are not using an optional title to provide the filmstrip a meaningful name
   
   
 ## Development Instructions 
 
 These instructions will take you through three stages of filmstrip development. These stages are: 
 
-Stage 1. Development of a simple filmstrip with an overflow container 
+[Stage 1.](Stage 1: Developing a simple filmstrip Development of a simple filmstrip with an overflow container 
 
 Stage 2. Enhancing the simple filmstrip to address accessibility and performance issues  
 
@@ -136,7 +139,7 @@ The individual grid items that you place inside the grid can be any type of cont
 
 **Step b) Add filmstrip styling**
 
-The next step will be to add CSS styling to your `.filmstrip` class so that it becomes a proper cedar filmstrip.
+The next step will be to add CSS styling to your `.filmstrip` class so that it becomes a proper Cedar filmstrip.
 
 ``` 
 .filmstrip { 
@@ -711,7 +714,7 @@ Below is an example of a filmstrip with left and right buttons:
 The following are two common use cases that can be followed. Designers can copy and paste these examples from the Figma library.
 
 ### Product Recommendation Filmstrip
-This the product recommendation filmstrip pattern to showcase relevant and related product recommendations. 
+Use the product recommendation filmstrip pattern to showcase relevant and related products or services. 
 
 This pattern commonly displays six content blocks per view and does not require more than 5 clicks or swipes to view all of the content within it.
 
@@ -720,7 +723,7 @@ This pattern commonly displays six content blocks per view and does not require 
 ### Category Hub Filmstrip
 Use the category hub filmstrip pattern to display larger categories of content.
 
-This pattern commonly displays 3 to 4 content blocks per view and does not require more than 5 clicks or swipes to view all of the content within it.
+This pattern commonly displays 3 to 4 content blocks per view to emphasize the fact that each piece of content has more prominence than individual products. This pattern should not require more than 5 clicks or swipes to view all of the content within it.
 
 <cdr-img :src="$withBase('/filmstrip/category-hub-filmstrip.png')" alt="image of REI.com category hub filmstrip"/>
   
