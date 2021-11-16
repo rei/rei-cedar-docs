@@ -28,7 +28,7 @@ Filmstrip allows users to preview multiple pieces of related content in a constr
 
 ## Getting Started Building a Filmstrip
   
-There are two common examples documented below: [Product Recommendation Filmstrip](#product-recommendation-filmstrip) and [Category Hub Filmstrip](#category-hub-filmstrip). 
+There are two common examples documented below: [Product Recommendation Filmstrip](#product-recommendation-filmstrip) and [Prominent Card Filmstrip](#prominent-card-filmstrip). 
   
 Designers can get started by pulling one of these examples from [the Figma library here.](https://www.figma.com/file/dGjTo4tpmVlSZQPWPnCLy0/Cedar-Web-Components?node-id=2019%3A183215) and then optionally customizing the header and subheader, content blocks, pagination controls, link to all content and/or overflow grid based on the needs of your use case.
 
@@ -720,12 +720,12 @@ This pattern commonly displays six content blocks per view and does not require 
 
 <cdr-img :src="$withBase('/filmstrip/product-filmstrip.jpeg')" alt="image of REI.com product recommendations filmstrip"/>
 
-### Category Hub Filmstrip
-Use the category hub filmstrip pattern to display larger categories of content.
+### Prominent Card Filmstrip
+Use the prominent card filmstrip pattern to display larger categories of content.
 
 This pattern commonly displays 3 to 4 content blocks per view to emphasize the fact that each piece of content has more prominence than individual products. This pattern should not require more than 5 clicks or swipes to view all of the content within it.
 
-<cdr-img :src="$withBase('/filmstrip/category-hub-filmstrip.png')" alt="image of REI.com category hub filmstrip"/>
+<cdr-img :src="$withBase('/filmstrip/category-hub-filmstrip.png')" alt="image of REI.com prominent card filmstrip"/>
   
 ## Guidelines
   
