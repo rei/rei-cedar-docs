@@ -57,15 +57,16 @@ There are a number of Figma UI libraries that house the Cedar design system. The
   For more information on Cedar UI libraries, check out [this tutorial](https://www.figma.com/file/9V46NiDSDfg1crbdOKpIVN/Turning-on-Libraries%3A-Tutorial?node-id=0%3A1) about turning on library assets in Figma.
 
 
-## Practice using Cedar
+<!-- ## Practice using Cedar
 Want to jump in and start using Cedar? We have a task for you! Understand when to use Cedar, how to drag & drop components, apply tokens, and hand off to your developer with your [first task](will need link) in Figma.
   
-<cdr-img alt="" :src="$withBase(`/getting-started-for-designers/practice.png`)"/>
+<cdr-img alt="" :src="$withBase(`/getting-started-for-designers/practice.png`)"/> -->
 
 ## Guides & resources
   <article-story-columns link1="https://www.figma.com/file/dZF2dkGLlu14ROjoPLGIbH/File-setup%3A-tutorial?node-id=0%3A1" link2="https://www.figma.com/file/BIHbjk562VfoKMsHYS2rwg/Typography-in-Cedar%3A-Tutorial?node-id=1301%3A454" link3="https://www.figma.com/file/I7siXZNfjZVgKoK7RcD1NO/Color%3A-Tutorial?node-id=1%3A9"><template #col-1-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/tutorial-file-setup.png`)"/></template><template #col-1-title>File Setup</template><template #col-2-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/tutorial-typography.png`)"/></template><template #col-2-title>Typography</template><template #col-3-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/tutorial-color.png`)"/></template><template #col-3-title>Color</template></article-story-columns>
-  <br />
-  <article-story-columns link1="https://www.figma.com/file/RJHI65TqMff7F3faj0Fx2R/Using-Components%3A-Tutorial?node-id=2%3A9" link2="https://www.figma.com/file/JrslK3sYjWiPclHj0f4SEZ/Working-with-Developers%3A-Tutorial?node-id=2%3A7" link3="https://www.figma.com/file/tdZn3PIv5B1G6OX8zPkQDb/Accessibility%3A-Tutorial?node-id=1%3A11"><template #col-1-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/tutorial-using-components.png`)"/></template><template #col-1-title>Using Components</template><template #col-2-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/tutorial-developers.png`)"/></template><template #col-2-title>Working with Developers</template><template #col-3-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/tutorial-accessibility.png`)"/></template><template #col-3-title>Accessibility</template></article-story-columns>
+  
+  <!-- <br />
+  <article-story-columns link1="https://www.figma.com/file/RJHI65TqMff7F3faj0Fx2R/Using-Components%3A-Tutorial?node-id=2%3A9" link2="https://www.figma.com/file/JrslK3sYjWiPclHj0f4SEZ/Working-with-Developers%3A-Tutorial?node-id=2%3A7" link3="https://www.figma.com/file/tdZn3PIv5B1G6OX8zPkQDb/Accessibility%3A-Tutorial?node-id=1%3A11"><template #col-1-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/tutorial-using-components.png`)"/></template><template #col-1-title>Using Components</template><template #col-2-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/tutorial-developers.png`)"/></template><template #col-2-title>Working with Developers</template><template #col-3-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/tutorial-accessibility.png`)"/></template><template #col-3-title>Accessibility</template></article-story-columns> -->
 
   ## Connect with us
   The team is available for questions or one-on-one help. The best way to reach out is through the Slack channel #cedar-user-support or by joining office hours (reach out to the team for an invite).
