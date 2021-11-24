@@ -9,13 +9,50 @@
       "text": "Foundation/"
     }
   ],
+  "bestPractices": [
+    {
+      "image": "prominence/prominence-best-practice-1.png",
+      "ratio": "4-3",
+      "alt": "A graphic showing content with a slightly elevated border with a standard pointer cursor nearby",
+      "caption": "Along with other attributes, convey an ability to be pressed."
+    },
+    {
+      "image": "prominence/prominence-best-practice-2.png",
+      "ratio": "4-3",
+      "alt": "A graphic showing two rectangles representing pieces of content. The left rectangle appears to be raised higher than the right rectangle because a link pointer is hovering over it",
+      "caption": "Respond to interaction by raising or lowering."
+    },
+    {
+      "image": "prominence/prominence-best-practice-3.png",
+      "ratio": "4-3",
+      "alt": "A graphic showing text next to elevated content on the right hand side",
+      "caption": "Focus a user's attention on a specific object."
+    },
+    {
+      "image": "prominence/prominence-best-practice-4.png",
+      "ratio": "4-3",
+      "alt": "A graphic showing a column of three identically sized rectangles with a grabber pointer over the first item. The first item appears to be elevated higher than the other two rectangles",
+      "caption": "Signal that an object can be moved across a surface."
+    },
+    {
+      "image": "prominence/prominence-best-practice-5.png",
+      "ratio": "4-3",
+      "alt": "A graphic showing two sets of three rectangles. The bottom set of rectangles appears to be elevated while the top three are not elevated",
+      "caption": "Visually separate dissimilar content or help group like items."
+    },
+    {
+      "image": "prominence/prominence-best-practice-6.png",
+      "ratio": "4-3",
+      "alt": "Graphic where the lower corner of a rectangle is superimposed over another rectangle",
+      "caption": "Create emphasize foreground and background relationships."
+    },
+  ],
 }
 ---
 
 <cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
-
 ## Overview
-[Insert image:https://www.figma.com/file/O5VYAUnSrzoTVikTMyIQtT/Production-Graphics?node-id=632%3A184]
+<cdr-img :src="$withBase('/prominence/prominence-header.png')" ratio="16-9" alt="A graphic showing a rectangular layout tilted at 45 degrees, with each rectangle slightly elevated. Next to the layout are x, y, and z axes to indicate height, width and depth"/>
 ### How designers create depth
 Most digital interfaces are inherently flat—which is to say all objects within an interface are constrained by two spatial dimensions: width (x) and height (y). To add additional dimensionality designers must create an illusion of depth (z). While there are several techniques to achieve this, designers typically will use varying degrees of a drop shadow. The ranges of depth created are used to strengthen spatial relationships and provide additional interaction affordances. 
 
@@ -25,30 +62,12 @@ While there are some parallels between an object's elevation and its z-index—s
 
 ### Why designers chose to elevate interface objects
 The shadow cast by an elevated object helps to communicate aspects of interactivity, order, and priority by drawing from real-world conventions. More specifically, designers use this implied sense of depth to: 
-[utilize 2-col component, similar to the do/don't images with copy, but without any color on the bottom]
-https://www.figma.com/file/O5VYAUnSrzoTVikTMyIQtT/Production-Graphics?node-id=632%3A197
-Along with other attributes, convey an ability to be pressed
-  
-https://www.figma.com/file/O5VYAUnSrzoTVikTMyIQtT/Production-Graphics?node-id=632%3A208
-Respond to interaction by raising or lowering
-  
-https://www.figma.com/file/O5VYAUnSrzoTVikTMyIQtT/Production-Graphics?node-id=632%3A229
-Focus a user's attention on a specific object
-
-https://www.figma.com/file/O5VYAUnSrzoTVikTMyIQtT/Production-Graphics?node-id=632%3A237
-Signal that an object can be moved across a surface
-  
-https://www.figma.com/file/O5VYAUnSrzoTVikTMyIQtT/Production-Graphics?node-id=632%3A258
-Visually separate dissimilar content or help group like items
-  
-https://www.figma.com/file/O5VYAUnSrzoTVikTMyIQtT/Production-Graphics?node-id=633%3A269
-Create emphasize foreground and background relationships
-
+<two-column-captioned-images :examples="$page.frontmatter.bestPractices"/>
 
 ## Application
   
 ### Tokenized options
-https://www.figma.com/file/O5VYAUnSrzoTVikTMyIQtT/Production-Graphics?node-id=632%3A217
+<cdr-img :src="$withBase('/prominence/prominence-tokens.png')" style="display:block; margin: 1em auto;" alt="A graphic showing squares labeled 1 through 5 in ascending prominence"/>
 
 1.	Flat: cdr-prominence-height-flat
 2.	Raised: cdr-prominence-height-raised
