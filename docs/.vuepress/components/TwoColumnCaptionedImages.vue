@@ -23,7 +23,7 @@
 
 <script>
 export default {
-  name: "TwoColumnGrid",
+  name: "TwoColumnCaptionedImages",
   props: {
     examples: {
       type: Array,
@@ -55,7 +55,6 @@ export default {
     border-radius: $cdr-radius-softer;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    border-bottom: none;
     background-color: #fff;
   }
 
@@ -65,11 +64,8 @@ export default {
     &::before {
       content: '';
       display: block;
-      height: 8px;
       width: 100%;
       border: none;
-      border-bottom-style: solid;
-      border-bottom-width: 8px;
       border-bottom-left-radius: $cdr-radius-softer;
       border-bottom-right-radius: $cdr-radius-softer;
       margin-bottom: 8px;
