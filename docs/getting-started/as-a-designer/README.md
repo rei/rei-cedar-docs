@@ -12,10 +12,6 @@
 ---
 
 [cedar-user-support-link]: https://rei.slack.com/messages/CA58YCGN4
-<cdr-banner type="warning" aria-live="polite"><template #icon-left><icon-warning-fill inherit-color /></template>Instructions on this page are applicable to internal REI designers only.</cdr-banner>
-<cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
-
-<br/>
 
 <cdr-img alt="" :src="$withBase(`/getting-started-for-designers/figma-at-rei.png`)"/>
 
@@ -62,10 +58,10 @@ Want to jump in and start using Cedar? We have a task for you! Understand when t
   
 <cdr-img alt="" :src="$withBase(`/getting-started-for-designers/practice.png`)"/> -->
 
-## Guides & resources
+<!-- ## Guides & resources
   <article-story-columns link1="https://www.figma.com/file/dZF2dkGLlu14ROjoPLGIbH/File-setup%3A-tutorial?node-id=0%3A1" link2="https://www.figma.com/file/BIHbjk562VfoKMsHYS2rwg/Typography-in-Cedar%3A-Tutorial?node-id=1301%3A454" link3="https://www.figma.com/file/I7siXZNfjZVgKoK7RcD1NO/Color%3A-Tutorial?node-id=1%3A9"><template #col-1-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/tutorial-file-setup.png`)"/></template><template #col-1-title>File Setup</template><template #col-2-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/tutorial-typography.png`)"/></template><template #col-2-title>Typography</template><template #col-3-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/tutorial-color.png`)"/></template><template #col-3-title>Color</template></article-story-columns>
   
-  <!-- <br />
+  <br />
   <article-story-columns link1="https://www.figma.com/file/RJHI65TqMff7F3faj0Fx2R/Using-Components%3A-Tutorial?node-id=2%3A9" link2="https://www.figma.com/file/JrslK3sYjWiPclHj0f4SEZ/Working-with-Developers%3A-Tutorial?node-id=2%3A7" link3="https://www.figma.com/file/tdZn3PIv5B1G6OX8zPkQDb/Accessibility%3A-Tutorial?node-id=1%3A11"><template #col-1-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/tutorial-using-components.png`)"/></template><template #col-1-title>Using Components</template><template #col-2-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/tutorial-developers.png`)"/></template><template #col-2-title>Working with Developers</template><template #col-3-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/tutorial-accessibility.png`)"/></template><template #col-3-title>Accessibility</template></article-story-columns> -->
 
   ## Connect with us
