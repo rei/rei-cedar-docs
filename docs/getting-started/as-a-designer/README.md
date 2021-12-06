@@ -83,6 +83,7 @@ Want to jump in and start using Cedar? We have a task for you! Understand when t
  
 <br/>
 <br/>
+
 **Up next:** [Hand-off Process](../../getting-started/hand-off/)
 
 <br/><br/>  
