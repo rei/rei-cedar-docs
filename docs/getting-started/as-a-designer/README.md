@@ -12,87 +12,79 @@
 ---
 
 [cedar-user-support-link]: https://rei.slack.com/messages/CA58YCGN4
-<cdr-banner type="warning" aria-live="polite"><template #icon-left><icon-warning-fill inherit-color /></template>Instructions on this page are applicable to internal REI designers only.</cdr-banner>
-<cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
+
+<cdr-img alt="" :src="$withBase(`/getting-started-for-designers/figma-at-rei.png`)"/>
+
+<br/>
+<br/>
+  <article-text-callout>Welcome to the Cedar Design System! Cedar is used as a foundation for REI's digital products, creating consistency by linking UI elements to documentation (this site) and code. Visit <a href="../../about/cedar-design-system/">"About"</a> for more information about Cedar and design systems.</article-text-callout>
+<br/>
+<br/>
+  
+  ## First, install Figma
+Figma is REI's design tool of choice and houses Cedar's UI toolkits. You can use Figma on a web browser, but you'll get the most out of it if you download the desktop app.
+<br/>
+  
+   <cdr-img alt="" :src="$withBase(`/getting-started-for-designers/app-desktop.png`)"/>
+ 
+<br/>
+  The Figma desktop app can be accessed using a tool called "Self Service." On a Mac, you can access Self Service by opening your applications folder and navigating to Self Service or opening Spotlight Search and searching for Self Service. In Self Service, search for "Figma" and install. If you need help or have problems installing Figma, please contact REI's IT Help Desk.
+  
+   <cdr-img alt="" :src="$withBase(`/getting-started-for-designers/self-service.png`)"/>
+
+  
+  [REI typefaces](../../foundation/typography/) are automatically distributed through Figma, so you won't need to install any fonts. However, if you plan on using REI typefaces in other applications you can install "Stuart TTF • Digital" and "Graphic TTF • Digital" through Self Service, using the same method as outlined above.
+  
+ ### New to Figma?
+Check out some resources to get you started
 
 
-
-## Design Guidelines
-Cedar manages the design language for the Co-op’s digital products. On this site, you will find supporting documentation for everything Cedar offers. After you’re set up with our Toolkits, check out our foundation pages and pay special attention to [Color](../../foundation/color) and [Typography](../../foundation/typography/) for more nuanced guidance.
-
-### Additional Brand Guidelines
-- [REI Co-op Brand Guidelines](https://public.cloud-dam.rei.com/api/public/content/7d09614ed12d4f4d8c56060a2f298c73)
-- [Photography Style Guide](https://www.cloud-dam.rei.com/en-us/AssetGuidesandCreativeStandards/AssetGuideBuild/REIPhotographyStandards)
+ <article-story-columns link1="https://www.youtube.com/playlist?list=PLXDU_eVOJTx7QHLShNqIXL1Cgbxj7HlN4" link2="https://www.figma.com/community/file/1014578976664907444"><template #col-1-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/watch.png`)"/></template><template #col-1-title>Watch these videos</template><template #col-2-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/tutorial.png`)"/></template><template #col-2-title>Duplicate & follow along with this tutorial</template></article-story-columns>
 
 
-## Design Toolkits
+## What to do next
+1. Explore some of REI's guidelines to help you give a better understanding of the coop's visual and verbal standards. The DAM (Digital Asset Manager) houses many of these guidelines as well as other important assets you'll need. You'll need to request access before viewing documents on the DAM, but the process is fairly quick (about 1-2 days).
 
-The design system toolkit is distributed as shared libraries through Figma. These libraries are directly managed by the Cedar team and automatically integrated into any new project.
+ <article-story-columns link1="https://public.cloud-dam.rei.com/api/public/content/7d09614ed12d4f4d8c56060a2f298c73" link2="https://www.cloud-dam.rei.com/en-us/AssetGuidesandCreativeStandards/AssetGuideBuild/REIPhotographyStandards" link3="https://confluence.rei.com/pages/viewpage.action?spaceKey=DRCREAT&title=UX+Copy+Best+Practices"><template #col-1-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/brand-guidelines.png`)"/></template><template #col-1-title>Brand guidelines</template><template #col-2-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/photography-guidelines.png`)"/></template><template #col-2-title>Photography style guide</template><template #col-3-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/ux-copy.png`)"/></template><template #col-3-title>UX copy best practices</template></article-story-columns>
 
+  <br/>
+  <br/>
 
-#### Installing Figma
-Figma is available for use directly in the browser, but we recommend installing the desktop app. The app is available to all designers through the Self Service client.
+ <article-story-columns link1="../../foundation/experience-principles/" link2="../../components/accordion/"><template #col-1-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/foundations.png`)"/></template><template #col-1-title>2. Read about Cedar foundations</template><template #col-1-text>These foundational elements are core to designing with Cedar. For more guidance on Foundational elements, see Guides and resources below.</template><template #col-2-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/components.png`)"/></template><template #col-2-title>3. Review Cedar components</template><template #col-2-text>Components are the building blocks to creating an interface. Note that the components listed on this site will mirror those available in the Figma Web Components Toolkit</template></article-story-columns>
 
-#### Required Fonts
-[Typefaces](../../foundation/typography/) are automatically distributed through Figma for use across projects.
+<br/>
+<br/>
+  
+## Cedar UI libraries
+There are a number of Figma UI libraries that house the Cedar design system. These libraries, as well as a few others, will be pre-loaded when you create a new file within the REI Figma ecosystem. In order to take advantage of all that Cedar offers, doublecheck to make sure that these libraries are turned on (and turn off libraries from other teams that you might not need).
+  
+  <cdr-img alt="" :src="$withBase(`/getting-started-for-designers/libraries.png`)"/>
 
-### Shared Token Libraries
-[Design tokens](../../tokens/overview/) are available for use in any project using any platform and are easy for developers to work with. Token libraries are automatically shared through Figma when you start a new project.
-
-#### Color
-[Color](../../foundation/color) choices are all derived from a close working relationship with the Brand team, and have been carefully tested to ensure accessibility on digital mediums. 
-
-#### Type
-Two primary brand typefaces are available as a range of pre-defined, ready-to-use type styles. Review the [typography guidelines](../../foundation/typography/) for detailed usage information.
-
-#### Spacing
-All spacing — from the padding inside a button to range of available icon sizes — is derived from a single spacing [scale](../../foundation/spacing/).
-
-#### Prominence & Shape
-Design decisions like border radii and ranges of available drop shadows are stored in this library.
-
-#### Grid & Breakpoints
-The [grid system](../../components/grid/) enables consistency of layout within supported breakpoints.
-
-#### Iconography
-Reference the [Icon library](../../icons/library/) for a complete list of icons available in Cedar.
-
-### Shared Component Libraries
-#### Web Components
-Cedar’s web components are available for direct plug-and-play into all platforms using the Microsite Framework. Check with your developer to ensure your project can consume Cedar’s web components.
-
-### Toolkit Updates
-#### Major Releases
-Major releases typically ship every quarter and with plenty of advance notice. Only two major releases are supported at a time: the current release and the prior release.
-
-- The current toolkits will be tagged vCurrent
-- The previous toolkit will be named vLegacy
-
-#### Minor Releases and Patches
-Smaller toolkit updates could come at any time. This could include (but is not limited to) accessibility fixes, bug fixes, layout improvements, or component behavior updates.
-
-#### Consuming Updates in Figma
-When we push changes to either our token or component libraries, users will be notified and prompted to update to the newer version directly in Figma.
-
-<cdr-img alt="screenshot" :src="$withBase(`/getting-started-for-designers/figma-update-alert.png`)"/>
+  For more information on Cedar UI libraries, check out [this tutorial](https://www.figma.com/file/9V46NiDSDfg1crbdOKpIVN/Turning-on-Libraries%3A-Tutorial?node-id=0%3A1) about turning on library assets in Figma.
 
 
-## Project Support
-The Cedar team is available to help with adopting, consuming, or contributing to the design system. Feel free to swing by our weekly office hours or reach out to us on Slack for immediate support.
+<!-- ## Practice using Cedar
+Want to jump in and start using Cedar? We have a task for you! Understand when to use Cedar, how to drag & drop components, apply tokens, and hand off to your developer with your [first task](will need link) in Figma.
+  
+<cdr-img alt="" :src="$withBase(`/getting-started-for-designers/practice.png`)"/> -->
 
+<!-- 
+<br/>
+<br/>
+  
+## Guides & resources
+  <article-story-columns link1="https://www.figma.com/file/dZF2dkGLlu14ROjoPLGIbH/File-setup%3A-tutorial?node-id=101%3A33" link2="https://www.figma.com/file/BIHbjk562VfoKMsHYS2rwg/Typography-in-Cedar%3A-Tutorial?node-id=1301%3A454" link3="https://www.figma.com/file/I7siXZNfjZVgKoK7RcD1NO/Color%3A-Tutorial?node-id=1%3A9"><template #col-1-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/tutorial-file-setup.png`)"/></template><template #col-1-title>File setup</template><template #col-2-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/tutorial-typography.png`)"/></template><template #col-2-title>Typography</template><template #col-3-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/tutorial-color.png`)"/></template><template #col-3-title>Color</template></article-story-columns>
 
-## FAQ
-#### Can I break the library?
-You won’t be able to make changes to the library that would impact other projects. By keeping Cedar libraries enabled and using components as-is, you minimize your risk of falling out of sync. Note that if you detach a component, you will no longer receive future updates from our team for that component. Never detach a component for production work.
+  <br />
+  <article-story-columns link1="https://www.figma.com/file/RJHI65TqMff7F3faj0Fx2R/Using-Components%3A-Tutorial?node-id=2%3A9" link2="https://www.figma.com/file/JrslK3sYjWiPclHj0f4SEZ/Working-with-Developers%3A-Tutorial?node-id=2%3A7" link3="https://www.figma.com/file/tdZn3PIv5B1G6OX8zPkQDb/Accessibility%3A-Tutorial?node-id=1%3A11"><template #col-1-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/tutorial-using-components.png`)"/></template><template #col-1-title>Using Components</template><template #col-2-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/tutorial-developers.png`)"/></template><template #col-2-title>Working with Developers</template><template #col-3-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/tutorial-accessibility.png`)"/></template><template #col-3-title>Accessibility</template></article-story-columns> -->
 
-#### How can I fix a bug or make an improvement to the toolkit?
-You can create a branch of the Cedar library to make the changes yourself, or reach out to the Cedar team using the [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) Slack channel to report a bug.
+  ## Connect with us
+  The team is available for questions or one-on-one help. The best way to reach out is through the Slack channel #cedar-user-support or by joining office hours (reach out to the team for an invite).
+ 
+<br/>
+<br/>
 
-#### Should I always consume updates to Figma Components?
-We keep the design and code aligned so if there’s an update available in Figma it means your developer has access to an update as well. It’s always smart to check in with your developer though.
-
-
-
+**Up next:** [Hand-off Process](../../getting-started/hand-off/)
 
 <br/><br/>  
 
