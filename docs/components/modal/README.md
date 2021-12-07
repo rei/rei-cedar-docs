@@ -256,7 +256,6 @@ This component complies with WCAG guidelines by:
 ### The Basics
 
 - Use modals sparingly. Modals are disruptive and their sudden appearance forces users to stop their current task and focus on the modal content
-- Two width options are available: 600px (default) and 800px (large)
 - Headlines should not exceed 68 characters
 - Modal centers within the page
 - Keep modal titles succinct and informative
