@@ -81,6 +81,12 @@
                 "type": "boolean",
                 "default": "false",
                 "description": "Sets the border-aligned style."
+              },
+              {
+                "name": "contentSpacing",
+                "type": "boolean",
+                "default": "true",
+                "description": "Sets the content spacing style"
               }
             ],
             "slots": [
@@ -296,7 +302,78 @@ Border aligns to the title text and expand/collapse icon.
 
 </cdr-doc-example-code-pair>
 
+## Content Spacing
 
+Optionally remove content spacing (css padding) from the accordion content for applications needing more design flexibility.
+
+<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ contentSpacing1: false, contentSpacing2: false, contentSpacing3: false }">
+
+```html
+<cdr-accordion-group>
+  <cdr-accordion
+    id="content-spacing-1"
+    level="4"
+    :content-spacing="false"
+    :opened="contentSpacing1"
+    @accordion-toggle="contentSpacing1 = !contentSpacing1"
+  >
+    <template #label>
+      How long have you been in business?
+    </template>
+    <cdr-img
+      src="/rei-cedar-docs/live.jpg"
+      alt="REI employees building trails during a stewardship event"
+    />
+    <cdr-text tag="p">
+      REI has offered the finest in outdoor gear since 1938. In that same spirit,
+      REI Adventures has led the way down wilderness paths and cultural back roads
+      to the most intriguing destinations in the world since 1987.
+    </cdr-text>
+  </cdr-accordion>
+  <cdr-accordion
+    id="content-spacing-2"
+    level="4"
+    :content-spacing="false"
+    :opened="contentSpacing2"
+    @accordion-toggle="contentSpacing2 = !contentSpacing2"
+  >
+    <template #label>
+      What kinds of trips are offered?
+    </template>
+    <cdr-img
+      src="/rei-cedar-docs/live.jpg"
+      alt="REI employees building trails during a stewardship event"
+    />
+    <cdr-text tag="p">
+      We have adventures that range from weekend getaways to three-week treks. We
+      explore the world on foot, by kayak, canoe or raft, bicycle, safari, 4-wheel
+      drive, cruise ship or a combination of these vehicles! Novices are welcome.
+      We can teach you to kayak or to safely summit a mountain.
+    </cdr-text>
+  </cdr-accordion>
+  <cdr-accordion
+    id="content-spacing-3"
+    level="4"
+    :content-spacing="false"
+    :opened="contentSpacing3"
+    @accordion-toggle="contentSpacing3 = !contentSpacing3"
+  >
+    <template #label>
+      How do I know what each trip is like?
+    </template>
+    <cdr-img
+      src="/rei-cedar-docs/live.jpg"
+      alt="REI employees building trails during a stewardship event"
+    />
+    <cdr-text tag="p">
+      This website provides full details of each trip. If you still have questions,
+      please call us at 1-800-622-2236 or e-mail us at travel@rei.com.
+    </cdr-text>
+  </cdr-accordion>
+</cdr-accordion-group>
+```
+
+</cdr-doc-example-code-pair>
 ## Dynamic Accordions
 
 In order to render a dynamic list of accordions, for example using data retrieved from a back-end API, you will need to use `this.$set` or some other Vue method to make the array of accordion data reactive. This can also be used to avoid creating an individual data attribute for every accordion and instead track their state with an array of booleans.

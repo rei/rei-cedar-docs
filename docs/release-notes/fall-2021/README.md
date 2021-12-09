@@ -25,11 +25,21 @@
 | `@rei/cedar` | ^11.x.x |
 | `@rei/cdr-tokens` | ^10.x.x |
 | `@rei/cdr-component-variables` | ^7.x.x |
-| `@rei/cedar-icons` | ^2.2.x |
 
 - If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your micro-site.
 
 <br>
+
+## 11.1.0
+### New Features
+
+#### TikTok
+- We have introduced a new social brand icon for TikTok to our [icon library](../../icons/library/)
+<icon-brand-tiktok/>
+
+#### CdrAccordion Content Spacing 
+- CdrAccordion has a new `content-spacing` prop that allows a consuming application to disable spacing (css padding) on the accordion content.
+- See the [CdrAccordion docs page](../../components/accordion#content-spacing) for more information.
 
 ## 11.0.1
 
@@ -61,13 +71,13 @@ New messaging [color tokens](../../tokens/all-tokens/#colors) have been added to
 
 ### New Error Icons
 
-We have introduced new error icons to our [icon library](../..//icons/library/) to create more clear delineation between warning and error icons.
+We have introduced new error icons to our [icon library](../../icons/library/) to create more clear delineation between warning and error icons.
 
 <icon-error-stroke/> <icon-error-fill/>
 
 ### CdrButton Type Size
 
-We have aligned the type size of CdrButton to be same at the medium (default) and large [button sizes](../..//components/buttons/#sizing).
+We have aligned the type size of CdrButton to be same at the medium (default) and large [button sizes](../../components/buttons/#sizing).
 
 <br>
 
