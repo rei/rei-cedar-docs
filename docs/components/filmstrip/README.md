@@ -564,7 +564,7 @@ At this point we have set up a filmstrip with buttons as well as attach click li
 
 Below is an example of a filmstrip with left and right buttons:
 
-<cdr-doc-example-code-pair copy-button="false" repository-href="/src/components/grid" 
+<cdr-doc-example-code-pair :copy-button="false" repository-href="/src/components/grid" 
   :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData)"
   :methods="{
     getFilmstripDimensions() {
