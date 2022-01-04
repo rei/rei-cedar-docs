@@ -2,7 +2,7 @@
 {
   "title": "Modal",
   "layout_type": "LayoutComponent",
-  "summary": "Displays additional page content in an overlay",
+  "summary": "Disruptive, action-blocking overlays used to display important, task-relevant information",
   "title_metadata": "CdrModal",
   "breadcrumbs": [
     {
