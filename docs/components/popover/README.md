@@ -119,7 +119,7 @@
 
 CdrPopover is a wrapper component that accepts a trigger element and popover content. When the trigger element is clicked, the popover content is rendered. Event bindings between the trigger and the popover are set up automatically. The popover will dynamically update its position property to ensure that it renders on screen, though this functionality can be disabled by setting autoPosition to false.
 
-<cdr-doc-example-code-pair repository-href="/src/components/CdrPopover"
+<cdr-doc-example-code-pair repository-href="/src/components/popover"
 :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
@@ -144,7 +144,7 @@ CdrPopover can also be controlled programmatically using the `open` prop. Howeve
 - The `open` property should be toggled to true when the trigger element is clicked. Close logic will be handled by CdrPopover.
 - The trigger element should have it's `aria-controls` property set to the ID of the CdrPopover, and it's `aria-haspopup` property set to "dialog".
 
-<cdr-doc-example-code-pair repository-href="/src/components/CdrPopover"
+<cdr-doc-example-code-pair repository-href="/src/components/popover"
 :sandbox-data="$page.frontmatter.sandboxData" :model="{open: false}">
 
 ```html

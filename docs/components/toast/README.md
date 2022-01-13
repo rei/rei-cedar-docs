@@ -104,7 +104,7 @@ There are five different options for styling the toast, based on the [message ty
 
 A toast should be passed a contextually appropriate icon using the `icon-left` slot.
 
-<cdr-doc-example-code-pair repository-href="/src/components/CdrToast"
+<cdr-doc-example-code-pair repository-href="/src/components/toast"
 :load-sprite="true"
 :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrToast, CdrButton, IconCheckFill'})" :model="{ opened: false }" >
 
@@ -132,7 +132,7 @@ A toast should be passed a contextually appropriate icon using the `icon-left` s
 
 CdrToast provides an optional `autoDismiss` property to disable the auto-dismiss functionality.
 
-<cdr-doc-example-code-pair repository-href="/src/components/CdrToast"
+<cdr-doc-example-code-pair repository-href="/src/components/toast"
 :load-sprite="true"
 :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrToast, CdrChip, IconWarningFill'})" :model="{ opened: false }" >
 
@@ -166,7 +166,7 @@ CdrToast provides an optional `autoDismiss` property to disable the auto-dismiss
 
 CdrToast provides an optional `dismissDelay` property to adjust timing of the automatic dimissal under certain conditions, such as when the toast contains an action.
 
-<cdr-doc-example-code-pair repository-href="/src/components/CdrToast"
+<cdr-doc-example-code-pair repository-href="/src/components/toast"
 :load-sprite="true"
 :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrToast, CdrButton, CdrLink, IconInformationFill'})" :model="{ opened: false }" >
 
