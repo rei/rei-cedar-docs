@@ -4,6 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Wrapper for working with CSS Grid",
   "title_metadata": "CdrGrid",
+  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/grid",
   "breadcrumbs": [
     {
       "text": "Components/"
@@ -112,7 +113,7 @@ New to or unfamiliar with CSS Grid? We recommend these resources for getting up 
 Use rows and columns to lay out content by specifying equal widths for all columns.
 Columns have a minimum width, if columns cannot be spaced equally etc. new line
 
-<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 
@@ -141,7 +142,7 @@ Define x-axis alignment and distribute space for all columns per row. Containers
 
 #### Left
 
-<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 
@@ -157,7 +158,7 @@ Define x-axis alignment and distribute space for all columns per row. Containers
 
 #### Center
 
-<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 
@@ -173,7 +174,7 @@ Define x-axis alignment and distribute space for all columns per row. Containers
 
 #### Right
 
-<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 
@@ -189,7 +190,7 @@ Define x-axis alignment and distribute space for all columns per row. Containers
 
 #### Around
 
-<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-grid class="grid-2-example" style="grid-template-columns: 75px 75px 75px; justify-content: space-around;">
@@ -203,7 +204,7 @@ Define x-axis alignment and distribute space for all columns per row. Containers
 
 #### Between
 
-<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 
@@ -222,7 +223,7 @@ Define y-axis alignment per row and distribute space across all columns per row.
 
 #### Top
 
-<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 
@@ -238,7 +239,7 @@ Define y-axis alignment per row and distribute space across all columns per row.
 
 #### Bottom
 
-<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 
@@ -254,7 +255,7 @@ Define y-axis alignment per row and distribute space across all columns per row.
 
 #### Middle
 
-<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 
@@ -270,7 +271,7 @@ Define y-axis alignment per row and distribute space across all columns per row.
 
 #### Stretch
 
-<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 
@@ -287,7 +288,7 @@ Define y-axis alignment per row and distribute space across all columns per row.
 
 #### Varied Alignment
 
-<cdr-doc-example-code-pair repository-href="/src/components/grid" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" >
 
 ```html
 
@@ -319,7 +320,7 @@ Defines gutter size for all columns on a row and maintains gutter size by breakp
 
 The default `gutter` value is `medium@xs medium@sm large@md large@lg`.
 
-<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 
@@ -337,7 +338,7 @@ The default `gutter` value is `medium@xs medium@sm large@md large@lg`.
 
 #### Small
 
-<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 
@@ -357,7 +358,7 @@ The default `gutter` value is `medium@xs medium@sm large@md large@lg`.
 #### None
 
 
-<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 
@@ -377,7 +378,7 @@ The default `gutter` value is `medium@xs medium@sm large@md large@lg`.
 
 #### Custom Responsive Gutters
 
-<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 
@@ -398,7 +399,7 @@ The default `gutter` value is `medium@xs medium@sm large@md large@lg`.
 
 Scrollable grids can be created using the `grid-auto-flow` property set to `column` for horizontal scrolling or `row` for vertical scrolling.
 
-<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 
@@ -427,7 +428,7 @@ Scrollable grids can be created using the `grid-auto-flow` property set to `colu
 
 For accessibility reasons it may make sense to construct your grid using list markup.
 
-<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 
@@ -446,7 +447,7 @@ For accessibility reasons it may make sense to construct your grid using list ma
 
 Column width can be controlled using the `grid-template-columns` property.
 
-<cdr-doc-example-code-pair repository-href="/src/components/grid" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" >
 
 ```html
 
@@ -468,7 +469,7 @@ Column width can be controlled using the `grid-template-columns` property.
 
 Individual items can override their sizing with `grid-column` and `grid-row`;
 
-<cdr-doc-example-code-pair repository-href="/src/components/grid" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" >
 
 ```html
 
@@ -490,7 +491,7 @@ Individual items can override their sizing with `grid-column` and `grid-row`;
 
 Offsets can be created on grid items using the `grid-column-start` property.
 
-<cdr-doc-example-code-pair repository-href="/src/components/grid" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" >
 
 ```html
 
@@ -507,7 +508,7 @@ Offsets can be created on grid items using the `grid-column-start` property.
 
 Grids can be nested to any depth by passing another CdrGrid in as a grid item.
 
-<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 
@@ -528,7 +529,7 @@ Grids can be nested to any depth by passing another CdrGrid in as a grid item.
 
 CSS grid layouts using `fr` units will be inherently responsive, however additional breakpoint-specific behaviors can be created using media queries.
 
-<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-grid class="grid-2-example responsive-grid-example">
@@ -554,7 +555,7 @@ CSS grid layouts using `fr` units will be inherently responsive, however additio
 
 For grid layouts with an unknown number of items you may end up with an incomplete row at the end. These "leftover" or "orphan" columns can be styled using a combination of the `last-child`/`nth-last-child` and `nth-child` selectors depending on how many items are in your grid row.
 
-<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 
@@ -578,7 +579,7 @@ For grid layouts with an unknown number of items you may end up with an incomple
 
 For grid layouts with an odd number of columns per row, make the grid-template and grid-items each twice as large so they can be offset as needed to center them.
 
-<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <div>
@@ -624,7 +625,7 @@ For grid layouts with an odd number of columns per row, make the grid-template a
 
 Use `grid-template-areas` to layout grid items named using the `grid-area` property.
 
-<cdr-doc-example-code-pair repository-href="/src/components/grid" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 
@@ -737,9 +738,12 @@ To build an effective responsive grid:
 
 <hr>
 
-## API
+# API
 
-### Props
+<cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/><b>View it on Github: 
+<cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
+
+## Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
@@ -747,7 +751,7 @@ To build an effective responsive grid:
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-### Usage
+## Usage
 
 **CdrGrid** functions as a grid container, and it's immediate children are grid items.
 

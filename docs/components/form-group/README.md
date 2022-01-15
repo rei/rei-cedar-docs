@@ -4,6 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Groups related input elements together",
   "title_metadata": "CdrFormGroup",
+  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/formGroup",
     "see_also": [
     {
       "text": 'See Also'
@@ -112,7 +113,7 @@ Grouping related form controls makes forms more understandable for all users, an
 
 ### Default
 
-<cdr-doc-example-code-pair repository-href="/src/components/formGroup"
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location"
 :sandbox-data="$page.frontmatter.sandboxData" :model="{ex: []}">
 
 ```html
@@ -140,7 +141,7 @@ Grouping related form controls makes forms more understandable for all users, an
 
 Rather than passing a `label` prop, the label element can be customized using the `label` slot.
 
-<cdr-doc-example-code-pair repository-href="/src/components/formGroup"
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location"
 :sandbox-data="$page.frontmatter.sandboxData" :model="{ex: []}">
 
 ```html
@@ -172,7 +173,7 @@ Rather than passing a `label` prop, the label element can be customized using th
 
 Render a form group  with validation and error state
 
-<cdr-doc-example-code-pair repository-href="/src/components/formGroup"
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location"
 :sandbox-data="$page.frontmatter.sandboxData" :model="{ex: [], modelError: 'Please make a selection'}" :methods="{validate() {this.modelError = !this.ex.length && 'Please make a selection'}}">
 
 ```html
@@ -204,7 +205,7 @@ Render a form group  with validation and error state
 
 Render a form group in a disabled state
 
-<cdr-doc-example-code-pair repository-href="/src/components/formGroup"
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location"
 :sandbox-data="$page.frontmatter.sandboxData" :model="{ex: []}">
 
 ```html
@@ -255,17 +256,20 @@ In CdrFormGroup, all of the related fields go inside the `fieldset` element, and
 - Creating a single form field that asks for a single piece of information
 
 
-## API
+# API
 
-### Props
+<cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/><b>View it on Github: 
+<cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
+
+## Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-### Slots
+## Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-### Component Variables
+## Component Variables
 
 <cdr-doc-comp-vars name="CdrFormGroup"/>
 

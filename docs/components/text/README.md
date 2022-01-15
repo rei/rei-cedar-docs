@@ -4,6 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Text container used for any text element such as paragraphs, headings, and lists. Establishes vertical spacing and optimizes the reading experience",
   "title_metadata": "CdrText",
+  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/text",
   "see_also": [
     {
       "text": 'See Also'
@@ -205,7 +206,7 @@ A heading helps users to identify and create a hierarchical structure within a p
 
 Display headings, set in REI Stuart, include the largest type styles available and are intended to be used for emotional and impactful messages on top of the funnel experiences (i.e., homepage, brand pages, or landing pages). Because display styles are lighter in weight than other heading styles, they are meant for sizes 800 and above. However, it is recommended to reserve sizes 800 and 900 for mobile breakpoints.  
   
-<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :copyButton="false" :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 
@@ -234,7 +235,7 @@ Display headings, set in REI Stuart, include the largest type styles available a
 
 Serif headings, set in REI Stuart, work best in large sizes (cdr-text-heading-serif-600 and above) and are intended to be used for functional messages on middle to bottom of funnel experiences (i.e., product detail pages or checkout experiences). It’s also available for areas where space is limited but an important distinction or callout needs to be made, such as a card title or aligning to marketing collateral.
 
-<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :copyButton="false" :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 
@@ -263,7 +264,7 @@ Serif headings, set in REI Stuart, work best in large sizes (cdr-text-heading-se
 
 Serif strong headings, set in REI Stuart with a greater font weight than [display](#display) or [serif](#serif), work best in larger sizes (cdr-text-heading-serif-strong-600 and above). Like serif headings, these styles are intended to be used for functional messages on middle to bottom of funnel experiences. It’s recommended to use serif strong headings very minimally throughout the page and should generally be reserved for important page titles, in cases where type overlays an image, or in situations where additional emphasis is needed.
 
-<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :copyButton="false" :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 
@@ -293,7 +294,7 @@ Serif strong headings, set in REI Stuart with a greater font weight than [displa
 
 Sans headings, set in Graphik, should play a supporting role to serif headings. Sans headings work best in smaller sizes (cdr-text-heading-serif-strong-600 and below). Sans headings are not recommended for page titles or other prominent placements. Instead, use [serif](#serif) or [serif strong](#serif-strong) headings.
 
-<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :copyButton="false" :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 
@@ -358,7 +359,7 @@ Sans headings, set in Graphik, should play a supporting role to serif headings. 
 ### Responsive Headings
 Cedar does not offer pre-styled responsive headings. Instead, construct responsive headings by defining a heading style for specific [breakpoints](../../foundation/responsive/#the-cedar-container). For instance, if the heading style is cdr-text-heading-serif-900 @lg, @md, and @sm sizes, set the heading style to cdr-text-heading-serif-800 at the @xs size. This helps to create optimal readability, spacing, and proportions for various breakpoint sizes. An examples in practice:
 
-<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :copyButton="false" :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-text
@@ -398,7 +399,7 @@ Subheadings give support or add meaning to a heading, and are intended to be pai
 ### Sans
 Sans-serif subheadings are set in Graphik. They are intended to be paired with serif or serif strong headings. Pairing a sans subheading with a sans heading is also acceptable.
 
-<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :copyButton="false" :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 
@@ -428,7 +429,7 @@ Heading and subheading combinations should have the appropriate contrast and hie
 
 Serif headings should only accompanied by sans subheadings.
 
-<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :copyButton="false" :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-text
@@ -467,7 +468,7 @@ Serif headings should only accompanied by sans subheadings.
 
 Sans headings also work best with sans subheadings.
 
-<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :copyButton="false" :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-text
@@ -513,7 +514,7 @@ Sans headings also work best with sans subheadings.
 ## Body
 Body styles work best for long-form copy like articles, customer reviews, or legal messages. Body styles have a generous line height and wider letter spacing for optimal reading. For tighter, more compact styles, use [utility](#utility) styles.
 
-<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :copyButton="false" :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 
@@ -542,7 +543,7 @@ Body styles work best for long-form copy like articles, customer reviews, or leg
 ### Strong
 Body strong is also intended for long-form copy but should be used minimally. Use body strong styles when emphasizing a subset of copy and never for the entire length of copy.
 
-<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :copyButton="false" :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 
@@ -623,7 +624,7 @@ Utility styles are used to communicate  functionality or descriptive information
 ### Serif
 Utility serif styles should be used when additional brand emphasis is needed.
 
-<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :copyButton="false" r:repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 
@@ -651,7 +652,7 @@ Utility serif styles should be used when additional brand emphasis is needed.
 ### Serif Strong
 Utility serif strong styles should be used when additional emphasis is needed over utility serif.
 
-<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :copyButton="false" :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 
@@ -679,7 +680,7 @@ Utility serif strong styles should be used when additional emphasis is needed ov
 ### Sans
 Utility sans styles typically make up the majority of utility styles used on a given page.
 
-<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :copyButton="false" :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 
@@ -707,7 +708,7 @@ Utility sans styles typically make up the majority of utility styles used on a g
 ### Sans Strong
 Utility sans styles should be used when additional emphasis is needed.
 
-<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :copyButton="false" :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 
@@ -747,7 +748,7 @@ Utility sans styles should be used when additional emphasis is needed.
 ## Eyebrow
 Eyebrows introduce a topic or show how an item is categorized. Content tags or certain label styles are two examples. Eyebrow text styles should not be used as headings or used for brand names.
 
-<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :copyButton="false" :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 
@@ -784,7 +785,7 @@ Eyebrows introduce a topic or show how an item is categorized. Content tags or c
 
 In addition to the specific type options listed above, we have provided two generic emphasis styles allowing you to make text italic or bold.
 
-<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :copyButton="false" :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 
@@ -824,7 +825,7 @@ In addition to the specific type options listed above, we have provided two gene
 </style>
 ```
 
-<cdr-doc-example-code-pair :copyButton="false" repository-href="/src/components/text" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :copyButton="false" :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 
@@ -898,12 +899,14 @@ Cedar uses design tokens to store typographic attributes that represent the fund
 
 For more information about design tokens and a complete list of tokens available in Cedar, visit the [Design Tokens](../../tokens/overview/) overview.
 
-### Component API
+# API
 
+<cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/><b>View it on Github: 
+<cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-### Slots
+## Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 

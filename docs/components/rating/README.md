@@ -4,6 +4,7 @@
   "layout_type": "LayoutComponent",
   "title_metadata": "Rating, Stars, Reviews, CdrRating",
   "summary": "Provides insights into user opinions for products, experiences and expert information",
+  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/rating",
   "stars": [
     {
       "type": "do",
@@ -123,7 +124,7 @@
 
 Shows review rating with up to 5 stars highlighted. If rating is zero, star icons are displayed using the grey outline star icon.
 
-<cdr-doc-example-code-pair repository-href="/src/components/rating" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 <div>
@@ -139,7 +140,7 @@ Shows review rating with up to 5 stars highlighted. If rating is zero, star icon
 
 Creates a link to the corresponding review content if on the same page.
 
-<cdr-doc-example-code-pair repository-href="/src/components/rating" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 <div>
@@ -158,7 +159,7 @@ Creates a link to the corresponding review content if on the same page.
 
 Removes the word "Reviews" from the label for limited space layout.
 
-<cdr-doc-example-code-pair repository-href="/src/components/rating" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 <div>
@@ -174,7 +175,7 @@ Removes the word "Reviews" from the label for limited space layout.
 
 Change size for the star icon and text. Default size is medium.
 
-<cdr-doc-example-code-pair repository-href="/src/components/rating" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 <div>
@@ -254,6 +255,9 @@ This component has compliance with WCAG guidelines by:
 <hr>
 
 # API
+
+<cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/><b>View it on Github: 
+<cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
 ## Props
 

@@ -4,6 +4,7 @@
   "layout_type": "LayoutComponent",
   "title_metadata": "CdrCheckbox",
   "summary": "Permits user to make one or more selections from a list",
+  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/checkbox",
   "see_also": [
     {
       "text": "See Also"
@@ -199,7 +200,7 @@
 
 Default and standard spacing for checkboxes.
 
-<cdr-doc-example-code-pair repository-href="/src/components/checkbox" :sandbox-data="$page.frontmatter.sandboxData" :model="{ex1: true, ex2: false, ex3: false}" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :model="{ex1: true, ex2: false, ex3: false}" >
 
 ```html
 <cdr-form-group label="Default label">
@@ -215,7 +216,7 @@ Default and standard spacing for checkboxes.
 
 Different sizing for checkboxes.
 
-<cdr-doc-example-code-pair repository-href="/src/components/checkbox" :sandbox-data="$page.frontmatter.sandboxData" :model="{ex1: true, ex2: false, ex3: false}">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :model="{ex1: true, ex2: false, ex3: false}">
 
 ```html
 <cdr-form-group label="Size label">
@@ -231,7 +232,7 @@ Different sizing for checkboxes.
 
 Use a custom value in place of true/false checked state.
 
-<cdr-doc-example-code-pair repository-href="/src/components/checkbox" :sandbox-data="$page.frontmatter.sandboxData" :model="{ex1: 'no', ex2: 'yes', ex3: 'no'}">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :model="{ex1: 'no', ex2: 'yes', ex3: 'no'}">
 
 ```html
 <cdr-form-group label="Custom true/false label">
@@ -247,7 +248,7 @@ Use a custom value in place of true/false checked state.
 
 Use an array as the model to track a list of custom values.
 
-<cdr-doc-example-code-pair repository-href="/src/components/checkbox" :sandbox-data="$page.frontmatter.sandboxData" :model="{ex: ['2']}">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :model="{ex: ['2']}">
 
 ```html
 <cdr-form-group label="Custom value label">
@@ -264,7 +265,7 @@ Use an array as the model to track a list of custom values.
 
 Pass checkbox data into change handlers.
 
-<cdr-doc-example-code-pair repository-href="/src/components/checkbox" :sandbox-data="$page.frontmatter.sandboxData" :model="{ex: ['2'], lastEdited: ''}">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :model="{ex: ['2'], lastEdited: ''}">
 
 ```html
 <cdr-form-group label="Handling change label">
@@ -283,7 +284,7 @@ Pass checkbox data into change handlers.
 Displays status for checkbox group by indicating that some of the sub-selections in a list are selected. Provides user with ability to select or unselect all items in the list’s sub-group.
 Note the usage of `aria-controls`, `id`, `role`, `aria-label`, and `aria-labelledby`.
 
-<cdr-doc-example-code-pair repository-href="/src/components/checkbox" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrCheckbox, CdrList, CdrFormGroup', styleTag: '.inset { margin-left: $cdr-space-one-x;}'})" :model="{selected: ['Cheese'], toppings: ['Cheese', 'Pepperoni', 'Mushroom', 'Peppers'], isIndeterminate: true, allSelected: false }" :methods="{selectAll(isChecked) {if (isChecked) {this.selected = this.toppings.slice();this.allSelected = true; this.isIndeterminate = false;} else { this.selected = []; this.allSelected = false; this.isIndeterminate = false; } }, selectOne() {if (this.selected.length === 0) {this.isIndeterminate = false; this.allSelected = false;} else if (this.selected.length === this.toppings.length) {this.allSelected = true; this.isIndeterminate = false;} else { this.isIndeterminate = true; this.allSelected = false;}}}">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrCheckbox, CdrList, CdrFormGroup', styleTag: '.inset { margin-left: $cdr-space-one-x;}'})" :model="{selected: ['Cheese'], toppings: ['Cheese', 'Pepperoni', 'Mushroom', 'Peppers'], isIndeterminate: true, allSelected: false }" :methods="{selectAll(isChecked) {if (isChecked) {this.selected = this.toppings.slice();this.allSelected = true; this.isIndeterminate = false;} else { this.selected = []; this.allSelected = false; this.isIndeterminate = false; } }, selectOne() {if (this.selected.length === 0) {this.isIndeterminate = false; this.allSelected = false;} else if (this.selected.length === this.toppings.length) {this.allSelected = true; this.isIndeterminate = false;} else { this.isIndeterminate = true; this.allSelected = false;}}}">
 
 ```html
 <cdr-form-group label="Choose your toppings">
@@ -315,7 +316,7 @@ Note the usage of `aria-controls`, `id`, `role`, `aria-label`, and `aria-labelle
 
 Custom styles for checkboxes.
 
-<cdr-doc-example-code-pair repository-href="/src/components/checkbox" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {styleTag: '.no-box:checked ~ .no-box__content {color: green;}'})" class="custom-checkbox-example" :model="{ex1: true, ex2: false, ex3: false}">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {styleTag: '.no-box:checked ~ .no-box__content {color: green;}'})" class="custom-checkbox-example" :model="{ex1: true, ex2: false, ex3: false}">
 
 ```html
 <cdr-form-group label="Custom checkbox label">
@@ -348,7 +349,7 @@ Custom styles for checkboxes.
 
 Render a checkbox group with validation and error state
 
-<cdr-doc-example-code-pair repository-href="/src/components/checkbox"
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location"
 :sandbox-data="$page.frontmatter.sandboxData" :model="{ex: [], modelError: 'Please make a selection'}" :methods="{validate() {this.modelError = !this.ex.length && 'Please make a selection'}}">
 
 ```html
@@ -469,24 +470,27 @@ Checkboxes work independently from each other:
 
 <hr>
 
-## API
+# API
 
-### Props
+<cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/><b>View it on Github: 
+<cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
+
+## Props
 
 This component will bind any attribute that a [native HTML checkbox element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox) accepts.
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
 
-### Slots
+## Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-### Events
+## Events
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
 
-### Component Variables
+## Component Variables
 
 <cdr-doc-comp-vars name="CdrLabelWrapper"/>
 

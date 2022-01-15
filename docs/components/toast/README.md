@@ -4,6 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Non-modal dialog used to communicate the status of a task or process.",
   "title_metadata": "CdrToast",
+  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/toast",
   "breadcrumbs": [
     {
       "text": "Components/"
@@ -104,7 +105,7 @@ There are five different options for styling the toast, based on the [message ty
 
 A toast should be passed a contextually appropriate icon using the `icon-left` slot.
 
-<cdr-doc-example-code-pair repository-href="/src/components/toast"
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location"
 :load-sprite="true"
 :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrToast, CdrButton, IconCheckFill'})" :model="{ opened: false }" >
 
@@ -132,7 +133,7 @@ A toast should be passed a contextually appropriate icon using the `icon-left` s
 
 CdrToast provides an optional `autoDismiss` property to disable the auto-dismiss functionality.
 
-<cdr-doc-example-code-pair repository-href="/src/components/toast"
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location"
 :load-sprite="true"
 :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrToast, CdrChip, IconWarningFill'})" :model="{ opened: false }" >
 
@@ -164,9 +165,9 @@ CdrToast provides an optional `autoDismiss` property to disable the auto-dismiss
 
 ### Adjusting auto-dismiss timing
 
-CdrToast provides an optional `dismissDelay` property to adjust timing of the automatic dimissal under certain conditions, such as when the toast contains an action.
+CdrToast provides an optional `dismissDelay` property to adjust timing of the automatic dismissal under certain conditions, such as when the toast contains an action.
 
-<cdr-doc-example-code-pair repository-href="/src/components/toast"
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location"
 :load-sprite="true"
 :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrToast, CdrButton, CdrLink, IconInformationFill'})" :model="{ opened: false }" >
 
@@ -256,17 +257,20 @@ Use to provide generic messaging that does not fit the other types
 - Toasts are delivered from the top-right of a page 
 - The most recent toast is always displayed on top of a stack 
 
-## API
+# API
 
-### Props
+<cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/><b>View it on Github: 
+<cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
+
+## Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-### Slots
+## Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-### Events
+## Events
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
 

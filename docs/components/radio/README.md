@@ -4,6 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Permits user to select only one option from a list of two or more",
   "title_metadata": "Radios, CdrRadio",
+  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/radio",
   "see_also": [
     {
       "text": 'See Also'
@@ -151,7 +152,7 @@
 ## Default (Medium)
 Default and standard spacing for radio buttons.
 
-<cdr-doc-example-code-pair repository-href="/src/components/radio" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{ex: ''}">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{ex: ''}">
 
 ```html
 <div>
@@ -196,7 +197,7 @@ Default and standard spacing for radio buttons.
 
 Different sizing for radio buttons.
 
-<cdr-doc-example-code-pair repository-href="/src/components/radio" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{ex: ''}">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{ex: ''}">
 
 ```html
 <div>
@@ -244,7 +245,7 @@ Different sizing for radio buttons.
 
 Custom styles for radio buttons.
 
-<cdr-doc-example-code-pair repository-href="/src/components/radio" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {styleTag: '.no-box:checked ~ .no-box__content {color: green;}'})" :codeMaxHeight="false" class="custom-radio-example" :model="{ex: ''}">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {styleTag: '.no-box:checked ~ .no-box__content {color: green;}'})" :codeMaxHeight="false" class="custom-radio-example" :model="{ex: ''}">
 
 ```html
 <div>
@@ -299,7 +300,7 @@ Custom styles for radio buttons.
 
 Render a radio group with validation and error state
 
-<cdr-doc-example-code-pair repository-href="/src/components/radio"
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location"
 :sandbox-data="$page.frontmatter.sandboxData" :model="{ex: [], modelError: 'Please make a selection'}" :methods="{validate() {this.modelError = !this.ex.length && 'Please make a selection'}}">
 
 ```html
@@ -402,6 +403,9 @@ Radio button labels should:
 <hr>
 
 # API
+
+<cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/><b>View it on Github: 
+<cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
 ## Props
 

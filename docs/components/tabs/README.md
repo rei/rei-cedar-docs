@@ -4,6 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Container used to organize and group related content into smaller sections navigable within a single container",
   "title_metadata": "Tab Panels, CdrTabs",
+  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/tabs",
   "select": [
     {
       "type": "do",
@@ -153,7 +154,7 @@
 ## Default (Medium)
 Tabs align left and bottom border expands to full width of container.
 
-<cdr-doc-example-code-pair repository-href="https://github.com/rei/rei-cedar/tree/feat/tabs/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" >
 
 ```html
 
@@ -172,7 +173,7 @@ Tabs align left and bottom border expands to full width of container.
 
 Reduced spacing around the tabs to create a denser visual design.
 
-<cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false">
 
 ```html
 <cdr-tabs modifier="compact" height="100px">
@@ -189,7 +190,7 @@ Reduced spacing around the tabs to create a denser visual design.
 
 Tabs space evenly across the container.
 
-<cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false">
 
 ```html
 <cdr-tabs modifier="full-width" height="100px">
@@ -206,7 +207,7 @@ Tabs space evenly across the container.
 
 Bottom border of tab header list is removed.
 
-<cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false">
 
 ```html
 <cdr-tabs modifier="no-border" height="100px">
@@ -223,7 +224,7 @@ Bottom border of tab header list is removed.
 
 Centered tab header content.
 
-<cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false">
 
 ```html
 <cdr-tabs modifier="centered" height="100px">
@@ -240,7 +241,7 @@ Centered tab header content.
 
 Tabs using the `active-tab` property to make the third element active on page load.
 
-<cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false">
 
 ```html
 <cdr-tabs :active-tab="2" height="100px">
@@ -257,7 +258,7 @@ Tabs using the `active-tab` property to make the third element active on page lo
 
 Tabs using `height="auto"` to render with variable height based on content size.
 
-<cdr-doc-example-code-pair repository-href="/src/components/tabs" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false">
 
 ```html
 <cdr-tabs height="auto">
@@ -362,6 +363,9 @@ Linking to a specific tab or accordion has SEO costs. If you still wish to imple
 <hr>
 
 # API
+
+<cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/><b>View it on Github: 
+<cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
 Tabs are built from two components: **CdrTabs** and **CdrTabPanel**. These are meant to be used together.
 

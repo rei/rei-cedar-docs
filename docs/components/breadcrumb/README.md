@@ -4,6 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Navigation used to reveal a page’s location within the site hierarchy",
   "title_metadata": "CdrBreadcrumb",
+  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/breadcrumb",
   "path": [
     {
       "type": "do",
@@ -123,7 +124,7 @@
 
 Long breadcrumb path shortened to display the last 2 items with hidden links indicated by ellipsis.
 
-<cdr-doc-example-code-pair repository-href="/src/components/breadcrumb" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight= false>
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight= false>
 
 ```html
     <cdr-breadcrumb
@@ -142,7 +143,7 @@ Long breadcrumb path shortened to display the last 2 items with hidden links ind
 
 Complete breadcrumb string with all items visible.
 
-<cdr-doc-example-code-pair repository-href="/src/components/breadcrumb" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight= false >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight= false >
 
 ```html
   <cdr-breadcrumb
@@ -161,7 +162,7 @@ Complete breadcrumb string with all items visible.
 
 Can be used to override the default link navigation behavior inside a breadcrumb.
 
-<cdr-doc-example-code-pair repository-href="/src/components/breadcrumb" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :methods="{handleNavigation(bc, e) {e.preventDefault(); this.lastClicked = bc.item.name}}" :model="{lastClicked: ''}">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :methods="{handleNavigation(bc, e) {e.preventDefault(); this.lastClicked = bc.item.name}}" :model="{lastClicked: ''}">
 
 ```html
 <div>
@@ -265,7 +266,8 @@ Truncate breadcrumbs left to right to show the final two links in the trail, so 
 
 # API
 
-## Props
+<cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/><b>View it on Github: 
+<cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>## Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props"/>
 
