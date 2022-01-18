@@ -364,7 +364,7 @@ Linking to a specific tab or accordion has SEO costs. If you still wish to imple
 
 # API
 
-<cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/><b>View it on Github: 
+<cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
 <cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
 Tabs are built from two components: **CdrTabs** and **CdrTabPanel**. These are meant to be used together.

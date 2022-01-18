@@ -266,7 +266,7 @@ Truncate breadcrumbs left to right to show the final two links in the trail, so 
 
 # API
 
-<cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/><b>View it on Github: 
+<cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
 <cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>## Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props"/>
