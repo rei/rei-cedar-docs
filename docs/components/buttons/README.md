@@ -4,6 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Invokes and communicates an action that will occur",
   "title_metadata": "CdrButton",
+  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/button",
   "vertical": [
     {
       "type": "do",
@@ -191,7 +192,7 @@
 
 Use primary buttons for actions to complete a task or to move forward in a process such as &quot;Add to cart.&quot; There is only one primary action per major page section.
 
-<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-button>Add to cart</cdr-button>
@@ -206,7 +207,7 @@ Use primary buttons for actions to complete a task or to move forward in a proce
 
 Use secondary buttons for all actions that do not move the user to the next step or require additional user actions such as &quot;Add to wish list&quot; or &quot;Find a campout near you.&quot;
 
-<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-button modifier="secondary">Add to wish list</cdr-button>
@@ -219,7 +220,7 @@ Use secondary buttons for all actions that do not move the user to the next step
 
 Use `sale` or `dark` for alternative button styling.
 
-<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-button modifier="sale">Buy now</cdr-button>
@@ -234,7 +235,7 @@ Use `sale` or `dark` for alternative button styling.
 
 Use `link` modifier to render a button that is styled like a CdrLink. This can be used to create links with the padding and sizing options of a button. Can be used with the `tag` property set to the default `"button"` or `"a"`. For rendering a link inline with text, use [CdrLink](../links). To render a button that behaves like a link, use a [CdrButton with link tag](#button-with-link-tag).
 
-<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-button modifier="link">Buy now</cdr-button>
@@ -248,7 +249,7 @@ Use `link` modifier to render a button that is styled like a CdrLink. This can b
 
 Pair an icon with text to improve recognition about an object or action.
 
-<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrButton, IconPlayStroke'})" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrButton, IconPlayStroke'})" >
 
 ```html
   <div>
@@ -282,7 +283,7 @@ Pair an icon with text to improve recognition about an object or action.
 
 Use icons to visually communicate an object or action in a limited space. Include alternative text to describe what the button does.
 
-<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrButton, IconQuestionFill'})" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrButton, IconQuestionFill'})" >
 
 ```html
   <div>
@@ -303,7 +304,7 @@ Use icons to visually communicate an object or action in a limited space. Includ
 
 Use `with-background` property in conjunction with the `icon-only` property to make icon buttons more identifiable. Include alternative text to describe what the button does.
 
-<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrButton, IconAccountProfile'})" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrButton, IconAccountProfile'})" >
 
 ```html
   <div>
@@ -325,7 +326,7 @@ Use `with-background` property in conjunction with the `icon-only` property to m
 
 For buttons that trigger asynchronous actions, use the `click` event and dynamic properties in order to change the label or state of a button.
 
-<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" :model="{isLoading: false}">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :model="{isLoading: false}">
 
 ```html
 <cdr-button :disabled="isLoading" @click="isLoading = true">
@@ -340,7 +341,7 @@ For buttons that trigger asynchronous actions, use the `click` event and dynamic
 
 Displays at full width of its container.
 
-<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
     <cdr-button
@@ -358,7 +359,7 @@ Displays at full width of its container.
 
 For a CdrButton that looks like a button but behaves like a link, set `tag="a"` and pass an `href`.
 
-<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrButton, IconCaretRight'})" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrButton, IconCaretRight'})" >
 
 ```html
   <cdr-button
@@ -375,7 +376,7 @@ For a CdrButton that looks like a button but behaves like a link, set `tag="a"` 
 
 Change the button size based on where the button is used. The default size is medium.
 
-<cdr-doc-example-code-pair repository-href="/src/components/button" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
     <div>
@@ -530,6 +531,9 @@ Apply the following use cases when deciding when to use links as anchors or butt
 <hr>
 
 # API
+
+<cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
+<cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
 ## Props
 

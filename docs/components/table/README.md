@@ -4,6 +4,7 @@
   "layout_type": "LayoutComponent",
   "title_metadata": "Table, CdrTable",
   "summary": "Organizes structured content so that it is easy to scan, make comparisons, and analyze the data",
+  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/table",
   "breadcrumbs": [
     {
       "text": "Components/"
@@ -88,7 +89,7 @@
 
 The default table is medium sized, bordered, full width, and has responsive overflow scrolling.
 
-<cdr-doc-example-code-pair repository-href="/src/components/table" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 <div>
@@ -124,7 +125,7 @@ The default table is medium sized, bordered, full width, and has responsive over
 
 Alternating light/dark backgrounds.
 
-<cdr-doc-example-code-pair repository-href="/src/components/table" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 <div>
@@ -161,7 +162,7 @@ Alternating light/dark backgrounds.
 
 Adds border between rows
 
-<cdr-doc-example-code-pair repository-href="/src/components/table" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 <div>
@@ -197,7 +198,7 @@ Adds border between rows
 
 This is an advanced example with multiple headers and a custom class to change the background color for headers inside `<tbody>`
 
-<cdr-doc-example-code-pair repository-href="/src/components/table" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 <div>
@@ -321,6 +322,9 @@ This component has compliance with WCAG guidelines by:
 <hr>
 
 # API
+
+<cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
+<cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
 ## Props
 

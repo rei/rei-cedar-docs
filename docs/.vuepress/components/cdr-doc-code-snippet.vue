@@ -5,7 +5,7 @@
     'cdr-doc-code-snippet--no-max-height': !maxHeight }">
     <div class="cdr-doc-code-snippet__actions" v-if="copyButton">
       <div class="cdr-doc-code-snippet__action-wrapper">
-        <cdr-link modifier="standalone" class="cdr-doc-code-snippet__action" :href="repositoryRoot + repositoryHref" target="_blank" rel="noopener noreferrer" v-if="repositoryHref">
+        <cdr-link modifier="standalone" class="cdr-doc-code-snippet__action" :href="repositoryHref" target="_blank" rel="noopener noreferrer" v-if="repositoryHref">
           <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/>
           View on GitHub
         </cdr-link>
@@ -85,7 +85,6 @@ export default {
       codeHidden: false,
       hideCodeToggleText: 'Hide code',
       sandboxCode: {},
-      repositoryRoot: 'https://github.com/rei/rei-cedar/tree/next'
     }
   },
   created: function() {

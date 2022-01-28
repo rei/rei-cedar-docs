@@ -4,6 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Allows users to navigate to next or previous page when content is split into several pages",
   "title_metadata": "Pagination, CdrPagination",
+  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/pagination",
   "align": [
     {
       "type": "do",
@@ -147,7 +148,7 @@
 
 At the sm, md, and lg breakpoints, pagination displays as a list of number text links. Prev and Next links are also added when applicable.
 
-<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ page: 3, pages: [{page: 1, url: '#'}, {page: 2, url: '#'}, {page: 3, url: '#'}, {page: 4, url: '#'}, {page: 5, url: '#'}] }">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :model="{ page: 3, pages: [{page: 1, url: '#'}, {page: 2, url: '#'}, {page: 3, url: '#'}, {page: 4, url: '#'}, {page: 5, url: '#'}] }">
 
 ```html
 <cdr-pagination
@@ -162,7 +163,7 @@ At the sm, md, and lg breakpoints, pagination displays as a list of number text 
 
 By default, CdrPagination assumes that you are navigating through pages on a site and will update the URL on change. For content that requires pagination but is part of a larger page the `linkTag` and `forLabel` properties can be used to render a button based pagination. Set `linkTag` to be `"button"` and set the `forLabel` to describe what element is being paginated, for example `"Pagination for user reviews"`
 
-<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ page: 3, pages: [{page: 1, url: '#'}, {page: 2, url: '#'}, {page: 3, url: '#'}, {page: 4, url: '#'}, {page: 5, url: '#'}] }">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :model="{ page: 3, pages: [{page: 1, url: '#'}, {page: 2, url: '#'}, {page: 3, url: '#'}, {page: 4, url: '#'}, {page: 5, url: '#'}] }">
 
 ```html
 <cdr-pagination
@@ -179,7 +180,7 @@ By default, CdrPagination assumes that you are navigating through pages on a sit
 
 By default pagination uses anchor elements which navigate the users web browser when clicked. This behavior can be overriden by adding a handler to the `navigate` event which emits `(currentPage, currentUrl, event)` and calling `event.preventDefault()` in the handler function. The `currentPage` and `currentUrl` can then be used to implement router based navigation or programmatically navigate the page. This can also be used in conjunction with the `link-tag` property to render a button based pagination.
 
-<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ lastNavigation: '', page: 3, pages: [{page: 1, url: '#'}, {page: 2, url: '#'}, {page: 3, url: '#'}, {page: 4, url: '#'}, {page: 5, url: '#'}] }" :methods="{handleNavigation(num, url, e) {e.preventDefault(); this.lastNavigation = num }}">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :model="{ lastNavigation: '', page: 3, pages: [{page: 1, url: '#'}, {page: 2, url: '#'}, {page: 3, url: '#'}, {page: 4, url: '#'}, {page: 5, url: '#'}] }" :methods="{handleNavigation(num, url, e) {e.preventDefault(); this.lastNavigation = num }}">
 
 ```html
 <div>
@@ -295,6 +296,9 @@ Pagination adapts to a Select component with a native UI dropdown menu on XS bre
 <hr>
 
 # API
+
+<cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
+<cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
 ## Props
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />

@@ -4,6 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Disruptive, action-blocking overlays used to display important, task-relevant information",
   "title_metadata": "CdrModal",
+  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/modal",
   "breadcrumbs": [
     {
       "text": "Components/"
@@ -114,7 +115,7 @@
 
 ## Overview
 
-<cdr-doc-example-code-pair repository-href="/src/components/modal"
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location"
 :sandbox-data="$page.frontmatter.sandboxData" :model="{ opened: false }">
 
 ```html
@@ -147,7 +148,7 @@
 
 When rendering multiple modals on a single page you can reduce your markup size by using a single CdrModal instance to launch all of the modals.
 
-<cdr-doc-example-code-pair repository-href="/src/components/modal"
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location"
 :sandbox-data="$page.frontmatter.sandboxData" 
 :model="{ opened: false, isAlert: false, termsTitle: 'Terms and Conditions', termsContent: 'Click to accept the Terms and Conditions and place item in your shopping cart.', termsRole: 'alertdialog', shippingTitle: 'Free Shipping', shippingContent: 'Free shipping available on certain orders', shippingRole: 'dialog', title: '', content: '', role: ''}" :methods="{openTermsModal(){this.title = this.termsTitle; this.content = this.termsContent; this.role = this.termsRole; this.opened = true; this.isAlert = true; }, openShippingModal(){this.title = this.shippingTitle; this.content = this.shippingContent; this.role = this.shippingRole; this.opened = true; this.isAlert = false;}}">
 
@@ -271,16 +272,20 @@ This component complies with WCAG guidelines by:
   - Pressing the escape key (ESC)
 - Modal opens one at a time and are never displayed in groups
 
-## API
-### Props
+# API
+
+<cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
+<cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
+
+## Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-### Slots
+## Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-### Events
+## Events
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.events" :slots-getting-started-link="false" />
 

@@ -4,6 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Provides contextual feedback messages for typical user actions",
   "title_metadata": "CdrBanner",
+  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/banner",
   "breadcrumbs": [
     {
       "text": "Components/"
@@ -68,7 +69,7 @@ CdrBanner is a simple wrapper component that allows for composing various banner
 ### Default Banner with Icon Left
 Banners should be passed an appropriate icon and text for the banner message type.
 
-<cdr-doc-example-code-pair repository-href="/src/components/CdrBanner"
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location"
 :load-sprite="true"
 :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrBanner, IconWarningFill,IconQuestionFill, IconInformationFill, IconCheckFill, IconErrorFill'})">
 
@@ -114,7 +115,7 @@ Banners should be passed an appropriate icon and text for the banner message typ
 
 CdrBanner provides an optional `message-body` slot in the case where additional information about the message needs to be communicated.
 
-<cdr-doc-example-code-pair repository-href="/src/components/CdrBanner"
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location"
 :load-sprite="true"
 :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrBanner, IconWarningFill'})">
 
@@ -135,7 +136,7 @@ CdrBanner provides an optional `message-body` slot in the case where additional 
 
 CdrBanner provides an optional `icon-right` slot that can be used to provide an action related to the Banner such as a close button. The actionable element should have an aria-label that explains it's relationship to the banner and what happens when you click on it.
 
-<cdr-doc-example-code-pair repository-href="/src/components/CdrBanner"
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location"
 :load-sprite="true"
 :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrBanner, CdrButton, IconErrorFill, IconXLg'})" :model="{ open: true }" >
 
@@ -164,7 +165,7 @@ CdrBanner provides an optional `icon-right` slot that can be used to provide an 
 
 Optional `info-action` slot that can be used to provide an action related to the Banner such as a link or tooltip. The actionable element should have an aria-label that explains it's relationship to the banner and what happens when you click on it.
 
-<cdr-doc-example-code-pair repository-href="/src/components/CdrBanner"
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location"
 :load-sprite="true"
 :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrBanner, CdrTooltip, CdrButton, IconCheckFill, IconInformationStroke'})">
 
@@ -209,7 +210,7 @@ Many WCAG requirements are contextual to their implementation. To ensure that us
 - Don't rely on color alone to convey your message. Provide an additional indicator to color, like an icon: [WCAG 1.4.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-without-color.html)
 - Error Identification techniques and criteria: [WCAG 3.3.1](https://www.w3.org/WAI/WCAG21/Understanding/error-identification.html)
 
-<cdr-doc-example-code-pair repository-href="/src/components/CdrBanner"
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location"
 :load-sprite="true"
 :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrBanner, IconQuestionFill, IconInformationFill, IconCheckFill, IconErrorFill'})">
 
@@ -311,13 +312,17 @@ Use to provide generic messaging that does not fit the other types.
 - Banners that persist across pages should sit alongside the global header 
   
 
-## API
+# API
 
-### Props
+<cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
+<cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
+
+
+## Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-### Slots
+## Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
