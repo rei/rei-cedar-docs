@@ -30,6 +30,17 @@
 
 <br>
 
+## 11.2.0 <cdr-link style="vertical-align: baseline" href="https://github.com/rei/rei-cedar/commit/43ee14a938cde33996912961985fc5a664c5a501"><icon-brand-github /><span class="sr-only">View the release on github</span></cdr-link>
+
+### New Features
+
+#### Icon Updates
+We have introduced new icons to our [icon library](../../icons/library/)
+- Membership <icon-membership/>
+- Returns <icon-returns/>
+- Shipping prep <icon-shipping-prep/>
+- Shipping truck <icon-shipping-truck/>
+
 ## 11.1.0
 ### New Features
 
