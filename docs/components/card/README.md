@@ -4,6 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Linked, interactive surface that groups related information and/or actions associated with a singular subject or destination.",
   "title_metadata": "CdrCard",
+  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/card",
   "breadcrumbs": [
     {
       "text": "Components/"
@@ -83,7 +84,7 @@ CdrCard is a simple wrapper component that allows for composing various card lay
 
 Cards should always be used to link to other content, and the `cdr-card__link` utility class should be used on the link element to ensure that the entire card functions as a click target.
 
-<cdr-doc-example-code-pair repository-href="/src/components/card"
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location"
 :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
@@ -121,7 +122,7 @@ Cards should always be used to link to other content, and the `cdr-card__link` u
 
 Because CdrCard is a simple wrapper component, its behavior can be customized or overridden in a variety of ways. For example, adding a border, inset padding, or modifying the link behavior.
 
-<cdr-doc-example-code-pair repository-href="/src/components/card"
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location"
 :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {styleTag: '.custom-card-example {border: 1px solid $cdr-color-border-primary; padding: $cdr-space-inset-one-x;} .custom-card-example .cdr-card__link {&:hover {color: $cdr-color-text-sale !important;}}'})" >
 
 ```html
@@ -195,17 +196,20 @@ Many WCAG requirements are contextual to their implementation. To ensure that us
 
 <do-dont :examples="$page.frontmatter.grouping" />
 
-## API
+# API
 
-### Props
+<cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
+<cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
+
+## Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-### Slots
+## Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-### Component Variables
+## Component Variables
 
 <cdr-doc-comp-vars name="CdrCard"/>
 

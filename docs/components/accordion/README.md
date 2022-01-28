@@ -4,6 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Vertically-stacked list that allows users to expand and collapse additional content",
   "title_metadata": "CdrAccordion, CdrAccordionGroup",
+  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/accordion",
   "breadcrumbs": [
     {
       "text": "Components/"
@@ -131,7 +132,7 @@
 
 Section borders expand to full width of container.
 
-<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ default1: false, default2: false, default3: false }">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :model="{ default1: false, default2: false, default3: false }">
 
 ```html
 <cdr-accordion-group>
@@ -187,7 +188,7 @@ Section borders expand to full width of container.
 
 Reduced spacing around title and content body. Also, smaller font sizes resulting in overall denser display of content.
 
-<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ compact1: false, compact2: false, compact3: false }">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :model="{ compact1: false, compact2: false, compact3: false }">
 
 ```html
 <cdr-accordion-group>
@@ -245,7 +246,7 @@ Reduced spacing around title and content body. Also, smaller font sizes resultin
 
 Border aligns to the title text and expand/collapse icon.
 
-<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ borderAligned1: false, borderAligned2: false, borderAligned3: false }">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :model="{ borderAligned1: false, borderAligned2: false, borderAligned3: false }">
 
 ```html
 <cdr-accordion-group>
@@ -306,7 +307,7 @@ Border aligns to the title text and expand/collapse icon.
 
 Optionally remove content spacing (css padding) from the accordion content for applications needing more design flexibility.
 
-<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ contentSpacing1: false, contentSpacing2: false, contentSpacing3: false }">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :model="{ contentSpacing1: false, contentSpacing2: false, contentSpacing3: false }">
 
 ```html
 <cdr-accordion-group>
@@ -378,7 +379,7 @@ Optionally remove content spacing (css padding) from the accordion content for a
 
 In order to render a dynamic list of accordions, for example using data retrieved from a back-end API, you will need to use `this.$set` or some other Vue method to make the array of accordion data reactive. This can also be used to avoid creating an individual data attribute for every accordion and instead track their state with an array of booleans.
 
-<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ accordions: [{id: 'dynamic-a', label: 'Dynamic A label', content: 'Dynamic A content', opened: false},{id: 'dynamic-b', label: 'Dynamic B label', content: 'Dynamic B content', opened: false},{id: 'dynamic-c', label: 'Dynamic C label', content: 'Dynamic C content', opened: false},] }" :methods="{toggleAccordion(idx){ this.$set(this.accordions[idx], 'opened', !this.accordions[idx].opened)}}">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :model="{ accordions: [{id: 'dynamic-a', label: 'Dynamic A label', content: 'Dynamic A content', opened: false},{id: 'dynamic-b', label: 'Dynamic B label', content: 'Dynamic B content', opened: false},{id: 'dynamic-c', label: 'Dynamic C label', content: 'Dynamic C content', opened: false},] }" :methods="{toggleAccordion(idx){ this.$set(this.accordions[idx], 'opened', !this.accordions[idx].opened)}}">
 
 ```html
 <cdr-accordion-group>
@@ -407,7 +408,7 @@ In order to render a dynamic list of accordions, for example using data retrieve
 
 The `unwrap` property of `CdrAccordionGroup` can be used to render the accordion content in an "unwrapped" state. This property accepts either a boolean toggle or a list of breakpoints.
 
-<cdr-doc-example-code-pair repository-href="/src/components/accordion" :sandbox-data="$page.frontmatter.sandboxData" :model="{ unwrap1: false, unwrap2: false, unwrap3: false }">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :model="{ unwrap1: false, unwrap2: false, unwrap3: false }">
 
 ```html
 <cdr-accordion-group unwrap="@md @lg">
@@ -538,6 +539,10 @@ This component has compliance with WCAG guidelines by:
 <hr>
 
 # API
+
+<cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
+<cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
+
 
 ## Props
 

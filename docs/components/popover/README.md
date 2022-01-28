@@ -4,6 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Small overlay used to display contextual information",
   "title_metadata": "CdrPopover",
+  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/popover",
   "breadcrumbs": [
     {
       "text": "Components/"
@@ -119,7 +120,7 @@
 
 CdrPopover is a wrapper component that accepts a trigger element and popover content. When the trigger element is clicked, the popover content is rendered. Event bindings between the trigger and the popover are set up automatically. The popover will dynamically update its position property to ensure that it renders on screen, though this functionality can be disabled by setting autoPosition to false.
 
-<cdr-doc-example-code-pair repository-href="/src/components/popover"
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location"
 :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
@@ -144,7 +145,7 @@ CdrPopover can also be controlled programmatically using the `open` prop. Howeve
 - The `open` property should be toggled to true when the trigger element is clicked. Close logic will be handled by CdrPopover.
 - The trigger element should have it's `aria-controls` property set to the ID of the CdrPopover, and it's `aria-haspopup` property set to "dialog".
 
-<cdr-doc-example-code-pair repository-href="/src/components/popover"
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location"
 :sandbox-data="$page.frontmatter.sandboxData" :model="{open: false}">
 
 ```html
@@ -215,17 +216,20 @@ Example:
 
 <do-dont :examples="$page.frontmatter.essential" />
 
-## API
+# API
 
-### Props
+<cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
+<cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
+
+## Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-### Slots
+## Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-### Events
+## Events
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.events" :slots-getting-started-link="false" />
 

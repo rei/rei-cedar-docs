@@ -4,6 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Captures the user’s attention and communicate your message",
   "title_metadata": "CdrImg",
+  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/image",
   "sandboxData": {
     "components": "CdrImg"
   },
@@ -91,7 +92,7 @@
 Use for images with no responsive qualities.
 
 
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/image" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :codeMaxHeight= false :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 
@@ -108,7 +109,7 @@ Use for images with no responsive qualities.
 Apply rules to an image using ratio and crop properties. The below example is cropped using top alignment with the aspect ratio set as 9:16.
 
 
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/image" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :codeMaxHeight= false :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <cdr-img
@@ -126,7 +127,7 @@ Apply rules to an image using ratio and crop properties. The below example is cr
 Use the cover property to resize the background image to fill the entire container.
 
 
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/image" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :codeMaxHeight= false :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <cdr-img
@@ -148,7 +149,7 @@ To use cover or crop properties without a defined aspect ratio, set `ratio="auto
 - Apply `height: 100%` to the CdrImg element to have it take up the full height of it's container (which must also have a height defined through some means)
 - Make the CdrImg be a grid item, in which case the image height would be determined by the height of the other grid items in the same row
 
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/image" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrImg, CdrGrid'})" >
+<cdr-doc-example-code-pair :codeMaxHeight= false :repository-href="$page.frontmatter.component_location" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrImg, CdrGrid'})" >
 
 ```html
 <div>
@@ -199,7 +200,7 @@ Apply a radius to an image.
 The below example is cropped using center alignment with the aspect ratio set as square and the radius set as rounded.
 
 
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/image" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :codeMaxHeight= false :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <cdr-img
@@ -217,7 +218,7 @@ The below example is cropped using center alignment with the aspect ratio set as
 The below example is cropped using center alignment with the aspect ratio set as square and the radius set as circle.
 
 
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/image" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :codeMaxHeight= false :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 <cdr-img
@@ -250,7 +251,7 @@ CdrImg will bind any event handlers to the `img` element that it wraps. This is 
 
 The CdrImg component accepts any valid HTML `img` attribute. CdrImg works with [native lazy loading](https://css-tricks.com/native-lazy-loading/) by setting the `loading` attribute.
 
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/image" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :codeMaxHeight= false :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 
@@ -411,6 +412,9 @@ Images are cropped on y-axis with bottom value and on x-axis with left, x-center
 
 # API
 
+<cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
+<cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
+
 ## Props
 
 This component will bind any attribute that a [native HTML img element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) accepts.
@@ -418,7 +422,7 @@ This component will bind any attribute that a [native HTML img element](https://
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
 
-## Slots
+### Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 

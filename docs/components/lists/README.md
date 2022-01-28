@@ -4,6 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Groups related content items together either vertically or horizontally",
   "title_metadata": "CdrList",
+  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/list",
   "see_also": [
     {
       "text": 'See Also'
@@ -96,7 +97,7 @@
 
 Collect items to be displayed in a list when items are not marked with bullets.  This is the default and is also known as unordered and undecorated “bare” list.
 
-<cdr-doc-example-code-pair repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" >
 
 
 ```html
@@ -117,7 +118,7 @@ Collect items to be displayed in a list when items are not marked with bullets. 
 
 Collect related items that don’t need to be in a specific order or sequence. List items are typically marked with bullets.
 
-<cdr-doc-example-code-pair :codeMaxHeight="false" repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :codeMaxHeight="false" :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-list modifier="unordered">
@@ -137,7 +138,7 @@ Collect related items that don’t need to be in a specific order or sequence. L
 
 Collect related items with numeric order or sequence. Numbering starts at 1 with the first list item and increases by increments of 1 for each successive ordered list item.
 
-<cdr-doc-example-code-pair :codeMaxHeight="false" repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :codeMaxHeight="false" :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-list tag="ol" modifier="ordered">
@@ -157,7 +158,7 @@ Collect related items with numeric order or sequence. Numbering starts at 1 with
 
 Compact modifier can be added to any `cdr-list` in order to reduce the margin between list items.
 
-<cdr-doc-example-code-pair repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" >
 
 ```html
   <cdr-list modifier="compact unordered">
@@ -177,7 +178,7 @@ Compact modifier can be added to any `cdr-list` in order to reduce the margin be
 
 Display items horizontally with no divider.
 
-<cdr-doc-example-code-pair :codeMaxHeight="false" repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :codeMaxHeight="false" :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-list modifier="inline">
@@ -193,7 +194,7 @@ Display items horizontally with no divider.
 
 Display items horizontally, separated by a bullet character.
 
-<cdr-doc-example-code-pair :codeMaxHeight="false" repository-href="/src/components/list" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :codeMaxHeight="false" :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-list modifier="inline unordered">
@@ -294,6 +295,9 @@ WebAIM: [Semantic Structure: Using Lists Correctly](https://webaim.org/technique
 <hr>
 
 # API
+
+<cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
+<cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
 ## Props
 

@@ -4,6 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Clickable text element used to navigate to page section, another page or open an overlaid window such as modal dialog or popover",
   "title_metadata": "Hyperlink, Anchor, CdrButton, CdrLink",
+  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/link",
   "see_also": [
     {
       "text": 'See Also'
@@ -102,7 +103,7 @@
 
 Display within body copy for articles, hub cards, footer, or recommendations.
 
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :codeMaxHeight= false :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <cdr-text>
@@ -124,7 +125,7 @@ Display within body copy for articles, hub cards, footer, or recommendations.
 
 Display independently with a Call to Action. Some examples are for finding a store, or viewing related products.
 
-<cdr-doc-example-code-pair repository-href="/src/components/link" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
   <cdr-link href="https://www.rei.com" modifier="standalone">
@@ -138,7 +139,7 @@ Display independently with a Call to Action. Some examples are for finding a sto
 
 Display standalone link with icon on left.
 
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrLink, IconShipping', styleTag: '.icon-class { margin-left: $cdr-space-one-x; }'})">
+<cdr-doc-example-code-pair :codeMaxHeight= false :repository-href="$page.frontmatter.component_location" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrLink, IconShipping', styleTag: '.icon-class { margin-left: $cdr-space-one-x; }'})">
 
 ```html
   <div>
@@ -155,7 +156,7 @@ Display standalone link with icon on left.
 
 Display standalone link with icon on right.
 
-<cdr-doc-example-code-pair :codeMaxHeight= false repository-href="/src/components/link" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrLink, IconExternalLink', styleTag: '.icon-class { margin-right: $cdr-space-one-x; }'})">
+<cdr-doc-example-code-pair :codeMaxHeight= false :repository-href="$page.frontmatter.component_location" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrLink, IconExternalLink', styleTag: '.icon-class { margin-right: $cdr-space-one-x; }'})">
 
 ```html
   <div>
@@ -177,7 +178,7 @@ Use the `tag` prop to render a button that looks like a link. Can be used inline
 
 To render a link that has the spacing and sizing of a button, use [CdrButton with link modifier](../buttons/#link-style). To visually render a button that behaves like a link, use [a CdrButton with link tag](../buttons#button-with-link-tag).
 
-<cdr-doc-example-code-pair repository-href="/src/components/link" :sandbox-data="$page.frontmatter.sandboxData" :model="{ count: 0 }">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :model="{ count: 0 }">
 
 ```html
   <cdr-text>
@@ -299,6 +300,9 @@ WebAIM: Links and Hypertext [Introduction to Links and Hypertext](https://webaim
 <hr>
 
 # API
+
+<cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
+<cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
 ## Props
 

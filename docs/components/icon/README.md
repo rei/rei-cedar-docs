@@ -4,6 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Communicates meaning through the use of graphics",
   "title_metadata": "CdrIcon",
+  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/icon",
   "breadcrumbs": [
     {
       "text": "Components/"
@@ -131,7 +132,7 @@
 
 The inline icon components are the recommended method for using Cedar icons in a Vue application. Cedar exports a component version of every SVG Icon in the [Cedar Icon Library](../../icons/library). These components are named using PascalCase, for example `account-profile` becomes `IconAccountProfile` or `camping` becomes `IconCamping`.
 
-<cdr-doc-example-code-pair repository-href="/src/components/icon" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'IconAccountProfile, IconCamera'})">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'IconAccountProfile, IconCamera'})">
 
 ```html
   <icon-account-profile />
@@ -146,7 +147,7 @@ A collection of SVG icon files composed into a single file. This method provides
 
 Visit the [Cedar Icon Sprite Creator](https://rei.github.io/cedar-icons/#/sprite) to generate a sprite sheet for your project. You will need to ensure that your sprite contains all the Cedar icons used in your application, including those used in shared components. The generated sprite sheet should be rendered inline at the root of your HTML. You should avoid rendering the sprite sheet in JavaScript/Vue, as that will cause it to be included twice (once in the server rendered HTML, and once in the client side bundle).
 
-<cdr-doc-example-code-pair repository-href="/src/components/icon" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrIcon'})" :load-sprite="true">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrIcon'})" :load-sprite="true">
 
 ```html
   <cdr-icon use="#arrow-up" />
@@ -160,7 +161,7 @@ Visit the [Cedar Icon Sprite Creator](https://rei.github.io/cedar-icons/#/sprite
 
 Create a new SVG icon using any valid SVG markup. The wrapping SVG element can be stripped (below) or maintained. Ensure that ID is not a used attribute in your icon to avoid introducing non-unique ID's on a page that may use this icon several times. Note that if it is not stripped, then `viewBox`, `role`, and `xmlns` attributes will not be preserved. Whereas, all other attributes will be preserved. This method creates an outer SVG wrapper for accessibility and styles. This is not recommended if using a large number of icons. See the [icon overview](../../icons/overview/) page for more details on building SVG for use with Cedar.
 
-<cdr-doc-example-code-pair repository-href="/src/components/icon" :sandbox-data="$page.frontmatter.sandboxData" >
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
   <cdr-icon>
@@ -315,6 +316,9 @@ Ensure that icons use contrast ratio of 4.5:1 between icon color and background 
 <do-dont :examples="$page.frontmatter.color" class="stack-2"/>
 
 # API
+
+<cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
+<cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
 ## Props
 

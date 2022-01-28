@@ -4,6 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Allows users to make selections, filter content, or trigger actions",
   "title_metadata": "CdrChip",
+  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/chip",
   "breadcrumbs": [
     {
       "text": "Components/"
@@ -196,7 +197,7 @@
             "slots": [
               {
                 "name": "label",
-                "description": "Slot for overriding CdrChip label content with a custom elementt."
+                "description": "Slot for overriding CdrChip label content with a custom element."
               }
             ]
           }
@@ -216,7 +217,7 @@ Chips are compact elements that represent a selection, attribute, or dynamic act
 
 Use chips to directly specify, dynamically categorize or immediately perform a discrete action.
 
-<cdr-doc-example-code-pair repository-href="/src/components/chip"
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location"
 :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
@@ -231,7 +232,7 @@ Use chips to directly specify, dynamically categorize or immediately perform a d
 
 Use `icon-left` or `icon-right` slots to pass icons into a chip. Place the X remove icon in the icon-right slot only. Place other icons in the icon-left slot. Use only one icon per chip.
 
-<cdr-doc-example-code-pair repository-href="/src/components/chip"
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location"
  :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconHeartStroke, IconCheckLg'})">
 
 ```html
@@ -248,7 +249,7 @@ Use stateful chips to update settings immediately or trigger an immediate action
 
 For chips that toggle a single selection on and off, use the click event and dynamic properties in order to change the label or state of a chip. The `aria-pressed` attribute should be used to designate the state of the toggle.
 
-<cdr-doc-example-code-pair repository-href="/src/components/chip"
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location"
 :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconHeartStroke, IconHeartFill'})" :model="{ toggled: false }" :methods="{toggle() {this.toggled = !this.toggled}}" >
 
 ```html
@@ -282,7 +283,7 @@ For chips that toggle a single selection on and off, use the click event and d
 
 Filter chips add a visual representation of user selected filters. Filter chips that represent user selections that can be dynamically removed should include an X icon in the right icon slot and be linked to the ID of the input it controls using `aria-controls`. The `aria-pressed` property should be set to true to designate that this selection is active. Filter chips that are linked to a checkbox should appear selected and be included in the same form group as the checkboxes.
 
-<cdr-doc-example-code-pair repository-href="/src/components/chip"
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location"
 :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconXLg, CdrCheckbox'})" :model="{ filtered: true }" :methods="{updateFilter() {this.filtered = !this.filtered}}">
 
 ```html
@@ -302,7 +303,7 @@ Use selection chips to allow users to make a single select choice or a multiple 
 
 For single select chip groups, apply `role='radio'` to each chip, use `aria-checked="true"` and `tabindex="0"` to designate the selected chip, and apply `aria-checked="false"` and `tabindex="-1"` to the other chips. The chip elements should be grouped directly inside a CdrChipGroup element to ensure keyboard navigation is properly managed. The CdrChipGroup element requires a label property or slot be passed in which describes the chip group. This label is visually hidden by default.
 
-<cdr-doc-example-code-pair repository-href="/src/components/chip"
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location"
 :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconXSm, CdrCheckbox'})" :model="{ categories: ['a', 'b', 'c'], selectedCategory: 'a' }" :methods="{selectCategory(category) {this.selectedCategory = category}}">
 
 ```html
@@ -321,7 +322,7 @@ For single select chip groups, apply `role='radio'` to each chip, use `aria-chec
 
 For multiple select chip groups, apply `role='checkbox'` to each chip, use `aria-checked="true"` to designate the selected chip, and apply `aria-checked="false"` to the other chips. The chip elements should be grouped directly inside a CdrChipGroup element to ensure keyboard navigation is properly managed. The CdrChipGroup element requires a label property or slot be passed in which describes the chip group. This label is visually hidden by default.
 
-<cdr-doc-example-code-pair repository-href="/src/components/chip"
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location"
 :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconXSm, CdrCheckbox'})" :model="{ categories: ['a', 'b', 'c', 'd'], selectedCategories: ['b', 'c'] }" :methods="{selectCategory(category) {const i = this.selectedCategories.indexOf(category); if (i !== -1) { this.selectedCategories.splice(i, 1) } else { this.selectedCategories.push(category)}}}">
 
 ```html
@@ -462,6 +463,8 @@ When making decisions about whether to use a button, links or chips, consider th
 
 # API
 
+<cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
+<cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
 ## CdrChip
 ### Props

@@ -4,6 +4,7 @@
   "layout_type": "LayoutComponent",
   "title_metadata": "Quote, CdrQuote",
   "summary": "Short excerpt with an external citation and citation URL that is set off from the main body of text",
+  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/quote",
   "see_also": [
     {
       "text": "See Also"
@@ -143,7 +144,7 @@
 
 Default block quote can be used with the following HTML tags: `<p>`, `<div>`, `<aside>`. This is responsive with styles for XS breakpoint.
 
-<cdr-doc-example-code-pair repository-href="/src/components/quote" :sandbox-data="$page.frontmatter.sandboxData">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData">
 
 ```html
 <div>
@@ -226,6 +227,9 @@ When block quotes are displayed at XS breakpoint, the text will use a smaller fo
 <hr>
 
 # API
+
+<cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
+<cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
 ## Props
 

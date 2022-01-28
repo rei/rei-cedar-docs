@@ -4,6 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Provides base margins and responsive layout logic for pages",
   "title_metadata": "CdrContainer",
+  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/container",
   "breadcrumbs": [
     {
       "text": "Components/"
@@ -52,7 +53,7 @@
 
 CdrContainer is a simple wrapper that provides basic responsive layout logic. The padding and margin applied by CdrContainer is designed to align with the header and footer in the REI page template. This component provides the same functionality as the `cdr-container` or `cdr-container-fluid` mixins from `@rei/cdr-tokens` but wrapped in a Vue component for ease of use. Note that the example below needs to be opened in CodeSandbox to see the full static vs. fluid behavior.
 
-<cdr-doc-example-code-pair repository-href="/src/components/CdrContainer"
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location"
 :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
@@ -103,13 +104,16 @@ The default `static` CdrContainer has a flexible content width up to a max width
 </cdr-container>
 ```
 
-## API
+# API
 
-### Props
+<cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
+<cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
+
+## Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-### Slots
+## Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
