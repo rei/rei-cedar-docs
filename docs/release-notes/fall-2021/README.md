@@ -30,7 +30,9 @@
 
 <br>
 
-## 11.2.0 <cdr-link style="vertical-align: baseline" href="https://github.com/rei/rei-cedar/commit/43ee14a938cde33996912961985fc5a664c5a501"><icon-brand-github /><span class="sr-only">View the release on github</span></cdr-link>
+## 11.2.0 
+
+See what's changed on <cdr-link style="vertical-align: baseline" href="https://github.com/rei/rei-cedar/commit/43ee14a938cde33996912961985fc5a664c5a501">GitHub <icon-brand-github /><span class="sr-only"></span></cdr-link>
 
 ### New Features
 
