@@ -13,7 +13,7 @@
 
 [cedar-user-support-link]: https://rei.slack.com/messages/CA58YCGN4
 
-<cdr-img alt="" :src="$withBase(`/getting-started-for-designers/figma-at-rei.png`)"/>
+<cdr-img alt="Welcome" :src="$withBase(`/getting-started-for-designers/figma-at-rei.png`)"/>
 
 <br />
 <br />
