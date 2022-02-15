@@ -346,7 +346,7 @@ Input field with validation that runs on `blur`. Error state is controlled with 
 
 Error messaging will override helper text rendered in the bottom position.
 
-<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: '', modelError: false}" :methods="{validateInput() {this.modelError = this.defaultModel.length > 4 && 'Error: please enter 4 or less characters'}}">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: '', modelError: false}" :methods="{validateInput() {this.modelError = this.defaultModel.length > 4}}">
 
 ```html
 <cdr-input
@@ -354,11 +354,15 @@ Error messaging will override helper text rendered in the bottom position.
   :background="backgroundColor"
   label="Input label"
   :error="modelError"
+  aria-describedby="errorMessage"
   @blur="validateInput"
 >
   <template #helper-text-bottom>
     Must be 4 or less characters
   </template>
+  <template #error>
+    <span id="errorMessage">Error: please enter 4 or less characters</span>
+  </template >
 </cdr-input>
 ```
 
