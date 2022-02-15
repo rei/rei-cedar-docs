@@ -13,7 +13,7 @@
 
 [cedar-user-support-link]: https://rei.slack.com/messages/CA58YCGN4
 
-<cdr-img alt="" :src="$withBase(`/getting-started-for-designers/figma-at-rei.png`)"/>
+<cdr-img alt="Welcome" :src="$withBase(`/getting-started-for-designers/figma-at-rei.png`)"/>
 
 <br />
 <br />
@@ -57,7 +57,7 @@ Figma is REI's design tool of choice and houses Cedar's UI toolkits. You can use
 
 <br />
 
- <article-story-columns link1="https://public.cloud-dam.rei.com/api/public/content/7d09614ed12d4f4d8c56060a2f298c73" link2="https://www.cloud-dam.rei.com/en-us/AssetGuidesandCreativeStandards/AssetGuideBuild/REIPhotographyStandards" link3="https://confluence.rei.com/pages/viewpage.action?spaceKey=DRCREAT&title=UX+Copy+Best+Practices"><template #col-1-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/brand-guidelines.png`)"/></template><template #col-1-title>Brand guidelines</template><template #col-2-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/photography-guidelines.png`)"/></template><template #col-2-title>Photography style guide</template><template #col-3-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/ux-copy.png`)"/></template><template #col-3-title>UX copy best practices</template></article-story-columns>
+ <article-story-columns link1="http://brand.rei.com/" link2="https://www.cloud-dam.rei.com/en-us/AssetGuidesandCreativeStandards/AssetGuideBuild/REIPhotographyStandards" link3="https://confluence.rei.com/pages/viewpage.action?spaceKey=DRCREAT&title=UX+Copy+Best+Practices"><template #col-1-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/brand-guidelines.png`)"/></template><template #col-1-title>Brand guidelines</template><template #col-2-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/photography-guidelines.png`)"/></template><template #col-2-title>Photography style guide</template><template #col-3-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/getting-started-for-designers/ux-copy.png`)"/></template><template #col-3-title>UX copy best practices</template></article-story-columns>
 
   
   

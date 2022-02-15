@@ -61,7 +61,7 @@ Validation should only be used once non-blocking techniques such as providing he
     -  For a group of elements such a form group of checkboxes, display notifications below the fieldset container
   - Use meaningful colors and iconography
   - Display messages within the context of the action
-  - Consider disabling the form submission to help direct the users attention to issues that exist
+  - Direct the user’s attention to issues in the form after using the submit button (forms will not submit to the server until issues are resolved)
   - Don't remove incorrect data entered by the user
   - Don't provide validation messages for unfilled inputs until the user attempts to submit the form
 - **Make it unassuming and friendly**

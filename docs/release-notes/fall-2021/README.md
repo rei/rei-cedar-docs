@@ -148,7 +148,7 @@ CdrModal has been updated to address an issue when using the `modal` slot that w
 
 ### CdrBanner Component Variable
 
-With the redesign of CdrBanner, the component variable has been deprecated and will be removed in a future release. Teams who are unable to utilize the Vue component should plan to make use of the [messaging tokens](http://localhost:8080/tokens/all-tokens/#colors) to create their banners. 
+With the redesign of CdrBanner, the component variable has been deprecated and will be removed in a future release. Teams who are unable to utilize the Vue component should plan to make use of the [messaging tokens](../../tokens/all-tokens/#colors) to create their banners. 
 
 ### Preparing for Vue 3
 
