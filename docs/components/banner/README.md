@@ -297,7 +297,7 @@ Use to provide generic messaging that does not fit the other types.
 - A call-to-action may be included 
 
 ### Structure
-  
+
 - A banner always spans the width of its parent container 
 - The height of a banner is variable, content depending 
   
@@ -309,20 +309,18 @@ Use to provide generic messaging that does not fit the other types.
 ### Placement 
 
 - Banners should be placed above their area of concern 
-- Banners that persist across pages should sit alongside the global header 
-  
+- Banners that persist across pages should sit alongside the global header
 
-# API
+## API
 
 <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
 <cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
-
-## Props
+### Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-## Slots
+### Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
