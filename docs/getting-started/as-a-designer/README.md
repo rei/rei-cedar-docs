@@ -28,7 +28,7 @@ Figma is REI's design tool of choice and houses Cedar's UI toolkits. You can use
 
  <br />
  
-   <cdr-img alt="" :src="$withBase(`/getting-started-for-designers/app-desktop.png`)"/>
+   <cdr-img alt="alt text?" :src="$withBase(`/getting-started-for-designers/app-desktop.png`)"/>
  
  <br />
 
