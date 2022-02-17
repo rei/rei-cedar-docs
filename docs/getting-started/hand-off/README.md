@@ -31,7 +31,7 @@ To cover all supported [breakpoints](../../components/grid/#the-basics), you wil
 To make starting your project easier, duplicate our Figma [template file](https://www.figma.com/file/JlTaoRS1devxB4A4Xdd0oE/Artboards?node-id=0%3A1). If using device-specific artboard sizes for native applications, be sure to apply a Layout Grid to the frame.
 
 <figure>
-  <cdr-img alt="screenshot" :src="$withBase(`/getting-started-hand-off/hand-off-artboard-setup.png`)"/>
+  <cdr-img alt="Artboard width examples from our Figma template file in extra small, small, and medium" :src="$withBase(`/getting-started-hand-off/hand-off-artboard-setup.png`)"/>
   <figcaption>
     <cdr-caption summary="The template file contains the artboard widths you need to get started."/>
   </figcaption>
@@ -41,7 +41,7 @@ To make starting your project easier, duplicate our Figma [template file](https:
 Toolkit libraries are automatically integrated into any new Figma project — simply drag-and-drop components from the asset tab or use shared styles for typography or color.
 
 <figure>
-  <cdr-img alt="screenshot" :src="$withBase(`/getting-started-hand-off/hand-off-component-example.gif`)"/>
+  <cdr-img alt="A cursor drags a text box from the Figma asset panel into a project" :src="$withBase(`/getting-started-hand-off/hand-off-component-example.gif`)"/>
   <figcaption>
     <cdr-caption summary="Components can be drag-and-dropped into your project from the assets panel in Figma."/>
   </figcaption>
@@ -57,7 +57,7 @@ The global header and footer are available as shared components. Look for them u
 Effectively communicating specifications to a developer is the only way to ensure your design intention shows up in the delivered product. When you incorporate assets from the UI Toolkit into your designs, you’re also using the common language shared between the design assets in Figma and the code used to display them on the web.
 
 <figure>
-  <cdr-img alt="screenshot" :src="$withBase(`/getting-started-hand-off/hand-off-spacing.png`)"/>
+  <cdr-img alt="Spacing symbols separate components to aid in handoff between designers and developers" :src="$withBase(`/getting-started-hand-off/hand-off-spacing.png`)"/>
   <figcaption>
     <cdr-caption summary="Here, spacing symbols are used to show separation between components."/>
   </figcaption>
@@ -76,14 +76,14 @@ We recommended teams keep all their design specifications together under one pro
 As developers, you have view access to any project you’re invited to in Figma. The primary tools at your disposal will be the ability to comment and inspect.
 
 <figure>
-  <cdr-img alt="screenshot" :src="$withBase(`/getting-started-hand-off/hand-off-commenting.png`)"/>
+  <cdr-img alt="A comment from a designer to a developer on a Figma component" :src="$withBase(`/getting-started-hand-off/hand-off-commenting.png`)"/>
   <figcaption>
     <cdr-caption summary="Commenting directly in Figma is a great way to manage hand-off conversations with your designer."/>
   </figcaption>
 </figure>
 
 <figure>
-  <cdr-img alt="screenshot" :src="$withBase(`/getting-started-hand-off/hand-off-inspect.png`)"/>
+  <cdr-img alt="A developer inspects a table header to find its component reference and token" :src="$withBase(`/getting-started-hand-off/hand-off-inspect.png`)"/>
   <figcaption>
     <cdr-caption summary="Use the inspect feature to discover component references or token names."/>
   </figcaption>
