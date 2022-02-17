@@ -72,7 +72,7 @@ There are a number of Figma UI libraries that house the Cedar design system. The
 
 <br />
   
-  <cdr-img alt="" :src="$withBase(`/getting-started-for-designers/libraries.png`)"/>
+  <cdr-img alt="more?" :src="$withBase(`/getting-started-for-designers/libraries.png`)"/>
 
 <br />
 
