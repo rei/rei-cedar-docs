@@ -54,13 +54,13 @@ The Cedar container `cdr-container` is the foundational layout mechanism on your
 
 The container builds in its display settings for each of the breakpoints. This allows all pages to begin from the same layout context as each other. The container has two variants: standard container and fluid container.
 
-<cdr-img :src="$withBase('/layout/Spec_Grids_Breakpoints_16-9.png')" alt="Breakpoints for REI’s responsive layout" />
+<cdr-img :src="$withBase('/layout/Spec_Grids_Breakpoints_16-9.png')" alt="Breakpoints for R E I’s responsive layout." />
 
 ### Standard vs. Fluid Container
 
 The Cedar container allows flexible content width, up to a max width of 1232px. The fluid variant of the container does not have a max width. As shown below, pages can contain both fluid and standard containers.
 
-<cdr-img :src="$withBase('/layout/StandardvFluid.gif')" alt="Standard vs. Fluid container " />
+<cdr-img :src="$withBase('/layout/StandardvFluid.gif')" alt="Standard vs. fluid container examples demonstrating how fluid containers have no max width." />
 
 
 
