@@ -13,13 +13,13 @@
     {
       "type": "do",
       "image": "typography/typography_italics_do.png",
-      "alt": "Image showing italics used within a sentence",
+      "alt": "Italics used within part of a sentence.",
       "caption": "use italics if necessary."
     },
     {
       "type": "dont",
       "image": "typography/typography_italics_dont.png",
-      "alt": "Image showing an entire sentence italicized",
+      "alt": "An entire sentence italicized.",
       "caption": "use italics if the copy is part of important user flows."
     },
   ],
@@ -27,13 +27,13 @@
     {
       "type": "do",
       "image": "typography/typography_alignment_do.png",
-      "alt": "Image showing left aligned headline and subhead",
+      "alt": "Left aligned headline and subhead.",
       "caption": "left align text."
     },
     {
       "type": "dont",
       "image": "typography/typography_alignment_dont.png",
-      "alt": "Image showing center aligned long headline",
+      "alt": "Center aligned long headline.",
       "caption": "center align long headlines."
     },
   ],
@@ -41,13 +41,13 @@
     {
       "type": "do",
       "image": "typography/typography_alignment_do_image.png",
-      "alt": "Image showing left aligned text above images",
+      "alt": "Left aligned text above images.",
       "caption": "left align text to other elements on the page."
     },
     {
       "type": "caution",
       "image": "typography/typography_alignment_caution.png",
-      "alt": "Image showing a center aligned headline above icons",
+      "alt": "Center aligned headline above icons.",
       "caption": "center aligning short headlines."
     },
   ],
@@ -55,13 +55,13 @@
     {
       "type": "do",
       "image": "typography/typography_line_length_mobile_do.png",
-      "alt": "Image showing appropriate line length on mobile",
+      "alt": "Appropriate line length on mobile is highlighted.",
       "caption": "reduce font sizes for mobile so that they are the optimal line length."
     },
     {
       "type": "dont",
       "image": "typography/typography_line_length_mobile_dont.png",
-      "alt": "Image showing a short line length because font size is too big",
+      "alt": "A short line length is highlighted because font size is too big on mobile.",
       "caption": "use the same font size across all device sizes. This will create incorrect line lengths on certain devices."
     },
   ],
@@ -69,13 +69,13 @@
     {
       "type": "do",
       "image": "typography/typography_line_length_desktop_do.png",
-      "alt": "Image showing proper line length on desktop",
+      "alt": "Proper line length is highlighted on desktop.",
       "caption": "use line lengths of 50-60 characters."
     },
     {
       "type": "caution",
       "image": "typography/typography_line_length_desktop_dont.png",
-      "alt": "Image showing and incorrect line length over 80 characters",
+      "alt": "An incorrect line length over 80 characters is highlighted on desktop.",
       "caption": "create line lengths of 80 characters or more."
     },
   ],
@@ -107,25 +107,25 @@ Cedar supports two primary brand typefaces: Stuart and Graphik. Each play a spec
 
 Designed exclusively for the co-op, Stuart was influenced by the U.S. National Park Service signage. Modeled after Plantin, Stuart embraces the same softness in both structure and finish and its warm character balances well with the clean simplicity of Graphik.
 
-<cdr-img class="cdr-doc-article-img" alt="A mosaic showing the Stuart font in various sizes and colors" :src="$withBase(`/typography/typography_stuart.png`)" />
+<cdr-img class="cdr-doc-article-img" alt="Four text examples showing the Stuart font in various sizes and colors." :src="$withBase(`/typography/typography_stuart.png`)" />
 
 #### Features
 
 Accessibility was front-of-mind during the development of Stuart. Accessible typefaces are inherently optimized for mobile usage.
 
-<cdr-img class="cdr-doc-article-img" alt="An graphic highlighting the Stuart font's open terminals, optimal x-height, optimal stroke width, ligatures, and co-op diamond" :src="$withBase(`/typography/typography_stuart_features.png`)" />
+<cdr-img class="cdr-doc-article-img" alt="The Stuart font's open terminals, optimal x-height, optimal stroke width, ligatures, and co-op diamond." :src="$withBase(`/typography/typography_stuart_features.png`)" />
 
 ### Graphik
 
 Graphik is a sans-serif typeface designed by Christian Schwartz and released through Commercial Type in 2009. Inspired by the lesser known grotesques and geometric sans-serifs, Graphik’s lower stroke contrast and a generous x-height lend it great versatility. Graphik is used for high-function or less-expressive moments.
 
-<cdr-img class="cdr-doc-article-img" alt="A mosaic showing the Graphik font in various sizes and colors" :src="$withBase(`/typography/typography_graphik.png`)" />
+<cdr-img class="cdr-doc-article-img" alt="Four text examples showing the Graphik font in various sizes and colors." :src="$withBase(`/typography/typography_graphik.png`)" />
 
 ## Type Scale
 
 The typographic scale manages the font sizes used within Cedar. All type styles are derived from this scale.
 
-<cdr-img class="cdr-doc-article-img" alt="A graphic displaying the range of sizes available for headings" :src="$withBase(`/typography/typography_type-scale.png`)" />
+<cdr-img class="cdr-doc-article-img" alt="The range of sizes available for headings from largest to smallest." :src="$withBase(`/typography/typography_type-scale.png`)" />
 
 ### Font Families
 
@@ -166,14 +166,14 @@ The distribution of brand fonts are managed through REI’s Self Service applica
 
 Font size selection directly impacts both readability and comprehension. Type styles are pre-optimized.
 
-<cdr-img class="cdr-doc-article-img" alt="A mosaic of various examples of typographic hierarchy" :src="$withBase(`/typography/typography_type_guidelines_size.png`)" />
+<cdr-img class="cdr-doc-article-img" alt="Three text examples displaying typographic hierarchy." :src="$withBase(`/typography/typography_type_guidelines_size.png`)" />
 
 
 ### Type Pairing
 
 To create the appropriate contrast and hierarchy, use a mix of Stuart and Graphik—the latter typically plays a supporting role.
 
-<cdr-img class="cdr-doc-article-img" alt="A graphic showing mixed usage of Stuart and Graphik typefaces" :src="$withBase(`/typography/typography_type_guidelines_type-pairing.png`)" />
+<cdr-img class="cdr-doc-article-img" alt="Mixed usage of Stuart and Graphik typefaces, with Stuart used in the header and Graphic in the subhead and body copy." :src="$withBase(`/typography/typography_type_guidelines_type-pairing.png`)" />
 
 ### Font Style
 
@@ -188,18 +188,18 @@ Users with certain disabilities like dyslexia might have difficulty making out i
 
 From refined to playful, Stuart’s personality becomes increasingly casual as it gets heavier. While six weights are included in the Stuart family, medium is preferred for most situations.
 
-<cdr-img class="cdr-doc-article-img" alt="A graphic showing various Stuart font weights, highlighting Medium" :src="$withBase(`/typography/typography_type_guidelines_font-weight_stuart.png`)" />
+<cdr-img class="cdr-doc-article-img" alt="Various Stuart font weights, highlighting Medium." :src="$withBase(`/typography/typography_type_guidelines_font-weight_stuart.png`)" />
 
 The Graphik family includes five weights. Preferred choices are: regular, medium, and semibold. Regular is appropriate for most applications.
 
-<cdr-img class="cdr-doc-article-img" alt="A graphic showing various Graphik font weights, highlighting Semibold, Medium, and Regular" :src="$withBase(`/typography/typography_type_guidelines_font-weight_graphik.png`)" />
+<cdr-img class="cdr-doc-article-img" alt="Various Graphik font weights, highlighting Semibold, Medium, and Regular." :src="$withBase(`/typography/typography_type_guidelines_font-weight_graphik.png`)" />
 
 
 ### Letter Spacing
 
 Stuart and Graphik were both designed with looser tracking to improve readability at smaller sizes. In code-driven environments, tracking is known as letter spacing. To best support the widest range of sizes, the letter spacing of text styles have been pre-optimized.
 
-<cdr-img class="cdr-doc-article-img" alt="A graphic showing the difference between default and pre-optimized letter spacing" :src="$withBase(`/typography/typography_type_guidelines_letter-spacing.png`)" />
+<cdr-img class="cdr-doc-article-img" alt="Text boxes showing pre-optimized letter spacing for Stuart and Graphik." :src="$withBase(`/typography/typography_type_guidelines_letter-spacing.png`)" />
 
 
 ### Alignment
@@ -216,7 +216,7 @@ For optimum legibility, it’s important to establish a strong vertical alignmen
 
 An optimal length, or measure, of a line of copy is 50 to 60 characters. Line lengths more than 80 characters are discouraged.
 
-<cdr-img class="cdr-doc-article-img" alt="A graphic showing how long a line of copy should be on mobile and desktop" :src="$withBase(`/typography/typography_type_guidelines_line-length.png`)" />
+<cdr-img class="cdr-doc-article-img" alt="Two examples of text highlighting how long a line of copy should be on mobile and desktop." :src="$withBase(`/typography/typography_type_guidelines_line-length.png`)" />
 
 <do-dont :examples="$page.frontmatter.lineLengthMobile" />
 
