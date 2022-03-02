@@ -13,11 +13,14 @@
 
 <cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
 
-The primary benefits of a design system include code reusability, consistency and increased design and development efficiency. However a design system is not intended to distribute business logic, domain-specific styling, or other more complex UI elements.
-
-For example, Cedar provides all of the elements necessary to build a login form component, but the business logic behind that form should be determined by the backend requirements of the authentication system it logs into. Furthermore, the UI/UX may need to be customized for the context in which it is rendered, and it would be impractical for Cedar to build in support for every possible use case of a login form.
-
-By distributing flexible atomic design system elements (Vue components, design tokens, CSS styles) we provide teams with all the tools necessary to create performant branded reusable components. By creating new components following shared standards, we can help extend the Cedar library as well as ensure high-quality customer experiences.
+Cedar’s main benefits as a design system are in the reusability of its code, which increases our overall consistency and design and development efficiency. By distributing flexible atomic design system elements (Vue components, design tokens, CSS styles) we provide teams with all the tools necessary to create performant branded reusable components.
+  
+## Understanding Cedar's Limits
+At times, you may have a specific use case where you feel Cedar is not providing the customization or support needed. This is normal, as a design system is not intended to distribute business logic, domain-specific styling, or other more complex UI elements. So what to do?
+  
+1. **Reach out to the Cedar team on Slack:** Contact us at #cedar-user-support or join our office hours to get 1:1 support. We’ll evaluate the issue and can help make changes in our system to better support you. This is the first and best option.
+  
+2. **Build a reusable component:** After talking with us, we may find the Cedar design system elements don’t satisfy the requirements for your application. At this point you may need to override Cedar directly or replace those elements with entirely new ones. Read on for further guidance on our shared standards for building reusable components. 
 
 ## Principles
 When building a new component, we encourage you to keep these core principals in mind to create durable solutions that can easily be shared and maintained:
