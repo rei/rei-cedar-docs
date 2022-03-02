@@ -309,7 +309,8 @@ When using the `label` slot, add CdrText to use the appropriate header styles.
 
 ### `modal` Override Slot
 
-The `modal` override slot provides teams a way to work from essentially a blank slate when creating their modal content. This is useful for situations where more art-direction or custom functionality is required. It is important to note that a clear way to close the modal is still required for user-experience and accessbility (i.e. relying only on the `esc` key will not suffice).
+The `modal` override slot provides teams a way to work from essentially a blank slate when creating their modal content. This is useful for situations where more art-direction or custom functionality is required. It is important to note that creating a clear way to close the modal is still required to meet user-experience and accessibility standards (i.e. relying only on the esc key is not enough).
+  
 ```vue{10,11,12,13}
   <cdr-modal
     v-if="opened"
@@ -325,9 +326,8 @@ The `modal` override slot provides teams a way to work from essentially a blank 
       <cdr-button @click="close">Close modal</cdr-button>
     </template>
   </cdr-modal>
-
-
 ```
+  
 ### Size
 
 The modal has a default width of `640px` which converts to a fullscreen view at `xs` screen sizes.
