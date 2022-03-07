@@ -112,7 +112,7 @@ When designing with color, use a color-blind simulator to review visibility of c
 - If you're working in Sketch, we recommend the [Stark plugin](http://www.getstark.co/)
 - Test an image by uploading it to the Coblis, [Color Blindness Simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/) web page
 
-<cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Non-color blind user versus color-blind user":src="$withBase(`/accessibility/Accessibility__ColorBlindness__16-9.png`)"/>
+<cdr-img class="cdr-doc-article-img" style="margin-bottom: 0" alt="Four columns with various color shades to compare how color appears to a user who is color blind user versus a user who is not":src="$withBase(`/accessibility/Accessibility__ColorBlindness__16-9.png`)"/>
 Non-color blind user versus color-blind user
 
 

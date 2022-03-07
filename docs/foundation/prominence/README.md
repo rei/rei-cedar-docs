@@ -13,37 +13,38 @@
     {
       "image": "prominence/prominence-best-practice-1.png",
       "ratio": "4-3",
-      "alt": "A graphic showing content with a slightly elevated border with a standard pointer cursor nearby",
+      "alt": "Content with a slightly elevated border with a standard pointer cursor nearby",
       "caption": "Along with other attributes, convey an ability to be pressed."
     },
     {
       "image": "prominence/prominence-best-practice-2.png",
       "ratio": "4-3",
-      "alt": "A graphic showing two rectangles representing pieces of content. The left rectangle appears to be raised higher than the right rectangle because a link pointer is hovering over it",
+      "alt": "A link pointer hovers over a rectangle representing content, making it appear slightly higher than the rectangle next to it
+",
       "caption": "Respond to interaction by raising or lowering."
     },
     {
       "image": "prominence/prominence-best-practice-3.png",
       "ratio": "4-3",
-      "alt": "A graphic showing text next to elevated content on the right hand side",
+      "alt": "Text next to elevated content on the right hand side",
       "caption": "Focus a user's attention on a specific object."
     },
     {
       "image": "prominence/prominence-best-practice-4.png",
       "ratio": "4-3",
-      "alt": "A graphic showing a column of three identically sized rectangles with a grabber pointer over the first item. The first item appears to be elevated higher than the other two rectangles",
+      "alt": "A grabber pointer hovering over one of three identically sized rectangles, making the first item appear to be elevated higher",
       "caption": "Signal that an object can be moved across a surface."
     },
     {
       "image": "prominence/prominence-best-practice-5.png",
       "ratio": "4-3",
-      "alt": "A graphic showing two sets of three rectangles. The bottom set of rectangles appears to be elevated while the top three are not elevated",
+      "alt": "Two sets of three rectangles, with the bottom set appearing elevated while the top three are not elevated",
       "caption": "Visually separate dissimilar content or help group like items."
     },
     {
       "image": "prominence/prominence-best-practice-6.png",
       "ratio": "4-3",
-      "alt": "Graphic where the lower corner of a rectangle is superimposed over another rectangle",
+      "alt": "The lower corner of a rectangle is superimposed over another rectangle",
       "caption": "Create emphasize foreground and background relationships."
     },
   ],
@@ -52,7 +53,7 @@
 
 <cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
 ## Overview
-<cdr-img :src="$withBase('/prominence/prominence-header.png')" ratio="16-9" alt="A graphic showing a rectangular layout tilted at 45 degrees, with each rectangle slightly elevated. Next to the layout are x, y, and z axes to indicate height, width and depth"/>
+<cdr-img :src="$withBase('/prominence/prominence-header.png')" ratio="16-9" alt="A rectangular layout tilted at 45 degrees, with each rectangle slightly elevated, and x, y, and z axes to indicate height, width, and depth"/>
 ### How designers create depth
 Most digital interfaces are inherently flat—which is to say all objects within an interface are constrained by two spatial dimensions: width (x) and height (y). To add additional dimensionality designers must create an illusion of depth (z). While there are several techniques to achieve this, designers typically will use varying degrees of a drop shadow. The ranges of depth created are used to strengthen spatial relationships and provide additional interaction affordances. 
 
@@ -67,7 +68,7 @@ The shadow cast by an elevated object helps to communicate aspects of interactiv
 ## Application
   
 ### Tokenized options
-<cdr-img :src="$withBase('/prominence/prominence-tokens.png')" style="display:block; margin: 1em auto;" alt="A graphic showing squares labeled 1 through 5 in ascending prominence"/>
+<cdr-img :src="$withBase('/prominence/prominence-tokens.png')" style="display:block; margin: 1em auto;" alt="Squares labeled 1 through 5 in ascending prominence"/>
 
 1.	Flat: cdr-prominence-height-flat
 2.	Raised: cdr-prominence-height-raised

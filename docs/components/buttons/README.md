@@ -10,14 +10,14 @@
       "type": "do",
       "image": "buttons/button_vert_do_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing proper vertical button grouping",
+      "alt": "Two buttons with proper vertical button grouping.",
       "caption": "match button widths."
     },
     {
       "type": "dont",
       "image": "buttons/button_vert_dont_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing mixed button sizing",
+      "alt": "Two vertically stacked buttons with mixed sizing.",
       "caption": "mix button sizes."
     }
   ],
@@ -26,14 +26,14 @@
       "type": "do",
       "image": "buttons/button_horiz_do_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing proper button height grouping",
+      "alt": "Two buttons with proper height grouping.",
       "caption": "match button heights."
     },
     {
       "type": "dont",
       "image": "buttons/button_horiz_dont_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing mixed button sizing",
+      "alt": "Two horizontally stacked buttons with mixed sizing.",
       "caption": "mix button sizes."
     }
   ],
@@ -42,14 +42,14 @@
       "type": "do",
       "image": "buttons/button_label_do_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing buttons with proper text length",
+      "alt": "Two buttons with proper text length.",
       "caption": "minimize label length."
     },
     {
       "type": "dont",
       "image": "buttons/button_label_dont_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing buttons with too much text",
+      "alt": "Two buttons with too much text.",
       "caption": "put too much text in a button."
     }
   ],
@@ -58,14 +58,14 @@
       "type": "do",
       "image": "buttons/button_case_do_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing buttons with proper text sentence case",
+      "alt": "Two buttons with proper use of sentence case",
       "caption": "use sentence case."
     },
     {
       "type": "dont",
       "image": "buttons/button_case_dont_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing buttons with title case",
+      "alt": "Two buttons with inappropriate use of title case.",
       "caption": "use title case."
     }
   ],
@@ -74,14 +74,14 @@
       "type": "do",
       "image": "buttons/button_noun_do_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing buttons with proper noun capitalization",
+      "alt": "Two buttons with proper noun capitalization.",
       "caption": "capitalize any proper nouns."
     },
     {
       "type": "dont",
       "image": "buttons/button_noun_dont_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing buttons with all uppercase text",
+      "alt": "Two buttons with inappropriate use of all uppercase text.",
       "caption": "use all caps."
     }
   ],
@@ -188,6 +188,7 @@
 <cdr-doc-table-of-contents-shell tab-name="Overview">
 
 # Overview
+
 ## Primary
 
 Use primary buttons for actions to complete a task or to move forward in a process such as &quot;Add to cart.&quot; There is only one primary action per major page section.

@@ -23,14 +23,14 @@
       "type": "do",
       "image": "block-quote/quotes_block_position_do.png",
       "ratio": "3-2",
-      "alt": "Image showing proper block quote use.",
+      "alt": "A box representing a webpage shows a block quote appropriately placed near the surrounding text.",
       "caption": "position the quote near the surrounding text."
     },
     {
       "type": "dont",
       "image": "block-quote/quotes_block_position_dont.png",
       "ratio": "3-2",
-      "alt": "Image showing random block quotes in an article",
+      "alt": "A box representing a webpage shows a block quote positioned inappropriately at random.",
       "caption": "position quotes in a random location on the page."
     }
   ],
@@ -39,14 +39,14 @@
       "type": "do",
       "image": "block-quote/quotes_block_indent_do.png",
       "ratio": "3-2",
-      "alt": "Image showing proper block quote use.",
+      "alt": "A box representing a webpage shows a block quote intended to add emphasis or additional content to an article.",
       "caption": "use for emphasizing content or additional content."
     },
     {
       "type": "dont",
       "image": "block-quote/quotes_block_indent_dont.png",
       "ratio": "3-2",
-      "alt": "Image showing random block quotes in an article",
+      "alt": "A box representing a webpage shows a block quote inappropriately used to indent content.",
       "caption": "use for indenting text content."
     }
   ],
@@ -55,14 +55,14 @@
       "type": "do",
       "image": "block-quote/quotes_block_too_many_do.png",
       "ratio": "3-2",
-      "alt": "Image showing proper block quote position.",
+      "alt": "A box representing a webpage shows a block quote positioned appropriately so users can easily scan the page.",
       "caption": "position quotes so users can visually scan the page."
     },
     {
       "type": "dont",
       "image": "block-quote/quotes_block_too_many_dont.png",
       "ratio": "3-2",
-      "alt": "Image showing too many block quotes in an article",
+      "alt": "A box representing a webpage shows too many block quotes used in a single article.",
       "caption": "use too many block quotes."
     }
   ],

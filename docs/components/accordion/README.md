@@ -16,14 +16,14 @@
       "type": "do",
       "image": "accordion/accordion_nest_do_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing proper accordion usage",
+      "alt": "A box representing a webpage shows an accordion dropdown containing a single section of content.",
       "caption": "present content in a single accordion."
     },
     {
       "type": "dont",
       "image": "accordion/accordion_nest_dont_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing nested accordions",
+      "alt": "A box representing a webpage shows an accordion dropdown containing multiple sections of content and nested accordions.",
       "caption": "nest accordions."
     }
   ],
@@ -32,14 +32,14 @@
       "type": "do",
       "image": "accordion/accordion_title_do_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing short and succinct accordion titles",
+      "alt": "A box representing a webpage shows an accordion which is labeled appropriately with short titles.",
       "caption": "keep titles short and concise."
     },
     {
       "type": "dont",
       "image": "accordion/accordion_title_dont_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing a too long accordion title wrapped to many lines",
+      "alt": "A box representing a webpage shows an accordion which is labeled with a too long title that wraps to the next line.",
       "caption": "create labels so lengthy that they wrap to a second line."
     }
   ],
