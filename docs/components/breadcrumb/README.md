@@ -10,14 +10,14 @@
       "type": "do",
       "image": "breadcrumb/breadcrumbs_path_do_16-9.png",
       "ratio": "16-9",
-      "alt": "Image showing proper breadcrumb paths",
+      "alt": "A breadcrumb with three items representing the full path.",
       "caption": "show the full path for breadcrumb items whenever possible."
     },
     {
       "type": "dont",
       "image": "breadcrumb/breadcrumbs_path_outline_dont_16-9.png",
       "ratio": "16-9",
-      "alt": "Image showing mixed breadcrumb paths",
+      "alt": "Three mixed breadcrumb paths inappropriately used to show the path a user takes to arrive at a page.",
       "caption": "show the path that the user takes to arrive at a page."
     }
   ],
@@ -26,14 +26,14 @@
       "type": "do",
       "image": "breadcrumb/breadcrumbs_path_symbol_do_16-9.png",
       "ratio": "16-9",
-      "alt": "breadcrumbs separated with a forward slash",
+      "alt": "Breadcrumbs separated with a forward slash.",
       "caption": "separate breadcrumb items with the \"/\" symbol, automatically added in CSS."
     },
     {
       "type": "dont",
       "image": "breadcrumb/breadcrumbs_path_symbol_outline_dont_16-9.png",
       "ratio": "16-9",
-      "alt": "breadcrumbs separated with a right arrow",
+      "alt": "Breadcrumbs separated with a right arrow.",
       "caption": "create a custom symbol to separate breadcrumb items."
     }
   ],
@@ -42,14 +42,14 @@
       "type": "do",
       "image": "breadcrumb/breadcrumbs_truncate_do_16-9.png",
       "ratio": "16-9",
-      "alt": "truncated breadcrumbs",
+      "alt": "Truncated breadcrumbs with ellipses on the left so only final two links are visible.",
       "caption": "use truncation for breadcrumb path."
     },
     {
       "type": "dont",
       "image": "breadcrumb/breadcrumbs_truncate_outline_dont_16-9.png",
       "ratio": "16-9",
-      "alt": "breadcrumbs forcing a linebreak",
+      "alt": "Breadcrumbs forcing a linebreak.",
       "caption": "break the page title when long breadcrumb path is expanded."
     }
   ],
@@ -58,14 +58,14 @@
       "type": "do",
       "image": "breadcrumb/breadcrumbs_link_do_16-9.png",
       "ratio": "16-9",
-      "alt": "breadcrumbs links in gray",
+      "alt": "Breadcrumbs links in gray.",
       "caption": "use gray color tints for breadcrumb items."
     },
     {
       "type": "dont",
       "image": "breadcrumb/breadcrumbs_link_outline_dont_16-9.png",
       "ratio": "16-9",
-      "alt": "breadcrumbs links in blue",
+      "alt": "Breadcrumbs links in blue.",
       "caption": "color breadcrumb items blue."
     }
   ],
