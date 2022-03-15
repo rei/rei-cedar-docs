@@ -43,14 +43,14 @@ module.exports = {
         ]
       },
       {
-        text: "Getting Started",
+        text: "Guides and Resources",
         items: [
-          { text: "As a Designer", link: "/getting-started/as-a-designer/" },
-          { text: "As a Developer", link: "/getting-started/as-a-developer/" },
-          { text: "As a Mobile Developer", link: "/getting-started/as-a-mobile-developer/" },
-          { text: "Hand-off Process", link: "/getting-started/hand-off/" },
-          { text: "Using Cedar", link: "/getting-started/using-cedar/" },
-          { text: "Building Reusable Components", link: "/getting-started/building-components-with-cedar/" },
+          { text: "As a Designer", link: "/guides/as-a-designer/" },
+          { text: "As a Developer", link: "/guides/as-a-developer/" },
+          { text: "As a Mobile Developer", link: "/guides/as-a-mobile-developer/" },
+          { text: "Hand-off Process", link: "/guides/hand-off/" },
+          { text: "Using Cedar", link: "/guides/using-cedar/" },
+          { text: "Building Reusable Components", link: "/guides/building-components-with-cedar/" },
         ]
       },
       {
