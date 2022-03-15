@@ -45,9 +45,11 @@ module.exports = {
       {
         text: "Guides and Resources",
         items: [
-          { text: "As a Designer", link: "/guides/as-a-designer/" },
+          
           { text: "As a Developer", link: "/guides/as-a-developer/" },
           { text: "As a Mobile Developer", link: "/guides/as-a-mobile-developer/" },
+          { text: "For Designers", link: "/guides/for-designers/" },
+          { text: "For Developers", link: "/guides/for-developers/"},
           { text: "Hand-off Process", link: "/guides/hand-off/" },
           { text: "Using Cedar", link: "/guides/using-cedar/" },
           { text: "Building Reusable Components", link: "/guides/building-components-with-cedar/" },

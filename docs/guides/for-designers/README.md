@@ -1,6 +1,6 @@
 ---
 {
-  "title": "As a Designer",
+  "title": "For Designers",
   "title_metadata": false,
   "layout_type": "LayoutArticle",
   "breadcrumbs": [
