@@ -20,14 +20,14 @@
       "type": "do",
       "image": "card/card_essential_do.png",
       "ratio": "4-3",
-      "alt": "Image showing proper card usage",
+      "alt": "Box representing a card component with appropriately condensed content.",
       "caption": "include essential, summarized information. "
     },
     {
       "type": "dont",
       "image": "card/card_excessive_dont.png",
       "ratio": "4-3",
-      "alt": "Image showing improper card usage",
+      "alt": "Box representing a card component with an overwhelming amount of content.",
       "caption": "overwhelm the space with excessive content."
     }
   ],
@@ -36,14 +36,14 @@
       "type": "do",
       "image": "card/card_consistent_do.png",
       "ratio": "4-3",
-      "alt": "Image showing proper card usage",
+      "alt": "Boxes representing two card components with similar elements.",
       "caption": "use consistent elements from card to card when arranged in groups."
     },
     {
       "type": "dont",
       "image": "card/card_unlike_dont.png",
       "ratio": "4-3",
-      "alt": "Image showing improper card usage",
+      "alt": "Boxes representing two card components with different unmatched elements.",
       "caption": "group unlike cards that use different elements."
     }
   ],
