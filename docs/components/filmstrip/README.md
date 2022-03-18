@@ -24,7 +24,7 @@ Filmstrip allows users to preview multiple pieces of related content in a constr
   
 **Filmstrip is not a traditional component that is functional out of the box.** Designers and developers need to use this documentation to compose their own custom version of a filmstrip using the recommended components and guidance relevant to their specific use case.
   
-<cdr-img :src="$withBase('/filmstrip/product-filmstrip.jpeg')" alt="image of REI.com product recommendations filmstrip"/>
+<cdr-img :src="$withBase('/filmstrip/product-filmstrip.jpeg')" alt="R E I.com product recommendations filmstrip."/>
 
 ## Getting Started Building a Filmstrip
   
@@ -41,7 +41,7 @@ Please feel free to share feedback with us by posting in the [cedar-user-support
 
 Because the Filmstrip is a cookbook of multiple sub-components, its structure can be customized in a variety of ways.
 
-<cdr-img :src="$withBase('/filmstrip/filmstrip-anatomy.png')" alt="a wireframe outlining the parts listed below"/>
+<cdr-img :src="$withBase('/filmstrip/filmstrip-anatomy.png')" alt="A wireframe outlining the parts listed below."/>
   
   
  ### 1. Wrapping container 
@@ -718,14 +718,14 @@ Use the product recommendation filmstrip pattern to showcase relevant and relate
 
 This pattern commonly displays six content blocks per view and does not require more than 5 clicks or swipes to view all of the content within it.
 
-<cdr-img :src="$withBase('/filmstrip/product-filmstrip.jpeg')" alt="image of REI.com product recommendations filmstrip"/>
+<cdr-img :src="$withBase('/filmstrip/product-filmstrip.jpeg')" alt="R E I.com product recommendations filmstrip."/>
 
 ### Prominent Card Filmstrip
 Use the prominent card filmstrip pattern to display larger categories of content.
 
 This pattern commonly displays 3 to 4 content blocks per view to emphasize the fact that each piece of content has more prominence than individual products. This pattern should not require more than 5 clicks or swipes to view all of the content within it.
 
-<cdr-img :src="$withBase('/filmstrip/category-hub-filmstrip.png')" alt="image of REI.com prominent card filmstrip"/>
+<cdr-img :src="$withBase('/filmstrip/category-hub-filmstrip.png')" alt="R E I.com prominent card filmstrip."/>
   
 ## Guidelines
   
