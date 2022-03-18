@@ -75,6 +75,88 @@ Questions about when to use design tokens? Ask the Cedar team in [#cedar-user-su
 
 <hr/>
 
+## How to Use Tokens
+
+### For Designers
+Token libraries are automatically available in the Assets panel when you create a new file in Figma. These libraries contain color, type, spacing, prominence, and icon styles that correspond to Cedar tokens.
+
+When using design tokens, it’s your responsibility to pass the entire design token name to the developer during the design hand-off process—this can be through automated or manual methods.
+
+For more information, see [Getting Started As A Designer](../../getting-started/as-a-designer/).
+
+
+### For Developers
+A base requirement for using Cedar design tokens is that you are able to consume and maintain packages through the following development processes:
+- Web consumers:
+  - Your project can compile CSS variables
+  - You can import NPM packages
+- Native iOS:
+  - You can import CocoaPods
+
+#### Install Tokens Package
+
+Resources are available within the **[CdrToken package](https://www.npmjs.com/package/@rei/cdr-tokens)**:
+
+`npm install --save-dev @rei/cdr-tokens`
+
+  - SCSS variables at `dist/scss/cdr-tokens.scss`
+  - LESS variables at `dist/less/cdr-tokens.less`
+  - JS as both commonJS and ES module at `dist/js`. Also noted in package.json as `main` and `module` respectively
+    - `dist/js/cdr-tokens.common.js`
+    - `dist/js/cdr-tokens.esm.js`
+
+#### Using Cedar Design Tokens
+
+SCSS example:
+```scss
+@import '@rei/cdr-tokens/dist/scss/cdr-tokens.scss'; /* import the design tokens file */
+
+.your-default-text-class {
+  /* use mixins to apply many properties at once */
+  @include cdr-text-default;
+}
+
+.your-other-default-text-class {
+  /* using SCSS placeholder selectors instead of mixins can optimize your final CSS output */
+  @extend %cdr-text-default;
+}
+
+.your-other-text-class {
+  /* use scss variables if you need to apply specific properties */
+  color: $cdr-color-text-error;
+}
+```
+
+LESS example:
+```less
+@import '@rei/cdr-tokens/dist/less/cdr-tokens.less'; /* import the desogn tokens file */
+
+.your-default-text-class {
+  /* use mixins to apply many properties at once */
+  .cdr-text-default();
+}
+
+.your-other-text-class {
+  /* use variables if you need to apply specific properties */
+  color: @cdr-color-text-error;
+}
+```
+
+JavaScript example:
+```js
+import { CdrBreakpointLg } from '@rei/cdr-tokens'; /* import the design tokens file */
+
+let screenWidth = window.innerWidth || 0;
+
+// Detect Large Breakpoint
+if (screenWidth >= CdrBreakpointLg) {
+  // Do Something
+}
+```
+
+This repository follows SEMVER practices and will notify users of changes and updates on the #cedar-user-support Slack channel.
+
+<hr/>
 
 ## Token Criteria
 #### Is **“cdr-color-text-primary** a design token?
@@ -156,90 +238,6 @@ The below tables for the naming structure show that levels will be skipped when 
 <br>
 <hr/>
 
-## How to Use Tokens
-
-### For Designers
-Token libraries are automatically available in the Assets panel when you create a new file in Figma. These libraries contain color, type, spacing, prominence, and icon styles that correspond to Cedar tokens.
-
-When using design tokens, it’s your responsibility to pass the entire design token name to the developer during the design hand-off process—this can be through automated or manual methods.
-
-For more information, see [Getting Started As A Designer](../../getting-started/as-a-designer/).
-
-
-### For Developers
-A base requirement for using Cedar design tokens is that you are able to consume and maintain packages through the following development processes:
-- Web consumers:
-  - Your project can compile CSS variables
-  - You can import NPM packages
-- Native iOS:
-  - You can import CocoaPods
-
-#### Install
-
-To install the [CdrToken package](https://www.npmjs.com/package/@rei/cdr-tokens) from npm:
-
-`npm install --save-dev @rei/cdr-tokens`
-
-Your project must be able to compile SCSS or LESS in order to make use of the SCSS and LESS modules.
-
-The CdrToken package contains `/dist/less` and `/dist/scss` folders, each of which contains `cdr-tokens.{less|scss}` files with all the design tokens in the corresponding format.
-
-Alternatively you could use `/dist/js` and/or `/dist/json` if your project cannot build SCSS and LESS.
-
-#### Usage
-
-SCSS example:
-```scss
-@import '@rei/cdr-tokens/dist/scss/cdr-tokens.scss'; /* import the design tokens file */
-
-.your-default-text-class {
-  /* use mixins to apply many properties at once */
-  @include cdr-text-default;
-}
-
-.your-other-default-text-class {
-  /* using SCSS placeholder selectors instead of mixins can optimize your final CSS output */
-  @extend %cdr-text-default;
-}
-
-.your-other-text-class {
-  /* use scss variables if you need to apply specific properties */
-  color: $cdr-color-text-error;
-}
-```
-
-LESS example:
-```less
-@import '@rei/cdr-tokens/dist/less/cdr-tokens.less'; /* import the desogn tokens file */
-
-.your-default-text-class {
-  /* use mixins to apply many properties at once */
-  .cdr-text-default();
-}
-
-.your-other-text-class {
-  /* use variables if you need to apply specific properties */
-  color: @cdr-color-text-error;
-}
-```
-
-JavaScript example:
-```js
-import { CdrBreakpointLg } from '@rei/cdr-tokens'; /* import the design tokens file */
-
-let screenWidth = window.innerWidth || 0;
-
-// Detect Large Breakpoint
-if (screenWidth >= CdrBreakpointLg) {
-  // Do Something
-}
-```
-
-This repository follows SEMVER practices and will notify users of changes and updates on the #cedar-user-support Slack channel.
-
-<hr/>
-
-
 ## Adding Design Tokens to the Repository
 
 If you have a request for a design token that is missing from the [Cedar Tokens](../../tokens/all-tokens/) list you can submit a request to [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) or come and talk to us during our weekly office hours.
@@ -254,8 +252,6 @@ Ensure that the design token meets the following requirements:
   - **iOS:** Uses Pascal case. For example, CdrColorBackgroundPrimary
   - **Android:** Uses Snake case. For example, cdr_color_background_primary
 
-
-<hr/>
-
+<hr /> 
 
 </cdr-doc-table-of-contents-shell>
