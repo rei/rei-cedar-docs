@@ -19,14 +19,14 @@
       "type": "do",
       "image": "caption/caption_align_do_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing proper alignment use.",
+      "alt": "A box representing media content with left-aligned caption lines below.",
       "caption": "left align the caption to the body copy."
     },
     {
       "type": "dont",
       "image": "caption/caption_align_dont_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing improper alignment use.",
+      "alt": "A box representing media content with caption lines improperly centered below.",
       "caption": "center the caption beneath the media."
     }
   ],
@@ -35,14 +35,14 @@
       "type": "do",
       "image": "caption/caption_media_do_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing proper media use.",
+      "alt": "A box representing media content with caption lines below .",
       "caption": "provide a caption for images when attribution information is available."
     },
     {
       "type": "dont",
       "image": "caption/caption_media_dont_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing improper media use.",
+      "alt": "Caption lines improperly used below non-media content.",
       "caption": "use captions without associated media content (image, video, chart, etc.)."
     }
   ],
@@ -51,14 +51,14 @@
       "type": "do",
       "image": "caption/caption_separate_do_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing proper use of summary and credit separation.",
+      "alt": "Credit lines with proper separation from the summary lines above.",
       "caption": "provide further explanation of media in the Summary field and attribution in the Credit field."
     },
     {
       "type": "dont",
       "image": "caption/caption_separate_dont_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing improper use of summary and credit separation.",
+      "alt": "Credit lines with improper separation from the summary lines.",
       "caption": "combine attribution within the Summary field."
     }
   ],
@@ -67,14 +67,14 @@
       "type": "do",
       "image": "caption/caption_summary_do_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing proper summary use.",
+      "alt": "A box representing content with an appropriately short caption.",
       "caption": "write succinct, informative summaries."
     },
     {
       "type": "dont",
       "image": "caption/caption_summary_dont_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing improper summary use.",
+      "alt": "A box representing content with an inappropriately long caption.",
       "caption": "write long summaries that wrap to more than 3 lines on desktop breakpoints."
     }
   ],
