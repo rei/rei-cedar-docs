@@ -10,14 +10,14 @@
       "type": "do",
       "image": "input/Input__Length_Do__16-9.png",
       "ratio": "16-9",
-      "alt": "input with width limited",
+      "alt": "Input with width limited.",
       "caption": "limit the width of the input field."
     },
     {
       "type": "dont",
       "image": "input/Input__Length_Dont__16-9.png",
       "ratio": "16-9",
-      "alt": "input with too much width",
+      "alt": "Input with too much width.",
       "caption": "make the input field wider than approximately ⅓ of the information being entered."
     }
   ],
@@ -26,14 +26,14 @@
       "type": "do",
       "image": "input/Input__Label_Do__16-9.png",
       "ratio": "16-9",
-      "alt": "input with proper label",
+      "alt": "Input with proper label concisely describing what needs to be entered.",
       "caption": "use concise and meaningful labels."
     },
     {
       "type": "dont",
       "image": "input/Input__Label_Dont__16-9.png",
       "ratio": "16-9",
-      "alt": "input with too long of label",
+      "alt": "Input with a label that's too long and includes help text.",
       "caption": "use instructional or help text for the label."
     }
   ],
@@ -42,14 +42,14 @@
       "type": "do",
       "image": "input/Input__Case_Do__16-9.png",
       "ratio": "16-9",
-      "alt": "label with proper case",
+      "alt": "Label with proper use of sentence case.",
       "caption": "use sentence case for labels."
     },
     {
       "type": "dont",
       "image": "input/Input__Case_Dont__16-9.png",
       "ratio": "16-9",
-      "alt": "label with all caps",
+      "alt": "Label with incorrect use of all caps",
       "caption": "use all caps for labels."
     }
   ],
@@ -58,14 +58,14 @@
       "type": "do",
       "image": "input/Input__Punctuation_Do__16-9.png",
       "ratio": "16-9",
-      "alt": "label without terminal punctuation",
+      "alt": "Label without terminal punctuation.",
       "caption": "remove unnecessary terminal punctuation such as semicolons, colons or periods."
     },
     {
       "type": "dont",
       "image": "input/Input__Punctuation_Dont__16-9.png",
       "ratio": "16-9",
-      "alt": "label with colon after",
+      "alt": "Label with an incorrect use of a colon as terminal punctuation.",
       "caption": "use colons after labels."
     }
   ],
@@ -74,14 +74,14 @@
       "type": "do",
       "image": "input/Input__Placeholder_Do__16-9.png",
       "ratio": "16-9",
-      "alt": "proper placeholder text usage",
+      "alt": "Proper placeholder text usage to provide extra help.",
       "caption": "use placeholder text when providing extra help, so user understands what to enter."
     },
     {
       "type": "dont",
       "image": "input/Input__Placeholder_Dont__16-9.png",
       "ratio": "16-9",
-      "alt": "placeholder text with too much information",
+      "alt": "Placeholder text with too much information.",
       "caption": "use placeholder text as an alternative to a label."
     }
   ],
@@ -90,14 +90,14 @@
       "type": "do",
       "image": "input/Input__Sizes_Do__4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing two equally sized input fields as a part of a form",
+      "alt": "Two equally sized input fields as a part of a form.",
       "caption": "use consistent sizes for components on a single form."
     },
     {
       "type": "dont",
       "image": "input/Input__Sizes_Dont__4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing missized input and button elements in a form",
+      "alt": "Unequally-sized input and button elements in a form.",
       "caption": "mix sizes for components on a single form."
     }
   ],
