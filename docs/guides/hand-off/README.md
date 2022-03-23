@@ -47,7 +47,7 @@ Toolkit libraries are automatically integrated into any new Figma project — si
   </figcaption>
 </figure>
 
-For more information on getting set up with Figma, visit the [For Designers](../for-designers/) article for designers.
+For more information on getting set up with Figma, visit the [For Designers](../for-designers/) guide.
 
 ### Page Headers and Footers
 The global header and footer are available as shared components. Look for them under the assets tab in Figma.
