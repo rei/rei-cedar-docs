@@ -5,7 +5,7 @@
   "layout_type": "LayoutArticle",
   "breadcrumbs": [
     {
-      "text": "Getting Started/"
+      "text": "Guides and Resources/"
     }
   ]
 }
