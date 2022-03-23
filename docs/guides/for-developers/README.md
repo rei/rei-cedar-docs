@@ -21,9 +21,9 @@ yourself (and your backlog) to continue doing work that inspires you and enhance
 experience for our customers. Visit [“About“](../../about/cedar-design-system/) to learn more about
 Cedar, design systems, and how you can benefit.
 
-## First steps
+# First steps
 
-If you are just starting out developing with Cedar, you’ll first need to [install Cedar]().
+If you are just starting out developing with Cedar, you’ll first need to [install Cedar](../installing-cedar/).
 Once you have Cedar installed, here's a checklist of everything you need to get up and running.
 
 -  [Learn Vue]()
