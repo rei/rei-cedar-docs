@@ -5,7 +5,7 @@
   "layout_type": "LayoutArticle",
   "breadcrumbs": [
     {
-      "text": "Getting Started/"
+      "text": "Guides and Resources/"
     }
   ]
 }
@@ -113,6 +113,6 @@ hours (reach out to the team for an invite), or sign up for 1:1 help.
 <br/>
 <br/>
 
-**Up next:** [Hand-off Process](../../getting-started/hand-off/)
+**Up next:** [Hand-off Process](../hand-off/)
 
 <br/><br/>

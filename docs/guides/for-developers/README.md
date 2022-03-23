@@ -5,7 +5,7 @@
   "layout_type": "LayoutArticle",
   "breadcrumbs": [
     {
-      "text": "Getting Started/"
+      "text": "Guides and Resources/"
     }
   ],
 }
@@ -118,6 +118,6 @@ Coding something that you think others can use? Learn about how you can contribu
 <br/>
 <br/>
 
-**Up next:** [Hand-off Process](../../getting-started/hand-off/)
+**Up next:** [Hand-off Process](../hand-off/#hand-off)
 
 <br/><br/>  
