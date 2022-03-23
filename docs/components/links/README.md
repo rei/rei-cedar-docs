@@ -19,14 +19,14 @@
       "type": "do",
       "image": "links/links_descriptivetext_do.png",
       "ratio": "16-9",
-      "alt": "Image showing proper link usage",
+      "alt": "Two radio buttons, one with a short descriptive link.",
       "caption": "use clear, concise, and descriptive text."
     },
     {
       "type": "dont",
       "image": "links/links_descriptivetext_dont.png",
       "ratio": "16-9",
-      "alt": "Image showing click here link",
+      "alt": "Two radio buttons one with a click here link.",
       "caption": "use “click here” or “start here” for link text."
     }
   ],
@@ -35,14 +35,14 @@
       "type": "do",
       "image": "links/links_underlinestyle_text_do.png",
       "ratio": "16-9",
-      "alt": "The link in this copy uses the cdr-link component, and, so correctly uses an underline",
+      "alt": "A copy block using the cdr-link component which correctly underlines links.",
       "caption": "underline every link."
     },
     {
       "type": "dont",
       "image": "links/links_underlinestyle_text_dont.png",
       "ratio": "16-9",
-      "alt": "The default link in body copy incorrectly does not use an underline",
+      "alt": "The default link in body copy incorrectly does not use an underline.",
       "caption": "apply different visual treatments for hyperlinks."
     }
   ],
