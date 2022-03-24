@@ -26,11 +26,11 @@
 If you are just starting out developing with Cedar, you’ll first need to [install Cedar](../installing-cedar/).
 Once you have Cedar installed, here's a checklist of everything you need to get up and running.
 
--  [Learn Vue]()
--  [Understand Cedar’s parts]()
--  [Troubleshooting]()
--  [Contribute to Cedar]()
--  [Connect with us]()
+-  [Learn Vue](#new-to-vue)
+-  [Understand Cedar’s parts](#understand-cedar-s-parts)
+-  [Troubleshooting](#troubleshooting)
+-  [Contribute to Cedar](#contribute-to-cedar)
+-  [Connect with us](#connect-with-us)
 
 ## New to Vue?
 
@@ -79,6 +79,9 @@ appear to be a cedar component. Component variables should only be used when you
 directly consume and use the Vue Cedar components. Find out if your team should use component
 variables and [learn more about them](../../components/component-variables/) or [view component variables in Github](https://github.com/rei/rei-cedar-component-variables).
 
+<br />
+<br />
+
 ### Patterns
 Patterns are the principled guidance to common design problems at REI. Patterns may be UI or a
 variety of other things, like a behavior, flow, or an application motif. For example, the alert
@@ -101,6 +104,8 @@ Feeling stuck? Check out some important articles that might help you in your tro
 
  <article-story-columns link1="../../release-notes/fall-2021" link2="../../release-notes/deprecated/"><template #col-1-img><cdr-img ratio="4-2" cover alt="" :src="$withBase(`/resources/for-developers/past-release-notes-12.png`)"/></template><template #col-1-title>Reference past release notes</template><template #col-2-img><cdr-img ratio="4-2" cover alt="" :src="$withBase(`/resources/for-developers/deprecated-features.png`)"/></template><template #col-2-title>View the list of deprecated features</template></article-story-columns>
 
+<br />
+<br />
 ## Contribute to Cedar
 
 Coding something that you think others can use? Learn about how you can contribute back to Cedar.
