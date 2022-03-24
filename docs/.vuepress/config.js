@@ -43,13 +43,13 @@ module.exports = {
         ]
       },
       {
-        text: "Guides and Resources",
+        text: "Resources",
         items: [
-          { text: "For Designers", link: "/guides/for-designers/" },
-          { text: "For Developers", link: "/guides/for-developers/"},
-          { text: "Hand-off Process", link: "/guides/hand-off/" },
-          { text: "Installing Cedar", link: "/guides/installing-cedar/" },
-          { text: "Building Reusable Components", link: "/guides/building-components-with-cedar/" },
+          { text: "For Designers", link: "/resources/for-designers/" },
+          { text: "For Developers", link: "/resources/for-developers/"},
+          { text: "Hand-off Process", link: "/resources/hand-off/" },
+          { text: "Installing Cedar", link: "/resources/installing-cedar/" },
+          { text: "Building Reusable Components", link: "/resources/building-components-with-cedar/" },
         ]
       },
       {
