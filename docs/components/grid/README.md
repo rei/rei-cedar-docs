@@ -14,13 +14,13 @@
     {
       "type": "do",
       "image": "grid/grid_consistent_do_16-9.png",
-      "alt": "Image showing proper grid usage",
+      "alt": "A grid with a consistent system.",
       "caption": "maintain a consistent grid system."
     },
     {
       "type": "dont",
       "image": "grid/grid_consistent_dont_16-9.png",
-      "alt": "Image showing mixed grid usage",
+      "alt": "A grid inconsistently mixed with other grid systems",
       "caption": "mix this grid and other grid systems."
     },
   ],
@@ -28,13 +28,13 @@
     {
       "type": "do",
       "image": "grid/grid_margins_do_16-9.png",
-      "alt": "Image showing grid margins",
+      "alt": "Grid with consistent global margins.",
       "caption": "maintain global margins."
     },
     {
       "type": "dont",
       "image": "grid/grid_margins_dont_16-9.png",
-      "alt": "Image showing overly large side margins",
+      "alt": "Grid with overly large side margins.",
       "caption": "make margins too large."
     },
   ],
@@ -42,13 +42,13 @@
     {
       "type": "do",
       "image": "grid/grid_gutters_do_16-9.png",
-      "alt": "Image showing grid gutters",
+      "alt": "Grid with appropriately maintained gutters.",
       "caption": "maintain global gutters."
     },
     {
       "type": "dont",
       "image": "grid/grid_gutters_dont_16-9.png",
-      "alt": "Image showing overly large grid gutters",
+      "alt": "Grid with overly large gutters.",
       "caption": "make gutters too large."
     },
   ],

@@ -37,14 +37,14 @@
       "type": "do",
       "image": "icon/icon_meaning_do_16-9.png",
       "ratio": "16-9",
-      "alt": "box icon by text which reads use 'this item ships free'",
+      "alt": "Box icon by text which reads use 'this item ships free.'",
       "caption": "use the appropriate icon."
     },
     {
       "type": "dont",
       "image": "icon/icon_meaning_dont_16-9.png",
       "ratio": "16-9",
-      "alt": "box icon by text which reads 'write a review'",
+      "alt": "Box icon by text which reads 'write a review.'",
       "caption": "change the meaning or intention of the Cedar icons."
     }
   ],
@@ -53,14 +53,14 @@
       "type": "do",
       "image": "icon/icon_clearance_do_16-9.png",
       "ratio": "16-9",
-      "alt": "icons with sufficient padding",
+      "alt": "Icons with sufficient padding.",
       "caption": "provide at least 40 pixel target area."
     },
     {
       "type": "dont",
       "image": "icon/icon_clearance_dont_16-9.png",
       "ratio": "16-9",
-      "alt": "icons with too little padding",
+      "alt": "Icons with too little padding.",
       "caption": "make click or touch target too small."
     }
   ],
@@ -69,14 +69,14 @@
       "type": "do",
       "image": "icon/icon_color_do_16-9.png",
       "ratio": "16-9",
-      "alt": "icons with sufficient contrast",
+      "alt": "Icons with sufficient contrast.",
       "caption": "use primary color tokens for icon color."
     },
     {
       "type": "dont",
       "image": "icon/icon_color_dont_16-9.png",
       "ratio": "16-9",
-      "alt": "icons with too little contrast",
+      "alt": "Icons with too little contrast.",
       "caption": "create new color tokens for icons or use secondary color tokens."
     }
   ],
@@ -277,14 +277,14 @@ Recommendations for writing screen reader text:
 ### Sizes
 Icons are available in three sizes: small (16px), medium (24px), and large (32px).  Default size is medium (24px); however, designers can choose a different size.
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/icon/Spec__Icon__Sizes.png`)" alt="Cedar icon sizes" />
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/icon/Spec__Icon__Sizes.png`)" alt="Cedar icon sizes." />
 
 
 
 ### Color
 Ensure that icons use the ratio of 4.5:1 contrast between icon color and background color. Follow recommendations in the [Color Foundation](../../foundation/color/) article for pairing color tokens.
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/icon/Spec__Icon__Colors.png`)" alt="Cedar icon color options" />
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/icon/Spec__Icon__Colors.png`)" alt="Cedar icon color options." />
 
 
 
@@ -293,7 +293,7 @@ Adequate space around the icon allows for legibility and touch. A minimum touch 
 
 When the mouse and keyboard are the primary input methods or when icons are paired inline with text, measurements may be condensed to accommodate denser layouts. Icon size should align to the line-height of the paired text element.
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/icon/Spec__Icon__Spacing.png`)" alt="Cedar icon clearance" />
+<cdr-img class="cdr-doc-article-img" :src="$withBase(`/icon/Spec__Icon__Spacing.png`)" alt="Cedar icon clearance." />
 
 
 
