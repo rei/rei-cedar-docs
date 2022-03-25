@@ -32,6 +32,9 @@ Once you have Cedar installed, here's a checklist of everything you need to get 
 -  [Contribute to Cedar](#contribute-to-cedar)
 -  [Connect with us](#connect-with-us)
 
+<br />
+<br />
+
 ## New to Vue?
 
 Cedar components are built using Vue and can only be used in Vue projects.
@@ -106,6 +109,7 @@ Feeling stuck? Check out some important articles that might help you in your tro
 
 <br />
 <br />
+
 ## Contribute to Cedar
 
 Coding something that you think others can use? Learn about how you can contribute back to Cedar.
