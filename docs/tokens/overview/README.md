@@ -233,7 +233,7 @@ The below tables for the naming structure show that levels will be skipped when 
 | -- | -- | -- | -- | -- | -- | -- |
 | `color` | `text` | `input` | `label` | ||
 | `color` | `background` | | | `primary` ||
-| `text` |  | `heeading` | | `serif` | `800`|
+| `text` |  | `heading` | | `serif` | `800`|
 
 <br>
 <hr/>
