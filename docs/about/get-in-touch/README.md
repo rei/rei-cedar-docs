@@ -24,9 +24,9 @@ For more info on how to contribute, visit our [Contributing to Cedar](../../abou
   
 The Cedar team is in Slack, which is the best way to learn about new releases and find support. Find us at [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) to:
   
-  - Stay up-to-date on Cedar releases, news, and events
-  - Ask us a question about using Cedar
-  - Let us know about a potential contribution
+- Stay up-to-date on Cedar releases, news, and events
+- Ask us a question about using Cedar
+- Let us know about a potential contribution
   
   
 For those outside of the REI network, feel free to email [cedar@rei.com](cedar@rei.com) with any questions or topics you’d like to discuss.
