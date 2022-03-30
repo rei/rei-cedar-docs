@@ -30,9 +30,26 @@
 
 <br>
 
+## 11.3.1 
+
+See what's changed on <cdr-link style="vertical-align: baseline" href="https://github.com/rei/rei-cedar/commit/c06fbeb241b97e29cad35d7eceea8fd15b583cdb">GitHub <icon-brand-github /></cdr-link>
+
+### New Features
+
+#### Icon Update
+
+We have introduced a new experiences icon to our [icon library](../../icons/library/)
+- Experiences running <icon-experiences-running/>
+
+### Fixes
+
+#### Mobile tokens
+
+Mobile tokens have been updated to ensure parity between Figma and the published package.
+
 ## 11.2.0 
 
-See what's changed on <cdr-link style="vertical-align: baseline" href="https://github.com/rei/rei-cedar/commit/43ee14a938cde33996912961985fc5a664c5a501">GitHub <icon-brand-github /><span class="sr-only"></span></cdr-link>
+See what's changed on <cdr-link style="vertical-align: baseline" href="https://github.com/rei/rei-cedar/commit/43ee14a938cde33996912961985fc5a664c5a501">GitHub <icon-brand-github /></cdr-link>
 
 ### New Features
 
