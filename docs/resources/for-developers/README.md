@@ -21,7 +21,7 @@
 <br />
 <br />
 
-# First steps
+## First steps
 
 If you are just starting out developing with Cedar, you’ll first need to [install Cedar](../installing-cedar/).
 Once you have Cedar installed, here's a checklist of everything you need to get up and running.
@@ -32,7 +32,7 @@ Once you have Cedar installed, here's a checklist of everything you need to get 
 -  [Contribute to Cedar](#contribute-to-cedar)
 -  [Connect with us](#connect-with-us)
 
-## New to Vue?
+### New to Vue?
 
 Cedar components are built using Vue and can only be used in Vue projects.
 Get updated on Vue with the following resources.
@@ -44,9 +44,9 @@ Get updated on Vue with the following resources.
 <br />
 <br />
 
-## Understand Cedar’s Parts
+### Understand Cedar’s Parts
 
-### Tokens
+#### Tokens
 
 Tokens are an evergreen set of variables mapped to the style attributes that define the foundation
 of REI's visual language, including color, typography, and spacing. Tokens are maintained and
@@ -62,7 +62,7 @@ the co-op.
 <br />
 <br />
   
-### Components
+#### Components
 Components are Cedar’s reusable, functional parts such as more visual components like buttons and
 more functionally complex components like forms. Components are vue-based and use Cedar’s tokens to
 distribute code templates that encapsulate reusable code. Components are maintained and distributed
@@ -73,7 +73,7 @@ by Cedar—when used in your application, you can stay in sync with the visual l
 <br />
 <br />
 
-### Component variables
+#### Component variables
 Component variables are a limited set of style mixins for web that can be used to make DOM elements
 appear to be a cedar component. Component variables should only be used when your team is unable to
 directly consume and use the Vue Cedar components. Find out if your team should use component
@@ -82,7 +82,7 @@ variables and [learn more about them](../../components/component-variables/) or 
 <br />
 <br />
 
-### Patterns
+#### Patterns
 Patterns are the principled guidance to common design problems at REI. Patterns may be UI or a
 variety of other things, like a behavior, flow, or an application motif. For example, the alert
 pattern gives design and development guidance for scenarios where you alert a user while the form
@@ -96,7 +96,7 @@ pattern header in the navigation.
 <br />
 <br />
 
-## Troubleshooting
+### Troubleshooting
 
 Feeling stuck? Check out some important articles that might help you in your troubleshooting efforts.
 
@@ -106,7 +106,8 @@ Feeling stuck? Check out some important articles that might help you in your tro
 
 <br />
 <br />
-## Contribute to Cedar
+
+### Contribute to Cedar
 
 Coding something that you think others can use? Learn about how you can contribute back to Cedar.
 
@@ -117,7 +118,7 @@ Coding something that you think others can use? Learn about how you can contribu
 <br />
 <br />
 
-## Connect with us
+### Connect with us
   The team is available for questions or one-on-one help. Connect with us on the Slack channel #cedar-user-support, join office hours (reach out to the team for an invite), or [sign up](https://forms.office.com/Pages/ResponsePage.aspx?id=npzFtGep6kuSHFlLQiB_F05iQ8ojF2dHtBV5C8NfjxBUMjFGRzNQOU04QkJGREFYNFNBTzFXQkZROC4u) for 1:1 help.
 
 <br/>
