@@ -89,7 +89,7 @@ export default {
     }));
     this.navigateToHash();
     this.url = window.document.location.href;
-    this.prodEquivalentUrl = this.url.replace('cedar-docs.rei-cloud.com', 'rei.github.io/rei-cedar-docs')
+    this.prodEquivalentUrl = this.url.replace('cedar-docs.rei-cloud.com', 'rei.github.io')
     this.isStaging = this.url.includes('cedar-docs.rei-cloud') ? true : false;
   },
 
