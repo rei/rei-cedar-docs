@@ -38,7 +38,7 @@ See what's changed on <cdr-link style="vertical-align: baseline" href="https://g
 
 #### Icon Update
 
-We have introduced a new experiences icon to our [icon library](../../icons/library/)
+We've introduced a new experiences icon to our [icon library](../../icons/library/)
 - Experiences running <icon-experiences-running/>
 
 ### Fixes
