@@ -21,7 +21,7 @@
 <br />
 <br />
 
-# First steps
+## First steps
 
 If you are just starting out developing with Cedar, you’ll first need to [install Cedar](../installing-cedar/).
 Once you have Cedar installed, here's a checklist of everything you need to get up and running.
@@ -31,6 +31,9 @@ Once you have Cedar installed, here's a checklist of everything you need to get 
 -  [Troubleshooting](#troubleshooting)
 -  [Contribute to Cedar](#contribute-to-cedar)
 -  [Connect with us](#connect-with-us)
+
+<br />
+<br />
 
 ## New to Vue?
 
@@ -106,6 +109,7 @@ Feeling stuck? Check out some important articles that might help you in your tro
 
 <br />
 <br />
+
 ## Contribute to Cedar
 
 Coding something that you think others can use? Learn about how you can contribute back to Cedar.
