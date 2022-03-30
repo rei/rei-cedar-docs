@@ -45,7 +45,7 @@ We've introduced a new experiences icon to our [icon library](../../icons/librar
 
 #### Mobile tokens
 
-Mobile tokens have been updated to ensure parity between Figma and the published package.
+We've updated mobile tokens to ensure parity between Figma and the published package.
 
 ## 11.2.0 
 
