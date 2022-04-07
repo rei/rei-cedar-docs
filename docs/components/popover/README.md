@@ -19,14 +19,14 @@
       "type": "do",
       "image": "popover/popover_content_do.png",
       "ratio": "4-3",
-      "alt": "Image showing proper popover usage",
+      "alt": "Popover text with hyperlink.",
       "caption": "link to additional content within a popover if additional information might be needed"
     },
     {
       "type": "dont",
       "image": "popover/popover_content_dont.png",
       "ratio": "4-3",
-      "alt": "Image showing improper popover usage",
+      "alt": "Popover with too much content for its container.",
       "caption": "overload the popover with too much content "
     }
   ],
@@ -36,14 +36,14 @@
       "type": "do",
       "image": "popover/popover_essential_do.png",
       "ratio": "4-3",
-      "alt": "Image showing proper popover usage",
+      "alt": "A popover correctly used to provide additional information.",
       "caption": "provide users with additional information in a popover when a feature or task might need clarification"
     },
     {
       "type": "dont",
       "image": "popover/popover_essential_dont.png",
       "ratio": "4-3",
-      "alt": "Image showing improper popover usage",
+      "alt": "A popover incorrectly used to display important password information.",
       "caption": "put information that's essential for completing a task in a popover"
     }
   ],
