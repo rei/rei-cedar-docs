@@ -23,14 +23,14 @@
       "type": "do",
       "image": "radio/radio_case_do_16-9.png",
       "ratio": "16-9",
-      "alt": "Radio buttons proper casing",
+      "alt": "Radio buttons with proper use of sentence case for labels.",
       "caption": "use sentence case, with only proper nouns capitalized."
     },
     {
       "type": "dont",
       "image": "radio/radio_case_dont_16-9.png",
       "ratio": "16-9",
-      "alt": "Radio buttons with incorrect casing",
+      "alt": "Radio buttons with incorrect use of title caps for labels.",
       "caption": "use title caps for labels."
     }
   ],
@@ -39,14 +39,14 @@
       "type": "do",
       "image": "radio/radio_label_do_16-9.png",
       "ratio": "16-9",
-      "alt": "radio buttons with brief labels",
+      "alt": "Radio buttons with appropriately brief labels.",
       "caption": "make labels brief."
     },
     {
       "type": "dont",
       "image": "radio/radio_label_dont_16-9.png",
       "ratio": "16-9",
-      "alt": "radio buttons with long labels",
+      "alt": "Radio buttons with inappropriately long labels.",
       "caption": "put too much text in the label."
     }
   ],
@@ -55,14 +55,14 @@
       "type": "do",
       "image": "radio/radio_fragment_do_16-9.png",
       "ratio": "16-9",
-      "alt": "radio buttons with no ending punctuation",
+      "alt": "Radio buttons correctly labeled with no ending punctuation.",
       "caption": "write labels as sentence fragments with no ending punctuation."
     },
     {
       "type": "dont",
       "image": "radio/radio_fragment_dont_16-9.png",
       "ratio": "16-9",
-      "alt": "radio buttons with ending punctuation",
+      "alt": "Radio buttons incorrectly labeled with ending punctuation.",
       "caption": "add terminal punctuation at the end of a label."
     }
   ],
