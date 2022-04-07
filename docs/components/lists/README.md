@@ -23,14 +23,14 @@
       "type": "do",
       "image": "lists/lists_link_do_4-3.png",
       "ratio": "4-3",
-      "alt": "",
+      "alt": "List items about different product details correctly separated by bullets.",
       "caption": "link independent clauses and product details."
     },
     {
       "type": "dont",
       "image": "lists/lists_link_dont_4-3.png",
       "ratio": "4-3",
-      "alt": "",
+      "alt": "List items about different product details incorrectly appearing on the same bullet.",
       "caption": "link unrelated items together."
     }
   ],
@@ -39,14 +39,14 @@
       "type": "do",
       "image": "lists/lists_punctuation_do_4-3.png",
       "ratio": "4-3",
-      "alt": "",
+      "alt": "A two sentence description in a bullet list with a period after the first but not second sentence.",
       "caption": "end each sentence with a period except last sentence."
     },
     {
       "type": "dont",
       "image": "lists/lists_punctuation_dont_4-3.png",
       "ratio": "4-3",
-      "alt": "",
+      "alt": "List of two items with incorrect use of terminal punctuation.",
       "caption": "add terminal punctuation."
     }
   ],
