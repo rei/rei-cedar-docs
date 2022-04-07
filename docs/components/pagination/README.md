@@ -10,14 +10,14 @@
       "type": "do",
       "image": "pagination/pagination_align_do_16-9.png",
       "ratio": "16-9",
-      "alt": "Image showing center-aligned pagination",
+      "alt": "Three boxes representing search result content with pagination correctly center-aligned.",
       "caption": "center align pagination beneath search results."
     },
     {
       "type": "dont",
       "image": "pagination/pagination_align_dont_16-9.png",
       "ratio": "16-9",
-      "alt": "Image showing right-aligned pagination",
+      "alt": "Three boxes representing search result content with pagination incorrectly right-aligned.",
       "caption": "right or left align pagination."
     }
   ],
@@ -26,14 +26,14 @@
       "type": "do",
       "image": "pagination/pagination_placement_do_16-9.png",
       "ratio": "16-9",
-      "alt": "Image showing pagination at bottom of page below search results",
+      "alt": "Three boxes representing search result content with pagination correctly placed below results.",
       "caption": "place pagination at the bottom of search results."
     },
     {
       "type": "dont",
       "image": "pagination/pagination_placement_dont_16-9.png",
       "ratio": "16-9",
-      "alt": "Image showing pagination above search results",
+      "alt": "Three boxes representing search result content with pagination incorrectly placed above results.",
       "caption": "place pagination above search results."
     }
   ],
@@ -42,14 +42,14 @@
       "type": "do",
       "image": "pagination/pagination_all_do.png",
       "ratio": "16-9",
-      "alt": "Image showing pagination page number truncation",
+      "alt": "Pagination correctly displaying page number truncation.",
       "caption": "show the first, previous, next, and last page links when possible. If not, use the degraded designs."
     },
     {
       "type": "dont",
       "image": "pagination/pagination_all_dont.png",
       "ratio": "16-9",
-      "alt": "Image showing pagination with all page numbers",
+      "alt": "Pagination incorrectly displaying all page numbers.",
       "caption": "show all available pages."
     }
   ],
@@ -200,7 +200,7 @@ By default pagination uses anchor elements which navigate the users web browser 
 
 At the xs breakpoint, pagination adapts to a Select component using the native UI dropdown menu.
 
-<img :src="$withBase('/pagination/pagination_breakpoint_xs_2x.png')" alt="Image showing responsive pagination component using Select element" />
+<img :src="$withBase('/pagination/pagination_breakpoint_xs_2x.png')" alt="Responsive pagination component using Select element" />
 
 ## Accessibility
 
