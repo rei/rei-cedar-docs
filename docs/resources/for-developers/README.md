@@ -56,7 +56,7 @@ the co-op.
 
 <br />
 
-<article-story-columns link1="../../tokens/overview/" link2="../../tokens/all-tokens/" link3="#"><template #col-1-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/resources/for-developers/token-overview-4.png`)"/></template><template #col-1-title> Token overview </template><template #col-2-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/resources/for-developers/view-all-tokens-5.png`)"/></template><template #col-2-title> View all tokens  </template><template #col-3-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/resources/for-developers/example-token-6.png`)"/></template><template #col-3-title>TODO: View an example token in the sandbox</template></article-story-columns>
+<article-story-columns link1="../../tokens/overview/" link2="../../tokens/all-tokens/" link3="https://codesandbox.io/s/cdr-token-playground-blioir"><template #col-1-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/resources/for-developers/token-overview-4.png`)"/></template><template #col-1-title> Token overview </template><template #col-2-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/resources/for-developers/view-all-tokens-5.png`)"/></template><template #col-2-title> View all tokens  </template><template #col-3-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/resources/for-developers/example-token-6.png`)"/></template><template #col-3-title> Set some tokens in a sandbox</template></article-story-columns>
 
 
 <br />
