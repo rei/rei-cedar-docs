@@ -10,14 +10,14 @@
       "type": "do",
       "image": "tabs/tab_select_do.png",
       "ratio": "16-9",
-      "alt": "tab with content displaying",
+      "alt": "Tab with content correctly displaying on load.",
       "caption": "display a tab section on load."
     },
     {
       "type": "dont",
       "image": "tabs/tab_select_dont.png",
       "ratio": "16-9",
-      "alt": "tab with empty content",
+      "alt": "Tab incorrectly displaying with empty content.",
       "caption": "display tabs without a section visible."
     }
   ],
@@ -26,14 +26,14 @@
       "type": "do",
       "image": "tabs/tab_number_do.png",
       "ratio": "16-9",
-      "alt": "tabs with two buttons",
+      "alt": "Tabs correctly displaying the minimum two buttons.",
       "caption": "use tabs with at least 2 buttons."
     },
     {
       "type": "dont",
       "image": "tabs/tab_number_dont.png",
       "ratio": "16-9",
-      "alt": "tab with one button",
+      "alt": "Tab incorrectly displaying with only one button.",
       "caption": "use tabs with only 1 button."
     }
   ],
@@ -42,14 +42,14 @@
       "type": "do",
       "image": "tabs/tab_capitalization_do.png",
       "ratio": "16-9",
-      "alt": "tabs with title cased labels",
+      "alt": "Tabs labeled correctly in title case.",
       "caption": "use title case for tab labels."
     },
     {
       "type": "dont",
       "image": "tabs/tab_capitalization_dont.png",
       "ratio": "16-9",
-      "alt": "tabs with all caps labels",
+      "alt": "Tabs labeled incorrectly with all caps.",
       "caption": "use all caps for tab labels."
     }
   ],
@@ -58,14 +58,14 @@
       "type": "do",
       "image": "tabs/tab_label_do.png",
       "ratio": "16-9",
-      "alt": "tabs with succint labels",
+      "alt": "Tabs with correct concise labels.",
       "caption": "write short and meaningful tab labels. Between 1-2 words is best."
     },
     {
       "type": "dont",
       "image": "tabs/tab_label_dont.png",
       "ratio": "16-9",
-      "alt": "tabs with truncated labels.",
+      "alt": "Tabs with incorrectly truncated labels.",
       "caption": "truncate tab labels. If a label overruns the container, find a shorter alternative."
     }
   ],
