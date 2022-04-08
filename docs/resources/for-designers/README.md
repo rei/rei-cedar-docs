@@ -87,7 +87,7 @@ Want to jump in and start using Cedar? We have a task for you! Understand when t
 <br/>
 <br/>
   
-## resources & resources
+## Resources
   <article-story-columns link1="https://www.figma.com/community/file/1057374607250433570" 
   link2="https://www.figma.com/community/file/1057382149759850021" 
   link3="https://www.figma.com/community/file/1057385750878897703"><template #col-1-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/resources/for-designers/tutorial-file-setup.png`)"/></template><template #col-1-title>File setup</template><template #col-2-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/resources/for-designers/tutorial-typography.png`)"/></template><template #col-2-title>Typography</template><template #col-3-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/resources/for-designers/tutorial-color.png`)"/></template><template #col-3-title>Color</template></article-story-columns>
