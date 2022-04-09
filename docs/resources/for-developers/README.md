@@ -68,7 +68,7 @@ more functionally complex components like forms. Components are vue-based and us
 distribute code templates that encapsulate reusable code. Components are maintained and distributed
 by Cedar—when used in your application, you can stay in sync with the visual language of the co-op.
 
-<article-story-columns link1="https://github.com/rei/rei-cedar" link2="../../components/buttons/" link3="https://codesandbox.io/s/hgjxb"><template #col-1-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/resources/for-developers/view-all-components-7.png`)"/></template><template #col-1-title> View all components in Github </template><template #col-2-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/resources/for-developers/view-button-doc-8.png`)"/></template><template #col-2-title> View button component docs for an example</template><template #col-3-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/resources/for-developers/button-in-sandbox-9.png`)"/></template><template #col-3-title>TODO: may need to build this - View a button component example in the sandbox</template></article-story-columns>
+<article-story-columns link1="https://github.com/rei/rei-cedar" link2="../../components/buttons/" link3="../../components/buttons/#primary"><template #col-1-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/resources/for-developers/view-all-components-7.png`)"/></template><template #col-1-title> View all components in Github </template><template #col-2-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/resources/for-developers/view-button-doc-8.png`)"/></template><template #col-2-title> View button component docs for an example</template><template #col-3-img><cdr-img ratio="4-3" cover alt="" :src="$withBase(`/resources/for-developers/button-in-sandbox-9.png`)"/></template><template #col-3-title> View a button component example in the sandbox</template></article-story-columns>
 
 <br />
 <br />
@@ -119,7 +119,7 @@ Coding something that you think others can use? Learn about how you can contribu
 <br />
 
 ### Connect with us
-  The team is available for questions or one-on-one help. Connect with us on the Slack channel #cedar-user-support, join office hours (reach out to the team for an invite), or [sign up](https://forms.office.com/Pages/ResponsePage.aspx?id=npzFtGep6kuSHFlLQiB_F05iQ8ojF2dHtBV5C8NfjxBUMjFGRzNQOU04QkJGREFYNFNBTzFXQkZROC4u) for 1:1 help.
+  The team is available for questions or one-on-one help. Connect with us on the Slack channel [#cedar-user-support](https://rei.slack.com/app_redirect?channel=cedar-user-support), join office hours (reach out to the team for an invite), or [sign up](https://forms.office.com/Pages/ResponsePage.aspx?id=npzFtGep6kuSHFlLQiB_F05iQ8ojF2dHtBV5C8NfjxBUMjFGRzNQOU04QkJGREFYNFNBTzFXQkZROC4u) for 1:1 help.
 
 <br/>
 <br/>
