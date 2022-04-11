@@ -20,13 +20,13 @@ UI icons or glyphs symbolize commands, navigation, utility, or common actions an
 
 ### Grid
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/iconography/grid.png`)"/>
+<cdr-img class="cdr-doc-article-img" alt="A 20px grid contains an icon on a 24px artboard." :src="$withBase(`/iconography/grid.png`)"/>
 
 Design icons on a 20px grid and export on a 24px artboard. Constrain the content of an icon  to the “live area” of the icon grid. The live area and padding ensure sufficient display room and consistent scaling of the icon set.
 
 ### Shapes
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/iconography/shapes.png`)"/>
+<cdr-img class="cdr-doc-article-img" alt="Four icon shapes on a grid: a square, circle, vertical rectangle, and horizontal rectangle."  :src="$withBase(`/iconography/shapes.png`)"/>
 
 Create icons  on the grid using basic foundational shapes. Adhering to these shapes ensures consistent proportionality of iconography throughout the icon set.
 
@@ -39,38 +39,38 @@ Icons scale to display across three sizes: small (16px), medium (24px), and larg
 
 Adequate space around the icon allows for legibility and touch. A minimum touch target area of 40px is recommended for standalone iconography.
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/iconography/clearance.png`)"/>
+<cdr-img class="cdr-doc-article-img" alt="Shopping cart icon condensed in a dense navigation layout." :src="$withBase(`/iconography/clearance.png`)"/>
 
 When the mouse and keyboard are the primary input methods or when icons are paired in-line with text, measurements may be condensed to accommodate denser layouts. Icon size should align to the line-height of the paired text element.
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/iconography/clearance2.png`)"/>
+<cdr-img class="cdr-doc-article-img" alt="An icon scaling in size as text element size increases." :src="$withBase(`/iconography/clearance2.png`)"/>
 
 ## Style
 Icons are built from foundational shapes within the icon grid and align to the pixel grid to ensure clarity when scaling. Optical corrections can be made where necessary.
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/iconography/style.png`)"/>
+<cdr-img class="cdr-doc-article-img" alt="Five icons grouped together." :src="$withBase(`/iconography/style.png`)"/>
 
 
 Minimize use  of depth or implied perspective unless necessary to convey the relationship of grouped items.
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/iconography/style2.png`)"/>
+<cdr-img class="cdr-doc-article-img" alt="Icons constructed with a 2 pixel stroke." :src="$withBase(`/iconography/style2.png`)"/>
 
 
 Constructed with a 2px stroke. Strokes have a 1px rounded terminus or butt-cap.
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/iconography/style3.png`)"/>
+<cdr-img class="cdr-doc-article-img" alt="Plus sign icon with rounded exterior corners and sharp interior angles." :src="$withBase(`/iconography/style3.png`)"/>
 
 Square and rectangular shapes have 1px rounded exterior corners and sharp interior angles.
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/iconography/style4.png`)"/>
+<cdr-img class="cdr-doc-article-img" alt="Filled version of a calendar icon." :src="$withBase(`/iconography/style4.png`)"/>
 
 Filled versions of select icons are available and typically represent an “on” or active state of the action, feature, or validation colors. When icons are paired with a complex or noisy background, consider using a filled icon (e.g. a filled location pin on a map environment).
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/iconography/style5.png`)"/>
+<cdr-img class="cdr-doc-article-img" alt="Five icons and their corresponding inverse displays." :src="$withBase(`/iconography/style5.png`)"/>
 
 Inverse display is available when paired with darker backgrounds.
 
-<cdr-img class="cdr-doc-article-img" :src="$withBase(`/iconography/style6.png`)"/>
+<cdr-img class="cdr-doc-article-img" alt="Five inversely displayed icons on a dark background." :src="$withBase(`/iconography/style6.png`)"/>
 
 
 ## Icons in Cedar
