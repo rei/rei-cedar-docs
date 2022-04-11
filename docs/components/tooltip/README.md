@@ -18,14 +18,14 @@
       "type": "do",
       "image": "tooltip/tooltip_consistency_do.png",
       "ratio": "4-3",
-      "alt": "Image showing proper tooltip usage",
+      "alt": "A set of three unlabeled icons with tooltips revealing their names upon hover.",
       "caption": "consistently provide tooltips for unlabeled icons "
     },
     {
       "type": "dont",
       "image": "tooltip/tooltip_consistency_dont.png",
       "ratio": "4-3",
-      "alt": "Image showing improper tooltip usage",
+      "alt": "A set of three unlabeled icons with tooltips incorrectly only provided for one.",
       "caption": "provide tooltips for only a subset of icons within a set"
     }
   ],
@@ -35,14 +35,14 @@
       "type": "do",
       "image": "tooltip/tooltip_redundancy_do.png",
       "ratio": "4-3",
-      "alt": "Image showing proper tooltip usage",
+      "alt": "A button with its action clearly labeled Add to Cart does not display a tooltip upon hover.",
       "caption": "avoid using tooltips when actions are clearly defined"
     },
     {
       "type": "dont",
       "image": "tooltip/tooltip_redundancy_dont.png",
       "ratio": "4-3",
-      "alt": "Image showing improper tooltip usage",
+      "alt": "A button with its action clearly labeled Add to Cart incorrectly displays a tooltip with redundant info upon hover.",
       "caption": "provide redundant information with a tooltip"
     }
   ],
