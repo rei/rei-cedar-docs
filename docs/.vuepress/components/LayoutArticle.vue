@@ -49,6 +49,12 @@ export default {
     margin: 0 auto;
     max-width: $cdr-doc-content-max-width;
 
+      a:is(:not(
+        .cdr-doc-example-code-pair a,
+        .cdr-doc-local-anchor-nav__list-item a
+      )) {
+        @include cdr-link-base-mixin;
+      }
       h2:is(:not(.cdr-doc-example-code-pair h2)) {
         @include cdr-text-heading-serif-strong-800;
       }
