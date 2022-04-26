@@ -54,4 +54,16 @@ The CdrBanner component variable has been removed. Teams who are unable to utili
 
 Vue 2.6 introduced a new `v-slot` syntax for passing slot content into components. A pound sign `#` can be used as a shorthand for `v-slot:`, much like a colon `:` can be used as a shorthand for `v-bind`. The old syntax is removed from Vue 3 and we recommend updating your codebase to make use of the new slot syntax to simplify the upgrade process in the future. Note that the new `v-slot` or `#` syntax can only be used on a `template` tag, however those additional `template` tags will not be included in the rendered HTML.
 
+
+## Documentation Refresh
+
+- We have updated our "Getting Started" section to "Guides" to better reflect that this content is for ongoing support, not just onboarding to the system.
+
+### For Designer
+
+- We have released a new "for designers" resource page. 
+### Developer
+
+- We have released a new "for developers" resource page.
+
 </cdr-doc-table-of-contents-shell>
