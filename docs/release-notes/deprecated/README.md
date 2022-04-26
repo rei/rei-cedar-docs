@@ -199,6 +199,10 @@
 
 ## Cedar Components
 
+### Vue2 Cedar component library
+
+Cedar is moving to Vue3! After deprecation removal, Cedar Vue2 assets will be made available via the "REI-Cedar-Vue2" repo and NPM package.
+
 ### CdrCta
 
 The functionality of CdrCta has been merged into [CdrButton](../../components/buttons). See [the release notes](../summer-2020/#cdrcta-deprecated-and-merged-with-cdrbutton) for migration steps.

@@ -26,6 +26,7 @@ module.exports = {
       {
         text: "Release Notes",
         items: [
+          { text: "Spring 2022", link: "/release-notes/spring-2022/" },
           { text: "Fall 2021", link: "/release-notes/fall-2021/" },
           { text: "Summer 2021", link: "/release-notes/summer-2021/" },
           { text: "Spring 2021", link: "/release-notes/spring-2021/" },
