@@ -273,9 +273,6 @@ Truncate breadcrumbs left to right to show the final two links in the trail, so 
 
 **Note:** Truncation only occurs if the ```items``` collection contains more than 2 items and the value is set to ```truncationEnabled=true```.
 
-## Scoped Slots
-
-<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.scopedSlots" />
 
 ## Events
 
