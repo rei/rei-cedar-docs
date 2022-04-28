@@ -38,7 +38,7 @@ module.exports = {
       {
         text: "About",
         items: [
-          { text: "Cedar Design System", link: "/about/cedar-design-system/" },
+          { text: "Cedar's Purpose & Parts", link: "/about/cedar-design-system/" },
           { text: "Contributing to Cedar", link: "/about/contributing-to-cedar/" },
           { text: "Browser Support", link: "/about/browser-support/" },
           { text: "Get in Touch", link: "/about/get-in-touch/" }
