@@ -78,7 +78,7 @@ Have a question? Find answers here. For more help, email us at cedar@rei.com or 
 <li>You can find guidelines on <cdr-link href="../../about/contributing-to-cedar/">how to contribute to Cedar here</cdr-link>.</li>
 <li>How can I contribute a token to Cedar?
 <cdr-list tag="ol" modifier="ordered">
-<li>Reach out to us on <cdr-link href="https://rei.slack.com/archives/CA58YCGN4">Slack</cdr-link> (REI internal link) or attend our weekly office hours to see how we can best support you. Then, read about <cdr-link href="../../tokens/overview/#adding-design-tokens-to-the-repository">how to add design tokens to our repository</cdr-link>.</li>
+<li>Reach out to us on <cdr-link href="https://rei.slack.com/archives/CA58YCGN4">Slack</cdr-link> or attend our weekly office hours to see how we can best support you. Then, read about <cdr-link href="../../tokens/overview/#adding-design-tokens-to-the-repository">how to add design tokens to our repository</cdr-link>.</li>
 </cdr-list>
 </li>
 </cdr-list>
