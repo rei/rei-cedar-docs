@@ -38,14 +38,14 @@ See what's changed on <cdr-link style="vertical-align: baseline" href="https://g
 
 #### Icon Update
 
-We have introduced a new experiences icon to our [icon library](../../icons/library/)
+We've introduced a new experiences icon to our [icon library](../../icons/library/)
 - Experiences running <icon-experiences-running/>
 
 ### Fixes
 
 #### Mobile tokens
 
-Mobile tokens have been updated to ensure parity between Figma and the published package.
+We've updated mobile tokens to ensure parity between Figma and the published package.
 
 ## 11.2.0 
 
