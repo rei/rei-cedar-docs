@@ -48,7 +48,7 @@ Scoped slots have been removed from CdrBreadcrumb and CdrPagination. See the [Cd
 
 #### CdrBanner Component Variable
 
-The CdrBanner component variable has been removed. Teams who are unable to utilize the Vue component should plan to make use of the [messaging tokens](../../tokens/all-tokens/#colors) to create their banners.  
+The CdrBanner component variable has been removed. Teams who are unable to utilize the Vue component should plan to use the [messaging tokens](../../tokens/all-tokens/#colors) to create their banners.  
 
 ### Preparing for Vue 3
 
@@ -60,30 +60,28 @@ Vue 2.6 introduced a new `v-slot` syntax for passing slot content into component
 
 ## Documentation Refresh
 
-- We've revised our "Getting Started" and "About" sections to provide better overall support.
+We've revised and reorganized our "Getting Started" and "About" sections to provide better overall support.
 ### "Getting Started" is now "Resources"
 
-- The new name better reflects the content's purpose, which is to provide ongoing support as well as system onboarding.
+The new name better reflects the section's purpose, which is to provide ongoing support as well as system onboarding.
 
-### "As a Designer" is now "For Designers"
+#### "As a Designer" is now "For Designers"
 
-- Our new resource page for designers includes a Figma installation guide, tutorials, and extra resources. 
-### "As a Developer" is now "For Developers"
+Our [resource page for designers](../for-designers) includes a Figma installation guide, tutorials, and extra resources. 
+#### "As a Developer" is now "For Developers"
 
-- Our new resource page for developers includes Vue guides, troubleshooting tips, and definitions of Cedar's parts.
+Our [new resource page for developers](../for-developers) includes Vue guides, troubleshooting tips, and definitions of Cedar's parts. Installation info can now be found on the new ["Installing Cedar"](../installing-cedar) page.
 
-### New "Frequently Asked Questions" Page
+#### New "Frequently Asked Questions" Page
 
-- if you have a question about Cedar, this is a handy place to look for answers 
-### New contact page, “Get in Touch”
+If you have a question about Cedar, [this is a handy place](../frequently-asked-questions) to look for answers. 
+### Revised About Section
+#### New contact page, “Get in Touch”
 
-- To better help people find ways to contact us, we created a new “Get in Touch” page
-- Content includes info on the best channels to reach the Cedar team, and how to use them
+To make it easier for people to find how to contact us, we created a new [“Get in Touch” page](../get-in-touch). Content includes info on the best channels to reach the Cedar team, and how to use them.
 
-### Updated “Cedar Design System” page
+#### Updated “Cedar Design System” page
 
-- This page is in the "About" section is now called "Cedar's Purpose & Parts"
-- We've streamlined the content to focus on what Cedar is and what it's for
-- Content includes an intro to our purpose and philosophy, an overview of Cedar's parts, and ways to further explore Cedar
+This page in the "About" section is now called ["Cedar's Purpose & Parts."](../cedar-design-system) We've streamlined the content to focus on what Cedar is and what it's for. Content includes an intro to our purpose and philosophy, an overview of Cedar's parts, and ways to further explore Cedar and the doc site.
 
 </cdr-doc-table-of-contents-shell>
