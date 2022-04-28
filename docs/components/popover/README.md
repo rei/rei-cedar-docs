@@ -142,7 +142,8 @@ CdrPopover is a wrapper component that accepts a trigger element and popover con
 CdrPopover can also be controlled programmatically using the `open` prop. However, doing so means that you must implement certain behavior yourself:
 
 - The CdrPopover element and the trigger element must be wrapped in a div with `position: relative` and `width: max-content`.
-- The `open` property should be toggled to true when the trigger element is clicked. Close logic will be handled by CdrPopover.
+- The `open` property should be toggled to true when the trigger element is clicked.
+- You will need to add an event listener for the `@closed` event in order to change the value of the `open` prop. In the example below we use `@closed="open = false"`.
 - The trigger element should have it's `aria-controls` property set to the ID of the CdrPopover, and it's `aria-haspopup` property set to "dialog".
 
 <cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location"
@@ -153,12 +154,11 @@ CdrPopover can also be controlled programmatically using the `open` prop. Howeve
   <cdr-button
     aria-haspopup="dialog"
     aria-controls="popover-custom-example"
-    @click="open = true"
-    @closed="open = false"
+    @click="open = !open"
   >
     Click me
   </cdr-button>
-  <cdr-popover id="popover-custom-example" position="top" :open="open">
+  <cdr-popover id="popover-custom-example" position="top" :open="open" @closed="open = false">
     <div>
       I provide additional information to the user
     </div>
