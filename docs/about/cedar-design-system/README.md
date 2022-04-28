@@ -1,6 +1,6 @@
 ---
 {
-  "title": "Cedar Design System",
+  "title": "Cedar's Purpose & Parts",
   "title_metadata": false,
   "layout_type": "LayoutArticle",
   "summary": false,
