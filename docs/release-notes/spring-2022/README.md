@@ -67,14 +67,14 @@ The new name better reflects the section's purpose, which is to provide ongoing 
 
 #### "As a Designer" is now "For Designers"
 
-Our [resource page for designers](../for-designers) includes a Figma installation guide, tutorials, and extra resources. 
+Our [resource page for designers](../../resources/for-designers) includes a Figma installation guide, tutorials, and extra resources. 
 #### "As a Developer" is now "For Developers"
 
-Our [new resource page for developers](../for-developers) includes Vue guides, troubleshooting tips, and definitions of Cedar's parts. Installation info can now be found on the new ["Installing Cedar"](../installing-cedar) page.
+Our [new resource page for developers](../../resources/for-developers) includes Vue guides, troubleshooting tips, and definitions of Cedar's parts. Installation info can now be found on the new ["Installing Cedar"](../../resources/installing-cedar) page.
 
 #### New "Frequently Asked Questions" Page
 
-If you have a question about Cedar, [this is a handy place](../frequently-asked-questions) to look for answers. 
+If you have a question about Cedar, [this is a handy place](../../resources/frequently-asked-questions) to look for answers. 
 ### Revised About Section
 #### New contact page, “Get in Touch”
 
