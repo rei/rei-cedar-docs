@@ -11,7 +11,7 @@
   ],
 }
 ---
-<cdr-banner type="info" aria-live="polite"><template #icon-left><icon-information-fill inherit-color /></template><span style="font-weight:500">This is our final major release prior to Cedar's migration to Vue 3</span><template #message-body>Cedar's next release will migrate our component library to Vue 3. As a result, this will be the only Vue 2 release we will support post-migration.</template></cdr-banner>
+<cdr-banner type="info" aria-live="polite"><template #icon-left><icon-information-fill inherit-color /></template><span style="font-weight:500">This is the final major release for Vue 2 before Cedar's migration to Vue 3</span><template #message-body>In our next release, we will complete the transition by migrating our component library to Vue 3. <span style="font-weight:600">Please note:</span> This will be the only Vue 2 release we are supporting post-migration.</template></cdr-banner>
 
 <br>
 
@@ -29,12 +29,15 @@
 
 ## Bug Fixes
 
-- CdrPopover has been updated to address an issue where the component would emit its `open` event twice in certain circumstances.
+### CdrPopover
+- Addressed an issue where the component would emit its `open` event twice in certain circumstances.
+- Addressed an accessibility issue where focus wasn’t being correctly assigned when multiple popovers were in use.
+
 ## Deprecations
 
 ### Vue 2
 
-In preparation of our Vue 3 migration we are deprecating the Vue 2 based component library. We will support this final release of the Vue 2 library with basic maintainence and bug fixes for an additional 12 months. Once we release our Vue 3 library, we will re-publish our Vue 2 libray as `@rei/cedar-vue-2`.
+To prepare for our Vue 3 migration, we're deprecating the Vue 2 component library. We'll provide basic maintenance and bug fixes to support this final Vue 2 release for an additional 12 months. Once our Vue 3 library is released, we'll republish our Vue 2 library as `@rei/cedar-vue-2`.
 
 ## Breaking Changes
 ### Removals
@@ -57,13 +60,30 @@ Vue 2.6 introduced a new `v-slot` syntax for passing slot content into component
 
 ## Documentation Refresh
 
-- We have updated our "Getting Started" section to "Guides" to better reflect that this content is for ongoing support, not just onboarding to the system.
+- We've revised our "Getting Started" and "About" sections to provide better overall support.
+### "Getting Started" is now "Resources"
 
-### For Designer
+- The new name better reflects the content's purpose, which is to provide ongoing support as well as system onboarding.
 
-- We have released a new "for designers" resource page. 
-### Developer
+### "As a Designer" is now "For Designers"
 
-- We have released a new "for developers" resource page.
+- Our new resource page for designers includes a Figma installation guide, tutorials, and extra resources. 
+### "As a Developer" is now "For Developers"
+
+- Our new resource page for developers includes Vue guides, troubleshooting tips, and definitions of Cedar's parts.
+
+### New "Frequently Asked Questions" Page
+
+- if you have a question about Cedar, this is a handy place to look for answers 
+### New contact page, “Get in Touch”
+
+- To better help people find ways to contact us, we created a new “Get in Touch” page
+- Content includes info on the best channels to reach the Cedar team, and how to use them
+
+### Updated “Cedar Design System” page
+
+- This page is in the "About" section is now called "Cedar's Purpose & Parts"
+- We've streamlined the content to focus on what Cedar is and what it's for
+- Content includes an intro to our purpose and philosophy, an overview of Cedar's parts, and ways to further explore Cedar
 
 </cdr-doc-table-of-contents-shell>
