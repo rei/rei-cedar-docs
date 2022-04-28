@@ -307,8 +307,5 @@ Pagination adapts to a Select component with a native UI dropdown menu on XS bre
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
 
-## Scoped Slots
-
-<cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.scopedSlots" />
 
 </cdr-doc-table-of-contents-shell>

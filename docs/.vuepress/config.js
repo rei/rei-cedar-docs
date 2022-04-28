@@ -40,7 +40,8 @@ module.exports = {
         items: [
           { text: "Cedar Design System", link: "/about/cedar-design-system/" },
           { text: "Contributing to Cedar", link: "/about/contributing-to-cedar/" },
-          { text: "Browser Support", link: "/about/browser-support/" }
+          { text: "Browser Support", link: "/about/browser-support/" },
+          { text: "Get in Touch", link: "/about/get-in-touch/" }
         ]
       },
       {
@@ -51,6 +52,7 @@ module.exports = {
           { text: "Hand-off Process", link: "/resources/hand-off/" },
           { text: "Installing Cedar", link: "/resources/installing-cedar/" },
           { text: "Building Reusable Components", link: "/resources/building-components-with-cedar/" },
+          { text: "Frequently Asked Questions", link: "/resources/frequently-asked-questions/" }
         ]
       },
       {

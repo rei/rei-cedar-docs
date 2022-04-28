@@ -251,6 +251,11 @@ The flexbox based CdrRow and CdrCol have been replaced with the CSS grid based [
 | IconWarningTri     | IconWarningFill    |
 
 
+## Component Variables
+
+### CdrBanner
+
+- The CdrBanner component variable has been removed. [Messaging tokens](../../tokens/all-tokens/#colors) are available to replicate CdrBanner.
 
 
 ## Utility Classes

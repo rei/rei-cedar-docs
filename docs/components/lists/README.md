@@ -301,7 +301,7 @@ WebAIM: [Semantic Structure: Using Lists Correctly](https://webaim.org/technique
 
 ## Props
 
-This component will bind any attribute that a [native HTML list element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul) accepts.
+This component will bind any attribute that a [native HTML list element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul) accepts (with exception of `type` attribute for ordered lists, use the `list-style-type` CSS property instead).
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props"/>
 
