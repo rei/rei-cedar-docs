@@ -67,10 +67,10 @@ The new name better reflects the section's purpose, which is to provide ongoing 
 
 #### "As a Designer" is now "For Designers"
 
-Our [resource page for designers](../../resources/for-designers) includes a Figma installation guide, tutorials, and extra resources. 
+Our [resource guide for designers](../../resources/for-designers) includes a Figma installation guide, tutorials, and extra resources. 
 #### "As a Developer" is now "For Developers"
 
-Our [new resource page for developers](../../resources/for-developers) includes Vue guides, troubleshooting tips, and definitions of Cedar's parts. Installation info can now be found on the new ["Installing Cedar"](../../resources/installing-cedar) page.
+Our [new resource guide for developers](../../resources/for-developers) is aimed at new REI developers and veteran devs alike. This guide features links to the most frequently needed Cedar resources for developers, Vue resources, and helpful definitions of Cedar’s most frequently used parts. Installation info can now be found on the new ["Installing Cedar"](../../resources/installing-cedar) page.
 
 #### New "Frequently Asked Questions" Page
 
