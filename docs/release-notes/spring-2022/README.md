@@ -37,7 +37,7 @@
 
 ### Vue 2
 
-To prepare for our Vue 3 migration, we're deprecating the Vue 2 component library. We'll provide basic maintenance and bug fixes to support this final Vue 2 release for an additional 12 months. Once our Vue 3 library is released, we'll republish our Vue 2 library as `@rei/cedar-vue-2`.
+To prepare for our Vue 3 migration, we're deprecating the Vue 2 component library. We'll provide basic maintenance and bug fixes to support this final planned Vue 2 release for an additional 12 months. Once our Vue 3 library is released, we'll republish our Vue 2 library as `@rei/cedar-vue-2`. We recognize this is a major migration and will flex our plans as needed to provide the best support to our teams as we make the move to Vue 3.
 
 ## Breaking Changes
 ### Removals
