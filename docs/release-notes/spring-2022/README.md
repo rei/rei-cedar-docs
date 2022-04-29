@@ -11,7 +11,7 @@
   ],
 }
 ---
-<cdr-banner type="info" aria-live="polite"><template #icon-left><icon-information-fill inherit-color /></template><span style="font-weight:500">This is the final major release for Vue 2 before Cedar's migration to Vue 3</span><template #message-body>In our next release, we will complete the transition by migrating our component library to Vue 3. <span style="font-weight:600">Please note:</span> This will be the only Vue 2 release we are supporting post-migration.</template></cdr-banner>
+<cdr-banner type="info" aria-live="polite"><template #icon-left><icon-information-fill inherit-color /></template><span style="font-weight:500">This is the final planned major release for Vue 2 before Cedar's migration to Vue 3</span><template #message-body>In our next release, we will complete the transition by migrating our component library to Vue 3. <span style="font-weight:600">Please note:</span> This will be the only Vue 2 release we are supporting post-migration.</template></cdr-banner>
 
 <br>
 
