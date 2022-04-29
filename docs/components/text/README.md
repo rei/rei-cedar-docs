@@ -23,14 +23,14 @@
       "type": "do",
       "image": "text/headings_levels_do.png",
       "ratio": "4-3",
-      "alt": "create a semantic heading structure",
+      "alt": "H1 and H3 used to display a semantic heading structure.",
       "caption": "use heading levels to define hierarchical information."
     },
     {
       "type": "dont",
       "image": "text/headings_levels_dont.png",
       "ratio": "4-3",
-      "alt": "Don't use semantic tags for display styles",
+      "alt": "Semantic tags incorrectly used for visual emphasis.",
       "caption": "use heading tags for visual results. Instead use our text styles."
     }
   ],
@@ -39,14 +39,14 @@
       "type": "do",
       "image": "text/headings_utility_do.png",
       "ratio": "4-3",
-      "alt": "",
+      "alt": "Utility and body styles correctly used to add bolding to a number and increase size.",
       "caption": "use utility or body styles for descriptive or utilitarian purposes. "
     },
     {
       "type": "dont",
       "image": "text/headings_utility_dont.png",
       "ratio": "4-3",
-      "alt": "",
+      "alt": "Heading style incorrectly used for text that isn't a headline.",
       "caption": "use heading styles in areas that aren’t headlines. Instead, consider body or utility styles. "
     }
   ],
@@ -55,14 +55,14 @@
       "type": "do",
       "image": "text/headings_subtitle_do.png",
       "ratio": "4-3",
-      "alt": "",
+      "alt": "Heading correctly paired with a subheading.",
       "caption": "pair headings with subheadings."
     },
     {
       "type": "dont",
       "image": "text/headings_subtitle_dont.png",
       "ratio": "4-3",
-      "alt": "",
+      "alt": "Subheading incorrectly used instead of a primary heading.",
       "caption": "use subheading as a primary heading or section heading."
     }
   ],
@@ -71,14 +71,14 @@
       "type": "do",
       "image": "text/headings_h_tag_do.png",
       "ratio": "4-3",
-      "alt": "",
+      "alt": "Subheading with correct use of a paragraph tag.",
       "caption": "use paragraph or span tags for subheadings. "
     },
     {
       "type": "dont",
       "image": "text/headings_h_tag_dont.png",
       "ratio": "4-3",
-      "alt": "",
+      "alt": "Subheading with incorrect use of heading tags.",
       "caption": "use heading tags for subheadings."
     }
   ],
@@ -87,14 +87,14 @@
       "type": "do",
       "image": "text/paragraphs_characterlength_text_do.png",
       "ratio": "4-3",
-      "alt": "",
+      "alt": "Paragraph with a set max-width.",
       "caption": "set a max-width for paragraphs."
     },
     {
       "type": "dont",
       "image": "text/paragraphs_characterlength_text_dont.png",
       "ratio": "4-3",
-      "alt": "",
+      "alt": "Paragraph with no max-width set.",
       "caption": "allow text to span beyond the max-width for paragraphs."
     }
   ],
@@ -103,14 +103,14 @@
       "type": "do",
       "image": "text/utility_headings_do.png",
       "ratio": "4-3",
-      "alt": "",
+      "alt": "Product price displayed correctly with utility styles.",
       "caption": "use utility styles for more functional elements."
     },
     {
       "type": "dont",
       "image": "text/utility_headings_dont.png",
       "ratio": "4-3",
-      "alt": "",
+      "alt": "Product price incorrectly displayed with heading style.",
       "caption": "use headings in place of utility styles."
     }
   ],
@@ -119,14 +119,14 @@
       "type": "do",
       "image": "text/utility_tight_do.png",
       "ratio": "4-3",
-      "alt": "",
+      "alt": "Product information displayed with utility styles to accomodate tight spacing.",
       "caption": "use utility styles for tight spaces."
     },
     {
       "type": "dont",
       "image": "text/utility_tight_dont.png",
       "ratio": "4-3",
-      "alt": "",
+      "alt": "Long-form content incorrectly displayed with utility styles.",
       "caption": "use utility styles for long-form content."
     }
   ],
@@ -135,14 +135,14 @@
       "type": "do",
       "image": "text/eyebrow_brand_do.png",
       "ratio": "4-3",
-      "alt": "",
+      "alt": "Eyebrow text correctly used to indicate the content's category.",
       "caption": "use eyebrows for categories or groupings."
     },
     {
       "type": "dont",
       "image": "text/eyebrow_brand_dont.png",
       "ratio": "4-3",
-      "alt": "",
+      "alt": "Eyebrow text incorrectly used to display a brand name.",
       "caption": "use eyebrows for brand names."
     }
   ],
@@ -151,14 +151,14 @@
       "type": "do",
       "image": "text/eyebrow_heading_do.png",
       "ratio": "4-3",
-      "alt": "",
+      "alt": "Three sets of data correctly categorized with eyebrow text.",
       "caption": "use eyebrows to categorize data."
     },
     {
       "type": "dont",
       "image": "text/eyebrow_heading_dont.png",
       "ratio": "4-3",
-      "alt": "",
+      "alt": "Eyebrow text incorrectly used as a heading above content.",
       "caption": "use eyebrows as headings."
     }
   ],
