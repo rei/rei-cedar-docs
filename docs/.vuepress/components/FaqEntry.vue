@@ -24,6 +24,7 @@ export default {
     }
   },
   computed: {
+    // Generate a unique (and predictable) ID as required by the component. 
     generatedId() {
       return this.title.replace(/\s+/g, '-').toLowerCase();
     }
