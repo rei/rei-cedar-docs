@@ -37,7 +37,7 @@
               <div>
                 <cdr-button
                   tag="a"
-                  :href="$withBase('/getting-started/as-a-designer/')"
+                  :href="$withBase('/resources/for-designers/')"
                   modifier="secondary"
                 >
                   View Designer Guide
@@ -46,7 +46,7 @@
               <div>
                 <cdr-button
                   tag="a"
-                  :href="$withBase('/getting-started/as-a-developer/')"
+                  :href="$withBase('/resources/for-developers/')"
                   modifier="secondary"
                 >
                   View Developer Guide
@@ -116,7 +116,7 @@
                     tag="h3"
                     class="home-card-heading stack-1"
                   >Cedar Design Libraries</cdr-text>
-                  <cdr-link :href="$withBase('/getting-started/as-a-designer/#design-toolkits')" modifier="standalone">Learn more about the toolkit</cdr-link>
+                  <cdr-link :href="$withBase('/resources/for-designers/#design-toolkits')" modifier="standalone">Learn more about the toolkit</cdr-link>
                 </div>
               </div>
               <div style="justify-items: end;">

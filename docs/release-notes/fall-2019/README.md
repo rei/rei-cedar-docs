@@ -66,7 +66,7 @@ For more information, please see the [Component Variables](https://rei.github.io
 
 #### Sticker Sheet
 
-Sticker sheets have been included in Web, Native, Token, and Icon libraries. To use the sticker sheet, [link the library](../../getting-started/as-a-designer/#using-the-toolkit) you need, select the sticker sheet from Symbols, right-click the sticker sheet, select "Detach from Symbol", ungroup, and copy or paste as needed.
+Sticker sheets have been included in Web, Native, Token, and Icon libraries. To use the sticker sheet, [link the library](../../resources/for-designers/#using-the-toolkit) you need, select the sticker sheet from Symbols, right-click the sticker sheet, select "Detach from Symbol", ungroup, and copy or paste as needed.
 
 #### Select Component
 A new Select component is available for use in the web components toolkit and the sticker sheet. For more information, see the [Select](../../components/selects/) page.
@@ -74,7 +74,7 @@ A new Select component is available for use in the web components toolkit and th
 ### Icon Contribution
 
 - The [guidelines for contributing icons](../../icons/resources/#contribution-process) to the [CDR · Icon Contribution](https://share.goabstract.com/99335c38-51ee-41c8-8454-38c2a70c4c7f) project has been updated
-- Minor updates to the [CDR Icons • vCurrent](https://share.goabstract.com/e9186773-0cc3-43a6-b7ff-54b163d95e00?sha=a814b05c391c93f5a7d39ce9508cd5238ae8fe0e) library to make icon symbols more consistent. For linking instructions, see the [Cedar UI Toolkit](../../getting-started/as-a-designer/#cedar-ui-toolkit) page
+- Minor updates to the [CDR Icons • vCurrent](https://share.goabstract.com/e9186773-0cc3-43a6-b7ff-54b163d95e00?sha=a814b05c391c93f5a7d39ce9508cd5238ae8fe0e) library to make icon symbols more consistent. For linking instructions, see the [Cedar UI Toolkit](../../resources/for-designers/#cedar-ui-toolkit) page
 - A new Sketch plugin has been added to help you [export Cedar-compliant icons that are not in the icon repo](../../icons/resources/#exporting-icons-that-aren’t-in-the-library)
 
 ### SVG in Icon Slot
