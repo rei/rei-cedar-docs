@@ -45,7 +45,7 @@ If you are not already on `@rei/cedar` >= 2.x.x, you will first need to [upgrade
 ## New Features
 
 ### Cedar Design Libraries Move to Figma
-The UI Toolkit has migrated to Figma! Designers can find updated information in the [getting started](../../resources/for-designers/) article. Additionally, Figma replaces Abstract in facilitating the design to development [hand-off process](../../getting-started/hand-off/).
+The UI Toolkit has migrated to Figma! Designers can find updated information in the [getting started](../../resources/for-designers/) article. Additionally, Figma replaces Abstract in facilitating the design to development [hand-off process](../../resources/hand-off/).
 
 ### Updated Brand Color Palette
 
