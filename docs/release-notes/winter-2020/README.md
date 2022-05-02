@@ -159,7 +159,7 @@ Previously we recommended listing `@rei/cedar` as a `peerDependency` and `devDep
 ### Updating Cedar CSS in a Component
 
 If you are updating a shared component:
-- In your main CSS file, use `@import url();` to load the CSS for each Cedar component and utility type being used in this component. See the [Getting Started as a Developer Guide](https://rei.github.io/rei-cedar-docs/getting-started/as-a-developer#Include-Component-and-Utility-CSS) guide for more information on loading Cedar CSS assets
+- In your main CSS file, use `@import url();` to load the CSS for each Cedar component and utility type being used in this component. See the [Getting Started as a Developer Guide](https://rei.github.io/rei-cedar-docs/resources/for-developers#Include-Component-and-Utility-CSS) guide for more information on loading Cedar CSS assets
 - You do not need to load the `cdr-fonts` or `reset` files in your component CSS, as those files will already be imported by the micro-site that consumes this package
 - If you run your build and inspect the compiled CSS file, you should see the `@import url();` statements left un-transformed. This will allow any micro-site that consumes this package to de-dupe and compile those assets
 - If your component has a local development environment you will need to update the entry file (usually named `local-development.js`) to import the Cedar reset and your main CSS file instead of importing `cedar.css`

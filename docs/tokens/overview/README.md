@@ -82,7 +82,7 @@ Token libraries are automatically available in the Assets panel when you create 
 
 When using design tokens, it’s your responsibility to pass the entire design token name to the developer during the design hand-off process—this can be through automated or manual methods.
 
-For more information, see [Getting Started As A Designer](../../getting-started/as-a-designer/).
+For more information, see [Getting Started As A Designer](../../resources/for-designers/).
 
 
 ### For Developers

@@ -250,7 +250,6 @@ This component has compliance with WCAG guidelines by:
 ## Resources
 
 - [Icons](../icon/)
-- [Iconography](../../icons/iconography/)
 
 <hr>
 
