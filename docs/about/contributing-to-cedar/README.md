@@ -21,7 +21,7 @@ There are many ways to contribute to Cedar—new components, enhancements, and b
 See the guidelines mentioned below on this page for more information about contributions, and reach out using [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) if you have any questions.  
 
 ## Component Contributions
-When creating a new component, first reach out to the Cedar team to see if the component is already under development in the [Cedar backlog](https://issues.rei.com/secure/RapidBoard.jspa?rapidView=1996) or if exists in a shared repo. If not, the Cedar team can help advise on how to [build resuable components](../../getting-started/building-components-with-cedar/) using REI design foundations and system assets, so that it can be pulled into the system in the future.
+When creating a new component, first reach out to the Cedar team to see if the component is already under development in the [Cedar backlog](https://issues.rei.com/secure/RapidBoard.jspa?rapidView=1996) or if exists in a shared repo. If not, the Cedar team can help advise on how to [build resuable components](../../resources/building-components-with-cedar/) using REI design foundations and system assets, so that it can be pulled into the system in the future.
 
 If you have a request for the Cedar team, please submit it in [#cedar-user-support](https://rei.slack.com/messages/CA58YCGN4) or come and talk to us during our weekly office hours.
 
