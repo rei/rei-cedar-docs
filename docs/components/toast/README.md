@@ -99,7 +99,7 @@
 
 CdrToast is a type of non-modal dialog used to communicate the status of a task or process. A proper toast is concise, time-relevant, and temporary.
 
-There are five different options for styling the toast, based on the [message type](../toast/#guidelines).
+There are five different options for styling the toast, based on the [message type](#guidelines).
 
 ### Default toast with icon
 

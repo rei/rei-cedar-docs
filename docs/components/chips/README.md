@@ -389,7 +389,7 @@ Chips allow users to make selections, filter content, or trigger actions. While 
 
 - Navigating a user. Instead, use [Buttons](../buttons/) or [Links](../links/)
 - Displaying non-interactive elements
-- Displaying more than two rows of chips. Instead use horizontal scrolling or [Select](../select/)
+- Displaying more than two rows of chips. Instead use horizontal scrolling or [Selects](../selects/)
 - Representing page tags
 
 ## The Basics
