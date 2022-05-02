@@ -30,7 +30,6 @@ module.exports = {
           { text: "Fall 2021", link: "/release-notes/fall-2021/" },
           { text: "Summer 2021", link: "/release-notes/summer-2021/" },
           { text: "Spring 2021", link: "/release-notes/spring-2021/" },
-          { text: "Winter 2021", link: "/release-notes/winter-2021/" },
           { text: "Deprecated", link: "/release-notes/deprecated/" },
           { text: "Archive", link: "/release-notes/archive/" },
         ]
