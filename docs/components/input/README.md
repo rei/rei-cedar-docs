@@ -464,7 +464,9 @@ Input field with icon wrapped in an actionable element outside the input field o
   label="Input label"
 >
   <template #info-action>
-    <cdr-link tag="button">
+    <cdr-link
+      tag="button"
+      aria-label="More information about happens when you click on the icon">
       <icon-information-fill
         inherit-color
       />
@@ -590,6 +592,7 @@ Input field with icon buttons inserted to the right. Up to 2 buttons can be pass
       <cdr-button
         :icon-only="true"
         class="cdr-input__button"
+        aria-label="More information about happens when you click on the icon"
       >
         <icon-credit-card
           inherit-color
@@ -610,6 +613,7 @@ Input field with icon buttons inserted to the right. Up to 2 buttons can be pass
         :icon-only="true"
         size="large"
         class="cdr-input__button"
+        aria-label="More information about happens when you click on the icon"
       >
         <icon-credit-card
           inherit-color
