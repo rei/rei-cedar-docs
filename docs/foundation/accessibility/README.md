@@ -136,7 +136,6 @@ Below are a collection of tools that can be used for accessibility testing:
     - WebAIM: [Color Contrast Checker](https://webaim.org/resources/contrastchecker/)
     - Colblindor: Coblis: [Color Blindness Simulator](https://www.color-blindness.com/coblis-color-blindness-simulator/)
     - Chrome Web Store: [High Contrast Chrome plugin](https://chrome.google.com/webstore/detail/high-contrast/djcfdncoelnlbldjfhinnjlhdjlikmph/related?hl=en)
-    - Chrome Web Store: [NoCoffee vision simulator](https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl)
     - Axe Browser Extension for easy accessibility testing: [axe Accessibility Testing](https://www.deque.com/axe/)
 
 </cdr-doc-table-of-contents-shell>
