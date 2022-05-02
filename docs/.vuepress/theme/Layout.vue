@@ -17,6 +17,12 @@
         </div>
       </div>
       <div :class="bodyClass">
+        <cdr-banner v-if="isStaging" type="warning">
+          <template #icon-left>
+            <icon-warning-fill />
+          </template>
+          <span><span style="font-weight: 500;">Cedar Design System documentation staging. For internal use only.</span> <cdr-link :href="prodEquivalentUrl">Return to production</cdr-link></span>
+        </cdr-banner>
         <div class="custom-layout" v-if="$page.frontmatter.layout_type">
           <component :is="$page.frontmatter.layout_type"/>
         </div>
@@ -43,6 +49,9 @@ export default {
     return {
       iconSprite,
       sideNavOpen: false,
+      isStaging: false,
+      url: '',
+      prodEquivalentUrl: '',
     }
   },
 
@@ -79,6 +88,9 @@ export default {
       this.sideNavOpen = false;
     }));
     this.navigateToHash();
+    this.url = window.document.location.href;
+    this.prodEquivalentUrl = this.url.replace('cedar-docs.rei-cloud.com', 'rei.github.io')
+    this.isStaging = this.url.includes('cedar-docs.rei-cloud') ? true : false;
   },
 
   beforeDestroy () {

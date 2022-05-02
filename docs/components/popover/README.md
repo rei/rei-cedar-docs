@@ -19,14 +19,14 @@
       "type": "do",
       "image": "popover/popover_content_do.png",
       "ratio": "4-3",
-      "alt": "Image showing proper popover usage",
+      "alt": "Popover text with hyperlink.",
       "caption": "link to additional content within a popover if additional information might be needed"
     },
     {
       "type": "dont",
       "image": "popover/popover_content_dont.png",
       "ratio": "4-3",
-      "alt": "Image showing improper popover usage",
+      "alt": "Popover with too much content for its container.",
       "caption": "overload the popover with too much content "
     }
   ],
@@ -36,14 +36,14 @@
       "type": "do",
       "image": "popover/popover_essential_do.png",
       "ratio": "4-3",
-      "alt": "Image showing proper popover usage",
+      "alt": "A popover correctly used to provide additional information.",
       "caption": "provide users with additional information in a popover when a feature or task might need clarification"
     },
     {
       "type": "dont",
       "image": "popover/popover_essential_dont.png",
       "ratio": "4-3",
-      "alt": "Image showing improper popover usage",
+      "alt": "A popover incorrectly used to display important password information.",
       "caption": "put information that's essential for completing a task in a popover"
     }
   ],
@@ -142,7 +142,8 @@ CdrPopover is a wrapper component that accepts a trigger element and popover con
 CdrPopover can also be controlled programmatically using the `open` prop. However, doing so means that you must implement certain behavior yourself:
 
 - The CdrPopover element and the trigger element must be wrapped in a div with `position: relative` and `width: max-content`.
-- The `open` property should be toggled to true when the trigger element is clicked. Close logic will be handled by CdrPopover.
+- The `open` property should be toggled to true when the trigger element is clicked.
+- You will need to add an event listener on the CdrPopover element for the `@closed` event. In the example below we use `@closed="open = false"` to change the value passed to the `open` prop.
 - The trigger element should have it's `aria-controls` property set to the ID of the CdrPopover, and it's `aria-haspopup` property set to "dialog".
 
 <cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location"
@@ -153,12 +154,11 @@ CdrPopover can also be controlled programmatically using the `open` prop. Howeve
   <cdr-button
     aria-haspopup="dialog"
     aria-controls="popover-custom-example"
-    @click="open = true"
-    @closed="open = false"
+    @click="open = !open"
   >
     Click me
   </cdr-button>
-  <cdr-popover id="popover-custom-example" position="top" :open="open">
+  <cdr-popover id="popover-custom-example" position="top" :open="open" @closed="open = false">
     <div>
       I provide additional information to the user
     </div>

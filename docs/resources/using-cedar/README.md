@@ -5,7 +5,7 @@
   "layout_type": "LayoutArticle",
   "breadcrumbs": [
     {
-      "text": "Getting Started/"
+      "text": "Resources/"
     }
   ]
 }
@@ -20,7 +20,7 @@ Cedar supports multiple tools and consumption methods. Reference the information
 ### Designer Toolkit
 The Cedar UI toolkit is distributed through shared libraries in Figma, and includes all published components and foundational styles.
 
-For more information about using the UI Toolkit, visit the [Getting Started for Designers](../as-a-designer/) article.
+For more information about using the UI Toolkit, visit the [For Designers](../for-designers/) article.
 
 ### Design Tokens
 Design tokens are special variables used to maintain a scalable visual system for UI development and brand consistency. Cedar design tokens store the visual design attributes that define the foundation of REI’s visual language, including color, typography, and spacing.

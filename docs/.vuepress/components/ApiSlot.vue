@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p v-if="slotsGettingStartedLink">Find more information about using Slots in the article <cdr-link :href="$withBase('/getting-started/as-a-developer/#add-content-using-slots')">Getting Started as a Developer.</cdr-link></p>
+    <p v-if="slotsGettingStartedLink">Find more information about using Slots in the article <cdr-link :href="$withBase('/resources/installing-cedar/#add-content-using-slots')">Installing Cedar.</cdr-link></p>
 
     <div class="api-slot" v-for="(apiSlot, index) in apiData" :key="apiSlot.text">
       <cdr-grid

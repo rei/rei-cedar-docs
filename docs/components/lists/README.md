@@ -23,14 +23,14 @@
       "type": "do",
       "image": "lists/lists_link_do_4-3.png",
       "ratio": "4-3",
-      "alt": "",
+      "alt": "List items about different product details correctly separated by bullets.",
       "caption": "link independent clauses and product details."
     },
     {
       "type": "dont",
       "image": "lists/lists_link_dont_4-3.png",
       "ratio": "4-3",
-      "alt": "",
+      "alt": "List items about different product details incorrectly appearing on the same bullet.",
       "caption": "link unrelated items together."
     }
   ],
@@ -39,14 +39,14 @@
       "type": "do",
       "image": "lists/lists_punctuation_do_4-3.png",
       "ratio": "4-3",
-      "alt": "",
+      "alt": "A two sentence description in a bullet list with a period after the first but not second sentence.",
       "caption": "end each sentence with a period except last sentence."
     },
     {
       "type": "dont",
       "image": "lists/lists_punctuation_dont_4-3.png",
       "ratio": "4-3",
-      "alt": "",
+      "alt": "List of two items with incorrect use of terminal punctuation.",
       "caption": "add terminal punctuation."
     }
   ],
@@ -301,7 +301,7 @@ WebAIM: [Semantic Structure: Using Lists Correctly](https://webaim.org/technique
 
 ## Props
 
-This component will bind any attribute that a [native HTML list element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul) accepts.
+This component will bind any attribute that a [native HTML list element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul) accepts (with exception of `type` attribute for ordered lists, use the `list-style-type` CSS property instead).
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props"/>
 

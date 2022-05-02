@@ -31,7 +31,7 @@ Below is a list of color tokens with descriptions and values. Web and mobile col
   - **For Android:** cdr_color_text_primary
   - **For iOS:** CdrColorTextPrimary  
 
-For more information on naming structure for design token, visit the [Design Tokens](../../components/design-tokens/#naming-structure-for-design-tokens/) overview.
+For more information on naming structure for design token, visit the [Design Tokens](../../tokens/overview/#naming-structure-for-design-tokens/) overview.
 
 <tokens-color />
 

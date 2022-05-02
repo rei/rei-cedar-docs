@@ -104,7 +104,7 @@ Update Notifications inform users of advisory information that enhances the site
 - Changing inline content based on user selection
 
 ### Don't Use When
-- The notification relates to an actionable element in a busy state (see [Loading Notifications](../update-and-loading-notifications/#loading-notifications))
+- The notification relates to an actionable element in a busy state (see [Loading Notifications](#loading-notifications))
 - Confirming that a task or process initiated by the user was completed successfully (see [Transient Status Notifications](../status-notifications/#transient-status-notifications))
 - Providing contextual information on the page processes (see [Transient Status Notifications](../status-notifications/#transient-status-notifications))
 - Providing errors, warnings, or success messaging related to user entered formatting, incomplete inputs, or invalid selections (see [Validation Notifications](../validation-notifications/))

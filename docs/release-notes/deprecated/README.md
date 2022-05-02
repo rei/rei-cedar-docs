@@ -199,6 +199,10 @@
 
 ## Cedar Components
 
+### Vue2 Cedar component library
+
+Cedar is moving to Vue3! After deprecation removal, Cedar Vue2 assets will be made available via the "REI-Cedar-Vue2" repo and NPM package.
+
 ### CdrCta
 
 The functionality of CdrCta has been merged into [CdrButton](../../components/buttons). See [the release notes](../summer-2020/#cdrcta-deprecated-and-merged-with-cdrbutton) for migration steps.
@@ -247,6 +251,11 @@ The flexbox based CdrRow and CdrCol have been replaced with the CSS grid based [
 | IconWarningTri     | IconWarningFill    |
 
 
+## Component Variables
+
+### CdrBanner
+
+- The CdrBanner component variable has been removed. [Messaging tokens](../../tokens/all-tokens/#colors) are available to replicate CdrBanner.
 
 
 ## Utility Classes

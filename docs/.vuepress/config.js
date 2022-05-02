@@ -26,6 +26,7 @@ module.exports = {
       {
         text: "Release Notes",
         items: [
+          { text: "Spring 2022", link: "/release-notes/spring-2022/" },
           { text: "Fall 2021", link: "/release-notes/fall-2021/" },
           { text: "Summer 2021", link: "/release-notes/summer-2021/" },
           { text: "Spring 2021", link: "/release-notes/spring-2021/" },
@@ -37,20 +38,21 @@ module.exports = {
       {
         text: "About",
         items: [
-          { text: "Cedar Design System", link: "/about/cedar-design-system/" },
+          { text: "Cedar's Purpose & Parts", link: "/about/cedar-design-system/" },
           { text: "Contributing to Cedar", link: "/about/contributing-to-cedar/" },
-          { text: "Browser Support", link: "/about/browser-support/" }
+          { text: "Browser Support", link: "/about/browser-support/" },
+          { text: "Get in Touch", link: "/about/get-in-touch/" }
         ]
       },
       {
-        text: "Getting Started",
+        text: "Resources",
         items: [
-          { text: "As a Designer", link: "/getting-started/as-a-designer/" },
-          { text: "As a Developer", link: "/getting-started/as-a-developer/" },
-          { text: "As a Mobile Developer", link: "/getting-started/as-a-mobile-developer/" },
-          { text: "Hand-off Process", link: "/getting-started/hand-off/" },
-          { text: "Using Cedar", link: "/getting-started/using-cedar/" },
-          { text: "Building Reusable Components", link: "/getting-started/building-components-with-cedar/" },
+          { text: "For Designers", link: "/resources/for-designers/" },
+          { text: "For Developers", link: "/resources/for-developers/"},
+          { text: "Hand-off Process", link: "/resources/hand-off/" },
+          { text: "Installing Cedar", link: "/resources/installing-cedar/" },
+          { text: "Building Reusable Components", link: "/resources/building-components-with-cedar/" },
+          { text: "Frequently Asked Questions", link: "/resources/frequently-asked-questions/" }
         ]
       },
       {

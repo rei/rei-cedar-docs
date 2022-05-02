@@ -26,7 +26,7 @@ We acknowledge that dealing with [breaking changes](#breaking-changes) in widely
 
 ## Update Your Cedar Dependencies and Imports
 
-Assuming you are already consuming the multi-package form of the Cedar Vue components (i.e, `@rei/cdr-assets`, `@rei/cdr-button`, `@rei/cdr-link`, etc.), you will need to update your Cedar dependencies in your `package.json` file, as well as update any Cedar imports in your code. If you are not yet using the Cedar Vue components, please see our [Getting Started as a Developer Guide](https://rei.github.io/rei-cedar-docs/getting-started/as-a-developer/) for more information.
+Assuming you are already consuming the multi-package form of the Cedar Vue components (i.e, `@rei/cdr-assets`, `@rei/cdr-button`, `@rei/cdr-link`, etc.), you will need to update your Cedar dependencies in your `package.json` file, as well as update any Cedar imports in your code. If you are not yet using the Cedar Vue components, please see our [Getting Started as a Developer Guide](https://rei.github.io/rei-cedar-docs/resources/for-developers/) for more information.
 
 Note that these steps will differ slightly depending on whether you are updating a micro-site or a component. Please reach out to the Cedar team if you have any questions, concerns, or need assistance with upgrading.
 

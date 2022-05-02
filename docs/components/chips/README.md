@@ -19,12 +19,14 @@
       "type": "do",
       "image": "chips/chips_do_case_1a.png",
       "ratio": "4-3",
+      "alt": "Chip with text in sentence case.",
       "caption": "use sentence case with only proper nouns capitalized."
     },
     {
       "type": "dont",
       "image": "chips/chips_dont_case_1b.png",
       "ratio": "4-3",
+      "alt": "Chip with text in title case.",
       "caption": "use title caps."
     }
   ],
@@ -34,12 +36,14 @@
       "type": "do",
       "image": "chips/chips_do_phrasing_2a.png",
       "ratio": "4-3",
+      "alt": "Chip with text using the positive phrasing set as my R E I.",
       "caption": "use positive phrasing"
     },
     {
       "type": "dont",
       "image": "chips/chips_dont_phrasing_2b.png",
       "ratio": "4-3",
+      "alt": "Chip with text using the negative phrasing do not set as my R E I.",
       "caption": "use negative phrasing for labels"
     }
   ],
@@ -49,12 +53,14 @@
       "type": "do",
       "image": "chips/chips_do_labels_3a.png",
       "ratio": "4-3",
+      "alt": "Chip with line representing a brief amount of text.",
       "caption": "make text brief."
     },
     {
       "type": "dont",
       "image": "chips/chips_dont_labels_3b.png",
       "ratio": "4-3",
+      "alt": "Chip with line representing too much text.",
       "caption": "put too much text in the chip."
     }
   ],
@@ -64,12 +70,14 @@
       "type": "do",
       "image": "chips/chips_do_punctuation_4a.png",
       "ratio": "4-3",
+      "alt": "Chip with text ending in no punctuation.",
       "caption": "write sentence fragments with no ending punctuation."
     },
     {
       "type": "dont",
       "image": "chips/chips_dont_punctuation_4b.png",
       "ratio": "4-3",
+      "alt": "Chip with text ending in punctuation.",
       "caption": "add terminal punctuation."
     }
   ],
@@ -79,12 +87,14 @@
       "type": "do",
       "image": "chips/chips_do_icon_5a.png",
       "ratio": "4-3",
+      "alt": "Two chips grouped together with icons on the right.",
       "caption": "use either icons in the right or the left slot per chip and chip group."
     },
     {
       "type": "dont",
       "image": "chips/chips_dont_icon_5b.png",
       "ratio": "4-3",
+      "alt": "Two chips grouped together, one with mismatched icons on both the left and right.",
       "caption": "put icons in the right and left slots in a single chip or chip group."
     }
   ],
@@ -94,12 +104,14 @@
       "type": "do",
       "image": "chips/chips_do_x_6a.png",
       "ratio": "4-3",
+      "alt": "Chip with x remove icon in the right slot.",
       "caption": "use the X remove icon in the right slot."
     },
     {
       "type": "dont",
       "image": "chips/chips_dont_x_6b.png",
       "ratio": "4-3",
+      "alt": "Chip with x remove icon incorrectly in the left slot.",
       "caption": "use the X remove icon in the left slot."
     }
   ],
@@ -109,12 +121,14 @@
       "type": "do",
       "image": "chips/chips_do_overflow_7a.png",
       "ratio": "4-3",
+      "alt": "A row of three chips with two overflowing into a new row.",
       "caption": "allow a group of chips to overflow to a new row."
     },
     {
       "type": "dont",
       "image": "chips/chips_dont_overflow_7b.png",
       "ratio": "4-3",
+      "alt": "A row of two chips with a line break causing three chips to flow into a new row.",
       "caption": "create excessive line breaks in a group of chips."
     }
   ],
@@ -124,12 +138,14 @@
       "type": "do",
       "image": "chips/chips_do_padding_8a.png",
       "ratio": "4-3",
+      "alt": "Two chips of different content sizes each with the right padding to accomodate their size.",
       "caption": "allow chip containers to hug their contents."
     },
     {
       "type": "dont",
       "image": "chips/chips_dont_padding_8b.png",
       "ratio": "4-3",
+      "alt": "Two chips of different content sizes with extra padding making them the same width.",
       "caption": "add extra padding and make all chips the same width."
     }
   ],
@@ -139,12 +155,14 @@
       "type": "do",
       "image": "chips/chips_do_sequence_9a.png",
       "ratio": "4-3",
+      "alt": "Three chips labeled in order with sequential numbers.",
       "caption": "display selection chips sequentially."
     },
     {
       "type": "dont",
       "image": "chips/chips_dont_sequence_9b.png",
       "ratio": "4-3",
+      "alt": "Three chips labeled out of order with random numbers.",
       "caption": "display selection chips in random order."
     }
   ],
@@ -154,12 +172,14 @@
       "type": "do",
       "image": "chips/chips_do_group_10a.png",
       "ratio": "4-3",
+      "alt": "Three chips in a group offering a selection.",
       "caption": "display chips that offer a selection as a group."
     },
     {
       "type": "dont",
       "image": "chips/chips_dont_group_10b.png",
       "ratio": "4-3",
+      "alt": "A single chip incorrectly offering a selection.",
       "caption": "display a single chip to offer a selection."
     }
   ],
@@ -369,7 +389,7 @@ Chips allow users to make selections, filter content, or trigger actions. While 
 
 - Navigating a user. Instead, use [Buttons](../buttons/) or [Links](../links/)
 - Displaying non-interactive elements
-- Displaying more than two rows of chips. Instead use horizontal scrolling or [Select](../select/)
+- Displaying more than two rows of chips. Instead use horizontal scrolling or [Selects](../selects/)
 - Representing page tags
 
 ## The Basics

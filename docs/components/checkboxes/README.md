@@ -23,14 +23,14 @@
       "type": "do",
       "image": "checkbox/checkbox_case_do_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing proper checkbox sentence case.",
+      "alt": "Four checkboxes with labels in sentence case.",
       "caption": "use sentence case, with only proper nouns capitalized."
     },
     {
       "type": "dont",
       "image": "checkbox/checkbox_case_dont_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing improper title caps use.",
+      "alt": "Four checkboxes with labels in title case.",
       "caption": "use title caps for labels."
     }
   ],
@@ -39,14 +39,14 @@
       "type": "do",
       "image": "checkbox/checkbox_fragment_do_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing proper checkbox label with no ending punctuation",
+      "alt": "Checkbox label without punctuation at the end.",
       "caption": "write labels as sentence fragments with no ending punctuation."
     },
     {
       "type": "dont",
       "image": "checkbox/checkbox_fragment_dont_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing improper terminal punctuation.",
+      "alt": "Checkbox label with punctuation at the end.",
       "caption": "add terminal punctuation at the end of a label."
     }
   ],
@@ -55,14 +55,14 @@
       "type": "do",
       "image": "checkbox/checkbox_label_do_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing proper checkbox label with brief copy",
+      "alt": "A proper checkbox label with brief copy.",
       "caption": "make labels brief."
     },
     {
       "type": "dont",
       "image": "checkbox/checkbox_label_dont_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing a label with too much text",
+      "alt": "A checkbox label with too much text.",
       "caption": "put too much text in the label."
     }
   ],
@@ -71,14 +71,14 @@
       "type": "do",
       "image": "checkbox/checkbox_positivecopy_do_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing proper checkbox positive phrasing",
+      "alt": "A checkbox label with the positive phrase turn on notifications.",
       "caption": "use positive phrasing for labels."
     },
     {
       "type": "dont",
       "image": "checkbox/checkbox_positivecopy_dont_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing a label with negative phrasing",
+      "alt": "A checkbox label with the negative phrase turn off notifications.",
       "caption": "use negative phrasing for labels."
     }
   ],
@@ -87,14 +87,14 @@
       "type": "do",
       "image": "checkbox/checkbox_simplify_do_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing proper simple checkbox usage",
+      "alt": "A single checkbox.",
       "caption": "use a single checkbox."
     },
     {
       "type": "dont",
       "image": "checkbox/checkbox_simplify_dont_4-3.png",
       "ratio": "4-3",
-      "alt": "Image showing a radio button used when a checkbox is preferred",
+      "alt": "A radio button instead of the preferred checkbox.",
       "caption": "use radio buttons or toggles for a simple toggle selection."
     }
   ],

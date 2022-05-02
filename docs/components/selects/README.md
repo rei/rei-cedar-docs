@@ -13,14 +13,14 @@
       "type": "do",
       "image": "select/select_label_do_16-9.png",
       "ratio": "16-9",
-      "alt": "Image showing a State/Province label ",
+      "alt": "Dropdown with appropriately concise State/Province label. ",
       "caption": "use concise and meaningful labels."
     },
     {
       "type": "dont",
       "image": "select/select_label_dont_16-9.png",
       "ratio": "16-9",
-      "alt": "Image showing STATE/PROVINCE label",
+      "alt": "Dropdown with incorrect use of label that includes instructions.",
       "caption": "use instructional or help text for the label."
     }
   ],
@@ -29,14 +29,14 @@
       "type": "do",
       "image": "select/select_case_do_16-9.png",
       "ratio": "16-9",
-      "alt": "Image showing a State/Province label ",
+      "alt": "Dropdown with correct use of sentence case in the label.",
       "caption": "use sentence case for labels."
     },
     {
       "type": "dont",
       "image": "select/select_case_dont_16-9.png",
       "ratio": "16-9",
-      "alt": "Image showing STATE/PROVINCE label",
+      "alt": "Dropdown with incorrect use of all caps in the label.",
       "caption": "use all caps for labels."
     }
   ],
@@ -45,14 +45,14 @@
       "type": "do",
       "image": "select/select_punctuation_do_16-9.png",
       "ratio": "16-9",
-      "alt": "Image showing a State/Province label ",
+      "alt": "Dropdown label correctly displayed with no end punctuation.",
       "caption": "remove all terminal punctuation."
     },
     {
       "type": "dont",
       "image": "select/select_punctuation_dont_16-9.png",
       "ratio": "16-9",
-      "alt": "Image showing State/Province: label",
+      "alt": "Dropdown label displayed incorrectly with a colon as terminal punctuation.",
       "caption": "use colons after labels."
     }
   ],

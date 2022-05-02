@@ -10,14 +10,14 @@
       "type": "do",
       "image": "rating/rating_stars_do_16-9.png",
       "ratio": "16-9",
-      "alt": "Image showing rating with 5 stars",
+      "alt": "Rating component correctly displaying 5 stars.",
       "caption": "show all 5 stars."
     },
     {
       "type": "dont",
       "image": "rating/rating_stars_dont_16-9.png",
       "ratio": "16-9",
-      "alt": "Image showing rating with fewer than 5 stars",
+      "alt": "Rating component incorrectly displaying 3 instead of 5 stars.",
       "caption": "adjust the number of stars."
     }
   ],
@@ -26,14 +26,14 @@
       "type": "do",
       "image": "rating/rating_number_do_16-9.png",
       "ratio": "16-9",
-      "alt": "Image showing rating with number of reviews text",
+      "alt": "Rating component correctly labeled and displaying the total number of reviews.",
       "caption": "display the number of reviews next to the star rating."
     },
     {
       "type": "dont",
       "image": "rating/rating_number_dont_16-9.png",
       "ratio": "16-9",
-      "alt": "Image showing rating without number of reviews text",
+      "alt": "Rating component incorrectly displayed without number of reviews and label.",
       "caption": "only show the stars."
     }
   ],
@@ -42,14 +42,14 @@
       "type": "do",
       "image": "rating/rating_none_do_16-9.png",
       "ratio": "16-9",
-      "alt": "Image showing rating with empty stars",
+      "alt": "Rating component displaying empty stars and 'Write a review' label.",
       "caption": "show an empty rating when no reviews are available."
     },
     {
       "type": "dont",
       "image": "rating/rating_none_dont_16-9.png",
       "ratio": "16-9",
-      "alt": "Image showing the text 'no ratings available'",
+      "alt": "Ratings component with no stars and 'no ratings available' label.",
       "caption": "hide rating in lieu of ‘No Ratings Available’ or blank space."
     }
   ],
@@ -250,7 +250,6 @@ This component has compliance with WCAG guidelines by:
 ## Resources
 
 - [Icons](../icon/)
-- [Iconography](../../icons/iconography/)
 
 <hr>
 

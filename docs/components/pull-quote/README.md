@@ -23,14 +23,14 @@
       "type": "do",
       "image": "pull-quote/quotes_pull_indent_do.png",
       "ratio": "4-3",
-      "alt": "Image showing proper pull quote use.",
+      "alt": "Pull quote correctly positioned near article text.",
       "caption": "position the quote near the surrounding text."
     },
     {
       "type": "dont",
       "image": "pull-quote/quotes_pull_indent_dont.png",
       "ratio": "4-3",
-      "alt": "Image showing improper pull quote use in an article",
+      "alt": "Pull quote incorrectly indented in an article.",
       "caption": "use for indenting text content."
     }
   ],
@@ -39,14 +39,14 @@
       "type": "do",
       "image": "pull-quote/quotes_pull_position_do.png",
       "ratio": "4-3",
-      "alt": "Image showing proper pull quote use.",
+      "alt": "Pull quote correctly placed in relation to the article text.",
       "caption": "relate the quote to the surrounding text."
     },
     {
       "type": "dont",
       "image": "pull-quote/quotes_pull_position_dont.png",
       "ratio": "4-3",
-      "alt": "Image showing improper pull quote use in an article",
+      "alt": "Pull quote incorrectly positioned randomly on a page.",
       "caption": "position quotes in a random location on the page."
     }
   ],
@@ -55,14 +55,14 @@
       "type": "do",
       "image": "pull-quote/quotes_pull_too_many_do.png",
       "ratio": "4-3",
-      "alt": "Image showing proper pull quote use.",
+      "alt": "Pull quote correctly used to emphasize the page's content.",
       "caption": "use for emphasizing content or additional content."
     },
     {
       "type": "dont",
       "image": "pull-quote/quotes_pull_too_many_dont.png",
       "ratio": "4-3",
-      "alt": "Image showing too many pull quotes in an article",
+      "alt": "A page incorrectly using too many pull quotes.",
       "caption": "use too many pull quotes."
     }
   ],
