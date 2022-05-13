@@ -12,7 +12,7 @@
       </div>
       <div class="cdr-doc-code-snippet__action-wrapper" v-if="sandboxHrefComputed">
         <cdr-link modifier="standalone" class="cdr-doc-code-snippet__action" :href="sandboxHrefComputed" target="_blank" rel="noopener noreferrer">
-          <cdr-icon class="cdr-doc-code-snippet__action-icon" title="A hallow box with a small solid box in each box panel" use="#brand-code-sandbox"/>
+          <cdr-icon class="cdr-doc-code-snippet__action-icon" title="A hollow box with a small solid box in each box panel" use="#brand-code-sandbox"/>
           View on CodeSandbox
         </cdr-link>
       </div>
