@@ -466,8 +466,9 @@ Input field with icon wrapped in an actionable element outside the input field o
   <template #info-action>
     <cdr-link
       tag="button"
-      aria-label="More information about happens when you click on the icon">
+      aria-label="An external link to more information">
       <icon-information-fill
+        title ="More information"
         inherit-color
       />
     </cdr-link>
@@ -530,7 +531,7 @@ Input field with icon inserted into the input field on left. Icon is decorative 
   label="Input label"
 >
   <template #pre-icon>
-    <icon-location-pin-stroke inherit-color />
+    <icon-location-pin-stroke title="a decorative icon example inserted into the input field on its left side" inherit-color />
   </template>
 </cdr-input>
 ```
@@ -551,6 +552,7 @@ Input field with icon inserted into the input field on right. Icon is decorative
 >
   <template #post-icon>
     <icon-credit-card
+      title="a decorative icon example inserted into the input field on its right side"
       inherit-color
       class="cdr-button__icon"
     />
@@ -579,9 +581,11 @@ Input field with icon buttons inserted to the right. Up to 2 buttons can be pass
       <cdr-tooltip class="cdr-input__button" id="input-tooltip">
         <template #trigger>
           <cdr-button
+            aria-label="Clear input text"
             :icon-only="true"
           >
             <icon-x-lg
+              title="A large X"
               inherit-color
             />
           </cdr-button>
@@ -595,6 +599,7 @@ Input field with icon buttons inserted to the right. Up to 2 buttons can be pass
         aria-label="More information about happens when you click on the icon"
       >
         <icon-credit-card
+          title="icon representing a credit-card"
           inherit-color
         />
       </cdr-button>
@@ -785,7 +790,7 @@ export default {
 
 ### Inputs with Icons
 
-- Icons inserted into input fields are decorative, not inteded for any action
+- Icons inserted into input fields are decorative, not intended for any action
 
 ### Required Fields
 
@@ -795,7 +800,7 @@ export default {
 
 # API
 
-<cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
+<cdr-icon class="cdr-doc-code-snippet__action-icon" title="An outline caricature of a cat" use="#brand-github"/> View it on Github: 
 <cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
 ## Props
