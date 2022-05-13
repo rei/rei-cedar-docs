@@ -311,8 +311,8 @@ Select control with icon outside select field on right.
   :options="defaultOptions"
 >
   <template #info-action>
-    <cdr-link tag="button">
-      <icon-information-fill/>
+    <cdr-link tag="button" aria-label="An example display of an additional information icon link">
+      <icon-information-fill title="info icon"/>
     </cdr-link>
   </template>
 </cdr-select>
