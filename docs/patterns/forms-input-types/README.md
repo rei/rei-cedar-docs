@@ -343,7 +343,7 @@ Cedar provides components for the basic HTML input elements: [CdrInput](../../co
     <cdr-popover id="popover-example" position="top">
       <template #trigger>
         <cdr-link tag="button">
-          <icon-information-stroke inherit-color/>
+          <icon-information-stroke title="Why we ask for gender" inherit-color/>
         </cdr-link>
       </template>
       <div>
