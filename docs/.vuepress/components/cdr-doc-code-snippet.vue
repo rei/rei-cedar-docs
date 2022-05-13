@@ -6,7 +6,7 @@
     <div class="cdr-doc-code-snippet__actions" v-if="copyButton">
       <div class="cdr-doc-code-snippet__action-wrapper">
         <cdr-link modifier="standalone" class="cdr-doc-code-snippet__action" :href="repositoryHref" target="_blank" rel="noopener noreferrer" v-if="repositoryHref">
-          <cdr-icon class="cdr-doc-code-snippet__action-icon" title="An outlined caricature of a cat" use="#brand-github"/>
+          <cdr-icon class="cdr-doc-code-snippet__action-icon" title="An outline caricature of a cat" use="#brand-github"/>
           View on GitHub
         </cdr-link>
       </div>
