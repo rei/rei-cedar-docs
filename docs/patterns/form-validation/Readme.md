@@ -130,7 +130,7 @@ Once the user has created an error and validation has been triggered, it's neces
   - Ensure the notification content is hidden or remove the aria-errormessage attribute or its value
 - **Must Not**
   - Use color alone to convey a field in error
-  - Expose aria-errormessage for an object with an aria-invalid value of false
+  - Expose `aria-error` message for an object with an aria-invalid value of false
 - **Should**
   - Preserve as much user-entered input as possible
   - Add information about the error in the page `<title>` if the submission causes a page reload or a new page load
