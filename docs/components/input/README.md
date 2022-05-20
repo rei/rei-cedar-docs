@@ -412,8 +412,8 @@ Use the `type="number"` attribute only for input fields that reference a numeric
 
 ```html
 <div>
-  <cdr-button :icon-only="true" :with-background="true" @click="decrement" aria-label="Decrement counter" :disabled="decrementDisabled">
-    <icon-minus-lg/>
+  <cdr-button :icon-only="true" :with-background="true" @click="decrement" :disabled="decrementDisabled">
+    <icon-minus-lg aria-label="Decrement counter"/>
   </cdr-button>
   <cdr-input
     v-model="defaultModel"
@@ -422,8 +422,8 @@ Use the `type="number"` attribute only for input fields that reference a numeric
     type="number"
     style="display: inline-block; width: 160px;"
   />
-  <cdr-button :icon-only="true" :with-background="true" @click="increment" aria-label="Increment counter">
-    <icon-plus-lg/>
+  <cdr-button :icon-only="true" :with-background="true" @click="increment" >
+    <icon-plus-lg aria-label="Increment counter"/>
   </cdr-button>
 </div>
 ```
@@ -468,7 +468,6 @@ Input field with icon wrapped in an actionable element outside the input field o
       tag="button"
       aria-label="An external link to more information">
       <icon-information-fill
-        title ="More information"
         inherit-color
       />
     </cdr-link>
