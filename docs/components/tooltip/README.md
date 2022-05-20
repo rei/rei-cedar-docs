@@ -125,9 +125,9 @@ CdrTooltip is a wrapper component that accepts a trigger element and tooltip con
 ```html
 <cdr-tooltip id="tooltip-example" position="top">
   <template #trigger>
-    <cdr-button :icon-only="true" :with-background="true">
+    <cdr-button :icon-only="true" :with-background="true" aria-label="Overview example: additional information">
       <template #icon>
-        <icon-information-stroke/>
+        <icon-information-stroke title="info icon"/>
       </template>
     </cdr-button>
   </template>
@@ -158,10 +158,11 @@ CdrTooltip can also be controlled programmatically using the `open` prop. Howeve
     @blur="open = false"
     :icon-only="true"
     :with-background="true"
+    aria-label="Custom Trigger example: additional information"
     aria-describedby="tooltip-custom-example"
   >
     <template #icon>
-      <icon-information-stroke/>
+      <icon-information-stroke title="info icon"/>
     </template>
   </cdr-button>
   <cdr-tooltip id="tooltip-custom-example" position="top" :open="open">
