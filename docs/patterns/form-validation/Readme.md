@@ -127,10 +127,10 @@ Once the user has created an error and validation has been triggered, it's neces
   - Map the associated id of the notification instruction to the input via `aria-describedby` (widely supported) or [aria-errormessage](https://a11ysupport.io/tech/aria/aria-errormessage_attribute) (not yet widely supported)
   - Append `aria-live` `role="status"`, or `role="alert"` to the notification container
   - Not hide the content of error messages when `aria-errormessage` is pertinent
-  - Ensure the notification content is hidden or remove the aria-errormessage attribute or its value
+  - Ensure the notification content is hidden or remove the `aria-errormessage` attribute or its value
 - **Must Not**
   - Use color alone to convey a field in error
-  - Expose `aria-error` message for an object with an aria-invalid value of false
+  - Expose `aria-errormessage` for an object with an aria-invalid value of false
 - **Should**
   - Preserve as much user-entered input as possible
   - Add information about the error in the page `<title>` if the submission causes a page reload or a new page load
