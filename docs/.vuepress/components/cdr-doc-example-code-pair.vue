@@ -1,11 +1,13 @@
 <template>
   <div class="cdr-doc-example-code-pair" :class="{'cdr-doc-example-code-pair--not-interactive': !interactive }">
-    <div class="cdr-doc-example-code-pair__item"
+    <div class="cdr-doc-example-code-pair__item" 
           :class="'cdr-doc-example-code-pair__item-background--' + backgroundColor"
           v-for="slotContent, slotLabel in $slots">
+          
+        
       <div class="cdr-doc-example-code-pair__item-background-toggle" v-if="backgroundToggle">
         <label
-          class="cdr-doc-item-background-toggle__button"
+          class="cdr-doc-item-background-toggle__button" tabindex="1"
           :class="{'cdr-doc-item-background-toggle__button--active': backgroundColor === 'primary'}"
         >
           <input
@@ -16,7 +18,7 @@
             Primary
         </label>
         <label
-          class="cdr-doc-item-background-toggle__button"
+          class="cdr-doc-item-background-toggle__button" tabindex="1"
           :class="{'cdr-doc-item-background-toggle__button--active': backgroundColor === 'secondary'}"
         >
           <input
@@ -318,6 +320,13 @@
       border-radius: 0 $cdr-doc-border-radius-default $cdr-doc-border-radius-default 0;
       border-right-width: 1px;
     }
+     &:hover,
+     &:focus-within {
+      color: $cdr-color-text-button-secondary-hover;
+      fill: $cdr-color-text-button-secondary-hover;
+      background-color: $cdr-color-background-button-secondary-hover;
+      box-shadow: inset 0 0 0 1px $cdr-color-border-button-secondary-hover, $cdr-prominence-raised;
+  }
   }
 
   .cdr-doc-item-background-toggle__button--active {
@@ -330,4 +339,5 @@
     overflow: hidden;
     clip: rect(1px, 1px, 1px, 1px);
   }
+
 </style>
