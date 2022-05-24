@@ -318,6 +318,14 @@
       border-radius: 0 $cdr-doc-border-radius-default $cdr-doc-border-radius-default 0;
       border-right-width: 1px;
     }
+
+    &:hover,
+    &:focus-within {
+      color: $cdr-color-text-button-secondary-hover;
+      fill: $cdr-color-text-button-secondary-hover;
+      background-color: $cdr-color-background-button-secondary-hover;
+      box-shadow: inset 0 0 0 1px $cdr-color-border-button-secondary-hover, $cdr-prominence-raised;
+    }
   }
 
   .cdr-doc-item-background-toggle__button--active {
