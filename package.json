@@ -41,6 +41,7 @@
     "@rei/cdr-component-variables": "^8.0.0",
     "@rei/cdr-tokens": "^10.0.3",
     "@rei/cedar": "^12.0.0",
+    "@stackblitz/sdk": "^1.6.0",
     "throttle-debounce": "^3.0.0"
   },
   "browserslist": [

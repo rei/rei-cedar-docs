@@ -27,7 +27,7 @@
 
 <script>
 import { CdrLink } from '@rei/cedar';
-import buildSandbox from '../../../utils/buildSandbox';
+import buildSandbox from '../../../utils/buildVue3Sandbox';
 
 export default {
   name: 'CdrDocCodeSnippet',
