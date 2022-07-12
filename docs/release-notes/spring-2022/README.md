@@ -27,6 +27,26 @@
 
 - If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your micro-site.
 
+## 12.1.0
+
+See what's changed on <cdr-link style="vertical-align: baseline" href="https://github.com/rei/rei-cedar/releases/tag/v12.1.0">GitHub <icon-brand-github /></cdr-link>
+
+### Performance improvements
+
+#### Font swapping
+
+We've added the `font-display: swap` property to our REI brand font defintions. This property allows the browser to subsitute the fallback font until the brand fonts are successfully loaded, serving to prevent a flash of invisible text on slower connections.
+
+### Accessibility improvements
+
+#### CdrRating
+
+CdrRating has been updated to improve the contrast ratio between the filled and non-filled state of the rating stars. The component now meets the WCAG 2.1 success criterion for <cdr-link href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html">non-text contrast</cdr-link>.
+
+Example
+<cdr-rating rating="3.33333" count="100" />
+
+
 ## Bug Fixes
 
 ### CdrPopover
