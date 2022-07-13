@@ -35,13 +35,13 @@ See what's changed on <cdr-link style="vertical-align: baseline" href="https://g
 
 #### Font swapping
 
-We've added the `font-display: swap` property to our REI brand font defintions. This property allows the browser to subsitute the fallback font until the brand fonts are successfully loaded, serving to prevent a flash of invisible text on slower connections.
+We've added the `font-display: swap` property to our REI brand font defintions. This property allows the browser to subsitute the fallback font until the brand fonts are successfully loaded, which serves to prevent a flash of invisible text on slower connections.
 
 ### Accessibility fixes
 
 #### CdrRating
 
-CdrRating has been updated to improve the contrast ratio between the filled and non-filled state of the rating stars. The component now meets the WCAG 2.1 success criterion for <cdr-link href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html">non-text contrast</cdr-link>.
+CdrRating is updated to improve the contrast ratio between the filled and non-filled state of the rating stars. The component now meets the WCAG 2.1 success criterion for <cdr-link href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html">non-text contrast</cdr-link>.
 
 Example
 <cdr-rating rating="3.33333" count="100" />
@@ -50,7 +50,7 @@ Example
 
 #### Switch
 
-New tokens have been added to support the upcoming CdrSwitch component releasing with the Vue 3 version of Cedar.
+We've added new tokens to support the upcoming CdrSwitch component, which will be released with Cedar's Vue 3 version.
 
 ## Bug Fixes
 
