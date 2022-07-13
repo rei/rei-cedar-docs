@@ -6,13 +6,13 @@
     <div class="cdr-doc-code-snippet__actions" v-if="copyButton">
       <div class="cdr-doc-code-snippet__action-wrapper">
         <cdr-link modifier="standalone" class="cdr-doc-code-snippet__action" :href="repositoryHref" target="_blank" rel="noopener noreferrer" v-if="repositoryHref">
-          <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/>
+          <cdr-icon class="cdr-doc-code-snippet__action-icon" title="An outline caricature of a cat" use="#brand-github"/>
           View on GitHub
         </cdr-link>
       </div>
       <div class="cdr-doc-code-snippet__action-wrapper" v-if="sandboxHrefComputed">
         <cdr-link modifier="standalone" class="cdr-doc-code-snippet__action" :href="sandboxHrefComputed" target="_blank" rel="noopener noreferrer">
-          <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-code-sandbox"/>
+          <cdr-icon class="cdr-doc-code-snippet__action-icon" title="A hollow box with a small solid box in each box panel" use="#brand-code-sandbox"/>
           View on CodeSandbox
         </cdr-link>
       </div>
