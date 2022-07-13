@@ -30,6 +30,18 @@
 
 <br>
 
+## 11.3.2
+
+### Accessibility fixes
+
+#### CdrRating
+
+CdrRating is updated to improve the contrast ratio between the filled and non-filled state of the rating stars. The component now meets the WCAG 2.1 success criterion for <cdr-link href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html">non-text contrast</cdr-link>.
+
+Example
+<cdr-rating rating="3.33333" count="100" />
+
+
 ## 11.3.1 
 
 See what's changed on <cdr-link style="vertical-align: baseline" href="https://github.com/rei/rei-cedar/commit/c06fbeb241b97e29cad35d7eceea8fd15b583cdb">GitHub <icon-brand-github /></cdr-link>
