@@ -1,6 +1,6 @@
 {
   "name": "rei-cedar-docs",
-  "version": "12.0.0",
+  "version": "12.1.0",
   "description": "This is the API documentation site for REI Cedar 2 Framework components",
   "private": false,
   "scripts": {
@@ -39,9 +39,8 @@
   },
   "dependencies": {
     "@rei/cdr-component-variables": "^8.0.0",
-    "@rei/cdr-tokens": "^10.0.3",
-    "@rei/cedar": "^12.0.0",
-    "@stackblitz/sdk": "^1.6.0",
+    "@rei/cdr-tokens": "^10.1.0",
+    "@rei/cedar": "^12.1.0",
     "throttle-debounce": "^3.0.0"
   },
   "browserslist": [
