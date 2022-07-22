@@ -118,7 +118,8 @@
 
 ## Overview
 
-TBD. 
+Switch is a system-wide control that is used to quickly change between two possible states. Toggles are only used for these binary actions that occur immediately after the user makes any changes.
+
 
 <cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location"
 :sandbox-data="$page.frontmatter.sandboxData" >
