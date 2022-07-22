@@ -85,8 +85,10 @@
 
 <cdr-doc-table-of-contents-shell>
 
-# Overview
-## Default (standard spacing)
+## Overview
+Switch is a system-wide control that is used to quickly change between two possible states. Toggles are only used for these binary actions that occur immediately after the user makes any changes.
+
+### Default (standard spacing)
 
 Default switch size and standard spacing.
 
@@ -101,7 +103,7 @@ Default switch size and standard spacing.
 ```
 </cdr-doc-example-code-pair>
 
-## Default (full-width spacing)
+### Default (full-width spacing)
 
 Default switch size and full-width spacing.
 
@@ -116,7 +118,7 @@ Default switch size and full-width spacing.
 ```
 </cdr-doc-example-code-pair>
 
-## Large (standard spacing)
+### Large (standard spacing)
 
 Default switch size and standard spacing.
 
@@ -131,7 +133,7 @@ Default switch size and standard spacing.
 ```
 </cdr-doc-example-code-pair>
 
-## Large (standard)
+### Large (standard)
 
 Default switch size, standard spacing, and a label with custom styling.
 
@@ -159,27 +161,23 @@ This component complies with WCAG guidelines by:
 - Setting the `role` of the switch button element to `switch` 
 - Applying the `aria-checked` attribute
 
-This component has compliance with WCAG guidelines by:
-
-- Setting the `aria-hidden="true"` so that the pull quote cannot be read by a screen reader
-
 <hr>
 
-# Guidelines
+## Guidelines
 
-## Use When
+### Use When
 
 - Displaying two options (yes or no; on or off) 
 - Changing system-level settings, preferences, or other functions 
 - The change needs to take immediate effect 
 
-## Don't Use When
+### Don't Use When
 
 - Requiring the user to save or submit to apply the state. Instead, use checkboxes or radio buttons 
 - Showing more than one option. Instead, use checkboxes 
 - Allowing users to filter. Instead, use checkboxes or chips
 
-## Content
+### Content
 
 - Keep labels short and direct 
 - The label should describe what the control will do when the switch is on 
@@ -187,7 +185,7 @@ This component has compliance with WCAG guidelines by:
 - Start labels with a capital letter and use sentence case 
 - Labels should have one or two words, preferably nouns, that describe the functionality of the switch
 
-## Responsiveness
+### Responsiveness
 
 When a pull quote is displayed at XS breakpoint, the left border will appear below the pull quote and will use a smaller font size.
 
@@ -201,9 +199,7 @@ When a pull quote is displayed at XS breakpoint, the left border will appear bel
 
 <do-dont :examples="$page.frontmatter.usage" />
 
-## Behavior
-
-When making decisions about whether to use a button, links or chips, consider the following:
+### Choosing the right component
 
 <cdr-table striped>
   <tbody>
@@ -258,17 +254,17 @@ When making decisions about whether to use a button, links or chips, consider th
   </tbody>
 </cdr-table>
 
-# API
+## API
 
-## Props
+### Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-## Slots
+### Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Events 
+### Events 
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
 
