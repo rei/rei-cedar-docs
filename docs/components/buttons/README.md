@@ -187,9 +187,9 @@
 
 <cdr-doc-table-of-contents-shell tab-name="Overview">
 
-# Overview
+## Overview
 
-## Primary
+### Primary
 
 Use primary buttons for actions to complete a task or to move forward in a process such as &quot;Add to cart.&quot; There is only one primary action per major page section.
 
@@ -204,7 +204,7 @@ Use primary buttons for actions to complete a task or to move forward in a proce
 
 
 
-## Secondary
+### Secondary
 
 Use secondary buttons for all actions that do not move the user to the next step or require additional user actions such as &quot;Add to wish list&quot; or &quot;Find a campout near you.&quot;
 
@@ -217,7 +217,7 @@ Use secondary buttons for all actions that do not move the user to the next step
 
 </cdr-doc-example-code-pair>
 
-## Alternative Styles
+### Alternative Styles
 
 Use `sale` or `dark` for alternative button styling.
 
@@ -232,7 +232,7 @@ Use `sale` or `dark` for alternative button styling.
 
 </cdr-doc-example-code-pair>
 
-## Link Style
+### Link Style
 
 Use `link` modifier to render a button that is styled like a CdrLink. This can be used to create links with the padding and sizing options of a button. Can be used with the `tag` property set to the default `"button"` or `"a"`. For rendering a link inline with text, use [CdrLink](../links). To render a button that behaves like a link, use a [CdrButton with link tag](#button-with-link-tag).
 
@@ -246,7 +246,7 @@ Use `link` modifier to render a button that is styled like a CdrLink. This can b
 
 </cdr-doc-example-code-pair>
 
-## Text and Icon
+### Text and Icon
 
 Pair an icon with text to improve recognition about an object or action.
 
@@ -280,7 +280,7 @@ Pair an icon with text to improve recognition about an object or action.
 
 </cdr-doc-example-code-pair>
 
-## Icon Only
+### Icon Only
 
 Use icons to visually communicate an object or action in a limited space. Include alternative text to describe what the button does.
 
@@ -301,7 +301,7 @@ Use icons to visually communicate an object or action in a limited space. Includ
 
 </cdr-doc-example-code-pair>
 
-## Icon Only With Background
+### Icon Only With Background
 
 Use `with-background` property in conjunction with the `icon-only` property to make icon buttons more identifiable. Include alternative text to describe what the button does.
 
@@ -323,7 +323,7 @@ Use `with-background` property in conjunction with the `icon-only` property to m
 
 </cdr-doc-example-code-pair>
 
-## Stateful Button
+### Stateful Button
 
 For buttons that trigger asynchronous actions, use the `click` event and dynamic properties in order to change the label or state of a button.
 
@@ -338,7 +338,7 @@ For buttons that trigger asynchronous actions, use the `click` event and dynamic
 </cdr-doc-example-code-pair>
 
 
-## Full Width
+### Full Width
 
 Displays at full width of its container.
 
@@ -356,7 +356,7 @@ Displays at full width of its container.
 </cdr-doc-example-code-pair>
 
 
-## Button With Link Tag
+### Button With Link Tag
 
 For a CdrButton that looks like a button but behaves like a link, set `tag="a"` and pass an `href`.
 
@@ -373,7 +373,7 @@ For a CdrButton that looks like a button but behaves like a link, set `tag="a"` 
 
 </cdr-doc-example-code-pair>
 
-## Sizing
+### Sizing
 
 Change the button size based on where the button is used. The default size is medium.
 
@@ -421,9 +421,9 @@ This component has no specific WCAG compliance attributes built into the control
 
 <hr>
 
-# Guidelines
+## Guidelines
 
-## Use When
+### Use When
 
 - Triggering an action  
 - Enabling a “final” action  
@@ -432,11 +432,11 @@ This component has no specific WCAG compliance attributes built into the control
 - Confirming the completion of a flow or cancelling out of it
 - Use `tag="a"` and `href` when navigating to another page on the site
 
-## Don't Use When
+### Don't Use When
 
 - Taking users to a different part within the same page. Instead, use [Links](../links/)
 
-## The Basics
+### The Basics
 
 Three button sizes are available: Small, Medium, and Large. Medium is the default size.
 <br />
@@ -463,7 +463,7 @@ When arranging buttons horizontally:
 
 <br />
 
-### Do / Don't
+#### Do / Don't
 
 When grouping buttons, match button sizes either horizontally or vertically.
 
@@ -476,7 +476,7 @@ When grouping buttons, match button sizes either horizontally or vertically.
 <br />
 
 
-## Content
+### Content
 
   - Clearly and concisely label with 1–3 words and fewer than 20 characters, including spaces
   - Start with a verb, if possible. Labels must be action-oriented and set expectations for what the user will see next
@@ -491,7 +491,7 @@ To construct consistent and universal Calls to Action across the site:
 - If leading to a Product Detail page, UI text for Call to Action should be **Shop product name**
 - If leading to a Collection or search result, UI text for Call to Action should be **Shop all Brand/Category/Activity Name**
 
-### Do / Don't
+#### Do / Don't
 
   <do-dont :examples="$page.frontmatter.label" />
 
@@ -499,9 +499,9 @@ To construct consistent and universal Calls to Action across the site:
 
   <do-dont :examples="$page.frontmatter.noun" />
 
-## Behavior
+### Behavior
 
-### Choosing a Button or a Link
+#### Choosing a Button or a Link
 
 When making decisions about whether to use a link or a button, consider the following:
 
@@ -524,34 +524,34 @@ Apply the following use cases when deciding when to use links as anchors or butt
 | Supporting internal page jumps                                                                      | Can be disabled with disabled attribute                                              |
 
 
-## Resources
+### Resources
 
   - WebAIM: [Keyboard Accessibility](https://webaim.org/techniques/keyboard/)
   - WebAIM [WCAG 2.0 Checklist](https://webaim.org/standards/wcag/checklist)
 
 <hr>
 
-# API
+## API
 
 <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
 <cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
-## Props
+### Props
 
 This component will bind any attribute that a [native HTML button element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button) accepts.
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-## Slots
+### Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Events
+### Events
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
 
 
-## Component Variables
+### Component Variables
 
 <cdr-doc-comp-vars name="CdrButton"/>
 
