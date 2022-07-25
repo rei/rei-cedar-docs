@@ -236,9 +236,9 @@
 
 
 <cdr-doc-table-of-contents-shell>
-# Overview
+## Overview
 
-## Default (Medium)
+### Default (Medium)
 Basic input field with label.
 
 
@@ -261,7 +261,7 @@ Basic input field with label.
 
 </cdr-doc-example-code-pair>
 
-## Required
+### Required
 
 Basic input field with label and required tag.
 
@@ -279,7 +279,7 @@ Basic input field with label and required tag.
 
 </cdr-doc-example-code-pair>
 
-## Optional
+### Optional
 
 Basic input field with label and optional tag.
 
@@ -297,7 +297,7 @@ Basic input field with label and optional tag.
 
 </cdr-doc-example-code-pair>
 
-## Sizing
+### Sizing
 
 Change size for the input field. Default size is medium.
 
@@ -321,7 +321,7 @@ Change size for the input field. Default size is medium.
 
 </cdr-doc-example-code-pair>
 
-## Bare
+### Bare
 
 Input field with no label.
 
@@ -339,7 +339,7 @@ Input field with no label.
 
 </cdr-doc-example-code-pair>
 
-## Validation
+### Validation
 
 Input field with validation that runs on `blur`. Error state is controlled with the `error` prop. Setting the `error` prop to a string will render that message with default error styling. The `error` slot can be used to fully customize the error message.
 
@@ -368,7 +368,7 @@ Error messaging will override helper text rendered in the bottom position.
 
 </cdr-doc-example-code-pair>
 
-## Multi-Line Input
+### Multi-Line Input
 
 Multiple line input field with expander control in lower right. Note that the pre-icon, post-icon, and info-action slots will not work properly in multi-line inputs.
 
@@ -385,7 +385,7 @@ Multiple line input field with expander control in lower right. Note that the pr
 
 </cdr-doc-example-code-pair>
 
-## Numeric Input
+### Numeric Input
 
 Input field designed to accept numerical input. Launches the numerical keyboard on mobile devices. Does not use the `type="number"` attribute as that is intended for values that are strictly "numbers" such as quantities and not values that contain numerical characters such as credit cards, security codes, month/year values, etc. Can be used in conjunction with [input masking](#input-masking) to handle formatting values like credit cards, or an `input` listener can be used to format or restrict input.
 
@@ -404,7 +404,7 @@ Input field designed to accept numerical input. Launches the numerical keyboard 
 
 </cdr-doc-example-code-pair>
 
-## Number/Quantity Input
+### Number/Quantity Input
 
 Use the `type="number"` attribute only for input fields that reference a numerical value, for example a quantity of something. For input fields that are composed of numerical characters but are not strictly a number value, for example a credit card number or a month/year value, use a [numeric input](./#numeric-input) instead. An input field with `type="number"` set will only accept pure number values as input and rejects all other content, which can cause issues with a numeric identifier that has leading zeroes and may behave differently across browsers and devices.
 
@@ -430,7 +430,7 @@ Use the `type="number"` attribute only for input fields that reference a numeric
 
 </cdr-doc-example-code-pair>
 
-## Input with Link Text
+### Input with Link Text
 
 Input field with link text on right. The link should describe it's relationship to the input field either through it's text content or an aria-label.
 
@@ -451,7 +451,7 @@ Input field with link text on right. The link should describe it's relationship 
 
 </cdr-doc-example-code-pair>
 
-## Input with Info Action
+### Input with Info Action
 
 Input field with icon wrapped in an actionable element outside the input field on right. The actionable element should have an aria-label that explains it's relationship to the input field and what happens when you click on it.
 
@@ -478,7 +478,7 @@ Input field with icon wrapped in an actionable element outside the input field o
 
 </cdr-doc-example-code-pair>
 
-## Input with Helper Text
+### Input with Helper Text
 
 Input field with helper or hint text below the input field. If the input is in an error state, the error messaging slot will override this text. Helper text should be used instead of the HTML `placeholder` attribute to provide additional information or context about the input.  Helper text is automatically linked to the input field through the `aria-describedby` attribute.
 
@@ -538,7 +538,7 @@ Input field with icon inserted into the input field on left. Icon is decorative 
 
 </cdr-doc-example-code-pair>
 
-## Input with Icon Inserted Right
+### Input with Icon Inserted Right
 
 Input field with icon inserted into the input field on right. Icon is decorative and not intended for any action.
 
@@ -563,7 +563,7 @@ Input field with icon inserted into the input field on right. Icon is decorative
 </cdr-doc-example-code-pair>
 
 
-## Input with Actions
+### Input with Actions
 
 Input field with icon buttons inserted to the right. Up to 2 buttons can be passed into the `post-icon` slot. Each button should have the `cdr-input__button` utility class applied to it. Each button should indicate it's function and relationship to the input field through either an `aria-label` or a tooltip.
 
@@ -643,30 +643,30 @@ Any additional actionable elements related to the input field, which may be exte
 
 <hr>
 
-# Guidelines
+## Guidelines
 
-## Use When
+### Use When
 
 - Entering data with a wide variety of responses
 - Searching for content
 
-## Don't Use When
+### Don't Use When
 
 - Selecting from a specific set of options. Instead, use [Selects](../selects/)
 
-## The Basics
+### The Basics
 
 - **Identifiable** - Input fields should indicate that users can enter information
 - **Findable** - It should be easy to find an input field among other elements
 - **Legible** - Input fields indicate their state such as enabled, focused, or disabled
 
-### Options
+#### Options
 
 - Define width using CSS styles
 - Height options are medium or large.
 - Ability to specify field type for text, email, number, password, search, and URL
 
-### Multi-Line Input Fields
+#### Multi-Line Input Fields
 
 - Use when long free-form text is the desired user input such as a comment on a review or feedback form
 - Overflow text wraps to a new line
@@ -677,33 +677,33 @@ Any additional actionable elements related to the input field, which may be exte
   - Max-height of text area
   - Maximum and minimum number of characters
 
-## Content
+### Content
 
-### Labels
+#### Labels
 
 - Use concise and consistent labels that describes the meaning of the input field
 - Limit labels to 1–3 words and fewer than 20 characters, including spaces
 - Use sentence case. Do not use all caps, title caps, or all lowercase
 - Don’t use colons after labels
 
-### Helper Text
+#### Helper Text
 
 - Use helper text for hints or suggestions
 - If help text is long or complex, use an icon or link above the input box
 - Too much helper help text can make a form look and feel difficult to use
 
-### Icon
+#### Icon
 
 - Use icons to trigger a popover for hints or suggestions
 - Reference Cedar's [icon guidelines](../icon/#guidelines/) for additional information
 
-### Link Text
+#### Link Text
 
 - Use a link when moving or navigating to another page or to a different portion of the same page
 - Use if navigating user to long or complex information
 - Reference the [Links](../links/) component article for more information
 
-### Do / Don't
+#### Do / Don't
 
 <do-dont :examples="$page.frontmatter.length" />
 
@@ -717,9 +717,9 @@ Any additional actionable elements related to the input field, which may be exte
 
 <do-dont :examples="$page.frontmatter.sizes" />
 
-## Behavior
+### Behavior
 
-### Default Input Attrs
+#### Default Input Attrs
 
 CdrInput sets some default attributes to make it easier to construct consistent and accessible forms. These default attributes can be overridden by passing the same attribute to the CdrInput component.
 
@@ -745,7 +745,7 @@ Note that the `maxlength` attribute does not work in conjunction with numeric in
 ```
 
 
-### Input Masking
+#### Input Masking
 
 User input should be automatically formatted to make forms easier to comprehend and use, for example by adding parentheses and a dash to a phone number or inserting a space between every four digits of a credit card number.
 
@@ -788,37 +788,37 @@ export default {
 
 ```
 
-### Inputs with Icons
+#### Inputs with Icons
 
 - Icons inserted into input fields are decorative, not intended for any action
 
-### Required Fields
+#### Required Fields
 
 - The default status of an input field is “optional”. Setting the `optional` prop on the input will render a text label indicating it is optional
 - If the status is set to “required”, an asterisk will appear next to the input label with an aria-label indicating that the input is required and the input field will be marked `aria-required`
 
 
-# API
+## API
 
 <cdr-icon class="cdr-doc-code-snippet__action-icon" title="An outline caricature of a cat" use="#brand-github"/> View it on Github: 
 <cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
-## Props
+### Props
 
 This component will bind any attribute that a [native HTML input element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) accepts.
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props"/>
 
-## Slots
+### Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" :slots-getting-started-link="false" />
 
-## Events
+### Events
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
 
 
-## Component Variables
+### Component Variables
 
 <cdr-doc-comp-vars name="CdrInput">Note that the <a href="../component-variables/#CdrLabelStandalone">cdr-label-standalone mixins</a> should be used for assembling the label element. </cdr-doc-comp-vars>
 
