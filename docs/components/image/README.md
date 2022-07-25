@@ -84,10 +84,10 @@
 
 
 <cdr-doc-table-of-contents-shell>
-# Overview
+## Overview
 
 
-## Default (Medium)
+### Default (Medium)
 
 Use for images with no responsive qualities.
 
@@ -104,7 +104,7 @@ Use for images with no responsive qualities.
 ```
 </cdr-doc-example-code-pair>
 
-## Managing Images
+### Managing Images
 
 Apply rules to an image using ratio and crop properties. The below example is cropped using top alignment with the aspect ratio set as 9:16.
 
@@ -122,7 +122,7 @@ Apply rules to an image using ratio and crop properties. The below example is cr
 ```
 </cdr-doc-example-code-pair>
 
-## Displaying Images as Backgrounds
+### Displaying Images as Backgrounds
 
 Use the cover property to resize the background image to fill the entire container.
 
@@ -142,7 +142,7 @@ Use the cover property to resize the background image to fill the entire contain
 </cdr-doc-example-code-pair>
 
 
-## Ratio Auto
+### Ratio Auto
 
 To use cover or crop properties without a defined aspect ratio, set `ratio="auto"` and give the image an explicit height and/or width. This can be done in several ways:
 - Apply `height` or `min-height` to the CdrImg element directly
@@ -192,11 +192,11 @@ To use cover or crop properties without a defined aspect ratio, set `ratio="auto
 
 
 
-## Shaping Images
+### Shaping Images
 
 Apply a radius to an image.
 
-### Rounded
+#### Rounded
 The below example is cropped using center alignment with the aspect ratio set as square and the radius set as rounded.
 
 
@@ -214,7 +214,7 @@ The below example is cropped using center alignment with the aspect ratio set as
 
 </cdr-doc-example-code-pair>
 
-### Circle
+#### Circle
 The below example is cropped using center alignment with the aspect ratio set as square and the radius set as circle.
 
 
@@ -232,7 +232,7 @@ The below example is cropped using center alignment with the aspect ratio set as
 
 </cdr-doc-example-code-pair>
 
-### Error Event Handler
+#### Error Event Handler
 
 CdrImg will bind any event handlers to the `img` element that it wraps. This is intended to support attaching an error handler function in case an image does not load, but can be used for any HTML/JS event. Note that because images are usually not "interactive" elements you should not bind click handlers to them.
 
@@ -247,7 +247,7 @@ CdrImg will bind any event handlers to the `img` element that it wraps. This is 
 
 </cdr-doc-code-snippet>
 
-## Lazy Loading
+### Lazy Loading
 
 The CdrImg component accepts any valid HTML `img` attribute. CdrImg works with [native lazy loading](https://css-tricks.com/native-lazy-loading/) by setting the `loading` attribute.
 
@@ -288,9 +288,9 @@ This component has compliance with WCAG guidelines by:
 
 <hr>
 
-# Guidelines
+## Guidelines
 
-## Use When
+### Use When
 
 - Illustrating a product feature
 - Allowing comparisons between similar items
@@ -299,11 +299,11 @@ This component has compliance with WCAG guidelines by:
 - Communicating the REI brand message
 - Explaining a complex procedure or how to perform an action
 
-## The Basics
+### The Basics
 
 REI image requirements are described on the [Launch and DefaultShop Image Sizes](https://confluence.rei.com/display/CMA/Launch-and-DefaultShop-Image-Sizes) page.
 
-### Aspect Ratio
+#### Aspect Ratio
 
 Use conventional aspect ratios:
 
@@ -311,27 +311,27 @@ Use conventional aspect ratios:
 - Portrait: 1:2, 2:3, 3:4, 9:16
 - Landscape: 2:1, 3:2, 4:3, 16:9
 
-### Quality
+#### Quality
 
 - Always maintain high image quality
 - Choose the right file format when saving your images to ensure proper image quality and file size:
   - For photos, use JPEG. Optimize JPEG files to find a balance between size and quality
   - For bitmap/raster artwork, use PNG with 8-bit color palette
 
-### Sizing
+#### Sizing
 
 - Avoid small file sizes that pixelate the image
 - Avoid unnecessarily large file sizes. Export images at the lowest file size possible without compromising quality
 - Optimize high resolution images using [TinyPNG](https://tinypng.com/)
 - Must display images at a proper pixel size compared to natural size
 
-### Color and Contrast
+#### Color and Contrast
 
 - Test images for high contrast displays
 - Ensure that no meaning is lost when colors are removed
 - Include text only with sufficient contrast
 
-### Cropping Images
+#### Cropping Images
 
 - Specify the ratio of all cropped images
 - Enable background image to use the entire container:
@@ -359,14 +359,14 @@ Images are cropped on y-axis with y-center value and on x-axis with left, x-cent
 Images are cropped on y-axis with bottom value and on x-axis with left, x-center, and right values
 
 
-## Content
+### Content
 
-### File Names
+#### File Names
 - Image file name should include primary keyword or what the page is targeting
 - Showcase keyword targeting through file name and alt text
 - For more information, view SEO How-to article [Image Implementation](https://confluence.rei.com/display/SI/Image+Implementation)
 
-### Overlaid Text
+#### Overlaid Text
 
 - Only display heading text on non-solid backgrounds:
   - Text should be at least 18px
@@ -376,14 +376,14 @@ Images are cropped on y-axis with bottom value and on x-axis with left, x-center
 - Always include a backup background color so that when the background image is disabled, text is still legible and passes contrast requirements
 - For help in determining whether your text and image combination conforms to the required contrast ratio, use the [Color Contrast Analyzer](https://chrome.google.com/webstore/detail/color-contrast-analyzer/dagdlcijhfbmgkjokkjicnnfimlebcll) Chrome plugin
 
-### Decorative Images
+#### Decorative Images
 
 - Avoid using decorative images; instead present the image as a background image using CSS
 - If using the HTML `<img>` element, add:
   - An empty `alt` attribute
   - Attribute ` role="presentation" `
 
-### Alternative Text
+#### Alternative Text
 
 - Use [this decision tree](https://www.w3.org/WAI/tutorials/images/decision-tree/) to determine how to use the `alt` attribute
 - Be succinct. Ideally, one sentence or less
@@ -398,7 +398,7 @@ Images are cropped on y-axis with bottom value and on x-axis with left, x-center
   - Must provide an overall context for the set of links using `alt` attribute
   - Each individual clickable area should have an `alt` attribute that describes the purpose or destination of the link
 
-## Responsiveness
+### Responsiveness
 - Ability to control image display at small, medium, and large breakpoints
 - Lazy loading of images is provided
 - The `srcet` and `sizes` attributes can be used to control which image loads at which screeen size
@@ -410,12 +410,12 @@ Images are cropped on y-axis with bottom value and on x-axis with left, x-center
 
 <hr>
 
-# API
+## API
 
 <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
 <cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
-## Props
+### Props
 
 This component will bind any attribute that a [native HTML img element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img) accepts.
 
