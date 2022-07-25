@@ -470,31 +470,31 @@ Checkboxes work independently from each other:
 
 <hr>
 
-# API
+## API
 
 <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
 <cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
-## Props
+### Props
 
 This component will bind any attribute that a [native HTML checkbox element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox) accepts.
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
 
-## Slots
+### Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Events
+### Events
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
 
-## Component Variables
+### Component Variables
 
 <cdr-doc-comp-vars name="CdrLabelWrapper"/>
 
-## Usage
+### Usage
 
 The **CdrCheckbox** component requires  `v-model`  to track  `:checked`  values.
 
@@ -570,7 +570,7 @@ Set the `indeterminate` prop to `true` to generate an indeterminate checkbox, wh
 </template>
 ```
 
-### Modifiers
+#### Modifiers
 
 Following variants are available to the `cdr-checkbox` modifier attribute:
 | Value | Description            |
