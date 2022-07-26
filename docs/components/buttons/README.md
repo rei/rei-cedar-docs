@@ -389,7 +389,7 @@ Change the button size based on where the button is used. The default size is me
 
 </cdr-doc-example-code-pair>
 
-## Accessibility
+### Accessibility
 Many WCAG requirements are contextual to their implementation.
 To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
 
@@ -499,7 +499,6 @@ To construct consistent and universal Calls to Action across the site:
 
   <do-dont :examples="$page.frontmatter.noun" />
 
-### Behavior
 
 #### Choosing a Button or a Link
 
