@@ -464,7 +464,7 @@ Checkboxes work independently from each other:
 
 <do-dont :examples="$page.frontmatter.simplify" />
 
-## Resources
+### Resources
 
  - WebAIM: [Semantic Structure: Using Lists Correctly](https://webaim.org/techniques/semanticstructure/)
 
