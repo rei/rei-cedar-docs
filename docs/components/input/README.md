@@ -498,7 +498,7 @@ Input field with helper or hint text below the input field. If the input is in a
 
 </cdr-doc-example-code-pair>
 
-## Input with Helper Text Above
+### Input with Helper Text Above
 
 Input field with helper or hint text rendered above the input field. Helper text should be used instead of the HTML `placeholder` attribute to provide additional information or context about the input. Helper text is automatically linked to the input field through the `aria-describedby` attribute.
 
@@ -518,7 +518,7 @@ Input field with helper or hint text rendered above the input field. Helper text
 
 </cdr-doc-example-code-pair>
 
-## Input with Icon Inserted Left
+### Input with Icon Inserted Left
 
 Input field with icon inserted into the input field on left. Icon is decorative and not intended for any action.
 
@@ -631,7 +631,7 @@ Input field with icon buttons inserted to the right. Up to 2 buttons can be pass
 
 </cdr-doc-example-code-pair>
 
-## Accessibility
+### Accessibility
 
 This component has compliance with WCAG guidelines by:
 - Requiring a value for the `label` field
