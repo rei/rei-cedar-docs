@@ -191,7 +191,7 @@ Create a new SVG icon using any valid SVG markup. The wrapping SVG element can b
 
 </cdr-doc-example-code-pair>
 
-## Accessibility
+### Accessibility
 
 CdrIcon by default adds `aria-hidden="true"` to the root SVG element. If your usage of CdrIcon is purely decorative, or if the icon is already explained by the text surrounding it, then there are no other accessibility steps needed.
 
