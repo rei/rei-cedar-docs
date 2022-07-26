@@ -359,7 +359,7 @@ For multiple select chip groups, apply `role='checkbox'` to each chip, use `aria
 
 
 
-## Accessibility
+### Accessibility
 Many WCAG requirements are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines:
 
 - For a group of chips related to a single selection, use `role="radio"`, `aria-checked`, and `tabindex` on each chip and wrap the group in a CdrChipGroup component. The selected chip should have `aria-checked="true"` and `tabindex="0"` set, while the rest of the chips should have `aria-checked="false"` and `tabindex="-1"`.
@@ -476,7 +476,7 @@ When making decisions about whether to use a button, links or chips, consider th
 | Opening a modal window                           | Changing the URL                                          | Offering a choice or representing a filter |
 | Triggering a popup menu                          | Causing a browser redraw or refresh                       | Immediately changing a setting on the page |
 
-## Resources
+### Resources
   - WebAIM: [Keyboard Accessibility](https://webaim.org/techniques/keyboard/)
   - WebAIM [WCAG 2.0 Checklist](https://webaim.org/standards/wcag/checklist)
   - W3C: [WCAG 3.0 Guidelines](https://www.w3.org/TR/wcag-3.0/)
