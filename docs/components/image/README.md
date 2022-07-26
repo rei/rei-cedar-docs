@@ -84,6 +84,7 @@
 
 
 <cdr-doc-table-of-contents-shell>
+
 ## Overview
 
 
@@ -264,7 +265,7 @@ The CdrImg component accepts any valid HTML `img` attribute. CdrImg works with [
 ```
 </cdr-doc-example-code-pair>
 
-## Accessibility
+### Accessibility
 
 To ensure that usage of this component complies with accessibility guidelines, provide descriptive text for `alt` attribute for:
 - Informative images:
@@ -403,7 +404,7 @@ Images are cropped on y-axis with bottom value and on x-axis with left, x-center
 - Lazy loading of images is provided
 - The `srcet` and `sizes` attributes can be used to control which image loads at which screeen size
 
-## Resources
+### Resources
 
 - Chrome plugin, [Color Contrast Analyzer](https://chrome.google.com/webstore/detail/color-contrast-analyzer/dagdlcijhfbmgkjokkjicnnfimlebcll)
 - Image compression service, [TinyPNG](https://tinypng.com/)
