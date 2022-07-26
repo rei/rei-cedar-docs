@@ -257,34 +257,34 @@ Use to provide generic messaging that does not fit the other types
 - Toasts are delivered from the top-right of a page 
 - The most recent toast is always displayed on top of a stack 
 
-# API
+## API
 
 <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
 <cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
-## Props
+### Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-## Slots
+### Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Events
+### Events
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
 
-## Usage
+### Usage
 
-### Positioning
+#### Positioning
 
 CdrToast component(s) should be contained within a `position: absolute` container in the top-right corner of your page. On smaller screens, they should appear at the top of the page and span the whole width of the viewport.
 
-### Elevation
+#### Elevation
 
 The CdrToast container should be be given an appropriate `z-index` value so that the toast components within will "float" on top of the other page elements.
 
-### Multiples
+#### Multiples
 
 If multiple CdrToast components are present, they should appear stacked with the newest at the bottom. Note: When a toast is closed, any toast components below it will take the place of the one above.
 
