@@ -899,18 +899,18 @@ Cedar uses design tokens to store typographic attributes that represent the fund
 
 For more information about design tokens and a complete list of tokens available in Cedar, visit the [Design Tokens](../../tokens/overview/) overview.
 
-# API
+## API
 
 <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
 <cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-## Slots
+### Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Usage
+### Usage
 
 The **CdrText** component allows for styling any HTML element with available text styles. Visual style and semantic meaning are managed independently by providing:
 
@@ -986,7 +986,7 @@ Note that heading styles do not always need to be paired with heading tags. Head
 </cdr-doc-code-snippet>
 
 
-## Text Options
+### Text Options
 
 <text-doc-overview />
 
