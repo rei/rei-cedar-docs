@@ -88,9 +88,9 @@
 ## Overview
 Switch is a system-wide control that is used to quickly change between two possible states. Toggles are only used for these binary actions that occur immediately after the user makes any changes.
 
-### Default (standard spacing)
+### Default
 
-Default switch size and standard spacing.
+Default switch with medium size and standard spacing.
 
 <cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :model="{ checked: false }">
 
@@ -103,9 +103,9 @@ Default switch size and standard spacing.
 ```
 </cdr-doc-example-code-pair>
 
-### Default (full-width spacing)
+### Full-width spacing
 
-Default switch size and full-width spacing.
+Medium switch size and full-width spacing.
 
 <cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :model="{ checked: false }">
 
@@ -120,7 +120,7 @@ Default switch size and full-width spacing.
 
 ### Large (standard spacing)
 
-Default switch size and standard spacing.
+Medium switch size and standard spacing.
 
 <cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :model="{ checked: false }">
 
@@ -133,9 +133,9 @@ Default switch size and standard spacing.
 ```
 </cdr-doc-example-code-pair>
 
-### Large (standard)
+### Custom labels
 
-Default switch size, standard spacing, and a label with custom styling.
+Medium switch size, standard spacing, and a label with custom styling.
 
 <cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :model="{ checked: false }">
 
