@@ -196,7 +196,7 @@ To render a link that has the spacing and sizing of a button, use [CdrButton wit
 
 </cdr-doc-example-code-pair>
 
-## Accessibility
+### Accessibility
 
 Many WCAG requirements are contextual to their implementation.
 To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
