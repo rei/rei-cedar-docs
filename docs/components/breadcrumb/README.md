@@ -180,7 +180,7 @@ Can be used to override the default link navigation behavior inside a breadcrumb
 </cdr-doc-example-code-pair>
 
 
-## Accessibility
+### Accessibility
 
 
 To ensure that usage of this component complies with accessibility guidelines:
