@@ -177,7 +177,7 @@ The captions component is text-only; however, it is meant to be displayed in the
 </cdr-doc-example-code-pair>
 
 
-## Accessibility
+### Accessibility
 
 To ensure that usage of this component complies with the accessibility guidelines, do the following:
 
