@@ -461,7 +461,7 @@ The `unwrap` property of `CdrAccordionGroup` can be used to render the accordion
 
 </cdr-doc-example-code-pair>
 
-## Accessibility
+### Accessibility
 
 To ensure that usage of this component complies with accessibility guidelines:
 - Provide descriptive label for accordion header
