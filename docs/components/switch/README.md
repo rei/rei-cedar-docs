@@ -86,7 +86,7 @@
 <cdr-doc-table-of-contents-shell>
 
 ## Overview
-Switch is a system-wide control that is used to quickly change between two possible states. Toggles are only used for these binary actions that occur immediately after the user makes any changes.
+Switch is a system-wide control that is used to quickly change between two possible states. This component is only used for binary actions that occur immediately after the user makes any changes.
 
 ### Default
 
@@ -105,7 +105,7 @@ Default switch with medium size and standard spacing.
 
 ### Full-width spacing
 
-Medium switch size and full-width spacing.
+Displays at full-width of its container.
 
 <cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :model="{ checked: false }">
 
@@ -118,9 +118,9 @@ Medium switch size and full-width spacing.
 ```
 </cdr-doc-example-code-pair>
 
-### Large (standard spacing)
+### Large
 
-Medium switch size and standard spacing.
+Size can be changed to large based on where the component is being used.
 
 <cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :model="{ checked: false }">
 
@@ -135,7 +135,7 @@ Medium switch size and standard spacing.
 
 ### Custom labels
 
-Medium switch size, standard spacing, and a label with custom styling.
+A label with custom styling.
 
 <cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :model="{ checked: false }">
 
@@ -148,7 +148,7 @@ Medium switch size, standard spacing, and a label with custom styling.
 ```
 </cdr-doc-example-code-pair>
 
-## Accessibility
+### Accessibility
 
 To ensure that usage of this component complies with accessibility guidelines: 
 
@@ -173,33 +173,13 @@ This component complies with WCAG guidelines by:
 
 ### Don't Use When
 
-- Requiring the user to save or submit to apply the state. Instead, use checkboxes or radio buttons 
-- Showing more than one option. Instead, use checkboxes 
-- Allowing users to filter. Instead, use checkboxes or chips
-
-### Content
-
-- Keep labels short and direct 
-- The label should describe what the control will do when the switch is on 
-- Labels should describe the state of the system when the switch is on (when in doubt, say the label aloud and append “on/off” to the end)  
-- Start labels with a capital letter and use sentence case 
-- Labels should have one or two words, preferably nouns, that describe the functionality of the switch
-
-### Responsiveness
-
-When a pull quote is displayed at XS breakpoint, the left border will appear below the pull quote and will use a smaller font size.
-
-<hr>
-
-### Do / Don't
-
-<do-dont :examples="$page.frontmatter.label" />
-
-### Do / Don't
-
-<do-dont :examples="$page.frontmatter.usage" />
+- Requiring the user to save or submit to apply the state. Instead, use [checkboxes](../checkboxes/) or [radio buttons](../radio/) 
+- Showing more than one option. Instead, use [checkboxes](../checkboxes/) 
+- Allowing users to filter. Instead, use [checkboxes](../checkboxes/) or [chips](../chips/)
 
 ### Choosing the right component
+
+Switches, checkboxes, radio buttons, and toggle buttons are all similar types of selection controls, but are generally not interchangeable. If you're not sure which one to use for a certain scenario, here's a table that might help. 
 
 <cdr-table striped>
   <tbody>
@@ -212,20 +192,12 @@ When a pull quote is displayed at XS breakpoint, the left border will appear bel
       <td><strong>Toggle Button</strong></td>
     </tr>
     <tr>
-      <td><strong>Options available</strong></td>
-      <td>Multiple</td>
-      <td>Multiple</td>
-      <td>1</td>
-      <td>1</td>
-      <td>Multiple</td>
-    </tr>
-    <tr>
       <td><strong>Selections available</strong></td>
-      <td>1</td>
-      <td>0 - all</td>
-      <td>2 (on/off)</td>
-      <td>2 (on/off)</td>
-      <td>1</td>
+      <td>At least two</td>
+      <td>At least one</td>
+      <td>Just one</td>
+      <td>Only two (on or off)</td>
+      <td>At least two (this or that)</td>
     </tr>
     <tr>
       <td><strong>Default option</strong></td>
@@ -253,6 +225,23 @@ When a pull quote is displayed at XS breakpoint, the left border will appear bel
     </tr>
   </tbody>
 </cdr-table>
+
+### Content
+
+- Keep labels short and direct 
+- The label should describe what the control will do when the switch is on 
+- Labels should describe the state of the system when the switch is on (when in doubt, say the label aloud and append “on/off” to the end)  
+- Start labels with a capital letter and use sentence case 
+- Labels should have one or two words, preferably nouns, that describe the functionality of the switch
+
+
+<hr>
+
+### Do / Don't
+
+<do-dont :examples="$page.frontmatter.label" />
+
+<do-dont :examples="$page.frontmatter.usage" />
 
 ## API
 
