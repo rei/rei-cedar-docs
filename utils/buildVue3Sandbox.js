@@ -109,7 +109,7 @@ function buildContent(data, model, computed, methods) {
 }
 
 function buildScriptTag(data, model, computed, methods) {
-  const componentsImport = `import { ${data.components} } from "@rei/cedar/dist/cedar.es.js"; // NOTE: importing from '@rei/cedar/dist/cedar.es.js' to bypass a codesandbox bug. Please import from '@rei/cedar' in your code.`;
+  const componentsImport = `import { ${data.components} } from "@rei/cedar/dist/cedar.mjs"; // NOTE: importing from '@rei/cedar/dist/cedar.mjs' to bypass a codesandbox bug. Please import from '@rei/cedar' in your code.`;
   const spriteString = 'svgSprite, ';
 
   let stringModel = model ? JSON.stringify(model) : "{}";
