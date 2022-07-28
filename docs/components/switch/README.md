@@ -10,10 +10,6 @@
       "text": "Components/"
     }
   ],
-  "sandboxData": {
-    "components": "CdrSwitch"
-  },
-
   "label": [
     {
       "type": "do",
@@ -86,67 +82,93 @@
 <cdr-doc-table-of-contents-shell>
 
 ## Overview
+
 Switch is a system-wide control that is used to quickly change between two possible states. This component is only used for binary actions that occur immediately after the user makes any changes.
 
 ### Default
 
 Default switch with medium size and standard spacing.
 
-<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :model="{ checked: false }">
+<iframe
+  src="https://y6hei2.sse.codesandbox.io/embed/new?codemirror=1"
+  style="width:100%; height:100px; border:1px solid #dcd6cb; border-radius: 4px; overflow:hidden;"
+  allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+  sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>
 
-```html
-<div>
-      <cdr-switch id="foo-123" :checked="checked" @switch="checked = !checked">
-        Switch Label (medium)
-      </cdr-switch>
+<div class="cdr-doc-code-snippet__actions">
+  <div class="cdr-doc-code-snippet__action-wrapper">
+    <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar-next/tree/main/src/components/switch" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" class="cdr-doc-code-snippet__action-icon cdr-icon_12-0-0" title="An outline caricature of a cat"><use href="#brand-github" xlink:href="#brand-github"></use></svg>
+            View on GitHub
+    </a>
+  </div> 
+  <div class="cdr-doc-code-snippet__action-wrapper">
+    <a target="_blank" rel="noopener noreferrer" href="https://codesandbox.io/s/cedarexamplesandbox-forked-y6hei2?file=/App.vue" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" class="cdr-doc-code-snippet__action-icon cdr-icon_12-0-0" title="A hollow box with a small solid box in each box panel"><use href="#brand-code-sandbox" xlink:href="#brand-code-sandbox"></use></svg>
+            View on CodeSandbox
+    </a>
+  </div>
 </div>
-```
-</cdr-doc-example-code-pair>
 
 ### Full-width spacing
 
 Displays at full-width of its container.
 
-<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :model="{ checked: false }">
+<iframe
+  src="https://ez4mqc.sse.codesandbox.io/embed/new?codemirror=1"
+  style="width:100%; height:100px; border:1px solid #dcd6cb; border-radius: 4px; overflow:hidden;"
+  allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+  sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>
 
-```html
-<div>
-      <cdr-switch id="foo-345" :checked="checked" :full-width="true" @switch="checked = !checked">
-        Switch Label (medium, full-width)
-      </cdr-switch>
-</div>
-```
-</cdr-doc-example-code-pair>
+<div class="cdr-doc-code-snippet__actions"><div class="cdr-doc-code-snippet__action-wrapper">
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar-next/tree/main/src/components/switch" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" class="cdr-doc-code-snippet__action-icon cdr-icon_12-0-0" title="An outline caricature of a cat"><use href="#brand-github" xlink:href="#brand-github"></use></svg>
+        View on GitHub
+</a>
+</div> 
+<div class="cdr-doc-code-snippet__action-wrapper"><a target="_blank" rel="noopener noreferrer" href="https://codesandbox.io/s/cdrswitch--medium-full-width-ez4mqc?file=/App.vue" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" class="cdr-doc-code-snippet__action-icon cdr-icon_12-0-0" title="A hollow box with a small solid box in each box panel"><use href="#brand-code-sandbox" xlink:href="#brand-code-sandbox"></use></svg>
+        View on CodeSandbox
+</a></div></div>
 
 ### Large
 
 Size can be changed to large based on where the component is being used.
 
-<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :model="{ checked: false }">
+<iframe
+  src="https://55d0xb.sse.codesandbox.io/embed/new?codemirror=1"
+  style="width:100%; height:100px; border:1px solid #dcd6cb; border-radius: 4px; overflow:hidden;"
+  allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+  sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>
 
-```html
-<div>
-      <cdr-switch id="foo-678" size="large" :checked="checked" @switch="checked = !checked">
-       Switch Label (large)
-      </cdr-switch>
-</div>
-```
-</cdr-doc-example-code-pair>
+<div class="cdr-doc-code-snippet__actions"><div class="cdr-doc-code-snippet__action-wrapper">
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar-next/tree/main/src/components/switch" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" class="cdr-doc-code-snippet__action-icon cdr-icon_12-0-0" title="An outline caricature of a cat"><use href="#brand-github" xlink:href="#brand-github"></use></svg>
+        View on GitHub
+</a>
+</div> 
+<div class="cdr-doc-code-snippet__action-wrapper"><a target="_blank" rel="noopener noreferrer" href="https://codesandbox.io/s/cdrswitch-large-55d0xb?file=/App.vue" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" class="cdr-doc-code-snippet__action-icon cdr-icon_12-0-0" title="A hollow box with a small solid box in each box panel"><use href="#brand-code-sandbox" xlink:href="#brand-code-sandbox"></use></svg>
+        View on CodeSandbox
+</a></div></div>
 
 ### Custom labels
 
 A label with custom styling.
 
-<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :model="{ checked: false }">
+<iframe
+  src="https://53f6ly.sse.codesandbox.io/embed/new?codemirror=1"
+  style="width:100%; height:100px; border:1px solid #dcd6cb; border-radius: 4px; overflow:hidden;"
+  allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+  sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+></iframe>
 
-```html
-<div>
-      <cdr-switch id="foo-101112" :checked="checked" @switch="checked = !checked">
-        <cdr-text class="custom-text-style">Switch label with custom text style</cdr-text>
-      </cdr-switch>
-</div>
-```
-</cdr-doc-example-code-pair>
+<div class="cdr-doc-code-snippet__actions"><div class="cdr-doc-code-snippet__action-wrapper">
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar-next/tree/main/src/components/switch" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" class="cdr-doc-code-snippet__action-icon cdr-icon_12-0-0" title="An outline caricature of a cat"><use href="#brand-github" xlink:href="#brand-github"></use></svg>
+        View on GitHub
+</a>
+</div> 
+<div class="cdr-doc-code-snippet__action-wrapper"><a target="_blank" rel="noopener noreferrer" href="https://codesandbox.io/s/cdrswitch-custom-label-style-53f6ly?file=/App.vue" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" class="cdr-doc-code-snippet__action-icon cdr-icon_12-0-0" title="A hollow box with a small solid box in each box panel"><use href="#brand-code-sandbox" xlink:href="#brand-code-sandbox"></use></svg>
+        View on CodeSandbox
+</a></div></div>
 
 ### Accessibility
 
