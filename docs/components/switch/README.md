@@ -79,7 +79,13 @@
 }
 ---
 
+
+
 <cdr-doc-table-of-contents-shell parentSelector="h2" childSelector="h3">
+
+<br>
+
+<cdr-banner type="warning" aria-live="polite"><template #icon-left><icon-information-fill inherit-color /></template><span style="font-weight:500">The switch component is only available in the Vue 3 (v13) Cedar release.</span><template #message-body>Upgrade to Vue 3 and Cedar v13 to access the switch component</template></cdr-banner>
 
 ## Overview
 
