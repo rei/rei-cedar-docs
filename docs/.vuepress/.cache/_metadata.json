@@ -1,0 +1,31 @@
+{
+  "hash": "971b3752",
+  "browserHash": "2ef3b106",
+  "optimized": {
+    "@vuepress/shared": {
+      "file": "/Users/kcrosla/rei/rei-cedar-docs/docs/.vuepress/.cache/@vuepress_shared.js",
+      "src": "/Users/kcrosla/rei/rei-cedar-docs/node_modules/@vuepress/shared/lib/esm/index.js",
+      "needsInterop": false
+    },
+    "vue": {
+      "file": "/Users/kcrosla/rei/rei-cedar-docs/docs/.vuepress/.cache/vue.js",
+      "src": "/Users/kcrosla/rei/rei-cedar-docs/node_modules/@vue/runtime-dom/dist/runtime-dom.esm-bundler.js",
+      "needsInterop": false
+    },
+    "vue-router": {
+      "file": "/Users/kcrosla/rei/rei-cedar-docs/docs/.vuepress/.cache/vue-router.js",
+      "src": "/Users/kcrosla/rei/rei-cedar-docs/node_modules/vue-router/dist/vue-router.esm-bundler.js",
+      "needsInterop": false
+    },
+    "@vueuse/core": {
+      "file": "/Users/kcrosla/rei/rei-cedar-docs/docs/.vuepress/.cache/@vueuse_core.js",
+      "src": "/Users/kcrosla/rei/rei-cedar-docs/node_modules/@vueuse/core/index.mjs",
+      "needsInterop": false
+    },
+    "nprogress": {
+      "file": "/Users/kcrosla/rei/rei-cedar-docs/docs/.vuepress/.cache/nprogress.js",
+      "src": "/Users/kcrosla/rei/rei-cedar-docs/node_modules/nprogress/nprogress.js",
+      "needsInterop": true
+    }
+  }
+}
