@@ -1,0 +1,3 @@
+<template><h2 id="cedar-utility-classes" tabindex="-1"><a class="header-anchor" href="#cedar-utility-classes">#</a> Cedar Utility Classes</h2>
+<p>The Cedar utility classes have been deprecated. Any future work should instead make use of <a href="../../tokens/all-tokens">Cedar tokens</a> and plain CSS to apply the same styles, and teams currently using the utility classes should incrementally migrate away from them. Please reach out in the <a href="https://rei.slack.com/messages/CA58YCGN4" target="_blank" rel="noopener noreferrer">#cedar-user-support<ExternalLinkIcon/></a> Slack channel if you have any questions.</p>
+</template>

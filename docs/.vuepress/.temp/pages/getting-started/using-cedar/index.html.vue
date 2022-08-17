@@ -1,0 +1,131 @@
+<template><cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
+<p>Cedar supports multiple tools and consumption methods. Reference the information below for an overview of the system parts and determine how to use Cedar in your project.</p>
+<h2 id="cedar-tools-and-resources" tabindex="-1"><a class="header-anchor" href="#cedar-tools-and-resources">#</a> Cedar Tools and Resources</h2>
+<h3 id="designer-toolkit" tabindex="-1"><a class="header-anchor" href="#designer-toolkit">#</a> Designer Toolkit</h3>
+<p>The Cedar UI toolkit is distributed through shared libraries in Figma, and includes all published components and foundational styles.</p>
+<p>For more information about using the UI Toolkit, visit the <RouterLink to="/getting-started/as-a-designer/">Getting Started for Designers</RouterLink> article.</p>
+<h3 id="design-tokens" tabindex="-1"><a class="header-anchor" href="#design-tokens">#</a> Design Tokens</h3>
+<p>Design tokens are special variables used to maintain a scalable visual system for UI development and brand consistency. Cedar design tokens store the visual design attributes that define the foundation of REI’s visual language, including color, typography, and spacing.</p>
+<p>Learn more about design tokens in the <RouterLink to="/tokens/overview/">Design Tokens Overview</RouterLink> article.</p>
+<h3 id="components" tabindex="-1"><a class="header-anchor" href="#components">#</a> Components</h3>
+<p>Components use Cedar’s tokens and design foundations to distribute code templates that extend basic HTML elements and encapsulate reusable code.
+These custom markup elements represent specific portions of the user interface. When used in your application, they will help ensure the UI remains consistent with REI’s digital display standards.</p>
+<p>For example:
+<code>&lt;cdr-link href=”rei.com”&gt;CdrLink Component&lt;/cdr-link&gt;</code></p>
+<h3 id="component-variables" tabindex="-1"><a class="header-anchor" href="#component-variables">#</a> Component Variables</h3>
+<p>Component variables are available for a subset of Cedar components. These SCSS or LESS mixins extend design tokens and define additional specific variables that are used to display Cedar components.</p>
+<p>For example:
+<code>cdr-link-base-mixin</code> would be used to style an element like a CdrLink component.</p>
+<p>Learn more in the <RouterLink to="/components/component-variables/">Component Variables</RouterLink> article.</p>
+<h3 id="documentation-site" tabindex="-1"><a class="header-anchor" href="#documentation-site">#</a> Documentation Site</h3>
+<p>The documentation for each component and foundational style includes design guidelines, do’s and don’ts, considerations for accessibility, and API instructions for developers.</p>
+<h2 id="dev-tools-comparison-chart" tabindex="-1"><a class="header-anchor" href="#dev-tools-comparison-chart">#</a> Dev Tools Comparison Chart</h2>
+<cdr-table class="table-vertical-align">
+  <thead>
+    <tr>
+      <th></th>
+      <th><b>Features</b></th>
+      <th><b>Requirements of usage</b></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th><b>Design Tokens</b></th>
+      <td>
+        <ul>
+          <li>Versioned and maintained by the design systems team</li>
+          <li>Semantic relationship to your content rather than to design</li>
+          <li>Represented in the UI Toolkit</li>
+          <li>Consistent release schedule</li>
+          <li>Up-to-date with digital brand standards</li>
+          <li>Distributed as SCSS, LESS, JSON, commonJS, or es6 module exports</li>
+          <li>Documented
+            <ul>
+              <li>Usage</li>
+              <li>Design</li>
+              <li>API</li>
+            </ul>
+          </li>
+          <li>Quick to implement</li>
+          <li>Compatible and can be combined with all other Cedar-distributed display assets</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Usage requires a SCSS or LESS preprocessor for styles</li>
+          <li>Distributed as a pull model which your team integrates and maintains within your project</li>
+          <li>Users are required to stay within one major version of the current release</li>
+          <li>Support provided only for the current REI.com-supported browser matrix </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th><b>Vue components (recommended)</b></th>
+      <td>
+        <ul>
+          <li>Versioned and maintained by the design systems team</li>
+          <li>Represented in the UI Toolkit as a named symbol</li>
+          <li>Consistent release schedule</li>
+          <li>Self-contained and encapsulated markup, behavior, and styles</li>
+          <li>Up-to-date with digital brand standards</li>
+          <li>Documented
+            <ul>
+              <li>Usage</li>
+              <li>Design</li>
+              <li>API</li>
+            </ul>
+          </li>
+          <li>Meets WCAG AA standards for display and markup pertaining to the component without context to the page</li>
+          <li>Support for server and client rendering</li>
+          <li>Distributed as commonJS or es module exports</li>
+          <li>Precompiled assets do not require a CSS preprocessor</li>
+          <li>Tree-shakeable assets</li>
+          <li>Quick to implement</li>
+          <li>Compatible and can be combined with all other Cedar-distributed display assets</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Requires Vue.js</li>
+          <li>Distributed as a pull model which your team integrates and maintains within your project</li>
+          <li>Support provided only for:
+            <ul>
+              <li>Current and previous major versions</li>
+              <li>Standard micro site architecture framework, expectations, and standards</li>
+              <li>Current REI.com supported browser matrix</li>
+            </ul>
+          </li>
+        </ul>
+      </td>
+    </tr>
+    <tr>
+      <th><b>Component variables</b></th>
+      <td>
+        <ul>
+          <li>Versioned and maintained by the design systems team</li>
+          <li>Represented in the UI Toolkit as a named symbol</li>
+          <li>Consistent release schedule</li>
+          <li>Up-to-date with digital brand standards</li>
+          <li>Documented markup contract</li>
+          <li>Meets WCAG AA standards for specific proprietary display only</li>
+          <li>Distributed as SCSS or LESS mixins</li>
+          <li>Compatible and can be combined with all other Cedar-distributed display assets</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li>Requires SCSS or LESS preprocessor</li>
+          <li>Distributed as a pull model which your team integrates and maintains within your project</li>
+          <li>Support provided only for:
+            <ul>
+              <li>Current and previous major versions</li>
+              <li>Current REI.com supported browser matrix</li>
+            </ul>
+          </li>
+        </ul>
+      </td>
+    </tr>
+  </tbody>
+</cdr-table>
+</cdr-doc-table-of-contents-shell>
+</template>

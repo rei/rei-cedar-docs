@@ -13,7 +13,13 @@
       <div class="cdr-doc-code-snippet__action-wrapper" v-if="sandboxHrefComputed">
         <cdr-link modifier="standalone" class="cdr-doc-code-snippet__action" :href="sandboxHrefComputed" target="_blank" rel="noopener noreferrer">
           <cdr-icon class="cdr-doc-code-snippet__action-icon" title="A hollow box with a small solid box in each box panel" use="#brand-code-sandbox"/>
-          View on CodeSandbox
+          View on CodeSandbox (Vue 2)
+        </cdr-link>
+      </div>
+      <div class="cdr-doc-code-snippet__action-wrapper" v-if="vue3SandboxHrefComputed">
+        <cdr-link modifier="standalone" class="cdr-doc-code-snippet__action" :href="vue3SandboxHrefComputed" target="_blank" rel="noopener noreferrer">
+          <cdr-icon class="cdr-doc-code-snippet__action-icon" title="A hollow box with a small solid box in each box panel" use="#brand-code-sandbox"/>
+          View on CodeSandbox (Vue 3)
         </cdr-link>
       </div>
 
@@ -28,6 +34,8 @@
 <script>
 import { CdrLink } from '@rei/cedar';
 import buildSandbox from '../../../utils/buildSandbox';
+import buildVue3Sandbox from '../../../utils/buildVue3Sandbox';
+
 
 export default {
   name: 'CdrDocCodeSnippet',
@@ -56,6 +64,10 @@ export default {
       type: [Object, Boolean]
     },
     sandboxHref: {
+      default: false,
+      type: [String, Boolean]
+    },
+    vue3SandboxHref: {
       default: false,
       type: [String, Boolean]
     },
@@ -91,6 +103,7 @@ export default {
     this.codeHidden = this.hideCode;
     this.setCodeToggleText();
   },
+  inject: ['showVue3'],
   mounted() {
     this.sandboxCode = {
       code: this.$refs.source.querySelector('code').textContent,
@@ -99,6 +112,9 @@ export default {
   computed: {
     sandboxHrefComputed() {
       return this.sandboxHref || buildSandbox(Object.assign({}, this.sandboxCode, this.sandboxData), this.model, this.computed, this.methods);
+    },
+    vue3SandboxHrefComputed() {
+      return this.vue3SandboxHref || buildVue3Sandbox(Object.assign({}, this.sandboxCode, this.sandboxData), this.model, this.computed, this.methods);
     }
   },
   methods: {
