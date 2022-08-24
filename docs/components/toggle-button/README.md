@@ -10,39 +10,75 @@
       "text": "Components/"
     }
   ],
-  "label": [
-    {
-      "type": "do",
-      "image": "switch/switch_clear_do_16-9.png",
-      "ratio": "16-9",
-      "alt": "Switch with label that says 'Email notifications'.",
-      "caption": "use key word(s) first, forming unique labels."
-    },
+  "width": [
+      {
+"type": "do",
+
+"image": "toggle-button/toggle-button_width_do_16-9.png",
+
+"ratio": "16-9",
+
+"alt": "A toggle button with two segments of equal width.",
+
+"caption": "ensure that each segment is equal in width."
+
+},
     {
       "type": "dont",
-      "image": "switch/switch_clear_dont_16-9.png",
+      "image": "toggle-button/toggle-button_width_dont_16-9.png",
       "ratio": "16-9",
-      "alt": "Switch with label that says 'Do you want to receive email notifications from us?'",
-      "caption": "overload the popover with too much content "
+      "alt": "A toggle button with two segments of unequal width.",
+      "caption": "allow segments to be varying widths."
     }
   ],
 
-  "usage": [
+  "segment": [
       {
       "type": "do",
-      "image": "https://placekitten.com/377/222",
+      "image": "toggle-button/toggle-button_segment_do_16-9.png",
       "ratio": "16-9",
-      "alt": "ALT TEXT TO BE ADDED",
+      "alt": "A toggle button with two segments labeled day and night.",
       "caption": "limit the number of segments to aid in usability and scannability."
     },
     {
       "type": "dont",
-      "image": "https://placekitten.com/377/222",
+      "image": "toggle-button/toggle-button_segment_dont_16-9.png",
       "ratio": "16-9",
-      "alt": "Switch with label that says 'Show in stock stores first'",
-      "caption": "use the switch component for filtering or sorting content."
-    }
+      "alt": "A toggle button with three segments labeled morning, afternoon, and night that don't fit the breakpoint.'",
+      "caption": "include more segments than what fit on the smallest breakpoint."
+    } 
   ],
+  "contentTypes": [
+
+{
+
+"type": "do",
+
+"image": "toggle-button/toggle-button_content-types_do_16-9.png",
+
+"ratio": "16-9",
+
+"alt": "A toggle button with two segments labeled centimeters and inches.",
+
+"caption": "use content types that make sense for each experience."
+
+},
+
+{
+
+"type": "dont",
+
+"image": "toggle-button/toggle-button_content-types_do_16-9.png",
+
+"ratio": "16-9",
+
+"alt": "A toggle button with a ruler icon on one segment and not on the other.",
+
+"caption": "mix content types in the same toggle button."
+
+}
+
+],
     "versions": [
     {
       "components": [
@@ -93,7 +129,7 @@
 
 <br>
 
-<cdr-banner type="warning" aria-live="polite"><template #icon-left><icon-information-fill inherit-color /></template><span style="font-weight:500">ToggleButton is only available in the Vue 3 (v13) Cedar release.</span><template #message-body>Upgrade to Vue 3 and Cedar v13 to access the toggleButton component.</template></cdr-banner>
+<cdr-banner type="warning" aria-live="polite"><template #icon-left><icon-information-fill inherit-color /></template><span style="font-weight:500">ToggleButton is only available in the Vue 3 (v13) Cedar release.</span><template #message-body>Upgrade to Vue 3 and Cedar v13 to access the ToggleButton component.</template></cdr-banner>
 
 ## Overview
 
@@ -102,32 +138,11 @@ Toggle buttons are a set of two or more options, each of which functions as a bu
 ### The Basics 
 The Toggle Button has at least two selections, with a default option selected. The component can also be extended to include more than two. Take care in using Toggle Buttons that include more than five selections, as space on mobile is limited. Consider checking that the Toggle Button will work on Cedar’s XS breakpoint to ensure usage.
 
-### Usage
-
-Toggle Button is built from two components: **CdrToggleGroup** and **CdrToggleButton**. These are meant to be used together.
-
-The parent **CdrToggleGroup** contains all the child **CdrToggleButton** components. This component will track the value of the selected toggle button among all the toggle buttons slotted to it.  **CdrToggleGroup** requires `v-model` to track the value of the selected child **CdrToggleButton**.
-
-```vue
-<template>
-   <cdr-toggle-group v-model="units">
-      <cdr-toggle-button toggleValue="centimeters">cm</cdr-toggle-button>
-      <cdr-toggle-button toggleValue="inches">in</cdr-toggle-button>
-    </cdr-toggle-group>
-</template>
-```
-
-The `toggleValue` prop of the selected **CdrToggleButton** will determine the `modelValue` of the selected toggle button. If no text or icon has been slotted to the toggle button, the string provided for the required `toggleValue` prop will be displayed as the button text. In cases where the slotted text and the `toggleValue` are different, as shown above, it will be the slotted text which gets displayed in the browser.
-
-The `modelValue` of the **CdrToggleGroup** will always be determined by the `toggleValue` prop of the selected **CdrToggleButton**. Also, screen readers will choose to read the `toggleValue` over the slotted text, which can be handy in the case of abbreviations like in the example above.
-
-
-
 ### Default
 
 Default toggle button with medium size and standard spacing.
 
-### Icon with Label
+### Icon with label
 
 Default size toggle button with icon and label
 
@@ -150,13 +165,13 @@ Toggle buttons, checkboxes, radio buttons, and switches are all similar types of
 
 To ensure that usage of this component complies with accessibility guidelines: 
 
-- Always provide a `toggleValue` prop. The value of this property will be used as an `aria-label` attribute. This can be useful to spell out abbreviated values (ie "centimeters" instead of "cm") for screen readers, as well as provide a label when only an icon is slotted to the toggle button.
+- Always provide a `toggleValue` prop. The value of this property will be used as an `aria-label` attribute. This can be useful to spell out abbreviated values (ie "centimeters" instead of "cm") for screen readers, as well as provide a label when only an icon is slotted to the toggle button
 
 This component complies with WCAG guidelines by: 
 
-- Setting the role of the unordered list to `radiogroup`.
-- Setting the role of the individual toggle buttons to `radio`.
-- Providing an `aria-checked` property for each toggle button.
+- Setting the role of the unordered list to `radiogroup`
+- Setting the role of the individual toggle buttons to `radio`
+- Providing an `aria-checked` property for each toggle button
 
 <hr>
 
@@ -236,6 +251,16 @@ Switches, checkboxes, radio buttons, and toggle buttons are all similar types of
 
 <hr>
 
+### Do / Don't
+
+<do-dont :examples="$page.frontmatter.width" />
+
+<do-dont :examples="$page.frontmatter.segment" />
+
+<do-dont :examples="$page.frontmatter.contentTypes" />
+
+<hr>
+
 ## API
 Toggle Button is built from two components: **CdrToggleGroup** and **CdrToggleButton**. These are meant to be used together.
 
@@ -252,5 +277,22 @@ Toggle Button is built from two components: **CdrToggleGroup** and **CdrToggleBu
 
 #### CdrToggleButton
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[1].api.slots" />
+
+### Usage
+
+The parent **CdrToggleGroup** contains all the child **CdrToggleButton** components. This component will track the value of the selected toggle button among all the toggle buttons slotted to it.  **CdrToggleGroup** requires `v-model` to track the value of the selected child **CdrToggleButton**.
+
+```vue
+<template>
+   <cdr-toggle-group v-model="units">
+      <cdr-toggle-button toggleValue="centimeters">cm</cdr-toggle-button>
+      <cdr-toggle-button toggleValue="inches">in</cdr-toggle-button>
+    </cdr-toggle-group>
+</template>
+```
+
+The `toggleValue` prop of the selected **CdrToggleButton** will determine the `modelValue` of the selected toggle button. If no text or icon has been slotted to the toggle button, the string provided for the required `toggleValue` prop will be displayed as the button text. In cases where the slotted text and the `toggleValue` are different, as shown above, it will be the slotted text which gets displayed in the browser.
+
+The `modelValue` of the **CdrToggleGroup** will always be determined by the `toggleValue` prop of the selected **CdrToggleButton**. Also, screen readers will choose to read the `toggleValue` over the slotted text, which can be handy in the case of abbreviations like in the example above.
 
 </cdr-doc-table-of-contents-shell>
