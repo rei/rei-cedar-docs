@@ -1,6 +1,6 @@
 ---
 {
-  "title": "Spring 2023 Release | Vue 3",
+  "title": "Summer 2022 Release | Vue 3",
   "title_metadata": false,
   "layout_type": "LayoutArticle",
   "summary": false,
@@ -134,7 +134,7 @@ A keen observer may notice our documentation site is still utilizing Vue 2. We'r
 
 While it's not ideal to document a Vue 3 component library in a Vue 2 site, we have introduced a handful of changes to support our Vue 3 library in the interim. 
 
-- Adding a utility to generate a Vue 3 version of our component sandboxes.
+- Adding a utility to generate a Vue 3 version of our component sandboxes [Try it out](../../components/buttons/#primary)
 - Flagging when a change or feature applies to the Vue 3 library only.
 
 
