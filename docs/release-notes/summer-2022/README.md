@@ -120,8 +120,23 @@ We have introduced a new UI toggle control intended for toggling between distinc
 
 Any notable a11y fixes go here
 
+<br>
+
 ## Bug Fixes
 
 Any notable bug fixes go here
+
+<br>
+
+## Doc site
+
+A keen observer may notice our documentation site is still utilizing Vue 2. We're currently in the process of rebuilding our documentation site from the ground up and hope to have it released in early 2023. 
+
+While it's not ideal to document a Vue 3 component library in a Vue 2 site, we have introduced a handful of changes to support our Vue 3 library in the interim. 
+
+- Adding a utility to generate a Vue 3 version of our component sandboxes.
+- Flagging when a change or feature applies to the Vue 3 library only.
+
+
 
 </cdr-doc-table-of-contents-shell>
