@@ -105,12 +105,11 @@ Default switch with medium size and standard spacing.
 <div class="cdr-doc-code-snippet__actions">
   <div class="cdr-doc-code-snippet__action-wrapper">
     <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar-next/tree/main/src/components/switch" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" class="cdr-doc-code-snippet__action-icon cdr-icon_12-0-0" title="An outline caricature of a cat"><use href="#brand-github" xlink:href="#brand-github"></use></svg>
             View on GitHub
     </a>
   </div> 
   <div class="cdr-doc-code-snippet__action-wrapper">
-    <a target="_blank" rel="noopener noreferrer" href="https://codesandbox.io/s/cedarexamplesandbox-forked-y6hei2?file=/App.vue" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" class="cdr-doc-code-snippet__action-icon cdr-icon_12-0-0" title="A hollow box with a small solid box in each box panel"><use href="#brand-code-sandbox" xlink:href="#brand-code-sandbox"></use></svg>
+    <a target="_blank" rel="noopener noreferrer" href="https://codesandbox.io/s/cedarexamplesandbox-forked-y6hei2?file=/App.vue" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
             View on CodeSandbox
     </a>
   </div>
@@ -128,11 +127,11 @@ Displays at full-width of its container.
 ></iframe>
 
 <div class="cdr-doc-code-snippet__actions"><div class="cdr-doc-code-snippet__action-wrapper">
-  <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar-next/tree/main/src/components/switch" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" class="cdr-doc-code-snippet__action-icon cdr-icon_12-0-0" title="An outline caricature of a cat"><use href="#brand-github" xlink:href="#brand-github"></use></svg>
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar-next/tree/main/src/components/switch" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
         View on GitHub
 </a>
 </div> 
-<div class="cdr-doc-code-snippet__action-wrapper"><a target="_blank" rel="noopener noreferrer" href="https://codesandbox.io/s/cdrswitch--medium-full-width-ez4mqc?file=/App.vue" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" class="cdr-doc-code-snippet__action-icon cdr-icon_12-0-0" title="A hollow box with a small solid box in each box panel"><use href="#brand-code-sandbox" xlink:href="#brand-code-sandbox"></use></svg>
+<div class="cdr-doc-code-snippet__action-wrapper"><a target="_blank" rel="noopener noreferrer" href="https://codesandbox.io/s/cdrswitch--medium-full-width-ez4mqc?file=/App.vue" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
         View on CodeSandbox
 </a></div></div>
 
@@ -148,11 +147,11 @@ Size can be changed to large based on where the component is being used.
 ></iframe>
 
 <div class="cdr-doc-code-snippet__actions"><div class="cdr-doc-code-snippet__action-wrapper">
-  <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar-next/tree/main/src/components/switch" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" class="cdr-doc-code-snippet__action-icon cdr-icon_12-0-0" title="An outline caricature of a cat"><use href="#brand-github" xlink:href="#brand-github"></use></svg>
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar-next/tree/main/src/components/switch" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
         View on GitHub
 </a>
 </div> 
-<div class="cdr-doc-code-snippet__action-wrapper"><a target="_blank" rel="noopener noreferrer" href="https://codesandbox.io/s/cdrswitch-large-55d0xb?file=/App.vue" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" class="cdr-doc-code-snippet__action-icon cdr-icon_12-0-0" title="A hollow box with a small solid box in each box panel"><use href="#brand-code-sandbox" xlink:href="#brand-code-sandbox"></use></svg>
+<div class="cdr-doc-code-snippet__action-wrapper"><a target="_blank" rel="noopener noreferrer" href="https://codesandbox.io/s/cdrswitch-large-55d0xb?file=/App.vue" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
         View on CodeSandbox
 </a></div></div>
 
@@ -168,11 +167,11 @@ A label with custom styling.
 ></iframe>
 
 <div class="cdr-doc-code-snippet__actions"><div class="cdr-doc-code-snippet__action-wrapper">
-  <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar-next/tree/main/src/components/switch" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" class="cdr-doc-code-snippet__action-icon cdr-icon_12-0-0" title="An outline caricature of a cat"><use href="#brand-github" xlink:href="#brand-github"></use></svg>
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar-next/tree/main/src/components/switch" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
         View on GitHub
 </a>
 </div> 
-<div class="cdr-doc-code-snippet__action-wrapper"><a target="_blank" rel="noopener noreferrer" href="https://codesandbox.io/s/cdrswitch-custom-label-style-53f6ly?file=/App.vue" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" class="cdr-doc-code-snippet__action-icon cdr-icon_12-0-0" title="A hollow box with a small solid box in each box panel"><use href="#brand-code-sandbox" xlink:href="#brand-code-sandbox"></use></svg>
+<div class="cdr-doc-code-snippet__action-wrapper"><a target="_blank" rel="noopener noreferrer" href="https://codesandbox.io/s/cdrswitch-custom-label-style-53f6ly?file=/App.vue" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
         View on CodeSandbox
 </a></div></div>
 
