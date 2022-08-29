@@ -1,127 +1,90 @@
 ---
 {
-  "title": "Toggle Button",
-  "layout_type": "LayoutComponent",
-  "summary": "Permits user to switch two or more options on and off",
-  "title_metadata": "CdrToggleButton",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/toggle-button",
-  "breadcrumbs": [
-    {
-      "text": "Components/"
-    }
-  ],
-  "width": [
+   "title":"Toggle Button",
+   "layout_type":"LayoutComponent",
+   "summary":"Permits user to switch two or more options on and off",
+   "title_metadata":"CdrToggleButton",
+   "component_location":"https://github.com/rei/rei-cedar/tree/next/src/components/toggle-button",
+   "breadcrumbs":[
       {
-"type": "do",
-
-"image": "toggle-button/toggle-button_width_do_16-9.png",
-
-"ratio": "16-9",
-
-"alt": "A toggle button with two segments of equal width.",
-
-"caption": "ensure that each segment is equal in width."
-
-},
-    {
-      "type": "dont",
-      "image": "toggle-button/toggle-button_width_dont_16-9.png",
-      "ratio": "16-9",
-      "alt": "A toggle button with two segments of unequal width.",
-      "caption": "allow segments to be varying widths."
-    }
-  ],
-
-  "segment": [
+         "text":"Components/"
+      }
+   ],
+   "segment":[
       {
-      "type": "do",
-      "image": "toggle-button/toggle-button_segment_do_16-9.png",
-      "ratio": "16-9",
-      "alt": "A toggle button with two segments labeled day and night.",
-      "caption": "limit the number of segments to aid in usability and scannability."
-    },
-    {
-      "type": "dont",
-      "image": "toggle-button/toggle-button_segment_dont_16-9.png",
-      "ratio": "16-9",
-      "alt": "A toggle button with three segments labeled morning, afternoon, and night that don't fit the breakpoint.'",
-      "caption": "include more segments than what fit on the smallest breakpoint."
-    } 
-  ],
-  "contentTypes": [
-
-{
-
-"type": "do",
-
-"image": "toggle-button/toggle-button_content-types_do_16-9.png",
-
-"ratio": "16-9",
-
-"alt": "A toggle button with two segments labeled centimeters and inches.",
-
-"caption": "use content types that make sense for each experience."
-
-},
-
-{
-
-"type": "dont",
-
-"image": "toggle-button/toggle-button_content-types_do_16-9.png",
-
-"ratio": "16-9",
-
-"alt": "A toggle button with a ruler icon on one segment and not on the other.",
-
-"caption": "mix content types in the same toggle button."
-
-}
-
-],
-    "versions": [
-    {
-      "components": [
-        {
-          "name": "CdrToggleGroup",
-          "api": {
-            "props": [
-              {
-                "name": "size",
-                "type": "boolean",
-                "description": "When true, this prop will make the toggle buttons larger than the default size."
-              },
-            ],
-            "slots": [
-              {
-                "name": "default",
-                "description": "Slot for individual cdr-toggle-button elements"
-              }
-            ],
-          }
-        },
-       {
-          "name": "CdrToggleButton",
-          "api": {
-            "props": [
-              {
-                "name": "toggleValue",
-                "type": "string",
-                "required": "true",
-                "description": "When a toggleButton is selected, this prop provides the selected value for the parent CdrToggleGroup. It also provides a label if no text is slotted to the toggleButton."
-              }
-            ],
-            "slots": [
-              {
-                "name": "default",
-                "description": "Slot for a toggle button label. Can either be text or an icon or both."
-              }
-            ],
-          }
-        }
-      ]
-    }
-  ]
+         "type":"do",
+         "image":"toggle-button/toggle-button_segment_do_16-9.png",
+         "ratio":"16-9",
+         "alt":"A toggle button with two segments labeled day and night.",
+         "caption":"limit the number of segments to aid in usability and scannability."
+      },
+      {
+         "type":"dont",
+         "image":"toggle-button/toggle-button_segment_dont_16-9.png",
+         "ratio":"16-9",
+         "alt":"A toggle button with three segments labeled morning, afternoon, and night that don't fit the breakpoint.'",
+         "caption":"include more segments than what fit on the smallest breakpoint."
+      }
+   ],
+   "contentTypes":[
+      {
+         "type":"do",
+         "image":"toggle-button/toggle-button_content-types_do_16-9.png",
+         "ratio":"16-9",
+         "alt":"A toggle button with two segments labeled centimeters and inches.",
+         "caption":"use content types that make sense for each experience."
+      },
+      {
+         "type":"dont",
+         "image":"toggle-button/toggle-button_content-types_dont_16-9.png",
+         "ratio":"16-9",
+         "alt":"A toggle button with a ruler icon on one segment and not on the other.",
+         "caption":"mix content types in the same toggle button."
+      }
+   ],
+   "versions":[
+      {
+         "components":[
+            {
+               "name":"CdrToggleGroup",
+               "api":{
+                  "props":[
+                     {
+                        "name":"size",
+                        "type":"boolean",
+                        "description":"When true, this prop will make the toggle buttons larger than the default size."
+                     }
+                  ],
+                  "slots":[
+                     {
+                        "name":"default",
+                        "description":"Slot for individual cdr-toggle-button elements"
+                     }
+                  ]
+               }
+            },
+            {
+               "name":"CdrToggleButton",
+               "api":{
+                  "props":[
+                     {
+                        "name":"toggleValue",
+                        "type":"string",
+                        "required":"true",
+                        "description":"When a toggleButton is selected, this prop provides the selected value for the parent CdrToggleGroup. It also provides a label if no text is slotted to the toggleButton."
+                     }
+                  ],
+                  "slots":[
+                     {
+                        "name":"default",
+                        "description":"Slot for a toggle button label. Can either be text or an icon or both."
+                     }
+                  ]
+               }
+            }
+         ]
+      }
+   ]
 }
 ---
 
@@ -252,8 +215,6 @@ Switches, checkboxes, radio buttons, and toggle buttons are all similar types of
 <hr>
 
 ### Do / Don't
-
-<do-dont :examples="$page.frontmatter.width" />
 
 <do-dont :examples="$page.frontmatter.segment" />
 
