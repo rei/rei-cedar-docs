@@ -83,9 +83,9 @@
 
 <br>
 
-# Overview
+## Overview
 
-## Default
+### Default
 
 The default table is medium sized, bordered, full width, and has responsive overflow scrolling.
 
@@ -121,7 +121,7 @@ The default table is medium sized, bordered, full width, and has responsive over
 
 </cdr-doc-example-code-pair>
 
-## Striped
+### Striped
 
 Alternating light/dark backgrounds.
 
@@ -158,7 +158,7 @@ Alternating light/dark backgrounds.
 </cdr-doc-example-code-pair>
 
 
-## Border
+### Border
 
 Adds border between rows
 
@@ -194,7 +194,7 @@ Adds border between rows
 
 </cdr-doc-example-code-pair>
 
-## Advanced with custom styles
+### Advanced with custom styles
 
 This is an advanced example with multiple headers and a custom class to change the background color for headers inside `<tbody>`
 
@@ -269,7 +269,7 @@ This is an advanced example with multiple headers and a custom class to change t
 
 </cdr-doc-example-code-pair>
 
-## Accessibility
+### Accessibility
 
 Many WCAG requirements are contextual to their implementation.
 To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
@@ -297,40 +297,40 @@ This component has compliance with WCAG guidelines by:
 
 <hr>
 
-# Guidelines
+## Guidelines
 
-## Use When
+### Use When
 
 - Presenting multiple metrics and categories together
 - Displaying tabular data for users to compare
 
-## Don't Use When
+### Don't Use When
 
 - Positioning contents on page. Instead, use [Grid](../grid/)
 - Laying out a page design. Instead, use [Grid](../grid/)
 
-## The Basics
+### The Basics
 
 - Use on either light or dark backgrounds.
 - Content within tables can include text, photos, graphics, or other components (i.e. links, buttons, icons)
 
-## Anatomy
+### Anatomy
 
 - `cdr-table` like `cdr-grid` is a wrapper component without predetermined layout requirements. This allows you the flexibility to construct the structure you need to accurately display the data you have. There are cases where you might need to change background colors or add additional borders (see the [advanced example](#advanced-with-custom-styles)). When this is done, tokens for the table colors (background, border, etc.) should be used so your customizations can persist through future cedar updates.
 - Our table component provides the visual class only and does not account for markup requirements to create an accessible table. Be sure to review the examples and the accessibility requirements for this component.
 
 <hr>
 
-# API
+## API
 
 <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
 <cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
-## Props
+### Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-## Component Variables
+### Component Variables
 
 <cdr-doc-comp-vars name="CdrTable"/>
 

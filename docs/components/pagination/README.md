@@ -143,8 +143,9 @@
 
 <cdr-doc-table-of-contents-shell>
 
-# Overview
-## Pagination @ sm, md, lg
+## Overview
+
+### Pagination @ sm, md, lg
 
 At the sm, md, and lg breakpoints, pagination displays as a list of number text links. Prev and Next links are also added when applicable.
 
@@ -159,7 +160,7 @@ At the sm, md, and lg breakpoints, pagination displays as a list of number text 
 ```
 </cdr-doc-example-code-pair>
 
-## Intra-Page Navigation
+### Intra-Page Navigation
 
 By default, CdrPagination assumes that you are navigating through pages on a site and will update the URL on change. For content that requires pagination but is part of a larger page the `linkTag` and `forLabel` properties can be used to render a button based pagination. Set `linkTag` to be `"button"` and set the `forLabel` to describe what element is being paginated, for example `"Pagination for user reviews"`
 
@@ -176,7 +177,7 @@ By default, CdrPagination assumes that you are navigating through pages on a sit
 ```
 </cdr-doc-example-code-pair>
 
-## Overriding Default Navigation
+### Overriding Default Navigation
 
 By default pagination uses anchor elements which navigate the users web browser when clicked. This behavior can be overriden by adding a handler to the `navigate` event which emits `(currentPage, currentUrl, event)` and calling `event.preventDefault()` in the handler function. The `currentPage` and `currentUrl` can then be used to implement router based navigation or programmatically navigate the page. This can also be used in conjunction with the `link-tag` property to render a button based pagination.
 
@@ -196,13 +197,13 @@ By default pagination uses anchor elements which navigate the users web browser 
 
 </cdr-doc-example-code-pair>
 
-## Pagination @ xs
+### Pagination @ xs
 
 At the xs breakpoint, pagination adapts to a Select component using the native UI dropdown menu.
 
 <img :src="$withBase('/pagination/pagination_breakpoint_xs_2x.png')" alt="Responsive pagination component using Select element" />
 
-## Accessibility
+### Accessibility
 
 This component complies with accessibility guidelines by doing the following:
 
@@ -239,9 +240,9 @@ This component has compliance with WCAG guidelines by:
 
 <hr>
 
-# Guidelines
+## Guidelines
 
-## SEO
+### SEO
 
 For best SEO support, use of pagination requires additional markup and logic in the `<head>` of the page.
 
@@ -249,17 +250,17 @@ See REI's SEO Confluence page on [pagination](https://confluence.rei.com/display
 
 Note that REI has chosen HTML `<link>` elements instead of HTTP headers. Make sure to use fully qualified absolute URLs in the `<link>` elements instead of relative URLs.
 
-## Use When
+### Use When
 - Providing navigation to break apart large quantities of content
 - Breaking up search result pages into manageable sections
 
-## Don't Use When
+### Don't Use When
 
 - Using lazy load or infinite scroll within an experience
 - Switching between slides or content in a carousel
 - Displaying editorial content. Instead, show entire article on one page
 
-## Behavior
+### Behavior
 
 - Page number links are truncated as follows: [first] ... [current-1] [current] [current+1] ... [last]
 - If there are 7 pages or fewer, all page number links will be shown
@@ -271,7 +272,7 @@ Within pagination, link styles are adapted
 - Prev and Next links use the small size for the caret-left and caret-right icons
 
 
-### Do / Don't
+#### Do / Don't
 
 By default, pagination is center aligned under category or search results content.
 
@@ -295,15 +296,15 @@ Pagination adapts to a Select component with a native UI dropdown menu on XS bre
 
 <hr>
 
-# API
+## API
 
 <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
 <cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
-## Props
+### Props
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-## Events
+### Events
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
 

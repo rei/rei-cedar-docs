@@ -126,9 +126,10 @@
 
 
 <cdr-doc-table-of-contents-shell>
-# Overview
 
-## Inline Icon Components
+## Overview
+
+### Inline Icon Components
 
 The inline icon components are the recommended method for using Cedar icons in a Vue application. Cedar exports a component version of every SVG Icon in the [Cedar Icon Library](../../icons/library). These components are named using PascalCase, for example `account-profile` becomes `IconAccountProfile` or `camping` becomes `IconCamping`.
 
@@ -141,7 +142,7 @@ The inline icon components are the recommended method for using Cedar icons in a
 
 </cdr-doc-example-code-pair>
 
-## SVG Sprite
+### SVG Sprite
 
 A collection of SVG icon files composed into a single file. This method provides a single server download request and caches icons for display. This is the most efficient way of displaying large numbers of icons, but has an added maintenance cost in that every icon used in the application must be manually added to it's sprite sheet. We recommend using the [inline icon components](#inline-icon-components), and optimizing to use a sprite only if it would provide a measurable performance benefit.
 
@@ -157,7 +158,7 @@ Visit the [Cedar Icon Sprite Creator](https://rei.github.io/cedar-icons/#/sprite
 </cdr-doc-example-code-pair>
 
 
-## Non-Cedar SVG
+### Non-Cedar SVG
 
 Create a new SVG icon using any valid SVG markup. The wrapping SVG element can be stripped (below) or maintained. Ensure that ID is not a used attribute in your icon to avoid introducing non-unique ID's on a page that may use this icon several times. Note that if it is not stripped, then `viewBox`, `role`, and `xmlns` attributes will not be preserved. Whereas, all other attributes will be preserved. This method creates an outer SVG wrapper for accessibility and styles. This is not recommended if using a large number of icons. See the [icon overview](../../icons/overview/) page for more details on building SVG for use with Cedar.
 
@@ -191,7 +192,7 @@ Create a new SVG icon using any valid SVG markup. The wrapping SVG element can b
 
 </cdr-doc-example-code-pair>
 
-## Accessibility
+### Accessibility
 
 CdrIcon by default adds `aria-hidden="true"` to the root SVG element. If your usage of CdrIcon is purely decorative, or if the icon is already explained by the text surrounding it, then there are no other accessibility steps needed.
 
@@ -264,31 +265,32 @@ Recommendations for writing screen reader text:
 
 <hr>
 
-# Guidelines
+## Guidelines
 
-## Use When
+### Use When
 - Communicating simple actions and concepts that are easily understood, such as printing a receipt or sending an email
 - Making navigation easier for common actions, such as return to home page or search
 - Representing an action, object, or concept at a high level of abstraction, such as using the snowflake icon to represent snow sports
 - Notifying users about status, such as the number of items in a shopping cart or a warning message
 - Conserving space for concepts that are difficult to depict, such as the progress icon or the 3-line “hamburger” menu
 
-## The Basics
-### Sizes
+### The Basics
+
+#### Sizes
 Icons are available in three sizes: small (16px), medium (24px), and large (32px).  Default size is medium (24px); however, designers can choose a different size.
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/icon/Spec__Icon__Sizes.png`)" alt="Cedar icon sizes." />
 
 
 
-### Color
+#### Color
 Ensure that icons use the ratio of 4.5:1 contrast between icon color and background color. Follow recommendations in the [Color Foundation](../../foundation/color/) article for pairing color tokens.
 
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/icon/Spec__Icon__Colors.png`)" alt="Cedar icon color options." />
 
 
 
-### Clearance
+#### Clearance
 Adequate space around the icon allows for legibility and touch. A minimum touch target area of 40px is recommended for standalone iconography.
 
 When the mouse and keyboard are the primary input methods or when icons are paired inline with text, measurements may be condensed to accommodate denser layouts. Icon size should align to the line-height of the paired text element.
@@ -297,11 +299,11 @@ When the mouse and keyboard are the primary input methods or when icons are pair
 
 
 
-## Icon Library
+### Icon Library
 
 For a list of all available icons and their names, visit the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/).
 
-## Behavior
+### Behavior
 
 When using icons with links or buttons, ensure that the icon communicates intended meaning.
 
@@ -315,26 +317,26 @@ Ensure that icons use contrast ratio of 4.5:1 between icon color and background 
 
 <do-dont :examples="$page.frontmatter.color" class="stack-2"/>
 
-# API
+## API
 
 <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
 <cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
-## Props
+### Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-## Slots
+### Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Usage
+### Usage
 
 For a list of all available icons and their names, visit the [Cedar Icon Library](https://rei.github.io/cedar-icons/#/).
 
 There are 2 different options to display SVG icons on your page using the **CdrIcon** package.
 
-### 1. SVG Sprite
+#### 1. SVG Sprite
 
 Requires:
 - Icon sprite inline on page
@@ -388,7 +390,7 @@ components: {
 </script>
 ```
 
-### 2. Non-Cedar SVG
+#### 2. Non-Cedar SVG
 
 The **CdrIcon** package is simply an SVG with default attributes set for accessibility and styling.
 

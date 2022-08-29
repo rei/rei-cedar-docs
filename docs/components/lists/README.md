@@ -91,9 +91,10 @@
 
 
 <cdr-doc-table-of-contents-shell>
-# Overview
 
-## Bare
+## Overview
+
+### Bare
 
 Collect items to be displayed in a list when items are not marked with bullets.  This is the default and is also known as unordered and undecorated “bare” list.
 
@@ -114,7 +115,7 @@ Collect items to be displayed in a list when items are not marked with bullets. 
 
 </cdr-doc-example-code-pair>
 
-## Unordered
+### Unordered
 
 Collect related items that don’t need to be in a specific order or sequence. List items are typically marked with bullets.
 
@@ -134,7 +135,7 @@ Collect related items that don’t need to be in a specific order or sequence. L
 
 </cdr-doc-example-code-pair>
 
-## Ordered
+### Ordered
 
 Collect related items with numeric order or sequence. Numbering starts at 1 with the first list item and increases by increments of 1 for each successive ordered list item.
 
@@ -154,7 +155,7 @@ Collect related items with numeric order or sequence. Numbering starts at 1 with
 
 </cdr-doc-example-code-pair>
 
-## Compact
+### Compact
 
 Compact modifier can be added to any `cdr-list` in order to reduce the margin between list items.
 
@@ -174,7 +175,7 @@ Compact modifier can be added to any `cdr-list` in order to reduce the margin be
 
 </cdr-doc-example-code-pair>
 
-## Inline
+### Inline
 
 Display items horizontally with no divider.
 
@@ -190,7 +191,7 @@ Display items horizontally with no divider.
 
 </cdr-doc-example-code-pair>
 
-## Inline - Unordered
+### Inline - Unordered
 
 Display items horizontally, separated by a bullet character.
 
@@ -206,7 +207,7 @@ Display items horizontally, separated by a bullet character.
 
 </cdr-doc-example-code-pair>
 
-## Accessibility
+### Accessibility
 
 To ensure that usage of this component complies with accessibility guidelines:
 
@@ -235,23 +236,23 @@ This component has compliance with WCAG guidelines by:
 
 <hr>
 
-# Guidelines
+## Guidelines
 
-## Use When
+### Use When
 
 - Displaying groups of related items represented by text
 
-## Don't Use When
+### Don't Use When
 
 - Displaying content that is not primarily text
 - Displaying content with two or more well-defined dimensions. Instead, use [Table](../table/)
 
-## The Basics
+### The Basics
 
 - Lists can inherit cdr-text modifiers to make any text a list
 - Follow spacing requirements outlined in the [Typography](../../foundation/typography/) and [Spacing](../../foundation/spacing/) foundation articles.
 
-## Content
+### Content
 
 Break up chunks of content to make the information easier to scan:
 
@@ -280,7 +281,7 @@ Every item in a list must:
 - Use semicolons when linking independent clauses and product details in the list
 - End each sentence in a list item with a period when there are multiple sentences; however, don’t add a period for the last sentence or phrase
 
-### Do / Don’t
+#### Do / Don’t
 
 <do-dont :examples="$page.frontmatter.list1" />
 
@@ -288,32 +289,32 @@ Every item in a list must:
 <do-dont :examples="$page.frontmatter.list2" />
 
 
-## Resources
+### Resources
 
 WebAIM: [Semantic Structure: Using Lists Correctly](https://webaim.org/techniques/semanticstructure/)
 
 <hr>
 
-# API
+## API
 
 <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
 <cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
-## Props
+### Props
 
 This component will bind any attribute that a [native HTML list element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul) accepts (with exception of `type` attribute for ordered lists, use the `list-style-type` CSS property instead).
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props"/>
 
-## Slots
+### Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Component Variables
+### Component Variables
 
 <cdr-doc-comp-vars name="CdrList"/>
 
-## Usage
+### Usage
 
 Visual style and semantic meaning are managed independently by providing:
 
@@ -337,7 +338,7 @@ The **CdrList** component has decoupled the semantic tags `<ul>` and `<ol>` from
 
 It is possible to render a semantic ordered list `<ol>` as a visually non-styled or bulleted list using the `cdr-list` modifiers. With this decoupling, individual list items can contain a variety of HTML elements, including paragraphs, headings, form elements, and other (nested) lists. Ensure that content is structured and follows design guidelines.
 
-### Tag Variants
+#### Tag Variants
 
 Following are different types of lists:
 
@@ -364,7 +365,7 @@ Following are different types of lists:
 - Bare or unstyled lists:
   - Contains a variety of HTML elements, including paragraphs, headings, form elements, and other (nested) lists
 
-### Modifiers
+#### Modifiers
 
 Note that the tag itself does not determine display, a modifier must be added for list styles. Add one of the following variants to the `modifier` attribute of the `cdr-list` tag to change the visual presentation:
 

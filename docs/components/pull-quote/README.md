@@ -136,8 +136,9 @@
 
 <cdr-doc-table-of-contents-shell>
 
-# Overview
-## Default (Medium)
+## Overview
+
+### Default (Medium)
 
 Default pull quote can be used with the following HTML tags: `<p>`, `<div>`, `<aside>`. For XS breakpoint, a border is added below the pull quote and the font size is smaller.
 
@@ -155,7 +156,7 @@ Default pull quote can be used with the following HTML tags: `<p>`, `<div>`, `<a
 
 </cdr-doc-example-code-pair>
 
-## Accessibility
+### Accessibility
 
 To ensure that usage of this component complies with accessibility guidelines:
 
@@ -172,21 +173,21 @@ This component has compliance with WCAG guidelines by:
 
 <hr>
 
-# Guidelines
+## Guidelines
 
-## Use When
+### Use When
 
 - Attracting the user’s attention to article text
 - Breaking up a large body of text
 - Providing the reader with visual markers
 - Maintaining a sense of sequence and place
 
-## Don't Use When
+### Don't Use When
 
 - Displaying a citation reference. Instead, use [Block Quote](../block-quote/)
 - Displaying for a decorative treatment only
 
-## The Basics
+### The Basics
 
 Use a pull quote for emphasizing content that has a close and significant relationship with the surrounding text and will help users to visually scan the page.
 
@@ -198,18 +199,18 @@ Use a pull quote for emphasizing content that has a close and significant relati
 
 <do-dont :examples="$page.frontmatter.position" />
 
-## Responsiveness
+### Responsiveness
 
 When a pull quote is displayed at XS breakpoint, the left border will appear below the pull quote and will use a smaller font size.
 
 <hr>
 
-# API
+## API
 
 <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
 <cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
-## Props
+### Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 

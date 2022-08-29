@@ -196,20 +196,20 @@ Many WCAG requirements are contextual to their implementation. To ensure that us
 
 <do-dont :examples="$page.frontmatter.grouping" />
 
-# API
+## API
 
 <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
 <cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
-## Props
+### Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-## Slots
+### Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Component Variables
+### Component Variables
 
 <cdr-doc-comp-vars name="CdrCard"/>
 
