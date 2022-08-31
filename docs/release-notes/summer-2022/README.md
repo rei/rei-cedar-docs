@@ -50,7 +50,7 @@ While the API for most of the components is unchanged, some changes were necessa
 
 By default, attributes applied to a component are "passed through" to the parent element. For certain Cedar components, we make use of Vue's `inheritAttrs` property to bind attributes to a deeper element in the component. This allows us to pass attributes like `loading="lazy"` to the `<img>` element within CdrImg, even when it's being used with a wrapping ratio container.
 
-We have identified two components so far where this may cause issues when apps relied on the Vue 2 `$attrs` object behavior. Rather than hack around Vue 3's new behavior, we have introduced a new prop that allows a custom class to be passed to the parent element.
+We have identified two components where this deeper class binding was causing style issues. Rather than hack around Vue 3's new behavior, we have introduced new props that allow a custom class to be bound to the parent element.
 
 #### CdrImg
 
@@ -64,7 +64,7 @@ Please reach out to us if you identify other situations where this attribute cha
 
 [Vue migration guide: $attrs](https://v3-migration.vuejs.org/breaking-changes/attrs-includes-class-style.html)
 
-### Vue 3 updated slot syntax
+### Vue 3 updated `slot` syntax
 
 The syntax for using a named slot on a `template` element has changed. Slots will not function correctly in Vue 3 using the old syntax.
 
@@ -77,7 +77,40 @@ The syntax for using a named slot on a `template` element has changed. Slots wil
 <template #title>...</template>
 ```
 
-### Vue 3 v-model
+### Vue 3 `v-html` directive
+
+Vue 3 has [limited the use](https://github.com/vuejs/core/issues/6553) of the `v-html` directive and it no longer functions on custom components (e.g. CdrText). If your application relied on this pattern, our current recommendation is to replace any custom components with standard HTML elements and style them using tokens and/or component variables.
+
+**Old**
+```html
+<cdr-text 
+  v-html="htmlContent"
+  class="my-custom-class" 
+/>
+
+<style lang="scss">
+  @import '@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
+  .my-custom-class {
+     @cdr-text-subheading-sans-500;
+  }
+</style>
+```
+**New**
+```html
+<p 
+  v-html="htmlContent"
+  class="my-custom-class" 
+/>
+
+<style lang="scss">
+  @import '@rei/cdr-tokens/dist/scss/cdr-tokens.scss';
+  .my-custom-class {
+     @cdr-text-subheading-sans-500;
+  }
+</style>
+```
+
+### Vue 3 `v-model`
 
 Multiple Cedar components utilize the Vue's `v-model` directive. Depending on your implementation, you may have to refactor your applications for the updates to `v-model` in Vue 3.
 
