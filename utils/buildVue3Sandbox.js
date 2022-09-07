@@ -45,7 +45,7 @@ export default function makeMeASandbox(data, model, computed, methods) {
           },
           "dependencies": {
             "@rei/cdr-tokens": packageJson.dependencies['@rei/cdr-tokens'],
-            "@rei/cedar": "beta",
+            "@rei/cedar": "^13.0.0",
             "core-js": "^3.22.7",
             "lodash-es": "^4.17.21",
             "tabbable": "^4.0.0",
