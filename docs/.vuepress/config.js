@@ -116,6 +116,7 @@ module.exports = {
           { text: "Tabs", link: "/components/tabs/" },
           { text: "Text", link: "/components/text/" },
           { text: "Toast", link: "/components/toast/" },
+          { text: "Toggle Buttons", link: "/components/toggle-button/" },
           { text: "Tooltip", link: "/components/tooltip/" }
         ]
       },
