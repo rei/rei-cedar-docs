@@ -26,7 +26,7 @@
 | `@rei/cdr-tokens` | ^10.x.x |
 | `@rei/cdr-component-variables` | ^8.x.x |
 
-If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your micro-site.
+If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your microsite.
 
 <br> 
 
@@ -36,7 +36,9 @@ We've migrated to Vue 3! While the components and their API's remain largely the
 
 Going forward, our Vue 3 library will be the only one we support with features and functionality. We will continue to support our Vue 2 library with basic maintenance and bug fixes until Spring 2023.
 
-<cdr-link style="vertical-align: baseline" href="https://github.com/rei/rei-cedar-next">Github <icon-brand-github /></cdr-link>
+Check out the repo on <cdr-link style="vertical-align: baseline" href="https://github.com/rei/rei-cedar-next">Github <icon-brand-github /></cdr-link>.
+
+Note: Shortly after launch, the Vue 3 repo will be renamed to `rei-cedar` and our Vue 2 library will be republished under `@rei/cedar-vue-2`. 
 
 <br>
 
@@ -121,10 +123,8 @@ Cedar components using `v-model`:
 
 ## Non-breaking changes
 
-### CdrModal
-
 - **CdrModal:** refactored to have a flatter HTML structure
-- To a consumer, nothing should change but the underlying structure is much cleaner and easier to maintain
+  - To a consumer, nothing should change but the underlying structure is cleaner, easier to maintain, and adds fewer nodes to the DOM
 
 <br>
 
@@ -140,13 +140,19 @@ Cedar components using `v-model`:
 
 ## Accessibility updates
 
-Any notable a11y fixes go here
+- **CdrFormGroup:** Now applies an `aria-describedby` when in an error state
+- **CdrInput:** No correctly applies a unique ID to an error state (related to above)
+- **CdrSelect:** No longer announces an error twice to a screen reader
+- **CdrRating:** Improved the contrast ratio between the filled and non-filled state of the rating stars
+- **CdrChipGroup:** Updated implementation guidance to apply `role="radiogroup"` for the CdrChipGroup when using Chip in a "single select" configuration
+- **CdrChip:** Improved contrast ratio for SVG icons added to the icon slots
 
 <br>
 
 ## Bug Fixes
 
-Any notable bug fixes go here
+- **CdrBanner:** Updated to address a small visual glitch at certain browser zoom levels
+- **CdrToast:** Updated to address a small visual glitch at certain browser zoom levels
 
 <br>
 
