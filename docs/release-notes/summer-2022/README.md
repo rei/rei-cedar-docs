@@ -14,7 +14,7 @@
 
 <cdr-doc-table-of-contents-shell parentSelector='h2' childSelector='h3'>
 
-## Update Steps
+## Update steps
 
 <cdr-banner type="warning" aria-live="polite"><template #icon-left><icon-warning-fill inherit-color /></template><span style="font-weight:500">For users at REI, our internal build system has also undergone significant changes</span><template #message-body>Teams should expect to refactor to the FEBS 3 pattern concurrently with this update</template></cdr-banner>
 
@@ -30,7 +30,7 @@ If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP,
 
 <br> 
 
-## Vue 3 Component library
+## Vue 3 component library
 
 We've migrated to Vue 3! While the components and their API's remain largely the same, we have adopted Vue 3's Composition API and rewritten the entire library from the ground-up as Vue SFC's (Single File Components). We have also adopted Vite, allowing us to significantly reduce the complexity of our build system. 
 
@@ -53,8 +53,8 @@ While the API for most components remains unchanged, some changes were necessary
 - By default, attributes applied to a component are "passed through" to the parent element. 
 - For certain Cedar components, we make use of Vue's `inheritAttrs` property to bind attributes to a deeper element in the component. This allows us to pass attributes like `loading="lazy"` to the `<img>` element within CdrImg, even when it's being used with a wrapping ratio container
 - We have identified two components where this deeper class binding was causing style issues. Rather than hack around Vue 3's new behavior, we have introduced new props that allow a custom class to be bound to the parent element
-- **CdrImg:** A new `containerClass` prop has been added to allow passing a custom class to the `cdr-img-ratio` container div.
-- **CdrInput:** A new `labelClass` prop has been added to allow passing a custom class to the `cdr-label-standalone` container div.
+- **CdrImg:** A new `containerClass` prop has been added to allow passing a custom class to the `cdr-img-ratio` container div
+- **CdrInput:** A new `labelClass` prop has been added to allow passing a custom class to the `cdr-label-standalone` container div
 
 Please reach out to us if you identify other situations where this attribute changes is causing issues.
 
@@ -141,7 +141,7 @@ Cedar components using `v-model`:
 ## Accessibility updates
 
 - **CdrFormGroup:** Now applies an `aria-describedby` when in an error state
-- **CdrInput:** No correctly applies a unique ID to an error state (related to above)
+- **CdrInput:** Now correctly applies a unique ID to an error state (related to above)
 - **CdrSelect:** No longer announces an error twice to a screen reader
 - **CdrRating:** Improved the contrast ratio between the filled and non-filled state of the rating stars
 - **CdrChipGroup:** Updated implementation guidance to apply `role="radiogroup"` for the CdrChipGroup when using Chip in a "single select" configuration
@@ -149,7 +149,7 @@ Cedar components using `v-model`:
 
 <br>
 
-## Bug Fixes
+## Bug fixes
 
 - **CdrBanner:** Updated to address a small visual glitch at certain browser zoom levels
 - **CdrToast:** Updated to address a small visual glitch at certain browser zoom levels
@@ -162,7 +162,7 @@ A keen observer may notice our documentation site is still utilizing Vue 2. We'r
 
 While it's not ideal to document a Vue 3 component library in a Vue 2 site, we have introduced a handful of changes to support our Vue 3 library in the interim: 
 
-- Adding a utility to generate a Vue 3 version of our component sandboxes [Try it out](../../components/buttons/#primary)
+- Adding a utility to generate a Vue 3 version of our component sandboxes. [Try it out](../../components/buttons/#primary)
 - Flagging when a change or feature applies to the Vue 3 library only
 
 
