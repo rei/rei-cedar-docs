@@ -56,6 +56,12 @@
                 "type": "string",
                 "default": "N/A",
                 "description": "Modifies the style variant for this component. Possible value: {  ‘responsive’  }"
+              },
+              {
+                "name": "containerClass",
+                "type": "string",
+                "default": "N/A",
+                "description": "VUE 3 ONLY - Add a custom class to the `cdr-img-ratio` container div"
               }
             ],
             "slots": [
@@ -83,7 +89,7 @@
 ---
 
 
-<cdr-doc-table-of-contents-shell>
+<cdr-doc-table-of-contents-shell parentSelector="h2" childSelector="h3">
 
 ## Overview
 
