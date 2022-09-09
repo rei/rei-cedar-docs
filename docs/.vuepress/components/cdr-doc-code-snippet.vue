@@ -103,7 +103,6 @@ export default {
     this.codeHidden = this.hideCode;
     this.setCodeToggleText();
   },
-  inject: ['showVue3'],
   mounted() {
     this.sandboxCode = {
       code: this.$refs.source.querySelector('code').textContent,

@@ -146,7 +146,7 @@
 ---
 
 
-<cdr-doc-table-of-contents-shell>
+<cdr-doc-table-of-contents-shell parentSelector="h2" childSelector="h3">
 ## Overview
 
 <cdr-banner type="warning" aria-live="polite"><template #icon-left><icon-warning-fill inherit-color /></template>Due to an issue with how Codesandbox handles link clicks, the CdrTabs examples do not work properly in the Codesandbox environment.</cdr-banner>

@@ -228,7 +228,7 @@
 }
 ---
 
-<cdr-doc-table-of-contents-shell>
+<cdr-doc-table-of-contents-shell parentSelector="h2" childSelector="h3">
 
 ## Overview
 Chips are compact elements that represent a selection, attribute, or dynamic action.
@@ -487,11 +487,6 @@ When making decisions about whether to use a button, links or chips, consider th
 <cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
 ### CdrChip
-
-#### Props
-
-
-<cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
 #### Slots
 

@@ -92,7 +92,7 @@
 
 <br>
 
-<cdr-banner type="warning" aria-live="polite"><template #icon-left><icon-information-fill inherit-color /></template><span style="font-weight:500">ToggleButton is only available in the Vue 3 (v13) Cedar release.</span><template #message-body>Upgrade to Vue 3 and Cedar v13 to access the ToggleButton component.</template></cdr-banner>
+<cdr-banner type="warning" aria-live="polite"><template #icon-left><icon-information-fill inherit-color /></template><span style="font-weight:500">ToggleButton is only available in the Vue 3 (v13+) Cedar release.</span><template #message-body>Upgrade to Vue 3 and Cedar v13 to access the ToggleButton component.</template></cdr-banner>
 
 ## Overview
 
