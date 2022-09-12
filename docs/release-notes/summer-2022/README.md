@@ -130,11 +130,9 @@ Cedar components using `v-model`:
 
 ## New features
 
-- **CdrSwitch:** We have introduced a new UI switch control intended for switching between binary states (e.g. on/off, true/false, etc.)
-  - See the [CdrSwitch docs page](../../components/switch/) for more information
+- **[CdrSwitch](../../components/switch/):** We have introduced a new UI switch control intended for switching between binary states (e.g. on/off, true/false, etc.)
 
-- **CdrToggleButton:** We have introduced a new UI toggle control intended for toggling between distinct options (e.g. metric/imperial)
-  - See the [CdrToggleButton docs page](../../components/toggle-button/) for more information
+- **[CdrToggleButton](../../components/toggle-button/):** We have introduced a new UI toggle control intended for toggling between distinct options (e.g. metric/imperial)
 
 **Note: These components are only available in our Vue 3 library**
 
