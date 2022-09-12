@@ -248,7 +248,7 @@ This component complies with WCAG guidelines by:
 ### Don't Use When
 - Displaying content that while related, isn’t the same type, which should be separated completely. Instead, use [tabs](../tabs/)
 - Content should be separated completely. Instead, use [tabs](../tabs/)
-- Allowing the user to take an action, such as add and remove. Instead, use a [button](../button/)
+- Allowing the user to take an action, such as add and remove. Instead, use a [button](../buttons/)
 - Content can’t fit on the smallest breakpoint (too many options can be hard to scan and navigate). Aim for five options at most. Instead, use [radio buttons](../radio/) or [select](../selects/)
 
 ### Choosing the right component
