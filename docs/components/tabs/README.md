@@ -146,12 +146,12 @@
 ---
 
 
-<cdr-doc-table-of-contents-shell>
-# Overview
+<cdr-doc-table-of-contents-shell parentSelector="h2" childSelector="h3">
+## Overview
 
 <cdr-banner type="warning" aria-live="polite"><template #icon-left><icon-warning-fill inherit-color /></template>Due to an issue with how Codesandbox handles link clicks, the CdrTabs examples do not work properly in the Codesandbox environment.</cdr-banner>
 
-## Default (Medium)
+### Default (Medium)
 Tabs align left and bottom border expands to full width of container.
 
 <cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :backgroundToggle="false" :codeMaxHeight="false" >
@@ -169,7 +169,7 @@ Tabs align left and bottom border expands to full width of container.
 
 </cdr-doc-example-code-pair>
 
-## Compact (Small)
+### Compact (Small)
 
 Reduced spacing around the tabs to create a denser visual design.
 
@@ -186,7 +186,7 @@ Reduced spacing around the tabs to create a denser visual design.
 
 </cdr-doc-example-code-pair>
 
-## Full Width
+### Full Width
 
 Tabs space evenly across the container.
 
@@ -203,7 +203,7 @@ Tabs space evenly across the container.
 
 </cdr-doc-example-code-pair>
 
-## No Border
+### No Border
 
 Bottom border of tab header list is removed.
 
@@ -220,7 +220,7 @@ Bottom border of tab header list is removed.
 
 </cdr-doc-example-code-pair>
 
-## Centered
+### Centered
 
 Centered tab header content.
 
@@ -237,7 +237,7 @@ Centered tab header content.
 
 </cdr-doc-example-code-pair>
 
-## Active Tab
+### Active Tab
 
 Tabs using the `active-tab` property to make the third element active on page load.
 
@@ -254,7 +254,7 @@ Tabs using the `active-tab` property to make the third element active on page lo
 
 </cdr-doc-example-code-pair>
 
-## Auto
+### Auto
 
 Tabs using `height="auto"` to render with variable height based on content size.
 
@@ -276,7 +276,7 @@ Tabs using `height="auto"` to render with variable height based on content size.
 
 </cdr-doc-example-code-pair>
 
-## Accessibility
+### Accessibility
 
 Tabs component maintains these keyboard interactions:
 
@@ -295,29 +295,29 @@ This component has compliance with WCAG guidelines by:
 
 <hr>
 
-# Guidelines
+## Guidelines
 
-## Use When
+### Use When
 
 - Organizing related content in a single container
 - Flipping between multiple panes or sections
 - Grouping content to display horizontally
 - Content can be broken into discrete parts
 
-## Don't Use When
+### Don't Use When
 
 - Grouping content to display vertically. Instead, use [Accordion](../accordion/)
 - Creating primary navigation that links to other pages
 - Comparing related content. Instead, use [Table](../table/)
 
-## The Basics
+### The Basics
 
 - Keep tabs in the same order, even when some tabs are disabled
 - Keep to no more than 6 tabs
 - Never display fewer than 2 tabs
 - Avoid changing the order of the tabs often. If your content changes frequently and needs to be selectively displayed, consider adopting a Filter pattern as in Product Display (https://www.rei.com/c/mens-climbing-shoes)
 
-## Content
+### Content
 
 - Order the tabs by priority or importance from left to right
 - Keep tab labels short and meaningful. Between 1-2 words is best and written in plain language
@@ -326,7 +326,7 @@ This component has compliance with WCAG guidelines by:
 - Use title caps for tab labels
 - Tab headers can be animated, but tab content should not be
 
-## Behavior
+### Behavior
 
 - The first tab section is selected by default
 - Only one tab can be selected at a time
@@ -335,7 +335,7 @@ This component has compliance with WCAG guidelines by:
 - Tabs become scrollable when the length of the labels exceed the width of the container
 - Inactive tab panels are rendered for SEO purposes
 
-### Do/Don't
+#### Do/Don't
 
 <do-dont :examples="$page.frontmatter.select" />
 
@@ -345,7 +345,7 @@ This component has compliance with WCAG guidelines by:
 
 <do-dont :examples="$page.frontmatter.label" />
 
-## Responsiveness
+### Responsiveness
 
 - Tabs can change styles based on breakpoint
   - Example: _Default_ at MD/LG, _Compact_ and _Full Width_ at XS/SM
@@ -362,28 +362,28 @@ Linking to a specific tab or accordion has SEO costs. If you still wish to imple
 
 <hr>
 
-# API
+## API
 
 <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
 <cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
 Tabs are built from two components: **CdrTabs** and **CdrTabPanel**. These are meant to be used together.
 
-## Props
+### Props
 
-### CdrTabs
+#### CdrTabs
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props"/>
 
-### CdrTabPanel
+#### CdrTabPanel
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[1].api.props"/>
 
-## Events
+### Events
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
 
-## Usage
+### Usage
 
 The `cdr-tab-panel name` property sets the tab display value and is used for reference.
 
@@ -393,7 +393,7 @@ The `cdr-tab-panel name` property sets the tab display value and is used for ref
  </cdr-tabs>
 ```
 
-### Modifiers
+#### Modifiers
 
 Following variants are available to the `cdr-tabs` modifier attribute:
 | Value        | Description            |

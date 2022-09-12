@@ -272,26 +272,26 @@ This component complies with WCAG guidelines by:
   - Pressing the escape key (ESC)
 - Modal opens one at a time and are never displayed in groups
 
-# API
+## API
 
 <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
 <cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
-## Props
+### Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-## Slots
+### Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Events
+### Events
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.events" :slots-getting-started-link="false" />
 
-## Usage
+### Usage
 
-### Modal Title
+#### Modal Title
 
 If the `title` slot is left empty, the `label` prop will be rendered as the title. The title can be hidden altogether by setting `showTitle` to `false`.
 
@@ -307,7 +307,7 @@ When using the `label` slot, add CdrText to use the appropriate header styles.
 </template>
 ```
 
-### `modal` Override Slot
+#### `modal` Override Slot
 
 The `modal` override slot provides teams a way to work from essentially a blank slate when creating their modal content. This is useful for situations where more art-direction or custom functionality is required. It is important to note that creating a clear way to close the modal is still required to meet user-experience and accessibility standards (i.e. relying only on the esc key is not enough).
   
@@ -328,15 +328,15 @@ The `modal` override slot provides teams a way to work from essentially a blank 
   </cdr-modal>
 ```
   
-### Size
+#### Size
 
 The modal has a default width of `640px` which converts to a fullscreen view at `xs` screen sizes.
 
-### Scroll Behavior
+#### Scroll Behavior
 
 The modal content area will scroll vertically if there's enough content. The modal title does not scroll; it stays affixed to the top of the modal.
 
-### Keep Alive
+#### Keep Alive
 
 Do not use `v-if` with CdrModal unless the component is wrapped with `keep-alive`. CdrModal handles showing and hiding itself when toggling, so `v-if` should be unneeded in most cases.
 

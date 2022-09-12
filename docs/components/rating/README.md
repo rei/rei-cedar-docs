@@ -114,13 +114,13 @@
 ---
 
 
-<cdr-doc-table-of-contents-shell>
+<cdr-doc-table-of-contents-shell parentSelector="h2" childSelector="h3">
 
-# Overview
+## Overview
 
 <cdr-banner type="info" aria-live="polite"><template #icon-left><icon-information-fill inherit-color /></template><strong>REI.com is currently using Bazaarvoice for ratings.</strong><template #message-body>Styles documented here may not reflect the current styles provided by the tool. Reach out in <cdr-link href="https://rei.slack.com/messages/CA58YCGN4" target="\_blank">#cedar-user-support</cdr-link> for further guidance or questions.</template></cdr-banner>
 
-## Default (Medium)
+### Default (Medium)
 
 Shows review rating with up to 5 stars highlighted. If rating is zero, star icons are displayed using the grey outline star icon.
 
@@ -136,7 +136,7 @@ Shows review rating with up to 5 stars highlighted. If rating is zero, star icon
 
 </cdr-doc-example-code-pair>
 
-## Linked
+### Linked
 
 Creates a link to the corresponding review content if on the same page.
 
@@ -155,7 +155,7 @@ Creates a link to the corresponding review content if on the same page.
 
 </cdr-doc-example-code-pair>
 
-## Compact (Small)
+### Compact (Small)
 
 Removes the word "Reviews" from the label for limited space layout.
 
@@ -171,7 +171,7 @@ Removes the word "Reviews" from the label for limited space layout.
 
 </cdr-doc-example-code-pair>
 
-## Sizing
+### Sizing
 
 Change size for the star icon and text. Default size is medium.
 
@@ -196,7 +196,7 @@ Change size for the star icon and text. Default size is medium.
 
 </cdr-doc-example-code-pair>
 
-## Accessibility
+### Accessibility
 
 Many WCAG requirements are contextual to their implementation.
 To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
@@ -216,28 +216,28 @@ This component has compliance with WCAG guidelines by:
 
 <hr>
 
-# Guidelines
+## Guidelines
 
-## Use When
+### Use When
 
 - Providing a tool for comparing others’ opinions
 
-## Don't Use When
+### Don't Use When
 
 - Displaying a range of data
 
-## Content
+### Content
 
 - Always display the number of reviews next to the star rating
 - Use accompanying text label ‘Reviews’ when space allows
 
 
-## Behavior
+### Behavior
 
 - Rating appears with grey outlined stars when no reviews are available
 - Link to the corresponding review content if on the same page
 
-### Do / Don’t
+#### Do / Don’t
 
 <br/>
 
@@ -253,20 +253,20 @@ This component has compliance with WCAG guidelines by:
 
 <hr>
 
-# API
+## API
 
 <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
 <cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
-## Props
+### Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-## Usage
+### Usage
 
 By default the **CdrRating** component renders the icons in medium size (24px) with the total number of reviews.
 
-### Rating Values
+#### Rating Values
 - The count for reviews will always be visible
 - Ratings are rounded to the nearest .25 because icons are represented in 25% increments
 - Screen reader text is provided which reads, “Rated [ rounded ] out of 5 with [ count ] reviews”

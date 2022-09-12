@@ -137,10 +137,10 @@
 ---
 
 
-<cdr-doc-table-of-contents-shell>
-# Overview
+<cdr-doc-table-of-contents-shell parentSelector="h2" childSelector="h3">
+## Overview
 
-## Default (Medium)
+### Default (Medium)
 
 Default block quote can be used with the following HTML tags: `<p>`, `<div>`, `<aside>`. This is responsive with styles for XS breakpoint.
 
@@ -176,19 +176,19 @@ This component has compliance with WCAG guidelines by:
 
 <hr>
 
-# Guidelines
+## Guidelines
 
-## Use When
+### Use When
 
 - Highlighting valuable customer feedback
 - Encouraging a customer to try out an experience or product
 
-## Don't Use When
+### Don't Use When
 
 - Pulling a direct quote from an article. Instead, use [Pull Quote](../pull-quote/)
 - Displaying for a decorative treatment only
 
-## The Basics
+### The Basics
 
 Use a block quote for emphasizing content that has a close and significant relationship with the surrounding text and will help users to visually scan the page.
 
@@ -208,7 +208,7 @@ Provide a citation to the external source and if available, the URL address.
 
 <do-dont :examples="$page.frontmatter.citation" />
 
-## Content
+### Content
 
 To make the block quote content accessible, follow these rules:
 
@@ -220,18 +220,18 @@ To make the block quote content accessible, follow these rules:
 - For more information, see [REI Accessible Patterns: Quotes](https://confluence.rei.com/display/accessibility/Quote)
 
 
-## Responsiveness
+### Responsiveness
 
 When block quotes are displayed at XS breakpoint, the text will use a smaller font size.
 
 <hr>
 
-# API
+## API
 
 <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
 <cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
-## Props
+### Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 

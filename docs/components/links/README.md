@@ -96,10 +96,10 @@
 ---
 
 
-<cdr-doc-table-of-contents-shell>
-# Overview
+<cdr-doc-table-of-contents-shell parentSelector="h2" childSelector="h3">
+## Overview
 
-## Default (Medium)
+### Default (Medium)
 
 Display within body copy for articles, hub cards, footer, or recommendations.
 
@@ -121,7 +121,7 @@ Display within body copy for articles, hub cards, footer, or recommendations.
 
 </cdr-doc-example-code-pair>
 
-## Standalone
+### Standalone
 
 Display independently with a Call to Action. Some examples are for finding a store, or viewing related products.
 
@@ -135,7 +135,7 @@ Display independently with a Call to Action. Some examples are for finding a sto
 
 </cdr-doc-example-code-pair>
 
-## Icon on Left
+### Icon on Left
 
 Display standalone link with icon on left.
 
@@ -152,7 +152,7 @@ Display standalone link with icon on left.
 
 </cdr-doc-example-code-pair>
 
-## Icon on Right
+### Icon on Right
 
 Display standalone link with icon on right.
 
@@ -172,7 +172,7 @@ Display standalone link with icon on right.
 </cdr-doc-example-code-pair>
 
 
-## Inline Link Button
+### Inline Link Button
 
 Use the `tag` prop to render a button that looks like a link. Can be used inline with other text. Should trigger an action rather than navigate to a new page.
 
@@ -196,7 +196,7 @@ To render a link that has the spacing and sizing of a button, use [CdrButton wit
 
 </cdr-doc-example-code-pair>
 
-## Accessibility
+### Accessibility
 
 Many WCAG requirements are contextual to their implementation.
 To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
@@ -233,17 +233,17 @@ This component has compliance with following WebAIM’s accessibility guidelines
 
 <hr>
 
-# Guidelines
+## Guidelines
 
-## Use When
+### Use When
 
 - Navigating to another page or a different portion of the same page
 
-## Don't Use When
+### Don't Use When
 
 - Navigating a user from promotional or campaign content. Instead, use [Buttons](../buttons/) styled to match the campaign
 
-## The Basics
+### The Basics
 
 - Link styles are adapted based on context, such as for links included in the [Breadcrumb](../breadcrumb/), Menus, and Navigation
 - There are 2 basic link styles: default and standalone
@@ -252,7 +252,7 @@ This component has compliance with following WebAIM’s accessibility guidelines
 - When using multiple inline links together, be sure that their behaviors are consistent. For instance, don't have one link go to a new page and another one in the group trigger an action
 - Link buttons are often useful for reducing the visual clutter of large groups of actions. For example, when there are many cards in a group using the link button style instead of a true button style
 
-## Content
+### Content
 
 Use link labels that describe the link’s destination when clicked or tapped:
 
@@ -264,7 +264,6 @@ Use link labels that describe the link’s destination when clicked or tapped:
 - Don’t capitalize links. Some screen readers read capitalized text letter-by-letter. Instead, use sentence case
 - Restrict the number of text links on a page. Screen reader will read all the links on a page
 
-## Behavior
 
 ### Choosing a Button or Link
 
@@ -287,42 +286,43 @@ Apply the following use cases when deciding when to use links as anchors or butt
 | Changing the URL                      	| Opening a modal window            	|
 | Causing a browser redraw/refresh      	| Triggering a popup menu           	|
 | Supporting internal page jumps        	| Playing media content             	|
+
 ### Do / Don’t
 
 <do-dont :examples="$page.frontmatter.standalone" />
 
 <do-dont :examples="$page.frontmatter.link" />
 
-## Resources
+### Resources
 
 WebAIM: Links and Hypertext [Introduction to Links and Hypertext](https://webaim.org/techniques/hypertext/)
 
 <hr>
 
-# API
+## API
 
 <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
 <cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
-## Props
+### Props
 
 This component will bind any attribute that a [native HTML anchor element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a) accepts.
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-## Slots
+### Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Events
+### Events
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events"/>
 
-## Component Variables
+### Component Variables
 
 <cdr-doc-comp-vars name="CdrLink"/>
 
-## Usage
+### Usage
 
 By default, the component renders using an anchor element and requires an `href` attribute to render a valid, accessible link.
 
@@ -340,7 +340,7 @@ Use the `tag` prop to render the link as a `<button>` element that appears as a 
   </cdr-link>
 ```
 
-### Style Modifier
+#### Style Modifier
 
 Following variants are available to the `cdr-link` modifier attribute:
 

@@ -147,9 +147,11 @@
 ---
 
 
-<cdr-doc-table-of-contents-shell>
-# Overview
-## Default (Medium)
+<cdr-doc-table-of-contents-shell parentSelector="h2" childSelector="h3">
+
+## Overview
+
+### Default (Medium)
 Default and standard spacing for radio buttons.
 
 <cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{ex: ''}">
@@ -193,7 +195,7 @@ Default and standard spacing for radio buttons.
 
 </cdr-doc-example-code-pair>
 
-## Size
+### Size
 
 Different sizing for radio buttons.
 
@@ -241,7 +243,7 @@ Different sizing for radio buttons.
 
 </cdr-doc-example-code-pair>
 
-## Custom
+### Custom
 
 Custom styles for radio buttons.
 
@@ -296,7 +298,7 @@ Custom styles for radio buttons.
 </cdr-doc-example-code-pair>
 
 
-## Validation
+### Validation
 
 Render a radio group with validation and error state
 
@@ -330,7 +332,7 @@ Render a radio group with validation and error state
 ```
 </cdr-doc-example-code-pair>
 
-## Accessibility
+### Accessibility
 
 Many WCAG requirements are contextual to their implementation.
 To ensure that usage of this component complies with accessibility guidelines you are responsible for the following:
@@ -358,21 +360,21 @@ For more information, review techniques and failures for:
 
 <hr>
 
-# Guidelines
+## Guidelines
 
-## Use When
+### Use When
 
 - Selecting only 1 choice from a list is allowed
 - Viewing all available options is needed
 - Comparing between list of selections is desired
 
 
-## Don't Use When
+### Don't Use When
 
 - Selecting from a list when multiple choices are allowed. Instead, use [Checkboxes](../checkboxes/)
 - Providing a single selectable option. Instead, use [Checkboxes](../checkboxes/) as a stand-alone checkbox
 
-## Content
+### Content
 When using radio buttons in a list:
 - Use a logical order, whether it’s alphabetical, numerical, or time-based
 - Labels should have approximately equal length
@@ -388,7 +390,7 @@ Radio button labels should:
 - Be written as sentence fragments
 - No terminal punctuation
 
-### Do/Don't
+#### Do/Don't
 
 <do-dont :examples="$page.frontmatter.case" />
 
@@ -396,40 +398,40 @@ Radio button labels should:
 
 <do-dont :examples="$page.frontmatter.fragment" />
 
-## Resources
+### Resources
 
 - WebAIM: [Semantic Structure: Using Lists Correctly](https://webaim.org/techniques/semanticstructure/)
 
 <hr>
 
-# API
+## API
 
 <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
 <cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
-## Props
+### Props
 
 This component will bind any attribute that a [native HTML radio element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/radio) accepts.
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props"/>
 
-## Slots
+### Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots"/>
 
-## Events
+### Events
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events"/>
 
-## Component Variables
+### Component Variables
 
 <cdr-doc-comp-vars name="CdrLabelWrapper"/>
 
-## Usage
+### Usage
 
 The **CdrRadio** component requires `v-model` to track the value of selected radios.
 
-### Modifiers
+#### Modifiers
 
 Following variants are available to the `cdr-radio` modifier attribute:
 | Value | Description            |

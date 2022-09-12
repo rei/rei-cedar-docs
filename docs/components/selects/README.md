@@ -188,10 +188,11 @@
 ---
 
 
-<cdr-doc-table-of-contents-shell tab-name="Overview">
-# Overview
+<cdr-doc-table-of-contents-shell parentSelector="h2" childSelector="h3">
 
-## Default (Medium)
+## Overview
+
+### Default (Medium)
 
 Basic select control with label.
 
@@ -220,7 +221,7 @@ Basic select control with label.
 </cdr-doc-example-code-pair>
 
 
-## Bare
+### Bare
 
 Basic select control with no label.
 
@@ -250,7 +251,7 @@ Basic select control with no label.
 </cdr-doc-example-code-pair>
 
 
-## Select with Link Text
+### Select with Link Text
 
 Select control with link text on right.
 
@@ -296,7 +297,7 @@ Select control with link text on right.
 </cdr-doc-example-code-pair>
 
 
-## Select with Info Action
+### Select with Info Action
 
 Select control with icon outside select field on right.
 
@@ -321,7 +322,7 @@ Select control with icon outside select field on right.
 </cdr-doc-example-code-pair>
 
 
-## Select with Helper Text
+### Select with Helper Text
 
 Input field with helper or hint text below the input field.
 
@@ -357,7 +358,7 @@ Input field with helper or hint text below the input field.
 </cdr-doc-example-code-pair>
 
 
-## Validation
+### Validation
 
 Error prop and slot can be used to render the select in an error state
 
@@ -378,7 +379,7 @@ Error prop and slot can be used to render the select in an error state
 
 </cdr-doc-example-code-pair>
 
-## Multiple Select
+### Multiple Select
 
 CdrSelect can be rendered as a multi-select by passing the native HTML select `multiple` attribute. The `multipleSize` prop can be used to control the height of the multi-select.
 
@@ -409,7 +410,7 @@ With multipleSize:
 
 </cdr-doc-example-code-pair>
 
-## Nested Options
+### Nested Options
 
 CdrSelect can be rendered with nested options using the `optgroup` tag.
 
@@ -436,7 +437,7 @@ CdrSelect can be rendered with nested options using the `optgroup` tag.
 
 </cdr-doc-example-code-pair>
 
-## Accessibility
+### Accessibility
 
 To ensure that the usage of Select component complies with the accessibility guidelines:
 + Always provide a label for each select control
@@ -455,15 +456,15 @@ This component has compliance with WCAG guidelines by:
 
 <hr>
 
-# Guidelines
+## Guidelines
 
-## Use When
+### Use When
 
 + Choosing an option from a predefined set of values
 + Recommending a default option for most users
 
 
-## Don't Use When
+### Don't Use When
 
 + Viewing or comparing all options is needed. Instead, use [Radio Buttons](../radio/)
 + Displaying a limited number of options. Instead, use [Radio Buttons](../radio/)
@@ -474,7 +475,7 @@ This component has compliance with WCAG guidelines by:
 + Sending the user to other areas of the site. Instead, use [Links](../links/)
 
 
-## The Basics
+### The Basics
 
 Select and dropdown components tend to look similar, but have different functionality. While select is used for selecting from a list of options and submitting that data, dropdowns contain links and take users elsewhere. Also, the select appearance is owned by the browser, whereas dropdowns can be styled.
 
@@ -483,26 +484,26 @@ Select components should be:
 + **Findable:** It should be easy to find a select field among other elements
 + **Legible:** Select fields indicate their state such as enabled, focused, or disabled
 
-### Options
+#### Options
 + Define width using CSS styles
 + Height options are medium and large. These variations can be used for creating media queries for responsive layouts, or to call more or less attention to the component.
 
 
-## Content
+### Content
 
-### Labels
+#### Labels
 
 + Use concise and consistent labels that describe the meaning of the select field
 + Limit labels to 1–3 words and fewer than 20 characters, including spaces
 + Use sentence case only. Do not use all caps, title case, or lowercase
 + Don’t use colons after labels
 
-### Prompt Text
+#### Prompt Text
 
 + Limit prompt text to 1–3 words
 + Use descriptive prompt text for accessibility users who use screen readers to fill out forms
 
-### Menu or List Text
+#### Menu or List Text
 
 + Use sentence case
 + Simplify the list. If an option is rarely selected, consider removing it from the list
@@ -511,23 +512,23 @@ Select components should be:
   + Alpha: For example, state or city locations
   + Numeric: For example, distances or sizes
 
-### Helper Text
+#### Helper Text
 
 + Use helper text for hints or suggestions
 + Be succinct. Too much helper text can make a form look and feel difficult to use
 
-### Icon
+#### Icon
 
 - Use icons to trigger a [popover](../popover) or [tooltip](../tooltip) for hints or suggestions
 - Reference Cedar's [icon guidelines](../icon/#guidelines) for additional information
 
-### Link Text
+#### Link Text
 
 - Use a link in the `info` slot when moving or navigating to another page or to a different portion of the same page
 - Use if navigating user to long or complex information
 - Reference the [Links](../links/) component article for more information
 
-### Do / Don’t
+#### Do / Don’t
 
 <br/>
 
@@ -538,40 +539,40 @@ Select components should be:
 <do-dont :examples="$page.frontmatter.punctuation" />
 
 
-## Behavior
+### Behavior
 
 + Avoid changing options in a dropdown menu based on the input from a different select field
 + Use a prompt in the format of “Select a…” or “Select category…”
 
-### Required Fields
+#### Required Fields
 
 + An asterisk will appear next to the input label if the status is required and the input field will have `aria-required` set
 
-### Validation
+#### Validation
 
 + Validate the user’s data before form submission. The `error` property and slot can be used to render a message on error.
 
 
-# API
+## API
 
 <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
 <cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
-## Props
+### Props
 
 This component will bind any attribute that a [native HTML select element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/select) accepts.
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props"/>
 
-## Slots
+### Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" :slots-getting-started-link="false" />
 
-## Events
+### Events
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
 
-## Component Variables
+### Component Variables
 
 <cdr-doc-comp-vars name="CdrSelect">Note that the <a href="../component-variables/#CdrLabelStandalone">cdr-label-standalone mixins</a> should be used for assembling the label element. </cdr-doc-comp-vars>
 

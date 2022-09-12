@@ -118,9 +118,10 @@
 }
 ---
 
-<cdr-doc-table-of-contents-shell>
-# Overview
-## Truncated (Default)
+<cdr-doc-table-of-contents-shell parentSelector="h2" childSelector="h3">
+## Overview
+
+### Truncated (Default)
 
 Long breadcrumb path shortened to display the last 2 items with hidden links indicated by ellipsis.
 
@@ -158,7 +159,7 @@ Complete breadcrumb string with all items visible.
 
 </cdr-doc-example-code-pair>
 
-## Custom Navigation
+### Custom Navigation
 
 Can be used to override the default link navigation behavior inside a breadcrumb.
 
@@ -179,7 +180,7 @@ Can be used to override the default link navigation behavior inside a breadcrumb
 </cdr-doc-example-code-pair>
 
 
-## Accessibility
+### Accessibility
 
 
 To ensure that usage of this component complies with accessibility guidelines:
@@ -196,19 +197,19 @@ This component has compliance with WCAG guidelines by:
 
 <hr>
 
-# Guidelines
+## Guidelines
 
-## Use When
+### Use When
 
 - Helping users understand where they are within the site hierarchy
 - Providing a shortcut to explore similar products within common parent categories
 
-## Don’t Use When
+### Don’t Use When
 
 - Displaying a top-level page, such as a home or high-level category page
 - Linking to previous steps of a sequential process
 
-## The Basics
+### The Basics
 
 Breadcrumbs provide context and a sense of place. This is especially important on a small screen, where other orienting content isn’t visible.
 
@@ -219,7 +220,7 @@ Breadcrumbs provide context and a sense of place. This is especially important o
 - Avoid displaying breadcrumbs on non-white backgrounds
 - Refer to API documentation for how to customize breadcrumb truncation width
 
-## Content
+### Content
 - Always align breadcrumb labels with page names that are the destination of that breadcrumb
 - Incorporate keywords into page names and breadcrumbs to improve SEO
 - Align breadcrumb labels with words customers use while searching for products, events, adventures, or expert advice
@@ -230,7 +231,7 @@ Breadcrumbs provide context and a sense of place. This is especially important o
   - If the user browsed to the same article through Camping, show the breadcrumb that includes Camping
   - If the user landed on the article from a Google search, show either category as a breadcrumb
 
-## Behavior
+### Behavior
 
 - Emphasize breadcrumb hover states with an underline
 
@@ -240,7 +241,7 @@ Breadcrumbs provide context and a sense of place. This is especially important o
 <do-dont :examples="$page.frontmatter.path" />
 
 
-### Truncation
+#### Truncation
 
 Indicate hidden links using an ellipsis.
 
@@ -251,39 +252,41 @@ Truncate breadcrumbs left to right to show the final two links in the trail, so 
 <do-dont :examples="$page.frontmatter.truncation" />
 
 
-### Avoid Customization
+#### Avoid Customization
 
 <do-dont :examples="$page.frontmatter.path_symbol" />
 
 
 <do-dont :examples="$page.frontmatter.link" />
 
-## Resources
+### Resources
 
 - [REI Navigation Standards: Breadcrumbs](https://confluence.rei.com/display/NAV/Breadcrumb+Guidance)
 
 <hr>
 
-# API
+## API
 
 <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
-<cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>## Props
+<cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
+
+### Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props"/>
 
 **Note:** Truncation only occurs if the ```items``` collection contains more than 2 items and the value is set to ```truncationEnabled=true```.
 
 
-## Events
+### Events
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
 
 
-## Component Variables
+### Component Variables
 
 <cdr-doc-comp-vars name="CdrBreadcrumb"/>
 
-## Usage
+### Usage
 
 The ```items``` property requires an array of objects, in the format shown above. Notable values include:
 

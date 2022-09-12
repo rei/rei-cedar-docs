@@ -26,10 +26,10 @@ module.exports = {
       {
         text: "Release Notes",
         items: [
+          { text: "Summer 2022", link: "/release-notes/summer-2022/" },
           { text: "Spring 2022", link: "/release-notes/spring-2022/" },
           { text: "Fall 2021", link: "/release-notes/fall-2021/" },
           { text: "Summer 2021", link: "/release-notes/summer-2021/" },
-          { text: "Spring 2021", link: "/release-notes/spring-2021/" },
           { text: "Deprecated", link: "/release-notes/deprecated/" },
           { text: "Archive", link: "/release-notes/archive/" },
         ]
@@ -111,10 +111,12 @@ module.exports = {
           { text: "Radio Buttons", link: "/components/radio/" },
           { text: "Ratings", link: "/components/rating/" },
           { text: "Select", link: "/components/selects/" },
+          { text: "Switch", link: "/components/switch/"},
           { text: "Table", link: "/components/table/" },
           { text: "Tabs", link: "/components/tabs/" },
           { text: "Text", link: "/components/text/" },
           { text: "Toast", link: "/components/toast/" },
+          { text: "Toggle Buttons", link: "/components/toggle-button/" },
           { text: "Tooltip", link: "/components/tooltip/" }
         ]
       },

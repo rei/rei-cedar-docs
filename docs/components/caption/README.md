@@ -111,10 +111,10 @@
 ---
 
 
-<cdr-doc-table-of-contents-shell>
-# Overview
+<cdr-doc-table-of-contents-shell parentSelector="h2" childSelector="h3">
+## Overview
 
-## Default (Medium)
+### Default (Medium)
 
 Caption aligns to the left alongside the body copy with inset padding. Default caption includes summary and credit.
 
@@ -128,7 +128,7 @@ Caption aligns to the left alongside the body copy with inset padding. Default c
 
 </cdr-doc-example-code-pair>
 
-## Summary
+### Summary
 
 Summary has same CSS styles as the default; however, only the summary element is displayed.
 
@@ -142,7 +142,7 @@ Summary has same CSS styles as the default; however, only the summary element is
 </cdr-doc-example-code-pair>
 
 
-## Credit
+### Credit
 
 Credit has same CSS styles as the default; however, only the credit element is displayed.
 
@@ -156,7 +156,7 @@ Credit has same CSS styles as the default; however, only the credit element is d
 </cdr-doc-example-code-pair>
 
 
-## Caption with Image
+### Caption with Image
 
 The captions component is text-only; however, it is meant to be displayed in the context of a media object.
 
@@ -177,7 +177,7 @@ The captions component is text-only; however, it is meant to be displayed in the
 </cdr-doc-example-code-pair>
 
 
-## Accessibility
+### Accessibility
 
 To ensure that usage of this component complies with the accessibility guidelines, do the following:
 
@@ -192,18 +192,18 @@ This component has compliance with WCAG guidelines by:
 
 <hr>
 
-# Guidelines
+## Guidelines
 
-## Use When
+### Use When
 
 - Providing further context and attribution to any figure or media asset such as an image, video, or chart
 
-## Don’t Use When
+### Don’t Use When
 
 - Displaying body copy. Instead, use [Text](../text/#body/)
 - Breaking up the text styles in a layout for aesthetic purposes
 
-## Content
+### Content
 
 The Caption component has two separate fields: Summary and Credit. While they often appear together, one is not dependent on the other. Both are, however, dependent on media content (image, video, etc).
 
@@ -215,7 +215,7 @@ There are two text fields available within a caption:
       - Helps users gauge the strength and validity of the material the author has used
       - Begin credit text with “Video Credit” or “Image Credit”
 
-## Anatomy
+### Anatomy
 
 - Captions align to the left border based on the paragraph container and not centered under the media object
 - Max width is 498 pixels, even if the media (image, video, or chart) extends beyond the paragraph max width
@@ -255,8 +255,6 @@ For copyrighted media (photos or video):
   - NPR Training, Storytelling tips and best practices: [These are NPR's photo caption guidelines](http://training.npr.org/visual/these-are-nprs-photo-caption-guidelines)
 
 
-## Behavior
-
 ### Do / Don’t
 
 Keep summary content short to avoid excess text-wrapping.
@@ -285,16 +283,16 @@ Caption stays left aligned with body copy regardless of the width of the media.
 
 <hr>
 
-# API
+## API
 
 <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
 <cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
-## Props
+### Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-## Usage
+### Usage
 
 The **CdrCaption** component is developed to work within a composition with other components; however, composition-type components have not been developed yet.
 

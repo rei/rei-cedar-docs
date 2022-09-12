@@ -125,10 +125,10 @@
 }
 ---
 
-<cdr-doc-table-of-contents-shell>
-# Overview
+<cdr-doc-table-of-contents-shell parentSelector="h2" childSelector="h3">
+## Overview
 
-## Default (Medium)
+### Default (Medium)
 
 Section borders expand to full width of container.
 
@@ -184,7 +184,7 @@ Section borders expand to full width of container.
 
 </cdr-doc-example-code-pair>
 
-## Compact (Small)
+### Compact (Small)
 
 Reduced spacing around title and content body. Also, smaller font sizes resulting in overall denser display of content.
 
@@ -242,7 +242,7 @@ Reduced spacing around title and content body. Also, smaller font sizes resultin
 
 </cdr-doc-example-code-pair>
 
-## Border Aligned
+### Border Aligned
 
 Border aligns to the title text and expand/collapse icon.
 
@@ -303,7 +303,7 @@ Border aligns to the title text and expand/collapse icon.
 
 </cdr-doc-example-code-pair>
 
-## Content Spacing
+### Content Spacing
 
 Optionally remove content spacing (css padding) from the accordion content for applications needing more design flexibility.
 
@@ -375,7 +375,8 @@ Optionally remove content spacing (css padding) from the accordion content for a
 ```
 
 </cdr-doc-example-code-pair>
-## Dynamic Accordions
+
+### Dynamic Accordions
 
 In order to render a dynamic list of accordions, for example using data retrieved from a back-end API, you will need to use `this.$set` or some other Vue method to make the array of accordion data reactive. This can also be used to avoid creating an individual data attribute for every accordion and instead track their state with an array of booleans.
 
@@ -404,7 +405,7 @@ In order to render a dynamic list of accordions, for example using data retrieve
 </cdr-doc-example-code-pair>
 
 
-## Unwrapped
+### Unwrapped
 
 The `unwrap` property of `CdrAccordionGroup` can be used to render the accordion content in an "unwrapped" state. This property accepts either a boolean toggle or a list of breakpoints.
 
@@ -460,7 +461,7 @@ The `unwrap` property of `CdrAccordionGroup` can be used to render the accordion
 
 </cdr-doc-example-code-pair>
 
-## Accessibility
+### Accessibility
 
 To ensure that usage of this component complies with accessibility guidelines:
 - Provide descriptive label for accordion header
@@ -476,26 +477,26 @@ This component has compliance with WCAG guidelines by:
 
 <hr>
 
-# Guidelines
+## Guidelines
 
-## Use When
+### Use When
 
 - Providing users more content within the same layout
 - Displaying content that is directly related, or supplemental, to the main subject of the page
 - Designing with limited vertical space and there is enough content to condense
 
-## Don't Use When
+### Don't Use When
 
 - Linking a title to another page. Instead, use [Links](../links/)
 - Designing with sparse content. Instead, use [Lists](../lists/)
 - Content is lengthy. Instead, use [Tabs](../tabs/)
 
-## The Basics
+### The Basics
 
 - Use on either light or dark backgrounds. Background color is provided for both
 - Content within accordions can include text, photos, graphics, or other components (i.e. links, buttons, tables)
 
-## Content
+### Content
 
 - Order the accordion titles by priority and importance
 - Keep titles short to avoid wrapping at smaller viewports
@@ -503,17 +504,17 @@ This component has compliance with WCAG guidelines by:
 - Use short titles for accordion labels to avoid wrapping
 - Always include a title, icon, and subsequent content for each section. All are required
 
-## Anatomy
+### Anatomy
 
 - Position interactive elements (i.e. Select, Button, Link) within the container far enough from the title area to avoid accidental collapsing
 
-## Behavior
+### Behavior
 
 - Entire title area is clickable, including icon and background
 - Never nest accordions within themselves
 
 
-### Show and Hide
+#### Show and Hide
 
 - Revealing the first accordion section is recommended
 - Other accordion sections are all hidden by default, however it is possible to specify that:
@@ -530,7 +531,7 @@ This component has compliance with WCAG guidelines by:
 <do-dont :examples="$page.frontmatter.titles" />
 
 
-## Responsiveness
+### Responsiveness
 
 - Accordion style can change variant based on breakpoint. Example: Default at MD/LG can change to Compact and Border-Aligned at XS/SM
 - Switching between the Tab component and the Accordion component is not supported in Cedar components library
@@ -538,27 +539,27 @@ This component has compliance with WCAG guidelines by:
 
 <hr>
 
-# API
+## API
 
 <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
 <cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
 
-## Props
+### Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-## Slots
+### Slots
 
 <api-slot :slots-getting-started-link="true" />
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" :slots-getting-started-link="false" />
 
-## Events
+### Events
 
 <cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events" />
 
-## Usage
+### Usage
 
 CdrAccordion emits an event when its button is clicked. Use an event listener to toggle the value of the opened prop to open or close the accordion.
 

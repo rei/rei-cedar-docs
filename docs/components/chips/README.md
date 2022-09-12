@@ -228,12 +228,12 @@
 }
 ---
 
-<cdr-doc-table-of-contents-shell>
+<cdr-doc-table-of-contents-shell parentSelector="h2" childSelector="h3">
 
-# Overview
+## Overview
 Chips are compact elements that represent a selection, attribute, or dynamic action.
 
-## Default
+### Default
 
 Use chips to directly specify, dynamically categorize or immediately perform a discrete action.
 
@@ -248,7 +248,7 @@ Use chips to directly specify, dynamically categorize or immediately perform a d
 ```
 </cdr-doc-example-code-pair>
 
-## Icon Slots
+### Icon Slots
 
 Use `icon-left` or `icon-right` slots to pass icons into a chip. Place the X remove icon in the icon-right slot only. Place other icons in the icon-left slot. Use only one icon per chip.
 
@@ -263,7 +263,7 @@ Use `icon-left` or `icon-right` slots to pass icons into a chip. Place the X rem
 ```
 </cdr-doc-example-code-pair>
 
-## Stateful Chips
+### Stateful Chips
 
 Use stateful chips to update settings immediately or trigger an immediate action while staying on the same page.
 
@@ -299,7 +299,7 @@ For chips that toggle a single selection on and off, use the click event and d
 </cdr-doc-example-code-pair>
 
 
-## Filter Chips
+### Filter Chips
 
 Filter chips add a visual representation of user selected filters. Filter chips that represent user selections that can be dynamically removed should include an X icon in the right icon slot and be linked to the ID of the input it controls using `aria-controls`. The `aria-pressed` property should be set to true to designate that this selection is active. Filter chips that are linked to a checkbox should appear selected and be included in the same form group as the checkboxes.
 
@@ -315,20 +315,20 @@ Filter chips add a visual representation of user selected filters. Filter chips 
 </cdr-doc-example-code-pair>
 
 
-## Selection Chips
+### Selection Chips
 
 Use selection chips to allow users to make a single select choice or a multiple select choice. Single select chip groups are a more prominent alternative to radio buttons while multiple select chip groups are a more prominent alternative to checkboxes.
 
-### Single Select
+#### Single Select
 
-For single select chip groups, apply `role='radio'` to each chip, use `aria-checked="true"` and `tabindex="0"` to designate the selected chip, and apply `aria-checked="false"` and `tabindex="-1"` to the other chips. The chip elements should be grouped directly inside a CdrChipGroup element to ensure keyboard navigation is properly managed. The CdrChipGroup element requires a label property or slot be passed in which describes the chip group. This label is visually hidden by default.
+For single select chip groups, apply `role='radio'` to each chip and `role='radiogroup'` to the group. Use `aria-checked="true"` and `tabindex="0"` to designate the selected chip, and apply `aria-checked="false"` and `tabindex="-1"` to the other chips. The chip elements should be grouped directly inside a CdrChipGroup element to ensure keyboard navigation is properly managed. The CdrChipGroup element requires a label property or slot be passed in which describes the chip group. This label is visually hidden by default.
 
 <cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location"
 :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrChip, IconXSm, CdrCheckbox'})" :model="{ categories: ['a', 'b', 'c'], selectedCategory: 'a' }" :methods="{selectCategory(category) {this.selectedCategory = category}}">
 
 ```html
 <div>
-  <cdr-chip-group label="Chip group description">
+  <cdr-chip-group role="radiogroup" label="Chip group description">
     <cdr-chip v-for="category in categories" role="radio" :aria-checked="category === selectedCategory" :tabindex="category === selectedCategory ? 0 : -1" @click="selectCategory(category)">
       Option {{ category }}
     </cdr-chip>
@@ -338,7 +338,7 @@ For single select chip groups, apply `role='radio'` to each chip, use `aria-chec
 ```
 </cdr-doc-example-code-pair>
 
-### Multiple Select
+#### Multiple Select
 
 For multiple select chip groups, apply `role='checkbox'` to each chip, use `aria-checked="true"` to designate the selected chip, and apply `aria-checked="false"` to the other chips. The chip elements should be grouped directly inside a CdrChipGroup element to ensure keyboard navigation is properly managed. The CdrChipGroup element requires a label property or slot be passed in which describes the chip group. This label is visually hidden by default.
 
@@ -359,7 +359,7 @@ For multiple select chip groups, apply `role='checkbox'` to each chip, use `aria
 
 
 
-## Accessibility
+### Accessibility
 Many WCAG requirements are contextual to their implementation. To ensure that usage of this component complies with accessibility guidelines:
 
 - For a group of chips related to a single selection, use `role="radio"`, `aria-checked`, and `tabindex` on each chip and wrap the group in a CdrChipGroup component. The selected chip should have `aria-checked="true"` and `tabindex="0"` set, while the rest of the chips should have `aria-checked="false"` and `tabindex="-1"`.
@@ -371,11 +371,11 @@ CdrChip and CdrChipGroup implement the following accessibility requirements:
 - CdrChip uses a button tag
 - CdrChipGroup implements keyboard navigation for a group of CdrChips
 
-# Guidelines
+## Guidelines
 
 Chips allow users to make selections, filter content, or trigger actions. While buttons are expected to appear consistently and with familiar calls to action, chips should appear dynamically.
 
-## Use when
+### Use when
 
 - Dynamically categorizing content based on descriptive words
 - Representing a checkbox group with more emphasis
@@ -385,14 +385,14 @@ Chips allow users to make selections, filter content, or trigger actions. While 
 - Allowing the user to trigger an immediate action while staying on the same page
 - Allowing users to update or configure settings immediately
 
-## Don’t use when
+### Don’t use when
 
 - Navigating a user. Instead, use [Buttons](../buttons/) or [Links](../links/)
 - Displaying non-interactive elements
 - Displaying more than two rows of chips. Instead use horizontal scrolling or [Selects](../selects/)
 - Representing page tags
 
-## The Basics
+### The Basics
 
 One chip container style is available: pill.
 
@@ -409,7 +409,7 @@ When stacking chips vertically:
 <cdr-img class="cdr-doc-article-img" :src="$withBase(`/chips/basics_vertical.png`)"/>
 
 
-## Content
+### Content
 
 When using chips in a group:
 - Use a logical order, whether it’s alphabetical, numerical, or time-based
@@ -424,7 +424,7 @@ Chip text should:
 - No terminal punctuation
 
 
-## Do / Don't
+### Do / Don't
 
 <do-dont :examples="$page.frontmatter.case" />
 <do-dont :examples="$page.frontmatter.phrasing" />
@@ -452,7 +452,7 @@ When representing radio button or checkbox groups, include more than 2 chips in 
 
 <do-dont :examples="$page.frontmatter.DATAKEY" /> -->
 
-## Behavior
+### Behavior
 
 Stateful chips used to dynamically perform a discrete action:
 - Can show confirmation feedback.
@@ -476,33 +476,30 @@ When making decisions about whether to use a button, links or chips, consider th
 | Opening a modal window                           | Changing the URL                                          | Offering a choice or representing a filter |
 | Triggering a popup menu                          | Causing a browser redraw or refresh                       | Immediately changing a setting on the page |
 
-## Resources
+### Resources
   - WebAIM: [Keyboard Accessibility](https://webaim.org/techniques/keyboard/)
   - WebAIM [WCAG 2.0 Checklist](https://webaim.org/standards/wcag/checklist)
   - W3C: [WCAG 3.0 Guidelines](https://www.w3.org/TR/wcag-3.0/)
 
-# API
+## API
 
 <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
 <cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
-## CdrChip
-### Props
+### CdrChip
 
-
-<cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
-
-### Slots
+#### Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## CdrChipGroup
-### Props
+### CdrChipGroup
+
+#### Props
 
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[1].api.props" />
 
-### Slots
+#### Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[1].api.slots" />
 

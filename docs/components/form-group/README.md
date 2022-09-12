@@ -256,20 +256,20 @@ In CdrFormGroup, all of the related fields go inside the `fieldset` element, and
 - Creating a single form field that asks for a single piece of information
 
 
-# API
+## API
 
 <cdr-icon class="cdr-doc-code-snippet__action-icon" use="#brand-github"/> View it on Github: 
 <cdr-link :href="$page.frontmatter.component_location">{{$page.frontmatter.component_location}}</cdr-link>
 
-## Props
+### Props
 
 <cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[0].api.props" />
 
-## Slots
+### Slots
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-## Component Variables
+### Component Variables
 
 <cdr-doc-comp-vars name="CdrFormGroup"/>
 
