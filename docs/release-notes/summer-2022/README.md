@@ -23,7 +23,7 @@
 | package name | version |
 |--------------|---------|
 | `@rei/cedar` | ^13.x.x |
-| `@rei/cdr-tokens` | ^10.x.x |
+| `@rei/cdr-tokens` | ^11.x.x |
 | `@rei/cdr-component-variables` | ^8.x.x |
 
 If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your microsite.
@@ -119,6 +119,19 @@ Cedar components using `v-model`:
 
 [Vue migration guide: v-model](https://v3-migration.vuejs.org/breaking-changes/v-model.html)
 
+### Cedar reset
+
+The `reset.css` asset is now consumed at the root level of the `/dist/`
+
+**Old**
+```html
+import '@rei/cedar/dist/style/reset.css';
+```
+**New**
+```html
+import '@rei/cedar/dist/reset.css';
+```
+
 <br>
 
 ## Non-breaking changes
@@ -155,6 +168,10 @@ Cedar components using `v-model`:
 - **CdrToast:** Updated to address a small visual glitch at certain browser zoom levels
 
 <br>
+
+## Tokens v11.0.0
+
+The JavaScript variable tokens are now exported as an ECMA module to work better with Vite applications.
 
 ## Doc site
 
