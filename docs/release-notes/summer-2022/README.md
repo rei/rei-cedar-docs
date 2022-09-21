@@ -119,6 +119,19 @@ Cedar components using `v-model`:
 
 [Vue migration guide: v-model](https://v3-migration.vuejs.org/breaking-changes/v-model.html)
 
+### Cedar reset
+
+The `reset.css` asset is now consumed at the root level of the `/dist/`
+
+**Old**
+```html
+import '@rei/cedar/dist/style/reset.css';
+```
+**New**
+```html
+import '@rei/cedar/dist/reset.css';
+```
+
 <br>
 
 ## Non-breaking changes
