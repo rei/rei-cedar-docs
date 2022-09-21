@@ -23,7 +23,7 @@
 | package name | version |
 |--------------|---------|
 | `@rei/cedar` | ^13.x.x |
-| `@rei/cdr-tokens` | ^10.x.x |
+| `@rei/cdr-tokens` | ^11.x.x |
 | `@rei/cdr-component-variables` | ^8.x.x |
 
 If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your microsite.
@@ -155,6 +155,10 @@ Cedar components using `v-model`:
 - **CdrToast:** Updated to address a small visual glitch at certain browser zoom levels
 
 <br>
+
+## Cedar tokens v11.0.0
+
+- The JavaScript variable tokens are now exported as an ECMA module to work better with Vite apps.
 
 ## Doc site
 
