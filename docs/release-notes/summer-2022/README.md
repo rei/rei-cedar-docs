@@ -156,9 +156,9 @@ Cedar components using `v-model`:
 
 <br>
 
-## Cedar tokens v11.0.0
+## Tokens v11.0.0
 
-- The JavaScript variable tokens are now exported as an ECMA module to work better with Vite apps.
+The JavaScript variable tokens are now exported as an ECMA module to work better with Vite applications.
 
 ## Doc site
 
