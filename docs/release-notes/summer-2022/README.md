@@ -48,11 +48,14 @@ While the API for most components remains unchanged, some changes were necessary
 
 ### Vue 3 attribute handling
 
-**The `$attrs` object now contains _all_ attributes passed to a component, including `class` and `style`.**
+In Vue 2, `class` and `style` attributes were excluded from the `$attrs` object.
 
-- By default, attributes applied to a component are "passed through" to the parent element. 
-- For certain Cedar components, we make use of Vue's `inheritAttrs` property to bind attributes to a deeper element in the component. This allows us to pass attributes like `loading="lazy"` to the `<img>` element within CdrImg, even when it's being used with a wrapping ratio container
-- We have identified two components where this deeper class binding was causing style issues. Rather than hack around Vue 3's new behavior, we have introduced new props that allow a custom class to be bound to the parent element
+**In Vue 3, The `$attrs` object now contains _all_ attributes passed to a component, including `class` and `style`.**
+
+- By default, attributes applied to a component are "passed through" to its parent element. For certain Cedar components, we make use of Vue's `inheritAttrs` property to bind attributes to a deeper element in the component. This allows us to pass attributes like `loading="lazy"` to the `<img>` element within CdrImg, even when it's being used with a wrapping ratio container
+
+- We have identified two components where this deeper class binding was causing style issues with the inclusion of `class` and `style` in the `$attrs` object. Rather than hack around Vue 3's new behavior, we have introduced new props that allow a custom class to be bound to the parent element
+
 - **CdrImg:** A new `containerClass` prop has been added to allow passing a custom class to the `cdr-img-ratio` container div
 - **CdrInput:** A new `labelClass` prop has been added to allow passing a custom class to the `cdr-label-standalone` container div
 
