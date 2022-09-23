@@ -30,6 +30,12 @@ If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP,
 
 <br> 
 
+## 13.0.1
+
+### Bug fixes
+
+- CdrAccordion has been updated to address an issue where the caret icon wasn't animating on accordion open/close.
+
 ## Vue 3 component library
 
 We've migrated to Vue 3! While the components and their API's remain largely the same, we have adopted Vue 3's Composition API and rewritten the entire library from the ground-up as Vue SFC's (Single File Components). We have also adopted Vite, allowing us to significantly reduce the complexity of our build system. 
