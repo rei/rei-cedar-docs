@@ -28,7 +28,19 @@
 
 If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your microsite.
 
-<br> 
+<br>
+
+## 13.0.2
+
+### Bug fixes
+
+- CdrModal has been updated to address an issue with the display of the close button when hiding the modal's title.
+
+## 13.0.1
+
+### Bug fixes
+
+- CdrAccordion has been updated to address an issue where the caret icon wasn't animating on accordion open/close.
 
 ## Vue 3 component library
 
