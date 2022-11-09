@@ -16,6 +16,17 @@ const VITE_CONFIG_JS = `
     plugins: [vue()]
   })
 `
+
+const SANDBOX_CONFIG_JS = `
+  {
+    "infiniteLoopProtection": true,
+    "hardReloadOnChange": false,
+    "view": "browser",
+    "container": {
+      "node": "16"
+    }
+  }
+`
 export default function makeMeASandbox(data, model, computed, methods) {
   // TODO: can we grab the preceding heading to use for name/title?
   const name = "CedarExampleSandbox";
@@ -44,7 +55,7 @@ export default function makeMeASandbox(data, model, computed, methods) {
             "sass": "^1.32.11",
           },
           "dependencies": {
-            "@rei/cdr-tokens": packageJson.dependencies['@rei/cdr-tokens'],
+            "@rei/cdr-tokens": "^11.0.0",
             "@rei/cedar": "^13.0.0",
             "core-js": "^3.22.7",
             "lodash-es": "^4.17.21",
@@ -58,6 +69,9 @@ export default function makeMeASandbox(data, model, computed, methods) {
       },
       'vite.config.js': {
         content: VITE_CONFIG_JS
+      },
+      'sandbox.config.json': {
+        content: SANDBOX_CONFIG_JS
       }
     },
   };
@@ -109,7 +123,7 @@ function buildContent(data, model, computed, methods) {
 }
 
 function buildScriptTag(data, model, computed, methods) {
-  const componentsImport = `import { ${data.components} } from "@rei/cedar/dist/cedar.mjs"; // NOTE: importing from '@rei/cedar/dist/cedar.mjs' to bypass a codesandbox bug. Please import from '@rei/cedar' in your code.`;
+  const componentsImport = `import { ${data.components} } from "@rei/cedar";`
   const spriteString = 'svgSprite, ';
 
   let stringModel = model ? JSON.stringify(model) : "{}";
