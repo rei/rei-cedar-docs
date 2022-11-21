@@ -105,7 +105,7 @@ The Toggle Button has at least two selections, with a default option selected. T
 Default toggle button that expands to the full width of its container
 
 <iframe
-  src="https://yd2iks.sse.codesandbox.io/embed/new?codemirror=1"
+  src="https://e9divl.sse.codesandbox.io/embed/new?codemirror=1"
   style="width:100%; height:150px; border:1px solid #dcd6cb; border-radius: 4px; overflow:hidden;"
   allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
   sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
@@ -118,7 +118,7 @@ Default toggle button that expands to the full width of its container
     </a>
   </div> 
   <div class="cdr-doc-code-snippet__action-wrapper">
-    <a target="_blank" rel="noopener noreferrer" href="https://codesandbox.io/s/cdrtogglebutton--default-yd2iks?file=/App.vue" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
+    <a target="_blank" rel="noopener noreferrer" href="https://codesandbox.io/s/cdrtogglebutton-default-full-width-e9divl?file=/App.vue" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
             View on CodeSandbox
     </a>
   </div>
@@ -129,7 +129,7 @@ Default toggle button that expands to the full width of its container
 Default toggle button with custom styles added to limit width
 
 <iframe
-  src="https://cnuhg0.sse.codesandbox.io/embed/new?codemirror=1"
+  src="https://bf0gin.sse.codesandbox.io/embed/new?codemirror=1"
   style="width:100%; height:150px; border:1px solid #dcd6cb; border-radius: 4px; overflow:hidden;"
   allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
   sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
@@ -142,7 +142,7 @@ Default toggle button with custom styles added to limit width
     </a>
   </div> 
   <div class="cdr-doc-code-snippet__action-wrapper">
-    <a target="_blank" rel="noopener noreferrer" href="https://codesandbox.io/s/cdrtogglebutton--default-cnuhg0?file=/App.vue" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
+    <a target="_blank" rel="noopener noreferrer" href="https://codesandbox.io/s/cdrtogglebutton-custom-width-bf0gin?file=/App.vue" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
             View on CodeSandbox
     </a>
   </div>
@@ -153,7 +153,7 @@ Default toggle button with custom styles added to limit width
 Default size toggle button with icon and label
 
 <iframe
-  src="https://ddpjhq.sse.codesandbox.io/embed/new?codemirror=1"
+  src="https://mlb7hp.sse.codesandbox.io/embed/new?codemirror=1"
   style="width:100%; height:150px; border:1px solid #dcd6cb; border-radius: 4px; overflow:hidden;"
   allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
   sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
@@ -166,7 +166,7 @@ Default size toggle button with icon and label
     </a>
   </div> 
   <div class="cdr-doc-code-snippet__action-wrapper">
-    <a target="_blank" rel="noopener noreferrer" href="https://codesandbox.io/s/cdrtogglebutton--default-forked-ddpjhq?file=/App.vue" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
+    <a target="_blank" rel="noopener noreferrer" href="https://codesandbox.io/s/cdrtogglebutton--icon-with-label-mlb7hp?file=/App.vue" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
             View on CodeSandbox
     </a>
   </div>
@@ -177,7 +177,7 @@ Default size toggle button with icon and label
 Default size toggle button with just an icon
 
 <iframe
-  src="https://629j2p.sse.codesandbox.io/embed/new?codemirror=1"
+  src="https://6up7wn.sse.codesandbox.io/embed/new?codemirror=1"
   style="width:100%; height:150px; border:1px solid #dcd6cb; border-radius: 4px; overflow:hidden;"
   allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
   sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
@@ -190,7 +190,7 @@ Default size toggle button with just an icon
     </a>
   </div> 
   <div class="cdr-doc-code-snippet__action-wrapper">
-    <a target="_blank" rel="noopener noreferrer" href="https://codesandbox.io/s/cdrtogglebutton--default-forked-629j2p?file=/App.vue" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
+    <a target="_blank" rel="noopener noreferrer" href="https://codesandbox.io/s/cdrtogglebutton--icon-6up7wn?file=/App.vue" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
             View on CodeSandbox
     </a>
   </div>
@@ -203,7 +203,7 @@ Size can be changed to large based on where the component is being used.
 Toggle buttons, checkboxes, radio buttons, and switches are all similar types of selection controls, but they generally are not interchangeable. If you're not sure which one to use for a certain scenario, here's a table that might help. 
 
 <iframe
-  src="https://cid742.sse.codesandbox.io/embed/new?codemirror=1"
+  src="https://vfdetw.sse.codesandbox.io/embed/new?codemirror=1"
   style="width:100%; height:150px; border:1px solid #dcd6cb; border-radius: 4px; overflow:hidden;"
   allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
   sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
@@ -216,7 +216,7 @@ Toggle buttons, checkboxes, radio buttons, and switches are all similar types of
     </a>
   </div> 
   <div class="cdr-doc-code-snippet__action-wrapper">
-    <a target="_blank" rel="noopener noreferrer" href="https://codesandbox.io/s/cdrtogglebutton--default-cid742?file=/App.vue" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
+    <a target="_blank" rel="noopener noreferrer" href="https://codesandbox.io/s/cdrtogglebutton-large-size-vfdetw?file=/App.vue" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
             View on CodeSandbox
     </a>
   </div>
