@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Communicates meaning through the use of graphics",
   "title_metadata": "CdrIcon",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/icon",
+  "component_location": "https://github.com/rei/rei-cedar-vue-2/tree/next/src/components/icon",
   "breadcrumbs": [
     {
       "text": "Components/"

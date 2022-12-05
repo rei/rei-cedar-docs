@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Permits users to select from two opposing options",
   "title_metadata": "CdrSwitch",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/switch",
+  "component_location": "https://github.com/rei/rei-cedar/tree/main/src/components/switch",
   "breadcrumbs": [
     {
       "text": "Components/"
@@ -104,7 +104,7 @@ Default switch with medium size and standard spacing.
 
 <div class="cdr-doc-code-snippet__actions">
   <div class="cdr-doc-code-snippet__action-wrapper">
-    <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar-next/tree/main/src/components/switch" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
+    <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar/tree/main/src/components/switch" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
             View on GitHub
     </a>
   </div> 
@@ -127,7 +127,7 @@ Displays at full-width of its container.
 ></iframe>
 
 <div class="cdr-doc-code-snippet__actions"><div class="cdr-doc-code-snippet__action-wrapper">
-  <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar-next/tree/main/src/components/switch" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar/tree/main/src/components/switch" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
         View on GitHub
 </a>
 </div> 
@@ -147,7 +147,7 @@ Size can be changed to large based on where the component is being used.
 ></iframe>
 
 <div class="cdr-doc-code-snippet__actions"><div class="cdr-doc-code-snippet__action-wrapper">
-  <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar-next/tree/main/src/components/switch" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar/tree/main/src/components/switch" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
         View on GitHub
 </a>
 </div> 
@@ -167,7 +167,7 @@ A label with custom styling.
 ></iframe>
 
 <div class="cdr-doc-code-snippet__actions"><div class="cdr-doc-code-snippet__action-wrapper">
-  <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar-next/tree/main/src/components/switch" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar/tree/main/src/components/switch" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
         View on GitHub
 </a>
 </div> 

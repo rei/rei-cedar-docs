@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Permits user to select only one option from a list of two or more",
   "title_metadata": "Radios, CdrRadio",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/radio",
+  "component_location": "https://github.com/rei/rei-cedar-vue-2/tree/next/src/components/radio",
   "see_also": [
     {
       "text": 'See Also'

@@ -29,7 +29,7 @@
 
 ## 12.1.0
 
-See what's changed on <cdr-link style="vertical-align: baseline" href="https://github.com/rei/rei-cedar/releases/tag/v12.1.0">GitHub <icon-brand-github /></cdr-link>
+See what's changed on <cdr-link style="vertical-align: baseline" href="https://github.com/rei/rei-cedar-vue-2/releases/tag/v12.1.0">GitHub <icon-brand-github /></cdr-link>
 
 ### Performance improvements
 

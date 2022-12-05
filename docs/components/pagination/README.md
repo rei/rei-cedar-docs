@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Allows users to navigate to next or previous page when content is split into several pages",
   "title_metadata": "Pagination, CdrPagination",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/pagination",
+  "component_location": "https://github.com/rei/rei-cedar-vue-2/tree/next/src/components/pagination",
   "align": [
     {
       "type": "do",

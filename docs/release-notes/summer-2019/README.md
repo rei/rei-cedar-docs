@@ -132,7 +132,7 @@ In order to unit test code that loads Cedar, you will need to run JSDOM or an eq
 
 The spacing utility classes have been deprecated and re-named to be consistent with our naming structure for tokens. This includes `cdr-stack`, `cdr-inline`, and `cdr-inset`, as well as their modifiers like `cdr-stack--lg`, or `cdr-inset--squish`.
 
-- All of the [deprecated classes can be found here](https://github.com/rei/rei-cedar/blob/45f3242d3e52c26ec48157b7290529dbf951440a/src/css/utility/_legacy.scss), and you can read more about the new utility classes in our [spacing foundation article](https://rei.github.io/rei-cedar-docs/foundation/spacing/)
+- All of the [deprecated classes can be found here](https://github.com/rei/rei-cedar-vue-2/blob/45f3242d3e52c26ec48157b7290529dbf951440a/src/css/utility/_legacy.scss), and you can read more about the new utility classes in our [spacing foundation article](https://rei.github.io/rei-cedar-docs/foundation/spacing/)
 - You can check if your project is affected by searching your codebase for the following CSS classes: `cdr-stack`, `cdr-inset`, and `cdr-inline`. Note which of the utility classes appear. They may show up either in their base form (i.e, `cdr-stack`), or with a size modifier (i.e, `cdr-stack--lg`)
 - We have also create a [spacing utility detector script](#spacing-utility-detector) that will highlight any use of the deprecated spacing classes on a page
 - For each of the deprecated classes that you are using, look it up in the [utility class migration map](#spacing-utility-class-mapping ) to find which of the new classes is equivalent, and execute a find and replace on your codebase to update it

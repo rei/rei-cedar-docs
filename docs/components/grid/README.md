@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Wrapper for working with CSS Grid",
   "title_metadata": "CdrGrid",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/grid",
+  "component_location": "https://github.com/rei/rei-cedar-vue-2/tree/next/src/components/grid",
   "breadcrumbs": [
     {
       "text": "Components/"

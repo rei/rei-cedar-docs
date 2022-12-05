@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Non-modal dialog used to communicate the status of a task or process.",
   "title_metadata": "CdrToast",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/toast",
+  "component_location": "https://github.com/rei/rei-cedar-vue-2/tree/next/src/components/toast",
   "breadcrumbs": [
     {
       "text": "Components/"

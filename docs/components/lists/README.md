@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Groups related content items together either vertically or horizontally",
   "title_metadata": "CdrList",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/list",
+  "component_location": "https://github.com/rei/rei-cedar-vue-2/tree/next/src/components/list",
   "see_also": [
     {
       "text": 'See Also'

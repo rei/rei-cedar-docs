@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Vertically-stacked list that allows users to expand and collapse additional content",
   "title_metadata": "CdrAccordion, CdrAccordionGroup",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/accordion",
+  "component_location": "https://github.com/rei/rei-cedar-vue-2/tree/next/src/components/accordion",
   "breadcrumbs": [
     {
       "text": "Components/"

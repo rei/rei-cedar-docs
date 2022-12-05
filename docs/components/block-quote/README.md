@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "title_metadata": "Quote, CdrQuote",
   "summary": "Short excerpt with an external citation and citation URL that is set off from the main body of text",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/quote",
+  "component_location": "https://github.com/rei/rei-cedar-vue-2/tree/next/src/components/quote",
   "see_also": [
     {
       "text": "See Also"

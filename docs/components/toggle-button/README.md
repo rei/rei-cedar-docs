@@ -4,7 +4,7 @@
    "layout_type":"LayoutComponent",
    "summary":"Permits user to switch two or more options on and off",
    "title_metadata":"CdrToggleButton",
-   "component_location":"https://github.com/rei/rei-cedar/tree/next/src/components/toggle-button",
+   "component_location":"https://github.com/rei/rei-cedar/tree/main/src/components/toggleButton",
    "breadcrumbs":[
       {
          "text":"Components/"
@@ -16,7 +16,7 @@
          "image":"toggle-button/toggle-button_segment_do_16-9.png",
          "ratio":"16-9",
          "alt":"A toggle button with two segments labeled day and night.",
-         "caption":"limit the number of segments to aid in usability and scannability."
+         "caption":"limit the number of segments to aid in usability and scanability."
       },
       {
          "type":"dont",
@@ -113,7 +113,7 @@ Default toggle button that expands to the full width of its container
 
 <div class="cdr-doc-code-snippet__actions">
   <div class="cdr-doc-code-snippet__action-wrapper">
-    <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar-next/tree/main/src/components/toggleButton" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
+    <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar/tree/main/src/components/toggleButton" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
             View on GitHub
     </a>
   </div> 
@@ -137,7 +137,7 @@ Default toggle button with custom styles added to limit width
 
 <div class="cdr-doc-code-snippet__actions">
   <div class="cdr-doc-code-snippet__action-wrapper">
-    <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar-next/tree/main/src/components/toggleButton" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
+    <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar/tree/main/src/components/toggleButton" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
             View on GitHub
     </a>
   </div> 
@@ -161,7 +161,7 @@ Default size toggle button with icon and label
 
 <div class="cdr-doc-code-snippet__actions">
   <div class="cdr-doc-code-snippet__action-wrapper">
-    <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar-next/tree/main/src/components/toggleButton" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
+    <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar/tree/main/src/components/toggleButton" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
             View on GitHub
     </a>
   </div> 
@@ -185,7 +185,7 @@ Default size toggle button with just an icon
 
 <div class="cdr-doc-code-snippet__actions">
   <div class="cdr-doc-code-snippet__action-wrapper">
-    <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar-next/tree/main/src/components/toggleButton" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
+    <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar/tree/main/src/components/toggleButton" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
             View on GitHub
     </a>
   </div> 
@@ -211,7 +211,7 @@ Toggle buttons, checkboxes, radio buttons, and switches are all similar types of
 
 <div class="cdr-doc-code-snippet__actions">
   <div class="cdr-doc-code-snippet__action-wrapper">
-    <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar-next/tree/main/src/components/toggleButton" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
+    <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar/tree/main/src/components/toggleButton" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
             View on GitHub
     </a>
   </div> 

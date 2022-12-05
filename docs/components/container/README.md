@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Provides base margins and responsive layout logic for pages",
   "title_metadata": "CdrContainer",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/container",
+  "component_location": "https://github.com/rei/rei-cedar-vue-2/tree/next/src/components/container",
   "breadcrumbs": [
     {
       "text": "Components/"
