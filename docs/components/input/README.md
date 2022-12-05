@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Allows a user to enter data, edit data and search",
   "title_metadata": "Text field, CdrInput, cdr-input",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/input",
+  "component_location": "https://github.com/rei/rei-cedar-vue-2/tree/next/src/components/input",
   "length": [
     {
       "type": "do",

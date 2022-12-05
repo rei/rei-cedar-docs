@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Linked, interactive surface that groups related information and/or actions associated with a singular subject or destination.",
   "title_metadata": "CdrCard",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/card",
+  "component_location": "https://github.com/rei/rei-cedar-vue-2/tree/next/src/components/card",
   "breadcrumbs": [
     {
       "text": "Components/"

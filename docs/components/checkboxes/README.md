@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "title_metadata": "CdrCheckbox",
   "summary": "Permits user to make one or more selections from a list",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/checkbox",
+  "component_location": "https://github.com/rei/rei-cedar-vue-2/tree/next/src/components/checkbox",
   "see_also": [
     {
       "text": "See Also"

@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Navigation used to reveal a page’s location within the site hierarchy",
   "title_metadata": "CdrBreadcrumb",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/breadcrumb",
+  "component_location": "https://github.com/rei/rei-cedar-vue-2/tree/next/src/components/breadcrumb",
   "path": [
     {
       "type": "do",

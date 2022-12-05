@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Small overlay used to display contextual information",
   "title_metadata": "CdrPopover",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/popover",
+  "component_location": "https://github.com/rei/rei-cedar-vue-2/tree/next/src/components/popover",
   "breadcrumbs": [
     {
       "text": "Components/"

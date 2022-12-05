@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Allows a user to select one or more options from a dropdown list",
   "title_metadata": "Dropdown, CdrSelect, cdr-select",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/select",
+  "component_location": "https://github.com/rei/rei-cedar-vue-2/tree/next/src/components/select",
   "sandboxData": {
     "components": "CdrSelect"
   },

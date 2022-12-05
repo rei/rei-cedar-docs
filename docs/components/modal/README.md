@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Disruptive, action-blocking overlays used to display important, task-relevant information",
   "title_metadata": "CdrModal",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/modal",
+  "component_location": "https://github.com/rei/rei-cedar-vue-2/tree/next/src/components/modal",
   "breadcrumbs": [
     {
       "text": "Components/"

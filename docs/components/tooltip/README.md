@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Floating label used to clarify interface actions",
   "title_metadata": "CdrTooltip",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/tooltip",
+  "component_location": "https://github.com/rei/rei-cedar-vue-2/tree/next/src/components/tooltip",
   "breadcrumbs": [
     {
       "text": "Components/"

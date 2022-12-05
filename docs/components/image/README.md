@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Captures the user’s attention and communicate your message",
   "title_metadata": "CdrImg",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/image",
+  "component_location": "https://github.com/rei/rei-cedar-vue-2/tree/next/src/components/image",
   "sandboxData": {
     "components": "CdrImg"
   },

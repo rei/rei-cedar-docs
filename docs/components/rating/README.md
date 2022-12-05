@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "title_metadata": "Rating, Stars, Reviews, CdrRating",
   "summary": "Provides insights into user opinions for products, experiences and expert information",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/rating",
+  "component_location": "https://github.com/rei/rei-cedar-vue-2/tree/next/src/components/rating",
   "stars": [
     {
       "type": "do",
