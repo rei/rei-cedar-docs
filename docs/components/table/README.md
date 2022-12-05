@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "title_metadata": "Table, CdrTable",
   "summary": "Organizes structured content so that it is easy to scan, make comparisons, and analyze the data",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/table",
+  "component_location": "https://github.com/rei/rei-cedar-vue-2/tree/next/src/components/table",
   "breadcrumbs": [
     {
       "text": "Components/"

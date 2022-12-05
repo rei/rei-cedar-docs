@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Clickable text element used to navigate to page section, another page or open an overlaid window such as modal dialog or popover",
   "title_metadata": "Hyperlink, Anchor, CdrButton, CdrLink",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/link",
+  "component_location": "https://github.com/rei/rei-cedar-vue-2/tree/next/src/components/link",
   "see_also": [
     {
       "text": 'See Also'

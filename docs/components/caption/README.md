@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Provides further context and attribution for a figure or media asset such as an image, video, or chart",
   "title_metadata": "CdrCaption",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/caption",
+  "component_location": "https://github.com/rei/rei-cedar-vue-2/tree/next/src/components/caption",
   "see_also": [
     {
       "text": "See Also"

@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Text container used for any text element such as paragraphs, headings, and lists. Establishes vertical spacing and optimizes the reading experience",
   "title_metadata": "CdrText",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/text",
+  "component_location": "https://github.com/rei/rei-cedar-vue-2/tree/next/src/components/text",
   "see_also": [
     {
       "text": 'See Also'

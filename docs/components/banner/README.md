@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Provides contextual feedback messages for typical user actions",
   "title_metadata": "CdrBanner",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/banner",
+  "component_location": "https://github.com/rei/rei-cedar-vue-2/tree/next/src/components/banner",
   "breadcrumbs": [
     {
       "text": "Components/"

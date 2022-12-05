@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Groups related input elements together",
   "title_metadata": "CdrFormGroup",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/formGroup",
+  "component_location": "https://github.com/rei/rei-cedar-vue-2/tree/next/src/components/formGroup",
     "see_also": [
     {
       "text": 'See Also'

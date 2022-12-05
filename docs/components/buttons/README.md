@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Invokes and communicates an action that will occur",
   "title_metadata": "CdrButton",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/button",
+  "component_location": "https://github.com/rei/rei-cedar-vue-2/tree/next/src/components/button",
   "vertical": [
     {
       "type": "do",

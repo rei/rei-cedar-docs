@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "title_metadata": "Quote, CdrQuote",
   "summary": "Short excerpt taken from the main body of text to give a dominant position",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/quote",
+  "component_location": "https://github.com/rei/rei-cedar-vue-2/tree/next/src/components/quote",
   "see_also": [
     {
       "text": "See Also"

@@ -48,7 +48,7 @@ We've migrated to Vue 3! While the components and their API's remain largely the
 
 Going forward, our Vue 3 library will be the only one we support with features and functionality. We will continue to support our Vue 2 library with basic maintenance and bug fixes until Spring 2023.
 
-Check out the repo on <cdr-link style="vertical-align: baseline" href="https://github.com/rei/rei-cedar-next">Github <icon-brand-github /></cdr-link>.
+Check out the repo on <cdr-link style="vertical-align: baseline" href="https://github.com/rei/rei-cedar">Github <icon-brand-github /></cdr-link>.
 
 Note: Shortly after launch, the Vue 3 repo will be renamed to `rei-cedar` and our Vue 2 library will be republished under `@rei/cedar-vue-2`. 
 

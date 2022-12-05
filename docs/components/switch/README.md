@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Permits users to select from two opposing options",
   "title_metadata": "CdrSwitch",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/switch",
+  "component_location": "https://github.com/rei/rei-cedar/tree/main/src/components/switch",
   "breadcrumbs": [
     {
       "text": "Components/"
@@ -96,7 +96,7 @@ Switch is a system-wide control that is used to quickly change between two possi
 Default switch with medium size and standard spacing.
 
 <iframe
-  src="https://y6hei2.sse.codesandbox.io/embed/new?codemirror=1"
+  src="https://od9nko.sse.codesandbox.io/embed/new?codemirror=1"
   style="width:100%; height:100px; border:1px solid #dcd6cb; border-radius: 4px; overflow:hidden;"
   allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
   sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
@@ -104,12 +104,12 @@ Default switch with medium size and standard spacing.
 
 <div class="cdr-doc-code-snippet__actions">
   <div class="cdr-doc-code-snippet__action-wrapper">
-    <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar-next/tree/main/src/components/switch" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
+    <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar/tree/main/src/components/switch" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
             View on GitHub
     </a>
   </div> 
   <div class="cdr-doc-code-snippet__action-wrapper">
-    <a target="_blank" rel="noopener noreferrer" href="https://codesandbox.io/s/cedarexamplesandbox-forked-y6hei2?file=/App.vue" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
+    <a target="_blank" rel="noopener noreferrer" href="https://codesandbox.io/s/cdrswitch-default-od9nko?file=/App.vue" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
             View on CodeSandbox
     </a>
   </div>
@@ -120,18 +120,18 @@ Default switch with medium size and standard spacing.
 Displays at full-width of its container.
 
 <iframe
-  src="https://ez4mqc.sse.codesandbox.io/embed/new?codemirror=1"
+  src="https://yyv9se.sse.codesandbox.io/embed/new?codemirror=1"
   style="width:100%; height:100px; border:1px solid #dcd6cb; border-radius: 4px; overflow:hidden;"
   allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
   sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
 ></iframe>
 
 <div class="cdr-doc-code-snippet__actions"><div class="cdr-doc-code-snippet__action-wrapper">
-  <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar-next/tree/main/src/components/switch" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar/tree/main/src/components/switch" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
         View on GitHub
 </a>
 </div> 
-<div class="cdr-doc-code-snippet__action-wrapper"><a target="_blank" rel="noopener noreferrer" href="https://codesandbox.io/s/cdrswitch--medium-full-width-ez4mqc?file=/App.vue" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
+<div class="cdr-doc-code-snippet__action-wrapper"><a target="_blank" rel="noopener noreferrer" href="https://codesandbox.io/s/cdrswitch-medium-full-width-yyv9se?file=/App.vue" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
         View on CodeSandbox
 </a></div></div>
 
@@ -140,18 +140,18 @@ Displays at full-width of its container.
 Size can be changed to large based on where the component is being used.
 
 <iframe
-  src="https://55d0xb.sse.codesandbox.io/embed/new?codemirror=1"
+  src="https://0s9xe9.sse.codesandbox.io/embed/new?codemirror=1"
   style="width:100%; height:100px; border:1px solid #dcd6cb; border-radius: 4px; overflow:hidden;"
   allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
   sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
 ></iframe>
 
 <div class="cdr-doc-code-snippet__actions"><div class="cdr-doc-code-snippet__action-wrapper">
-  <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar-next/tree/main/src/components/switch" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar/tree/main/src/components/switch" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
         View on GitHub
 </a>
 </div> 
-<div class="cdr-doc-code-snippet__action-wrapper"><a target="_blank" rel="noopener noreferrer" href="https://codesandbox.io/s/cdrswitch-large-55d0xb?file=/App.vue" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
+<div class="cdr-doc-code-snippet__action-wrapper"><a target="_blank" rel="noopener noreferrer" href="https://codesandbox.io/s/cdrswitch-large-0s9xe9?file=/App.vue" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
         View on CodeSandbox
 </a></div></div>
 
@@ -160,18 +160,18 @@ Size can be changed to large based on where the component is being used.
 A label with custom styling.
 
 <iframe
-  src="https://53f6ly.sse.codesandbox.io/embed/new?codemirror=1"
+  src="https://0ms1hk.sse.codesandbox.io/embed/new?codemirror=1"
   style="width:100%; height:100px; border:1px solid #dcd6cb; border-radius: 4px; overflow:hidden;"
   allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
   sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
 ></iframe>
 
 <div class="cdr-doc-code-snippet__actions"><div class="cdr-doc-code-snippet__action-wrapper">
-  <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar-next/tree/main/src/components/switch" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
+  <a target="_blank" rel="noopener noreferrer" href="https://github.com/rei/rei-cedar/tree/main/src/components/switch" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
         View on GitHub
 </a>
 </div> 
-<div class="cdr-doc-code-snippet__action-wrapper"><a target="_blank" rel="noopener noreferrer" href="https://codesandbox.io/s/cdrswitch-custom-label-style-53f6ly?file=/App.vue" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
+<div class="cdr-doc-code-snippet__action-wrapper"><a target="_blank" rel="noopener noreferrer" href="https://codesandbox.io/s/cdrswitch-custom-label-0ms1hk?file=/App.vue" class="cdr-doc-code-snippet__action cdr-link_12-0-0 cdr-link--standalone_12-0-0">
         View on CodeSandbox
 </a></div></div>
 

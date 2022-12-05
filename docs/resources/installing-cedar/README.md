@@ -292,7 +292,7 @@ For example with checkbox you may want to target both the label and the content 
 </style>
 ```
 
-If you find that a component needs to have a targeted prop class added, please [create an issue](https://github.com/rei/rei-cedar/issues) and let us know.
+If you find that a component needs to have a targeted prop class added, please [create an issue](https://github.com/rei/rei-cedar-vue-2/issues) and let us know.
 
 <hr/>
 

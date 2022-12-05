@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Container used to organize and group related content into smaller sections navigable within a single container",
   "title_metadata": "Tab Panels, CdrTabs",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/tabs",
+  "component_location": "https://github.com/rei/rei-cedar-vue-2/tree/next/src/components/tabs",
   "select": [
     {
       "type": "do",

@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Allows users to make selections, filter content, or trigger actions",
   "title_metadata": "CdrChip",
-  "component_location": "https://github.com/rei/rei-cedar/tree/next/src/components/chip",
+  "component_location": "https://github.com/rei/rei-cedar-vue-2/tree/next/src/components/chip",
   "breadcrumbs": [
     {
       "text": "Components/"
