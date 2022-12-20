@@ -26,10 +26,38 @@
 | `@rei/cdr-tokens` | ^11.x.x |
 | `@rei/cdr-component-variables` | ^8.x.x |
 
-If your project depends on any shared component packages (i.e, FEDPACK, FEDCOMP, FEDPAGES), you will want to update those packages to the new version of Cedar before updating your microsite.
+If your project depends on any shared component packages, you will want to update those packages to the new version of Cedar before updating your microsite.
 
 <br>
 
+## 13.2.0
+
+See what's changed on <cdr-link style="vertical-align: baseline" href="https://github.com/rei/rei-cedar/releases/tag/v13.2.0">GitHub <icon-brand-github /></cdr-link>
+
+### CdrSkeleton
+
+CdrSkeleton is now available. Skeletons are used to visually communicate when content is in the process of loading. See the [CdrSkeleton docs page](../../components/skeleton) for more information.
+
+### Polyfill removals
+
+Polyfills for older, unsupported browsers have been removed. This should reduce the bundle sizes and result in better performance. View Cedar's [browser targets](https://github.com/rei/rei-cedar/blob/main/browserTargets.mjs).
+
+<cdr-banner type="warning" aria-live="polite"><template #icon-left><icon-warning-fill inherit-color /></template><span style="font-weight:500">Users at REI should also update to the latest version of FEBS for optimal performance.</span></cdr-banner>
+
+
+### Accessibility improvements
+- CdrChip's design has been tweaked to improve visual contrast between selected and unselected states.
+
+### Bug fixes
+- The Cedar component library is now less vocal about transitions and when they end.
+
+<br />
+
+## 13.1.0
+See what's changed on <cdr-link style="vertical-align: baseline" href="https://github.com/rei/rei-cedar/releases/tag/v13.1.0">GitHub <icon-brand-github /></cdr-link>
+
+### New icons
+- New icons have been added to the library
 ## 13.0.2
 
 ### Bug fixes
