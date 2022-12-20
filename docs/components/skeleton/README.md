@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Visually communicates content is in the process of loading ",
   "title_metadata": "CdrSkeleton, CdrSkeletonBone, skeleton, bone",
-  "component_location": "https://github.com/rei/rei-cedar-vue-2/tree/next/src/components/link",
+  "component_location": "https://github.com/rei/rei-cedar/tree/skelelton-testing/src/components/skeleton",
   "structure": [
     {
       "type": "do",
@@ -130,17 +130,9 @@ At its core, CdrSkeleton is essentially a paint brush you can use to create any 
 <cdr-doc-example-code-pair :codeMaxHeight= false :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
-<cdr-text>
-  If you spend much time in the great outdoors,
-  you’re likely to hear the phrase “Leave No Trace”
-  as often as you hear
-  "<cdr-link
-    href="https://www.rei.com/learn/expert-advice/ten-essentials.html">
-      the Ten Essentials
-  </cdr-link>".
-  What does it mean? Simply put, it’s the best practices
-  we should follow to enjoy and protect our natural spaces.
-</cdr-text>
+<CdrSkeleton :motion="motionToggle">
+  <CdrSkeletonBone type="heading" />
+</CdrSkeleton>
 ```
  </cdr-doc-example-code-pair>
 
@@ -151,44 +143,39 @@ At its core, CdrSkeleton is essentially a paint brush you can use to create any 
 <cdr-doc-example-code-pair :codeMaxHeight= false :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
-<cdr-text>
-  If you spend much time in the great outdoors,
-  you’re likely to hear the phrase “Leave No Trace”
-  as often as you hear
-  "<cdr-link
-    href="https://www.rei.com/learn/expert-advice/ten-essentials.html">
-      the Ten Essentials
-  </cdr-link>".
-  What does it mean? Simply put, it’s the best practices
-  we should follow to enjoy and protect our natural spaces.
-</cdr-text>
+<CdrSkeleton>
+  <CdrSkeletonBone type="line" />
+  <CdrSkeletonBone type="line" />
+  <CdrSkeletonBone type="line" />
+</CdrSkeleton>
 ```
  </cdr-doc-example-code-pair>
 
 #### Rectangle (4:3) 
 
-- Fluid 
+- Fluid
 
  <cdr-doc-example-code-pair :codeMaxHeight= false :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
-<cdr-text>
-  If you spend much time in the great outdoors,
-  you’re likely to hear the phrase “Leave No Trace”
-  as often as you hear
-  "<cdr-link
-    href="https://www.rei.com/learn/expert-advice/ten-essentials.html">
-      the Ten Essentials
-  </cdr-link>".
-  What does it mean? Simply put, it’s the best practices
-  we should follow to enjoy and protect our natural spaces.
-</cdr-text>
+<CdrSkeleton>
+  <CdrSkeletonBone type="rectangle" />
+</CdrSkeleton>
 ```
 </cdr-doc-example-code-pair>
 
 #### Square (1:1) 
 
-- Fluid 
+- Fluid
+
+ <cdr-doc-example-code-pair :codeMaxHeight= false :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
+
+```html
+<CdrSkeleton>
+  <CdrSkeletonBone type="square" />
+</CdrSkeleton>
+```
+</cdr-doc-example-code-pair>
 
 ### Motion (shimmer effect) 
 
@@ -196,7 +183,6 @@ Skeletons use motion to convey the UI is still loading and the page is not froze
 
 - Can be disabled via prop 
 - Disabled if user has reduced motion preferences 
-
 
 ### Accessibility
 
@@ -260,72 +246,56 @@ CdrSkeleton is used to provide a visual placeholder while content is loading.
 
 CdrSkeletonBone is used to provide a visual placeholder for a single line of content while content is loading.
 
+<cdr-doc-api type="prop" :api-data="$page.frontmatter.versions[0].components[1].api.props" />
+
+
 ### Slots
 
 #### CdrSkeleton
 
 <cdr-doc-api type="slot" :api-data="$page.frontmatter.versions[0].components[0].api.slots" />
 
-#### CdrSkeletonBone
-
-### Events
-
-#### CdrSkeletonBone
-
-<cdr-doc-api type="event" :api-data="$page.frontmatter.versions[0].components[0].api.events"/>
-
-### Component Variables
-
-<cdr-doc-comp-vars name="CdrLink"/>
-
 ### Usage
+
+#### CdrSkeleton
 
 ```vue
 
-<CdrSkeleton >
+ <CdrSkeleton :motion="motionToggle">
   // place your bones in  here
   <CdrSkeletonBone />
 </CdrSkeleton>
 
 ```
 
-Use the `tag` prop to render the link as a `<button>` element that appears as a link, but without an `href` attribute.
-
-```vue
-  <cdr-link tag="button">
-    Show Details
-  </cdr-link>
-```
-### CdrSkeleton
-
-#### Provide
+##### Provide
 
 - `motionToggle`: motion setting toggle. 
 
-#### Setup
+##### Setup
 
 The `setup` method is used to create the instance data and provide the `motionToggle` setting.
 
-#### CSS Modules
+##### CSS Modules
 
 The `useCssModule` hook is used in the `setup` method to access the stylesheet. The `baseClass` variable is used to apply the styles to the skeleton. The `style` variable is used to apply the class names to the element.
 
-### CdrSkeletonBone
+#### CdrSkeletonBone
 
-### Inject
+##### Inject
 
 - `motionToggle`: motion setting toggle. 
 
-### Computed
+##### Computed
 
 - `typeClass`: class name for the bone type.
 - `motionClass`: class name for the motion setting toggle.
 
-### Setup
+##### Setup
 
 The `setup` method is used to create the instance data, inject the `motionToggle` setting, and compute the class names.
 
-### CSS Modules
+##### CSS Modules
 
 The `useCssModule` hook is used in the `setup` method to access the stylesheet. The `baseClass` variable is used to apply the styles to the skeleton bone. The `style` variable is used to apply the class names to the element. The `mapClasses` utility is used to apply the computed classes to the element.
 
