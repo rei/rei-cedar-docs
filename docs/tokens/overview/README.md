@@ -103,7 +103,7 @@ Resources are available within the **[CdrToken package](https://www.npmjs.com/pa
   - LESS variables at `dist/less/cdr-tokens.less`
   - JS as both commonJS and ES module at `dist/js`. Also noted in package.json as `main` and `module` respectively
     - `dist/js/cdr-tokens.common.js`
-    - `dist/js/cdr-tokens.esm.js`
+    - `dist/js/cdr-tokens.mjs`
 
 #### Using Cedar Design Tokens
 
