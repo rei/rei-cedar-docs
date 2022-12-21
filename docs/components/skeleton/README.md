@@ -118,29 +118,38 @@ Skeletons serve to reduce cumulative layout shift (CLS) and improve user-perceiv
 A skeleton should be temporary and not visible for more than a few seconds before being replaced by content. 
 
 A complete skeleton requires the CdrSkeleton wrapping component and at least one CdrSkeletonBone component. 
+### Demo
+
+<iframe src="https://codesandbox.io/embed/cedar-skeleton-demo-oitxku?fontsize=14&hidenavigation=1&module=%2FApp.vue&theme=light&view=preview"
+     style="width:100%; height:700px; border:0; border-radius: 4px; overflow:hidden;"
+     title="Cedar Skeleton Demo"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
 
 ### Types 
 
-At its core, CdrSkeleton is essentially a paint brush you can use to create any UI shape your application requires. However, there are several presets to allow quick assembly of basic UI elements. 
- 
-#### Heading 
+At its core, CdrSkeleton is essentially a paint brush you can use to create any UI shape your application requires. However, there are several presets to allow quick assembly of basic UI elements. All type options are fluid and will expand to fit their container.
 
-- Fluid 
-
-<cdr-doc-example-code-pair :codeMaxHeight= false :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
+#### Default
 
 ```html
-<CdrSkeleton :motion="motionToggle">
+<CdrSkeleton>
+  <CdrSkeletonBone />
+</CdrSkeleton>
+```
+
+#### Heading 
+
+```html
+<CdrSkeleton>
   <CdrSkeletonBone type="heading" />
 </CdrSkeleton>
 ```
- </cdr-doc-example-code-pair>
 
 #### Line 
 
-- Repeated lines within a skeleton will automatically change their length 
-
-<cdr-doc-example-code-pair :codeMaxHeight= false :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
+Repeated lines within a skeleton will automatically change their length 
 
 ```html
 <CdrSkeleton>
@@ -149,52 +158,42 @@ At its core, CdrSkeleton is essentially a paint brush you can use to create any 
   <CdrSkeletonBone type="line" />
 </CdrSkeleton>
 ```
- </cdr-doc-example-code-pair>
 
 #### Rectangle (4:3) 
-
-- Fluid
-
- <cdr-doc-example-code-pair :codeMaxHeight= false :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <CdrSkeleton>
   <CdrSkeletonBone type="rectangle" />
 </CdrSkeleton>
 ```
-</cdr-doc-example-code-pair>
 
 #### Square (1:1) 
-
-- Fluid
-
- <cdr-doc-example-code-pair :codeMaxHeight= false :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" >
 
 ```html
 <CdrSkeleton>
   <CdrSkeletonBone type="square" />
 </CdrSkeleton>
 ```
-</cdr-doc-example-code-pair>
-
 ### Motion (shimmer effect) 
 
-Skeletons use motion to convey the UI is still loading and the page is not frozen. 
+Skeletons use motion to convey the UI is still loading and the page is not frozen. This effect can be disabled.
 
-- Can be disabled via prop 
-- Disabled if user has reduced motion preferences 
+```html
+<CdrSkeleton>
+  <CdrSkeletonBone :motion="false" />
+</CdrSkeleton>
+```
 
 ### Accessibility
 
 #### What Cedar provides 
 
-- Skeleton wrapper adds `aria-busy=true` and aria-live=”polite” 
-- Motion is disabled if user has indicated they prefer reduced motion 
+- Skeleton wrapper adds `aria-busy=true` and `aria-live=”polite”`
+- The shimmer effect is disabled automatically if a user has indicated they prefer reduced motion 
 
 #### Development responsibilities 
 
-- Add a handler if true UI is still loading after 5 seconds 
--  Add a fallback if true UI never loads 
+- A skeleton should not be visible for more than 5 seconds so a fallback is needed if loading is delayed or fails.
 
 
 <hr>
@@ -212,7 +211,7 @@ Skeletons use motion to convey the UI is still loading and the page is not froze
 - Communicating an actionable item, processing a user request, is busy 
 - Representing isolated dynamic content  (like a page title or personalization data) 
 
-## The Basics [in new docsite as best practices] 
+## The basics 
 
 When showing loading for in-context operations, consider using a spinner. 
 
@@ -257,46 +256,44 @@ CdrSkeletonBone is used to provide a visual placeholder for a single line of con
 
 ### Usage
 
-#### CdrSkeleton
+A skeleton can be used in conjunction with other Cedar components to construct whatever UI approximation your app requires.
 
 ```vue
-
- <CdrSkeleton :motion="motionToggle">
-  // place your bones in  here
-  <CdrSkeletonBone />
+<CdrSkeleton v-if="contentLoading">
+  <CdrCard class="skeleton-card">
+    <section>
+      <CdrSkeletonBone type="rectangle" />
+      <div class="inset">
+        <CdrSkeletonBone type="heading" />
+        <div class="skeleton-card--body">
+          <CdrSkeletonBone type="line" />
+          <CdrSkeletonBone type="line" />
+          <CdrSkeletonBone type="line" />
+        </div>
+      </div>
+    </section>
 </CdrSkeleton>
+<CdrCard v-else>
+  <!-- True UI/Content  -->
+</CdrCard>
 
 ```
+#### Suspense
 
-##### Provide
+CdrSkeleton can be used with Vue's built-in [suspense component](https://vuejs.org/guide/built-ins/suspense.html) component to render a fallback for asynchronous components. 
 
-- `motionToggle`: motion setting toggle. 
+```vue
+<Suspense>
+  <!-- component with nested async dependencies -->
+  <MyAsyncComponent />
 
-##### Setup
-
-The `setup` method is used to create the instance data and provide the `motionToggle` setting.
-
-##### CSS Modules
-
-The `useCssModule` hook is used in the `setup` method to access the stylesheet. The `baseClass` variable is used to apply the styles to the skeleton. The `style` variable is used to apply the class names to the element.
-
-#### CdrSkeletonBone
-
-##### Inject
-
-- `motionToggle`: motion setting toggle. 
-
-##### Computed
-
-- `typeClass`: class name for the bone type.
-- `motionClass`: class name for the motion setting toggle.
-
-##### Setup
-
-The `setup` method is used to create the instance data, inject the `motionToggle` setting, and compute the class names.
-
-##### CSS Modules
-
-The `useCssModule` hook is used in the `setup` method to access the stylesheet. The `baseClass` variable is used to apply the styles to the skeleton bone. The `style` variable is used to apply the class names to the element. The `mapClasses` utility is used to apply the computed classes to the element.
+  <!-- loading state via #fallback slot -->
+  <template #fallback>
+    <CdrSkeleton>
+      <CdrSkeletonBone />
+    </CdrSkeleton>
+  </template>
+</Suspense>
+```
 
 </cdr-doc-table-of-contents-shell>
