@@ -39,7 +39,7 @@
   },
   "dependencies": {
     "@rei/cdr-component-variables": "^8.0.0",
-    "@rei/cdr-tokens": "^11.0.1",
+    "@rei/cdr-tokens": "^10.2.0",
     "@rei/cedar": "^12.1.0",
     "throttle-debounce": "^3.0.0"
   },
