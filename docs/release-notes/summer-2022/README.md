@@ -46,10 +46,10 @@ Polyfills for older, unsupported browsers have been removed. This should reduce 
 
 
 ### Accessibility improvements
-- CdrChip's design has been tweaked to improve visual contrast between selected and unselected states.
+CdrChip's design has been tweaked to improve visual contrast between selected and unselected states.
 
 ### Bug fixes
-- The Cedar component library is now less vocal about transitions and when they end.
+The Cedar component library is now less vocal about transitions and when they end.
 
 <br />
 
@@ -57,12 +57,12 @@ Polyfills for older, unsupported browsers have been removed. This should reduce 
 See what's changed on <cdr-link style="vertical-align: baseline" href="https://github.com/rei/rei-cedar/releases/tag/v13.1.0">GitHub <icon-brand-github /></cdr-link>
 
 ### New icons
-- New icons have been added to the library
+New icons have been added to the library.
 ## 13.0.2
 
 ### Bug fixes
 
-- CdrModal has been updated to address an issue with the display of the close button when hiding the modal's title.
+CdrModal has been updated to address an issue with the display of the close button when hiding the modal's title.
 
 ## 13.0.1
 
