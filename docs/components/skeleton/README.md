@@ -113,11 +113,12 @@ Skeleton components are intended for use on initial page load to loosely represe
 
 Skeletons can be used for regions or sections of a page such as search results or a product tile filmstrip rather than specific interactive elements like a standalone button or image. 
 
-Skeletons serve to reduce cumulative layout shift (CLS) and improve user-perceived load times. 
+- Skeletons serve to reduce cumulative layout shift (CLS) and improve user-perceived load times 
 
-A skeleton should be temporary and not visible for more than a few seconds before being replaced by content. 
+- A skeleton should be temporary and not visible for more than a few seconds before being replaced by content 
 
-A complete skeleton requires the `CdrSkeleton` wrapping component and at least one `CdrSkeletonBone` component. 
+- A complete skeleton requires the `CdrSkeleton` wrapping component and at least one `CdrSkeletonBone` component 
+
 ### Demo
 
 <iframe src="https://codesandbox.io/embed/cedar-skeleton-demo-oitxku?fontsize=14&hidenavigation=1&module=%2FApp.vue&theme=light&view=preview"
@@ -193,7 +194,7 @@ Skeletons use motion to convey the UI is still loading and the page is not froze
 
 #### Development responsibilities 
 
-- A skeleton should not be visible for more than 5 seconds so a fallback is needed if loading is delayed or fails.
+A skeleton should not be visible for more than 5 seconds so a fallback is needed if loading is delayed or fails.
 
 
 <hr>
@@ -202,21 +203,21 @@ Skeletons use motion to convey the UI is still loading and the page is not froze
 
 ### Use When 
 
-- Representing the shape of your UI with generic shapes. 
+- Representing the shape of your UI with generic shapes 
 - Loading multiple items within a dynamic section of your page 
 - Representing container-based components like cards, tiles, or tables 
 
 ### Don’t Use When 
 
-- Communicating an actionable item, processing a user request, is busy 
+- Communicating that an actionable item is busy (like processing a user request) 
 - Representing isolated dynamic content  (like a page title or personalization data) 
 
-## The basics 
+## The Basics 
 
 When showing loading for in-context operations, consider using a spinner. 
 
 
-### Content
+## Content
 
 ### Do / Don’t
 
