@@ -39,14 +39,14 @@
   ],
    "when": [
     {
-      "type": "do",
+      "type": "dont",
       "image": "links/links_underlinestyle_text_do.png",
       "ratio": "16-9",
       "alt": "needs path",
       "caption": "show page titles that never change for a page."
     },
     {
-      "type": "dont",
+      "type": "do",
       "image": "links/links_underlinestyle_text_dont.png",
       "ratio": "16-9",
       "alt": "TODO",
@@ -117,7 +117,7 @@ Skeletons serve to reduce cumulative layout shift (CLS) and improve user-perceiv
 
 A skeleton should be temporary and not visible for more than a few seconds before being replaced by content. 
 
-A complete skeleton requires the CdrSkeleton wrapping component and at least one CdrSkeletonBone component. 
+A complete skeleton requires the `CdrSkeleton` wrapping component and at least one `CdrSkeletonBone` component. 
 ### Demo
 
 <iframe src="https://codesandbox.io/embed/cedar-skeleton-demo-oitxku?fontsize=14&hidenavigation=1&module=%2FApp.vue&theme=light&view=preview"
