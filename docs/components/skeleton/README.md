@@ -8,14 +8,14 @@
   "structure": [
     {
       "type": "do",
-      "image": "links/links_descriptivetext_do.png",
+      "image": "skeleton/skeleton_do_structure.png",
       "ratio": "16-9",
       "alt": "need image path",
       "caption": "represent the general structure of the container-based user-interface with skeleton."
     },
     {
       "type": "dont",
-      "image": "links/links_descriptivetext_dont.png",
+      "image": "skeleton/skeleton_dont_structure.png",
       "ratio": "16-9",
       "alt": "Two radio buttons one with a click here link.",
       "caption": "recreate the exact structure of the container-based user interface with skeleton."
@@ -24,14 +24,14 @@
   "where": [
     {
       "type": "do",
-      "image": "links/links_underlinestyle_text_do.png",
+      "image": "skeleton/skeleton_do_container.png",
       "ratio": "16-9",
       "alt": "A copy block using the cdr-link component which correctly underlines links.",
       "caption": "use to represent a yet-to-be-loaded or updating container-based user interface."
     },
     {
       "type": "dont",
-      "image": "links/links_underlinestyle_text_dont.png",
+      "image": "skeleton/skeleton_dont_container.png",
       "ratio": "16-9",
       "alt": "TODO",
       "caption": "use to represent a yet-to-be-loaded or updating isolated non-repeated user interface."
@@ -40,14 +40,14 @@
    "when": [
     {
       "type": "dont",
-      "image": "links/links_underlinestyle_text_do.png",
+      "image": "skeleton/skeleton_do_placeholder.png",
       "ratio": "16-9",
       "alt": "needs path",
       "caption": "show page titles that never change for a page."
     },
     {
       "type": "do",
-      "image": "links/links_underlinestyle_text_dont.png",
+      "image": "skeleton/skeleton_dont_placeholder.png",
       "ratio": "16-9",
       "alt": "TODO",
       "caption": "use placeholder content for titles that will change when the page fully loads."
