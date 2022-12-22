@@ -4,7 +4,7 @@
   "layout_type": "LayoutComponent",
   "summary": "Visually communicates content is in the process of loading ",
   "title_metadata": "CdrSkeleton, CdrSkeletonBone, skeleton, bone",
-  "component_location": "https://github.com/rei/rei-cedar/tree/skelelton-testing/src/components/skeleton",
+  "component_location": "https://github.com/rei/rei-cedar/tree/main/src/components/skeleton",
   "structure": [
     {
       "type": "do",
