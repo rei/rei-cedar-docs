@@ -39,14 +39,14 @@
   ],
    "when": [
     {
-      "type": "dont",
+      "type": "do",
       "image": "links/links_underlinestyle_text_do.png",
       "ratio": "16-9",
       "alt": "needs path",
       "caption": "show page titles that never change for a page."
     },
     {
-      "type": "do",
+      "type": "dont",
       "image": "links/links_underlinestyle_text_dont.png",
       "ratio": "16-9",
       "alt": "TODO",
