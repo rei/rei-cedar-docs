@@ -40,7 +40,7 @@ CdrSkeleton is now available. Skeletons are used to visually communicate when co
 
 ### Polyfill removals
 
-Polyfills for older, unsupported browsers have been removed. This should reduce the bundle sizes and result in better performance. View Cedar's [browser targets](https://github.com/rei/rei-cedar/blob/main/browserTargets.mjs).
+Polyfills for older, unsupported browsers have been removed. This has reduced the package size by about 50 Kb and should result in better application performance. View Cedar's [browser targets](https://github.com/rei/rei-cedar/blob/main/browserTargets.mjs).
 
 <cdr-banner type="warning" aria-live="polite"><template #icon-left><icon-warning-fill inherit-color /></template><span style="font-weight:500">Users at REI should also update to the latest version of FEBS for optimal performance.</span></cdr-banner>
 
