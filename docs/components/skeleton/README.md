@@ -4,50 +4,50 @@
   "layout_type": "LayoutComponent",
   "summary": "Visually communicates content is in the process of loading ",
   "title_metadata": "CdrSkeleton, CdrSkeletonBone, skeleton, bone",
-  "component_location": "https://github.com/rei/rei-cedar/tree/skelelton-testing/src/components/skeleton",
+  "component_location": "https://github.com/rei/rei-cedar/tree/main/src/components/skeleton",
   "structure": [
     {
       "type": "do",
-      "image": "links/links_descriptivetext_do.png",
+      "image": "skeleton/skeleton_do_structure.png",
       "ratio": "16-9",
       "alt": "need image path",
       "caption": "represent the general structure of the container-based user-interface with skeleton."
     },
     {
       "type": "dont",
-      "image": "links/links_descriptivetext_dont.png",
+      "image": "skeleton/skeleton_dont_structure.png",
       "ratio": "16-9",
       "alt": "Two radio buttons one with a click here link.",
-      "caption": "recreate the exact structure of the container-based user-interface with skeleton."
+      "caption": "recreate the exact structure of the container-based user interface with skeleton."
     }
   ],
   "where": [
     {
       "type": "do",
-      "image": "links/links_underlinestyle_text_do.png",
+      "image": "skeleton/skeleton_do_container.png",
       "ratio": "16-9",
       "alt": "A copy block using the cdr-link component which correctly underlines links.",
-      "caption": "use to represent a yet to be loaded or updating container-based user-interface."
+      "caption": "use to represent a yet-to-be-loaded or updating container-based user interface."
     },
     {
       "type": "dont",
-      "image": "links/links_underlinestyle_text_dont.png",
+      "image": "skeleton/skeleton_dont_container.png",
       "ratio": "16-9",
       "alt": "TODO",
-      "caption": "use to represent a yet to be loaded or updating isolated non repeated user-interface."
+      "caption": "use to represent a yet-to-be-loaded or updating isolated non-repeated user interface."
     }
   ],
    "when": [
     {
       "type": "do",
-      "image": "links/links_underlinestyle_text_do.png",
+      "image": "skeleton/skeleton_do_placeholder.png",
       "ratio": "16-9",
       "alt": "needs path",
       "caption": "show page titles that never change for a page."
     },
     {
       "type": "dont",
-      "image": "links/links_underlinestyle_text_dont.png",
+      "image": "skeleton/skeleton_dont_placeholder.png",
       "ratio": "16-9",
       "alt": "TODO",
       "caption": "use placeholder content for titles that will change when the page fully loads."
@@ -109,15 +109,14 @@
 
 ## Overview
 
-Skeleton components are intended for use on initial page load to loosely represent a container-based user-interface that is not fully loaded. A skeleton should never take the place of static content. 
+Skeleton components are intended for use on initial page load to loosely represent a container-based user interface that is not fully loaded. A skeleton should never take the place of static content. 
 
-Skeletons can be used for regions or sections of a page such as search results or a product tile filmstrip rather than specific interactive elements like a standalone button or image. 
+Use skeletons to represent regions or sections of a page, such as search results or a product tile filmstrip, rather than specific interactive elements like a standalone button or image. 
 
-- Skeletons serve to reduce cumulative layout shift (CLS) and improve user-perceived load times 
+Skeletons serve to reduce cumulative layout shift (CLS) and improve user-perceived load times. They should be temporary and not visible for more than a few seconds before being replaced by content.
 
-- A skeleton should be temporary and not visible for more than a few seconds before being replaced by content 
+A complete skeleton requires the `CdrSkeleton` wrapping component and at least one `CdrSkeletonBone` component. 
 
-- A complete skeleton requires the CdrSkeleton wrapping component and at least one CdrSkeletonBone component 
 ### Demo
 
 <iframe src="https://codesandbox.io/embed/cedar-skeleton-demo-oitxku?fontsize=14&hidenavigation=1&module=%2FApp.vue&theme=light&view=preview"
@@ -174,9 +173,9 @@ Repeated lines within a skeleton will automatically change their length
   <CdrSkeletonBone type="square" />
 </CdrSkeleton>
 ```
-### Motion (shimmer effect) 
+### Motion 
 
-Skeletons use motion to convey the UI is still loading and the page is not frozen. This effect can be disabled.
+Skeletons use motion in a left to right gradient to convey the UI is still loading and the page is not frozen. This effect can be disabled.
 
 ```html
 <CdrSkeleton>
@@ -189,7 +188,7 @@ Skeletons use motion to convey the UI is still loading and the page is not froze
 #### What Cedar provides 
 
 - Skeleton wrapper adds `aria-busy=true` and `aria-live=”polite”`
-- The shimmer effect is disabled automatically if a user has indicated they prefer reduced motion 
+- The motion effect is disabled automatically if a user has indicated they prefer reduced motion 
 
 #### Development responsibilities 
 
@@ -210,10 +209,7 @@ A skeleton should not be visible for more than 5 seconds so a fallback is needed
 
 - Communicating that an actionable item is busy (like processing a user request) 
 - Representing isolated dynamic content  (like a page title or personalization data) 
-
-## The Basics 
-
-When showing loading for in-context operations, consider using a spinner. 
+- Showing loading for in-context operations. Instead, consider using a spinner. 
 
 
 ## Content
