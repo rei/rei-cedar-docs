@@ -200,8 +200,6 @@ Default size toggle button with just an icon
 
 Size can be changed to large based on where the component is being used.
 
-Toggle buttons, checkboxes, radio buttons, and switches are all similar types of selection controls, but they generally are not interchangeable. If you're not sure which one to use for a certain scenario, here's a table that might help. 
-
 <iframe
   src="https://vfdetw.sse.codesandbox.io/embed/new?codemirror=1"
   style="width:100%; height:150px; border:1px solid #dcd6cb; border-radius: 4px; overflow:hidden;"
@@ -308,7 +306,7 @@ Switches, checkboxes, radio buttons, and toggle buttons are all similar types of
 - Text/copy adequately informs the user of the expected content  
 - There is no CdrIcon to properly inform the user of represented content
 
-**Accessibility note:** As with any graphic or image, be sure to provide a toggleValue attribute. This attribute will be used for people who use screen readers. 
+**Accessibility note:** As with any graphic or image, be sure to provide a `toggleValue` attribute. This attribute will be used for people who use screen readers. 
 
 <hr>
 
