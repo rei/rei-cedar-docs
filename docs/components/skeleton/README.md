@@ -40,14 +40,22 @@
    "when": [
     {
       "type": "do",
+<<<<<<< HEAD
+      "image": "links/links_underlinestyle_text_do.png",
+=======
       "image": "skeleton/skeleton_do_placeholder.png",
+>>>>>>> c47a19c68de484cc4efd63ebb66991ccc766010b
       "ratio": "16-9",
       "alt": "needs path",
       "caption": "show page titles that never change for a page."
     },
     {
       "type": "dont",
+<<<<<<< HEAD
+      "image": "links/links_underlinestyle_text_dont.png",
+=======
       "image": "skeleton/skeleton_dont_placeholder.png",
+>>>>>>> c47a19c68de484cc4efd63ebb66991ccc766010b
       "ratio": "16-9",
       "alt": "TODO",
       "caption": "use placeholder content for titles that will change when the page fully loads."
@@ -115,8 +123,14 @@ Use skeletons to represent regions or sections of a page, such as search results
 
 Skeletons serve to reduce cumulative layout shift (CLS) and improve user-perceived load times. They should be temporary and not visible for more than a few seconds before being replaced by content.
 
+<<<<<<< HEAD
+- A skeleton should be temporary and not visible for more than a few seconds before being replaced by content 
+
+- A complete skeleton requires the CdrSkeleton wrapping component and at least one CdrSkeletonBone component 
+=======
 A complete skeleton requires the `CdrSkeleton` wrapping component and at least one `CdrSkeletonBone` component. 
 
+>>>>>>> c47a19c68de484cc4efd63ebb66991ccc766010b
 ### Demo
 
 <iframe src="https://codesandbox.io/embed/cedar-skeleton-demo-oitxku?fontsize=14&hidenavigation=1&module=%2FApp.vue&theme=light&view=preview"
