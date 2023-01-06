@@ -28,11 +28,19 @@
 
 If your project depends on any shared component packages, you will want to update those packages to the new version of Cedar before updating your microsite.
 
-<br>
+<br />
+
+## 13.2.1 
+
+### Bug fixes
+
+Resolved an issue where CdrTabs was not emitting a `tab-change` event.
+
+<cdr-link style="vertical-align: baseline" href="https://github.com/rei/rei-cedar/releases/tag/v13.2.1">v13.2.1 changelog <icon-brand-github style="margin-left: 0.2rem"/></cdr-link>
+
+<br />
 
 ## 13.2.0
-
-See what's changed on <cdr-link style="vertical-align: baseline" href="https://github.com/rei/rei-cedar/releases/tag/v13.2.0">GitHub <icon-brand-github /></cdr-link>
 
 ### CdrSkeleton
 
@@ -51,24 +59,38 @@ CdrChip's design has been tweaked to improve visual contrast between selected an
 ### Bug fixes
 The Cedar component library is now less vocal about transitions and when they end.
 
+<cdr-link style="vertical-align: baseline" href="https://github.com/rei/rei-cedar/releases/tag/v13.2.0">v13.2.0 changelog <icon-brand-github style="margin-left: 0.2rem" /></cdr-link>
+
 <br />
 
 ## 13.1.0
-See what's changed on <cdr-link style="vertical-align: baseline" href="https://github.com/rei/rei-cedar/releases/tag/v13.1.0">GitHub <icon-brand-github /></cdr-link>
 
 ### New icons
 New icons have been added to the library.
+
+<cdr-link style="vertical-align: baseline" href="https://github.com/rei/rei-cedar/releases/tag/v13.1.0">v13.1.0 changelog <icon-brand-github style="margin-left: 0.2rem" /></cdr-link>
+
+<br />
+
 ## 13.0.2
 
 ### Bug fixes
 
 CdrModal has been updated to address an issue with the display of the close button when hiding the modal's title.
 
+<cdr-link style="vertical-align: baseline" href="https://github.com/rei/rei-cedar/releases/tag/v13.0.2">v13.0.2 changelog <icon-brand-github style="margin-left: 0.2rem" /></cdr-link>
+
+<br />
+
 ## 13.0.1
 
 ### Bug fixes
 
-- CdrAccordion has been updated to address an issue where the caret icon wasn't animating on accordion open/close.
+CdrAccordion has been updated to address an issue where the caret icon wasn't animating on accordion open/close.
+
+<cdr-link style="vertical-align: baseline" href="https://github.com/rei/rei-cedar/releases/tag/v13.0.1">v13.0.1 changelog <icon-brand-github style="margin-left: 0.2rem" /></cdr-link>
+
+<br />
 
 ## Vue 3 component library
 
