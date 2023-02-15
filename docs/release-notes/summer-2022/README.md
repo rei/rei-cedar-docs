@@ -30,6 +30,12 @@ If your project depends on any shared component packages, you will want to updat
 
 <br />
 
+## 13.3.0
+
+Adds `type="date"` to CdrInput to support browser-native date-picking functionality. See the [CdrInput article](../../components/input#date-input) for more information.
+
+<br />
+
 ## 13.2.1 
 
 ### Bug fixes
@@ -44,7 +50,7 @@ Resolved an issue where CdrTabs was not emitting a `tab-change` event.
 
 ### CdrSkeleton
 
-CdrSkeleton is now available. Skeletons are used to visually communicate when content is in the process of loading. See the [CdrSkeleton docs page](../../components/skeleton) for more information.
+CdrSkeleton is now available. Skeletons are used to visually communicate when content is in the process of loading. See the [CdrSkeleton article](../../components/skeleton) for more information.
 
 ### Polyfill removals
 
