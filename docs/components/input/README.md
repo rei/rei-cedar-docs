@@ -121,7 +121,7 @@
                 "name": "type",
                 "type": "string",
                 "default": "text",
-                "description": "Supports HTML5 <input> types for text, email, number, password, search, and URL."
+                "description": "Supports HTML5 <input> types for text, email, number, password, search, date, and URL."
               },
               {
                 "name": "label",
@@ -432,6 +432,29 @@ Use the `type="number"` attribute only for input fields that reference a numeric
     <icon-plus-lg/>
   </cdr-button>
 </div>
+```
+
+</cdr-doc-example-code-pair>
+
+### Date input
+
+<cdr-banner type="info"><template #icon-left><icon-information-fill inherit-color /></template><span style="font-weight: 500">Vue 3 Only</span></cdr-banner>
+
+Use `type="date"` to create input fields that let a user enter a date, either with a validated text field and/or a simple calendar UI. The presentation is dependent on the browser and largely immutable so this is best used for applications where consistent presentation is less important than the functional benefits.
+
+See the [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date) for `type="date"` to learn more.
+
+<cdr-doc-example-code-pair :vue2-supported="false" :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: ''}" :methods="{restrictInput() {this.defaultModel = this.defaultModel.replace(/\D/g, '')}}">
+
+```html
+<cdr-input
+  v-model="defaultModel"
+  :background="backgroundColor"
+  label="Choose a date"
+  optional
+  type="date"
+  @input="restrictInput"
+/>
 ```
 
 </cdr-doc-example-code-pair>
