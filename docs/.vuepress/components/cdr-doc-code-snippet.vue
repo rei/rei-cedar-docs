@@ -11,7 +11,7 @@
         </cdr-link>
       </div>
       <div class="cdr-doc-code-snippet__action-wrapper" v-if="sandboxHrefComputed">
-        <cdr-link modifier="standalone" class="cdr-doc-code-snippet__action" :href="sandboxHrefComputed" target="_blank" rel="noopener noreferrer">
+        <cdr-link v-if="vue2Supported" modifier="standalone" class="cdr-doc-code-snippet__action" :href="sandboxHrefComputed" target="_blank" rel="noopener noreferrer">
           <cdr-icon class="cdr-doc-code-snippet__action-icon" title="A hollow box with a small solid box in each box panel" use="#brand-code-sandbox"/>
           View on CodeSandbox (Vue 2)
         </cdr-link>
@@ -77,6 +77,10 @@ export default {
     },
     hideCode: {
       default: false,
+      type: Boolean
+    },
+    vue2Supported: {
+      default: true,
       type: Boolean
     },
     model: {

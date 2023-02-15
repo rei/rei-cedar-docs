@@ -39,7 +39,7 @@
       </div>
     </div>
 
-    <cdr-doc-code-snippet :copy-button="copyButton" :line-numbers="lineNumbers" :max-height="codeMaxHeight" :repository-href="repositoryHref" :sandbox-href="sandboxHref" :sandbox-data="Object.assign({}, sandboxData, {code: sandboxCode, loadSprite})" :model="Object.assign({}, model, {backgroundColor: this.backgroundColor})" :computed="computed" :methods="methods" :code-toggle="codeToggle" :hide-code="hideCode">
+    <cdr-doc-code-snippet :vue2-supported="vue2Supported" :copy-button="copyButton" :line-numbers="lineNumbers" :max-height="codeMaxHeight" :repository-href="repositoryHref" :sandbox-href="sandboxHref" :sandbox-data="Object.assign({}, sandboxData, {code: sandboxCode, loadSprite})" :model="Object.assign({}, model, {backgroundColor: this.backgroundColor})" :computed="computed" :methods="methods" :code-toggle="codeToggle" :hide-code="hideCode">
       <slot :name="slotNames[0]"/> <!-- Only display the code snippet for the first (or only) slot content -->
     </cdr-doc-code-snippet>
   </div>
@@ -108,6 +108,10 @@
         type: Boolean
       },
       hideCode: {
+        default: true,
+        type: Boolean
+      },
+      vue2Supported: {
         default: true,
         type: Boolean
       },
