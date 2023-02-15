@@ -32,6 +32,8 @@ If your project depends on any shared component packages, you will want to updat
 
 ## 13.3.0
 
+### New features
+
 Adds `type="date"` to CdrInput to support browser-native date-picking functionality. See the [CdrInput article](../../components/input#date-input) for more information.
 
 <br />
