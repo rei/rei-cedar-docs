@@ -440,7 +440,7 @@ Use the `type="number"` attribute only for input fields that reference a numeric
 
 <cdr-banner type="info"><template #icon-left><icon-information-fill inherit-color /></template><span style="font-weight: 500">Vue 3 Only</span></cdr-banner>
 
-Use `type="date"` to create input fields that let a user enter a date, either with a validated text field and/or a simple calendar UI. The presentation is dependent on the browser and largely immutable so this is best used for applications where consistent presentation is less important than the functional benefits.
+Use `type="date"` to create input fields which allow users to enter a date, either with a validated text field and/or a simple calendar UI. Note: the presentation is dependent on the browser and largely unchangeable. Use this input field for applications where consistent presentation is less important than the functional benefits.
 
 See the [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date) for `type="date"` to learn more.
 
@@ -461,7 +461,7 @@ See the [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element
 
 ### Input with Link Text
 
-Input field with link text on right. The link should describe it's relationship to the input field either through it's text content or an aria-label.
+Input field with link text on right. The link should describe its relationship to the input field either through its text content or an aria-label.
 
 
 <cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="Object.assign({}, $page.frontmatter.sandboxData, {components: 'CdrInput, CdrLink'})" :codeMaxHeight="false" :model="{defaultModel: ''}">
