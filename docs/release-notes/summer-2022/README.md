@@ -36,6 +36,8 @@ If your project depends on any shared component packages, you will want to updat
 
 Adds `type="date"` to CdrInput to support browser-native date-picking functionality. See the [CdrInput article](../../components/input#date-input) for more information.
 
+<cdr-link style="vertical-align: baseline" href="https://github.com/rei/rei-cedar/releases/tag/v13.3.0">v13.3.3 changelog <icon-brand-github style="margin-left: 0.2rem"/></cdr-link>
+
 <br />
 
 ## 13.2.1 
