@@ -444,7 +444,7 @@ Use `type="date"` to create input fields which allow users to enter a date, eith
 
 See the [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/date) for `type="date"` to learn more.
 
-<cdr-doc-example-code-pair :vue2-supported="false" :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: ''}" :methods="{restrictInput() {this.defaultModel = this.defaultModel.replace(/\D/g, '')}}">
+<cdr-doc-example-code-pair :repository-href="$page.frontmatter.component_location" :sandbox-data="$page.frontmatter.sandboxData" :codeMaxHeight="false" :model="{defaultModel: ''}">
 
 ```html
 <cdr-input
