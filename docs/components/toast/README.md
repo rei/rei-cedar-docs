@@ -254,7 +254,7 @@ Use to provide generic messaging that does not fit the other types
 
 ### Placement 
 
-- Toasts are delivered from the top-right of a page 
+- Toasts are delivered from the top-right of a viewport (desktop) or at the top and spanning the full-width (mobile)
 - The most recent toast is always displayed on top of a stack 
 
 ## API
@@ -278,7 +278,7 @@ Use to provide generic messaging that does not fit the other types
 
 #### Positioning
 
-CdrToast component(s) should be contained within a `position: absolute` container in the top-right corner of your page. On smaller screens, they should appear at the top of the page and span the whole width of the viewport.
+CdrToast component(s) should be positioned in the top-right corner of the viewport. On smaller screens, they should appear at the top of the page and span the whole width of the viewport.
 
 #### Elevation
 
