@@ -23,7 +23,7 @@
       "image": "switch/switch_clear_dont_16-9.png",
       "ratio": "16-9",
       "alt": "Switch with label that says 'Do you want to receive email notifications from us?'",
-      "caption": "overload the popover with too much content "
+      "caption": "overload the switch label with too much content "
     }
   ],
 
