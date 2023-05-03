@@ -80,7 +80,7 @@ export default function makeMeASandbox(data, model, computed, methods) {
     parameters.files['package.json'].content.dependencies['@rei/cedar-icons'] = packageJson.devDependencies['@rei/cedar-icons']
   }
 
-  return `https://codesandbox.io/api/v1/sandboxes/define?parameters=${getParameters(parameters)}`;
+  return `https://codesandbox.io/api/v1/sandboxes/define?parameters=${getParameters(parameters)}&environment=server`;
 }
 
 function buildIndexHtml(title) {
