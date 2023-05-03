@@ -185,7 +185,7 @@
 ---
 
 
-<cdr-doc-table-of-contents-shell tab-name="Overview">
+<cdr-doc-table-of-contents-shell parentSelector="h2" childSelector="h3">
 
 ## Overview
 
