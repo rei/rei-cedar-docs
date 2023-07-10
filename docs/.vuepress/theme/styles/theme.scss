@@ -23,7 +23,19 @@ h1, h2, h3, h4, h5 {
 .sr-only {
   @include cdr-display-sr-only;
 }
-
+.migration-banner {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  & span {
+    @include cdr-text-utility-sans-300;
+    font-weight: 500;
+    padding: $cdr-space-quarter-x;
+  }
+  &--hidden {
+    display: none;
+  }
+}
 .cdr-doc-page-shell {
   display: flex;
 }

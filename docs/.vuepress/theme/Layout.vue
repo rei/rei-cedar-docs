@@ -17,11 +17,24 @@
         </div>
       </div>
       <div :class="bodyClass">
-        <cdr-banner v-if="isStaging" type="warning">
+        <cdr-banner
+          v-if="isMigrationBannerShown"
+          type="info"
+          class="migration-banner"
+        >
           <template #icon-left>
-            <icon-warning-fill />
+            <icon-information-fill />
           </template>
-          <span><span style="font-weight: 500;">Cedar Design System documentation staging. For internal use only.</span> <cdr-link :href="prodEquivalentUrl">Return to production</cdr-link></span>
+          <span>This is Cedar’s legacy site. Information may be outdated.</span>
+          <template #message-body>
+            Go to <cdr-link href="https://cedar.rei.com">Cedar's new documentation site</cdr-link> for the latest features and support.
+          </template>
+          <template #icon-right>
+            <cdr-button
+              :icon-only="true"
+              @click="isMigrationBannerShown = false"
+            ><icon-x-lg /></cdr-button>
+          </template>
         </cdr-banner>
         <div class="custom-layout" v-if="$page.frontmatter.layout_type">
           <component :is="$page.frontmatter.layout_type"/>
@@ -49,7 +62,7 @@ export default {
     return {
       iconSprite,
       sideNavOpen: false,
-      isStaging: false,
+      isMigrationBannerShown: true,
       url: '',
       prodEquivalentUrl: '',
     }
