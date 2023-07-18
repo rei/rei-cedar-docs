@@ -9,6 +9,7 @@ module.exports = {
     ["link", { rel: "stylesheet", href: "/cedar.css" }],
     ["link", { rel: "stylesheet", href: "/back-to-top-btn.css" }],
     ["meta", { property: "og:image", content: "https://rei.github.io/rei-cedar-docs/og.png" }],
+    ["meta", { name: "robots", content: "noindex"}],
   ],
   ga: '',
   plugins: [
