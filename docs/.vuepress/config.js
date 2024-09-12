@@ -14,7 +14,6 @@ module.exports = {
   ga: '',
   plugins: [
     ['@vuepress/google-analytics', { ga: 'UA-129829250-1' }],
-    'flowchart'
   ],
   markdown: {
     lineNumbers: true,

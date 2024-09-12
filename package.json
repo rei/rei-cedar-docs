@@ -24,18 +24,17 @@
     "npm": "^6.9.0"
   },
   "devDependencies": {
-    "@babel/plugin-transform-runtime": "^7.14.3",
-    "@rei/cedar-icons": "^2.5.1",
-    "@vuepress/plugin-google-analytics": "^1.8.2",
+    "@babel/plugin-transform-runtime": "^7.19.6",
+    "@rei/cedar-icons": "^2.6.1",
+    "@vuepress/plugin-google-analytics": "^1.9.7",
     "codesandbox": "^2.2.3",
     "cross-env": "^7.0.3",
     "npm-run-all": "^4.1.5",
     "sass": "^1.57.1",
     "sass-loader": "^10.4.1",
     "svg-inline-loader": "^0.8.2",
-    "v-mask": "^2.2.4",
-    "vuepress": "^1.8.2",
-    "vuepress-plugin-flowchart": "^1.4.3"
+    "v-mask": "^2.3.0",
+    "vuepress": "^1.9.7"
   },
   "dependencies": {
     "@babel/core": "^7.20.5",
